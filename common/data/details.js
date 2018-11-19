@@ -29130,7 +29130,7 @@ window.details = {
             "character1": "Makes [QCK] orbs \"beneficial\" for Free Spirit characters",
             "character2": "Makes [STR] orbs \"beneficial\" for Free Spirit characters",
             "combined": "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
-            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters"
+            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for this character"
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -36972,41 +36972,41 @@ window.details = {
         ]
     },
     2400: {//World Clash Luffy
-        captain: "Boosts ATK of [STR] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by ?x",
+        captain: "Boosts ATK of [STR] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 2 or more [DEX] or [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
-        specialName: "Luffy Special",
+        specialName: "Gum Gum Culverin",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2401: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 2 or more [DEX] or [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
-        specialName: "Luffy Special",
+        specialName: "Gum Gum Culverin",
         specialNotes: "#{ignoreBarrier}",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2402: {//World Clash Blackbeard
-        captain: "Boosts ATK of [DEX] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by ?x",
+        captain: "Boosts ATK of [DEX] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 15%, reduces enemy's Threshold Damage Reduction and Increased Defense duration by 5 turns and Barrier duration by 1 turn. If your crew has 2 or more [STR] or [QCK] characters, boosts ATK of [DEX] characters by 2.25x for 1 turn, by 1.75x otherwise.",
-        specialName: "Blackbeard Special",
+        specialName: "Epicenter of Destruction",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2403: {//World Clash Blackbeard
         captain: "Boosts ATK of [DEX] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Cuts the current HP of each enemy by 15%, reduces enemy's Threshold Damage Reduction and Increased Defense duration by 5 turns and Barrier duration by 1 turn. If your crew has 2 or more [STR] or [QCK] characters, boosts ATK of [DEX] characters by 2.25x for 1 turn, by 1.75x otherwise.",
-        specialName: "Blackbeard Special",
+        specialName: "Epicenter of Destruction",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2404: {//World Clash Akainu
-        captain: "Boosts ATK of [QCK] characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by ?x",
+        captain: "Boosts ATK of [QCK] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes all orbs, including [BLOCK] orbs on [STR] and [QCK] characters into Matching orbs. If your crew has 2 or more [STR] or [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
-        specialName: "Akainu Special",
+        specialName: "Grave Threat",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2405: {//World Clash Akainu
         captain: "Boosts ATK of [QCK] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes all orbs, including [BLOCK] orbs on [STR] and [QCK] characters into Matching orbs. If your crew has 2 or more [STR] or [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
-        specialName: "Akainu Special",
+        specialName: "Grave Threat",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2406: {//World Clash Ace
@@ -37024,7 +37024,7 @@ window.details = {
     2408: {//World Clash Sabo
         captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 500 HP at end of each turn",
         special: "Reduces Bind duration for one character completely and changes [BLOCK] orbs into Matching orbs",
-        specialName: "Sabo Speical",
+        specialName: "Inheriting the Will of Fire",
         sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
     },
     2502: {//Kung Fu Luffy
