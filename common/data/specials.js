@@ -6161,6 +6161,9 @@ window.specials = {
             window.specials[2310].turnedOn = false;
         }
     },
+    2318: {
+        chainAddition: function(p) { return 0.5; },
+    },
     2324: {
         chainAddition: function(p) { return 0.75; },
         turnedOn: false,
