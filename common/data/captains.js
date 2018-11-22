@@ -8034,6 +8034,19 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    2318: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.percHP <= 50.0 ? 2.75 : 2.5 : 1; }//change
+    },
+    2320: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },//change
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },//change
+        chainModifier: function(p) { return (p.percHP <= 30.0) ? 1.4 : 1; }//change
+    },
+    2321: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+        chainModifier: function(p) { return (p.percHP <= 30.0) ? 1.4 : 1; }
+    },
     2322: {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 2 : 1; },
     },
@@ -8135,10 +8148,10 @@ window.captains = {
             }, {
                 type: 'STR',
                 minModifier: 'Good'
-            }]) ? 1 : 1 : 1;//Change this
+            }]) ? 3 : 2 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        hp: function(p) { return p.unit.type == "STR" ? 1 : 1; },//Change this
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
     },
     2401: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
@@ -8169,10 +8182,10 @@ window.captains = {
             }, {
                 type: 'DEX',
                 minModifier: 'Good'
-            }]) ? 1 : 1 : 1;//Change this
+            }]) ? 3 : 2 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        hp: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//Change this
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
     },
     2403: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'QCK', 'DEX']); },
@@ -8203,10 +8216,10 @@ window.captains = {
             }, {
                 type: 'QCK',
                 minModifier: 'Good'
-            }]) ? 1 : 1 : 1;//Change this
+            }]) ? 3 : 2 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        hp: function(p) { return p.unit.type == "QCK" ? 1 : 1; },//Change this
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
     2405: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'STR', 'QCK']); },

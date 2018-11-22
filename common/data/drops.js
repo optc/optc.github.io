@@ -876,6 +876,15 @@ window.drops = {
             '11': [ 2231 ],
         },
         
+        {
+            name: 'Chocolat Town to The Seducing Woods',
+            shortName: 'WCI 1',
+            thumb: null,
+            nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: null,
+        },
+        
     ], 
 
     'Booster and Evolver Island': [
@@ -2058,6 +2067,7 @@ window.drops = {
         {
             name: 'Strawhat Pirates Pizza Party!! Lunch',
             thumb: 2087,
+            global: true,
             nakama: 2208700,
             gamewith: 102409,
             'All Difficulties': [ 2087, 2088, 2089, 2090, 2091, -1910, -1440, -1442, -1895, -1902, -1714 ]
@@ -2081,7 +2091,7 @@ window.drops = {
         },
         
         {
-            name: 'Coliseum Executioner! Diamante',
+            name: 'Coliseum Executioner!',
             thumb: 2146,
             global: true,
             nakama: 2214600,
@@ -2090,8 +2100,9 @@ window.drops = {
         },
         
         {
-            name: 'Baby 5\'s Journey to Become a Bride',
+            name: 'Baby 5\'s Wedding Plans',
             thumb: 2165,
+            global: true,
             nakama: 2216500,
             gamewith: 111404,
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ]
@@ -2130,7 +2141,7 @@ window.drops = {
         },
         
         {
-            name: 'Angry Corps! Amande and Bobbin',
+            name: 'Forces of Rage - Amande and Bobbin',
             thumb: 2327,
             nakama: null,
             gamewith: 127786,
@@ -2399,6 +2410,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Pica',
             thumb: 1647,
+            global: true,
             nakama: 4164700,
             gamewith: 60095,
             condition: '1 Expert version and 3 different Master versions with different conditions. Expert: Powerhouse/Driven/Slasher Only. Master: Powerhouse Only, Driven Only, and Slasher Only',
@@ -2842,7 +2854,7 @@ window.drops = {
         {
             name: 'Red Hair Shanks',
             thumb: 2261,
-            nakama: null,
+            nakama: 8226100,
             gamewith: 119738,
             'Primordial Sea': [ 2260 ]
         },
@@ -2850,7 +2862,7 @@ window.drops = {
         {
             name: 'Boa Hancock',
             thumb: 2299,
-            nakama: null,
+            nakama: 8229900,
             gamewith: 123536,
             'Raging Sea': [ 2298 ]
         },
@@ -2858,9 +2870,9 @@ window.drops = {
         {
             name: 'Trafalgar Law',
             thumb: 2336,
-            nakama: null,
-            gamewith: null,
-            'Raging Sea': [ 2335 ]
+            nakama: 8233600,
+            gamewith: 128733,
+            'Calm Sea': [ 2335 ]
         },
         
     ],
@@ -3328,15 +3340,16 @@ window.drops = {
             global: true,
             nakama: 6170000,
             gamewith: 107881,
-            condition: "Challenge: Characters with a cost of 50 or below. Crew's Special gauge is maxed",
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
         
         {
             name: '3 Stamina Ranking! Vs Kyros',
             thumb: 1873,
+            global: true,
             nakama: 6187300,
             gamewith: 111278,
-            condition: "Challenge: Characters with a cost of 50 or below. Crew's Special gauge is maxed",
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
    ],
 
