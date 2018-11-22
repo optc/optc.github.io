@@ -6302,7 +6302,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? window.specials[2404].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
+            if (p.colorCount.STR + p.colorCount.DEX >= 2) {
                 window.specials[2404].multiplier = 2.25;
             }
             else{
@@ -6318,7 +6318,7 @@ window.specials = {
         atk: function(p) { return p.unit.type == "QCK" ? window.specials[2405].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            if (p.colorCount.STR + p.colorCount.QCK >= 2) {
+            if (p.colorCount.STR + p.colorCount.DEX >= 2) {
                 window.specials[2405].multiplier = 2.25;
             }
             else{

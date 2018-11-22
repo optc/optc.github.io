@@ -29160,7 +29160,7 @@ window.details = {
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 65" },
-            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs \"beneficial\" for this character" },
             { "description": "Boosts base HP by 85" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire Potential 3: Pinch Healing" },
@@ -37359,7 +37359,7 @@ window.details = {
         specialName: "Brotherly Bond",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
-            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters"
+            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for this character"
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -37389,7 +37389,7 @@ window.details = {
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 65" },
-            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs \"beneficial\" for this character" },
             { "description": "Boosts base HP by 85" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire Potential 3: Pinch Healing" },
@@ -37434,7 +37434,7 @@ window.details = {
         specialName: "Brotherly Bond",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
-            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters"
+            "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for this character"
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -37464,7 +37464,7 @@ window.details = {
             { "description": "Boosts base HP by 65" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 65" },
-            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs \"beneficial\" for Free Spirit characters" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs \"beneficial\" for this character" },
             { "description": "Boosts base HP by 85" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire Potential 3: Pinch Healing" },
