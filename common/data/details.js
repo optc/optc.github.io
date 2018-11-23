@@ -36559,10 +36559,20 @@ window.details = {
             },
         ],
     },
+    2317: {//Story Yonji
+        captain: "Boosts ATK of Powerhouse characters by 2.25x and boosts HP of [DEX] characters by 1.2x",
+        special: "Increases damage received by 2x for 2 turns and boosts ATK of Powerhouse characters by 1.5x for 1 turn and amplifies orbs of Powerhouse characters by 1.5x for 1 turn",
+        specialName: "Yonji Special",
+    },
     2318: {//Story Judge
         captain: "Boosts ATK of Powerhouse characters by 2.75x when HP is below ?%, 2.5x otherwise and reduces damage received by 10%",
         special: "Makes [STR], [QCK] and [QCK] orbs \"beneficial\" for Powerhouse characters for 3 turns, reduces ATK DOWN duration by 2 turns and adds .5x to Chain multiplier for 2 turns",
         specialName: "Judge Special",
+    },
+    2319: {//Story Niji
+        captain: "Boosts ATK of Powerhouse characters by 2.25x and boosts HP of [STR] characters by 1.2x",
+        special: "Deals 45x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers and reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 2 turns",
+        specialName: "Niji Special",
     },
     2320: {//Story Cracker
         captain: "Boosts ATK of Slasher characters by ?x and their HP by ?x and boosts chain by ?x if HP below ?% at the start of the turn",
