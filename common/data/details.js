@@ -37049,7 +37049,7 @@ window.details = {
     2408: {//World Clash Sabo
         captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 500 HP at end of each turn",
         special: "Reduces Bind duration for one character completely and changes [BLOCK] orbs into Matching orbs",
-        specialName: "Inheriting the Will of Fire",
+        specialName: "Inheriting the Will of Flame",
         sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
     },
     2502: {//Kung Fu Luffy
