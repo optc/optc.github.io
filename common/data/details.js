@@ -14883,7 +14883,7 @@ window.details = {
     },
     1250: {// Coliseum Marco
         captain: "Boosts ATK of Powerhouse characters by 1.5x and Recovers a variable amount of character's RCV in HP at the end of each turn depending on how many Powerhouse characters are on your team",
-        captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 2.5x RCV",
+        captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 3.5x RCV",
         special: [
             {
                 "description": "Randomizes all orbs and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
@@ -36562,27 +36562,27 @@ window.details = {
     2317: {//Story Yonji
         captain: "Boosts ATK of Powerhouse characters by 2.25x and boosts HP of [DEX] characters by 1.2x",
         special: "Increases damage received by 2x for 2 turns and boosts ATK of Powerhouse characters by 1.5x for 1 turn and amplifies orbs of Powerhouse characters by 1.5x for 1 turn",
-        specialName: "Yonji Special",
+        specialName: "Excessive Provocation",
     },
     2318: {//Story Judge
         captain: "Boosts ATK of Powerhouse characters by 2.75x when HP is below ?%, 2.5x otherwise and reduces damage received by 10%",
         special: "Makes [STR], [QCK] and [QCK] orbs \"beneficial\" for Powerhouse characters for 3 turns, reduces ATK DOWN duration by 2 turns and adds .5x to Chain multiplier for 2 turns",
-        specialName: "Judge Special",
+        specialName: "Hand-in-Hand Combat \"Garuda\"",
     },
     2319: {//Story Niji
         captain: "Boosts ATK of Powerhouse characters by 2.25x and boosts HP of [STR] characters by 1.2x",
         special: "Deals 45x character's ATK in [STR] damage to all enemies that will ignore damage negating abilities and barriers and reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 2 turns",
-        specialName: "Niji Special",
+        specialName: "A Punishment for the Disgraced",
     },
     2320: {//Story Cracker
         captain: "Boosts ATK of Slasher characters by ?x and their HP by ?x and boosts chain by ?x if HP below ?% at the start of the turn",
         special: "Cuts the current HP of one enemy by 15%, reduces damage by 50% and deals 75x character's ATK as [INT] damage to all enemies at the end of the turn for 3 turns",
-        specialName: "Cracker Special",
+        specialName: "Baptism of the \"New World\"",
     },
     2321: {//Story Cracker
         captain: "Boosts ATK of Slasher characters by 2.5x and their HP by 1.2x and boosts chain by 1.4x if HP below 30% at the start of the turn",
         special: "Cuts the current HP of one enemy by 15%, reduces damage by 50% and deals 75x character's ATK as [INT] damage to all enemies at the end of the turn for 3 turns",
-        specialName: "Cracker Special",
+        specialName: "Baptism of the \"New World\"",
     },
     2322: {//Oven
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x. Deals 2 times the damage received in the previous turn in typeless damage to all enemies at the end of each turn.",
