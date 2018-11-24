@@ -8034,8 +8034,16 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    2317: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
     2318: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? p.percHP <= 50.0 ? 2.75 : 2.5 : 1; }//change
+    },
+    2319: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
     },
     2320: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },//change
