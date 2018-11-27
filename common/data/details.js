@@ -2982,11 +2982,11 @@ window.details = {
         captain: "Boosts RCV of all characters by 1.5x"
     },
     379: {
-        special: "Removes Poison",
+        special: "Removes Poison duration completely",
         specialName: "Dugong Kung Fu Fist of Healing"
     },
     380: {
-        special: "Removes Poison",
+        special: "Removes Poison duration completely",
         specialName: "Dugong Kung Fu Fist of Healing",
         captain: "Boosts ATK and RCV of [STR] characters by 1.5x"
     },
@@ -4632,13 +4632,13 @@ window.details = {
         ]
     },
     527: {
-        special: "Removes Poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison duration completely, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of [DEX] characters by 1.5x",
         sailor: "When HP is below 30% at the start of the turn, boosts base RCV of himself by 50"
     },
     528: {
-        special: "Removes Poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison duration completely, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of [DEX] characters by 2x",
         sailor: "When HP is below 30% at the start of the turn, boosts base RCV of himself by 50"
@@ -5377,12 +5377,12 @@ window.details = {
         captain: "Boosts HP and RCV of [PSY] characters by 1.5x"
     },
     587: {
-        special: "Removes Poison, reduces Bind and Despair duration by 2 turns",
+        special: "Removes Poison duration completely, reduces Bind and Despair duration by 2 turns",
         specialName: "Merciful Painkiller",
         captain: "Recovers 3x character's RCV in HP at the end of each turn"
     },
     588: {
-        special: "Removes Poison, reduces Bind and Despair duration by 2 turns",
+        special: "Removes Poison duration completely, reduces Bind and Despair duration by 2 turns",
         specialName: "Merciful Painkiller",
         captain: "Recovers 5x character's RCV in HP at the end of each turn"
     },
@@ -6250,12 +6250,12 @@ window.details = {
         ]
     },
     674: {
-        special: "Removes Poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
+        special: "Removes Poison duration completely, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Free Spirit characters by 2x"
     },
     675: {
-        special: "Removes Poison, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
+        special: "Removes Poison duration completely, reduces damage received by 50% for 2 turns, recovers 13x character's RCV in HP at the end of each turn for 2 turns",
         specialName: "Emporio Healing Hormone",
         captain: "Boosts ATK of Free Spirit characters by 2.5x",
         sailor: {
@@ -7645,7 +7645,7 @@ window.details = {
         captain: "Boosts ATK of Cerebral and Powerhouse characters by 2x"
     },
     798: {
-        special: "Removes Poison, following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Fighter characters by 1.75x in the following turn",
+        special: "Removes Poison duration completely, following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Fighter characters by 1.75x in the following turn",
         specialName: "Dugong Secret! Fist of the Black Fin",
         captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row"
     },
@@ -13219,13 +13219,13 @@ window.details = {
     },
     1156: {
         captain: "Boosts ATK of Driven characters by 1.2x if HP is above 50% at the start of the turn",
-        special: "Removes Poison. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Removes Poison duration completely. Protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Abyss Road",
         specialNotes: "#{zombie}",
     },
     1157: {
         captain: "Boosts ATK of Driven and Striker characters by 1.75x and protects from defeat as long as HP is above 50% at the start of the turn",
-        special: "Removes Poison. Protects from defeat as long as HP is above 50% for 1 turn",
+        special: "Removes Poison duration completely. Protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Abyss Road",
         specialNotes: "#{zombie}",
     },
@@ -13469,13 +13469,13 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     1176: {
-        special: "Removes Poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison duration completely, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of [DEX] characters by 1.5x",
         sailor: "When HP is below 30% at the start of the turn, boosts base RCV of himself by 50"
     },
     1177: {
-        special: "Removes Poison, recovers 15x character's RCV in HP",
+        special: "Removes Poison duration completely, recovers 15x character's RCV in HP",
         specialName: "Devoted Healing - \"I'm Glad You are Safe\"",
         captain: "Boosts ATK and RCV of [DEX] characters by 2x",
         sailor: "When HP is below 30% at the start of the turn, boosts base RCV of himself by 50"
@@ -15587,12 +15587,12 @@ window.details = {
     },
     1295: {//Halloween Kalifa
         captain: "Boosts ATK and RCV of [STR] characters by 1.5x",
-        special: "Reduces Paralysis duration by 3 turns, removes Poison and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Reduces Paralysis duration by 3 turns, removes Poison duration completely and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Mysterious Hour of the Dark Night",
     },
     1296: {//Halloween Kalifa
         captain: "Boosts ATK of [STR] characters by 2x and their RCV by 1.5x",
-        special: "Reduces Paralysis duration by 3 turns, removes Poison and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Reduces Paralysis duration by 3 turns, removes Poison duration completely and reduces the defense of all enemies by 100% for 1 turn",
         specialName: "Mysterious Hour of the Dark Night",
     },
     1297: {//Akainu
@@ -19541,7 +19541,7 @@ window.details = {
     },
     1512: {//Kingdew
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x",
-        special: "Removes Poison, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30%",
+        special: "Removes Poison duration completely, boosts ATK of Powerhouse characters by 1.5x for 1 turn if HP is below 30%",
         specialName: "Enlightened Spirit",
         sailor: "Makes [RCV] orbs \"beneficial\" for this character if your Captain is a Powerhouse character",
         sailorNotes: "#{beneficial}",
@@ -21200,13 +21200,13 @@ window.details = {
     },
     1601: {//Power Creep Shiryu
         captain: "Boosts ATK of Slasher characters by 2x",
-        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison and reduces damage received by 50% for 3 turns,",
+        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison duration completely and reduces damage received by 50% for 3 turns,",
         specialName: "Blood Stained 'Iron Wall'",
         sailor: "Boosts own base ATK by 100 if this character is the last in the chain to attack",
     },
     1602: {//Power Creep Shiryu
         captain: "Boosts ATK of Slasher characters by 2x at the start of the chain, by 3x after the 3rd PERFECT in a row",
-        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison and reduces damage received by 50% for 3 turns,",
+        special: "Instantly defeats all enemies with HP equal to or below 75x character's ATK, removes Poison duration completely and reduces damage received by 50% for 3 turns,",
         specialName: "Blood Stained 'Iron Wall'",
         sailor: "Boosts own base ATK by 100 if this character is the last in the chain to attack",
     },
@@ -24073,13 +24073,13 @@ window.details = {
     },
     1754: {//20th Anni Sanji
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2x",
-        special: "Cuts the current HP of one enemy by 15%, removes Poison and amplifies the effects of orbs by 1.75x for 1 turn",
+        special: "Cuts the current HP of one enemy by 15%, removes Poison duration completely and amplifies the effects of orbs by 1.75x for 1 turn",
         sailor: "Boosts base ATK, HP and RCV of all characters by 40",
         specialName: "Diable Jambe: Collier Strike",
     },
     1755: {//20th Anni Sanji
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2.5x and their HP by 1.2x",
-        special: "Cuts the current HP of one enemy by 15%, removes Poison and amplifies the effects of orbs by 1.75x for 1 turn",
+        special: "Cuts the current HP of one enemy by 15%, removes Poison duration completely and amplifies the effects of orbs by 1.75x for 1 turn",
         specialName: "Diable Jambe: Collier Strike",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of all characters by 40",
@@ -25682,7 +25682,7 @@ window.details = {
     1833: {//Reiju
         captain: "Boosts ATK of [INT] characters by 1.75x and Powerhouse characters by 1.2x and the RCV of Powerhouse characters by 1.1x",
         captainNotes: "Attack boost stacks, so a [INT] Powerhouse character has a 2.1x ATK",
-        special: "If your captain is a [INT] or [PSY] character, recovers 7,000 HP, removes Poison and reduces Paralysis, Despair and Silence duration by 3 turns. If your Captain is aPowerhouse character, reduces damage received by 70% for 2 turns",
+        special: "If your captain is a [INT] or [PSY] character, recovers 7,000 HP, removes Poison duration completely and reduces Paralysis, Despair and Silence duration by 3 turns. If your Captain is aPowerhouse character, reduces damage received by 70% for 2 turns",
         specialName: "Dangerous Healing",
         sailor: "Makes [PSY] orbs \"beneficial\" for this character",
         sailorNotes: "#{beneficial}",
@@ -25690,7 +25690,7 @@ window.details = {
     1834: {//Reiju
         captain: "Boosts ATK of [INT] characters by 2.25x and Powerhouse characters by 1.3x and the RCV of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [INT] Powerhouse character has a 2.925x ATK",
-        special: "If your captain is a [INT] or [PSY] character, recovers 7,000 HP, removes Poison and reduces Paralysis, Despair and Silence duration by 3 turns. If your Captain is a Powerhouse character, reduces damage received by 70% for 2 turns",
+        special: "If your captain is a [INT] or [PSY] character, recovers 7,000 HP, removes Poison duration completely and reduces Paralysis, Despair and Silence duration by 3 turns. If your Captain is a Powerhouse character, reduces damage received by 70% for 2 turns",
         specialName: "Dangerous Healing",
         sailor: {
             "base": "Makes [PSY] orbs \"beneficial\" for this character",
@@ -31286,12 +31286,12 @@ window.details = {
     },
     2083: {//Reiju
         captain: "Boosts ATK of [DEX] and [QCK] characters by 2.25x",
-        special: "Removes Poison, changes left column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
+        special: "Removes Poison duration completely, changes left column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2084: {//Reiju
         captain: "Boosts ATK of [DEX] and [QCK] characters by 2.5x and their RCV by 1.2x",
-        special: "Removes Poison, changes left column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
+        special: "Removes Poison duration completely, changes left column [STR], [DEX], [QCK], [PSY], or [INT] orbs into Matching orbs and amplifies the effect of orbs on [DEX], [QCK] and [PSY] characters by 1.75x for 1 turn",
         specialName: "Celebration at the Flower Garden",
     },
     2085: {//Sanji
@@ -31336,7 +31336,7 @@ window.details = {
     },
     2093: {//Pizza Chopper
         captain: "Boosts ATK of Fighter and Free Spirit characters by 1.5x and their RCV by 1.2x",
-        special: "Removes Poison and boosts ATK against delayed enemies by 1.5x for 1 turn",
+        special: "Removes Poison duration completely and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Overflowing Happiness",
     },
     2094: {//Pizza Brook
@@ -32295,13 +32295,13 @@ window.details = {
     },
     2131: {//Ivankov
         captain: "Boosts ATK of Cerebral characters by 1.2x",
-        special: "Removes Poison and reduces Paralysis duration by 4 turns. If you are on a Treasure Map, boosts ATK of Fighter, Shooter and Cerebral characters depending on your Treasure Map Level for 1 turn",
+        special: "Removes Poison duration completely and reduces Paralysis duration by 4 turns. If you are on a Treasure Map, boosts ATK of Fighter, Shooter and Cerebral characters depending on your Treasure Map Level for 1 turn",
         specialName: "Laser Treatment Fist",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
     },
     2132: {//Ivankov
         captain: "Boosts ATK of Cerebral characters by 1.5x and their RCV by 1.2x",
-        special: "Removes Poison and reduces Paralysis duration by 4 turns. If you are on a Treasure Map, boosts ATK of Fighter, Shooter and Cerebral characters depending on your Treasure Map Level for 1 turn",
+        special: "Removes Poison duration completely and reduces Paralysis duration by 4 turns. If you are on a Treasure Map, boosts ATK of Fighter, Shooter and Cerebral characters depending on your Treasure Map Level for 1 turn",
         specialName: "Laser Treatment Fist",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
     },
@@ -34372,14 +34372,14 @@ window.details = {
     },
     2216: {//Conis
         captain: "Boosts ATK, HP and RCV of all characters by 1.5x",
-        special: "Removes Poison, reduces RCV DOWN duration by 10 turns, boosts RCV of all characters by 1.5x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
-        sailor: "Restores her own special cooldown by 5 turns when it is rewinded",//confirm
+        special: "Removes Poison duration completely, reduces RCV DOWN duration by 10 turns, boosts RCV of all characters by 1.5x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
+        sailor: "Restores her own special cooldown by 5 turns when it is rewinded",
         specialName: "Angel Cruising",
     },
     2217: {//Conis
         captain: "Boosts ATK, HP and RCV of all characters by 1.75x",
-        special: "Removes Poison, reduces RCV DOWN duration by 10 turns, boosts RCV of all characters by 1.5x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
-        sailor: "Restores her own special cooldown by 5 turns when it is rewinded",//confirm
+        special: "Removes Poison duration completely, reduces RCV DOWN duration by 10 turns, boosts RCV of all characters by 1.5x for 1 turn and reduces Special Cooldown of your top row by 1 turn.",
+        sailor: "Restores her own special cooldown by 5 turns when it is rewinded",
         specialName: "Angel Cruising",
     },
     2218: {//Inuarashi
@@ -34698,14 +34698,14 @@ window.details = {
     },
     2237: {//Smoothie
         captain: "Boosts ATK of all characters by 3x following a chain of Good > Great > PERFECT hits and recovers 300 HP at end of each turn",
-        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
+        special: "Recovers 5,000, removes Poison duration completely, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
         specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: "Boosts base ATK of characters in the top row by 50",
     },
     2238: {//Smoothie
         captain: "Boosts ATK of all characters by 3.5x following a chain of Good > Great > PERFECT hits and recovers 500 HP at end of each turn",
-        special: "Recovers 5,000, removes Poison, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
+        special: "Recovers 5,000, removes Poison duration completely, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
         specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: {
