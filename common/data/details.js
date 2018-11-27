@@ -35159,7 +35159,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Reduces Silence duration on this character by 20 turns",
-            "level2": "Boosts own base ATK, HP and RCV by 75",
+            "level2": "Boosts base ATK, HP and RCV of all characters by 75",
         },
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -35188,7 +35188,7 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 80" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: Boosts own base ATK, HP and RCV by 75" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of all characters by 75" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 3: Critical Hit" },
