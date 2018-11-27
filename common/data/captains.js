@@ -8144,6 +8144,54 @@ window.captains = {
             return Math.pow(p.actions[p.sourceSlot] ? 1.8 : 1.2, Katacount);
         },
     },
+    2337: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return (p.turnCounter < 12) ? Math.pow(2, Katacount) : (Katacount > 0) ? 2.75 : 1;
+        },
+    },
+    2338: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return (p.turnCounter < 12) ? Math.pow(2, Katacount) : (Katacount > 0) ? 2.75 : 1;
+        },
+    },
+    2339: {
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
+    },
+    2340: {
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
+    2341: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1 : 1; },///Change This
+    },
+    2342: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 2 : 1; },
+    },
+    2343: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
+    },
+    2344: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 2.5 : 1; },
+    },
+    2345: {
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 1 : 1; },//Change This
+    },
+    2346: {
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {
