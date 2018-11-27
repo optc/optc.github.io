@@ -8268,6 +8268,15 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p){ return 1.5; },
     },
+    2505: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Shooter")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.147915078125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.9503953125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.76228125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.583125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 3.4125 : 3.25;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        rcv: function(p){ return 0; },
+    },
     5000: {
         atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },

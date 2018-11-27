@@ -6379,6 +6379,10 @@ window.specials = {
         atk: function(p) { return 1.75; },
         type: "type",
     },
+    2505: {
+        def: function(p) { return .2; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",

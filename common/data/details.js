@@ -36930,6 +36930,7 @@ window.details = {
             "level1": "Makes [TND] and [RCV] orbs \"beneficial\" for this character",
             "level2": "Restores his own special cooldown by 2 turns when it is rewinded",
         },
+        sailorNotes: "#{beneficial}<br>#{rewind : 2}",
         limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 10" },
@@ -36972,7 +36973,6 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of Fighter, Slasher, Cerebral and Free Spirit characters by 1.8x and makes [RCV] and [TND] orbs \"beneficial\" for Fighter, Slasher, Cerebral and Free Spirit characters." },
             { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
-        sailorNotes: "#{beneficial}<br>#{rewind : 2}",
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -36995,6 +36995,101 @@ window.details = {
                 ]
             },
         ]
+    },
+    2337: {//Legend Sulong Carrot
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. For 12 turns after the start of the fight, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x, boosts chances of getting Matching orbs and attacks will ignore defensive barriers and buffs. After 12 turns, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2.75x.",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 2x bonus for the first 12 turns",
+        special: "Reduces Special Cooldown of Fighter, Slasher, Striker, Shooter and Cerebral specials by 2 turns, amplifies the effects of orbs for Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x for 1 turn, makes [QCK], [RCV] and [TND] orbs \"beneficial\" for all characters for 1 turn and swaps this unit with your captain for 1 turn.",
+        specialNotes: "#{beneficial}",
+        specialName: "Electrical Rush",
+    },
+    2338: {//Legend Sulong Carrot
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. For 12 turns after the start of the fight, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x, boosts chances of getting Matching orbs and attacks will ignore defensive barriers and buffs. After 12 turns, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2.75x.",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 2x bonus for the first 12 turns",
+        special: "Reduces Special Cooldown of Fighter, Slasher, Striker, Shooter and Cerebral specials by 2 turns, amplifies the effects of orbs for Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x for 1 turn, makes [QCK], [RCV] and [TND] orbs \"beneficial\" for all characters for 1 turn and swaps this unit with your captain for 1 turn.",
+        specialNotes: "#{beneficial}",
+        specialName: "Electrical Rush",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 30",
+            "level2": "Restores her own special cooldown completely when it is rewinded",
+        },
+        sailorNotes: "#{rewind : all}",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    2339: {//Stussy
+        captain: "Reduces cooldown of all specials by ? turn at the start of the fight. Boosts ATK of Shooter and Cerebral characters by ?x",
+        special: "Deals 50x character's ATK in [QCK] damage to one enemy, randomizes all non-matching orbs and boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 1.5x for 1 turn. If \"Flying Finger Gun\" is used again in the same turn the special is activated in, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2.25x for 1 turn.",
+        specialName: "Flying Finger Gun",
+    },
+    2340: {//Stussy
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Shooter and Cerebral characters by 2.5x",
+        special: "Deals 50x character's ATK in [QCK] damage to one enemy, randomizes all non-matching orbs and boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 1.5x for 1 turn. If \"Flying Finger Gun\" is used again in the same turn the special is activated in, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2.25x for 1 turn.",
+        specialName: "Flying Finger Gun",
+        sailor: {
+            "base": "None",
+            "level1": "When any other character uses a special, reduces own cooldown by 1 turn",
+            "level2": "Reduces Blindness duration by 3 turns",
+        },
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2341: {//Opera
+        captain: "Boosts ATK of Striker and Fighter characters by 2x, cuts the current HP of each enemy by 10% at the end of each turn",
+        special: "Deals 80x character's ATK in Typeless damage to all enemies.",
+        specialName: "Flying Finger Gun",
     },
     2400: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
@@ -37147,6 +37242,81 @@ window.details = {
             "character2": "Boosts base ATK, HP and RCV of [STR] characters by 30",
             "combined": "Boosts base ATK, HP and RCV of [STR] and [DEX] characters by 50"
         },
+    },
+    2505: {//Rob Lucci
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Shooter characters by 3.25x at the start of the chain and reduces crew's RCV to 0.<br>Boosts ATK of Shooter characters by 3.4125x after the 1st PERFECT in a row, by 3.583125x after the 2nd PERFECT in a row, by 3.76228125x after the 3rd PERFECT in a row, by 3.9503953125x after the 4th PERFECT in a row and by 4.147915078125x after the 5th PERFECT in a row.",
+        special: "Reduces the defense of all enemies by ?% for 1 turns, deals ?x character's ATK in [QCK] damage to one enemy, reduces Paralysis duration by 4 turns and boosts the Color Affinity of Shooter characters by 2x for 1 turn",
+        specialName: "Lucci Special",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Powerhouse characters by 50",
+            "level2": "Completely resists Paralysis on this character",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Powerhouse characters by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Potential 2: Enrage" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire Sailor Ability 2: Completely resists Paralysis on this character" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Acquire Potential 3: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 100",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 2: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 10 turns on this character",
+                    "Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs \"beneficial\" for [INT] and [PSY] characters",
