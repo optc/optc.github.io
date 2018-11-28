@@ -37560,7 +37560,7 @@ window.details = {
         special: "Locks all orbs for 2 turns, changes own orb to [STR] and boosts the Color Affinity of Striker and Cerebral characters by 1.3x for 2 turns",
         specialName: "Perospero Special",
     },
-    2351: {//Mascarpone & Joscarpone
+    2352: {//Mascarpone & Joscarpone
         captain: "Boosts ATK of Slasher characters by 1.75x and their RCV by 1.2x.",
         special: "Deals 20 hits of of 15x character's ATK in typeless damage to random enemies and removes Poison duration completely",
         specialName: "Mascarpone & Joscarpone Special",
