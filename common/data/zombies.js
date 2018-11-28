@@ -670,6 +670,14 @@ window.zombies = {
         multiplier: 0.2,//change this
         threshold: 1.0//change this
     },
+    2343: { // Bavarois
+        type: 'healer',
+        amount: 1000//change this
+    },
+    2344: { // Bavarois
+        type: 'healer',
+        amount: 1000
+    },
     2407: { // Ace
         type: 'healer',
         amount: 500

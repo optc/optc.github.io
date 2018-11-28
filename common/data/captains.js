@@ -8144,6 +8144,54 @@ window.captains = {
             return Math.pow(p.actions[p.sourceSlot] ? 1.8 : 1.2, Katacount);
         },
     },
+    2337: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return (p.turnCounter < 12) ? Math.pow(2, Katacount) : (Katacount > 0) ? 2.75 : 1;
+        },
+    },
+    2338: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return (p.turnCounter < 12) ? Math.pow(2, Katacount) : (Katacount > 0) ? 2.75 : 1;
+        },
+    },
+    2339: {
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
+    },
+    2340: {
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
+    2341: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1 : 1; },///Change This
+    },
+    2342: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 2 : 1; },
+    },
+    2343: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
+    },
+    2344: {
+        atk: function(p){ return p.unit.class.has("Shooter") ? 2.5 : 1; },
+    },
+    2345: {
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 1 : 1; },//Change This
+    },
+    2346: {
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {
@@ -8267,6 +8315,15 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p){ return 1.5; },
+    },
+    2505: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Shooter" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Shooter")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.147915078125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.9503953125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.76228125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.583125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 3.4125 : 3.25;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        rcv: function(p){ return 0; },
     },
     5000: {
         atk: function(p){ return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
