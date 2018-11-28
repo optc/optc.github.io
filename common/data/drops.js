@@ -2159,6 +2159,14 @@ window.drops = {
             'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
         },
         
+        {
+            name: 'Perospero Fortnight',
+            thumb: 2351,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
+        },
+        
     ],
 
             

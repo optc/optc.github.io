@@ -8211,6 +8211,71 @@ window.captains = {
     2346: {
         atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.5 : 1; },
     },
+    2350: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'STR', 'STR']); },
+        hitAtk: function(p) {
+            return p.unit.class.has("Powerhouse") ? (CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }, {
+                type: 'STR',
+                minModifier: 'Good'
+            }]) ||
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ||
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'DEX',
+                minModifier: 'Good'
+            }]) ||
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'PSY',
+                minModifier: 'Good'
+            }]) ||
+            CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }])) ? 2.5 : 1 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p){ return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2351: {
+        atk: function(p){ return p.unit.type == "STR" ? 2.25 : 1; },
+        hp: function(p){ return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    2352: {
+        atk: function(p){ return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        rcv: function(p){ return p.unit.class.has("Slasher") ? 1.2 : 1; },
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {

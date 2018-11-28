@@ -6345,6 +6345,9 @@ window.specials = {
             }
         },
     },
+    2351: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
     2400: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",

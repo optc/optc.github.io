@@ -37550,6 +37550,21 @@ window.details = {
             },
         ]
     },
+    2350: {//Compote
+        captain: "Boosts HP of Powerhouse characters by 1.2x. Boosts ATK of Powerhouse characters by 2.5x following a chain of 3 same Type attacks no lower than Good",
+        special: "Changes [RCV], [TND] and [BOMB] orbs into Matching orbs and reduces Chain Coefficient Reduction duration by 3 turns.",
+        specialName: "Compote Special",
+    },
+    2351: {//Perospero
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x.",
+        special: "Locks all orbs for 2 turns, changes own orb to [STR] and boosts the Color Affinity of Striker and Cerebral characters by 1.3x for 2 turns",
+        specialName: "Perospero Special",
+    },
+    2351: {//Mascarpone & Joscarpone
+        captain: "Boosts ATK of Slasher characters by 1.75x and their RCV by 1.2x.",
+        special: "Deals 20 hits of of 15x character's ATK in typeless damage to random enemies and removes Poison duration completely",
+        specialName: "Mascarpone & Joscarpone Special",
+    },
     2400: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 2 or more [DEX] or [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
