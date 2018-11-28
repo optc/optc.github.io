@@ -6135,13 +6135,13 @@ window.details = {
         captain: "Reduces damage received by 10%, boosts ATK of all characters by 1.5x"
     },
     668: {
-        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
+        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}"
     },
     669: {
-        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Free Spirit characters by 2x in the following turn.",
+        special: "Boosts ATK of Free Spirit characters by 1.5x for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of Free Spirit characters by 2x in the following turn.",
         specialName: "Dragon's Claw",
         captain: "Boosts HP and RCV of all characters by 1.2x, boosts ATK of Free Spirit characters proportionally to the crew's current HP",
         captainNotes: "#{captainProportional : higher : 2 + 0.75 * (remaining HP) / (total HP) : 2.75 : 2}",
@@ -7653,11 +7653,11 @@ window.details = {
         captain: "Reduces damage received by 50%, reduces crew's current HP by 10% at the end of each turn"
     },
     788: {
-        special: "Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.75x in the following turn",
+        special: "Following the activation of the special, if during that turn you score 6 PERFECT hits, boosts ATK of Slasher characters by 1.75x in the following turn",
         specialName: "Real Sword Fight with a Girl Swordsman"
     },
     789: {
-        special: "Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.75x in the following turn",
+        special: "Following the activation of the special, if during that turn you score 6 PERFECT hits, boosts ATK of Slasher characters by 1.75x in the following turn",
         specialName: "Real Sword Fight with a Girl Swordsman",
         captain: "Boosts ATK of Slasher characters by 1.5x"
     },
@@ -7749,7 +7749,7 @@ window.details = {
         captain: "Boosts ATK of Cerebral and Powerhouse characters by 2x"
     },
     798: {
-        special: "Removes Poison duration completely, following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Fighter characters by 1.75x in the following turn",
+        special: "Removes Poison duration completely, following the activation of the special, if during that turn you score 6 PERFECT hits, boosts ATK of Fighter characters by 1.75x in the following turn",
         specialName: "Dugong Secret! Fist of the Black Fin",
         captain: "Boosts ATK of all characters by 2.5x after scoring 3 PERFECTs in a row"
     },
@@ -8250,12 +8250,12 @@ window.details = {
     843: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 1.5x",
         specialName: "Arms-Morphosis: Missile Girl",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn."
     },
     844: {
         captain: "Boosts ATK of Slasher, Striker and Shooter characters by 2x",
         specialName: "Arms-Morphosis: Missile Girl",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, boosts ATK of Shooter characters by 1.5x for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of Shooter, Striker and Slasher characters by 1.5x in the following turn.",
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of Shooter, Slasher and Striker characters by 100",
@@ -8389,7 +8389,7 @@ window.details = {
     },
     853: {
         specialName: "Robson: Serious Mode",
-        special: "Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Powerhouse and Fighter characters by 1.2x for 3 turns"
+        special: "Following the activation of the special, if during that turn you score 6 PERFECT hits, boosts ATK of Powerhouse and Fighter characters by 1.2x for 3 turns"
     },
     854: {
         captain: "Boosts ATK of [DEX] chracters by 1.5x, reduces damage received by 10%",
@@ -10874,12 +10874,12 @@ window.details = {
     },
     1015: {
         captain: "Boosts ATK of [INT] characters by 2.75x if they have a matching orb",
-        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
+        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
         specialName: "Hollow Eye Killing Shot"
     },
     1016: {
         captain: "Boosts ATK of [INT] characters by 3x if they have a matching orb, by 1.5x otherwise",
-        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
+        special: "Randomizes all orbs. Boosts ATK of [INT] characters by 1.5x for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of [INT] characters by 1.5x for the next 2 turns",
         specialName: "Hollow Eye Killing Shot",
         sailor: {
             "base": "None",
@@ -15174,7 +15174,7 @@ window.details = {
     },
     1253: {// Coliseum Shura
         captain: "Boosts ATK of [DEX] characters by 2.25x if HP is above 99% at the start of the turn",
-        special: "Makes PERFECTs harder to hit for 1 turn. If during that turn every unit scores a PERFECT hit, boosts ATK of [DEX] characters by 1.75x in the following turn.",
+        special: "Makes PERFECTs harder to hit for 1 turn. If during that turn you score 6 PERFECT hits, boosts ATK of [DEX] characters by 1.75x in the following turn.",
         specialName: "Angry Instigator",
     },
     1254: {//FN Squard
@@ -15723,13 +15723,13 @@ window.details = {
     1288: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.5x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.5x on the first turn, 2.4x on the second, 2.3x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a PERFECT hit, reduces Special Cooldown of Driven specials by 1 turn.",
+        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn you score 6 PERFECT hits, reduces Special Cooldown of Driven specials by 1 turn.",
         specialName: "Outcome of Sparta",
     },
     1289: {//Kid Law
         captain: "Boosts ATK of Driven characters by 2.75x, reduces crew's current HP by 10% at the end of each turn, reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.65x on the second, 2.55x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Driven characters. You will not die to the HP reduction",
-        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn every unit scores a PERFECT hit, reduces Special Cooldown of Driven specials by 1 turn.",
+        special: "Reduces Special Cooldown of Driven specials by 1 turn. If during that turn you score 6 PERFECT hits, reduces Special Cooldown of Driven specials by 1 turn.",
         specialName: "Outcome of Sparta",
     },
     1290: {//Kid Buffalo
@@ -15739,12 +15739,12 @@ window.details = {
     },
     1291: {//Lao G, Coliseum
         captain: "Boosts ATK of Driven characters by 1.75x",
-        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a PERFECT hit, changes [G] orbs into Matching Orbs",
+        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn you score 6 PERFECT hits, changes [G] orbs into Matching Orbs",
         specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
     },
     1292: {//Lao G, Coliseum
         captain: "Boosts ATK of Driven characters by 2.5x if they have a matching orb, by 2x otherwise",
-        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn every unit scores a PERFECT hit, changes [G] orbs into Matching Orbs",
+        special: "Changes [PSY], [INT], [RCV] and [TND] orbs into [G] orbs. Locks orbs for 1 turn. If during that turn you score 6 PERFECT hits, changes [G] orbs into Matching Orbs",
         specialName: "Lower Back Pain Stance - The Eyes of Blight Impact",
         sailor: {
             "base": "None",
@@ -15931,12 +15931,12 @@ window.details = {
     },
     1307: {//Halloween Bartolomeo
         captain: "Boosts ATK of Driven characters by 1.75x. If you don't attack with Bartolomeo, reduces damage received by 10% for that turn.",
-        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a PERFECT hit, reduces damage received by 80% in the following turn",
+        special: "Reduces damage received by 50% for 1 turn. If during that turn you score 6 PERFECT hits, reduces damage received by 80% in the following turn",
         specialName: "Vulgar Provocation",
     },
     1308: {//Halloween Bartolomeo
         captain: "Boosts ATK of Driven characters by 2x. If you don't attack with Bartolomeo, reduces damage received by 20% for that turn.",
-        special: "Reduces damage received by 50% for 1 turn. If during that turn every unit scores a PERFECT hit, reduces damage received by 80% in the following turn",
+        special: "Reduces damage received by 50% for 1 turn. If during that turn you score 6 PERFECT hits, reduces damage received by 80% in the following turn",
         specialName: "Vulgar Provocation",
     },
     1309: {//Coliseum Kinemon
@@ -16694,7 +16694,7 @@ window.details = {
     },
     1352: {//Ivankov
         captain: "Boosts ATK of Fighter characters by 2x at the start of the chain, boosts ATK of Fighter characters by 3.5x after the 5th PERFECT in a row",
-        special: "Following the activation of the special, if every unit scores a PERFECT hit, reduces damage received by 90% in the following turn",
+        special: "Following the activation of the special, if during that turn you score 6 PERFECT hits, reduces damage received by 90% in the following turn",
         specialName: "Rolling Beauty",
     },
     1353: {//Rayleigh
@@ -17538,7 +17538,7 @@ window.details = {
     1392: {//Sentomaru
         captain: "Boosts ATK of Striker characters by 2x and boosts the HP of [PSY] characters by 1.25x",
         captainNotes: "A character with both classes will get both boosts",
-        special: "Deals 25x character's ATK in [PSY] damage to all enemies. If during that turn every unit scores a PERFECT hit, boosts ATK of [PSY] characters by 1.75x in the following turn.",
+        special: "Deals 25x character's ATK in [PSY] damage to all enemies. If during that turn you score 6 PERFECT hits, boosts ATK of [PSY] characters by 1.75x in the following turn.",
         specialName: "Large Cutting Axe",
     },
     1393: {//Demaro Black
@@ -36877,6 +36877,36 @@ window.details = {
             },
         ],
     },
+    2311: {//Germa Fodder
+        captain: "Boosts ATK of [STR] characters by 1.5x and reduces damage received by 5%",
+        special: "Reduces damage received by 33%. Following the activation of the special, if during that turn you score 5 PERFECT hits, reduces damage received by 66% in the following turn",
+        specialName: "Tough Body",
+    },
+    2312: {//Germa Fodder
+        captain: "Boosts ATK of [DEX] characters by 1.5x and their HP by 1.25x",
+        special: "Makes [DEX] and [TND] orbs \"beneficial\" for all characters for 1 turn. Following the activation of the special, if during that turn you score 4 PERFECT hits, makes [DEX], [PSY] and [INT] orbs \"beneficial\" for all characters for 1 turn",
+        specialName: "Phantasmagoric Work",
+    },
+    2313: {//Germa Fodder
+        captain: "Reduces cooldown of [QCK] specials by 1 turn at the start of the fight and boosts ATK of [QCK] characters by 1.5x",
+        special: "Reduces Special Cooldown of [QCK] specials by 1 turn. Following the activation of the special, if during that turn you score 6 PERFECT hits, reduces Special Cooldown of Powerhouse specials by 1 turn in the following turn",
+        specialName: "Rapid Trump Card",
+    },
+    2314: {//Sea Ant
+        captain: "Boosts ATK of characters with fewer than or equal to 3 stars by 2x",
+        special: "Reduces enemy's Threshold Damage Reduction, Percent Damage Reduction and Increased Defense Buffs duration by 1 turn and cuts the current HP of one enemy by 10%",
+        specialName: "Amazing Bite",
+    },
+    2315: {//Negative Soul Homie
+        captain: "Boosts ATK of [INT] characters by 1.5x and makes [INT] orbs \"beneficial\" for Free Spirit characters",
+        special: "Changes [BLOCK] orbs into [G] orbs and [EMPTY] orbs into [INT] orbs",
+        specialName: "Knowled\"G\"e Slot Change",
+    },
+    2316: {//Positive Soul Homie
+        captain: "Boosts ATK of [PSY] characters by 1.5x and makes [PSY] orbs \"beneficial\" for Free Spirit characters",
+        special: "Changes [BOMB] orbs into [RCV] orbs and Badly Matching orbs into [INT] orbs",
+        specialName: "Hearty Meal Slot Change",
+    },
     2317: {//Story Yonji
         captain: "Boosts ATK of Powerhouse characters by 2.25x and boosts HP of [DEX] characters by 1.2x",
         special: "Increases damage received by 2x for 2 turns and boosts ATK of Powerhouse characters by 1.5x for 1 turn and amplifies orbs of Powerhouse characters by 1.5x for 1 turn",
@@ -37028,7 +37058,7 @@ window.details = {
     },
     2328: {//Bobbin
         captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 1.2x",
-        special: "Removes Blindness duration completely. Following the activation of the special, if every unit scores a PERFECT hit, boosts ATK of Slasher characters by 1.5x in the following turn.",
+        special: "Removes Blindness duration completely. Following the activation of the special, if you score 6 PERFECT hits, boosts ATK of Slasher characters by 1.5x in the following turn.",
         specialName: "The Disposer's Pursuit",
     },
     2329:{//Zephyr
@@ -37418,7 +37448,7 @@ window.details = {
             "base": "Cannot be blown away",
             "level1": "Makes [PSY] orbs \"beneficial\" for Fighter characters",
         },
-        specialNotes: "#{beneficial}",
+        sailorlNotes: "#{beneficial}",
         potential: [
             {
                 "Name": "[INT] Damage Reduction",

@@ -8034,6 +8034,25 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    2311: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+    },
+    2312: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    2313: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    2314: {
+        atk: function(p) { return p.unit.stars <= 3 ? 2 : 1; }
+    },
+    2315: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2316: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
     2317: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
