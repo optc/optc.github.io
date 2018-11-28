@@ -37562,7 +37562,7 @@ window.details = {
     },
     2352: {//Mascarpone & Joscarpone
         captain: "Boosts ATK of Slasher characters by 1.75x and their RCV by 1.2x.",
-        special: "Deals 20 hits of of 15x character's ATK in typeless damage to random enemies and removes Poison duration completely",
+        special: "Deals 20 hits of of 15x character's ATK in [QCK] damage to random enemies and removes Poison duration completely",
         specialName: "Mascarpone & Joscarpone Special",
     },
     2400: {//World Clash Luffy
