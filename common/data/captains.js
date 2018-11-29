@@ -8276,6 +8276,12 @@ window.captains = {
         atk: function(p){ return p.unit.class.has("Slasher") ? 1.75 : 1; },
         rcv: function(p){ return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
+    2353: {
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1 : 1; },//Change this
+    },
+    2354: {
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 2.5 : 1; },
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {

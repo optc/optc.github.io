@@ -6348,6 +6348,30 @@ window.specials = {
     2351: {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
+    2353: {
+        atk: function(p) { return window.specials[2353].multiplier; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2353].multiplier == 1.5 ? 1 : 0);
+            window.specials[2353].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
+                name: '2353warning'
+            });
+        },
+    },
+    2354: {
+        atk: function(p) { return window.specials[2354].multiplier; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2354].multiplier == 1.5 ? 1 : 0);
+            window.specials[2354].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
+                name: '2354warning'
+            });
+        },
+    },
     2400: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",
