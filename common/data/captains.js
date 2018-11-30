@@ -8211,6 +8211,14 @@ window.captains = {
     2346: {
         atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.5 : 1; },
     },
+    2348: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; },//Change this
+        chainModifier: function(p) { return (p.classCount.Slasher >= 5) ? 1 : 1; }//Change this
+    },
+    2349: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+        chainModifier: function(p) { return (p.classCount.Slasher >= 5) ? 1.3 : 1; }
+    },
     2350: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['STR', 'STR', 'STR']); },
         hitAtk: function(p) {

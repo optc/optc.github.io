@@ -6351,6 +6351,24 @@ window.specials = {
             }
         },
     },
+    2348: {
+        def: function(p) { return 0; },
+        atk: function(p) { return (window.specials[2348].turnedOn && p.defenseDown) ? 2 : 1 },
+        type: "condition",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2348].turnedOn = p.classCount.Slasher >= 5 ? true : false;
+        },       
+    },
+    2349: {
+        def: function(p) { return 0; },
+        atk: function(p) { return (window.specials[2349].turnedOn && p.defenseDown) ? 2 : 1 },
+        type: "condition",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2349].turnedOn = p.classCount.Slasher >= 5 ? true : false;
+        },       
+    },
     2351: {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },

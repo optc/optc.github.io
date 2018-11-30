@@ -29138,19 +29138,19 @@ window.details = {
         specialName: "10,000 Kilo Guillotine - Cake Slice",
     },
     1971: {//Sabo
-        captain: "Boosts ATK of Cerebral characters by 1.3x and their HP and RCV by 1.05x and boosts chain by 1.1x if HP is above 70% or below 30% at the start of the turn",
+        captain: "Boosts ATK of Cerebral characters by 1.3x and their HP and RCV by 1.05x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.1x",
         special: "If your Captain is a Cerebral character, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Cerebral characters into Matching orbs, reduces the defense of all enemies by 80% and boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         specialName: "Blissful Selection",
     },
     1972: {//Sabo
         captain: {
-            "base": "Boosts ATK of Cerebral characters by 1.5x and their HP and RCV by 1.05x and boosts chain by 1.2x if HP is above 70% or below 30% at the start of the turn",
-            "level1": "Boosts ATK of Cerebral characters by 1.5x and their HP and RCV by 1.1x and boosts chain by 1.2x if HP is above 70% or below 30% at the start of the turn",
-            "level2": "Boosts ATK of Cerebral characters by 1.75x and their HP and RCV by 1.1x and boosts chain by 1.2x if HP is above 70% or below 30% at the start of the turn",
-            "level3": "Boosts ATK of Cerebral characters by 1.75x and their HP and RCV by 1.1x and boosts chain by 1.3x if HP is above 70% or below 30% at the start of the turn",
-            "level4": "Boosts ATK of Cerebral characters by 2x and their HP and RCV by 1.1x and boosts chain by 1.3x if HP is above 70% or below 30% at the start of the turn",
-            "level5": "Boosts ATK of Cerebral characters by 2x and their HP and RCV by 1.2x and boosts chain by 1.4x if HP is above 70% or below 30% at the start of the turn",
-            "level6": "Boosts ATK of Cerebral characters by 2.25x and their HP and RCV by 1.2x and boosts chain by 1.5x if HP is above 70% or below 30% at the start of the turn",
+            "base": "Boosts ATK of Cerebral characters by 1.5x and their HP and RCV by 1.05x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.2x",
+            "level1": "Boosts ATK of Cerebral characters by 1.5x and their HP and RCV by 1.1x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.2x",
+            "level2": "Boosts ATK of Cerebral characters by 1.75x and their HP and RCV by 1.1x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.2x",
+            "level3": "Boosts ATK of Cerebral characters by 1.75x and their HP and RCV by 1.1x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.3x",
+            "level4": "Boosts ATK of Cerebral characters by 2x and their HP and RCV by 1.1x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.3x",
+            "level5": "Boosts ATK of Cerebral characters by 2x and their HP and RCV by 1.2x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.4x",
+            "level6": "Boosts ATK of Cerebral characters by 2.25x and their HP and RCV by 1.2x and if HP is above 70% or below 30% at the start of the turn, boosts chain by 1.5x",
         },
         special: "If your Captain is a Cerebral character, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Cerebral characters into Matching orbs, reduces the defense of all enemies by 80% and boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         specialName: "Blissful Selection",
@@ -37550,20 +37550,57 @@ window.details = {
             },
         ]
     },
+    2348: {//Pedro
+        captain: "Reduces cooldown of all specials by ? turn at the start of the fight. Boosts ATK of Slasher characters by ?x and if you have 5 or more Slashers characters in your crew, boosts chain by ?x",
+        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against delayed enemies by 1.75x for 1 turn and changes adjacent orbs into Matching Orbs.",
+        specialName: "Royal Dawnbreak Sword",
+    },
+    2349: {//Pedro
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 2.75x and if you have 5 or more Slashers characters in your crew, boosts chain by 1.3x",
+        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against delayed enemies by 1.75x for 1 turn and changes adjacent orbs into Matching Orbs.",
+        specialName: "Royal Dawnbreak Sword",
+        sailor: {
+            "base": "If this character has a [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
+            "level1": "Makes [DEX] orbs \"beneficial\" for Slasher characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
     2350: {//Compote
         captain: "Boosts HP of Powerhouse characters by 1.2x. Boosts ATK of Powerhouse characters by 2.5x following a chain of 3 same Type attacks no lower than Good",
         special: "Changes [RCV], [TND] and [BOMB] orbs into Matching orbs and reduces Chain Coefficient Reduction duration by 3 turns.",
-        specialName: "Compote Special",
+        specialName: "Fruit Bowl",
     },
     2351: {//Perospero
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x.",
         special: "Locks all orbs for 2 turns, changes own orb to [STR] and boosts the Color Affinity of Striker and Cerebral characters by 1.3x for 2 turns",
-        specialName: "Perospero Special",
+        specialName: "Candy Man",
     },
     2352: {//Mascarpone & Joscarpone
         captain: "Boosts ATK of Slasher characters by 1.75x and their RCV by 1.2x.",
         special: "Deals 20 hits of of 15x character's ATK in [QCK] damage to random enemies and removes Poison duration completely",
-        specialName: "Mascarpone & Joscarpone Special",
+        specialName: "Flaming Arrows Aimed Through the Mirror",
     },
     2353: {//Magellan
         captain: "Boosts ATK of Shooter and Striker characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
@@ -37578,7 +37615,7 @@ window.details = {
             },
         ],
         specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
-        specialName: "Magellan Special",
+        specialName: "Chloro Ball",
     },
     2354: {//Magellan
         captain: "Boosts ATK of Shooter and Striker characters by 2.5x and recovers 3x character's RCV in HP at the end of each turn.",
@@ -37593,7 +37630,7 @@ window.details = {
             },
         ],
         specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
-        specialName: "Magellan Special",
+        specialName: "Chloro Ball",
         sailor: {
             "base": "None",
             "level1": "Reduces Silence duration on this character by 3 turns",
@@ -37664,13 +37701,13 @@ window.details = {
     },
     2406: {//World Clash Ace
         captain: "Boosts ATK of all characters by ?x and recovers ? HP at end of each turn",
-        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by ?x for 2 turns, amplifies the effect of orbs by ?x for 2 turns and adds .7x to Chain multiplier for 1 turn",
+        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by 1.75x for 2 turns, amplifies the effect of orbs of all characters by 1.75x for 2 turns and adds .7x to Chain multiplier for 1 turn",
         specialName: "Words Left To Family",
         sailor: "Boosts base ATK, HP and RCV of all characters by 30",
     },
     2407: {//World Clash Ace
         captain: "Boosts ATK of all characters by 3x and recovers 500 HP at end of each turn",
-        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by ?x for 2 turns, amplifies the effect of orbs by ?x for 2 turns and adds .7x to Chain multiplier for 1 turn",
+        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by 1.75x for 2 turns, amplifies the effect of orbs of all characters by 1.75x for 2 turns and adds .7x to Chain multiplier for 1 turn",
         specialName: "Words Left To Family",
         sailor: "Boosts base ATK, HP and RCV of all characters by 30",
     },
