@@ -36904,7 +36904,7 @@ window.details = {
     },
     2316: {//Positive Soul Homie
         captain: "Boosts ATK of [PSY] characters by 1.5x and makes [PSY] orbs \"beneficial\" for Free Spirit characters",
-        special: "Changes [BOMB] orbs into [RCV] orbs and Badly Matching orbs into [INT] orbs",
+        special: "Changes [BOMB] orbs into [RCV] orbs and Badly Matching orbs into [PSY] orbs",
         specialName: "Hearty Meal Slot Change",
     },
     2317: {//Story Yonji
