@@ -2352,7 +2352,7 @@ window.units = [
     [ "Charlotte Perospero, Minister of Candy", "STR", [ "Striker", "Cerebral" ], 4, 20, 5, 4, 99, 1000000, null, null, null, 2100, 1230, 190, null ],
     [ "Mascarpone & Joscarpone", "QCK", [ "Shooter", "Slasher" ], 3, 15, 6, 2, 70, 355666, null, null, null, 1610, 740, 125, null ],
     [ "Coliseum Magellan", "QCK", [ "Shooter", "Striker" ], 4, 25, null, null, 70, 1066998, null, null, null, null, null, null, null ],
-    [ "Chief Warden Magellan, Venom-Venom Fruit User", "QCK", [ "Shooter", "Striker" ], 5, 40, 4, null, 99, 4000000, 1000, 1000, 1000, 1000, 1000, 1000, null ],
+    [ "Chief Warden Magellan, Venom-Venom Fruit User", "QCK", [ "Shooter", "Striker" ], 5, 40, 4, null, 99, 4000000, 1000, 1000, 1000, 2568, 1410, 302, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

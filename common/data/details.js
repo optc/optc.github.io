@@ -31438,7 +31438,7 @@ window.details = {
     },
     2077: {//Carrot
         captain: "Boosts ATK of Fighter characters by 2x",
-        special: "Reduces Paralysis and Despair duration by 4 turns, delays all enemies for 1 turn, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs into [PSY] orbs and boosts ATK against enemies with reduced defense by 1.75x for ? turns",
+        special: "Reduces Paralysis and Despair duration by 4 turns, delays all enemies for 1 turn, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs into [PSY] orbs and boosts ATK against enemies with reduced defense by 1.75x for 1 turn",
         specialName: "Eleclaw",
         sailor: "Completely resists Paralysis on this character",
     },
@@ -37607,11 +37607,11 @@ window.details = {
         special: [
             {
                 "description": "Poisons all enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 1 turn and boosts ATK against Poisoned enemies by 1.5x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 23, null ],
             },
             {
                 "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 27, null ],
             },
         ],
         specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
@@ -37622,11 +37622,11 @@ window.details = {
         special: [
             {
                 "description": "Poisons all enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 1 turn and boosts ATK against Poisoned enemies by 1.5x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 23, null ],
             },
             {
                 "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
-                "cooldown": [ null, null ],
+                "cooldown": [ 27, null ],
             },
         ],
         specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
