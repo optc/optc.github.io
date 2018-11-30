@@ -5226,7 +5226,7 @@ window.specials = {
     },
     2138: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2 : 1; },
-        type: "class"
+        type: "class",
     },
     2139: {
         atk: function(p) { return window.specials[2139].multiplier; },
@@ -6168,6 +6168,12 @@ window.specials = {
     },
     2318: {
         chainAddition: function(p) { return 0.5; },
+        onActivation: function(p) {
+            window.specials[2318].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2318].turnedOn = false;
+        }
     },
     2322: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
