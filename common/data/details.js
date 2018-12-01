@@ -37552,12 +37552,12 @@ window.details = {
     },
     2348: {//Pedro
         captain: "Reduces cooldown of all specials by ? turn at the start of the fight. Boosts ATK of Slasher characters by ?x and if you have 5 or more Slashers characters in your crew, boosts chain by ?x",
-        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against delayed enemies by 1.75x for 1 turn and changes adjacent orbs into Matching Orbs.",
+        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
         specialName: "Royal Dawnbreak Sword",
     },
     2349: {//Pedro
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 2.75x and if you have 5 or more Slashers characters in your crew, boosts chain by 1.3x",
-        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against delayed enemies by 1.75x for 1 turn and changes adjacent orbs into Matching Orbs.",
+        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
         specialName: "Royal Dawnbreak Sword",
         sailor: {
             "base": "If this character has a [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
