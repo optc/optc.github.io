@@ -5226,7 +5226,7 @@ window.specials = {
     },
     2138: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2 : 1; },
-        type: "class"
+        type: "class",
     },
     2139: {
         atk: function(p) { return window.specials[2139].multiplier; },
@@ -6168,6 +6168,18 @@ window.specials = {
     },
     2318: {
         chainAddition: function(p) { return 0.5; },
+        onActivation: function(p) {
+            window.specials[2318].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2318].turnedOn = false;
+        }
+    },
+    2322: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2323: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     2324: {
         chainAddition: function(p) { return 0.75; },
@@ -6343,6 +6355,51 @@ window.specials = {
                     window.specials[2346].multiplier = 3;
                 }
             }
+        },
+    },
+    2348: {
+        def: function(p) { return 0; },
+        atk: function(p) { return (window.specials[2348].turnedOn && p.defenseDown) ? 2 : 1 },
+        type: "condition",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2348].turnedOn = p.classCount.Slasher >= 5 ? true : false;
+        },       
+    },
+    2349: {
+        def: function(p) { return 0; },
+        atk: function(p) { return (window.specials[2349].turnedOn && p.defenseDown) ? 2 : 1 },
+        type: "condition",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2349].turnedOn = p.classCount.Slasher >= 5 ? true : false;
+        },       
+    },
+    2351: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    2353: {
+        atk: function(p) { return window.specials[2353].multiplier; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2353].multiplier == 1.5 ? 1 : 0);
+            window.specials[2353].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
+                name: '2353warning'
+            });
+        },
+    },
+    2354: {
+        atk: function(p) { return window.specials[2354].multiplier; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2354].multiplier == 1.5 ? 1 : 0);
+            window.specials[2354].multiplier = [1.5, 1.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
+                name: '2354warning'
+            });
         },
     },
     2400: {

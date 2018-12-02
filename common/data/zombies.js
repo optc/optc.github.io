@@ -678,6 +678,14 @@ window.zombies = {
         type: 'healer',
         amount: 1000
     },
+    2353: { // Magellan
+        type: 'healer',
+        multiplier: 3//Change this
+    },
+    2354: { // Magellan
+        type: 'healer',
+        multiplier: 3
+    },
     2407: { // Ace
         type: 'healer',
         amount: 500

@@ -223,7 +223,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
-    if(window.specials[1528].turnedOn){
+    if(window.specials[1528].turnedOn || window.specials[2318].turnedOn){
         if(uclass.has("Powerhouse")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
