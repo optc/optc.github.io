@@ -6357,6 +6357,10 @@ window.specials = {
             }
         },
     },
+    2347: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? 1.5 : 1; },
+        type: "type",
+    },
     2348: {
         def: function(p) { return 0; },
         atk: function(p) { return (window.specials[2348].turnedOn && p.defenseDown) ? 2 : 1 },
