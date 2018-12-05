@@ -467,7 +467,7 @@ window.matchers = [
     {
         name: 'Defense and Barrier Buff Ignoring damage dealer',
         target: 'special',
-        matcher: /Deals.+ignore damage negating abilities and barriers/i
+        matcher: /(Deals|Cuts).+ignore damage negating abilities and barriers/i
     },
 
     {
@@ -654,7 +654,7 @@ window.matchers = [
     {
         name: 'Enemy Barrier reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Barrier.+duration/i 
+        matcher: /(removes|reduces).+Barrier .*duration/i 
     },
 
     {
@@ -801,6 +801,12 @@ window.matchers = [
         name: 'Additional Damage dealer',
         target: 'sailor',
         matcher: /Additional.+Damage/i
+    },
+    
+    {
+        name: 'Full-board Premptive Orb Controllers',
+        target: 'sailor',
+        matcher: /Changes all orbs into/i
     },
     
     {

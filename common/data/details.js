@@ -37704,7 +37704,7 @@ window.details = {
     },
     2352: {//Mascarpone & Joscarpone
         captain: "Boosts ATK of Slasher characters by 1.75x and their RCV by 1.2x.",
-        special: "Deals 20 hits of of 15x character's ATK in [QCK] damage to random enemies and removes Poison duration completely",
+        special: "Deals 2 hits of of 15x character's ATK in [QCK] damage to random enemies and removes Poison duration completely",
         specialName: "Flaming Arrows Aimed Through the Mirror",
     },
     2353: {//Magellan
@@ -37715,7 +37715,7 @@ window.details = {
                 "cooldown": [ 23, null ],
             },
             {
-                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
+                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
                 "cooldown": [ 27, null ],
             },
         ],
@@ -37730,7 +37730,7 @@ window.details = {
                 "cooldown": [ 23, null ],
             },
             {
-                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
+                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
                 "cooldown": [ 27, null ],
             },
         ],

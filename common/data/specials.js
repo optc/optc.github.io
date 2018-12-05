@@ -6383,6 +6383,7 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
     2353: {
+        def: function(p) { return (window.specials[2353].multiplier == 1.75) ? 0 : 1; },
         atk: function(p) { return window.specials[2353].multiplier; },
         type: "condition",
         onActivation: function(p) {
@@ -6395,6 +6396,7 @@ window.specials = {
         },
     },
     2354: {
+        def: function(p) { return (window.specials[2354].multiplier == 1.75) ? 0 : 1; },
         atk: function(p) { return window.specials[2354].multiplier; },
         type: "condition",
         onActivation: function(p) {
