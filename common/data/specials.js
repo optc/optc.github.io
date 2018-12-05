@@ -6314,6 +6314,7 @@ window.specials = {
         type: "class"
     },
     2345: {
+        delay: function(p) { return 1; },
         chain: function(p) { return window.specials[2345].multiplier; },
         chainLimiter: function(p) {
             if (window.specials[2345].multiplier != 1){
@@ -6335,6 +6336,7 @@ window.specials = {
         },
     },
     2346: {
+        delay: function(p) { return 1; },
         chain: function(p) { return window.specials[2346].multiplier; },
         chainLimiter: function(p) {
             if (window.specials[2346].multiplier != 1){
