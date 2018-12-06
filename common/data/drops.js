@@ -2169,10 +2169,10 @@ window.drops = {
         },
         
         {
-            name: 'Perospero Fortnight',
+            name: 'Banquet! The Best Tea Party Ever, Perorin!',
             thumb: 2351,
             nakama: null,
-            gamewith: null,
+            gamewith: 133025,
             'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
         },
         
@@ -2417,6 +2417,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Pirate Empress Hancock',
             thumb: 2070,
+            global: true,
             nakama: 4207000,
             gamewith: 102084,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
