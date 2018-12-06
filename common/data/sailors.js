@@ -625,6 +625,11 @@ window.sailors = {
         rcvStatic: function(p) { return 20; },
         hpStatic: function(p) { return 20; },
     },
+    2347: {
+        atkStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
+    },
     2400: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },

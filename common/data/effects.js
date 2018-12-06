@@ -461,7 +461,7 @@ window.effects = {
     },
     
     '3 Ranking Missions - Shanks, Tony Tony Chopper and Jinbe': {
-        description: 'Stats of certain units boosted',
+        description: 'Stats of certain units boosted.',
         thumb: 1700,
         id: 45, // don't change this
         atk: function(p) {
@@ -791,4 +791,25 @@ window.effects = {
             return boost;
         },
 	},
+    
+    '3 Ranking Missions - Perospero, Tamago and Jack': {
+        description: 'Stats of certain characters boosted.',
+        thumb: 2175,
+        id: 64, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Stussy", "Pedro", "Brook", "Hody Jones", "Kizaru", "Charlotte Oven", "Wanda", "Carina", "Charlotte Daifuku"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Stussy", "Pedro", "Brook", "Hody Jones", "Kizaru", "Charlotte Oven", "Wanda", "Carina", "Charlotte Daifuku"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = ["Koala", "Stussy", "Pedro", "Brook", "Hody Jones", "Kizaru", "Charlotte Oven", "Wanda", "Carina", "Charlotte Daifuku"].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },
+    },
 };

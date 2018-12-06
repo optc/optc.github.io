@@ -3380,6 +3380,22 @@ window.drops = {
             gamewith: 111278,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
+        
+        {
+            name: '3 Stamina Ranking! Vs Sanji',
+            thumb: 912,
+            nakama: null,
+            gamewith: 120486,
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Jack',
+            thumb: 2175,
+            nakama: null,
+            gamewith: 133004,
+            condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
    ],
 
     'Training Forest': [
