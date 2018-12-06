@@ -6408,6 +6408,32 @@ window.specials = {
             });
         },
     },
+    2355: {
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2356: {
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2357: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName)}
+    },
+    2358:{
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? window.specials[2358].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2358].multiplier == 1.75 ? 1 : window.specials[2358].multiplier == 2 ? 2 : 0);
+            window.specials[2358].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2131warning'
+            });
+        },
+    },
+    2359: {
+        affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
     2400: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",

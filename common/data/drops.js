@@ -2726,6 +2726,15 @@ window.drops = {
             Master: [ 2280 ],
             Expert: [ 2280 ]
         },
+        
+        {
+            name: 'Clash!! Arlong',
+            thumb: 2256,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2255 ],
+            Expert: [ 2255 ]
+        },
 
     ],
 
@@ -2893,6 +2902,14 @@ window.drops = {
             nakama: 8233600,
             gamewith: 128733,
             'Calm Sea': [ 2335 ]
+        },
+
+        {
+            name: 'Cat Burglar Nami',
+            thumb: 2362,
+            nakama: null,
+            gamewith: null,
+            'Calm Sea': [ 2361 ]
         },
         
     ],
