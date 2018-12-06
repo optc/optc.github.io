@@ -38771,6 +38771,34 @@ window.details = {
         captain: "Boosts ATK of Slasher characters by 2.75x, but boosts his OWN attack by 3x",
         special: "Deals ?x character's ATK in [STR] damage to one enemy, Reduces enemy's Increased Defense and Resilience Buffs duration by 3 turns, changes [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Slasher characters by 1.75x for 3 turns",
         specialName: "Kiribachi - Single Stroke Slice",
+        sailor: {
+            "base": "None",
+            "level1": "Makes QCK orbs \"beneficial\" for this character",
+            "level2": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turn on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
     },
     2357: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 3x, but boosts his OWN attack by 4x",
