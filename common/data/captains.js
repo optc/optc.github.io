@@ -8188,25 +8188,25 @@ window.captains = {
         },
     },
     2339: {
-        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1 : 1; },//Change This
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },
     2340: {
         atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
     },
     2341: {
-        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 1 : 1; },///Change This
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 2 : 1; },
     },
     2342: {
         atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Fighter") ? 2 : 1; },
     },
     2343: {
-        atk: function(p){ return p.unit.class.has("Shooter") ? 1 : 1; },//Change This
+        atk: function(p){ return p.unit.class.has("Shooter") ? 2.25 : 1; },
     },
     2344: {
         atk: function(p){ return p.unit.class.has("Shooter") ? 2.5 : 1; },
     },
     2345: {
-        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 1 : 1; },//Change This
+        atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.25 : 1; },
     },
     2346: {
         atk: function(p){ return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.5 : 1; },
@@ -8287,7 +8287,7 @@ window.captains = {
         rcv: function(p){ return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     2353: {
-        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1 : 1; },//Change this
+        atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 2.25 : 1; },
     },
     2354: {
         atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 2.5 : 1; },

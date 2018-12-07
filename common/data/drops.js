@@ -2096,6 +2096,7 @@ window.drops = {
         {
             name: 'Strawhat Pirates Pizza Party!! Dinner',
             thumb: 2092,
+            global: true,
             nakama: 2209200,
             gamewith: 106868,
             'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -2300, -1436, -1438, -1926, -1955, -1715 ]
