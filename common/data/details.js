@@ -38803,7 +38803,7 @@ window.details = {
     2357: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 3x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 3x for a total of 12x boost with two Cavendish captains",
-        special: "Removes all positive buffs on your team. Deals ?x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 2x for 2 turns, locks own orb for 2 turns and changes own orb to [QCK].",
+        special: "Removes all positive buffs on your team. Deals ?x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 2x for 2 turns, locks own orb for 2 turns and changes own orb, including [BLOCK] orb, to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the character who uses their own Special.",
         specialName: "The Slashing Wind",
         sailor: {
