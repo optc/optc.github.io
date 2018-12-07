@@ -8293,6 +8293,12 @@ window.captains = {
     2354: {
         atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 2.5 : 1; },
     },
+    2355: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Slasher") ? 1 : 1; }//Change this
+    },
+    2356: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3 : p.unit.class.has("Slasher") ? 2.75 : 1; }
+    },
     2357: {
         atk: function(p) { return p.slot == p.sourceSlot ? 4 : p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 3 : 1; }
     },
