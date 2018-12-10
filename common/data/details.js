@@ -17869,7 +17869,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Cerebral and Free Spirit characters by 50",
-            "level1": "Makes [INT] orbs \"beneficial\" for Cerebral characters",
+            "level2": "Makes [INT] orbs \"beneficial\" for Cerebral characters",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -18061,7 +18061,7 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
         limit: [
-            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Acquire Potential 1: Pinch Healing" },
@@ -29028,7 +29028,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of all characters by 50",
-            "level2": "When any other character uses a special, reduces own cooldown by 2 turns",
+            "level2": "When any other character uses a special, reduces own cooldown by 3 turns",
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -29042,7 +29042,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 2 turns" },
+            { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 3 turns" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
@@ -29051,7 +29051,7 @@ window.details = {
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 1: If you hit a PERFECT with this character, there is a 10% chance to deal 1% of this character's attack in extra damage",
                     "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
