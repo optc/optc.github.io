@@ -2160,10 +2160,10 @@ window.drops = {
         },
         
         {
-            name: 'Perospero Fortnight',
+            name: 'Banquet! Extreme Tea Party',
             thumb: 2351,
             nakama: null,
-            gamewith: null,
+            gamewith: 133025,
             'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
         },
         

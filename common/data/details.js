@@ -38725,11 +38725,11 @@ window.details = {
         special: [
             {
                 "description": "Poisons all enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 1 turn and boosts ATK against Poisoned enemies by 1.5x for 1 turn",
-                "cooldown": [ 23, null ],
+                "cooldown": [ 23, 9 ],
             },
             {
                 "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
-                "cooldown": [ 27, null ],
+                "cooldown": [ 27, 13 ],
             },
         ],
         specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
@@ -38740,11 +38740,11 @@ window.details = {
         special: [
             {
                 "description": "Poisons all enemies, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 1 turn and boosts ATK against Poisoned enemies by 1.5x for 1 turn",
-                "cooldown": [ 23, null ],
+                "cooldown": [ 23, 9 ],
             },
             {
                 "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
-                "cooldown": [ 27, null ],
+                "cooldown": [ 27, 13 ],
             },
         ],
         specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
