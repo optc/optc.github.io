@@ -7059,7 +7059,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     2094: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
     },
     2095: {
         atk: function(p){ return p.unit.type == "INT" ? 1.5 : 1; },

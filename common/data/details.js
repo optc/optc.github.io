@@ -32610,7 +32610,7 @@ window.details = {
         specialName: "Overflowing Happiness",
     },
     2094: {//Pizza Brook
-        captain: "Boosts ATK of Free Spirit characters by 1.75x",
+        captain: "Boosts ATK of Slasher characters by 1.75x",
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and reduces damage received by 60% for 1 turn",
         specialName: "An Enchanted Bliss that Pierces the Bones",
     },
