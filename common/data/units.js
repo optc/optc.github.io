@@ -2105,7 +2105,7 @@ window.units = [
     [ "Mr. Tanaka, Casino Security Officer", "DEX", [ "Shooter", "Free Spirit" ], 4, 15, 6, 3, 50, 392109, 264, 131, 22, 1239, 558, 162, 1 ],
     [ "Mr. Tanaka, Gold Armor", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1129, 512, 147, 2499, 1333, 312, 1 ],
     [ "\"Female Fox\" Carina", "PSY", [ "Cerebral", "Slasher" ], 4, 15, 6, 3, 50, 392109, 1, 1, 1, 1067, 501, 178, 1 ],
-    [ "The Thief Carina", "PSY", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1002, 481, 167, 2317, 1298, 431, 1 ],
+    [ "Phantom Thief Carina", "PSY", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1002, 481, 167, 2182, 1258, 401, 1 ],
     [ "Charlotte Linlin", "STR", "Powerhouse", 4, 30, 6, 1, 50, 130703, 395, 149, 12, 1315, 438, 53, 1 ],
     [ "Charlotte Linlin, The Great Pirate \"Big Mom\"", "STR", "Powerhouse", 5, 60, 6, 1, 99, 5000000, 923, 391, 45, 3134, 1529, 125, 1 ],
     [ "Eustass Kid, The Worst Generation Aiming at \"Yonko\"", "DEX", [ "Striker", "Shooter" ], 4, 25, 4, 3, 70, 1066998, 350, 154, 23, 159, 880, 123, 1 ],
