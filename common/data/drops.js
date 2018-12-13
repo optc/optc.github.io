@@ -2170,7 +2170,7 @@ window.drops = {
         },
         
         {
-            name: 'Banquet! The Best Tea Party Ever, Perorin!',
+            name: 'Banquet! The Best Tea Party Ever!',
             thumb: 2351,
             nakama: null,
             gamewith: 133025,
@@ -2418,7 +2418,6 @@ window.drops = {
         {
             name: 'Clash Neo!! Pirate Empress Hancock',
             thumb: 2070,
-            global: true,
             nakama: 4207000,
             gamewith: 102084,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
@@ -2742,7 +2741,7 @@ window.drops = {
             name: 'Clash!! Arlong',
             thumb: 2256,
             nakama: null,
-            gamewith: null,
+            gamewith: 134190,
             Master: [ 2255 ],
             Expert: [ 2255 ]
         },

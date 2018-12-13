@@ -7059,7 +7059,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     2094: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
     },
     2095: {
         atk: function(p){ return p.unit.type == "INT" ? 1.5 : 1; },
@@ -8291,6 +8291,12 @@ window.captains = {
     },
     2354: {
         atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 2.5 : 1; },
+    },
+    2355: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : p.unit.class.has("Slasher") ? 2.25 : 1; }//Change this
+    },
+    2356: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3 : p.unit.class.has("Slasher") ? 2.75 : 1; }
     },
     2357: {
         atk: function(p) { return p.slot == p.sourceSlot ? 4 : p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 3 : 1; }

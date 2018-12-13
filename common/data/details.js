@@ -17869,7 +17869,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Cerebral and Free Spirit characters by 50",
-            "level1": "Makes [INT] orbs \"beneficial\" for Cerebral characters",
+            "level2": "Makes [INT] orbs \"beneficial\" for Cerebral characters",
         },
         sailorNotes: "#{beneficial}",
         limit: [
@@ -18061,7 +18061,7 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
         limit: [
-            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Acquire Potential 1: Pinch Healing" },
@@ -29028,7 +29028,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of all characters by 50",
-            "level2": "When any other character uses a special, reduces own cooldown by 2 turns",
+            "level2": "When any other character uses a special, reduces own cooldown by 3 turns",
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -29042,7 +29042,7 @@ window.details = {
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base HP by 90" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 2 turns" },
+            { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 3 turns" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
@@ -29051,7 +29051,7 @@ window.details = {
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 1: If you hit a PERFECT with this character, there is a 10% chance to deal 1% of this character's attack in extra damage",
                     "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
                     "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
                     "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
@@ -32610,7 +32610,7 @@ window.details = {
         specialName: "Overflowing Happiness",
     },
     2094: {//Pizza Brook
-        captain: "Boosts ATK of Free Spirit characters by 1.75x",
+        captain: "Boosts ATK of Slasher characters by 1.75x",
         special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and reduces damage received by 60% for 1 turn",
         specialName: "An Enchanted Bliss that Pierces the Bones",
     },
@@ -38791,13 +38791,13 @@ window.details = {
                     "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above 75% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ]
     },
     2355: {//Arlong
-        captain: "Boosts ATK of Slasher characters by ?x, but boosts his OWN attack by ?x",
+        captain: "Boosts ATK of Slasher characters by 2.25x, but boosts his OWN attack by 2.5x",
         special: "Deals ?x character's ATK in [STR] damage to one enemy, Reduces enemy's Increased Defense and Resilience Buffs duration by 3 turns, changes [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Slasher characters by 1.75x for 3 turns",
         specialName: "Kiribachi - Single Stroke Slice",
     },
@@ -38837,7 +38837,7 @@ window.details = {
     2357: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 3x, but boosts his OWN attack by 4x",
         captainNotes: "Cavendish only boosts Friend or Sub Cavendish by 3x for a total of 12x boost with two Cavendish captains",
-        special: "Removes all positive buffs on your team. Deals ?x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 2x for 2 turns, locks own orb for 2 turns and changes own orb to [QCK].",
+        special: "Removes all positive buffs on your team. Deals ?x the character's ATK as Typeless damage to all enemies. Boosts own ATK by 2.25x for 2 turns, amplifies the effect of own orb by 2x for 2 turns, locks own orb for 2 turns and changes own orb, including [BLOCK] orb, to [QCK].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the character who uses their own Special.",
         specialName: "The Slashing Wind",
         sailor: {
