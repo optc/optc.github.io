@@ -4535,7 +4535,7 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysis by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns on this character"
     },
     522: {
         special: "Deals several times the character's ATK in [INT] damage to all enemies",
@@ -4543,7 +4543,7 @@ window.details = {
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         sailor: {
-            "base": "Reduces Paralysis by 3 turns for self",
+            "base": "Reduces Paralysis by 3 turns on this character",
             "level1": "When HP is below ?% at the start of the turn, boosts own base ATK by 500",
         },
         limit: [
@@ -11502,7 +11502,7 @@ window.details = {
         special: "Changes Captain orb into Matching orb and switches orbs between slots three times",
         sailor: {
             "base": "None",
-            "level1": "Makes [QCK] orbs \"beneficial\" for this character",
+            "level1": "Makes [DEX] orbs \"beneficial\" for this character",
             "level2": "Makes [STR], [PSY], [INT] orbs \"beneficial\" for this character",
         },
         limit: [
@@ -11515,7 +11515,7 @@ window.details = {
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for this character" },
+            { "description": "Acquire Sailor Ability 1: Makes [DEX] orbs \"beneficial\" for this character" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
@@ -13088,7 +13088,7 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe: Concassé",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysis by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns on this character"
     },
     1117: {
         special: "Deals several times the character's ATK in [INT] damage to all enemies",
@@ -13096,7 +13096,7 @@ window.details = {
         specialName: "Diable Jambe: Concassé",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         sailor: {
-            "base": "Reduces Paralysis by 3 turns for self",
+            "base": "Reduces Paralysis by 3 turns on this character",
             "level1": "When HP is below ?% at the start of the turn, boosts own base ATK by 500",
         },
         limit: [
@@ -13621,11 +13621,11 @@ window.details = {
         captain: "Boosts ATK and HP of Fighter characters by 1.5x",
         special: [
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+                "description": "Deals 30x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
                 "cooldown": [ 18, 12 ]
             },
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.75x for 1 turn",
+                "description": "Deals 50x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.75x for 1 turn",
                 "cooldown": [ 23, 17 ]
             }
         ],
@@ -13636,11 +13636,11 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+                "description": "Deals 30x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
                 "cooldown": [ 18, 12 ]
             },
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter and Shooter characters by 1.75x for 1 turn",
+                "description": "Deals 50x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter and Shooter characters by 1.75x for 1 turn",
                 "cooldown": [ 23, 17 ]
             }
         ],
@@ -13946,13 +13946,13 @@ window.details = {
     1166: {//Baccarat
         captain: "Gives chance of duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
-        special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
+        special: "Boosts chance of matching orbs and reduces the ATK of enemies by 10% for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1167: {//Baccarat Evolved
         captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
-        special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
+        special: "Boosts chance of matching orbs and reduces the ATK of enemies by 10% for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1168: {//Dice

@@ -111,10 +111,20 @@
 </div>
 
 <div class="filter-container">
-    <span class="filter width-12 exc" ng-model="filters.worldClash" ng-class="{ active: filters.worldClash }"
-        ng-click="filters.worldClash = !filters.worldClash">Show World Clash Boosters</span><!--
+    <span class="filter-header">Specific Captain filters</span>
+    <span class="filter width-12 exc" ng-model="filters.katakuri" ng-class="{ active: filters.katakuri }"
+        ng-click="filters.katakuri = !filters.katakuri">Show Double Boosted Katakuri Units</span><!--
+ --><span class="filter width-12 exc" ng-model="filters.TMlaw" ng-class="{ active: filters.TMlaw }"
+        ng-click="filters.TMlaw = !filters.TMlaw">Show Double Boosted TM Law Units</span><!--
+ --><span class="filter width-12 exc" ng-model="filters.sulongCarrot" ng-class="{ active: filters.sulongCarrot }"
+        ng-click="filters.sulongCarrot = !filters.sulongCarrot">Show Double Boosted Sulong Carrot Units</span><!--
  -->
 </div>
+
+<!--div class="filter-container">
+    <span class="filter width-12 exc" ng-model="filters.worldClash" ng-class="{ active: filters.worldClash }"
+        ng-click="filters.worldClash = !filters.worldClash">Show World Clash Boosters</span>
+</div-->
 
 <!--div class="filter-container">
     <span class="filter-header">Dev. filters</span>

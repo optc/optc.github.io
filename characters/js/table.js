@@ -113,12 +113,14 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by class
         if (filters.classes && filters.classes.length) {
-            var singleQuery = filters.classes.length == 1, singleClass = unit.class.length > 2;
+            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2, dualCharacter = Array.isArray(unit.class)  && unit.class.length == 3;
             if (!singleQuery && singleClass) return false;
             else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
-            else if (singleQuery && !singleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
+            else if (singleQuery && dualCharacter && (filters.classes[0] !== unit.class[2][0] &&
+                        filters.classes[0] !== unit.class[2][1])) return false;
+            else if (singleQuery && doubleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
                     filters.classes.indexOf(unit.class[1]) == -1) return false;
-            else if (!singleQuery && !singleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
+            else if (!singleQuery && doubleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
                         filters.classes.indexOf(unit.class[1]) == -1)) return false;
         }
         // filter by stars
@@ -163,9 +165,30 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
         //console.log(window.details[id] ? "limit" in window.details[id] ? id : "no" : "no details");
         if (filters.noLB && window.details[id]) if("limit" in window.details[id]) return false;
-        if (filters.globalTM && [ 2168, 2169, 2132, 2172, 2173, 2134, 2170, 2171, 2135, 2137, 2138, 2148, 2175, 578, 1121, 1434, 1880, 1571, 1610, 1652, 1869, 2066, 2023, 2113, 2159, 2503, 1741, 1743, 1778, 1834, 1836, 1838, 1840, 2139, 2140, 2141, 2142, 1873, 1906, 1908, 1987, 1989, 2115, 2117, 2119, 2121, 2150, 2152, 2154, 2156, 2161, 1804, 1806, 1849, 1851, 1885, 1887, 1937, 1939, 1968, 1970, 2009, 2011, 2060, 2062, 516, 836, 1595, 1647, 1830, 2158, 1252, 2163, 690, 1300, 1306, 1326, 1918, 1920, 2056, 2057, 2058, 2144, 2146, 1808, 1853, 1889, 1916, 1941, 1972, 2000, 2064, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551, 1411, 1412, 1699, 1700, 1613, 1614 ].indexOf(id) == -1) return false;
-        if (filters.japanTM && [ 2330, 2332, 2334, 2299, 2302, 2099, 2113, 2201, 2245, 2265, 2300, 2304, 2306, 2308, 2310, 2325, 2323, 2294, 2327, 2261, 1816, 2034, 2234, 2236, 2251, 516, 518, 865, 1432, 1696, 1815, 1830, 2015, 2070, 2097, 2158, 2281, 777, 901, 924, 1143, 1220, 1222, 1339, 1376, 1401, 1489, 1491, 1861, 1897, 2111, 2193, 2290, 722, 724, 761, 762, 763, 764, 765, 766, 767, 768, 769, 852, 1003, 1037, 1039, 1300, 1302, 1304, 1306, 1326, 1607, 1624, 1649, 1650, 1690, 1737, 1891, 1893, 1947, 1980, 1995, 2044, 2045, 2046, 2109, 2137, 2175, 2336, 2283 ].indexOf(id) == -1) return false;
+        if (filters.globalTM && [ 2099, 2084, 2086, 2169, 2173, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551, 1271, 1272, 1319, 1320, 1611, 1612, 2065, 2074, 2076, 2101, 2103, 2105, 2107, 2109, 2171, 2175, 2401, 2403, 2405, 2023, 2025, 2113, 2505, 1824, 1838, 1895, 1902, 1987, 2027, 2072, 2078, 2080, 2082, 1804, 1806, 1849, 1851, 1885, 1887, 1937, 1939, 1968, 1970, 2009, 2011, 2060, 2062, 2132, 2134, 2135, 1623, 1772, 1780, 1826, 2097, 1402, 2111, 2087, 2088, 2089, 2090, 2091, 2092, 2093, 2094, 2095, 2165, 2167, 1808, 1853, 1889, 1916, 1941, 1972, 2000, 2064, 2137 ].indexOf(id) == -1) return false;
+        if (filters.japanTM && [ 2358, 2360, 2359, 2302, 2330, 2357, 2340, 2342, 2344, 2346, 2356, 2354, 2350, 2351, 2407, 2408, 2347, 2336, 2338, 870, 1123, 1619, 2035, 2265, 575, 603, 865, 978, 1047, 1298, 1518, 1680, 1815, 1879, 1924, 1943, 2015, 2033, 2097, 2197, 2263, 804, 1041, 1251, 1456, 1602, 1694, 1733, 1945, 2037, 2163, 2323, 268, 918, 1287, 1357, 1359, 1522, 1547, 1735, 1766, 1774, 1776, 1810, 1812, 1842, 1931, 1932, 1933, 2128, 2144, 2146, 2219, 1258, 1380, 1530, 1846, 1889, 1972, 2299, 2362 ].indexOf(id) == -1) return false;
         if (filters.worldClash && [ 253, 1041, 255, 257, 259, 979, 980, 983, 453, 455, 457, 946, 947, 948, 1182, 1528, 1186, 1188, 1190, 1270, 1509, 1510, 1511, 1606, 451, 981, 1184, 1272, 1512, 1607, 1222, 1276, 1278, 1602, 1608, 1700, 1798, 1989, 2037, 1047, 1492, 1972, 447, 1268, 575, 2025, 978, 2034, 1298, 2023, 1380, 2007, 1846, 1416, 1847, 2066, 408, 1927, 1345, 1593, 649, 1251, 1991, 1387, 2401, 2403, 2405 ].indexOf(id) == -1) return false;
+        if (filters.katakuri){
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
+            if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
+            else for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) Katacount++;
+            if (Katacount !== 2) return false;
+        }
+        if (filters.TMlaw){
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Cerebral", "Free Spirit" ];
+            if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
+            else for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) Katacount++;
+            if (Katacount !== 2) return false;
+        }
+        if (filters.sulongCarrot){
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Shooter", "Cerebral" ];
+            if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
+            else for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) Katacount++;
+            if (Katacount !== 2) return false;
+        }
         if (filters.noFodder && Utils.isFodder(unit)) return false;
         if (filters.noFortnights && flags.fnonly) return false;
         if (filters.noRaids && flags.raid) return false;
