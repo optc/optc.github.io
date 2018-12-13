@@ -7050,7 +7050,7 @@ window.captains = {
             var specialEnabled = false;
             for(var i=0;i<2;i++)
             {
-                if(window.specials[2087].turnedOn[i]==true){specialEnabled = true;}
+                if(window.specials[2092].turnedOn[i]==true){specialEnabled = true;}
             }
             return specialEnabled ? 2.6 : 2; },
     },
