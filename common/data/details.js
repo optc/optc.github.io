@@ -11502,7 +11502,7 @@ window.details = {
         special: "Changes Captain orb into Matching orb and switches orbs between slots three times",
         sailor: {
             "base": "None",
-            "level1": "Makes [QCK] orbs \"beneficial\" for this character",
+            "level1": "Makes [DEX] orbs \"beneficial\" for this character",
             "level2": "Makes [STR], [PSY], [INT] orbs \"beneficial\" for this character",
         },
         limit: [
@@ -11515,7 +11515,7 @@ window.details = {
             { "description": "Boosts base RCV by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs \"beneficial\" for this character" },
+            { "description": "Acquire Sailor Ability 1: Makes [DEX] orbs \"beneficial\" for this character" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
@@ -13946,13 +13946,13 @@ window.details = {
     1166: {//Baccarat
         captain: "Gives chance of duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
-        special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
+        special: "Boosts chance of matching orbs and reduces the ATK of enemies by 10% for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1167: {//Baccarat Evolved
         captain: "Boosts ATK of all characters by 1.2x. Gives chance of duplicating a drop upon completion of the island.",
         captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
-        special: "Boosts chance of matching orbs and reduces the ATK of enemies for 1 turn",
+        special: "Boosts chance of matching orbs and reduces the ATK of enemies by 10% for 1 turn",
         specialName: "Lucky-Lucky Fruit",
     },
     1168: {//Dice
