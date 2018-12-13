@@ -4535,7 +4535,7 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysis by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns on this character"
     },
     522: {
         special: "Deals several times the character's ATK in [INT] damage to all enemies",
@@ -4543,7 +4543,7 @@ window.details = {
         specialName: "Diable Jambe - Venaison Shot",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         sailor: {
-            "base": "Reduces Paralysis by 3 turns for self",
+            "base": "Reduces Paralysis by 3 turns on this character",
             "level1": "When HP is below ?% at the start of the turn, boosts own base ATK by 500",
         },
         limit: [
@@ -13088,7 +13088,7 @@ window.details = {
         specialNotes: "#{specialProportional : lower : 100 * ( 1 - (remaining HP) / (total HP) )}",
         specialName: "Diable Jambe: Concassé",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
-        sailor: "Reduces Paralysis by 3 turns for self"
+        sailor: "Reduces Paralysis by 3 turns on this character"
     },
     1117: {
         special: "Deals several times the character's ATK in [INT] damage to all enemies",
@@ -13096,7 +13096,7 @@ window.details = {
         specialName: "Diable Jambe: Concassé",
         captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         sailor: {
-            "base": "Reduces Paralysis by 3 turns for self",
+            "base": "Reduces Paralysis by 3 turns on this character",
             "level1": "When HP is below ?% at the start of the turn, boosts own base ATK by 500",
         },
         limit: [
