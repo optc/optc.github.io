@@ -13621,11 +13621,11 @@ window.details = {
         captain: "Boosts ATK and HP of Fighter characters by 1.5x",
         special: [
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+                "description": "Deals 30x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
                 "cooldown": [ 18, 12 ]
             },
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.75x for 1 turn",
+                "description": "Deals 50x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.75x for 1 turn",
                 "cooldown": [ 23, 17 ]
             }
         ],
@@ -13636,11 +13636,11 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x and their HP by 1.5x. Recovers 2x character's RCV in HP at the end of each turn",
         special: [
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
+                "description": "Deals 30x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter characters by 1.5x for 1 turn",
                 "cooldown": [ 18, 12 ]
             },
             {
-                "description": "Deals severe [QCK] damage to all enemies, boosts ATK of Fighter and Shooter characters by 1.75x for 1 turn",
+                "description": "Deals 50x character's ATK in [QCK] damage to all enemies, boosts ATK of Fighter and Shooter characters by 1.75x for 1 turn",
                 "cooldown": [ 23, 17 ]
             }
         ],
