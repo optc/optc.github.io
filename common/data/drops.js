@@ -2418,6 +2418,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Pirate Empress Hancock',
             thumb: 2070,
+            global: true,
             nakama: 4207000,
             gamewith: 102084,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
@@ -2859,6 +2860,7 @@ window.drops = {
         {
             name: 'Big Mom',
             thumb: 2109,
+            global: true,
             nakama: 8210900,
             gamewith: 105881,
             'Sweet Sea': [ 2108 ]

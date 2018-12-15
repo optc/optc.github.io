@@ -2058,6 +2058,8 @@ window.flags = {
     2066: { rr: 1, rro: 1, global: 1 },
     2067: { rr: 1, rro: 1, lrr: 1, global: 1 },
     2068: { rr: 1, rro: 1, lrr: 1, global: 1 },
+    2069: { global: 1 },
+    2070: { global: 1 },
     2071: { rr: 1, rro: 1, global: 1 },
     2072: { rr: 1, rro: 1, global: 1 },
     2073: { rr: 1, rro: 1, global: 1 },

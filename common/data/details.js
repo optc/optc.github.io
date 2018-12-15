@@ -38916,7 +38916,19 @@ window.details = {
         captainNotes: "Beli boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Reduces Silence duration by 2 turns and changes adjacent orbs into Matching Orbs. If you are on a Treasure Map, boosts ATK of Fighter, Slasher and Striker characters depending on your Treasure Map Level for 1 turn",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
-        specialName: "The Ship's Doctor that will Deliver a Merry Christmas",
+        specialName: "The Ship's Doctor that Delivers a Merry Christmas",
+        limit: [
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Critical Hit",
@@ -38934,6 +38946,18 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 1.5x",
         special: "If your crew has 4 or more characters with [STR], [QCK] or [INT] orbs, boosts the Color Affinity of Fighter and Cerebral characters by 1.75x for 1 turn",
         specialName: "A Cute Christmas Gift",
+        limit: [
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -38953,6 +38977,18 @@ window.details = {
         specialName: "The Guardian's Christmas Chicken",
         sailor: "Restores his own special cooldown by 1 turn when it is rewinded",
         sailorNotes: "#{rewind : 1}",
+        limit: [
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
