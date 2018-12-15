@@ -35,12 +35,21 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 					$(row.cells[10 + scope.table.additional]).append(checkbox);
 					// cosmetic fixes
                     var typeBox = row.cells[2];
+                    var classBox = row.cells[3];
                     var type = typeBox.textContent;
+                    var classes = classBox.textContent;
                     if (type.indexOf(",") > -1) {
                         type = type.replace(",", "/");
                         var types = type.split('/');
                         var typeHtml = '<span class="cell-' + types[0] + '">' + types[0] + '</span>/<span class="cell-' + types[1] + '">' + types[1] + '</span>';
                         $(typeBox).html(typeHtml);
+                    }
+                    if ((classes.match(new RegExp(",", "g")) || []).length > 1) {
+                        while ((classes.match(new RegExp(",", "g")) || []).length >= 1) classes = classes.replace(",", "/");
+                        var classess = classes.split('/');
+                        //console.log(classess);
+                        var classesHtml = '<span class="cell-' + classess[4] + '">' + classess[4] + '</span>, <span class="cell-' + classess[5] + '">' + classess[5] + '</span>';
+                        $(classBox).html(classesHtml);
                     }
                     $(typeBox).addClass('cell-' + type);
 					var n = row.cells.length - 2 - scope.table.additional;
