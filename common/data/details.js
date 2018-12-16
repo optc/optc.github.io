@@ -38602,7 +38602,7 @@ window.details = {
         specialName: "Left-Handed Haul",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of all characters by 20",
-            "level2": "Restores her own special cooldown by 3 turns when it is rewinded",
+            "level1": "Restores her own special cooldown by 3 turns when it is rewinded",
         },
         sailorNotes: "#{rewind : 3}",
         limit: [
@@ -39244,8 +39244,8 @@ window.details = {
     },
     2505: {//Rob Lucci
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Shooter characters by 3.25x at the start of the chain and reduces crew's RCV to 0.<br>Boosts ATK of Shooter characters by 3.4125x after the 1st PERFECT in a row, by 3.583125x after the 2nd PERFECT in a row, by 3.76228125x after the 3rd PERFECT in a row, by 3.9503953125x after the 4th PERFECT in a row and by 4.147915078125x after the 5th PERFECT in a row.",
-        special: "Reduces the defense of all enemies by ?% for 1 turns, deals ?x character's ATK in [QCK] damage to one enemy, reduces Paralysis duration by 4 turns and boosts the Color Affinity of Shooter characters by 2x for 1 turn",
-        specialName: "Lucci Special",
+        special: "Reduces the defense of all enemies by 80% for 1 turns, deals 100x character's ATK in [QCK] damage to one enemy, reduces Paralysis duration by 4 turns and boosts the Color Affinity of Shooter characters by 2x for 1 turn",
+        specialName: "Tempest Kick: Victory Bird",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Powerhouse characters by 50",
