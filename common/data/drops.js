@@ -896,6 +896,15 @@ window.drops = {
             '11': [ 2320 ],
         },
         
+        {
+            name: 'Outside of Town to Bege\'s Hideout',
+            shortName: 'WCI 2',
+            thumb: null,
+            nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: null,
+        },
+        
     ], 
 
     'Booster and Evolver Island': [
@@ -2087,6 +2096,7 @@ window.drops = {
         {
             name: 'Strawhat Pirates Pizza Party!! Dinner',
             thumb: 2092,
+            global: true,
             nakama: 2209200,
             gamewith: 106868,
             'All Difficulties': [ 2091, 2092, 2093, 2094, 2095, -1935, -2300, -1436, -1438, -1926, -1955, -1715 ]
@@ -2160,7 +2170,7 @@ window.drops = {
         },
         
         {
-            name: 'Banquet! Extreme Tea Party',
+            name: 'Banquet! The Best Tea Party Ever!',
             thumb: 2351,
             nakama: null,
             gamewith: 133025,
@@ -2408,6 +2418,7 @@ window.drops = {
         {
             name: 'Clash Neo!! Pirate Empress Hancock',
             thumb: 2070,
+            global: true,
             nakama: 4207000,
             gamewith: 102084,
             condition: '1 Master version and 3 Ultimate versions with different conditions. Master: Slasher/Free Spirit/Cerebral Only. Ultimate: Slasher Only, Free Spirit Only, and Cerebral Only. Can only complete 7 times each per day. Can drop +10 Cotton Candy and Forbidden Tomes.',
@@ -2731,7 +2742,7 @@ window.drops = {
             name: 'Clash!! Arlong',
             thumb: 2256,
             nakama: null,
-            gamewith: null,
+            gamewith: 134190,
             Master: [ 2255 ],
             Expert: [ 2255 ]
         },
@@ -2747,8 +2758,8 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322 ],
-            Neo: [ 1862, 1898, 1975, 2016, 2353 ]
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353 ],
+            Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
         {
@@ -2849,6 +2860,7 @@ window.drops = {
         {
             name: 'Big Mom',
             thumb: 2109,
+            global: true,
             nakama: 8210900,
             gamewith: 105881,
             'Sweet Sea': [ 2108 ]

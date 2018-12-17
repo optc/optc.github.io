@@ -672,7 +672,7 @@ window.zombies = {
     },
     2343: { // Bavarois
         type: 'healer',
-        amount: 1000//change this
+        amount: 1000
     },
     2344: { // Bavarois
         type: 'healer',
@@ -684,7 +684,7 @@ window.zombies = {
     },
     2353: { // Magellan
         type: 'healer',
-        multiplier: 3//Change this
+        multiplier: 1.5
     },
     2354: { // Magellan
         type: 'healer',

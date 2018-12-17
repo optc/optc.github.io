@@ -3813,11 +3813,11 @@ window.evolutions = {
     },
     1123: {
         evolution: 2357,
-        evolvers: [  ]
+        evolvers: [ 'skullCavendish', 'skullCavendish', 'skullCavendish', 'skullCavendish', 'skullCavendish',]
     },
     2361: {
         evolution: 2362,
-        evolvers: [  ]
+        evolvers: [ 115, 116, 117, 118, 103 ]
     },
     2400: {
         evolution: 2401,
@@ -3833,7 +3833,7 @@ window.evolutions = {
     },
     2406: {
         evolution: 2407,
-        evolvers: [  ]
+        evolvers: [ 118, 87, 92, 98, 103 ]
     },
     2502: {
         evolution: 2503,
