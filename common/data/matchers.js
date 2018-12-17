@@ -449,7 +449,7 @@ window.matchers = [
     {
         name: 'Typed damage dealers',
         target: 'special',
-        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]) damage/i
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|character\'s Type) damage/i
     },
     
     {
