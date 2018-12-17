@@ -8308,10 +8308,10 @@ window.captains = {
         atk: function(p){ return p.unit.class.has("Striker") ? 1.5 : 1; },
     },
     2361: {
-        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     2362: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.percHP >= 50.0 ? p.actions[p.sourceSlot] ? 3 : 1 : p.actions[p.sourceSlot] ? 2 : 1 : 1; }
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.percHP >= 50.0 ? p.actions[p.sourceSlot] ? 3 : 1.75 : p.actions[p.sourceSlot] ? 2 : 1.5 : 1; }
     },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },

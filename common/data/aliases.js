@@ -2404,7 +2404,7 @@ window.aliases = {
     2403: [ '黒ひげ 新時代を告げる台風の目', '', 'LINE Blackbeard', 'World Clash Blackbeard' ],
     2404: [ 'サカズキ元帥', '', 'LINE Akainu', 'World Clash Akainu' ],
     2405: [ 'サカズキ元帥 海軍総大将', '', 'LINE Akainu', 'World Clash Akainu' ],
-    2406: [ 'ポートガス・D・エース 「大罪」の血筋', '', 'LINE Ace', 'World Clash Ace' ],
+    2406: [ 'ポートガス・D・エース “大罪”の血筋', '', 'LINE Ace', 'World Clash Ace' ],
     2407: [ 'ポートガス・D・エース 愛された鬼の血', '', 'LINE Ace', 'World Clash Ace', 'Actually Dead' ],
     2408: [ 'サボ 亡き兄弟への宣誓', '', 'LINE Sabo', 'World Clash Sabo' ],
     2409: [ '', '', '' ],
