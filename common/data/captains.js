@@ -8293,19 +8293,22 @@ window.captains = {
         atk: function(p){ return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 2.5 : 1; },
     },
     2355: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : p.unit.class.has("Slasher") ? 2.25 : 1; }//Change this
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : p.unit.class.has("Slasher") ? 2.25 : 1; },
     },
     2356: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 3 : p.unit.class.has("Slasher") ? 2.75 : 1; }
+        atk: function(p) { return p.slot == p.sourceSlot ? 3 : p.unit.class.has("Slasher") ? 2.75 : 1; },
     },
     2357: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 4 : p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 3 : 1; }
+        atk: function(p) { return p.slot == p.sourceSlot ? 4 : p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 3 : 1; },
     },
     2359: {
         atk: function(p){ return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     2360: {
         atk: function(p){ return p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    2361: {
+        atk: function(p){ return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },
     2362: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.percHP >= 50.0 ? p.actions[p.sourceSlot] ? 3 : 1 : p.actions[p.sourceSlot] ? 2 : 1 : 1; }
