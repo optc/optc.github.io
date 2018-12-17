@@ -32678,13 +32678,13 @@ window.details = {
     },
     2098: {//Tesoro
         captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
-        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, not for the rest of the battle.",
+        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, boosting ATK by 2.625x at the start of the chain, by 3.15x after scoring 4 GREATs in a row, not for the rest of the battle.",
         special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
         specialName: "Gon Inferno",
     },
     2099: {//Tesoro
         captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
-        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, not for the rest of the battle.",
+        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, boosting ATK by 2.625x at the start of the chain, by 3.15x after scoring 4 GREATs in a row, not for the rest of the battle.",
         special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
         specialName: "Gon Inferno",
         sailor: {

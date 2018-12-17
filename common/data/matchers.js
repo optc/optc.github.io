@@ -531,6 +531,12 @@ window.matchers = [
     },
 
     {
+        name: 'Threshold Damage reducers',
+        target: 'special',
+        matcher: /Reduces (any )?damage received above/i
+    },
+
+    {
         name: 'Damage nullifiers',
         target: 'special',
         matcher: /Reduces (any )?damage received.+100%/i
