@@ -62,7 +62,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "All Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's ATK to the supported character's ATK",
+                    "Level 2: Adds 2% of this character's ATK to the supported character's ATK",
+                    "Level 3: Adds 3% of this character's ATK to the supported character's ATK",
+                    "Level 4: Adds 4% of this character's ATK to the supported character's ATK",
+                    "Level 5: Adds 5% of this character's ATK to the supported character's ATK"
+                ]
+            }
+        ]
     },
     5: {
         special: "Deals 7x character's ATK in [DEX] damage to one enemy",
@@ -16271,7 +16283,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "All Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's ATK to the supported character's ATK",
+                    "Level 2: Adds 2% of this character's ATK to the supported character's ATK",
+                    "Level 3: Adds 3% of this character's ATK to the supported character's ATK",
+                    "Level 4: Adds 4% of this character's ATK to the supported character's ATK",
+                    "Level 5: Adds 5% of this character's ATK to the supported character's ATK"
+                ]
+            }
+        ]
     },
     1388: {//Zoro 5+
         captain: "Boosts ATK of [DEX] characters by 2.5x",
@@ -19110,6 +19134,18 @@ window.details = {
                     "Level 5: If HP is below ??% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sanji",
+                "description": [
+                    "Level 1: Adds 3% of this character's stats to the supported character's stats",
+                    "Level 2: Adds 4% of this character's stats to the supported character's stats",
+                    "Level 3: Adds 5% of this character's stats to the supported character's stats",
+                    "Level 4: Adds 6% of this character's stats to the supported character's stats",
+                    "Level 5: Adds 7% of this character's stats to the supported character's stats",
+                ]
+            }
         ]
     },
     1543: {//6+ Usopp

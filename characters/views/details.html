@@ -305,6 +305,36 @@
                                     </td>
                                 </tr>
                             </tbody>
+                            <!--------------    Support Abilities    -------------->
+                            <!--------------    isSupportHybrid is not used since JPN and Global all match so far, leaving in for future cases    -------------->
+                            <tbody>
+                                <tr>
+                                    <td>Support Abilities</td>
+                                    <td>
+                                        <!-- same potential break (differences across versions) -->
+                                        <div ng-if="!isSupportHybrid && !isSupportStaged" ng-bind-html="details.support | decorate"></div>
+                                        <!-- different potential abilities -->
+                                        <div ng-if="!isSupportHybrid && isSupportStaged">
+                                            <div ng-repeat="stage in details.support track by $index">
+                                                <strong>Supported Characters:</strong>
+                                                 {{stage.Characters}}
+                                                <br>
+                                                <span ng-bind-html="stage.description[0] | decorate"></span><br>
+                                                <span ng-bind-html="stage.description[1] | decorate"></span><br>
+                                                <span ng-bind-html="stage.description[2] | decorate"></span><br>
+                                                <span ng-bind-html="stage.description[3] | decorate"></span><br>
+                                                <span ng-bind-html="stage.description[4] | decorate"></span><br>
+                                            </div>
+                                        </div>
+                                        <div ng-if="isSupportHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.potential.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.potential.global | decorate"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>                            
                         </table>
                     </div>
 
