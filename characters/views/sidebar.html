@@ -111,28 +111,6 @@
 </div>
 
 <div class="filter-container">
-    <span class="filter-header">Specific Captain filters</span>
-    <span class="filter width-12 exc" ng-model="filters.katakuri" ng-class="{ active: filters.katakuri }"
-        ng-click="filters.katakuri = !filters.katakuri">Show Double Boosted Katakuri Units</span><!--
- --><span class="filter width-12 exc" ng-model="filters.TMlaw" ng-class="{ active: filters.TMlaw }"
-        ng-click="filters.TMlaw = !filters.TMlaw">Show Double Boosted TM Law Units</span><!--
- --><span class="filter width-12 exc" ng-model="filters.sulongCarrot" ng-class="{ active: filters.sulongCarrot }"
-        ng-click="filters.sulongCarrot = !filters.sulongCarrot">Show Double Boosted Sulong Carrot Units</span><!--
- -->
-</div>
-
-<!--div class="filter-container">
-    <span class="filter width-12 exc" ng-model="filters.worldClash" ng-class="{ active: filters.worldClash }"
-        ng-click="filters.worldClash = !filters.worldClash">Show World Clash Boosters</span>
-</div-->
-
-<!--div class="filter-container">
-    <span class="filter-header">Dev. filters</span>
-    <span class="filter width-12 exc" ng-model="filters.noLB" ng-class="{ active: filters.noLB }"
-        ng-click="filters.noLB = !filters.noLB">Show Characters with no limit break</span>
-</div-->
-
-<div class="filter-container">
     <span class="filter-header">Captain ability filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target == 'captain'"
         ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-captain-options

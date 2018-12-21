@@ -553,10 +553,6 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
-    2001: { // Law 6+
-        type: 'healer',
-        amount: 1000
-    },
     2072: { // Chopper
         type: 'healer',
         multiplier: 5
@@ -568,10 +564,6 @@ window.zombies = {
     2123: { // Neptune
         type: 'healer',
         multiplier: 5
-    },
-    2155: { // Pekoms
-        type: 'zombie',
-        threshold: 0.5//CHANGE THIS
     },
     2156: { // Pekoms
         type: 'zombie',
@@ -623,80 +615,13 @@ window.zombies = {
         type: 'healer',
         amount: 800
     },
-    2260: { // Shanks
-        type: 'healer',
-        multiplier: 1.2
-    },
-    2261: { // Shanks
-        type: 'healer',
-    },
-    2268: { // Praline
-        type: 'healer',
-        multiplier: 1
-    },
     2269: { // Praline
         type: 'healer',
         multiplier: 1.5
     },
-    2274: { // Camie
-        type: 'healer',
-        multiplier: 3
-    },
     2275: { // Camie
         type: 'healer',
         multiplier: 5
-    },
-    2291: { // Vivi
-        type: 'healer',
-        multiplier: 3
-    },
-    2292: { // Vivi
-        type: 'healer',
-        multiplier: 5
-    },
-    2301: { // Capone
-        type: 'healer',
-    },
-    2302: { // Capone
-        type: 'healer',
-    },
-    2303: { // Chiffon
-        type: 'reducer',
-        multiplier: 0.2,//change this
-        threshold: 1.0//change this
-    },
-    2304: { // Chiffon
-        type: 'reducer',
-        multiplier: 0.2,//change this
-        threshold: 1.0//change this
-    },
-    2343: { // Bavarois
-        type: 'healer',
-        amount: 1000
-    },
-    2344: { // Bavarois
-        type: 'healer',
-        amount: 1000
-    },
-    2347: { // Shanks
-        type: 'healer',
-        amount: 500
-    },
-    2353: { // Magellan
-        type: 'healer',
-        multiplier: 1.5
-    },
-    2354: { // Magellan
-        type: 'healer',
-        multiplier: 3
-    },
-    2407: { // Ace
-        type: 'healer',
-        amount: 500
-    },
-    2408: { // Sabo
-        type: 'healer',
-        amount: 500
     },
     5001: { // Smoker/Tashigi
         type: 'healer',

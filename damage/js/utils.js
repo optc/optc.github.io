@@ -205,25 +205,13 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
-    if(window.specials[2309].turnedOn || window.specials[2310].turnedOn){
-        if(uclass.has("Shooter")){
-            if (orb == 'str') return boostedMultiplier;
-            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
-        }
-    }
-    if(window.specials[2324].turnedOn || window.specials[2325].turnedOn){
-        if(uclass.has("Shooter")){
-            if (orb == 'str') return boostedMultiplier;
-            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
-        }
-    }
     if(window.specials[1651].turnedOn || window.specials[1652].turnedOn){
         if(uclass.has("Striker")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
-    if(window.specials[1528].turnedOn || window.specials[2318].turnedOn){
+    if(window.specials[1528].turnedOn){
         if(uclass.has("Powerhouse")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
@@ -269,11 +257,6 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             }
             if([2022, 2023].includes(captains[temp].number + 1) && type == 'INT'){
                 if (orb == 'str'){
-                    return boostedMultiplier;
-                }
-            }
-            if([2306].includes(captains[temp].number + 1) && (uclass.has("Slasher") || uclass.has("Cerebral"))){
-                if (orb == 'str' || (type == 'DEX' && orb == 0.5)){
                     return boostedMultiplier;
                 }
             }

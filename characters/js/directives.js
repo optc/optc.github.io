@@ -35,21 +35,12 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 					$(row.cells[10 + scope.table.additional]).append(checkbox);
 					// cosmetic fixes
                     var typeBox = row.cells[2];
-                    var classBox = row.cells[3];
                     var type = typeBox.textContent;
-                    var classes = classBox.textContent;
                     if (type.indexOf(",") > -1) {
                         type = type.replace(",", "/");
                         var types = type.split('/');
                         var typeHtml = '<span class="cell-' + types[0] + '">' + types[0] + '</span>/<span class="cell-' + types[1] + '">' + types[1] + '</span>';
                         $(typeBox).html(typeHtml);
-                    }
-                    if ((classes.match(new RegExp(",", "g")) || []).length > 1) {
-                        while ((classes.match(new RegExp(",", "g")) || []).length >= 1) classes = classes.replace(",", "/");
-                        var classess = classes.split('/');
-                        //console.log(classess);
-                        var classesHtml = '<span class="cell-' + classess[4] + '">' + classess[4] + '</span>, <span class="cell-' + classess[5] + '">' + classess[5] + '</span>';
-                        $(classBox).html(classesHtml);
                     }
                     $(typeBox).addClass('cell-' + type);
 					var n = row.cells.length - 2 - scope.table.additional;
@@ -450,9 +441,7 @@ directives.addTags = function($stateParams, $rootScope) {
                                 if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
-                                if (name != "Has Sailor Ability sailor"){
-                                    element.append($('<span class="tag sailor">' + name + '</div>'));
-                                }
+                                element.append($('<span class="tag sailor">' + name + '</div>'));
                             }
                         }
                     }
@@ -512,7 +501,7 @@ directives.addLinks = function($stateParams) {
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/ジュラキュール・ミホーク-シッケアール王国　跡/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }
-                else if ([ 2049, 2050, 2072, 2079, 2080, 2081, 2082, 2083, 2084, 2085, 2086, 2087, 2088, 2089, 2090, 2091, 2097, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2114, 2116, 2119, 2120, 2121, 2146, 2162, 2163, 2168, 2169, 2170, 2171, 2172, 2173, 2175, 2180, 2181, 2182, 2183, 2184, 2185, 2186, 2187, 2188, 2189, 2190, 2191, 2192, 2193, 2212, 2213, 2214, 2215, 2216, 2216, 2218, 2219, 2240, 2241, 2242, 2243, 2244, 2248, 2249, 2255 ].indexOf(id) != -1){
+                else if ([ 2049, 2050, 2072, 2079, 2080, 2081, 2082, 2083, 2084, 2085, 2086, 2087, 2088, 2089, 2090, 2091, 2097, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2114, 2116, 2119, 2120, 2121, 2146, 2162, 2163, 2168, 2169, 2170, 2171, 2172, 2173, 2175, 2180, 2181, 2182, 2183, 2184, 2185, 2186, 2187, 2188, 2189, 2190, 2191, 2192, 2193, 2212, 2213, 2214, 2215, 2216, 2216, 2217, 2218, 2219, 2240, 2241, 2242, 2243, 2244, 2248, 2249, 2255 ].indexOf(id) != -1){
                     ul.append($('<li><a href="http://onepiece-treasurecruise.com/c%E2%80%90' + id + '/" target="_blank">' +
                         'Official Guide (Japanese)</a></li>'));
                 }

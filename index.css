@@ -94,7 +94,6 @@ body {
 .yellow { background-color: #F4BA70; }
 .pink   { background-color: #DEA5A4; }
 .brown   { background-color: #993300; }
-.darkpurple   { background-color: #7D3C98; }
 
 .green:hover  { background-color: #6EB98E; }
 .blue:hover   { background-color: #74B0E4; }
@@ -103,7 +102,6 @@ body {
 .yellow:hover { background-color: #E3A969; }
 .pink:hover   { background-color: #A57777; }
 .brown:hover   { background-color: #662200; }
-.darkpurple:hover   { background-color: #5B2C6F; }
 
 .overlay {
     position: absolute;

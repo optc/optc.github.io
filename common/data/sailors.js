@@ -483,12 +483,6 @@ window.sailors = {
     2081: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? 40 : 0; },
     },
-    2084: {
-        atkStatic: function(p) { return 50; },
-    },
-    2085: {
-        atkStatic: function(p) { return 50; },
-    },
     2110: {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 20 : 0; },
@@ -510,10 +504,10 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 50 : 0; },
     },
     2153: {
-        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 120 : 0; },
+        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
     },
     2154: {
-        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 120 : 0; },
+        atkStatic: function(p) { return p.percHP >= 50.0 && p.unit.class.has("Fighter") ? 125 : 0; },
     },
     2164: {
         staticMult: function(p) { return p.captain.class.has("Fighter") ? 1.5 : 0; }
@@ -568,112 +562,6 @@ window.sailors = {
     },
     2273: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
-    },
-    2280: {
-        atkStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
-    },
-    2281: {
-        atkStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
-    },
-    2284: {
-        atkStatic: function(p) { return 50; },
-    },
-    2285: {
-        atkStatic: function(p) { return 50; },
-    },
-    2287: {
-        atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
-    },
-    2288: {
-        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 50 : 0; },
-    },
-    2289: {
-        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 50 : 0; },
-    },
-    2290: {
-        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 50 : 0; },
-    },
-    2305: {
-        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0; },
-    },
-    2306: {
-        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0; },
-    },
-    2322: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
-    },
-    2323: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 75 : 0; },
-    },
-    2333: {
-        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
-    },
-    2334: {
-        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
-    },
-    2345: {
-        atkStatic: function(p) { return 20; },
-        rcvStatic: function(p) { return 20; },
-        hpStatic: function(p) { return 20; },
-    },
-    2346: {
-        atkStatic: function(p) { return 20; },
-        rcvStatic: function(p) { return 20; },
-        hpStatic: function(p) { return 20; },
-    },
-    2347: {
-        atkStatic: function(p) { return 20; },
-        rcvStatic: function(p) { return 20; },
-        hpStatic: function(p) { return 20; },
-    },
-    2400: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-    },
-    2401: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-    },
-    2402: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-    },
-    2403: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-    },
-    2404: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-    },
-    2405: {
-        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
-    },
-    2406: {
-        atkStatic: function(p) { return 30; },
-        rcvStatic: function(p) { return 30; },
-        hpStatic: function(p) { return 30; },
-    },
-    2407: {
-        atkStatic: function(p) { return 30; },
-        rcvStatic: function(p) { return 30; },
-        hpStatic: function(p) { return 30; },
-    },
-    2408: {
-        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
     },
     2502: {
         staticMult: function(p) { return 3; }
