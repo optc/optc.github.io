@@ -954,5 +954,12 @@ window.matchers = [
         target: 'limit',
         matcher: /\[INT\] Damage Reduction/i
     },
-
+    
+    /* * * * * Support Abiliites * * * * */
+    
+    {
+        name: 'Has Support Ability',
+        target: 'support',
+        matcher: /\S/i
+    },
 ];
