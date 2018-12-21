@@ -39658,6 +39658,23 @@ window.details = {
             },
         ]
     },
+    2382: {//Support Sanji
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        special: "Deals 20,000 fixed damage to one enemy and changes adjacent orbs into [RCV] orbs",
+        specialName: "Sanji Special",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV].",
+                    "Level 2: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 300 HP",
+                    "Level 3: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 500 HP",
+                    "Level 4: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 700 HP",
+                    "Level 5: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 1,000 HP"
+                ]
+            }
+        ]
+    },
     2400: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 2 or more [DEX] or [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",

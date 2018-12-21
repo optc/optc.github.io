@@ -8313,6 +8313,9 @@ window.captains = {
     2362: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.percHP >= 50.0 ? p.actions[p.sourceSlot] ? 3 : 1.75 : p.actions[p.sourceSlot] ? 2 : 1.5 : 1; }
     },
+    2382: {
+        atk: function(p) { return 2.25; }
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {
