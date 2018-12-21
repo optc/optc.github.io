@@ -147,9 +147,9 @@ window.ships = [
     },
 
     { // 11
-        name: 'Ace\'s Striker',
+        name: 'Striker',
         thumb: 'ship_0012_c1.png',
-        description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.3x, reduces cooldown of all specials by 1 turn at the start of the fight',
+        description: 'Boosts ATK of Shooter characters by 1.5x and their HP by 1.3x, reduces cooldown of Shooter specials by 1 turn at the start of the fight',
         atk: function(p) {
             return !p.unit.class.has('Shooter') ? 1 :
                 [ 1.2, 1.2, 1.2, 1.25, 1.25, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
@@ -501,7 +501,7 @@ window.ships = [
     { //38
         name: "Nostra Castello",
         thumb: 'ship_0040_c.png',
-        description: 'Boosts ATK of all units by 1.55x and their HP by 1.3x. Makes PERFECTS easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK based on how many Slasher, Free Spirit or Powerhouse characters you have on your crew.',
+        description: 'Boosts ATK of all units by 1.55x and their HP by 1.3x. Makes PERFECTS easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK if you have a Slasher, Free Spirit or Powerhouse characters on your crew.',
         atk: function(p) {
             var reduction = 1;
             if(p.classCount.Slasher > 0) reduction *= 0.5;

@@ -17,7 +17,7 @@ window.matchers = [
     {
         name: 'Universal ATK boosting captains',
         target: 'captain',
-        matcher: /Boosts.+ATK of (all characters|all others)/i
+        matcher: /Boosts.+ATK of (all characters|all other)/i
     },
 
     {
@@ -297,7 +297,7 @@ window.matchers = [
     {
         name: 'RCV boosters',
         target: 'special',
-        matcher: /Boosts.+RCV/i
+        matcher: /Boosts RCV/i
     },
 
     {
@@ -449,7 +449,7 @@ window.matchers = [
     {
         name: 'Typed damage dealers',
         target: 'special',
-        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]) damage/i
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|character\'s Type) damage/i
     },
     
     {
@@ -467,7 +467,7 @@ window.matchers = [
     {
         name: 'Defense and Barrier Buff Ignoring damage dealer',
         target: 'special',
-        matcher: /Deals.+ignore damage negating abilities and barriers/i
+        matcher: /(Deals|Cuts).+ignore damage negating abilities and barriers/i
     },
 
     {
@@ -491,7 +491,7 @@ window.matchers = [
     {
         name: 'Poison removers',
         target: 'special',
-        matcher: /removes.+poison/i 
+        matcher: /removes.+poison.+duration completely/i 
     },
 
     {
@@ -528,6 +528,12 @@ window.matchers = [
         name: 'Damage reducers',
         target: 'special',
         matcher: /Reduces (any )?damage received/i
+    },
+
+    {
+        name: 'Threshold Damage reducers',
+        target: 'special',
+        matcher: /Reduces (any )?damage received above/i
     },
 
     {
@@ -604,6 +610,12 @@ window.matchers = [
     },
 
     {
+        name: 'Orb rate Increase and Decrease reducer',
+        target: 'special',
+        matcher: /(reduces|removes).+Orb Rate Up and Orb Rate Down.+Buffs/i
+    },
+
+    {
         name: 'Enemy End of Turn buff reducer',
         target: 'special',
         matcher: /(removes|reduces).+End of Turn.+duration/i 
@@ -648,7 +660,7 @@ window.matchers = [
     {
         name: 'Enemy Barrier reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Barrier.+duration/i 
+        matcher: /(removes|reduces).+Barrier .*duration/i 
     },
 
     {
@@ -795,6 +807,12 @@ window.matchers = [
         name: 'Additional Damage dealer',
         target: 'sailor',
         matcher: /Additional.+Damage/i
+    },
+    
+    {
+        name: 'Full-board Premptive Orb Controllers',
+        target: 'sailor',
+        matcher: /Changes all orbs into/i
     },
     
     {
