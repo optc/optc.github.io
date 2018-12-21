@@ -36,18 +36,34 @@
                     <div class="panel panel-default stats-pane">
                         <table class="table table-striped">
                             <tbody>
+                                <tr ng-if="dualunit">
+                                    <th ng-if="hybrid">Character 1 Class 1</th>
+                                    <th ng-if="hybrid">Character 1 Class 2</th>
+                                    <th ng-if="hybrid">Character 1 Class 1</th>
+                                    <th ng-if="hybrid" colspan=2>Character 1 Class 2</th>
+                                </tr>
+                                <tr ng-if="dualunit">
+                                    <td>{{unit.class[0][0]}}</td>
+                                    <td>{{unit.class[0][1]}}</td>
+                                    <td>{{unit.class[1][0]}}</td>
+                                    <td colspan=2>{{unit.class[1][1]}}</td>
+                                </tr>
                                 <tr>
                                     <th ng-if="!hybrid">Class</th>
-                                    <th ng-if="hybrid">Class 1</th>
-                                    <th ng-if="hybrid">Class 2</th>
+                                    <th ng-if="hybrid && !dualunit">Class 1</th>
+                                    <th ng-if="hybrid && !dualunit">Class 2</th>
+                                    <th ng-if="hybrid && dualunit"> Dual Character Class 1</th>
+                                    <th ng-if="hybrid && dualunit"> Dual Character Class 2</th>
                                     <th>Type</th>
                                     <th>Stars</th>
                                     <th>Cost</th>
                                 </tr>
                                 <tr>
                                     <td ng-if="!hybrid">{{unit.class}}</td>
-                                    <td ng-if="hybrid">{{unit.class[0]}}</td>
-                                    <td ng-if="hybrid">{{unit.class[1]}}</td>
+                                    <td ng-if="hybrid && !dualunit">{{unit.class[0]}}</td>
+                                    <td ng-if="hybrid && !dualunit">{{unit.class[1]}}</td>
+                                    <td ng-if="hybrid && dualunit">{{unit.class[2][0]}}</td>
+                                    <td ng-if="hybrid && dualunit">{{unit.class[2][1]}}</td>
                                     <td ng-if="!dualunit">{{unit.type}}</td>
                                     <td ng-if="dualunit">{{unit.type[0]}}/{{unit.type[1]}}</td>
                                     <td ng-if="!compare">{{unit.stars}}</td>
