@@ -25587,7 +25587,7 @@ window.details = {
     },
     1770: {//Ben Beckman
         captain: "Boosts ATK of Cerebral characters by 2.5x and their HP by 1.2x at the start of the chain and boosts ATK of Cerebral characters by 3.25x following a chain of Good > Great > PERFECT hits",
-        special: "Delays all enemies for 1 turn. If your Captain is aCerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Delays all enemies for 1 turn. If your Captain is a Cerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
         sailor: {
             "base": "None",
