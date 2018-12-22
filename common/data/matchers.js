@@ -449,7 +449,7 @@ window.matchers = [
     {
         name: 'Typed damage dealers',
         target: 'special',
-        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]) damage/i
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|character\'s Type) damage/i
     },
     
     {
@@ -528,6 +528,12 @@ window.matchers = [
         name: 'Damage reducers',
         target: 'special',
         matcher: /Reduces (any )?damage received/i
+    },
+
+    {
+        name: 'Threshold Damage reducers',
+        target: 'special',
+        matcher: /Reduces (any )?damage received above/i
     },
 
     {
@@ -948,5 +954,36 @@ window.matchers = [
         target: 'limit',
         matcher: /\[INT\] Damage Reduction/i
     },
-
+    
+    /* * * * * Support Abiliites * * * * */
+    
+    {
+        name: 'Has Support Ability',
+        target: 'support',
+        matcher: /\S/i
+    },
+    
+    {
+        name: 'ATK Boosting Support',
+        target: 'support',
+        matcher: /Adds.+ATK/i
+    },
+    
+    {
+        name: 'HP Boosting Support',
+        target: 'support',
+        matcher: /Adds.+HP/i
+    },
+    
+    {
+        name: 'RCV Boosting Support',
+        target: 'support',
+        matcher: /Adds.+RCV/i
+    },
+    
+    {
+        name: 'Orb Controllers',
+        target: 'support',
+        matcher: /(Changes.+(orb|orbs))/i
+    },
 ];

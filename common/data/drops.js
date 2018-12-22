@@ -896,15 +896,14 @@ window.drops = {
             '11': [ 2320 ],
         },
         
-        {
+        /*{
             name: 'Outside of Town to Bege\'s Hideout',
-            shortName: 'WCI 2',
+            shortName: 'Whole Cake 2',
             thumb: null,
             nakama: null,
             completion: '5x Rainbow Gems',
             gamewith: null,
-        },
-        
+        },*/
     ], 
 
     'Booster and Evolver Island': [
@@ -2921,7 +2920,7 @@ window.drops = {
             thumb: 2362,
             nakama: null,
             gamewith: null,
-            'Calm Sea': [ 2361 ]
+            'Winter Sea': [ 2361, 9025 ]
         },
         
     ],

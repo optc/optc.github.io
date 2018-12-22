@@ -122,6 +122,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     filters.classes.indexOf(unit.class[1]) == -1) return false;
             else if (!singleQuery && doubleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
                         filters.classes.indexOf(unit.class[1]) == -1)) return false;
+            else if (!singleQuery && dualCharacter && (filters.classes.indexOf(unit.class[2][0]) == -1 ||
+                        filters.classes.indexOf(unit.class[2][1]) == -1)) return false;
         }
         // filter by stars
         if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;

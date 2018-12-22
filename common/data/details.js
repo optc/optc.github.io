@@ -62,7 +62,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "All Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     5: {
         special: "Deals 7x character's ATK in [DEX] damage to one enemy",
@@ -127,6 +139,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 40% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[DEX] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     9: {
@@ -192,6 +216,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[INT] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     13: {
@@ -255,6 +291,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Shooter Characters",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Reduces damage received from [INT] characters by 1%. Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Reduces damage received from [INT] characters by 2%. Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Reduces damage received from [INT] characters by 2%. Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Reduces damage received from [INT] characters by 3%. Adds 3% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     17: {
@@ -321,6 +369,18 @@ window.details = {
                     "Level 5: If HP is below 20% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Powerhouse Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 2: Adds 1% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 3: Adds 2% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 4: Adds 3% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 5: Adds 4% of this character's base HP and ATK to the supported character's base HP and ATK"
+                ]
+            }
         ]
     },
     21: {
@@ -1456,6 +1516,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     228: {
@@ -1652,6 +1724,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard, Ace, Vista and Jozu",
+                "description": [
+                    "Level 1: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 8% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 12% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     252: {
@@ -1763,6 +1847,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard, Ace, Jozu and Marco",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     256: {
@@ -2173,7 +2269,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Coby, Helmeppo and Aokiji",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 13% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     307: {
         special: "Randomizes all orbs other than [DEX] into either [DEX], [RCV] or [TND] orbs",
@@ -2228,6 +2336,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[DEX] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     309: {
@@ -4285,7 +4405,19 @@ window.details = {
     500: {
         special: "Delays all enemies by 1 turn",
         specialName: "Women Are Courageous!",
-        captain: "Boosts RCV of Shooter characters by 2x"
+        captain: "Boosts RCV of Shooter characters by 2x",
+        support: [
+            {
+                "Characters": "Nami and Nojiko",
+                "description": [
+                    "Level 1: Adds 6% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Adds 7% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Adds 9% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Adds 12% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Adds 15% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
+        ]
     },
     501: {
         special: "Recovers 5x character's RCV in HP at the end of each turn for 4 turns",
@@ -5917,6 +6049,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard and Marco",
+                "description": [
+                    "Level 1: Supported character deals 1.1x damage to Akainu",
+                    "Level 2: Supported character deals 1.15x damage to Akainu",
+                    "Level 3: Supported character deals 1.2x damage to Akainu",
+                    "Level 4: Supported character deals 1.25x damage to Akainu",
+                    "Level 5: Supported character deals 1.3x damage to Akainu"
+                ]
+            }
         ]
     },
     644: {
@@ -6389,7 +6533,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Sabo, Hack and Robin",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     672: {
         special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR]",
@@ -6443,6 +6599,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sabo and Koala",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     674: {
@@ -6497,6 +6665,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Inazuma and Bon Clay",
+                "description": [
+                    "Level 1: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 3 turns",
+                    "Level 2: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 4 turns",
+                    "Level 3: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 5 turns",
+                    "Level 4: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 7 turns",
+                    "Level 5: Once per adventure, when you gain Poison or Toxic, removes Poison duration completely"
+                ]
+            }
         ]
     },
     676: {
@@ -6554,6 +6734,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy and Ivankov",
+                "description": [
+                    "Level 1: Reduces damage received from [STR] characters by 1%. Adds 2% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Reduces damage received from [STR] characters by 2%. Adds 3% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Reduces damage received from [STR] characters by 3%. Adds 5% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Reduces damage received from [STR] characters by 4%. Adds 7% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Reduces damage received from [STR] characters by 5%. Adds 10% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
         ]
     },
     678: {
@@ -7332,7 +7524,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Rob Lucci, Kaku, Jabra, Blueno, Fukuro and Kumadori",
+                "description": [
+                    "Level 1: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 2: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 3: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by ??% for 1 turn",
+                    "Level 4: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 4,000 HP by ??% for 1 turn",
+                    "Level 5: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 3,000 HP by ??% for 1 turn"
+                ]
+            }
+        ]
     },
     753: {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -7778,7 +7982,19 @@ window.details = {
     785: {
         special: "Reduces Despair duration by 2 turns, removes Blindness duration completely",
         specialName: "Yelling at Lascivious Young Women",
-        captain: "Reduces damage received by 20%"
+        captain: "Reduces damage received by 20%",
+        support: [
+            {
+                "Characters": "Nami, Bellemere and Nojiko",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV"
+                ]
+            }
+        ]
     },
     786: {
         special: "Seals himself for 10 turns, delays all enemies for 1 turn, reduces damage received by 50% for 4 turns",
@@ -7796,7 +8012,19 @@ window.details = {
     789: {
         special: "Following the activation of the special, if during that turn you score 6 PERFECT hits, boosts ATK of Slasher characters by 1.75x in the following turn",
         specialName: "Real Sword Fight with a Girl Swordsman",
-        captain: "Boosts ATK of Slasher characters by 1.5x"
+        captain: "Boosts ATK of Slasher characters by 1.5x",
+        support: [
+            {
+                "Characters": "Zoro",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.1x for 1 turn",
+                    "Level 2: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.15x for 1 turn",
+                    "Level 3: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.2x for 1 turn",
+                    "Level 4: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.25x for 1 turn",
+                    "Level 5: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.3x for 1 turn"
+                ]
+            }
+        ]
     },
     790: {
         special: "Deals 3x character's ATK in [QCK] damage to one enemy, boosts ATK of STR, [DEX] and [QCK] characters by 1.2x for 3 turns",
@@ -8526,6 +8754,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Pica, Gladius and Buffalo",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     845: {
@@ -8815,6 +9055,18 @@ window.details = {
                     //"Level 5: This character's normal attack will ignore barriers"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sandersonia, Marigold and Marguerite",
+                "description": [
+                    "Level 1: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 2: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 3: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 4: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 5: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.5x for 1 turn"
+                ]
+            }
         ]
     },
     866: {
@@ -9042,6 +9294,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Doflamingo, Diamante, Lao G, Machvise and Dellinger",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     875: {
@@ -10140,7 +10404,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Doflamingo, Gladius, Buffalo and Baby 5",
+                "description": [
+                    "Level 1: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
+                    "Level 2: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
+                    "Level 3: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
+                    "Level 4: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs",
+                    "Level 5: Once per adventure, when the supported character uses their special, For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs"
+                ]
+            }
+        ]
     },
     934: {
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
@@ -11925,6 +12201,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Striker Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1044: {
@@ -12083,7 +12371,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Hack, Koala, Ivankov, Inazuma and Kuma",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 9% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1048: {
         captain: "Boosts ATK and RCV of [PSY] characters by 1.2x",
@@ -12348,6 +12648,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Usopp, Robin and Mansherry",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV"
+                ]
+            }
         ]
     },
     1078: {
@@ -12430,6 +12742,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Characters with cost 29 or less",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, recovers 500 HP at the end of each turn for 3 turns",
+                    "Level 2: Once per adventure, when you reach the final stage, recovers 700 HP at the end of each turn for 3 turns",
+                    "Level 3: Once per adventure, when you reach the final stage, recovers 1000 HP at the end of each turn for 3 turns",
+                    "Level 4: Once per adventure, when you reach the final stage, recovers 1200 HP at the end of each turn for 3 turns",
+                    "Level 5: Once per adventure, when you reach the final stage, recovers 1500 HP at the end of each turn for 3 turns"
+                ]
+            }
         ]
     },
     1080: {
@@ -14350,7 +14674,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 4% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
@@ -15235,7 +15571,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Smoker and Zoro",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
+        ]
     },
     1235: {//Maynard
         captain: "Boosts ATK of [PSY] characters by 1.75x, deals 3x character's ATK to all enemies at the end of each turn",
@@ -16003,6 +16351,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Blackbeard, Jesus Burgess, Van Augur, Shiryu and Doc Q",
+                "description": [
+                    "Level 1: Once per an adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 2: Once per an adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 3: Once per an adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 4: Once per an adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 2 turns.",
+                    "Level 5: Once per an adventure, when you are inflicted with Bind, Despair or Blindness, reduces Bind, Despair and Blindness duration by 2 turns."
+                ]
+            }
         ]
     },
     1271: {//Van Augur
@@ -16057,6 +16417,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu and Doc Q",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1273: {//Jesus Burgess
@@ -16113,6 +16485,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Blackbeard, Van Augur, Lafitte, Shiryu, and Doc Q",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     1275: {//Shiliew
@@ -16171,6 +16555,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Blackbeard, Burgess, Laffitte, Van Augur and Doc Q",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1277: {//Doc Q
@@ -16226,7 +16622,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu and Van Augur",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1279: {//John Giant
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
@@ -16899,7 +17307,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Akainu, Aokiji, Kizaru and Sengoku",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
+        ]
     },
     1323: {//Onigumo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Slasher and Driven characters by 1.3x",
@@ -17997,7 +18417,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "All Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1388: {//Zoro 5+
         captain: "Boosts ATK of [DEX] characters by 2.5x",
@@ -18047,6 +18479,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 40% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[DEX] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     1389: {//Nami 5+
@@ -18098,6 +18542,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[INT] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     1390: {//Buggy Legend
@@ -19186,6 +19642,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Hody, Hyouzou, Daruma, Dosun and Zeo",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1439: {//Daruma
@@ -19244,6 +19712,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by ? turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Hody Jones, Hyouzou, Ikaros, Dosun and Zeo",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character is inflicted with Silence, reduces Silence on supported character duration by 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character is inflicted with Silence, reduces Silence on supported character duration by 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character is inflicted with Silence, reduces Silence on supported character duration by 2 turns.",
+                    "Level 4: Once per an adventure, when the supported character is inflicted with Silence or Paralysis, reduces Silence and Paralysis on supported character duration by 2 turns.",
+                    "Level 5: Once per an adventure, when the supported character is inflicted with Silence or Paralysis, reduces Silence and Paralysis on supported character duration by 3 turns."
+                ]
+            }
         ]
     },
     1441: {//Zeo
@@ -19302,7 +19782,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Hody, Hyouzou, Ikaros, Daruma and Dosun",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
     },
     1443: {//Dosun
         captain: "Boosts ATK of Powerhouse characters by 2.75x following a chain of Good > Great > PERFECT hits",
@@ -19358,7 +19850,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Hody Jones, Hyouzou, Ikaros, Daruma and Zeo",
+                "description": [
+                    "Level 1: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 7% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 9% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 12% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP"
+                ]
+            }
+        ]
     },
     1445: {//Boa Hancock+
         captain: "Boosts ATK of [QCK] and [PSY] characters proportionally to the crew's current HP. If HP is below 50%, boosts RCV of [QCK] and [PSY] characters by 1.5x.",
@@ -19481,6 +19985,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Shooter Characters",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Reduces damage received from [INT] characters by 1%. Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Reduces damage received from [INT] characters by 2%. Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Reduces damage received from [INT] characters by 2%. Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Reduces damage received from [INT] characters by 3%. Adds 3% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1447: {//Sanji 5+
@@ -19541,6 +20057,18 @@ window.details = {
                     "Level 5: If HP is below 20% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Powerhouse Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 2: Adds 1% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 3: Adds 2% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 4: Adds 3% of this character's base HP and ATK to the supported character's base HP and ATK",
+                    "Level 5: Adds 4% of this character's base HP and ATK to the supported character's base HP and ATK"
+                ]
+            }
         ]
     },
     1448: {//Chopper 5+
@@ -20881,7 +21409,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Luffy",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     1535: {//Duval
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of [PSY] characters by 2.5x if they have matching orbs",
@@ -20993,6 +21533,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Usopp",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     1539: {//Perona
@@ -21047,6 +21599,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Zoro",
+                "description": [
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1541: {//Elizabeth
@@ -21104,6 +21668,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sanji",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                ]
+            }
         ]
     },
     1543: {//6+ Usopp
@@ -21649,7 +22225,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Sicilian, Pedro and Inuarashi",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1574: {//Sicilian
         captain: "Boosts ATK of [INT] characters by 2.25x",
@@ -21704,7 +22292,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Wanda and Inuarashi",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1576: {//Kin'emon
         captain: "Boosts ATK of all characters by 2.5x following a chain of Good > Great > PERFECT hits",
@@ -24130,7 +24730,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Fighter and Powerhouse Characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, adds .1x to Chain multiplier for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, adds .1x to Chain multiplier for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, adds .15x to Chain multiplier for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, adds .15x to Chain multiplier for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, adds .2x to Chain multiplier for 1 turn."
+                ]
+            }
+        ]
     },
     1701: {//Ivankov
         captain: "Boosts ATK of Free Spirit characters by 2x",
@@ -24325,7 +24937,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Luffy",
+                "description": [
+                    "Level 1: Reduces damage received from [DEX] characters by 1%. Adds 5% of this character's base HP to the supported character's base HP",
+                    "Level 2: Reduces damage received from [DEX] characters by 2%. Adds 7% of this character's base HP to the supported character's base HP",
+                    "Level 3: Reduces damage received from [DEX] characters by 3%. Adds 10% of this character's base HP to the supported character's base HP",
+                    "Level 4: Reduces damage received from [DEX] characters by 4%. Adds 12% of this character's base HP to the supported character's base HP",
+                    "Level 5: Reduces damage received from [DEX] characters by 5%. Adds 15% of this character's base HP to the supported character's base HP"
+                ]
+            }
+        ]
     },
     1707: {//Shanks 6+
         captain: "Boosts ATK of [PSY] characters by 2.75x and their HP by 1.3x. Boosts chances of getting [PSY] orbs proportionally to the crew's current HP.",
@@ -24775,7 +25399,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Marigold",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns. Changes supported character's own orb into [DEX].",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns. Changes supported character's own and adjacent orbs into [DEX].",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 2 turns. Changes supported character's own and adjacent orbs into [DEX]."
+                ]
+            }
+        ]
     },
     1742: {//Marigold
         captain: "Boosts ATK of Striker and Powerhouse characters by 2x and boosts HP of [STR] characters by 1.1x",
@@ -24832,7 +25468,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Sandersonia",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.2x for 1 turn",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn. Changes supported character's DEX orb into matching.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn. Changes supported character's DEX or QCK orb into matching.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 2 turns. Changes supported character's DEX or QCK orb into matching."
+                ]
+            }
+        ]
     },
     1744: {//Marguerite
         captain: "Boosts ATK of Shooter characters by 2x",
@@ -24886,6 +25534,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Shooter Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1746: {//Boa Hancock
@@ -25024,6 +25684,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Law",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's Threshold Damage Reduction duration by 1 turn",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's Threshold Damage Reduction duration by 1 turn"
+                ]
+            }
         ]
     },
     1750: {//Korea Law
@@ -26131,6 +26803,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Bartolomeo",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 12% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1801:{//Bartolomeo
@@ -26185,6 +26869,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Cavendish",
+                "description": [
+                    "Level 1: Reduces damage received from [STR] characters by 1%. Adds 5% of this character's base HP to the supported character's base HP",
+                    "Level 2: Reduces damage received from [STR] characters by 2%. Adds 7% of this character's base HP to the supported character's base HP",
+                    "Level 3: Reduces damage received from [STR] characters by 3%. Adds 10% of this character's base HP to the supported character's base HP",
+                    "Level 4: Reduces damage received from [STR] characters by 4%. Adds 12% of this character's base HP to the supported character's base HP",
+                    "Level 5: Reduces damage received from [STR] characters by 5%. Adds 15% of this character's base HP to the supported character's base HP"
+                ]
+            }
         ]
     },
     1803: {//Zoro
@@ -26316,6 +27012,18 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Fighter characters by 2.25x",
         special: "Reduces Special Cooldown of your top row by 2 turns, boosts ATK of Fighter characters by 1.5x for 1 turn",
         specialName: "Rabbit Mink's Air Step",
+        support: [
+            {
+                "Characters": "Fighter Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
     },
     1813: {//Koala
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
@@ -26375,7 +27083,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Powerhouse Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1816: {// Ace 6+
         special: "Reduces crew's current HP by 40%, deals 15x the amount of HP subtracted in typeless damage to all enemies, boosts ATK of Shooter characters by 2x for 1 turn",
@@ -27736,6 +28456,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Kyros, Riku and Rebecca",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. Boosts the supported character's ATK by 1.05x against Doflamingo",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. Boosts the supported character's ATK by 1.1x against Doflamingo",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. Boosts the supported character's ATK by 1.15x against Doflamingo",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. Boosts the supported character's ATK by 1.2x against Doflamingo",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. Boosts the supported character's ATK by 1.25x against Doflamingo"
+                ]
+            }
         ]
     },
     1876: {//Rebecca
@@ -27792,6 +28524,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "King Riku, Kyros and Violet",
+                "description": [
+                    "Level 1: Reduces damage received from [QCK] characters by 1%. Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [QCK] characters by 2%. Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [QCK] characters by 3%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [QCK] characters by 4%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [QCK] characters by 5%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1878: {//Bartolomeo
@@ -27863,6 +28607,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Striker Characters",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%",
+                    "Level 2: Reduces damage received from [INT] characters by 1%",
+                    "Level 3: Reduces damage received from [INT] characters by 2%",
+                    "Level 4: Reduces damage received from [INT] characters by 2%",
+                    "Level 5: Reduces damage received from [INT] characters by 3%"
+                ]
+            }
         ]
     },
     1880: {//Hody Jones 6+
@@ -29617,7 +30373,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
+        ]
     },
     1946: {//Vander Decken
         captain: "Boosts ATK of all characters by 1.75x.",
@@ -30524,6 +31292,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Adds 3% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 4% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 5% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 9% of this character's base HP to the supported character's base HP"
+                ]
+            }
+        ]
     },
     1990: {//Garp
         captain: "Boosts ATK of Free Spirit characters by 2.5x until the first hit other than PERFECT",
@@ -30580,6 +31360,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Coby, Helmeppo and Sengoku",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1992: {//Coby
         captain: "Boosts ATK of Free Spirit and Fighter characters by 2.25x and reduce damage received by 10%",
@@ -30685,7 +31477,7 @@ window.details = {
             "combined": "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" for [PSY] and [DEX] characters"
         },
         captainNotes: "#{beneficial}",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
@@ -30936,7 +31728,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[INT] Characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     2008: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.2x",
@@ -32223,6 +33027,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by 5 turns at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Nami and Carrot",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     2073: {//V4 Luffy
@@ -32306,6 +33122,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "All Characters",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 2: Adds 5% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 3: Adds 7% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 4: Adds 8% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 5: Adds 9% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV"
+                ]
+            }
         ]
     },
     2075: {//Legend Nami
@@ -32386,6 +33214,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 10 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Carrot and Chopper",
+                "description": [
+                    "Level 1: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 11% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 13% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     2077: {//Carrot
@@ -32441,7 +33281,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Chopper",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     2079: {//Brook
         captain: "Boosts ATK of Slasher and Free Spirit characters by 2x",
@@ -32552,6 +33404,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Carrot, Wanda, Sicilian and Brook",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     2083: {//Reiju
@@ -32588,6 +33452,18 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and reduces damage received by 15%",
         special: "If HP is full at the time the special was activated, reduces Bind duration by 3 turns and boosts ATK of all characters by 1.5x for 1 turn.",
         specialName: "Intoxicating Magic",
+        support: [
+            {
+                "Characters": "Shooter Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
+        ]
     },
     2090: {//Pizza Franky
         captain: "Boosts ATK of [DEX] characters by 1.5x and their HP and RCV by 1.2x",
@@ -32608,6 +33484,18 @@ window.details = {
         captain: "Boosts ATK of Fighter and Free Spirit characters by 1.5x and their RCV by 1.2x",
         special: "Removes Poison duration completely and boosts ATK against delayed enemies by 1.5x for 1 turn",
         specialName: "Overflowing Happiness",
+        support: [
+            {
+                "Characters": "Free Spirit Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 2: Adds 1% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 3: Adds 2% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 4: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 5: Adds 4% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV"
+                ]
+            }
+        ]
     },
     2094: {//Pizza Brook
         captain: "Boosts ATK of Slasher characters by 1.75x",
@@ -32678,13 +33566,13 @@ window.details = {
     },
     2098: {//Tesoro
         captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
-        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, not for the rest of the battle.",
+        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, boosting ATK by 2.625x at the start of the chain, by 3.15x after scoring 4 GREATs in a row, not for the rest of the battle.",
         special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
         specialName: "Gon Inferno",
     },
     2099: {//Tesoro
         captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
-        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, not for the rest of the battle.",
+        captainNotes: "Scoring a PERFECT will reduce the ATK boost for the next character in the chain, boosting ATK by 2.625x at the start of the chain, by 3.15x after scoring 4 GREATs in a row, not for the rest of the battle.",
         special: "Deals 200,000 fixed damage to all enemies, changes top and bottom row orbs into matching orbs and locks the chain multiplier at 3.25x for 1 turn.",
         specialName: "Gon Inferno",
         sailor: {
@@ -33283,6 +34171,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Katakuri and Perospero",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     2116: {//Amande
@@ -33468,6 +34368,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Big Mom, Katakuri and Smoothie",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     2122: {//Neptune
@@ -33547,6 +34459,18 @@ window.details = {
         captain: "Boosts RCV of Cerebral characters by 1.2x and boosts ATK of Cerebral characters by 2.75x if they have a matching orb, by 1.75x otherwise",
         special: "Reduces Bind duration by 2 turns and amplifies the effect of orbs for Cerebral characters by 1.5x and boosts ATK of Cerebral characters by 1.5x for 1 turn.",
         specialName: "The Witch's Meal",
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Adds 2% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Adds 3% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Adds 4% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Adds 5% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Adds 6% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
+        ]
     },
     2128: {//Randolph
         captain: "Boosts ATK of DEX characters by 2x and boosts chain multiplier by 1.2x",
@@ -34058,6 +34982,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 10 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Nami and Reiju",
+                "description": [
+                    "Level 1: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 12% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 15% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 18% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     2149: {//Zeff
@@ -34169,6 +35105,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sanji and Reiju",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, reduces crew's current HP by 20% and slightly boosts chances of getting matching orbs for 3 turns",
+                    "Level 2: Once per adventure, when you reach the final stage, reduces crew's current HP by 20% and slightly boosts chances of getting matching orbs for 3 turns",
+                    "Level 3: Once per adventure, when you reach the final stage, reduces crew's current HP by 20% and boosts chances of getting matching orbs for 3 turns",
+                    "Level 4: Once per adventure, when you reach the final stage, reduces crew's current HP by 20% and boosts chances of getting matching orbs for 3 turns",
+                    "Level 5: Once per adventure, when you reach the final stage, reduces crew's current HP by 20% and greatly boosts chances of getting matching orbs for 3 turns"
+                ]
+            }
         ]
     },
     2153: {//Tamago
@@ -34355,6 +35303,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 50% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[DEX] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     2159: {//Magellan 6+
@@ -35022,6 +35982,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 2% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     2190: {//Rebecca
@@ -36078,6 +37050,18 @@ window.details = {
                     "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Big Mom, Katakuri and Smoothie",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     2241: {//Cracker
@@ -36133,6 +37117,18 @@ window.details = {
                     "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Big Mom, Brûlée, Homies and Randolph",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     2243: {//Daifuku
@@ -36188,6 +37184,18 @@ window.details = {
                     "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Katakuri, Oven, Brulee and Smoothie",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     2245: {//Legend Sanji
@@ -36395,6 +37403,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Adds 2% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 3% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 4% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 8% of this character's base HP to the supported character's base HP"
+                ]
+            }
         ]
     },
     2250: {//Garp
@@ -37983,6 +39003,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "[STR] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     2324: {//Usopp
         captain: "Boosts ATK of Shooter characters by 3x following a chain of Good > Great > PERFECT hits.",
@@ -38253,7 +39285,7 @@ window.details = {
     2335: {//TM Law
         captain: "Boosts ATK of Fighter, Slasher, Cerebral and Free Spirit characters by 1.1x",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 1.21x bonus",
-        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orb into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orbs into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
         specialName: "Counter-Shock",
     },
     2336: {//TM Law
@@ -38267,7 +39299,7 @@ window.details = {
             "level6": "Boosts ATK of Fighter, Slasher, Cerebral and Free Spirit characters by 1.8x and makes [RCV] and [TND] orbs \"beneficial\" for Fighter, Slasher, Cerebral and Free Spirit characters.",
         },
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.24x bonus",
-        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orb into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orbs into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
         specialName: "Counter-Shock",
         sailor: {
             "base": "None",
@@ -38422,6 +39454,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Nami, Jimbei, Chopper and Brook",
+                "description": [
+                    "Level 1: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 12% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 15% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 18% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     2339: {//Stussy
@@ -38477,7 +39521,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Shooter Characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes all orbs and boosts ATK of supported character by 1.2x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes all orbs and boosts ATK of supported character by 1.2x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes all non-matching orbs and boosts ATK of supported character by 1.2x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes all non-matching orbs and boosts ATK of supported character by 1.3x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes all non-matching orbs and boosts ATK of supported character by 1.5x for 1 turn."
+                ]
+            }
+        ]
     },
     2341: {//Opera
         captain: "Boosts ATK of Striker and Fighter characters by 2x",
@@ -38532,6 +39588,18 @@ window.details = {
                     "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Galette, Amande and Bobbin",
+                "description": [
+                    "Level 1: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 7% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 9% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 12% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP"
+                ]
+            }
         ]
     },
     2343: {//Bavarois
@@ -38589,6 +39657,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Big Mom and Perospero",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     2345: {//Galette
         captain: "Boosts ATK of [QCK] and [INT] characters by 2.25x and makes [QCK] and [INT] orbs \"beneficial\" for [QCK] and [INT] characters",
@@ -38643,6 +39723,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by 8 turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Amande, Opera and Bobbin",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 8% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     2347: {//Shanks
@@ -38714,6 +39806,18 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of [STR] characters by 2.25x and their HP by 1.2x.",
         special: "Locks all orbs for 2 turns, changes own orb to [STR] and boosts the Color Affinity of Striker and Cerebral characters by 1.3x for 2 turns",
         specialName: "Candy Man",
+        support: [
+            {
+                "Characters": "Striker Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 2: Adds 1% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 3: Adds 2% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 4: Adds 2% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 5: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV"
+                ]
+            }
+        ]
     },
     2352: {//Mascarpone & Joscarpone
         captain: "Boosts ATK of Slasher characters by 1.75x and their RCV by 1.2x.",
@@ -38794,6 +39898,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Hannyabal, Sadie and Saldeath",
+                "description": [
+                    "Level 1: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 8% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     2355: {//Arlong
@@ -38849,6 +39965,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Hatchan, Choo and Kuroobi",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 9% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     2357: {
         captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 3x, but boosts his OWN attack by 4x",
@@ -39106,6 +40234,23 @@ window.details = {
             },
         ]
     },
+    2382: {//Support Sanji
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        special: "Deals 20,000 fixed damage to one enemy and changes adjacent orbs into [RCV] orbs",
+        specialName: "Sanji Special",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV].",
+                    "Level 2: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 300 HP",
+                    "Level 3: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 500 HP",
+                    "Level 4: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 700 HP",
+                    "Level 5: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 1,000 HP"
+                ]
+            }
+        ]
+    },
     2400: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 2 or more [DEX] or [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
@@ -39260,7 +40405,7 @@ window.details = {
     },
     2505: {//Rob Lucci
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Shooter characters by 3.25x at the start of the chain and reduces crew's RCV to 0.<br>Boosts ATK of Shooter characters by 3.4125x after the 1st PERFECT in a row, by 3.583125x after the 2nd PERFECT in a row, by 3.76228125x after the 3rd PERFECT in a row, by 3.9503953125x after the 4th PERFECT in a row and by 4.147915078125x after the 5th PERFECT in a row.",
-        special: "Reduces the defense of all enemies by 80% for 1 turns, deals 100x character's ATK in [QCK] damage to one enemy, reduces Paralysis duration by 4 turns and boosts the Color Affinity of Shooter characters by 2x for 1 turn",
+        special: "Reduces the defense of all enemies by 80% for 1 turn, deals 100x character's ATK in [QCK] damage to one enemy, reduces Paralysis duration by 4 turns and boosts the Color Affinity of Shooter characters by 2x for 1 turn",
         specialName: "Tempest Kick: Victory Bird",
         sailor: {
             "base": "None",
@@ -39700,7 +40845,7 @@ window.details = {
     5012: {//TM Sanji & Zoro
         captain: "Reduces cooldown of [DEX] and [PSY] specials by 2 turns at the start of the fight. Boosts ATK of [PSY] characters by 2.75x and boosts ATK of [DEX] characters by 2x",
         captainNotes: "#{beneficial}",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
@@ -39776,7 +40921,7 @@ window.details = {
     5013: {//TM Sanji & Zoro
         captain: "Reduces cooldown of [DEX] and [PSY] specials by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
         captainNotes: "#{beneficial}",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
@@ -39852,7 +40997,7 @@ window.details = {
     5014: {//TM Sanji & Zoro
         captain: "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" for [PSY] and [DEX] characters",
         captainNotes: "#{beneficial}",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
@@ -39928,7 +41073,7 @@ window.details = {
     5015: {//TM Sanji & Zoro
         captain: "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs \"beneficial\" for [PSY] and [DEX] characters",
         captainNotes: "#{beneficial}",
-        special: "Deals 30x character's ATK in Typeless damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
+        special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
