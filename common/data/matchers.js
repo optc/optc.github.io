@@ -962,4 +962,28 @@ window.matchers = [
         target: 'support',
         matcher: /\S/i
     },
+    
+    {
+        name: 'ATK Boosting Support',
+        target: 'support',
+        matcher: /Adds.+ATK/i
+    },
+    
+    {
+        name: 'HP Boosting Support',
+        target: 'support',
+        matcher: /Adds.+HP/i
+    },
+    
+    {
+        name: 'RCV Boosting Support',
+        target: 'support',
+        matcher: /Adds.+RCV/i
+    },
+    
+    {
+        name: 'Orb Controllers',
+        target: 'support',
+        matcher: /(Changes.+(orb|orbs))/i
+    },
 ];

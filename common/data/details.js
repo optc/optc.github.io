@@ -67,9 +67,9 @@ window.details = {
             {
                 "Characters": "All Characters",
                 "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
                     "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
                     "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
-                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
                     "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
                     "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
                 ]
@@ -1712,6 +1712,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard, Ace, Vista, Jozu",
+                "description": [
+                    "Level 1: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 8% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 12% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     252: {
@@ -1823,6 +1835,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard, Ace, Jozu, Marco",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     256: {
@@ -6013,6 +6037,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard, Marco",
+                "description": [
+                    "Level 1: Supported character deals 1.1x damage to Akainu",
+                    "Level 2: Supported character deals 1.15x damage to Akainu",
+                    "Level 3: Supported character deals 1.2x damage to Akainu",
+                    "Level 4: Supported character deals 1.25x damage to Akainu",
+                    "Level 5: Supported character deals 1.3x damage to Akainu"
+                ]
+            }
         ]
     },
     644: {
@@ -6617,6 +6653,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Inazuma, Bon Clay",
+                "description": [
+                    "Level 1: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 3 turns",
+                    "Level 2: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 4 turns",
+                    "Level 3: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 5 turns",
+                    "Level 4: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 7 turns",
+                    "Level 5: Once per adventure, when you gain Poison or Toxic, removes Poison duration completely"
+                ]
+            }
         ]
     },
     676: {
@@ -6674,6 +6722,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Ivankov",
+                "description": [
+                    "Level 1: Reduces damage received from [STR] characters by 1%. Adds 2% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Reduces damage received from [STR] characters by 2%. Adds 3% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Reduces damage received from [STR] characters by 3%. Adds 5% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Reduces damage received from [STR] characters by 4%. Adds 7% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Reduces damage received from [STR] characters by 5%. Adds 10% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
         ]
     },
     678: {
@@ -7452,7 +7512,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Rob Lucci, Kaku, Jabra, Blueno, Fukuro, Kumadori",
+                "description": [
+                    "Level 1: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 2: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 3: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by ??% for 1 turn",
+                    "Level 4: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 4,000 HP by ??% for 1 turn",
+                    "Level 5: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 3,000 HP by ??% for 1 turn"
+                ]
+            }
+        ]
     },
     753: {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -8971,6 +9043,18 @@ window.details = {
                     //"Level 5: This character's normal attack will ignore barriers"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sandersonia, Marigold, Marguerite",
+                "description": [
+                    "Level 1: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 2: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 3: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 4: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 5: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.5x for 1 turn"
+                ]
+            }
         ]
     },
     866: {
@@ -9198,6 +9282,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Doflamingo, Diamante, Lao G, Machvise, Dellinger",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     875: {
@@ -10296,7 +10392,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Doflamingo, Gladius, Buffalo, Baby 5",
+                "description": [
+                    "Level 1: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
+                    "Level 2: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
+                    "Level 3: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
+                    "Level 4: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs",
+                    "Level 5: Once per adventure, when the supported character uses their special, For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs"
+                ]
+            }
+        ]
     },
     934: {
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.5x. If HP is above 70% or below 30%, boosts ATK of Fighter characters by 2.75 instead",
@@ -12528,6 +12636,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Usopp, Robin, Mansherry",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV"
+                ]
+            }
         ]
     },
     1078: {
@@ -12610,6 +12730,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Characters with cost 29 or less",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, recovers 500 HP at the end of each turn for 3 turns",
+                    "Level 2: Once per adventure, when you reach the final stage, recovers 700 HP at the end of each turn for 3 turns",
+                    "Level 3: Once per adventure, when you reach the final stage, recovers 1000 HP at the end of each turn for 3 turns",
+                    "Level 4: Once per adventure, when you reach the final stage, recovers 1200 HP at the end of each turn for 3 turns",
+                    "Level 5: Once per adventure, when you reach the final stage, recovers 1500 HP at the end of each turn for 3 turns"
+                ]
+            }
         ]
     },
     1080: {
@@ -14530,7 +14662,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 4% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
@@ -15415,7 +15559,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Smoker, Zoro",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
+        ]
     },
     1235: {//Maynard
         captain: "Boosts ATK of [PSY] characters by 1.75x, deals 3x character's ATK to all enemies at the end of each turn",
@@ -16249,6 +16405,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu, Doc Q",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1273: {//Jesus Burgess
@@ -16375,6 +16543,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Blackbeard, Burgess, Laffitte, Van Augur, Doc Q",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1277: {//Doc Q
@@ -16430,7 +16610,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu, Van Augur",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1279: {//John Giant
         captain: "Boosts ATK and HP of Slasher characters by 1.5x",
@@ -39334,6 +39526,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Hannyabal, Sadie, Saldeath",
+                "description": [
+                    "Level 1: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 8% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     2355: {//Arlong
