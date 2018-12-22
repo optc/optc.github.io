@@ -25692,8 +25692,8 @@ window.details = {
                     "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. If the supported character hits a PERFECT, reduces enemy's Threshold Damage Reduction duration by 1 turn",
-                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. If the supported character hits a PERFECT, reduces enemy's Threshold Damage Reduction duration by 1 turn"
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's Threshold Damage Reduction duration by 1 turn",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's Threshold Damage Reduction duration by 1 turn"
                 ]
             }
         ]
