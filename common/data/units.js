@@ -1,4 +1,4 @@
-units = [
+window.units = [
     [ "Monkey D. Luffy", "STR", "Fighter", 2, 1, 5, 0, 5, 163, 42, 15, 8, 134, 68, 15, 1 ],
     [ "Monkey D. Luffy Gum-Gum Pistol", "STR", "Fighter", 3, 4, 6, 0, 20, 26184, 130, 76, 14, 510, 249, 49, 0.7 ],
     [ "Monkey D. Luffy Gum-Gum Bazooka", "STR", "Fighter", 4, 7, 6, 2, 35, 136167, 404, 227, 39, 975, 522, 105, 1 ],
@@ -2087,7 +2087,7 @@ units = [
     [ "Sanji, Celebrate the Exciting Cruise", "DEX", [ "Fighter", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 1208, 590, 152, 2576, 1348, 321, 1 ],
     [ "Monkey D. Luffy, Let's go for Pirate Festival", "STR", [ "Fighter", "Free Spirit" ], 4, 20, 4, 4, 99, 1000000, 750, 351, 38, 2278, 1327, 128, 1 ],
     [ "Sanji, Let's go for Pirate Festival", "INT", [ "Fighter", "Powerhouse" ], 4, 20, 5, 4, 99, 1000000, 708, 333, 51, 1990, 1252, 201, 1 ],
-    [ "Nami, Let's go for Pirate Festival", "PSY", [ "Shooter", "Cerebral" ], 4, 20, 6, 4, 99, 1000000, 594, 288, 85, 1740, 1008, 324, 1 ],
+    [ "Nami, Let's go for Pirate Festival", "PSY", [ "Cerebral", "Shooter" ], 4, 20, 6, 4, 99, 1000000, 594, 288, 85, 1740, 1008, 324, 1 ],
     [ "Franky, Let's go for Pirate Festival", "DEX", [ "Powerhouse", "Fighter" ], 4, 20, 6, 4, 99, 1000000, 724, 340, 46, 2148, 1212, 188, 1 ],
     [ "Usopp, Let's go for Pirate Festival", "QCK", "Shooter", 4, 20, 4, 4, 99, 1000000, 634, 301, 74, 1820, 1076, 288, 1 ],
     [ "Zoro, Let's go for Pirate Festival", "PSY", [ "Slasher", "Driven" ], 4, 20, 5, 4, 99, 1000000, 755, 342, 41, 2299, 1302, 133, 1 ],
