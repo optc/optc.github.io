@@ -1715,7 +1715,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Whitebeard, Ace, Vista, Jozu",
+                "Characters": "Whitebeard, Ace, Vista and Jozu",
                 "description": [
                     "Level 1: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
                     "Level 2: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
@@ -1838,7 +1838,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Whitebeard, Ace, Jozu, Marco",
+                "Characters": "Whitebeard, Ace, Jozu and Marco",
                 "description": [
                     "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
                     "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
@@ -6040,7 +6040,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Whitebeard, Marco",
+                "Characters": "Whitebeard and Marco",
                 "description": [
                     "Level 1: Supported character deals 1.1x damage to Akainu",
                     "Level 2: Supported character deals 1.15x damage to Akainu",
@@ -6656,7 +6656,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Luffy, Inazuma, Bon Clay",
+                "Characters": "Luffy, Inazuma and Bon Clay",
                 "description": [
                     "Level 1: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 3 turns",
                     "Level 2: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 4 turns",
@@ -6725,7 +6725,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Luffy, Ivankov",
+                "Characters": "Luffy and Ivankov",
                 "description": [
                     "Level 1: Reduces damage received from [STR] characters by 1%. Adds 2% of this character's base RCV to the supported character's base RCV",
                     "Level 2: Reduces damage received from [STR] characters by 2%. Adds 3% of this character's base RCV to the supported character's base RCV",
@@ -7515,7 +7515,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Rob Lucci, Kaku, Jabra, Blueno, Fukuro, Kumadori",
+                "Characters": "Rob Lucci, Kaku, Jabra, Blueno, Fukuro and Kumadori",
                 "description": [
                     "Level 1: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
                     "Level 2: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
@@ -9046,7 +9046,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Sandersonia, Marigold, Marguerite",
+                "Characters": "Sandersonia, Marigold and Marguerite",
                 "description": [
                     "Level 1: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
                     "Level 2: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
@@ -9285,7 +9285,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Doflamingo, Diamante, Lao G, Machvise, Dellinger",
+                "Characters": "Doflamingo, Diamante, Lao G, Machvise and Dellinger",
                 "description": [
                     "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
                     "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
@@ -10395,7 +10395,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Doflamingo, Gladius, Buffalo, Baby 5",
+                "Characters": "Doflamingo, Gladius, Buffalo and Baby 5",
                 "description": [
                     "Level 1: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
                     "Level 2: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
@@ -12639,7 +12639,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Usopp, Robin, Mansherry",
+                "Characters": "Usopp, Robin and Mansherry",
                 "description": [
                     "Level 1: Adds 3% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
                     "Level 2: Adds 4% of this character's base ATK, HP, and RCV to the supported character's base ATK, HP, and RCV",
@@ -15562,7 +15562,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Smoker, Zoro",
+                "Characters": "Smoker and Zoro",
                 "description": [
                     "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
                     "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
@@ -16408,7 +16408,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu, Doc Q",
+                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu and Doc Q",
                 "description": [
                     "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
                     "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
@@ -16546,7 +16546,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Blackbeard, Burgess, Laffitte, Van Augur, Doc Q",
+                "Characters": "Blackbeard, Burgess, Laffitte, Van Augur and Doc Q",
                 "description": [
                     "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
                     "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
@@ -16613,7 +16613,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu, Van Augur",
+                "Characters": "Blackbeard, Burgess, Laffitte, Shiryu and Van Augur",
                 "description": [
                     "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
                     "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
@@ -25294,7 +25294,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Boa Marigold",
+                "Characters": "Marigold",
                 "description": [
                     "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns.",
                     "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns.",
@@ -25363,7 +25363,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Boa Sandersonia",
+                "Characters": "Sandersonia",
                 "description": [
                     "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.2x for 1 turn",
                     "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn",
@@ -39529,7 +39529,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Hannyabal, Sadie, Saldeath",
+                "Characters": "Hannyabal, Sadie and Saldeath",
                 "description": [
                     "Level 1: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV",
                     "Level 2: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
