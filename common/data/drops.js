@@ -2742,8 +2742,8 @@ window.drops = {
             thumb: 2256,
             nakama: null,
             gamewith: 134190,
-            Master: [ 2255 ],
-            Expert: [ 2255 ]
+            Master: [ 2355 ],
+            Expert: [ 2355 ]
         },
 
     ],
