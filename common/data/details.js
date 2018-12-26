@@ -14146,11 +14146,11 @@ window.details = {
             {
                 "Characters": "Elizabello",
                 "description": [
-                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 7% of the supported character's base ATK to the supported character's base ATK",
-                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 10% of the supported character's base ATK to the supported character's base ATK",
-                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 12% of the supported character's base ATK to the supported character's base ATK",
-                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 15% of the supported character's base ATK to the supported character's base ATK",
-                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 20% of the supported character's base ATK to the supported character's base ATK"
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 12% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 15% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 20% of this character's base ATK to the supported character's base ATK"
                 ]
             }
         ]
@@ -40700,6 +40700,18 @@ window.details = {
         specialName: "Inheriting the Will of Flame",
         sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
     },
+    2500: {//Knight Zoro
+        captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [INT] orbs, makes [STR] and [QCK] orbs \"beneficial\" for [STR] and [QCK] characters. If there is a [STR], [QCK] and [INT] character in your crew, boosts chain multiplier by 1.5x.",
+        special: "Locks all orbs for 1 turn and changes [QCK] and [DEX] orbs into Matching orbs. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of [STR] and [QCK] characters by 2x for 2 turns, by 1.75x for 2 turns otherwise.",
+        sailor: "Not Translated",//CHANGE THIS
+        specialName: "Chivalrous Slash",
+    },
+    2501: {//Knight Sanji
+        captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [PSY] orbs, makes [STR] and [QCK] orbs \"beneficial\" for [STR] and [QCK] characters. If there is a [STR], [QCK] and [PSY] character in your crew, boosts chain multiplier by 1.5x.",
+        special: "Reduces any damage received above 6,000 HP by ?% for 1 turn and changes all orbs, including [BLOCK] orbs, to [QCK] orbs. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effects of orbs for [STR] and [QCK] characters by 2x for 2 turns, by 1.75x for 2 turns otherwise.",
+        sailor: "Not Translated",//CHANGE THIS
+        specialName: "Chivalrous Kick",
+    },
     2502: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
@@ -40870,6 +40882,61 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    2506: {//Sengoku&Garp
+        captain: {
+            "character1": "Boosts ATK of Fighter Characters by ?x and their HP by ?x and makes [INT] orbs \"beneficial\" for Fighter characters",
+            "character2": "Boosts ATK of Fighter Characters by ?x and their HP by ?x, but boosts his OWN attack by ?x and makes [DEX] orbs \"beneficial\" for Fighter characters",
+            "combined": "Boosts ATK of Fighter Characters by ?x and their HP by ?x, but boosts his OWN attack by ?x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters"
+        },
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: {
+            "character1": "Not Translated",
+            "character2": "Not Translated",
+            "combined": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character"
+        },
+    },
+    2507: {//Sengoku&Garp
+        captain: {
+            "character1": "Boosts ATK of Fighter Characters by 2.5x and their HP by 1.2x and makes [INT] orbs \"beneficial\" for Fighter characters",
+            "character2": "Boosts ATK of Fighter Characters by 2.25x and their HP by 1.2x, but boosts his OWN attack by 3x and makes [DEX] orbs \"beneficial\" for Fighter characters",
+            "combined": "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters"
+        },
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: {
+            "character1": "Not Translated",
+            "character2": "Not Translated",
+            "combined": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+            "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs \"beneficial\" for [INT] and [PSY] characters",
@@ -41893,5 +41960,169 @@ window.details = {
         specialNotes: "Change Action: When Change is activated, randomizes all non-matching orbs, including [BLOCK] orbs, reduces Bind duration by 1 turn",
         specialName: "Neverending Sand and Blades",
         sailor: "Boosts base ATK, HP and RCV of [STR] and [DEX] characters by 50",
+    },
+    5028: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by ?x and their HP by ?x and makes [INT] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: "Not Translated",
+    },
+    5029: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by ?x and their HP by ?x, but boosts his OWN attack by 3x and makes [DEX] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: "Not Translated",
+    },
+    5030: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+    },
+    5031: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+    },
+    5032: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by 2.5x and their HP by 1.2x and makes [INT] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: {
+            "base": "Not Translated",
+            "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    5033: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by 2.25x and their HP by 1.2x, but boosts his OWN attack by 3x and makes [DEX] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: {
+            "base": "Not Translated",
+            "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    5034: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: {
+            "base": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+            "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    5035: {//Sengoku&Garp
+        captain: "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters",
+        captainNotes: "#{beneficial}",
+        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
+        specialName: "Twin Fists of Justice",
+        sailor: {
+            "base": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+            "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
     },
 };

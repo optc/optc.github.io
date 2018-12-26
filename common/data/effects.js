@@ -642,7 +642,7 @@ window.effects = {
         orb: function(p) { return p.orb == 2.0 ? 1.75 : (p.orb == 0.5 ? 4/7 : 1); }
     },
 
-    '0.5x Chain Boost - Zoro Sanji Change Action': {
+    '0.5x Chain Boost - Sanji Zoro Change Action': {
         description: 'Chain Boosted by 0.5x',
         thumb: 2000,
         id: 56, // don't change this
@@ -814,5 +814,12 @@ window.effects = {
             matching = ["Koala", "Stussy", "Pedro", "Brook", "Hody Jones", "Kizaru", "Charlotte Oven", "Wanda", "Carina", "Charlotte Daifuku"].indexOf(character) != -1;
             return !matching ? 1 : 1.25;
         },
+    },
+
+    '1.2x ATK Boost - Sengoku Garp Change Action': {
+        description: '1.2x ATK boost for Fighters',
+        thumb: 2507,
+        id: 65, // don't change this
+        atk: function(p) { return p.class.has('Fighter') ? 1.2 : 1; }
     },
 };
