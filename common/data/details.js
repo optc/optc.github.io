@@ -40631,11 +40631,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, boosts ATK of all characters by 4x, by 4.25x after 3 PERFECTs in a row",
         special: [
             {
-                "description": "Deals Typeless damage to one enemy, adds .3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes makes [STR], [DEX], [QCK], [PSY] and [INT] orbs 'beneficial' for all characters for 3 turns",
+                "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds .3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes makes [STR], [DEX], [QCK], [PSY] and [INT] orbs 'beneficial' for all characters for 3 turns",
                 "cooldown": [ 12, 7 ],
             },
             {
-                "description": "Deals super typeless damage to one enemy, adds .7 to chain multiplier for 3 turns, amplifies the effect of orbs by 1.75x for 1 turn. If during that turn you score 3 PERFECT hits, amplifies the effect of orbs by 2x in the following turn. If Luffy is your Captain or Friend/Guest Captain, makes makes [STR], [DEX], [QCK], [PSY] and [INT] orbs 'beneficial' for all characters for 3 turns",
+                "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds .7 to chain multiplier for 3 turns, amplifies the effect of orbs by 1.75x for 1 turn. If during that turn you score 3 PERFECT hits, amplifies the effect of orbs by 2x in the following turn. If Luffy is your Captain or Friend/Guest Captain, makes makes [STR], [DEX], [QCK], [PSY] and [INT] orbs 'beneficial' for all characters for 3 turns",
                 "cooldown": [ 19, 14 ],
             },
         ],
@@ -40948,7 +40948,7 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 3x and if HP is below 30% at the start of the turn boosts chain by 1.5x",
         special: "Reduces crew's current HP by ?%, cuts the current HP of one enemy by 20% and adds 130x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 130x}",
-        specialName: "King Sword Shine",
+        specialName: "Inuarashi Special",
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of Cerebral characters by 200",
@@ -41021,10 +41021,10 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2373: {//Nekomamushi
-        captain: "Boosts HP of Striker characters by 1.25x, boosts chances of getting Matching orbs and boosts ATK of Striker charcters by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
-        special: "Deals ?x character's ATK in [PSY] damage to one enemy, reduces Bind and ATK DOWN duration by 3 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
+        captain: "Boosts HP of Striker characters by 1.25x, boosts chances of getting [STR], [QCK], [DEX], [PSY] and [INT] orbs and boosts ATK of Striker charcters by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
+        special: "Deals 60x character's ATK in [PSY] damage to one enemy, reduces Bind and ATK DOWN duration by 3 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialNotes: "#{beneficial}",
-        specialName: "Daybreak Ruler's Spear",
+        specialName: "Nekomamushi Special",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Striker characters by 70",
