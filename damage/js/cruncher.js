@@ -56,6 +56,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * Local variables * * * * */
 
     var cptsWith = { };
+    var specialsWith = { };
     var currentDefense = 0;
     var isDefenseDown = false;
     var isDelayed = false;
@@ -223,14 +224,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n), againstType = type;//Same problem as above, so yeah
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
-            if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn) ? 2 : 0.5;
+            if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2363].turnedOn || window.specials[2370].turnedOn || window.specials[2371].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Driven")) orb = (window.specials[1259].turnedOn || window.specials[1260].turnedOn || window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Slasher")) orb = (window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Fighter")) orb = (window.specials[1593].turnedOn || window.specials[1463]. turnedOn || window.specials[1462]. turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Powerhouse")) orb = (window.specials[1528].turnedOn || window.specials[2318].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Free Spirit")) orb = (window.specials[1593].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Shooter")) orb = (window.specials[1640].turnedOn || window.specials[1746].turnedOn || window.specials[1747].turnedOn || window.specials[2309].turnedOn || window.specials[2310].turnedOn || window.specials[2324].turnedOn || window.specials[2325].turnedOn) ? 2 : 0.5;
-            if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Striker")) orb = (window.specials[1651].turnedOn || window.specials[1652].turnedOn) ? 2 : 0.5;
+            if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Striker")) orb = (window.specials[1651].turnedOn || window.specials[1652].turnedOn || window.specials[2373].turnedOn) ? 2 : 0.5;
             if (orb == 'str') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn 
                                      || ((window.specials[1259].turnedOn || window.specials[1260].turnedOn) && x.unit.class.has("Driven"))
                                      || ((window.specials[1323].turnedOn || window.specials[1324].turnedOn) && (x.unit.class.has("Driven") || x.unit.class.has("Slasher")))
@@ -426,6 +427,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             lastAtk = unitAtk;
             // apply hit-based captain effects if any
             cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
+            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
@@ -499,7 +501,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var getTypeMultiplierOfUnit = function(attackerType,attackedType, unit) {
-        var typeMult = 1, affinityMult = 1;
+        var typeMult = 1, affinityMult = 1, captAffinityMult = 1;
         
         if (attackerType == 'STR' && attackedType == 'DEX') typeMult = 2;
         if (attackerType == 'QCK' && attackedType == 'STR') typeMult = 2;
@@ -516,10 +518,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         affinityMult = special.affinityMultiplier(unit);
                 });
         
+        //Get the strongest Color affinity Mult captains
+        captAffinityMultiplier.forEach(function(captain){
+                    captAffinityMult *= captain.captAffinityMultiplier(unit);
+                });
+        
         //Calculate the new Affinity mult
         if(affinityMult != 1){
-            if(typeMult == 2) typeMult *= affinityMult;
-            if(typeMult == 0.5) typeMult /= affinityMult;
+            if(typeMult == 2) typeMult *= (affinityMult * captAffinityMult);
+            if(typeMult == 0.5) typeMult /= (affinityMult * captAffinityMult);
         }
         
         return typeMult;
@@ -787,6 +794,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         chainSpecials = [ ];
         chainAddition = [ ];
         affinityMultiplier = [ ];
+        captAffinityMultiplier = [ ];
         staticMultiplier = [ ];
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
@@ -805,6 +813,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 staticMultiplier.push({staticMultiplier: data.staticMult, sourceSlot: data.sourceSlot});
             if (data.hasOwnProperty('affinity'))
                 affinityMultiplier.push({affinityMultiplier: data.affinity || function(){ return 1.0; }});
+        });
+        enabledEffects.forEach(function(data) {
+            if (data.hasOwnProperty('affinity'))
+                captAffinityMultiplier.push({captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -853,10 +865,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             //Add the static extra Damage to each attacking member
             var multSpecial = 0;
             var baseDamage = 0;
+            var specialid;
             for (var y=0;y<enabledSpecials.length;++y) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
+                        specialid = team[slot].unit.number + 1;
                         multSpecial = enabledSpecials[y].staticMult(params);
                         baseDamage = getStatOfUnit(team[slot],'atk');
                         enabledEffects.forEach(function(x) {
@@ -866,7 +880,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
-            var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier*affinityMultiplier);
+            if (specialid == 2364 || specialid == 2365) var staticDamage = Math.ceil(multSpecial);
+            else var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier);
             if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                 resultDamage += staticDamage;
             }
@@ -900,6 +915,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.tdata.turnCounter.enabled = false;
         $scope.tdata.healCounter.enabled = false;
         $scope.tdata.semlaCounter.enabled = false;
+        $scope.tdata.damageCounter.enabled = false;
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
         // orb map effects
@@ -950,6 +966,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232))
                 $scope.tdata.healCounter.enabled = true;
+            if (id == 2364 || id == 2365)
+                $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && (id == 2233 || id == 2234))
                 $scope.tdata.semlaCounter.enabled = true;
         });
@@ -1003,6 +1021,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             hitMultipliers: enabledEffects.filter(function(x) { return x.hasOwnProperty('hit');  }),
             chainModifiers: enabledEffects.filter(function(x) { return x.hasOwnProperty('chainModifier'); }),
             damageSorters:  enabledEffects.filter(function(x) { return x.hasOwnProperty('damageSorter');  })
+        };
+        specialsWith = {
+            hitMultipliers: enabledSpecials.filter(function(x) { return x.hasOwnProperty('hit');  }),
         };
         // get all non-default hit modifiers
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
@@ -1131,6 +1152,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             turnCounter: $scope.tdata.turnCounter.value,
             healCounter: $scope.tdata.healCounter.value,
             semlaCounter: $scope.tdata.semlaCounter.value,
+            damageCounter: $scope.tdata.damageCounter.value,
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),

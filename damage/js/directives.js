@@ -566,6 +566,43 @@ directives.semlaCounter = function() {
     };
 };
     
+directives.damageCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="damages"><div id="damageSlider"></div>' +
+            '<div id="damageLabel">{{currentDamages}} {{currentDamages == 1 ? "Health Point" : "Health Points"}} lost since special was activated</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentHeals = 0;
+
+            var slider = element.find('#damageSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentDamages ],
+                range: { min: [ 0 ], max: [ 200000 ] },
+                step: 100,
+                connect: 'lower'
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentDamages = parseInt(value, 10);
+                if (event == 'change') scope.tdata.damageCounter.value = scope.currentDamages;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+    
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',

@@ -185,6 +185,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         baseY += 25;
     }
 
+    // damage counter
+    if ($scope.tdata.damageCounter.enabled) {
+        awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
+        var heals = $scope.tdata.damageCounter.value;
+        type(context, { text: heals + (heals == 1 ? ' Health Point' : ' Health Points') + ' lost since special was activated', x: baseX + 25, y: baseY + 20 });
+        baseY += 25;
+    }
+
     // specials
     awesome(context, { text: 'f0e7', x: baseX + 8, y: baseY + 20, align: 'center' });
     type(context, { text: 'Active specials:', x: baseX + 25, y: baseY + 20 });

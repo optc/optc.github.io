@@ -690,6 +690,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    2366: { // Flampe
+        type: 'healer',
+        multiplier: 5//Change this
+    },
+    2367: { // Flampe
+        type: 'healer',
+        multiplier: 5
+    },
     2407: { // Ace
         type: 'healer',
         amount: 500

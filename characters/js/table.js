@@ -177,6 +177,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) Katacount++;
             if (Katacount !== 2) return false;
         }
+        if (filters.katakuriv2){
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
+            if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
+            else for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) Katacount++;
+            if (Katacount !== 2) return false;
+        }
         if (filters.TMlaw){
             var Katacount = 0;
             var Kataclass = [ "Fighter", "Slasher", "Cerebral", "Free Spirit" ];

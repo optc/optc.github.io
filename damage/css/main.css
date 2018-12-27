@@ -331,13 +331,13 @@ body, html {
  * BUTTONS & HP BAR *
  ********************/
 
-#hpSlider, #turnSlider, #healSlider, #semlaSlider {
+#hpSlider, #turnSlider, #healSlider, #semlaSlider, #damageSlider {
     width: 350px;
     height: 12px;
     display: inline-block;
 }
 
-#turnSlider, #healSlider, #semlaSlider {
+#turnSlider, #healSlider, #semlaSlider, #damageSlider {
     width: 300px;
 }
 
@@ -351,6 +351,10 @@ body, html {
 
 #semla > .noUi-connect {
     background: lemonchiffon;
+}
+
+#damages > .noUi-connect {
+    background: darkred;
 }
 
 .noUi-handle {

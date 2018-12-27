@@ -8313,6 +8313,77 @@ window.captains = {
     2362: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.percHP >= 50.0 ? p.actions[p.sourceSlot] ? 3 : 1.75 : p.actions[p.sourceSlot] ? 2 : 1.5 : 1; }
     },
+    2363: {
+        hitAtk: function(p) { return p.actions[p.sourceSlot] ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 4.25 : 4 : 3.25; },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return 1.35; }
+    },
+    2364: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return Math.pow(1.825, Katacount);
+        },
+        affinity: function(p) { return 1.4; }
+    },
+    2365: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++){
+                if(p.unit.class.has(Kataclass[i])){
+                    Katacount++;
+                }
+            }
+            return Math.pow(1.825, Katacount);
+        },
+        affinity: function(p) { return 1.4; }
+    },
+    2368: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 1, [ "STR", "PSY" ]); },//change this
+        hitAtk: function(p) {
+            if (!(p.unit.type == "STR" || p.unit.type == "PSY")) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 1 : (prev == 'Good' ? 1 : (prev == 'Great' ? 1 : (prev == 'Perfect' ? 1 : 1)));//change this
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2369: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.75, [ "STR", "PSY" ]); },
+        hitAtk: function(p) {
+            if (!(p.unit.type == "STR" || p.unit.type == "PSY")) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 2 : (prev == 'Good' ? 2.25 : (prev == 'Great' ? 2.5 : (prev == 'Perfect' ? 2.75 : 2)));
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2370: {
+        atk: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
+        rcv: function(p){ return p.unit.type == "STR" ? 1 : 1; },//change this
+    },
+    2371: {
+        atk: function(p){ return p.unit.type == "STR" ? 2.75 : 1; },
+        rcv: function(p){ return p.unit.type == "STR" ? 1.3 : 1; },
+    },
+    2372: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 3 : 1; },
+        chainModifier: function(p) { return  p.percHP <= 30.0 ? 1.5 : 1; }
+    },
+    2373: {
+        atk: function(p) { return p.unit.class.has("Striker") ? (p.orb == 'meat' || p.orb == 'g') ? 1 : 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.25 : 1; }
+    },
+    2374: {
+        atk: function(p){ return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1 : 1; },//Change this
+    },
+    2375: {
+        atk: function(p){ return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2.75 : 1; },
+    },
     2382: {
         atk: function(p) { return 2.25; }
     },
