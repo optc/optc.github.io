@@ -2129,8 +2129,9 @@ window.drops = {
         },
         
         {
-            name: 'Let\'s Go See Master Nekomamushi!',
+            name: 'Let\'s Go See The Cat Viper!',
             thumb: 2177,
+            global: true,
             nakama: 2217700,
             gamewith: 114148,
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ]
@@ -2739,11 +2740,21 @@ window.drops = {
         
         {
             name: 'Clash!! Arlong',
-            thumb: 2256,
+            thumb: 2356,
             nakama: null,
             gamewith: 134190,
-            Master: [ 2255 ],
-            Expert: [ 2255 ]
+            Master: [ 2355 ],
+            Expert: [ 2355 ]
+        },
+        
+        {
+            name: 'Clash!! Sengoku & Garp',
+            thumb: 2507,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2506 ],
+            Expert: [ 2506 ]
         },
 
     ],

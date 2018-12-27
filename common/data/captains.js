@@ -8424,6 +8424,16 @@ window.captains = {
     2408: {
         atk: function(p){ return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
+    2500: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },
+        chainModifier: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1 && p.colorCount.INT >= 1) ? 1.5 : 1; }
+    },
+    2501: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },
+        chainModifier: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1) ? 1.5 : 1; }
+    },
     2502: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -8553,5 +8563,37 @@ window.captains = {
         atk: function(p){
             return (p.unit.type == "STR" || p.unit.type == "DEX") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.5 : 1;
         },
+    },
+    5028: {
+        atk: function(p){ return p.unit.class.has("Fighter") ? 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+    },
+    5029: {
+        atk: function(p){ return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Fighter") ? 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+    },
+    5030: {
+        atk: function(p){ return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Fighter") ? 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+    },
+    5031: {
+        atk: function(p){ return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Fighter") ? 1 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+    },
+    5032: {
+        atk: function(p){ return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    5033: {
+        atk: function(p){ return p.slot == p.sourceSlot ? 3 : p.unit.class.has("Fighter") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    5034: {
+        atk: function(p){ return p.slot == p.sourceSlot ? 4 : p.unit.class.has("Fighter") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    5035: {
+        atk: function(p){ return p.slot == p.sourceSlot ? 4 : p.unit.class.has("Fighter") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
 };
