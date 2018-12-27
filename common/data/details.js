@@ -40946,7 +40946,7 @@ window.details = {
     },
     2372: {//Inuarashi
         captain: "Boosts ATK of Cerebral characters by 3x and if HP is below 30% at the start of the turn boosts chain by 1.5x",
-        special: "Reduces crew's current HP by ?%, cuts the current HP of one enemy by 20% and adds 130x character's ATK as Additional Typeless Damage for 1 turn",
+        special: "Reduces crew's current HP by 80%, cuts the current HP of one enemy by 20% and adds 130x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 130x}",
         specialName: "Inuarashi Special",
         sailor: {
