@@ -61,6 +61,11 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             enabled: false,
             value: 0
         },
+        
+        damageCounter: {
+            enabled: false,
+            value: 0
+        },
 
     };
 

@@ -6434,6 +6434,90 @@ window.specials = {
     2359: {
         affinity: function(p){ return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },
+    2363: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, [1.5, 1.75, 2][window.specials[2363].multiplier], [p.friendCaptain, p.captain], p.effectName); },
+        chainAddition: function(p) { return [.3, .7, .7][window.specials[2363].multiplier]; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2363].turnedOn = true;
+            var n = (window.specials[2363].multiplier == 1 ? 2 : (window.specials[2363].multiplier == 2 | window.specials[2363].multiplier == undefined) ? 0 : 1);
+            window.specials[2363].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['0.3 Chain boost and 1.5x orb boost', '0.7 Chain boost and 1.75x orb boost', '0.7 Chain boost and 2x orb boost'][n] + ' special. To switch to the ' + ['0.7 Chain boost and 1.75x orb boost', '0.7 Chain boost and 2x orb boost', '0.3 Chain boost and 1.5x orb boost'][n] + ', disable and re-enable this special',
+                name: '2363warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2363].turnedOn = false;
+        }
+    },
+    2364: {
+        staticMult: function(p) { return p.damageCounter * 15; }
+    },
+    2365: {
+        staticMult: function(p) { return p.damageCounter * 15; }
+    },
+    2366: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+    },
+    2367: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+    },
+    2368: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2368].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2368].multiplier = 1;
+            if (p.captain.type == "STR" || p.captain.type == "PSY"){
+                window.specials[2368].multiplier = 1.75;
+            }
+        }
+    },
+    2369: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2369].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2369].multiplier = 1;
+            if (p.captain.type == "STR" || p.captain.type == "PSY"){
+                window.specials[2369].multiplier = 1.75;
+            }
+        }
+    },
+    2370: {
+        onActivation: function(p) {
+            window.specials[2370].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2370].turnedOn = false;
+        }
+    },
+    2371: {
+        onActivation: function(p) {
+            window.specials[2371].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2371].turnedOn = false;
+        }
+    },
+    2372: {
+        staticMult: function(p) { return 130; }
+    },
+    2373: {
+        onActivation: function(p) {
+            window.specials[2371].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2371].turnedOn = false;
+        }
+    },
+    2374: {
+        //TODO
+        hit: function(n) { return n > 30 ? 1.75 : 1; },
+        type: "condition"
+    },
+    2375: {
+        //TODO
+        hit: function(n) { return n > 30 ? 1.75 : 1; },
+        type: "condition"
+    },
     2400: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
         type: "type",

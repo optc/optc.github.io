@@ -165,7 +165,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
     }
-    if(window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn){
+    if(window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2363].turnedOn || window.specials[2370].turnedOn || window.specials[2371].turnedOn){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
     }
@@ -217,7 +217,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
-    if(window.specials[1651].turnedOn || window.specials[1652].turnedOn){
+    if(window.specials[1651].turnedOn || window.specials[1652].turnedOn || window.specials[2373].turnedOn){
         if(uclass.has("Striker")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
@@ -263,6 +263,11 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                 }
             }
             if([2012, 2013].includes(captains[temp].number + 1) && uclass.has("Free Spirit")){
+                if (orb == 'meat'){
+                    return boostedMultiplier;
+                }
+            }
+            if([2374, 2375].includes(captains[temp].number + 1) && (uclass.has("Driven") || uclass.has("Powerhouse"))){
                 if (orb == 'meat'){
                     return boostedMultiplier;
                 }
