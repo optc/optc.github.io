@@ -41096,16 +41096,60 @@ window.details = {
             },
         ]
     },
-    2374: {//Young Big Mom
+    2376: {//Mother Caramel
+        captain: "Boosts ATK of Driven characters by ?x and their RCV by ?x",
+        special: "Reduces enemy's ATK UP duration by 3 turns, changes orbs in the top row into [RCV] orbs and boosts ATK of characters in the top row by 1.75x for 1 turn.",
+        specialName: "The Voice Given by the Holy Mother",
+    },
+    2377: {//Mother Caramel
+        captain: "Boosts ATK of Driven characters by 2x and their RCV by 1.5x",
+        special: "Reduces enemy's ATK UP duration by 3 turns, changes orbs in the top row into [RCV] orbs and boosts ATK of characters in the top row by 1.75x for 1 turn.",
+        specialName: "The Voice Given by the Holy Mother",
+        support: [
+            {
+                "Characters": "Charlotte Linlin and Hajrudin",
+                "description": [
+                    "Level 1: Adds 2% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Adds 3% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Adds 4% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Adds 5% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Adds 6% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
+        ]
+    },
+    2378: {//Hajrudin
+        captain: "Boosts ATK of Slasher characters by 1.5x and their HP by 1.2x",
+        special: "Changes own orb into [STR], boosts own ATK by 1.5x for 1 turn.",
+        specialName: "The Pride of the Small Giant",
+    },
+    2379: {//Streusen
+        captain: "Boosts ATK of Slasher characters by 2x and their RCV by 1.2x",
+        special: "Recovers 3,000 HP and boosts RCV of all characters by 2x for 1 turn.",
+        specialName: "The Cook's Expectation",
+        support: [
+            {
+                "Characters": "Charlotte Linlin",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, recovers 100 HP",
+                    "Level 2: Once per an adventure, when the supported character uses their special, recovers 300 HP",
+                    "Level 3: Once per an adventure, when the supported character uses their special, recovers 500 HP",
+                    "Level 4: Once per an adventure, when the supported character uses their special, recovers 700 HP",
+                    "Level 5: Once per an adventure, when the supported character uses their special, recovers 1,000 HP"
+                ]
+            }
+        ]
+    },
+    2380: {//Young Big Mom
         captain: "Boosts ATK of Driven and Powerhouse characters by ?x and makes [RCV] orbs \"beneficial\" for Driven and Powerhouse characters.",
         captainNotes: "#{beneficial}",
-        special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 1.75x after 12th hit in the chain for 3 turns.",
+        special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 2.25x after 12th hit in the chain for 3 turns.",
         specialName: "Natural Born Destroyer",
     },
-    2375: {//Young Big Mom
+    2381: {//Young Big Mom
         captain: "Boosts ATK of Driven and Powerhouse characters by 2.75x and makes [RCV] orbs \"beneficial\" for Driven and Powerhouse characters.",
         captainNotes: "#{beneficial}",
-        special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 1.75x after 12th hit in the chain for 3 turns.",
+        special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 2.25x after 12th hit in the chain for 3 turns.",
         specialName: "Natural Born Destroyer",
         sailor: {
             "base": "None",
@@ -41150,7 +41194,7 @@ window.details = {
     2382: {//Support Sanji
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Deals 20,000 fixed damage to one enemy and changes adjacent orbs into [RCV] orbs",
-        specialName: "Sanji Special",
+        specialName: "Kick of Separation",
         support: [
             {
                 "Characters": "Luffy, Zoro, Nami, Usopp, Chopper, Robin, Franky and Brook",
@@ -41162,6 +41206,147 @@ window.details = {
                     "Level 5: Once per an adventure, when the supported character uses their special, changes supported character's orb to [RCV] and recovers 1,000 HP"
                 ]
             }
+        ]
+    },
+    2383: {//Kid
+        captain: "Boosts ATK of [QCK] characters by 1.5x",
+        special: "Deals 30x character's ATK in [QCK] damage to one enemy and reduces ATK DOWN and Increase Damage Taken duration by 4 turns. If you are on a Treasure Map, boosts ATK of [STR], [QCK] and [PSY] characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Allied \"Captain\" Anger",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 60% chance to deal 4% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+        ],
+    },
+    2384: {//Hawkins
+        captain: "Boosts ATK of Fighter characters by 1.5x",
+        special: "Reduces enemy Damage Nullification duration by 1 turn and amplifies the effect of orbs for all characters by 1.5x for 1 turn. If your captain is a [STR] or [PSY], boosts the Color Affinity of all characters by 1.5x for 1 turn",
+        specialName: "Allied \"Magician\" Grief",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 3 turn",
+                    "Level 2: Reduces No Healing duration by 5 turn",
+                    "Level 3: Reduces No Healing duration by 7 turn",
+                    "Level 4: Reduces No Healing duration by 8 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
+    },
+    2385: {//Apoo
+        captain: "Boosts ATK of Shooter characters by 1.5x",
+        special: "Reduces enemy Percent Damage Reduction duration by 3 turns reduces Chain Multiplier Limit duration by 3 turns and makes [RCV] and [TND] orbs \"beneficial\" for [STR], [QCK] and [PSY] characters for 3 turns",
+        specialName: "Allied \"Roar of the Sea\" Aggravation",
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 60% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+        ],
+    },
+    2386: {//TM Kaido
+        captain: "Boosts own ATK by ?x and boosts ATK of Driven and Powerhouse characters by ?x and their HP by ?x",
+        special: "Removes all positive buffs on your team, cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, amplifies the effect of orbs for all characters by 1.5x and boosts own ATK by 3.25x for a variable amount of turns",
+        special: "ATK and Orb amplification buff duration is equal to the amount of [RCV] orbs consumed prior to the time the special was activated with a maximum of 6 turns.",
+        specialName: "Kaido Special",
+    },
+    2387: {//TM Kaido
+        captain: {
+            "base": "Boosts own ATK by ?x and boosts ATK of Driven and Powerhouse characters by ?x and their HP by ?x",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts own ATK by 3.25x and boosts ATK of Driven and Powerhouse characters by 2.75x and their HP by 1.2x",
+        },
+        special: "Removes all positive buffs on your team, cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, amplifies the effect of orbs for all characters by 1.5x and boosts own ATK by 3.25x for a variable amount of turns",
+        special: "ATK and Orb amplification buff duration is equal to the amount of [RCV] orbs consumed prior to the time the special was activated with a maximum of 6 turns.",
+        specialName: "Kaido Special",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Powerhouse and Driven characters by 50",
+            "level2": "Cannot be Blown Away",
+        },
+        /*limit: [
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Sailor Ability 2: Makes [INT] orbs \"beneficial\" for this character" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],*/
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turn on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
         ]
     },
     2400: {//World Clash Luffy
