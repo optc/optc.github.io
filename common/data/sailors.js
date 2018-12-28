@@ -767,10 +767,22 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
+    5028: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    5029: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
     5030: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
     },
     5031: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    5032: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    5033: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
     },
     5034: {

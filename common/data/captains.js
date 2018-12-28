@@ -8636,20 +8636,20 @@ window.captains = {
         },
     },
     5028: {
-        atk: function(p){ return p.unit.class.has("Fighter") ? 1 : 1; },
-        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+        atk: function(p){ return p.unit.class.has("Fighter") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
     5029: {
-        atk: function(p){ return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Fighter") ? 1 : 1; },
-        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+        atk: function(p){ return p.slot == p.sourceSlot ? 2.5 : p.unit.class.has("Fighter") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
     5030: {
-        atk: function(p){ return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Fighter") ? 1 : 1; },
-        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+        atk: function(p){ return p.slot == p.sourceSlot ? 4 : p.unit.class.has("Fighter") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
     5031: {
-        atk: function(p){ return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Fighter") ? 1 : 1; },
-        hp: function(p) { return p.unit.class.has("Fighter") ? 1 : 1; },
+        atk: function(p){ return p.slot == p.sourceSlot ? 4 : p.unit.class.has("Fighter") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
     5032: {
         atk: function(p){ return p.unit.class.has("Fighter") ? 2.5 : 1; },

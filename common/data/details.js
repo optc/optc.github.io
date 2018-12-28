@@ -41405,17 +41405,17 @@ window.details = {
     },
     2506: {//Sengoku&Garp
         captain: {
-            "character1": "Boosts ATK of Fighter Characters by ?x and their HP by ?x and makes [INT] orbs \"beneficial\" for Fighter characters",
-            "character2": "Boosts ATK of Fighter Characters by ?x and their HP by ?x, but boosts his OWN attack by ?x and makes [DEX] orbs \"beneficial\" for Fighter characters",
-            "combined": "Boosts ATK of Fighter Characters by ?x and their HP by ?x, but boosts his OWN attack by ?x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters"
+            "character1": "Boosts ATK of Fighter Characters by 2.25x and their HP by 1.2x and makes [INT] orbs \"beneficial\" for Fighter characters",
+            "character2": "Boosts ATK of Fighter Characters by 2x and their HP by 1.2x, but boosts his OWN attack by 2.5x and makes [DEX] orbs \"beneficial\" for Fighter characters",
+            "combined": "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters"
         },
         captainNotes: "#{beneficial}",
         special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
         specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
         specialName: "Twin Fists of Justice",
         sailor: {
-            "character1": "Not Translated",
-            "character2": "Not Translated",
+            "character1": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+            "character2": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "combined": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character"
         },
     },
@@ -41430,30 +41430,47 @@ window.details = {
         specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
         specialName: "Twin Fists of Justice",
         sailor: {
-            "character1": "Not Translated",
-            "character2": "Not Translated",
+            "character1": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
+            "character2": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "combined": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
+        limit: [
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -42482,20 +42499,20 @@ window.details = {
         sailor: "Boosts base ATK, HP and RCV of [STR] and [DEX] characters by 50",
     },
     5028: {//Sengoku&Garp
-        captain: "Boosts ATK of Fighter Characters by ?x and their HP by ?x and makes [INT] orbs \"beneficial\" for Fighter characters",
+        captain: "Boosts ATK of Fighter Characters by 2.25x and their HP by 1.2x and makes [INT] orbs \"beneficial\" for Fighter characters",
         captainNotes: "#{beneficial}",
         special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
         specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
         specialName: "Twin Fists of Justice",
-        sailor: "Not Translated",
+        sailor: "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
     },
     5029: {//Sengoku&Garp
-        captain: "Boosts ATK of Fighter Characters by ?x and their HP by ?x, but boosts his OWN attack by 3x and makes [DEX] orbs \"beneficial\" for Fighter characters",
+        captain: "Boosts ATK of Fighter Characters by 2x and their HP by 1.2x, but boosts his OWN attack by 2.5x and makes [DEX] orbs \"beneficial\" for Fighter characters",
         captainNotes: "#{beneficial}",
         special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
         specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
         specialName: "Twin Fists of Justice",
-        sailor: "Not Translated",
+        sailor: "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
     },
     5030: {//Sengoku&Garp
         captain: "Boosts ATK of Fighter Characters by 3x and their HP by 1.2x, but boosts his OWN attack by 4x and makes [DEX], [INT], [RCV] and [TND] orbs \"beneficial\" for Fighter characters",
@@ -42520,28 +42537,45 @@ window.details = {
         specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
         specialName: "Twin Fists of Justice",
         sailor: {
-            "base": "Not Translated",
+            "base": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
+        limit: [
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -42553,28 +42587,45 @@ window.details = {
         specialNotes: "Change Action: When Change is activated, boosts ATK of Fighter characters by 1.2x for 1 turn and changes their own orb into a Matching orb",
         specialName: "Twin Fists of Justice",
         sailor: {
-            "base": "Not Translated",
+            "base": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
+        limit: [
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -42589,25 +42640,42 @@ window.details = {
             "base": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
+        limit: [
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -42622,25 +42690,42 @@ window.details = {
             "base": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character",
             "level1": "Boosts own base ATK by 200 if this character is the last in the chain to attack",
         },
+        limit: [
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 200 if this character is the last in the chain to attack" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
         ]
