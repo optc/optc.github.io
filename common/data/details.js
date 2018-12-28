@@ -40948,7 +40948,7 @@ window.details = {
         captain: "Boosts ATK of Cerebral characters by 3x and if HP is below 30% at the start of the turn boosts chain by 1.5x",
         special: "Reduces crew's current HP by 80%, cuts the current HP of one enemy by 20% and adds 130x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 130x}",
-        specialName: "Inuarashi Special",
+        specialName: "Sword Strike of Reconciliation",
         sailor: {
             "base": "None",
             "level1": "Boosts base HP of Cerebral characters by 200",
@@ -41024,7 +41024,7 @@ window.details = {
         captain: "Boosts HP of Striker characters by 1.25x, boosts chances of getting [STR], [QCK], [DEX], [PSY] and [INT] orbs and boosts ATK of Striker charcters by 3.75x if they have a [STR], [QCK], [DEX], [INT], [PSY] or [RAINBOW] orb",
         special: "Deals 60x character's ATK in [PSY] damage to one enemy, reduces Bind and ATK DOWN duration by 3 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs \"beneficial\" for Striker characters for 1 turn",
         specialNotes: "#{beneficial}",
-        specialName: "Nekomamushi Special",
+        specialName: "Spear Strike of Reconcilation",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Striker characters by 70",
@@ -41096,13 +41096,13 @@ window.details = {
             },
         ]
     },
-    2374: {//Young Big Mom
+    2380: {//Young Big Mom
         captain: "Boosts ATK of Driven and Powerhouse characters by ?x and makes [RCV] orbs \"beneficial\" for Driven and Powerhouse characters.",
         captainNotes: "#{beneficial}",
         special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 1.75x after 12th hit in the chain for 3 turns.",
         specialName: "Natural Born Destroyer",
     },
-    2375: {//Young Big Mom
+    2381: {//Young Big Mom
         captain: "Boosts ATK of Driven and Powerhouse characters by 2.75x and makes [RCV] orbs \"beneficial\" for Driven and Powerhouse characters.",
         captainNotes: "#{beneficial}",
         special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 1.75x after 12th hit in the chain for 3 turns.",
@@ -41150,7 +41150,7 @@ window.details = {
     2382: {//Support Sanji
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Deals 20,000 fixed damage to one enemy and changes adjacent orbs into [RCV] orbs",
-        specialName: "Sanji Special",
+        specialName: "Kick of Separation",
         support: [
             {
                 "Characters": "Luffy, Zoro, Nami, Usopp, Chopper, Robin, Franky and Brook",
