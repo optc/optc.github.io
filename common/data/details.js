@@ -37487,7 +37487,7 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Acquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for [STR], [DEX] and [QCK] characters" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Potential 2: Double Special Activation" },
+            { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
             {
@@ -37501,13 +37501,13 @@ window.details = {
                 ]
             },
             {
-                "Name": "Double Special Activation",
+                "Name": "Critical Hit",
                 "description": [
-                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
-                    "Level 2: Once per an adventure, reduce own Special Cooldown by 3 turns after the first time this special is used",
-                    "Level 3: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
-                    "Level 4: Once per an adventure, reduce own Special Cooldown by 7 turns after the first time this special is used",
-                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
         ],
