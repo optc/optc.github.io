@@ -37487,7 +37487,7 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Acquire Sailor Ability 1: Makes [TND] orbs \"beneficial\" for [STR], [DEX] and [QCK] characters" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Potential 2: Critical Hit" },
+            { "description": "Acquire Potential 2: Double Special Activation" },
         ],
         potential: [
             {
