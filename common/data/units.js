@@ -2270,7 +2270,7 @@ window.units = [
     [ "Charlotte Praline, Charlotte Family 21st Daughter", "DEX", [ "Cerebral", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 872, 732, 133, 2288, 1234, 401, 1 ],
     [ "Wadatsumi, Umibozu", "STR", [ "Powerhouse", "Fighter" ], 4, 15, 4, 3, 50, 392109, 452, 312, 6, 1201, 891, 21, 1 ],
     [ "Large Monk Wadatsumi, Umibozu", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1182, 872, 18, 3221, 1435, 62, 1 ],
-    [ "Hatchan, Fishman District Ruffian", "PSY", [ "Slasher", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 382, 272, 29, 1029, 821, 111, 1 ],
+    [ "Hatchan, Fishman District Ruffian", "PSY", [ "Fighter", "Powerhouse" ], 4, 15, 6, 3, 50, 392109, 382, 272, 29, 1029, 821, 111, 1 ],
     [ "Hatchan, Starting Up the Party", "PSY", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1001, 812, 99, 2621, 1344, 288, 1 ],
     [ "Camie, Mermaid Cafe Waitress", "PSY", [ "Free Spirit", "Fighter" ], 4, 15, 4, 3, 50, 392109, 245, 232, 52, 632, 711, 171, 1 ],
     [ "Camie, Strawhat Pirates' Supporter", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 602, 673, 155, 1734, 1129, 432, 1 ],
