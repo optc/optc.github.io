@@ -6459,9 +6459,11 @@ window.specials = {
     },
     2366: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        type: "class",
     },
     2367: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        type: "class",
     },
     2368: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2368].multiplier : 1; },
