@@ -40628,7 +40628,7 @@ window.details = {
         ]
     },
     2363: {//6+ Gear 4 Luffy
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, boosts ATK of all characters by 4x, by 4.25x after 3 PERFECTs in a row",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, THIS Luffy boosts ATK of all characters by 4x, by 4.25x after 3 PERFECTs in a row",
         special: [
             {
                 "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds .3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes makes [STR], [DEX], [QCK], [PSY] and [INT] orbs 'beneficial' for all characters for 3 turns",
@@ -40724,16 +40724,16 @@ window.details = {
         ]
     },
     2364: {//Katakuri
-        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of all characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs \"beneficial\" for all characters. Recovers 50% of damage taken in the previous stage when entering a new stage.",
+        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of all characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs \"beneficial\" for all characters. Recovers 50% of damage taken from enemies in the previous stage when entering a new stage.",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>#{beneficial}",
-        special: "Deals typeless damage to all enemies equal to 30x the damage taken before the special is activated and adds Additional Typeless Damage equal to 15x the damage taken before the special is activated for 1 turn.",
+        special: "Deals typeless damage to all enemies equal to 30x the damage taken from enemies before the special is activated and adds Additional Typeless Damage equal to 15x the damage taken from enemies before the special is activated for 1 turn.",
         specialNotes: "The amount of damage possible caps at 200,000 damage taken, so 6,000,000 AOE Typeless damage and 3,000,000 Additional Damage.",
         specialName: "Burning Mochi",
     },
     2365: {//Katakuri
-        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of all characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs \"beneficial\" for all characters. Recovers 50% of damage taken in the previous stage when entering a new stage.",
+        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of all characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs \"beneficial\" for all characters. Recovers 50% of damage taken from enemies in the previous stage when entering a new stage.",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>#{beneficial}",
-        special: "Deals typeless damage to all enemies equal to 30x the damage taken before the special is activated and adds Additional Typeless Damage equal to 15x the damage taken before the special is activated for 1 turn.",
+        special: "Deals typeless damage to all enemies equal to 30x the damage taken from enemies before the special is activated and adds Additional Typeless Damage equal to 15x the damage taken from enemies before the special is activated for 1 turn.",
         specialNotes: "The amount of damage possible caps at 200,000 damage taken, so 6,000,000 AOE Typeless damage and 3,000,000 Additional Damage.",
         specialName: "Burning Mochi",
         sailor: {
