@@ -2380,7 +2380,7 @@ window.aliases = {
     2379: [ '', '', '' ],
     2380: [ '', '', 'Young Big Mom', 'Ambush Big Mom', 'Invasion Big Mom' ],
     2381: [ '', '', 'Young Big Mom', 'Ambush Big Mom', 'Invasion Big Mom' ],
-    2382: [ '', '', 'Support Sanji' ],
+    2382: [ 'サンジ ヴィンスモークからの訣別', '', 'Support Sanji' ],
     2383: [ '', '', 'Limited Kid', 'Secret Kid' ],
     2384: [ '', '', 'Limited Hawkins', 'Secret Hawkins' ],
     2385: [ '', '', 'Limited Apoo', 'Secret Apoo' ],

@@ -3114,7 +3114,7 @@ window.drops = {
             thumb: 2381,
             nakama: null,
             gamewith: null,
-            condition: 'Has a chance of appearing at the end of ANY Rain boss. You MUST use the same team that you just used to complete the Rain boss to fight Charlotte Linlin.',
+            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
         },
         

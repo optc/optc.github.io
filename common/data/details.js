@@ -40841,7 +40841,7 @@ window.details = {
     2368: {//Mont-d'Or
         captain: "Boosts ATK of [STR] and [PSY] characters by a variable factor between ?x and ?x based on the timing of the attack of the previous unit in the chain and recovers ? HP at end of each turn",
         //captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a PERFECT hit by 2.75x.",
-        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 4 turns, reduces Silence, Increase Damage Taken and Burn duration by 4 turns. If your captain is a [STR] or [PSY], boosts the Color Affinity of [STR] and [PSY] characters by 1.75x for 1 turn",
+        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 4 turns, reduces Silence, Increase Damage Taken and Burn duration by 4 turns. If your captain is a [STR] or [PSY], boosts the Color Affinity of [STR] and [PSY] characters by 1.75x for 2 turns",
         specialName: "Sealed Books",
         sailor: "Reduces Silence duration on this character by 3 turns",
         sailorNotes: "#{silence}",
@@ -40849,7 +40849,7 @@ window.details = {
     2369: {//Mont-d'Or
         captain: "Boosts ATK of [STR] and [PSY] characters by a variable factor between 2x and 2.75x based on the timing of the attack of the previous unit in the chain and recovers 700 HP at end of each turn",
         captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.25x, a Great hit by 2.5x and a PERFECT hit by 2.75x.",
-        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 4 turns, reduces Silence, Increase Damage Taken and Burn duration by 4 turns. If your captain is a [STR] or [PSY], boosts the Color Affinity of [STR] and [PSY] characters by 1.75x for 1 turn",
+        special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 4 turns, reduces Silence, Increase Damage Taken and Burn duration by 4 turns. If your captain is a [STR] or [PSY], boosts the Color Affinity of [STR] and [PSY] characters by 1.75x for 2 turns",
         specialName: "Sealed Books",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
