@@ -523,8 +523,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     captAffinityMult *= captain.captAffinityMultiplier(unit);
                 });
         
+        //console.log(affinityMult);
         //Calculate the new Affinity mult
-        if(affinityMult != 1){
+        if(affinityMult != 1 || captAffinityMult != 1){
             if(typeMult == 2) typeMult *= (affinityMult * captAffinityMult);
             if(typeMult == 0.5) typeMult /= (affinityMult * captAffinityMult);
         }
