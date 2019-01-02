@@ -841,10 +841,10 @@ window.drops = {
             gamewith: 111173,
             '01': [ 2003 ],
             '02': [  ],
-            '03': [ 991 ],
+            '03': [ 1628 ],
             '04': [ 1292 ],
-            '05': [ 1400 ],
-            '06': [  ],
+            '05': [ 1401 ],
+            '06': [ 1401 ],
             '07': [ 1648 ],
             '08': [ 2002 ],
             '09': [ 1421 ],
@@ -2731,7 +2731,7 @@ window.drops = {
         {
             name: 'Clash!! Judge',
             thumb: 2281,
-            nakama: null,
+            nakama: 4228100,
             gamewith: 121664,
             Ultimate: [ 2280 ],
             Master: [ 2280 ],
@@ -2741,7 +2741,7 @@ window.drops = {
         {
             name: 'Clash!! Arlong',
             thumb: 2356,
-            nakama: null,
+            nakama: 4225600,
             gamewith: 134190,
             Master: [ 2355 ],
             Expert: [ 2355 ]
