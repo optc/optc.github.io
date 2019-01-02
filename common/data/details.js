@@ -40789,13 +40789,13 @@ window.details = {
     },
     2366: {//Flampe
         captain: "Recovers ?x character's RCV in HP at the end of each turn",
-        special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns. If during that turn, you hit 3 PERFECTS, boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.75x for 3 turns in the following turn and protects from defeat as long as HP is above ?% for 1 turn",
+        special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns. If during that turn, you hit 3 PERFECTS, boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.75x for 3 turns in the following turn and protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Numbing Needle",
         sailor: "If this character has a [PSY] orb and you hit a PERFECT with her, keep his [PSY] orb for the next turn",
     },
     2367: {//Flampe
         captain: "Recovers 5x character's RCV in HP at the end of each turn",
-        special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns. If during that turn, you hit 3 PERFECTS, boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.75x for 3 turns in the following turn and protects from defeat as long as HP is above ?% for 1 turn",
+        special: "Recovers 6x character's RCV in HP at the end of each turn for 3 turns. If during that turn, you hit 3 PERFECTS, boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.75x for 3 turns in the following turn and protects from defeat as long as HP is above 50% for 1 turn",
         specialName: "Numbing Needle",
         sailor: {
             "base": "If this character has a [PSY] orb and you hit a PERFECT with her, keep his [PSY] orb for the next turn",
