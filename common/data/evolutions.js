@@ -3841,19 +3841,23 @@ window.evolutions = {
     },
     1571: {
         evolution: 2372,
-        evolvers: [  ]
-    },
-    1652: {
-        evolution: 2373,
-        evolvers: [  ]
-    },
-    2374: {
-        evolution: 2375,
-        evolvers: [  ]
+        evolvers: [ 'skullSTR' ]
     },
     1652: {
         evolution: 2373,
         evolvers: [ 'skullPSY' ]
+    },
+    2376: {
+        evolution: 2377,
+        evolvers: [  ]
+    },
+    2380: {
+        evolution: 2381,
+        evolvers: [  ]
+    },
+    2386: {
+        evolution: 2387,
+        evolvers: [  ]
     },
     2400: {
         evolution: 2401,
@@ -3874,6 +3878,10 @@ window.evolutions = {
     2502: {
         evolution: 2503,
         evolvers: [ 118, 86, 266, 302, 267 ]
+    },
+    2506: {
+        evolution: 2507,
+        evolvers: [ 104, 102, 267, 1180, 118 ]
     },
     1763: {
         evolution: 2505,

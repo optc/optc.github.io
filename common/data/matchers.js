@@ -148,9 +148,9 @@ window.matchers = [
     },
     
     {
-        name: '"Beneficial" Orb captains',
+        name: 'Beneficial Orb captains',
         target: 'captain',
-        matcher: /"beneficial/i
+        matcher: /beneficial/i
         //matcher: /Makes ((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\])|((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]) and (STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]))) orbs "beneficial"/i
     },
 
@@ -712,9 +712,9 @@ window.matchers = [
     },
     
     {
-        name: '"Beneficial" Orb Enablers',
+        name: 'Beneficial Orb Enablers',
         target: 'special',
-        matcher: /"beneficial/i
+        matcher: /beneficial/i
     },
     
     {
@@ -816,51 +816,51 @@ window.matchers = [
     },
     
     {
-        name: '"Beneficial" Orb sailors',
+        name: 'Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /"beneficial/i
+        matcher: /beneficial/i
     },
     
     {
-        name: 'STR Orb Team "Beneficial" Orb sailors',
+        name: 'STR Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[STR\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[STR\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     {
-        name: 'DEX Orb Team "Beneficial" Orb sailors',
+        name: 'DEX Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[DEX\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[DEX\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     {
-        name: 'QCK Orb Team "Beneficial" Orb sailors',
+        name: 'QCK Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[QCK\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[QCK\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     {
-        name: 'PSY Orb Team "Beneficial" Orb sailors',
+        name: 'PSY Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[PSY\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[PSY\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     {
-        name: 'INT Orb Team "Beneficial" Orb sailors',
+        name: 'INT Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[INT\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[INT\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     {
-        name: 'TND Orb Team "Beneficial" Orb sailors',
+        name: 'TND Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[TND\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[TND\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     {
-        name: 'RCV Orb Team "Beneficial" Orb sailors',
+        name: 'RCV Orb Team Beneficial Orb sailors',
         target: 'sailor',
-        matcher: /Makes.+\[RCV\][^\"\d]+orbs \\"beneficial\\"[^\"\d]+characters/i
+        matcher: /Makes.+\[RCV\][^\"\d]+orbs beneficial[^\"\d]+characters/i
     },
     
     /* * * * * Limit Break * * * * */

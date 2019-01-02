@@ -2177,6 +2177,14 @@ window.drops = {
             'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
         },
         
+        {
+            name: 'Mother Caramel',
+            thumb: 2377,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2376, 2378, 2379, -2234, -2201, -2203, -2242, -2161, -2244 ]
+        },
+        
     ],
 
             
@@ -2933,6 +2941,14 @@ window.drops = {
             gamewith: null,
             'Winter Sea': [ 2361, 9025 ]
         },
+
+        {
+            name: 'Kaido',
+            thumb: 2387,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2386 ]
+        },
         
     ],
 
@@ -3095,11 +3111,11 @@ window.drops = {
         
         {
             name: 'Invasion! Charlotte Linlin',
-            thumb: 2375,
+            thumb: 2381,
             nakama: null,
             gamewith: null,
-            condition: 'Has a chance of appearing at the end of ANY Rain boss. You MUST use the same team that you just used to complete the Rain boss to fight Charlotte Linlin.',
-            'All Difficulties': [ 2374, 9010, 9011, 9012, 9013, 9014 ]
+            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
+            'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
