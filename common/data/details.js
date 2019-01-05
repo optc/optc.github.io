@@ -30771,11 +30771,11 @@ window.details = {
             {
                 "Characters": "Cerebral Characters",
                 "description": [
-                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 4: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 5: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                    "Level 1: Adds 3% of this character's base HP and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 4% of this character's base HP and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 5% of this character's base HP and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 6% of this character's base HP and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 7% of this character's base HP and RCV to the supported character's base ATK and RCV"
                 ]
             }
         ]
