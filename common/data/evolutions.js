@@ -3841,19 +3841,19 @@ window.evolutions = {
     },
     1571: {
         evolution: 2372,
-        evolvers: [ 'skullSTR' ]
+        evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
     },
     1652: {
         evolution: 2373,
-        evolvers: [ 'skullPSY' ]
+        evolvers: [ 'skullPSY', 118, 87, 303, 267 ]
     },
     2376: {
         evolution: 2377,
-        evolvers: [  ]
+        evolvers: [ 116, 80, 86, 97, 102 ]
     },
     2380: {
         evolution: 2381,
-        evolvers: [  ]
+        evolvers: [ 118, 87, 92, 98, 267 ]
     },
     2386: {
         evolution: 2387,
