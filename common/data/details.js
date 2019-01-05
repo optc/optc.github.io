@@ -16423,7 +16423,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Cannot be Blown Away",
-            "level1": "When HP is below ?% at the start of the turn, boosts own base ATK by 100",
+            "level2": "When HP is below ?% at the start of the turn, boosts own base ATK by 100",
         },
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -29198,7 +29198,7 @@ window.details = {
         specialName: "Signaling the Beginning of a Bright Future",
         sailor: {
             "base": "None",
-            "level1": "Boosts ATK, HP and RCV of all characters by 50",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 50",
             "level2": "Makes [STR] and [QCK] orbs beneficial for this character",
         },
         sailorNotes: "#{beneficial}",
