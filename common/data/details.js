@@ -33564,7 +33564,7 @@ window.details = {
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
             { "description": "Boosts base RCV by 15" },
             { "description": "Boosts base RCV by 15" },
-            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 30" },
