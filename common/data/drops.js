@@ -2156,7 +2156,7 @@ window.drops = {
         {
             name: 'The Genius Jester! Buggy\'s Festival!',
             thumb: 2277,
-            nakama: null,
+            nakama: 2227700,
             gamewith: 121547,
             'All Difficulties': [ 2276, 2278, 2279, -2074, -2363, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
         },
@@ -2164,7 +2164,7 @@ window.drops = {
         {
             name: 'Forces of Rage - Amande and Bobbin',
             thumb: 2327,
-            nakama: null,
+            nakama: 2232700,
             gamewith: 127786,
             'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
         },
@@ -2172,16 +2172,16 @@ window.drops = {
         {
             name: 'Banquet! The Best Tea Party Ever!',
             thumb: 2351,
-            nakama: null,
+            nakama: 2235100,
             gamewith: 133025,
             'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ]
         },
         
         {
-            name: 'Mother Caramel',
+            name: 'Holy Mother\'s Affection - Mother Caramel',
             thumb: 2377,
-            nakama: null,
-            gamewith: null,
+            nakama: 2237700,
+            gamewith: 136822,
             'All Difficulties': [ 2376, 2378, 2379, -2234, -2201, -2203, -2242, -2161, -2244 ]
         },
         
@@ -2759,7 +2759,7 @@ window.drops = {
             name: 'Clash!! Sengoku & Garp',
             thumb: 2507,
             global: true,
-            nakama: null,
+            nakama: 4250700,
             gamewith: null,
             Master: [ 2506 ],
             Expert: [ 2506 ]
@@ -2937,15 +2937,15 @@ window.drops = {
         {
             name: 'Cat Burglar Nami',
             thumb: 2362,
-            nakama: null,
-            gamewith: null,
+            nakama: 8236200,
+            gamewith: 134017,
             'Winter Sea': [ 2361, 9025 ]
         },
 
         {
             name: 'Kaido',
             thumb: 2387,
-            nakama: null,
+            nakama: 8238700,
             gamewith: null,
             'Raging Sea': [ 2386 ]
         },
@@ -3112,8 +3112,8 @@ window.drops = {
         {
             name: 'Invasion! Charlotte Linlin',
             thumb: 2381,
-            nakama: null,
-            gamewith: null,
+            nakama: 6238100,
+            gamewith: 136823,
             condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
         },
@@ -3185,6 +3185,7 @@ window.drops = {
             condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
             'Japan': [ -1621, -1632, -1665, -1678, -1713, -1721, -1770 ],
             'Global': [ -1621, -1632, -1665, -1713, -1721 ],
+            'Global v2': [ -1974, -1926, -1895, -1824, -1859],
             'Chopperman Missions': [ 1023, 1600 ],
         },
         
@@ -3367,9 +3368,9 @@ window.drops = {
         },
         
         {
-            name: 'Kami\'s Return',
+            name: 'Kami\'s Rises Again',
             thumb: 2232,
-            nakama: null,
+            nakama: 6223200,
             gamewith: 117538,
             showManual: true,
             'All Difficulties': [ 9021, -545, -602, -1896, -1929 ],
