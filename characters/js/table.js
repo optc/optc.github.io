@@ -170,6 +170,16 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.globalTM && [ 2099, 2084, 2086, 2169, 2173, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551, 1271, 1272, 1319, 1320, 1611, 1612, 2065, 2074, 2076, 2101, 2103, 2105, 2107, 2109, 2171, 2175, 2401, 2403, 2405, 2023, 2025, 2113, 2505, 1824, 1838, 1895, 1902, 1987, 2027, 2072, 2078, 2080, 2082, 1804, 1806, 1849, 1851, 1885, 1887, 1937, 1939, 1968, 1970, 2009, 2011, 2060, 2062, 2132, 2134, 2135, 1623, 1772, 1780, 1826, 2097, 1402, 2111, 2087, 2088, 2089, 2090, 2091, 2092, 2093, 2094, 2095, 2165, 2167, 1808, 1853, 1889, 1916, 1941, 1972, 2000, 2064, 2137 ].indexOf(id) == -1) return false;
         if (filters.japanTM && [ 2358, 2360, 2359, 2302, 2330, 2357, 2340, 2342, 2344, 2346, 2356, 2354, 2350, 2351, 2407, 2408, 2347, 2336, 2338, 870, 1123, 1619, 2035, 2265, 575, 603, 865, 978, 1047, 1298, 1518, 1680, 1815, 1879, 1924, 1943, 2015, 2033, 2097, 2197, 2263, 804, 1041, 1251, 1456, 1602, 1694, 1733, 1945, 2037, 2163, 2323, 268, 918, 1287, 1357, 1359, 1522, 1547, 1735, 1766, 1774, 1776, 1810, 1812, 1842, 1931, 1932, 1933, 2128, 2144, 2146, 2219, 1258, 1380, 1530, 1846, 1889, 1972, 2299, 2362 ].indexOf(id) == -1) return false;
         if (filters.worldClash && [ 253, 1041, 255, 257, 259, 979, 980, 983, 453, 455, 457, 946, 947, 948, 1182, 1528, 1186, 1188, 1190, 1270, 1509, 1510, 1511, 1606, 451, 981, 1184, 1272, 1512, 1607, 1222, 1276, 1278, 1602, 1608, 1700, 1798, 1989, 2037, 1047, 1492, 1972, 447, 1268, 575, 2025, 978, 2034, 1298, 2023, 1380, 2007, 1846, 1416, 1847, 2066, 408, 1927, 1345, 1593, 649, 1251, 1991, 1387, 2401, 2403, 2405 ].indexOf(id) == -1) return false;
+        if (filters.doffyBlitz){
+            var character = window.families[unit.number];
+            var matching = [ "Monkey D. Luffy", "Roronoa Zoro", "Franky", "Nico Robin", "Usopp", "Trafalgar Law", "Bartolomeo", "Cavendish", "Rob Lucci", "Sabo", "Boa Sandersonia", "Boa Marigold", "Boa Hancock", "Marguerite", "Leo", "Don Sai", "Don Chinjao", "Ideo", "Blue Gilly", "Suleiman", "Mansherry", "Ricky", "Kyros", "Funk Brothers", "Hajrudin", "Abdullah and Jeet", "Orlumbus", "Elizabello", "Bepo", "Sabo", "Dagama", "Jesus Burgess", "Diamante" ].indexOf(character) != -1;
+            var Katacount = 0;
+            var Kataclass = [ "Slasher", "Striker", "Shooter", "Powerhouse" ];
+            if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
+            else for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) Katacount++;
+            if (Katacount !== 2) return false;
+            else if (!matching) return false;
+        }
         if (filters.katakuri){
             var Katacount = 0;
             var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
