@@ -16423,7 +16423,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Cannot be Blown Away",
-            "level1": "When HP is below ?% at the start of the turn, boosts own base ATK by 100",
+            "level2": "When HP is below ?% at the start of the turn, boosts own base ATK by 100",
         },
         limit: [
             { "description": "Boosts base ATK by 20" },
@@ -29200,7 +29200,7 @@ window.details = {
         specialName: "Signaling the Beginning of a Bright Future",
         sailor: {
             "base": "None",
-            "level1": "Boosts ATK, HP and RCV of all characters by 50",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 50",
             "level2": "Makes [STR] and [QCK] orbs beneficial for this character",
         },
         sailorNotes: "#{beneficial}",
@@ -30773,11 +30773,11 @@ window.details = {
             {
                 "Characters": "Cerebral Characters",
                 "description": [
-                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 4: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV",
-                    "Level 5: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                    "Level 1: Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 7% of this character's base HP and RCV to the supported character's base HP and RCV"
                 ]
             }
         ]
