@@ -692,7 +692,7 @@ window.zombies = {
     },
     2366: { // Flampe
         type: 'healer',
-        multiplier: 5//Change this
+        multiplier: 3
     },
     2367: { // Flampe
         type: 'healer',

@@ -8345,11 +8345,11 @@ window.captains = {
         affinity: function(p) { return 1.4; }
     },
     2368: {
-        damageSorter: function(d) { return CrunchUtils.typeSort(d, 1, [ "STR", "PSY" ]); },//change this
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.5, [ "STR", "PSY" ]); },
         hitAtk: function(p) {
             if (!(p.unit.type == "STR" || p.unit.type == "PSY")) return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
-            return p.chainPosition === 0 ? 1 : (prev == 'Good' ? 1 : (prev == 'Great' ? 1 : (prev == 'Perfect' ? 1 : 1)));//change this
+            return p.chainPosition === 0 ? 2 : (prev == 'Good' ? 2.125 : (prev == 'Great' ? 2.25 : (prev == 'Perfect' ? 2.5 : 2)));//confirm
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
@@ -8363,8 +8363,8 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2370: {
-        atk: function(p) { return p.unit.type == "STR" ? 1 : 1; },//change this
-        rcv: function(p) { return p.unit.type == "STR" ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
     },
     2371: {
         atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
@@ -8395,7 +8395,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     2380: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1 : 1; },//Change this
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2.25 : 1; },
     },
     2381: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2.75 : 1; },
