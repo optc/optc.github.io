@@ -24010,7 +24010,7 @@ window.details = {
             { "description": "Boosts base HP by 45" },
             { "description": "Boosts base HP by 55" },
             { "description": "Boosts base HP by 65" },
-            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 80" },
@@ -26647,12 +26647,12 @@ window.details = {
     },
     1769: {//Ben Beckman
         captain: "Boosts ATK of Cerebral characters by 2.5x",
-        special: "Delays all enemies for 1 turn. If your Captain is aCerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Delays all enemies for 1 turn. If your Captain is a Cerebral character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
     },
     1770: {//Ben Beckman
         captain: "Boosts ATK of Cerebral characters by 2.5x and their HP by 1.2x at the start of the chain and boosts ATK of Cerebral characters by 3.25x following a chain of Good > Great > PERFECT hits",
-        special: "Delays all enemies for 1 turn. If your Captain is a Cerebral Character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
+        special: "Delays all enemies for 1 turn. If your Captain is a Cerebral character, boosts ATK against delayed enemies by 1.5x for 1 turn and changes adjacent orbs into Matching Orbs",
         specialName: "Restraining Gunpoint",
         sailor: {
             "base": "None",
@@ -40891,7 +40891,7 @@ window.details = {
     },
     2368: {//Mont-d'Or
         captain: "Boosts ATK of [STR] and [PSY] characters by a variable factor between 2x and 2.5x based on the timing of the attack of the previous unit in the chain",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by 2.125x, a Great hit by 2.25x and a PERFECT hit by 2.5x.",//confirm
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 2x, a Good hit by ?x, a Great hit by ?x and a PERFECT hit by 2.5x.",
         special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 4 turns, reduces Silence, Increase Damage Taken and Burn duration by 4 turns. If your captain is a [STR] or [PSY], boosts the Color Affinity of [STR] and [PSY] characters by 1.75x for 2 turns",
         specialName: "Sealed Books",
         sailor: "Reduces Silence duration on this character by 3 turns",
@@ -41137,7 +41137,7 @@ window.details = {
             { "description": "Boosts base HP by 45" },
             { "description": "Boosts base HP by 55" },
             { "description": "Boosts base HP by 65" },
-            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 80" },
@@ -41226,7 +41226,7 @@ window.details = {
         ]
     },
     2380: {//Young Big Mom
-        captain: "Boosts ATK of Driven and Powerhouse characters by 2.25x and makes [RCV] orbs beneficial for Driven and Powerhouse characters.",
+        captain: "Boosts ATK of Powerhouse characters by 2.25x and makes [RCV] orbs beneficial for Powerhouse characters.",
         captainNotes: "#{beneficial}",
         special: "Reduces ATK DOWN, Bind and Despair duration by 6 turns, changes own orb and adjacent orbs into [RCV] orbs boosts ATK of Driven and Powerhouse characters by 2.25x after 12th hit in the chain for 3 turns.",
         specialName: "Natural Born Destroyer",

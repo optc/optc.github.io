@@ -8349,7 +8349,7 @@ window.captains = {
         hitAtk: function(p) {
             if (!(p.unit.type == "STR" || p.unit.type == "PSY")) return 1;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
-            return p.chainPosition === 0 ? 2 : (prev == 'Good' ? 2.125 : (prev == 'Great' ? 2.25 : (prev == 'Perfect' ? 2.5 : 2)));//confirm
+            return p.chainPosition === 0 ? 2 : (prev == 'Good' ? 2 : (prev == 'Great' ? 2 : (prev == 'Perfect' ? 2.5 : 1)));//change this
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
@@ -8395,7 +8395,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     2380: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
     },
     2381: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2.75 : 1; },

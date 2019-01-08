@@ -698,6 +698,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2369: { // Mont-d'Or
+        type: 'healer',
+        amount: 700
+    },
     2407: { // Ace
         type: 'healer',
         amount: 500

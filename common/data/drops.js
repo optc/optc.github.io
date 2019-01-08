@@ -833,9 +833,10 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Royal Palace Top Floor to Town Center',
+            name: 'Dressrosa - The Royal Palace\'s Top Floor to Central Town',
             shortName: 'Dressrosa 4',
             thumb: 2126,
+            global: true,
             nakama: 1212600,
             completion: '10x Rainbow Gems',
             gamewith: 111173,
@@ -2178,7 +2179,7 @@ window.drops = {
         },
         
         {
-            name: 'Holy Mother\'s Affection - Mother Caramel',
+            name: 'Our Lady\'s Motherly Love',
             thumb: 2377,
             nakama: 2237700,
             gamewith: 136822,
@@ -2905,6 +2906,7 @@ window.drops = {
         {
             name: 'Kami Enel',
             thumb: 2211,
+            global: true,
             nakama: 8221100,
             gamewith: 116377,
             'Raging Sea': [ 2210 ]
@@ -3371,6 +3373,7 @@ window.drops = {
             name: 'Kami\'s Rises Again',
             thumb: 2232,
             nakama: 6223200,
+            global: true,
             gamewith: 117538,
             showManual: true,
             'All Difficulties': [ 9021, -545, -602, -1896, -1929 ],
