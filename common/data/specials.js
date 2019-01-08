@@ -6134,13 +6134,29 @@ window.specials = {
         type: "class"
     },
     2305: {
-        atk: function(p) { return 1.75; },
+        atk: function(p) { return window.specials[2305].multiplier ? 1.75 : 1; },
         type: "condition",
+        onActivation: function(p) {
+            window.specials[2305].multiplier = false;
+            if(p.captain) {
+                if (p.captain.class.has("Cerebral") || p.captain.class.has("Slasher")) {
+                    window.specials[2305].multiplier = true;
+                }
+            }
+        },
         warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     2306: {
-        atk: function(p) { return 1.75; },
+        atk: function(p) { return window.specials[2306].multiplier ? 1.75 : 1; },
         type: "condition",
+        onActivation: function(p) {
+            window.specials[2306].multiplier = false;
+            if(p.captain) {
+                if (p.captain.class.has("Cerebral") || p.captain.class.has("Slasher")) {
+                    window.specials[2306].multiplier = true;
+                }
+            }
+        },
         warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     2309: {
