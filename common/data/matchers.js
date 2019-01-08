@@ -986,4 +986,22 @@ window.matchers = [
         target: 'support',
         matcher: /(Changes.+(orb|orbs))/i
     },
+
+    {
+        name: 'Healers',
+        target: 'support',
+        matcher: /Recovers/i
+    },
+    
+    {
+        name: 'Final Stage Activated Support',
+        target: 'support',
+        matcher: /final stage/i
+    },
+    
+    {
+        name: 'First Special Activated Support',
+        target: 'support',
+        matcher: /uses their special/i
+    },
 ];

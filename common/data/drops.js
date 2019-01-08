@@ -833,9 +833,10 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Royal Palace Top Floor to Town Center',
+            name: 'Dressrosa - The Royal Palace\'s Top Floor to Central Town',
             shortName: 'Dressrosa 4',
             thumb: 2126,
+            global: true,
             nakama: 1212600,
             completion: '10x Rainbow Gems',
             gamewith: 111173,
@@ -2178,7 +2179,7 @@ window.drops = {
         },
         
         {
-            name: 'Mother Caramel',
+            name: 'Our Lady\'s Motherly Love',
             thumb: 2377,
             nakama: null,
             gamewith: null,
@@ -2905,6 +2906,7 @@ window.drops = {
         {
             name: 'Kami Enel',
             thumb: 2211,
+            global: true,
             nakama: 8221100,
             gamewith: 116377,
             'Raging Sea': [ 2210 ]
@@ -2938,7 +2940,7 @@ window.drops = {
             name: 'Cat Burglar Nami',
             thumb: 2362,
             nakama: null,
-            gamewith: null,
+            gamewith: 134017,
             'Winter Sea': [ 2361, 9025 ]
         },
 
@@ -3113,7 +3115,7 @@ window.drops = {
             name: 'Invasion! Charlotte Linlin',
             thumb: 2381,
             nakama: null,
-            gamewith: null,
+            gamewith: 136823,
             condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
         },
@@ -3369,6 +3371,7 @@ window.drops = {
         {
             name: 'Kami\'s Return',
             thumb: 2232,
+            global: true,
             nakama: null,
             gamewith: 117538,
             showManual: true,
