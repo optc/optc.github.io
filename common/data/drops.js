@@ -3369,7 +3369,7 @@ window.drops = {
         },
         
         {
-            name: 'Kami\'s Return',
+            name: 'Kami Rises Again',
             thumb: 2232,
             global: true,
             nakama: null,
