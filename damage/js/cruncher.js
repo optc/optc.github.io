@@ -399,7 +399,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
      */
-    var computeDamageOfUnit = function(unit, unitAtk, hitModifier, currentHitCount, type) {
+    var computeDamageOfUnit = function(position, unit, unitAtk, hitModifier, currentHitCount, type) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
         var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastAtk = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
@@ -426,8 +426,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             ++result.hits;
             lastAtk = unitAtk;
             // apply hit-based captain effects if any
-            cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
-            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
+            cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position)); });
+            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position)); });
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
@@ -687,7 +687,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
                 // compute damage
                 var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
-                var temp = computeDamageOfUnit(x.unit.unit, unitAtk, modifiers[n], currentHits, type);
+                var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type);
                 currentHits = temp.hits;
                 overall += temp.result;
                 multipliersUsed.push(chainMultiplier);
