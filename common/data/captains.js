@@ -8421,8 +8421,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
     2386: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 1 : (p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? 1 : 1; },//change this
-        hp: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     2387: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : (p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? 2.75 : 1; },

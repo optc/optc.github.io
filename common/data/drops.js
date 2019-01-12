@@ -2948,7 +2948,7 @@ window.drops = {
             name: 'Kaido',
             thumb: 2387,
             nakama: 8238700,
-            gamewith: null,
+            gamewith: 137053,
             'Raging Sea': [ 2386 ]
         },
         
@@ -3207,7 +3207,7 @@ window.drops = {
             name: 'World Clash!',
             thumb: 2407,
             global: true,
-            nakama: null,
+            nakama: 6240700,
             gamewith: 130091,
             condition: 'Chance of dropping the Forbidden Tomes and Almighty Manuals.',
             'Chopperman Missions': [ 2408 ],
@@ -3382,7 +3382,7 @@ window.drops = {
         {
             name: 'Higuma - The Bandit Who Rowed Out to Sea',
             thumb: 2259,
-            nakama: null,
+            nakama: 6225900,
             gamewith: 119604,
             'All Difficulties': [ 9022 ],
         },
@@ -3390,7 +3390,7 @@ window.drops = {
         {
             name: 'Push Forward! Straw Hat Crew!',
             thumb: 2300,
-            nakama: null,
+            nakama: 6230000,
             gamewith: 124622,
             showManual: true,
             'All Difficulties': [ 9023, 9024, -1935, -2300, -1588, -2245, -912, -943, -1364, -1368 ],
@@ -3443,7 +3443,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Sanji',
             thumb: 912,
-            nakama: null,
+            nakama: 6091200,
             gamewith: 120486,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
@@ -3451,7 +3451,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Jack',
             thumb: 2175,
-            nakama: null,
+            nakama: 6217500,
             gamewith: 133004,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
         },
