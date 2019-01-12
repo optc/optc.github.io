@@ -1347,12 +1347,12 @@ window.specials = {
     },
     1028: {
         //TODO
-        hit: function(n) { return n > 30 ? 1.75 : 1; },
+        hit: function(n,p) { return n > 30 ? 1.75 : 1; },
         type: "condition"
     },
     1029: {
         //TODO
-        hit: function(n) { return n > 30 ? 1.75 : 1; },
+        hit: function(n,p) { return n > 30 ? 1.75 : 1; },
         type: "condition"
     },
     1030: {
@@ -1787,12 +1787,12 @@ window.specials = {
     },
     1237: {
         //TODO
-        hit: function(n) { return n > 30 ? 2 : 1; },
+        hit: function(n,p) { return n > 30 ? 2 : 1; },
         type: "condition"
     },
     1238: {
         //TODO
-        hit: function(n) { return n > 30 ? 2 : 1; },
+        hit: function(n,p) { return n > 30 ? 2 : 1; },
         type: "condition"
     },
     1239: {
@@ -6455,7 +6455,7 @@ window.specials = {
         chainAddition: function(p) { return [.3, .7, .7][window.specials[2363].multiplier]; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2363].turnedOn = true;
+            if (p.sourceSlot < 2) window.specials[2363].turnedOn = true;
             var n = (window.specials[2363].multiplier == 1 ? 2 : (window.specials[2363].multiplier == 2 | window.specials[2363].multiplier == undefined) ? 0 : 1);
             window.specials[2363].multiplier = n;
             p.scope.notify({
@@ -6526,6 +6526,29 @@ window.specials = {
             window.specials[2371].turnedOn = false;
         }
     },
+    2374: {
+        affinity: function(p) { return window.specials[2374].multiplier && (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        onActivation: function(p) {
+            window.specials[2374].multiplier = false;
+            window.specials[2374].turnedOn = true;
+            if(p.captain) {
+                if (p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) {
+                    window.specials[2374].multiplier = true;
+                }
+            }
+        },
+    },
+    2375: {
+        affinity: function(p) { return window.specials[2375].multiplier && (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        onActivation: function(p) {
+            window.specials[2375].multiplier = false;
+            if(p.captain) {
+                if (p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) {
+                    window.specials[2375].multiplier = true;
+                }
+            }
+        },
+    },
     2376: {
         atk: function(p) { return p.slot < 2 ? 1.75 : 1; },
         type: "class",
@@ -6543,13 +6566,13 @@ window.specials = {
     },
     2380: {
         //TODO
-        hit: function(n) { return n > 12 ? 2.25 : 1; },
-        type: "condition"
+        hit: function(n,p) { return (n > 12 && (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) ? 2.25 : 1; },
+        type: "condition",
     },
     2381: {
         //TODO
-        hit: function(n) { return n > 12 ? 2.25 : 1; },
-        type: "condition"
+        hit: function(n,p) { return (n > 12 && (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) ? 2.25 : 1; },
+        type: "condition",
     },
     2383:{
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2383].multiplier : 1; },
@@ -6582,6 +6605,14 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : 1; },
         type: "class",
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2389: {
+        atk: function(p) { return 1.3; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.3, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2391: {
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
     2400: {
         atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
@@ -6749,6 +6780,40 @@ window.specials = {
     2505: {
         def: function(p) { return .2; },
         affinity: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
+    2508: {
+        chain: function(p) { return window.specials[2508].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2508].multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2508].multiplier == 3 ? 1 : 0);
+            window.specials[2508].multiplier = [3, 1][n];
+            p.scope.notify({
+                text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
+                name: '2508warning'
+            });
+        },
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2509: {
+        chain: function(p) { return window.specials[2509].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2509].multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2509].multiplier == 3 ? 1 : 0);
+            window.specials[2509].multiplier = [3, 1][n];
+            p.scope.notify({
+                text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
+                name: '2509warning'
+            });
+        },
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },

@@ -675,6 +675,26 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
     },
+    2409: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
+    2410: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
+    2413: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    2414: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },

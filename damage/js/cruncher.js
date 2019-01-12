@@ -399,7 +399,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
      */
-    var computeDamageOfUnit = function(unit, unitAtk, hitModifier, currentHitCount, type) {
+    var computeDamageOfUnit = function(position, unit, unitAtk, hitModifier, currentHitCount, type) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
         var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastAtk = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
@@ -426,8 +426,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             ++result.hits;
             lastAtk = unitAtk;
             // apply hit-based captain effects if any
-            cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
-            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits); });
+            cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position)); });
+            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position)); });
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
@@ -687,7 +687,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
                 // compute damage
                 var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
-                var temp = computeDamageOfUnit(x.unit.unit, unitAtk, modifiers[n], currentHits, type);
+                var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type);
                 currentHits = temp.hits;
                 overall += temp.result;
                 multipliersUsed.push(chainMultiplier);
@@ -963,7 +963,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2508 || id == 2509))
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232))
                 $scope.tdata.healCounter.enabled = true;
