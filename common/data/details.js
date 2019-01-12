@@ -40628,7 +40628,7 @@ window.details = {
         ]
     },
     2363: {//6+ Gear 4 Luffy
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, THIS Luffy boosts ATK of all characters by 4x, by 4.25x after 3 PERFECTs in a row",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, THIS Luffy boosts ATK of all characters by 4x at the start of the chain, by 4.25x after 3 PERFECTs in a row",
         special: [
             {
                 "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds .3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 3 turns",
@@ -41466,6 +41466,91 @@ window.details = {
             },
         ]
     },
+    2388: {//Makino
+        captain: "Reduces damage received by 20% and recovers 2x character's RCV in HP at the end of each turn",
+        special: "Recovers 3,000 HP and reduces damage received by 60% for 2 turns.",
+        specialName: "Female Bartender's Care",
+        support: [
+            {
+                "Characters": "Luffy, Ace and Sabo",
+                "description": [
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
+    2389: {//Tsuru
+        captain: "Boosts ATK of all characters by 1.75x and their HP by 1.2x.",
+        special: "Reduces enemies Percent Damage Reduction duration by 2 turns and boosts ATK of all characters by 1.3x for 2 turns and amplifies the effect of orbs by 1.3x for 2 turns.",
+        specialName: "Great Staff Officer's Commands",
+        support: [
+            {
+                "Characters": "Garp and Sengoku",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, cuts the current HP of each enemy by 2% for 3 turns at the end of the turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, cuts the current HP of each enemy by 3% for 3 turns at the end of the turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, cuts the current HP of each enemy by 4% for 3 turns at the end of the turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, cuts the current HP of each enemy by 5% for 3 turns at the end of the turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, cuts the current HP of each enemy by 7% for 3 turns at the end of the turn."
+                ]
+            }
+        ]
+    },
+    2390: {//Conis
+        captain: "Boosts ATK and RCV of all Striker and Free Spirit characters by 1.5x.",
+        special: "Removes Blindness duration completely and reduces Bind duration by 5 turns.",
+        specialName: "Angel's Message",
+        support: [
+            {
+                "Characters": "Ganfor, Aisa, Wyper, Nami, Sanji and Usopp",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK. Boosts the supported character's ATK by 1.5x against Enel. When the supported character hits a PERFECT, reduces enemy's Increased Defense duration by 1 turn.",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK. Boosts the supported character's ATK by 1.5x against Enel. When the supported character hits a PERFECT, reduces enemy's Increased Defense duration by 1 turn.",
+                    "Level 3: Adds 9% of this character's base ATK to the supported character's base ATK. Boosts the supported character's ATK by 1.5x against Enel. When the supported character hits a PERFECT, reduces enemy's Increased Defense duration by 1 turn.",
+                    "Level 4: Adds 12% of this character's base ATK to the supported character's base ATK. Boosts the supported character's ATK by 1.5x against Enel. When the supported character hits a PERFECT, reduces enemy's Increased Defense duration by 1 turn.",
+                    "Level 5: Adds 15% of this character's base ATK to the supported character's base ATK. Boosts the supported character's ATK by 1.5x against Enel. When the supported character hits a PERFECT, reduces enemy's Increased Defense duration by 1 turn."
+                ]
+            }
+        ]
+    },
+    2391: {//Sabo
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.25x at the start of the chain, by 2.925x after 3 PERFECTs in a row.",
+        special: "Changes own orb into [STR], amplifies the effect of orbs for Fighter and Free Spirit characters by 1.75x for 1 turn.",
+        specialName: "Sworn Brother's Rescuer",
+        support: [
+            {
+                "Characters": "Luffy, Koala and Hack",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts base ATK of the supported character by 1.2x until the next stage.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts base ATK of the supported character by 1.25x until the next stage.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts base ATK of the supported character by 1.3x until the next stage.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts base ATK of the supported character by 1.35x until the next stage.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts base ATK of the supported character by 1.5x until the next stage."
+                ]
+            }
+        ]
+    },
+    2392: {//Iceberg
+        captain: "Boosts ATK of Shooter characters by 2x and recovers 500 HP at end of each turn.",
+        special: "Makes [DEX] orbs beneficial for Shooter characters for 3 turns.",
+        specialName: "Senior Apprentice's Assistance",
+        support: [
+            {
+                "Characters": "Luffy, Koala and Hack",
+                "description": [
+                    "Level 1: When the supported character uses their special, boosts base ATK of the supported character by 1.2x until the next stage.",
+                    "Level 2: When the supported character uses their special, boosts base ATK of the supported character by 1.25x until the next stage.",
+                    "Level 3: When the supported character uses their special, boosts base ATK of the supported character by 1.3x until the next stage.",
+                    "Level 4: When the supported character uses their special, boosts base ATK of the supported character by 1.35x until the next stage.",
+                    "Level 5: When the supported character uses their special, boosts base ATK of the supported character by 1.5x until the next stage."
+                ]
+            }
+        ]
+    },
     2400: {//World Clash Luffy
         captain: "Boosts ATK of [STR] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [QCK] > [DEX] > [STR] attacks no lower than Good and boosts their HP by 1.2x",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, reduces Bind and Despair duration by 4 turns. If your crew has 2 or more [DEX] or [QCK] characters, boosts ATK of [STR] characters by 2.25x for 1 turn, by 1.75x otherwise.",
@@ -41521,6 +41606,119 @@ window.details = {
         special: "Reduces Bind duration for one character completely and changes [BLOCK] orbs into Matching orbs",
         specialName: "Inheriting the Will of Flame",
         sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
+    },
+    2409: {//World Journey Luffy
+        captain: "Boosts ATK of Fighter and Free Spirit characters by ?x and their HP by ?x",
+        special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns. If you captain is a Fighter character, changes [BLOCK] orbs into Matching orbs",
+        specialName: "Captain's Spinning Gun",
+        sailor: "Boosts base ATK, HP and RCV of Fighter and Free Spirit characters by 50",
+    },
+    2410: {//World Journey Luffy
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.5x and their HP by 1.2x",
+        special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns. If you captain is a Fighter character, changes [BLOCK] orbs into Matching orbs",
+        specialName: "Captain's Spinning Gun",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Fighter and Free Spirit characters by 50",
+            "level1": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                ]
+            },
+        ],
+    },
+    2411: {//World Journey Nami
+        captain: "Reduces damage received by 20% and boosts ATK of Shooter and Striker characters proportionally to the crew's current HP, by ?x at max",
+        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : ? : ?}",
+        special: "Reduces Paralysis and Silence duration by 3 turns. if HP is above 80% at the time the special is activated, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs",
+        specialName: "Seductive Gun Play",
+        sailor: "Reduces Paralysis duration on this character by 3 turns",
+    },
+    2412: {//World Journey Nami
+        captain: "Reduces damage received by 20% and boosts ATK of Shooter and Striker characters proportionally to the crew's current HP, by 2.75x at max",
+        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : ? : 2.75}",
+        special: "Reduces Paralysis and Silence duration by 3 turns. if HP is above 80% at the time the special is activated, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs",
+        specialName: "Seductive Gun Play",
+        sailor: {
+            "base": "Reduces Paralysis duration on this character by 3 turns",
+            "level1": "Reduces Silence duration on this character by 3 turns",
+        },
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+    },
+    2413: {//World Journey Zoro
+        captain: "Boosts ATK of Shooter and Driven characters by ?x if they have a matching orb, by ?x otherwise.",
+        special: "If enemies have a barrier at the time the special was activated, changes all orbs, including [BLOCK] orbs, into Matching orbs and reduces enemy Barrier duration by 1 turn, changes adjacent orbs into Matching Orbs otherwise.",
+        specialName: "Triple-Wielding Outlaw",
+        sailor: "Boosts base ATK, HP and RCV of Shooter and Driven characters by 50",
+    },
+    2414: {//World Journey Zoro
+        captain: "Boosts ATK of Shooter and Driven characters by 2.75x if they have a matching orb, by 2.25x otherwise.",
+        special: "If enemies have a barrier at the time the special was activated, changes all orbs, including [BLOCK] orbs, into Matching orbs and reduces enemy Barrier duration by 1 turn, changes adjacent orbs into Matching Orbs otherwise.",
+        specialName: "Triple-Wielding Outlaw",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Shooter and Driven characters by 50",
+            "level1": "Reduces Silence duration by 1 turn",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
     },
     2500: {//Knight Zoro
         captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [INT] orbs, makes [STR] and [QCK] orbs beneficial for [STR] and [QCK] characters. If there is a [STR], [QCK] and [INT] character in your crew, boosts chain multiplier by 1.5x.",
@@ -41861,6 +42059,55 @@ window.details = {
                     "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
                     "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
                     "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    2508: {//Sabo V3
+        captain:  "Boosts chances of getting Matching orbs for Fighter, Shooter and Free Spirit characters. Boosts ATK of Fighter, Shooter and Free Spirit characters by 3x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 4.25x.",
+        special: "Locks the chain multiplier at 3x for 1 turn and amplifies the effects of orbs for Fighter, Shooter and Free Spirit characters by 2.25x for 1 turn",
+        specialName: "Sabo Special",
+    },
+    2509: {//Sabo V3
+        captain:  "Boosts chances of getting Matching orbs for Fighter, Shooter and Free Spirit characters. Boosts ATK of Fighter, Shooter and Free Spirit characters by 3x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 4.25x.",
+        special: "Locks the chain multiplier at 3x for 1 turn and amplifies the effects of orbs for Fighter, Shooter and Free Spirit characters by 2.25x for 1 turn",
+        specialName: "Sabo Special",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [TND] and [RCV] orbs beneficial for Fighter, Shooter and Free Spirit characters",
+            "level2": "Boosts base ATK, HP and RCV of Fighter, Shooter and Free Spirit characters by 60"
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    //"Level 5: This character's normal attack will ignore barriers"
                 ]
             },
         ]

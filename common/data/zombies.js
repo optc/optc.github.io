@@ -702,6 +702,14 @@ window.zombies = {
         type: 'healer',
         amount: 700
     },
+    2388: { // Makino
+        type: 'healer',
+        multiplier: 2
+    },
+    2392: { // Iceberg
+        type: 'healer',
+        amount: 500
+    },
     2407: { // Ace
         type: 'healer',
         amount: 500
