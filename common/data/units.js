@@ -2385,7 +2385,7 @@ window.units = [
     [ "Basil Hawkins, The Problem Children's Pirate Alliance", "PSY", [ "Fighter", "Slasher" ], 5, 20, 5, 4, 99, 2000000, 1331, 701, 159, 2191, 1307, 309, 1 ],
     [ "Scratchman Apoo, The Problem Children's Pirate Alliance", "QCK", [ "Shooter", "Driven" ], 5, 20, 5, 4, 99, 2000000, 1332, 698, 178, 2194, 1280, 310, 1 ],
     [ "Kaido", "STR", [ "Powerhouse", "Driven" ], 4, 30, 4, 1, 50, 130703, 1020, 502, 30, 1900, 888, 61, 1 ],
-    [ "Kaido, The King of the Beasts", "STR", [ "Powerhouse", "Driven" ], 5, 60, 5, 1, 99, 5000000, 1820, 802, 51, 3279, 1510, 110 ],
+    [ "Kaido, The King of the Beasts", "STR", [ "Powerhouse", "Driven" ], 5, 60, 5, 1, 99, 5000000, 1820, 802, 51, 3279, 1510, 110, 1 ],
     [ "Makino, Looking After the 3 Brothers", "INT", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, null, null, null, null, 1645, 1011, 468, null ],
     [ "Tsuru, Observant Great Staff Officer", "PSY", [ "Shooter", "Cerebral" ], 5, 1, 5, 4, 99, null, null, null, null, 2671, 1272, 331, null ],
     [ "Conis, Fearless Angel Facing Judgement", "QCK", [ "Striker", "Free Spirit" ], 5, 1, 6, 4, 99, null, null, null, null, 1821, 1056, 422, null ],
