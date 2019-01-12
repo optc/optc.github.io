@@ -6782,18 +6782,36 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
     2508: {
-        chain: function(p) { return 3; },
+        chain: function(p) { return window.specials[2508].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            if (window.specials[2508].multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2508].multiplier == 3 ? 1 : 0);
+            window.specials[2508].multiplier = [3, 1][n];
+            p.scope.notify({
+                text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
+                name: '2508warning'
+            });
         },
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     2509: {
-        chain: function(p) { return 3; },
+        chain: function(p) { return window.specials[2509].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            if (window.specials[2509].multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2509].multiplier == 3 ? 1 : 0);
+            window.specials[2509].multiplier = [3, 1][n];
+            p.scope.notify({
+                text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
+                name: '2509warning'
+            });
         },
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
