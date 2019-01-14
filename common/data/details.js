@@ -41181,14 +41181,14 @@ window.details = {
     },
     2374: {//Smoothie
         captain: "Boosts ATK of Slasher and Powerhouse characters by ?x if they have a matching orb, by ?x otherwise, and boosts their HP by ?x.",
-        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher and Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
+        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher or Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
         specialNotes: "#{beneficial}",
         specialName: "Smoothie Special",
         sailor: "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 50",
     },
     2375: {//Smoothie
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.75x if they have a matching orb, by 2.25x otherwise, and boosts their HP by 1.25x.",
-        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher and Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
+        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher or Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
         specialNotes: "#{beneficial}",
         specialName: "Smoothie Special",
         sailor: {
