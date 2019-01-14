@@ -412,6 +412,7 @@ directives.addTags = function($stateParams, $rootScope) {
                         (CharUtils.isFarmable(id) ? 'Farmable' : 'Non-farmable') + '</div>'));
             if (flags.rr) element.append($('<span class="tag flag">Rare Recruit only</div>'));
             if (flags.lrr) element.append($('<span class="tag flag">Limited Rare Recruit only</div>'));
+            if (flags.tmlrr) element.append($('<span class="tag flag">Treasure Map Sugo-fest Limited Rare Recruit only</div>'));
             if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
             if (flags.shop) element.append($('<span class="tag flag">Rayleigh Shop Unit</div>'));
             if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
