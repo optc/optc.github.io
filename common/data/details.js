@@ -40603,7 +40603,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire new Captain Ability: Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Striker and Cerebral characters by 3x if HP is above 50%, by 2x otherwise" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -41400,7 +41400,7 @@ window.details = {
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 35" },
-            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Acquire Potential 1: Barrier Penetration" },
         ],
         potential: [
             {
@@ -41419,7 +41419,7 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 1.2x",
         special: "Removes all positive buffs on your team, cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, amplifies the effect of orbs for all characters by 1.5x and boosts own ATK by 3.25x for a variable amount of turns",
         specialNotes: "ATK and Orb amplification buff duration is equal to the amount of [RCV] orbs consumed prior to the time the special was activated with a maximum of 6 turns.",
-        specialName: "Hundred-fold Iron Club",
+        specialName: "Iron Club of the Beasts",
     },
     2387: {//TM Kaido
         captain: {
@@ -41433,7 +41433,7 @@ window.details = {
         },
         special: "Removes all positive buffs on your team, cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, amplifies the effect of orbs for all characters by 1.5x and boosts own ATK by 3.25x for a variable amount of turns",
         specialNotes: "ATK and Orb amplification buff duration is equal to the amount of [RCV] orbs consumed prior to the time the special was activated with a maximum of 6 turns.",
-        specialName: "Hundred-fold Iron Club",
+        specialName: "Iron Club of the Beasts",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Powerhouse and Driven characters by 50",
@@ -41505,7 +41505,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Jack and Donquixote Doflamingo",
+                "Characters": "Jack and Doflamingo",
                 "description": [
                     "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
                     "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",

@@ -2503,7 +2503,6 @@ window.families = [
     "Monkey D. Luffy",
     "Monkey D. Luffy",
     [ "Crocodile", "Daz Bones" ],
-    [ "Crocodile", "Daz Bones" ],
     "Rob Lucci",
     [ "Sengoku", "Monkey D. Garp" ],
     [ "Sengoku", "Monkey D. Garp" ],
