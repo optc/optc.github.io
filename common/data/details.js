@@ -5936,6 +5936,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[QCK] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 1% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 2% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     604: {
@@ -6883,11 +6895,11 @@ window.details = {
             {
                 "Characters": "Luffy, Inazuma and Bon Clay",
                 "description": [
-                    "Level 1: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 3 turns",
-                    "Level 2: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 4 turns",
-                    "Level 3: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 5 turns",
-                    "Level 4: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 7 turns",
-                    "Level 5: Once per adventure, when you gain Poison or Toxic, removes Poison duration completely"
+                    "Level 1: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 3 turns",
+                    "Level 2: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 4 turns",
+                    "Level 3: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 5 turns",
+                    "Level 4: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 7 turns",
+                    "Level 5: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration completely"
                 ]
             }
         ]
@@ -7178,7 +7190,19 @@ window.details = {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
         specialName: "Sky Knight's Javelin",
-        captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn"
+        captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn",
+        support: [
+            {
+                "Characters": "Conis, Pierre and Chopper",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching and amplifies the effect of orbs for all characters by 1.1x for 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching and amplifies the effect of orbs for all characters by 1.2x for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching and amplifies the effect of orbs for all characters by 1.3x for 1 turn"
+                ]
+            }
+        ]
     },
     714: {
         special: "Randomizes slots with [STR], [QCK], [INT] or [PSY] orbs",
@@ -7192,7 +7216,19 @@ window.details = {
     716: {
         special: "Boosts ATK and RCV of Free Spirit characters by 1.5x for 2 turns, seals herself for 3 turns",
         specialName: "Angel's Harp - Healing",
-        captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
+        captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn",
+        support: [
+            {
+                "Characters": "Ganfor, Aisa, Wyper, Nami, Usopp and Sanji",
+                "description": [
+                    "Level 1: Boosts the supported character's ATK by 1.05x against Enel",
+                    "Level 2: Boosts the supported character's ATK by 1.05x against Enel",
+                    "Level 3: Boosts the supported character's ATK by 1.1x against Enel",
+                    "Level 4: Boosts the supported character's ATK by 1.15x against Enel",
+                    "Level 5: Boosts the supported character's ATK by 1.2x against Enel"
+                ]
+            }
+        ]
     },
     717: {
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemies",
@@ -7742,11 +7778,11 @@ window.details = {
             {
                 "Characters": "Rob Lucci, Kaku, Jabra, Blueno, Fukuro and Kumadori",
                 "description": [
-                    "Level 1: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
-                    "Level 2: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
-                    "Level 3: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by ??% for 1 turn",
-                    "Level 4: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 4,000 HP by ??% for 1 turn",
-                    "Level 5: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 3,000 HP by ??% for 1 turn"
+                    "Level 1: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 5,000 HP by ??% for 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 4,000 HP by ??% for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 3,000 HP by ??% for 1 turn"
                 ]
             }
         ]
@@ -9321,11 +9357,11 @@ window.details = {
             {
                 "Characters": "Sandersonia, Marigold and Marguerite",
                 "description": [
-                    "Level 1: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
-                    "Level 2: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
-                    "Level 3: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
-                    "Level 4: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
-                    "Level 5: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.5x for 1 turn"
+                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2.5x for 1 turn"
                 ]
             }
         ]
@@ -13257,7 +13293,6 @@ window.details = {
     },
     1089: {
         captain: "Boosts ATK of Slasher characters by 2x and boosts HP of Driven characters by 1.75x",
-        captainNotes: "Slasher + Driven characters gain ATK AND HP",
         special: "Reduces crew's HP by 70%, deals 15x ATK in [QCK] damage to all enemies. Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn.",
         specialName: "Seven Stars Sword of Darkness"
     },
