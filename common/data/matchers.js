@@ -1004,4 +1004,10 @@ window.matchers = [
         target: 'support',
         matcher: /uses their special/i
     },
+    
+    {
+        name: 'Debuff Activated Support',
+        target: 'support',
+        matcher: /when you are inflicted with/i
+    },
 ];
