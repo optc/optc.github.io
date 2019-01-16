@@ -41051,7 +41051,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Charlotte Linlin, Charlotte Pudding and Sanji",
+                "Characters": "Charlotte Linlin, Pudding and Sanji",
                 "description": [
                     "Level 1: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
                     "Level 2: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
@@ -41228,8 +41228,60 @@ window.details = {
         specialName: "Smoothie Special",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 50",
-            "level1": "Not Translated",
+            "level1": "Makes [PSY] orbs beneficial for this character",
         },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs beneficial for this character" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduces Damage received from [PSY] enemies by 1%",
+                    "Level 2: Reduces Damage received from [PSY] enemies by 2%",
+                    "Level 3: Reduces Damage received from [PSY] enemies by 3%",
+                    "Level 4: Reduces Damage received from [PSY] enemies by 4%",
+                    "Level 5: Reduces Damage received from [PSY] enemies by 5%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Charlotte Linlin, Katakuri, Daifuku and Cracker",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
     },
     2376: {//Mother Caramel
         captain: "Boosts ATK of Driven characters by ?x and their RCV by ?x",
