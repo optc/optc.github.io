@@ -37369,14 +37369,12 @@ window.details = {
     2237: {//Smoothie
         captain: "Boosts ATK of all characters by 3x following a chain of Good > Great > PERFECT hits and recovers 300 HP at end of each turn",
         special: "Recovers 5,000, removes Poison duration completely, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
-        specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: "Boosts base ATK of characters in the top row by 50",
     },
     2238: {//Smoothie
         captain: "Boosts ATK of all characters by 3.5x following a chain of Good > Great > PERFECT hits and recovers 500 HP at end of each turn",
         special: "Recovers 5,000, removes Poison duration completely, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
-        specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: {
             "base": "Boosts base ATK of characters in the top row by 50",
@@ -41218,14 +41216,14 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by ?x if they have a matching orb, by ?x otherwise, and boosts their HP by ?x.",
         special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher or Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
         specialNotes: "#{beneficial}",
-        specialName: "Smoothie Special",
+        specialName: "Juice Slash",
         sailor: "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 50",
     },
     2375: {//Smoothie
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.75x if they have a matching orb, by 2.25x otherwise, and boosts their HP by 1.25x.",
         special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher or Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
         specialNotes: "#{beneficial}",
-        specialName: "Smoothie Special",
+        specialName: "Juice Slash",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 50",
             "level1": "Makes [PSY] orbs beneficial for this character",
