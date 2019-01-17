@@ -3403,11 +3403,11 @@ window.drops = {
         },
         
         {
-            name: 'Garp Challenge!',
-            thumb: 1318,
-            nakama: 6213800,
-            gamewith: 108237,
-            condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+            name: 'Clash!! Enel [Extra]',
+            thumb: 603,
+            gamewith: 138206,
+            'All Difficulties': [ 602 ],
+            condition: "Chance of dropping the Support Medallions.",
         },
         
         {
