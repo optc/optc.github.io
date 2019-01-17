@@ -37037,7 +37037,7 @@ window.details = {
         ],
         specialName: "Tropical Country Flowers",
         specialNotes: "#{stages}<br>#{silence}",
-        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailor: "Reduces Silence duration on this character by 2 turns",
         sailorNotes: "#{silence}",
     },
     2216: {//Conis
