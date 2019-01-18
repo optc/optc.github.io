@@ -170,7 +170,7 @@
 <div class="filter-container">
     <span class="filter-header">Support filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('support') == 0"
-        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-support-options
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

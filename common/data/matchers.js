@@ -970,6 +970,18 @@ window.matchers = [
     },
     
     {
+        name: 'Type-boosting supports',
+        target: 'support',
+        matcher: /^[^,]+(STR|DEX|QCK|PSY|INT)\b/i
+    },
+
+    {
+        name: 'Class-boosting supports',
+        target: 'support',
+        matcher: /^[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+    
+    {
         name: 'ATK Boosting Support',
         target: 'support',
         matcher: /Adds.+ATK/i
