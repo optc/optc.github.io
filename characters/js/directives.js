@@ -195,6 +195,28 @@ directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
     };
 };
 
+directives.addSupportOptions = function($timeout, $compile, MATCHER_IDS) {
+    var TARGET = MATCHER_IDS['support.ClassBoostingSupports'];
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            if (scope.n !== TARGET) return;
+            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
+            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
+            classes.forEach(function(x,n) {
+                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSupport == \'%s\' }" ' +
+                    'ng-click="onSupportClick($event,\'%s\')">%s</span>';
+                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
+            });
+            element.after(filter);
+            $compile(filter)(scope);
+            scope.onSupportClick = function(e,type) {
+                scope.filters.classSupport = (scope.filters.classSupport == type ? null : type);
+            };
+        }
+    };
+};
+
 directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
     var TARGET = MATCHER_IDS['special.OrbControllers'];
     return {
@@ -412,6 +434,7 @@ directives.addTags = function($stateParams, $rootScope) {
                         (CharUtils.isFarmable(id) ? 'Farmable' : 'Non-farmable') + '</div>'));
             if (flags.rr) element.append($('<span class="tag flag">Rare Recruit only</div>'));
             if (flags.lrr) element.append($('<span class="tag flag">Limited Rare Recruit only</div>'));
+            if (flags.tmlrr) element.append($('<span class="tag flag">Treasure Map Sugo-fest Limited Rare Recruit only</div>'));
             if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
             if (flags.shop) element.append($('<span class="tag flag">Rayleigh Shop Unit</div>'));
             if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));

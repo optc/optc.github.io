@@ -5936,6 +5936,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[QCK] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 1% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 2% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
         ]
     },
     604: {
@@ -6883,11 +6895,11 @@ window.details = {
             {
                 "Characters": "Luffy, Inazuma and Bon Clay",
                 "description": [
-                    "Level 1: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 3 turns",
-                    "Level 2: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 4 turns",
-                    "Level 3: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 5 turns",
-                    "Level 4: Once per adventure, when you gain Poison or Toxic, removes Poison duration by 7 turns",
-                    "Level 5: Once per adventure, when you gain Poison or Toxic, removes Poison duration completely"
+                    "Level 1: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 3 turns",
+                    "Level 2: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 4 turns",
+                    "Level 3: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 5 turns",
+                    "Level 4: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration by 7 turns",
+                    "Level 5: Once per adventure, when you are inflicted with Poison or Toxic, removes Poison duration completely"
                 ]
             }
         ]
@@ -7178,7 +7190,19 @@ window.details = {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of characters in the top row by 1.5x for 2 turns",
         specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
         specialName: "Sky Knight's Javelin",
-        captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn"
+        captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn",
+        support: [
+            {
+                "Characters": "Conis, Pierre and Chopper",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching and amplifies the effect of orbs for all characters by 1.1x for 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching and amplifies the effect of orbs for all characters by 1.2x for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis, changes supported character's orb into Matching and amplifies the effect of orbs for all characters by 1.3x for 1 turn"
+                ]
+            }
+        ]
     },
     714: {
         special: "Randomizes slots with [STR], [QCK], [INT] or [PSY] orbs",
@@ -7192,7 +7216,19 @@ window.details = {
     716: {
         special: "Boosts ATK and RCV of Free Spirit characters by 1.5x for 2 turns, seals herself for 3 turns",
         specialName: "Angel's Harp - Healing",
-        captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn"
+        captain: "Boosts RCV of all characters by 5x if HP is below 30% at the start of the turn",
+        support: [
+            {
+                "Characters": "Ganfor, Aisa, Wyper, Nami, Usopp and Sanji",
+                "description": [
+                    "Level 1: Boosts the supported character's ATK by 1.05x against Enel",
+                    "Level 2: Boosts the supported character's ATK by 1.05x against Enel",
+                    "Level 3: Boosts the supported character's ATK by 1.1x against Enel",
+                    "Level 4: Boosts the supported character's ATK by 1.15x against Enel",
+                    "Level 5: Boosts the supported character's ATK by 1.2x against Enel"
+                ]
+            }
+        ]
     },
     717: {
         special: "Deals 50% of the damage dealt in the previous turn as typeless damage to all enemies",
@@ -7742,11 +7778,11 @@ window.details = {
             {
                 "Characters": "Rob Lucci, Kaku, Jabra, Blueno, Fukuro and Kumadori",
                 "description": [
-                    "Level 1: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
-                    "Level 2: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
-                    "Level 3: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 5,000 HP by ??% for 1 turn",
-                    "Level 4: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 4,000 HP by ??% for 1 turn",
-                    "Level 5: Once per adventure, when you gain Increase Damage Taken, reduces any damage received above 3,000 HP by ??% for 1 turn"
+                    "Level 1: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 5,000 HP by 50% for 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 5,000 HP by ??% for 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 4,000 HP by ??% for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Increase Damage Taken, reduces any damage received above 3,000 HP by ??% for 1 turn"
                 ]
             }
         ]
@@ -9321,11 +9357,11 @@ window.details = {
             {
                 "Characters": "Sandersonia, Marigold and Marguerite",
                 "description": [
-                    "Level 1: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
-                    "Level 2: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
-                    "Level 3: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
-                    "Level 4: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
-                    "Level 5: Once per adventure, when you gain Chain Coefficient Reduction, locks the chain multiplier at 2.5x for 1 turn"
+                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2x for 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2.2x for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction, locks the chain multiplier at 2.5x for 1 turn"
                 ]
             }
         ]
@@ -13257,7 +13293,6 @@ window.details = {
     },
     1089: {
         captain: "Boosts ATK of Slasher characters by 2x and boosts HP of Driven characters by 1.75x",
-        captainNotes: "Slasher + Driven characters gain ATK AND HP",
         special: "Reduces crew's HP by 70%, deals 15x ATK in [QCK] damage to all enemies. Boosts ATK of Slasher and Driven characters by 1.5x for 1 turn.",
         specialName: "Seven Stars Sword of Darkness"
     },
@@ -37004,7 +37039,7 @@ window.details = {
         ],
         specialName: "Tropical Country Flowers",
         specialNotes: "#{stages}<br>#{silence}",
-        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailor: "Reduces Silence duration on this character by 2 turns",
         sailorNotes: "#{silence}",
     },
     2216: {//Conis
@@ -37336,14 +37371,12 @@ window.details = {
     2237: {//Smoothie
         captain: "Boosts ATK of all characters by 3x following a chain of Good > Great > PERFECT hits and recovers 300 HP at end of each turn",
         special: "Recovers 5,000, removes Poison duration completely, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
-        specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: "Boosts base ATK of characters in the top row by 50",
     },
     2238: {//Smoothie
         captain: "Boosts ATK of all characters by 3.5x following a chain of Good > Great > PERFECT hits and recovers 500 HP at end of each turn",
         special: "Recovers 5,000, removes Poison duration completely, reduces Paralysis, Bind, Despair and Burn duration by 2 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times",
-        specialNotes: "We don't know what Burn is yet.",
         specialName: "Human Juicer",
         sailor: {
             "base": "Boosts base ATK of characters in the top row by 50",
@@ -41018,7 +41051,7 @@ window.details = {
         potentialNotes: "#{enrage}",
         support: [
             {
-                "Characters": "Charlotte Linlin, Charlotte Pudding and Sanji",
+                "Characters": "Charlotte Linlin, Pudding and Sanji",
                 "description": [
                     "Level 1: Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV",
                     "Level 2: Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV",
@@ -41183,20 +41216,72 @@ window.details = {
     },
     2374: {//Smoothie
         captain: "Boosts ATK of Slasher and Powerhouse characters by ?x if they have a matching orb, by ?x otherwise, and boosts their HP by ?x.",
-        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher and Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
+        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher or Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
         specialNotes: "#{beneficial}",
-        specialName: "Smoothie Special",
+        specialName: "Juice Slash",
         sailor: "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 50",
     },
     2375: {//Smoothie
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.75x if they have a matching orb, by 2.25x otherwise, and boosts their HP by 1.25x.",
-        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher and Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
+        special: "Deals 100x character's ATK in [INT] damage to one enemy, makes [DEX], [QCK] and [INT] orbs beneficial for Slasher and Powerhouse characters for 1 turn. If your captain is a Slasher or Powerhouse character, boosts the Color Affinity of Slasher and Powerhouse characters by 1.75x for 3 turns",
         specialNotes: "#{beneficial}",
-        specialName: "Smoothie Special",
+        specialName: "Juice Slash",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 50",
-            "level1": "Not Translated",
+            "level1": "Makes [PSY] orbs beneficial for this character",
         },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs beneficial for this character" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduces Damage received from [PSY] enemies by 1%",
+                    "Level 2: Reduces Damage received from [PSY] enemies by 2%",
+                    "Level 3: Reduces Damage received from [PSY] enemies by 3%",
+                    "Level 4: Reduces Damage received from [PSY] enemies by 4%",
+                    "Level 5: Reduces Damage received from [PSY] enemies by 5%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Charlotte Linlin, Katakuri, Daifuku and Cracker",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
     },
     2376: {//Mother Caramel
         captain: "Boosts ATK of Driven characters by ?x and their RCV by ?x",

@@ -616,9 +616,15 @@ window.matchers = [
     },
 
     {
-        name: 'Enemy End of Turn buff reducer',
+        name: 'Enemy End of Turn Heal buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+End of Turn.+duration/i 
+        matcher: /(removes|reduces).+End of Turn Heal.+duration/i 
+    },
+
+    {
+        name: 'Enemy End of Turn Damage/Percent Cut buff reducer',
+        target: 'special',
+        matcher: /(removes|reduces).+End of Turn Damage\/Percent Cut.+duration/i 
     },
 
     {
@@ -964,6 +970,18 @@ window.matchers = [
     },
     
     {
+        name: 'Type-boosting supports',
+        target: 'support',
+        matcher: /^[^,]+(STR|DEX|QCK|PSY|INT)\b/i
+    },
+
+    {
+        name: 'Class-boosting supports',
+        target: 'support',
+        matcher: /^[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+    
+    {
         name: 'ATK Boosting Support',
         target: 'support',
         matcher: /Adds.+ATK/i
@@ -1003,5 +1021,11 @@ window.matchers = [
         name: 'First Special Activated Support',
         target: 'support',
         matcher: /uses their special/i
+    },
+    
+    {
+        name: 'Debuff Activated Support',
+        target: 'support',
+        matcher: /when you are inflicted with/i
     },
 ];

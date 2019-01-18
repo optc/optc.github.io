@@ -2389,7 +2389,7 @@ window.aliases = {
     2388: [ 'マキノ ３兄弟のお世話', '', 'Support Makino' ],
     2389: [ 'つる 見守りし大参謀', '', 'Support Tsuru' ],
     2390: [ 'コニス 裁きを恐れぬ天使', '', 'Support Conis', 'Support Konis' ],
-    2391: [ 'サボ 弟を守る意思', '', 'Support Sabo' ],
+    2391: [ 'サボ 弟を守る意志', '', 'Support Sabo' ],
     2392: [ 'アイスバーグ 背中を押す兄弟子', '', 'Support Iceburg' ],
     2393: [ '', '', '' ],
     2394: [ '', '', '' ],

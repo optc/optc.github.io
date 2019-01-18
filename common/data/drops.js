@@ -3192,15 +3192,22 @@ window.drops = {
         },
         
         {
-            name: 'Battle Blitz! Akainu vs Aokiji',
+            name: 'Face Off! Akainu vs Aokiji',
             thumb: 2023,
             global: true,
             nakama: 6202300,
-            gamewith: null,
+            gamewith: 98096,
             condition: 'Chance of dropping the Silver Almighty Manual, Traning Potions, Guilding Fragments, Guilding Crystals and Guilding Jewels.',
             'Aokiji': [ -2023 ],
             'Akainu' : [ -2025 ],
             'Chopperman Missions': [ 2042 ],
+        },
+        
+        {
+            name: 'Face Off! Luffy vs Katakuri',
+            thumb: 2363,
+            gamewith: 136731,
+            condition: 'Chance of dropping the Support Medallions.',
         },
         
         {
@@ -3360,7 +3367,7 @@ window.drops = {
         },
         
         {
-            name: 'Germa Resurrection​ Plan!',
+            name: 'Germa Resurrection Plan!',
             thumb: 2138,
             global: true,
             nakama: 6128001,
@@ -3376,7 +3383,7 @@ window.drops = {
             global: true,
             gamewith: 117538,
             showManual: true,
-            'All Difficulties': [ 9021, -545, -602, -1896, -1929 ],
+            'All Difficulties': [ 9021, 545, -546, 602, -603, 1896, -1897, 1929, -1930 ],
         },
         
         {
@@ -3397,11 +3404,11 @@ window.drops = {
         },
         
         {
-            name: 'Garp Challenge!',
-            thumb: 1318,
-            nakama: 6213800,
-            gamewith: 108237,
-            condition: "The Gamewith Link is only for the most recent Garp Challenge (Fist)",
+            name: 'Clash!! Enel [Extra]',
+            thumb: 603,
+            gamewith: 138206,
+            'All Difficulties': [ 602 ],
+            condition: "Chance of dropping the Support Medallions.",
         },
         
         {
