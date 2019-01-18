@@ -8554,8 +8554,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
     2409: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 1 : 1; },//change this
-        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 1 : 1; },//change this
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 2.5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 1.2 : 1; },
     },
     2410: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 2.5 : 1; },
@@ -8563,7 +8563,7 @@ window.captains = {
     },
     2411: {
         atk: function(p) {
-            return (p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1 + 0 * (p.percHP / 100) : 1;//change this
+            return (p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1 + 1.75 * (p.percHP / 100) : 1;
         }
     },
     2412: {
@@ -8572,7 +8572,7 @@ window.captains = {
         }
     },
     2413: {
-        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 1 : 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; },
     },
     2414: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; },

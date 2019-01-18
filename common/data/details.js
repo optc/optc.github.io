@@ -40172,7 +40172,7 @@ window.details = {
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
     },
     2348: {//Pedro
-        captain: "Reduces cooldown of all specials by ? turn at the start of the fight. Boosts ATK of Slasher characters by 2.5x",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 2.5x",
         special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
         specialName: "Dawn-break Sword",
     },
@@ -41504,7 +41504,7 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters by 1.2x",
         special: "Removes all positive buffs on your team, cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, amplifies the effect of orbs for all characters by 1.5x and boosts own ATK by 3.25x for a variable amount of turns",
         specialNotes: "ATK and Orb amplification buff duration is equal to the amount of [RCV] orbs consumed prior to the time the special was activated with a maximum of 6 turns.",
-        specialName: "Iron Club of the Beasts",
+        specialName: "The Beasts Iron Club",
     },
     2387: {//TM Kaido
         captain: {
@@ -41518,7 +41518,7 @@ window.details = {
         },
         special: "Removes all positive buffs on your team, cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, amplifies the effect of orbs for all characters by 1.5x and boosts own ATK by 3.25x for a variable amount of turns",
         specialNotes: "ATK and Orb amplification buff duration is equal to the amount of [RCV] orbs consumed prior to the time the special was activated with a maximum of 6 turns.",
-        specialName: "Iron Club of the Beasts",
+        specialName: "The Beasts Iron Club",
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK of Powerhouse and Driven characters by 50",
@@ -41743,7 +41743,7 @@ window.details = {
         sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 30",
     },
     2409: {//World Journey Luffy
-        captain: "Boosts ATK of Fighter and Free Spirit characters by ?x and their HP by ?x",
+        captain: "Boosts ATK of Fighter and Free Spirit characters by 2.5x and their HP by 1.2x",
         special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns. If you captain is a Fighter character, changes [BLOCK] orbs into Matching orbs",
         specialName: "Captain's Spinning Gun",
         sailor: "Boosts base ATK, HP and RCV of Fighter and Free Spirit characters by 50",
@@ -41756,38 +41756,55 @@ window.details = {
             "base": "Boosts base ATK, HP and RCV of Fighter and Free Spirit characters by 50",
             "level1": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
         },
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 60% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ],
     },
     2411: {//World Journey Nami
-        captain: "Reduces damage received by 20% and boosts ATK of Shooter and Striker characters proportionally to the crew's current HP, by ?x at max",
-        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : ? : ?}",
+        captain: "Reduces damage received by 10% and boosts ATK of Shooter and Striker characters proportionally to the crew's current HP, by 2.75x at max",
+        captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : ? : 2.75}",
         special: "Reduces Paralysis and Silence duration by 3 turns. if HP is above 80% at the time the special is activated, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs",
         specialName: "Seductive Gun Play",
         sailor: "Reduces Paralysis duration on this character by 3 turns",
     },
     2412: {//World Journey Nami
-        captain: "Reduces damage received by 20% and boosts ATK of Shooter and Striker characters proportionally to the crew's current HP, by 2.75x at max",
+        captain: "Reduces damage received by 10% and boosts ATK of Shooter and Striker characters proportionally to the crew's current HP, by 2.75x at max",
         captainNotes: "#{captainProportional : higher : ? + ? * ((remaining HP) / (total HP)) : ? : 2.75}",
         special: "Reduces Paralysis and Silence duration by 3 turns. if HP is above 80% at the time the special is activated, changes [STR], [QCK], [DEX], [PSY] and [INT] orbs into Matching orbs",
         specialName: "Seductive Gun Play",
@@ -41795,31 +41812,48 @@ window.details = {
             "base": "Reduces Paralysis duration on this character by 3 turns",
             "level1": "Reduces Silence duration on this character by 3 turns",
         },
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 30% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
         ],
     },
     2413: {//World Journey Zoro
-        captain: "Boosts ATK of Shooter and Driven characters by ?x if they have a matching orb, by ?x otherwise.",
+        captain: "Boosts ATK of Shooter and Driven characters by 2.75x if they have a matching orb, by 2.25x otherwise.",
         special: "If enemies have a barrier at the time the special was activated, changes all orbs, including [BLOCK] orbs, into Matching orbs and reduces enemy Barrier duration by 1 turn, changes adjacent orbs into Matching Orbs otherwise.",
         specialName: "Triple-Wielding Outlaw",
         sailor: "Boosts base ATK, HP and RCV of Shooter and Driven characters by 50",
@@ -41832,25 +41866,41 @@ window.details = {
             "base": "Boosts base ATK, HP and RCV of Shooter and Driven characters by 50",
             "level1": "Reduces Silence duration by 1 turn",
         },
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 3% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
         ],
