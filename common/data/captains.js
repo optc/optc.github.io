@@ -8445,6 +8445,16 @@ window.captains = {
     2392: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
+    2398: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2398].turnedOn[i]==true) {specialEnabled = true;}
+            }
+            return p.unit.class.has("Shooter") ? specialEnabled ? 2.75 : 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {

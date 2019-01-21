@@ -2234,6 +2234,16 @@ window.drops = {
         },
 
         {
+            name: 'Clash Neo!! Vice-Admiral Garp',
+            thumb: 306,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: '3 different Master versions with different conditions. Master: Fighter Only, Slasher Only, and Shooter Only',
+            Master: [  ],
+        },
+
+        {
             name: 'Clash!! Black Arm Zephyr',
             thumb: 353,
             global: true,
@@ -2754,6 +2764,15 @@ window.drops = {
             gamewith: 134190,
             Master: [ 2355 ],
             Expert: [ 2355 ]
+        },
+        
+        {
+            name: 'Clash!! Big Emperor',
+            thumb: 2398,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2395, 2396, 2397 ],
+            Expert: [ 2395, 2396, 2397 ]
         },
         
         {
