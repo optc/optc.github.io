@@ -41673,13 +41673,13 @@ window.details = {
         specialName: "Senior Apprentice's Assistance",
         support: [
             {
-                "Characters": "Luffy, Koala and Hack",
+                "Characters": "Franky",
                 "description": [
-                    "Level 1: When the supported character uses their special, boosts base ATK of the supported character by 1.2x until the next stage.",
-                    "Level 2: When the supported character uses their special, boosts base ATK of the supported character by 1.25x until the next stage.",
-                    "Level 3: When the supported character uses their special, boosts base ATK of the supported character by 1.3x until the next stage.",
-                    "Level 4: When the supported character uses their special, boosts base ATK of the supported character by 1.35x until the next stage.",
-                    "Level 5: When the supported character uses their special, boosts base ATK of the supported character by 1.5x until the next stage."
+                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 2 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 3 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 2 turns."
                 ]
             }
         ]
@@ -42267,6 +42267,16 @@ window.details = {
                 ]
             },
         ]
+    },
+    2510: {
+        special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
+        specialName: "Meteor Fist Shower [Neo]",
+        captain: "Boosts ATK and HP Fighter characters by 1.5x"
+    },
+    2511: {
+        special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
+        specialName: "Meteor Fist Shower [Neo]",
+        captain: "Boosts ATK Fighter characters by 2.25x and their HP by 1.5x",
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",

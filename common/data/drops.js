@@ -2235,12 +2235,12 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Vice-Admiral Garp',
-            thumb: 306,
+            thumb: 2511,
             global: true,
             nakama: null,
             gamewith: null,
-            condition: '3 different Master versions with different conditions. Master: Fighter Only, Slasher Only, and Shooter Only',
-            Master: [  ],
+            condition: 'Master: Fighter/Slasher/Shooter Only',
+            Master: [ 2510 ],
         },
 
         {

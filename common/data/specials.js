@@ -6833,6 +6833,14 @@ window.specials = {
         },
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
+    2510: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class"
+    },
+    2511: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
+        type: "class"
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",
