@@ -8445,6 +8445,16 @@ window.captains = {
     2392: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
+    2398: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<2;i++)
+            {
+                if(window.specials[2398].turnedOn[i]==true) {specialEnabled = true;}
+            }
+            return p.unit.class.has("Shooter") ? specialEnabled ? 2.75 : 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.2 : 1; }
+    },
     2400: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'DEX', 'STR']); },
         hitAtk: function(p) {
@@ -8619,6 +8629,14 @@ window.captains = {
     2509: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? Math.min(4.25, 3.0 + 0.25 * p.turnCounter) : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1.25 : 1; },
+    },
+    2510: {
+        atk: function(p) { return (p.unit.class.has("Fighter")) ? 1.5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter")) ? 1.5 : 1; },
+    },
+    2511: {
+        atk: function(p) { return (p.unit.class.has("Fighter")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter")) ? 1.5 : 1; },
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
