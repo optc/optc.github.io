@@ -42274,23 +42274,55 @@ window.details = {
     2508: {//Sabo V3
         captain:  "Boosts chances of getting Matching orbs for Fighter, Shooter and Free Spirit characters. Boosts ATK of Fighter, Shooter and Free Spirit characters by 3x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 4.25x.",
         special: "Locks the chain multiplier at 3x for 1 turn and amplifies the effects of orbs for Fighter, Shooter and Free Spirit characters by 2.25x for 1 turn",
-        specialName: "Sabo Special",
+        specialName: "Fire Fist of the Inherited Will",
     },
     2509: {//Sabo V3
         captain:  "Boosts chances of getting Matching orbs for Fighter, Shooter and Free Spirit characters. Boosts ATK of Fighter, Shooter and Free Spirit characters by 3x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 4.25x.",
         special: "Locks the chain multiplier at 3x for 1 turn and amplifies the effects of orbs for Fighter, Shooter and Free Spirit characters by 2.25x for 1 turn",
-        specialName: "Sabo Special",
+        specialName: "Fire Fist of the Inherited Will",
         sailor: {
             "base": "None",
             "level1": "Makes [TND] and [RCV] orbs beneficial for Fighter, Shooter and Free Spirit characters",
             "level2": "Boosts base ATK, HP and RCV of Fighter, Shooter and Free Spirit characters by 60"
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs beneficial for Fighter, Shooter and Free Spirit characters" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of Fighter, Shooter and Free Spirit characters by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Potential 3: Barrier Penetration" },
+        ],
         potential: [
             {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
                     "Level 2: Reduce damage taken from [QCK] characters by ?%",
                     "Level 3: Reduce damage taken from [QCK] characters by ?%",
                     "Level 4: Reduce damage taken from [QCK] characters by ?%",
@@ -42300,7 +42332,7 @@ window.details = {
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
                     "Level 2: Reduces Slot Bind duration by ? turns on this character",
                     "Level 3: Reduces Slot Bind duration by ? turns on this character",
                     "Level 4: Reduces Slot Bind duration by ? turns on this character",
@@ -42310,7 +42342,7 @@ window.details = {
             {
                 "Name": "Barrier Penetration",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
                     "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
                     "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
                     "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
@@ -42320,15 +42352,15 @@ window.details = {
             },
         ]
     },
-    2510: {
-        special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
-        specialName: "Meteor Fist Shower [Neo]",
+    2510: {//Neo Garp
         captain: "Boosts ATK and HP Fighter characters by 1.5x"
-    },
-    2511: {
         special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
         specialName: "Meteor Fist Shower [Neo]",
+    },
+    2511: {//Neo Garp
         captain: "Boosts ATK Fighter characters by 2.25x and their HP by 1.5x",
+        special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
+        specialName: "Meteor Fist Shower [Neo]",
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
