@@ -7764,9 +7764,9 @@ window.captains = {
     2250: {
         hitAtk: function(p) {
             var reduction = 1;
-            if(p.classCount.Striker >= 1) reduction *= .5;//Change This
-            if(p.classCount.Shooter >= 1) reduction *= .5;//Change This
-            if(p.classCount.Cerebral >= 1) reduction *= .5;//Change This
+            if(p.classCount.Striker >= 1) reduction *= .2;
+            if(p.classCount.Shooter >= 1) reduction *= .2;
+            if(p.classCount.Cerebral >= 1) reduction *= .2;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 * reduction : 2 * reduction;
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
@@ -7775,9 +7775,9 @@ window.captains = {
     2251: {
         hitAtk: function(p) {
             var reduction = 1;
-            if(p.classCount.Striker >= 1) reduction *= .5;//Change This
-            if(p.classCount.Shooter >= 1) reduction *= .5;//Change This
-            if(p.classCount.Cerebral >= 1) reduction *= .5;//Change This
+            if(p.classCount.Striker >= 1) reduction *= .2;
+            if(p.classCount.Shooter >= 1) reduction *= .2;
+            if(p.classCount.Cerebral >= 1) reduction *= .2;
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4 * reduction : 2 * reduction;
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],

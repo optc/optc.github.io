@@ -37847,6 +37847,7 @@ window.details = {
     },
     2250: {//Garp
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs beneficial for all characters. Reduces ATK based on how many Striker, Shooter or Cerebral characters you have on your crew.",
+        captainNotes: "ATK reduction is .2x for each Striker, Shooter or Cerebral class on your team. This stacks if you have each class on your team, so a team with a Striker, Shooter, and Cerebral character will get a 99.2% ATK reduction from Garp.",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
@@ -37862,6 +37863,7 @@ window.details = {
     },
     2251: {//Garp
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs beneficial for all characters. Reduces ATK based on how many Striker, Shooter or Cerebral characters you have on your crew.",
+        captainNotes: "ATK reduction is .2x for each Striker, Shooter or Cerebral class on your team. This stacks if you have each class on your team, so a team with a Striker, Shooter, and Cerebral character will get a 99.2% ATK reduction from Garp.",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
