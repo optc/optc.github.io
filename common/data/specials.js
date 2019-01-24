@@ -1744,8 +1744,6 @@ window.specials = {
         type: "type"
     },
     1231: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
-        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1231].turnedOn = true;
@@ -1759,8 +1757,6 @@ window.specials = {
         }
     },
     1232: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
-        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1232].turnedOn = true;
@@ -6762,6 +6758,32 @@ window.specials = {
                 text: (window.specials[2407].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
                 name: '2407warning'
             });
+        }
+    },
+    2415: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2415].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects captain damage if Pica is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
+                name: '2415warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2415].turnedOn = false;
+        }
+    },
+    2416: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2416].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects captain damage if Pica is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
+                name: '2416warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2416].turnedOn = false;
         }
     },
     2500: {

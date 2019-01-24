@@ -41917,6 +41917,57 @@ window.details = {
             },
         ],
     },
+    2415: {//Pica
+        captain: "If this character becomes your captain in the middle of an island, reduces damage received by ?% and boosts his OWN attack by ?x and cuts the current HP of each enemy by ?% at the end of each turn.",
+        special: "Deals 300,000 Fixed damage to one enemy. Swaps this unit with your captain for 3 turns",
+        specialName: "Giant Rock Punch",
+        sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
+        sailorNotes: "#{rewind : 2}",
+    },
+    2416: {//Pica
+        captain: "If this character becomes your captain in the middle of an island, reduces damage received by 70% and boosts his OWN attack by 6x and cuts the current HP of each enemy by 10% at the end of each turn.",
+        special: "Deals 300,000 Fixed damage to one enemy. Swaps this unit with your captain for 3 turns",
+        specialName: "Giant Rock Punch",
+        sailor: {
+            "base": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "level1": "Reduces Silence duration on this character by 3 turns",
+        },
+        sailorNotes: "#{rewind : 2}<br>#{silence}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Doflamingo, Gladius, Buffalo, Baby 5",
+                "description": [
+                    "Level 1: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 13% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ]
+    },
     2500: {//Knight Zoro
         captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [INT] orbs, makes [STR] and [QCK] orbs beneficial for [STR] and [QCK] characters. If there is a [STR], [QCK] and [INT] character in your crew, boosts chain multiplier by 1.5x.",
         captainNotes: "#{beneficial}",
