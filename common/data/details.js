@@ -41688,7 +41688,7 @@ window.details = {
     },
     2398: {//Big Emperor
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x. If you use \"Tactics Fifteen \"Big Emperor\"\" in this turn boosts ATK of Shooter characters by 2.75x instead.",
-        special: "Increases damage received by ?x for 2 turns and amplifies the effect of orbs for Shooter characters by 1.75x for 2 turns. If during that turn you score 5 PERFECT hits, changes all orbs on Shooter characters into Matching orbs in the following turn.",
+        special: "Increases damage received by 1.25x for 2 turns and amplifies the effect of orbs for Shooter characters by 1.75x for 2 turns. If during that turn you score 5 PERFECT hits, changes all orbs on Shooter characters into Matching orbs in the following turn.",
         specialName: "Tactics Fifteen \"Big Emperor\"",
         sailor: {
             "base": "Makes [STR] and [QCK] orbs beneficial for this character",
