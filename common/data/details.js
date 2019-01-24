@@ -41691,11 +41691,50 @@ window.details = {
         special: "Increases damage received by ?x for 2 turns and amplifies the effect of orbs for Shooter characters by 1.75x for 2 turns. If during that turn you score 5 PERFECT hits, changes all orbs on Shooter characters into Matching orbs in the following turn.",
         specialName: "Tactics Fifteen \"Big Emperor\"",
         sailor: {
-            "base": "None",
-            "level1": "Makes [STR] and [QCK] orbs beneficial for this character",
-            "level2": "Makes [TND] orbs beneficial for Shooter characters",
+            "base": "Makes [STR] and [QCK] orbs beneficial for this character",
+            "level1": "Makes [TND] orbs beneficial for Shooter characters",
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] orbs beneficial for Shooter characters" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 45" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 125",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
         support: [
             {
                 "Characters": "Shooter Characters",

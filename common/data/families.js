@@ -2396,7 +2396,7 @@ window.families = [
     [ "Franky", "Tony Tony Chopper" ],
     [ "Sanji", "Roronoa Zoro" ],
     [ "Usopp", "Nico Robin" ],
-    [ "Franky", "Tony Tony Chopper", "Sanji", "Roronoa Zoro", "Usopp", "Nico Robin" ],
+    [ "Franky", "Tony Tony Chopper", "Sanji", "Roronoa Zoro", "Usopp" ],
     null,
     "Monkey D. Luffy",
     "Monkey D. Luffy",
