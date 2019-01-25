@@ -2412,7 +2412,7 @@ window.units = [
     [ "Nami, Outlaw on the Prairie", "INT", [ "Shooter", "Striker" ], 4, 15, 4, 3, 50, 392109, 762, 520, 123, 1250, 810, 210, 1 ],
     [ "Nami, Cat Burglar on the Prairie", "INT", [ "Shooter", "Striker" ], 5, 30, 4, 5, 99, 4000000, 1191, 711, 200, 2098, 1289, 373, 1 ],
     [ "Roronoa Zoro, Outlaw on the Prairie", "DEX", [ "Shooter", "Driven" ], 4, 15, 4, 3, 50, 392109, 1000, 481, 36, 1805, 854, 70, 1 ],
-    [ "Roronoa Zoro, Lone Wolf on the Prairie", "DEX", [ "Shooter", "Driven" ], 5, 30, 4, 5, 99, 4000000, 1702, 810, 66, 3120, 1399, 110, 1 
+    [ "Roronoa Zoro, Lone Wolf on the Prairie", "DEX", [ "Shooter", "Driven" ], 5, 30, 4, 5, 99, 4000000, 1702, 810, 66, 3120, 1399, 110, 1 ],
     [ "Pica", "DEX", [ "Driven", "Powerhouse" ], 4, 25, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Pica, The Giant Eliminating the Former King", "DEX", [ "Driven", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
