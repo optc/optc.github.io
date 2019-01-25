@@ -823,4 +823,11 @@ window.effects = {
         id: 65, // don't change this
         atk: function(p) { return p.class.has('Fighter') ? 1.2 : 1; }
     },
+
+    '1.2x ATK Boost - Neo Garp': {
+        description: '1.2x ATK',
+        thumb: 2511,
+        id: 66, // don't change this
+        atk: function(p) { return 1.2; }
+    },
 };

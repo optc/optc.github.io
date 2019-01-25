@@ -41690,14 +41690,53 @@ window.details = {
     },
     2398: {//Big Emperor
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x. If you use \"Tactics Fifteen \"Big Emperor\"\" in this turn boosts ATK of Shooter characters by 2.75x instead.",
-        special: "Increases damage received by ?x for 2 turns and amplifies the effect of orbs for Shooter characters by 1.75x for 2 turns. If during that turn you score 5 PERFECT hits, changes all orbs on Shooter characters into Matching orbs in the following turn.",
+        special: "Increases damage received by 1.25x for 2 turns and amplifies the effect of orbs for Shooter characters by 1.75x for 2 turns. If during that turn you score 5 PERFECT hits, changes all orbs on Shooter characters into Matching orbs in the following turn.",
         specialName: "Tactics Fifteen \"Big Emperor\"",
         sailor: {
-            "base": "None",
-            "level1": "Makes [STR] and [QCK] orbs beneficial for this character",
-            "level2": "Makes [TND] orbs beneficial for Shooter characters",
+            "base": "Makes [STR] and [QCK] orbs beneficial for this character",
+            "level1": "Makes [TND] orbs beneficial for Shooter characters",
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] orbs beneficial for Shooter characters" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 45" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 125",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
         support: [
             {
                 "Characters": "Shooter Characters",
@@ -41929,6 +41968,57 @@ window.details = {
                 ]
             },
         ],
+    },
+    2415: {//Pica
+        captain: "If this character becomes your captain in the middle of an island, reduces damage received by ?% and boosts his OWN attack by ?x and cuts the current HP of each enemy by ?% at the end of each turn.",
+        special: "Deals 300,000 Fixed damage to one enemy. Swaps this unit with your captain for 3 turns",
+        specialName: "Giant Rock Punch",
+        sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
+        sailorNotes: "#{rewind : 2}",
+    },
+    2416: {//Pica
+        captain: "If this character becomes your captain in the middle of an island, reduces damage received by 70% and boosts his OWN attack by 6x and cuts the current HP of each enemy by 10% at the end of each turn.",
+        special: "Deals 300,000 Fixed damage to one enemy. Swaps this unit with your captain for 3 turns",
+        specialName: "Giant Rock Punch",
+        sailor: {
+            "base": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "level1": "Reduces Silence duration on this character by 3 turns",
+        },
+        sailorNotes: "#{rewind : 2}<br>#{silence}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Doflamingo, Gladius, Buffalo, Baby 5",
+                "description": [
+                    "Level 1: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 13% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ]
     },
     2500: {//Knight Zoro
         captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [INT] orbs, makes [STR] and [QCK] orbs beneficial for [STR] and [QCK] characters. If there is a [STR], [QCK] and [INT] character in your crew, boosts chain multiplier by 1.5x.",
