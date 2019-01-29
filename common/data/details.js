@@ -41975,7 +41975,7 @@ window.details = {
             "combined": "Boosts ATK of Driven characters by 4.25x, reduce damage received by 25% and makes [STR], [DEX] and [QCK] orbs beneficial for Driven characters"
         },
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: {
             "character1": "Boosts base HP of Driven characters by 50",
@@ -43897,35 +43897,35 @@ window.details = {
     5036: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 3.25x. If you don't attack with Bartolomeo, reduces damage received by 25% for that turn.",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: "Boosts base HP of Driven characters by 50",
     },
     5037: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 3.25x, but boosts his OWN attack by 3.75x",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: "Boosts base ATK of Driven characters by 50",
     },
     5038: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 4.25x, reduce damage received by 25% and makes [STR], [DEX] and [QCK] orbs beneficial for Driven characters",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: "Boosts base ATK and HP of Driven characters by 100",
     },
     5039: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 4.25x, reduce damage received by 25% and makes [STR], [DEX] and [QCK] orbs beneficial for Driven characters",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: "Boosts base ATK and HP of Driven characters by 100",
     },
     5040: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 3.25x. If you don't attack with Bartolomeo, reduces damage received by 25% for that turn.",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: {
             "base": "Boosts base HP of Driven characters by 50",
@@ -43968,7 +43968,7 @@ window.details = {
     5040: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 3.25x, but boosts his OWN attack by 3.75x",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: {
             "base": "Boosts base ATK of Driven characters by 50",
@@ -44011,7 +44011,7 @@ window.details = {
     5040: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 4.25x, reduce damage received by 25% and makes [STR], [DEX] and [QCK] orbs beneficial for Driven characters",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: {
             "base": "Boosts base ATK and HP of Driven characters by 100",
@@ -44054,7 +44054,7 @@ window.details = {
     5040: {//Bartolomeo&Cavendish
         captain: "Boosts ATK of Driven characters by 4.25x, reduce damage received by 25% and makes [STR], [DEX] and [QCK] orbs beneficial for Driven characters",
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: {
             "base": "Boosts base ATK and HP of Driven characters by 100",
