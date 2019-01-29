@@ -36207,7 +36207,7 @@ window.details = {
         specialName: "Mero Mero Slave Arrow",
         sailor: {
             "base": "Boosts base RCV of [PSY] and [INT] characters by 50",
-            "level1": "Makes [STR], [QCK], [DEX] and [INT] orbs beneficial for this character if your Captain is a [PSY] or [INT] character",
+            "level1": "Makes [STR], [QCK], [DEX] and [PSY] orbs beneficial for this character if your Captain is a [PSY] or [INT] character",
         },
         limit: [
             { "description": "Boosts base HP by 50" },
