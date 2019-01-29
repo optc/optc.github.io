@@ -187,31 +187,13 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
-    if(window.specials[1259].turnedOn || window.specials[1260].turnedOn){
+    if(window.specials[1259].turnedOn || window.specials[1260].turnedOn || window.specials[2425].turnedOn || window.specials[2426].turnedOn){
         if(uclass.has("Driven")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
         }
     }
-    if(window.specials[1640].turnedOn){
-        if(uclass.has("Shooter")){
-            if (orb == 'str') return boostedMultiplier;
-            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
-        }
-    }
-    if(window.specials[1746].turnedOn || window.specials[1747].turnedOn){
-        if(uclass.has("Shooter")){
-            if (orb == 'str') return boostedMultiplier;
-            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
-        }
-    }
-    if(window.specials[2309].turnedOn || window.specials[2310].turnedOn){
-        if(uclass.has("Shooter")){
-            if (orb == 'str') return boostedMultiplier;
-            if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
-        }
-    }
-    if(window.specials[2324].turnedOn || window.specials[2325].turnedOn){
+    if(window.specials[1640].turnedOn || window.specials[1746].turnedOn || window.specials[1747].turnedOn || window.specials[2309].turnedOn || window.specials[2310].turnedOn || window.specials[2324].turnedOn || window.specials[2325].turnedOn){
         if(uclass.has("Shooter")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
@@ -278,6 +260,11 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                 }
             }
             if([2306].includes(captains[temp].number + 1) && (uclass.has("Slasher") || uclass.has("Cerebral"))){
+                if (orb == 'str' || (type == 'DEX' && orb == 0.5)){
+                    return boostedMultiplier;
+                }
+            }
+            if([5036, 5037, 5038, 5039, 5040, 5041, 5042, 5043].includes(captains[temp].number + 1) && (uclass.has("Driven"))){
                 if (orb == 'str' || (type == 'DEX' && orb == 0.5)){
                     return boostedMultiplier;
                 }

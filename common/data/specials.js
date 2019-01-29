@@ -4453,19 +4453,29 @@ window.specials = {
         },
     },
     1988: {
-        atk: function(p) { return p.captain != null ? (p.delayed > 0 && (p.captain.class.has("Slasher"))) ? 1.75 : 1 : 1; },
+        atk: function(p) { return (p.delayed > 0 && window.specials[1988].multiplier) ? 1.75 : 1; },
         type: "condition",
+        onActivation: function(p) {
+            window.specials[1988].multiplier = false;
+            if (p.captain) if (p.captain.class.has("Slasher")) window.specials[1988].multiplier = true;
+            else window.specials[1988].multiplier = false;
+        },
     },
     1989: {
-        atk: function(p) { return p.captain != null ? (p.delayed > 0 && (p.captain.class.has("Slasher"))) ? 1.75 : 1 : 1; },
+        atk: function(p) { return (p.delayed > 0 && window.specials[1989].multiplier) ? 1.75 : 1; },
         type: "condition",
+        onActivation: function(p) {
+            window.specials[1989].multiplier = false;
+            if (p.captain) if (p.captain.class.has("Slasher")) window.specials[1989].multiplier = true;
+            else window.specials[1989].multiplier = false;
+        },
     },
     1990: {
         delay: function(p) { return 1; },
         staticMult: function(p) { return window.specials[1990].multiplier ? 55 : 0; },
         onActivation: function(p) {
             window.specials[1990].multiplier = false;
-            if (p.captain) if ((p.captain.type == "STR" || p.captain.type == "QCK")) window.specials[1990].multiplier = true;
+            if (p.captain) if (p.captain.type == "STR" || p.captain.type == "QCK") window.specials[1990].multiplier = true;
             else window.specials[1990].multiplier = false;
         },
     },
@@ -4474,7 +4484,7 @@ window.specials = {
         staticMult: function(p) { return window.specials[1991].multiplier ? 55 : 0; },
         onActivation: function(p) {
             window.specials[1991].multiplier = false;
-            if (p.captain) if ((p.captain.type == "STR" || p.captain.type == "QCK")) window.specials[1991].multiplier = true;
+            if (p.captain) if (p.captain.type == "STR" || p.captain.type == "QCK") window.specials[1991].multiplier = true;
             else window.specials[1991].multiplier = false;
         },
     },
@@ -6786,6 +6796,109 @@ window.specials = {
             window.specials[2416].turnedOn = false;
         }
     },
+    2419: {
+        turnedOn: false,
+        delay: function(p) { return 2; },
+        chain: function(p) { return window.specials[2419].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2419].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2419].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var n = window.specials[2419].turnedOn; var m = n ? 1 : 0;
+            window.specials[2419].multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
+            p.scope.notify({
+                text: ['Enabling', 'Disabling'][m] + ' the chain lock. To switch to the chain buff ' + ['off', 'on'][m] + ', disable and re-enable this special',
+                name: '2419warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2419].turnedOn = !window.specials[2419].turnedOn;
+        }
+    },
+    2420: {
+        turnedOn: false,
+        delay: function(p) { return 2; },
+        chain: function(p) { return window.specials[2420].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2420].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2420].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            console.log(window.specials[2420].turnedOn);
+            var n = window.specials[2420].turnedOn; var m = n ? 1 : 0;
+            window.specials[2420].multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
+            p.scope.notify({
+                text: ['Enabling', 'Disabling'][m] + ' the chain lock. To switch to the chain buff ' + ['off', 'on'][m] + ', disable and re-enable this special',
+                name: '2420warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2420].turnedOn = !window.specials[2420].turnedOn;
+        }
+    },
+    2421: {
+        atk: function(p) { return (p.delayed > 0 && window.specials[2421].multiplier) ? 1.75 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2421].multiplier = false;
+            if (p.captain) if (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) window.specials[2421].multiplier = true;
+            else window.specials[2421].multiplier = false;
+        },
+    },
+    2422: {
+        atk: function(p) { return (p.delayed > 0 && window.specials[2422].multiplier) ? 1.75 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2422].multiplier = false;
+            if (p.captain) if (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) window.specials[2422].multiplier = true;
+            else window.specials[2422].multiplier = false;
+        },
+    },
+    2423: {
+        orb: function(p) { return window.specials[2423].multiplier == 2 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2423].multiplier, [p.friendCaptain, p.captain], p.effectName) : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2423].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2423].multiplier == 1.75 ? 1 : 0);
+            window.specials[2423].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2423warning'
+            });
+        },
+    },
+    2424: {
+        orb: function(p) { return window.specials[2424].multiplier == 2 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2424].multiplier, [p.friendCaptain, p.captain], p.effectName) : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2424].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2424].multiplier == 1.75 ? 1 : 0);
+            window.specials[2424].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2424warning'
+            });
+        },
+    },
+    2425: {
+        def: function(p) { return 0.5; },//change this
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2425].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2425].turnedOn = false;
+        }
+    },
+    2426: {
+        def: function(p) { return 0.5; },//change this
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2426].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2426].turnedOn = false;
+        }
+    },
     2500: {
         atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK") ? 1 : window.specials[2500].multiplier; },
         type: "type",
@@ -6970,5 +7083,109 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: "class",
         orb: function(p) { return p.unit.class.has("Fighter") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5036: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5036].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5036].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5036].multiplier == 0 ? 1 : window.specials[5036].multiplier == 1 ? 2 : 0);
+            window.specials[5036].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5036warning'
+            });
+        },
+    },
+    5037: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5037].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5037].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5037].multiplier == 0 ? 1 : window.specials[5037].multiplier == 1 ? 2 : 0);
+            window.specials[5037].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5037warning'
+            });
+        },
+    },
+    5038: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5038].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5038].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5038].multiplier == 0 ? 1 : window.specials[5038].multiplier == 1 ? 2 : 0);
+            window.specials[5038].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5038warning'
+            });
+        },
+    },
+    5039: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5039].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5039].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5039].multiplier == 0 ? 1 : window.specials[5039].multiplier == 1 ? 2 : 0);
+            window.specials[5039].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5039warning'
+            });
+        },
+    },
+    5040: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5040].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5040].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5040].multiplier == 0 ? 1 : window.specials[5040].multiplier == 1 ? 2 : 0);
+            window.specials[5040].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5040warning'
+            });
+        },
+    },
+    5041: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5041].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5041].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5041].multiplier == 0 ? 1 : window.specials[5041].multiplier == 1 ? 2 : 0);
+            window.specials[5041].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5041warning'
+            });
+        },
+    },
+    5042: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5042].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5042].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5042].multiplier == 0 ? 1 : window.specials[5042].multiplier == 1 ? 2 : 0);
+            window.specials[5042].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5042warning'
+            });
+        },
+    },
+    5043: {
+        atk: function(p) { return (p.unit.class.has("Driven") && window.specials[5043].multiplier != 1) ? 2.25 : 1; },
+        type: "class",
+        orb: function(p) { return (p.slot == p.sourceSlot && window.specials[5043].multiplier != 0) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5043].multiplier == 0 ? 1 : window.specials[5043].multiplier == 1 ? 2 : 0);
+            window.specials[5043].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
+                name: '5043warning'
+            });
+        },
     },
 };

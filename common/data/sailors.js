@@ -705,6 +705,22 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
     },
+    2421: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+    },
+    2422: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+    },
+    2425: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    2426: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
@@ -820,5 +836,33 @@ window.sailors = {
     },
     5035: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    5036: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5037: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5038: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5039: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5040: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5041: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    5042: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    5043: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
 };

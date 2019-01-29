@@ -718,6 +718,14 @@ window.zombies = {
         type: 'healer',
         amount: 500
     },
+    2423: { // Elizabello
+        type: 'healer',
+        amount: 0//change this
+    },
+    2424: { // Elizabello
+        type: 'healer',
+        amount: 500
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
