@@ -41990,7 +41990,7 @@ window.details = {
             "combined": "Boosts ATK of Driven characters by 4.25x, reduce damage received by 25% and makes [STR], [DEX] and [QCK] orbs beneficial for Driven characters"
         },
         special: "Deals 75x the character's ATK as Typeless damage to all enemies, reduces any damage received above 5,000 HP by ?% for 1 turn, boosts ATK of Driven characters by 2.25x for 1 turn and becomes Bartolomeo & Cavendish for 3 turns",
-        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb<br>#{beneficial}",
+        specialNotes: "Change Action: When Change is activated, amplifies the effect of own orb by 1.5x for 1 turn, reduces damage received by 25% for 1 turn and changes their own orb into a Matching orb. Heals for 5% MAX HP.<br>#{beneficial}",
         specialName: "Beautiful Sword Barrier Barrage",
         sailor: {
             "character1": "Boosts base HP of Driven characters by 50",
@@ -42086,14 +42086,14 @@ window.details = {
     2421: {//Hajrudin
         captain: "Boosts ATK of Driven and Powerhouse characters by ?x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
         captainNotes: "His ATK multiplier will be ?x on the first turn, ?x on the second, ?x on the third and so on. The reduction stops once the multiplier is ?x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
-        special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven and Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
+        special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven or Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
         specialName: "\"Gungnir\" - The Decree of the Giant",
         sailor: "Boosts base ATK, HP and RCV of Driven characters by 30",
     },
     2422: {//Hajrudin
         captain: "Boosts ATK of Driven and Powerhouse characters by 3.25x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.25x on the first turn, ?x on the second, ?x on the third and so on. The reduction stops once the multiplier is ?x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
-        special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven and Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
+        special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven or Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
         specialName: "\"Gungnir\" - The Decree of the Giant",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Driven characters by 30",
@@ -42135,14 +42135,14 @@ window.details = {
         ]
     },
     2423: {//Elizabello
-        captain: "Boosts ATK of Driven characters by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 20 times to a maximum of ?x. Recovers ? HP at end of each turn.",
+        captain: "Boosts ATK of Driven characters by ?x. Increases his own ATK multiplier by ??x at the end of each turn until it reaches a maximum ??x after ?? turns. Recovers ?? HP at end of each turn.",
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns and locks all orbs for 1 turn. If enemies have a Increased Defense buff or a Defense Reduction debuff at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn, amplifies the effect of orbs by 1.75x for Driven and Fighter characters for 3 turns otherwise",
         specialName: "Light Version: King Punch",
         sailor: "Boosts own base ATK by 150 if this character is the last in the chain to attack",
     },
     2424: {//Elizabello
-        captain: "Boosts ATK of Driven characters by ?x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 20 times to a maximum of 3.25x. Recovers 500 HP at end of each turn.",
+        captain: "Boosts ATK of Driven characters by ?x. Increases his own ATK multiplier by ??x at the end of each turn until it reaches a maximum 3.25x after 20 turns. Recovers 500 HP at end of each turn.",
         captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
         special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns and locks all orbs for 1 turn. If enemies have a Increased Defense buff or a Defense Reduction debuff at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn, amplifies the effect of orbs by 1.75x for Driven and Fighter characters for 3 turns otherwise",
         specialName: "Light Version: King Punch",
