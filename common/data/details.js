@@ -42669,7 +42669,7 @@ window.details = {
             "character1": "Boosts base ATK of [QCK] characters by 50",
             "character2": "Boosts base ATK of [INT] characters by 50",
             "combined": "Boosts base ATK of [QCK] and [INT] characters by 50",
-            "level1": "Not Translated",
+            "level1": "Reduces Silence duration on this character by 3 turns",
         },
         potential: [
             {
@@ -44189,7 +44189,7 @@ window.details = {
         specialName: "A Feast for the New Age",
         sailor: {
             "base": "Boosts base ATK of [QCK] characters by 50",
-            "level1": "Not Translated",
+            "level1": "Reduces Silence duration on this character by 3 turns",
         },
         potential: [
             {
@@ -44222,7 +44222,7 @@ window.details = {
         specialName: "A Feast for the New Age",
         sailor: {
             "base": "Boosts base ATK of [INT] characters by 50",
-            "level1": "Not Translated",
+            "level1": "Reduces Silence duration on this character by 3 turns",
         },
         potential: [
             {
@@ -44255,7 +44255,7 @@ window.details = {
         specialName: "A Feast for the New Age",
         sailor: {
             "base": "Boosts base ATK of [QCK] and [INT] characters by 50",
-            "level1": "Not Translated",
+            "level1": "Reduces Silence duration on this character by 3 turns",
         },
         potential: [
             {
@@ -44288,7 +44288,7 @@ window.details = {
         specialName: "A Feast for the New Age",
         sailor: {
             "base": "Boosts base ATK of [QCK] and [INT] characters by 50",
-            "level1": "Not Translated",
+            "level1": "Reduces Silence duration on this character by 3 turns",
         },
         potential: [
             {
