@@ -42663,7 +42663,7 @@ window.details = {
             "combined": "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters"
         },
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: {
@@ -42679,7 +42679,7 @@ window.details = {
             "combined": "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters"
         },
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: {
@@ -44169,7 +44169,7 @@ window.details = {
     5044: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher characters by ?x and reduces damage received by ?%",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: "Boosts base ATK of [QCK] characters by 50",
@@ -44177,7 +44177,7 @@ window.details = {
     5045: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher Characters by ?x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: "Boosts base ATK of [INT] characters by 50",
@@ -44185,7 +44185,7 @@ window.details = {
     5046: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: "Boosts base ATK of [QCK] and [INT] characters by 50",
@@ -44193,7 +44193,7 @@ window.details = {
     5047: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: "Boosts base ATK of [QCK] and [INT] characters by 50",
@@ -44201,7 +44201,7 @@ window.details = {
     5048: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher characters by 2.25x and reduces damage received by 10%",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: {
@@ -44234,7 +44234,7 @@ window.details = {
     5049: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher Characters by 2.5x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: {
@@ -44267,7 +44267,7 @@ window.details = {
     5050: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: {
@@ -44300,7 +44300,7 @@ window.details = {
     5051: {//Shanks&Mihawk
         captain: "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
-        special: "Removes all positive buffs on your team and reduces Despair duration by 2 turns. Boosts ATK of Fighter characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Fighter characters for 1 turn and becomes Sengoku & Garp for 3 turns",
+        special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
         specialName: "A Feast for the New Age",
         sailor: {

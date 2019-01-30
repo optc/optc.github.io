@@ -7189,75 +7189,75 @@ window.specials = {
         },
     },
     5044: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5044].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5044].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
             window.specials[5044].multiplier = n;
         }
     },
     5045: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5045].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5045].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5045].multiplier = n;
         }
     },
     5046: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5046].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5046].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5046].multiplier = n;
         }
     },
     5047: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5047].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5047].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5047].multiplier = n;
         }
     },
     5048: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5048].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5048].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5048].multiplier = n;
         }
     },
     5049: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5049].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5049].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5049].multiplier = n;
         }
     },
     5050: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5050].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5050].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5050].multiplier = n;
         }
     },
     5051: {
-        atk: function(p) { return window.specials[5044].multiplier; },
+        atk: function(p) { return p.delayed > 0 ? window.specials[5051].multiplier : 1; },
         type: "conditional",
-        delay: function(p) { return window.specials[5044].multiplier; },
+        delay: function(p) { return window.specials[5051].multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[5044].multiplier = n;
+            window.specials[5051].multiplier = n;
         }
     },
 };
