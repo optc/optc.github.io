@@ -42136,14 +42136,14 @@ window.details = {
     },
     2423: {//Elizabello
         captain: "Boosts ATK of Driven characters by ?x. Increases his own ATK multiplier by ??x at the end of each turn until it reaches a maximum ??x after ?? turns. Recovers ?? HP at end of each turn.",
-        captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
+        captainNotes: "His ATK multiplier will be ?x on the first turn, ?x on the second, ?x on the third and so on. The increase stops once the multiplier is ?x.",
         special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns and locks all orbs for 1 turn. If enemies have a Increased Defense buff or a Defense Reduction debuff at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn, amplifies the effect of orbs by 1.75x for Driven and Fighter characters for 3 turns otherwise",
         specialName: "Light Version: King Punch",
         sailor: "Boosts own base ATK by 150 if this character is the last in the chain to attack",
     },
     2424: {//Elizabello
         captain: "Boosts ATK of Driven characters by ?x. Increases his own ATK multiplier by ??x at the end of each turn until it reaches a maximum 3.25x after 20 turns. Recovers 500 HP at end of each turn.",
-        captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
+        captainNotes: "His ATK multiplier will be ?x on the first turn, ?x on the second, ?x on the third and so on. The increase stops once the multiplier is 3.25x.",
         special: "Reduces enemy's Percent Damage Reduction and Threshold Damage Reduction Buffs duration by 3 turns and locks all orbs for 1 turn. If enemies have a Increased Defense buff or a Defense Reduction debuff at the time the special was activated, amplifies the effect of orbs by 2x for 1 turn, amplifies the effect of orbs by 1.75x for Driven and Fighter characters for 3 turns otherwise",
         specialName: "Light Version: King Punch",
         sailor: {
