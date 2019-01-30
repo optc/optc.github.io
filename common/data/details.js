@@ -41933,25 +41933,42 @@ window.details = {
             "level1": "Reduces Silence duration on this character by 3 turns",
         },
         sailorNotes: "#{rewind : 2}<br>#{silence}",
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
         ],
@@ -41959,10 +41976,10 @@ window.details = {
             {
                 "Characters": "Doflamingo, Gladius, Buffalo and Baby 5",
                 "description": [
-                    "Level 1: Adds ?% of this character's base HP to the supported character's base HP.",
-                    "Level 2: Adds ?% of this character's base HP to the supported character's base HP.",
-                    "Level 3: Adds ?% of this character's base HP to the supported character's base HP.",
-                    "Level 4: Adds ?% of this character's base HP to the supported character's base HP.",
+                    "Level 1: Adds 5% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 6% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 8% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 10% of this character's base HP to the supported character's base HP.",
                     "Level 5: Adds 13% of this character's base HP to the supported character's base HP."
                 ]
             }
