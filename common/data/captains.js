@@ -8827,4 +8827,31 @@ window.captains = {
     5043: {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
     },
+    5044: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
+    },
+    5045: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; }
+    },
+    5046: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; }
+    },
+    5047: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; }
+    },
+    5048: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; }
+    },
+    5049: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; }
+    },
+    5050: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; }
+    },
+    5051: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; }
+    },
+    5052: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; }
+    },
 };

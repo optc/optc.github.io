@@ -2784,6 +2784,17 @@ window.drops = {
             Master: [ 2506 ],
             Expert: [ 2506 ]
         },
+        
+        {
+            name: 'Showdown!! Shanks & Mihawk',
+            thumb: 2513,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2512 ],
+            Expert: [ 2512 ],
+            Ultimate: [ 2512 ],
+        },
 
     ],
 

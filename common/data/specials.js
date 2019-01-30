@@ -7188,4 +7188,76 @@ window.specials = {
             });
         },
     },
+    5044: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5045: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5046: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5047: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5048: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5049: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5050: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
+    5051: {
+        atk: function(p) { return window.specials[5044].multiplier; },
+        type: "conditional",
+        delay: function(p) { return window.specials[5044].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP <= 50 ? 1.75 : 1);
+            window.specials[5044].multiplier = n;
+        }
+    },
 };
