@@ -42877,8 +42877,8 @@ window.details = {
     },
     2512: {//Shanks&Mihawk
         captain: {
-            "character1": "Boosts ATK of Slasher characters by ?x and reduces damage received by ?%",
-            "character2": "Boosts ATK of Slasher Characters by ?x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
+            "character1": "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
+            "character2": "Boosts ATK of Slasher Characters by 2.25x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
             "combined": "Boosts ATK of Slasher Characters by 3x, reduces damage received by 20% and makes [TND] and [RCV] orbs beneficial for Slasher characters"
         },
         captainNotes: "#{beneficial}",
@@ -44403,7 +44403,7 @@ window.details = {
         ],
     },
     5044: {//Shanks&Mihawk
-        captain: "Boosts ATK of Slasher characters by ?x and reduces damage received by ?%",
+        captain: "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
         captainNotes: "#{beneficial}",
         special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",
@@ -44411,7 +44411,7 @@ window.details = {
         sailor: "Boosts base ATK of [QCK] characters by 50",
     },
     5045: {//Shanks&Mihawk
-        captain: "Boosts ATK of Slasher Characters by ?x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
+        captain: "Boosts ATK of Slasher Characters by 2.25x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
         captainNotes: "#{beneficial}",
         special: "Reduces Bind, Silence and ATK DOWN duration by 2 turns. If HP is below 50% at the time the special is activated, delays all enemies for 2 turns and boosts ATK against delayed enemies by 1.75x for 2 turns and becomes Shanks & Mihawk for 2 turns",
         specialNotes: "Change Action: When Change is activated, boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn and randomizes all non-matching orbs",

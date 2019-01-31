@@ -8840,10 +8840,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
     },
     5045: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; }
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     5046: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? 1 : 1; }
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; }
     },
     5047: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; }
