@@ -8615,6 +8615,15 @@ window.captains = {
         atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 1.5); },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.25 : 1; }
     },
+    2427: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Slasher") ? 1 : 1; }//change this
+    },
+    2428: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.75 : p.unit.class.has("Slasher") ? 2 : 1; }
+    },
+    2429: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
+    },
     2500: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },

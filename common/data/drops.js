@@ -2186,6 +2186,14 @@ window.drops = {
             'All Difficulties': [ 2376, 2378, 2379, -2234, -2201, -2203, -2242, -2161, -2244 ]
         },
         
+        {
+            name: 'Cavendish Fortnight',
+            thumb: 2428,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2427, 2429, -2236, -2265, -2205, -2238, -2267, -2269, -2125 ]
+        },
+        
     ],
 
             
