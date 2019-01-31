@@ -4154,6 +4154,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by 5 turns at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Whitebeard, Ace, Marco and Vista",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, changes supported character's [EMPTY] orb into a [PSY] orb",
+                    "Level 2: Once per adventure, when you reach the final stage, changes supported character's [EMPTY] and [TND] orb into a [PSY] orb",
+                    "Level 3: Once per adventure, when you reach the final stage, changes supported character's [EMPTY], [TND] and [RCV] orb into a [PSY] orb",
+                    "Level 4: Once per adventure, when you reach the final stage, changes supported character's orb into a [PSY] orb",
+                    "Level 5: Once per adventure, when you reach the final stage, changes supported character's orb into a [PSY] orb and reduces Special Cooldown of supported character by 1 turn"
+                ]
+            }
         ]
     },
     454: {
@@ -4271,6 +4283,18 @@ window.details = {
                     //"Level 5: This character's normal attack will ignore barriers"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[INT] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     458: {
@@ -9659,7 +9683,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Sugar, Doflamingo and Giolla",
+                "description": [
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     877: {
         captain: "Boosts amount of Beli received by 2x",
@@ -9773,6 +9809,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Machvise, Señor Pink, Dellinger and Diamante",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     881: {
@@ -10549,7 +10597,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Driven Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     925: {
         captain: "Boosts ATK of Powerhouse characters by 2x",
@@ -12128,6 +12188,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Elizabello and Dagama",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, changes supported character's [EMPTY] and [TND] orb into a Matching orb",
+                    "Level 2: Once per adventure, when you reach the final stage, randomizes supported character's orb",
+                    "Level 3: Once per adventure, when you reach the final stage, changes supported character's orb into a Matching orb",
+                    "Level 4: Once per adventure, when you reach the final stage, changes supported character's orb into a Matching orb and switches orbs between slots once",
+                    "Level 5: Once per adventure, when you reach the final stage, changes supported character's orb into a Matching orb and switches orbs between slots twice"
+                ]
+            }
         ]
     },
     1028: {
@@ -16052,6 +16124,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Fujitora and Maynard",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK of all characters by 1.1x after 20th hit in the chain for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK of all characters by 1.2x after 20th hit in the chain for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of all characters by 1.3x after 20th hit in the chain for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of all characters by 1.4x after 20th hit in the chain for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of all characters by 1.5x after 20th hit in the chain for 1 turn."
+                ]
+            }
         ]
     },
     1239: {//6* Kizaru
@@ -17186,6 +17270,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[STR] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 5% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1299: {//Halloween Rebecca
@@ -19673,7 +19769,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Doflamingo, Lao G, Señor Pink and Machvise",
+                "description": [
+                    "Level 1: Adds 5% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 8% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 10% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 12% of this character's base HP to the supported character's base HP"
+                ]
+            }
+        ]
     },
     1423: {//Coliseum T-Bone
         captain: "Boosts ATK of the whole crew by 1.75x and recovers 918 HP at end of each turn,",
@@ -21744,6 +21852,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 30% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Heracles'n, Luffy, Zoro, Robin and Franky",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1533: {//Rayleigh
@@ -22158,6 +22278,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 30% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Heracles'n, Luffy, Zoro, Robin and Franky",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1544: {//Sakura Koala
@@ -22468,6 +22600,18 @@ window.details = {
         specialNotes: "#{stages}",
         specialName: "Battle Royale Rush",
         sailor: "Boosts own base ATK by 350 if this character is the last in the chain to attack",
+        support: [
+            {
+                "Characters": "Dagama, Chinjao, Sai, Ideo and Hajrudin",
+                "description": [
+                    "Level 1: Once per adventure, when the enemy enables an End of Turn Damage buff, reduces Increase Damage Taken duration by 1 turns.",
+                    "Level 2: Once per adventure, when the enemy enables an End of Turn Damage buff, reduces Increase Damage Taken duration by 1 turns.",
+                    "Level 3: Once per adventure, when the enemy enables an End of Turn Damage buff, reduces Increase Damage Taken duration by 1 turns and recovers 1,000 HP.",
+                    "Level 4: Once per adventure, when the enemy enables an End of Turn Damage buff, reduces Increase Damage Taken duration by 3 turns and recovers 2,000 HP.",
+                    "Level 5: Once per adventure, when the enemy enables an End of Turn Damage buff, reduces Increase Damage Taken duration by 3 turns and recovers 3,000 HP."
+                ]
+            }
+        ]
     },
     1565: {//Dagama
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 1.75x",
@@ -22478,6 +22622,18 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of all characters by 2x",
         special: "Reduces Special Cooldown of all characters by 1 turn and reduces crew's current HP by 10%",
         specialName: "War of Mislead Order",
+        support: [
+            {
+                "Characters": "Elizabello, Chinjao, Sai, Ideo and Hajrudin",
+                "description": [
+                    "Level 1: Boosts the supported character's ATK by 1.05x against Bartolomeo",
+                    "Level 2: Boosts the supported character's ATK by 1.05x against Bartolomeo",
+                    "Level 3: Boosts the supported character's ATK by 1.1x against Bartolomeo",
+                    "Level 4: Boosts the supported character's ATK by 1.1x against Bartolomeo",
+                    "Level 5: Boosts the supported character's ATK by 1.2x against Bartolomeo"
+                ]
+            }
+        ]
     },
     1567: {//Kid Boa
         captain: "Boosts ATK and RCV of [QCK] characters by 1.5x",
@@ -25901,8 +26057,8 @@ window.details = {
             {
                 "Characters": "Sandersonia",
                 "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.2x for 1 turn",
-                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn",
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.2x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn.",
                     "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn. Changes supported character's DEX orb into matching.",
                     "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn. Changes supported character's DEX or QCK orb into matching.",
                     "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 2 turns. Changes supported character's DEX or QCK orb into matching."
@@ -27457,6 +27613,18 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
         special: "Changes Captain's orb into Matching and boosts ATK of your Captain by 1.5x for 1 turn",
         specialName: "Revolutionary Soldier's Anger",
+        support: [
+            {
+                "Characters": "Fighter Characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK of your captain characters by 1.025x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK of your captain characters by 1.05x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of your captain characters by 1.1x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of your captain characters by 1.15x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of your captain characters by 1.2x for 1 turn."
+                ]
+            }
+        ]
     },
     1814: {//Raid Sanji
         captain: "Boosts ATK of Powerhouse characters by 2.5x until the first hit other than PERFECT and recovers 100 HP at end of each turn",
@@ -30918,7 +31086,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Bartolomeo, Cavendish, Rebecca and Kyros",
+                "description": [
+                    "Level 1: Adds 8% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 12% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 15% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 18% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
+        ]
     },
     1952: {//Koala
         captain: "Boosts ATK of [INT] characters by 2.5x",
