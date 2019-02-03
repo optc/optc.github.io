@@ -2508,6 +2508,8 @@ window.aliases = {
     2509: [ '', '', 'Korea Sabo', 'V2 Sabo', 'V3 Sabo' ],
     2510: [ '', '', 'Neo Garp' ],
     2511: [ '', '', 'Neo Garp' ],
+    2512: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    2513: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
     5000: [ 'スモーカー 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker' ],
     5001: [ 'たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker' ],
     5002: [ 'スモーカー＆たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker' ],
@@ -2552,6 +2554,14 @@ window.aliases = {
     5041: [ '', '', 'Bartolomeo&Cavendish', 'Bartolomeo and Cavendish', 'Bartolomeo Cavendish', 'BartolomeoCavendish', 'Cavendish&Bartolomeo', 'Cavendish and Bartolomeo', 'Cavendish Bartolomeo', 'CavendishBartolomeo', 'Barto', 'Cabbage' ],
     5042: [ '', '', 'Bartolomeo&Cavendish', 'Bartolomeo and Cavendish', 'Bartolomeo Cavendish', 'BartolomeoCavendish', 'Cavendish&Bartolomeo', 'Cavendish and Bartolomeo', 'Cavendish Bartolomeo', 'CavendishBartolomeo', 'Barto', 'Cabbage' ],
     5043: [ '', '', 'Bartolomeo&Cavendish', 'Bartolomeo and Cavendish', 'Bartolomeo Cavendish', 'BartolomeoCavendish', 'Cavendish&Bartolomeo', 'Cavendish and Bartolomeo', 'Cavendish Bartolomeo', 'CavendishBartolomeo', 'Barto', 'Cabbage' ],
+    5044: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5045: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5046: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5047: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5048: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5049: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5050: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
+    5051: [ '', '', 'Shanks&Mihawk', 'Shanks and Mihawk', 'Shanks Mihawk', 'ShanksMihawk', 'Mihawk&Shanks', 'Mihawk and Shanks', 'Mihawk Shanks', 'MihawkShanks' ],
 };
 
 //  xxxx: [ 'JPN', 'FR', 'Other' ],

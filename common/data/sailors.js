@@ -865,4 +865,28 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
+    5044: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    5045: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    5046: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5047: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5048: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    5049: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    5050: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5051: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
 };
