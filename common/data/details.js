@@ -9500,7 +9500,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Free Spirit and Cerebral characters by 30",
-            "level2": "Reduces Silence duration by 1 turn",
+            "level2": "Reduces Paralysis duration by 1 turn",
         },
         limit: [
             { "description": "Boosts base HP by 40" },
@@ -9514,7 +9514,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 60" },
-            { "description": "Acquire Sailor Ability 2: Reduces Silence duration by 1 turn" },
+            { "description": "Acquire Sailor Ability 2: Reduces Paralysis duration by 1 turn" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 60" },
             { "description": "Acquire Potential 2: Pinch Healing" },
@@ -41857,11 +41857,11 @@ window.details = {
             {
                 "Characters": "Franky",
                 "description": [
-                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 1 turn.",
-                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 2 turn.",
-                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 3 turn.",
-                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 1 turn.",
-                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 2 turns."
+                    "Level 1: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 2 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 3 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 2 turns."
                 ]
             }
         ]
