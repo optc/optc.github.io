@@ -3909,23 +3909,23 @@ window.evolutions = {
     },
     2417: {
         evolution: 2418,
-        evolvers: [  ]
+        evolvers: [ 118, 302, 301, 1180, 267 ]
     },
     2419: {
         evolution: 2420,
-        evolvers: [  ]
+        evolvers: [ 84, 266, 95, 300, 100 ]
     },
     2421: {
         evolution: 2422,
-        evolvers: [  ]
+        evolvers: [ 85, 96, 1180, 301, 101 ]
     },
     2423: {
         evolution: 2424,
-        evolvers: [  ]
+        evolvers: [ 83, 266, 99, 304, 104 ]
     },
     2425: {
         evolution: 2426,
-        evolvers: [  ]
+        evolvers: [ 83, 266, 98, 303, 103 ]
     },
     2427: {
         evolution: 2428,

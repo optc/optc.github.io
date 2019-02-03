@@ -8590,26 +8590,26 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? ((window.specials[2415].turnedOn || window.specials[2416].turnedOn) && p.sourceSlot == 1 ? 6 : 1) : 1; },
     },
     2419: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 1 : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? 1 : 1; },//change this
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? 2 : 1; },
     },
     2420: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.75 : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? 2.5 : 1; },
     },
     2421: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 1 - 0.1 * p.turnCounter) : 1; }//change this
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 2.75 - 0.1 * p.turnCounter) : 1; }//change this
     },
     2422: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 3.25 - 0.1 * p.turnCounter) : 1; }//change this
     },
     2423: {
-        atk: function(p) { return p.unit.class.has("Driven") ? Math.min(1.0, 1.0 + 0.1 * p.turnCounter) : 1; }//change this
+        atk: function(p) { return p.unit.class.has("Driven") ? Math.min(2.75, 1.0 + 0.0875 * p.turnCounter) : 1; }//change this
     },
     2424: {
-        atk: function(p) { return p.unit.class.has("Driven") ? Math.min(3.25, 1.0 + 0.1 * p.turnCounter) : 1; }//change this
+        atk: function(p) { return p.unit.class.has("Driven") ? Math.min(3.25, 1.0 + 0.1125 * p.turnCounter) : 1; }//change this
     },
     2425: {
-        atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 1 : 1); },//change this
-        hp: function(p) { return p.unit.class.has("Driven") ? 1 : 1; }//change this
+        atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.25 : 1.5); },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; }
     },
     2426: {
         atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 1.5); },
