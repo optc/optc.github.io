@@ -12050,10 +12050,7 @@ window.details = {
     },
     1019: {
         captain: "Reduces damage received from [QCK] enemies by 50%",
-        special: {
-            "japan": "Switches orbs between slots 2 times and deals 2000 fixed damage to one enemy",
-            "global": "Randomizes all non-matching orbs and deals 2000 fixed damage to one enemy"
-        },
+        special: "Randomizes all non-matching orbs and deals 2000 fixed damage to one enemy",
         specialName: "Blacksmithing Measurement: Double Slash",
         specialNotes: "#{fixed}"
     },
