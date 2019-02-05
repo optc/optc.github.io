@@ -12050,7 +12050,10 @@ window.details = {
     },
     1019: {
         captain: "Reduces damage received from [QCK] enemies by 50%",
-        special: "Switches orbs between slots 2 times and deals 2000 fixed damage to one enemy",
+        special: {
+            "japan": "Switches orbs between slots 2 times and deals 2000 fixed damage to one enemy",
+            "global": "Randomizes all non-matching orbs and deals 2000 fixed damage to one enemy"
+        },
         specialName: "Blacksmithing Measurement: Double Slash",
         specialNotes: "#{fixed}"
     },
@@ -41526,7 +41529,7 @@ window.details = {
         limit: [
             { "description": "Boosts base HP by 55" },
             { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base RCV by 50" },
@@ -41538,27 +41541,27 @@ window.details = {
             { "description": "Acquire Sailor Ability 2: Boosts amount healed from [RCV] orbs by 250 each" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base HP by 110" },
-            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
-            {
-                "Name": "Reduce No Healing duration",
-                "description": [
-                    "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
-                ]
-            },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
                 ]
             },
         ],
@@ -42587,7 +42590,7 @@ window.details = {
         ]
     },
     2427: {//Cavendish
-        captain: "Boosts ATK of Slasher characters by ?x, but boosts his OWN attack by ?x",
+        captain: "Boosts ATK of Slasher characters by 1.75x, but boosts his OWN attack by 2.5x",
         special: "Deals 15x character's ATK in [PSY] damage to one enemy and amplifies the effect of orbs for Slasher characters by 1.5x and boosts ATK of Slasher characters by 1.5x for 1 turn",
         specialName: "Cavendish Special",
     },
@@ -42599,10 +42602,10 @@ window.details = {
             {
                 "Characters": "Suleiman, Bartolomeo",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
                 ]
             }
@@ -42616,10 +42619,10 @@ window.details = {
             {
                 "Characters": "Cavendish",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK.",
                     "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
                 ]
             }
