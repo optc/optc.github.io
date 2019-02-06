@@ -8828,10 +8828,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
     },
     5039: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
+        atk: function(p) { return p.unit.class.has("Driven") ? 4.25 : 1; }
     },
     5040: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
+        atk: function(p) { return p.unit.class.has("Driven") ? 4.25 : 1; }
     },
     5041: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.75 : p.unit.class.has("Driven") ? 3.25 : 1; }
@@ -8840,10 +8840,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
     },
     5043: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
+        atk: function(p) { return p.unit.class.has("Driven") ? 4.25 : 1; }
     },
     5044: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 3.25 : 1; }
+        atk: function(p) { return p.unit.class.has("Driven") ? 4.25 : 1; }
     },
     5045: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
