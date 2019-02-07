@@ -2187,11 +2187,11 @@ window.drops = {
         },
         
         {
-            name: 'Cavendish Fortnight',
+            name: 'Cavendish\'s Rose Colored Melancholy',
             thumb: 2428,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2427, 2429, -2236, -2265, -2205, -2238, -2267, -2269, -2125 ]
+            gamewith: 141693,
+            'All Difficulties': [ 2427, 2429, -2236, -2265, -2205, -2238, -2267, -2269, -2125, -2240 ]
         },
         
     ],
@@ -2738,6 +2738,7 @@ window.drops = {
         {
             name: 'Clash!! "Blackbeard" Teach',
             thumb: 2197,
+            global: true,
             nakama: 4219700,
             gamewith: 115114,
             Ultimate: [ 2196 ],

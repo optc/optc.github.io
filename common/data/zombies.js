@@ -724,7 +724,7 @@ window.zombies = {
     },
     2430: { // Pudding
         type: 'healer',
-        multiplier: 2//change this
+        multiplier: 1
     },
     2431: { // Pudding
         type: 'healer',
