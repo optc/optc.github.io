@@ -1348,12 +1348,10 @@ window.specials = {
     1028: {
         //TODO
         hit: function(n,p) { return n > 30 ? 1.75 : 1; },
-        type: "condition"
     },
     1029: {
         //TODO
         hit: function(n,p) { return n > 30 ? 1.75 : 1; },
-        type: "condition"
     },
     1030: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
@@ -1784,12 +1782,10 @@ window.specials = {
     1237: {
         //TODO
         hit: function(n,p) { return n > 30 ? 2 : 1; },
-        type: "condition"
     },
     1238: {
         //TODO
         hit: function(n,p) { return n > 30 ? 2 : 1; },
-        type: "condition"
     },
     1239: {
         turnedOn: [ false, false ],
@@ -6573,12 +6569,10 @@ window.specials = {
     2380: {
         //TODO
         hit: function(n,p) { return (n > 12 && (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) ? 2.25 : 1; },
-        type: "condition",
     },
     2381: {
         //TODO
         hit: function(n,p) { return (n > 12 && (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse"))) ? 2.25 : 1; },
-        type: "condition",
     },
     2383:{
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2383].multiplier : 1; },
