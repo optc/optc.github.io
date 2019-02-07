@@ -42696,7 +42696,7 @@ window.details = {
     2435: {//Dagama
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight and boosts ATK of Slasher and Driven characters by 2.25x",
         special: "Reduces Bind and ATK DOWN duration by 2 turns and boosts ATK of Slasher and Driven characters by 1.5x for 1 turn.",
-        specialName: "Military Officer Two-Blaze Slash",
+        specialName: "Tactician's Twin Blade Slash",
         support: [
             {
                 "Characters": "Elizabello, Chinjao, Sai, Ideo and Hajrudin",
@@ -42713,7 +42713,7 @@ window.details = {
     2436: {//Orlumbus
         captain: "Boosts ATK of Striker characters by 2.7x if they have a matching orb, by 2.25x otherwise",
         special: "Changes all orbs on all characters into Orlumbus's orb and locks all orbs for 1 turn.",
-        specialName: "Adventurer's Support",
+        specialName: "Adventurer's Assistance",
         support: [
             {
                 "Characters": "Elizabello, Chinjao, Sai, Ideo and Hajrudin",
