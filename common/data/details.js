@@ -42716,7 +42716,7 @@ window.details = {
         specialName: "Adventurer's Assistance",
         support: [
             {
-                "Characters": "Elizabello, Chinjao, Sai, Ideo and Hajrudin",
+                "Characters": "Hajrudin, Cavendish, Ideo, Bartolomeo, Leo and Sai",
                 "description": [
                     "Level 1: Once per an adventure, when the supported character uses their special, changes [RCV] orbs on Driven characters into the supported character's orb.",
                     "Level 2: Once per an adventure, when the supported character uses their special, changes [RCV] and [EMPTY] orbs on Driven characters into the supported character's orb.",
