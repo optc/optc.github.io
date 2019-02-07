@@ -42591,12 +42591,12 @@ window.details = {
     2427: {//Cavendish
         captain: "Boosts ATK of Slasher characters by 1.75x, but boosts his OWN attack by 2.5x",
         special: "Deals 15x character's ATK in [PSY] damage to one enemy and amplifies the effect of orbs for Slasher characters by 1.5x and boosts ATK of Slasher characters by 1.5x for 1 turn",
-        specialName: "Cavendish Special",
+        specialName: "Swan Lake Sword",
     },
     2428: {//Cavendish
         captain: "Boosts ATK of Slasher characters by 2x, but boosts his OWN attack by 2.75x",
         special: "Deals 15x character's ATK in [PSY] damage to one enemy and amplifies the effect of orbs for Slasher characters by 1.5x and boosts ATK of Slasher characters by 1.5x for 1 turn",
-        specialName: "Cavendish Special",
+        specialName: "Swan Lake Sword",
         support: [
             {
                 "Characters": "Suleiman, Bartolomeo",
@@ -42613,7 +42613,7 @@ window.details = {
     2429: {//Suleiman
         captain: "Boosts ATK of Slasher characters by 2x",
         special: "Deals 15x character's ATK in [PSY] damage to all enemies. If your Captain is a Slasher character, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Slasher characters into Matching orbs and reduces the defense of all enemies by 50% for 1 turn.",
-        specialName: "Suleiman Special",
+        specialName: "Ghost Execution",
         support: [
             {
                 "Characters": "Cavendish",
@@ -42628,11 +42628,11 @@ window.details = {
         ]
     },
     2430: {//Pudding
-        captain: "Boosts ATK of Driven characters by ?x and recovers ?x character's RCV in HP at the end of each turn",
+        captain: "Boosts ATK of Driven characters by 2.5x and recovers 1x character's RCV in HP at the end of each turn",
         special: "Reduces Silence duration by 5 turns, reduces enemy's Percent Damage Reduction and Resilience Buffs duration by 5 turns, changes [BLOCK] and Badly Matching orbs into [G] orbs. If there are 6 Driven characters in your crew when the special is activated, changes [STR], [DEX], [QCK], [PSY], [INT] orbs into Matching orbs and recovers 5,000 HP at the end of the turn for 3 turns.",
         sailor: "Reduces Silence duration on this character by 5 turns",
         sailorNotes: "#{silence}",
-        specialName: "Pudding Special",
+        specialName: "Memory Filament: Flashback",
     },
     2431: {//Pudding
         captain: "Boosts ATK of Driven characters by 3x and recovers 2x character's RCV in HP at the end of each turn",
@@ -42642,26 +42642,43 @@ window.details = {
             "level1": "Makes [PSY] orbs beneficial for Driven characters"
         },
         sailorNotes: "#{beneficial}<br>#{silence}",
-        specialName: "Pudding Special",
+        specialName: "Memory Filament: Flashback",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Makes [PSY] orbs beneficial for Driven characters" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
         potential: [
             {
                 "Name": "[INT] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [INT] characters by ?%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 60% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ],
@@ -42669,10 +42686,10 @@ window.details = {
             {
                 "Characters": "Sanji and Chiffon",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
-                    "Level 2: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
-                    "Level 3: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
-                    "Level 4: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 1: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 2: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 3: Adds 8% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 4: Adds 10% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
                     "Level 5: Adds 12% of this character's base ATK and RCV to the supported character's base ATK and RCV."
                 ]
             }
