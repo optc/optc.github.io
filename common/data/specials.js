@@ -6917,6 +6917,10 @@ window.specials = {
             window.specials[2425].turnedOn = p.captain.class.has("Slasher") ? true : false;
         },
     },
+    2435: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1},
+        type: "class"
+    },
     2500: {
         atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK") ? 1 : window.specials[2500].multiplier; },
         type: "type",

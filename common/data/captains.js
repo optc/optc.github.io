@@ -8625,10 +8625,16 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
     },
     2430: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 1 : 1; }//change this
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; }
     },
     2431: {
         atk: function(p) { return p.unit.class.has("Driven") ? 3 : 1; }
+    },
+    2435: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? 2.25 : 1; }
+    },
+    2436: {
+        atk: function(p) { return !(p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.7 : 2.25); }
     },
     2500: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
