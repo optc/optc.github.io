@@ -36152,12 +36152,12 @@ window.details = {
     },
     2170: {//Sicilian
         captain: "Boosts ATK of [DEX] characters by 1.5x",
-        special: "Deals 15x character's ATK in [DEX] damage to all enemies, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
+        special: "Deals 15x character's ATK in [DEX] damage to one enemy, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
         specialName: "Lightning Slash",
     },
     2171: {//Sicilian
         captain: "Boosts ATK of [DEX] characters by 2.25x",
-        special: "Deals 15x character's ATK in [DEX] damage to all enemies, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
+        special: "Deals 15x character's ATK in [DEX] damage to ome enemy, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
         specialName: "Lightning Slash",
     },
     2172: {//Swimsuit Shirahoshi
