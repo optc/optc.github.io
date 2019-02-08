@@ -2948,7 +2948,7 @@ window.drops = {
             global: true,
             nakama: 8221100,
             gamewith: 116377,
-            'Raging Sea': [ 2210 ]
+            'Calm Sea': [ 2210 ]
         },
 
         {
