@@ -27829,15 +27829,15 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 1.5x at the start of the chain.<br>Boosts ATK of Shooter characters by 1.65x after the 1st PERFECT in a row, by 1.815x after the 2nd PERFECT in a row, by 1.9965x after the 3rd PERFECT in a row, by 2.19615x after the 4th PERFECT in a row and by 2.415765x after the 5th PERFECT in a row.",
         special: [
             {
-                "description": "Deals 100,000 fixed damage to one enemy and removes ATK DOWN debuff from your team",
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK DOWN duration completely",
                 "cooldown": [ 14, 10 ]
             },
             {
-                "description": "Deals 300,000 fixed damage to one enemy and removes ATK DOWN debuff from your team",
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK DOWN duration completely",
                 "cooldown": [ 18, 14 ]
             },
             {
-                "description": "Deals 500,000 fixed damage to one enemy, removes ATK DOWN debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK DOWN duration completely and reduces enemy Barrier duration by 1 turn",
                 "cooldown": [ 22, 18 ]
             }
         ],
@@ -27848,15 +27848,15 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2.2x at the start of the chain.<br>Boosts ATK of Shooter characters by 2.42x after the 1st PERFECT in a row, by 2.662x after the 2nd PERFECT in a row, by 2.9282x after the 3rd PERFECT in a row, by 3.22102x after the 4th PERFECT in a row and by 3.543122x after the 5th PERFECT in a row.",
         special: [
             {
-                "description": "Deals 100,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "description": "Deals 100,000 fixed damage to one enemy and removes ATK DOWN duration completely",
                 "cooldown": [ 14, 10 ]
             },
             {
-                "description": "Deals 300,000 fixed damage to one enemy and removes ATK down debuff from your team",
+                "description": "Deals 300,000 fixed damage to one enemy and removes ATK DOWN duration completely",
                 "cooldown": [ 18, 14 ]
             },
             {
-                "description": "Deals 500,000 fixed damage to one enemy, removes ATK down debuff from your team and reduces enemy Barrier duration by 1 turn",
+                "description": "Deals 500,000 fixed damage to one enemy, removes ATK DOWN duration completely and reduces enemy Barrier duration by 1 turn",
                 "cooldown": [ 22, 18 ]
             }
         ],
@@ -42691,6 +42691,40 @@ window.details = {
                     "Level 3: Adds 8% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
                     "Level 4: Adds 10% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
                     "Level 5: Adds 12% of this character's base ATK and RCV to the supported character's base ATK and RCV."
+                ]
+            }
+        ]
+    },
+    2435: {//Dagama
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight and boosts ATK of Slasher and Driven characters by 2.25x",
+        special: "Reduces Bind and ATK DOWN duration by 2 turns and boosts ATK of Slasher and Driven characters by 1.5x for 1 turn.",
+        specialName: "Tactician's Twin Blade Slash",
+        support: [
+            {
+                "Characters": "Elizabello, Chinjao, Sai, Ideo and Hajrudin",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 2: Adds 7% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 3: Adds 10% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 4: Adds 15% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 5: Adds 20% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns."
+                ]
+            }
+        ]
+    },
+    2436: {//Orlumbus
+        captain: "Boosts ATK of Striker characters by 2.7x if they have a matching orb, by 2.25x otherwise",
+        special: "Changes all orbs on all characters into Orlumbus's orb and locks all orbs for 1 turn.",
+        specialName: "Adventurer's Assistance",
+        support: [
+            {
+                "Characters": "Hajrudin, Cavendish, Ideo, Bartolomeo, Leo and Sai",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, changes [RCV] orbs on Driven characters into the supported character's orb.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, changes [RCV] and [EMPTY] orbs on Driven characters into the supported character's orb.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, changes [RCV], [EMPTY] and [BOMB] orbs on Driven characters into the supported character's orb.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, changes [RCV], [TND], [EMPTY] and [BOMB] orbs on Driven characters into the supported character's orb.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, changes [RCV], [TND], [EMPTY] and [BOMB] orbs on Driven characters into the supported character's orb and locks the supported character's orb for 1 turn."
                 ]
             }
         ]
