@@ -42610,7 +42610,7 @@ window.details = {
     },
     2429: {//Suleiman
         captain: "Boosts ATK of Slasher characters by 2x",
-        special: "Deals 15x character's ATK in [PSY] damage to all enemies. If your Captain is a Slasher character, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Slasher characters into Matching orbs and reduces the defense of all enemies by 50% for 1 turn.",
+        special: "Deals 15x character's ATK in [INT] damage to all enemies. If your Captain is a Slasher character, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Slasher characters into Matching orbs and reduces the defense of all enemies by 50% for 1 turn.",
         specialName: "Ghost Execution",
         support: [
             {
