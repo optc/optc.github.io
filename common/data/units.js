@@ -2503,7 +2503,7 @@ window.units = [
     [ "Monkey D. Luffy, Kung Fu Training", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 70, 1066998, 520, 256, 66, 1603, 675, 146, 1 ],
     [ "Monkey D. Luffy, To Become a True Kung Fu Master", "DEX", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1510, 652, 132, 3000, 1505, 265, 1 ],
     [ "Crocodile & Daz, Revived Duo", [ "DEX", "STR" ], [[ "Striker", "Driven" ], [ "Slasher", "Cerebral" ], [ "Striker", "Slasher" ]], 4, 15, 4, 4, 99, 2000000, 250, 140, 22, 1895, 1489, 216, 1 ],
-    [ "Lucci, Beastman - Absolute Prevention of Evil", "QCK", [ "Shooter", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1587, 772, 181, 3505, 1590, 363, null ],
+    [ "Lucci, Beastman - Absolute Prevention of Evil", "QCK", [ "Shooter", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1587, 772, 181, 3505, 1590, 363, 1 ],
     [ "Admiral Sengoku and Vice Admiral Garp", [ "INT", "DEX" ], [[ "Fighter", "Cerebral" ],[ "Fighter", "Free Spirit" ],[ "Fighter", "Cerebral" ]], 4, 30, 4, 2, 70, 1066998, 312, 326, 123, 1546, 906, 257, 1 ],
     [ "Admiral Sengoku and Vice Admiral Garp, Dawn of the Great Era of Piracy", [ "INT", "DEX" ], [[ "Fighter", "Cerebral" ],[ "Fighter", "Free Spirit" ],[ "Fighter", "Cerebral" ]], 5, 50, 4, 3, 99, 5000000, 1456, 789, 157, 2800, 1530, 300, 1 ],
     [ "Sabo, Straw Hat Luffy's Brother", "DEX", [ "Fighter", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 394, 337, 71, null, null, null, null ],
