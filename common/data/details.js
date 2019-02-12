@@ -37003,14 +37003,14 @@ window.details = {
     },
     2204: {//Scarlet
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2.5x following a chain of Good > Great > PERFECT hits",
-        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
-        specialName: "Chemical Juggling",
+        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, locks all orbs for 1 turn and reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
+        specialName: "Natural Strength",
         sailor: "If your Captain is a Driven character, boosts own base ATK by 100",
     },
     2205: {//Scarlet
         captain: "Boosts ATK of Fighter and Powerhouse characters by 3.25x following a chain of Good > Great > PERFECT hits",
-        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
-        specialName: "Chemical Juggling",
+        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, locks all orbs for 1 turn and reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
+        specialName: "Natural Strength",
         sailor: {
             "base": "If your Captain is a Driven character, boosts own base ATK by 100",
             "level1": "Boosts base ATK of all characters by 50"
