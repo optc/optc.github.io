@@ -28716,15 +28716,15 @@ window.details = {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Shooter characters by 2.5x",
         special: [
             {
-                "description": "Deals 3x character's ATK in [QCK] damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs,",
+                "description": "Deals 3x character's ATK in [QCK] damage to all enemies, changes Shooter character's [TND] and [RCV] orbs into Matching orbs,",
                 "cooldown": [ 19, 4 ]
             },
             {
-                "description": "Deals 7x character's ATK in [QCK] damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs. If your Captain is a Shooter Character, boosts ATK against delayed enemies by 1.35x for 1 turn",
+                "description": "Deals 7x character's ATK in [QCK] damage to all enemies, changes Shooter character's [TND] and [RCV] orbs into Matching orbs. If your Captain is a Shooter Character, boosts ATK against delayed enemies by 1.35x for 1 turn",
                 "cooldown": [ 24, 9 ]
             },
             {
-                "description": "Deals 11x character's ATK in [QCK] damage to all enemies, changes [TND] and [RCV] orbs on Shooter characters into Matching Orbs. If your Captain is a Shooter Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
+                "description": "Deals 11x character's ATK in [QCK] damage to all enemies, changes Shooter character's [TND] and [RCV] orbs into Matching orbs. If your Captain is a Shooter Character, boosts ATK against delayed enemies by 1.75x for 1 turn",
                 "cooldown": [ 30, 15 ]
             }
         ],
@@ -36154,12 +36154,12 @@ window.details = {
     },
     2170: {//Sicilian
         captain: "Boosts ATK of [DEX] characters by 1.5x",
-        special: "Deals 15x character's ATK in [DEX] damage to all enemies, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
+        special: "Deals 15x character's ATK in [DEX] damage to one enemy, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
         specialName: "Lightning Slash",
     },
     2171: {//Sicilian
         captain: "Boosts ATK of [DEX] characters by 2.25x",
-        special: "Deals 15x character's ATK in [DEX] damage to all enemies, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
+        special: "Deals 15x character's ATK in [DEX] damage to ome enemy, delays all enemies for 1 turn and if enemies have a barrier at the time the special was activated, boosts ATK of all characters by 1.75x, 1.5x otherwise.",
         specialName: "Lightning Slash",
     },
     2172: {//Swimsuit Shirahoshi
@@ -37005,14 +37005,14 @@ window.details = {
     },
     2204: {//Scarlet
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2.5x following a chain of Good > Great > PERFECT hits",
-        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
-        specialName: "Chemical Juggling",
+        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, locks all orbs for 1 turn and reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
+        specialName: "Natural Strength",
         sailor: "If your Captain is a Driven character, boosts own base ATK by 100",
     },
     2205: {//Scarlet
         captain: "Boosts ATK of Fighter and Powerhouse characters by 3.25x following a chain of Good > Great > PERFECT hits",
-        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
-        specialName: "Chemical Juggling",
+        special: "If HP is below 10%, amplifies the effect of orbs by 2x for 1 turn. If your Captain is a Driven character, locks all orbs for 1 turn and reduces enemies' ATK Up, Enrage and End of Turn Damage/Percent Cut duration by 5 turns.",
+        specialName: "Natural Strength",
         sailor: {
             "base": "If your Captain is a Driven character, boosts own base ATK by 100",
             "level1": "Boosts base ATK of all characters by 50"
@@ -42612,7 +42612,7 @@ window.details = {
     },
     2429: {//Suleiman
         captain: "Boosts ATK of Slasher characters by 2x",
-        special: "Deals 15x character's ATK in [PSY] damage to all enemies. If your Captain is a Slasher character, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Slasher characters into Matching orbs and reduces the defense of all enemies by 50% for 1 turn.",
+        special: "Deals 15x character's ATK in [INT] damage to all enemies. If your Captain is a Slasher character, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Slasher characters into Matching orbs and reduces the defense of all enemies by 50% for 1 turn.",
         specialName: "Ghost Execution",
         support: [
             {
