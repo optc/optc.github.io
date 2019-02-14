@@ -3947,8 +3947,8 @@ window.evolutions = {
         evolution: 2505,
         evolvers: [ 'skullQCK', 'skullQCK', 'skullQCK', 1180, 301 ]
     },
-    2508: {
-        evolution: 2509,
+    2440: {
+        evolution: 2441,
         evolvers: [  ]
     },
     2510: {
