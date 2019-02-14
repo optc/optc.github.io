@@ -42727,6 +42727,65 @@ window.details = {
             }
         ]
     },
+    2437: {//Corazon
+        captain: "Boosts ATK of [PSY] characters by 1.5x",
+        special: "Reduces enemy Percent Damage Reduction duration by 3 turns reduces Chain Multiplier Limit duration by 3 turns, reduces the defense of all enemies by ?% for 1 turn and adds 40x character's ATK as Additional Typeless Damage 1 turns",
+        specialName: "The Gentle \"Heart\" Resolution",
+        limit: [
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Acquire Potential 1: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 60% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+        ],
+    },
+    2009: {//Law
+        captain: "Boosts ATK of Slasher characters by 1.5x",
+        special: "Deals 30x character's ATK in [DEX] damage to one enemy. If enemies have a Defense Reduction debuff at the time the special was activated, boosts the Color Affinity of all characters by 1.5x and boosts ATK against enemies with reduced defense depending on your Treasure Map Level for 1 turn",
+        specialName: "Shambles - Kikoku's Strike",
+        specialNotes: "Level 1-10: 1.75x conditional boost<br\>Level 11-20: 2x conditional boost<br\>Level 21+: 2.25x conditional boost",
+        limit: [
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Boosts base " },
+            { "description": "Acquire Potential 1: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 60% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+        ],
+    },
     2440: {//Sabo V2-3
         captain:  "Boosts chances of getting Matching orbs for Fighter, Shooter and Free Spirit characters. Boosts ATK of Fighter, Shooter and Free Spirit characters by 3x and their HP by 1.25x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 4.25x.",
         special: "Locks the chain multiplier at 3x for 1 turn and amplifies the effects of orbs for Fighter, Shooter and Free Spirit characters by 2.25x for 1 turn",

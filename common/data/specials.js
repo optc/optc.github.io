@@ -6915,6 +6915,26 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1},
         type: "class"
     },
+    2437: {
+        staticMult: function(p) { return 40; }
+    },
+    2438:{
+        affinity: function(p) { return window.specials[2438].turnedOn ? 1.5 : 1; },
+        atk: function(p) { return window.specials[2438].turnedOn ? window.specials[2438].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2438].turnedOn = p.defenseDown;
+            var n = (window.specials[2438].multiplier == 1 ? 1 : window.specials[2438].multiplier == 1.75 ? 2 : window.specials[1967].multiplier == 2 ? 3 : 0);
+            window.specials[2438].multiplier = [1, 1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2438warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2438].turnedOn = false;
+        },
+    },
     2440: {
         chain: function(p) { return window.specials[2440].multiplier; },
         chainLimiter: function(p) {

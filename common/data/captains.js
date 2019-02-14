@@ -8636,6 +8636,12 @@ window.captains = {
     2436: {
         atk: function(p) { return !(p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.7 : 2.25); }
     },
+    2437: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    2438: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
     2440: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? Math.min(4.25, 3.0 + 0.25 * p.turnCounter) : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1.25 : 1; },
