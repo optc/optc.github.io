@@ -95,6 +95,7 @@ body {
 .pink   { background-color: #DEA5A4; }
 .brown   { background-color: #993300; }
 .darkpurple   { background-color: #7D3C98; }
+.gold   { background-color: #B38F15; }
 
 .green:hover  { background-color: #6EB98E; }
 .blue:hover   { background-color: #74B0E4; }
@@ -104,6 +105,7 @@ body {
 .pink:hover   { background-color: #A57777; }
 .brown:hover   { background-color: #662200; }
 .darkpurple:hover   { background-color: #5B2C6F; }
+.gold:hover   { background-color: #947713; }
 
 .overlay {
     position: absolute;

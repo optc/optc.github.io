@@ -197,6 +197,12 @@
     transform: translateY(-4em);
 }
 
+#links-button.active .rotater:nth-child(11) > a {
+    -webkit-transform: translateY(-4em);
+    -ms-transform: translateY(-4em);
+    transform: translateY(-4em);
+}
+
 #link-damage > .btn { background: #85C1F5; }
 #link-characters > .btn { background: #7FCA9F; }
 #link-drops > .btn { background: #F4BA70; }
@@ -206,6 +212,7 @@
 #links-home > .btn { background: #939393; }
 #link-prob > .btn { background: #DEA5A4; }
 #link-ship > .btn { background: #9932CC; }
+#link-planner > .btn { background: #DAAD13; }
 #link-turtles > .btn { background: #ce4500; }
 #link-es > .btn { background: linear-gradient(#ff0000 30%, #ffff00 30%, #ffff00 70%, #ff0000 30%); }
 
