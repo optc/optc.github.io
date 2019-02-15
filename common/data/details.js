@@ -24658,7 +24658,7 @@ window.details = {
             { "description": "Acquire Sailor Ability 1: Adds 2x character's ATK as Additional Damage" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 70" },
             { "description": "Acquire Sailor Ability 2: When any other character uses a special, reduces own cooldown by 1 turn" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
