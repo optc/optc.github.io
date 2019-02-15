@@ -138,6 +138,8 @@
             case 9024: return 'https://onepiece-treasurecruise.com/wp-content/uploads/frankie_skull_f.png'; break;
             case 'skullCavendish':
             case 9025: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Cavendish_skull_f.png'; break;
+            case 'skullDoflamingo':
+            case 9026: return /*'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f.png'*/; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -196,12 +198,12 @@
             case '2507': return '../res/character_10641_t1.png'; break;
             case '5028': return '../res/character_10636_t1.png'; break;
             case '5029': return '../res/character_10637_t1.png'; break;
-            case '5030': return '../res/character_10640_t1.png_int'; break;
-            case '5031': return '../res/character_10640_t1.png_dex'; break;
+            case '5030': return '../res/character_10640_t1_int.png'; break;
+            case '5031': return '../res/character_10640_t1_dex.png'; break;
             case '5032': return '../res/character_10638_t1.png'; break;
             case '5033': return '../res/character_10639_t1.png'; break;
-            case '5034': return '../res/character_10641_t1.png_int'; break;
-            case '5035': return '../res/character_10642_t1.png_dex'; break;
+            case '5034': return '../res/character_10641_t1_int.png'; break;
+            case '5035': return '../res/character_10641_t1_dex.png'; break;
             case '5036': return '../res/character_10650_t1.png'; break;
             case '5037': return '../res/character_10649_t1.png'; break;
             case '5038': return '../res/character_10653_t1_dex.png'; break;
@@ -277,6 +279,8 @@
             case 9024: return 'https://onepiece-treasurecruise.com/wp-content/uploads/frankie_skull_c.png'; break;
             case 'skullCavendish':
             case 9025: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Cavendish_skull_c.png'; break;
+            case 'skullDoflamingo':
+            case 9026: return /*'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_c.png'*/; break;
         }
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';

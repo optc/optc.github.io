@@ -3215,7 +3215,7 @@ window.captains = {
     1239: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[1239].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1240].turnedOn[i]==true) {specialEnabled = true;}
@@ -3226,7 +3226,7 @@ window.captains = {
     1240: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[1239].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1240].turnedOn[i]==true) {specialEnabled = true;}
@@ -5551,7 +5551,7 @@ window.captains = {
     1807: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[1807].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1808].turnedOn[i]==true) {specialEnabled = true;}
@@ -5562,7 +5562,7 @@ window.captains = {
     1808: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[1807].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1808].turnedOn[i]==true) {specialEnabled = true;}
@@ -5910,7 +5910,7 @@ window.captains = {
     1878: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[1878].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1879].turnedOn[i]==true) {specialEnabled = true;}
@@ -5920,7 +5920,7 @@ window.captains = {
     1879: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[1878].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1879].turnedOn[i]==true) {specialEnabled = true;}
@@ -6502,9 +6502,10 @@ window.captains = {
     1963: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
-            if(window.specials[1960].turnedOn == true) {specialEnabled = true;}
-            if(window.specials[1961].turnedOn == true) {specialEnabled = true;}
+            for(var i=0;i<6;i++){
+                if(window.specials[1960].turnedOn == true) {specialEnabled = true;}
+                if(window.specials[1961].turnedOn == true) {specialEnabled = true;}
+            }
             return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? specialEnabled ? 2.925 : 2.25 : 1; },
         hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Fighter")) ? 1.2 : 1 }
     },
@@ -6787,7 +6788,7 @@ window.captains = {
     2034: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2034].turnedOn[i]==true) { specialEnabled = true; }
             }
@@ -7023,7 +7024,7 @@ window.captains = {
     2087: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2087].turnedOn[i]==true) {specialEnabled = true;}
             }
@@ -7044,7 +7045,7 @@ window.captains = {
     2092: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2092].turnedOn[i]==true) {specialEnabled = true;}
             }
@@ -7374,7 +7375,7 @@ window.captains = {
     2160: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2160].turnedOn[i]==true || window.specials[2161].turnedOn[i]==true) { specialEnabled = true; }
             }
@@ -7384,7 +7385,7 @@ window.captains = {
     2161: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2160].turnedOn[i]==true || window.specials[2161].turnedOn[i]==true) { specialEnabled = true; }
             }
@@ -7425,7 +7426,7 @@ window.captains = {
     2168: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2168].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[2169].turnedOn[i]==true) {specialEnabled = true;}
@@ -7436,7 +7437,7 @@ window.captains = {
     2169: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2168].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[2169].turnedOn[i]==true) {specialEnabled = true;}
@@ -7785,7 +7786,7 @@ window.captains = {
     2253: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2252].turnedOn[i]==true) { specialEnabled = true; }
                 if(window.specials[2253].turnedOn[i]==true) { specialEnabled = true; }
@@ -8444,7 +8445,7 @@ window.captains = {
     2398: {
         atk: function(p) {
             var specialEnabled = false;
-            for(var i=0;i<2;i++)
+            for(var i=0;i<6;i++)
             {
                 if(window.specials[2398].turnedOn[i]==true) {specialEnabled = true;}
             }
@@ -8642,6 +8643,9 @@ window.captains = {
     2438: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
+    2439: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? p.percHP <= 50.0 ? 2.75 : 1.5 : 1; }//change
+    },
     2440: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? Math.min(4.25, 3.0 + 0.25 * p.turnCounter) : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1.25 : 1; },
@@ -8649,6 +8653,30 @@ window.captains = {
     2441: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? Math.min(4.25, 3.0 + 0.25 * p.turnCounter) : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1.25 : 1; },
+    },
+    2442: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[2442].turnedOn[i]==true) {specialEnabled = true;}
+                if(window.specials[2443].turnedOn[i]==true) {specialEnabled = true;}
+            }
+            return p.unit.class.has("Driven") ? specialEnabled ? 1 : 1 : 1; },//change this
+    },
+    2443: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[2442].turnedOn[i]==true) {specialEnabled = true;}
+                if(window.specials[2443].turnedOn[i]==true) {specialEnabled = true;}
+            }
+            return p.unit.class.has("Driven") ? specialEnabled ? p.actions[p.sourceSlot] ? 3.5 : 1 : p.actions[p.sourceSlot] ? 2.75 : 1 : 1; },//change this
+    },
+    2444: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
     },
     2500: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },

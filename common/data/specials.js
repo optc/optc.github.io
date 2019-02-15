@@ -1788,7 +1788,7 @@ window.specials = {
         hit: function(n,p) { return n > 30 ? 2 : 1; },
     },
     1239: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1239].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -1801,7 +1801,7 @@ window.specials = {
         }
     },
     1240: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1240].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -3660,7 +3660,7 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); }
     },
     1807: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1807].turnedOn[p.slot] = true;
             if (p.captain) window.specials[1807].multiplier = p.captain.class.has("Slasher");
@@ -3677,7 +3677,7 @@ window.specials = {
         orb: function(p) { return window.specials[1807].multiplier ? p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     1808: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = true;
             if (p.captain) window.specials[1808].multiplier = p.captain.class.has("Slasher");
@@ -3900,7 +3900,7 @@ window.specials = {
         chainAddition: function(p) { return 0.5; }
     },
     1878: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1878].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -3913,7 +3913,7 @@ window.specials = {
         }
     },
     1879: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1879].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -4690,7 +4690,7 @@ window.specials = {
         }
     },
     2034: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2034].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -4943,7 +4943,7 @@ window.specials = {
         type: "type"
     },
     2087: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2087].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -4975,7 +4975,7 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     2092: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2092].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -5331,7 +5331,7 @@ window.specials = {
         warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     },
     2160: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2160].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -5345,7 +5345,7 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
     2161: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2161].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -5372,7 +5372,7 @@ window.specials = {
     },
     2168: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2168].multiplier, [p.friendCaptain, p.captain], p.effectName); },
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2168].turnedOn[p.slot] = true;
             var n = (window.specials[2168].multiplier == 1.75 ? 1 : window.specials[2168].multiplier == 2 ? 2 : 0);
@@ -5388,7 +5388,7 @@ window.specials = {
     },
     2169: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2169].multiplier, [p.friendCaptain, p.captain], p.effectName); },
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2169].turnedOn[p.slot] = true;
             var n = (window.specials[2169].multiplier == 1.75 ? 1 : window.specials[2169].multiplier == 2 ? 2 : 0);
@@ -5822,7 +5822,7 @@ window.specials = {
         }
     },
     2252: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2252].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -5836,7 +5836,7 @@ window.specials = {
         orb: function(p) { return (p.slot >= 2) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     2253: {
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2253].turnedOn[p.slot] = true;
             p.scope.notify({
@@ -6616,7 +6616,7 @@ window.specials = {
     },
     2398: {
         orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
-        turnedOn: [ false, false ],
+        turnedOn: [ false, false, false, false, false, false ],
         multiplier: true,
         onActivation: function(p) {
             window.specials[2398].turnedOn[p.slot] = window.specials[2398].multiplier ? true : false;
@@ -6968,6 +6968,32 @@ window.specials = {
             });
         },
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2442: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[2442].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Doflamingo is your captain',
+                name: '2442warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2442].turnedOn[p.slot] = false;
+        }
+    },
+    2443: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[2443].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Doflamingo is your captain',
+                name: '2443warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2443].turnedOn[p.slot] = false;
+        }
     },
     2500: {
         atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK") ? 1 : window.specials[2500].multiplier; },
