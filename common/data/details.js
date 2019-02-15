@@ -2322,11 +2322,11 @@ window.details = {
             {
                 "Characters": "Coby, Helmeppo and Aokiji",
                 "description": [
-                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK",
-                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
-                    "Level 3: Adds 8% of this character's base ATK to the supported character's base ATK",
-                    "Level 4: Adds 10% of this character's base ATK to the supported character's base ATK",
-                    "Level 5: Adds 13% of this character's base ATK to the supported character's base ATK"
+                    "Level 1: Adds 5% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 8% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 10% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 13% of this character's base HP to the supported character's base HP"
                 ]
             }
         ]
@@ -38800,13 +38800,13 @@ window.details = {
     },
     2284: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.75x and increases damage received by ?x.",
-        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your friend Captain's orb is [STR] or [DEX], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
+        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your friend Captain's orb is [STR], [DEX] or [RCV], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
         specialName: "Shark Slicer",
         sailor: "Boosts base ATK of all characters by 50",
     },
     2285: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 3.25x and increases damage received by ?x.",
-        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your friend Captain's orb is [STR] or [DEX], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
+        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your friend Captain's orb is [STR], [DEX] or [RCV], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
         specialName: "Shark Slicer",
         sailor: {
             "base": "Boosts base ATK of all characters by 50",
@@ -42701,11 +42701,11 @@ window.details = {
             {
                 "Characters": "Elizabello, Chinjao, Sai, Ideo and Hajrudin",
                 "description": [
-                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
-                    "Level 2: Adds 7% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
-                    "Level 3: Adds 10% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
-                    "Level 4: Adds 15% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
-                    "Level 5: Adds 20% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Crocodile and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns."
+                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Bartolomeo and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 2: Adds 7% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Bartolomeo and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 3: Adds 10% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Bartolomeo and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 4: Adds 15% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Bartolomeo and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns.",
+                    "Level 5: Adds 20% of this character's base ATK to the supported character's base ATK, boosts the supported character's ATK by 1.5x against Bartolomeo and when the supported character hits a PERFECT, reduces enemy's End of Turn Damage/Percent Cut duration by 5 turns."
                 ]
             }
         ]
