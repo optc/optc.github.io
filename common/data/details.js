@@ -42980,7 +42980,7 @@ window.details = {
         captain: "Boosts ATK of Driven characters by 3.5x, their HP by 1.2x and makes [PSY] and [INT] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
         specialName: "Black Knight Ambushing the \"D\"",
-        special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs for Driven characters by 2.5x for 1 turn",
+        special: "Changes adjacent orbs into matching orbs, amplifies the effect of orbs for Driven characters by 2.25x for 1 turn",
         specialNotes: "#{orb : 2x}",
         sailor: {
             "base": "None",
