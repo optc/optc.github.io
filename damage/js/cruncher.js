@@ -972,7 +972,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2508 || id == 2509))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441))
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232))
                 $scope.tdata.healCounter.enabled = true;
@@ -1212,7 +1212,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(getParameters(i));
                     });
-                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302].has(id)){
+                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
@@ -1223,6 +1223,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 1251 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp)) : 0;
                         healAmount += id == 1889 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) : 1.5 * (data.team[i].rcv + rcvtemp) : 0;
                         healAmount += id == 2211 ? capActions[i] ? 510 : 51 : 0;
+                        healAmount += id == 2443 ? capActions[i] ? 500 : 50 : 0;
                         healAmount += (id == 1000 || id == 1001 || id == 2195) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * hitsCount['Perfect']) : 0;
