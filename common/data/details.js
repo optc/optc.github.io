@@ -42756,7 +42756,7 @@ window.details = {
             },
         ],
     },
-    2009: {//Law
+    2438: {//Law
         captain: "Boosts ATK of Slasher characters by 1.5x",
         special: "Deals 30x character's ATK in [DEX] damage to one enemy. If enemies have a Defense Reduction debuff at the time the special was activated, boosts the Color Affinity of all characters by 1.5x and boosts ATK against enemies with reduced defense depending on your Treasure Map Level for 1 turn",
         specialName: "Shambles - Kikoku's Strike",
@@ -42786,7 +42786,7 @@ window.details = {
             },
         ],
     },
-    2009: {//Ussop
+    2439: {//Ussop
         captain: "Boosts ATK of Free Spirit characters by 2.75x if HP is below ?% at the start of the turn, by 1.5x otherwise",
         special: "Reduces crew's current HP by 50%, delays all enemies for 1 turn, removes all positive buffs on your team and reduces Bind, Despair, Paralysis and Silence duration by 1 turn.",
         specialName: "Usoland's Great Scream",
