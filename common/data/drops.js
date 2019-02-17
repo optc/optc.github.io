@@ -2139,8 +2139,9 @@ window.drops = {
         },
         
         {
-            name: 'Recover! King of Day Duke Inuarashi',
+            name: 'Comeback! "King of the day" Duke Dogstorm!',
             thumb: 2219,
+            global: true,
             nakama: 2221900,
             gamewith: 116883,
             'All Difficulties': [ 2218, 2220, 2221, -2007, -2027, -2031, -1783, -1538, -1536 ]
@@ -3077,6 +3078,7 @@ window.drops = {
         {
             name: 'Sweet Heart Memory',
             thumb: 1961,
+            global: true,
             nakama: 6196100,
             gamewith: 88896,
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
