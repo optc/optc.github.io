@@ -42734,15 +42734,15 @@ window.details = {
         special: "Reduces enemy Percent Damage Reduction duration by 3 turns reduces Chain Multiplier Limit duration by 3 turns, reduces the defense of all enemies by ?% for 1 turn and adds 40x character's ATK as Additional Typeless Damage 1 turns",
         specialName: "The Gentle \"Heart\" Resolution",
         limit: [
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 15" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 30" },
             { "description": "Acquire Potential 1: Barrier Penetration" },
         ],
         potential: [
@@ -42764,15 +42764,15 @@ window.details = {
         specialName: "Shambles - Kikoku's Strike",
         specialNotes: "Level 1-10: 1.75x conditional boost<br\>Level 11-20: 2x conditional boost<br\>Level 21+: 2.25x conditional boost",
         limit: [
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 15" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
-            { "description": "Boosts base " },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 30" },
             { "description": "Acquire Potential 1: Barrier Penetration" },
         ],
         potential: [
@@ -43009,7 +43009,7 @@ window.details = {
             }
         ]
     },
-    2444: {// Doflamingo 6+
+    2444: {//Doflamingo 6+
         captain: "Boosts ATK of Driven characters by 3.5x, their HP by 1.2x and makes [PSY] and [INT] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
         specialName: "Black Knight Ambushing the \"D\"",
