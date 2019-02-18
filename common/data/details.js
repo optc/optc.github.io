@@ -26466,7 +26466,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
             {
@@ -26480,13 +26480,13 @@ window.details = {
                 ]
             },
             {
-                "Name": "Reduce No Healing duration",
+                "Name": "Critical Hit",
                 "description": [
-                    "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turns",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
         ]
