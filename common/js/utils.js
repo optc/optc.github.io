@@ -139,7 +139,7 @@
             case 'skullCavendish':
             case 9025: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Cavendish_skull_f.png'; break;
             case 'skullDoflamingo':
-            case 9026: return /*'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f.png'*/; break;
+            case 9026: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f2.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -164,8 +164,8 @@
             case '2503': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5014.png'; break;
             case '2504': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5015.png'; break;
             case '2505': return '../res/character_10642_t1.png'; break;
-            case '2440': return '../res/character_10643_t1.png'; break;
-            case '2441': return '../res/character_10644_t1.png'; break;
+            //case '2440': return '../res/character_10643_t1.png'; break;
+            //case '2441': return '../res/character_10644_t1.png'; break;
             case '5000': return '../res/character_10185_t1.png'; break;
             case '5001': return '../res/character_10186_t1.png'; break;
             case '5002': return '../res/character_10187_t1_int.png'; break;
@@ -280,7 +280,7 @@
             case 'skullCavendish':
             case 9025: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Cavendish_skull_c.png'; break;
             case 'skullDoflamingo':
-            case 9026: return /*'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_c.png'*/; break;
+            case 9026: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_c2.png'; break;
         }
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
