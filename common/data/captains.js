@@ -8655,14 +8655,7 @@ window.captains = {
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1.25 : 1; },
     },
     2442: {
-        atk: function(p) {
-            var specialEnabled = false;
-            for(var i=0;i<6;i++)
-            {
-                if(window.specials[2442].turnedOn[i]==true) {specialEnabled = true;}
-                if(window.specials[2443].turnedOn[i]==true) {specialEnabled = true;}
-            }
-            return p.unit.class.has("Driven") ? specialEnabled ? 1 : 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
     },
     2443: {
         atk: function(p) {
@@ -8672,7 +8665,7 @@ window.captains = {
                 if(window.specials[2442].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[2443].turnedOn[i]==true) {specialEnabled = true;}
             }
-            return p.unit.class.has("Driven") ? specialEnabled ? p.actions[p.sourceSlot] ? 3.5 : 1 : p.actions[p.sourceSlot] ? 2.75 : 1 : 1; },//change this
+            return p.unit.class.has("Driven") ? specialEnabled ? p.actions[p.sourceSlot] ? 3.5 : 2 : p.actions[p.sourceSlot] ? 2.75 : 1.5 : 1; },//change this
     },
     2444: {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },

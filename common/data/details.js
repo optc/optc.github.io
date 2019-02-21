@@ -9458,30 +9458,30 @@ window.details = {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a PERFECT with this character, there is a 20% chance to deal 3% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a PERFECT with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 50% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
                     "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind completely on this character"
                 ]
             },
         ]
@@ -26466,7 +26466,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
             {
@@ -26480,13 +26480,13 @@ window.details = {
                 ]
             },
             {
-                "Name": "Reduce No Healing duration",
+                "Name": "Critical Hit",
                 "description": [
-                    "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turns",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
         ]
@@ -42794,15 +42794,15 @@ window.details = {
         specialName: "Usoland's Great Scream",
         sailor: "Reduces Silence duration on this character by 2 turns",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 30" },
             { "description": "Acquire Potential 1: Barrier Penetration" },
         ],
         potential: [
@@ -42911,13 +42911,13 @@ window.details = {
         ]
     },
     2442: {//TM Doflamingo
-        captain: "Boosts ATK of Driven characters by ?x and recovers ? HP at end of each turn. If you use \"Off White\" in this turn boosts ATK of Driven characters by ?x instead.",
+        captain: "Boosts ATK of Driven characters by 1.5x.",
         special: "Removes RCV DOWN duration completely and reduces damage received by 80% for 2 turns. If your Captain is a Driven character, changes all Driven character's orbs, including [BLOCK] orbs, into Matching orbs",
         specialName: "Off White",
     },
     2443: {//TM Doflamingo
         captain: {
-            "base": "Boosts ATK of Driven characters by ?x and recovers ? HP at end of each turn. If you use \"Off White\" in this turn boosts ATK of Driven characters by ?x instead.",
+            "base": "Boosts ATK of Driven characters by 1.5x. If you use \"Off White\" in this turn boosts ATK of Driven characters by 2x instead.",
             "level1": "Not Translated",
             "level2": "Not Translated",
             "level3": "Not Translated",
@@ -42932,37 +42932,37 @@ window.details = {
             "level1": "Reduces Silence duration on this character by 3 turns",
             "level2": "Boosts base ATK, HP and RCV of Driven characters by 30",
         },
-        /*limit: [
+        limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
-            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 10" },
             { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Acquire new Captain Ability: " },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Powerhouse and Driven characters by 50" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 20" },
             { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Acquire new Captain Ability: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base RCV by 30" },
             { "description": "Boosts base RCV by 30" },
-            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 40" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Boosts base ATK by 30" },
-            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability 2: Cannot be Blown Away" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of Driven characters by 30" },
             { "description": "Boosts base ATK by 35" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 50" },
@@ -42971,9 +42971,9 @@ window.details = {
             { "description": "Acquire new Captain Ability: " },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability: Boosts own ATK by 3.25x and boosts ATK of Driven and Powerhouse characters by 2.75x and their HP by 1.2x" },
-            { "description": "Acquire Potential 2: Critical Hit" },
-        ],*/
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2.75x and recovers 500 HP at end of each turn. If you use \"Off White\" in this turn boosts ATK of Driven characters by 3.5x instead." },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -43057,30 +43057,30 @@ window.details = {
                 "Name": "Critical Hit",
                 "description": [
                     "Level 1: If you hit a PERFECT with this character, there is a 20% chance to deal 3% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 2: If you hit a PERFECT with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 50% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
                     "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind completely on this character"
                 ]
             },
         ]
