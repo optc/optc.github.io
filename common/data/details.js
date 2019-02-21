@@ -43588,13 +43588,13 @@ window.details = {
     2516: {//V2 Whitebeard
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
         captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 4.5 : 1}",
-        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds .7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
+        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds .7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
         specialName: "Seismic Strike",
     },
     2517: {//V2 Whitebeard
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
         captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 4.5 : 1}",
-        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds .7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 1.75x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
+        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds .7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
         specialName: "Seismic Strike",
         potential: [
             {
