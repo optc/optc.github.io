@@ -518,7 +518,7 @@ window.ships = [
     
     { //39
         name: "Queen Mama Chanter",
-        thumb: null,
+        thumb: 'ship_0041_c.png',
         description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. Special: Changes bottom right orb into [RCV] (Cooldown: 6 turns). (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
         atk: function(p) {
