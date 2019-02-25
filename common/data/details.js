@@ -27469,12 +27469,12 @@ window.details = {
     },
     1803: {//Zoro
         captain: "Boosts ATK of Slasher characters by 2x",
-        special: "Deals 13x character's ATK in [DEX] to one enemy, removes enemies' End of Turn Damage/Percent Cut and randomizes all orbs, including [BLOCK] orbs",
+        special: "Deals 13x character's ATK in [DEX] to one enemy, removes enemies' End of Turn Damage/Percent Cut duration completely and randomizes all orbs, including [BLOCK] orbs",
         specialName: "To Become Stronger. Santoryu Ogi: Sanzen Sekai",
     },
     1804: {//Zoro
         captain: "Boosts ATK of Slasher characters by 2.25x and their HP by 1.3x",
-        special: "Deals 13x character's ATK in [DEX] to one enemy, removes enemies' End of Turn Damage/Percent Cut and randomizes all orbs, including [BLOCK] orbs",
+        special: "Deals 13x character's ATK in [DEX] to one enemy, removes enemies' End of Turn Damage/Percent Cut duration completely and randomizes all orbs, including [BLOCK] orbs",
         specialName: "To Become Stronger. Santoryu Ogi: Sanzen Sekai",
     },
     1805: {//Buggy
