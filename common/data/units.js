@@ -2515,7 +2515,7 @@ window.units = [
     [ "Roronoa Zoro, Three-Sword Style Swordsman in Chainmail", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1222, 599, 105, 2811, 1422, 181, 1 ],
     [ "Sanji, First Class Cook in Shining Armor", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1241, 594, 134, 3025, 1389, 252, 1 ],
     [ "Whitebeard, Great Pirate Who Created an Age", "QCK", [ "Powerhouse", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1194, 426, 14, null, null, null, null ],
-    [ "Whitebeard, Voiceless Rage", "QCK", [ "Powerhouse", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1, 1, 1, 3000, 1720, 100, null ],
+    [ "Whitebeard, Voiceless Rage", "QCK", [ "Powerhouse", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1820, 789, 40, 4504, 1520, 141, null ],
     [ "Nefertari Vivi, Wake of an Endless Dream - Princess of Alabasta", "DEX", [ "Slasher", "Striker" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Nefertari Vivi, Wake of an Endless Dream - Pirate Queen", "DEX", [ "Slasher", "Striker" ], 5, 30, 4, 5, 99, null, null, null, null, 2119, 1321, 388, null ],
     [ "Portgas D. Ace, Wake of an Endless Dream - Whitebeard Pirates", "STR", [ "Free Spirit", "Powerhouse" ], 4, 15, null, null, null, null, null, null, null, null, null, null, null ],
