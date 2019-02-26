@@ -7206,13 +7206,13 @@ window.details = {
     },
     712: {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of characters in the top row by 1.5x for 2 turns",
-        specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
+        specialNotes: "The special boosts the attack of only the crew's captain and the currently selected Friend captain.",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2x if HP is above 50% at the start of the turn"
     },
     713: {
         special: "Deals 15x character's ATK in [QCK] damage to one enemy, boosts ATK of characters in the top row by 1.5x for 2 turns",
-        specialNotes: "The special boosts the attack of only the crew's captain and the currently selected friend captain.",
+        specialNotes: "The special boosts the attack of only the crew's captain and the currently selected Friend captain.",
         specialName: "Sky Knight's Javelin",
         captain: "Boosts ATK of Striker characters by 2.5x if HP is above 50% at the start of the turn",
         support: [
@@ -9757,13 +9757,13 @@ window.details = {
     879: {
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Fighter characters by 1.75x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Changes all orbs, including [BLOCK] orbs, into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}"
     },
     880: {
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight, boosts ATK of Fighter characters by 2x",
         specialName: "Battle Preservation Fist: Manki Kayaku",
-        special: "Changes all orbs including [BLOCK] orbs into [G] orbs, deals random typeless damage to all enemies",
+        special: "Changes all orbs, including [BLOCK] orbs, into [G] orbs, deals random typeless damage to all enemies",
         specialNotes: "#{gOrbs}<br>#{random : 5,000 : 100,000}",
         sailor: {
             "base": "None",
@@ -11281,12 +11281,12 @@ window.details = {
     973:{
         captain: "Boosts ATK of Powerhouse characters by 2x if HP is above 99% at the start of the turn",
         specialName: "Ironclad Thrust: Dwarf Guard of the World",
-        special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
+        special: "Deals 20,000 fixed damage to one enemy. Changes Friend captain's orb into Matching orb"
     },
     974:{
         captain: "Boosts ATK of Powerhouse characters by 2.5x if HP is above 99% at the start of the turn",
         specialName: "Ironclad Thrust: Dwarf Guard of the World",
-        special: "Deals 20,000 fixed damage to one enemy. Changes friend captain's orb into Matching orb"
+        special: "Deals 20,000 fixed damage to one enemy. Changes Friend captain's orb into Matching orb"
     },
     975:{
         captain: "Reduces damage received by 10%",
@@ -12073,7 +12073,7 @@ window.details = {
     },
     1023: {
         captain: "Boosts ATK of Free Spirit characters by 2.25x",
-        special: "Deals 13x characters ATK in [INT] damage to all enemies, boosts ATK of Free Spirit characters by 1.75x for one turn.",
+        special: "Deals 13x character's ATK in [INT] damage to all enemies, boosts ATK of Free Spirit characters by 1.75x for one turn.",
         specialName: "Flame Mirror: Dawn"
     },
     1024: {
@@ -13349,13 +13349,13 @@ window.details = {
     1086: {
         captain: "Boosts ATK and RCV of Driven characters by 1.5x",
         specialNotes: "#{orb : 1.5x}",
-        special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
         specialName: "Lot Stiffen"
     },
     1087: {
         captain: "Boosts ATK of Driven characters by 2x and their RCV by 1.5x",
         specialNotes: "#{orb : 1.5x}",
-        special: "Randomizes all orbs including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs. Amplifies the effect of orbs by 1.5x for 2 turns",
         specialName: "Lot Stiffen"
     },
     1088: {
@@ -13458,7 +13458,7 @@ window.details = {
     },
     1098: {
         captain: "Boosts chain multiplier by 2x",
-        special: "Randomizes all orbs including [BLOCK] orbs and switches orbs between slots once.",
+        special: "Randomizes all orbs, including [BLOCK] orbs, and switches orbs between slots once.",
         specialName: "Mutation-Induced Thunder"
     },
     1099: {
@@ -13529,15 +13529,15 @@ window.details = {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.5x",
         special: [
             {
-                "description": "Recovers 12% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
+                "description": "Recovers 12% of crew's MAX HP and randomizes all orbs, including [BLOCK] orbs",
                 "cooldown": [ 21, 11 ]
             },
             {
-                "description": "Recovers 24% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
+                "description": "Recovers 24% of crew's MAX HP and randomizes all orbs, including [BLOCK] orbs",
                 "cooldown": [ 24, 14 ]
             },
             {
-                "description": "Recovers 36% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
+                "description": "Recovers 36% of crew's MAX HP and randomizes all orbs, including [BLOCK] orbs",
                 "cooldown": [ 27, 17 ]
             },
         ],
@@ -13548,15 +13548,15 @@ window.details = {
         captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
         special: [
             {
-                "description": "Recovers 12% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
+                "description": "Recovers 12% of crew's MAX HP and randomizes all orbs, including [BLOCK] orbs",
                 "cooldown": [ 21, 11 ]
             },
             {
-                "description": "Recovers 24% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
+                "description": "Recovers 24% of crew's MAX HP and randomizes all orbs, including [BLOCK] orbs",
                 "cooldown": [ 24, 14 ]
             },
             {
-                "description": "Recovers 36% of crew's MAX HP and randomizes all orbs including [BLOCK] orbs",
+                "description": "Recovers 36% of crew's MAX HP and randomizes all orbs, including [BLOCK] orbs",
                 "cooldown": [ 27, 17 ]
             },
         ],
@@ -14876,13 +14876,13 @@ window.details = {
     },
     1178: {
         captain: "Boosts ATK of [STR] characters by 2x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
-        special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
+        special: "Deals random typeless damage to all enemies. Randomizes all orbs, including [BLOCK] orbs.",
         specialName: "Not Rubber Gum-Gum Jet Gatling",
         specialNotes: "#{random : 30,000 : 150,000}",
     },
     1179: {
         captain: "Boosts ATK of [STR] characters by 2.75x if HP is above 99% at the start of the turn. Reduces damage received by 50%",
-        special: "Deals random typeless damage to all enemies. Randomizes all orbs including [BLOCK] orbs.",
+        special: "Deals random typeless damage to all enemies. Randomizes all orbs, including [BLOCK] orbs.",
         specialName: "Not Rubber Gum-Gum Jet Gatling",
         specialNotes: "#{random : 30,000 : 150,000}",
     },
@@ -15354,7 +15354,7 @@ window.details = {
     },
     1197: {
         captain: "Boosts ATK of Cerebral and Powerhouse characters by 2.5x if they have a matching orb, by 1x otherwise, reduces crew's RCV to 0",
-        special: "For Cerebral and Powerhouse characters, changes all orbs including [BLOCK] orbs to Badly Matching. Deals [INT] damage to all enemies",
+        special: "For Cerebral and Powerhouse characters, changes all orbs, including [BLOCK] orbs, to Badly Matching. Deals [INT] damage to all enemies",
         specialName: "Investigator of Sorrow",
     },
     1198: {
@@ -17080,7 +17080,7 @@ window.details = {
     },
     1284: {//Wild Luffy
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.2x",
-        special: "Reduces Bind and Silence duration by 3 turns. Randomizes non-matching orbs including [BLOCK] orbs",
+        special: "Reduces Bind and Silence duration by 3 turns. Randomizes non-matching orbs, including [BLOCK] orbs",
         specialNotes: "#{silence}",
         sailor: "Reduces Silence duration against this character by 3 turns",
         sailorNotes: "#{silence}",
@@ -17088,7 +17088,7 @@ window.details = {
     },
     1285: {//Wild Luffy Evolved
         captain: "Boosts ATK of Striker characters by 1.5x and their HP by 1.25x. Boosts ATK of Striker characters by 3.375x after scoring 3 PERFECTs in a row.",
-        special: "Reduces Bind and Silence duration by 3 turns. Randomizes non-matching orbs including [BLOCK] orbs",
+        special: "Reduces Bind and Silence duration by 3 turns. Randomizes non-matching orbs, including [BLOCK] orbs",
         specialNotes: "#{silence}",
         sailor: "Reduces Silence duration against this character by 3 turns",
         sailorNotes: "#{silence}",
@@ -17837,7 +17837,7 @@ window.details = {
                 "cooldown": [ 11, 4 ],
             },
             {
-                "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and friend's orb into Matching orbs",
+                "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and Friend's orb into Matching orbs",
                 "cooldown": [ 19, 12 ],
             }
         ],
@@ -17852,7 +17852,7 @@ window.details = {
                 "cooldown": [ 11, 4 ],
             },
             {
-                "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and friend's orb into Matching orbs",
+                "description": "Deal 15x character's ATK as [DEX] damage to one enemy, changes own and Friend's orb into Matching orbs",
                 "cooldown": [ 19, 12 ],
             }
         ],
@@ -18101,7 +18101,7 @@ window.details = {
     },
     1349: {//Haredas
         captain: "Boosts ATK of Cerebral characters by 1.5x and their RCV by 1.75x",
-        special: "Empty all slots including [BLOCK] orbs and boosts ATK of Cerebral characters by 1.2x for 1 turn",
+        special: "Empty all slots, including [BLOCK] orbs, and boosts ATK of Cerebral characters by 1.2x for 1 turn",
         specialName: "Gust 'Wind Knot'",
     },
     1350: {//Longarm Tribe Theives
@@ -19607,7 +19607,7 @@ window.details = {
     },
     1413: {//6+ Whitebeard
         captain: "Boosts ATK of all characters by 3x if HP is below 30% at the start of the turn, 1.75x otherwise and boosts the HP of all characters by 1.2x",
-        special: "Cuts the current HP of each enemy by 30%, reduces special cooldown of all non-Captain specials by 1 turn and randomizes non-matching orbs including [BLOCK] orbs.",
+        special: "Cuts the current HP of each enemy by 30%, reduces special cooldown of all non-Captain specials by 1 turn and randomizes non-matching orbs, including [BLOCK] orbs.",
         specialName: "Emperor's Pride",
         sailor: {
             "base": "None",
@@ -20761,12 +20761,12 @@ window.details = {
     },
     1466: {//White Day Cavendish
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
-        special: "Reduces the defense of all enemies by 100% for 1 turn and changes own orb into [PSY] and friend captain's orb into [STR]",
+        special: "Reduces the defense of all enemies by 100% for 1 turn and changes own orb into [PSY] and Friend captain's orb into [STR]",
         specialName: "Rosy Pleasure",
     },
     1467: {//White Day Cavendish
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2.25x and their RCV by 1.3x",
-        special: "Reduces the defense of all enemies by 100% for 1 turn and changes own orb into [PSY] and friend captain's orb into [STR]",
+        special: "Reduces the defense of all enemies by 100% for 1 turn and changes own orb into [PSY] and Friend captain's orb into [STR]",
         specialName: "Rosy Pleasure",
     },
     1468: {//Fortnight Sentomaru
@@ -20811,11 +20811,11 @@ window.details = {
         captain: "Boosts ATK of all characters by 2.25x, but boosts her OWN attack by 1.125x, recovers 5x character's RCV in HP at the end of each turn and if you don't attack with her, reduces damage received by 10% for that turn.",
         special: [
             {
-                "description": "Changes adjacent orbs, including [BLOCK] orbs into [RAINBOW] orbs, recovers 9x character's RCV in HP.",
+                "description": "Changes adjacent orbs, including [BLOCK] orbs, into [RAINBOW] orbs, recovers 9x character's RCV in HP.",
                 "cooldown": [ 13, 9 ],
             },
             {
-                "description": "Changes all orbs, including [BLOCK] orbs into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
+                "description": "Changes all orbs, including [BLOCK] orbs, into [RAINBOW] orbs, recovers 100x character's RCV in HP.",
                 "cooldown": [ 22, 18 ],
             },
         ],
@@ -22647,7 +22647,7 @@ window.details = {
     },
     1569: {//Anniversary Law
         captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
-        special: "Randomizes all non-matching orbs, including [BLOCK] orbs and switches orbs between slots three times",
+        special: "Randomizes all non-matching orbs, including [BLOCK] orbs, and switches orbs between slots three times",
         specialName: "ROOM Shambles・Junction",
     },
     1570: {//Inuarashi
@@ -22734,13 +22734,13 @@ window.details = {
     },
     1572: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2x and their RCV by 1.2x",
-        special: "Randomizes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         sailor: "Reduces Paralysis duration by 1 turn",
         specialName: "Ruler's Aide Flight",
     },
     1573: {//Wanda
         captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.2x",
-        special: "Randomizes all orbs, including [BLOCK] orbs into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
+        special: "Randomizes all orbs, including [BLOCK] orbs, into [STR], [DEX], [QCK], [INT], or [PSY] orbs, boosts ATK of Cerebral characters by 1.75x for 3 turns",
         specialName: "Ruler's Aide Flight",
         sailor: {
             "base": "Reduces Paralysis duration by 1 turn",
@@ -23897,7 +23897,7 @@ window.details = {
     },
     1625: {//Daruma
         captain: "Boosts ATK of Powerhouse and Fighter characters by 1.75x",
-        special: "Randomizes all orbs, including [BLOCK] orbs and reduces damage received by 50% for 1 turn.",
+        special: "Randomizes all orbs, including [BLOCK] orbs, and reduces damage received by 50% for 1 turn.",
         specialName: "Arching Fangs",
     },
     1626: {//Dosun
@@ -27971,6 +27971,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 20% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Inuarashi, Wanda and Pedro",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1829: {//Raid Caesar
@@ -28027,13 +28039,13 @@ window.details = {
         ]
     },
     1831: {//6* Judge
-        captain: "Increase the rate of [PSY] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
-        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn. If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
+        captain: "Increase the rate of [PSY] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn. If this character is the captain or the Friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs, including [BLOCK] orbs",
         specialName: "Dengi Crack",
     },
     1832: {//6* Judge
-        captain: "Increase the rate of [PSY] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
-        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn. If this character is the captain or the friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs including [BLOCK] orbs",
+        captain: "Increase the rate of [PSY] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        special: "Reduces bind duration by 7 turns and amplifies the effect of orbs by 2x for 1 turn. If this character is the captain or the Friend captain, slightly boosts the rate of [PSY] orbs and randomly shuffles all orbs, including [BLOCK] orbs",
         specialName: "Dengi Crack",
         sailor: {
             "base": "None",
@@ -28103,6 +28115,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind completely on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Ichiji, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1833: {//Reiju
@@ -28161,6 +28185,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 8 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji, Sanji and Yonji",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Poison or Toxic, recovers 1,000 HP",
+                    "Level 2: Once per adventure, when you are inflicted with Poison or Toxic, recovers 2,000 HP",
+                    "Level 3: Once per adventure, when you are inflicted with Poison or Toxic, recovers 4,000 HP",
+                    "Level 4: Once per adventure, when you are inflicted with Poison or Toxic, recovers 6,000 HP",
+                    "Level 5: Once per adventure, when you are inflicted with Poison or Toxic, recovers 7,000 HP"
+                ]
+            }
         ]
     },
     1835: {//Ichiji
@@ -28220,7 +28256,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Judge, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns",
+                    "Level 2: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns",
+                    "Level 3: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns",
+                    "Level 4: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns delays all enemies for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 2 turns delays all enemies for 1 turn"
+                ]
+            }
+        ]
     },
     1837: {//Niji
         captain: "Boosts ATK of [QCK] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x and the HP of Powerhouse characters by 1.2x",
@@ -28278,12 +28326,24 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 8 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn."
+                ]
+            }
         ]
     },
     1839: {//Yonji
         captain: "Boosts ATK of [DEX] characters by 1.75x, boosts ATK of Powerhouse characters by 1.2x and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [DEX] Powerhouse character has a 2.1x ATK",
-        special: "If your Captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your Captain is a Powerhouse character, adds 40x characters ATK as Additional Damage for 1 turn",
+        special: "If your Captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your Captain is a Powerhouse character, adds 40x character's ATK as Additional Damage for 1 turn",
         specialName: "Burst End Kick",
         specialNotes: "#{additionalDamage : 40x}",
         sailor: "Makes [PSY] orbs beneficial for this character",
@@ -28292,7 +28352,7 @@ window.details = {
     1840: {//Yonji
         captain: "Boosts ATK of [DEX] characters by 2.25x, boosts ATK of Powerhouse characters by 1.3x and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [DEX] Powerhouse character has a 2.925x ATK",
-        special: "If your Captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your Captain is a Powerhouse character, adds 40x characters ATK as Additional Damage for 1 turn",
+        special: "If your Captain is a [DEX] or [PSY] character, boosts ATK against delayed enemies by 1.75x for 1 turn. If your Captain is a Powerhouse character, adds 40x character's ATK as Additional Damage for 1 turn",
         specialName: "Burst End Kick",
         specialNotes: "#{additionalDamage : 40x}",
         sailor: {
@@ -28338,6 +28398,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 8 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji and Reiju",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, adds 10x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 2: Once per adventure, when you reach the final stage, adds 10x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 20x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 4: Once per adventure, when you reach the final stage, adds 20x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 5: Once per adventure, when you reach the final stage, adds 30x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn"
+                ]
+            }
         ]
     },
     1841: {//Caribou
@@ -29781,14 +29853,14 @@ window.details = {
     },
     1901:{//Pica
         captain: "Boosts ATK of Driven characters by 1.2x and their HP by 1.75x",
-        special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs including [BLOCK] orbs on Driven characters into [G] orbs",
+        special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs, including [BLOCK] orbs, on Driven characters into [G] orbs",
         specialNotes: "#{gOrbs}",
         specialName: "The Toughest Trump Card",
         sailor: "Cannot be Blown Away",
     },
     1902:{//Pica
         captain: "Boosts ATK of Driven characters by 1.75x and their HP by 2.25x",
-        special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs including [BLOCK] orbs on Driven characters into [G] orbs",
+        special: "Cuts the current HP of one enemy by 20%, reduces Bind and Despair duration by 4 turns, changes all orbs, including [BLOCK] orbs, on Driven characters into [G] orbs",
         specialNotes: "#{gOrbs}",
         specialName: "The Toughest Trump Card",
         sailor: {
@@ -30667,13 +30739,13 @@ window.details = {
     1934: {//Legend Franky
         captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3x and their HP by 1.3x. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
         captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
-        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
+        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
     },
     1935: {//Legend Franky
         captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3x and their HP by 1.3x. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
         captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
-        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
+        special: "Cuts the current HP of all enemies by 10%, randomizes all non-matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
         sailor: {
             "base": "None",
@@ -31680,8 +31752,8 @@ window.details = {
     1984: {//Luffy&Ace
         captain: {
             "character1": "Boosts ATK of Free Spirit characters by 3x and their HP by 1.2x and reduce damage received by 15%",
-            "character2": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise",
-            "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
+            "character2": "Boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise and boosts HP of Free Spirit characters by 1.2x",
+            "combined": "Boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise, boosts HP of Free Spirit characters by 1.2x and reduce damage received by 20%"
         },
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
@@ -31696,8 +31768,8 @@ window.details = {
     1985: {//Luffy&Ace
         captain: {
             "character1": "Boosts ATK of Free Spirit characters by 3x and their HP by 1.2x and reduce damage received by 15%",
-            "character2": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise",
-            "combined": "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%"
+            "character2": "Boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise and boosts HP of Free Spirit characters by 1.2x",
+            "combined": "Boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise, boosts HP of Free Spirit characters by 1.2x and reduce damage received by 20%"
         },
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
@@ -32066,12 +32138,12 @@ window.details = {
     },
     1996: {//FN Vista
         captain: "Boosts ATK of Slasher characters by 1.75x",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes all non-matching orbs, including [BLOCK] orbs and delays all enemies for 1 turn",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes all non-matching orbs, including [BLOCK] orbs, and delays all enemies for 1 turn",
         specialName: "Fast Revolving Strike",
     },
     1997: {//FN Vista
         captain: "Reduces cooldown of Slasher specials by 1 turn at the start of the fight, boosts ATK of Slasher characters by 2.475x after scoring 3 Greats in a row, by 2.25x otherwise.",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes all non-matching orbs, including [BLOCK] orbs and delays all enemies for 1 turn",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, randomizes all non-matching orbs, including [BLOCK] orbs, and delays all enemies for 1 turn",
         specialName: "Fast Revolving Strike",
     },
     1998: {//Sanji
@@ -34112,7 +34184,7 @@ window.details = {
     },
     2095: {//Pizza Robin
         captain: "Boosts ATK of [INT] characters by 1.5x and their HP and RCV by 1.2x",
-        special: "Reduces Blindness duration by 3 turns, boosts chances of getting matching orbs for 3 turns and randomizes non-matching orbs including [BLOCK] orbs.",
+        special: "Reduces Blindness duration by 3 turns, boosts chances of getting matching orbs for 3 turns and randomizes non-matching orbs, including [BLOCK] orbs.",
         specialName: "Gorgeous Small Break",
     },
     2096: {//Raid Zoro
@@ -34370,14 +34442,14 @@ window.details = {
     },
     2104: {//Mr. Tanaka
         captain: "Boosts ATK of Free Spirit and Shooter characters by 1.75x and boosts HP of [DEX] characters by 1.2x",
-        special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is a [DEX] or [QCK] character, Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
+        special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is a [DEX] or [QCK] character, Changes own orb into [DEX] and adds 40x character's ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
         specialNotes: "#{ignoreBarrier}",
         sailor: "If this character has a [DEX] orb and you hit a GOOD or GREAT with him, keep his [DEX] orb for the next turn",
     },
     2105: {//Mr. Tanaka
         captain: "Boosts ATK of Free Spirit and Shooter characters by 2.25x and boosts HP of [DEX] characters by 1.2x",
-        special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is a [DEX] or [QCK] character, Changes own orb into [DEX] and adds 40x characters ATK as additional typeless damage for 1 turn",
+        special: "Deal 40x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies ATK UP, Increased Defense and Enrage duration by 3 turns. If your captain is a [DEX] or [QCK] character, Changes own orb into [DEX] and adds 40x character's ATK as additional typeless damage for 1 turn",
         specialName: "A Tormenting Show",
         specialNotes: "#{ignoreBarrier}",
         sailor: {
@@ -34480,7 +34552,7 @@ window.details = {
     },
     2108: {//Big Mom
         captain: "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 1.5x, boosts damage of [STR], [DEX], [QCK], [PSY] and [INT] specials by 1.2x and cuts the current HP of each enemy by 5% at the end of each turn. Recovers 0.5x character's RCV in HP at the end of each turn.",
-        special: "Removes all positive buffs on your team, changes all orbs, including [BLOCK] orbs into [G] orbs, amplifies the effect of orbs by 3x for 1 turn, boosts ATK of all characters by 1.25x for 1 turn and boosts the Color Affinity of all characters by 1.25x for 1 turn",
+        special: "Removes all positive buffs on your team, changes all orbs, including [BLOCK] orbs, into [G] orbs, amplifies the effect of orbs by 3x for 1 turn, boosts ATK of all characters by 1.25x for 1 turn and boosts the Color Affinity of all characters by 1.25x for 1 turn",
         specialName: "The Harmony that Interweaves the Souls",
     },
     2109: {//Big Mom
@@ -34493,7 +34565,7 @@ window.details = {
             "level5": "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 1.75x, boosts damage of [STR], [DEX], [QCK], [PSY] and [INT] specials by 2x and cuts the current HP of each enemy by 10% at the end of each turn. Recovers 1.5x character's RCV in HP at the end of each turn.",
             "level6": "If there's a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2x, boosts damage of [STR], [DEX], [QCK], [PSY] and [INT] specials by 3x and cuts the current HP of each enemy by 10% at the end of each turn. Recovers 2x character's RCV in HP at the end of each turn.",
         },
-        special: "Removes all positive buffs on your team, changes all orbs, including [BLOCK] orbs into [G] orbs, amplifies the effect of orbs by 3x for 1 turn, boosts ATK of all characters by 1.25x for 1 turn and boosts the Color Affinity of all characters by 1.25x for 1 turn",
+        special: "Removes all positive buffs on your team, changes all orbs, including [BLOCK] orbs, into [G] orbs, amplifies the effect of orbs by 3x for 1 turn, boosts ATK of all characters by 1.25x for 1 turn and boosts the Color Affinity of all characters by 1.25x for 1 turn",
         specialName: "The Harmony that Interweaves the Souls",
         sailor: {
             "base": "None",
@@ -34866,7 +34938,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Bobbin, Mont-D'or, Opera and Galette",
+                "description": [
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
     },
     2118: {//Bobbin
         captain: "Boosts ATK of [QCK] and [PSY] characters by 2x",
@@ -34920,6 +35004,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[QCK] Characters",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with ATK DOWN, changes supported character's adjacent orbs into Matching Orbs",
+                    "Level 2: Once per adventure, when you are inflicted with ATK DOWN, changes supported character's adjacent orbs into Matching Orbs",
+                    "Level 3: Once per adventure, when you are inflicted with ATK DOWN, changes supported character's adjacent orbs into Matching Orbs",
+                    "Level 4: Once per adventure, when you are inflicted with ATK DOWN, changes supported character's adjacent orbs into Matching Orbs",
+                    "Level 5: Once per adventure, when you are inflicted with ATK DOWN, changes supported character's own orb and adjacent orbs into Matching Orbs"
+                ]
+            }
         ]
     },
     2120: {//Oven
@@ -35215,8 +35311,8 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2138: {//6+ Judge
-        captain: "Increase the rate of [INT] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, makes Badly Matching orbs beneficial for all characters boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
-        special: "Reduces damage received by 30% for 2 turns and boosts ATK of Fighter, Driven and Powerhouse characters by 2x for 1 turn. If this character is the captain or the friend captain, changes all orbs, including [BLOCK] orbs, to [INT] orbs",
+        captain: "Increase the rate of [INT] orbs, reduces damage received by 15%, boosts the HP of all characters by 1.25x and if there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, makes Badly Matching orbs beneficial for all characters boosts ATK of all characters by 3.9375x if they have a matching orb, by 2.25x otherwise",
+        special: "Reduces damage received by 30% for 2 turns and boosts ATK of Fighter, Driven and Powerhouse characters by 2x for 1 turn. If this character is the captain or the Friend captain, changes all orbs, including [BLOCK] orbs, to [INT] orbs",
         specialName: "Dengi Crack - Blaster",
         sailor: {
             "base": "None",
@@ -35286,6 +35382,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind completely on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Ichiji, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     2139: {//Reiju
@@ -35337,6 +35445,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 8 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji, Sanji and Yonji",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Poison or Toxic, recovers 1,000 HP",
+                    "Level 2: Once per adventure, when you are inflicted with Poison or Toxic, recovers 2,000 HP",
+                    "Level 3: Once per adventure, when you are inflicted with Poison or Toxic, recovers 4,000 HP",
+                    "Level 4: Once per adventure, when you are inflicted with Poison or Toxic, recovers 6,000 HP",
+                    "Level 5: Once per adventure, when you are inflicted with Poison or Toxic, recovers 7,000 HP"
+                ]
+            }
         ]
     },
     2140: {//Ichiji
@@ -35388,7 +35508,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Judge, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns",
+                    "Level 2: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns",
+                    "Level 3: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns",
+                    "Level 4: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 1 turns delays all enemies for 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Increase Damage Taken, reduces Increase Damage Taken duration by 2 turns delays all enemies for 1 turn"
+                ]
+            }
+        ]
     },
     2141: {//Niji
         captain: "Boosts ATK of [DEX] characters by 2.25x, boosts ATK of Powerhouse characters by 1.4x and the HP of Powerhouse characters by 1.2x",
@@ -35438,12 +35570,24 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 8 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn.",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemy's ATK UP and Enrage duration by 1 turn."
+                ]
+            }
         ]
     },
     2142: {//Yonji
         captain: "Boosts ATK of [STR] characters by 2.25x, boosts ATK of Powerhouse characters by 1.4x and the HP of Powerhouse characters by 1.2x",
         captainNotes: "Attack boost stacks, so a [STR] Powerhouse character has a 3.15x ATK",
-        special: "If your Captain is a [STR] or [INT] character, adds 55x characters ATK as additional typeless damage for 1 turn. If your Captain is a Powerhouse character, reduces enemies Percent Damage Reduction and Threshold Damage Reduction duration by 3 turns",
+        special: "If your Captain is a [STR] or [INT] character, adds 55x character's ATK as additional typeless damage for 1 turn. If your Captain is a Powerhouse character, reduces enemies Percent Damage Reduction and Threshold Damage Reduction duration by 3 turns",
         specialName: "Burst End Iron Arm",
         specialNotes: "#{additionalDamage : 55x}",
         sailor: {
@@ -35489,6 +35633,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 8 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji and Reiju",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, adds 10x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 2: Once per adventure, when you reach the final stage, adds 10x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 20x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 4: Once per adventure, when you reach the final stage, adds 20x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn",
+                    "Level 5: Once per adventure, when you reach the final stage, adds 30x supported character's ATK as Additional Damage to Powerhouse character's attacks for 1 turn"
+                ]
+            }
         ]
     },
     2143: {//Diamante
@@ -36108,6 +36264,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Fighter Characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, reduces Despair duration by 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, reduces Despair duration by 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, reduces Despair duration by 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, reduces Despair duration by 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, reduces Despair duration by 2 turns."
+                ]
+            }
         ]
     },
     2164: {//Baby 5
@@ -37600,7 +37768,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Cracker and Katakuri",
+                "description": [
+                    "Level 1: Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 2: Adds 4% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 3: Adds 7% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 4: Adds 8% of this character's base HP and RCV to the supported character's base HP and RCV",
+                    "Level 5: Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV"
+                ]
+            }
+        ]
     },
     2239: {//Perospero
         captain: "Boosts ATK of characters with a of cost 50 or higher by 3x and their HP and RCV by 1.1x",
@@ -38167,7 +38347,7 @@ window.details = {
     },
     2260: {//Shanks
         captain: "Boosts ATK of Free Spirit and Cerebral characters by 2x if HP is above 99%, by 1.5x otherwise, recovers 1.2x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
-        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting matching orbs for 1 turn, randomizes all non-matching orbs, including [BLOCK] orbs and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
+        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting matching orbs for 1 turn, randomizes all non-matching orbs, including [BLOCK] orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
         specialName: "Great Pirate's Majesty",
         specialNotes: "#{additionalDamage : 60x}",
     },
@@ -38181,7 +38361,7 @@ window.details = {
             "level5": "Not Translated",
             "level6": "Boosts ATK of Free Spirit and Cerebral characters by 3x if HP is above 99%, by 2.5x otherwise, recovers 1.75x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
         },
-        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting matching orbs for 1 turn, randomizes all non-matching orbs, including [BLOCK] orbs and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
+        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting matching orbs for 1 turn, randomizes all non-matching orbs, including [BLOCK] orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
         specialName: "Great Pirate's Majesty",
         specialNotes: "#{additionalDamage : 60x}",
         sailor: {
@@ -38393,13 +38573,13 @@ window.details = {
     },
     2266: {//Aladdin
         captain: "Boosts ATK of Powerhouse characters by 2.25x",
-        special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your friend Captain's orb is [DEX], amplifies the effect of orbs for all characters by 1.75x for 3 turns.",
+        special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your Friend Captain's orb is [DEX], amplifies the effect of orbs for all characters by 1.75x for 3 turns.",
         specialName: "The Fishman Preparing to Strike Back",
         sailor: "Adds 2x character's ATK as Additional Damage",
     },
     2267: {//Aladdin
         captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.25x",
-        special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your friend Captain's orb is [DEX], amplifies the effect of orbs for all characters by 1.75x for 3 turns.",
+        special: "Reduces Bind and Despair duration by 3 turns, locks all orbs for 1 turn, changes right column orbs, from top to bottom, into [RCV], [INT] and [QCK] orbs. If your Friend Captain's orb is [DEX], amplifies the effect of orbs for all characters by 1.75x for 3 turns.",
         specialName: "The Fishman Preparing to Strike Back",
         sailor: {
             "base": "Adds 2x character's ATK as Additional Damage",
@@ -38739,6 +38919,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Ichiji, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     2282: {//Sengoku
@@ -38800,13 +38992,13 @@ window.details = {
     },
     2284: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.75x and increases damage received by ?x.",
-        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your friend Captain's orb is [STR], [DEX] or [RCV], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
+        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your Friend Captain's orb is [STR], [DEX] or [RCV], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
         specialName: "Shark Slicer",
         sailor: "Boosts base ATK of all characters by 50",
     },
     2285: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 3.25x and increases damage received by ?x.",
-        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your friend Captain's orb is [STR], [DEX] or [RCV], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
+        special: "Deals 50x character's ATK in [STR] damage to all enemies, changes the orbs in the left column into [DEX], [STR] and [PSY], the orbs in the right column into [TND], [QCK] and [INT]. If your Friend Captain's orb is [STR], [DEX] or [RCV], amplifies the effect of orbs for Powerhouse characters by 2.25x for 1 turn.",
         specialName: "Shark Slicer",
         sailor: {
             "base": "Boosts base ATK of all characters by 50",
@@ -38910,19 +39102,19 @@ window.details = {
     },
     2288: {//Tamago
         captain: "Boosts ATK of Slasher and Striker characters by 2.25x",
-        special: "Deals 120x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and changes [EMPTY] orbs into Matching orbs. If your friend Captain's orb is [RCV] or [TND], adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes [RCV] and [TND] orbs into Matching orbs. If your friend Captain's orb is [STR], [DEX], [QCK], [PSY] or [INT], changes orbs in the top row to [RCV], boosts RCV of all characters by 1.5x for 2 turns and reduces damage received by 60% for 2 turns.",
+        special: "Deals 120x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and changes [EMPTY] orbs into Matching orbs. If your Friend Captain's orb is [RCV] or [TND], adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes [RCV] and [TND] orbs into Matching orbs. If your Friend Captain's orb is [STR], [DEX], [QCK], [PSY] or [INT], changes orbs in the top row to [RCV], boosts RCV of all characters by 1.5x for 2 turns and reduces damage received by 60% for 2 turns.",
         specialName: "Chicken Wing Edge",
         sailor: "Boosts base ATK of Slasher and Striker characters by 50",
     },
     2289: {//Tamago
         captain: "Boosts ATK of Slasher and Striker characters by 2.25x and reduces damage received by 7%",
-        special: "Deals 120x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and changes [EMPTY] orbs into Matching orbs. If your friend Captain's orb is [RCV] or [TND], adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes [RCV] and [TND] orbs into Matching orbs. If your friend Captain's orb is [STR], [DEX], [QCK], [PSY] or [INT], changes orbs in the top row to [RCV], boosts RCV of all characters by 1.5x for 2 turns and reduces damage received by 60% for 2 turns.",
+        special: "Deals 120x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and changes [EMPTY] orbs into Matching orbs. If your Friend Captain's orb is [RCV] or [TND], adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes [RCV] and [TND] orbs into Matching orbs. If your Friend Captain's orb is [STR], [DEX], [QCK], [PSY] or [INT], changes orbs in the top row to [RCV], boosts RCV of all characters by 1.5x for 2 turns and reduces damage received by 60% for 2 turns.",
         specialName: "Chicken Wing Edge",
         sailor: "Boosts base ATK of Slasher and Striker characters by 50",
     },
     2290: {//Tamago
         captain: "Boosts ATK of Slasher and Striker characters by 2.75x if they have a matching orb, by 2.25x otherwise and reduces damage received by 7%",
-        special: "Deals 120x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and changes [EMPTY] orbs into Matching orbs. If your friend Captain's orb is [RCV] or [TND], adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes [RCV] and [TND] orbs into Matching orbs. If your friend Captain's orb is [STR], [DEX], [QCK], [PSY] or [INT], changes orbs in the top row to [RCV], boosts RCV of all characters by 1.5x for 2 turns and reduces damage received by 60% for 2 turns.",
+        special: "Deals 120x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers and changes [EMPTY] orbs into Matching orbs. If your Friend Captain's orb is [RCV] or [TND], adds 45x character's ATK as Additional Typeless Damage for 2 turns and changes [RCV] and [TND] orbs into Matching orbs. If your Friend Captain's orb is [STR], [DEX], [QCK], [PSY] or [INT], changes orbs in the top row to [RCV], boosts RCV of all characters by 1.5x for 2 turns and reduces damage received by 60% for 2 turns.",
         specialName: "Chicken Wing Edge",
         sailor: {
             "base": "Boosts base ATK of Striker and Slasher characters by 50",
@@ -41956,13 +42148,13 @@ window.details = {
     },
     2404: {//World Clash Akainu
         captain: "Boosts ATK of [QCK] characters by 2x at the start of the chain, boosts ATK by 3x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by 1.2x",
-        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes all orbs, including [BLOCK] orbs on [STR] and [QCK] characters into Matching orbs. If your crew has 2 or more [STR] or [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes all orbs, including [BLOCK] orbs, on [STR] and [QCK] characters into Matching orbs. If your crew has 2 or more [STR] or [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Grave Threat",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
     2405: {//World Clash Akainu
         captain: "Boosts ATK of [QCK] characters by 3x at the start of the chain, boosts ATK by 4x following a chain of [DEX] > [STR] > [QCK] attacks no lower than Good and boosts their HP by 1.2x",
-        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes all orbs, including [BLOCK] orbs on [STR] and [QCK] characters into Matching orbs. If your crew has 2 or more [STR] or [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
+        special: "Reduces ATK DOWN and Increase Damage Taken duration by 5 turns, changes all orbs, including [BLOCK] orbs, on [STR] and [QCK] characters into Matching orbs. If your crew has 2 or more [STR] or [DEX] characters, boosts ATK of [QCK] characters by 2.25x for 1 turn, by 1.75x otherwise.",
         specialName: "Grave Threat",
         sailor: "Boosts base ATK, HP and RCV of STR, DEX and QCK characters by 30",
     },
@@ -43007,7 +43199,7 @@ window.details = {
             }
         ]
     },
-    2444: {// Doflamingo 6+
+    2444: {//Doflamingo 6+
         captain: "Boosts ATK of Driven characters by 3.5x, their HP by 1.2x and makes [PSY] and [INT] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
         specialName: "Black Knight Ambushing the \"D\"",
@@ -43081,6 +43273,425 @@ window.details = {
                     "Level 5: Reduces Slot Bind completely on this character"
                 ]
             },
+        ]
+    },
+    2445: {//Sanji&Judge
+        captain: {
+            "character1": "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [RCV] and [TND] orbs beneficial for Powerhouse characters.",
+            "character2": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [PSY] orbs beneficial for all characters.",
+            "combined": "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 4.25x. If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts HP of Powerhouse characters by 1.25x and makes [PSY], [RCV] and [TND] orbs beneficial for all characters."
+        },
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: {
+            "character1": "Makes [TND] and [RCV] orbs beneficial for this character",
+            "character2": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
+            "combined": "Boosts base ATK, HP and RCV of Powerhouse characters by 75"
+        },
+    },
+    2446: {//Sanji&Judge
+        captain: {
+            "character1": "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [RCV] and [TND] orbs beneficial for Powerhouse characters.",
+            "character2": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [PSY] orbs beneficial for all characters.",
+            "combined": "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 4.25x. If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts HP of Powerhouse characters by 1.25x and makes [PSY], [RCV] and [TND] orbs beneficial for all characters."
+        },
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: {
+            "character1": "Makes [TND] and [RCV] orbs beneficial for this character",
+            "character2": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
+            "combined": "Boosts base ATK, HP and RCV of Powerhouse characters by 75",
+            "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character",
+                    //"Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ]
+    },
+    2447: {//Ichiji
+        captain: "Boosts ATK of Powerhouse characters and [STR] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, deals 100x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], delays all enemies for 1 turn and reduces the defense of all enemies by 100% for 1 turn.",
+        specialName: "Ichiji Special",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character",
+                    //"Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Judge, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
+    2448: {//Ichiji
+        captain: "Boosts ATK of Powerhouse characters and [STR] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, deals 120x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], removes enemy's Defense Reduction Debuff Protection, delays all enemies for 2 turns and reduces the defense of all enemies by 100% for 1 turn.",
+        specialName: "Ichiji Special",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [STR] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character",
+                    //"Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Judge, Niji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
+    2449: {//Niji
+        captain: "Boosts ATK of Powerhouse characters and [QCK] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, boosts ATK against enemies with reduced defense by 1.75x for 1 turn. If your Captain's orb or Friend Captain's orb is [TND], changes all orbs, including [BLOCK] orbs, into [TND] orbs and makes [TND] orbs beneficial for all characters for 1 turn.",
+        specialName: "Niji Special",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
+    },
+    2450: {//Niji
+        captain: "Boosts ATK of Powerhouse characters and [QCK] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, boosts ATK against enemies with reduced defense by 2x for 1 turn. If your Captain's orb or Friend Captain's orb is [TND], changes all orbs, including [BLOCK] orbs, into [TND] orbs and makes [TND] orbs beneficial for all characters for 1 turn.",
+        specialName: "Niji Special",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [QCK] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Yonji and Reiju",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
+    },
+    2451: {//Yonji
+        captain: "Boosts ATK of Powerhouse characters and [DEX] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, reduces ATK DOWN, Bind and Despair duration by 4 turns. If your Captain's orb or Friend Captain's orb is [TND], boosts the Color Affinity of all characters by 1.75x for 1 turn.",
+        specialName: "Yonji Special",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji and Reiju",
+                "description": [
+                    "Level 1: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP"
+                ]
+            }
+        ]
+    },
+    2452: {//Yonji
+        captain: "Boosts ATK of Powerhouse characters and [DEX] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, reduces ATK DOWN, Bind and Despair duration by 5 turns. If your Captain's orb or Friend Captain's orb is [TND], boosts the Color Affinity of all characters by 2x for 1 turn.",
+        specialName: "Yonji Special",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [DEX] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji and Reiju",
+                "description": [
+                    "Level 1: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds ?% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP"
+                ]
+            }
+        ]
+    },
+    2453: {//Reiju
+        captain: "Boosts ATK of Powerhouse characters and [INT] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, poisons all enemies and reduces damage received by 70% for 2 turns. If your Captain's orb or Friend Captain's orb is [TND], reduces enemy's Threshold Damage Reduction, Percent Damage Reduction and Increased Defense Buffs duration by 4 turns.",
+        specialName: "Reiju Special",
+        specialNotes: "Poison deals ?x character's ATK in fixed damage at the end of each turn.",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji and Yonji",
+                "description": [
+                    "Level 1: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Adds 15% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
+        ]
+    },
+    2454: {//Reiju
+        captain: "Boosts ATK of Powerhouse characters and [INT] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
+        special: "If there are 6 Powerhouse characters in your crew, poisons all enemies and reduces damage received by 70% for 2 turns. If your Captain's orb or Friend Captain's orb is [TND], reduces enemy's Threshold Damage Reduction, Percent Damage Reduction and Increased Defense Buffs duration by 5 turns.",
+        specialNotes: "Poison deals 75x character's ATK in fixed damage at the end of each turn.",
+        specialName: "Reiju Special",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [INT] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Judge, Ichiji, Niji and Yonji",
+                "description": [
+                    "Level 1: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Adds ?% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Adds 15% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
+        ]
+    },
+    2455: {//Sora
+        captain: "Boosts ATK and RCV of all characters by 1.75x and recovers 500 HP at end of each turn.",
+        special: "Reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns and boosts chances of getting [PSY] orbs for 3 turns.",
+        specialName: "Sora Special",
+        support: [
+            {
+                "Characters": "Sanji, Judge, Reiju, Ichiji, Niji and Yonji",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, changes supported character's orb, including [BLOCK] orbs, into a [TND] orb, reduces Special Cooldown of supported character by ? turn and recovers ? HP",
+                    "Level 2: Once per adventure, when you reach the final stage, changes supported character's orb, including [BLOCK] orbs, into a [TND] orb, reduces Special Cooldown of supported character by ? turn and recovers ? HP",
+                    "Level 3: Once per adventure, when you reach the final stage, changes supported character's orb, including [BLOCK] orbs, into a [TND] orb, reduces Special Cooldown of supported character by ? turn and recovers ? HP",
+                    "Level 4: Once per adventure, when you reach the final stage, changes supported character's orb, including [BLOCK] orbs, into a [TND] orb, reduces Special Cooldown of supported character by ? turn and recovers ? HP",
+                    "Level 5: Once per adventure, when you reach the final stage, changes supported character's orb, including [BLOCK] orbs, into a [TND] orb, reduces Special Cooldown of supported character by 1 turn and recovers 3,000 HP"
+                ]
+            }
         ]
     },
     2500: {//Big Mom
@@ -43695,6 +44306,30 @@ window.details = {
         sailorNotes: "#{beneficial}",
     },
     5005: {//Luffy&Ace
+        captain: "Boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise and boosts their HP by 1.2x",
+        special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
+        specialName: "Brotherly Bond",
+        sailor: "Makes [STR] orbs beneficial for Free Spirit characters",
+        sailorNotes: "#{beneficial}",
+    },
+    5006: {//Luffy&Ace
+        captain: "Boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise, boosts HP of Free Spirit characters by 1.2x and reduce damage received by 20%",
+        special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
+        specialName: "Brotherly Bond",
+        sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
+        sailorNotes: "#{beneficial}",
+    },
+    5007: {//Luffy&Ace
+        captain: "Boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise, boosts HP of Free Spirit characters by 1.2x and reduce damage received by 20%",
+        special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
+        specialName: "Brotherly Bond",
+        sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
+        sailorNotes: "#{beneficial}",
+    },
+    5008: {//Luffy&Ace
         captain: "Boosts ATK of Free Spirit characters by 3x and their HP by 1.2x and reduce damage received by 15%",
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
@@ -43769,16 +44404,8 @@ window.details = {
             },
         ],
     },
-    5006: {//Luffy&Ace
-        captain: "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise",
-        special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
-        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
-        specialName: "Brotherly Bond",
-        sailor: "Makes [STR] orbs beneficial for Free Spirit characters",
-        sailorNotes: "#{beneficial}",
-    },
-    5007: {//Luffy&Ace
-        captain: "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise",
+    5009: {//Luffy&Ace
+        captain: "Boosts ATK of Free Spirit characters by 3.5x if they have a matching orb, by 2.25x otherwise and boosts their HP by 1.2x",
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
         specialName: "Brotherly Bond",
@@ -43852,24 +44479,8 @@ window.details = {
             },
         ],
     },
-    5008: {//Luffy&Ace
-        captain: "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%",
-        special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
-        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
-        specialName: "Brotherly Bond",
-        sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
-        sailorNotes: "#{beneficial}",
-    },
-    5009: {//Luffy&Ace
-        captain: "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%",
-        special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
-        specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
-        specialName: "Brotherly Bond",
-        sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 150",
-        sailorNotes: "#{beneficial}",
-    },
     5010: {//Luffy&Ace
-        captain: "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%",
+        captain: "Boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise, boosts HP of Free Spirit characters by 1.2x and reduce damage received by 20%",
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
         specialName: "Brotherly Bond",
@@ -43944,7 +44555,7 @@ window.details = {
         ],
     },
     5011: {//Luffy&Ace
-        captain: "Boosts HP of Free Spirit characters by 1.2x and boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise and reduce damage received by 20%",
+        captain: "Boosts ATK of Free Spirit characters by 4.25x if they have a matching orb, by 3x otherwise, boosts HP of Free Spirit characters by 1.2x and reduce damage received by 20%",
         special: "Deals 75x character's ATK in typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Free Spirit characters into Matching orbs, amplifies the effect of orbs by 2x for 1 turn and becomes Luffy & Ace for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Despair, Paralysis and Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb",
         specialName: "Brotherly Bond",
@@ -44330,6 +44941,27 @@ window.details = {
         sailor: "Boosts base ATK of [PSY] and [INT] characters by 75",
     },
     5017: {//Whitebeard&Marco
+        captain: "Boosts ATK of [INT] characters by 3.5x, boosts ATK of all other characters by 2.75x, boosts RCV of all characters by 1.25x and makes [INT] orbs beneficial for all characters",
+        special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
+        specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
+        specialName: "Immortal Blue Flame Shockwave",
+        sailor: "Boosts base HP and RCV of [PSY] and [INT] characters by 75",
+    },
+    5018: {//Whitebeard&Marco
+        captain: "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs beneficial for all characters",
+        special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
+        specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
+        specialName: "Immortal Blue Flame Shockwave",
+        sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 100",
+    },
+    5019: {//Whitebeard&Marco
+        captain: "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs beneficial for all characters",
+        special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
+        specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
+        specialName: "Immortal Blue Flame Shockwave",
+        sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 100",
+    },
+    5020: {//Whitebeard&Marco
         captain: "Boosts ATK of [PSY] characters by 3.5x, boosts ATK of all other characters by 2.75x, reduce damage received by 20% and makes [PSY] orbs beneficial for all characters",
         special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
         specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
@@ -44403,14 +45035,7 @@ window.details = {
             },
         ],
     },
-    5018: {//Whitebeard&Marco
-        captain: "Boosts ATK of [INT] characters by 3.5x, boosts ATK of all other characters by 2.75x, boosts RCV of all characters by 1.25x and makes [INT] orbs beneficial for all characters",
-        special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
-        specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
-        specialName: "Immortal Blue Flame Shockwave",
-        sailor: "Boosts base HP and RCV of [PSY] and [INT] characters by 75",
-    },
-    5019: {//Whitebeard&Marco
+    5021: {//Whitebeard&Marco
         captain: "Boosts ATK of [INT] characters by 3.5x, boosts ATK of all other characters by 2.75x, boosts RCV of all characters by 1.25x and makes [INT] orbs beneficial for all characters",
         special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
         specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
@@ -44483,20 +45108,6 @@ window.details = {
                 ]
             },
         ],
-    },
-    5020: {//Whitebeard&Marco
-        captain: "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs beneficial for all characters",
-        special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
-        specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
-        specialName: "Immortal Blue Flame Shockwave",
-        sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 100",
-    },
-    5021: {//Whitebeard&Marco
-        captain: "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs beneficial for all characters",
-        special: "Cuts the current HP of each enemy by 30%, recovers 20,000 HP, randomizes all orbs into either [PSY], [INT] or [RCV] orbs and becomes Whitebeard & Marco for 3 turns",
-        specialNotes: "Change Action: When Change is activated, reduces Paralysis and Silence duration by 1 turn, makes [RCV] orbs beneficial for all characters for 1 turn and changes their own orb into a [RCV] orb<br>#{beneficial}",
-        specialName: "Immortal Blue Flame Shockwave",
-        sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 100",
     },
     5022: {//Whitebeard&Marco
         captain: "Boosts ATK of [PSY] and [INT] characters by 4.25x, boosts ATK of all other characters by 3x, boosts RCV of all characters by 1.5x, reduce damage received by 20% and makes [PSY] and [INT] orbs beneficial for all characters",
@@ -45461,6 +46072,156 @@ window.details = {
                     "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
                     "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
                     "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    5052: {//Sanji&Judge
+        captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [RCV] and [TND] orbs beneficial for Powerhouse characters.",
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: "Makes [TND] and [RCV] orbs beneficial for this character",
+    },
+    5053: {//Sanji&Judge
+        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [PSY] orbs beneficial for all characters.",
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
+    },
+    5054: {//Sanji&Judge
+        captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 4.25x. If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts HP of Powerhouse characters by 1.25x and makes [PSY], [RCV] and [TND] orbs beneficial for all characters.",
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: "Boosts base ATK, HP and RCV of Powerhouse characters by 75",
+    },
+    5055: {//Sanji&Judge
+        captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [RCV] and [TND] orbs beneficial for Powerhouse characters.",
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: {
+            "base": "Makes [TND] and [RCV] orbs beneficial for this character",
+            "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character",
+                    //"Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ]
+    },
+    5056: {//Sanji&Judge
+        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [PSY] orbs beneficial for all characters.",
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
+            "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character",
+                    //"Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ]
+    },
+    5057: {//Sanji&Judge
+        captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 4.25x. If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts HP of Powerhouse characters by 1.25x and makes [PSY], [RCV] and [TND] orbs beneficial for all characters.",
+        special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
+        specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
+        specialName: "Sanji&Judge Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Powerhouse characters by 75",
+            "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character",
+                    //"Level 5: Reduces Slot Bind completely on this character"
                 ]
             },
         ]

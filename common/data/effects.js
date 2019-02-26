@@ -824,10 +824,24 @@ window.effects = {
         atk: function(p) { return p.class.has('Fighter') ? 1.2 : 1; }
     },
 
+    '1.25x Chain Multiplier - Sanji Judge Change Action': {
+        description: 'Chain Boosted by 1.25x',
+        thumb: 2446,
+        id: 66, // don't change this
+        chainAddition: function(p) { return 1.25 }
+    },
+
     '1.2x ATK Boost - Neo Garp': {
         description: '1.2x ATK',
         thumb: 2511,
-        id: 66, // don't change this
+        id: 67, // don't change this
         atk: function(p) { return 1.2; }
+    },
+    
+    'Meat Orbs': {
+        description: 'Activates [RCV] orb support',
+        thumb: 1652,
+        id: 53, // don't change this
+        meatOrbsEnabled: true
     },
 };

@@ -733,6 +733,10 @@ window.zombies = {
     2443: { // Doflamingo
         type: 'healer',
     },
+    2455: { // Sora
+        type: 'healer',
+        amount: 500
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

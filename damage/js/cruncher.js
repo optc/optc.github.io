@@ -126,17 +126,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var hpMax = 0, rcvTotal = 0, bonusrcv = 0;
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null) return;
+            var shipParam = getParameters(n);
             // hp
             var hp = getStatOfUnit(x,'hp');
-            hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n);
+            hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n,shipParam);
             hp = applyStaticEffectsToHP(n,hp);
             hp *= getEffectBonus('hp',x.unit);
-            hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n);
+            hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n,shipParam);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
             var rcv = getStatOfUnit(x,'rcv');
-            rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n);
-            rcv *= getShipBonus('rcv',false,x.unit,n,team[1].unit,n);
+            rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n,shipParam);
+            rcv *= getShipBonus('rcv',false,x.unit,n,team[1].unit,n,shipParam);
             rcv *= getEffectBonus('rcv',x.unit);
             rcvTotal += Math.floor(applyCaptainEffectsAndSpecialsToRCV(n,rcv));
             
@@ -217,11 +218,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // populate array with the damage of each unit in the team
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
+            var shipParam = getParameters(n);
             var friendCaptain = $scope.tdata.team[0];
             var captain = $scope.tdata.team[1];
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
-            var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n), againstType = type;//Same problem as above, so yeah
+            var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n,shipParam), againstType = type;//Same problem as above, so yeah
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
             if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2363].turnedOn || window.specials[2370].turnedOn || window.specials[2371].turnedOn) ? 2 : 0.5;
@@ -248,7 +250,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 5052, 5054, 5055, 5057 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -298,7 +300,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             if (orb == 'str') orb = 1;
-            atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
+            atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
             multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
@@ -492,14 +494,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return defreduced;
     };
 
-    var getShipBonus = function(type,static,unit,slot,captain,chainPosition) {
+    var getShipBonus = function(type,static,unit,slot,captain,chainPosition,parameters) {
         var result = (static ? 0 : 1);
         for (var key in shipBonus.bonus) {
             if (key.indexOf(type) !== 0) continue;
             var isStatic = (key.indexOf('Static') !== -1);
             if (isStatic != static) continue;
-            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition });
-            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition });
+            if (static) result += shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition, p: parameters });
+            else result *= shipBonus.bonus[key]({ boatLevel: shipBonus.level, unit: unit, slot: slot, classCount: classCounter(), colorCount: colorCounter(), captain : captain, hitModifiers: hitModifiers, chainPosition: chainPosition, p: parameters });
         }
         return result;
     };
@@ -543,6 +545,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var getChainMultiplier = function(chainBase, hitModifiers, chainModifier) {
+        var sanjijudge = 1;
+        if ($scope.data.effect == '1.25x Chain Multiplier - Sanji Judge Change Action'){
+            sanjijudge = 1.25;
+        }
         var result = chainBase;
         for (var i=0;i<hitModifiers.length;++i) {
             if (hitModifiers[i] == 'Perfect') result += chainBase * chainModifier * 0.3;
@@ -550,6 +556,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             else if (hitModifiers[i] == 'Good') result += 0;
             else result = chainBase;
         }
+        result = result != 1 ? result * sanjijudge : result;
         return result;
     };
 

@@ -1020,7 +1020,7 @@ window.matchers = [
     {
         name: 'First Special Activated Support',
         target: 'support',
-        matcher: /uses their special/i
+        matcher: /uses (their|a).+special/i
     },
     
     {

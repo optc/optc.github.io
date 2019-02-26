@@ -6998,6 +6998,44 @@ window.specials = {
     2444: {
         orb: function(p) { return (p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
+    2447: {
+        delay: function(p) { return 1; },
+        def: function(p) { return 0; },
+        warning: "Selected special (%name%) assumes that the Captain or Friend Captain have a TND orb."
+    },
+    2448: {
+        delay: function(p) { return 2; },
+        def: function(p) { return 0; },
+        warning: "Selected special (%name%) assumes that the Captain or Friend Captain have a TND orb."
+    },
+    2449: {
+        atk: function(p) { return (window.specials[2449].turnedOn && p.defenseDown) ? 1.75 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2449].turnedOn = p.classCount.Powerhouse == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2449].turnedOn = false;
+        }
+    },
+    2450: {
+        atk: function(p) { return (window.specials[2450].turnedOn && p.defenseDown) ? 2 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2450].turnedOn = p.classCount.Powerhouse == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2450].turnedOn = false;
+        }
+    },
+    2451: {
+        affinity: function(p) { return 1.75; },
+        warning: "Selected special (%name%) assumes that the Captain or Friend Captain have a TND orb."
+    },
+    2452: {
+        affinity: function(p) { return 2; },
+        warning: "Selected special (%name%) assumes that the Captain or Friend Captain have a TND orb."
+    },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",
@@ -7348,5 +7386,35 @@ window.specials = {
             var n = (p.percHP <= 50 ? 1.75 : 1);
             window.specials[5051].multiplier = n;
         }
+    },
+    5052: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5053: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5054: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5055: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5056: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5057: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
 };

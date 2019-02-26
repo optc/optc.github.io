@@ -5,7 +5,7 @@ window.ships = [
     { // 0
         name: 'Dinghy',
         thumb: 'ship_0001_c.png',
-        description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120 units',
+        description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120',
         hp: function(p) {
             return p.boatLevel < 6  ? 1.0  :
                    p.boatLevel < 10 ? 1.1 :
@@ -20,7 +20,7 @@ window.ships = [
     { // 1
         name: 'Merry Go',
         thumb: 'ship_0002_c.png',
-        description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300 units',
+        description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300',
         hpStatic: function(p) {
             return p.slot != 1 ? 0 :
                 [ 100, 130, 150, 170, 190, 210, 230, 250, 270, 300 ][p.boatLevel - 1];
@@ -35,7 +35,7 @@ window.ships = [
     { // 2
         name: 'Navy Ship',
         thumb: 'ship_0003_c.png',
-        description: 'Boosts HP by 1.5x, boosts ATK of Shooter characters by 100 units',
+        description: 'Boosts HP by 1.5x, boosts ATK of Shooter characters by 100',
         atkStatic: function(p) {
             return !p.unit.class.has('Shooter') ? 0 :
                 [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ][p.boatLevel -1];
@@ -50,7 +50,7 @@ window.ships = [
     { // 3
         name: 'Baratie',
         thumb: 'ship_0004_c.png',
-        description: 'Boosts captain\'s HP by 2000 units',
+        description: 'Boosts captain\'s HP by 2000',
         hpStatic: function(p) {
             return p.slot != 1 ? 0 :
                 [ 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 2000 ][p.boatLevel - 1];
@@ -60,7 +60,7 @@ window.ships = [
     { // 4
         name: 'Coffin Boat',
         thumb: 'ship_0005_c.png',
-        description: 'Boosts ATK and HP of Slasher characters by 1.5x, reduces captain\'s RCV by 700 units',
+        description: 'Boosts ATK and HP of Slasher characters by 1.5x, reduces captain\'s RCV by 700',
         atk: function(p) {
             return !p.unit.class.has('Slasher') ? 1 :
                 [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
@@ -77,7 +77,7 @@ window.ships = [
     { // 5
         name: 'Miss Love Duck',
         thumb: 'ship_0006_c.png',
-        description: 'Reduces damage received by 10%, boosts ATK of Striker characters by 100 units',
+        description: 'Reduces damage received by 10%, boosts ATK of Striker characters by 100',
         atkStatic: function(p) {
             return !p.unit.class.has('Striker') ? 0 : [ 0, 0, 0, 0, 0, 0, 50, 50, 50, 100 ][p.boatLevel -1];
         }
@@ -228,7 +228,7 @@ window.ships = [
     { // 18
         name: 'Sun Pirates Ship',
         thumb: 'ship_0019_c.png',
-        description: 'Boosts ATK and HP of Fighter characters depending on the number of Fighters on the team. Sharply reduces ATK and HP of non-Fighter units.',
+        description: 'Boosts ATK and HP of Fighter characters depending on the number of Fighters on the team. Sharply reduces ATK and HP of non-Fighter characters.',
         atk: function(p) {
             return !p.unit.class.has('Fighter') ? .05 :
                 [ p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.01 : p.classCount.Fighter == 3 ? 1.02 : p.classCount.Fighter == 4 ? 1.03 : p.classCount.Fighter == 5 ? 1.04 : p.classCount.Fighter == 6 ? 1.05 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.03 : p.classCount.Fighter == 4 ? 1.04 : p.classCount.Fighter == 5 ? 1.05 : p.classCount.Fighter == 6 ? 1.1 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.03 : p.classCount.Fighter == 4 ? 1.05 : p.classCount.Fighter == 5 ? 1.1 : p.classCount.Fighter == 6 ? 1.15 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.02 : p.classCount.Fighter == 3 ? 1.05 : p.classCount.Fighter == 4 ? 1.1 : p.classCount.Fighter == 5 ? 1.15 : p.classCount.Fighter == 6 ? 1.2 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.05 : p.classCount.Fighter == 3 ? 1.1 : p.classCount.Fighter == 4 ? 1.15 : p.classCount.Fighter == 5 ? 1.2 : p.classCount.Fighter == 6 ? 1.25 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.05 : p.classCount.Fighter == 3 ? 1.1 : p.classCount.Fighter == 4 ? 1.15 : p.classCount.Fighter == 5 ? 1.2 : p.classCount.Fighter == 6 ? 1.3 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.25 : p.classCount.Fighter == 6 ? 1.35 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.3 : p.classCount.Fighter == 6 ? 1.4 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.15 : p.classCount.Fighter == 4 ? 1.2 : p.classCount.Fighter == 5 ? 1.3 : p.classCount.Fighter == 6 ? 1.45 : 0, p.classCount.Fighter == 1 ? 1 : p.classCount.Fighter == 2 ? 1.1 : p.classCount.Fighter == 3 ? 1.2 : p.classCount.Fighter == 4 ? 1.3 : p.classCount.Fighter == 5 ? 1.4 : p.classCount.Fighter == 6 ? 1.5 : 0][p.boatLevel - 1];
@@ -242,7 +242,7 @@ window.ships = [
     { // 19
         name: "Doflamingo Ship",
         thumb: 'ship_0020_c.png',
-        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes PERFECTS easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes PERFECTs easier to Hit for Driven characters. Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
@@ -250,7 +250,7 @@ window.ships = [
     { // 19.2
         name: "Doflamingo Ship - Special ACTIVATED",
         thumb: 'ship_0020_c.png',
-        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes PERFECTS easier to Hit for Driven characters. ACTIVATED Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
+        description: 'Boosts ATK of Driven Characters by 1.5x and their HP by 1.35x. Makes PERFECTs easier to Hit for Driven characters. ACTIVATED Special: Adds 0.2 to Chain  (cooldown MAX: 15 Turns)',
         atk: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5][p.boatLevel - 1]},
         hp: function(p) { return !p.unit.class.has('Driven') ? 1 : [ 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.2, 1.2, 1.35][p.boatLevel - 1]}
     },
@@ -258,7 +258,7 @@ window.ships = [
     { // 20
         name: 'The Rocket Man',
         thumb: 'ship_0021_c.png',
-        description: 'Boosts ATK of Powerhouse characters by 1.55x, and heals at the end of every turn for a variable amount depending on the number of Powerhouse characters on the team. (At MAX, heals 900 per turn with 6 Powerhouse characters) Sharply reduces HP of non-Powerhouse units. Special: Deals 99,999 typeless damage to one unit.  (cooldown MAX: 17 Turns)',
+        description: 'Boosts ATK of Powerhouse characters by 1.55x, and heals at the end of every turn for a variable amount depending on the number of Powerhouse characters on the team. (At MAX, heals 900 per turn with 6 Powerhouse characters) Sharply reduces HP of non-Powerhouse characters. Special: Deals 99,999 typeless damage to one unit.  (cooldown MAX: 17 Turns)',
         atk: function(p) {
             return !p.unit.class.has('Powerhouse') ? 1 : [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.4, 1.55 ][p.boatLevel - 1];
         },
@@ -302,7 +302,7 @@ window.ships = [
     { //23
         name: 'Polar Tang',
         thumb: 'ship_0024_c.png',
-        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Makes PERFECTS easier to Hit. Special: Heals for 10k when under 20% HP. (cooldown MAX: 18 turns)',
+        description: 'Boosts ATK of Slashers and Free Spirit characters by 1.5x and their HP by 1.25x. Makes PERFECTs easier to Hit. Special: Heals for 10k when under 20% HP. (cooldown MAX: 18 turns)',
         atk: function(p) {
             return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
         },
@@ -313,7 +313,7 @@ window.ships = [
     { // 24
         name: 'New Year\'s Big Top',
         thumb: 'ship_0025_c.png',
-        //description: 'Boosted Ability: Boosts ATK of all units by 1.5x. Boosts EXP gained by 1.5x and Beli gained by 1.5x.  Base Ability: Boosts ATK of characters with 20 cost or less by 1.2x',
+        //description: 'Boosted Ability: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x and Beli gained by 1.5x.  Base Ability: Boosts ATK of characters with 20 cost or less by 1.2x',
         description: 'Boosts ATK of characters with 20 cost or less by 1.2x',
         atk: function(p) {
             return p.unit.cost <= 20 ? 1.2 : 1;
@@ -440,7 +440,7 @@ window.ships = [
     { //33
         name: "Blackbirds",
         thumb: 'ship_0035_c.png',
-        description: 'Boosts HP by 1.2x and reduces special cooldown of all characters by 1 at the start of the adventure. Boosts ATK of [STR], [DEX] and [QCK] characters by 1.55x if you have a [STR], [DEX] and [QCK] character on your crew.',
+        description: 'Boosts HP by 1.2x and reduces special cooldown of all characters by 1 at the start of the adventure. If you have a [STR], [DEX] and [QCK] character on your crew, boosts ATK of [STR], [DEX] and [QCK] characters by 1.55x.',
         atk: function(p) { 
             return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.5, 1.55 ][p.boatLevel - 1] : 1;
         },
@@ -454,7 +454,7 @@ window.ships = [
     { //34
         name: "Zunisha",
         thumb: 'ship_0036_c.png',
-        description: 'Boost ATK of Powerhouse and Cerebral units by 1.55x and their HP by 1.25x, makes PERFECTS easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral units.',
+        description: 'Boost ATK of Powerhouse and Cerebral characters by 1.55x and their HP by 1.25x, makes PERFECTs easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral characters.',
         atk: function(p) {
             return !(p.unit.class.has('Powerhouse') || p.unit.class.has('Cerebral')) ? 1 : [ 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.5, 1.55 ][p.boatLevel - 1];
         },
@@ -468,7 +468,7 @@ window.ships = [
     { //35
         name: "Laboon",
         thumb: 'ship_0038_c.png',
-        description: 'Boosted Ability: Boosts ATK of all units by 1.5x. At the start of the adventure, all specials start at MAX charge. Default Ability: Boosts ATK of all units by 1.2x',
+        description: 'Boosted Ability: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge. Default Ability: Boosts ATK of all characters by 1.2x',
         atk: function(p) {
             return 1.5;
         },
@@ -479,7 +479,7 @@ window.ships = [
     { //36
         name: "Sexy Foxy",
         thumb: 'ship_0037_c.png',
-        description: 'Boosts ATK of all units by 1.5x. Boosts EXP gained by 1.2x and Beli gained by 2x.',
+        description: 'Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.2x and Beli gained by 2x.',
         atk: function(p) {
             return 1.5;
         },
@@ -490,7 +490,7 @@ window.ships = [
     { //38
         name: "4th Anniversary Thousand Sunny",
         thumb: 'ship_0039_c.png',
-        description: 'Boosted Ability 1: Boosts ATK of all units by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all units by 1.5x. At the start of the adventure, all specials start at MAX charge.',
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge.',
         atk: function(p) {
             return 1.5;
         },
@@ -501,7 +501,7 @@ window.ships = [
     { //38
         name: "Nostra Castello",
         thumb: 'ship_0040_c.png',
-        description: 'Boosts ATK of all units by 1.55x and their HP by 1.3x. Makes PERFECTS easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK if you have a Slasher, Free Spirit or Powerhouse characters on your crew.',
+        description: 'Boosts ATK of all characters by 1.55x and their HP by 1.3x. Makes PERFECTs easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK if you have a Slasher, Free Spirit or Powerhouse characters on your crew.',
         atk: function(p) {
             var reduction = 1;
             if(p.classCount.Slasher > 0) reduction *= 0.5;
@@ -519,7 +519,7 @@ window.ships = [
     { //39
         name: "Queen Mama Chanter",
         thumb: 'ship_0041_c.png',
-        description: 'Boosts chances of getting Matching orbs, Boosts HP of all units by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. Special: Changes bottom right orb into [RCV] (Cooldown: 6 turns). (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
+        description: 'Boosts chances of getting Matching orbs, Boosts HP of all characters by 1.25x. If your Captain is a Powerhouse or Driven character, boosts ATK of [STR], [DEX] and [QCK] characters by 1.5x at the start of the chain, by 1.65x after 3 consecutive PERFECTs. Special: Changes bottom right orb into [RCV] (Cooldown: 6 turns). (currently only boosts by 1.5x unconditionally, 1.65x boost is a WIP)',
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
         atk: function(p) {
             //return (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? p.hitModifiers[0].slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 1.65 : 1.5 : 1 : 1;
@@ -527,7 +527,25 @@ window.ships = [
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) {
-            return [ 1, 1, 1, 1, 1, 1, 1, 1.1, 1.2, 1.35 ][p.boatLevel - 1];
+            return [ 1, 1, 1, 1, 1, 1, 1, 1.1, 1.2, 1.25 ][p.boatLevel - 1];
+        },
+    },
+    
+    
+    
+    { //40
+        name: "Germa 66",
+        thumb: null,
+        description: 'If you have a [STR], [DEX], [QCK], [PSY] and [INT] character on your crew, reduces cooldown of all specials by 2 turns, boosts ATK of all characters by 1.55x, their HP by 1.25x, makes PERFECTs slightly easier to hit. If any character has a [RCV] or [TND] orb, boosts their ATK by an additional 1.1x.',
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
+        atk: function(p) {
+            var boost = 1;
+            boost *= (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1 && p.colorCount.PSY>=1 && p.colorCount.INT>=1) ? [ 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.55, 1.55 ][p.boatLevel - 1] : 1;
+            boost *= (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1 && p.colorCount.PSY>=1 && p.colorCount.INT>=1) ? p.p.orb == "meat" ? [ 1, 1, 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1.1 ][p.boatLevel - 1] : 1 : 1;
+            return boost;
+        },
+        hp: function(p) {
+            return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1 && p.colorCount.PSY>=1 && p.colorCount.INT>=1) ? [ 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
         },
     },
 
