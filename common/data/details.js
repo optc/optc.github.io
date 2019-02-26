@@ -43283,7 +43283,7 @@ window.details = {
         },
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: {
             "character1": "Makes [TND] and [RCV] orbs beneficial for this character",
             "character2": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
@@ -43298,7 +43298,7 @@ window.details = {
         },
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: {
             "character1": "Makes [TND] and [RCV] orbs beneficial for this character",
             "character2": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
@@ -43342,7 +43342,7 @@ window.details = {
     2447: {//Ichiji
         captain: "Boosts ATK of Powerhouse characters and [STR] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, deals 100x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], delays all enemies for 1 turn and reduces the defense of all enemies by 100% for 1 turn.",
-        specialName: "Ichiji Special",
+        specialName: "Sparking Valkyrie: Spark Light Fists",
         sailor: "Reduces Silence duration on this character by 3 turns",
         potential: [
             {
@@ -43384,7 +43384,7 @@ window.details = {
     2448: {//Ichiji
         captain: "Boosts ATK of Powerhouse characters and [STR] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, deals 120x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], removes enemy's Defense Reduction Debuff Protection, delays all enemies for 2 turns and reduces the defense of all enemies by 100% for 1 turn.",
-        specialName: "Ichiji Special",
+        specialName: "Sparking Valkyrie: Spark Light Fists",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
             "level1": "If there are 6 Powerhouse characters in your crew, makes [STR] orbs beneficial for Powerhouse characters",
@@ -43429,7 +43429,7 @@ window.details = {
     2449: {//Niji
         captain: "Boosts ATK of Powerhouse characters and [QCK] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, boosts ATK against enemies with reduced defense by 1.75x for 1 turn. If your Captain's orb or Friend Captain's orb is [TND], changes all orbs, including [BLOCK] orbs, into [TND] orbs and makes [TND] orbs beneficial for all characters for 1 turn.",
-        specialName: "Niji Special",
+        specialName: "Lightspeed Blade: Henry Blazer",
         sailor: "Reduces Silence duration on this character by 3 turns",
         potential: [
             {
@@ -43469,7 +43469,7 @@ window.details = {
     2450: {//Niji
         captain: "Boosts ATK of Powerhouse characters and [QCK] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, boosts ATK against enemies with reduced defense by 2x for 1 turn. If your Captain's orb or Friend Captain's orb is [TND], changes all orbs, including [BLOCK] orbs, into [TND] orbs and makes [TND] orbs beneficial for all characters for 1 turn.",
-        specialName: "Niji Special",
+        specialName: "Lightspeed Blade: Henry Blazer",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
             "level1": "If there are 6 Powerhouse characters in your crew, makes [QCK] orbs beneficial for Powerhouse characters",
@@ -43512,7 +43512,7 @@ window.details = {
     2451: {//Yonji
         captain: "Boosts ATK of Powerhouse characters and [DEX] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, reduces ATK DOWN, Bind and Despair duration by 4 turns. If your Captain's orb or Friend Captain's orb is [TND], boosts the Color Affinity of all characters by 1.75x for 1 turn.",
-        specialName: "Yonji Special",
+        specialName: "Winch Guillotine: Winch Danton",
         sailor: "Reduces Silence duration on this character by 3 turns",
         potential: [
             {
@@ -43552,7 +43552,7 @@ window.details = {
     2452: {//Yonji
         captain: "Boosts ATK of Powerhouse characters and [DEX] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, reduces ATK DOWN, Bind and Despair duration by 5 turns. If your Captain's orb or Friend Captain's orb is [TND], boosts the Color Affinity of all characters by 2x for 1 turn.",
-        specialName: "Yonji Special",
+        specialName: "Winch Guillotine: Winch Danton",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
             "level1": "If there are 6 Powerhouse characters in your crew, makes [DEX] orbs beneficial for Powerhouse characters",
@@ -43595,7 +43595,7 @@ window.details = {
     2453: {//Reiju
         captain: "Boosts ATK of Powerhouse characters and [INT] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, poisons all enemies and reduces damage received by 70% for 2 turns. If your Captain's orb or Friend Captain's orb is [TND], reduces enemy's Threshold Damage Reduction, Percent Damage Reduction and Increased Defense Buffs duration by 4 turns.",
-        specialName: "Reiju Special",
+        specialName: "Pink Hornet: Peach Poison Fang",
         specialNotes: "Poison deals ?x character's ATK in fixed damage at the end of each turn.",
         sailor: "Reduces Silence duration on this character by 3 turns",
         potential: [
@@ -43637,7 +43637,7 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters and [INT] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, poisons all enemies and reduces damage received by 70% for 2 turns. If your Captain's orb or Friend Captain's orb is [TND], reduces enemy's Threshold Damage Reduction, Percent Damage Reduction and Increased Defense Buffs duration by 5 turns.",
         specialNotes: "Poison deals 75x character's ATK in fixed damage at the end of each turn.",
-        specialName: "Reiju Special",
+        specialName: "Pink Hornet: Peach Poison Fang",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
             "level1": "If there are 6 Powerhouse characters in your crew, makes [INT] orbs beneficial for Powerhouse characters",
@@ -43680,7 +43680,7 @@ window.details = {
     2455: {//Sora
         captain: "Boosts ATK and RCV of all characters by 1.75x and recovers 500 HP at end of each turn.",
         special: "Reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns and boosts chances of getting [PSY] orbs for 3 turns.",
-        specialName: "Sora Special",
+        specialName: "Mother's Empathy",
         support: [
             {
                 "Characters": "Sanji, Judge, Reiju, Ichiji, Niji and Yonji",
@@ -46080,28 +46080,28 @@ window.details = {
         captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [RCV] and [TND] orbs beneficial for Powerhouse characters.",
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: "Makes [TND] and [RCV] orbs beneficial for this character",
     },
     5053: {//Sanji&Judge
         captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [PSY] orbs beneficial for all characters.",
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
     },
     5054: {//Sanji&Judge
         captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 4.25x. If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts HP of Powerhouse characters by 1.25x and makes [PSY], [RCV] and [TND] orbs beneficial for all characters.",
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: "Boosts base ATK, HP and RCV of Powerhouse characters by 75",
     },
     5055: {//Sanji&Judge
         captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [RCV] and [TND] orbs beneficial for Powerhouse characters.",
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: {
             "base": "Makes [TND] and [RCV] orbs beneficial for this character",
             "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
@@ -46144,7 +46144,7 @@ window.details = {
         captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts ATK of Powerhouse characters by 3.5x, their HP by 1.25x and makes [PSY] orbs beneficial for all characters.",
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
             "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
@@ -46187,7 +46187,7 @@ window.details = {
         captain: "If there are 6 Powerhouse characters in your crew, boosts ATK of Powerhouse characters by 4.25x. If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, boosts HP of Powerhouse characters by 1.25x and makes [PSY], [RCV] and [TND] orbs beneficial for all characters.",
         special: "Boosts ATK of Powerhouse characters by 2x for 1 turn, amplifies the effect of orbs for Powerhouse characters by 2x for 1 turn, reduces Paralysis duration by 5 turns and becomes Sanji & Judge for 3 turns",
         specialNotes: "Change Action: When Change is activated, this character removes all Silence on themselves, changes their own orb, including [BLOCK] orbs, into a [TND] orb and adds 1.25x to Chain multiplier for 1 turn.",
-        specialName: "Sanji&Judge Special",
+        specialName: "Crack & Strike",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Powerhouse characters by 75",
             "level1": "Makes [PSY], [TND] and [RCV] orbs beneficial for Powerhouse characters",
