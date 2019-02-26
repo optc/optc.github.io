@@ -24051,7 +24051,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Powerhouse Characters",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by ?%. Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Reduces damage received from [INT] characters by ?%. Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Reduces damage received from [INT] characters by ?%. Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Reduces damage received from [INT] characters by ?%. Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Reduces damage received from [INT] characters by 5%. Adds 7% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ]
     },
     1633: {//Punk Hazard Dragon
         captain: "Boosts ATK of [STR] characters by 1.75x and the HP of Powerhouse characters by 1.2x",
