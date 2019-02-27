@@ -2449,7 +2449,7 @@ window.units = [
     [ "Vinsmoke Ichiji, Germa 66 Red Flash", "STR", [ "Powerhouse", "Shooter" ], "5+", 40, 6, 4, 99, 4000000, 1296, 582, 99, 3118, 1474, 260, null ],
     [ "Vinsmoke Niji, Germa Royal Family Second Son", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1, 1, 1, 3000, 1500, 300, null ],
     [ "Vinsmoke Niji, Germa 66 Blue Lightning", "QCK", [ "Powerhouse", "Slasher" ], "5+", 40, 4, 4, 99, 4000000, 1, 1, 1, 3000, 1500, 300, null ],
-    [ "Vinsmoke Yonji, Germa Royal Family Third Son", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1, 1, 1, 3000, 1500, 300, null ],
+    [ "Vinsmoke Yonji, Germa Royal Family Third Son", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 999, 410, 155, 2447, 1364, 358, null ],
     [ "Vinsmoke Yonji, Germa 66 Green Strong Arm", "DEX", [ "Powerhouse", "Striker" ], "5+", 40, 4, 4, 99, 4000000, 1, 1, 1, 3000, 1500, 300, null ],
     [ "Vinsmoke Reiju, Germa Royal Family First Daughter", "INT", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1, 1, 1, 3000, 1500, 300, null ],
     [ "Vinsmoke Reiju, Germa 66 Peach Poison Fang", "INT", [ "Powerhouse", "Shooter" ], "5+", 40, 4, 4, 99, 4000000, 1, 1, 1, 3000, 1500, 300, null ],
