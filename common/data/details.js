@@ -43355,7 +43355,10 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters and [STR] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, deals 100x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], delays all enemies for 1 turn and reduces the defense of all enemies by 100% for 1 turn.",
         specialName: "Sparking Valkyrie: Spark Light Fists",
-        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [STR] orbs beneficial for Powerhouse characters",
+        },
         potential: [
             {
                 "Name": "Enrage",
@@ -43395,7 +43398,7 @@ window.details = {
     },
     2448: {//Ichiji
         captain: "Boosts ATK of Powerhouse characters and [STR] characters by 2.5x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
-        special: "If there are 6 Powerhouse characters in your crew, deals 120x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], removes enemy's Defense Reduction Debuff Protection, delays all enemies for 2 turns and reduces the defense of all enemies by 100% for 1 turn.",
+        special: "If there are 6 Powerhouse characters in your crew, deals 120x character's ATK as typeless damage to all enemies at the end of the turn for 3 turns. If your Captain's orb or Friend Captain's orb is [TND], removes enemy's Defense Reduction Debuff Protection duration completely, delays all enemies for 2 turns and reduces the defense of all enemies by 100% for 1 turn.",
         specialName: "Sparking Valkyrie: Spark Light Fists",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
@@ -43442,7 +43445,10 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters and [QCK] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, boosts ATK against enemies with reduced defense by 1.75x for 1 turn. If your Captain's orb or Friend Captain's orb is [TND], changes all orbs, including [BLOCK] orbs, into [TND] orbs and makes [TND] orbs beneficial for all characters for 1 turn.",
         specialName: "Lightspeed Blade: Henry Blazer",
-        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [QCK] orbs beneficial for Powerhouse characters",
+        },
         potential: [
             {
                 "Name": "Critical Hit",
@@ -43525,7 +43531,10 @@ window.details = {
         captain: "Boosts ATK of Powerhouse characters and [DEX] characters by 2.25x and their HP by 1.2x. Boosts RCV of Powerhouse characters by 1.2x.",
         special: "If there are 6 Powerhouse characters in your crew, reduces ATK DOWN, Bind and Despair duration by 4 turns. If your Captain's orb or Friend Captain's orb is [TND], boosts the Color Affinity of all characters by 1.75x for 1 turn.",
         specialName: "Winch Guillotine: Winch Danton",
-        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [DEX] orbs beneficial for Powerhouse characters",
+        },
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -43609,7 +43618,10 @@ window.details = {
         special: "If there are 6 Powerhouse characters in your crew, poisons all enemies and reduces damage received by 70% for 2 turns. If your Captain's orb or Friend Captain's orb is [TND], reduces enemy's Threshold Damage Reduction, Percent Damage Reduction and Increased Defense Buffs duration by 4 turns.",
         specialName: "Pink Hornet: Peach Poison Fang",
         specialNotes: "Poison deals ?x character's ATK in fixed damage at the end of each turn.",
-        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "If there are 6 Powerhouse characters in your crew, makes [INT] orbs beneficial for Powerhouse characters",
+        },
         potential: [
             {
                 "Name": "Pinch Healing",
