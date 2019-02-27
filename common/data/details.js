@@ -39269,7 +39269,7 @@ window.details = {
             { "description": "Acquire new Captain Ability: Boosts ATK of Shooter characters by 2x and their RCV by 1.2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 6 times to a maximum of 3x" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 80" },
-            { "description": "Acquire Sailor Ability 2: Makes [TND] orbs beneficial for Shooter characters" },
+            { "description": "Acquire Sailor Ability 2: Makes [RCV] orbs beneficial for Shooter characters" },
             { "description": "Boosts base ATK by 30" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Boosts base ATK by 40" },
