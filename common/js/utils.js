@@ -170,11 +170,11 @@
             case '5002': return '../res/character_10187_t1_int.png'; break;
             case '5003': return '../res/character_10187_t1_psy.png'; break;
             case '5004': return '../res/character_10173_t1.png'; break;
-            case '5005': return '../res/character_10175_t1.png'; break;
-            case '5006': return '../res/character_10174_t1.png'; break;
-            case '5007': return '../res/character_10176_t1.png'; break;
-            case '5008': return '../res/character_10177_t1_qck.png'; break;
-            case '5009': return '../res/character_10177_t1_str.png'; break;
+            case '5005': return '../res/character_10174_t1.png'; break;
+            case '5006': return '../res/character_10177_t1_qck.png'; break;
+            case '5007': return '../res/character_10177_t1_str.png'; break;
+            case '5008': return '../res/character_10175_t1.png'; break;
+            case '5009': return '../res/character_10176_t1.png'; break;
             case '5010': return '../res/character_10178_t1_qck.png'; break;
             case '5011': return '../res/character_10178_t1_str.png'; break;
             case '5012': return '../res/character_10181_t1.png'; break;
@@ -182,11 +182,11 @@
             case '5014': return '../res/character_10183_t1_psy.png'; break;
             case '5015': return '../res/character_10183_t1_dex.png'; break;
             case '5016': return '../res/character_10344_t1.png'; break;
-            case '5017': return '../res/character_10346_t1.png'; break;
-            case '5018': return '../res/character_10345_t1.png'; break;
-            case '5019': return '../res/character_10347_t1.png'; break;
-            case '5020': return '../res/character_10348_t1_psy.png'; break;
-            case '5021': return '../res/character_10348_t1_int.png'; break;
+            case '5017': return '../res/character_10345_t1.png'; break;
+            case '5018': return '../res/character_10348_t1_psy.png'; break;
+            case '5019': return '../res/character_10348_t1_int.png'; break;
+            case '5020': return '../res/character_10346_t1.png'; break;
+            case '5021': return '../res/character_10347_t1.png'; break;
             case '5022': return '../res/character_10349_t1_psy.png'; break;
             case '5023': return '../res/character_10349_t1_int.png'; break;
             case '5024': return '../res/character_10496_t1.png'; break;
@@ -221,6 +221,12 @@
             case '5049': return '../res/character_10706_t1.png'; break;
             case '5050': return '../res/character_10708_t1_qck.png'; break;
             case '5051': return '../res/character_10708_t1_int.png'; break;
+            case '5052': return '../res/character_10720_t1.png'; break;
+            case '5053': return '../res/character_10721_t1.png'; break;
+            case '5054': return '../res/character_10724_t1_psy.png'; break;
+            case '5055': return '../res/character_10722_t1.png'; break;
+            case '5056': return '../res/character_10723_t1.png'; break;
+            case '5057': return '../res/character_10725_t1_psy.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';

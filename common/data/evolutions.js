@@ -3959,9 +3959,29 @@ window.evolutions = {
         evolution: 2444,
         evolvers: [ 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', ]
     },
+    2445: {
+        evolution: 2446,
+        evolvers: [  ]
+    },
+    2447: {
+        evolution: 2448,
+        evolvers: [  ]
+    },
+    2449: {
+        evolution: 2450,
+        evolvers: [  ]
+    },
+    2451: {
+        evolution: 2452,
+        evolvers: [  ]
+    },
+    2453: {
+        evolution: 2454,
+        evolvers: [  ]
+    },
     2234: {
         evolution: 2500,
-        evolvers: [  ]
+        evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
     },
     2510: {
         evolution: 2511,
@@ -3973,14 +3993,14 @@ window.evolutions = {
     },
     2516: {
         evolution: 2517,
-        evolvers: [  ]
+        evolvers: [ 118, 79, 1180, 301, 267 ]
     },
     2518: {
         evolution: 2519,
-        evolvers: [  ]
+        evolvers: [ 117, 83, 86, 302, 102 ]
     },
     2520: {
         evolution: 2521,
-        evolvers: [  ]
+        evolvers: [ 117, 83, 84, 300, 100 ]
     },
 };
