@@ -2196,10 +2196,10 @@ window.drops = {
         
         {
             name: 'Pudding\'s Sweet Cooking',
-            thumb: null,
+            thumb: 2457,
             nakama: null,
-            gamewith: 141693,
-            'All Difficulties': [ -2441, -2302, -2273, -2271, -2275, -2308, -2310, -2199 ]
+            gamewith: null,
+            'All Difficulties': [ 2456, 2458, 2459, -2441, -2302, -2273, -2271, -2275, -2308, -2310, -2199 ]
         },
         
     ],
@@ -3458,10 +3458,36 @@ window.drops = {
         },
         
         {
+            name: 'Germa 66 Counterattack',
+            thumb: 2446,
+            nakama: null,
+            gamewith: 143826,
+            showManual: true,
+            'All Difficulties': [ 9027, 9028, 9029, 9030, -2446, -2447, -2448, -2449, -2450, -2451, -2452, -2453, -2454 ],
+        },
+        
+        {
+            name: 'Escape! Whole Cake Island',
+            thumb: 2234,
+            nakama: null,
+            gamewith: 143825,
+            condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
+            'All Difficulties': [ 2455 ],
+        },
+        
+        {
             name: 'Clash!! Enel [Extra]',
             thumb: 603,
             gamewith: 138206,
             'All Difficulties': [ 602 ],
+            condition: "Chance of dropping the Support Medallions.",
+        },
+        
+        {
+            name: 'Clash!! Bartolomeo [Extra]',
+            thumb: 1879,
+            gamewith: 142094,
+            'All Difficulties': [ 1878 ],
             condition: "Chance of dropping the Support Medallions.",
         },
         
@@ -3633,7 +3659,7 @@ window.drops = {
             global: true,
             nakama: 7126800,
             gamewith: 59779,
-            completion: 'Ship: Blackbeard Pirates Ship',
+            completion: 'Ship: Marshall D. Teach\'s Pirate Ship',
         },
         
         {
@@ -3645,8 +3671,9 @@ window.drops = {
         },
         
         {
-            name: 'Forest of Training: Mother',
+            name: 'Forest of Training: Mama',
             thumb: 2234,
+            global: true,
             nakama: null,
             gamewith: 118924,
             completion: 'Ship: Queen Mama Chanter',
