@@ -5053,8 +5053,8 @@ window.units = [
     [ "[Dual Unit] Sanji, The Fate of the Father and Son", "PSY", [ "Powerhouse", "Fighter" ], 5, 30, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
     [ "[Dual Unit] Judge, The Fate of the Father and Son", "PSY", [ "Powerhouse", "Driven" ], 5, 30, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
     [ "[Dual Unit] Sanji & Judge, The Fate of the Father and Son", "PSY", [ "Powerhouse", "Fighter" ], 5, 30, 5, 3, 70, 1066998, 434, 289, 55, 2022, 831, 161, 1 ],
-    [ "[Dual Unit] Sanji, The Parting between Father and Son", "PSY", [ "Powerhouse", "Fighter" ], 6, 55, 5, 5, 99, 5000000, 1, 1, 1, 3000, 1600, 350, 1 ],
-    [ "[Dual Unit] Judge, The Parting between Father and Son", "PSY", [ "Powerhouse", "Driven" ], 6, 55, 5, 5, 99, 5000000, 1, 1, 1, 3000, 1600, 350, 1 ],
+    [ "[Dual Unit] Sanji, The Parting between Father and Son", "PSY", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1398, 782, 128, 3000, 1600, 350, 1 ],
+    [ "[Dual Unit] Judge, The Parting between Father and Son", "PSY", [ "Powerhouse", "Driven" ], 6, 55, 5, 5, 99, 5000000, 1601, 756, 99, 3000, 1600, 350, 1 ],
     [ "[Dual Unit] Sanji & Judge, The Parting between Father and Son", "PSY", [ "Powerhouse", "Fighter" ], 6, 55, 5, 5, 99, 5000000, 1927, 811, 143, 4028, 1642, 288, 1 ],
 ];
 // [ "Name", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
