@@ -2198,7 +2198,7 @@ window.drops = {
             name: 'Pudding\'s Sweet Cooking',
             thumb: 2457,
             nakama: null,
-            gamewith: null,
+            gamewith: 144058,
             'All Difficulties': [ 2456, 2458, 2459, -2441, -2302, -2273, -2271, -2275, -2308, -2310, -2199 ]
         },
         

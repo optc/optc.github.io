@@ -31657,13 +31657,13 @@ window.details = {
     },
     1975: {//X Drake
         captain: "Boosts ATK of all characters by 2x if HP is below 30% at the start of the turn",
-        special: "Deals 50x character's ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn. If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below 30% then changes adjacent orbs into matching orbs",
+        special: "If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs. If HP below 30% then changes adjacent orbs into matching orbs. Deals 50x character's ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn.",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
     },
     1976: {//X Drake
         captain: "Boosts ATK of all characters by 2.5x if HP is below 30% at the start of the turn",
-        special: "Deals 50x character's ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn. If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs and if HP below 30% then changes adjacent orbs into matching orbs",
+        special: "If HP above 70% then changes [RCV], [TND], [EMPTY], [BOMB] and [BLOCK] orbs into matching orbs. If HP below 30% then changes adjacent orbs into matching orbs. Deals 50x character's ATK in [QCK] damage to one enemy, changes own orb into [QCK] and locks all orbs for 1 turn.",
         specialName: "Double Edge of Revolt [Neo]",
         sailor: "When HP is below 30% at the start of the turn, boosts base ATK of all characters by 40",
     },
@@ -43884,22 +43884,22 @@ window.details = {
         ]
     },
     2456: {//Pudding
-        captain: "Boosts ATK of all characters by ?x and their RCV by ?x.",
+        captain: "Boosts ATK of Cerebral characters by 2x.",
         special: "Binds self for 3 turns, reduces crew's ATK DOWN duration by 2 turns and adds .3x to Chain multiplier for 1 turn. If your Captain is a Fighter character, changes own orb and the Captain's orb into Matching orbs.",
         specialName: "Chocolatier's Love",
     },
     2457: {//Pudding
-        captain: "Boosts ATK of all characters by 2x and their RCV by 1.2x.",
+        captain: "Boosts ATK of Cerebral characters by 2x and their RCV by 1.2x.",
         special: "Binds self for 3 turns, reduces crew's ATK DOWN duration by 2 turns and adds .3x to Chain multiplier for 1 turn. If your Captain is a Fighter character, changes own orb and the Captain's orb into Matching orbs.",
         specialName: "Chocolatier's Love",
         support: [
             {
-                "Characters": "Sanji and Chiffon",
+                "Characters": "Sanji",
                 "description": [
-                    "Level 1: Adds ?% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by ?x against Big Mom.",
-                    "Level 2: Adds ?% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by ?x against Big Mom.",
-                    "Level 3: Adds ?% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by ?x against Big Mom.",
-                    "Level 4: Adds ?% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by ?x against Big Mom.",
+                    "Level 1: Adds 1% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by 1.05x against Big Mom.",
+                    "Level 2: Adds 1% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by 1.1x against Big Mom.",
+                    "Level 3: Adds 2% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by 1.15x against Big Mom.",
+                    "Level 4: Adds 2% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by 1.15x against Big Mom.",
                     "Level 5: Adds 3% of this character's base HP to the supported character's base HP. Boosts the supported character's ATK by 1.2x against Big Mom."
                 ]
             }
@@ -43907,16 +43907,16 @@ window.details = {
     },
     2458: {//Chiffon
         captain: "Boosts ATK of [QCK] characters by 2x and their HP by 1.2x.",
-        special: "Reduces Silence duration by 3 turns and reduces enemy Threshold Damage Reduction duration by 2 turns.",
+        special: "Reduces Bind duration by 3 turns and reduces enemy Threshold Damage Reduction duration by 2 turns.",
         specialName: "Enforcing her Duty",
         support: [
             {
                 "Characters": "Sanji and Pudding",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
                     "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
                 ]
             }
@@ -43928,12 +43928,12 @@ window.details = {
         specialName: "The Ultimate Fresh Cream",
         support: [
             {
-                "Characters": "Chiffon and Pudding",
+                "Characters": "Pudding",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK",
-                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK",
-                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK",
-                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK",
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 1% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK",
                     "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK"
                 ]
             }

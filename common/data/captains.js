@@ -8716,12 +8716,11 @@ window.captains = {
         rcv: function(p) { return 1.75; },
     },
     2456: {
-        atk: function(p) { return 1; },//change this
-        rcv: function(p) { return 1; },//change this
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
     },
     2457: {
-        atk: function(p) { return 2; },
-        rcv: function(p) { return 1.2; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
     2458: {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
