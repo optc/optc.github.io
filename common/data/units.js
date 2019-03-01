@@ -2516,7 +2516,7 @@ window.units = [
     [ "Sanji, First Class Cook in Shining Armor", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1241, 594, 134, 3025, 1389, 252, 1 ],
     [ "Whitebeard, Great Pirate Who Created an Age", "QCK", [ "Powerhouse", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1194, 426, 14, 2091, 933, 60, 1 ],
     [ "Whitebeard, Voiceless Rage", "QCK", [ "Powerhouse", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1820, 789, 40, 4504, 1520, 141, 1 ],
-    [ "Nefertari Vivi, Wake of an Endless Dream - Princess of Alabasta", "DEX", [ "Slasher", "Striker" ], 4, 15, 6, 3, 50, 392109, 198, 61, 62, null, null, null, null ],
+    [ "Nefertari Vivi, Wake of an Endless Dream - Princess of Alabasta", "DEX", [ "Slasher", "Striker" ], 4, 15, 6, 3, 50, 392109, 198, 61, 62, 866, 571, 278, 1 ],
     [ "Nefertari Vivi, Wake of an Endless Dream - Pirate Queen", "DEX", [ "Slasher", "Striker" ], 5, 30, 4, 5, 99, 4000000, 813, 520, 213, 2119, 1321, 388, 1 ],
     [ "Portgas D. Ace, Wake of an Endless Dream - Whitebeard Pirates", "STR", [ "Free Spirit", "Powerhouse" ], 4, 15, 5, 3, 50, 392109, 141, 77, 36, 1321, 585, 189, 1 ],
     [ "Portgas D. Ace, Wake of an Endless Dream - High Seas Pirate", "STR", [ "Free Spirit", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 1263, 644, 140, 2681, 1482, 258, 1 ],
