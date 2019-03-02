@@ -392,6 +392,13 @@ window.matchers = [
         matcher: /(Empties|Changes.+into.+\[EMPTY\])/i
     },
 
+    {
+        name: 'Block orb removers',
+        target: 'special',
+        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
+        include: [ 1383, 1384 ]
+    },
+
     /*{
         name: 'Slot fillers',
         target: 'special',
@@ -576,13 +583,6 @@ window.matchers = [
         name: 'Burn reducers',
         target: 'special',
         matcher: /(reduces|removes).+Burn.+duration/i 
-    },
-
-    {
-        name: 'Block orb removers',
-        target: 'special',
-        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
-        include: [ 1383, 1384 ]
     },
 
     {
