@@ -398,6 +398,12 @@ window.matchers = [
         matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
         include: [ 1383, 1384 ]
     },
+    
+    {
+        name: 'Beneficial Orb Enablers',
+        target: 'special',
+        matcher: /beneficial/i
+    },
 
     /*{
         name: 'Slot fillers',
@@ -715,12 +721,6 @@ window.matchers = [
         name: 'Chain Coefficient Reduction reducer',
         target: 'special',
         matcher: /(removes|reduces).+Chain Coefficient Reduction/i 
-    },
-    
-    {
-        name: 'Beneficial Orb Enablers',
-        target: 'special',
-        matcher: /beneficial/i
     },
     
     {
