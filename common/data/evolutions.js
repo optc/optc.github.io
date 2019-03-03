@@ -3961,23 +3961,27 @@ window.evolutions = {
     },
     2445: {
         evolution: 2446,
-        evolvers: [  ]
+        evolvers: [ 118, 103, 98, 303, 267 ]
     },
     2447: {
         evolution: 2448,
-        evolvers: [  ]
+        evolvers: [ 'skullIchiji2', 'skullIchiji2', 'skullIchiji2', 'skullIchiji2', 'skullIchiji2' ]
     },
     2449: {
         evolution: 2450,
-        evolvers: [  ]
+        evolvers: [ 'skullNiji2', 'skullNiji2', 'skullNiji2', 'skullNiji2', 'skullNiji2' ]
     },
     2451: {
         evolution: 2452,
-        evolvers: [  ]
+        evolvers: [ 'skullYonji2', 'skullYonji2', 'skullYonji2', 'skullYonji2', 'skullYonji2' ]
     },
     2453: {
         evolution: 2454,
-        evolvers: [  ]
+        evolvers: [ 'skullReiju2', 'skullReiju2', 'skullReiju2', 'skullReiju2', 'skullReiju2' ]
+    },
+    2456: {
+        evolution: 2457,
+        evolvers: [ 117, 82, 88, 99, 104 ]
     },
     2234: {
         evolution: 2500,

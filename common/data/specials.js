@@ -5359,10 +5359,22 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
     2162: {
-        delay: function(p) { return 1; },
+        delay: function(p) { return window.specials[2162].turnedOn ? 1 : 0; },
+        onActivation: function(p) {
+            window.specials[2162].turnedOn = p.classCount.Fighter >= 5 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2162].turnedOn = false;
+        },
     },
     2163: {
-        delay: function(p) { return 1; },
+        delay: function(p) { return window.specials[2163].turnedOn ? 1 : 0; },
+        onActivation: function(p) {
+            window.specials[2163].turnedOn = p.classCount.Fighter >= 5 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2163].turnedOn = false;
+        },
     },
     2164: {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
@@ -7035,6 +7047,21 @@ window.specials = {
     2452: {
         affinity: function(p) { return 2; },
         warning: "Selected special (%name%) assumes that the Captain or Friend Captain have a TND orb."
+    },
+    2456: {
+        chainAddition: function(p) { return 0.3; }
+    },
+    2457: {
+        chainAddition: function(p) { return 0.3; }
+    },
+    2459: {
+        delay: function(p) { return window.specials[2459].turnedOn ? 1 : 0; },
+        onActivation: function(p) {
+            window.specials[2459].turnedOn = p.classCount.Fighter == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2459].turnedOn = false;
+        },
     },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
