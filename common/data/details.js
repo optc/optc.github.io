@@ -13265,14 +13265,14 @@ window.details = {
     1084: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK of Driven characters by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
-        special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
+        special: "Cuts the current HP of each enemy by 20%. Cuts the current HP of each enemy by 20% at the end of the turn for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall"
     },
     1085: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK of Driven characters by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
-        special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
+        special: "Cuts the current HP of each enemy by 20%. Cuts the current HP of each enemy by 20% at the end of the turn for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall",
         sailor: {
@@ -26845,7 +26845,7 @@ window.details = {
     },
     1768: {//Abdullah and Jeet
         captain: "Boosts ATK of Striker and Slasher characters by 1.5x",
-        special: "At the end of the turn, cuts the current HP of each enemy by 10% for 2 turns",
+        special: "Cuts the current HP of each enemy by 10% at the end of the turn for 2 turns",
         specialName: "Nasty Final Blow",
     },
     1769: {//Ben Beckman
@@ -28881,12 +28881,12 @@ window.details = {
     },
     1866: {//Hawkins FN
         captain: "Boosts ATK of Cerebral characters by 2x",
-        special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
+        special: "Cuts the current HP of each enemy by 10%. Cuts the current HP of each enemy by 10% at the end of the turn for 3 turns. Reduces damage received by 40% for 3 turns.",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
     1867: {//Hawkins FN
         captain: "Boosts ATK of Cerebral characters by 2x, boosts chain multiplier by 1.5x",
-        special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
+        special: "Cuts the current HP of each enemy by 10%. Cuts the current HP of each enemy by 10% at the end of the turn for 3 turns. Reduces damage received by 40% for 3 turns.",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
     1868: {//Fujitora
