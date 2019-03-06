@@ -30292,6 +30292,18 @@ window.details = {
         specialName: "Brute Force Rescue",
         sailor: "Makes [PSY] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
+        support: [
+            {
+                "Characters": "Ichiji, Niji, Yonji, Judge and Sanji",
+                "description": [
+                    "Level 1: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 1 turn and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 2: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 1 turn and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 3: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 2 turns and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 4: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 2 turns and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 5: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 3 turns and makes [RCV] orbs beneficial for all characters for 1 turn"
+                ]
+            }
+        ]
     },
     1919: {//Sanji
         captain: "Recovers 1.5x character's RCV in HP at the end of each turn",
@@ -30302,6 +30314,18 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 2 turns and switches orbs between slots twice",
         specialName: "Iron Mask of Dreams",
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Boosts the supported character's ATK by 1.05x against Judge",
+                    "Level 2: Boosts the supported character's ATK by 1.05x against Judge",
+                    "Level 3: Boosts the supported character's ATK by 1.1x against Judge",
+                    "Level 4: Boosts the supported character's ATK by 1.15x against Judge",
+                    "Level 5: Boosts the supported character's ATK by 1.2x against Judge"
+                ]
+            }
+        ]
     },
     1921:{//6+ Zoro
         captain: "Boosts ATK of Slasher characters by 3x and their HP by 1.5x",
