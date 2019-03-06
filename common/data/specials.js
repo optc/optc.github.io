@@ -7063,6 +7063,13 @@ window.specials = {
             window.specials[2459].turnedOn = false;
         },
     },
+    2460: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type",
+    },
+    2461: {
+        chainAddition: function(p) { return 0.5; }
+    },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",

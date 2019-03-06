@@ -43939,6 +43939,40 @@ window.details = {
             }
         ]
     },
+    2460: {//Oven
+        captain: "Boosts ATK of [STR] characters by 2.25x and boost HP of Powerhouse characters by 1.25x.",
+        special: "Boosts ATK of STR characters by 1.75x for 1 turn and deals 50x character's ATK as [STR] damage to all enemies at the end of the turn for 2 turns.",
+        specialName: "Overheated Anger",
+        support: [
+            {
+                "Characters": "Charlotte Linlin, Katakuri, Cracker, Daifuku and Smoothie",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, changes [TND] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.1x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, changes [RCV] and [TND] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.1x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, changes [RCV], [TND] and [BOMB] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.15x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, changes [EMPTY], [RCV], [TND] and [BOMB] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.2x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, changes all orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.3x for 1 turn."
+                ]
+            }
+        ]
+    },
+    2460: {//Pekoms/Mystoms
+        captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 5%.",
+        special: "Reduces enemy Threshold Damage Reduction duration by 2 turns and adds .5x to Chain multiplier for 1 turn.",
+        specialName: "Disguised Determination",
+        support: [
+            {
+                "Characters": "Luffy, Sanji, Carrot and Pedro",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 1 turn, reduces Special Cooldown of the supported character's special by 1 turn and reduces damage received by 25% for 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 50% for 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 75% for 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 75% for 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 3 turns, reduces Special Cooldown of the supported character's special by 3 turns and reduces damage received by 75% for 1 turn."
+                ]
+            }
+        ]
+    },
     2500: {//Big Mom
         captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.3x, makes [SEMLA] orbs beneficial for all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts own ATK by 4.25x, boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 12x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x and boosts chances of getting [SEMLA] orbs",
         captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
