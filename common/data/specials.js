@@ -7070,6 +7070,30 @@ window.specials = {
     2461: {
         chainAddition: function(p) { return 0.5; }
     },
+    2462:{
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2462].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2462].multiplier == 1.75 ? 1 : 0);
+            window.specials[2462].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2462warning'
+            });
+        },
+    },
+    2463:{
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2463].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2463].multiplier == 1.75 ? 1 : 0);
+            window.specials[2463].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2463warning'
+            });
+        },
+    },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",

@@ -43980,7 +43980,7 @@ window.details = {
             }
         ]
     },
-    2460: {//Pekoms/Mystoms
+    2461: {//Pekoms/Mystoms
         captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 5%.",
         special: "Reduces enemy Threshold Damage Reduction duration by 2 turns and adds .5x to Chain multiplier for 1 turn.",
         specialName: "Disguised Determination",
@@ -43993,6 +43993,56 @@ window.details = {
                     "Level 3: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 75% for 1 turn.",
                     "Level 4: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 75% for 1 turn.",
                     "Level 5: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 3 turns, reduces Special Cooldown of the supported character's special by 3 turns and reduces damage received by 75% for 1 turn."
+                ]
+            }
+        ]
+    },
+    2462: {//Franky
+        captain: "Boosts ATK of Powerhouse characters by ?x, their HP by ?x and makes [RCV] orbs beneficial for all characters.",
+        special: "Deals 10 hits of random Typeless damage to random enemies. If enemies have ATK UP, Enrage, End of Turn Damage/Percent Cut or End of Turn Heal at the time the special was activated, boosts ATK of Powerhouse characters by 2.25x for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn otherwise.",
+        specialName: "Weapons Left",
+        sailor: "Boosts base HP of Powerhouse characters by 100",
+    },
+    2463: {//Franky
+        captain: "Boosts ATK of Powerhouse characters by 3x, their HP by 1.2x and makes [RCV] orbs beneficial for all characters.",
+        special: "Deals 10 hits of random Typeless damage to random enemies. If enemies have ATK UP, Enrage, End of Turn Damage/Percent Cut or End of Turn Heal at the time the special was activated, boosts ATK of Powerhouse characters by 2.25x for 1 turn, boosts ATK of Powerhouse characters by 1.75x for 1 turn otherwise.",
+        specialName: "Weapons Left",
+        sailor: {
+            "base": "Boosts base HP of Powerhouse characters by 100",
+            "level1": "Makes [STR] orbs beneficial for Powerhouse characters",
+        },
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    //"Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Powerhouse Characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base HP to the supported character's base HP",
+                    "Level 2: Adds 6% of this character's base HP to the supported character's base HP",
+                    "Level 3: Adds 8% of this character's base HP to the supported character's base HP",
+                    "Level 4: Adds 10% of this character's base HP to the supported character's base HP",
+                    "Level 5: Adds 12% of this character's base HP to the supported character's base HP"
                 ]
             }
         ]

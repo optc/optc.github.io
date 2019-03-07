@@ -8749,6 +8749,14 @@ window.captains = {
     2461: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
     },
+    2462: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1 : 1; },//change this
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1 : 1; },//change this
+    },
+    2463: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
     2500: {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.3 : 1; },
         atk: function(p) { return [ p.slot == p.sourceSlot ? 4.25 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 4 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, p.slot == p.sourceSlot ? 12 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.75 : 1 ][Math.min(3, p.semlaCounter)]; },

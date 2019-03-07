@@ -721,6 +721,12 @@ window.sailors = {
     2426: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
+    2462: {
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
+    2463: {
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
