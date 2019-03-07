@@ -13265,14 +13265,14 @@ window.details = {
     1084: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK of Driven characters by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
-        special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
+        special: "Cuts the current HP of each enemy by 20%. Cuts the current HP of each enemy by 20% at the end of the turn for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall"
     },
     1085: {
         captain: "Boosts HP of Driven characters by 1.5x and boosts ATK of Driven characters by 3x if they have a matching orb, by 1.5x otherwise. Makes [TND] and [RCV] orbs beneficial for Driven characters",
         captainNotes: "#{beneficial}",
-        special: "Cuts the current HP of each enemy by 20%. At the end of the turn, cuts the current HP of each enemy by 20% for 3 turns",
+        special: "Cuts the current HP of each enemy by 20%. Cuts the current HP of each enemy by 20% at the end of the turn for 3 turns",
         specialNotes: "Does not stack with other 'end of turn damage' abilities",
         specialName: "Gravito: Heavens Fall",
         sailor: {
@@ -26845,7 +26845,7 @@ window.details = {
     },
     1768: {//Abdullah and Jeet
         captain: "Boosts ATK of Striker and Slasher characters by 1.5x",
-        special: "At the end of the turn, cuts the current HP of each enemy by 10% for 2 turns",
+        special: "Cuts the current HP of each enemy by 10% at the end of the turn for 2 turns",
         specialName: "Nasty Final Blow",
     },
     1769: {//Ben Beckman
@@ -28883,12 +28883,12 @@ window.details = {
     },
     1866: {//Hawkins FN
         captain: "Boosts ATK of Cerebral characters by 2x",
-        special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
+        special: "Cuts the current HP of each enemy by 10%. Cuts the current HP of each enemy by 10% at the end of the turn for 3 turns. Reduces damage received by 40% for 3 turns.",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
     1867: {//Hawkins FN
         captain: "Boosts ATK of Cerebral characters by 2x, boosts chain multiplier by 1.5x",
-        special: "Cuts the current HP of each enemy by 10%. At the end of the turn, cuts the current HP of each enemy by 10% for 3 turns. Reduces damage received by 40% for 3 turns.",
+        special: "Cuts the current HP of each enemy by 10%. Cuts the current HP of each enemy by 10% at the end of the turn for 3 turns. Reduces damage received by 40% for 3 turns.",
         specialName: "Fortune-Telling from the Shadow of Death"
     },
     1868: {//Fujitora
@@ -30294,6 +30294,18 @@ window.details = {
         specialName: "Brute Force Rescue",
         sailor: "Makes [PSY] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
+        support: [
+            {
+                "Characters": "Ichiji, Niji, Yonji, Judge and Sanji",
+                "description": [
+                    "Level 1: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 1 turn and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 2: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 1 turn and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 3: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 2 turns and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 4: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 2 turns and makes [RCV] orbs beneficial for all characters for 1 turn",
+                    "Level 5: Once per adventure, when your orbs are shuffled by the enemy, reduces Chain Multiplier Limit duration by 3 turns and makes [RCV] orbs beneficial for all characters for 1 turn"
+                ]
+            }
+        ]
     },
     1919: {//Sanji
         captain: "Recovers 1.5x character's RCV in HP at the end of each turn",
@@ -30304,6 +30316,18 @@ window.details = {
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
         special: "Reduces enemies Percent Damage Reduction and Increased Defense duration by 2 turns and switches orbs between slots twice",
         specialName: "Iron Mask of Dreams",
+        support: [
+            {
+                "Characters": "Cerebral Characters",
+                "description": [
+                    "Level 1: Boosts the supported character's ATK by 1.05x against Judge",
+                    "Level 2: Boosts the supported character's ATK by 1.05x against Judge",
+                    "Level 3: Boosts the supported character's ATK by 1.1x against Judge",
+                    "Level 4: Boosts the supported character's ATK by 1.15x against Judge",
+                    "Level 5: Boosts the supported character's ATK by 1.2x against Judge"
+                ]
+            }
+        ]
     },
     1921:{//6+ Zoro
         captain: "Boosts ATK of Slasher characters by 3x and their HP by 1.5x",
@@ -38136,7 +38160,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
                 "cooldown": [ 24, 10 ],
             },
             {
@@ -38151,7 +38175,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
                 "cooldown": [ 24, 10 ],
             },
             {
@@ -43937,6 +43961,40 @@ window.details = {
                     "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK",
                     "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK",
                     "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
+    },
+    2460: {//Oven
+        captain: "Boosts ATK of [STR] characters by 2.25x and boost HP of Powerhouse characters by 1.25x.",
+        special: "Boosts ATK of STR characters by 1.75x for 1 turn and deals 50x character's ATK as [STR] damage to all enemies at the end of the turn for 2 turns.",
+        specialName: "Overheated Anger",
+        support: [
+            {
+                "Characters": "Charlotte Linlin, Katakuri, Cracker, Daifuku and Smoothie",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, changes [TND] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.1x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, changes [RCV] and [TND] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.1x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, changes [RCV], [TND] and [BOMB] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.15x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, changes [EMPTY], [RCV], [TND] and [BOMB] orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.2x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, changes all orbs on Powerhouse characters into [STR] orbs and boosts the Color Affinity of Powerhouse characters by 1.3x for 1 turn."
+                ]
+            }
+        ]
+    },
+    2460: {//Pekoms/Mystoms
+        captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 5%.",
+        special: "Reduces enemy Threshold Damage Reduction duration by 2 turns and adds .5x to Chain multiplier for 1 turn.",
+        specialName: "Disguised Determination",
+        support: [
+            {
+                "Characters": "Luffy, Sanji, Carrot and Pedro",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 1 turn, reduces Special Cooldown of the supported character's special by 1 turn and reduces damage received by 25% for 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 50% for 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 75% for 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 2 turns, reduces Special Cooldown of the supported character's special by 2 turns and reduces damage received by 75% for 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis or Special Rewind, reduces Paralysis duration on the supported character by 3 turns, reduces Special Cooldown of the supported character's special by 3 turns and reduces damage received by 75% for 1 turn."
                 ]
             }
         ]
