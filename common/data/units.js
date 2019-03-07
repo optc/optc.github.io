@@ -2245,7 +2245,7 @@ window.units = [
     [ "Daifuku, Charlotte Family's 3rd Son", "QCK", [ "Powerhouse", "Driven" ], 5, 30, 5, 4, 99, 4000000, 1253, 532, 72, 3054, 1288, 206, 1 ],
     [ "Sanji, Vinsmoke Family's Illegitimate Child", "INT", [ "Fighter", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1320, 730, 153, 3438, 1538, 360, 1 ],
     [ "Nefertari Vivi, Vivi's Adventure", "QCK", [ "Free Spirit", "Slasher" ], 4, 20, 6, 4, 70, 1066998, 362, 210, 64, 981, 581, 200, 1 ],
-    [ "Nefertari Vivi, The Princess' Resolve", "QCK", [ "Free Spirit", "Slasher" ], 5, 30, 4, 5, 99, 4000000, 953, 565, 182, 2058, 1299, 375, 1 ],
+    [ "Nefertari Vivi, Princess Coming of Age", "QCK", [ "Free Spirit", "Slasher" ], 5, 30, 4, 5, 99, 4000000, 953, 565, 182, 2058, 1299, 375, 1 ],
     [ "Charlotte Daifuku, Big Mom Pirates", "DEX", [ "Fighter", "Powerhouse" ], 4, 25, 5, 3, 70, 1066998, 381, 174, 12, 1599, 939, 73, 1 ],
     [ "Charlotte Daifuku, Puff Puff Fruit Lamp Human", "DEX", [ "Slasher", "Powerhouse" ], 5, 40, 5, 4, 99, 4000000, 1556, 875, 58, 2988, 1476, 150, 1 ],
     [ "Monkey D. Garp, Pirate King's Arch-Nemesis", "PSY", [ "Free Spirit", "Powerhouse" ], 5, 30, 5, 3, 70, 1066998, 920, 450, 90, 1890, 905, 193, 1 ],
