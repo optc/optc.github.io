@@ -38158,7 +38158,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
                 "cooldown": [ 24, 10 ],
             },
             {
@@ -38173,7 +38173,7 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by ?x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
                 "cooldown": [ 24, 10 ],
             },
             {
