@@ -5794,27 +5794,27 @@ window.specials = {
         }
     },
     2248: {
-        affinity: function(p) { return window.specials[2248].multiplier == 2 ? 1.75 : 1; },
-        chainAddition: function(p) { return window.specials[2248].multiplier == 1 ? .8 : 0; },
-        delay: function(p) { return window.specials[2248].multiplier == 1 ? 1 : 0; },
+        affinity: function(p) { return window.specials[2248].multiplier == 2 ? 1.5 : window.specials[2248].multiplier == 3 ? 1.75 : 1; },
+        chainAddition: function(p) { return window.specials[2248].multiplier == 0 ? .5 : window.specials[2248].multiplier == 1 ? .8 : 0; },
+        delay: function(p) { return window.specials[2248].multiplier == 0 ? 1 : window.specials[2248].multiplier == 1 ? 2 : 0; },
         onActivation: function(p) {
-            var n = (window.specials[2248].multiplier == 1 ? 1 : 0);
-            window.specials[2248].multiplier = [1, 2][n];
+            var n = window.specials[2248].multiplier != null ? (window.specials[2248].multiplier + 1) % 4 : 0;
+            window.specials[2248].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + ' special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
-                name: '2248warning'
+                text: 'Using the ' + ['4 STR and DEX orbs Stage 1', '4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2'][n] + ' special. To switch to the ' + ['4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2', '4 STR and DEX orbs Stage 1'][n] + ' special, disable and re-enable this special',
+                name: '2249warning'
             });
         }
     },
     2249: {
-        affinity: function(p) { return window.specials[2249].multiplier == 2 ? 1.75 : 1; },
-        chainAddition: function(p) { return window.specials[2249].multiplier == 1 ? .8 : 0; },
-        delay: function(p) { return window.specials[2249].multiplier == 1 ? 1 : 0; },
+        affinity: function(p) { return window.specials[2249].multiplier == 2 ? 1.5 : window.specials[2249].multiplier == 3 ? 1.75 : 1; },
+        chainAddition: function(p) { return window.specials[2249].multiplier == 0 ? .5 : window.specials[2249].multiplier == 1 ? .8 : 0; },
+        delay: function(p) { return window.specials[2249].multiplier == 0 ? 1 : window.specials[2249].multiplier == 1 ? 2 : 0; },
         onActivation: function(p) {
-            var n = (window.specials[2249].multiplier == 1 ? 1 : 0);
-            window.specials[2249].multiplier = [1, 2][n];
+            var n = window.specials[2249].multiplier != null ? (window.specials[2249].multiplier + 1) % 4 : 0;
+            window.specials[2249].multiplier = n;
             p.scope.notify({
-                text: 'Using the ' + ['4 STR and DEX orbs', '4 PSY and INT orbs'][n] + ' special. To switch to the ' + ['4 PSY and INT orbs', '4 STR and DEX orbs'][n] + ' special, disable and re-enable this special',
+                text: 'Using the ' + ['4 STR and DEX orbs Stage 1', '4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2'][n] + ' special. To switch to the ' + ['4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2', '4 STR and DEX orbs Stage 1'][n] + ' special, disable and re-enable this special',
                 name: '2249warning'
             });
         }
