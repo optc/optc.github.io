@@ -861,6 +861,7 @@ window.drops = {
             name: 'Mokomo Dukedom',
             shortName: 'Zou',
             thumb: 2231,
+            global: true,
             nakama: 1223100,
             completion: '5x Rainbow Gems',
             gamewith: 117222,
@@ -3443,6 +3444,7 @@ window.drops = {
         {
             name: 'Higuma - The Bandit Who Rowed Out to Sea',
             thumb: 2259,
+            global: true,
             nakama: null,
             gamewith: 119604,
             'All Difficulties': [ 9022 ],
@@ -3488,6 +3490,15 @@ window.drops = {
             thumb: 1879,
             gamewith: 142094,
             'All Difficulties': [ 1878 ],
+            condition: "Chance of dropping the Support Medallions.",
+        },
+        
+        {
+            name: 'Clash!! Judge [Extra]',
+            thumb: 2281,
+            nakama: null,
+            gamewith: 144312,
+            'All Difficulties': [ 2280 ],
             condition: "Chance of dropping the Support Medallions.",
         },
         
