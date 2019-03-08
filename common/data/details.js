@@ -32460,13 +32460,13 @@ window.details = {
     },
     2008: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.2x",
-        special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Cuts the current HP of each enemy by 10% and reduces Special Cooldown of your top row by 2 turns. If you are on a Training Map, boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialName: "Proof of a Human Weapon",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
     2009: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
-        special: "Cuts the current HP of each enemy by 10%, reduces Special Cooldown of your top row by 2 turns and boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Cuts the current HP of each enemy by 10% and reduces Special Cooldown of your top row by 2 turns. If you are on a Training Map, boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialName: "Proof of a Human Weapon",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
@@ -33436,13 +33436,13 @@ window.details = {
     },
     2059: {//Beckman
         captain: "Boosts ATK of Cerebral characters by 1.2x",
-        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR], amplifies the effect of orbs by 1.5x for 1 turn and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and amplifies the effect of orbs by 1.5x for 1 turn. If you are on a Training Map, locks the chain multiplier depending on your Treasure Map Level for 1 turn",
         specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
     2060: {//Beckman
         captain: "Boosts ATK of Cerebral characters by 1.5x and their HP by 1.2x",
-        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR], amplifies the effect of orbs by 1.5x for 1 turn and locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and amplifies the effect of orbs by 1.5x for 1 turn. If you are on a Training Map, locks the chain multiplier depending on your Treasure Map Level for 1 turn",
         specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
@@ -37262,13 +37262,13 @@ window.details = {
     },
     2206: {//Luffy
         captain: "Boosts ATK of Striker characters by 1.5x",
-        special: "Reduces enemy Barrier duration by 1 turn, reduces the defense of all enemies by 100% for 1 turn and boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn and reduces the defense of all enemies by 100% for 1 turn. If you are on a Training Map, boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         specialName: "Gomu Gomu no Fireworks: Golden Peony",
     },
     2207: {//Luffy
         captain: "Boosts ATK of Striker characters by 1.75x",
-        special: "Reduces enemy Barrier duration by 1 turn, reduces the defense of all enemies by 100% for 1 turn and boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn and reduces the defense of all enemies by 100% for 1 turn. If you are on a Training Map, boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         specialName: "Gomu Gomu no Fireworks: Golden Peony",
     },
@@ -42986,7 +42986,7 @@ window.details = {
     },
     2438: {//Law
         captain: "Boosts ATK of Slasher characters by 1.5x",
-        special: "Deals 30x character's ATK in [DEX] damage to one enemy. If enemies have a Defense Reduction debuff at the time the special was activated, boosts the Color Affinity of all characters by 1.5x and boosts ATK against enemies with reduced defense depending on your Treasure Map Level for 1 turn",
+        special: "Deals 30x character's ATK in [DEX] damage to one enemy. If enemies have a Defense Reduction debuff at the time the special was activated, boosts the Color Affinity of all characters by 1.5x and if you are on a Training Map, boosts ATK against enemies with reduced defense depending on your Treasure Map Level for 1 turn",
         specialName: "Shambles - Kikoku's Strike",
         specialNotes: "Level 1-10: 1.75x conditional boost<br\>Level 11-20: 2x conditional boost<br\>Level 21+: 2.25x conditional boost",
         limit: [
@@ -44045,6 +44045,178 @@ window.details = {
                     "Level 5: Adds 12% of this character's base HP to the supported character's base HP"
                 ]
             }
+        ]
+    },
+    2464: {//Cracker
+        captain: "Boosts ATK of Powerhouse characters by 3.75x. Boosts HP of Fighter, Slasher, Striker and Shooter characters by 1.35x.",
+        special: "Changes [EMPTY], [BOMB], [RCV], [G], [BLOCK] and own orbs into Matching orbs. If your Captain is a Fighter, Slasher, Shooter or Striker character, adds 1.1x to Chain multiplier for 2 turns. If your Captain is a Free Spirit, Cerebral, Powerhouse or Driven character, boosts the Color Affinity of Free Spirit, Cerebral, Powerhouse and Driven characters by 1.75x for 1 turn.",
+        specialName: "Roaring \"Honey Preztel\"",
+        sailor: "When any other Powerhouse or Slasher character uses a special, reduces own cooldown by 1 turn",
+    },
+    2465: {//Cracker
+        captain: "Boosts ATK of Powerhouse characters by 3.75x. Boosts HP of Fighter, Slasher, Striker and Shooter characters by 1.35x.",
+        special: "Changes [EMPTY], [BOMB], [RCV], [G], [BLOCK] and own orbs into Matching orbs. If your Captain is a Fighter, Slasher, Shooter or Striker character, adds 1.1x to Chain multiplier for 2 turns. If your Captain is a Free Spirit, Cerebral, Powerhouse or Driven character, boosts the Color Affinity of Free Spirit, Cerebral, Powerhouse and Driven characters by 1.75x for 1 turn.",
+        specialName: "Roaring \"Honey Preztel\"",
+        sailor: {
+            "base": "When any other Powerhouse or Slasher character uses a special, reduces own cooldown by 1 turn",
+            "level1": "Boosts base ATK, HP and RCV of Slasher and Powerhouse characters by 100",
+        },
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Katakuri and Smoothie",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by ? turns and adds ?x to Chain multiplier for 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by ? turns and adds ?x to Chain multiplier for 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by ? turns and adds ?x to Chain multiplier for 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by ? turns and adds ?x to Chain multiplier for 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and adds .7x to Chain multiplier for 1 turn."
+                ]
+            }
+        ]
+    },
+    2466: {//Jinbe
+        captain: "Boosts ATK of Powerhouse characters by 1.5x",
+        special: "Reduces Bind and Chain Multiplier Limit duration by 3 turns, deals 50x character's ATK as [QCK] damage to all enemies at the end of the turn for 3 turns. If you are on a Training Map, amplifies the effects of orbs for Powerhouse characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Black Tea Ocean Current Shoulder Throw",
+        specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+    },
+    2467: {//Pound
+        captain: "Boosts ATK of [PSY] characters by 1.5x",
+        special: "Reduces Silence and Increase Damage Taken duration by 2 turns and reduces enemies Percent Damage Reduction duration by 3 turns.",
+        specialName: "Attacking with All His Might in Order to Protect His Daughter",
+        sailor: "Reduces Silence duration on this character by 2 turns",
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+    },
+    2468: {//Smoothie&Oven
+        captain: {
+            "character1": "Boosts ATK of [PSY] characters by ?x and boosts ATK of [QCK] and [INT] characters by ?x.",
+            "character2": "Boosts ATK of [QCK] characters by ?x and boosts ATK of [PSY] and [INT] characters by ?x.",
+            "combined": "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn."
+        },
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn, deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: {
+            "character1": "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
+            "character2": "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
+            "combined": "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
+        },
+    },
+    2469: {//Smoothie&Oven
+        captain: {
+            "character1": "Boosts ATK of [PSY] characters by 3x and boosts ATK of [QCK] and [INT] characters by 2.5x.",
+            "character2": "Boosts ATK of [QCK] characters by 3x and boosts ATK of [PSY] and [INT] characters by 2.5x.",
+            "combined": "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn."
+        },
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn, deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: {
+            "character1": "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
+            "character2": "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
+            "combined": "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
+            "level1": "Cannot be blown away",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
         ]
     },
     2500: {//Big Mom
@@ -46705,6 +46877,162 @@ window.details = {
                     "Level 3: Reduces Slot Bind duration by 5 turns on this character",
                     "Level 4: Reduces Slot Bind duration by 7 turns on this character",
                     "Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ]
+    },
+    2468: {//Smoothie&Oven
+        captain: "Boosts ATK of [PSY] characters by ?x and boosts ATK of [QCK] and [INT] characters by ?x.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
+    },
+    2468: {//Smoothie&Oven
+        captain: "Boosts ATK of [QCK] characters by ?x and boosts ATK of [PSY] and [INT] characters by ?x.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
+    },
+    2468: {//Smoothie&Oven
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
+    },
+    2468: {//Smoothie&Oven
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
+    },
+    2469: {//Smoothie&Oven
+        captain: "Boosts ATK of [PSY] characters by 3x and boosts ATK of [QCK] and [INT] characters by 2.5x.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
+            "level1": "Cannot be blown away",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
+    },
+    2469: {//Smoothie&Oven
+        captain: "Boosts ATK of [QCK] characters by 3x and boosts ATK of [PSY] and [INT] characters by 2.5x.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
+            "level1": "Cannot be blown away",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
+    },
+    2469: {//Smoothie&Oven
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
+            "level1": "Cannot be blown away",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ]
+    },
+    2469: {//Smoothie&Oven
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn.",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        specialNotes: "Change Action: When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
+        specialName: "Smoothie&Oven Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
+            "level1": "Cannot be blown away",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
                 ]
             },
         ]

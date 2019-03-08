@@ -3007,6 +3007,14 @@ window.drops = {
             gamewith: null,
             'Primordial Sea': [ 2442, 9026 ]
         },
+
+        {
+            name: 'Smoothie & Oven',
+            thumb: 2469,
+            nakama: null,
+            gamewith: null,
+            'Sweet Sea': [ 2468 ]
+        },
         
     ],
 
