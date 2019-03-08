@@ -2142,6 +2142,7 @@ window.drops = {
         {
             name: 'Recover! King of Day Duke Inuarashi',
             thumb: 2219,
+            global: true,
             nakama: 2221900,
             gamewith: 116883,
             'All Difficulties': [ 2218, 2220, 2221, -2007, -2027, -2031, -1783, -1538, -1536 ]
@@ -2150,6 +2151,7 @@ window.drops = {
         {
             name: 'Lets Play! The Seducing Woods',
             thumb: 2253,
+            global: true,
             nakama: 2225300,
             gamewith: 118916,
             'All Difficulties': [ 2252, 2254, 2255, -2023, -2025, -1959, -2082, -2080, -2068, -1782, -1781 ]
