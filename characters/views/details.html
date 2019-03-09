@@ -257,6 +257,21 @@
                                         <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Swap</td>
+                                    <td>
+                                        <!-- same sailor ability -->
+                                        <div ng-if="!isSwapHybrid" ng-bind-html="details.swap | decorate"></div>
+                                        <!-- different sailor abilities -->
+                                        <div ng-if="isSwapHybrid">
+                                            <span class="badge badge-japan" ng-show="details.Swap.japan">Japan</span>
+                                            <div ng-show="details.Swap.japan" ng-bind-html="details.sailor.japan | decorate"></div>
+                                            <span class="badge badge-global" ng-show="details.Swap.global">Global</span>
+                                            <div ng-show="details.Swap.global" ng-bind-html="details.Swap.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.swapNotes" ng-bind-html="details.swapNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
                                 <tr ng-if="cooldown && !isSpecialStaged">
                                     <td>Cooldown</td>
                                     <td>
