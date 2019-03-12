@@ -44103,7 +44103,7 @@ window.details = {
             "character2": "Boosts ATK of [QCK] characters by ?x and boosts ATK of [PSY] and [INT] characters by ?x.",
             "combined": "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn."
         },
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn, deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: {
@@ -44118,7 +44118,7 @@ window.details = {
             "character2": "Boosts ATK of [QCK] characters by 3x and boosts ATK of [PSY] and [INT] characters by 2.5x.",
             "combined": "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn."
         },
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn, deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: {
@@ -46822,35 +46822,35 @@ window.details = {
     },
     5058: {//Smoothie&Oven
         captain: "Boosts ATK of [PSY] characters by ?x and boosts ATK of [QCK] and [INT] characters by ?x.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
     },
     5059: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK] characters by ?x and boosts ATK of [PSY] and [INT] characters by ?x.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
     },
     5060: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
     },
     5061: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
     },
     5062: {//Smoothie&Oven
         captain: "Boosts ATK of [PSY] characters by 3x and boosts ATK of [QCK] and [INT] characters by 2.5x.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: {
@@ -46882,7 +46882,7 @@ window.details = {
     },
     5063: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK] characters by 3x and boosts ATK of [PSY] and [INT] characters by 2.5x.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: {
@@ -46914,7 +46914,7 @@ window.details = {
     },
     5064: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: {
@@ -46946,7 +46946,7 @@ window.details = {
     },
     5065: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn.",
-        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK] and [PSY] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
+        special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK], [PSY] and [INT] orbs beneficial for all characters for 1 turn, deals 20x character's ATK as typeless damage to all enemies at the end of the turn for 1 turn and randomizes all orbs.",
         specialName: "Smoothie&Oven Special",
         sailor: {
