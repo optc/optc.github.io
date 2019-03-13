@@ -30785,13 +30785,13 @@ window.details = {
     },
     1936: {//Blackbeard
         captain: "Boosts ATK of [INT] characters by 1.75x",
-        special: "Adds 15x character's ATK as Additional Typeless Damage for 2 turns. If you are on a Training Map, Cuts the current HP of all enemies depending on your Treasure Map Level that will ignore damage negating abilities and barriers",
+        special: "Adds 15x character's ATK as Additional Typeless Damage for 2 turns. If you are on a Treasure Map, Cuts the current HP of all enemies depending on your Treasure Map Level that will ignore damage negating abilities and barriers",
         specialNotes: "Level 1-20: 10% Health Cut<br\>Level 21+: 25% Health Cut<br>#{ignoreBarrier}",
         specialName: "Sacred Flames: Unknown Fire",
     },
     1937: {//Blackbeard
         captain: "Boosts ATK of [INT] characters by 1.75x and their HP by 1.5x",
-        special: "Adds 15x character's ATK as Additional Typeless Damage for 2 turns. If you are on a Training Map, Cuts the current HP of all enemies depending on your Treasure Map Level that will ignore damage negating abilities and barriers",
+        special: "Adds 15x character's ATK as Additional Typeless Damage for 2 turns. If you are on a Treasure Map, Cuts the current HP of all enemies depending on your Treasure Map Level that will ignore damage negating abilities and barriers",
         specialNotes: "Level 1-20: 10% Health Cut<br\>Level 21+: 25% Health Cut<br>#{ignoreBarrier}",
         specialName: "Sacred Flames: Unknown Fire",
     },
@@ -32390,13 +32390,13 @@ window.details = {
     },
     2008: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.2x",
-        special: "Cuts the current HP of each enemy by 10% and reduces Special Cooldown of your top row by 2 turns. If you are on a Training Map, boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Cuts the current HP of each enemy by 10% and reduces Special Cooldown of your top row by 2 turns. If you are on a Treasure Map, boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialName: "Proof of a Human Weapon",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
     2009: {//Kuma
         captain: "Boosts ATK of [STR] and [INT] characters by 1.5x and their HP by 1.2x",
-        special: "Cuts the current HP of each enemy by 10% and reduces Special Cooldown of your top row by 2 turns. If you are on a Training Map, boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Cuts the current HP of each enemy by 10% and reduces Special Cooldown of your top row by 2 turns. If you are on a Treasure Map, boosts the Color Affinity of [STR] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialName: "Proof of a Human Weapon",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
     },
@@ -33365,13 +33365,13 @@ window.details = {
     },
     2059: {//Beckman
         captain: "Boosts ATK of Cerebral characters by 1.2x",
-        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and amplifies the effect of orbs by 1.5x for 1 turn. If you are on a Training Map, locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and amplifies the effect of orbs by 1.5x for 1 turn. If you are on a Treasure Map, locks the chain multiplier depending on your Treasure Map Level for 1 turn",
         specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
     2060: {//Beckman
         captain: "Boosts ATK of Cerebral characters by 1.5x and their HP by 1.2x",
-        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and amplifies the effect of orbs by 1.5x for 1 turn. If you are on a Training Map, locks the chain multiplier depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemies Increased Defense duration by 3 turns, changes own orb into [STR] and amplifies the effect of orbs by 1.5x for 1 turn. If you are on a Treasure Map, locks the chain multiplier depending on your Treasure Map Level for 1 turn",
         specialName: "Trial of Annihilation",
         specialNotes: "Level 1-10: 2.5x chain lock<br\>Level 11-20: 2.75x chain lock<br\>Level 21+: 3x chain lock",
     },
@@ -37193,13 +37193,13 @@ window.details = {
     },
     2206: {//Luffy
         captain: "Boosts ATK of Striker characters by 1.5x",
-        special: "Reduces enemy Barrier duration by 1 turn and reduces the defense of all enemies by 100% for 1 turn. If you are on a Training Map, boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn and reduces the defense of all enemies by 100% for 1 turn. If you are on a Treasure Map, boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         specialName: "Gomu Gomu no Fireworks: Golden Peony",
     },
     2207: {//Luffy
         captain: "Boosts ATK of Striker characters by 1.75x",
-        special: "Reduces enemy Barrier duration by 1 turn and reduces the defense of all enemies by 100% for 1 turn. If you are on a Training Map, boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        special: "Reduces enemy Barrier duration by 1 turn and reduces the defense of all enemies by 100% for 1 turn. If you are on a Treasure Map, boosts ATK of [DEX], [QCK] and [INT] characters depending on your Treasure Map Level for 1 turn",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         specialName: "Gomu Gomu no Fireworks: Golden Peony",
     },
@@ -42917,7 +42917,7 @@ window.details = {
     },
     2438: {//Law
         captain: "Boosts ATK of Slasher characters by 1.5x",
-        special: "Deals 30x character's ATK in [DEX] damage to one enemy. If enemies have a Defense Reduction debuff at the time the special was activated, boosts the Color Affinity of all characters by 1.5x and if you are on a Training Map, boosts ATK against enemies with reduced defense depending on your Treasure Map Level for 1 turn",
+        special: "Deals 30x character's ATK in [DEX] damage to one enemy. If enemies have a Defense Reduction debuff at the time the special was activated, boosts the Color Affinity of all characters by 1.5x and if you are on a Treasure Map, boosts ATK against enemies with reduced defense depending on your Treasure Map Level for 1 turn",
         specialName: "Shambles - Kikoku's Strike",
         specialNotes: "Level 1-10: 1.75x conditional boost<br\>Level 11-20: 2x conditional boost<br\>Level 21+: 2.25x conditional boost",
         limit: [
@@ -44039,7 +44039,7 @@ window.details = {
     },
     2466: {//Jinbe
         captain: "Boosts ATK of Powerhouse characters by 1.5x",
-        special: "Reduces Bind and Chain Multiplier Limit duration by 3 turns, deals 50x character's ATK as [QCK] damage to all enemies at the end of the turn for 3 turns. If you are on a Training Map, amplifies the effects of orbs for Powerhouse characters depending on your Treasure Map Level for 1 turn",
+        special: "Reduces Bind and Chain Multiplier Limit duration by 3 turns, deals 50x character's ATK as [QCK] damage to all enemies at the end of the turn for 3 turns. If you are on a Treasure Map, amplifies the effects of orbs for Powerhouse characters depending on your Treasure Map Level for 1 turn",
         specialName: "Black Tea Ocean Current Shoulder Throw",
         specialNotes: "Level 1-10: 1.75x orb boost<br\>Level 11-20: 2x orb boost<br\>Level 21+: 2.25x orb boost",
         limit: [
