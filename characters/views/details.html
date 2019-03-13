@@ -203,7 +203,7 @@
                                         <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr ng-if="details.sailor">
                                     <td>Sailor Ability</td>
                                     <td>
                                         <!-- same sailor ability -->
@@ -257,7 +257,7 @@
                                         <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr ng-if="details.swap">
                                     <td>Swap</td>
                                     <td>
                                         <!-- same sailor ability -->
@@ -284,10 +284,10 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities">
+                    <div class="panel panel-default" ng-hide="hidden.abilities"  ng-if="details.limit || details.potential">
                         <table class="table table-striped-column abilities">
                             <tbody>
-                                <tr>
+                                <tr ng-if="details.limit">
                                     <td>Limit Break</td>
                                     <td>
                                         <!-- same limit break (differences across versions) -->
@@ -308,7 +308,7 @@
                                         <span class="notes" ng-if="details.limitNotes" ng-bind-html="details.limitNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr ng-if="details.potential">
                                     <td>Potential Abilties</td>
                                     <td>
                                         <!-- same potential break (differences across versions) -->
@@ -335,11 +335,15 @@
                                         <span class="notes" ng-if="details.potentialNotes" ng-bind-html="details.potentialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                            </tbody>
+                            </tbody>                     
+                        </table>
+                    </div>
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
+                        <table class="table table-striped-column abilities">
                             <!--------------    Support Abilities    -------------->
                             <!--------------    isSupportHybrid is not used since JPN and Global all match so far, leaving in for future cases    -------------->
                             <tbody>
-                                <tr>
+                                <tr ng-if="details.support">
                                     <td>Support Abilities</td>
                                     <td>
                                         <!-- same potential break (differences across versions) -->
