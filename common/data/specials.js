@@ -7133,6 +7133,26 @@ window.specials = {
             });
         },
     },
+    2470: {
+        delay: function(p) { return 2; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2470].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2470].turnedOn = false;
+        }
+    },
+    2471: {
+        delay: function(p) { return 2; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2471].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2471].turnedOn = false;
+        }
+    },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",
