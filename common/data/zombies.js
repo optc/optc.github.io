@@ -749,4 +749,20 @@ window.zombies = {
         type: 'healer',
         amount: 1000
     },
+    5060: { // Smoothie&Oven
+        type: 'healer',
+        multiplier: 0//Change this
+    },
+    5061: { // Smoothie&Oven
+        type: 'healer',
+        multiplier: 0//Change this
+    },
+    5064: { // Smoothie&Oven
+        type: 'healer',
+        multiplier: 3
+    },
+    5065: { // Smoothie&Oven
+        type: 'healer',
+        multiplier: 3
+    },
 };

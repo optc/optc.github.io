@@ -816,6 +816,12 @@ window.matchers = [
     },
     
     {
+        name: 'Enemy Type-Based Damage booster',
+        target: 'sailor',
+        matcher: /Boosts this character's damage against/i
+    },
+    
+    {
         name: 'Full-board Premptive Orb Controllers',
         target: 'sailor',
         matcher: /Changes all orbs into/i

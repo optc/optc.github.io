@@ -203,6 +203,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.isLimitStaged = ($scope.details && $scope.details.limit && $scope.details.limit.constructor == Array);
     $scope.isPotentialStaged = ($scope.details && $scope.details.potential && $scope.details.potential.constructor == Array);
     $scope.isSupportStaged = ($scope.details && $scope.details.support && $scope.details.support.constructor == Array);
+    $scope.isSwapHybrid = ($scope.details && $scope.details.swap && $scope.details.swap.global);
 
     $scope.$watch('customLevel.level',function(level) {
         if (isNaN(level) || level < 1 || level > $scope.unit.maxLevel) {

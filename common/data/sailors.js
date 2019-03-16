@@ -721,6 +721,12 @@ window.sailors = {
     2426: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
+    2462: {
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
+    2463: {
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
     2502: {
         staticMult: function(p) { return 3; }
     },
@@ -914,5 +920,45 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    5058: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    },
+    5059: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    },
+    5060: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5061: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5062: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    },
+    5063: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    },
+    5064: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5065: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },
 };

@@ -861,6 +861,7 @@ window.drops = {
             name: 'Mokomo Dukedom',
             shortName: 'Zou',
             thumb: 2231,
+            global: true,
             nakama: 1223100,
             completion: '5x Rainbow Gems',
             gamewith: 117222,
@@ -2148,8 +2149,9 @@ window.drops = {
         },
         
         {
-            name: 'Lets Play! The Seducing Woods',
+            name: 'Lets Play in The Seducing Woods',
             thumb: 2253,
+            global: true,
             nakama: 2225300,
             gamewith: 118916,
             'All Difficulties': [ 2252, 2254, 2255, -2023, -2025, -1959, -2082, -2080, -2068, -1782, -1781 ]
@@ -2825,7 +2827,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353, 2374, 2415 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353, 2374, 2415, 2470 ],
             Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
@@ -3006,6 +3008,14 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Primordial Sea': [ 2442, 9026 ]
+        },
+
+        {
+            name: 'Smoothie & Oven',
+            thumb: 2469,
+            nakama: null,
+            gamewith: null,
+            'Sweet Sea': [ 2468 ]
         },
         
     ],
@@ -3447,6 +3457,7 @@ window.drops = {
             name: 'Higuma - The Bandit Who Rowed Out to Sea',
             thumb: 2259,
             nakama: 6225900,
+            global: true,
             gamewith: 119604,
             'All Difficulties': [ 9022 ],
         },
@@ -3491,6 +3502,15 @@ window.drops = {
             thumb: 1879,
             gamewith: 142094,
             'All Difficulties': [ 1878 ],
+            condition: "Chance of dropping the Support Medallions.",
+        },
+        
+        {
+            name: 'Clash!! Judge [Extra]',
+            thumb: 2281,
+            nakama: null,
+            gamewith: 144312,
+            'All Difficulties': [ 2280 ],
             condition: "Chance of dropping the Support Medallions.",
         },
         
