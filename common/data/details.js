@@ -42541,15 +42541,15 @@ window.details = {
         ]
     },
     2421: {//Hajrudin
-        captain: "Boosts ATK of Driven and Powerhouse characters by 2.75x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
-        captainNotes: "His ATK multiplier will be 2.75x on the first turn, ?x on the second, ?x on the third and so on. The reduction stops once the multiplier is ?x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
+        captain: "Boosts ATK of Driven and Powerhouse characters by 2.75x, reduces crew's current HP by 5% at the end of each turn, reduces his own ATK multiplier by approximately .06x at the end of each turn",
+        captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.69x on the second, 2.63x on the third and so on. The reduction stops once the multiplier is 1x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
         special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven or Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
         specialName: "\"Gungnir\" - The Decree of the Giant",
         sailor: "Boosts base ATK, HP and RCV of Driven characters by 30",
     },
     2422: {//Hajrudin
-        captain: "Boosts ATK of Driven and Powerhouse characters by 3.25x, reduces crew's current HP by ?% at the end of each turn, reduces his own ATK multiplier by ?x at the end of each turn",
-        captainNotes: "His ATK multiplier will be 3.25x on the first turn, ?x on the second, ?x on the third and so on. The reduction stops once the multiplier is ?x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
+        captain: "Boosts ATK of Driven and Powerhouse characters by 3.25x, reduces crew's current HP by 5% at the end of each turn, reduces his own ATK multiplier by approximately .06x at the end of each turn",
+        captainNotes: "His ATK multiplier will be 3.25x on the first turn, 3.19x on the second, 3.13x on the third and so on. The reduction stops once the multiplier is 1x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
         special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven or Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
         specialName: "\"Gungnir\" - The Decree of the Giant",
         sailor: {
@@ -42679,13 +42679,13 @@ window.details = {
     },
     2425: {//Sai
         captain: "Boosts HP of Driven characters by 1.2x and boosts ATK of Driven characters by 2.25x if they have a Matching orb, by 1.5x otherwise",
-        special: "Reduces Bind, Despair and Burn duration by 3 turns, reduces enemies' ATK Up, Enrage and Resilience Buffs duration by 3 turns, reduces the defense of all enemies by ?% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Driven characters for 1 turn",
+        special: "Reduces Bind, Despair and Burn duration by 3 turns, reduces enemies' ATK Up, Enrage and Resilience Buffs duration by 3 turns, reduces the defense of all enemies by 80% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Driven characters for 1 turn",
         specialName: "Drill Dragon Nail - The Leader's Killing Strike",
         sailor: "Makes [RCV] and [TND] orbs beneficial for this character",
     },
     2426: {//Sai
         captain: "Boosts HP of Driven characters by 1.25x and boosts ATK of Driven characters by 2.75x if they have a Matching orb, by 1.5x otherwise",
-        special: "Reduces Bind, Despair and Burn duration by 3 turns, reduces enemies' ATK Up, Enrage and Resilience Buffs duration by 3 turns, reduces the defense of all enemies by ?% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Driven characters for 1 turn",
+        special: "Reduces Bind, Despair and Burn duration by 3 turns, reduces enemies' ATK Up, Enrage and Resilience Buffs duration by 3 turns, reduces the defense of all enemies by 80% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Driven characters for 1 turn",
         specialName: "Drill Dragon Nail - The Leader's Killing Strike",
         sailor: {
             "base": "Boosts base ATK of Driven characters by 50",

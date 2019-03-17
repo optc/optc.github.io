@@ -6890,7 +6890,7 @@ window.specials = {
         },
     },
     2425: {
-        def: function(p) { return 0.5; },//change this
+        def: function(p) { return 0.2; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2425].turnedOn = true;
@@ -6900,7 +6900,7 @@ window.specials = {
         }
     },
     2426: {
-        def: function(p) { return 0.5; },//change this
+        def: function(p) { return 0.2; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2426].turnedOn = true;
