@@ -850,6 +850,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Ben Beckman, Lucky Roo and Yasopp",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [INT] characters by 2%. Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [INT] characters by 3%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [INT] characters by 4%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [INT] characters by 5%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     119: {
@@ -4045,6 +4057,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Ace and Whitebeard",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     450: {
@@ -6184,6 +6208,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characers",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 9% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     640: {
@@ -6364,6 +6400,18 @@ window.details = {
                     //"Level 5: This character's normal attack will ignore barriers"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characers",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Bind or Despair reducing special, reduces Bind duration by 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses a Bind or Despair reducing special, reduces Bind duration by 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses a Bind or Despair reducing special, reduces Bind duration by 2 turns.",
+                    "Level 4: Once per an adventure, when the supported character uses a Bind or Despair reducing special, reduces Bind duration by 2 turns.",
+                    "Level 5: Once per an adventure, when the supported character uses a Bind or Despair reducing special, reduces Bind and Despair duration by 2 turns."
+                ]
+            }
         ]
     },
     646: {
@@ -7334,6 +7382,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characers",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     719: {
@@ -10765,11 +10825,11 @@ window.details = {
             {
                 "Characters": "Doflamingo, Gladius, Buffalo and Baby 5",
                 "description": [
-                    "Level 1: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
-                    "Level 2: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
-                    "Level 3: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] orbs into Matching orbs",
-                    "Level 4: Once per adventure, when the supported character uses their special, For Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs",
-                    "Level 5: Once per adventure, when the supported character uses their special, For Driven and Powerhouse characters, changes [EMPTY] and Badly Matching orbs into Matching orbs"
+                    "Level 1: Once per adventure, when the supported character uses their special, Changes [EMPTY] orbs on Powerhouse characters into Matching orbs",
+                    "Level 2: Once per adventure, when the supported character uses their special, Changes [EMPTY] orbs on Powerhouse characters into Matching orbs",
+                    "Level 3: Once per adventure, when the supported character uses their special, Changes [EMPTY] orbs on Powerhouse characters into Matching orbs",
+                    "Level 4: Once per adventure, when the supported character uses their special, Changes [EMPTY] and Badly Matching orbs on Powerhouse characters into Matching orbs",
+                    "Level 5: Once per adventure, when the supported character uses their special, Changes [EMPTY] and Badly Matching orbs on Powerhouse and Driven characters into Matching orbs"
                 ]
             }
         ]
@@ -13201,7 +13261,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Rebecca",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK of the supported character by 1.2x.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK of the supported character by 1.25x.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of the supported character by 1.5x.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of the supported character by 1.75x.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of the supported character by 2x."
+                ]
+            }
+        ]
     },
     1082: {
         captain: "Boosts ATK of Striker and Fighter characters by 1.2x",
@@ -16067,6 +16139,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by ? turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Fujitora",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1237: {//Bastille
@@ -16629,14 +16713,14 @@ window.details = {
     },
     1267: {//Legend Blackbeard
         captain: "Boosts ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
-        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
+        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored. Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.<br>#{ignoreBarrier}",
         specialName: "World Shaking Impact",
     },
     1268: {//Legend Blackbeard
         captain: "Boosts ATK of all characters by 2.75x and their HP by 1.5x if you have a Striker, Shooter, Fighter and Slasher on your crew. Attacks will ignore defensive barriers and buffs.",
-        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored). Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
+        captainNotes: "Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored. Multiple class characters count as a character of each class. Enemy attacks will go through YOUR defensive buffs.",
         special: "Cuts the current HP of each enemy by 30%. If Blackbeard is a captain, this ability will ignore damage negating abilities and barriers",
         specialNotes: "If Blackbeard is not a captain, the effect works exactly like Whitebeard special and is affected by barriers.<br>#{ignoreBarrier}",
         specialName: "World Shaking Impact",
@@ -17386,6 +17470,18 @@ window.details = {
                     "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Kanjuro, Momonosuke and Raizo",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn.",
+                    "Level 2: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn.",
+                    "Level 3: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn.",
+                    "Level 4: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn.",
+                    "Level 5: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 2 turns."
+                ]
+            }
         ]
     },
     1311: {//Coliseum Marigold
@@ -18238,6 +18334,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Mihawk and Perona",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 2 turns."
+                ]
+            }
         ]
     },
     1363: {//Timeskip Franky
@@ -21581,6 +21689,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Cavendish",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.1x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.1x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.2x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.2x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.3x for 1 turn."
+                ]
+            }
         ]
     },
     1526: {//Arlong
@@ -23566,6 +23686,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Kaku, Blueno, Jabra, Kumadori, Fukuro and Kalifa",
+                "description": [
+                    "Level 1: Reduces damage received from [QCK] characters by 1%. Adds 4% of this character's base HP to the supported character's base HP",
+                    "Level 2: Reduces damage received from [QCK] characters by 2%. Adds 7% of this character's base HP to the supported character's base HP",
+                    "Level 3: Reduces damage received from [QCK] characters by 3%. Adds 10% of this character's base HP to the supported character's base HP",
+                    "Level 4: Reduces damage received from [QCK] characters by 4%. Adds 12% of this character's base HP to the supported character's base HP",
+                    "Level 5: Reduces damage received from [QCK] characters by 5%. Adds 13% of this character's base HP to the supported character's base HP"
+                ]
+            }
         ]
     },
     1615: {//Crocodile
@@ -23622,6 +23754,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Daz Bones, Robin and Bon Clay",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn.",
+                    "Level 2: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn.",
+                    "Level 3: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn and reduces Silence duration by 1 turn.",
+                    "Level 4: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn and reduces Silence duration by 2 turns.",
+                    "Level 5: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character by 1 turn and reduces Silence duration by 3 turns."
+                ]
+            }
         ]
     },
     1617: {//Moria
@@ -28897,7 +29041,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes suppoted character's orb.",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes suppoted character's orb.",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orb on the supported character into Matching orb.",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orb on the supported character into Matching orb.",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orbs on Slasher characters into Matching orbs."
+                ]
+            }
+        ]
     },
     1870: {//Bellamy
         captain: "Boosts ATK of Driven characters by 2.25x",
@@ -29399,6 +29555,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characers",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1882: {//Rayleigh V2
@@ -30328,6 +30496,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Mihawk and Perona",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 2 turns."
+                ]
+            }
         ]
     },
     1922:{//6+ Law
@@ -33607,6 +33787,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by 10 turns at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Nami and Carrot",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with ATK DOWN, changes [STR] orbs on all characters into Matching Orbs",
+                    "Level 2: Once per adventure, when you are inflicted with ATK DOWN, changes [STR] and [QCK] orbs on all characters into Matching Orbs",
+                    "Level 3: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 1 turn and changes [STR] and [QCK] orbs on all characters into Matching Orbs",
+                    "Level 4: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 1 turn and changes [STR] and [QCK] orbs on all characters into Matching Orbs",
+                    "Level 5: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 2 turns and changes [STR] and [QCK] orbs on all characters into Matching Orbs"
+                ]
+            }
         ]
     },
     2069: {//Neo Boa
@@ -34207,7 +34399,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, boosts the Color Affinity of Slasher characters by 1.1x for 1 turn.",
+                    "Level 2: Once per adventure, when you reach the final stage, boosts the Color Affinity of Slasher characters by 1.1x for 1 turn.",
+                    "Level 3: Once per adventure, when you reach the final stage, boosts the Color Affinity of Slasher characters by 1.2x for 1 turn.",
+                    "Level 4: Once per adventure, when you reach the final stage, boosts the Color Affinity of Slasher characters by 1.2x for 1 turn.",
+                    "Level 5: Once per adventure, when you reach the final stage, boosts the Color Affinity of Slasher characters by 1.3x for 1 turn."
+                ]
+            }
+        ]
     },
     2098: {//Tesoro
         captain: "If you have a Striker, Shooter, Fighter, Slasher, Free Spirit, Cerebral, Powerhouse and Driven character on your crew, boosts ATK of all characters by 3.75x, their HP by 1.35x and boosts chances of getting Matching orbs. Boosts ATK of all characters by 4.5 after scoring 4 GREATs in a row. Scoring a PERFECT reduces ATK boost for the next attack by 30%.",
@@ -38320,12 +38524,12 @@ window.details = {
     },
     2261: {//Shanks
         captain: {
-            "base": "Boosts ATK of Free Spirit and Cerebral characters by 2x if HP is above 99%, by 1.5x otherwise, recovers 1.5x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
-            "level1": "Not Translated",
-            "level2": "Not Translated",
-            "level3": "Not Translated",
-            "level4": "Not Translated",
-            "level5": "Not Translated",
+            "base": "Boosts ATK of Free Spirit and Cerebral characters by 2x if HP is above 99%, by 1.5x otherwise, recovers 1.5x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
+            "level1": "Boosts ATK of Free Spirit and Cerebral characters by 2.25x if HP is above 99%, by 1.5x otherwise, recovers 1.5x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
+            "level2": "Boosts ATK of Free Spirit and Cerebral characters by 2.5x if HP is above 99%, by 1.5x otherwise, recovers 1.5x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
+            "level3": "Boosts ATK of Free Spirit and Cerebral characters by 2.5x if HP is above 99%, by 2x otherwise, recovers 1.5x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
+            "level4": "Boosts ATK of Free Spirit and Cerebral characters by 2.5x if HP is above 99%, by 2x otherwise, recovers 1.75x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
+            "level5": "Boosts ATK of Free Spirit and Cerebral characters by 3x if HP is above 99%, by 2x otherwise, recovers 1.75x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
             "level6": "Boosts ATK of Free Spirit and Cerebral characters by 3x if HP is above 99%, by 2.5x otherwise, recovers 1.75x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
         },
         special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting Matching orbs for 1 turn, randomizes all non-Matching orbs, including [BLOCK] orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
@@ -40141,14 +40345,14 @@ window.details = {
     },
     2337: {//Legend Sulong Carrot
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. For 12 turns after the start of the fight, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x, boosts chances of getting Matching orbs and attacks will ignore defensive barriers and buffs. After 12 turns, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2.75x.",
-        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 4x bonus for the first 12 turns<br>Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored). Enemy attacks will go through YOUR defensive buffs.",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 4x bonus for the first 12 turns<br>Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored. Enemy attacks will go through YOUR defensive buffs.",
         special: "Reduces Special Cooldown of Fighter, Slasher, Striker, Shooter and Cerebral specials by 2 turns, amplifies the effects of orbs for Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x for 1 turn, makes [QCK], [RCV] and [TND] orbs beneficial for all characters for 1 turn and swaps this unit with your captain for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Electrical Rush",
     },
     2338: {//Legend Sulong Carrot
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. For 12 turns after the start of the fight, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x, boosts chances of getting Matching orbs and attacks will ignore defensive barriers and buffs. After 12 turns, boosts ATK of Fighter, Slasher, Striker, Shooter and Cerebral characters by 2.75x.",
-        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 4x bonus for the first 12 turns<br>Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored). Enemy attacks will go through YOUR defensive buffs.",
+        captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 4x bonus for the first 12 turns<br>Attacks are still affected by DEF value. DEF boost buffs (Blue shield) still reduce your damage and you can not kill through Resilience, but Damage Negating (Yellow shield), % Damage Reduction (Rainbow shield), Barriers and Threshold Damage Reduction are ignored. Enemy attacks will go through YOUR defensive buffs.",
         special: "Reduces Special Cooldown of Fighter, Slasher, Striker, Shooter and Cerebral specials by 2 turns, amplifies the effects of orbs for Fighter, Slasher, Striker, Shooter and Cerebral characters by 2x for 1 turn, makes [QCK], [RCV] and [TND] orbs beneficial for all characters for 1 turn and swaps this unit with your captain for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Electrical Rush",

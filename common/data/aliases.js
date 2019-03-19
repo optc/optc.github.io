@@ -2471,7 +2471,7 @@ window.aliases = {
     2470: [ '', '', 'Coliseum Katakuri', 'Potato Starch' ],
     2471: [ '', '', 'Coliseum Katakuri', 'Potato Starch' ],
     2472: [ '', '', '' ],
-    2473: [ '', '', '' ],
+    2473: [ 'ビッグ・マム 空腹の猛攻撃', '', 'This is a temporary placement for Raid Big Mom' ],
     2474: [ '', '', '' ],
     2475: [ '', '', '' ],
     2476: [ '', '', '' ],

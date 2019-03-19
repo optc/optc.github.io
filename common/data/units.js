@@ -2108,7 +2108,7 @@ window.units = [
     [ "Phantom Thief Carina", "PSY", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1002, 481, 167, 2182, 1258, 401, 1 ],
     [ "Charlotte Linlin", "STR", "Powerhouse", 4, 30, 6, 1, 50, 130703, 395, 149, 12, 1315, 438, 53, 1 ],
     [ "Charlotte Linlin, The Great Pirate \"Big Mom\"", "STR", "Powerhouse", 5, 60, 6, 1, 99, 5000000, 923, 391, 45, 3134, 1529, 125, 1 ],
-    [ "Eustass Kid, The Worst Generation Aiming at \"Yonko\"", "DEX", [ "Striker", "Shooter" ], 4, 25, 4, 3, 70, 1066998, 350, 154, 23, 159, 880, 123, 1 ],
+    [ "Eustass Kid, The Worst Generation Aiming at \"Yonko\"", "DEX", [ "Striker", "Shooter" ], 4, 25, 4, 3, 70, 1066998, 350, 154, 23, 1539, 880, 123, 1 ],
     [ "Eustass Kid, The Worst Generation Aiming at \"Red Hair\"", "DEX", [ "Striker", "Shooter" ], 5, 40, 4, 4, 99, 4000000, 1522, 863, 105, 2849, 1395, 237, 1 ],
     [ "Charlotte Katakuri", "STR", [ "Shooter", "Cerebral" ], 5, 30, 5, 3, 70, 1066998, 595, 330, 50, 1750, 975, 150, 1 ],
     [ "Charlotte Katakuri, Big Mom Pirates 3 Sweet Commanders", "STR", [ "Shooter", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1675, 910, 100, 3700, 1640, 250, 1 ],

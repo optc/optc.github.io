@@ -1010,6 +1010,12 @@ window.matchers = [
         target: 'support',
         matcher: /(Changes.+(orb|orbs))/i
     },
+    
+    {
+        name: 'Damage Reduction supports',
+        target: 'support',
+        matcher: /Reduces damage received/i
+    },
 
     {
         name: 'Healers',
