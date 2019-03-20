@@ -44505,12 +44505,12 @@ window.details = {
     },
     2472: {//Big Mom
         captain: "Boosts ATK of all characters by ?x if HP is below 50% at the start of the turn, ?x otherwise and reduces HP of all characters by ?%",
-        special: "Reduces crew's current HP by 50%, deals 100x the amount of HP subtracted in typeless damage to all enemies and randomizes all non-[RCV] orbs.",
+        special: "Reduces crew's current HP by 50%, deals 100x the amount of HP subtracted in typeless damage to one enemy and randomizes all non-[RCV] orbs.",
         specialName: "Mama-Mash",
     },
     2473: {//Big Mom
         captain: "Boosts ATK of all characters by 3x if HP is below 50% at the start of the turn, 2.5x otherwise and reduces HP of all characters by 20%",
-        special: "Reduces crew's current HP by 50%, deals 100x the amount of HP subtracted in typeless damage to all enemies and randomizes all non-[RCV] orbs.",
+        special: "Reduces crew's current HP by 50%, deals 100x the amount of HP subtracted in typeless damage to one enemy and randomizes all non-[RCV] orbs.",
         specialName: "Mama-Mash",
         sailor: {
             "base": "None",

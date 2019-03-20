@@ -2498,7 +2498,7 @@ window.aliases = {
     2497: [ '', '', '' ],
     2498: [ '', '', '' ],
     2499: [ '', '', '' ],
-    2500: [ '', '', 'Super Big Mom', 'Mega Big Mom' ],
+    2500: [ 'ビッグ・マム 食いわずらいの四皇', '', 'Super Big Mom', 'Mega Big Mom' ],
     2501: [ '', '', '' ],
     2502: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy' ],
     2503: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy' ],
