@@ -2815,6 +2815,16 @@ window.drops = {
             Expert: [ 2512 ],
             Ultimate: [ 2512 ],
         },
+        
+        {
+            name: 'Clash!! Big Mom',
+            thumb: 2473,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2472 ],
+            Expert: [ 2472 ],
+            Ultimate: [ 2472 ],
+        },
 
     ],
 
