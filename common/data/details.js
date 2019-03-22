@@ -14769,12 +14769,12 @@ window.details = {
     },
     1170: {//Tanaka
         captain: "Boosts ATK of [QCK] characters by 1.5x",
-        special: "Reduces Bind duration by 3 turns and swaps Badly Matching, [BLOCK] and [BOMB] orbs to [EMPTY]",
+        special: "Reduces Bind duration by 3 turns and changes Badly Matching, [BLOCK] and [BOMB] orbs to [EMPTY]",
         specialName: "Escape-Escape Fruit",
     },
     1171: {//Tanaka Evolved
         captain: "Boosts ATK of [QCK] characters by 2x",
-        special: "Reduces Bind duration by 3 turns and swaps Badly Matching, [BLOCK] and [BOMB] orbs to [EMPTY]",
+        special: "Reduces Bind duration by 3 turns and changes Badly Matching, [BLOCK] and [BOMB] orbs to [EMPTY]",
         specialName: "Escape-Escape Fruit",
     },
     1172: {
@@ -44453,21 +44453,38 @@ window.details = {
         ]
     },
     2470: {//Katakuri
-        captain: "Boosts ATK of Powerhouse and Striker characters by 2x and makes [INT] orbs beneficial for Powerhouse and Striker characters",
+        captain: "Boosts ATK of Powerhouse and Striker characters by 2x",
         captainNotes: "#{beneficial}",
         special: "Makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Powerhouse and Striker characters for 2 turns. If there are 4 enemies or more on the stage at the time the special is activated, ignores Delay Debuff Protection and delays all enemies for 2 turns.",
-        specialName: "Katakuri Special",
+        specialName: "Sharpened Bullets",
         sailor: "Boosts this character's damage against [PSY] characters by 1.1x",
     },
     2471: {//Katakuri
         captain: "Boosts ATK of Powerhouse and Striker characters by 2.75x and makes [INT] orbs beneficial for Powerhouse and Striker characters",
         captainNotes: "#{beneficial}",
         special: "Makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Powerhouse and Striker characters for 2 turns. If there are 4 enemies or more on the stage at the time the special is activated, ignores Delay Debuff Protection and delays all enemies for 2 turns.",
-        specialName: "Katakuri Special",
+        specialName: "Sharpened Bullets",
         sailor: {
             "base": "Boosts this character's damage against [PSY] characters by 1.1x",
             "level1": "Reduces Silence duration on this character by 3 turns",
         },
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "[PSY] Damage Reduction",
@@ -44504,39 +44521,55 @@ window.details = {
         ]
     },
     2472: {//Big Mom
-        captain: "Boosts ATK of all characters by ?x if HP is below 50% at the start of the turn, ?x otherwise and reduces HP of all characters by ?%",
+        captain: "Boosts ATK of all characters by 2.5x if HP is below 50% at the start of the turn, 2x otherwise and reduces HP of all characters by 20%",
         special: "Reduces crew's current HP by 50%, deals 100x the amount of HP subtracted in typeless damage to one enemy and randomizes all non-[RCV] orbs.",
         specialName: "Mama-Mash",
+        sailor: "Reduces HP of all characters by 30% and boosts RCV of all characters by 1.2x",
     },
     2473: {//Big Mom
         captain: "Boosts ATK of all characters by 3x if HP is below 50% at the start of the turn, 2.5x otherwise and reduces HP of all characters by 20%",
         special: "Reduces crew's current HP by 50%, deals 100x the amount of HP subtracted in typeless damage to one enemy and randomizes all non-[RCV] orbs.",
         specialName: "Mama-Mash",
         sailor: {
-            "base": "None",
-            "level1": "Reduces HP of all characters by 30% and boosts RCV of all characters by 1.2x",
-            "level2": "Boosts amount healed from [RCV] orbs by 300 each",
+            "base": "Reduces HP of all characters by 30% and boosts RCV of all characters by 1.2x",
+            "level1": "Boosts amount healed from [RCV] orbs by 300 each",
         },
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Potential 1: Double Special Activation" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts amount healed from [RCV] orbs by 300 each" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 70" },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
+        ],
         potential: [
             {
                 "Name": "Double Special Activation",
                 "description": [
-                    "Level 1: Once per an adventure, reduce own Special Cooldown by ? turn after the first time this special is used",
-                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 5: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    //"Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by 2 turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by 3 turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
+                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
             {
                 "Name": "Cooldown Reduction",
                 "description": [
-                    "Level 1: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by 2 turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by 3 turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by 4 turn at the start of the fight"
                 ]
             },
         ],

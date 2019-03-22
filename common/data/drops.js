@@ -2820,7 +2820,7 @@ window.drops = {
             name: 'Clash!! Big Mom',
             thumb: 2473,
             nakama: null,
-            gamewith: null,
+            gamewith: 145832,
             Master: [ 2472 ],
             Expert: [ 2472 ],
             Ultimate: [ 2472 ],

@@ -8770,8 +8770,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Striker") ? 2.75 : 1; },
     },
     2472: {
-        atk: function(p) { return p.percHP <= 50.0 ? 1 : 1; },//change this
-        hp: function(p) { return .8; }//change this
+        atk: function(p) { return p.percHP <= 50.0 ? 2.5 : 2; },
+        hp: function(p) { return .8; }
     },
     2473: {
         atk: function(p) { return p.percHP <= 50.0 ? 3 : 2.5; },
