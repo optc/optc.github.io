@@ -30271,12 +30271,12 @@ window.details = {
     },
     1911:{//Kimono Urouge
         captain: "Boosts ATK of Striker and Powerhouse characters by 1.5x. Boosts EXP gained by 1.25x",
-        special: "Changes [RCV], [TND], [G], [BLOCK] and [BOMB] orbs into Matching orbs, recovers 7,600 HP and reduces damage received by 76% for 1 turn",
+        special: "Changes [RCV], [TND], [G], [BLOCK], [EMPTY] and [BOMB] orbs into Matching orbs, recovers 7,600 HP and reduces damage received by 76% for 1 turn",
         specialName: "Prayers of Paradise",
     },
     1912:{//Kimono Urouge
         captain: "Boosts ATK of Striker and Powerhouse characters by 1.75x and their HP by 1.5x. Boosts EXP gained by 1.5x",
-        special: "Changes [RCV], [TND], [G], [BLOCK] and [BOMB] orbs into Matching orbs, recovers 7,600 HP and reduces damage received by 76% for 1 turn",
+        special: "Changes [RCV], [TND], [G], [BLOCK], [EMPTY] and [BOMB] orbs into Matching orbs, recovers 7,600 HP and reduces damage received by 76% for 1 turn",
         specialName: "Prayers of Paradise",
     },
     1913:{//Kimono Vivi
