@@ -844,4 +844,25 @@ window.effects = {
         id: 53, // don't change this
         meatOrbsEnabled: true
     },
+    
+    '3 Ranking Missions - Bege, Buggy and Akainu': {
+        description: 'Stats of certain units boosted.',
+        thumb: 1298,
+        id: 67, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Nefertari Vivi", "Portgas D. Ace", "Shanks", "Brook", "Sabo", "Pound", "Charlotte Linlin", "Charlotte Smoothie", "Charlotte Perospero", "Charlotte Cracker", "Charlotte Daifuku", ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Nefertari Vivi", "Portgas D. Ace", "Shanks", "Brook", "Sabo", "Pound", "Charlotte Linlin", "Charlotte Smoothie", "Charlotte Perospero", "Charlotte Cracker", "Charlotte Daifuku", ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Nefertari Vivi", "Portgas D. Ace", "Shanks", "Brook", "Sabo", "Pound", "Charlotte Linlin", "Charlotte Smoothie", "Charlotte Perospero", "Charlotte Cracker", "Charlotte Daifuku", ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+    },
 };

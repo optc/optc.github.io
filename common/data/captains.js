@@ -8597,10 +8597,10 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.75 : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? 2.5 : 1; },
     },
     2421: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 2.75 - 0.1 * p.turnCounter) : 1; }//change this
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 2.75 - 0.0583294122 * p.turnCounter) : 1; }
     },
     2422: {
-        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 3.25 - 0.1 * p.turnCounter) : 1; }//change this
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 3.25 - 0.0583294122 * p.turnCounter) : 1; }
     },
     2423: {
         atk: function(p) { return p.unit.class.has("Driven") ? Math.min(2.75, 1.0 + 0.0875 * p.turnCounter) : 1; }//change this
@@ -8768,6 +8768,14 @@ window.captains = {
     },
     2471: {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Striker") ? 2.75 : 1; },
+    },
+    2472: {
+        atk: function(p) { return p.percHP <= 50.0 ? 2.5 : 2; },
+        hp: function(p) { return .8; }
+    },
+    2473: {
+        atk: function(p) { return p.percHP <= 50.0 ? 3 : 2.5; },
+        hp: function(p) { return .8; }
     },
     2500: {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.3 : 1; },
