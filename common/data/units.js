@@ -2468,7 +2468,7 @@ window.units = [
     [ "Pound, A Blessing for His Daughter", "PSY", [ "Powerhouse", "Free Spirit" ], 5, 20, 4, 4, 99, 2000000, 1331, 701, 150, 2341, 1121, 300, 1 ],
     [ "Smoothie & Oven, The Duo that will Defend the Tea Party", [ "PSY", "QCK" ], [[ "Powerhouse", "Slasher" ], [ "Powerhouse", "Fighter" ], [ "Powerhouse", "Slasher" ]], 4, 30, 6, 1, 50, 130703, 882, 452, 120, 1512, 244, 933, 1 ],
     [ "Smoothie & Oven, The Duo that will Eliminate the Intruders", [ "PSY", "QCK" ], [[ "Powerhouse", "Slasher" ], [ "Powerhouse", "Fighter" ], [ "Powerhouse", "Slasher" ]], 5, 60, 6, 1, 99, 5000000, 1420, 780, 212, 2672, 1428, 322, 1 ],
-    [ "Charlotte Katakuri, Charlotte Family's Third Son", "INT", [ "Powerhouse", "Striker" ], 4, 25, 4, 3, 70, 1066998, 804, 481, 40, 1512, 830, 132, 1 ],
+    [ "Charlotte Katakuri, Charlotte Family's Second Son", "INT", [ "Powerhouse", "Striker" ], 4, 25, 4, 3, 70, 1066998, 804, 481, 40, 1512, 830, 132, 1 ],
     [ "Charlotte Katakuri, Mochi-Mochi Fruit User", "INT", [ "Powerhouse", "Striker" ], 5, 40, 6, 4, 99, 4000000, 1460, 780, 120, 2871, 1403, 258, 1 ],
     [ "Big Mom, Hungry Pursuit", "QCK", [ "Slasher", "Powerhouse" ], 4, 30, 2, 5, 70, 1066998, 458, 245, 35, 1944, 731, 110, 1 ],
     [ "Big Mom, Hungry Onslaught", "QCK", [ "Slasher", "Powerhouse" ], 5, 50, 5, 3, 99, 5000000, 1466, 632, 78, 3001, 1450, 200, 1 ],

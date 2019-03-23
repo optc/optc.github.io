@@ -751,11 +751,11 @@ window.zombies = {
     },
     5060: { // Smoothie&Oven
         type: 'healer',
-        multiplier: 0//Change this
+        multiplier: 1
     },
     5061: { // Smoothie&Oven
         type: 'healer',
-        multiplier: 0//Change this
+        multiplier: 1
     },
     5064: { // Smoothie&Oven
         type: 'healer',

@@ -2819,7 +2819,7 @@ window.drops = {
         {
             name: 'Clash!! Big Mom',
             thumb: 2473,
-            nakama: null,
+            nakama: 4247300,
             gamewith: 145832,
             Master: [ 2472 ],
             Expert: [ 2472 ],
@@ -2975,6 +2975,7 @@ window.drops = {
         {
             name: 'Red Hair Shanks',
             thumb: 2261,
+            global: true,
             nakama: 8226100,
             gamewith: 119738,
             'Primordial Sea': [ 2260 ]
@@ -3015,16 +3016,16 @@ window.drops = {
         {
             name: 'Doflamingo',
             thumb: 2443,
-            nakama: null,
-            gamewith: null,
+            nakama: 8244300,
+            gamewith: 143066,
             'Primordial Sea': [ 2442, 9026 ]
         },
 
         {
             name: 'Smoothie & Oven',
             thumb: 2469,
-            nakama: null,
-            gamewith: null,
+            nakama: 8246900,
+            gamewith: 144785,
             'Sweet Sea': [ 2468 ]
         },
         
