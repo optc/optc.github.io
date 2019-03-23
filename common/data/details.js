@@ -33790,7 +33790,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Luffy, Nami and Carrot",
+                "Characters": "Smoker and Zoro",
                 "description": [
                     "Level 1: Once per adventure, when you are inflicted with ATK DOWN, changes [STR] orbs on all characters into Matching Orbs",
                     "Level 2: Once per adventure, when you are inflicted with ATK DOWN, changes [STR] and [QCK] orbs on all characters into Matching Orbs",
