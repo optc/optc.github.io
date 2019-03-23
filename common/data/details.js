@@ -18340,7 +18340,7 @@ window.details = {
                 "Characters": "Mihawk and Perona",
                 "description": [
                     "Level 1: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2x for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2x for 1 turn.",
                     "Level 3: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
                     "Level 4: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
                     "Level 5: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 2 turns."
@@ -30502,7 +30502,7 @@ window.details = {
                 "Characters": "Mihawk and Perona",
                 "description": [
                     "Level 1: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2x for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2x for 1 turn.",
                     "Level 3: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
                     "Level 4: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 1 turn.",
                     "Level 5: Once per an adventure, when the supported character uses their special, locks the chain multiplier at 2.5x for 2 turns."
