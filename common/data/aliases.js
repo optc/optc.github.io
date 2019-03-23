@@ -2470,7 +2470,7 @@ window.aliases = {
     2469: [ 'スムージー＆オーブン 乱入者を排除する者達', '', 'Smoothie&Oven', 'Smoothie and Oven', 'Smoothie Oven', 'SmoothieOven', 'Oven&Smoothie', 'Oven and Smoothie', 'Oven Smoothie', 'OvenSmoothie', 'TM Smoothie', 'TM Oven' ],
     2470: [ 'シャーロット・カタクリ シャーロット家次男', '', 'Coliseum Katakuri', 'Potato Starch' ],
     2471: [ 'シャーロット・カタクリ “モチモチの実”の能力者', '', 'Coliseum Katakuri', 'Potato Starch' ],
-    2472: [ '', '', 'Raid Big Mom', 'Thin Mom' ],
+    2472: [ 'ビッグ・マム 空腹の追跡', '', 'Raid Big Mom', 'Thin Mom' ],
     2473: [ 'ビッグ・マム 空腹の猛攻撃', '', 'Raid Big Mom', 'Thin Mom' ],
     2474: [ '', '', '' ],
     2475: [ '', '', '' ],
