@@ -199,10 +199,10 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
@@ -429,13 +429,25 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Fighter Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     23: {
@@ -786,7 +798,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -1339,7 +1351,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -2927,9 +2939,9 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
@@ -3398,21 +3410,21 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
             {
                 "Name": "Cooldown Reduction",
                 "description": [
                     "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
-                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                    "Level 2: Reduce own Special Cooldown by 2 turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by 3 turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by 5 turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by 7 turn at the start of the fight"
                 ]
             },
         ]
@@ -4770,20 +4782,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ]
@@ -4824,20 +4836,20 @@ window.details = {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 1 turn",
+                    "Level 3: Reduces No Healing duration by 2 turn",
+                    "Level 4: Reduces No Healing duration by 2 turns",
+                    "Level 5: Reduces No Healing duration by 3 turns"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ]
@@ -4890,7 +4902,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -6767,7 +6779,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 40% at the start of the turn, recovers .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 40% at the start of the turn, recovers 0.75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 40% at the start of the turn, recovers 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -9073,7 +9085,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -10963,7 +10975,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -11131,7 +11143,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -11221,7 +11233,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -11368,7 +11380,7 @@ window.details = {
                 "cooldown": [ 19, 5 ]
             },
             {
-                "description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
+                "description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds 0.5x to Chain multiplier for 2 turns",
                 "cooldown": [ 25, 11 ]
             }
         ],
@@ -11386,7 +11398,7 @@ window.details = {
                 "cooldown": [ 19, 5 ]
             },
             {
-                "description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
+                "description": "Changes own orb into [QCK]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds 0.5x to Chain multiplier for 2 turns",
                 "cooldown": [ 25, 11 ]
             }
         ],
@@ -11576,7 +11588,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -11850,13 +11862,13 @@ window.details = {
         ]
     },
     1000: {
-        captain: "Boosts ATK of all characters proportionally to the crew's current HP. Recovers 1.5x his RCV at the end of the turn each time you hit a Good. Recovers .5x his RCV at the end of the turn each time you hit a Great",
+        captain: "Boosts ATK of all characters proportionally to the crew's current HP. Recovers 1.5x his RCV at the end of the turn each time you hit a Good. Recovers 0.5x his RCV at the end of the turn each time you hit a Great",
         captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
         special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
         specialName: "Love Sacrifice"
     },
     1001: {
-        captain: "Boosts ATK of all characters proportionally to the crew's current HP. Recovers 1.5x his RCV at the end of the turn each time you hit a Good. Recovers .5x his RCV at the end of the turn each time you hit a Great",
+        captain: "Boosts ATK of all characters proportionally to the crew's current HP. Recovers 1.5x his RCV at the end of the turn each time you hit a Good. Recovers 0.5x his RCV at the end of the turn each time you hit a Great",
         captainNotes: "#{captainProportional : higher : 1 + 1 * (remaining HP) / (total HP) : 2 : 1 }",
         special: "Recovers 25x character's RCV in HP. Reduces Bind and Despair duration by 3 turns",
         specialName: "Love Sacrifice",
@@ -12803,9 +12815,9 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
@@ -12922,7 +12934,7 @@ window.details = {
     },
     1066: {
         captain: "Boosts ATK and HP of [PSY] characters by 1.2x",
-        special: "Adds .1x to Chain multiplier for 1 turn",
+        special: "Adds 0.1x to Chain multiplier for 1 turn",
         specialName: "Chain Plus Light"
     },
     1067: {
@@ -13083,10 +13095,10 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
@@ -13681,12 +13693,12 @@ window.details = {
     },
     1105: {
         captain: "Boosts ATK of Striker and Free Spirit characters by 1.5x, deals 2x character's ATK in typeless damage to all enemies at the end of each turn",
-        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes PERFECTs easier to hit for 2 turns.",
+        special: "Delays all enemies for 1 turn. Adds 0.2x to Chain multiplier for 2 turns. Makes PERFECTs easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance"
     },
     1106: {
         captain: "Boosts ATK of Striker and Free Spirit characters by 2x, deals 2x character's ATK in typeless damage to all enemies at the end of each turn",
-        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 2 turns. Makes PERFECTs easier to hit for 2 turns.",
+        special: "Delays all enemies for 1 turn. Adds 0.2x to Chain multiplier for 2 turns. Makes PERFECTs easier to hit for 2 turns.",
         specialName: "Mosa Mosa Dance",
         sailor: {
             "base": "None",
@@ -13861,7 +13873,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -14655,13 +14667,13 @@ window.details = {
     1158: {
         captain: "Boosts ATK of Shooter, Striker and Powerhouse characters by 1.75x",
         special: "Cuts the current HP of all enemies by 20%. Strongly Poisons one enemy and Poisons all other enemies.",
-        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn. Regular Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Poison Puffer Fish"
     },
     1159: {
         captain: "Boosts ATK of Shooter, Striker and Powerhouse characters by 2.25x",
         special: "Cuts the current HP of all enemies by 20%. Strongly Poisons one enemy and Poisons all other enemies.",
-        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
+        specialNotes: "Strong Poison deals 5x character's ATK in fixed damage at the end of each turn. Regular Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Poison Puffer Fish"
     },
     1160: {
@@ -14724,10 +14736,10 @@ window.details = {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
         ]
@@ -16122,7 +16134,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -16481,7 +16493,7 @@ window.details = {
     },
     1250: {// Coliseum Marco
         captain: "Boosts ATK of Powerhouse characters by 1.5x and Recovers a variable amount of character's RCV in HP at the end of each turn depending on how many Powerhouse characters are on your team",
-        captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 3.5x RCV",
+        captainNotes: "1x Powerhouse: 0.5x RCV | 2x Powerhouse: 0.75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 3.5x RCV",
         special: [
             {
                 "description": "Randomizes all orbs and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
@@ -16497,7 +16509,7 @@ window.details = {
     },
     1251: {// Coliseum Marco
         captain: "Boosts ATK of Powerhouse characters by 2x and Recovers a variable amount of character's RCV in HP at the end of each turn depending on how many Powerhouse characters are on your team",
-        captainNotes: "1x Powerhouse: .5x RCV | 2x Powerhouse: .75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 3.5x RCV",
+        captainNotes: "1x Powerhouse: 0.5x RCV | 2x Powerhouse: 0.75x RCV | 3x Powerhouse: 1x RCV | 4x Powerhouse: 1.5x RCV | 5x Powerhouse: 2x RCV | 6x Powerhouse: 3.5x RCV",
         special: [
             {
                 "description": "Randomizes all orbs and boosts ATK of Powerhouse characters by 1.5x for 1 turn",
@@ -16680,13 +16692,13 @@ window.details = {
         specialName: "Five Color Strings (Goshikito)",
     },
     1261: {//Young Senor Pink
-        captain: "Boosts ATK of Free Spirit characters by 1.5x. Recovers .75x his RCV at the end of the turn each time you hit a PERFECT.",
+        captain: "Boosts ATK of Free Spirit characters by 1.5x. Recovers 0.75x his RCV at the end of the turn each time you hit a PERFECT.",
         special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
         specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Blood and Gunpowder of the Underground Family",
     },
     1262: {//Young Senor Pink
-        captain: "Boosts ATK of Free Spirit characters by 1.75x. Recovers .75x his RCV at the end of the turn each time you hit a PERFECT.",
+        captain: "Boosts ATK of Free Spirit characters by 1.75x. Recovers 0.75x his RCV at the end of the turn each time you hit a PERFECT.",
         special: "Randomizes all orbs. Boosts the Color Affinity of Free Spirit and Shooter characters by 1.5x for 1 turn",
         specialNotes: "#{colorAffinity : 1.5}",
         specialName: "Blood and Gunpowder of the Underground Family",
@@ -16898,9 +16910,9 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
@@ -17454,20 +17466,20 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
                 "Name": "Double Special Activation",
                 "description": [
                     "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
-                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by 2 turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by 7 turns after the first time this special is used",
+                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
         ],
@@ -17717,7 +17729,7 @@ window.details = {
         ]
     },
     1319: {//Lady Tsuru
-        captain: "Recovers 1x her RCV at the end of the turn each time you hit a Good. Recovers .1x her RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Recovers 1x her RCV at the end of the turn each time you hit a Good. Recovers 0.1x her RCV at the end of the turn each time you hit a PERFECT",
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
         sailor: "Reduces Paralysis duration by 1 turn",
@@ -17725,8 +17737,8 @@ window.details = {
     },
     1320: {//Lady Tsuru
         captain: {
-            "base": "Recovers 1.5x her RCV at the end of the turn each time you hit a Good. Recovers .1x her RCV at the end of the turn each time you hit a PERFECT",
-            "level1": "Boosts ATK of all characters by 1.2x, recovers 1.5x her RCV at the end of the turn each time you hit a Good. Recovers .3x her RCV at the end of the turn each time you hit a PERFECT",
+            "base": "Recovers 1.5x her RCV at the end of the turn each time you hit a Good. Recovers 0.1x her RCV at the end of the turn each time you hit a PERFECT",
+            "level1": "Boosts ATK of all characters by 1.2x, recovers 1.5x her RCV at the end of the turn each time you hit a Good. Recovers 0.3x her RCV at the end of the turn each time you hit a PERFECT",
         },
         special: "Deals 10 hits of random [QCK] damage to random enemies. Boosts ATK of all characters by 1.5x for 1 turn",
         specialNotes: "#{randomHits : 10}<br>#{random : 1,000 : 32,000 : for each hit}",
@@ -17747,7 +17759,7 @@ window.details = {
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Acquire Sailor Ability 1: Reduces Blindness duration by 3 turns" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.2x, recovers 1.5x her RCV at the end of the turn each time you hit a Good. Recovers .3x her RCV at the end of the turn each time you hit a PERFECT" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of all characters by 1.2x, recovers 1.5x her RCV at the end of the turn each time you hit a Good. Recovers 0.3x her RCV at the end of the turn each time you hit a PERFECT" },
             { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
@@ -17756,9 +17768,9 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
@@ -18023,12 +18035,12 @@ window.details = {
     },
     1335: {//Wedding Sabo
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of Free Spirit characters by 1.5x.",
-        special: "Changes Friend Captain orb into Matching. Adds .5x to Chain multiplier for 1 turn",
+        special: "Changes Friend Captain orb into Matching. Adds 0.5x to Chain multiplier for 1 turn",
         specialName: "Gentleman's Welcome",
     },
     1336: {//Wedding Sabo
         captain: "Reduces cooldown of all specials by 3 turns at the start of the fight. Boosts ATK of Free Spirit characters by 2x.",
-        special: "Changes Friend Captain orb into Matching. Adds .5x to Chain multiplier for 1 turn",
+        special: "Changes Friend Captain orb into Matching. Adds 0.5x to Chain multiplier for 1 turn",
         specialName: "Gentleman's Welcome",
     },
     1337: {//Kanjuro
@@ -18089,15 +18101,15 @@ window.details = {
         captain: "Boosts ATK of [DEX] characters by 2.25x",
         special: [
             {
-                "description": "Reduces Paralysis duration by 1 turn. Adds .2x to Chain multiplier for 1 turn",
+                "description": "Reduces Paralysis duration by 1 turn. Adds 0.2x to Chain multiplier for 1 turn",
                 "cooldown": [ 18, 8 ],
             },
             {
-                "description": "Reduces Paralysis duration by 2 turns. Adds .3x to Chain multiplier for 1 turn",
+                "description": "Reduces Paralysis duration by 2 turns. Adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 23, 13 ],
             },
             {
-                "description": "Reduces Paralysis duration by 2 turns. Adds .5x to Chain multiplier for 1 turn",
+                "description": "Reduces Paralysis duration by 2 turns. Adds 0.5x to Chain multiplier for 1 turn",
                 "cooldown": [ 25, 15 ],
             },
         ],
@@ -18759,10 +18771,10 @@ window.details = {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
         ]
@@ -19071,10 +19083,10 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
@@ -19790,20 +19802,20 @@ window.details = {
                 "Name": "Enrage",
                 "description": [
                     "Level 1: Boosts base ATK by 20",
-                    "Level 2: Boosts base ATK by ?",
-                    "Level 3: Boosts base ATK by ?",
-                    "Level 4: Boosts base ATK by ?",
-                    "Level 5: Boosts base ATK by ?"
+                    "Level 2: Boosts base ATK by 40",
+                    "Level 3: Boosts base ATK by 60",
+                    "Level 4: Boosts base ATK by 80",
+                    "Level 5: Boosts base ATK by 120"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
         ],
@@ -19899,7 +19911,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -20615,11 +20627,11 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -20637,12 +20649,12 @@ window.details = {
         ]
     },
     1449: {//Violet
-        captain: "Boosts ATK of Cerebral characters by 1.5x. Recovers .3x character's RCV at the end of the turn each time you hit a Great.",
+        captain: "Boosts ATK of Cerebral characters by 1.5x. Recovers 0.3x character's RCV at the end of the turn each time you hit a Great.",
         special: "Reduces the defense of all enemies by 50% for 1 turn and if HP is below 50%, randomizes all orbs to either [RCV] or [TND] orbs",
         specialName: "Clairvoyance",
     },
     1450: {//Violet
-        captain: "Boosts ATK of Cerebral characters by 1.75x. Recovers .5x character's RCV at the end of the turn each time you hit a Great.",
+        captain: "Boosts ATK of Cerebral characters by 1.75x. Recovers 0.5x character's RCV at the end of the turn each time you hit a Great.",
         special: "Reduces the defense of all enemies by 50% for 1 turn and if HP is below 50%, randomizes all orbs to either [RCV] or [TND] orbs",
         specialName: "Clairvoyance",
     },
@@ -20724,20 +20736,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turns",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
         ]
@@ -21286,20 +21298,20 @@ window.details = {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
                     "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ]
@@ -21400,7 +21412,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 40% at the start of the turn, recovers .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 40% at the start of the turn, recovers 0.75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 40% at the start of the turn, recovers 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -21589,20 +21601,20 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Double Special Activation",
                 "description": [
                     "Level 1: Once per an adventure, reduce own Special Cooldown by 1 turn after the first time this special is used",
-                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
-                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used"
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by 3 turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by 5 turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by 7 turns after the first time this special is used",
+                    "Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
                 ]
             },
         ]
@@ -21744,7 +21756,7 @@ window.details = {
     1529: {//Cavendish
         captain: "Boosts ATK of all characters by 1.5x, but boosts his OWN attack by 3x",
         special: "For Slasher characters, if HP is above 50% at the time the special was activated, amplifies the effects of orbs by 2.25x for 1 turn, 2x otherwise",
-        sailor: "Reduces ATK of all characters by .5x if your Captain is a [STR] or [QCK] character",
+        sailor: "Reduces ATK of all characters by 0.5x if your Captain is a [STR] or [QCK] character",
         specialName: "Blue Bird Sword",
     },
     1530: {//Cavendish
@@ -21752,7 +21764,7 @@ window.details = {
         special: "If HP is above 50% at the time the special was activated, amplifies the effects of orbs for Slasher characters by 2.25x for 1 turn, by 2x otherwise",
         specialName: "Blue Bird Sword",
         sailor: {
-            "base": "Reduces ATK of all characters by .5x if your Captain is a [STR] or [QCK] character",
+            "base": "Reduces ATK of all characters by 0.5x if your Captain is a [STR] or [QCK] character",
             "level1": "Boosts base ATK of all characters by 75",
         },
         limit: [
@@ -22032,7 +22044,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -22189,14 +22201,14 @@ window.details = {
     },
     1541: {//Elizabeth
         captain: "Boosts ATK of all characters by 2x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
-        special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Recovers 13x character's RCV in HP, adds 0.5x to Chain multiplier and reduces the defense of all enemies by 100% for 1 turn",
         sailor: "Restores her own special by 2 turns when it is rewinded",
         sailorNotes: "#{rewind : 1}",
         specialName: "Soft and Gentle Fluffy Kisses",
     },
     1542: {//Elizabeth
         captain: "Boosts RCV and HP by 1.2x, boosts ATK of all characters by 2.5x following a chain of [STR] > [DEX] > [QCK] attacks no lower than Good",
-        special: "Recovers 13x character's RCV in HP, adds .5x to Chain multiplier and reduces the defense of all enemies by 100% for 1 turn",
+        special: "Recovers 13x character's RCV in HP, adds 0.5x to Chain multiplier and reduces the defense of all enemies by 100% for 1 turn",
         sailorNotes: "#{rewind : 1}",
         specialName: "Soft and Gentle Fluffy Kisses",
         sailor: {
@@ -22235,7 +22247,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -22343,12 +22355,12 @@ window.details = {
         ]
     },
     1544: {//Sakura Koala
-        captain: "Boosts ATK of Fighter characters by 1.75x and recovers .3x her RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Fighter characters by 1.75x and recovers 0.3x her RCV at the end of the turn each time you hit a PERFECT",
         special: "Changes Captain orb into Matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
         specialName: "Bean Paste under the Petal Snow",
     },
     1545: {//Sakura Koala
-        captain: "Boosts ATK of Fighter characters by 2.25x and recovers .5x her RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Fighter characters by 2.25x and recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT",
         special: "Changes Captain orb into Matching and boosts ATK of Fighter characters by 1.5x for 1 turn",
         specialName: "Bean Paste under the Petal Snow",
     },
@@ -22366,7 +22378,7 @@ window.details = {
     },
     1548: {//Soul King Managers
         captain: "Boosts ATK of Driven characters by 1.5x",
-        special: "Delays all enemies for 1 turn. Adds .2x to Chain multiplier for 1 turn",
+        special: "Delays all enemies for 1 turn. Adds 0.2x to Chain multiplier for 1 turn",
         specialName: "Former Thief's Box Office",
     },
     1549: {//5+ Robin
@@ -22627,7 +22639,7 @@ window.details = {
                 "cooldown": [ 17, 9 ],
             },
             {
-                "description": "Changes own orb into [STR], deals 10 hits of 15x character's ATK in typeless damage to random enemies and adds .3x to Chain multiplier for 1 turn",
+                "description": "Changes own orb into [STR], deals 10 hits of 15x character's ATK in typeless damage to random enemies and adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 24, 16 ],
             },
         ],
@@ -22643,7 +22655,7 @@ window.details = {
                 "cooldown": [ 17, 9 ],
             },
             {
-                "description": "Changes own orb into [STR], deals 10 hits of 15x character's ATK in typeless damage to random enemies and adds .3x to Chain multiplier for 1 turn",
+                "description": "Changes own orb into [STR], deals 10 hits of 15x character's ATK in typeless damage to random enemies and adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 24, 16 ],
             },
         ],
@@ -22965,7 +22977,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -22978,15 +22990,15 @@ window.details = {
         captain: "Protects from defeat as long as HP is above 50%",
         special: [
             {
-                "description": "Adds .2x to Chain multiplier for 1 turn",
+                "description": "Adds 0.2x to Chain multiplier for 1 turn",
                 "cooldown": [ 8, 3 ],
             },
             {
-                "description": "Switches orbs between slots once and adds .3x to Chain multiplier for 1 turn",
+                "description": "Switches orbs between slots once and adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 11, 6 ],
             },
             {
-                "description": "Switches orbs between slots once and adds .5x to Chain multiplier for 1 turn",
+                "description": "Switches orbs between slots once and adds 0.5x to Chain multiplier for 1 turn",
                 "cooldown": [ 14, 9 ],
             },
         ],
@@ -22999,15 +23011,15 @@ window.details = {
         captain: "Boosts ATK, HP and RCV of all characters by 1.25x, protects from defeat as long as HP is above 50%",
         special: [
             {
-                "description": "Adds .2x to Chain multiplier for 1 turn",
+                "description": "Adds 0.2x to Chain multiplier for 1 turn",
                 "cooldown": [ 8, 3 ],
             },
             {
-                "description": "Switches orbs between slots once and adds .3x to Chain multiplier for 1 turn",
+                "description": "Switches orbs between slots once and adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 11, 6 ],
             },
             {
-                "description": "Switches orbs between slots once and adds .5x to Chain multiplier for 1 turn",
+                "description": "Switches orbs between slots once and adds 0.5x to Chain multiplier for 1 turn",
                 "cooldown": [ 14, 9 ],
             },
         ],
@@ -23049,7 +23061,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -23364,20 +23376,20 @@ window.details = {
                 "Name": "[INT] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [INT] characters by 1%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
-                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
-                    "Level 2: Reduces No Healing duration by ? turns",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 2: Reduces No Healing duration by 3 turns",
+                    "Level 3: Reduces No Healing duration by 5 turns",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
                 ]
             },
         ]
@@ -24890,13 +24902,13 @@ window.details = {
     },
     1681: {//20th Anni Luffy
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
-        special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
+        special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds 0.5x to Chain multiplier for 1 turn.",
         specialName: "Gomu Gomu no Tako Stamp",
         sailor: "Boosts base HP and ATK of all characters by 56",
     },
     1682: {//20th Anni Luffy
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x at the start of the chain and their HP by 1.3x, boosts all characters by 1.4x, 3.5x for characters with cost 30 or less, after the 3rd PERFECT in a row",
-        special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds .5x to Chain multiplier for 1 turn.",
+        special: "Cuts the current HP of each enemy by 20%, if Luffy is your Captain or Friend/Guest Captain, changes left column into Matching orbs, otherwise, adds 0.5x to Chain multiplier for 1 turn.",
         specialName: "Gomu Gomu no Tako Stamp",
         sailor: {
             "base": "Boosts base HP and ATK of all characters by 56",
@@ -25131,7 +25143,7 @@ window.details = {
     },
     1692: {//Wire
         captain: "Boosts HP of Driven characters by 1.5x",
-        special: "Adds .3x to Chain multiplier and reduces the defense of all enemies by 50% for 1 turn",
+        special: "Adds 0.3x to Chain multiplier and reduces the defense of all enemies by 50% for 1 turn",
         specialName: "Three Wind Tunnels",
     },
     1693: {//Inuarashi
@@ -25325,13 +25337,13 @@ window.details = {
     },
     1699: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2x and their HP by 1.2x",
-        special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns",
+        special: "Adds 0.3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns",
         specialName: "Gentle Ultrasound Wave",
         sailor: "Boosts base ATK of Fighter characters by 75",
     },
     1700: {//Jinbe
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.3x",
-        special: "Adds .3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns",
+        special: "Adds 0.3x to Chain multiplier for 2 turns, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns",
         specialName: "Gentle Ultrasound Wave",
         sailor: {
             "base": "Boosts base ATK of Fighter characters by 75",
@@ -25381,11 +25393,11 @@ window.details = {
             {
                 "Characters": "Fighter and Powerhouse Characters",
                 "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, adds .1x to Chain multiplier for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, adds .1x to Chain multiplier for 1 turn.",
-                    "Level 3: Once per an adventure, when the supported character uses their special, adds .15x to Chain multiplier for 1 turn.",
-                    "Level 4: Once per an adventure, when the supported character uses their special, adds .15x to Chain multiplier for 1 turn.",
-                    "Level 5: Once per an adventure, when the supported character uses their special, adds .2x to Chain multiplier for 1 turn."
+                    "Level 1: Once per an adventure, when the supported character uses their special, adds 0.1x to Chain multiplier for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, adds 0.1x to Chain multiplier for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, adds 0.15x to Chain multiplier for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, adds 0.15x to Chain multiplier for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, adds 0.2x to Chain multiplier for 1 turn."
                 ]
             }
         ]
@@ -25589,10 +25601,10 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
@@ -25964,20 +25976,20 @@ window.details = {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [DEX] characters by 1%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
         ]
@@ -26369,7 +26381,7 @@ window.details = {
         ]
     },
     1750: {//Korea Law
-        captain: "Boosts ATK of Striker characters by 3x and recovers .5x his RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Striker characters by 3x and recovers 0.5x his RCV at the end of the turn each time you hit a PERFECT",
         special: [
             {
                 "description": "Deals 50,000 fixed damage to one enemy and amplifies the effect of orbs for Striker characters by 1.75x for 1 turn",
@@ -26384,7 +26396,7 @@ window.details = {
         specialName: "Injection Shot",
     },
     1751: {//Korea Law
-        captain: "Boosts ATK of Striker characters by 3x and recovers .5x his RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Striker characters by 3x and recovers 0.5x his RCV at the end of the turn each time you hit a PERFECT",
         special: [
             {
                 "description": "Deals 50,000 fixed damage to one enemy and for Striker characters, amplifies the effect of orbs by 1.75x for 1 turn",
@@ -27009,13 +27021,13 @@ window.details = {
     },
     1777:{//Kizaru
         captain: "Boosts ATK of Free Spirit characters by 2.5x",
-        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR] and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR] and [INT] orbs into Matching orbs for Free Spirit characters and adds 0.2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
         specialNotes: "#{ignoreBarrier}"
     },
     1778:{//Kizaru
         captain: "Boosts ATK of Free Spirit characters by 2.5x and their HP by 1.2x. Recovers 1.5x character's RCV in HP at the end of each turn",
-        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR] and [INT] orbs into Matching orbs for Free Spirit characters and adds .2x to Chain multiplier for 3 turns",
+        special: "Deals 50x character's ATK in typeless damage to one enemy that will ignore damage negating abilities and barriers, changes [BLOCK], [STR] and [INT] orbs into Matching orbs for Free Spirit characters and adds 0.2x to Chain multiplier for 3 turns",
         specialName: "Devil Destroyer's Light Arrow",
         specialNotes: "#{ignoreBarrier}",
         sailor: {
@@ -27073,7 +27085,7 @@ window.details = {
                 "cooldown": [ 14, 5 ]
             },
             {
-                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
+                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds 0.5x to Chain multiplier for 2 turns",
                 "cooldown": [ 20, 11 ]
             }
         ],
@@ -27088,7 +27100,7 @@ window.details = {
                 "cooldown": [ 14, 5 ]
             },
             {
-                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds .5x to Chain multiplier for 2 turns",
+                "description": "Changes own orb into [DEX]. Reduces Special Cooldown of Shooter and Fighter specials by 1 turn. Adds 0.5x to Chain multiplier for 2 turns",
                 "cooldown": [ 20, 11 ]
             }
         ],
@@ -28668,7 +28680,7 @@ window.details = {
     },
     1850: {//Treasure Map Squard
         captain: "Boosts ATK of Driven characters by 2x",
-        special: "Deals 40x character's ATK in [DEX] damage to one enemy that will ignore damage negating abilities and barriers, makes PERFECTs easier to hit for 1 turn and adds .5x to Chain multiplier for 1 turn",
+        special: "Deals 40x character's ATK in [DEX] damage to one enemy that will ignore damage negating abilities and barriers, makes PERFECTs easier to hit for 1 turn and adds 0.5x to Chain multiplier for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Piercing Hatred",
         sailor: "Makes [PSY] and [INT] orbs beneficial for this character",
@@ -28676,7 +28688,7 @@ window.details = {
     },
     1851: {//Treasure Map Squard
         captain: "Boosts ATK of Driven characters by 2.25x and their HP by 1.3x",
-        special: "Deals 40x character's ATK in [DEX] damage to one enemy that will ignore damage negating abilities and barriers, makes PERFECTs easier to hit for 1 turn and adds .5x to Chain multiplier for 1 turn",
+        special: "Deals 40x character's ATK in [DEX] damage to one enemy that will ignore damage negating abilities and barriers, makes PERFECTs easier to hit for 1 turn and adds 0.5x to Chain multiplier for 1 turn",
         specialNotes: "#{ignoreBarrier}",
         specialName: "Piercing Hatred",
         sailor: "Makes [PSY] and [INT] orbs beneficial for this character",
@@ -29171,14 +29183,14 @@ window.details = {
     },
     1874: {//Violet
         captain: "Boosts amount of Beli received by 2.5x",
-        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds 0.5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: "Completely resists Silence on this character",
         sailorNotes: "#{silence}",
     },
     1875: {//Violet
         captain: "Boosts ATK of all characters by 1.5x. Boosts amount of Beli received by 2.5x",
-        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds .5x to Chain multiplier for 1 turn",
+        special: "Changes [RCV], [TND], [EMPTY] and [BLOCK] orbs into Matching orbs, reduces Paralysis and Silence duration by 2 turns and adds 0.5x to Chain multiplier for 1 turn",
         specialName: "Violent Interrogation of Passion",
         sailor: {
             "base": "Completely resists Silence on this character",
@@ -29876,11 +29888,11 @@ window.details = {
         captainNotes: "#{captainProportional : higher : 1.25 + 1 * ((remaining HP) / (total HP)) : 2.25 : 1.25}",
         special: [
             {
-                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds .3x to Chain multiplier for 1 turn",
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 23, 9 ],
             },
             {
-                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 5 turns. If your Captain is a Driven character, adds .7x to Chain multiplier for 1 turn",
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 5 turns. If your Captain is a Driven character, adds 0.7x to Chain multiplier for 1 turn",
                 "cooldown": [ 28, 14 ],
             },
         ],
@@ -29892,11 +29904,11 @@ window.details = {
         captainNotes: "#{captainProportional : higher : 1.5 + 1.25 * ((remaining HP) / (total HP)) : 2.75 : 1.5}",
         special: [
             {
-                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds .3x to Chain multiplier for 1 turn",
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 2 turns. If your Captain is a Driven character, adds 0.3x to Chain multiplier for 1 turn",
                 "cooldown": [ 23, 9 ],
             },
             {
-                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 5 turns. If your Captain is a Driven character, adds .7x to Chain multiplier for 1 turn",
+                "description": "Changes own orb into [STR], reduces crew's ATK DOWN, Chain Multiplier Limit and Paralysis duration by 5 turns. If your Captain is a Driven character, adds 0.7x to Chain multiplier for 1 turn",
                 "cooldown": [ 28, 14 ],
             },
         ],
@@ -30677,10 +30689,10 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
@@ -30863,7 +30875,7 @@ window.details = {
     },
     1931: {//Sandersonia
         captain: "Boosts ATK of Free Spirit characters by 1.75x",
-        special: "Adds .25x to Chain multiplier for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Eldest Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
+        special: "Adds 0.25x to Chain multiplier for 1 turn and boosts ATK of Fighter characters by 1.5x for 1 turn. If \"The Trio Crawling Away from the Heavens: The Eldest Daughter\" is used again in the same turn the special is activated in, boosts ATK of Fighter characters by 1.75x instead.",
         specialNotes: "This special is boosted if you use Boa Hancock's [1933] special in the same turn",
         specialName: "The Trio Crawling Away from the Heavens: The Second Daughter",
         sailor: "Boosts own base ATK by 100 if this character is the 2nd in the chain to attack",
@@ -30885,13 +30897,13 @@ window.details = {
     },
     1934: {//Legend Franky
         captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3x and their HP by 1.3x. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
-        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
+        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal 0.75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
         special: "Cuts the current HP of all enemies by 10%, randomizes all non-Matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
     },
     1935: {//Legend Franky
         captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3x and their HP by 1.3x. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4x instead and reduces damage taken by 38%",
-        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
+        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal 0.75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
         special: "Cuts the current HP of all enemies by 10%, randomizes all non-Matching orbs, including [BLOCK] orbs, and boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2x for 1 turn",
         specialName: "Franky Cannon",
         sailor: {
@@ -31321,13 +31333,13 @@ window.details = {
     },
     1952: {//Koala
         captain: "Boosts ATK of [INT] characters by 2.5x",
-        special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds .7x to Chain multiplier for 1 turn and changes bottom row orbs into Matching orbs",
+        special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds 0.7x to Chain multiplier for 1 turn and changes bottom row orbs into Matching orbs",
         specialName: "Vigorous Straight Fist",
         sailor: "If this character has a [RCV] orb and you hit a PERFECT with her, keep her [RCV] orb for the next turn",
     },
     1953: {//Koala
         captain: "Boosts ATK of [INT] characters by 2.75x",
-        special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds .7x to Chain multiplier for 1 turn and changes bottom row orbs into Matching orbs",
+        special: "Reduces Bind and Despair duration by 3 turns and changes own orb into [RCV]. If your Captain is a Cerebral character, adds 0.7x to Chain multiplier for 1 turn and changes bottom row orbs into Matching orbs",
         specialName: "Vigorous Straight Fist",
         sailor: {
             "base": "If this character has a [RCV] orb and you hit a PERFECT with her, keep her [RCV] orb for the next turn",
@@ -31997,11 +32009,11 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x and their RCV by 1.2x. Recovers 2x character's RCV in HP at the end of each turn.",
         special: [
             {
-                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 3 turns, reduces damage received by 50% for 1 turn. If your crew has 3 or more [STR] characters, adds .5x to Chain multiplier for 1 turn",
+                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 3 turns, reduces damage received by 50% for 1 turn. If your crew has 3 or more [STR] characters, adds 0.5x to Chain multiplier for 1 turn",
                 "cooldown": [ 16, 10 ],
             },
             {
-                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 5 turns, reduces damage received by 90% for 1 turn. If your crew has 3 or more [STR] characters, adds .75x to Chain multiplier for 1 turn",
+                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 5 turns, reduces damage received by 90% for 1 turn. If your crew has 3 or more [STR] characters, adds 0.75x to Chain multiplier for 1 turn",
                 "cooldown": [ 20, 14 ],
             },
         ],
@@ -32012,11 +32024,11 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.5x and their RCV by 1.3x. Recovers 3x character's RCV in HP at the end of each turn.",
         special: [
             {
-                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 3 turns, reduces damage received by 50% for 1 turn. If your crew has 3 or more [STR] characters, adds .5x to Chain multiplier for 1 turn",
+                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 3 turns, reduces damage received by 50% for 1 turn. If your crew has 3 or more [STR] characters, adds 0.5x to Chain multiplier for 1 turn",
                 "cooldown": [ 16, 10 ],
             },
             {
-                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 5 turns, reduces damage received by 90% for 1 turn. If your crew has 3 or more [STR] characters, adds .75x to Chain multiplier for 1 turn",
+                "description": "Reduces Bind and Chain Coefficient Reduction and ATK DOWN duration by 5 turns, reduces damage received by 90% for 1 turn. If your crew has 3 or more [STR] characters, adds 0.75x to Chain multiplier for 1 turn",
                 "cooldown": [ 20, 14 ],
             },
         ],
@@ -32306,7 +32318,7 @@ window.details = {
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "#{ignoreBarrier}",
-        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
+        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
             "character1": "Boosts base ATK of [PSY] characters by 30",
@@ -32479,13 +32491,13 @@ window.details = {
     },
     2006: {//V2 Shanks
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.3x.",
-        special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
+        special: "Adds 0.9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
         specialName: "Closing Declaration",
     },
     2007: {//V2 Shanks
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK all characters by 3.5x, by 2.75x otherwise and boosts HP of all characters by 1.3x.",
-        special: "Adds .9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
+        special: "Adds 0.9x to Chain multiplier for 1 turn. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 2.25x and changes all orbs, including [BLOCK] orbs, to Dominant Type orbs",
         sailor: {
             "base": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 125",
             "level1": "Makes [PSY] orbs beneficial for all characters",
@@ -33090,12 +33102,12 @@ window.details = {
     },
     2032: {//Luffy Tankman
         captain: "Boosts ATK and HP of [PSY] characters by 0.5x",
-        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds .3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
+        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds 0.3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
         specialName: "The Heavy Tank's Critical Breakthrough",
     },
     2033: {//Luffy Tankman
         captain: "Boosts ATK of [PSY] characters by 2.5x and their HP by 1.5x",
-        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds .3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
+        special: "Boosts ATK of all characters by 1.5x for 1 turn. If your Captain is a [PSY] character, amplifies the effect of orbs by 1.5x for 1 turn, adds 0.3x to Chain multiplier for 1 turn, adds 20x character's ATK as Additional Typeless Damage for 1 turn and reduces damage received by 40% for 1 turn.",
         specialName: "The Heavy Tank's Critical Breakthrough",
     },
     2034: {//Kizaru 6+
@@ -33646,7 +33658,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 20% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 35% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -33815,13 +33827,13 @@ window.details = {
     },
     2071: {//Anni Chopper
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
-        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orbs beneficial for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
+        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orbs beneficial for all characters for 1 turn and adds 0.6x to Chain multiplier for 1 turn.",
         sailor: "Changes all orbs into [RCV] orbs at the start of the fight",
         specialName: "A Man's Stratagem to Victory",
     },
     2072: {//Anni Chopper
         captain: "Recovers 5x character's RCV in HP at the end of each turn",
-        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orbs beneficial for all characters for 1 turn and adds .6x to Chain multiplier for 1 turn.",
+        special: "Reduces the defense of all enemies by 80% for 1 turn, reduces enemy's Threshold Damage Reduction and Enrage duration by 5 turns, makes [INT], [PSY] and [DEX] orbs beneficial for all characters for 1 turn and adds 0.6x to Chain multiplier for 1 turn.",
         specialName: "A Man's Stratagem to Victory",
         sailor: {
             "base": "Changes all orbs into [RCV] orbs at the start of the fight",
@@ -34279,7 +34291,7 @@ window.details = {
     },
     2087: {//Pizza Luffy
         captain: "Boosts ATK of all characters by 2x. If you use \"Gomu Gomu no Octopus Stamp: Banquet\" in this turn boosts ATK of all characters by 2.6x instead.",
-        special: "Deals 15x character's ATK in [STR] damage to all enemies, recovers 2,000 HP and adds .5x to Chain multiplier for 1 turn.",
+        special: "Deals 15x character's ATK in [STR] damage to all enemies, recovers 2,000 HP and adds 0.5x to Chain multiplier for 1 turn.",
         specialName: "Gomu Gomu no Octopus Stamp: Banquet",
     },
     2088: {//Pizza Sanji
@@ -36501,12 +36513,12 @@ window.details = {
     },
     2172: {//Swimsuit Shirahoshi
         captain: "Boosts ATK of Striker characters by 1.75x, recovers 1x character's RCV in HP at the end of each turn",
-        special: "Reduces enemy's Percent Damage Reduction and crew's Chain Coefficient Reduction duration by 4 turns, changes Badly Matching orbs into Matching orbs and adds .65x to Chain multiplier for 1 turn.",
+        special: "Reduces enemy's Percent Damage Reduction and crew's Chain Coefficient Reduction duration by 4 turns, changes Badly Matching orbs into Matching orbs and adds 0.65x to Chain multiplier for 1 turn.",
         specialName: "Spending Some Time with Megalo",
     },
     2173: {//Swimsuit Shirahoshi
         captain: "Boosts ATK of Striker characters by 2.25x, recovers 2x character's RCV in HP at the end of each turn",
-        special: "Reduces enemy's Percent Damage Reduction and crew's Chain Coefficient Reduction duration by 4 turns, changes Badly Matching orbs into Matching orbs and adds .65x to Chain multiplier for 1 turn.",
+        special: "Reduces enemy's Percent Damage Reduction and crew's Chain Coefficient Reduction duration by 4 turns, changes Badly Matching orbs into Matching orbs and adds 0.65x to Chain multiplier for 1 turn.",
         specialName: "Spending Some Time with Megalo",
     },
     2174: {//Jack TM
@@ -36601,12 +36613,12 @@ window.details = {
     },
     2176: {//Nekomamushi
         captain: "Boosts ATK of Striker characters by 2x",
-        special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
+        special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds 0.5x to Chain multiplier for 2 turns.",
         specialName: "Cat Toy",
     },
     2177: {//Nekomamushi
         captain: "Boosts ATK of Striker characters by 2.25x and their HP by 1.1x",
-        special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds .5x to Chain multiplier for 2 turns.",
+        special: "Reduces Bind duration by 2 turns and changes own orb into [QCK]. If your Captain is a Striker character, adds 0.5x to Chain multiplier for 2 turns.",
         specialName: "Cat Toy",
     },
     2178: {//Roddy
@@ -37020,7 +37032,7 @@ window.details = {
         specialName: "Royal Treatment",
     },
     2195: {//Corazon +
-        captain: "Boosts ATK of all characters proportionally to the crew's current HP, by 3x at max. Recovers 1.5x his RCV at the end of the turn each time you hit a Good. Recovers .5x his RCV at the end of the turn each time you hit a Great",
+        captain: "Boosts ATK of all characters proportionally to the crew's current HP, by 3x at max. Recovers 1.5x his RCV at the end of the turn each time you hit a Good. Recovers 0.5x his RCV at the end of the turn each time you hit a Great",
         captainNotes: "#{captainProportional : higher : ? + ? * (remaining HP) / (total HP) : 3 : ? }",
         special: "Recovers 50x character's RCV in HP and reduces Bind, Despair, Paralysis, ATK DOWN, Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns. If Corazon is your Captain or Friend/Guest Captain, reduces Despair duration by 20 turns.",
         specialName: "Grateful Love",
@@ -37605,7 +37617,7 @@ window.details = {
     },
     2224: {
         captain: "Boosts ATK of [QCK] characters by 1.5x",
-        special: "Reduces Paralysis duration by 2 turns and adds .25x to Chain multiplier for 1 turn.",
+        special: "Reduces Paralysis duration by 2 turns and adds 0.25x to Chain multiplier for 1 turn.",
         specialName: "Mink Chain Plus",
     },
     2225: {
@@ -37635,7 +37647,7 @@ window.details = {
     },
     2230: {//Sheepshead
         captain: "Boosts ATK of Powerhouse characters by 2x",
-        special: "Boosts own ATK by 2x for 1 turn and adds .4x to Chain multiplier for 1 turn.",
+        special: "Boosts own ATK by 2x for 1 turn and adds 0.4x to Chain multiplier for 1 turn.",
         specialName: "Cruel Questioning",
     },
     2231: {//Jack
@@ -38160,7 +38172,7 @@ window.details = {
     2245: {//Legend Sanji
         captain: "Boosts own ATK by 3x and boosts ATK of all other characters by 2.75x and their HP by 1.3x and makes [TND] orbs beneficial for all characters <br> <b>Action:</b> Sanji Sky Walks into the air and is unable to attack for 1 turn, preventing all debuffs to himself (Including, but not limited to, Bind, Despair, Silence and Paralysis). This does not remove his own Captain boost while he is unable to attack. During the next turn, boosts own ATK by 8.25x instead",
         captainNotes: "Sanji Captain Action lasts for 2 turns and can be reactivated after no cooldown. Even while Sky Walking, will still boost all characters by 2.75x. Sky Walk is not a type boost and will stack with other boosts",
-        special: "Deals 100,000 fixed damage to all enemies, changes [BLOCK], adjacent orbs and own orb into Matching orbs and adds .8x to Chain multiplier for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns",
+        special: "Deals 100,000 fixed damage to all enemies, changes [BLOCK], adjacent orbs and own orb into Matching orbs and adds 0.8x to Chain multiplier for 1 turn. If Sanji is your Captain or Friend/Guest Captain, reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns",
         specialName: "Diable Mouton Shot",
         sailor: {
             "base": "Makes [RCV] orbs beneficial for all characters",
@@ -38295,11 +38307,11 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds 0.5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
                 "cooldown": [ 24, 10 ],
             },
             {
-                "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds .8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs beneficial for all characters for 2 turns.",
+                "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds 0.8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs beneficial for all characters for 2 turns.",
                 "cooldown": [ 28, 14 ],
             },
         ],
@@ -38310,11 +38322,11 @@ window.details = {
         captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x at the start of the chain and their HP by 1.25x, by 2.85x after scoring 3 PERFECTs in a row.",
         special: [
             {
-                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds .5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
+                "description": "Deals 45x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 1 turn and adds 0.5x to Chain multiplier for 1 turn. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.5x for 1 turn and makes [PSY] and [INT] orbs beneficial for all characters for 1 turn.",
                 "cooldown": [ 24, 10 ],
             },
             {
-                "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds .8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs beneficial for all characters for 2 turns.",
+                "description": "Deals 75x character's ATK in [DEX] damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 4 or more characters with [STR] or [DEX] orbs, Delays all enemies for 2 turns and adds 0.8x to Chain multiplier for 2 turns. If your crew has 4 or more characters with [PSY] or [INT] orbs, boosts the Color Affinity of all characters by 1.75x for 2 turns and makes [PSY] and [INT] orbs beneficial for all characters for 2 turns.",
                 "cooldown": [ 28, 14 ],
             },
         ],
@@ -38378,7 +38390,7 @@ window.details = {
     },
     2250: {//Garp
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs beneficial for all characters. Reduces ATK based on how many Striker, Shooter or Cerebral characters you have on your crew.",
-        captainNotes: "ATK reduction is .2x for each Striker, Shooter or Cerebral class on your team. This stacks if you have each class on your team, so a team with a Striker, Shooter, and Cerebral character will get a 99.2% ATK reduction from Garp.",
+        captainNotes: "ATK reduction is 0.2x for each Striker, Shooter or Cerebral class on your team. This stacks if you have each class on your team, so a team with a Striker, Shooter, and Cerebral character will get a 99.2% ATK reduction from Garp.",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
@@ -38394,7 +38406,7 @@ window.details = {
     },
     2251: {//Garp
         captain: "Boosts ATK of all characters by 2x at the start of the chain and their HP by 1.5x, boosts ATK of all characters by 4x following a chain of Good > Great > PERFECT hits, makes [PSY] and [RCV] orbs beneficial for all characters. Reduces ATK based on how many Striker, Shooter or Cerebral characters you have on your crew.",
-        captainNotes: "ATK reduction is .2x for each Striker, Shooter or Cerebral class on your team. This stacks if you have each class on your team, so a team with a Striker, Shooter, and Cerebral character will get a 99.2% ATK reduction from Garp.",
+        captainNotes: "ATK reduction is 0.2x for each Striker, Shooter or Cerebral class on your team. This stacks if you have each class on your team, so a team with a Striker, Shooter, and Cerebral character will get a 99.2% ATK reduction from Garp.",
         special: [
             {
                 "description": "Cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, locks the chain multiplier at 3x for 1 turn and reduces Silence duration by 1 turn",
@@ -38857,13 +38869,13 @@ window.details = {
     },
     2270: {//Wadatsumi
         captain: "Boosts ATK of Powerhouse characters by 2.5x, reduces crew's RCV to 0",
-        special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds .7x to Chain multiplier for 2 turns.",
+        special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds 0.7x to Chain multiplier for 2 turns.",
         specialName: "Mega Monk",
         sailor: "Cannot be Blown Away",
     },
     2271: {//Wadatsumi
         captain: "Boosts ATK of Powerhouse characters by 2.75x, reduces crew's RCV to 0",
-        special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds .7x to Chain multiplier for 2 turns.",
+        special: "Changes left column orbs, including [BLOCK] orbs, into Matching orbs and adds 0.7x to Chain multiplier for 2 turns.",
         specialName: "Mega Monk",
         sailor: {
             "base": "Cannot be Blown Away",
@@ -39467,7 +39479,7 @@ window.details = {
     },
     2300: {//Legend Franky
         captain: "If there are 6 characters in your crew with Fighter, Slasher, Shooter or Striker classes, boosts ATK of all characters by 3.25x and their HP by 1.3x and makes [RCV] and [TND] orbs beneficial for all characters. <br> <b>Action:</b> Franky brings the entire crew into General Franky for 1 turn and becomes immune to Blow Away inflicted to the crew. During this turn, boosts ATK of all characters by 4.25x instead and reduces damage taken by 38%",
-        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal .75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
+        captainNotes: "All characters on your crew must have one of the 4 classes listed, but you do not need one of each. Franky Captain Action lasts one turn and can be reactivated after a 4 turn cooldown. Only 1 Franky Captain Action can be activated at once. <br\> During transformation:<br\>If you attack with a Fighter character, deal 1.25x damage to targeted enemy<br\>If you attack with a Slasher character, deal full damage to targeted enemy, but deal 0.1x damage to all enemies in the same row as the targeted enemy<br\>If you attack with a Striker character, deal 0.5x damage to all enemies on the stage<br\>If you attack with a Shooter character, deal 0.75x damage to targeted enemy but deal 0.3x damage to all other enemies on the stage",
         special: "Cuts the current HP of all enemies by 10% and randomizes all non-Matching orbs, including [BLOCK] orbs. If there are 3 enemies or more on the stage when the special is activated, boosts ATK of Fighter, Slasher, Shooter and Striker characters by 2.25x for 1 turn by 2x otherwise",
         specialName: "Franky Radical Beam",
         sailor: {
@@ -39542,13 +39554,13 @@ window.details = {
         ]
     },
     2301: {//Legend Capone
-        captain: "Boosts ATK of Shooter characters by 3.75x and their HP by 1.35x and makes [PSY] and [INT] orbs beneficial for Shooter characters. If there are 6 Shooter characters in your crew, recovers .5x his RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Shooter characters by 3.75x and their HP by 1.35x and makes [PSY] and [INT] orbs beneficial for Shooter characters. If there are 6 Shooter characters in your crew, recovers 0.5x his RCV at the end of the turn each time you hit a PERFECT",
         special: "Boosts ATK of Shooter characters by 2x for 1 turn. If there are 6 characters in your crew at the time the special is activated, reduces crew's current HP by 85%, transforms crew into Big Father and turns the amount of HP subtracted into Big Father's Barrier.",
         specialNotes: "While Big Father is active, crew's HP isn't able to be reduced and becomes immune to Blow Away inflicted to the crew. Big Father deactivates when the Barrier HP is reduced to 0 HP. While in Big Father, you can not use Captain Swap, Captain Actions or Dual Unit Swap (last unconfirmed). If a Captain Swap or Captain Action is already active, you can not transform into Big Father.",
         specialName: "Full-Scale Rook! The Big Father",
     },
     2302: {//Legend Capone
-        captain: "Boosts ATK of Shooter characters by 3.75x and their HP by 1.35x and makes [PSY] and [INT] orbs beneficial for Shooter characters. If there are 6 Shooter characters in your crew, recovers .5x his RCV at the end of the turn each time you hit a PERFECT",
+        captain: "Boosts ATK of Shooter characters by 3.75x and their HP by 1.35x and makes [PSY] and [INT] orbs beneficial for Shooter characters. If there are 6 Shooter characters in your crew, recovers 0.5x his RCV at the end of the turn each time you hit a PERFECT",
         special: "Boosts ATK of Shooter characters by 2x for 1 turn. If there are 6 characters in your crew at the time the special is activated, reduces crew's current HP by 85%, transforms crew into Big Father and turns the amount of HP subtracted into Big Father's Barrier.",
         specialNotes: "While Big Father is active, crew's HP isn't able to be reduced and becomes immune to Blow Away inflicted to the crew. Big Father deactivates when the Barrier HP is reduced to 0 HP. While in Big Father, you can not use Captain Swap, Captain Actions or Dual Unit Swap (last unconfirmed). If a Captain Swap or Captain Action is already active, you can not transform into Big Father.",
         specialName: "Full-Scale Rook! The Big Father",
@@ -39813,14 +39825,14 @@ window.details = {
         captain: "Boosts ATK of Shooter and Driven characters by 2.25x and their HP by 1.2x",
         special: "Reduces any damage received above 5,000 HP by 95% for 3 turns and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If enemies have a barrier at the time the special was activated, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Assassin's Angry Roar",
-        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * .05<br>#{beneficial}",
+        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.05<br>#{beneficial}",
         sailor: "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
     },
     2310: {//Gotti
         captain: "Boosts ATK of Shooter and Driven characters by 2.5x and their HP by 1.2x",
         special: "Reduces any damage received above 5,000 HP by 95% for 3 turns and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If enemies have a barrier at the time the special was activated, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Assassin's Angry Roar",
-        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * .05<br>#{beneficial}",
+        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.05<br>#{beneficial}",
         sailor: {
             "base": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
             "level1": "Makes [QCK] orbs beneficial for Shooter characters",
@@ -39903,7 +39915,7 @@ window.details = {
     },
     2318: {//Story Judge
         captain: "Boosts ATK of Powerhouse characters by 2.75x when HP is below ?%, 2.5x otherwise and reduces damage received by 10%",
-        special: "Makes [STR], [DEX] and [QCK] orbs beneficial for Powerhouse characters for 3 turns, reduces ATK DOWN duration by 2 turns and adds .5x to Chain multiplier for 2 turns",
+        special: "Makes [STR], [DEX] and [QCK] orbs beneficial for Powerhouse characters for 3 turns, reduces ATK DOWN duration by 2 turns and adds 0.5x to Chain multiplier for 2 turns",
         specialName: "Hand-in-Hand Combat \"Garuda\"",
     },
     2319: {//Story Niji
@@ -39991,7 +40003,7 @@ window.details = {
     },
     2324: {//Usopp
         captain: "Boosts ATK of Shooter characters by 3x following a chain of Good > Great > PERFECT hits.",
-        special: "Cuts the current HP of one enemy by 20%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds .75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
+        special: "Cuts the current HP of one enemy by 20%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds 0.75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Green Star: Skull Bombgrass",
         specialNotes: "#{beneficial}",
         sailor: "Reduces Silence duration on this character by 3 turns",
@@ -39999,7 +40011,7 @@ window.details = {
     },
     2325: {//Usopp
         captain: "Boosts ATK of Shooter characters by 3.75x following a chain of Good > Great > PERFECT hits and reduces damage received by 7%.",
-        special: "Cuts the current HP of one enemy by 20%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds .75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
+        special: "Cuts the current HP of one enemy by 20%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds 0.75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Green Star: Skull Bombgrass",
         specialNotes: "#{beneficial}",
         sailor: {
@@ -40258,7 +40270,7 @@ window.details = {
     2335: {//TM Law
         captain: "Boosts ATK of Fighter, Slasher, Cerebral and Free Spirit characters by 1.1x",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 1.21x bonus",
-        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orbs into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orbs into Matching orbs, adds 0.7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
         specialName: "Counter-Shock",
     },
     2336: {//TM Law
@@ -40272,7 +40284,7 @@ window.details = {
             "level6": "Boosts ATK of Fighter, Slasher, Cerebral and Free Spirit characters by 1.8x and makes [RCV] and [TND] orbs beneficial for Fighter, Slasher, Cerebral and Free Spirit characters.",
         },
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.24x bonus",
-        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orbs into Matching orbs, adds .7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces Bind and Despair duration by 2 turns, changes own orb and adjacent orbs into Matching orbs, adds 0.7x to Chain multiplier for 1 turn and reduces Special Cooldown of Fighter, Slasher, Cerebral and Free Spirit specials by 1 turn",
         specialName: "Counter-Shock",
         sailor: {
             "base": "None",
@@ -40809,7 +40821,7 @@ window.details = {
                 "cooldown": [ 27, 13 ],
             },
         ],
-        specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
+        specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Chloro Ball",
         sailor: "Reduces Silence duration on this character by 3 turns",
         sailorNotes : "#{silence}",
@@ -40826,7 +40838,7 @@ window.details = {
                 "cooldown": [ 27, 13 ],
             },
         ],
-        specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals .5x character's ATK in fixed damage at the end of each turn.",
+        specialNotes: "Strong Poison deals 300x character's ATK in fixed damage at the end of each turn. Regular Poison deals 0.5x character's ATK in fixed damage at the end of each turn.",
         specialName: "Chloro Ball",
         sailor: {
             "base": "Reduces Silence duration on this character by 3 turns",
@@ -41211,11 +41223,11 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, THIS Luffy boosts ATK of all characters by 4x at the start of the chain, by 4.25x after 3 PERFECTs in a row",
         special: [
             {
-                "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds .3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 3 turns",
+                "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds 0.3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 3 turns",
                 "cooldown": [ 12, 7 ],
             },
             {
-                "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds .7 to chain multiplier for 3 turns, amplifies the effect of orbs by 1.75x for 1 turn. If during that turn you score 3 PERFECT hits, amplifies the effect of orbs by 2x in the following turn. If Luffy is your Captain or Friend/Guest Captain, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 3 turns",
+                "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds 0.7 to chain multiplier for 3 turns, amplifies the effect of orbs by 1.75x for 1 turn. If during that turn you score 3 PERFECT hits, amplifies the effect of orbs by 2x in the following turn. If Luffy is your Captain or Friend/Guest Captain, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 3 turns",
                 "cooldown": [ 19, 14 ],
             },
         ],
@@ -42333,13 +42345,13 @@ window.details = {
     },
     2406: {//World Clash Ace
         captain: "Boosts ATK of all characters by ?x and recovers ? HP at end of each turn",
-        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by 1.75x for 2 turns, amplifies the effect of orbs of all characters by 1.75x for 2 turns and adds .7x to Chain multiplier for 1 turn",
+        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by 1.75x for 2 turns, amplifies the effect of orbs of all characters by 1.75x for 2 turns and adds 0.7x to Chain multiplier for 1 turn",
         specialName: "Words Left To Family",
         sailor: "Boosts base ATK, HP and RCV of all characters by 30",
     },
     2407: {//World Clash Ace
         captain: "Boosts ATK of all characters by 3x and recovers 500 HP at end of each turn",
-        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by 1.75x for 2 turns, amplifies the effect of orbs of all characters by 1.75x for 2 turns and adds .7x to Chain multiplier for 1 turn",
+        special: "Binds self for 50 turns, changes all orbs into Matching orbs, boosts ATK of all characters by 1.75x for 2 turns, amplifies the effect of orbs of all characters by 1.75x for 2 turns and adds 0.7x to Chain multiplier for 1 turn",
         specialName: "Words Left To Family",
         sailor: "Boosts base ATK, HP and RCV of all characters by 30",
     },
@@ -42747,14 +42759,14 @@ window.details = {
         ]
     },
     2421: {//Hajrudin
-        captain: "Boosts ATK of Driven and Powerhouse characters by 2.75x, reduces crew's current HP by 5% at the end of each turn, reduces his own ATK multiplier by approximately .06x at the end of each turn",
+        captain: "Boosts ATK of Driven and Powerhouse characters by 2.75x, reduces crew's current HP by 5% at the end of each turn, reduces his own ATK multiplier by approximately 0.06x at the end of each turn",
         captainNotes: "His ATK multiplier will be 2.75x on the first turn, 2.69x on the second, 2.63x on the third and so on. The reduction stops once the multiplier is 1x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
         special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven or Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
         specialName: "\"Gungnir\" - The Decree of the Giant",
         sailor: "Boosts base ATK, HP and RCV of Driven characters by 30",
     },
     2422: {//Hajrudin
-        captain: "Boosts ATK of Driven and Powerhouse characters by 3.25x, reduces crew's current HP by 5% at the end of each turn, reduces his own ATK multiplier by approximately .06x at the end of each turn",
+        captain: "Boosts ATK of Driven and Powerhouse characters by 3.25x, reduces crew's current HP by 5% at the end of each turn, reduces his own ATK multiplier by approximately 0.06x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.25x on the first turn, 3.19x on the second, 3.13x on the third and so on. The reduction stops once the multiplier is 1x. The multiplier affects all Driven and Powerhouse characters. You will not die to the HP reduction",
         special: "Reduces Bind, Paralysis and Chain Coefficient Reduction duration by 4 turns, reduces Special Cooldown of Driven and Powerhouse characters by 1 turn. If your Captain is a Driven or Powerhouse character, boosts ATK against delayed enemies by 1.75x for 2 turns",
         specialName: "\"Gungnir\" - The Decree of the Giant",
@@ -44054,12 +44066,12 @@ window.details = {
     },
     2456: {//Pudding
         captain: "Boosts ATK of Cerebral characters by 2x.",
-        special: "Binds self for 3 turns, reduces crew's ATK DOWN duration by 2 turns and adds .3x to Chain multiplier for 1 turn. If your Captain is a Fighter character, changes own orb and the Captain's orb into Matching orbs.",
+        special: "Binds self for 3 turns, reduces crew's ATK DOWN duration by 2 turns and adds 0.3x to Chain multiplier for 1 turn. If your Captain is a Fighter character, changes own orb and the Captain's orb into Matching orbs.",
         specialName: "Chocolatier's Love",
     },
     2457: {//Pudding
         captain: "Boosts ATK of Cerebral characters by 2x and their RCV by 1.2x.",
-        special: "Binds self for 3 turns, reduces crew's ATK DOWN duration by 2 turns and adds .3x to Chain multiplier for 1 turn. If your Captain is a Fighter character, changes own orb and the Captain's orb into Matching orbs.",
+        special: "Binds self for 3 turns, reduces crew's ATK DOWN duration by 2 turns and adds 0.3x to Chain multiplier for 1 turn. If your Captain is a Fighter character, changes own orb and the Captain's orb into Matching orbs.",
         specialName: "Chocolatier's Love",
         support: [
             {
@@ -44127,7 +44139,7 @@ window.details = {
     },
     2461: {//Pekoms/Mystoms
         captain: "Boosts ATK of Fighter characters by 2.25x and reduces damage received by 5%.",
-        special: "Reduces enemy Threshold Damage Reduction duration by 2 turns and adds .5x to Chain multiplier for 1 turn.",
+        special: "Reduces enemy Threshold Damage Reduction duration by 2 turns and adds 0.5x to Chain multiplier for 1 turn.",
         specialName: "Disguised Determination",
         support: [
             {
@@ -44290,11 +44302,11 @@ window.details = {
             {
                 "Characters": "Katakuri and Smoothie",
                 "description": [
-                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 1 turn and adds .3x to Chain multiplier for 1 turn.",
-                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 1 turn and adds .4x to Chain multiplier for 1 turn.",
-                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and adds .4x to Chain multiplier for 1 turn.",
-                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and adds .5x to Chain multiplier for 1 turn.",
-                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and adds .7x to Chain multiplier for 1 turn."
+                    "Level 1: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 1 turn and adds 0.3x to Chain multiplier for 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 1 turn and adds 0.4x to Chain multiplier for 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and adds 0.4x to Chain multiplier for 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and adds 0.5x to Chain multiplier for 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Chain Coefficient Reduction or Chain Multiplier Limit, reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and adds 0.7x to Chain multiplier for 1 turn."
                 ]
             }
         ]
@@ -44350,8 +44362,8 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 40% at the start of the turn, recovers .5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 40% at the start of the turn, recovers .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 40% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 40% at the start of the turn, recovers 0.75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
@@ -44736,7 +44748,7 @@ window.details = {
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below 40% at the start of the turn, recovers .75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 40% at the start of the turn, recovers 0.75x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 2: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 3: If HP is below 40% at the start of the turn, recovers 1.25x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 4: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
@@ -45093,13 +45105,13 @@ window.details = {
     2516: {//V2 Whitebeard
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
         captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
-        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds .7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
+        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
         specialName: "Seismic Strike",
     },
     2517: {//V2 Whitebeard
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
         captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
-        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds .7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
+        special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
         specialName: "Seismic Strike",
         sailor: {
             "base": "None",
@@ -45564,7 +45576,7 @@ window.details = {
         captain: "Reduces cooldown of [DEX] and [PSY] specials by 2 turns at the start of the fight. Boosts ATK of [PSY] characters by 2.75x and boosts ATK of [DEX] characters by 2x",
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
-        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
+        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
             "base": "Boosts base ATK of [PSY] characters by 30",
@@ -45640,7 +45652,7 @@ window.details = {
         captain: "Reduces cooldown of [DEX] and [PSY] specials by 2 turns at the start of the fight. Boosts ATK of [DEX] characters by 2.75x and boosts ATK of [PSY] characters by 2x",
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
-        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
+        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
             "base": "Boosts base ATK of [DEX] characters by 30",
@@ -45716,7 +45728,7 @@ window.details = {
         captain: "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs beneficial for [PSY] and [DEX] characters",
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
-        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
+        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of [DEX] and [PSY] characters by 50",
@@ -45792,7 +45804,7 @@ window.details = {
         captain: "Boosts ATK of [DEX] and [PSY] characters by 3.75x and makes [PSY] and [DEX] orbs beneficial for [PSY] and [DEX] characters",
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
-        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds .5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
+        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of [DEX] and [PSY] characters by 50",

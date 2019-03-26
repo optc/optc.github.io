@@ -2796,6 +2796,16 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Big Mom',
+            thumb: 2473,
+            nakama: 4247300,
+            gamewith: 145832,
+            Master: [ 2472 ],
+            Expert: [ 2472 ],
+            Ultimate: [ 2472 ],
+        },
+        
+        {
             name: 'Clash!! Sengoku & Garp',
             thumb: 2507,
             global: true,
@@ -2814,16 +2824,6 @@ window.drops = {
             Master: [ 2512 ],
             Expert: [ 2512 ],
             Ultimate: [ 2512 ],
-        },
-        
-        {
-            name: 'Clash!! Big Mom',
-            thumb: 2473,
-            nakama: 4247300,
-            gamewith: 145832,
-            Master: [ 2472 ],
-            Expert: [ 2472 ],
-            Ultimate: [ 2472 ],
         },
 
     ],
