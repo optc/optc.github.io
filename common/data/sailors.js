@@ -753,16 +753,16 @@ window.sailors = {
     2489: {
         hpStatic: function(p) { return p.unit.type == "PSY" ? 40 : 0; },
     },
-    2502: {
+    3333: {
         staticMult: function(p) { return 3; }
     },
-    2503: {
+    3334: {
         staticMult: function(p) { return 3; }
     },
-    2518: {
+    3347: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
-    2519: {
+    3348: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
     5000: {

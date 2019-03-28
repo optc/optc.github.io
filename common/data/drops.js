@@ -2262,12 +2262,12 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Vice-Admiral Garp',
-            thumb: 2511,
+            thumb: 3340,
             global: true,
             nakama: null,
             gamewith: null,
             condition: 'Master: Fighter/Slasher/Shooter Only',
-            Master: [ 2510 ],
+            Master: [ 3339 ],
         },
 
         {
@@ -2815,23 +2815,23 @@ window.drops = {
         
         {
             name: 'Clash!! Sengoku & Garp',
-            thumb: 2507,
+            thumb: 3338,
             global: true,
             nakama: null,
             gamewith: null,
-            Master: [ 2506 ],
-            Expert: [ 2506 ]
+            Master: [ 3337 ],
+            Expert: [ 3337 ]
         },
         
         {
             name: 'Showdown!! Shanks & Mihawk',
-            thumb: 2513,
+            thumb: 3342,
             global: true,
             nakama: null,
             gamewith: null,
-            Master: [ 2512 ],
-            Expert: [ 2512 ],
-            Ultimate: [ 2512 ],
+            Master: [ 3341 ],
+            Expert: [ 3341 ],
+            Ultimate: [ 3341 ],
         },
 
     ],

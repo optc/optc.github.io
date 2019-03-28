@@ -45097,13 +45097,13 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
-    2502: {//Kung Fu Luffy
+    3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
         sailor: "Adds 3x character's ATK as Additional Damage",
         specialName: "Gum-Gum Giant Rifle: Kung Fu",
     },
-    2503: {//Kung Fu Luffy
+    3334: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
         sailor: {
@@ -45177,7 +45177,7 @@ window.details = {
             },
         ]
     },
-    2504: {//Crocodile&Daz
+    3335: {//Crocodile&Daz
         captain: {
             "character1": "Boosts ATK of [STR] and [DEX] characters by 2.75x if they have a Matching orb, by 2x otherwise and makes [TND] and [DEX] orbs beneficial for [STR] and [DEX] characters",
             "character2": "Boosts ATK of [STR] and [DEX] characters by 2.5x and reduce damage received by 10%",
@@ -45193,7 +45193,7 @@ window.details = {
             "combined": "Boosts base ATK, HP and RCV of [STR] and [DEX] characters by 50"
         },
     },
-    2505: {//Rob Lucci
+    3336: {//Rob Lucci
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Shooter characters by 3.25x at the start of the chain and reduces crew's RCV to 0.<br>Boosts ATK of Shooter characters by 3.4125x after the 1st PERFECT in a row, by 3.583125x after the 2nd PERFECT in a row, by 3.76228125x after the 3rd PERFECT in a row, by 3.9503953125x after the 4th PERFECT in a row and by 4.147915078125x after the 5th PERFECT in a row.",
         special: "Reduces the defense of all enemies by 80% for 1 turn, deals 100x character's ATK in [QCK] damage to one enemy, reduces Paralysis duration by 4 turns and boosts the Color Affinity of Shooter characters by 2x for 1 turn",
         specialName: "Tempest Kick: Victory Bird",
@@ -45268,7 +45268,7 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
-    2506: {//Sengoku&Garp
+    3337: {//Sengoku&Garp
         captain: {
             "character1": "Boosts ATK of Fighter Characters by 2.25x and their HP by 1.2x and makes [INT] orbs beneficial for Fighter characters",
             "character2": "Boosts ATK of Fighter Characters by 2x and their HP by 1.2x, but boosts his OWN attack by 2.5x and makes [DEX] orbs beneficial for Fighter characters",
@@ -45284,7 +45284,7 @@ window.details = {
             "combined": "Boosts base ATK of all characters by 40 if your Captain is a Fighter character"
         },
     },
-    2507: {//Sengoku&Garp
+    3338: {//Sengoku&Garp
         captain: {
             "character1": "Boosts ATK of Fighter Characters by 2.5x and their HP by 1.2x and makes [INT] orbs beneficial for Fighter characters",
             "character2": "Boosts ATK of Fighter Characters by 2.25x and their HP by 1.2x, but boosts his OWN attack by 3x and makes [DEX] orbs beneficial for Fighter characters",
@@ -45340,17 +45340,17 @@ window.details = {
             },
         ]
     },
-    2510: {//Neo Garp
+    3339: {//Neo Garp
         special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
         specialName: "Meteor Fist Shower [Neo]",
         captain: "Boosts ATK and HP Fighter characters by 1.5x"
     },
-    2511: {//Neo Garp
+    3340: {//Neo Garp
         special: "Randomizes all orbs into either [STR] or [RCV] orbs, reduces Bind and Despair duration by 1 turn and boosts ATK of Fighter characters by 1.75x for 1 turn.",
         specialName: "Meteor Fist Shower [Neo]",
         captain: "Boosts ATK Fighter characters by 2.25x and their HP by 1.5x",
     },
-    2512: {//Shanks&Mihawk
+    3341: {//Shanks&Mihawk
         captain: {
             "character1": "Boosts ATK of Slasher characters by 2x and reduces damage received by 10%",
             "character2": "Boosts ATK of Slasher Characters by 2.25x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
@@ -45366,7 +45366,7 @@ window.details = {
             "combined": "Boosts base ATK of [QCK] and [INT] characters by 50",
         },
     },
-    2513: {//Shanks&Mihawk
+    3342: {//Shanks&Mihawk
         captain: {
             "character1": "Boosts ATK of Slasher characters by 2.25x and reduces damage received by 10%",
             "character2": "Boosts ATK of Slasher Characters by 2.5x and makes [TND] and [RCV] orbs beneficial for Slasher characters",
@@ -45422,7 +45422,7 @@ window.details = {
             },
         ]
     },
-    2514: {//Knight Zoro
+    3343: {//Knight Zoro
         captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [INT] orbs, makes [STR] and [QCK] orbs beneficial for [STR] and [QCK] characters. If there is a [STR], [QCK] and [INT] character in your crew, boosts chain multiplier by 1.5x.",
         captainNotes: "#{beneficial}",
         special: "Locks all orbs for 1 turn and changes [QCK] and [DEX] orbs into Matching orbs. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of [STR] and [QCK] characters by 2x for 2 turns, by 1.75x for 2 turns otherwise.",
@@ -45472,7 +45472,7 @@ window.details = {
             },
         ]
     },
-    2515: {//Knight Sanji
+    3344: {//Knight Sanji
         captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [PSY] orbs, makes [STR] and [QCK] orbs beneficial for [STR] and [QCK] characters. If there is a [STR], [QCK] and [PSY] character in your crew, boosts chain multiplier by 1.5x.",
         captainNotes: "#{beneficial}",
         special: "Reduces any damage received above 6,000 HP by ?% for 1 turn and changes all orbs, including [BLOCK] orbs, to [QCK] orbs. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effects of orbs for [STR] and [QCK] characters by 2x for 2 turns, by 1.75x for 2 turns otherwise.",
@@ -45522,13 +45522,13 @@ window.details = {
             },
         ]
     },
-    2516: {//V2 Whitebeard
+    3345: {//V2 Whitebeard
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
         captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
         special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
         specialName: "Seismic Strike",
     },
-    2517: {//V2 Whitebeard
+    3346: {//V2 Whitebeard
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
         captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
         special: "Deals 400,000 fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
@@ -45604,25 +45604,25 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
-    2518:{//Log Vivi
+    3347:{//Log Vivi
         captain: "Boosts ATK and RCV of Slasher and Striker characters by ?x. Boosts EXP gained by ?x",
         special: "Reduces crew's current HP by 90%, cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, changes top and bottom row [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs and amplifies the effect of orbs of all characters by 1.75x for 2 turns. If your Captain is a Slasher or Striker character, removes enemies' End of Turn Damage/Percent Cut Buffs duration completely",
         specialName: "Peacock String Slasher",
         sailor: "Boosts base ATK of top row characters by 60",
     },
-    2519:{//Log Vivi
+    3348:{//Log Vivi
         captain: "Boosts ATK and RCV of Slasher and Striker characters by 1.5x. Boosts EXP gained by 1.5x",
         special: "Reduces crew's current HP by 90%, cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, changes top and bottom row [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs and amplifies the effect of orbs of all characters by 1.75x for 2 turns. If your Captain is a Slasher or Striker character, removes enemies' End of Turn Damage/Percent Cut Buffs duration completely",
         specialName: "Peacock String Slasher",
         sailor: "Boosts base ATK of top row characters by 60",
     },
-    2520:{//Log Ace
+    3349:{//Log Ace
         captain: "Boosts ATK of Free Spirit and Powerhouse characters by ?x and their HP by ?x. Boosts Beli gained by ?x",
         special: "Reduces crew's HP to 1, removes Poison duration completely, reduces Paralysis, Bind and Silence duration by 4 turns, recovers 7,000 HP at the end of the turn for 1 turn and changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs. If your Captain is a Free Spirit or Powerhouse character, reduces enemy's Threshold Damage Reduction duration by 5 turns.",
         specialName: "Flame Fence",
         sailor: "Reduces Silence duration on this character by 3 turns",
     },
-    2521:{//Log Ace
+    3350:{//Log Ace
         captain: "Boosts ATK of Free Spirit and Powerhouse characters by 1.75x and their HP by 1.5x. Boosts Beli gained by 2.5x",
         special: "Reduces crew's HP to 1, removes Poison duration completely, reduces Paralysis, Bind and Silence duration by 4 turns, recovers 7,000 HP at the end of the turn for 1 turn and changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs. If your Captain is a Free Spirit or Powerhouse character, reduces enemy's Threshold Damage Reduction duration by 5 turns.",
         specialName: "Flame Fence",
