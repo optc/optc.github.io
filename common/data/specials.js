@@ -7274,6 +7274,9 @@ window.specials = {
             }
         },
     },
+    2492: {
+        chainAddition: function(p) { return 0.3; }
+    },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",

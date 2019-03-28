@@ -8853,6 +8853,31 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
+    2488: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1 : 1; },//change
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1 : 1; },//change
+    },
+    2489: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.25 : 1; },
+    },
+    2490: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : 1; },//change
+        hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : 1; },//change
+        rcv: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : 1; },//change
+    },
+    2491: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 1.2 : 1; },
+    },
+    2492: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2493: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
+    },
     2500: {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.3 : 1; },
         atk: function(p) { return [ p.slot == p.sourceSlot ? 4.25 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 4 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, p.slot == p.sourceSlot ? 12 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.75 : 1 ][Math.min(3, p.semlaCounter)]; },

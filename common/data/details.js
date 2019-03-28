@@ -40728,12 +40728,12 @@ window.details = {
     },
     2348: {//Pedro
         captain: "Reduces cooldown of all specials by ? turn at the start of the fight. Boosts ATK of Slasher characters by 2.5x",
-        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
+        special: "Cuts the current HP of one enemy by 10% and reduces the defense of all enemies by 100% for 1 turn. If your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
         specialName: "Dawn-break Sword",
     },
     2349: {//Pedro
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of Slasher characters by 2.75x and if you have 5 or more Slashers characters in your crew, boosts chain by 1.3x",
-        special: "Cuts the current HP of one enemy by 10%, reduces the defense of all enemies by 100% for 1 turn if your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
+        special: "Cuts the current HP of one enemy by 10% and reduces the defense of all enemies by 100% for 1 turn. If your crew has 5 or more Slasher characters at the time the special is activated, boosts ATK against enemies with reduced defense by 2x for 1 turn and changes adjacent orbs into Matching Orbs.",
         specialName: "Dawn-break Sword",
         sailor: {
             "base": "If this character has a [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
@@ -44937,6 +44937,88 @@ window.details = {
                 ]
             }
         ]
+    },
+    2488: {//Brook
+        captain: "Boosts ATK of Slasher and Free Spirit characters by ?x and their HP by ?x.",
+        special: "Deals 90x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 5 or more Slasher characters at the time the special is activated, reduces damage received from [INT] enemies by 100% for 1 turn and cuts the current HP of each enemy by 15% at the end of the turn for 2 turns.",
+        specialName: "Brook Special",
+        sailor: "Boosts base HP of [PSY] characters by 40",
+    },
+    2489: {//Brook
+        captain: "Boosts ATK of Slasher and Free Spirit characters by 2.5x and their HP by 1.25x.",
+        special: "Deals 90x character's ATK in typeless damage to all enemies that will ignore damage negating abilities and barriers. If your crew has 5 or more Slasher characters at the time the special is activated, reduces damage received from [INT] enemies by 100% for 1 turn and cuts the current HP of each enemy by 15% at the end of the turn for 2 turns.",
+        specialName: "Brook Special",
+        sailor: {
+            "base": "Boosts base HP of [PSY] characters by 40",
+            "level1": "Boosts base ATK of Slasher and Free Spirit characters by 50",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Slasher characters",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 2: Adds ?% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 3: Adds ?% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 4: Adds ?% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 5: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP."
+                ]
+            }
+        ]
+    },
+    2490: {//Hiriluk
+        captain: "Boosts ATK of [DEX] and [INT] characters by ?x and their HP and RCV by ?x.",
+        special: "Reduces crew's current HP by 50%, reduces Despair, Paralysis and Chain Coefficient Reduction duration by 3 turns and changes [TND] and [RCV] orbs on all characters into Matching Orbs.",
+        specialName: "Hiriluk Special",
+    },
+    2491: {//Hiriluk
+        captain: "Boosts ATK of [DEX] and [INT] characters by 2.25x and their HP and RCV by 1.2x.",
+        special: "Reduces crew's current HP by 50%, reduces Despair, Paralysis and Chain Coefficient Reduction duration by 3 turns and changes [TND] and [RCV] orbs on all characters into Matching Orbs.",
+        specialName: "Hiriluk Special",
+        support: [
+            {
+                "Characters": "Dr. Kureha and Chopper",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ]
+    },
+    2492: {//Chopper
+        captain: "Boosts ATK of Fighter characters by 1.5x.",
+        special: "Reduces crew's current HP by 10%, removes Blindness duration completely and adds 0.3x to Chain multiplier for 1 turn.",
+        specialName: "Chopper Special",
+    },
+    2493: {//Kureha
+        captain: "Boosts ATK and RCV of Free Spirit characters by 1.25x.",
+        special: "Reduces Bind duration by 3 turns and makes [RCV] orbs beneficial for Free Spirit characters for 1 turn.",
+        specialName: "Kureha Special",
+        specialNotes: "#{beneficial}",
     },
     2500: {//Big Mom
         captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.3x, makes [SEMLA] orbs beneficial for all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts own ATK by 4.25x, boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 12x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x and boosts chances of getting [SEMLA] orbs",
