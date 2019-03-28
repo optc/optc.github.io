@@ -17509,13 +17509,13 @@ window.details = {
         specialName: "King Cobra Machetes",
     },
     1313: {//Akainu
-        captain: "If any character has a [STR] orb, boosts ATK of all characters by 3.9375x, boosts ATK of all characters by 2.25x otherwise. Boosts chances of getting [STR] orbs",
+        captain: "Boosts ATK of all characters by 2.25x. If a character has a [STR] orb, boosts their ATK by 3.9375x instead. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
     },
     1314: {//Akainu
-        captain: "If any character has a [STR] orb, boosts ATK of all characters by 3.9375x, boosts ATK of all characters by 2.25x otherwise. Boosts chances of getting [STR] orbs",
+        captain: "Boosts ATK of all characters by 2.25x. If a character has a [STR] orb, boosts their ATK by 3.9375x instead. Boosts chances of getting [STR] orbs",
         captainNotes: "If a character has a [STR] orb, regardless of type, they will have a 3.9375x ATK boost",
         special: "Deals 125x character's ATK typeless damage to all enemies and randomizes non-[STR] orbs. Boosts ATK of characters with cost 50 or higher by 1.75x for 2 turns",
         specialName: "Meteor Volcano",
@@ -44220,13 +44220,13 @@ window.details = {
     },
     2464: {//Cracker
         captain: "Boosts ATK of Powerhouse characters by 3.75x. Boosts HP of Fighter, Slasher, Striker and Shooter characters by 1.35x.",
-        special: "Changes [EMPTY], [BOMB], [RCV], [G], [BLOCK] and own orbs into Matching orbs. If your Captain is a Fighter, Slasher, Shooter or Striker character, adds 1.1x to Chain multiplier for 2 turns. If your Captain is a Free Spirit, Cerebral, Powerhouse or Driven character, boosts the Color Affinity of Free Spirit, Cerebral, Powerhouse and Driven characters by 1.75x for 1 turn.",
+        special: "Changes [EMPTY], [BOMB], [RCV], [G], [BLOCK] and own orbs into Matching orbs. If your Captain is a Fighter, Slasher, Shooter or Striker character, adds 1.1x to Chain multiplier for 2 turns. If your Captain is a Free Spirit, Cerebral, Powerhouse or Driven character, boosts the Color Affinity of Free Spirit, Cerebral, Powerhouse and Driven characters by 1.75x for 2 turns.",
         specialName: "Roaring \"Honey Preztel\"",
         sailor: "When any other Powerhouse or Slasher character uses a special, reduces own cooldown by 1 turn",
     },
     2465: {//Cracker
         captain: "Boosts ATK of Powerhouse characters by 3.75x. Boosts HP of Fighter, Slasher, Striker and Shooter characters by 1.35x.",
-        special: "Changes [EMPTY], [BOMB], [RCV], [G], [BLOCK] and own orbs into Matching orbs. If your Captain is a Fighter, Slasher, Shooter or Striker character, adds 1.1x to Chain multiplier for 2 turns. If your Captain is a Free Spirit, Cerebral, Powerhouse or Driven character, boosts the Color Affinity of Free Spirit, Cerebral, Powerhouse and Driven characters by 1.75x for 1 turn.",
+        special: "Changes [EMPTY], [BOMB], [RCV], [G], [BLOCK] and own orbs into Matching orbs. If your Captain is a Fighter, Slasher, Shooter or Striker character, adds 1.1x to Chain multiplier for 2 turns. If your Captain is a Free Spirit, Cerebral, Powerhouse or Driven character, boosts the Color Affinity of Free Spirit, Cerebral, Powerhouse and Driven characters by 1.75x for 2 turns.",
         specialName: "Roaring \"Honey Preztel\"",
         sailor: {
             "base": "When any other Powerhouse or Slasher character uses a special, reduces own cooldown by 1 turn",
@@ -44594,6 +44594,346 @@ window.details = {
                     "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
                     "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
                     "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
+    2474: {//Mihawk
+        captain: "If there are 6 Slasher characters in your crew, boosts chain multiplier by 4x and boosts ATK of Slasher characters by 1.75x. Boosts chances of getting [DEX] and [INT] orbs.",
+        special: "Cuts the current HP of one enemy by 25%, If your crew has 4 or more characters with [DEX] or [INT] orbs, amplifies the effects of orbs for Slasher characters by 2.25x for 1 turn and locks all orbs for 1 turn, amplifies the effects of orbs for Slasher characters by 2x for 1 turn otherwise.",
+        specialName: "Haki Sword",
+    },
+    2475: {//Mihawk
+        captain: "If there are 6 Slasher characters in your crew, boosts chain multiplier by 4x and boosts ATK of Slasher characters by 1.75x. Boosts chances of getting [DEX] and [INT] orbs.",
+        special: "Cuts the current HP of one enemy by 25%, If your crew has 4 or more characters with [DEX] or [INT] orbs, amplifies the effects of orbs for Slasher characters by 2.25x for 1 turn and locks all orbs for 1 turn, amplifies the effects of orbs for Slasher characters by 2x for 1 turn otherwise.",
+        specialName: "Haki Sword",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Slasher characters by 75",
+            "level2": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs beneficial for this character if your Captain is a Slasher character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Zoro",
+                "description": [
+                    "Level 1: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 12% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 15% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 18% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
+    },
+    2476: {//Zoro
+        captain: "Boosts ATK of Slaher characters by 3.25x and their HP by 1.5x. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
+        special: "Deals 120x character's ATK as typeless damage to all enemies and makes [RCV] and [TND] orbs beneficial for Slasher characters for 3 turns. Boosts ATK of Slasher characters by 2x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Slasher characters by 2.25x in the following turn.",
+        specialName: "Three Sword Style - 1080 Pound Phoenix",
+    },
+    2477: {//Zoro
+        captain: "Boosts ATK of Slaher characters by 3.25x and their HP by 1.5x. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
+        special: "Deals 120x character's ATK as typeless damage to all enemies and makes [RCV] and [TND] orbs beneficial for Slasher characters for 3 turns. Boosts ATK of Slasher characters by 2x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Slasher characters by 2.25x in the following turn.",
+        specialName: "Three Sword Style - 1080 Pound Phoenix",
+        sailor: {
+            "base": "None",
+            "level1": "Reduces Silence duration on this character by 10 turns",
+            "level2": "Makes [DEX] and [INT] orbs beneficial for Slasher characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Mihawk",
+                "description": [
+                    "Level 1: Adds 6% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 11% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 13% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
+    },
+    2478: {//Mr. 1
+        captain: "Boosts ATK of Slaher and Cerebral characters by ?x and their HP by ?x.",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, randomizes all non-Matching orbs, including [BLOCK] orbs, makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns and reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 3 turns.",
+        specialName: "Spiral Hollow",
+        sailor: "If your Captain is a Slasher character, boosts own base ATK by 150",
+    },
+    2479: {//Mr. 1
+        captain: "Boosts ATK of Slaher and Cerebral characters by 2.5x and their HP by 1.2x.",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, randomizes all non-Matching orbs, including [BLOCK] orbs, makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns and reduces enemies Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 3 turns.",
+        specialName: "Spiral Hollow",
+        sailor: {
+            "base": "If your Captain is a Slasher character, boosts own base ATK by 150",
+            "level1": "Makes [PSY] orbs beneficial for Slasher characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Crocodile and Miss Doublefinger",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
+    },
+    2480: {//Hyouzou
+        captain: "Boosts ATK of Slasher characters by ?x at the start of the chain, boosts ATK by ?x following a chain of [INT] > [DEX] > [DEX] attacks no lower than Good and boosts HP of Slasher characters by ?x.",
+        special: "Strongly Poisons one enemy. Removes Blindness duration completely, reduces Despair and Silence duration by 5 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times.",
+        specialName: "Octopus Eight Sword Style - Poisonous Blade",
+        sailor: "Reduces Silence duration on this character by 3 turns",
+        sailorNotes: "#{silence}",
+    },
+    2481: {//Hyouzou
+        captain: "Boosts ATK of Slasher characters by 2.25x at the start of the chain, boosts ATK by 2.81x following a chain of [INT] > [DEX] > [DEX] attacks no lower than Good and boosts HP of Slasher characters by 1.2x.",
+        special: "Strongly Poisons one enemy. Removes Blindness duration completely, reduces Despair and Silence duration by 5 turns, changes adjacent orbs into Matching Orbs and switches orbs between slots three times.",
+        specialName: "Octopus Eight Sword Style - Poisonous Blade",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 3 turns",
+            "level1": "Completely resists Paralysis on this character",
+        },
+        sailorNotes: "#{silence}",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Hody, Ikaros, Daruma and Dosun",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Despair and Silence duration by 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Despair and Silence duration by 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Despair and Silence duration by 2 turns.",
+                    "Level 4: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Despair and Silence duration by 2 turns.",
+                    "Level 5: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Despair and Silence duration by 3 turns."
+                ]
+            }
+        ]
+    },
+    2482: {//Kaku
+        captain: "Boosts ATK of Slasher characters by ?x and their HP and RCV by ?x.",
+        special: [
+            {
+                "description": "Deals 50,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 3 turns.",
+                "cooldown": [ null, null ]
+            },
+            {
+                "description": "Deals 200,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 5 turns.",
+                "cooldown": [ null, null ]
+            }
+        ],
+        specialName: "Extreme Nose Gun - \"Kirimanjaro\"",
+        sailor: "Boosts this character's damage against [DEX] characters by 2x",
+    },
+    2483: {//Kaku
+        captain: "Boosts ATK of Slasher characters by 2.25x and their HP and RCV by 1.2x.",
+        special: [
+            {
+                "description": "Deals 50,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 3 turns.",
+                "cooldown": [ null, null ]
+            },
+            {
+                "description": "Deals 200,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 5 turns.",
+                "cooldown": [ null, null ]
+            }
+        ],
+        specialName: "Extreme Nose Gun - \"Kirimanjaro\"",
+        sailor: {
+            "base": "Boosts this character's damage against [DEX] characters by 2x",
+            "level1": "Restores his own special cooldown by 2 turns when it is rewinded",
+        },
+        sailorNotes: "#{rewind : 2}",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Lucci, Jabra, Blueno, Fukuro, Kalifa and Kumadori",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ]
+    },
+    2484: {//Ryuma
+        captain: "Boosts ATK of [STR] characters by ?x and boosts HP of Slasher characters by ?x.",
+        special: "If your Captain is a Slasher character, boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn.",
+        specialName: "Polka Remise",
+        sailor: "Boosts base ATK of Slasher characters by 50",
+    },
+    2485: {//Ryuma
+        captain: "Boosts ATK of [STR] characters by 2.5x and boosts HP of Slasher characters by 1.2x.",
+        special: "If your Captain is a Slasher character, boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn.",
+        specialName: "Polka Remise",
+        sailor: {
+            "base": "Boosts base ATK of Slasher characters by 50",
+            "level1": "Makes QCK orbs beneficial for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    //"Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Slasher characters",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 2: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV."
                 ]
             }
         ]

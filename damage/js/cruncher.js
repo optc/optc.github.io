@@ -656,7 +656,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         });
         
-        if ($scope.data.effect == '0.5x Chain Boost - Zoro Sanji Change Action'){
+        if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
             addition = 0.5;
         }
         
