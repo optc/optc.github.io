@@ -235,10 +235,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Shooter")) orb = (window.specials[1640].turnedOn || window.specials[1746].turnedOn || window.specials[1747].turnedOn || window.specials[2309].turnedOn || window.specials[2310].turnedOn || window.specials[2324].turnedOn || window.specials[2325].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Striker")) orb = (window.specials[1651].turnedOn || window.specials[1652].turnedOn || window.specials[2373].turnedOn || window.specials[2470].turnedOn || window.specials[2471].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'PSY') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn 
-                                     || ((window.specials[2374].turnedOn || window.specials[2475].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
+                                     || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'QCK') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn 
-                                     || ((window.specials[2374].turnedOn || window.specials[2475].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
+                                     || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1323].turnedOn || window.specials[1324].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Driven")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))
                                      || ((window.specials[1528].turnedOn) && (x.unit.class.has("Powerhouse")))
@@ -254,13 +254,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                      || ((window.specials[1940].turnedOn|| window.specials[1941].turnedOn) && (x.unit.type == "STR" || x.unit.type == "QCK" || x.unit.type == "PSY"))
                                      || ((window.specials[2264].turnedOn|| window.specials[2265].turnedOn) && (x.unit.type == "STR" || x.unit.type == "DEX" || x.unit.type == "PSY"))) ? 2 : 'str';
             if (orb == 'dex') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn 
-                                     || ((window.specials[2374].turnedOn || window.specials[2475].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
+                                     || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1323].turnedOn || window.specials[1324].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Driven")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))
                                      || ((window.specials[1528].turnedOn) && (x.unit.class.has("Powerhouse")))
                                      || (window.specials[2128].turnedOn && (x.unit.class.has("Striker") || x.unit.class.has("Slasher")))) ? 2 : 'dex';
             if (orb == 'int') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn 
-                                     || ((window.specials[2374].turnedOn || window.specials[2475].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
+                                     || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 'int';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn) ? 1 : .5;
