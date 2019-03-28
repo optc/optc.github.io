@@ -8786,11 +8786,11 @@ window.captains = {
         chainModifier: function(p) { return  p.classCount.Slasher == 6 ? 4 : 1; }
     },
     2476: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? ((p.unit.type == "DEX" || p.unit.type == "INT") ? ((p.orb == 2) ? 4.0625 : 3.25) : ((p.unit.type == "QCK" || p.unit.type == "PSY") ? (p.orb == 0.5 ? 4.0625 : 3.25) : ((p.orb == 'dex' || p.orb == 'int') ? 4.0625 : 3.25))) : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? ((p.unit.type == "DEX" || p.unit.type == "INT") ? ((p.orb == 2 || (p.unit.type == "DEX" && p.orb == 'int') || (p.unit.type == "INT" && p.orb == 'dex')) ? 4.0625 : 3.25) : ((p.unit.type == "QCK" || p.unit.type == "PSY") ? (p.orb == 0.5 ? 4.0625 : 3.25) : ((p.orb == 'dex' || p.orb == 'int') ? 4.0625 : 3.25))) : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2477: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? ((p.unit.type == "DEX" || p.unit.type == "INT") ? ((p.orb == 2) ? 4.0625 : 3.25) : ((p.unit.type == "QCK" || p.unit.type == "PSY") ? (p.orb == 0.5 ? 4.0625 : 3.25) : ((p.orb == 'dex' || p.orb == 'int') ? 4.0625 : 3.25))) : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? ((p.unit.type == "DEX" || p.unit.type == "INT") ? ((p.orb == 2 || (p.unit.type == "DEX" && p.orb == 'int') || (p.unit.type == "INT" && p.orb == 'dex')) ? 4.0625 : 3.25) : ((p.unit.type == "QCK" || p.unit.type == "PSY") ? (p.orb == 0.5 ? 4.0625 : 3.25) : ((p.orb == 'dex' || p.orb == 'int') ? 4.0625 : 3.25))) : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2478: {

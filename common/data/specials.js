@@ -7214,6 +7214,7 @@ window.specials = {
     },
     2476: {
         atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2476].multiplier : 1; },
+        type: "class",
         onActivation: function(p) {
             var n = (window.specials[2476].multiplier == 2 ? 1 : 0);
             window.specials[2476].multiplier = [2, 2.25][n];
@@ -7225,6 +7226,7 @@ window.specials = {
     },
     2477: {
         atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2477].multiplier : 1; },
+        type: "class",
         onActivation: function(p) {
             var n = (window.specials[2477].multiplier == 2 ? 1 : 0);
             window.specials[2477].multiplier = [2, 2.25][n];
