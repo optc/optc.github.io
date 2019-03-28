@@ -44824,11 +44824,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 50,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 3 turns.",
-                "cooldown": [ null, null ]
+                "cooldown": [ 17, null ]
             },
             {
                 "description": "Deals 200,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 5 turns.",
-                "cooldown": [ null, null ]
+                "cooldown": [ 20, null ]
             }
         ],
         specialName: "Extreme Nose Gun - \"Kirimanjaro\"",
@@ -44839,11 +44839,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 50,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 3 turns.",
-                "cooldown": [ null, null ]
+                "cooldown": [ 17, null ]
             },
             {
                 "description": "Deals 200,000 fixed damage to one enemy, changes all orbs on all characters into Kaku's orb and reduces ATK DOWN, Bind and Paralysis duration by 5 turns.",
-                "cooldown": [ null, null ]
+                "cooldown": [ 20, null ]
             }
         ],
         specialName: "Extreme Nose Gun - \"Kirimanjaro\"",

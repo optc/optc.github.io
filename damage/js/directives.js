@@ -703,6 +703,10 @@ directives.unitOrb = function($rootScope) {
                 if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
                 if (unit.orb == 'g') return 'G';
                 if (unit.orb == 'str') return 'S';
+                if (unit.orb == 'dex') return 'D';
+                if (unit.orb == 'qck') return 'Q';
+                if (unit.orb == 'psy') return 'P';
+                if (unit.orb == 'int') return 'I';
                 if (unit.orb == 'rainbow') return 'R';
                 if (unit.orb == 'meat') return 'M';
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
@@ -724,10 +728,56 @@ directives.unitOrb = function($rootScope) {
                     if($rootScope.areSTROrbsEnabled()){
                         ORBS.push('str');
                     }
+                    if($rootScope.areDEXOrbsEnabled()){
+                        ORBS.push('dex');
+                    }
+                    if($rootScope.areQCKOrbsEnabled()){
+                        ORBS.push('qck');
+                    }
+                    if($rootScope.arePSYOrbsEnabled()){
+                        ORBS.push('psy');
+                    }
+                    if($rootScope.areINTOrbsEnabled()){
+                        ORBS.push('int');
+                    }
+                    var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                     var ORBSlength = ORBS.length;
                     if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
-                        ORBSlength--;
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'str') tempy.push(element);
+                        });
+                        ORBS = tempy;
                     }
+                    if($rootScope.areDEXOrbsEnabled() && (unit.unit.type == "QCK" || unit.unit.type == "DEX")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'dex') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.areQCKOrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "QCK")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'qck') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.arePSYOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'psy') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.areINTOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'int') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    ORBSlength = ORBS.length;
                     var n = ORBS.indexOf(tunit.orb);
                     /*if(unit.unit.type == "STR" || unit.unit.type == "DEX")
                         tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
@@ -756,12 +806,57 @@ directives.unitOrb = function($rootScope) {
                 if($rootScope.areSTROrbsEnabled()){
                     ORBS.push('str');
                 }
+                if($rootScope.areDEXOrbsEnabled()){
+                    ORBS.push('dex');
+                }
+                if($rootScope.areQCKOrbsEnabled()){
+                    ORBS.push('qck');
+                }
+                if($rootScope.arePSYOrbsEnabled()){
+                    ORBS.push('psy');
+                }
+                if($rootScope.areINTOrbsEnabled()){
+                    ORBS.push('int');
+                }
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                 var ORBSlength = ORBS.length;
-                    if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
-                        ORBSlength--;
-                    }
-                    var n = ORBS.indexOf(tunit.orb);
+                if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'str') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.areDEXOrbsEnabled() && (unit.unit.type == "QCK" || unit.unit.type == "DEX")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'dex') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.areQCKOrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "QCK")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'qck') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.arePSYOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'psy') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.areINTOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'int') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                ORBSlength = ORBS.length;
+                var n = ORBS.indexOf(tunit.orb);
                 /*if(unit.unit.type == "STR" || unit.unit.type == "DEX")
                 tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
                 else

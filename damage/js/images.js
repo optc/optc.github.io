@@ -3,7 +3,7 @@
 var app = angular.module('optc');
 
 var BOX_COLORS = { STR: 'salmon', QCK: 'lightskyblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid' };
-var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange', S: 'orangered', RAINBOW: 'pink', MEAT: 'darkgoldenrod'};
+var ORB_COLORS = { STR: 'orangered', QCK: 'dodgerblue', DEX: 'lightgreen', PSY: 'gold', INT: 'orchid', G: 'orange', S: 'orangered', Q: 'dodgerblue', D: 'lightgreen', P: 'gold', I: 'orchid', RAINBOW: 'pink', MEAT: 'darkgoldenrod'};
 
 var lock = new Image(), silence = new Image();
 lock.src = 'res/chain.png';
@@ -83,7 +83,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                 if (orb != 1.0) {
                     var gradient = context.createRadialGradient(baseX + 20, baseY + 21, 13, baseX + 22, baseY + 22, 35);
                     if (orb < 1) gradient.addColorStop(0.1, ORB_COLORS[Utils.getOppositeType(unit.type)]);
-                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : orb == 'rainbow' ? 'RAINBOW' : orb == 'meat' ? 'MEAT' : unit.type]);
+                    else gradient.addColorStop(0.1, ORB_COLORS[orb == 'g' ? 'G' : orb == 'str' ? 'STR' : orb == 'dex' ? 'DEX' : orb == 'qck' ? 'QCK' : orb == 'psy' ? 'PSY' : orb == 'int' ? 'INT' : orb == 'rainbow' ? 'RAINBOW' : orb == 'meat' ? 'MEAT' : unit.type]);
                     if (orb < 1) gradient.addColorStop(0.2, 'black');
                     else {
                         gradient.addColorStop(0.2, 'white');
@@ -93,7 +93,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                     gradient.addColorStop(1.0, 'transparent');
                     context.fillStyle = gradient;
                     context.fillRect(0, 0, canvas.width, canvas.height);
-                    if (orb != 'g' && orb != 'str' && orb != 'rainbow' && orb != 'meat') {
+                    if (orb != 'g' && orb != 'str' && orb != 'dex' && orb != 'qck' && orb != 'psy' && orb != 'int' && orb != 'rainbow' && orb != 'meat') {
                         var temp = (orb < 1 ? [ 'f0d7', baseX + 13, baseY + 31 ] : [ 'f0d8', baseX + 13, baseY + 28 ]);
                         awesome(context, { text: temp[0], style: '28px', color: 'white',
                             x: temp[1], y: temp[2], stroke: 'gray' });
@@ -102,6 +102,18 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
                     } else if (orb == 'str'){
                         type(context, { text: 'S', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else if (orb == 'dex'){
+                        type(context, { text: 'D', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else if (orb == 'qck'){
+                        type(context, { text: 'Q', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else if (orb == 'psy'){
+                        type(context, { text: 'P', style: 'bold 20px "Open Sans"',
+                            x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
+                    } else if (orb == 'int'){
+                        type(context, { text: 'I', style: 'bold 20px "Open Sans"',
                             x: baseX + 13, y: baseY + 28, color: 'white', stroke: 'black', strokeWidth: 2 });
                     } else if (orb == 'rainbow'){
                         type(context, { text: 'R', style: 'bold 20px "Open Sans"',

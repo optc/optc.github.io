@@ -56,6 +56,30 @@
     background-image: radial-gradient(9px 3px, circle cover, oldlace, orangered, rgb(50,50,50));
 }
 
+.unitOrb.D {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, limegreen, rgb(50,50,50));
+}
+
+.unitOrb.Q {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, dodgerblue, rgb(50,50,50));
+}
+
+.unitOrb.P {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, orange, rgb(50,50,50));
+}
+
+.unitOrb.I {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, mediumorchid, rgb(50,50,50));
+}
+
 .unitOrb.R {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, pink, magenta);
     background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, pink, magenta);
@@ -89,6 +113,50 @@
 }
 
 .str-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
+.dex-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
+.qck-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
+.psy-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
+.int-orb {
     color: white;
     font-weight: bold;
     font-style: normal;

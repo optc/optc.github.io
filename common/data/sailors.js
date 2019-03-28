@@ -144,7 +144,7 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Driven") ? 10 : 0; },
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 10 : 0; },
     },
-    1271: {
+    1269: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Driven") ? 100 : 0 : 0; },
     },
     1270: {
@@ -734,6 +734,15 @@ window.sailors = {
     2473: {
         hp: function(p) { return .8; },
         rcv: function(p) { return 1.2; },
+    },
+    2478: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Slasher") ? p.slot == p.sourceSlot ? 150 : 0 : 0 : 0; },
+    },
+    2479: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Slasher") ? p.slot == p.sourceSlot ? 150 : 0 : 0 : 0; },
+    },
+    2484: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 50 : 0; },
     },
     2502: {
         staticMult: function(p) { return 3; }
