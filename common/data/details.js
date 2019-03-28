@@ -44889,13 +44889,13 @@ window.details = {
     },
     2484: {//Ryuma
         captain: "Boosts ATK of [STR] characters by ?x and boosts HP of Slasher characters by ?x.",
-        special: "If your Captain is a Slasher character, boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn.",
+        special: "If your Captain is a Slasher character, boosts ATK of Slasher characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Slasher characters for 1 turn.",
         specialName: "Polka Remise",
         sailor: "Boosts base ATK of Slasher characters by 50",
     },
     2485: {//Ryuma
         captain: "Boosts ATK of [STR] characters by 2.5x and boosts HP of Slasher characters by 1.2x.",
-        special: "If your Captain is a Slasher character, boosts ATK of Driven characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Driven characters for 1 turn.",
+        special: "If your Captain is a Slasher character, boosts ATK of Slasher characters by 1.75x for 1 turn and amplifies the effect of orbs by 1.75x for Slasher characters for 1 turn.",
         specialName: "Polka Remise",
         sailor: {
             "base": "Boosts base ATK of Slasher characters by 50",
