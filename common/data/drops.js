@@ -2392,6 +2392,14 @@ window.drops = {
             Master: [ 85, 111, 118, 1929 ] ,
             Expert: [ 111, 118, 1929 ]
         },
+        
+        {
+            name: 'Clash!! Eneru [Extra]',
+            thumb: 603,
+            gamewith: 138206,
+            'All Difficulties': [ 602 ],
+            condition: "Chance of dropping the Support Medallions.",
+        },
 
         {
             name: 'Clash!! Duval',
@@ -2691,6 +2699,14 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Bartolomeo [Extra]',
+            thumb: 1879,
+            gamewith: 142094,
+            'All Difficulties': [ 1878 ],
+            condition: "Chance of dropping the Support Medallions.",
+        },
+        
+        {
             name: 'Clash!! Rayleigh',
             thumb: 1924,
             global: true,
@@ -2783,6 +2799,15 @@ window.drops = {
             Ultimate: [ 2280 ],
             Master: [ 2280 ],
             Expert: [ 2280 ]
+        },
+        
+        {
+            name: 'Clash!! Judge [Extra]',
+            thumb: 2281,
+            nakama: null,
+            gamewith: 144312,
+            'All Difficulties': [ 2280 ],
+            condition: "Chance of dropping the Support Medallions.",
         },
         
         {
@@ -3503,31 +3528,6 @@ window.drops = {
             gamewith: 143825,
             condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
             'All Difficulties': [ 2455 ],
-        },
-        
-        {
-            name: 'Clash!! Enel [Extra]',
-            thumb: 603,
-            gamewith: 138206,
-            'All Difficulties': [ 602 ],
-            condition: "Chance of dropping the Support Medallions.",
-        },
-        
-        {
-            name: 'Clash!! Bartolomeo [Extra]',
-            thumb: 1879,
-            gamewith: 142094,
-            'All Difficulties': [ 1878 ],
-            condition: "Chance of dropping the Support Medallions.",
-        },
-        
-        {
-            name: 'Clash!! Judge [Extra]',
-            thumb: 2281,
-            nakama: null,
-            gamewith: 144312,
-            'All Difficulties': [ 2280 ],
-            condition: "Chance of dropping the Support Medallions.",
         },
         
         {
