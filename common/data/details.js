@@ -45611,7 +45611,7 @@ window.details = {
         sailor: "Boosts base ATK of top row characters by 60",
     },
     3348:{//Log Vivi
-        captain: "Boosts ATK and RCV of Slasher and Striker characters by 1.5x. Boosts EXP gained by 1.5x",
+        captain: "Boosts ATK of Slasher and Striker characters by 1.75x and their RCV by 1.5x. Boosts EXP gained by 1.5x",
         special: "Reduces crew's current HP by 90%, cuts the current HP of one enemy by 10% that will ignore damage negating abilities and barriers, changes top and bottom row [STR], [DEX], [QCK], [PSY] and [INT] orbs into Matching orbs and amplifies the effect of orbs of all characters by 1.75x for 2 turns. If your Captain is a Slasher or Striker character, removes enemies' End of Turn Damage/Percent Cut Buffs duration completely",
         specialName: "Peacock String Slasher",
         sailor: "Boosts base ATK of top row characters by 60",

@@ -8935,7 +8935,7 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1.5 : 1; },
     },
     3348: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1.5 : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1.75 : 1; },
         rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1.5 : 1; },
     },
     3349: {
