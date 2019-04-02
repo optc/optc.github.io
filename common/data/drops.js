@@ -3120,6 +3120,7 @@ window.drops = {
         {
             name: 'Dead or Treat!! Sweetie Party',
             thumb: 2292,
+            global: true,
             gamewith: 122996,
             condition: 'Katakuri: Can not use characters who are both Driven and Powerhouse classes.',
             'All Difficulties': [ 2291, 2293 ],
