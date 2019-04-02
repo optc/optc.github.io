@@ -7274,6 +7274,24 @@ window.specials = {
             }
         },
     },
+    2486: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? window.specials[2486].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2486].multiplier = 1;
+            if (p.captain.class.has("Slasher")) {
+                window.specials[2486].multiplier = 2;
+            }
+        },
+    },
+    2487: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? window.specials[2487].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2487].multiplier = 1;
+            if (p.captain.class.has("Slasher")) {
+                window.specials[2487].multiplier = 2;
+            }
+        },
+    },
     2492: {
         chainAddition: function(p) { return 0.3; }
     },

@@ -38530,7 +38530,7 @@ window.details = {
     },
     2260: {//Shanks
         captain: "Boosts ATK of Free Spirit and Cerebral characters by 2x if HP is above 99%, by 1.5x otherwise, recovers 1.2x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
-        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting Matching orbs for 1 turn, randomizes all non-Matching orbs, including [BLOCK] orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
+        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting Matching orbs for 1 turn, changes [BLOCK] orbs into Matching orbs, randomizes all non-Matching orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
         specialName: "Great Pirate's Majesty",
         specialNotes: "#{additionalDamage : 60x}",
     },
@@ -38544,7 +38544,7 @@ window.details = {
             "level5": "Boosts ATK of Free Spirit and Cerebral characters by 3x if HP is above 99%, by 2x otherwise, recovers 1.75x character's RCV in HP at the end of each turn and slightly boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
             "level6": "Boosts ATK of Free Spirit and Cerebral characters by 3x if HP is above 99%, by 2.5x otherwise, recovers 1.75x character's RCV in HP at the end of each turn and boosts chances of getting Matching orbs for Free Spirit and Cerebral Characters",
         },
-        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting Matching orbs for 1 turn, randomizes all non-Matching orbs, including [BLOCK] orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
+        special: "Reduces enemy Barrier duration by 1 turn, reduces Burn duration by 1 turn, boosts chances of getting Matching orbs for 1 turn, changes [BLOCK] orbs into Matching orbs, randomizes all non-Matching orbs, and adds 60x character's ATK as Additional Typeless Damage for 1 turn.",
         specialName: "Great Pirate's Majesty",
         specialNotes: "#{additionalDamage : 60x}",
         sailor: {
@@ -45066,6 +45066,55 @@ window.details = {
                     "Level 3: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
                     "Level 4: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
                     "Level 5: Adds 9% of this character's base ATK and RCV to the supported character's base ATK and RCV."
+                ]
+            }
+        ]
+    },
+    2486: {//Kinemon
+        captain: "Boosts ATK of Slasher characters by 2.5x and their HP by 1.2?x.",
+        special: "Deals 50x character's ATK in [QCK] damage to all enemies and reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 7 turns. If your Captain is a Slasher character, boosts the Color Affinity of Slasher characters by 2x for 1 turn.",
+        specialName: "Foxfire Style - Continuous Flame Split",
+        sailor: "Boosts base ATK of Slasher characters by 50",
+    },
+    2487: {//Kinemon
+        captain: "Boosts ATK of Slasher characters by 2.75x and their HP by 1.25x.",
+        special: "Deals 50x character's ATK in [QCK] damage to all enemies and reduces crew's Chain Multiplier Limit and Chain Coefficient Reduction duration by 7 turns. If your Captain is a Slasher character, boosts the Color Affinity of Slasher characters by 2x for 1 turn.",
+        specialName: "Foxfire Style - Continuous Flame Split",
+        sailor: {
+            "base": "Boosts base ATK of Slasher characters by 50",
+            "level1": "Makes [QCK] orbs beneficial for Slasher characters",
+        },
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Slasher characters",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 8% of this character's base ATK to the supported character's base ATK."
                 ]
             }
         ]

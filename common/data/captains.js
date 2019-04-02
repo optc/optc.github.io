@@ -8850,6 +8850,14 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
+    2486: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },//change this
+    },
+    2487: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
     2488: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.15 : 1; },

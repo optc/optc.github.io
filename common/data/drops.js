@@ -2160,6 +2160,7 @@ window.drops = {
         {
             name: 'The Genius Jester! Buggy\'s Festival!',
             thumb: 2277,
+            global: true,
             nakama: null,
             gamewith: 121547,
             'All Difficulties': [ 2276, 2278, 2279, -2074, -2363, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
@@ -3506,6 +3507,7 @@ window.drops = {
         {
             name: 'Push Forward! Straw Hat Crew!',
             thumb: 2300,
+            global: true,
             nakama: null,
             gamewith: 124622,
             showManual: true,
