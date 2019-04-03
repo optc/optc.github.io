@@ -759,6 +759,16 @@ window.sailors = {
     2489: {
         hpStatic: function(p) { return p.unit.type == "PSY" ? 40 : 0; },
     },
+    2503: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
+    2504: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

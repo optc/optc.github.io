@@ -4043,6 +4043,14 @@ window.evolutions = {
         evolution: 2500,
         evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
     },
+    2503: {
+        evolution: 2504,
+        evolvers: [  ]
+    },
+    1869: {
+        evolution: 2505,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ],
+    },
     3339: {
         evolution: 3340,
         evolvers: [ 118, 84, 300, 100, 266 ]

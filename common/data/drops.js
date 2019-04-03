@@ -2840,6 +2840,16 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Capone Bege',
+            thumb: 2504,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2503 ],
+            Expert: [ 2503 ],
+            Ultimate: [ 2503 ],
+        },
+        
+        {
             name: 'Clash!! Sengoku & Garp',
             thumb: 3338,
             global: true,

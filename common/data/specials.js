@@ -7303,6 +7303,37 @@ window.specials = {
             window.specials[2500].multiplier = (p.slot < 2 ? true : false);
         }
     },
+    2503: {
+        atk: function(p) { return window.specials[2503].turnedOn ? 2 : 1; },
+        type: "class",
+        onActivation: function(p) {
+            window.specials[2503].turnedOn = p.classCount.Shooter == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2503].turnedOn = false;
+        }
+    },
+    2504: {
+        atk: function(p) { return window.specials[2504].turnedOn ? 2 : 1; },
+        type: "class",
+        onActivation: function(p) {
+            window.specials[2504].turnedOn = p.classCount.Shooter == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2504].turnedOn = false;
+        }
+    },
+    2505: {
+        delay: function(p) { return 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2505].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2505].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[2505].multiplier = p.sourceSlot < 2 ? 2.75 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

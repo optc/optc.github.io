@@ -12548,12 +12548,12 @@ window.details = {
     },
     1040: {
         captain: "Boosts ATK and HP of [STR] characters by 1.5x",
-        special: "Deals 30x the character's ATK as [STR] damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
+        special: "Deals 30x the character's ATK as [STR] damage to all enemies. If HP is below 30% at the time the special is activated, boosts ATK of everyone by 1.5x.",
         specialName: "Ice Throw"
     },
     1041: {
         captain: "Boosts ATK and HP of [STR] characters by 2x",
-        special: "Deals 30x the character's ATK as [STR] damage to all enemies. Boosts ATK of everyone by 1.5x if HP is below 30% at the time the special is activated",
+        special: "Deals 30x the character's ATK as [STR] damage to all enemies. If HP is below 30% at the time the special is activated, boosts ATK of everyone by 1.5x.",
         specialName: "Ice Throw",
         sailor: {
             "base": "None",
@@ -28976,12 +28976,12 @@ window.details = {
     },
     1868: {//Fujitora
         captain: "Increases damage received by 1.2x, boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
-        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs.",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, changes all orbs on Slasher characters into Matching orbs.",
         specialName: "The Rain of War's End"
     },
     1869: {//Fujitora
         captain: "Increases damage received by 1.2x, boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
-        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, Changes all orbs on Slasher characters into Matching orbs.",
+        special: "Deals 10 hits of 20x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, changes all orbs on Slasher characters into Matching orbs.",
         specialName: "The Rain of War's End",
         sailor: {
             "base": "None",
@@ -45294,6 +45294,144 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    2503: {//Capone
+        captain: "Boosts ATK of Shooter characters by ?x if HP is above 50% at the start of the turn, ?x otherwise and if you don't attack with him, reduces damage received by ?% for that turn.",
+        special: "If there are 6 Shooter characters in your crew, boosts ATK of all characters by 1.75x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
+        specialName: "Manipulating the Castle's Interior",
+        sailor: "Boosts base ATK, HP and RCV of Shooter characters by 30",
+    },
+    2504: {//Capone
+        captain: "Boosts ATK of Shooter characters by 3x if HP is above 50% at the start of the turn, 2.5x otherwise and if you don't attack with him, reduces damage received by 20% for that turn.",
+        special: "If there are 6 Shooter characters in your crew, boosts ATK of all characters by 1.75x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
+        specialName: "Manipulating the Castle's Interior",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Shooter characters by 30",
+            "level1": "When HP is above 50% at the start of the turn, boosts base ATK of Shooter characters by 100",
+        },
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    //"Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Chiffon, Vito and Goti",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
+    2505: {//Fujitora
+        captain: "Boosts ATK of Slasher characters by 3.25x at the start of the chain and their HP by 1.2x and boosts ATK of Slasher characters by 4.225x following a chain of Good > Great > PERFECT hits",
+        special: "Deals 10 hits of 30x character's ATK in typeless damage to random enemies and delays all enemies for 1 turn. If this character is your Captain or Friend/Guest Captain, changes all orbs on Slasher characters into Matching orbs and locks the chain multiplier at 2.75x for 2 turns.",
+        specialName: "Rain of Debris with No Escape",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Slasher characters by 40",
+            "level2": "Makes [STR], [QCK], [DEX] and [PSY] orbs beneficial for this character if your Captain is a Slasher character",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 25" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Slasher characters by 40" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 35" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Sailor Ability 2: Makes [STR], [QCK], [DEX] and [PSY] orbs beneficial for this character if your Captain is a Slasher character" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 3: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 30",
+                    "Level 2: Boosts base ATK by 60",
+                    "Level 3: Boosts base ATK by 90",
+                    "Level 4: Boosts base ATK by 100",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes suppoted character's orb.",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, randomizes suppoted character's orb.",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orb on the supported character into Matching orb.",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orb on the supported character into Matching orb.",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orbs on Slasher characters into Matching orbs."
+                ]
+            }
+        ]
     },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
