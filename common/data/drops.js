@@ -2844,6 +2844,7 @@ window.drops = {
             thumb: 2504,
             nakama: null,
             gamewith: null,
+            condition: 'You can only bring Slasher, Shooter or Driven units',
             Master: [ 2503 ],
             Expert: [ 2503 ],
             Ultimate: [ 2503 ],
