@@ -7309,9 +7309,6 @@ window.specials = {
         onActivation: function(p) {
             window.specials[2503].turnedOn = p.classCount.Shooter == 6 ? true : false;
         },
-        onDeactivation: function(p) {
-            window.specials[2503].turnedOn = false;
-        }
     },
     2504: {
         atk: function(p) { return window.specials[2504].turnedOn ? 2 : 1; },
@@ -7319,9 +7316,6 @@ window.specials = {
         onActivation: function(p) {
             window.specials[2504].turnedOn = p.classCount.Shooter == 6 ? true : false;
         },
-        onDeactivation: function(p) {
-            window.specials[2504].turnedOn = false;
-        }
     },
     2505: {
         delay: function(p) { return 1; },

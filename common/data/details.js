@@ -44478,8 +44478,9 @@ window.details = {
         specialName: "Sharpened Bullets",
         sailor: {
             "base": "Boosts this character's damage against [PSY] characters by 1.1x",
-            "level1": "Reduces Silence duration on this character by 3 turns",
+            "level1": "Restores his own special cooldown by 3 turns when it is rewinded",
         },
+        sailorNotes: "#{rewind : 3}",
         limit: [
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 30" },
@@ -45297,13 +45298,13 @@ window.details = {
     },
     2503: {//Capone
         captain: "Boosts ATK of Shooter characters by ?x if HP is above 50% at the start of the turn, ?x otherwise and if you don't attack with him, reduces damage received by ?% for that turn.",
-        special: "If there are 6 Shooter characters in your crew, boosts ATK of all characters by 1.75x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
+        special: "If there are 6 Shooter characters in your crew, boosts ATK of all characters by 2x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
         specialName: "Manipulating the Castle's Interior",
         sailor: "Boosts base ATK, HP and RCV of Shooter characters by 30",
     },
     2504: {//Capone
         captain: "Boosts ATK of Shooter characters by 3x if HP is above 50% at the start of the turn, 2.5x otherwise and if you don't attack with him, reduces damage received by 20% for that turn.",
-        special: "If there are 6 Shooter characters in your crew, boosts ATK of all characters by 1.75x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
+        special: "If there are 6 Shooter characters in your crew, boosts ATK of all characters by 2x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
         specialName: "Manipulating the Castle's Interior",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Shooter characters by 30",
