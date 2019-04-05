@@ -40815,7 +40815,7 @@ window.details = {
                 "cooldown": [ 23, 9 ],
             },
             {
-                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
+                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 2 turns, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
                 "cooldown": [ 27, 13 ],
             },
         ],
@@ -40832,7 +40832,7 @@ window.details = {
                 "cooldown": [ 23, 9 ],
             },
             {
-                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 1 turn, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
+                "description": "Strongly Poisons one enemy, Poisons all other enemies, reduces the defense of all enemies by 100% for 2 turns, reduces enemy's Threshold Damage Reduction and Percent Damage Reduction duration by 2 turns and boosts ATK against Poisoned and Strongly Poisoned enemies by 1.75x for 1 turn",
                 "cooldown": [ 27, 13 ],
             },
         ],
