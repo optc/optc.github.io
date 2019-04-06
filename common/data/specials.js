@@ -7304,14 +7304,14 @@ window.specials = {
         }
     },
     2503: {
-        atk: function(p) { return window.specials[2503].turnedOn ? 2 : 1; },
+        atk: function(p) { return (p.unit.class.has("Shooter") && window.specials[2503].turnedOn) ? 2 : 1; },
         type: "class",
         onActivation: function(p) {
             window.specials[2503].turnedOn = p.classCount.Shooter == 6 ? true : false;
         },
     },
     2504: {
-        atk: function(p) { return window.specials[2504].turnedOn ? 2 : 1; },
+        atk: function(p) { return (p.unit.class.has("Shooter") && window.specials[2504].turnedOn) ? 2 : 1; },
         type: "class",
         onActivation: function(p) {
             window.specials[2504].turnedOn = p.classCount.Shooter == 6 ? true : false;
