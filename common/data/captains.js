@@ -8852,7 +8852,7 @@ window.captains = {
     },
     2486: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
-        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },//change this
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     2487: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
