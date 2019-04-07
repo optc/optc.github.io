@@ -882,7 +882,7 @@ window.drops = {
             name: 'Chocolat Town to The Seducing Woods',
             shortName: 'Whole Cake 1',
             thumb: 2321,
-            nakama: null,
+            nakama: 1232100,
             completion: '5x Rainbow Gems',
             gamewith: 131692,
             '01': [ 2317 ],
@@ -2160,6 +2160,7 @@ window.drops = {
         {
             name: 'The Genius Jester! Buggy\'s Festival!',
             thumb: 2277,
+            global: true,
             nakama: 2227700,
             gamewith: 121547,
             'All Difficulties': [ 2276, 2278, 2279, -2074, -2363, -2076, -2078, -2072, -2050, -2115, -1784, -2053 ]
@@ -2200,9 +2201,17 @@ window.drops = {
         {
             name: 'Pudding\'s Sweet Cooking',
             thumb: 2457,
-            nakama: null,
+            nakama: 2245700,
             gamewith: 144058,
             'All Difficulties': [ 2456, 2458, 2459, -2441, -2302, -2273, -2271, -2275, -2308, -2310, -2199 ]
+        },
+        
+        {
+            name: 'Miracle Cherry Blossoms Return',
+            thumb: 2491,
+            nakama: 2249100,
+            gamewith: 146866,
+            'All Difficulties': [ 2490, 2492, 2493, -2330, -2251, -1869, -2334, -2332, -2156, -2154, -2150, -2107, -1877, -1802, -1800, -1796, -1577, -1540, -2052 ]
         },
         
     ],
@@ -2254,12 +2263,12 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Vice-Admiral Garp',
-            thumb: 2511,
+            thumb: 3340,
             global: true,
-            nakama: null,
+            nakama: 4334000,
             gamewith: null,
             condition: 'Master: Fighter/Slasher/Shooter Only',
-            Master: [ 2510 ],
+            Master: [ 3339 ],
         },
 
         {
@@ -2383,6 +2392,14 @@ window.drops = {
             Ultimate: [ 85, 111, 118, 301, 1929 ],
             Master: [ 85, 111, 118, 1929 ] ,
             Expert: [ 111, 118, 1929 ]
+        },
+        
+        {
+            name: 'Clash!! Eneru [Extra]',
+            thumb: 603,
+            gamewith: 138206,
+            'All Difficulties': [ 602 ],
+            condition: "Chance of dropping the Support Medallions.",
         },
 
         {
@@ -2683,6 +2700,14 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Bartolomeo [Extra]',
+            thumb: 1879,
+            gamewith: 142094,
+            'All Difficulties': [ 1878 ],
+            condition: "Chance of dropping the Support Medallions.",
+        },
+        
+        {
             name: 'Clash!! Rayleigh',
             thumb: 1924,
             global: true,
@@ -2770,11 +2795,21 @@ window.drops = {
         {
             name: 'Clash!! Judge',
             thumb: 2281,
+            global: true,
             nakama: 4228100,
             gamewith: 121664,
             Ultimate: [ 2280 ],
             Master: [ 2280 ],
             Expert: [ 2280 ]
+        },
+        
+        {
+            name: 'Clash!! Judge [Extra]',
+            thumb: 2281,
+            nakama: 4228101,
+            gamewith: 144312,
+            'All Difficulties': [ 2280 ],
+            condition: "Chance of dropping the Support Medallions.",
         },
         
         {
@@ -2806,24 +2841,35 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Capone Bege',
+            thumb: 2504,
+            nakama: 4250400,
+            gamewith: 147262,
+            condition: 'You can only bring Slasher, Shooter or Driven units',
+            Master: [ 2503 ],
+            Expert: [ 2503 ],
+            Ultimate: [ 2503 ],
+        },
+        
+        {
             name: 'Clash!! Sengoku & Garp',
-            thumb: 2507,
+            thumb: 3338,
             global: true,
-            nakama: 4250700,
+            nakama: 4333800,
             gamewith: null,
-            Master: [ 2506 ],
-            Expert: [ 2506 ]
+            Master: [ 3337 ],
+            Expert: [ 3337 ]
         },
         
         {
             name: 'Showdown!! Shanks & Mihawk',
-            thumb: 2513,
+            thumb: 3342,
             global: true,
-            nakama: 425130,
+            nakama: 4334200,
             gamewith: null,
-            Master: [ 2512 ],
-            Expert: [ 2512 ],
-            Ultimate: [ 2512 ],
+            Master: [ 3341 ],
+            Expert: [ 3341 ],
+            Ultimate: [ 3341 ],
         },
 
     ],
@@ -2837,7 +2883,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1309, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1455, 1457, 1486, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1896, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2288, 2322, 2353, 2374, 2415, 2470 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2322, 2353, 2374, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ]
         },
         
@@ -2857,6 +2903,58 @@ window.drops = {
             gamewith: 17473,
             slefty: 'coliseums',
             Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
+        },
+
+        {
+            name: 'Foxfire-Style Samurai',
+            thumb: 1310,
+            global: true,
+            nakama: 5130901,
+            gamewith: 43749,
+            slefty: 'coliseums',
+            Chaos: [ 1309, -1310 ],
+        },
+
+        {
+            name: '12th Leader of the Happosui Army',
+            thumb: 1456,
+            global: true,
+            nakama: 5145501,
+            gamewith: 50805,
+            slefty: 'coliseums',
+            Chaos: [ 1455, -1456 ],
+        },
+
+        {
+            name: 'Lonely XXX-Weight Boxer',
+            thumb: 1487,
+            global: true,
+            nakama: 5148601,
+            gamewith: 52185,
+            slefty: 'coliseums',
+            Chaos: [ 1486, -1487 ],
+        },
+
+        {
+            name: 'Omnipotent Kami of the Skies',
+            thumb: 1897,
+            global: true,
+            nakama: 5189601,
+            gamewith: 84402,
+            slefty: 'coliseums',
+            Chaos: [ 1896, -1897 ],
+            Underground: [ 1896, -1897 ],
+        },
+
+        {
+            name: 'Evolution of a True Knight',
+            thumb: 2290,
+            global: true,
+            nakama: 5228801,
+            gamewith: 121684,
+            slefty: 'coliseums',
+            Chaos: [ 2288, -2290 ],
+            Underground: [ 2288, -2290 ],
         },
         
     ],
@@ -3087,6 +3185,7 @@ window.drops = {
         {
             name: 'Dead or Treat!! Sweetie Party',
             thumb: 2292,
+            global: true,
             gamewith: 122996,
             condition: 'Katakuri: Can not use characters who are both Driven and Powerhouse classes.',
             'All Difficulties': [ 2291, 2293 ],
@@ -3183,6 +3282,7 @@ window.drops = {
         {
             name: 'Invasion! Sengoku',
             thumb: 2283,
+            global: true,
             nakama: 6228300,
             gamewith: 122270,
             condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
@@ -3373,7 +3473,7 @@ window.drops = {
             name: 'Champion Challenge! Charlotte Family',
             thumb: 2113,
             global: true,
-            nakama: null,
+            nakama: 6211300,
             gamewith: null,
             showManual: true,
             condition: 'Chance to get Manuals for the first Charlotte Family batch. Only Boosters will drop posters.',
@@ -3474,9 +3574,10 @@ window.drops = {
         },
         
         {
-            name: 'Push Forward! Straw Hat Crew!',
+            name: 'Forward! Straw Hat Crew!',
             thumb: 2300,
             nakama: 6230000,
+            global: true,
             gamewith: 124622,
             showManual: true,
             'All Difficulties': [ 9023, 9024, -1935, -2300, -1588, -2245, -912, -943, -1364, -1368 ],
@@ -3485,7 +3586,7 @@ window.drops = {
         {
             name: 'Germa 66 Counterattack',
             thumb: 2446,
-            nakama: null,
+            nakama: 6244600,
             gamewith: 143826,
             showManual: true,
             'All Difficulties': [ 9027, 9028, 9029, 9030, -2446, -2447, -2448, -2449, -2450, -2451, -2452, -2453, -2454 ],
@@ -3494,35 +3595,10 @@ window.drops = {
         {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
-            nakama: null,
+            nakama: 6223400,
             gamewith: 143825,
             condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
-            'All Difficulties': [ 2455 ],
-        },
-        
-        {
-            name: 'Clash!! Enel [Extra]',
-            thumb: 603,
-            gamewith: 138206,
-            'All Difficulties': [ 602 ],
-            condition: "Chance of dropping the Support Medallions.",
-        },
-        
-        {
-            name: 'Clash!! Bartolomeo [Extra]',
-            thumb: 1879,
-            gamewith: 142094,
-            'All Difficulties': [ 1878 ],
-            condition: "Chance of dropping the Support Medallions.",
-        },
-        
-        {
-            name: 'Clash!! Judge [Extra]',
-            thumb: 2281,
-            nakama: null,
-            gamewith: 144312,
-            'All Difficulties': [ 2280 ],
-            condition: "Chance of dropping the Support Medallions.",
+            'Challenge Unit': [ 2455 ],
         },
         
         {
@@ -3708,7 +3784,7 @@ window.drops = {
             name: 'Forest of Training: Mama',
             thumb: 2234,
             global: true,
-            nakama: null,
+            nakama: 7223400,
             gamewith: 118924,
             completion: 'Ship: Queen Mama Chanter',
         },

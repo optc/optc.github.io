@@ -77,6 +77,10 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     $rootScope.options = {
         gOrbsEnabled: 0,
         strOrbsEnabled: 0,
+        dexOrbsEnabled: 0,
+        qckOrbsEnabled: 0,
+        psyOrbsEnabled: 0,
+        intOrbsEnabled: 0,
         rainbowOrbsEnabled: 0,
         meatOrbsEnabled: 0,
         slidersEnabled: true,
@@ -98,7 +102,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         // reset slot
         if (!onlyTransitional)
             $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
-        $scope.tdata.team[n] = { orb: 1, g: false, str: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
+        $scope.tdata.team[n] = { orb: 1, g: false, str: false, dex: false, qck: false, psy: false, int: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
@@ -163,6 +167,122 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.strOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [DEX] orb control * * * * */
+
+    var resetDEXOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'dex')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset DEX slots automatically
+    $scope.$watch('options.dexOrbsEnabled',function() {
+        if (!$rootScope.areDEXOrbsEnabled())
+            resetDEXOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areDEXOrbsEnabled())
+            resetDEXOrbs();
+    });
+
+    $rootScope.areDEXOrbsEnabled = function() {
+        if ($rootScope.options.dexOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.dexOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [QCK] orb control * * * * */
+
+    var resetQCKOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'qck')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset QCK slots automatically
+    $scope.$watch('options.qckOrbsEnabled',function() {
+        if (!$rootScope.areQCKOrbsEnabled())
+            resetQCKOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areQCKOrbsEnabled())
+            resetQCKOrbs();
+    });
+
+    $rootScope.areQCKOrbsEnabled = function() {
+        if ($rootScope.options.qckOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.qckOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [PSY] orb control * * * * */
+
+    var resetPSYOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'psy')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset PSY slots automatically
+    $scope.$watch('options.psyOrbsEnabled',function() {
+        if (!$rootScope.arePSYOrbsEnabled())
+            resetPSYOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.arePSYOrbsEnabled())
+            resetPSYOrbs();
+    });
+
+    $rootScope.arePSYOrbsEnabled = function() {
+        if ($rootScope.options.psyOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.psyOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [INT] orb control * * * * */
+
+    var resetINTOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'int')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset INT slots automatically
+    $scope.$watch('options.intOrbsEnabled',function() {
+        if (!$rootScope.areINTOrbsEnabled())
+            resetINTOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areINTOrbsEnabled())
+            resetINTOrbs();
+    });
+
+    $rootScope.areINTOrbsEnabled = function() {
+        if ($rootScope.options.intOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.intOrbsEnabled) return true;
         }
         return false;
     };

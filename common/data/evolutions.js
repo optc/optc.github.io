@@ -3935,16 +3935,16 @@ window.evolutions = {
         evolution: 2431,
         evolvers: [ 118, 87, 98, 303, 103 ]
     },
-    2502: {
-        evolution: 2503,
+    3333: {
+        evolution: 3334,
         evolvers: [ 118, 86, 266, 302, 267 ]
     },
-    2506: {
-        evolution: 2507,
+    3337: {
+        evolution: 3338,
         evolvers: [ 104, 102, 267, 1180, 118 ]
     },
     1763: {
-        evolution: 2505,
+        evolution: 3336,
         evolvers: [ 'skullQCK', 'skullQCK', 'skullQCK', 1180, 301 ]
     },
     2440: {
@@ -4003,28 +4003,72 @@ window.evolutions = {
         evolution: 2473,
         evolvers: [ 118, 85, 266, 301, 101 ]
     },
+    2474: {
+        evolution: 2475,
+        evolvers: [ 118, 102, 1180, 302, 267 ]
+    },
+    2476: {
+        evolution: 2477,
+        evolvers: [ 118, 104, 1180, 304, 267 ]
+    },
+    2478: {
+        evolution: 2479,
+        evolvers: [ 94, 1180, 303, 303, 103 ]
+    },
+    2480: {
+        evolution: 2481,
+        evolvers: [ 94, 1180, 302, 302, 102 ]
+    },
+    2482: {
+        evolution: 2483,
+        evolvers: [ 94, 1180, 301, 301, 101 ]
+    },
+    2484: {
+        evolution: 2485,
+        evolvers: [ 94, 1180, 300, 300, 100 ]
+    },
+    2486: {
+        evolution: 2487,
+        evolvers: [ 118, 85, 96, 301, 101 ]
+    },
+    2488: {
+        evolution: 2489,
+        evolvers: [ 118, 98, 1180, 303, 103 ]
+    },
+    2490: {
+        evolution: 2491,
+        evolvers: [ 117, 82, 88, 99, 104 ]
+    },
     2234: {
         evolution: 2500,
         evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
     },
-    2510: {
-        evolution: 2511,
+    2503: {
+        evolution: 2504,
+        evolvers: [  ]
+    },
+    1869: {
+        evolution: 2505,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ],
+    },
+    3339: {
+        evolution: 3340,
         evolvers: [ 118, 84, 300, 100, 266 ]
     },
-    2512: {
-        evolution: 2513,
+    3341: {
+        evolution: 3342,
         evolvers: [ 118, 96, 1180, 83, 104 ]
     },
-    2516: {
-        evolution: 2517,
+    3345: {
+        evolution: 3346,
         evolvers: [ 118, 79, 1180, 301, 267 ]
     },
-    2518: {
-        evolution: 2519,
+    3347: {
+        evolution: 3348,
         evolvers: [ 117, 83, 86, 302, 102 ]
     },
-    2520: {
-        evolution: 2521,
+    3349: {
+        evolution: 3350,
         evolvers: [ 117, 83, 84, 300, 100 ]
     },
 };

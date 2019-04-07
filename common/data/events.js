@@ -439,6 +439,30 @@ window.events = {
                 $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
         }
     },
+    2476: {
+        onInsertion: function($scope) {
+            if (++$scope.options.dexOrbsEnabled == 1){}
+            if (++$scope.options.intOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [DEX] and [INT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.dexOrbsEnabled === 0){}
+            if (--$scope.options.intOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [DEX] and [INT] orbs support.' });
+        }
+    },
+    2477: {
+        onInsertion: function($scope) {
+            if (++$scope.options.dexOrbsEnabled == 1){}
+            if (++$scope.options.intOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [DEX] and [INT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.dexOrbsEnabled === 0){}
+            if (--$scope.options.intOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [DEX] and [INT] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

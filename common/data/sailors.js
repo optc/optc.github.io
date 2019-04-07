@@ -144,7 +144,7 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Driven") ? 10 : 0; },
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 10 : 0; },
     },
-    1271: {
+    1269: {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Driven") ? 100 : 0 : 0; },
     },
     1270: {
@@ -735,16 +735,50 @@ window.sailors = {
         hp: function(p) { return .8; },
         rcv: function(p) { return 1.2; },
     },
-    2502: {
-        staticMult: function(p) { return 3; }
+    2478: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Slasher") ? p.slot == p.sourceSlot ? 150 : 0 : 0 : 0; },
+    },
+    2479: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Slasher") ? p.slot == p.sourceSlot ? 150 : 0 : 0 : 0; },
+    },
+    2484: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 50 : 0; },
+    },
+    2485: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 50 : 0; },
+    },
+    2486: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 50 : 0; },
+    },
+    2487: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 50 : 0; },
+    },
+    2488: {
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 40 : 0; },
+    },
+    2489: {
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 40 : 0; },
     },
     2503: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
+    2504: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
+    },
+    3333: {
         staticMult: function(p) { return 3; }
     },
-    2518: {
+    3334: {
+        staticMult: function(p) { return 3; }
+    },
+    3347: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
-    2519: {
+    3348: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
     5000: {
