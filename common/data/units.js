@@ -2375,7 +2375,7 @@ window.units = [
     [ "Charlotte Smoothie, Charlotte Family 14th Daughter", "INT", [ "Slasher", "Powerhouse" ], 4, 25, 5, 3, 70, 1066998, 799, 133, 109, 1491, 731, 190, 1 ],
     [ "Sweet Commander Smoothie, Charlotte Family 14th Daughter", "INT", [ "Slasher", "Powerhouse" ], 5, 40, 5, 4, 99, 4000000, 1409, 691, 178, 2578, 1341, 320, 1 ],
     [ "Mother Caramel", "DEX", [ "Shooter", "Driven" ], 3, 1, 4, 3, 50, 130703, 442, 180, 60, 1092, 499, 130, 1 ],
-    [ "Mother Carmel, The Holy Mother of the Sheep's House", "DEX", [ "Shooter", "Driven" ], 4, 1, 4, 4, 99, 1000000, 800, 300, 120, 1626, 1017, 355, 1 ],
+    [ "Mother Caramel, The Holy Mother of the Sheep's House", "DEX", [ "Shooter", "Driven" ], 4, 1, 4, 4, 99, 1000000, 800, 300, 120, 1626, 1017, 355, 1 ],
     [ "Hajrudin, Young Giant Warrior", "STR", [ "Slasher", "Powerhouse" ], 3, 1, 6, 2, 70, 355666, 750, 290, 22, 1405, 1001, 42, 1 ],
     [ "Streusen, Cook Cook Fruit User", "DEX", [ "Slasher", "Driven" ], 4, 1, 5, 4, 99, 1000000, 750, 320, 130, 1799, 1099, 309, 1 ],
     [ "Charlotte Linlin", "PSY", [ "Powerhouse", "Fighter" ], 4, 30, 5, 2, 70, 1778330, 1255, 567, 13, 2188, 1081, 64, 1 ],

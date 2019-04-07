@@ -1253,6 +1253,7 @@ window.flags = {
     1250: { global: 1 },
     1251: { global: 1 },
     1252: { global: 1 },
+    1253: { global: 1 },
     1254: { global: 1 },
     1255: { global: 1 },
     1256: { global: 1 },
