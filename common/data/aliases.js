@@ -2503,7 +2503,7 @@ window.aliases = {
     2502: [ '', '', '' ],
     2503: [ '', '', '' ],
     2504: [ '', '', '' ],
-    2505: [ '', '', 'Super Fujitora', 'Mega Fujitora', 'Super Issho', 'Mega Issho' ],
+    2505: [ '藤虎 世界を揺るがす土下座', '', 'Super Fujitora', 'Mega Fujitora', 'Super Issho', 'Mega Issho' ],
     3333: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy' ],
     3334: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy' ],
     3335: [ '', '', 'Crocodile&Daz', 'Crocodile and Daz', 'Crocodile Daz', 'CrocodileDaz', 'Daz&Crocodile', 'Daz and Crocodile', 'Daz Crocodile', 'DazCrocodile', 'Crocobones' ],

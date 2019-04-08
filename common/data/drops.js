@@ -3073,6 +3073,7 @@ window.drops = {
         {
             name: 'Red Hair Shanks',
             thumb: 2261,
+            global: true,
             nakama: 8226100,
             gamewith: 119738,
             'Primordial Sea': [ 2260 ]
@@ -3205,6 +3206,7 @@ window.drops = {
         {
             name: 'Sweet Heart Memory',
             thumb: 1961,
+            global: true,
             nakama: 6196100,
             gamewith: 88896,
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
@@ -3596,6 +3598,15 @@ window.drops = {
             gamewith: 143825,
             condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
             'Challenge Unit': [ 2455 ],
+        },
+        
+        {
+            name: 'Ordeal of the Blade',
+            thumb: 2475,
+            nakama: null,
+            gamewith: null,
+            condition: 'Certain units stats boosted by 1.25x and 8 turns special cooldown reduction. Challenge Difficulty: Total Crew Cost must be 180 Cost or less.\nChance to drop the 「Old Sword, Swordsman\'s Loot」, 「Baboon Sword, Swordsman\'s Loot」, and 「Muggy Kingdom Sword, Swordsman\'s Loot」.',
+            'Chopperman Missions': [ null ],
         },
         
         {
