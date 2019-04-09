@@ -3606,7 +3606,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             condition: 'Certain units stats boosted by 1.25x and 8 turns special cooldown reduction. Challenge Difficulty: Total Crew Cost must be 180 Cost or less.\nChance to drop the 「Old Sword, Swordsman\'s Loot」, 「Baboon Sword, Swordsman\'s Loot」, and 「Muggy Kingdom Sword, Swordsman\'s Loot」.',
-            'Chopperman Missions': [ null ],
+            'Chopperman Missions': [ 2499 ],
         },
         
         {

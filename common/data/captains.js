@@ -8882,6 +8882,24 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
         rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
     },
+    2495: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1 : 1; },//change this
+    },
+    2496: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+    },
+    2497: {
+        atk: function(p) { return p.unit.cost <= 40 ? p.actions[p.sourceSlot] ? 3 : 2.5 : 1; },
+        hp: function(p) { return p.unit.cost <= 40 ? 1.2 : 1; },
+    },
+    2493: {
+        atk: function(p) { return p.unit.cost <= 40 ? p.actions[p.sourceSlot] ? 3.5 : 3 : 1; },
+        hp: function(p) { return p.unit.cost <= 40 ? 1.2 : 1; },
+    },
+    2499: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.25 : 1; },
+    },
     2500: {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.3 : 1; },
         atk: function(p) { return [ p.slot == p.sourceSlot ? 4.25 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 4 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, p.slot == p.sourceSlot ? 12 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.75 : 1 ][Math.min(3, p.semlaCounter)]; },

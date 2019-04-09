@@ -19331,7 +19331,7 @@ window.details = {
         specialName: "Offense Battle Axe",
     },
     1403: {//Timeskip Luffy
-        captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" on this Luffy boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
@@ -19347,7 +19347,7 @@ window.details = {
         specialName: "Gomu Gomu no Red Hawk",
     },
     1404: {//Timeskip Luffy
-        captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" THIS LUFFY boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and reduce damage received by 15%. If you use \"Gomu Gomu no Red Hawk\" on this Luffy boosts ATK of Free Spirit characters by 4x instead for 3 turns.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
@@ -23254,7 +23254,7 @@ window.details = {
         specialName: "Immoral Gaze",
     },
     1593: {//Gear 4 Luffy
-        captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" THIS LUFFY boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
+        captain: "Boosts ATK of Fighter characters by 2.5x. If you use \"King Kong Gun\" on this Luffy boosts ATK of Fighter characters by 4x instead for 3 turns and reduces damage taken by 56% for 3 turns.",
         captainNotes: "Using Luffy's special will change his own captain boost to 4x. If both Luffy's specials are used, the total ATK boost will be 16x",
         special: [
             {
@@ -32477,7 +32477,7 @@ window.details = {
         specialName: "Bullet Thread",
     },
     2004: {//Story Doflamingo
-        captain: "Boosts ATK of Slasher characters by 2.25x and their HP by 1.5x. If you use \"Bullet Thread\" THIS DOFLAMINGO boosts ATK of Slasher characters by 2.75x instead for 3 turns",
+        captain: "Boosts ATK of Slasher characters by 2.25x and their HP by 1.5x. If you use \"Bullet Thread\" on this Doflamingo boosts ATK of Slasher characters by 2.75x instead for 3 turns",
         captainNotes: "Using Doflamingo's special will change his own captain boost to 2.75x. If both Doflamingo's specials are used, the total ATK boost will be 7.5625x",
         special: "Changes own orb into [STR], boosts own ATK by 2x for 1 turn and deals 30x character's ATK in Typeless damage to all enemies",
         specialName: "Bullet Thread",
@@ -35335,7 +35335,7 @@ window.details = {
         specialNotes: "#{ignoreBarrier}",
     },
     2126: {//Doffy
-        captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.3x. If you use \"Fullbright\" THIS DOFLAMINGO boosts ATK of Striker characters by 3x instead for 3 turns",
+        captain: "Boosts ATK of Striker characters by 2.5x and their HP by 1.3x. If you use \"Fullbright\" on this Doflamingo boosts ATK of Striker characters by 3x instead for 3 turns",
         captainNotes: "Using Doflamingo's special will change his own captain boost to 3x. If both Doflamingo's specials are used, the total ATK boost will be 9x",
         special: "Cuts the current HP of each enemy by 20%, changes own orb into [STR] and at the end of the turn, cuts the current HP of each enemy by 10% for 2 turns. If HP is below 50% at the time the special is activated, boosts ATK of Striker and Driven characters by 1.75x for 1 turn",
         specialName: "Fullbright",
@@ -41218,7 +41218,7 @@ window.details = {
         ]
     },
     2363: {//6+ Gear 4 Luffy
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, THIS Luffy boosts ATK of all characters by 4x at the start of the chain, by 4.25x after 3 PERFECTs in a row",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.25x, their HP by 1.35x, makes [DEX] and [INT] orbs beneficial for all characters. If you use 'Gomu Gomu no King Cobra' for 3 turns, on this Luffy boosts ATK of all characters by 4x at the start of the chain, by 4.25x after 3 PERFECTs in a row",
         special: [
             {
                 "description": "Deals 150x character's ATK in Typeless damage to one enemy, adds 0.3 to Chain multiplier for 1 turn, amplifies the effect of orbs of all characters by 1.5x for 1 turn. If Luffy is your Captain or Friend/Guest Captain, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 3 turns",
@@ -45236,6 +45236,66 @@ window.details = {
         specialName: "Life Expectancy Declaration",
         specialNotes: "#{beneficial}",
     },
+    2495: {//Pudding
+        captain: "Boosts ATK Striker and Cerebral characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+        special: "Reduces Special Cooldown of all characters by 1 turn, changes adjacent orbs into Matching Orbs, reduces enemies Percent Damage Reduction duration by 5 turns and reduces Burn duration by 5 turns.",
+        specialName: "Cherry Blossoms Falling onto the Tea Party",
+    },
+    2496: {//Pudding
+        captain: "Boosts ATK Striker and Cerebral characters by 2.75x and recovers 1.5x character's RCV in HP at the end of each turn.",
+        special: "Reduces Special Cooldown of all characters by 1 turn, changes adjacent orbs into Matching Orbs, reduces enemies Percent Damage Reduction duration by 5 turns and reduces Burn duration by 5 turns.",
+        specialName: "Cherry Blossoms Falling onto the Tea Party",
+    },
+    2497: {//Big Mom
+        captain: "Boosts ATK of characters with cost 40 or less by 2.5x and their HP by 1.2x. If you use \"Life or Sakura Mochi!?\" on this Charlotte Linlin boosts ATK of characters with cost 40 or less by 3x instead and reduce damage received by ?% for 3 turns.",
+        special: "Recovers 3,450 HP and boosts ATK of Striker and Driven characters by 1.75x for 2 turns. If there are 3 enemies or less on the stage when the special is activated, reduces crew's ATK DOWN duration by 7 turns, otherwise if there are 4 enemies or more on the stage when the special is activated, reduces Increase Damage Taken duration by 7 turns.",
+        specialName: "Life or Sakura Mochi!?",
+    },
+    2498: {//Big Mom
+        captain: "Boosts ATK of characters with cost 40 or less by 3x and their HP by 1.2x. If you use \"Life or Sakura Mochi!?\" on this Charlotte Linlin boosts ATK of characters with cost 40 or less by 3.5x instead and reduce damage received by 15% for 3 turns.",
+        special: "Recovers 3,450 HP and boosts ATK of Striker and Driven characters by 1.75x for 2 turns. If there are 3 enemies or less on the stage when the special is activated, reduces crew's ATK DOWN duration by 7 turns, otherwise if there are 4 enemies or more on the stage when the special is activated, reduces Increase Damage Taken duration by 7 turns.",
+        specialName: "Life or Sakura Mochi!?",
+    },
+    2499: {//Perona
+        captain: "Boosts ATK Driven and Cerebral characters by 2.5x and their RCV by 1.25x.",
+        special: "Reduces the defense of all enemies by 100% for 2 turns, reduces Special Cooldown of characters in the right column by 2 turns and changes the orbs in the top row into [QCK] orbs, changes the orbs in the middle row into [PSY] orbs, changes the orbs in the bottom row into [INT] orbs.",
+        specialName: "Hollow Farewell",
+        sailor: "Reduces Paralysis duration by 1 turn",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by 10 turn at the start of the fight"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Zoro and Mihawk",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, ?",
+                    "Level 2: Once per adventure, when you reach the final stage, ?",
+                    "Level 3: Once per adventure, when you reach the final stage, ?",
+                    "Level 4: Once per adventure, when you reach the final stage, ?",
+                    "Level 5: Once per adventure, when you reach the final stage, changes [STR], [QCK] and [PSY] orbs on Slasher characters orb into [DEX] and [INT] orbs and makes PERFECTs slightly easier to hit for 2 turns."
+                ]
+            }
+        ]
+    },
     2500: {//Big Mom
         captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.3x, makes [SEMLA] orbs beneficial for all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts own ATK by 4.25x, boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 12x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x and boosts chances of getting [SEMLA] orbs",
         captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
@@ -45314,7 +45374,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2503: {//Capone
-        captain: "Boosts ATK of Shooter characters by ?x if HP is above 50% at the start of the turn, ?x otherwise and if you don't attack with him, reduces damage received by ?% for that turn.",
+        captain: "Boosts ATK of Shooter characters by 2.5x if HP is above 50% at the start of the turn, 2x otherwise and if you don't attack with him, reduces damage received by 20% for that turn.",
         special: "If there are 6 Shooter characters in your crew, boosts ATK of Shooter characters by 2x for 1 turn. If HP is below 50% at the time the special is activated, Recovers missing HP to 51% MAX HP.",
         specialName: "Manipulating the Castle's Interior",
         sailor: "Boosts base ATK, HP and RCV of Shooter characters by 30",
@@ -45327,26 +45387,42 @@ window.details = {
             "base": "Boosts base ATK, HP and RCV of Shooter characters by 30",
             "level1": "When HP is above 50% at the start of the turn, boosts base ATK of Shooter characters by 100",
         },
+        limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 1: When HP is above 50% at the start of the turn, boosts base ATK of Shooter characters by 100" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
         potential: [
             {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
                 ]
             },
             {
                 "Name": "Barrier Penetration",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
-                    //"Level 5: This character's normal attack will ignore barriers"
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
         ],
@@ -45354,10 +45430,10 @@ window.details = {
             {
                 "Characters": "Chiffon, Vito and Goti",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
                     "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
                 ]
             }

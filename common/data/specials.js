@@ -7295,6 +7295,14 @@ window.specials = {
     2492: {
         chainAddition: function(p) { return 0.3; }
     },
+    2497: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class"
+    },
+    2498: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class"
+    },
     2500: {
         atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",
