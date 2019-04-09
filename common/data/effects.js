@@ -866,7 +866,7 @@ window.effects = {
         },    
     },
     
-    'Ordeal of the Blade: {
+    'Ordeal of the Blade': {
         description: 'Stats of certain units boosted.',
         thumb: 2475,
         id: 68, // don't change this
