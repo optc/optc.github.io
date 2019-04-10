@@ -294,6 +294,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             orb = 2;
                         }
                     }
+                    if (orb == 'dex'){
+                        if ([ 2476, 2477 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher"))){
+                            orb = 2;
+                        }
+                    }
+                    if (orb == 'int'){
+                        if ([ 2476, 2477 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher"))){
+                            orb = 2;
+                        }
+                    }
                     if (orb == 0.5){
                         if ([ 2137 ].includes(team[temp].unit.number + 1) && x.unit.type == 'DEX'){
                             orb = 2;
@@ -305,6 +315,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             orb = 2;
                         }
                         if ([ 5036, 5037, 5038, 5039, 5040, 5041, 5042, 5043 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Driven") && x.unit.type == 'DEX'){
+                            orb = 2;
+                        }
+                        if ([ 2476, 2477 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher")) && (x.unit.type == 'PSY' || x.unit.type == 'QCK')){
                             orb = 2;
                         }
                     }

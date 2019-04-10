@@ -44692,12 +44692,12 @@ window.details = {
         ]
     },
     2476: {//Zoro
-        captain: "Boosts ATK of Slaher characters by 3.25x and their HP by 1.5x. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
+        captain: "Boosts ATK of Slaher characters by 3.25x, their HP by 1.5x and makes [DEX] and [INT] orbs beneficial for Slasher characters. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
         special: "Deals 120x character's ATK as Typeless damage to all enemies and makes [RCV] and [TND] orbs beneficial for Slasher characters for 3 turns. Boosts ATK of Slasher characters by 2x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Slasher characters by 2.25x in the following turn.",
         specialName: "Three Sword Style - 1080 Pound Phoenix",
     },
     2477: {//Zoro
-        captain: "Boosts ATK of Slaher characters by 3.25x and their HP by 1.5x. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
+        captain: "Boosts ATK of Slaher characters by 3.25x, their HP by 1.5x and makes [DEX] and [INT] orbs beneficial for Slasher characters. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
         special: "Deals 120x character's ATK as Typeless damage to all enemies and makes [RCV] and [TND] orbs beneficial for Slasher characters for 3 turns. Boosts ATK of Slasher characters by 2x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Slasher characters by 2.25x in the following turn.",
         specialName: "Three Sword Style - 1080 Pound Phoenix",
         sailor: {
