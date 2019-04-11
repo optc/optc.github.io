@@ -45237,7 +45237,7 @@ window.details = {
         specialNotes: "#{beneficial}",
     },
     2495: {//Pudding
-        captain: "Boosts ATK Striker and Cerebral characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+        captain: "Boosts ATK Striker and Cerebral characters by 2x and recovers 1x character's RCV in HP at the end of each turn.",
         special: "Reduces Special Cooldown of all characters by 1 turn, changes adjacent orbs into Matching Orbs, reduces enemies' Percent Damage Reduction duration by 5 turns and reduces Burn duration by 5 turns.",
         specialName: "Cherry Blossoms Falling onto the Tea Party",
     },
@@ -45247,7 +45247,7 @@ window.details = {
         specialName: "Cherry Blossoms Falling onto the Tea Party",
     },
     2497: {//Big Mom
-        captain: "Boosts ATK of characters with cost 40 or less by 2.5x and their HP by 1.2x. If you use \"Life or Sakura Mochi!?\" on this Charlotte Linlin boosts ATK of characters with cost 40 or less by 3x instead and reduce damage received by ?% for 3 turns.",
+        captain: "Boosts ATK of characters with cost 40 or less by 2.5x and their HP by 1.2x. If you use \"Life or Sakura Mochi!?\" on this Charlotte Linlin boosts ATK of characters with cost 40 or less by 3x instead for 3 turns.",
         special: "Recovers 3,450 HP and boosts ATK of Striker and Driven characters by 1.75x for 2 turns. If there are 3 enemies or less on the stage when the special is activated, reduces crew's ATK DOWN duration by 7 turns, otherwise if there are 4 enemies or more on the stage when the special is activated, reduces Increase Damage Taken duration by 7 turns.",
         specialName: "Life or Sakura Mochi!?",
     },

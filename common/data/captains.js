@@ -8883,7 +8883,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
     },
     2495: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
     },
     2496: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
@@ -8913,7 +8913,7 @@ window.captains = {
         hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Slasher")) ? 1.2 : 1; },
     },
     2503: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? p.percHP >= 50.0 ? 1 : 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Shooter") ? p.percHP >= 50.0 ? 2.5 : 2 : 1; },
     },
     2504: {
         atk: function(p) { return p.unit.class.has("Shooter") ? p.percHP >= 50.0 ? 3 : 2.5 : 1; },
