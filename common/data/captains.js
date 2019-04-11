@@ -8904,6 +8904,14 @@ window.captains = {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.3 : 1; },
         atk: function(p) { return [ p.slot == p.sourceSlot ? 4.25 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 4 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.5 : 1, p.slot == p.sourceSlot ? 12 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 3.75 : 1 ][Math.min(3, p.semlaCounter)]; },
     },
+    2501: {
+        atk: function(p) { return (p.unit.class.has("Slasher")) ? 1.75 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Slasher")) ? 1.75 : 1; },
+    },
+    2502: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Slasher")) ? 2 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Slasher")) ? 1.2 : 1; },
+    },
     2503: {
         atk: function(p) { return p.unit.class.has("Shooter") ? p.percHP >= 50.0 ? 1 : 1 : 1; },//change this
     },
@@ -8917,6 +8925,21 @@ window.captains = {
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
+    },
+    2511: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; }
+    },
+    2512: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; }
+    },
+    2513: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Powerhouse" ]); },
+        hitAtk: function(p) {
+            if (!p.unit.class.has("Powerhouse")) return 1;
+            return p.modifiers.slice(0, p.chainPosition)
+                .subcontains(["Perfect", "Perfect", "Perfect"]) ? 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     3333: {
         hitAtk: function(p) {
