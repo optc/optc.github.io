@@ -4135,6 +4135,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Fighter Characters",
+                "description": [
+                    "Level 1: Adds 6% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 8% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 10% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 12% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP."
+                ]
+            }
         ]
     },
     452: {
@@ -4262,7 +4274,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[STR] Characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 2: Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 3: Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 4: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 5: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV."
+                ]
+            }
+        ]
     },
     456: {
         special: "Randomizes the orbs in the middle row into either [STR] or [DEX] orbs, the orbs in the lower row into either [PSY] or [INT] orbs, switches orbs between slots once",
@@ -7937,6 +7961,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Rob Lucci and Kaku",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, Changes [RCV] orbs on all characters into the supported character's orb",
+                    "Level 2: Once per an adventure, when the supported character uses their special, Changes [RCV] orbs on all characters into the supported character's orb",
+                    "Level 3: Once per an adventure, when the supported character uses their special, Changes [RCV], [EMPTY] and [BOMB] orbs on all characters into the supported character's orb",
+                    "Level 4: Once per an adventure, when the supported character uses their special, Changes [RCV], [EMPTY] and [BOMB] orbs on all characters into the supported character's orb",
+                    "Level 5: Once per an adventure, when the supported character uses their special, Changes all orbs on all characters into the supported character's orb"
+                ]
+            }
         ]
     },
     755: {
@@ -9092,6 +9128,18 @@ window.details = {
                     "Level 5: If HP is below 40% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Doflamingo Sugar and Vergo",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 5% of this character's base RCV to the supported character's base RCV",
+                    "Level 2: Reduces damage received from [INT] characters by 2%. Adds 8% of this character's base RCV to the supported character's base RCV",
+                    "Level 3: Reduces damage received from [INT] characters by 3%. Adds 12% of this character's base RCV to the supported character's base RCV",
+                    "Level 4: Reduces damage received from [INT] characters by 4%. Adds 15% of this character's base RCV to the supported character's base RCV",
+                    "Level 5: Reduces damage received from [INT] characters by 5%. Adds 20% of this character's base RCV to the supported character's base RCV"
+                ]
+            }
         ]
     },
     843: {
@@ -9212,6 +9260,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Gladius, Baby 5 and Pica",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, Boosts ATK of all characters by 1.2x after 17th hit in the chain for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, Boosts ATK of all characters by 1.4x after 17th hit in the chain for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, Boosts ATK of all characters by 1.6x after 17th hit in the chain for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, Boosts ATK of all characters by 1.8x after 17th hit in the chain for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, Boosts ATK of all characters by 2x after 17th hit in the chain for 1 turn."
+                ]
+            }
         ]
     },
     847: {
@@ -9386,6 +9446,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by ? turns on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[QCK] Characters",
+                "description": [
+                    "Level 1: Reduces damage received from [STR] characters by 1%",
+                    "Level 2: Reduces damage received from [STR] characters by 2%",
+                    "Level 3: Reduces damage received from [STR] characters by 3%",
+                    "Level 4: Reduces damage received from [STR] characters by 4%",
+                    "Level 5: Reduces damage received from [STR] characters by 5%"
+                ]
+            }
         ]
     },
     863: {
@@ -11941,7 +12013,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Law",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Bind, Despair or Paralysis, reduces Bind, Despair and Paralysis duration by 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Bind, Despair or Paralysis, reduces Bind, Despair and Paralysis duration by 2 turns."
+                ]
+            }
+        ]
     },
     1002: {
         captain: "Boosts ATK of Fighter characters by 1.5x",
@@ -15942,6 +16026,18 @@ window.details = {
                     "Level 5: Reduce own Special Cooldown by 9 turn at the start of the fight"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Kizaru",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, Changes supported character's orb into a Matching orb.",
+                    "Level 2: Once per adventure, when you reach the final stage, Changes supported character's orb into a Matching orb.",
+                    "Level 3: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character's special by 1 turn and Changes supported character's orb into a Matching orb.",
+                    "Level 4: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character's special by 1 turn and Changes supported character's orb and Friend Captain's orb into Matching orbs.",
+                    "Level 5: Once per adventure, when you reach the final stage, reduces Special Cooldown of supported character's special by 2 turns and Changes supported character's orb and Friend Captain's orb into Matching orbs."
+                ]
+            }
         ]
     },
     1231: {//Smoker
@@ -37103,7 +37199,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Law",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Bind or Despair, reduces Bind and Despair duration by 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Bind, Despair or Paralysis, reduces Bind, Despair and Paralysis duration by 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Bind, Despair or Paralysis, reduces Bind, Despair and Paralysis duration by 2 turns."
+                ]
+            }
+        ]
     },
     2196: {//Blackbeard
         captain: "Boosts ATK of Driven characters by 2x and boosts their HP by 1.2x",
@@ -42232,11 +42340,11 @@ window.details = {
             {
                 "Characters": "Franky",
                 "description": [
-                    "Level 1: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 1 turn.",
-                    "Level 2: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 2 turn.",
-                    "Level 3: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 3 turn.",
-                    "Level 4: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 1 turn.",
-                    "Level 5: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence on the supported character by 3 turn and reduces Special Cooldown of the supported character by 2 turns."
+                    "Level 1: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence duration on the supported character by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence duration on the supported character by 2 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence duration on the supported character by 3 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence duration on the supported character by 3 turn and reduces Special Cooldown of the supported character by 1 turn.",
+                    "Level 5: Once per adventure, when you are inflicted with Despair or Silence, reduces Despair and Silence duration on the supported character by 3 turn and reduces Special Cooldown of the supported character by 2 turns."
                 ]
             }
         ]
