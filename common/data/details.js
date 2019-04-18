@@ -18265,6 +18265,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Enel",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 9% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
         ]
     },
     1342: {//Dadan
@@ -24493,6 +24505,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Nekomamushi, Wanda and Carrot",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1655: {//Carrot
@@ -24984,6 +25008,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 6% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
         ]
     },
     1679: {//Kai Mihawk
@@ -25349,6 +25385,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Doflamingo, Monet and Caesar",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.25x for 1 turn",
+                    "Level 2: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.25x for 1 turn",
+                    "Level 3: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.25x for 1 turn",
+                    "Level 4: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.5x for 1 turn",
+                    "Level 5: Once per an adventure, when the supported character uses their special, amplifies the effect of orbs for the supported character by 1.75x for 1 turn"
+                ]
+            }
         ]
     },
     1697: {//Magellan
@@ -32171,6 +32219,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Whitebeard, Ace, Vista and Jozu",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1988: {//Oars
         captain: "Boosts ATK of Slasher characters by 2.25x and their RCV by 1.2x",
@@ -33077,6 +33137,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 7 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Smoker, Fullbody and Django",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 2: Adds 6% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 3: Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 4: Adds 8% of this character's base ATK and RCV to the supported character's base ATK and RCV",
+                    "Level 5: Adds 10% of this character's base ATK and RCV to the supported character's base ATK and RCV"
+                ]
+            }
         ]
     },
     2028: {//Sengoku
@@ -37919,7 +37991,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[STR], [DEX], [QCK] Characters",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 10% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     2235: {//Brook
         captain: "Boosts ATK of all characters by 2.75x if HP is above 99% at the start of the turn, by 2x otherwise, cuts the current HP of each enemy by 10% at the end of each turn and revives the team after a GAME OVER once per adventure.",
@@ -45665,6 +45749,160 @@ window.details = {
                     "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orb on the supported character into Matching orb.",
                     "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orb on the supported character into Matching orb.",
                     "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes Badly Matching orbs on Slasher characters into Matching orbs."
+                ]
+            }
+        ]
+    },
+    2506: {//A O
+        captain: "Boosts ATK of [PSY] characters by 1.5x",
+        special: "Changes [G], [BOMB] and [TND] orbs into [STR], [DEX], [QCK], [PSY] and [INT] orbs, reduces enemy Barrier duration by 1 turn and adds 0.5x to Chain multiplier for 1 turn.",
+        specialName: "A.O. Slash",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+    },
+    2507: {//Kizaru
+        captain: "Boosts ATK of Shooter characters by 1.75x",
+        special: "Reduces Bind duration by 3 turns, reduces crew's ATK DOWN duration by 4 turns. If you are on a Treasure Map, amplifies the effects of orbs for [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
+        specialName: "Radiant Light Arrow",
+        specialNotes: "Level 1-10: 1.5x orb boost<br\>Level 11-20: 1.75x orb boost<br\>Level 21+: 2x orb boost",
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+    },
+    2508: {//Marco
+        captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x and their HP by 1.2x. If you use \"Phoenix Claw\" on this Marco boosts ATK of [PSY] and [INT] characters by 3.5x instead for 3 turns.",
+        special: "Deals 50x character's ATK in Typeless damage to one enemy, reduces Bind duration by 3 turns, reduces enemies' Threshold Damage Reduction duration by 4 turns. If this character is your Captain or Friend/Guest Captain, changes all orbs on all characters into Matching orbs and if you are on a Treasure Map, boosts ATK of [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
+        specialName: "Phoenix Claw",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+    },
+    2509: {//TM Weevil
+        captain: "Boosts ATK of Slasher characters proportionally to the crew's current HP, by ?x at max and their HP by ?x.",
+        captainNotes: "#{captainProportional : higher : ? + 1 * (remaining HP) / (total HP)) : ? : 1}",
+        special: "Reduces ATK DOWN duration by 20 turns and adds 300x character's ATK as Additional Typeless Damage to own's attacks for 2 turns. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of all characters by 2x.",
+        specialName: "I Absolutely Won't Forgive Him",
+    },
+    2510: {//TM Weevil
+        captain: {
+            "base": "Boosts ATK of Slasher characters proportionally to the crew's current HP, by ?x at max and their HP by ?x.",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts ATK of Slasher characters proportionally to the crew's current HP, by 3.25x at max and their HP by 1.35x.",
+        },
+        captainNotes: "#{captainProportional : higher : 2.25 + 1 * (remaining HP) / (total HP)) : 3.25 : 1}",
+        special: "Reduces ATK DOWN duration by 20 turns and adds 300x character's ATK as Additional Typeless Damage to own's attacks for 2 turns. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of all characters by 2x.",
+        specialName: "I Absolutely Won't Forgive Him",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base HP of all characters by 50",
+            "level2": "Boosts base ATK of all characters by 50",
+        },
+        /*limit: [
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 40" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of Driven characters by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2.75x and recovers 500 HP at end of each turn. If you use \"Off White\" in this turn boosts ATK of Driven characters by 3.5x instead." },
+            { "description": "Acquire Potential 2: Cooldown Reduction" },
+        ],*/
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Slasher Characters",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 2: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 4: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 5: Once per adventure, when you reach the final stage, adds 120x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn"
                 ]
             }
         ]

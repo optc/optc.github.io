@@ -2885,7 +2885,6 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1400, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2122, 2162, 2192, 2248, 2322, 2353, 2374, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
-            EX: [ 2511 ]
         },
         
         {
@@ -3000,6 +2999,16 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2288, -2290 ],
             Underground: [ 2288, -2290 ],
+        },
+
+        {
+            name: 'Coliseum EX Vs. Gecko Moria',
+            thumb: 2512,
+            nakama: null,
+            gamewith: 147896,
+            slefty: 'coliseums',
+            Chaos: [ 2511, 2513 ],
+            Underground: [ 2511, 2513 ],
         },
         
     ],
@@ -3127,9 +3136,10 @@ window.drops = {
         {
             name: 'Boa Hancock',
             thumb: 2299,
+            global: true,
             nakama: 8229900,
             gamewith: 123536,
-            'Raging Sea': [ 2298 ]
+            'Roaring Sea': [ 2298 ]
         },
 
         {
@@ -3152,14 +3162,14 @@ window.drops = {
             name: 'Kaido',
             thumb: 2387,
             nakama: 8238700,
-            gamewith: null,
+            gamewith: 137053,
             'Raging Sea': [ 2386 ]
         },
 
         {
             name: 'Doflamingo',
             thumb: 2443,
-            nakama: null,
+            nakama: 143066,
             gamewith: 8244300,
             'Primordial Sea': [ 2442, 9026 ]
         },
@@ -3168,8 +3178,16 @@ window.drops = {
             name: 'Smoothie & Oven',
             thumb: 2469,
             nakama: 8246900,
-            gamewith: null,
+            gamewith: 144785,
             'Sweet Sea': [ 2468 ]
+        },
+
+        {
+            name: 'Edward Weevil',
+            thumb: 2510,
+            nakama: null,
+            gamewith: null,
+            'Sweet Sea': [ 2509 ]
         },
         
     ],

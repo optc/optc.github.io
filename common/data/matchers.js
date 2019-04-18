@@ -404,6 +404,12 @@ window.matchers = [
         target: 'special',
         matcher: /beneficial/i
     },
+    
+    {
+        name: 'Negative Orb Negators',
+        target: 'special',
+        matcher: /Makes Badly Matching and \[BLOCK\] orbs not reduce damage/i
+    },
 
     /*{
         name: 'Slot fillers',

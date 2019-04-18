@@ -8926,6 +8926,23 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
     },
+    2506: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; }
+    },
+    2507: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; }
+    },
+    2508: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1.2 : 1; },
+    },
+    2509: {
+        atk: function(p) { return (p.unit.class.has("Slasher")) ? 1 + 1 * (p.percHP) / 100 : 1; },
+    },
+    2510: {
+        atk: function(p) { return (p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 1 + 2.25 * (p.percHP) / 100 : 1 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 1.35 : 1 : 1; },
+    },
     2511: {
         atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; }
     },

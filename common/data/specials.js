@@ -7336,6 +7336,62 @@ window.specials = {
             window.specials[2505].multiplier = p.sourceSlot < 2 ? 2.75 : 1;
         },
     },
+    2506: {
+        chainAddition: function(p) { return 0.5; }
+    },
+    2507:{
+        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2507].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2507].multiplier == 1.5 ? 1 : window.specials[2507].multiplier == 1.75 ? 2 : 0);
+            window.specials[2507].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2507warning'
+            });
+        },
+    },
+    2508:{
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2508].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2508].multiplier == 1.75 ? 1 : window.specials[2508].multiplier == 2 ? 2 : 0);
+            window.specials[2508].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2508warning'
+            });
+        },
+    },
+    2509:{
+        atk: function(p) { return window.specials[2509].turnedOn ? 2 : 1; },
+        type: "class",
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2509].turnedOn = !window.specials[2509].turnedOn;
+            if (window.specials[2509].turnedOn){
+                p.scope.notify({
+                    text: 'Using the 2x ATK boost. To switch to the ATK boost off, disable and re-enable this special',
+                    name: '2509warning'
+                });
+            }
+        },
+    },
+    2510:{
+        atk: function(p) { return window.specials[2510].turnedOn ? 2 : 1; },
+        type: "class",
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2510].turnedOn = !window.specials[2510].turnedOn;
+            if (window.specials[2510].turnedOn){
+                p.scope.notify({
+                    text: 'Using the 2x ATK boost. To switch to the ATK boost off, disable and re-enable this special',
+                    name: '2510warning'
+                });
+            }
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
