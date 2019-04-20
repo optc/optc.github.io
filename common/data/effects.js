@@ -463,7 +463,7 @@ window.effects = {
         },
     },
     
-    '3 Ranking Missions - Shanks, Tony Tony Chopper and Jinbe': {
+    '3 Stamina Ranking Missions - Shanks, Tony Tony Chopper and Jinbe': {
         description: 'Stats of certain units boosted.',
         thumb: 1700,
         id: 45, // don't change this
@@ -671,7 +671,7 @@ window.effects = {
         },
     },
     
-    '3 Ranking Missions - Ganfor, Mihawk and Blackbeard': {
+    '3 Stamina Ranking Missions - Ganfor, Mihawk and Blackbeard': {
         description: 'Stats of certain characters boosted.',
         thumb: 447,
         id: 58, // don't change this
@@ -699,7 +699,7 @@ window.effects = {
         strOrbsEnabled: true
     },
     
-    '3 Ranking Missions - Wanda, Ivankov and Kyros': {
+    '3 Stamina Ranking Missions - Wanda, Ivankov and Kyros': {
         description: 'Stats of certain characters boosted.',
         thumb: 1873,
         id: 60, // don't change this
@@ -748,7 +748,7 @@ window.effects = {
         atk: function(p) { return 1.75; }
     },
     
-    'Ranking Mission - Sanji': {
+    '3 Stamina Ranking Mission - Sanji': {
         description: 'Stats of certain units boosted',
         thumb: 912,
         id: 62, // don't change this
@@ -796,7 +796,7 @@ window.effects = {
         },
 	},
     
-    '3 Ranking Missions - Perospero, Tamago and Jack': {
+    '3 Stamina Ranking Missions - Perospero, Tamago and Jack': {
         description: 'Stats of certain characters boosted.',
         thumb: 2175,
         id: 64, // don't change this
@@ -845,7 +845,7 @@ window.effects = {
         meatOrbsEnabled: true
     },
     
-    '3 Ranking Missions - Bege, Buggy and Akainu': {
+    '3 Stamina Ranking Missions - Bege, Buggy and Akainu': {
         description: 'Stats of certain units boosted.',
         thumb: 1298,
         id: 67, // don't change this

@@ -209,6 +209,12 @@
     transform: translateY(-4em);
 }
 
+#links-button.active .rotater:nth-child(13) > a {
+    -webkit-transform: translateY(-8em);
+    -ms-transform: translateY(-8em);
+    transform: translateY(-8em);
+}
+
 #link-damage > .btn { background: #85C1F5; }
 #link-characters > .btn { background: #7FCA9F; }
 #link-drops > .btn { background: #F4BA70; }
@@ -222,6 +228,7 @@
 #link-nakama > .btn { background: #3c6ee0; }
 #link-turtles > .btn { background: #ce4500; }
 #link-es > .btn { background: linear-gradient(#ff0000 30%, #ffff00 30%, #ffff00 70%, #ff0000 30%); }
+#link-fr > .btn { background: linear-gradient(90deg, #002295 30%, #ffffff 30%, #ffffff 70%, #ff0000 30%); }
 
 .tip { color: black; }
 
