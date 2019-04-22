@@ -46368,7 +46368,7 @@ window.details = {
     3344: {//Knight Sanji
         captain: "Boosts ATK of [STR] and [QCK] characters by 2.75x, their HP by 1.3x, lowers chances of getting [PSY] orbs, makes [STR] and [QCK] orbs beneficial for [STR] and [QCK] characters. If there is a [STR], [QCK] and [PSY] character in your crew, boosts chain multiplier by 1.5x.",
         captainNotes: "#{beneficial}",
-        special: "Reduces any damage received above 6,000 HP by ?% for 1 turn and changes all orbs, including [BLOCK] orbs, to [QCK] orbs. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effects of orbs for [STR] and [QCK] characters by 2x for 2 turns, by 1.75x for 2 turns otherwise.",
+        special: "Reduces any damage received above 6,000 HP by 90% for 1 turn and changes all orbs, including [BLOCK] orbs, to [QCK] orbs. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, amplifies the effects of orbs for [STR] and [QCK] characters by 2x for 2 turns, by 1.75x for 2 turns otherwise.",
         sailor: {
             "base": "Changes all orbs into [RCV] orbs at the start of the fight",
             "level1": "Makes [TND] orbs beneficial for all characters",
