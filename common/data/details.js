@@ -45789,7 +45789,7 @@ window.details = {
     },
     2508: {//Marco
         captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x and their HP by 1.2x. If you use \"Phoenix Claw\" on this Marco boosts ATK of [PSY] and [INT] characters by 3.5x instead for 3 turns.",
-        special: "Deals 50x character's ATK in Typeless damage to one enemy, reduces Bind duration by 3 turns, reduces enemies' Threshold Damage Reduction duration by 4 turns. If this character is your Captain or Friend/Guest Captain, changes all orbs on all characters into Matching orbs and if you are on a Treasure Map, boosts ATK of [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
+        special: "Deals 50x character's ATK in Typeless damage to one enemy, reduces Despair duration by 3 turns, reduces enemies' Threshold Damage Reduction duration by 4 turns. If this character is your Captain or Friend/Guest Captain, changes all orbs on all characters into Matching orbs and if you are on a Treasure Map, boosts ATK of [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
         specialName: "Phoenix Claw",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         potential: [
