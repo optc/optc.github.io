@@ -3208,7 +3208,7 @@ window.drops = {
         },
 
         {
-            name: 'NEO Coliseum vs. Diamante',
+            name: 'Coliseum [NEO] vs. Diamante',
             thumb: 2017,
             global: true,
             nakama: 5201601,
