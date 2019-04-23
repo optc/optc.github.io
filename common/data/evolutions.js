@@ -4063,6 +4063,10 @@ window.evolutions = {
         evolution: 2512,
         evolvers: [  ]
     },
+    2514: {
+        evolution: 2515,
+        evolvers: [  ]
+    },
     1869: {
         evolution: 2505,
         evolvers: [ 'skullINT', 118, 88, 304, 267 ],
@@ -4086,5 +4090,13 @@ window.evolutions = {
     3349: {
         evolution: 3350,
         evolvers: [ 117, 83, 84, 300, 100 ]
+    },
+    3351: {
+        evolution: 3352,
+        evolvers: [  ]
+    },
+    3353: {
+        evolution: 3354,
+        evolvers: [  ]
     },
 };

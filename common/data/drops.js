@@ -2469,6 +2469,18 @@ window.drops = {
         },
 
         {
+            name: 'Clash Neo!! Ivankov',
+            dropID: 'clashneo5',
+            thumb: 3352,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'raid_bosses/6',
+            Master: [ 3351 ],
+            Expert: [ 3351 ]
+        },
+
+        {
             name: 'Clash!! Doflamingo',
             dropID: 'clash6',
             thumb: 418,
@@ -3557,6 +3569,16 @@ window.drops = {
             gamewith: 38237,
             condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
             'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Invasion Neo! Young Whitebeard',
+            thumb: 3354,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {

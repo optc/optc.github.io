@@ -45990,6 +45990,57 @@ window.details = {
             }
         ]
     },
+    2514: {//Urouge
+        captain: "Boosts ATK of Fighter characters by ?x and reduces damage received by ?%",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
+        specialName: "Karmic Punishment and Prayers",
+        sailor: "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
+        sailorNotes: "#{beneficial}",
+    },
+    2515: {//Urouge
+        captain: "Boosts ATK of Fighter characters by 3x and reduces damage received by 5%",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
+        specialName: "Karmic Punishment and Prayers",
+        sailor: {
+            "base": "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
+            "level1": "Makes [PSY] orbs beneficial for Fighter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        support: [
+            {
+                "Characters": "Fighter Characters",
+                "description": [
+                    "Level 1: Adds 6% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 8% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 10% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 12% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ],
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
@@ -46520,6 +46571,99 @@ window.details = {
         special: "Reduces crew's HP to 1, removes Poison duration completely, reduces Paralysis, Bind and Silence duration by 4 turns, recovers 7,000 HP at the end of the turn for 1 turn and changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs. If your Captain is a Free Spirit or Powerhouse character, reduces enemies' Threshold Damage Reduction duration by 5 turns.",
         specialName: "Flame Fence",
         sailor: "Reduces Silence duration on this character by 3 turns",
+    },
+    3351: {//Ivankov Neo
+        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs, changes own orb, including [BLOCK] orbs, into [QCK], makes [RCV] orbs beneficial for all characters for 1 turn and boosts ATK of Free Spirit characters by 1.75x for 1 turn.",
+        specialName: "Hell Wink [Neo]",
+        captain: "Boosts ATK of all characters by ?x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good"
+    },
+    3352: {//Ivankov Neo
+        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs, changes own orb, including [BLOCK] orbs, into [QCK], makes [RCV] orbs beneficial for all characters for 1 turn and boosts ATK of Free Spirit characters by 1.75x for 1 turn.",
+        specialName: "Hell Wink [Neo]",
+        captain: "Boosts ATK of all characters by 3.25x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good",
+    },
+    3353: {//Young Whitebeard Neo
+        captain: "Boosts ATK of all characters by ?x if HP is below 50% at the start of the turn",
+        special: [
+            {
+                "description": "Cuts the current HP of each enemy by 10% and reduces any damage received above 10,000 HP by 70% for 1 turn.",
+                "cooldown": [ 23, 11 ],
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 20% and reduces any damage received above 10,000 HP by 70% for 1 turn.",
+                "cooldown": [ 28, 16 ],
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 40% and reduces any damage received above 10,000 HP by 70% for 1 turn.",
+                "cooldown": [ 36, 24 ],
+            },
+        ],
+        specialNotes: "#{stages}",
+        specialName: "Earth Shattering Fist",
+    },
+    3354: {//Young Whitebeard Neo
+        captain: "Boosts ATK of all characters by 2.75x if HP is below 50% at the start of the turn",
+        special: [
+            {
+                "description": "Cuts the current HP of each enemy by 10% and reduces any damage received above 10,000 HP by 70% for 1 turn.",
+                "cooldown": [ 23, 11 ],
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 20% and reduces any damage received above 10,000 HP by 70% for 1 turn.",
+                "cooldown": [ 28, 16 ],
+            },
+            {
+                "description": "Cuts the current HP of each enemy by 40% and reduces any damage received above 10,000 HP by 70% for 1 turn.",
+                "cooldown": [ 36, 24 ],
+            },
+        ],
+        specialNotes: "#{stages}",
+        specialName: "Earth Shattering Fist",
+        sailor: {
+            "base": "None",
+            "level1": "When HP is below 50% at the start of the turn, boosts own base ATK by 150",
+            "level2": "If your Captain is a Fighter character, makes [DEX] orbs beneficial for Powerhouse characters",
+        },
+        /*limit: [
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire Sailor Ability 1: Cannot be Blown Away" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Sailor Ability 2: When HP is below ?% at the start of the turn, boosts own base ATK by 100" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Enrage" },
+        ],*/
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
