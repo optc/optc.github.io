@@ -7412,7 +7412,7 @@ window.specials = {
         affinity: function(p) { return window.specials[2521].turnedOn ? 1.5 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2521].turnedOn = p.captain.type == "DEX";
+            window.specials[2521].turnedOn = p.captain != null && p.captain.type == "DEX";
         },
     },
     2522: {
@@ -7820,56 +7820,56 @@ window.specials = {
         affinity: function(p) { return window.specials[5066].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5066].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5066].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5067:{
         affinity: function(p) { return window.specials[5067].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5067].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5067].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5068:{
         affinity: function(p) { return window.specials[5068].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5068].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5068].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5069:{
         affinity: function(p) { return window.specials[5069].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5069].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5069].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5070:{
         affinity: function(p) { return window.specials[5070].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5070].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5070].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5071:{
         affinity: function(p) { return window.specials[5071].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5071].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5071].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5072:{
         affinity: function(p) { return window.specials[5072].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5072].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5072].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
     5073:{
         affinity: function(p) { return window.specials[5073].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[5073].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+            window.specials[5073].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
 };
