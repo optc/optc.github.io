@@ -7392,6 +7392,33 @@ window.specials = {
             }
         },
     },
+    2514: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+        type: "class"
+    },
+    2515: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+        type: "class"
+    },
+    2519: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.5 : 1; },
+        type: "class"
+    },
+    2520: {
+        atk: function(p) { return (p.delayed > 0) ? 1.5 : 1; },
+        type: "condition",
+    },
+    2521:{
+        affinity: function(p) { return window.specials[2521].turnedOn ? 1.5 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2521].turnedOn = p.captain.type == "DEX";
+        },
+    },
+    2522: {
+        delay: function(p) { return 1; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -7788,5 +7815,61 @@ window.specials = {
     },
     5065: {
         orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5066:{
+        affinity: function(p) { return window.specials[5066].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5066].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5067:{
+        affinity: function(p) { return window.specials[5067].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5067].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5068:{
+        affinity: function(p) { return window.specials[5068].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5068].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5069:{
+        affinity: function(p) { return window.specials[5069].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5069].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5070:{
+        affinity: function(p) { return window.specials[5070].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5070].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5071:{
+        affinity: function(p) { return window.specials[5071].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5071].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5072:{
+        affinity: function(p) { return window.specials[5072].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5072].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
+    },
+    5073:{
+        affinity: function(p) { return window.specials[5073].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[5073].turnedOn = (p.captain.type == "QCK" || p.captain.type == "INT");
+        },
     },
 };

@@ -2382,6 +2382,15 @@ window.drops = {
             'All Difficulties': [ 2490, 2492, 2493, -2330, -2251, -1869, -2334, -2332, -2156, -2154, -2150, -2107, -1877, -1802, -1800, -1796, -1577, -1540, -2052 ]
         },
         
+        {
+            name: 'Dress Up for the Pirate Festival!',
+            dropID: 'event119',
+            thumb: 2519,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2519, 2520, 2521, 2522, 2523, -2148, -2338, -1959, -1989, -2013, -2078, -2515, -2152, -2080, -2048, -2340, -2247, -2187, -2342, -2230 ]
+        },
+        
     ],
 
             
@@ -3088,6 +3097,16 @@ window.drops = {
             Master: [ 2503 ],
             Expert: [ 2503 ],
             Ultimate: [ 2503 ],
+        },
+        
+        {
+            name: 'Clash!! Magellan & Hannyabal',
+            dropID: 'clash44',
+            thumb: 2517,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2516 ],
+            Expert: [ 2516 ]
         },
         
         {
