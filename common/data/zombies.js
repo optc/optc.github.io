@@ -749,6 +749,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    2529: { // Neptune
+        type: 'healer',
+        multiplier: 5
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
