@@ -2448,6 +2448,8 @@ window.flags = {
     3348: { rr: 1, rro: 1, global: 1 },
     3349: { rr: 1, rro: 1, global: 1 },
     3350: { rr: 1, rro: 1, global: 1 },
-    3350: { global: 1 },
-    3350: { global: 1 },
+    3351: { global: 1 },
+    3352: { global: 1 },
+    3353: { global: 1 },
+    3354: { global: 1 },
 };

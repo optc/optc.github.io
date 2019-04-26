@@ -35438,7 +35438,7 @@ window.details = {
         captain: "Boosts ATK of all characters by 1.5x and boosts EXP gained by 1.25x",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs duration by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Cerebral and Powerhouse characters for 3 turns",
-        sailor: "Boosts base ATK, HP and RCV of Cerebral characters by 75",
+        sailor: "Boosts base ATK, HP and RCV of Cerebral characters by 50",
         specialName: "Great Ocean Current of Resuscitation",
     },
     2123: {//Neptune
@@ -45842,8 +45842,8 @@ window.details = {
         ],
     },
     2509: {//TM Weevil
-        captain: "Boosts ATK of Slasher characters proportionally to the crew's current HP, by ?x at max and their HP by ?x.",
-        captainNotes: "#{captainProportional : higher : ? + 1 * (remaining HP) / (total HP)) : ? : 1}",
+        captain: "Boosts ATK of Slasher characters proportionally to the crew's current HP, by 1.5x at max.",
+        captainNotes: "#{captainProportional : higher : .5 + 1 * (remaining HP) / (total HP)) : 1.5 : 1}",//check this
         special: "Reduces ATK DOWN duration by 20 turns and adds 300x character's ATK as Additional Typeless Damage to own's attacks for 2 turns. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of all characters by 2x.",
         specialName: "I Absolutely Won't Forgive Him",
     },
@@ -45857,7 +45857,7 @@ window.details = {
             "level5": "Not Translated",
             "level6": "Boosts ATK of Slasher characters proportionally to the crew's current HP, by 3.25x at max and their HP by 1.35x.",
         },
-        captainNotes: "#{captainProportional : higher : 2.25 + 1 * (remaining HP) / (total HP)) : 3.25 : 1}",
+        captainNotes: "#{captainProportional : higher : 2.25 + 1 * (remaining HP) / (total HP)) : 3.25 : 1}",//check this
         special: "Reduces ATK DOWN duration by 20 turns and adds 300x character's ATK as Additional Typeless Damage to own's attacks for 2 turns. If enemies have All Debuff Protection or Delay Debuff Protection at the time the special was activated, boosts ATK of all characters by 2x.",
         specialName: "I Absolutely Won't Forgive Him",
         sailor: {
@@ -45865,67 +45865,67 @@ window.details = {
             "level1": "Boosts base HP of all characters by 50",
             "level2": "Boosts base ATK of all characters by 50",
         },
-        /*limit: [
+        limit: [
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 10" },
             { "description": "Boosts base ATK by 10" },
-            { "description": "Boosts base ATK by 10" },
-            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Acquire Potential 1: Critical Hit" },
             { "description": "Acquire new Captain Ability: " },
-            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
-            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP of all characters by 50" },
+            { "description": "Boosts base HP by 15" },
             { "description": "Boosts base HP by 20" },
             { "description": "Boosts base HP by 20" },
             { "description": "Acquire new Captain Ability: " },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Acquire new Captain Ability: " },
             { "description": "Reduce base Special Cooldown by 2 turns" },
-            { "description": "Boosts base RCV by 30" },
-            { "description": "Boosts base RCV by 30" },
-            { "description": "Boosts base RCV by 40" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 35" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Boosts base HP by 30" },
-            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Acquire new Captain Ability: " },
-            { "description": "Boosts base HP by 60" },
-            { "description": "Boosts base HP by 70" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV of Driven characters by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK of all characters by 50" },
             { "description": "Boosts base ATK by 35" },
-            { "description": "Boosts base ATK by 40" },
-            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base HP by 35" },
+            { "description": "Boosts base HP by 50" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Acquire new Captain Ability: " },
-            { "description": "Boosts base HP by 70" },
-            { "description": "Boosts base HP by 100" },
-            { "description": "Acquire new Captain Ability: Boosts ATK of Driven characters by 2.75x and recovers 500 HP at end of each turn. If you use \"Off White\" in this turn boosts ATK of Driven characters by 3.5x instead." },
-            { "description": "Acquire Potential 2: Cooldown Reduction" },
-        ],*/
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher characters proportionally to the crew's current HP, by 3.25x at max and their HP by 1.35x." },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 8 turns"
                 ]
             },
         ],
@@ -45933,10 +45933,10 @@ window.details = {
             {
                 "Characters": "Slasher Characters",
                 "description": [
-                    "Level 1: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
-                    "Level 2: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
-                    "Level 3: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
-                    "Level 4: Once per adventure, when you reach the final stage, adds ?x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 1: Once per adventure, when you reach the final stage, adds 20x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 2: Once per adventure, when you reach the final stage, adds 40x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 60x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 4: Once per adventure, when you reach the final stage, adds 80x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 5: Once per adventure, when you reach the final stage, adds 120x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn"
                 ]
             }
@@ -46213,6 +46213,91 @@ window.details = {
                     "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of Captain by ?x for 1 turn.",
                     "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of Captain by ?x for 1 turn.",
                     "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of Captain by 1.2x for 1 turn."
+                ]
+            }
+        ],
+    },
+    2528: {//Neptune
+        captain: "Boosts ATK of all characters by 1.5x and boosts EXP gained by 1.25x",
+        captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
+        special: "Changes own orb into [DEX], reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs duration by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Striker and Powerhouse characters for 3 turns",
+        sailor: "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
+        specialName: "Great Ocean Current of Resuscitation [EX]",
+    },
+    2529: {//Neptune
+        captain: "Boosts ATK of all characters by 2x, boosts EXP gained by 1.5x and recovers 5x character's RCV in HP at the end of each turn",
+        captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
+        special: "Changes own orb into [DEX], reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs duration by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Striker and Powerhouse characters for 3 turns",
+        specialName: "Great Ocean Current of Resuscitation [EX]",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
+            "level1": "When any other character uses a special, reduces own cooldown by 1 turn",
+        },
+        /*limit: [
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 1: When any other character uses a special, reduces own cooldown by 1 turn" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],*/
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Fukaboshi, Manboshi, Ryuboshi, Shirahoshi, and Jinbe",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds ?% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2530: {//Shirahoshi
+        captain: "Boosts ATK and RCV of [PSY] characters by 1.75x",
+        special: "Reduces Bind, Despair and Paralysis duration by 2 turns, reduces damage received by 70% for 1 turn",
+        specialName: "Great Dinner Buffet [EX]",
+        support: [
+            {
+                "Characters": "Neptune",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Burn duration by ? turns and changes ? orbs into Matching orbs.",
+                    "Level 2: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Burn duration by ? turns and changes ? orbs into Matching orbs.",
+                    "Level 3: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Burn duration by ? turns and changes ? orbs into Matching orbs.",
+                    "Level 4: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Burn duration by ? turns and changes ? orbs into Matching orbs.",
+                    "Level 5: Once per an adventure, when the supported character uses a Orb Converting or Orb Randomizing special, reduces Burn duration by 3 turns and changes [EMPTY], [BOMB], [G] and [TND] orbs into Matching orbs."
                 ]
             }
         ],

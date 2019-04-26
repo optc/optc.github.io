@@ -8937,11 +8937,11 @@ window.captains = {
         hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1.2 : 1; },
     },
     2509: {
-        atk: function(p) { return (p.unit.class.has("Slasher")) ? 1 + 1 * (p.percHP) / 100 : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher")) ? .5 + 1 * (p.percHP) / 100 : 1; },
     },
     2510: {
-        atk: function(p) { return (p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 1 + 2.25 * (p.percHP) / 100 : 1 : 1; },
-        hp: function(p) { return (p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 1.35 : 1 : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 1 + 2.25 * (p.percHP) / 100 : 1 + 1 * (p.percHP) / 100 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 1.35 : 1.2 : 1; },
     },
     2511: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; }
@@ -8985,6 +8985,16 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 2; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
         rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    2528: {
+        atk: function(p) { return 1.5; },
+    },
+    2529: {
+        atk: function(p) { return 2; },
+    },
+    2530: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
     3333: {
         hitAtk: function(p) {

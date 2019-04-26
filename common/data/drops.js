@@ -3317,8 +3317,16 @@ window.drops = {
             nakama: null,
             gamewith: 147896,
             slefty: 'coliseums',
-            Chaos: [ 2511, 2513 ],
-            Underground: [ 2511, 2513 ],
+            'All Difficulties': [ 2511, 2513 ],
+        },
+
+        {
+            name: 'Coliseum EX Vs. King Neptune',
+            thumb: 2529,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            'All Difficulties': [ 2528, 2530 ],
         },
         
     ],
