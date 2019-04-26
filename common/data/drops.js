@@ -2332,6 +2332,7 @@ window.drops = {
             name: 'Forces of Rage - Amande and Bobbin',
             dropID: 'event113',
             thumb: 2327,
+            global: true,
             nakama: 2232700,
             gamewith: 127786,
             'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
