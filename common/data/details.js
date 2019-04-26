@@ -35129,11 +35129,11 @@ window.details = {
         captain: "Boosts ATK and RCV of [PSY] characters by 1.2x and cuts the current HP of each enemy by 10% at the end of each turn",
         special: [
             {
-                "description": "Changes own [TND] and [RCV] orbs into [PSY] orbs, changes [BLOCK] orbs into [EMPTY] orbs and changes all other orbs, including [BLOCK] orbs, on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
+                "description": "Changes own [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs, including [BLOCK] orbs, on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 3 turns",
                 "cooldown": [ 18, 12 ],
             },
             {
-                "description": "Changes own [TND] and [RCV] orbs into [PSY] orbs, changes [BLOCK] orbs into [EMPTY] orbs and changes all other orbs, including [BLOCK] orbs, on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
+                "description": "Changes own [TND] and [RCV] orbs into [PSY] orbs, changes all other orbs, including [BLOCK] orbs, on all characters into Brûlée's orb. Adds 30x character's ATK as Additional Typeless Damage for 5 turns",
                 "cooldown": [ 22, 16 ],
             },
         ],
@@ -45813,7 +45813,7 @@ window.details = {
     },
     2508: {//Marco
         captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x and their HP by 1.2x. If you use \"Phoenix Claw\" on this Marco boosts ATK of [PSY] and [INT] characters by 3.5x instead for 3 turns.",
-        special: "Deals 50x character's ATK in Typeless damage to one enemy, reduces Despair duration by 3 turns, reduces enemies' Threshold Damage Reduction duration by 4 turns. If this character is your Captain or Friend/Guest Captain, changes all orbs on all characters into Matching orbs and if you are on a Treasure Map, boosts ATK of [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
+        special: "Deals 50x character's ATK in Typeless damage to one enemy, reduces Despair duration by 3 turns, reduces enemies' Threshold Damage Reduction duration by 4 turns. If this character is your Captain or Friend/Guest Captain, changes [STR], [DEX], [QCK], [PSY] and [INT] orbs on all characters into Matching orbs and if you are on a Treasure Map, boosts ATK of [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
         specialName: "Phoenix Claw",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         limit: [
