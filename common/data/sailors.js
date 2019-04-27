@@ -769,6 +769,16 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 50 : 0; },
     },
+    2528: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    2529: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
@@ -1002,5 +1012,45 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5066: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
+    },
+    5067: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
+    },
+    5068: {
+        atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+    },
+    5069: {
+        atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+    },
+    5070: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
+    },
+    5071: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
+    },
+    5072: {
+        atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+    },
+    5073: {
+        atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
     },
 };

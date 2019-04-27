@@ -4,6 +4,7 @@ window.drops = {
 
         {
             name: 'Fushia Village',
+            dropID: 'story1',
             thumb: 28,
             global: true,
             nakama: 1002800,
@@ -16,6 +17,7 @@ window.drops = {
 
         {
             name: 'Alvida\'s Hideout',
+            dropID: 'story2',
             thumb: 29,
             global: true,
             nakama: 1002900,
@@ -29,6 +31,7 @@ window.drops = {
 
         {
             name: 'Shells Town',
+            dropID: 'story3',
             thumb: 35,
             global: true,
             nakama: 1003500,
@@ -48,6 +51,7 @@ window.drops = {
 
         {
             name: 'Orange Town',
+            dropID: 'story4',
             thumb: 38,
             global: true,
             nakama: 1003800,
@@ -70,6 +74,7 @@ window.drops = {
 
         {
             name: 'Syrup Village',
+            dropID: 'story5',
             thumb: 45,
             global: true,
             nakama: 1004500,
@@ -93,6 +98,7 @@ window.drops = {
 
         {
             name: 'Baratie',
+            dropID: 'story6',
             thumb: 57,
             global: true,
             nakama: 1005700,
@@ -118,6 +124,7 @@ window.drops = {
 
         {
             name: 'Arlong Park',
+            dropID: 'story7',
             thumb: 65,
             global: true,
             nakama: 1006500,
@@ -143,6 +150,7 @@ window.drops = {
         
         {
             name: 'Logue Town',
+            dropID: 'story8',
             thumb: 69,
             global: true,
             nakama: 1006900,
@@ -164,6 +172,7 @@ window.drops = {
 
         {
             name: 'Twin Cape',
+            dropID: 'story9',
             thumb: 213,
             global: true,
             nakama: 1021300,
@@ -183,6 +192,7 @@ window.drops = {
 
         {
             name: 'Whiskey Peak',
+            dropID: 'story10',
             thumb: 201,
             global: true,
             nakama: 1020100,
@@ -207,6 +217,7 @@ window.drops = {
 
         {
             name: 'Little Garden',
+            dropID: 'story11',
             thumb: 292,
             global: true,
             nakama: 1029200,
@@ -231,6 +242,7 @@ window.drops = {
 
         {
             name: 'Drum Island',
+            dropID: 'story12',
             thumb: 326,
             global: true,
             nakama: 1032600,
@@ -256,6 +268,7 @@ window.drops = {
 
         {
             name: 'Nanohana - Rainbase',
+            dropID: 'story13',
             shortName: 'Alabasta 1',
             thumb: 383,
             global: true,
@@ -281,6 +294,7 @@ window.drops = {
 
         {
             name: 'Alubarna',
+            dropID: 'story14',
             shortName: 'Alabasta 2',
             thumb: 384,
             global: true,
@@ -306,6 +320,7 @@ window.drops = {
 
         {
             name: 'Jaya',
+            dropID: 'story15',
             shortName: 'Jaya',
             thumb: 430,
             global: true,
@@ -331,6 +346,7 @@ window.drops = {
 
         {
             name: 'Angel Island - Upper Yard',
+            dropID: 'story16',
             shortName: 'Skypea 1',
             thumb: 467,
             global: true,
@@ -378,6 +394,7 @@ window.drops = {
 
         {
             name: 'Long Ring Long Land',
+            dropID: 'story17',
             thumb: 568,
             global: true,
             nakama: 1056800,
@@ -398,6 +415,7 @@ window.drops = {
 
         {
             name: 'Water Seven',
+            dropID: 'story18',
             thumb: 632,
             global: true,
             nakama: 1063200,
@@ -422,6 +440,7 @@ window.drops = {
 
         {
             name: 'Enies Lobby Front Gate',
+            dropID: 'story19',
             shortName: 'Enies Lobby 1',
             thumb: 706,
             global: true,
@@ -443,6 +462,7 @@ window.drops = {
 
         {
             name: 'Tower of Law - Gates of Justice',
+            dropID: 'story20',
             shortName: 'Enies Lobby 2',
             thumb: 737,
             global: true,
@@ -468,6 +488,7 @@ window.drops = {
 
         {
             name: 'Mouth Gate - Hogback\'s Mansion',
+            dropID: 'story21',
             shortName: 'Thriller Bark 1',
             thumb: 816,
             global: true,
@@ -489,6 +510,7 @@ window.drops = {
 
         {
             name: 'Moria\'s Mast Mansion',
+            dropID: 'story22',
             shortName: 'Thriller Bark 2',
             thumb: 894,
             global: true,
@@ -512,6 +534,7 @@ window.drops = {
         
         {
             name: 'Sabaody Archipelago',
+            dropID: 'story23',
             shortName: 'Sabaody Archipelago',
             thumb: 974,
             global: true,
@@ -536,6 +559,7 @@ window.drops = {
         
         {
             name: 'Amazon Lily',
+            dropID: 'story24',
             shortName: 'Amazon Lily',
             thumb: 1056,
             global: true,
@@ -555,6 +579,7 @@ window.drops = {
         
         {
             name: 'Impel Down',
+            dropID: 'story25',
             shortName: 'Impel Down',
             thumb: 1159,
             global: true,
@@ -581,6 +606,7 @@ window.drops = {
         
         {
             name: 'Marineford Bay',
+            dropID: 'story26',
             shortName: 'Marineford 1',
             thumb: 1228,
             global: true,
@@ -603,6 +629,7 @@ window.drops = {
         
         {
             name: 'The Bay - Oris Plaza',
+            dropID: 'story27',
             shortName: 'Marineford 2',
             thumb: 1283,
             global: true,
@@ -628,6 +655,7 @@ window.drops = {
         
         {
             name: '3D2Y',
+            dropID: 'story28',
             shortName: '3D2Y',
             thumb: 1353,
             global: true,
@@ -652,6 +680,7 @@ window.drops = {
         
         {
             name: 'Sabaody Archipelago Redux',
+            dropID: 'story29',
             shortName: 'Straw Hat Return',
             global: true,
             thumb: 1393,
@@ -671,6 +700,7 @@ window.drops = {
         
         {
             name: 'Deep-Sea Aphotic Zone to Ryugu Palace',
+            dropID: 'story30',
             shortName: 'Fishman Island 1',
             thumb: 1506,
             global: true,
@@ -695,6 +725,7 @@ window.drops = {
         
         {
             name: 'King Neptune\'s Execution Site - Noah\'s Ark',
+            dropID: 'story31',
             shortName: 'Fishman Island 2',
             thumb: 1562,
             global: true,
@@ -719,6 +750,7 @@ window.drops = {
         
         {
             name: 'Punk Hazard - Burning Lands to Laboratory',
+            dropID: 'story32',
             shortName: 'Punk Hazard 1',
             thumb: 1637,
             global: true,
@@ -744,6 +776,7 @@ window.drops = {
         
         {
             name: 'Punk Hazard - Ice Lands to First Floor Room R',
+            dropID: 'story33',
             shortName: 'Punk Hazard 2',
             thumb: 1716,
             global: true,
@@ -768,6 +801,7 @@ window.drops = {
         
         {
             name: 'Dressrosa - Port Town Acacia to Coliseum',
+            dropID: 'story34',
             shortName: 'Dressrosa 1',
             thumb: 1782,
             global: true,
@@ -790,6 +824,7 @@ window.drops = {
         
         {
             name: 'Dressrosa - Coliseum Lodging to Executive Tower',
+            dropID: 'story35',
             shortName: 'Dressrosa 2',
             thumb: 2004,
             global: true,
@@ -812,6 +847,7 @@ window.drops = {
         
         {
             name: 'Dressrosa - Former King\'s Land to Royal Palace Top Floor',
+            dropID: 'story36',
             shortName: 'Dressrosa 3',
             thumb: 1784,
             global: true,
@@ -834,6 +870,7 @@ window.drops = {
         
         {
             name: 'Dressrosa - The Royal Palace\'s Top Floor to Central Town',
+            dropID: 'story37',
             shortName: 'Dressrosa 4',
             thumb: 2126,
             global: true,
@@ -859,6 +896,7 @@ window.drops = {
         
         {
             name: 'Mokomo Dukedom',
+            dropID: 'story38',
             shortName: 'Zou',
             thumb: 2231,
             global: true,
@@ -880,6 +918,7 @@ window.drops = {
         
         {
             name: 'Chocolat Town to The Seducing Woods',
+            dropID: 'story39',
             shortName: 'Whole Cake 1',
             thumb: 2321,
             nakama: 1232100,
@@ -900,6 +939,7 @@ window.drops = {
         
         /*{
             name: 'Outside of Town to Bege\'s Hideout',
+            dropID: 'story40',
             shortName: 'Whole Cake 2',
             thumb: null,
             nakama: null,
@@ -912,6 +952,7 @@ window.drops = {
 
         {
             name: 'Turtle Haven',
+            dropID: 'turtle',
             day: 0,
             thumb: 193,
             global: true,
@@ -921,6 +962,7 @@ window.drops = {
         },
         {
             name: 'Princess Turtle\'s Dragon Palace',
+            dropID: 'himeTurtle',
             thumb: 595,
             global: true,
             nakama: 3059500,
@@ -929,6 +971,7 @@ window.drops = {
 
         {
             name: 'Sea Pony Paradise',
+            dropID: 'seahorse',
             day: 1,
             thumb: 118,
             global: true,
@@ -938,6 +981,7 @@ window.drops = {
 
         {
             name: 'Penguin Beach',
+            dropID: 'rpenguin',
             day: 2,
             thumb: 83,
             global: true,
@@ -947,6 +991,7 @@ window.drops = {
 
         {
             name: 'Penguin Long Beach',
+            dropID: 'ppenguin',
             day: 2,
             thumb: 266,
             global: true,
@@ -957,6 +1002,7 @@ window.drops = {
 
         {
             name: 'Dragon Sanctuary',
+            dropID: 'dragon',
             day: 3,
             thumb: 267,
             global: true,
@@ -966,6 +1012,7 @@ window.drops = {
 
         {
             name: 'Scissor Cavern',
+            dropID: 'crab',
             day: 4,
             thumb: 95,
             nakama: 3009500,
@@ -974,6 +1021,7 @@ window.drops = {
 
         {
             name: 'Scissor Cavern, Entrance',
+            dropID: 'lobster1',
             day: 4,
             thumb: 304,
             global: true,
@@ -984,6 +1032,7 @@ window.drops = {
         
         {
             name: 'Scissor Cavern, Innermost Grotto',
+            dropID: 'lobster2',
             day: 4,
             thumb: 1180,
             global: true,
@@ -994,6 +1043,7 @@ window.drops = {
 
         {
             name: 'Jeweled Porc Sanctuary',
+            dropID: 'pig',
             thumb: 347,
             global: true,
             nakama: 3034700,
@@ -1005,6 +1055,7 @@ window.drops = {
 
         {
             name: 'Buggy\'s Counterattack!!',
+            dropID: 'event1',
             thumb: 39,
             global: true,
             nakama: 2003900,
@@ -1016,6 +1067,7 @@ window.drops = {
 
         {
             name: 'Alvida\'s Romance',
+            dropID: 'event2',
             thumb: 30,
             global: true,
             nakama: 2003000,
@@ -1026,6 +1078,7 @@ window.drops = {
 
         {
             name: 'Kuro\'s Master Plan',
+            dropID: 'event3',
             thumb: 46,
             global: true,
             nakama: 2004600,
@@ -1037,6 +1090,7 @@ window.drops = {
 
         {
             name: 'Arlong: Empire Rising',
+            dropID: 'event4',
             thumb: 66,
             global: true,
             nakama: 2006600,
@@ -1048,6 +1102,7 @@ window.drops = {
 
         {
             name: 'Krieg\'s Assault!',
+            dropID: 'event5',
             thumb: 58,
             global: true,
             nakama: 2005800,
@@ -1059,6 +1114,7 @@ window.drops = {
 
         {
             name: 'Escaped! Morgan',
+            dropID: 'event6',
             thumb: 228,
             global: true,
             nakama: 2022800,
@@ -1070,6 +1126,7 @@ window.drops = {
 
         {
             name: 'Hina\'s Resort Getaway',
+            dropID: 'event7',
             thumb: 232,
             global: true,
             nakama: 2023200,
@@ -1083,6 +1140,7 @@ window.drops = {
 
         {
             name: 'Cobymeppo\'s Proving Ground!',
+            dropID: 'event8',
             thumb: 263,
             global: true,
             nakama: 2026300,
@@ -1096,6 +1154,7 @@ window.drops = {
 
         {
             name: 'Smoker\'s Great Pursuit',
+            dropID: 'event9',
             thumb: 268,
             global: true,
             nakama: 2026800,
@@ -1108,6 +1167,7 @@ window.drops = {
 
         {
             name: 'Tsuru\'s Morning Stroll',
+            dropID: 'event10',
             thumb: 297,
             global: true,
             nakama: 2029700,
@@ -1119,6 +1179,7 @@ window.drops = {
 
         {
             name: 'Kalifa\'s Secret Assignment',
+            dropID: 'event11',
             thumb: 318,
             global: true,
             nakama: 2031800,
@@ -1129,6 +1190,7 @@ window.drops = {
 
         {
             name: 'Lucci\'s Artisan Spirit',
+            dropID: 'event12',
             thumb: 322,
             global: true,
             nakama: 2032200,
@@ -1139,6 +1201,7 @@ window.drops = {
 
         {
             name: 'Franky - Pervert\'s Aesthetic!',
+            dropID: 'event13',
             thumb: 337,
             global: true,
             nakama: 2033700,
@@ -1152,6 +1215,7 @@ window.drops = {
 
         {
             name: 'Deep Sea Kraken',
+            dropID: 'event14',
             thumb: 341,
             global: true,
             nakama: 2034100,
@@ -1164,6 +1228,7 @@ window.drops = {
 
         {
             name: 'Dr. Hogback\'s Lab of the Dead',
+            dropID: 'event15',
             thumb: 386,
             global: true,
             nakama: 2038600,
@@ -1176,6 +1241,7 @@ window.drops = {
 
         {
             name: 'Perona\'s Wonder Garden',
+            dropID: 'event16',
             thumb: 392,
             global: true,
             nakama: 2039200,
@@ -1188,6 +1254,7 @@ window.drops = {
 
         {
             name: 'Perv-salom\'s Very Manly Adventure',
+            dropID: 'event17',
             thumb: 405,
             global: true,
             nakama: 2040500,
@@ -1198,6 +1265,7 @@ window.drops = {
 
         {
             name: 'Rising Sun, Rising Fortunes',
+            dropID: 'event18',
             thumb: 420,
             global: true,
             nakama: 2042000,
@@ -1207,6 +1275,7 @@ window.drops = {
 
         {
             name: 'Adrift!? Humming Brook',
+            dropID: 'event19',
             thumb: 424,
             global: true,
             nakama: 2042400,
@@ -1219,6 +1288,7 @@ window.drops = {
 
         {
             name: 'Candy the Maiden-Hearted',
+            dropID: 'event20',
             thumb: 436,
             global: true,
             nakama: 2043600,
@@ -1231,11 +1301,12 @@ window.drops = {
 
         {
             name: 'Supersonic Duck Squadron!',
+            dropID: 'event21',
             thumb: 445,
             global: true,
             nakama: 2044500,
             gamewith: 7566,
-            condition: 'Higher Chance of Food orbs',
+            condition: 'Higher Chance of [RCV] orbs',
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['450,000 Damage','1x Yellow Elder'],['1,250,000 Damage','1x RCV Cotton Candy'],['3,000,000 Damage','3x Rainbow Gems']],
             'All Difficulties': [ 290, 293, 294, 295, 334, 379, 381, 382, 429, 441, 442, 443, 444, -378, -368, -363, -251, -73, -15 ]
@@ -1243,6 +1314,7 @@ window.drops = {
 
         {
             name: 'Prison Break! Baroque Works',
+            dropID: 'event22',
             thumb: 462,
             global: true,
             nakama: 2046200,
@@ -1255,6 +1327,7 @@ window.drops = {
 
         {
             name: 'Crocodile: Life on the Inside',
+            dropID: 'event23',
             thumb: 510,
             global: true,
             nakama: 2051000,
@@ -1267,6 +1340,7 @@ window.drops = {
 
         {
             name: 'Domino\'s Special Security',
+            dropID: 'event24',
             thumb: 538,
             global: true,
             nakama: 2053800,
@@ -1279,6 +1353,7 @@ window.drops = {
 
         {
             name: 'Chief Jailer Sadie',
+            dropID: 'event25',
             thumb: 550,
             global: true,
             nakama: 2055000,
@@ -1291,6 +1366,7 @@ window.drops = {
 
         {
             name: 'Brother Soul! Afro Luffy!',
+            dropID: 'event26',
             thumb: 571,
             global: true,
             nakama: 2057100,
@@ -1302,6 +1378,7 @@ window.drops = {
 
         {
             name: 'Shandia - Dreams of a Homeland!',
+            dropID: 'event27',
             thumb: 583,
             global: true,
             nakama: 2058300,
@@ -1314,6 +1391,7 @@ window.drops = {
 
         {
             name: 'Apprentices! Shanks and Buggy!',
+            dropID: 'event28',
             thumb: 599,
             global: true,
             nakama: 2059900,
@@ -1324,6 +1402,7 @@ window.drops = {
 
         {
             name: 'Raging Cook! Red Leg Zeff',
+            dropID: 'event29',
             thumb: 607,
             global: true,
             nakama: 2060700,
@@ -1334,6 +1413,7 @@ window.drops = {
 
         {
             name: 'Camie and Hachi\'s Takoyaki Stand!',
+            dropID: 'event30',
             thumb: 635,
             global: true,
             nakama: 2063500,
@@ -1346,6 +1426,7 @@ window.drops = {
 
         {
             name: 'Shark Attack! Arlong Pirates',
+            dropID: 'event31',
             thumb: 656,
             global: true,
             nakama: 2065600,
@@ -1356,6 +1437,7 @@ window.drops = {
 
         {
             name: 'Fight! Sand-Sand Band!!',
+            dropID: 'event32',
             thumb: 664,
             global: true,
             nakama: 2066400,
@@ -1367,6 +1449,7 @@ window.drops = {
 
         {
             name: 'Calgara & Noland!',
+            dropID: 'event33',
             thumb: 688,
             global: true,
             nakama: 2068800,
@@ -1378,6 +1461,7 @@ window.drops = {
 
         {
             name: 'Sky Night Ganfor',
+            dropID: 'event34',
             thumb: 713,
             global: true,
             nakama: 2071300,
@@ -1391,6 +1475,7 @@ window.drops = {
 
         {
             name: 'T-Bone\'s Absolute Justice',
+            dropID: 'event35',
             thumb: 724,
             global: true,
             nakama: 2072400,
@@ -1402,6 +1487,7 @@ window.drops = {
 
         {
             name: 'Wanze\'s Ramen Kung Fu!!',
+            dropID: 'event36',
             thumb: 743,
             global: true,
             nakama: 2074300,
@@ -1413,6 +1499,7 @@ window.drops = {
 
         {
             name: 'Twilight Party! DEAD or TREAT!!',
+            dropID: 'event37',
             thumb: 761,
             global: true,
             nakama: 2076100,
@@ -1423,6 +1510,7 @@ window.drops = {
 
         {
             name: 'Midnight Party! DEAD or TREAT!!',
+            dropID: 'event38',
             thumb: 766,
             global: true,
             nakama: 2076600,
@@ -1433,6 +1521,7 @@ window.drops = {
 
         {
             name: 'Breed\'s Sea Animal Circus!',
+            dropID: 'event39',
             thumb: 797,
             global: true,
             nakama: 2079700,
@@ -1446,6 +1535,7 @@ window.drops = {
 
         {
             name: 'Operation: Proposal!',
+            dropID: 'event40',
             thumb: 808,
             global: true,
             nakama: 2080800,
@@ -1457,6 +1547,7 @@ window.drops = {
 
         {
             name:'Tom\'s Workers',
+            dropID: 'event41',
             thumb: 848,
             global: true,
             nakama: 2084800,
@@ -1470,6 +1561,7 @@ window.drops = {
 
         {
             name: 'Wapol\'s Revenge',
+            dropID: 'event42',
             thumb: 852,
             global: true,
             nakama: 2085200,
@@ -1483,6 +1575,7 @@ window.drops = {
 
         {
             name: 'Lightning Speed! Strawhat Crew\'s Surprise Visit',
+            dropID: 'event43',
             thumb: 866,
             global: true,
             nakama: 2086600,
@@ -1495,6 +1588,7 @@ window.drops = {
 
         {
             name: 'Riverside Banquet! Enter the Crazy Ones!',
+            dropID: 'event44',
             thumb: 885,
             global: true,
             nakama: 2088500,
@@ -1505,6 +1599,7 @@ window.drops = {
 
         {
             name: 'Mountaintop Banquet! Enter the Generals!',
+            dropID: 'event45',
             thumb: 897,
             global: true,
             nakama: 2089700,
@@ -1516,6 +1611,7 @@ window.drops = {
 
         {
             name: 'The Secret Garden! Men are Forbidden!?',
+            dropID: 'event46',
             thumb: 918,
             global: true,
             nakama: 2091800,
@@ -1527,6 +1623,7 @@ window.drops = {
         
         {
             name: 'Hannyabal\'s Great Ambition',
+            dropID: 'event47',
             thumb: 929,
             global: true,
             nakama: 2092900,
@@ -1537,6 +1634,7 @@ window.drops = {
         
         {
             name: 'Encounter! Whitebeard Pirates',
+            dropID: 'event48',
             thumb: 946,
             global: true,
             nakama: 2094600,
@@ -1548,6 +1646,7 @@ window.drops = {
         
         {
             name: 'Clash! Whitebeard Pirates',
+            dropID: 'event49',
             thumb: 979,
             global: true,
             nakama: 2097900,
@@ -1561,6 +1660,7 @@ window.drops = {
         
         {
             name: 'Let\'s Find Our Captain! Heart Pirates!',
+            dropID: 'event50',
             thumb: 1003,
             global: true,
             nakama: 2100300,
@@ -1572,6 +1672,7 @@ window.drops = {
         
         {
             name: 'Butler and Strange Animal Island',
+            dropID: 'event51',
             thumb: 1011,
             global: true,
             nakama: 2101100,
@@ -1582,6 +1683,7 @@ window.drops = {
         
         {
             name: 'The Queen of Kamabakka Queendom!',
+            dropID: 'event52',
             thumb: 1037,
             global: true,
             nakama: 2103700,
@@ -1592,6 +1694,7 @@ window.drops = {
         
         {
             name: 'Archaeologist Nico Olvia',
+            dropID: 'event53',
             thumb: 1049,
             global: true,
             nakama: 2104900,
@@ -1602,6 +1705,7 @@ window.drops = {
         
         {
             name: 'Dead End Begins! Raging Blast!',
+            dropID: 'event54',
             thumb: 1072,
             global: true,
             nakama: 2107200,
@@ -1613,6 +1717,7 @@ window.drops = {
         
         {
             name: 'Golden Lion Pirates\' Attack!',
+            dropID: 'event55',
             thumb: 1095,
             global: true,
             nakama: 2109500,
@@ -1624,6 +1729,7 @@ window.drops = {
         
         {
             name: 'Robin and Nami\'s Secret Undercover Investigation',
+            dropID: 'event56',
             thumb: 1112,
             global: true,
             nakama: 2111200,
@@ -1634,6 +1740,7 @@ window.drops = {
         
         {
             name: 'Behind the Scenes Intelligency Agency: CP9',
+            dropID: 'event57',
             thumb: 1137,
             global: true,
             nakama: 2113700,
@@ -1644,6 +1751,7 @@ window.drops = {
         
         {
             name: 'Welcome To The Gran Tesoro!',
+            dropID: 'event58',
             thumb: 1167,
             global: true,
             nakama: 2116700,
@@ -1653,6 +1761,7 @@ window.drops = {
         
         {
             name: 'Rumbar Pirates!',
+            dropID: 'event59',
             thumb: 1203,
             global: true,
             nakama: 2120300,
@@ -1663,6 +1772,7 @@ window.drops = {
         
         {
             name: 'World Pirates!',
+            dropID: 'event60',
             thumb: 1215,
             global: true,
             nakama: 2121500,
@@ -1673,6 +1783,7 @@ window.drops = {
         
         {
             name: 'Revealing the Truth!',
+            dropID: 'event61',
             thumb: 1242,
             global: true,
             nakama: 2124200,
@@ -1683,6 +1794,7 @@ window.drops = {
         
         {
             name: 'Gather! Whitebeard Alliance',
+            dropID: 'event62',
             thumb: 1254,
             global: true,
             nakama: 2125400,
@@ -1693,6 +1805,7 @@ window.drops = {
         
         {
             name: 'Young Donquixote Pirates - Baby 5 And Buffalo',
+            dropID: 'event63',
             thumb: 1287,
             global: true,
             nakama: 2128700,
@@ -1703,6 +1816,7 @@ window.drops = {
         
         {
             name: 'Jailbreak Battle! Mr. 3 and Buggy',
+            dropID: 'event64',
             thumb: 1304,
             global: true,
             nakama: 2130400,
@@ -1713,6 +1827,7 @@ window.drops = {
         
         {
             name: 'Tontatta Tribe: Catch the Big Person!',
+            dropID: 'event65',
             thumb: 1328,
             global: true,
             nakama: 2132800,
@@ -1723,6 +1838,7 @@ window.drops = {
         
         {
             name: 'Tontatta Tribe: Find the Beloved Prince?!',
+            dropID: 'event66',
             thumb: 1332,
             global: true,
             nakama: 2133200,
@@ -1733,6 +1849,7 @@ window.drops = {
         
         {
             name: 'Gather the Candy!',
+            dropID: 'event67',
             thumb: 1357,
             global: true,
             nakama: 2135700,
@@ -1742,6 +1859,7 @@ window.drops = {
         
         {
             name: 'Fight for your Happiness!',
+            dropID: 'event68',
             thumb: 1384,
             global: true,
             nakama: 2138400,
@@ -1752,6 +1870,7 @@ window.drops = {
         
         {
             name: 'Shambles! Tashigi and Smoker?!?',
+            dropID: 'event69',
             thumb: 1397,
             global: true,
             nakama: 2139700,
@@ -1762,6 +1881,7 @@ window.drops = {
         
         {
             name: 'Full Defense! Buddha Sengoku!',
+            dropID: 'event70',
             thumb: 1416,
             global: true,
             nakama: 2141600,
@@ -1772,6 +1892,7 @@ window.drops = {
         
         {
             name: 'Chinjao Family!',
+            dropID: 'event71',
             thumb: 1426,
             global: true,
             nakama: 2142600,
@@ -1782,6 +1903,7 @@ window.drops = {
         
         {
             name: 'Fugitive of Love and Passion!!',
+            dropID: 'event72',
             thumb: 1450,
             global: true,
             nakama: 2145000,
@@ -1792,6 +1914,7 @@ window.drops = {
         
         {
             name: 'Gatekeeper of the New World!',
+            dropID: 'event73',
             thumb: 1469,
             global: true,
             nakama: 2146900,
@@ -1802,6 +1925,7 @@ window.drops = {
         
         {
             name: 'Departure! Whitebeard Pirates',
+            dropID: 'event74',
             thumb: 1509,
             global: true,
             nakama: 2150900,
@@ -1812,6 +1936,7 @@ window.drops = {
         
         {
             name: 'Bandits! Dadan Family!',
+            dropID: 'event75',
             thumb: 1520,
             global: true,
             nakama: 2152000,
@@ -1821,6 +1946,7 @@ window.drops = {
         
         {
             name: 'Encourage the Soul!',
+            dropID: 'event76',
             thumb: 1547,
             global: true,
             nakama: 2154700,
@@ -1831,6 +1957,7 @@ window.drops = {
         
         {
             name: 'Fight for your Friends!',
+            dropID: 'event77',
             thumb: 1564,
             global: true,
             nakama: 2156400,
@@ -1841,6 +1968,7 @@ window.drops = {
         
         {
             name: 'The Mysterious Warlord!',
+            dropID: 'event78',
             thumb: 1581,
             global: true,
             nakama: 2158100,
@@ -1850,6 +1978,7 @@ window.drops = {
         
         {
             name: 'Targeted Mermaid Princess!',
+            dropID: 'event79',
             thumb: 1597,
             global: true,
             nakama: 2159700,
@@ -1860,6 +1989,7 @@ window.drops = {
         
         {
             name: 'The Dark Path of the Blackbeard Pirates!',
+            dropID: 'event80',
             thumb: 1606,
             global: true,
             nakama: 2160600,
@@ -1869,6 +1999,7 @@ window.drops = {
         
         {
             name: 'The Time of Revenge has Come! New Fishman Pirates!',
+            dropID: 'event81',
             thumb: 1624,
             global: true,
             nakama: 2162400,
@@ -1878,6 +2009,7 @@ window.drops = {
         
         {
             name: 'Seeking The Best Art! Giolla and Brook!',
+            dropID: 'event82',
             thumb: 1649,
             global: true,
             nakama: 2164900,
@@ -1888,6 +2020,7 @@ window.drops = {
         
         {
             name: 'Dead-On Prophecy?! Madam Sharley',
+            dropID: 'event83',
             thumb: 1670,
             global: true,
             nakama: 2167000,
@@ -1898,6 +2031,7 @@ window.drops = {
         
         {
             name: 'Brutal Fiend! Eustass Kid',
+            dropID: 'event84',
             thumb: 1690,
             global: true,
             nakama: 2169000,
@@ -1908,6 +2042,7 @@ window.drops = {
         
         {
             name: 'Royal Neptune Family!',
+            dropID: 'event85',
             thumb: 1723,
             global: true,
             nakama: 2172300,
@@ -1918,6 +2053,7 @@ window.drops = {
         
         {
             name: 'Underground Trade Port! Escape!',
+            dropID: 'event86',
             thumb: 1735,
             global: true,
             nakama: 2173500,
@@ -1928,6 +2064,7 @@ window.drops = {
         
         {
             name: 'Battle Royale!',
+            dropID: 'event87',
             thumb: 1766,
             global: true,
             nakama: 2176600,
@@ -1938,6 +2075,7 @@ window.drops = {
         
         {
             name: 'Wano Samurai!',
+            dropID: 'event88',
             thumb: 1774,
             global: true,
             nakama: 2177400,
@@ -1948,6 +2086,7 @@ window.drops = {
         
         {
             name: 'Zou Royal Guard!',
+            dropID: 'event89',
             thumb: 1812,
             global: true,
             nakama: 2181200,
@@ -1958,6 +2097,7 @@ window.drops = {
         
         {
             name: 'Crisis in the 800 Year Old Kingdom!',
+            dropID: 'event90',
             thumb: 1818,
             global: true,
             nakama: 2181800,
@@ -1967,6 +2107,7 @@ window.drops = {
         
         {
             name: 'Caribou Pirates!',
+            dropID: 'event91',
             thumb: 1842,
             global: true,
             nakama: 2184200,
@@ -1977,6 +2118,7 @@ window.drops = {
         
         {
             name: 'Supernova! Apoo and Drake!',
+            dropID: 'event92',
             thumb: 1855,
             global: true,
             nakama: 2185500,
@@ -1986,6 +2128,7 @@ window.drops = {
         
         {
             name: 'Oh, Impermanence! Hawkins and Urouge!',
+            dropID: 'event93',
             thumb: 1867,
             global: true,
             nakama: 2186700,
@@ -1995,6 +2138,7 @@ window.drops = {
         
         {
             name: 'Perona\'s Peculiar Living Situation',
+            dropID: 'event94',
             thumb: 1891,
             global: true,
             nakama: 2189100,
@@ -2005,6 +2149,7 @@ window.drops = {
         
         {
             name: 'Last Wish for Sanji!',
+            dropID: 'event95',
             thumb: 1918,
             global: true,
             nakama: 2191800,
@@ -2014,6 +2159,7 @@ window.drops = {
         
         {
             name: 'Branded in Shackles!',
+            dropID: 'event96',
             thumb: 1933,
             global: true,
             nakama: 2193300,
@@ -2024,6 +2170,7 @@ window.drops = {
         
         {
             name: 'I\'m Now Your Ideal Type! I Think',
+            dropID: 'event97',
             thumb: 1947,
             global: true,
             nakama: 2194700,
@@ -2033,6 +2180,7 @@ window.drops = {
         
         {
             name: 'The Beast\'s Return',
+            dropID: 'event98',
             thumb: 1965,
             global: true,
             nakama: 2196500,
@@ -2042,6 +2190,7 @@ window.drops = {
         
         {
             name: 'Volatile Meal! Bonney and Bege!',
+            dropID: 'event99',
             thumb: 1982,
             global: true,
             nakama: 2198200,
@@ -2051,6 +2200,7 @@ window.drops = {
         
         {
             name: 'Whitebeard Pirates Commanders! Marco and Vista!',
+            dropID: 'event100',
             thumb: 1997,
             global: true,
             nakama: 2199700,
@@ -2060,6 +2210,7 @@ window.drops = {
         
         {
             name: 'Commotion at Makino\'s Tavern?!',
+            dropID: 'event101',
             thumb: 2021,
             global: true,
             nakama: 2202100,
@@ -2069,6 +2220,7 @@ window.drops = {
         
         {
             name: 'Red Hair Pirates at the Harbor!',
+            dropID: 'event102',
             thumb: 2044,
             global: true,
             nakama: 2204400,
@@ -2078,6 +2230,7 @@ window.drops = {
         
         {
             name: 'The Germa Bloodline Elements',
+            dropID: 'event103',
             thumb: 2056,
             global: true,
             nakama: 2205600,
@@ -2087,6 +2240,7 @@ window.drops = {
         
         {
             name: 'Strawhat Pirates Pizza Party!! Lunch',
+            dropID: 'event104',
             thumb: 2087,
             global: true,
             nakama: 2208700,
@@ -2096,6 +2250,7 @@ window.drops = {
         
         {
             name: 'Strawhat Pirates Pizza Party!! Dinner',
+            dropID: 'event105',
             thumb: 2092,
             global: true,
             nakama: 2209200,
@@ -2105,6 +2260,7 @@ window.drops = {
         
         {
             name: 'Brûlée\'s Cauldron Party',
+            dropID: 'event106',
             thumb: 2127,
             global: true,
             nakama: 2212700,
@@ -2114,6 +2270,7 @@ window.drops = {
         
         {
             name: 'Coliseum Executioner!',
+            dropID: 'event107',
             thumb: 2146,
             global: true,
             nakama: 2214600,
@@ -2123,6 +2280,7 @@ window.drops = {
         
         {
             name: 'Baby 5\'s Wedding Plans',
+            dropID: 'event108',
             thumb: 2165,
             global: true,
             nakama: 2216500,
@@ -2132,6 +2290,7 @@ window.drops = {
         
         {
             name: 'Let\'s Go See The Cat Viper!',
+            dropID: 'event109',
             thumb: 2177,
             global: true,
             nakama: 2217700,
@@ -2140,7 +2299,8 @@ window.drops = {
         },
         
         {
-            name: 'Comeback! "King of the day" Duke Dogstorm!',
+            name: 'Recover! King of Day Duke Inuarashi',
+            dropID: 'event110',
             thumb: 2219,
             global: true,
             nakama: 2221900,
@@ -2150,6 +2310,7 @@ window.drops = {
         
         {
             name: 'Lets Play in The Seducing Woods',
+            dropID: 'event111',
             thumb: 2253,
             global: true,
             nakama: 2225300,
@@ -2159,6 +2320,7 @@ window.drops = {
         
         {
             name: 'The Genius Jester! Buggy\'s Festival!',
+            dropID: 'event112',
             thumb: 2277,
             global: true,
             nakama: 2227700,
@@ -2168,7 +2330,9 @@ window.drops = {
         
         {
             name: 'Forces of Rage - Amande and Bobbin',
+            dropID: 'event113',
             thumb: 2327,
+            global: true,
             nakama: 2232700,
             gamewith: 127786,
             'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2117, -2119, -2002, -2005 ]
@@ -2176,6 +2340,7 @@ window.drops = {
         
         {
             name: 'Banquet! The Best Tea Party Ever!',
+            dropID: 'event114',
             thumb: 2351,
             nakama: 2235100,
             gamewith: 133025,
@@ -2184,6 +2349,7 @@ window.drops = {
         
         {
             name: 'Our Lady\'s Motherly Love',
+            dropID: 'event115',
             thumb: 2377,
             nakama: 2237700,
             gamewith: 136822,
@@ -2192,6 +2358,7 @@ window.drops = {
         
         {
             name: 'Cavendish\'s Rose Colored Melancholy',
+            dropID: 'event116',
             thumb: 2428,
             nakama: 2242800,
             gamewith: 141693,
@@ -2200,6 +2367,7 @@ window.drops = {
         
         {
             name: 'Pudding\'s Sweet Cooking',
+            dropID: 'event117',
             thumb: 2457,
             nakama: 2245700,
             gamewith: 144058,
@@ -2208,10 +2376,20 @@ window.drops = {
         
         {
             name: 'Miracle Cherry Blossoms Return',
+            dropID: 'event118',
             thumb: 2491,
             nakama: 2249100,
             gamewith: 146866,
             'All Difficulties': [ 2490, 2492, 2493, -2330, -2251, -1869, -2334, -2332, -2156, -2154, -2150, -2107, -1877, -1802, -1800, -1796, -1577, -1540, -2052 ]
+        },
+        
+        {
+            name: 'Dress Up for the Pirate Festival!',
+            dropID: 'event119',
+            thumb: 2519,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2519, 2520, 2521, 2522, 2523, -2148, -2338, -1959, -1989, -2013, -2078, -2515, -2152, -2080, -2048, -2340, -2247, -2187, -2342, -2230 ]
         },
         
     ],
@@ -2221,6 +2399,7 @@ window.drops = {
 
         {
             name: 'Clash!! Mihawk',
+            dropID: 'clash1',
             thumb: 227,
             global: true,
             nakama: 4022700,
@@ -2232,6 +2411,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Mihawk',
+            dropID: 'clashneo1',
             thumb: 1680,
             global: true,
             nakama: 4168000,
@@ -2242,6 +2422,7 @@ window.drops = {
 
         {
             name: 'Clash!! Chopper\'s Rampage',
+            dropID: 'clash2',
             thumb: 249,
             global: true,
             nakama: 4024900,
@@ -2253,6 +2434,7 @@ window.drops = {
 
         {
             name: 'Clash!! Vice-Admiral Garp',
+            dropID: 'clash3',
             thumb: 306,
             global: true,
             nakama: 4030600,
@@ -2263,6 +2445,7 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Vice-Admiral Garp',
+            dropID: 'clashneo3',
             thumb: 3340,
             global: true,
             nakama: 4334000,
@@ -2273,6 +2456,7 @@ window.drops = {
 
         {
             name: 'Clash!! Black Arm Zephyr',
+            dropID: 'clash4',
             thumb: 353,
             global: true,
             nakama: 4035300,
@@ -2284,6 +2468,7 @@ window.drops = {
 
         {
             name: 'Clash!! Ivankov',
+            dropID: 'clash5',
             thumb: 390,
             global: true,
             nakama: 4039000,
@@ -2294,7 +2479,20 @@ window.drops = {
         },
 
         {
+            name: 'Clash Neo!! Ivankov',
+            dropID: 'clashneo5',
+            thumb: 3352,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'raid_bosses/6',
+            Master: [ 3351 ],
+            Expert: [ 3351 ]
+        },
+
+        {
             name: 'Clash!! Doflamingo',
+            dropID: 'clash6',
             thumb: 418,
             global: true,
             nakama: 4041800,
@@ -2306,6 +2504,7 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Doflamingo',
+            dropID: 'clashneo6',
             thumb: 1623,
             global: true,
             nakama: 4162300,
@@ -2317,6 +2516,7 @@ window.drops = {
 
         {
             name: 'Clash!! Blackbeard',
+            dropID: 'clash7',
             thumb: 447,
             global: true,
             nakama: 4044700,
@@ -2328,6 +2528,7 @@ window.drops = {
 
         {
             name: 'Clash!? Usopp\'n',
+            dropID: 'clash8',
             thumb: 518,
             showManual: true,
             global: true,
@@ -2338,6 +2539,7 @@ window.drops = {
 
         {
             name: 'Clash!! Heracles\'n',
+            dropID: 'clash9',
             thumb: 516,
             global: true,
             nakama: 4051600,
@@ -2349,6 +2551,7 @@ window.drops = {
 
         {
             name: 'Clash!! Aokiji',
+            dropID: 'clash10',
             thumb: 575,
             global: true,
             nakama: 4057500,
@@ -2360,6 +2563,7 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Aokiji',
+            dropID: 'clashneo10',
             thumb: 1669,
             global: true,
             nakama: 4166900,
@@ -2371,6 +2575,7 @@ window.drops = {
 
         {
             name: 'Clash!! Eneru',
+            dropID: 'clash11',
             thumb: 603,
             global: true,
             nakama: 4060300,
@@ -2384,6 +2589,7 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Eneru',
+            dropID: 'clashneo11',
             thumb: 1930,
             global: true,
             nakama: 4193000,
@@ -2396,6 +2602,7 @@ window.drops = {
         
         {
             name: 'Clash!! Eneru [Extra]',
+            dropID: 'clashextra11',
             thumb: 603,
             gamewith: 138206,
             'All Difficulties': [ 602 ],
@@ -2404,6 +2611,7 @@ window.drops = {
 
         {
             name: 'Clash!! Duval',
+            dropID: 'clash12',
             thumb: 654,
             global: true,
             nakama: 4065400,
@@ -2415,6 +2623,7 @@ window.drops = {
 
         {
             name: 'Clash!! Buster Call',
+            dropID: 'clash13',
             thumb: 771,
             global: true,
             nakama: 4077100,
@@ -2426,6 +2635,7 @@ window.drops = {
 
         {
             name: 'Clash!! Nightmare Luffy',
+            dropID: 'clash14',
             thumb: 795,
             global: true,
             nakama: 4079500,
@@ -2438,6 +2648,7 @@ window.drops = {
 
         {
             name: 'Clash!! Tyrant Kuma',
+            dropID: 'clash15',
             thumb: 836,
             global: true,
             nakama: 4083600,
@@ -2449,6 +2660,7 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Tyrant Kuma',
+            dropID: 'clashneo15',
             thumb: 1772,
             global: true,
             nakama: 4177200,
@@ -2460,6 +2672,7 @@ window.drops = {
 
         {
             name: 'Clash!! Pirate Empress Hancock',
+            dropID: 'clash16',
             thumb: 865,
             global: true,
             nakama: 4086500,
@@ -2472,6 +2685,7 @@ window.drops = {
 
         {
             name: 'Clash Neo!! Pirate Empress Hancock',
+            dropID: 'clashneo16',
             thumb: 2070,
             global: true,
             nakama: 4207000,
@@ -2483,6 +2697,7 @@ window.drops = {
         
         {
             name: 'Clash!! Pica',
+            dropID: 'clash17',
             thumb: 932,
             global: true,
             nakama: 4093200,
@@ -2494,6 +2709,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Pica',
+            dropID: 'clashneo17',
             thumb: 1647,
             global: true,
             nakama: 4164700,
@@ -2505,6 +2721,7 @@ window.drops = {
         
         {
             name: 'Clash!! Kizaru',
+            dropID: 'clash18',
             thumb: 978,
             global: true,
             nakama: 4097800,
@@ -2516,6 +2733,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Kizaru',
+            dropID: 'clashneo18',
             thumb: 1780,
             global: true,
             nakama: 4178000,
@@ -2527,6 +2745,7 @@ window.drops = {
         
         {
             name: 'Clash!? Impostor Straw Hat Pirates',
+            dropID: 'clash19',
             showManual: true,
             global: true,
             gamewith: 26803,
@@ -2537,6 +2756,7 @@ window.drops = {
         
         {
             name: 'Clash!! Sabo',
+            dropID: 'clash19',
             global: true,
             gamewith: 29788,
             slefty: 'raid_bosses/17',
@@ -2549,6 +2769,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Sabo',
+            dropID: 'clashneo19',
             global: true,
             gamewith: 64230,
             thumb: 1727,
@@ -2561,6 +2782,7 @@ window.drops = {
         
         {
             name: 'Clash!! Shiki',
+            dropID: 'clash20',
             thumb: 1108,
             global: true,
             nakama: 4110800,
@@ -2573,6 +2795,7 @@ window.drops = {
         
         {
             name: 'Clash!! Gild Tesoro',
+            dropID: 'clash21',
             thumb: 1163,
             global: true,
             nakama: 4116300, 
@@ -2584,6 +2807,7 @@ window.drops = {
         
         {
             name: 'Clash!! Akainu',
+            dropID: 'clash22',
             thumb: 1298,
             global: true,
             nakama: 4129800,
@@ -2594,6 +2818,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Akainu',
+            dropID: 'clashneo22',
             thumb: 1826,
             global: true,
             nakama: 4182600,
@@ -2605,6 +2830,7 @@ window.drops = {
         
         {
             name: 'Clash!! Warden Magellan',
+            dropID: 'clash23',
             thumb: 1374,
             global: true,
             nakama: 4137400,
@@ -2616,6 +2842,7 @@ window.drops = {
         
         {
             name: 'Clash!! Shogun Franky',
+            dropID: 'clash24',
             thumb: 1432,
             global: true,
             nakama: 4143200,
@@ -2626,6 +2853,7 @@ window.drops = {
         
         {
             name: 'Clash!! Bellamy',
+            dropID: 'clash25',
             thumb: 1518,
             global: true,
             nakama: 4151800,
@@ -2636,6 +2864,7 @@ window.drops = {
         
         {
             name: 'Clash Neo!! Bellamy',
+            dropID: 'clashneo25',
             thumb: 1738,
             global: true,
             nakama: 4173800,
@@ -2647,6 +2876,7 @@ window.drops = {
         
         {
             name: 'Clash!! Fujitora',
+            dropID: 'clash26',
             thumb: 1595,
             global: true,
             nakama: 4159500,
@@ -2658,6 +2888,7 @@ window.drops = {
         
         {
             name: 'Clash!! Vergo',
+            dropID: 'clash27',
             thumb: 1696,
             global: true,
             nakama: 4169600,
@@ -2668,6 +2899,7 @@ window.drops = {
         
         {
             name: 'Clash!! Vinsmoke Sanji',
+            dropID: 'clash28',
             thumb: 1815,
             global: true,
             nakama: 4181500,
@@ -2679,6 +2911,7 @@ window.drops = {
         
         {
             name: 'Clash!! Caesar',
+            dropID: 'clash29',
             thumb: 1830,
             global: true,
             nakama: 4183000,
@@ -2690,6 +2923,7 @@ window.drops = {
         
         {
             name: 'Clash!! Bartolomeo',
+            dropID: 'clash30',
             thumb: 1879,
             global: true,
             nakama: 4187900,
@@ -2701,6 +2935,7 @@ window.drops = {
         
         {
             name: 'Clash!! Bartolomeo [Extra]',
+            dropID: 'clashextra30',
             thumb: 1879,
             gamewith: 142094,
             'All Difficulties': [ 1878 ],
@@ -2709,6 +2944,7 @@ window.drops = {
         
         {
             name: 'Clash!! Rayleigh',
+            dropID: 'clash31',
             thumb: 1924,
             global: true,
             nakama: 4192400,
@@ -2719,6 +2955,7 @@ window.drops = {
         
         {
             name: 'Clash!! Señor Pink',
+            dropID: 'clash32',
             thumb: 1943,
             global: true,
             nakama: 4194300,
@@ -2729,6 +2966,7 @@ window.drops = {
         
         {
             name: 'Clash!! Rob Lucci',
+            dropID: 'clash33',
             thumb: 2015,
             global: true,
             nakama: 4201500,
@@ -2740,6 +2978,7 @@ window.drops = {
 
         {
             name: 'Clash!? Luffy',
+            dropID: 'clash34',
             thumb: 2033,
             global: true,
             showManual: true,
@@ -2751,6 +2990,7 @@ window.drops = {
         
         {
             name: 'Clash!! Zoro',
+            dropID: 'clash35',
             thumb: 2097,
             global: true,
             nakama: 4209700,
@@ -2762,6 +3002,7 @@ window.drops = {
         
         {
             name: 'Clash!! Cracker',
+            dropID: 'clash36',
             thumb: 2158,
             global: true,
             nakama: 4215800,
@@ -2773,6 +3014,7 @@ window.drops = {
         
         {
             name: 'Clash!! "Blackbeard" Teach',
+            dropID: 'clash37',
             thumb: 2197,
             global: true,
             nakama: 4219700,
@@ -2783,6 +3025,7 @@ window.drops = {
         
         {
             name: 'Clash!! Heavenly Demon Doflamingo',
+            dropID: 'clash38',
             thumb: 2263,
             global: true,
             nakama: 4220100,
@@ -2794,6 +3037,7 @@ window.drops = {
         
         {
             name: 'Clash!! Judge',
+            dropID: 'clash39',
             thumb: 2281,
             global: true,
             nakama: 4228100,
@@ -2805,6 +3049,7 @@ window.drops = {
         
         {
             name: 'Clash!! Judge [Extra]',
+            dropID: 'clashextra39',
             thumb: 2281,
             nakama: 4228101,
             gamewith: 144312,
@@ -2814,6 +3059,7 @@ window.drops = {
         
         {
             name: 'Clash!! Arlong',
+            dropID: 'clash40',
             thumb: 2356,
             nakama: 4225600,
             gamewith: 134190,
@@ -2823,6 +3069,7 @@ window.drops = {
         
         {
             name: 'Clash!! Big Emperor',
+            dropID: 'clash41',
             thumb: 2398,
             nakama: 4239800,
             gamewith: 140044,
@@ -2832,6 +3079,7 @@ window.drops = {
         
         {
             name: 'Clash!! Big Mom',
+            dropID: 'clash42',
             thumb: 2473,
             nakama: 4247300,
             gamewith: 145832,
@@ -2842,6 +3090,7 @@ window.drops = {
         
         {
             name: 'Clash!! Capone Bege',
+            dropID: 'clash43',
             thumb: 2504,
             nakama: 4250400,
             gamewith: 147262,
@@ -2849,6 +3098,16 @@ window.drops = {
             Master: [ 2503 ],
             Expert: [ 2503 ],
             Ultimate: [ 2503 ],
+        },
+        
+        {
+            name: 'Clash!! Magellan & Hannyabal',
+            dropID: 'clash44',
+            thumb: 2517,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2516 ],
+            Expert: [ 2516 ]
         },
         
         {
@@ -2883,8 +3142,8 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 881, 883, 900, 902, 923, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1221, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1377, 1400, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2110, 2122, 2162, 2192, 2248, 2322, 2353, 2374, 2415, 2470, 2488 ],
-            Neo: [ 1862, 1898, 1975, 2016 ]
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 883, 900, 902, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1400, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2122, 2162, 2192, 2248, 2322, 2353, 2374, 2415, 2470, 2488 ],
+            Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
         {
@@ -2893,7 +3152,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1896, 1977, 2036, 2110, 2162, 2192, 2248, 2288, 2322, 2353, 2374, 2415 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1977, 2036, 2162, 2192, 2248, 2488 ],
         },
         
         {
@@ -2902,7 +3161,50 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1221, 1252, 1253, 1293, 1311, 1339, 1340, 1377, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
+            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
+        },
+
+        {
+            name: 'Roar of the Sea\s Cha-Cha',
+            thumb: 882,
+            global: true,
+            nakama: 5088101,
+            gamewith: 22035,
+            slefty: 'coliseums',
+            Chaos: [ 881, -882 ],
+        },
+
+        {
+            name: 'Supernova Burning with Ambition',
+            thumb: 924,
+            global: true,
+            nakama: 5092301,
+            gamewith: 24038,
+            slefty: 'coliseums',
+            Chaos: [ 923, -924 ],
+        },
+
+        {
+            name: 'Gentle Devil-Blood Warrior',
+            thumb: 1222,
+            global: true,
+            nakama: 5122101,
+            gamewith: 36718,
+            slefty: 'coliseums',
+            Chaos: [ 1221, -1222 ],
+            Underground: [ 1221, -1222 ],
+            Exebition: [ 1221, -1222 ],
+        },
+
+        {
+            name: 'Flying Spearman',
+            thumb: 1253,
+            global: true,
+            nakama: 5125301,
+            gamewith: 38054,
+            slefty: 'coliseums',
+            Underground: [ 1253, -1253 ],
+            Exebition: [ 1253, -1253 ],
         },
 
         {
@@ -2913,6 +3215,38 @@ window.drops = {
             gamewith: 43749,
             slefty: 'coliseums',
             Chaos: [ 1309, -1310 ],
+        },
+
+        {
+            name: 'Pure-Hearted Guardian Warrior',
+            thumb: 1378,
+            global: true,
+            nakama: 5137701,
+            gamewith: 46329,
+            slefty: 'coliseums',
+            Chaos: [ 1377, -1378 ],
+            Underground: [ 1377, -1378 ],
+            Exebition: [ 1377, -1378 ],
+        },
+
+        {
+            name: 'Provoking Hero of the Coliseum',
+            thumb: 1422,
+            global: true,
+            nakama: 5142101,
+            gamewith: 48690,
+            slefty: 'coliseums',
+            Chaos: [ 1421, -1422 ],
+        },
+
+        {
+            name: 'Coliseum [NEO] vs. Diamante',
+            thumb: 2017,
+            global: true,
+            nakama: 5201601,
+            gamewith: 95570,
+            slefty: 'coliseums',
+            Chaos: [ 2016, -2017 ],
         },
 
         {
@@ -2936,6 +3270,16 @@ window.drops = {
         },
 
         {
+            name: 'Captain of the Musketeers',
+            thumb: 1828,
+            global: true,
+            nakama: 5182701,
+            gamewith: 74382,
+            slefty: 'coliseums',
+            Chaos: [ 1827, -1828 ],
+        },
+
+        {
             name: 'Omnipotent Kami of the Skies',
             thumb: 1897,
             global: true,
@@ -2944,6 +3288,17 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1896, -1897 ],
             Underground: [ 1896, -1897 ],
+        },
+
+        {
+            name: 'Steel Magnetic Arm',
+            thumb: 2111,
+            global: true,
+            nakama: 5211001,
+            gamewith: 103562,
+            slefty: 'coliseums',
+            Chaos: [ 2110, -2111 ],
+            Underground: [ 2110, -2111 ],
         },
 
         {
@@ -2956,6 +3311,24 @@ window.drops = {
             Chaos: [ 2288, -2290 ],
             Underground: [ 2288, -2290 ],
         },
+
+        {
+            name: 'Coliseum EX Vs. Gecko Moria',
+            thumb: 2512,
+            nakama: null,
+            gamewith: 147896,
+            slefty: 'coliseums',
+            'All Difficulties': [ 2511, 2513 ],
+        },
+
+        {
+            name: 'Coliseum EX Vs. King Neptune',
+            thumb: 2529,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            'All Difficulties': [ 2528, 2530 ],
+        },
         
     ],
 
@@ -2964,6 +3337,7 @@ window.drops = {
 
         {
             name: 'Dracule Mihawk',
+            dropID: 'treasuremap1',
             thumb: 1808,
             global: true,
             nakama: 8180800,
@@ -2973,6 +3347,7 @@ window.drops = {
 
         {
             name: 'Edward Newgate',
+            dropID: 'treasuremap2',
             thumb: 1853,
             global: true,
             nakama: 8185300,
@@ -2982,6 +3357,7 @@ window.drops = {
 
         {
             name: 'White Knight Cavendish',
+            dropID: 'treasuremap3',
             thumb: 1889,
             global: true,
             nakama: 8188900,
@@ -2991,6 +3367,7 @@ window.drops = {
 
         {
             name: 'Luffy: Gear 4th',
+            dropID: 'treasuremap4',
             thumb: 1916,
             global: true,
 			nakama: 8191600,
@@ -3000,6 +3377,7 @@ window.drops = {
 
         {
             name: 'Fire Fist Ace',
+            dropID: 'treasuremap5',
             thumb: 1941,
             global: true,
 			nakama: 8194100,
@@ -3009,6 +3387,7 @@ window.drops = {
 
         {
             name: 'Sabo',
+            dropID: 'treasuremap6',
             thumb: 1972,
             global: true,
 			nakama: 8197200,
@@ -3018,6 +3397,7 @@ window.drops = {
 
         {
             name: 'Sanji and Zoro',
+            dropID: 'treasuremap7',
             thumb: 2000,
             global: true,
             nakama: 8200000,
@@ -3027,6 +3407,7 @@ window.drops = {
 
         {
             name: 'Borsalino',
+            dropID: 'treasuremap8',
             thumb: 2064,
             global: true,
             nakama: 8206400,
@@ -3036,6 +3417,7 @@ window.drops = {
 
         {
             name: 'Big Mom',
+            dropID: 'treasuremap9',
             thumb: 2109,
             global: true,
             nakama: 8210900,
@@ -3045,6 +3427,7 @@ window.drops = {
 
         {
             name: 'Crocodile',
+            dropID: 'treasuremap10',
             thumb: 2137,
             global: true,
             nakama: 8213700,
@@ -3054,6 +3437,7 @@ window.drops = {
 
         {
             name: 'Jack',
+            dropID: 'treasuremap11',
             thumb: 2175,
             global: true,
             nakama: 8217500,
@@ -3063,6 +3447,7 @@ window.drops = {
 
         {
             name: 'Kami Enel',
+            dropID: 'treasuremap12',
             thumb: 2211,
             global: true,
             nakama: 8221100,
@@ -3072,6 +3457,7 @@ window.drops = {
 
         {
             name: 'Red Hair Shanks',
+            dropID: 'treasuremap13',
             thumb: 2261,
             global: true,
             nakama: 8226100,
@@ -3081,14 +3467,17 @@ window.drops = {
 
         {
             name: 'Boa Hancock',
+            dropID: 'treasuremap14',
             thumb: 2299,
+            global: true,
             nakama: 8229900,
             gamewith: 123536,
-            'Raging Sea': [ 2298 ]
+            'Roaring Sea': [ 2298 ]
         },
 
         {
             name: 'Trafalgar Law',
+            dropID: 'treasuremap15',
             thumb: 2336,
             nakama: 8233600,
             gamewith: 128733,
@@ -3097,6 +3486,7 @@ window.drops = {
 
         {
             name: 'Cat Burglar Nami',
+            dropID: 'treasuremap16',
             thumb: 2362,
             nakama: 8236200,
             gamewith: 134017,
@@ -3105,6 +3495,7 @@ window.drops = {
 
         {
             name: 'Kaido',
+            dropID: 'treasuremap17',
             thumb: 2387,
             nakama: 8238700,
             gamewith: 137053,
@@ -3113,6 +3504,7 @@ window.drops = {
 
         {
             name: 'Doflamingo',
+            dropID: 'treasuremap18',
             thumb: 2443,
             nakama: 8244300,
             gamewith: 143066,
@@ -3121,10 +3513,20 @@ window.drops = {
 
         {
             name: 'Smoothie & Oven',
+            dropID: 'treasuremap19',
             thumb: 2469,
             nakama: 8246900,
             gamewith: 144785,
             'Sweet Sea': [ 2468 ]
+        },
+
+        {
+            name: 'Edward Weevil',
+            dropID: 'treasuremap20',
+            thumb: 2510,
+            nakama: null,
+            gamewith: null,
+            'Sweet Sea': [ 2509 ]
         },
         
     ],
@@ -3247,6 +3649,16 @@ window.drops = {
             gamewith: 38237,
             condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
             'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Invasion Neo! Young Whitebeard',
+            thumb: 3354,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
         },
         
         {
@@ -3599,6 +4011,15 @@ window.drops = {
             gamewith: 143825,
             condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
             'Challenge Unit': [ 2455 ],
+        },
+        
+        {
+            name: 'Ordeal of the Blade',
+            thumb: 2475,
+            nakama: null,
+            gamewith: 147515,
+            condition: 'Certain units stats boosted by 1.25x and 8 turns special cooldown reduction. Challenge Difficulty: Total Crew Cost must be 180 Cost or less.\nChance to drop the 「Old Sword, Swordsman\'s Loot」, 「Baboon Sword, Swordsman\'s Loot」, and 「Muggy Kingdom Sword, Swordsman\'s Loot」.',
+            'Chopperman Missions': [ 2499 ],
         },
         
         {
