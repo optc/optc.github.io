@@ -46883,7 +46883,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "When HP is below 50% at the start of the turn, boosts own base ATK by 150",
-            "level2": "If your Captain is a Powerhouse character, makes [RCV] orbs beneficial for Powerhouse characters",
+            "level2": "If your Captain is a Powerhouse character, makes [DEX] orbs beneficial for Powerhouse characters",
         },
         /*limit: [
             { "description": "Boosts base ATK by 20" },
