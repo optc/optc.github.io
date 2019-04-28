@@ -46860,7 +46860,7 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        specialName: "Earth Shattering Fist",
+        specialName: "Earth Shattering Fist [Neo]",
     },
     3354: {//Young Whitebeard Neo
         captain: "Boosts ATK of all characters by 2.75x if HP is below 50% at the start of the turn",
@@ -46879,11 +46879,11 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        specialName: "Earth Shattering Fist",
+        specialName: "Earth Shattering Fist [Neo]",
         sailor: {
             "base": "None",
             "level1": "When HP is below 50% at the start of the turn, boosts own base ATK by 150",
-            "level2": "If your Captain is a Fighter character, makes [DEX] orbs beneficial for Powerhouse characters",
+            "level2": "Makes [RCV] orbs beneficial for Powerhouse characters",
         },
         /*limit: [
             { "description": "Boosts base ATK by 20" },
