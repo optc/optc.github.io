@@ -9348,7 +9348,7 @@ window.details = {
         specialNotes: "#{zombie}",
         sailor: {
             "base": "None",
-            "level1": "Boosts base ATK, HP and RCV for this character by 50",
+            "level1": "Boosts base ATK, HP and RCV for all characters by 50",
             "level2": "Boosts amount healed from [RCV] orbs by 200 each",
         },
         limit: [
@@ -9358,7 +9358,7 @@ window.details = {
             { "description": "Acquire Potential 1: [INT] Damage Reduction" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for all characters by 50" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 3 turns" },
@@ -10774,7 +10774,7 @@ window.details = {
             { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for all characters by 50" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
@@ -19470,7 +19470,7 @@ window.details = {
         specialName: "Gomu Gomu no Red Hawk",
         sailor: {
             "base": "None",
-            "level1": "Boosts own base ATK, HP and RCV by 75",
+            "level1": "Boosts ATK, HP and RCV for all characters by 75",
         },
         limit: [
             { "description": "Boosts base ATK by 5" },
@@ -19499,7 +19499,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 75" },
+            { "description": "Acquire Sailor Ability 1: Boosts ATK, HP and RCV for all characters by 75" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 80" },
             { "description": "Acquire Potential 3: Cooldown Reduction" },
@@ -23376,8 +23376,8 @@ window.details = {
         specialNotes: "#{stages}<br>#{beneficial}",
         specialName: "King Kong Gun",
         sailor: {
-            "base": "Completely resists Paralysis on this character",
-            "level1": "Boosts own base ATK, HP and RCV by 75",
+            "base": "None",
+            "level1": "Boosts ATK, HP and RCV for all characters by 75",
         },
         limit: [
             { "description": "Boosts base ATK by 5" },
@@ -23406,7 +23406,7 @@ window.details = {
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for this character by 75" },
+            { "description": "Acquire Sailor Ability 1: Boosts ATK, HP and RCV for all characters by 75" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 80" },
             { "description": "Acquire Potential 3: Cooldown Reduction" },
@@ -26095,7 +26095,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of Striker and Powerhouse characters by 30",
-            "level2": "Boosts base ATK, HP and RCV for this character by 30",
+            "level2": "Boosts base ATK, HP and RCV for all characters by 30",
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -26109,7 +26109,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base HP by 110" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for this character by 30" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for all characters by 30" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
@@ -34073,7 +34073,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Completely resists Paralysis on this character",
-            "level2": "Boosts base ATK, HP and RCV for this character by 50",
+            "level2": "Boosts base ATK, HP and RCV for all characters by 50",
         },
         limit: [
             { "description": "Boosts base RCV by 5" },
@@ -34102,7 +34102,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for this character by 50" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for all characters by 50" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base HP by 100" },
             { "description": "Acquire Potential 3: Critical Hit" },
@@ -41425,7 +41425,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Completely resists Paralysis on this character",
-            "level2": "Boosts base ATK, HP and RCV for this character by 50",
+            "level2": "Boosts base ATK, HP and RCV for all characters by 50",
         },
         limit: [
             { "description": "Boosts base RCV by 5" },
@@ -41454,7 +41454,7 @@ window.details = {
             { "description": "Boosts base RCV by 20" },
             { "description": "Boosts base RCV by 20" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for this character by 50" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK, HP and RCV for all characters by 50" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base HP by 100" },
             { "description": "Acquire Potential 3: Critical Hit" },
@@ -46834,12 +46834,12 @@ window.details = {
         sailor: "Reduces Silence duration on this character by 3 turns",
     },
     3351: {//Ivankov Neo
-        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs, changes own orb, including [BLOCK] orbs, into [QCK], makes [RCV] orbs beneficial for all characters for 1 turn and boosts ATK of Free Spirit characters by 1.75x for 1 turn.",
+        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs, changes own orb, including [BLOCK] orbs, into [DEX], makes [RCV] orbs beneficial for all characters for 1 turn and boosts ATK of Free Spirit characters by 1.75x for 1 turn.",
         specialName: "Hell Wink [Neo]",
         captain: "Boosts ATK of all characters by ?x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good"
     },
     3352: {//Ivankov Neo
-        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs, changes own orb, including [BLOCK] orbs, into [QCK], makes [RCV] orbs beneficial for all characters for 1 turn and boosts ATK of Free Spirit characters by 1.75x for 1 turn.",
+        special: "Randomizes all orbs into either [RCV], [STR], [DEX] or [QCK] orbs, changes own orb, including [BLOCK] orbs, into [DEX], makes [RCV] orbs beneficial for all characters for 1 turn and boosts ATK of Free Spirit characters by 1.75x for 1 turn.",
         specialName: "Hell Wink [Neo]",
         captain: "Boosts ATK of all characters by 3.25x following a chain of [STR] > [QCK] > [DEX] attacks no lower than Good",
     },
