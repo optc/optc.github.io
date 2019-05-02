@@ -2483,7 +2483,7 @@ window.drops = {
             dropID: 'clashneo5',
             thumb: 3352,
             global: true,
-            nakama: null,
+            nakama: 4335200,
             gamewith: null,
             slefty: 'raid_bosses/6',
             Master: [ 3351 ],
@@ -3142,7 +3142,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 883, 900, 902, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1400, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2122, 2162, 2192, 2248, 2322, 2353, 2374, 2415, 2470, 2488 ],
+            Chaos: [ 776, 778, 780, 803, 805, 830, 832, 834, 859, 861, 883, 900, 902, 925, 950, 952, 982, 984, 1017, 1015, 1040, 1042, 1086, 1088, 1090, 1101, 1103, 1105, 1140, 1142, 1144, 1195, 1219, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2122, 2162, 2192, 2248, 2353, 2374, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3152,7 +3152,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1977, 2036, 2162, 2192, 2248, 2488 ],
+            Underground: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1977, 2036, 2162, 2192, 2248, 2488 ],
         },
         
         {
@@ -3161,7 +3161,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1490, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
+            Exhibition: [ 776, 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1103, 1105, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
         },
 
         {
@@ -3230,6 +3230,16 @@ window.drops = {
         },
 
         {
+            name: 'Punishing Catapult Pop',
+            thumb: 1401,
+            global: true,
+            nakama: 5140001,
+            gamewith: 47305,
+            slefty: 'coliseums',
+            Chaos: [ 1400, -1401 ],
+        },
+
+        {
             name: 'Provoking Hero of the Coliseum',
             thumb: 1422,
             global: true,
@@ -3237,6 +3247,17 @@ window.drops = {
             gamewith: 48690,
             slefty: 'coliseums',
             Chaos: [ 1421, -1422 ],
+        },
+
+        {
+            name: 'Inescapable Nez-Palm Cannon',
+            thumb: 1491,
+            global: true,
+            nakama: 5149001,
+            gamewith: 52212,
+            slefty: 'coliseums',
+            Underground: [ 1490, -1491 ],
+            Exebition: [ 1490, -1491 ],
         },
 
         {
@@ -3280,6 +3301,17 @@ window.drops = {
         },
 
         {
+            name: 'Invincible as a Ninja',
+            thumb: 1861,
+            global: true,
+            nakama: 5186001,
+            gamewith: 80286,
+            slefty: 'coliseums',
+            Chaos: [ 1860, -1861 ],
+            Underground: [ 1860, -1861 ],
+        },
+
+        {
             name: 'Omnipotent Kami of the Skies',
             thumb: 1897,
             global: true,
@@ -3302,6 +3334,17 @@ window.drops = {
         },
 
         {
+            name: 'Unhesitating Paw-Palmed Human',
+            thumb: 2193,
+            global: true,
+            nakama: 5219201,
+            gamewith: 114952,
+            slefty: 'coliseums',
+            Chaos: [ 2192, -2193 ],
+            Underground: [ 2192, -2193 ],
+        },
+
+        {
             name: 'Evolution of a True Knight',
             thumb: 2290,
             global: true,
@@ -3310,6 +3353,17 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2288, -2290 ],
             Underground: [ 2288, -2290 ],
+        },
+
+        {
+            name: 'Law-Abiding Man',
+            thumb: 2323,
+            global: true,
+            nakama: 5232201,
+            gamewith: 125294,
+            slefty: 'coliseums',
+            Chaos: [ 2322, -2323 ],
+            Underground: [ 2322, -2323 ],
         },
 
         {
@@ -3655,7 +3709,7 @@ window.drops = {
             name: 'Invasion Neo! Young Whitebeard',
             thumb: 3354,
             global: true,
-            nakama: null,
+            nakama: 6335400,
             gamewith: null,
             condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
             'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
