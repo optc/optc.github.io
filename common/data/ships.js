@@ -501,7 +501,7 @@ window.ships = [
     { //38
         name: "Nostra Castello",
         thumb: 'ship_0040_c.png',
-        description: 'Boosts ATK of all characters by 1.55x and their HP by 1.3x. Makes PERFECTs easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK if you have a Slasher, Free Spirit or Powerhouse characters on your crew.',
+        description: 'Boosts ATK of all characters by 1.55x and their HP by 1.3x. Makes PERFECTs easier to Hit. Cuts the current HP of each enemy by 3% at the end of each turn. Reduces ATK by 50% per Slasher, Free Spirit or Powerhouse class on your crew.',
         atk: function(p) {
             var reduction = 1;
             if(p.classCount.Slasher > 0) reduction *= 0.5;
