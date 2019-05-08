@@ -7888,4 +7888,68 @@ window.specials = {
             window.specials[5073].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
         },
     },
+    5074: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5074].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2.75 : 2);
+            window.specials[5074].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5074warning'
+            });
+        }
+    },
+    5075: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5075].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2.75 : 2);
+            window.specials[5075].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5075warning'
+            });
+        }
+    },
+    5076: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5076].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2.75 : 2);
+            window.specials[5076].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5076warning'
+            });
+        }
+    },
+    5077: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5077].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2.75 : 2);
+            window.specials[5077].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5077warning'
+            });
+        }
+    },
+    5078: {
+        atk: function(p) { return 1.75; },
+        type: "class"
+    },
+    5079: {
+        atk: function(p) { return 1.75; },
+        type: "class"
+    },
+    5080: {
+        atk: function(p) { return 1.75; },
+        type: "class"
+    },
+    5081: {
+        atk: function(p) { return 1.75; },
+        type: "class"
+    },
 };

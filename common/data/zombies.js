@@ -781,4 +781,20 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    5075: { // Zoro/Sanji
+        type: 'healer',
+        multiplier: 2
+    },
+    5078: { // Chopper/Carrot
+        type: 'healer',
+        amount: 500
+    },
+    5080: { // Chopper/Carrot
+        type: 'healer',
+        amount: 1000
+    },
+    5081: { // Chopper/Carrot
+        type: 'healer',
+        amount: 1000
+    },
 };
