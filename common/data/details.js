@@ -32471,7 +32471,7 @@ window.details = {
         captainNotes: "#{beneficial}",
         special: "Deals 30x character's ATK in character's Type damage to one enemy that will ignore damage negating abilities and barriers, amplifies the effect of orbs on [PSY] and [DEX] characters by 2.25x for 1 turn and becomes Sanji & Zoro for 1 turn",
         specialNotes: "#{ignoreBarrier}",
-        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn<br>#{ignoreBarrier}",
+        swap: "When Change is activated, randomizes all non-Matching orbs on [PSY] and [DEX] characters and adds 0.5x to Chain multiplier for 1 turn",
         specialName: "Armée de L'Air Power Shoot",
         sailor: {
             "character1": "Boosts base ATK of [PSY] characters by 30",
@@ -44564,11 +44564,11 @@ window.details = {
         captain: {
             "character1": "Boosts ATK of [PSY] characters by ?x and boosts ATK of [QCK] and [INT] characters by ?x.",
             "character2": "Boosts ATK of [QCK] characters by ?x and boosts ATK of [PSY] and [INT] characters by ?x.",
-            "combined": "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn."
+            "combined": "Boosts ATK of [QCK], [PSY] and [INT] characters by 2.5x and recovers 1x character's RCV in HP at the end of each turn."
         },
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: {
             "character1": "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
             "character2": "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
@@ -44583,7 +44583,7 @@ window.details = {
         },
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: {
             "character1": "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
             "character2": "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
@@ -46028,14 +46028,14 @@ window.details = {
     },
     2514: {//Urouge
         captain: "Boosts ATK of Fighter characters by ?x and reduces damage received by ?%",
-        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Fighter characters by 2.25x for 1 turn in the following turn.",
         specialName: "Karmic Punishment and Prayers",
         sailor: "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
         sailorNotes: "#{beneficial}",
     },
     2515: {//Urouge
         captain: "Boosts ATK of Fighter characters by 3x and reduces damage received by 5%",
-        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Fighter characters by 2.25x for 1 turn in the following turn.",
         specialName: "Karmic Punishment and Prayers",
         sailor: {
             "base": "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
@@ -46357,7 +46357,7 @@ window.details = {
         captain: {
             "character1": "Boosts ATK of Slasher and Fighter characters by 2.75x and makes [DEX] orbs beneficial for Slasher and Fighter characters. If you defeated an enemy last turn, boosts ATK of Slasher and Fighter characters by 3.3x instead.",
             "character2": "Boosts ATK of Slasher and Fighter characters by 2.75x, recovers 2x character's RCV in HP at the end of each turn and makes [QCK] orbs beneficial for Slasher and Fighter characters.",
-            "combined": "Boosts ATK of Slasher and Fighter characters by 3.75xand makes [DEX], [QCK], [RCV] and [TND] orbs beneficial for Slasher and Fighter characters."
+            "combined": "Boosts ATK of Slasher and Fighter characters by 3.75x and makes [DEX], [QCK], [RCV] and [TND] orbs beneficial for Slasher and Fighter characters."
         },
         sailor: {
             "base": "None",
@@ -46409,6 +46409,425 @@ window.details = {
         special: "Reduces damage received by 50% for 1 turn, boosts ATK of all characters by 1.75x for 1 turn and becomes Chobro & Carrot for 2 turns",
         swap: "When Change is activated, makes PERFECTs easier to hit for 1 turn and recovers 2x character's RCV",
         specialName: "A Call from the Mirror",
+    },
+    2533: {//Luffy&Law
+        captain: {
+            "character1": "Boosts ATK of all characters by 3.5x and their HP by 1.25x.",
+            "character2": "Boosts ATK of all characters by 3x, their HP by 1.25x and recovers 0.5x his RCV at the end of the turn each time you hit a PERFECT.",
+            "combined": "Boosts ATK of all characters by 4.5x, their HP by 1.25x and recovers 1x their RCV at the end of the turn each time you hit a PERFECT."
+        },
+        sailor: {
+            "character1": "Boosts base ATK of all characters by 50",
+            "character2": "Boosts base HP of all characters by 50",
+            "combined": "Boosts base ATK, HP and RCV of all characters by 100"
+        },
+        special: {
+            "character1": "Deals 400x character's ATK in Typeless damage to one enemy, makes [DEX] and [QCK] orbs beneficial for all characters for 1 turn, amplifies the effect of orbs by 2.5x for 1 turn and becomes Luffy & Law for 3 turns.",
+            "character2": "Deals 75x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, makes [DEX] and [QCK] orbs beneficial for all characters for 1 turn, amplifies the effect of orbs by 2.5x for 1 turn and becomes Luffy & Law for 3 turns.",
+        },
+        swap: "When Change is activated, this character removes all Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb, boosts own ATK by 2x for 1 turn and makes own normal attacks ignore defensive barriers and buffs.",
+        specialName: "The Ultimate Stratagem to Defeat God",
+    },
+    2534: {//Luffy&Law
+        captain: {
+            "character1": "Boosts ATK of all characters by 3.5x and their HP by 1.25x.",
+            "character2": "Boosts ATK of all characters by 3x, their HP by 1.25x and recovers 0.5x his RCV at the end of the turn each time you hit a PERFECT.",
+            "combined": "Boosts ATK of all characters by 4.5x, their HP by 1.25x and recovers 1x their RCV at the end of the turn each time you hit a PERFECT."
+        },
+        sailor: {
+            "character1": "Boosts base ATK of all characters by 50",
+            "character2": "Boosts base HP of all characters by 50",
+            "combined": "Boosts base ATK, HP and RCV of all characters by 100",
+            "level1": "Completely resists Paralysis and Silence on this character"
+        },
+        special: {
+            "character1": "Deals 400x character's ATK in Typeless damage to one enemy, makes [DEX] and [QCK] orbs beneficial for all characters for 1 turn, amplifies the effect of orbs by 2.5x for 1 turn and becomes Luffy & Law for 3 turns.",
+            "character2": "Deals 75x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, makes [DEX] and [QCK] orbs beneficial for all characters for 1 turn, amplifies the effect of orbs by 2.5x for 1 turn and becomes Luffy & Law for 3 turns.",
+        },
+        swap: "When Change is activated, this character removes all Slot Bind on themselves and changes their own orb, including [BLOCK] orbs, into a Matching orb, boosts own ATK by 2x for 1 turn and makes own normal attacks ignore defensive barriers and buffs.",
+        specialName: "The Ultimate Stratagem to Defeat God",
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 90% chance to deal 9% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    2535: {//Homies&Big Mom
+        captain: {
+            "character1": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, Increases damage received by 1.75x boosts ATK of all characters by 3.25x and their HP by 2x. Recovers HP proportional to the number of enemies you defeated in that turn ✕ crew's RCV at the end of the enemy turn.",
+            "character2": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, Increases damage received by 1.75x boosts ATK of all characters by 3.25x and their HP by 2x. Recovers HP proportional to the number of enemies you defeated in that turn ✕ crew's RCV at the end of the enemy turn.",
+            "combined": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, Increases damage received by 1.75x boosts ATK of all characters by 4x and their HP by 2x. Recovers HP proportional to the number of enemies you defeated in that turn ✕ crew's RCV at the end of the enemy turn."
+        },
+        sailor: {
+            "character1": "Makes [STR], [PSY] and [RCV] orbs beneficial for this character",
+            "character2": "Makes [DEX], [QCK] and [TND] orbs beneficial for this character",
+            "combined": "Makes [STR], [DEX], [QCK], [PSY], [INT], [TND] and [RCV] orbs beneficial for this character"
+        },
+        special: "Boosts base ATK of all characters based on your current HP for 1 turn and becomes Zeus & Prometheus & Big Mom for 3 turns. If HP is above 50% at the time the special is activated, locks the chain multiplier at 3.5x for 1 turn.",
+        specialNotes: "Base ATK boost is equal to current HP/100, the maximum effect at 100,000 HP will give a 1,000 base ATK boost.",
+        swap: "When Change is activated, this character removes all Paralysis on themselves and changes their own orb into a Matching orb, boosts own ATK by 1.5x for 1 turn and amplifies the effect of own orb by 1.5x for 1 turn.",
+        specialName: "Heavenly Fire and Lightning Ring & Mama Mash",
+    },
+    2536: {//Homies&Big Mom
+        captain: {
+            "character1": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, Increases damage received by 1.75x boosts ATK of all characters by 3.25x and their HP by 2x. Recovers HP proportional to the number of enemies you defeated in that turn ✕ crew's RCV at the end of the enemy turn.",
+            "character2": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, Increases damage received by 1.75x boosts ATK of all characters by 3.25x and their HP by 2x. Recovers HP proportional to the number of enemies you defeated in that turn ✕ crew's RCV at the end of the enemy turn.",
+            "combined": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] characters in your crew, Increases damage received by 1.75x boosts ATK of all characters by 4x and their HP by 2x. Recovers HP proportional to the number of enemies you defeated in that turn ✕ crew's RCV at the end of the enemy turn."
+        },
+        sailor: {
+            "character1": "Makes [STR], [PSY] and [RCV] orbs beneficial for this character",
+            "character2": "Makes [DEX], [QCK] and [TND] orbs beneficial for this character",
+            "combined": "Makes [STR], [DEX], [QCK], [PSY], [INT], [TND] and [RCV] orbs beneficial for this character",
+            "level1": "Boosts base HP of all characters by 150"
+        },
+        special: "Boosts base ATK of all characters based on your current HP for 1 turn and becomes Zeus & Prometheus & Big Mom for 3 turns. If HP is above 50% at the time the special is activated, locks the chain multiplier at 3.5x for 1 turn.",
+        specialNotes: "Base ATK boost is equal to current HP/100, the maximum effect at 100,000 HP will give a 1,000 base ATK boost.",
+        swap: "When Change is activated, this character removes all Paralysis on themselves and changes their own orb into a Matching orb, boosts own ATK by 1.5x for 1 turn and amplifies the effect of own orb by 1.5x for 1 turn.",
+        specialName: "Heavenly Fire and Lightning Ring & Mama Mash",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 150",
+                    "Level 4: Boosts base ATK by 200",
+                    "Level 5: Boosts base ATK by 300"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2537: {//Lucci&Kaku
+        captain: {
+            "character1": "Boosts ATK of Powerhouse characters by ?x if they have a Matching orb, by ?x otherwise. Reduces RCV of all characters by ?%.",
+            "character2": "Boosts ATK of Powerhouse characters by ?x and boosts damage of Powerhouse Typed specials by ?x.",
+            "combined": "Boosts ATK of Powerhouse characters by ?x if they have a Matching orb, by ?x otherwise and boosts damage of Powerhouse Typed specials by ?x."
+        },
+        sailor: {
+            "character1": "Boosts base ATK and HP of Powerhouse and Fighter characters by 30",
+            "character2": "Boosts base ATK and HP of Powerhouse and Slasher characters by 30",
+            "combined": "Boosts base ATK and HP of Powerhouse, Fighter and Slasher characters by 50",
+        },
+        special: "Deals 50x character's ATK in character's Type damage to all enemies and becomes Lucci & Kaku for 2 turns. If your Captain is a Powerhouse, Fighter or Slasher character, boosts ATK of Powerhouse, Fighter and Slasher characters by 2x for 1 turn.",
+        swap: "When Change is activated, makes [TND] orbs beneficial for Powerhouse, Fighter or Slasher characters for 1 turn and adds 0.3x to Chain multiplier for 1 turn.",
+        specialName: "Tempest Kick - Twin Beasts",
+    },
+    2538: {//Lucci&Kaku
+        captain: {
+            "character1": "Boosts ATK of Powerhouse characters by 2.75x if they have a Matching orb, by 2.25x otherwise. Reduces RCV of all characters by ?%.",
+            "character2": "Boosts ATK of Powerhouse characters by 2.25x and boosts damage of Powerhouse Typed specials by 1.2x.",
+            "combined": "Boosts ATK of Powerhouse characters by 3x if they have a Matching orb, by 2.5x otherwise and boosts damage of Powerhouse Typed specials by 1.5x."
+        },
+        sailor: {
+            "character1": "Boosts base ATK and HP of Powerhouse and Fighter characters by 30",
+            "character2": "Boosts base ATK and HP of Powerhouse and Slasher characters by 30",
+            "combined": "Boosts base ATK and HP of Powerhouse, Fighter and Slasher characters by 50",
+            "level1": "If your Captain is a Powerhouse, Fighter or Slasher character, completely resists Blindness"
+        },
+        special: "Deals 50x character's ATK in character's Type damage to all enemies and becomes Lucci & Kaku for 2 turns. If your Captain is a Powerhouse, Fighter or Slasher character, boosts ATK of Powerhouse, Fighter and Slasher characters by 2x for 1 turn.",
+        swap: "When Change is activated, makes [TND] orbs beneficial for Powerhouse, Fighter or Slasher characters for 1 turn and adds 0.3x to Chain multiplier for 1 turn.",
+        specialName: "Tempest Kick - Twin Beasts",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 4% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 60% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 80% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+        ]
+    },
+    2539: {//Ivankov&Bon Clay
+        captain: {
+            "character1": "Boosts ATK of Free Spirit characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+            "character2": "Boosts ATK of Free Spirit characters by ?x at the start of the chain, by ?x after 4 PERFECTs in a row.",
+            "combined": "Boosts ATK of Free Spirit characters by ?x at the start of the chain, by ?x after 4 PERFECTs in a row and recovers ?x character's RCV in HP at the end of each turn."
+        },
+        sailor: {
+            "character1": "Boosts base RCV of Free Spirit characters by 50",
+            "character2": "Boosts base ATK of Free Spirit characters by 50",
+            "combined": "Boosts base ATK and RCV of Free Spirit characters by 75",
+        },
+        special: "Removes Poison, RCV DOWN and Blindness duration completely, reduces Bind and Despair duration by 5 turns, recovers 13x character's RCV in HP at the end of each turn for 5 turns and becomes Ivankov & Bon Clay for 2 turns.",
+        swap: "When Change is activated, reduces Paralysis duration by 1 turn and reduces damage received by 20% for 1 turn.",
+        specialName: "The Cheer that will Summon a Miracle",
+    },
+    2540: {//Ivankov&Bon Clay
+        captain: {
+            "character1": "Boosts ATK of Free Spirit characters by 2x and recovers 2x character's RCV in HP at the end of each turn.",
+            "character2": "Boosts ATK of Free Spirit characters by 2.25x at the start of the chain, by 2.7x after 4 PERFECTs in a row.",
+            "combined": "Boosts ATK of Free Spirit characters by 2.75x at the start of the chain, by 3.43x after 4 PERFECTs in a row and recovers 3x character's RCV in HP at the end of each turn."
+        },
+        sailor: {
+            "character1": "Boosts base RCV of Free Spirit characters by 50",
+            "character2": "Boosts base ATK of Free Spirit characters by 50",
+            "combined": "Boosts base ATK and RCV of Free Spirit characters by 75",
+            "level1": "Reduces Silence duration on this character by 5 turns"
+        },
+        special: "Removes Poison, RCV DOWN and Blindness duration completely, reduces Bind and Despair duration by 5 turns, recovers 13x character's RCV in HP at the end of each turn for 5 turns and becomes Ivankov & Bon Clay for 2 turns.",
+        swap: "When Change is activated, reduces Paralysis duration by 1 turn and reduces damage received by 20% for 1 turn.",
+        specialName: "The Cheer that will Summon a Miracle",
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 25% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+        ]
+    },
+    2541: {//Smoker&Tashigi
+        captain: {
+            "character1": "Boosts ATK of [QCK] characters by ?x, boosts ATK of all other characters by ?x, and boosts HP of all characters by ?x.",
+            "character2": "Boosts ATK of [PSY] characters by ?x, boosts ATK of all other characters by ?x, and boosts HP of all characters by ?x.",
+            "combined": "Boosts ATK of [QCK] and [PSY] characters by ?x, boosts ATK of all other characters by ?x, and boosts HP of all characters by ?x."
+        },
+        sailor: {
+            "character1": "Boosts base HP of [QCK] and [PSY] characters by 50",
+            "character2": "Boosts base RCV of [QCK] and [PSY] characters by 50",
+            "combined": "Boosts base HP and RCV of [QCK] and [PSY] characters by 75",
+        },
+        special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
+        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        specialName: "White Hunting Autumn Rain",
+    },
+    2542: {//Smoker&Tashigi
+        captain: {
+            "character1": "Boosts ATK of [QCK] characters by 2.5x, boosts ATK of all other characters by 2x, and boosts HP of all characters by 1.2x.",
+            "character2": "Boosts ATK of [PSY] characters by 2.5x, boosts ATK of all other characters by 2x, and boosts HP of all characters by 1.2x.",
+            "combined": "Boosts ATK of [QCK] and [PSY] characters by 3.25x, boosts ATK of all other characters by 2.5x, and boosts HP of all characters by 1.2x."
+        },
+        sailor: {
+            "character1": "Boosts base HP of [QCK] and [PSY] characters by 50",
+            "character2": "Boosts base RCV of [QCK] and [PSY] characters by 50",
+            "combined": "Boosts base HP and RCV of [QCK] and [PSY] characters by 75",
+            "level1": "Makes [TND] orbs beneficial for [QCK] and [PSY] characters"
+        },
+        special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
+        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        specialName: "White Hunting Autumn Rain",
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ]
+    },
+    2543: {//Crocodile&Robin
+        captain: {
+            "character1": "Boosts ATK of Cerebral characters by ?x and makes [DEX] orbs beneficial for Cerebral characters.",
+            "character2": "Boosts ATK of Cerebral characters by ?x and reduce damage received by ?%.",
+            "combined": "Boosts ATK of Cerebral characters by ?x, reduce damage received by ?% and makes [DEX] orbs beneficial for Cerebral characters."
+        },
+        sailor: {
+            "character1": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "character2": "Reduces Silence duration on this character by 2 turns",
+            "combined": "Boosts base ATK, HP and RCV of Cerebral characters by 50",
+        },
+        special: "Reduces damage received by 80% for 1 turn, boosts the Color Affinity of all characters by 1.75x for 1 turn and becomes Mr. 0 & Miss All Sunday for 2 turns.",
+        swap: "When Change is activated, slightly boosts chances of getting Matching orbs for 1 turn.",
+        specialName: "Disorderly Bloom: Pesado",
+    },
+    2544: {//Crocodile&Robin
+        captain: {
+            "character1": "Boosts ATK of Cerebral characters by 2.5x and makes [DEX] orbs beneficial for Cerebral characters.",
+            "character2": "Boosts ATK of Cerebral characters by 2.25x and reduce damage received by 15%.",
+            "combined": "Boosts ATK of Cerebral characters by 3x, reduce damage received by 20% and makes [DEX] orbs beneficial for Cerebral characters."
+        },
+        sailor: {
+            "character1": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "character2": "Reduces Silence duration on this character by 2 turns",
+            "combined": "Boosts base ATK, HP and RCV of Cerebral characters by 50",
+            "level1": "Makes [DEX] orbs beneficial for Cerebral characters"
+        },
+        special: "Reduces damage received by 80% for 1 turn, boosts the Color Affinity of all characters by 1.75x for 1 turn and becomes Mr. 0 & Miss All Sunday for 2 turns.",
+        swap: "When Change is activated, slightly boosts chances of getting Matching orbs for 1 turn.",
+        specialName: "Disorderly Bloom: Pesado",
+        potential: [
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ]
+    },
+    2545: {//Ace
+        captain: "Boosts ATK of Free Spirit characters by ?x and makes [RCV] orbs beneficial for Cerebral characters.",
+        special: "Binds self for 5 turns, reduces Special Cooldown of all characters by 2 turns and locks the chain multiplier at 3x for 2 turns.",
+        specialName: "My Paced Feast",
+    },
+    2546: {//Ace
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and makes [RCV] orbs beneficial for Cerebral characters.",
+        sailor: {
+            "base": "None",
+            "Level1": "Restores his own special cooldown by 2 turns when it is rewinded",
+        },
+        special: "Binds self for 5 turns, reduces Special Cooldown of all characters by 2 turns and locks the chain multiplier at 3x for 2 turns.",
+        specialName: "My Paced Feast",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+        ],
+    },
+    2547: {//Perona
+        captain: "Boosts ATK and RCV of Driven characters by 1.75x.",
+        special: "Recovers 50% of crew's MAX HP and reduces damage received by 70% for 3 turns.",
+        specialName: "Party Ghost Greeting",
+    },
+    2548: {//Perona
+        captain: "Boosts ATK and RCV of Driven characters by 1.75x.",
+        sailor: {
+            "base": "None",
+            "Level1": "Reduces Silence duration on this character by 2 turns",
+        },
+        special: "Recovers 50% of crew's MAX HP and reduces damage received by 70% for 3 turns.",
+        specialName: "Party Ghost Greeting",
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 3 turn",
+                    "Level 2: Reduces No Healing duration by 4 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
     },
     2551: {//Sengoku&Garp
         captain: {
@@ -49100,35 +49519,35 @@ window.details = {
         captain: "Boosts ATK of [PSY] characters by ?x and boosts ATK of [QCK] and [INT] characters by ?x.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
     },
     5059: {//Smoothie&Oven
         captain: "Boosts ATK of [QCK] characters by ?x and boosts ATK of [PSY] and [INT] characters by ?x.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
     },
     5060: {//Smoothie&Oven
-        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 2.5x and recovers 1x character's RCV in HP at the end of each turn.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
     },
     5061: {//Smoothie&Oven
-        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by ?x and recovers ?x character's RCV in HP at the end of each turn.",
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 2.5x and recovers 1x character's RCV in HP at the end of each turn.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
     },
     5062: {//Smoothie&Oven
         captain: "Boosts ATK of [PSY] characters by 3x and boosts ATK of [QCK] and [INT] characters by 2.5x.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of [PSY] and [INT] characters by 25",
             "level1": "Cannot be blown away",
@@ -49202,7 +49621,7 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 3x and boosts ATK of [PSY] and [INT] characters by 2.5x.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of [QCK] and [INT] characters by 25",
             "level1": "Cannot be blown away",
@@ -49276,7 +49695,7 @@ window.details = {
         captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
             "level1": "Cannot be blown away",
@@ -49350,7 +49769,7 @@ window.details = {
         captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 3.75x and recovers 3x character's RCV in HP at the end of each turn.",
         special: "Boosts chances of getting [QCK] and [PSY] orbs for 2 turns, randomizes all orbs, amplifies the effect of orbs on [QCK], [PSY] and [INT] characters by 2x for 2 turns and becomes Smoothie & Oven for 2 turns",
         swap: "When Change is activated, makes [QCK] and [PSY] orbs beneficial for [QCK], [PSY] and [INT] characters for 1 turn and deals 20x character's ATK in character's Type damage to all enemies at the end of the turn for 1 turn.",
-        specialName: "Smoothie&Oven Special",
+        specialName: "Brother and Sister Chasing Intruders",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of [QCK], [PSY] and [INT] characters by 50",
             "level1": "Cannot be blown away",

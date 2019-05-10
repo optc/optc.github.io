@@ -3803,7 +3803,7 @@ window.drops = {
             nakama: null,
             gamewith: 149563,
             condition: 'Will have a unique tab in the drops page soon.',
-            'All Difficulties': [ 2531, 2519 ]
+            'All Difficulties': [ 2531, 2518 ]
         },
         
         {
@@ -3812,7 +3812,7 @@ window.drops = {
             nakama: null,
             gamewith: 149693,
             condition: 'Will have a unique tab in the drops page soon.',
-            'All Difficulties': [ 2532, 2519 ]
+            'All Difficulties': [ 2532, 2518 ]
         },
         
         {
