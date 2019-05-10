@@ -2389,7 +2389,7 @@ window.drops = {
             dropID: 'event119',
             thumb: 2519,
             nakama: null,
-            gamewith: null,
+            gamewith: 149417,
             'All Difficulties': [ 2519, 2520, 2521, 2522, 2523, -2148, -2338, -1959, -1989, -2013, -2078, -2515, -2152, -2080, -2048, -2340, -2247, -2187, -2342, -2230 ]
         },
         
@@ -3113,12 +3113,12 @@ window.drops = {
         
         {
             name: 'Clash!! Sengoku & Garp',
-            thumb: 3338,
+            thumb: 2552,
             global: true,
-            nakama: 4333800,
-            gamewith: null,
-            Master: [ 3337 ],
-            Expert: [ 3337 ]
+            nakama: 4255200,
+            gamewith: 150061,
+            Master: [ 2551 ],
+            Expert: [ 2551 ]
         },
         
         {
@@ -3412,7 +3412,7 @@ window.drops = {
             name: 'Coliseum EX Vs. King Neptune',
             thumb: 2529,
             nakama: null,
-            gamewith: null,
+            gamewith: 149444,
             slefty: 'coliseums',
             'All Difficulties': [ 2528, 2530 ],
         },
@@ -3795,6 +3795,24 @@ window.drops = {
             gamewith: 136823,
             condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Bond Battle',
+            thumb: 2531,
+            nakama: null,
+            gamewith: 149563,
+            condition: 'Will have a unique tab in the drops page soon.',
+            'All Difficulties': [ 2531, 2519 ]
+        },
+        
+        {
+            name: 'Beginner Adventure: Whole Cake Island Special Edition',
+            thumb: 2532,
+            nakama: null,
+            gamewith: 149693,
+            condition: 'Will have a unique tab in the drops page soon.',
+            'All Difficulties': [ 2532, 2519 ]
         },
         
         {

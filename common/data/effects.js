@@ -819,7 +819,7 @@ window.effects = {
 
     '1.2x ATK Boost - Sengoku Garp Change Action': {
         description: '1.2x ATK boost for Fighters',
-        thumb: 3338,
+        thumb: 2552,
         id: 65, // don't change this
         atk: function(p) { return p.class.has('Fighter') ? 1.2 : 1; }
     },

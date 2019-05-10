@@ -3935,13 +3935,13 @@ window.evolutions = {
         evolution: 2431,
         evolvers: [ 118, 87, 98, 303, 103 ]
     },
+    2551: {
+        evolution: 2552,
+        evolvers: [ 104, 102, 267, 1180, 118 ]
+    },
     3333: {
         evolution: 3334,
         evolvers: [ 118, 86, 266, 302, 267 ]
-    },
-    3337: {
-        evolution: 3338,
-        evolvers: [ 104, 102, 267, 1180, 118 ]
     },
     1763: {
         evolution: 3336,
@@ -4073,11 +4073,11 @@ window.evolutions = {
     },
     2516: {
         evolution: 2517,
-        evolvers: [  ]
+        evolvers: [ 116, 117, 118, 101, 104 ]
     },
     2528: {
         evolution: 2529,
-        evolvers: [  ]
+        evolvers: [ 118, 97, 1180, 302, 102 ]
     },
     3339: {
         evolution: 3340,

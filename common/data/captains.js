@@ -9331,16 +9331,16 @@ window.captains = {
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 3.75 : 1; },
     },
     5066: {
-        atk: function(p) { return p.unit.type == "INT" ? 1 : p.unit.type == "QCK" ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },
     5067: {
-        atk: function(p) { return p.unit.type == "QCK" ? 1 : p.unit.type == "INT" ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
     },
     5068: {
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : 1; },//Change this
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
     },
     5069: {
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : 1; },//Change this
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
     },
     5070: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : p.unit.type == "QCK" ? 2 : 1; },

@@ -4741,7 +4741,7 @@ window.specials = {
         type: "type"
     },
     2044: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
         type: "class",
     },
     2046: {
@@ -7892,7 +7892,7 @@ window.specials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5074].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 50 ? 2.75 : 2);
+            var n = (p.percHP >= 99 ? 2.75 : 2);
             window.specials[5074].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -7904,7 +7904,7 @@ window.specials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5075].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 50 ? 2.75 : 2);
+            var n = (p.percHP >= 99 ? 2.75 : 2);
             window.specials[5075].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -7916,7 +7916,7 @@ window.specials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5076].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 50 ? 2.75 : 2);
+            var n = (p.percHP >= 99 ? 2.75 : 2);
             window.specials[5076].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -7928,7 +7928,7 @@ window.specials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[5077].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 50 ? 2.75 : 2);
+            var n = (p.percHP >= 99 ? 2.75 : 2);
             window.specials[5077].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',

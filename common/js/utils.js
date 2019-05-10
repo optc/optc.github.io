@@ -215,8 +215,8 @@
             case '5025': return '../res/character_10497_t1.png'; break;
             case '5026': return '../res/character_10498_t1_dex.png'; break;
             case '5027': return '../res/character_10498_t1_str.png'; break;
-            case '3337': return '../res/character_10640_t1.png'; break;
-            case '3338': return '../res/character_10641_t1.png'; break;
+            case '2551': return '../res/character_10640_t1.png'; break;//remove this
+            case '2552': return '../res/character_10641_t1.png'; break;//remove this
             case '5028': return '../res/character_10636_t1.png'; break;
             case '5029': return '../res/character_10637_t1.png'; break;
             case '5030': return '../res/character_10640_t1_int.png'; break;
@@ -264,7 +264,15 @@
             case '5070': return '../res/character_10834_t1.png'; break;
             case '5071': return '../res/character_10835_t1.png'; break;
             case '5072': return '../res/character_10837_t1_int.png'; break;
-            case '5073': return '../res/character_10838_t1_qck.png'; break;
+            case '5073': return '../res/character_10837_t1_qck.png'; break;
+            case '5074': return '../res/character_10950_t1.png'; break;
+            case '5075': return '../res/character_10951_t1.png'; break;
+            case '5076': return '../res/character_10952_t1_dex.png'; break;
+            case '5077': return '../res/character_10952_t1_qck.png'; break;
+            case '5078': return '../res/character_10773_t1.png'; break;
+            case '5079': return '../res/character_10774_t1.png'; break;
+            case '5080': return '../res/character_10775_t1_int.png'; break;
+            case '5081': return '../res/character_10775_t1_qck.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
