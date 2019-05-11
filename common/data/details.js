@@ -40119,7 +40119,7 @@ window.details = {
     },
     2321: {//Story Cracker
         captain: "Boosts ATK of Slasher characters by 2.5x and their HP by 1.2x and boosts chain by 1.4x if HP below 30% at the start of the turn",
-        special: "Cuts the current HP of one enemy by 15%, reduces damage by 50% and deals 75x character's ATK as [INT] damage to all enemies at the end of the turn for 3 turns",
+        special: "Cuts the current HP of all enemies by 15%, reduces damage by 50% and deals 75x character's ATK as [INT] damage to all enemies at the end of the turn for 3 turns",
         specialName: "Baptism of the \"New World\"",
     },
     2322: {//Oven
@@ -44976,13 +44976,13 @@ window.details = {
         ]
     },
     2478: {//Mr. 1
-        captain: "Boosts ATK of Slaher and Cerebral characters by 2.25x.",
+        captain: "Boosts ATK of Slasher and Cerebral characters by 2.25x.",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, randomizes all non-Matching orbs, including [BLOCK] orbs, makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 3 turns.",
         specialName: "Spiral Hollow",
         sailor: "If your Captain is a Slasher character, boosts own base ATK by 150",
     },
     2479: {//Mr. 1
-        captain: "Boosts ATK of Slaher and Cerebral characters by 2.5x and their HP by 1.2x.",
+        captain: "Boosts ATK of Slasher and Cerebral characters by 2.5x and their HP by 1.2x.",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers, randomizes all non-Matching orbs, including [BLOCK] orbs, makes Badly Matching and [BLOCK] orbs not reduce damage for 3 turns and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 3 turns.",
         specialName: "Spiral Hollow",
         sailor: {
