@@ -346,6 +346,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (enabledEffects[i].hasOwnProperty('atk'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk,null,false,enabledEffects[i].sourceSlot);
         }
+        for (var i=0;i<enabledSpecials.length;++i) {
+            if (enabledSpecials[i].hasOwnProperty('atkStatic'))
+                result = applyCaptainEffectsToDamage(result,enabledSpecials[i].atkStatic,null,true,enabledSpecials[i].sourceSlot);
+        }
         
         // if the user has specified a custom order, sort by that
         if ($scope.tdata.orderOverride.hasOwnProperty(type)) {
@@ -839,7 +843,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], orb: [ ], affinity: [ ], condition: [ ]};
+        var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ]};
         chainSpecials = [ ];
         chainAddition = [ ];
         affinityMultiplier = [ ];
@@ -918,11 +922,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             for (var y=0;y<enabledSpecials.length;++y) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
+                    params.sourceSlot = slot;
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         specialid = team[slot].unit.number + 1;
                         multSpecial = enabledSpecials[y].staticMult(params);
                         baseDamage = getStatOfUnit(team[slot],'atk');
                         enabledEffects.forEach(function(x) {
+                            if (x.hasOwnProperty('atkStatic'))
+                                baseDamage += x.atkStatic(getParameters(slot));
+                        });
+                        enabledSpecials.forEach(function(x) {
                             if (x.hasOwnProperty('atkStatic'))
                                 baseDamage += x.atkStatic(getParameters(slot));
                         });
@@ -942,6 +951,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledEffects.forEach(function(x) {
                         if (x.hasOwnProperty('atkStatic'))
                             baseDamage2 += x.atkStatic(getParameters(slot));
+                    });
+                    enabledSpecials.forEach(function(x) {
+                        if (x.hasOwnProperty('atkStatic'))
+                            baseDamage += x.atkStatic(getParameters(slot));
                     });
                     var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){

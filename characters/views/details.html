@@ -249,10 +249,14 @@
                                         </div>
                                         <!-- different specials -->
                                         <div ng-if="isSpecialHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="details.special.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="details.special.global | decorate"></div>
+                                            <span class="badge badge-japan" ng-show="details.special.japan">Japan</span>
+                                            <div ng-show="details.special.japan" ng-bind-html="details.special.japan | decorate"></div>
+                                            <span class="badge badge-global" ng-show="details.special.global">Global</span>
+                                            <div ng-show="details.special.global" ng-bind-html="details.special.global | decorate"></div>
+                                            <span class="badge badge-character1" ng-show="details.special.character1">Character 1 Special Ability</span>
+                                            <div ng-bind-html="details.special.character1 | decorate"></div>
+                                            <span class="badge badge-character2" ng-show="details.special.character2">Character 2 Special Ability</span>
+                                            <div ng-bind-html="details.special.character2 | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                                     </td>
