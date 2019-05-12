@@ -40192,17 +40192,17 @@ window.details = {
             }
         ]
     },
-    2324: {//Usopp
+    2324: {//LRR Usopp
         captain: "Boosts ATK of Shooter characters by 3x following a chain of Good > Great > PERFECT hits.",
-        special: "Cuts the current HP of one enemy by 20%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds 0.75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
+        special: "Cuts the current HP of one enemy by 15%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds 0.75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Green Star: Skull Bombgrass",
         specialNotes: "#{beneficial}",
         sailor: "Reduces Silence duration on this character by 3 turns",
         specialNotes: "#{silence}",
     },
-    2325: {//Usopp
+    2325: {//LRR Usopp
         captain: "Boosts ATK of Shooter characters by 3.75x following a chain of Good > Great > PERFECT hits and reduces damage received by 7%.",
-        special: "Cuts the current HP of one enemy by 20%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds 0.75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
+        special: "Cuts the current HP of one enemy by 15%, reduces enemies' Threshold Damage Reduction, ATK Up and End of Turn Damage/Percent Cut Buffs duration by 7 turns. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, adds 0.75x to Chain multiplier for 1 turn and makes [STR], [DEX] and [QCK] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Green Star: Skull Bombgrass",
         specialNotes: "#{beneficial}",
         sailor: {
@@ -43354,7 +43354,7 @@ window.details = {
             },
         ],
     },
-    2439: {//Ussop
+    2439: {//Usopp
         captain: "Boosts ATK of Free Spirit characters by 2.75x if HP is below ?% at the start of the turn, by 1.5x otherwise",
         special: "Reduces crew's current HP by 50%, delays all enemies for 1 turn, removes all positive buffs on your team and reduces Bind, Despair, Paralysis and Silence duration by 1 turn.",
         specialName: "Usoland's Great Scream",
@@ -46368,7 +46368,7 @@ window.details = {
         },
         special: "Deals 100x character's ATK in Typeless damage to all enemies, and becomes Zoro & Sanji for 3 turns. If HP is above 99% at the time the special is activated, boosts ATK of Slasher and Fighter characters by 2.75x for 1 turn, by 2x for 2 turns otherwise.",
         swap: "When Change is activated, this character removes all Slot Bind on themselves and changes their own orb into a Matching orb",
-        specialName: "Zoro & Sanji Special",
+        specialName: "Three Sword and Twin Black Leg Style - Harmonized Shoot",
         potential: [
             {
                 "Name": "Critical Hit",

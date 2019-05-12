@@ -3566,6 +3566,7 @@ window.drops = {
             name: 'Trafalgar Law',
             dropID: 'treasuremap15',
             thumb: 2336,
+            global: true,
             nakama: 8233600,
             gamewith: 128733,
             'Calm Sea': [ 2335 ]
