@@ -8,6 +8,12 @@
 </div>
 
 <div class="filter-container">
+    <span class="filter-header">Character filters</span>
+    <span class="filter width-12 exc" ng-model="filters.dualUnits" ng-class="{ active: filters.dualUnits }"
+        ng-click="filters.dualUnits = !filters.dualUnits">Show Dual Character Units</span>
+</div>
+
+<div class="filter-container">
     <span class="filter-header">Class filters</span>
     <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven', 'Evolver', 'Booster' ]"
         class="filter width-6 class" ng-click="onClassClick($event,class)"
