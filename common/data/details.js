@@ -46028,14 +46028,14 @@ window.details = {
     },
     2514: {//Urouge
         captain: "Boosts ATK of Fighter characters by ?x and reduces damage received by ?%",
-        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Fighter characters by 2.25x for 1 turn in the following turn.",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
         specialName: "Karmic Punishment and Prayers",
         sailor: "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
         sailorNotes: "#{beneficial}",
     },
     2515: {//Urouge
         captain: "Boosts ATK of Fighter characters by 3x and reduces damage received by 5%",
-        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Fighter characters by 2.25x for 1 turn in the following turn.",
+        special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
         specialName: "Karmic Punishment and Prayers",
         sailor: {
             "base": "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
