@@ -536,7 +536,7 @@ window.ships = [
     
     { //40
         name: "Germa 66",
-        thumb: null,
+        thumb: 'ship_0042_c.png',
         description: 'If you have a [STR], [DEX], [QCK], [PSY] and [INT] character on your crew, reduces cooldown of all specials by 2 turns, boosts ATK of all characters by 1.55x, their HP by 1.25x, makes PERFECTs slightly easier to hit. If any character has a [RCV] or [TND] orb, boosts their ATK by an additional 1.1x.',
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 1.65, [ "QCK", "STR", "DEX" ]); },
         atk: function(p) {
@@ -547,6 +547,17 @@ window.ships = [
         },
         hp: function(p) {
             return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1 && p.colorCount.PSY>=1 && p.colorCount.INT>=1) ? [ 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
+    },
+    
+    
+    
+    { //41
+        name: "5th Anniversary Thousand Sunny",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge.',
+        atk: function(p) {
+            return 1.5;
         },
     },
 

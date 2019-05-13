@@ -6874,7 +6874,6 @@ window.specials = {
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            console.log(window.specials[2420].turnedOn);
             var n = window.specials[2420].turnedOn; var m = n ? 1 : 0;
             window.specials[2420].multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
             p.scope.notify({
