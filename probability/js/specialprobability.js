@@ -4,9 +4,9 @@ onmessage = function(e) {
 	var skillups = parseInt(e.data.skillups);
 
 	var probability = 0.2;
-    /*if (e.data.jpn_server == true) {
+    if (e.data.server == 1) {//2 for Japan, 1 for Global
 		probability = .2;
-	}*/
+	}
 	// if special event selected probability is affected
     probability *= e.data.special_event;
 
