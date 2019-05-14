@@ -79,7 +79,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
 
     $scope.onClassClick = function(e, clazz) {
         if ($rootScope.filters.classes.indexOf(clazz) == -1) {
-            $rootScope.filters.classes = $rootScope.filters.classes.slice(0,1);
+            //$rootScope.filters.classes = $rootScope.filters.classes.slice(0,1);
             $rootScope.filters.classes.push(clazz);
         }
         else $rootScope.filters.classes.splice($rootScope.filters.classes.indexOf(clazz), 1);

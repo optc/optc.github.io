@@ -113,17 +113,37 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by class
         if (filters.classes && filters.classes.length) {
-            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2, dualCharacter = Array.isArray(unit.class)  && unit.class.length == 3;
-            if (!singleQuery && singleClass) return false;
-            else if (singleQuery && singleClass && filters.classes[0] != unit.class) return false;
-            else if (singleQuery && dualCharacter && (filters.classes[0] !== unit.class[2][0] &&
-                        filters.classes[0] !== unit.class[2][1])) return false;
-            else if (singleQuery && doubleClass && filters.classes.indexOf(unit.class[0]) == -1 &&
-                    filters.classes.indexOf(unit.class[1]) == -1) return false;
-            else if (!singleQuery && doubleClass && (filters.classes.indexOf(unit.class[0]) == -1 ||
-                        filters.classes.indexOf(unit.class[1]) == -1)) return false;
-            else if (!singleQuery && dualCharacter && (filters.classes.indexOf(unit.class[2][0]) == -1 ||
-                        filters.classes.indexOf(unit.class[2][1]) == -1)) return false;
+            var inclusive = filters.classInclusive;
+            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2, dualCharacter = Array.isArray(unit.class) && unit.class.length == 3;
+            if(!inclusive){
+                if (singleClass){
+                    if(singleQuery) if(filters.classes[0] != unit.class) return false;
+                    if(!singleQuery) if(!filters.classes.includes(unit.class)) return false;
+                }
+                else if(doubleClass){
+                    if(singleQuery) return false;
+                    if(!singleQuery) if(!filters.classes.includes(unit.class[0]) || !filters.classes.includes(unit.class[1])) return false;
+                }
+                else{
+                    if(singleQuery) return false;
+                    if(!singleQuery){
+                        if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
+                          && (!filters.classes.includes(unit.class[1][0]) || !filters.classes.includes(unit.class[1][1]))
+                          && (!filters.classes.includes(unit.class[2][0]) || !filters.classes.includes(unit.class[2][1]))) return false;
+                    }
+                }
+            }
+            else{
+                if (singleClass) if(!filters.classes.includes(unit.class)) return false;
+                if (doubleClass) if(!filters.classes.includes(unit.class[0]) && !filters.classes.includes(unit.class[1])) return false;
+                if (dualCharacter) {
+                    var uclasses = [];
+                    for(i = 0; i < unit.class.length; i++) { uclasses.push(unit.class[i][0]); uclasses.push(unit.class[i][1]); }
+                    var temp = false;
+                    for(i = 0; i < uclasses.length; i++) if(temp || filters.classes.includes(uclasses[i])) temp = true;
+                    if(!temp) return false;
+                }
+            }
         }
         // filter by stars
         if (filters.stars && filters.stars.length && filters.stars.indexOf(unit.stars) == -1) return false;
