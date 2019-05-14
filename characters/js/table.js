@@ -113,7 +113,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         }
         // filter by class
         if (filters.classes && filters.classes.length) {
-            var inclusive = filters.classInclusive;
+            var inclusive = !filters.classInclusive;
             var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2, dualCharacter = Array.isArray(unit.class) && unit.class.length == 3;
             if(!inclusive){
                 if (singleClass){

@@ -19,7 +19,7 @@
         class="filter width-6 class" ng-click="onClassClick($event,class)"
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
     <span class="filter width-12 exc"  ng-class="{ active: filters.classInclusive === true }"
-        ng-model="filters.classInclusive" ng-click="filters.classInclusive = !filters.classInclusive">Include Characters with other Classes</span>
+        ng-model="filters.classInclusive" ng-click="filters.classInclusive = !filters.classInclusive">Exclude Characters with other Classes</span>
 </div>
 
 
