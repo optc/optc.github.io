@@ -8156,4 +8156,124 @@ window.specials = {
     5119: {
         affinity: function(p) { return 1.75; }
     },
+    5128: {
+        chain: function(p) { return window.specials[5128].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5128].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5128].multiplier == 2.75 ? 1 : 0);
+            window.specials[5128].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5128warning'
+            });
+        },
+    },
+    5129: {
+        chain: function(p) { return window.specials[5129].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5129].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5129].multiplier == 2.75 ? 1 : 0);
+            window.specials[5129].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5129warning'
+            });
+        },
+    },
+    5130: {
+        chain: function(p) { return window.specials[5130].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5130].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5130].multiplier == 2.75 ? 1 : 0);
+            window.specials[5130].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5130warning'
+            });
+        },
+    },
+    5131: {
+        chain: function(p) { return window.specials[5131].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5131].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5131].multiplier == 2.75 ? 1 : 0);
+            window.specials[5131].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5131warning'
+            });
+        },
+    },
+    5132: {
+        chain: function(p) { return window.specials[5132].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5132].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5132].multiplier == 2.75 ? 1 : 0);
+            window.specials[5132].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5132warning'
+            });
+        },
+    },
+    5133: {
+        chain: function(p) { return window.specials[5133].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5133].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5133].multiplier == 2.75 ? 1 : 0);
+            window.specials[5133].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5133warning'
+            });
+        },
+    },
+    5134: {
+        chain: function(p) { return window.specials[5134].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5134].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5134].multiplier == 2.75 ? 1 : 0);
+            window.specials[5134].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5134warning'
+            });
+        },
+    },
+    5135: {
+        chain: function(p) { return window.specials[5135].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5135].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[5135].multiplier == 2.75 ? 1 : 0);
+            window.specials[5135].multiplier = [2.75,3.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '5135warning'
+            });
+        },
+    },
 };

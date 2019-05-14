@@ -215,8 +215,6 @@
             case '5025': return '../res/character_10497_t1.png'; break;
             case '5026': return '../res/character_10498_t1_dex.png'; break;
             case '5027': return '../res/character_10498_t1_str.png'; break;
-            case '2551': return '../res/character_10640_t1.png'; break;//remove this
-            case '2552': return '../res/character_10641_t1.png'; break;//remove this
             case '5028': return '../res/character_10636_t1.png'; break;
             case '5029': return '../res/character_10637_t1.png'; break;
             case '5030': return '../res/character_10640_t1_int.png'; break;
