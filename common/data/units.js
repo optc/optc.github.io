@@ -2516,7 +2516,7 @@ window.units = [
     [ "Urouge, A Monk Healing his Wounds", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 5, 99, 4000000, 1339, 557, 71, 3348, 1392, 178, 1 ],
     [ "Magellan & Hannyabal, Impel Down Guardians", [ "INT", "QCK" ], [[ "Striker", "Shooter" ],[ "Striker", "Driven" ],[ "Striker", "Shooter" ]], 4, 30, 4, 2, 70, 1066998, 861, 445, 70, 1510, 890, 194, 1 ],
     [ "Magellan & Hannyabal, The Great Guardian Deities of Hell", [ "INT", "QCK" ], [[ "Striker", "Shooter" ],[ "Striker", "Driven" ],[ "Striker", "Shooter" ]], 5, 50, 4, 3, 99, 5000000, 1400, 734, 161, 2671, 1475, 270, 1 ],
-    [ "Bartolomeo, Strawhat Pirates' Worshipper", "PSY", [ "Driven", "Free Spirit" ], 5, 1, 4, 4, 99, null, null, null, null, 2122, 1185, 355, null ],
+    [ "Bartolomeo, Strawhat Pirates' Worshipper", "PSY", [ "Driven", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 598, 575, 115, 2122, 1185, 355, 1 ],
     [ "Monkey D. Luffy, Dress up for Pirate Festival", "DEX", [ "Free Spirit", "Fighter" ], 4, 1, 4, 4, 99, 1000000, 924, 551, 42, 2310, 1377, 106, 1 ],
     [ "Nico Robin, Dress up for Pirate Festival", "QCK", [ "Cerebral", "Fighter" ], 4, 1, 6, 4, 99, 1000000, 783, 400, 116, 1958, 1001, 290, 1 ],
     [ "Usopp, Dress up for Pirate Festival", "DEX", "Shooter", 4, 1, 4, 4, 99, 1000000, 884, 407, 96, 2210, 1019, 242, 1 ],

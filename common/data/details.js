@@ -46174,10 +46174,10 @@ window.details = {
             {
                 "Characters": "Luffy",
                 "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, Reduces damage received by ?% for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, Reduces damage received by ?% for 1 turn.",
-                    "Level 3: Once per an adventure, when the supported character uses their special, Reduces damage received by ?% for 1 turn.",
-                    "Level 4: Once per an adventure, when the supported character uses their special, Reduces damage received by ?% for 1 turn.",
+                    "Level 1: Once per an adventure, when the supported character uses their special, Reduces damage received by 10% for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, Reduces damage received by 20% for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, Reduces damage received by 30% for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, Reduces damage received by 40% for 1 turn.",
                     "Level 5: Once per an adventure, when the supported character uses their special, Reduces damage received by 50% for 1 turn."
                 ]
             }
