@@ -3,8 +3,8 @@
 <div class="filter-container">
     <span class="filter-header">Type filters</span>
     <span ng-model="filters.type" ng-repeat="(n,type) in [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ]"
-        class="filter {{n < 3 ? 'width-4' : 'width-6'}} type {{type}}" ng-class="{ active: filters.type == type }"
-        ng-click="onFilterClick($event,type)">{{type}}</span>
+        class="filter {{n < 3 ? 'width-4' : 'width-6'}} type {{type}}" ng-class="{ active: filters.types.indexOf(type) > -1 }"
+        ng-click="onTypeClick($event,type)">{{type}}</span>
 </div>
 
 <div class="filter-container">
