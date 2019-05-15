@@ -4,7 +4,7 @@
  * Common data *
  ***************/
 
-var filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
+var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ] };
 
 /***************
  * Controllers *
@@ -56,8 +56,8 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     });
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
-        $rootScope.filters = { custom: [ ], classes: [ ], stars: [ ], cost: [ 1, 99 ] };
+        filters = { custom: [ ], classes: [ ], type: [ ], stars: [ ], cost: [ 1, 99 ] };
+        $rootScope.filters = { custom: [ ], classes: [ ], type: [ ], stars: [ ], cost: [ 1, 99 ] };
     };
 
     $scope.onFilterClick = function(e, value) {
@@ -77,9 +77,17 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
         $rootScope.filters[type] = ($rootScope.filters[type] == value ? null : value);
     };
 
+    $scope.onTypeClick = function(e, value) {
+        if ($rootScope.filters.types.indexOf(value) == -1) {
+            //$rootScope.filters.classes = $rootScope.filters.classes.slice(0,1);
+            $rootScope.filters.types.push(value);
+        }
+        else $rootScope.filters.types.splice($rootScope.filters.types.indexOf(value), 1);
+    };
+
     $scope.onClassClick = function(e, clazz) {
         if ($rootScope.filters.classes.indexOf(clazz) == -1) {
-            $rootScope.filters.classes = $rootScope.filters.classes.slice(0,1);
+            //$rootScope.filters.classes = $rootScope.filters.classes.slice(0,1);
             $rootScope.filters.classes.push(clazz);
         }
         else $rootScope.filters.classes.splice($rootScope.filters.classes.indexOf(clazz), 1);

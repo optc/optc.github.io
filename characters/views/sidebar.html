@@ -3,8 +3,8 @@
 <div class="filter-container">
     <span class="filter-header">Type filters</span>
     <span ng-model="filters.type" ng-repeat="(n,type) in [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ]"
-        class="filter {{n < 3 ? 'width-4' : 'width-6'}} type {{type}}" ng-class="{ active: filters.type == type }"
-        ng-click="onFilterClick($event,type)">{{type}}</span>
+        class="filter {{n < 3 ? 'width-4' : 'width-6'}} type {{type}}" ng-class="{ active: filters.types.indexOf(type) > -1 }"
+        ng-click="onTypeClick($event,type)">{{type}}</span>
 </div>
 
 <div class="filter-container">
@@ -18,6 +18,8 @@
     <span ng-repeat="(n,class) in [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven', 'Evolver', 'Booster' ]"
         class="filter width-6 class" ng-click="onClassClick($event,class)"
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
+    <span class="filter width-12 exc"  ng-class="{ active: filters.classInclusive === true }"
+        ng-model="filters.classInclusive" ng-click="filters.classInclusive = !filters.classInclusive">Exclude Characters with other Classes</span>
 </div>
 
 

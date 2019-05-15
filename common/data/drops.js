@@ -3462,6 +3462,15 @@ window.drops = {
             slefty: 'coliseums',
             'All Difficulties': [ 2528, 2530 ],
         },
+
+        {
+            name: 'Doflamingo & Trebol',
+            thumb: 2550,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2549, -2550 ],
+        },
         
     ],
 

@@ -817,15 +817,15 @@ window.zombies = {
     },
     5106: { // Ivan/Bon Clay
         type: 'healer',
-        multiplier: 2//change this
+        multiplier: 2
     },
     5108: { // Ivan/Bon Clay
         type: 'healer',
-        multiplier: 3//change this
+        multiplier: 3
     },
     5109: { // Ivan/Bon Clay
         type: 'healer',
-        multiplier: 3//change this
+        multiplier: 3
     },
     5110: { // Ivan/Bon Clay
         type: 'healer',
