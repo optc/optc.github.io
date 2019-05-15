@@ -8132,28 +8132,28 @@ window.specials = {
             window.specials[5103].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
-    5112: {
+    5120: {
         affinity: function(p) { return 1.75; }
     },
-    5113: {
+    5121: {
         affinity: function(p) { return 1.75; }
     },
-    5114: {
+    5122: {
         affinity: function(p) { return 1.75; }
     },
-    5115: {
+    5123: {
         affinity: function(p) { return 1.75; }
     },
-    5116: {
+    5124: {
         affinity: function(p) { return 1.75; }
     },
-    5117: {
+    5125: {
         affinity: function(p) { return 1.75; }
     },
-    5118: {
+    5126: {
         affinity: function(p) { return 1.75; }
     },
-    5119: {
+    5127: {
         affinity: function(p) { return 1.75; }
     },
     5128: {

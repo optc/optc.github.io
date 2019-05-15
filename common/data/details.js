@@ -45562,7 +45562,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[STR], [DEX], [QCK] Characters",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 10% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     2501: {//Koshiro
         captain: "Boosts ATK and RCV of Slasher characters by 1.75x",
