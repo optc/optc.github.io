@@ -38811,12 +38811,12 @@ window.details = {
     },
     2262: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 2.5x when HP is 50% or below, 1.5x otherwise",
-        special: "Randomizes all non-Matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
+        special: "Randomizes all non-Matching orbs, including [BLOCK] orbs and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
     },
     2263: {//Doflamingo Raid v2
         captain: "Boosts ATK of Driven and Cerebral characters by 3x when HP is 50% or below, 1.5x otherwise",
-        special: "Randomizes all non-Matching orbs, including [BLOCK] slots and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
+        special: "Randomizes all non-Matching orbs, including [BLOCK] orbs and locks all orbs for 1 turn. If your Captain is a Cerebral or Driven character, increases duration of any Class/Type boosting buffs and Orb Amplification buffs by 2 turns",
         specialName: "Athlete",
         sailor: {
             "base": "None",
@@ -46276,6 +46276,74 @@ window.details = {
                     "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of Captain by 1.1x for 1 turn.",
                     "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of Captain by 1.15x for 1 turn.",
                     "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of Captain by 1.2x for 1 turn."
+                ]
+            }
+        ],
+    },
+    2524: {//Dress Up Nami
+        captain: "Boosts ATK of [QCK], [PSY] and [INT] characters by 2.5x, boosts ATK of all others by 2x and boosts HP and RCV of all characters by 1.2x",
+        special: "Reduces damage received by 70% for 1 turn, randomizes all non-Matching orbs, including [BLOCK] orbs and switches orbs between slots twice.",
+        specialName: "Nami Special",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Sanji, Usopp, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 2: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 3: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 4: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 5: Adds 3% of this character's base RCV to the supported character's base RCV."
+                ]
+            }
+        ],
+    },
+    2525: {//Dress Up Zoro
+        captain: "Boosts ATK of Slaher characters by 1.75x. If a character has a DEX or INT orb, boosts their ATK by 2.1x instead",
+        special: "Boosts ATK of [QCK], [PSY] and [INT] characters by 1.5x for 1 turn, adds 0.3x to Chain multiplier for 1 turn and changes adjacent orbs into [INT] orbs.",
+        specialName: "Zoro Special",
+        support: [
+            {
+                "Characters": "Luffy, Nami, Sanji, Usopp, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
+    2526: {//Dress Up Chopper
+        captain: "Boosts ATK of [PSY] characters by 1.75x and their HP by 1.2x",
+        special: "Reduces the defense of all enemies by 50% for 1 turn, changes orbs in the middle row into [RCV] orbs and boosts RCV of all characters by 1.5x for 1 turn.",
+        specialName: "Chopper Special",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Sanji, Usopp, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 2: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 3: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 4: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 5: Adds 3% of this character's base RCV to the supported character's base RCV."
+                ]
+            }
+        ],
+    },
+    2527: {//Dress Up Franky
+        captain: "Boosts ATK of Fighter characters by 2x",
+        special: "Makes [INT] orbs beneficial for all characters for 1 turn, locks all orbs for 1 turn and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
+        specialName: "Franky Special",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Sanji, Usopp, Robin, Chopper and Brook",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
                 ]
             }
         ],

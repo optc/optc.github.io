@@ -20,6 +20,8 @@
         ng-class="{ active: filters.classes.indexOf(class) > -1 }">{{class}}</span>
     <span class="filter width-12 exc"  ng-class="{ active: filters.classInclusive === true }"
         ng-model="filters.classInclusive" ng-click="filters.classInclusive = !filters.classInclusive">Exclude Characters with other Classes</span>
+    <span class="filter width-12 exc"  ng-class="{ active: filters.noSingleClass === true }"
+        ng-model="filters.noSingleClass" ng-click="filters.noSingleClass = !filters.noSingleClass">Exclude Single Class Characters</span>
 </div>
 
 
