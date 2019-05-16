@@ -46298,7 +46298,7 @@ window.details = {
         ],
     },
     2525: {//Dress Up Zoro
-        captain: "Boosts ATK of Slaher characters by 1.75x. If a character has a DEX or INT orb, boosts their ATK by 2.1x instead",
+        captain: "Boosts ATK of Slaher characters by 1.75x. If a character has an [INT] orb, boosts their ATK by 2.1x instead",
         special: "Boosts ATK of [QCK], [PSY] and [INT] characters by 1.5x for 1 turn, adds 0.3x to Chain multiplier for 1 turn and changes adjacent orbs into [INT] orbs.",
         specialName: "Zoro Special",
         support: [
