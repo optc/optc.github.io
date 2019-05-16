@@ -9008,7 +9008,7 @@ window.captains = {
         atk: function(p) { return 2; },
     },
     2545: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     2546: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },

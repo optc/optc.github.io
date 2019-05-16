@@ -47004,18 +47004,35 @@ window.details = {
         ]
     },
     2545: {//Ace
-        captain: "Boosts ATK of Free Spirit characters by ?x and makes [RCV] orbs beneficial for Cerebral characters.",
+        captain: "Boosts ATK of Free Spirit characters by 2x and makes [RCV] orbs beneficial for Free Spirit characters.",
         special: "Binds self for 5 turns, reduces Special Cooldown of all characters by 2 turns and locks the chain multiplier at 3x for 2 turns.",
         specialName: "My Paced Feast",
     },
     2546: {//Ace
-        captain: "Boosts ATK of Free Spirit characters by 2.5x and makes [RCV] orbs beneficial for Cerebral characters.",
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and makes [RCV] orbs beneficial for Free Spirit characters.",
         sailor: {
             "base": "None",
             "Level1": "Restores his own special cooldown by 2 turns when it is rewinded",
         },
         special: "Binds self for 5 turns, reduces Special Cooldown of all characters by 2 turns and locks the chain multiplier at 3x for 2 turns.",
         specialName: "My Paced Feast",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Sailor Ability 1: Restores his own special cooldown by 2 turns when it is rewinded" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -47088,7 +47105,7 @@ window.details = {
         },
         special: "Switches orbs between slots twice, locks all orbs for 1 turn, locks the chain multiplier at 2.75x for 1 turn and becomes Doflamingo & Trebol for 2 turns. If during that turn, you hit 4 PERFECTS, locks the chain multiplier at 3.25x for 1 turn.",
         swap: "When Change is activated, makes [STR] and [DEX] orbs beneficial for all characters for 1 turn and changes their own orb into a Matching orb.",
-        specialName: "Doflamingo&Trebol Special",
+        specialName: "Execution by \"Evil\"",
     },
     2550: {//Doflamingo&Trebol
         captain: {
@@ -47104,25 +47121,42 @@ window.details = {
         },
         special: "Switches orbs between slots twice, locks all orbs for 1 turn, locks the chain multiplier at 2.75x for 1 turn and becomes Doflamingo & Trebol for 2 turns. If during that turn, you hit 4 PERFECTS, locks the chain multiplier at 3.25x for 1 turn.",
         swap: "When Change is activated, makes [STR] and [DEX] orbs beneficial for all characters for 1 turn and changes their own orb into a Matching orb.",
-        specialName: "Doflamingo&Trebol Special",
+        specialName: "Execution by \"Evil\"",
+        limit: [
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs beneficial for Driven and Cerebral characters" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
                     "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 1: If you hit a PERFECT with this character, there is a 10% chance to deal 1% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 20% chance to deal 2% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 30% chance to deal 3% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
                     "Level 5: If you hit a PERFECT with this character, there is a 50% chance to deal 8% of this character's attack in extra damage"
                 ]
             },
