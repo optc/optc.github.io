@@ -47270,7 +47270,7 @@ window.details = {
     2553: {//Rockstar
         captain: "Boosts ATK of Fighter characters by 1.5x",
         special: "Delays all enemies for 1 turn, makes [STR] and [QCK] orbs beneficial for all characters for 1 turn and amplifies the effect of orbs by 1.5x for 1 turn.",
-        specialName: "Rockstar Special",
+        specialName: "You've Heard of the Name Rockstar ... Right?",
         limit: [
             { "description": "" },
             { "description": "" },
@@ -47300,7 +47300,7 @@ window.details = {
     2554: {//Yasopp
         captain: "Boosts ATK of Free Spirit characters by 1.5x",
         special: "Reduces enemy Barrier duration by 1 turn and reduces ATK DOWN duration by 3 turns. If you are on a Treasure Map, boosts ATK against delayed enemies depending on your Treasure Map Level for 1 turn.",
-        specialName: "Yasopp Special",
+        specialName: "The Sniper that Never Misses",
         specialNotes: "Level 1-10: 1.5x ATK boost<br\>Level 11-20: 1.75x ATK boost<br\>Level 21+: 2x ATK boost",
         limit: [
             { "description": "" },
@@ -47342,7 +47342,7 @@ window.details = {
     2555: {//Lucky Roux
         captain: "Boosts ATK of [QCK] characters by 1.25x and their HP by 1.2x",
         special: "Reduces Bind duration by 5 turns, changes orbs on Free Spirit, Shooter and Slasher characters into [QCK] orbs. If you are on a Treasure Map, boosts ATK of Free Spirit, Shooter and Slasher characters depending on your Treasure Map Level for 1 turn.",
-        specialName: "Lucky Roux Special",
+        specialName: "Meat Power Shot",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         limit: [
             { "description": "" },
@@ -47390,7 +47390,7 @@ window.details = {
         special: "Changes all orbs, including [BLOCK] orbs, into [EMPTY] orbs, boosts the Color Affinity of all characters by 3x for 1 turn, locks the chain multiplier at 3x for 1 turn and becomes Shanks & Ben Beckman for 2 turns.",
         specialNotes: "This special can only be activated if no other special has been activated this turn and removes the ability to activate any other specials this turn.",
         swap: "When Change is activated, reduces Bind, Despair and Paralysis duration by 1 turn",
-        specialName: "Shanks & Ben Beckman Special",
+        specialName: "Controlling the Battlefield",
     },
     2557: {//Shanks&Ben Beckman
         captain: {
@@ -47401,7 +47401,7 @@ window.details = {
         special: "Changes all orbs, including [BLOCK] orbs, into [EMPTY] orbs, boosts the Color Affinity of all characters by 3x for 1 turn, locks the chain multiplier at 3x for 1 turn and becomes Shanks & Ben Beckman for 2 turns.",
         specialNotes: "This special can only be activated if no other special has been activated this turn and removes the ability to activate any other specials this turn.",
         swap: "When Change is activated, reduces Bind, Despair and Paralysis duration by 1 turn",
-        specialName: "Shanks & Ben Beckman Special",
+        specialName: "Controlling the Battlefield",
         sailor: {
             "base": "None",
             "level1": "Reduces Blindness duration by 5 turns",
