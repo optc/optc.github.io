@@ -9025,6 +9025,16 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
+    2533: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2534: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    2535: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -9633,5 +9643,29 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? 2.75 : 1; },
         hp: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
         rcv: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5136: {
+        atk: function(p) { return p.unit.type == "INT" ? 1 : 1; },//Change this
+    },
+    5137: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//Change this
+    },
+    5138: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 1 : 1; },//Change this
+    },
+    5139: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 1 : 1; },//Change this
+    },
+    5140: {
+        atk: function(p) { return p.unit.type == "INT" ? 3 : 2; },
+    },
+    5141: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 2; },
+    },
+    5142: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 3.75 : 2.5; },
+    },
+    5143: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 3.75 : 2.5; },
     },
 };

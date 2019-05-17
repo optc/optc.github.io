@@ -3677,7 +3677,16 @@ window.drops = {
             thumb: 2510,
             nakama: null,
             gamewith: null,
-            'Sweet Sea': [ 2509 ]
+            'Raging Sea': [ 2509 ]
+        },
+
+        {
+            name: 'Shanks & Ben Beckman',
+            dropID: 'treasuremap21',
+            thumb: 2557,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2556 ]
         },
         
     ],
