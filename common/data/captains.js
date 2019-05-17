@@ -9025,13 +9025,13 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
-    2533: {
+    2553: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
-    2534: {
+    2554: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
     },
-    2535: {
+    2555: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
