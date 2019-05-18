@@ -46891,7 +46891,7 @@ window.details = {
             "combined": "Boosts base HP and RCV of [QCK] and [PSY] characters by 75",
         },
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
     },
     2542: {//Smoker&Tashigi
@@ -46907,7 +46907,7 @@ window.details = {
             "level1": "Makes [TND] orbs beneficial for [QCK] and [PSY] characters"
         },
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -51874,28 +51874,28 @@ window.details = {
         captain: "Boosts ATK of [QCK] characters by 2.5x, boosts ATK of all other characters by 2x, and boosts HP of all characters by 1.2x.",
         sailor: "Boosts base HP of [QCK] and [PSY] characters by 50",
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
     },
     5113: {//Smoker&Tashigi
         captain: "Boosts ATK of [PSY] characters by 2.5x, boosts ATK of all other characters by 2x, and boosts HP of all characters by 1.2x.",
         sailor: "Boosts base RCV of [QCK] and [PSY] characters by 50",
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
     },
     5114: {//Smoker&Tashigi
         captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x, boosts ATK of all other characters by 2.5x, and boosts HP of all characters by 1.2x.",
         sailor: "Boosts base HP and RCV of [QCK] and [PSY] characters by 75",
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
     },
     5115: {//Smoker&Tashigi
         captain: "Boosts ATK of [QCK] and [PSY] characters by 3.25x, boosts ATK of all other characters by 2.5x, and boosts HP of all characters by 1.2x.",
         sailor: "Boosts base HP and RCV of [QCK] and [PSY] characters by 75",
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
     },
     5116: {//Smoker&Tashigi
@@ -51905,7 +51905,7 @@ window.details = {
             "level1": "Makes [TND] orbs beneficial for [QCK] and [PSY] characters"
         },
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -51954,7 +51954,7 @@ window.details = {
             "level1": "Makes [TND] orbs beneficial for [QCK] and [PSY] characters"
         },
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -52003,7 +52003,7 @@ window.details = {
             "level1": "Makes [TND] orbs beneficial for [QCK] and [PSY] characters"
         },
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -52052,7 +52052,7 @@ window.details = {
             "level1": "Makes [TND] orbs beneficial for [QCK] and [PSY] characters"
         },
         special: "Deals 100,000 Fixed damage to all enemies, changes [STR], [DEX], [QCK], [PSY], [INT] and [BLOCK] orbs into Matching orbs, locks all orbs for 1 turn and becomes Smoker & Tashigi for 2 turns.",
-        swap: "When Change is activated, randomizes [RCV], [TND], [G], [BOMB] orbs and recovers 1,000 HP.",
+        swap: "When Change is activated, randomizes [RCV], [EMPTY], [G], [BOMB] orbs and recovers 1,000 HP.",
         specialName: "White Hunting Autumn Rain",
         limit: [
             { "description": "Boosts base HP by 30" },
