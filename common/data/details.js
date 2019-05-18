@@ -7059,11 +7059,11 @@ window.details = {
             {
                 "Name": "Cooldown Reduction",
                 "description": [
-                    "Level 1: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
-                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by 2 turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by 3 turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by 4 turn at the start of the fight"
                 ]
             },
         ],
