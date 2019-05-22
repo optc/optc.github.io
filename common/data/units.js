@@ -2492,7 +2492,7 @@ window.units = [
     [ "Dr. Hiriluk, The Quack Doctor Making his Dream Come True", "INT", [ "Free Spirit", "Driven" ], 4, 1, 4, 4, 99, 1000000, 796, 334, 136, 1990, 835, 340, 1 ],
     [ "Tony Tony Chopper, Snow Story", "PSY", [ "Fighter", "Striker" ], 3, 1, 4, 2, 70, 355666, 692, 164, 86, 1730, 410, 215, 1 ],
     [ "Doctorine", "DEX", [ "Free Spirit", "Cerebral" ], 3, 1, 5, 2, 70, 355666, 572, 290, 64, 1430, 725, 160, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Monkey D. Luffy, Delicious Kitchen", "PSY", [ "Free Spirit", "Fighter" ], 5, 20, 4, 4, 99, null, null, null, null, 2080, 1222, 286, null ],
     [ "Charlotte Pudding, Sweet Cherry Blossom", "PSY", [ "Striker", "Cerebral" ], 4, 20, 4, 3, 50, 392109, 681, 472, 130, 1134, 808, 261, 1 ],
     [ "Charlotte Pudding, Melty Cherry Blossom", "PSY", [ "Striker", "Cerebral" ], 5, 30, 4, 5, 99, 4000000, 1002, 781, 260, 1992, 1198, 472, 1 ],
     [ "Charlotte Linlin, Spring Tea Party", "QCK", [ "Striker", "Driven" ], 4, 20, 5, 3, 50, 392109, 802, 564, 70, 1701, 921, 130, 1 ],

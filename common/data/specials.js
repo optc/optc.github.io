@@ -7294,6 +7294,9 @@ window.specials = {
     2492: {
         chainAddition: function(p) { return 0.3; }
     },
+    2494: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); }
+    },
     2497: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.75 : 1; },
         type: "class"

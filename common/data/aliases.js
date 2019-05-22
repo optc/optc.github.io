@@ -2492,7 +2492,7 @@ window.aliases = {
     2491: [ 'Dr.ヒルルク ヤブ医者の叶えたい夢', '', '' ],
     2492: [ 'トニートニー・チョッパー 雪物語', '', '' ],
     2493: [ 'ドクトリーヌ', '', 'Kureha' ],
-    2494: [ '', '', '' ],
+    2494: [ '', '', 'Kitchen Luffy', 'EXP Luffy' ],
     2495: [ 'シャーロット・プリン スイート・チェリーブロッサム', '', 'Sakura Pudding', 'Secret Pudding', 'Limited Pudding' ],
     2496: [ 'シャーロット・プリン メルティ・チェリーブロッサム', '', 'Sakura Pudding', 'Secret Pudding', 'Limited Pudding' ],
     2497: [ 'シャーロット・リンリン スプリング・ティーパーティー', '', 'Sakura Linlin', 'Sakura Big Mom', 'Secret Big Mom', 'Limited Big Mom' ],

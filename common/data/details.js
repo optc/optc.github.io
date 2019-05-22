@@ -45374,6 +45374,12 @@ window.details = {
         specialName: "Life Expectancy Declaration",
         specialNotes: "#{beneficial}",
     },
+    2494: {//Luffy
+        captain: "Boosts ATK of all characters by 2.25x and boosts EXP and amount of Beli received by 1.2x",
+        special: "Deals 50x character's ATK in Typeless damage to one enemy and amplifies the effect of orbs by 1.75x for 1 turn.",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 25.",
+        specialName: "Gomu Gomu no Grizzly Magnum",
+    },
     2495: {//Pudding
         captain: "Boosts ATK Striker and Cerebral characters by 2x and recovers 1x character's RCV in HP at the end of each turn.",
         special: "Reduces Special Cooldown of all characters by 1 turn, changes adjacent orbs into Matching Orbs, reduces enemies' Percent Damage Reduction duration by 5 turns and reduces Burn duration by 5 turns.",
@@ -47322,6 +47328,7 @@ window.details = {
         specialNotes: "This special can only be activated if no other special has been activated this turn and removes the ability to activate any other specials this turn.",
         swap: "When Change is activated, reduces Bind, Despair and Paralysis duration by 1 turn",
         specialName: "Controlling the Battlefield",
+        sailor: "Reduces Blindness duration by 5 turns",
     },
     2557: {//Shanks&Ben Beckman
         captain: {
@@ -47334,9 +47341,8 @@ window.details = {
         swap: "When Change is activated, reduces Bind, Despair and Paralysis duration by 1 turn",
         specialName: "Controlling the Battlefield",
         sailor: {
-            "base": "None",
-            "level1": "Reduces Blindness duration by 5 turns",
-            "level2": "Reduces Silence duration on this character by 5 turns"
+            "base": "Reduces Blindness duration by 5 turns",
+            "level1": "Reduces Silence duration on this character by 5 turns",
         },
         potential: [
             {

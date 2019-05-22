@@ -2394,11 +2394,11 @@ window.drops = {
         },
         
         {
-            name: 'Dress Up for the Pirate Festival!',
+            name: 'Dress Up for the Pirate Festival! Chic',
             dropID: 'event120',
             thumb: 2524,
             nakama: null,
-            gamewith: null,
+            gamewith: 150791,
             'All Difficulties': [ 2523, 2524, 2525, 2526, 2527, -2074, -2363, -2365, -2072, -2078, -2115, -2304, -2189, -2285, -2367, -2371, -2538, -2540, -2542, -2544, -2231 ]
         },
         
@@ -3508,7 +3508,7 @@ window.drops = {
             name: 'Doflamingo & Trebol',
             thumb: 2550,
             nakama: null,
-            gamewith: null,
+            gamewith: 150550,
             slefty: 'coliseums',
             Chaos: [ 2549, -2550 ],
         },

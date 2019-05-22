@@ -8882,6 +8882,9 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
         rcv: function(p) { return p.unit.class.has("Free Spirit") ? 1.25 : 1; },
     },
+    2494: {
+        atk: function(p) { return 2.25; },
+    },
     2495: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
     },
