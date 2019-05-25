@@ -40191,7 +40191,7 @@ window.details = {
     },
     2328: {//Bobbin
         captain: "Boosts ATK of [DEX] characters by 1.75x and their HP by 1.2x",
-        special: "Removes Blindness duration completely. Following the activation of the special, if you score 6 PERFECT hits, boosts ATK of Slasher characters by 1.5x in the following turn.",
+        special: "Removes Blindness duration completely. Following the activation of the special, if you score 3 PERFECT hits, boosts ATK of Slasher characters by 1.5x in the following turn.",
         specialName: "The Disposer's Pursuit",
     },
     2329:{//Zephyr
