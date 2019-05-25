@@ -6635,13 +6635,13 @@ window.details = {
     },
     663: {
         special: "Deals [PSY] damage to one enemy according to HP, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
-        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
+        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80,000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
         captain: "Recovers 2x character's RCV in HP at the end of each turn"
     },
     664: {
         special: "Deals [PSY] damage to one enemy according to HP, recovers 5x character's RCV in HP at the end of each turn for 5 turns",
-        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80000 * (1 - (current HP) / (total HP))",
+        specialNotes: "The exact damage is proportional to the crew's remaining HP and is higher the lower the HP is. The formula used is 80,000 * (1 - (current HP) / (total HP))",
         specialName: "Vivi's Important Security Guard",
         captain: "Recovers 3x character's RCV in HP at the end of each turn"
     },
@@ -6944,13 +6944,13 @@ window.details = {
     },
     676: {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
-        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
+        specialNotes: "The exact formula for the damage received is: 5,000 + ((total damage) - 5,000) * 0.03",
         specialName: "KEEP OUT",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in [QCK] damage to all enemies at the end of each turn"
     },
     677: {
         special: "Reduces any damage received above 5,000 HP by 97% for 3 turns",
-        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.03",
+        specialNotes: "The exact formula for the damage received is: 5,000 + ((total damage) - 5,000) * 0.03",
         specialName: "KEEP OUT",
         captain: "Boosts ATK of Slasher characters by 1.5x, deals 5x character's ATK in [QCK] damage to all enemies at the end of each turn",
         sailor: {
@@ -8137,7 +8137,7 @@ window.details = {
     },
     773: {
         special: "Reduces any damage received above 3,000 HP by 80% for 1 turn",
-        specialNotes: "The exact formula for the damage received is: 3000 + ((total damage) - 3000) * 0.2",
+        specialNotes: "The exact formula for the damage received is: 3,000 + ((total damage) - 3,000) * 0.2",
         specialName: "Rust-Rust Fruit",
         captain: "Reduces damage received by 20%"
     },
@@ -9774,13 +9774,13 @@ window.details = {
         captain: "Boosts amount of Beli received by 2x",
         specialName: "Heaven's Do Art",
         special: "Reduces any damage received above 2,000 HP by 88% for 2 turns",
-        specialNotes: "The exact formula for the damage received is: 2000 + ((total damage) - 2000) * 0.12"
+        specialNotes: "The exact formula for the damage received is: 2,000 + ((total damage) - 2,000) * 0.12"
     },
     878: {
         captain: "Boosts ATK of all characters by 1.5x, boosts amount of Beli received by 2x",
         specialName: "Heaven's Do Art",
         special: "Reduces any damage received above 2,000 HP by 88% for 2 turns",
-        specialNotes: "The exact formula for the damage received is: 2000 + ((total damage) - 2000) * 0.12",
+        specialNotes: "The exact formula for the damage received is: 2,000 + ((total damage) - 2,000) * 0.12",
         sailor: {
             "base": "None",
             "level1": "Makes [STR] and [QCK] orbs beneficial for this character",
@@ -10608,12 +10608,12 @@ window.details = {
     921: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.2x",
         specialName: "Pure and Beautiful Shyness",
-        special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
+        special: "Recovers 5,000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
     },
     922: {
         captain: "Boosts ATK and RCV of Free Spirit characters by 1.75x",
         specialName: "Pure and Beautiful Shyness",
-        special: "Recovers 5000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
+        special: "Recovers 5,000 HP and amplifies the effect of orbs by 1.5x for 2 turns"
     },
     923: {
         captain: "Boosts ATK of Driven Characters by 2.5x if HP is below 30% at the start of the turn, 2x otherwise",
@@ -12135,7 +12135,7 @@ window.details = {
     },
     1019: {
         captain: "Reduces damage received from [QCK] enemies by 50%",
-        special: "Randomizes all non-Matching orbs and deals 2000 Fixed damage to one enemy",
+        special: "Randomizes all non-Matching orbs and deals 2,000 Fixed damage to one enemy",
         specialName: "Blacksmithing Measurement: Double Slash",
         specialNotes: "#{fixed}"
     },
@@ -13227,9 +13227,9 @@ window.details = {
                 "description": [
                     "Level 1: Once per adventure, when you reach the final stage, recovers 500 HP at the end of each turn for 3 turns",
                     "Level 2: Once per adventure, when you reach the final stage, recovers 700 HP at the end of each turn for 3 turns",
-                    "Level 3: Once per adventure, when you reach the final stage, recovers 1000 HP at the end of each turn for 3 turns",
-                    "Level 4: Once per adventure, when you reach the final stage, recovers 1200 HP at the end of each turn for 3 turns",
-                    "Level 5: Once per adventure, when you reach the final stage, recovers 1500 HP at the end of each turn for 3 turns"
+                    "Level 3: Once per adventure, when you reach the final stage, recovers 1,000 HP at the end of each turn for 3 turns",
+                    "Level 4: Once per adventure, when you reach the final stage, recovers 1,200 HP at the end of each turn for 3 turns",
+                    "Level 5: Once per adventure, when you reach the final stage, recovers 1,500 HP at the end of each turn for 3 turns"
                 ]
             }
         ]
@@ -15192,14 +15192,14 @@ window.details = {
     1187: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
         special: "Deals 7 hits of random Typeless damage to random enemies. Reduces Bind and Despair duration by 3 turns",
-        specialNotes: "#{randomHits : 7}<br>#{random : 5000 : 20000 : for each hit}",
+        specialNotes: "#{randomHits : 7}<br>#{random : 5,000 : 20,000 : for each hit}",
         specialName: "Advancing Continuous Sword Attack",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20"
     },
     1188: {
         captain: "Boosts ATK of [STR] characters by 2.5x",
         special: "Deals 7 hits of random Typeless damage to random enemies. Reduces Bind and Despair duration by 3 turns",
-        specialNotes: "#{randomHits : 7}<br>#{random : 5000 : 20000 : for each hit}",
+        specialNotes: "#{randomHits : 7}<br>#{random : 5,000 : 20,000 : for each hit}",
         specialName: "Advancing Continuous Sword Attack",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of all characters by 20",
@@ -19906,12 +19906,12 @@ window.details = {
     },
     1429: {//Valentines Mansherry
         captain: "Boosts the RCV of Striker and Free Spirit characters by 1.5x",
-        special: "Reduces Bind, Despair and Paralysis duration by 3 turns and recovers 2000 HP at the end of each turn for 3 turns",
+        special: "Reduces Bind, Despair and Paralysis duration by 3 turns and recovers 2,000 HP at the end of each turn for 3 turns",
         specialName: "Boy's Unknown Taste of Hard Work",
     },
     1430: {//Valentines Mansherry
         captain: "Boosts the RCV of Striker and Free Spirit characters by 2x",
-        special: "Reduces Bind, Despair and Paralysis duration by 3 turns and recovers 2000 HP at the end of each turn for 3 turns",
+        special: "Reduces Bind, Despair and Paralysis duration by 3 turns and recovers 2,000 HP at the end of each turn for 3 turns",
         specialName: "Boy's Unknown Taste of Hard Work",
     },
     1431: {//Raid Franky
@@ -21498,7 +21498,7 @@ window.details = {
     },
     1500: {//DEX Fishman Guard
         captain: "Boosts ATK, HP and RCV of [DEX] characters by 1.2x",
-        special: "Recovers 2000 HP",
+        special: "Recovers 2,000 HP",
         specialName: "First Aid",
     },
     1501: {//Caribou
@@ -23685,14 +23685,14 @@ window.details = {
     1613: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
-        specialName: "4000 Power Level Technique: Tempest Kick",
+        specialName: "4,000 Power Level Technique: Tempest Kick",
         sailor: "Adds 2x character's ATK as Additional Damage",
         sailorNotes: "#{additionalDamage : 2x}",
     },
     1614: {//Rob Lucci
         captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.25x",
         special: "Cuts the current HP of each enemy by 10%, reduces the defense of all enemies by 50% and amplifies the effects of orbs by 1.75x for 1 turn",
-        specialName: "4000 Power Level Technique: Tempest Kick",
+        specialName: "4,000 Power Level Technique: Tempest Kick",
         sailor: {
             "base": "Adds 2x character's ATK as Additional Damage",
             "level1": "If this character has a [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
@@ -25210,13 +25210,13 @@ window.details = {
     },
     1693: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2x",
-        special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
+        special: "Reduces crew's current HP by 50%, deals 50,000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
     },
     1694: {//Inuarashi
         captain: "Boosts ATK of [PSY] characters by 2.75x",
-        special: "Reduces crew's current HP by 50%, deals 50000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
+        special: "Reduces crew's current HP by 50%, deals 50,000 Fixed damage to one enemy, boosts own ATK by 1.75x for 1 turn, amplifies the effect of own orb by 1.75x for 1 turn and changes own orb to [PSY].",
         specialNotes: "Boosted ATK and Orb Effectiveness only works for the character who uses their own Special.",
         specialName: "King's Lightning Burial",
         sailor: {
@@ -27204,7 +27204,7 @@ window.details = {
     },
     1785: {//Spartan
         captain: "Recovers 3x character's RCV in HP at the end of each turn",
-        special: "Recovers 3000 HP and amplifies the effect of orbs by 1.25x for 1 turn",
+        special: "Recovers 3,000 HP and amplifies the effect of orbs by 1.25x for 1 turn",
         specialName: "Boiling Fighting Spirit",
     },
     1786: {//Dressrosa Fodder
@@ -28740,14 +28740,14 @@ window.details = {
     },
     1848: {//Treasure Map Akainu
         captain: "Boosts ATK of Powerhouse characters by 2x",
-        special: "Deals 50x character's ATK in [STR] damage to one enemy, reduces enemy Barrier duration by 1 turn and reduces any damage above 3000 by 80% for 1 turn",
+        special: "Deals 50x character's ATK in [STR] damage to one enemy, reduces enemy Barrier duration by 1 turn and reduces any damage above 3,000 by 80% for 1 turn",
         specialName: "Hellhound Bite",
         sailor: "Makes [PSY] and [INT] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
     },
     1849: {//Treasure Map Akainu
         captain: "Boosts ATK of Powerhouse characters by 2.25x and their HP by 1.3x",
-        special: "Deals 50x character's ATK in [STR] damage to one enemy, reduces enemy Barrier duration by 1 turn and reduces any damage above 3000 by 80% for 1 turn",
+        special: "Deals 50x character's ATK in [STR] damage to one enemy, reduces enemy Barrier duration by 1 turn and reduces any damage above 3,000 by 80% for 1 turn",
         specialName: "Hellhound Bite",
         sailor: "Makes [PSY] and [INT] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
@@ -39945,14 +39945,14 @@ window.details = {
         captain: "Boosts ATK of Shooter and Driven characters by 2.25x and their HP by 1.2x",
         special: "Reduces any damage received above 5,000 HP by 95% for 3 turns and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If enemies have a barrier at the time the special was activated, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Assassin's Angry Roar",
-        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.05<br>#{beneficial}",
+        specialNotes: "The exact formula for the damage received is: 5,000 + ((total damage) - 5,000) * 0.05<br>#{beneficial}",
         sailor: "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
     },
     2310: {//Gotti
         captain: "Boosts ATK of Shooter and Driven characters by 2.5x and their HP by 1.2x",
         special: "Reduces any damage received above 5,000 HP by 95% for 3 turns and randomizes all orbs, including [BLOCK] orbs, into either [STR], [DEX], [QCK], [PSY] or [INT] orbs. If enemies have a barrier at the time the special was activated, makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for Shooter characters for 3 turns",
         specialName: "Assassin's Angry Roar",
-        specialNotes: "The exact formula for the damage received is: 5000 + ((total damage) - 5000) * 0.05<br>#{beneficial}",
+        specialNotes: "The exact formula for the damage received is: 5,000 + ((total damage) - 5,000) * 0.05<br>#{beneficial}",
         sailor: {
             "base": "If this character has an [QCK] orb and you hit a PERFECT with him, keep his [QCK] orb for the next turn",
             "level1": "Makes [QCK] orbs beneficial for Shooter characters",
@@ -40708,14 +40708,14 @@ window.details = {
         ]
     },
     2343: {//Bavarois
-        captain: "Boosts ATK of Shooter characters by 2.25x and recovers 1000 HP at end of each turn",
+        captain: "Boosts ATK of Shooter characters by 2.25x and recovers 1,000 HP at end of each turn",
         special: "Deals 8 hits of random Typeless damage to random enemies and changes left column orbs into Matching orbs. If your Captain's orb is [QCK], [PSY], [INT] or [TND], boosts ATK of Shooter characters by 1.75x for 3 turns.",
         specialNotes: "#{randomHits : 8}<br>#{random : ? : ? : for each hit}",
         specialName: "Ordering the Homie Cannonballs",
         sailor: "Boosts base ATK of Shooter characters by 50",
     },
     2344: {//Bavarois
-        captain: "Boosts ATK of Shooter characters by 2.5x and recovers 1000 HP at end of each turn",
+        captain: "Boosts ATK of Shooter characters by 2.5x and recovers 1,000 HP at end of each turn",
         special: "Deals 8 hits of random Typeless damage to random enemies and changes left column orbs into Matching orbs. If your Captain's orb is [QCK], [PSY], [INT] or [TND], boosts ATK of Shooter characters by 1.75x for 3 turns.",
         specialNotes: "#{randomHits : 8}<br>#{random : ? : ? : for each hit}",
         specialName: "Ordering the Homie Cannonballs",

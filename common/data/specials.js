@@ -7450,6 +7450,7 @@ window.specials = {
     },
     2553: {
         delay: function(p) { return 1; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2553].turnedOn = true;
