@@ -9648,16 +9648,16 @@ window.captains = {
         rcv: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
     },
     5136: {
-        atk: function(p) { return p.unit.type == "INT" ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1.5; },
     },
     5137: {
-        atk: function(p) { return p.unit.type == "DEX" ? 1 : 1; },//Change this
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1.5; },
     },
     5138: {
-        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 1 : 1; },//Change this
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 3 : 2; },
     },
     5139: {
-        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 1 : 1; },//Change this
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 3 : 2; },
     },
     5140: {
         atk: function(p) { return p.unit.type == "INT" ? 3 : 2; },

@@ -210,8 +210,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if(character) if(character.length == 2) var matching2 = [ "Charlotte Katakuri", "Charlotte Flampe", "Charlotte Mont-d'Or", "Streusen" ].indexOf(character[0]) != -1 || [ "Charlotte Katakuri", "Charlotte Flampe", "Charlotte Mont-d'Or", "Streusen" ].indexOf(character[1]) != -1;
             else var matching2 = [ "Charlotte Katakuri", "Charlotte Flampe", "Charlotte Mont-d'Or", "Streusen" ].indexOf(character) != -1;
             var criteria = unit.stars >= 4 && unit.maxLevel == 99;
-            var specific = [ 2245, 2148, 1815, 2236, 2080, 2076, 2089, 2072, 2093, 2074, 2363 ].indexOf(id) != -1;
-            if (!((matching2 && evolved) || (matching && criteria))) return false;
+            var specific = [ 2245, 2148, 1815, 2236, 2080, 2076, 2089, 2072, 2093, 2074, 2363, 2382 ].indexOf(id) != -1;
+            if (!((matching2 && evolved) || (matching && criteria) || specific)) return false;
         }
         if (filters.doffyBlitz){
             var character = window.families[unit.number];
