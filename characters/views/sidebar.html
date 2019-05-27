@@ -72,10 +72,18 @@
         ng-model="filters.farmable.Coliseum" ng-click="onDropFilterClick($event,true)">Coliseum-only</span><!--
  --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Coliseum === false }"
         ng-model="filters.farmable.Coliseum" ng-click="onDropFilterClick($event,false)">Hide Clssm-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.Ambush }"
+        ng-model="filters.farmable.Ambush" ng-click="onDropFilterClick($event,true)">Ambush-only</span><!--
+ --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Ambush === false }"
+        ng-model="filters.farmable.Ambush" ng-click="onDropFilterClick($event,false)">Hide Ambush-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.farmable.Treasure }"
         ng-model="filters.farmable.Treasure" ng-click="onDropFilterClick($event,true)">Treasure Map-only</span><!--
  --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Treasure === false }"
         ng-model="filters.farmable.Treasure" ng-click="onDropFilterClick($event,false)">Hide TreasMap-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.farmable.Bond }"
+        ng-model="filters.farmable.Bond" ng-click="onDropFilterClick($event,true)">Bond Battle-only</span><!--
+ --><span class="filter width-6 exc"  ng-class="{ active: filters.farmable.Bond === false }"
+        ng-model="filters.farmable.Bond" ng-click="onDropFilterClick($event,false)">Hide BoBattle-only</span>
 </div>
 
 <div class="filter-container conditional" ng-show="filters.drop == 'Non-farmable'">

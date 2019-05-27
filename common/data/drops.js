@@ -3705,6 +3705,7 @@ window.drops = {
             name: 'Trafalgar Law',
             dropID: 'treasuremap15',
             thumb: 2336,
+            global: true,
             nakama: 8233600,
             gamewith: 128733,
             'Calm Sea': [ 2335 ]
@@ -3762,6 +3763,101 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 2556 ]
+        },
+        
+    ],
+
+            
+    'Ambush': [
+        
+        {
+            name: 'Ambush! Edward Newgate',
+            dropID: 'ambush1',
+            thumb: 1258,
+            global: true,
+            nakama: 6125800,
+            gamewith: 38237,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush Neo! Edward Newgate',
+            dropID: 'ambushneo1',
+            thumb: 3354,
+            global: true,
+            nakama: 6335400,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Red Hair Shanks',
+            dropID: 'ambush2',
+            thumb: 1380,
+            global: true,
+            nakama: 6138000,
+            gamewith: 46369,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.',
+            'All Difficulties': [ 1379, 952, 776, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Cavendish',
+            dropID: 'ambush3',
+            thumb: 1530,
+            global: true,
+            nakama: 6153000,
+            gamewith: 53621,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
+            'All Difficulties': [ 1529, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Garp',
+            dropID: 'ambush4',
+            thumb: 1846,
+            global: true,
+            nakama: 6184600,
+            gamewith: 75260,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
+            'All Difficulties': [ 1845, 771, 772, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Sengoku',
+            dropID: 'ambush5',
+            thumb: 2283,
+            global: true,
+            nakama: 6228300,
+            gamewith: 122270,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
+            'All Difficulties': [ 2282, 1845, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Charlotte Linlin',
+            dropID: 'ambush6',
+            thumb: 2381,
+            nakama: 6238100,
+            gamewith: 136823,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
+            'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+    ],
+
+            
+    'Bond Battle': [
+        
+        {
+            name: 'Zoro & Sanji',
+            dropID: 'bond1',
+            thumb: 2531,
+            nakama: null,
+            gamewith: 149563,
+            'All Difficulties': [ 2531, 2518 ]
         },
         
     ],
@@ -3849,6 +3945,16 @@ window.drops = {
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
             'Pudding': [ 1962, 83, 94, 266, 1180, 82, 88, 93, 99, 114 ],
         },
+        
+        {
+            name: 'Game! Leo',
+            thumb: 2559,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Drops the Leo specific Limit Break crystals.',
+            'All Difficulties': [ 2558 ]
+        },
 
         {
             name: 'Straw Hat Pirates!',
@@ -3874,84 +3980,6 @@ window.drops = {
             condition: '40 Stamina drops all Final Forbidden Tomes',
             '30 Stamina': [ 1600, 189, 190, 191, 192, 193, 118, 110, 111, 112, 113, 114, 117, 116, 115 ],
             '40 Stamina': [ 189, 190, 191, 192, 193, 118, 110, 111, 112, 113, 114, 117, 116, 115 ],
-        },
-        
-        {
-            name: 'Invasion! Young Whitebeard',
-            thumb: 1258,
-            global: true,
-            nakama: 6125800,
-            gamewith: 38237,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
-            'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion Neo! Young Whitebeard',
-            thumb: 3354,
-            global: true,
-            nakama: 6335400,
-            gamewith: null,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
-            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Red Hair Shanks',
-            thumb: 1380,
-            global: true,
-            nakama: 6138000,
-            gamewith: 46369,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.',
-            'All Difficulties': [ 1379, 952, 776, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Cavendish',
-            thumb: 1530,
-            global: true,
-            nakama: 6153000,
-            gamewith: 53621,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
-            'All Difficulties': [ 1529, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Garp',
-            thumb: 1846,
-            global: true,
-            nakama: 6184600,
-            gamewith: 75260,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
-            'All Difficulties': [ 1845, 771, 772, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Sengoku',
-            thumb: 2283,
-            global: true,
-            nakama: 6228300,
-            gamewith: 122270,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
-            'All Difficulties': [ 2282, 1845, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Charlotte Linlin',
-            thumb: 2381,
-            nakama: 6238100,
-            gamewith: 136823,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
-            'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Bond Battle',
-            thumb: 2531,
-            nakama: null,
-            gamewith: 149563,
-            condition: 'Will have a unique tab in the drops page soon.',
-            'All Difficulties': [ 2531, 2518 ]
         },
         
         {
@@ -4117,6 +4145,7 @@ window.drops = {
         {
             name: 'Champion Challenge! 4th Anniversary',
             thumb: 2076,
+            global: true,
             nakama: 6207600,
             gamewith: 100803,
             showManual: true,

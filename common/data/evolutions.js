@@ -4047,6 +4047,42 @@ window.evolutions = {
         evolution: 2498,
         evolvers: [ 118, 85, 96, 301, 101 ]
     },
+    2549: {
+        evolution: 2550,
+        evolvers: [ 116, 117, 118, 100, 102 ]
+    },
+    2234: {
+        evolution: 2500,
+        evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
+    },
+    2503: {
+        evolution: 2504,
+        evolvers: [ 118, 84, 266, 300, 100 ]
+    },
+    1869: {
+        evolution: 2505,
+        evolvers: [ 'skullINT', 118, 88, 304, 267 ],
+    },
+    2509: {
+        evolution: 2510,
+        evolvers: [ 115, 116, 117, 118, 103 ]
+    },
+    2511: {
+        evolution: 2512,
+        evolvers: [ 118, 83, 84, 87, 100 ]
+    },
+    2514: {
+        evolution: 2515,
+        evolvers: [ 118, 87, 98, 303, 103 ]
+    },
+    2516: {
+        evolution: 2517,
+        evolvers: [ 116, 117, 118, 101, 104 ]
+    },
+    2528: {
+        evolution: 2529,
+        evolvers: [ 118, 97, 1180, 302, 102 ]
+    },
     2533: {
         evolution: 2534,
         evolvers: [ 118, 118, 102, 101, 267 ]
@@ -4083,41 +4119,9 @@ window.evolutions = {
         evolution: 2557,
         evolvers: [ 116, 117, 118, 102, 104 ]
     },
-    2549: {
-        evolution: 2550,
-        evolvers: [ 116, 117, 118, 100, 102 ]
-    },
-    2234: {
-        evolution: 2500,
-        evolvers: [ 'skullSTR', 118, 84, 300, 267 ]
-    },
-    2503: {
-        evolution: 2504,
-        evolvers: [ 118, 84, 266, 300, 100 ]
-    },
-    1869: {
-        evolution: 2505,
-        evolvers: [ 'skullINT', 118, 88, 304, 267 ],
-    },
-    2509: {
-        evolution: 2510,
-        evolvers: [ 115, 116, 117, 118, 103 ]
-    },
-    2511: {
-        evolution: 2512,
-        evolvers: [ 118, 83, 84, 87, 100 ]
-    },
-    2514: {
-        evolution: 2515,
-        evolvers: [ 118, 87, 98, 303, 103 ]
-    },
-    2516: {
-        evolution: 2517,
-        evolvers: [ 116, 117, 118, 101, 104 ]
-    },
-    2528: {
-        evolution: 2529,
-        evolvers: [ 118, 97, 1180, 302, 102 ]
+    2558: {
+        evolution: 2559,
+        evolvers: [  ]
     },
     3339: {
         evolution: 3340,
