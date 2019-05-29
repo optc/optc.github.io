@@ -560,10 +560,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = 0.5;
         
         //Get the strongest Color affinity Mult if it exists and apply it
-        affinityMultiplier.forEach(function(special){
+        if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
+            affinityMultiplier.forEach(function(special){
                     if(affinityMult<special.affinityMultiplier(unit))
                         affinityMult = special.affinityMultiplier(unit);
                 });
+        }
+        else{
+            affinityMult = effects[$scope.data.effect]['affinity'](unit.unit);
+        }
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){

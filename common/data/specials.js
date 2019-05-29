@@ -7483,6 +7483,36 @@ window.specials = {
             });
         },
     },
+    2562: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2563: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2564:{
+        chainAddition: function(p) { return window.specials[2564].multiplier ? 0.3 : 0.7; },
+        rcv: function(p) { return !window.specials[2564].multiplier ? 1.5 : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2564].multiplier == true ? 1 : 0);
+            window.specials[2564].multiplier = [true, false][n];
+            p.scope.notify({
+                text: 'Using the ' + ['0.3x Chain Boost', '0.7x Chain Boost and 1.5x RCV boost'][n] + '. To switch to the ' + ['0.7x Chain Boost and 1.5x RCV boost', '0.3x Chain Boost'][n] + ', disable and re-enable this special',
+                name: '2564warning'
+            });
+        },
+    },
+    2565:{
+        chainAddition: function(p) { return window.specials[2565].multiplier ? 0.3 : 0.7; },
+        rcv: function(p) { return !window.specials[2565].multiplier ? 1.5 : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2565].multiplier == true ? 1 : 0);
+            window.specials[2565].multiplier = [true, false][n];
+            p.scope.notify({
+                text: 'Using the ' + ['0.3x Chain Boost', '0.7x Chain Boost and 1.5x RCV boost'][n] + '. To switch to the ' + ['0.7x Chain Boost and 1.5x RCV boost', '0.3x Chain Boost'][n] + ', disable and re-enable this special',
+                name: '2565warning'
+            });
+        },
+    },
     2568: {
         atk: function(p) { return (p.defenseDown && window.specials[2568].turnedOn) ? 1.75 : 1; },
         type: "condition",
@@ -8437,5 +8467,37 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
         }
+    },
+    5144: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5145: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5146: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5147: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5148: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5149: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5150: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
+    },
+    5151: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        type: "class"
     },
 };

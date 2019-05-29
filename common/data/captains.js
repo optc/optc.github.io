@@ -9017,8 +9017,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
     2547: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 1 : 1; },//change this
-        rcv: function(p) { return p.unit.class.has("Driven") ? 1 : 1; },//change this
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
     },
     2548: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
@@ -9037,6 +9036,26 @@ window.captains = {
     2555: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    2562: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },//change this
+    },
+    2563: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+    },
+    2564: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1 : p.unit.class.has("Free Spirit") ? 1 : 1; },//change this
+    },
+    2563: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : p.unit.class.has("Free Spirit") ? 3 : 1; },
+    },
+    2562: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1 : 1; },//change this
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1 : 1; },//change this
+    },
+    2563: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2.5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
     },
     2568: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },//Change this
@@ -9678,5 +9697,97 @@ window.captains = {
     },
     5143: {
         atk: function(p) { return (p.unit.type == "INT" || p.unit.type == "DEX") ? 3.75 : 2.5; },
+    },
+    5144: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 3.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5145: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .1 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .3 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? .5 : addit;
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 3 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5146: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .1 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .3 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? .5 : addit;
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 4 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5147: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .1 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .3 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? .5 : addit;
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 4 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5148: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 3.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5149: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .1 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .3 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? .5 : addit;
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 3 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5150: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .1 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .3 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? .5 : addit;
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 4 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    5151: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .1 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .3 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? .5 : addit;
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 4 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
     },
 };
