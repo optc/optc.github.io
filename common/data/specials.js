@@ -7483,6 +7483,46 @@ window.specials = {
             });
         },
     },
+    2568: {
+        atk: function(p) { return (p.defenseDown && window.specials[2568].turnedOn) ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return window.specials[2568].turnedOn ? window.specials[2568].multiplier : 1 },
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.captain.class.has("Free Spirit")) {
+                window.specials[2568].turnedOn = true;
+                var n = (window.specials[2568].multiplier == 0.5 ? 1 : 0);
+                window.specials[2568].multiplier = [0.5, 0][n];
+                p.scope.notify({
+                    text: 'Using the ' + ['50%', '100%'][n] + ' Defense down. To switch to the ' + ['100%', '50%'][n] + ' Defense down, disable and re-enable this special',
+                    name: '2568warning'
+                });
+            }
+        },
+        onDeactivation: function(p) {
+            window.specials[2568].turnedOn = false;
+        },
+    },
+    2569: {
+        atk: function(p) { return (p.defenseDown && window.specials[2569].turnedOn) ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return window.specials[2569].turnedOn ? window.specials[2569].multiplier : 1 },
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.captain.class.has("Free Spirit")) {
+                window.specials[2569].turnedOn = true;
+                var n = (window.specials[2569].multiplier == 0.5 ? 1 : 0);
+                window.specials[2569].multiplier = [0.5, 0][n];
+                p.scope.notify({
+                    text: 'Using the ' + ['50%', '100%'][n] + ' Defense down. To switch to the ' + ['100%', '50%'][n] + ' Defense down, disable and re-enable this special',
+                    name: '2569warning'
+                });
+            }
+        },
+        onDeactivation: function(p) {
+            window.specials[2569].turnedOn = false;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

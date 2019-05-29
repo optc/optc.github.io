@@ -3555,6 +3555,15 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2549, -2550 ],
         },
+
+        {
+            name: 'Morley',
+            thumb: 2569,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2568, -2569 ],
+        },
         
     ],
 
