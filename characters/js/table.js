@@ -235,7 +235,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
         if (filters.katakuriv2){
-            var Katacount = 0;
+            var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
             else { 
@@ -246,7 +246,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
         if (filters.TMlaw){
-            var Katacount = 0;
+            var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Slasher", "Cerebral", "Free Spirit" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
             else { 
@@ -257,7 +257,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
         if (filters.sulongCarrot){
-            var Katacount = 0;
+            var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Slasher", "Striker", "Shooter", "Cerebral" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
             else { 
