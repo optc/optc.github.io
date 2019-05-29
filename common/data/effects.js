@@ -740,13 +740,6 @@ window.effects = {
             return !matching ? 1 : 1.5;
         },
     },
-
-    'Attack boost (1.75x)': {
-        description: 'ATK of all units boosted by 1.75x',
-        thumb: 2215,
-        id: 62, // don't change this
-        atk: function(p) { return 1.75; }
-    },
     
     '3 Stamina Ranking Mission - Sanji': {
         description: 'Stats of certain units boosted',
@@ -838,17 +831,10 @@ window.effects = {
         atk: function(p) { return 1.2; }
     },
     
-    'Meat Orbs': {
-        description: 'Activates [RCV] orb support',
-        thumb: 1652,
-        id: 53, // don't change this
-        meatOrbsEnabled: true
-    },
-    
     '3 Stamina Ranking Missions - Bege, Buggy and Akainu': {
         description: 'Stats of certain units boosted.',
         thumb: 1298,
-        id: 67, // don't change this
+        id: 68, // don't change this
         atk: function(p) {
             var character = window.families[p.number];
             matching = [ "Nefertari Vivi", "Portgas D. Ace", "Shanks", "Brook", "Sabo", "Pound", "Charlotte Linlin", "Charlotte Smoothie", "Charlotte Perospero", "Charlotte Cracker", "Charlotte Daifuku", ].indexOf(character) != -1;
@@ -869,7 +855,7 @@ window.effects = {
     'Ordeal of the Blade': {
         description: 'Stats of certain units boosted.',
         thumb: 2475,
-        id: 68, // don't change this
+        id: 69, // don't change this
         atk: function(p) {
             var id = p.number + 1,
                 matching = ([ 77, 255, 308, 449, 455, 530, 639, 645, 677, 750, 914, 1033, 1081, 1125, 1129, 1173, 1182, 1186, 1188, 1175, 1230, 1234, 1236, 1238, 1276, 1278, 1322, 1324, 1410, 1436, 1481, 1534, 1536, 1573, 1575, 1577, 1654, 1614, 1796, 1753, 1800, 1759, 1881, 2505, 1873, 1875, 1877, 1921, 1989, 2001, 2242, 2306, 2031, 2034, 2080, 2082, 2332, 2185, 2189, 2117, 2119, 2107, 2336, 2338, 2346, 2372, 2338, 2371, 2418, 2465, 2475, 2477, 2479, 2481, 2483, 2485, 2496, 2498 ].indexOf(id) != -1);
@@ -890,14 +876,14 @@ window.effects = {
     '0.3x Chain Boost - Lucci Kaku Change Action': {
         description: 'Chain Boosted by 0.3x',
         thumb: 2538,
-        id: 69, // don't change this
+        id: 70, // don't change this
         chainAddition: function(p) { return 0.3 }
     },
     
     'Face Off! Luffy vs. Katakuri: Part 1': {
         description: 'Stats of certain units boosted.',
         thumb: 2363,
-        id: 70, // don't change this
+        id: 71, // don't change this
         atk: function(p) {
             var id = p.number + 1;
             var evolved = !(id in window.evolutions);
@@ -911,6 +897,7 @@ window.effects = {
             var specific2 = [ 2074, 2363 ].indexOf(id) != -1;
             if ((matching2 && evolved) || specific2) return 1.5;
             if ((matching && criteria) || specific1) return 1.25;
+            return 1;
         },
         hp: function(p) {
             var id = p.number + 1;
@@ -925,6 +912,7 @@ window.effects = {
             var specific2 = [ 2074, 2363 ].indexOf(id) != -1;
             if ((matching2 && evolved) || specific2) return 1.5;
             if ((matching && criteria) || specific1) return 1.25;
+            return 1;
         },
         rcv: function(p) {
             var id = p.number + 1;
@@ -939,13 +927,28 @@ window.effects = {
             var specific2 = [ 2074, 2363 ].indexOf(id) != -1;
             if ((matching2 && evolved) || specific2) return 1.5;
             if ((matching && criteria) || specific1) return 1.25;
+            return 1;
         },
     },
 
     '1.5x Affinity Boost - Sabo Koala Change Action': {
         description: 'Affinity of Free Spirit and Cerebral by 1.5x',
         thumb: 2538,
-        id: 69, // don't change this
+        id: 72, // don't change this
         affinity: function(p) { return (p.class.has('Free Spirit') || p.class.has('Cerebral')) ? 1.5 : 1 }
+    },
+    
+    'Meat Orbs': {
+        description: 'Activates [RCV] orb support',
+        thumb: 1652,
+        id: 73, // don't change this
+        meatOrbsEnabled: true
+    },
+
+    'Attack boost (1.75x)': {
+        description: 'ATK of all units boosted by 1.75x',
+        thumb: 2215,
+        id: 74, // don't change this
+        atk: function(p) { return 1.75; }
     },
 };
