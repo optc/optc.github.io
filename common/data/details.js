@@ -47475,7 +47475,7 @@ window.details = {
     2560: {//Sabo&Koala
         captain: {
             "character1": "Boosts ATK of Free Spirit and Cerebral characters by 3.25x and their HP and RCV by 1.2x.",
-            "character2": "Boosts ATK of Free Spirit and Cerebral characters by 3x, their HP by 1.2x. Boosts ATK of Free Spirit and Cerebral characters by an additive 1.1x after the each PERFECT in a row.",
+            "character2": "Boosts ATK of Free Spirit and Cerebral characters by 3x, their HP by 1.2x. Boosts ATK of Free Spirit and Cerebral characters by an additive 0.1x after the each PERFECT in a row.",
             "combined": "Boosts ATK of Free Spirit and Cerebral characters by 4x and their HP and RCV by 1.2x. Boosts ATK of Free Spirit and Cerebral characters by an additive 0.1x after the each PERFECT in a row."
         },
         sailor: {
@@ -47490,7 +47490,7 @@ window.details = {
     2561: {//Sabo&Koala
         captain: {
             "character1": "Boosts ATK of Free Spirit and Cerebral characters by 3.25x and their HP and RCV by 1.2x.",
-            "character2": "Boosts ATK of Free Spirit and Cerebral characters by 3x, their HP by 1.2x. Boosts ATK of Free Spirit and Cerebral characters by an additive 1.1x after the each PERFECT in a row.",
+            "character2": "Boosts ATK of Free Spirit and Cerebral characters by 3x, their HP by 1.2x. Boosts ATK of Free Spirit and Cerebral characters by an additive 0.1x after the each PERFECT in a row.",
             "combined": "Boosts ATK of Free Spirit and Cerebral characters by 4x and their HP and RCV by 1.2x. Boosts ATK of Free Spirit and Cerebral characters by an additive 0.1x after the each PERFECT in a row."
         },
         sailor: {
