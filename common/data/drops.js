@@ -3958,9 +3958,8 @@ window.drops = {
         {
             name: 'Game! Leo',
             thumb: 2559,
-            global: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 152009,
             condition: 'Drops the Leo specific Limit Break crystals.',
             'All Difficulties': [ 2558 ]
         },

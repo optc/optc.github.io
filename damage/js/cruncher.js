@@ -290,6 +290,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if ([ 2306 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher") || x.unit.class.has("Cerebral"))){
                             orb = 2;
                         }
+                        if ([ 5152, 5154, 5155, 5156, 5158, 5159 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Striker") || x.unit.class.has("Cerebral"))){
+                            orb = 2;
+                        }
                         if ([ 5036, 5037, 5038, 5039, 5040, 5041, 5042, 5043 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Driven")){
                             orb = 2;
                         }

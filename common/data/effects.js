@@ -933,7 +933,7 @@ window.effects = {
 
     '1.5x Affinity Boost - Sabo Koala Change Action': {
         description: 'Affinity of Free Spirit and Cerebral by 1.5x',
-        thumb: 2538,
+        thumb: 2561,
         id: 72, // don't change this
         affinity: function(p) { return (p.class.has('Free Spirit') || p.class.has('Cerebral')) ? 1.5 : 1 }
     },
