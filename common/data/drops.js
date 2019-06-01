@@ -3733,6 +3733,7 @@ window.drops = {
             name: 'Kaido',
             dropID: 'treasuremap17',
             thumb: 2387,
+            global: true,
             nakama: 8238700,
             gamewith: 137053,
             'Raging Sea': [ 2386 ]
