@@ -2300,7 +2300,7 @@ window.drops = {
         },
         
         {
-            name: 'Recover! King of Day Duke Inuarashi',
+            name: 'Comeback! "King of the Day" Duke Dogstorm',
             dropID: 'event110',
             thumb: 2219,
             global: true,
@@ -2342,6 +2342,7 @@ window.drops = {
         {
             name: 'Banquet! The Best Tea Party Ever!',
             dropID: 'event114',
+            global: true,
             thumb: 2351,
             nakama: 2235100,
             gamewith: 133025,
@@ -2349,7 +2350,7 @@ window.drops = {
         },
         
         {
-            name: 'Our Lady\'s Motherly Love',
+            name: 'Holy Mother\'s Love - Mother Carmel',
             dropID: 'event115',
             thumb: 2377,
             nakama: 2237700,
