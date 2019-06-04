@@ -4002,6 +4002,14 @@ window.drops = {
         },
         
         {
+            name: 'Memories of Marineford',
+            thumb: 1985,
+            nakama: null,
+            gamewith: 100030,
+            condition: 'Available for 30 minutes after starting, drops +10 Cotton Candy.',
+        },
+        
+        {
             name: 'Beginner Adventure: Whole Cake Island Special Edition',
             thumb: 2532,
             nakama: null,
