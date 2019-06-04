@@ -9068,11 +9068,12 @@ window.captains = {
     2570: {
         atk: function(p) {
             var boost = 1;
-            boost *= p.unit.class.has("Driven") ? 2.25 : 1;
-            boost *= p.unit.type == "STR" ? ((p.orb == 2) ? 1.1 : 1) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 1.1 : 1) : (p.orb == 'str' ? 1.1 : 1));
-            boost *= p.unit.type == "PSY" ? 0.5 : 1;
+            boost *= p.unit.class.has("Driven") ? 2.25 : 1;//Change this
+            boost *= p.unit.type == "STR" ? ((p.orb == 2) ? 1.1 : 1) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 1.1 : 1) : (p.orb == 'str' ? 1.1 : 1));//Change this
+            boost *= p.unit.type == "PSY" ? 0.5 : 1;//Change this
             return boost;
         },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.25 : 1; },//Change this
     },
     2571: {
         atk: function(p) {
@@ -9082,6 +9083,7 @@ window.captains = {
             boost *= p.unit.type == "PSY" ? 0.5 : 1;
             return boost;
         },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.25 : 1; },
     },
     2572: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
