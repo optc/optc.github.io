@@ -4004,6 +4004,7 @@ window.drops = {
         {
             name: 'Memories of Marineford',
             thumb: 1985,
+            global: true,
             nakama: null,
             gamewith: 100030,
             condition: 'Available for 30 minutes after starting, drops +10 Cotton Candy.',
