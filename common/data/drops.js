@@ -3090,6 +3090,7 @@ window.drops = {
         {
             name: 'Clash!! Big Emperor',
             dropID: 'clash41',
+            showManual: true,
             thumb: 2398,
             nakama: 4239800,
             gamewith: 140044,
@@ -3162,7 +3163,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 830, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1944, 2036, 2122, 2162, 2192, 2353, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1944, 2036, 2122, 2162, 2192, 2353, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3172,7 +3173,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 2036, 2162, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 2036, 2162, 2192, 2488 ],
         },
         
         {
@@ -3181,12 +3182,13 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629 ],
         },
 
         {
             name: 'Red-Hair Pirates Gunner',
             thumb: 777,
+            showManual: true,
             global: true,
             nakama: 5077601,
             gamewith: 17475,
@@ -3197,8 +3199,20 @@ window.drops = {
         },
 
         {
+            name: 'Sorcerer\'s Spell',
+            thumb: 831,
+            showManual: true,
+            global: true,
+            nakama: 5083001,
+            gamewith: 19419,
+            slefty: 'coliseums',
+            Chaos: [ 830, -831 ],
+        },
+
+        {
             name: 'Roar of the Sea\s Cha-Cha',
             thumb: 882,
+            showManual: true,
             global: true,
             nakama: 5088101,
             gamewith: 22035,
@@ -3209,6 +3223,7 @@ window.drops = {
         {
             name: 'Super Pervert',
             thumb: 901,
+            showManual: true,
             global: true,
             nakama: 5090001,
             gamewith: 23129,
@@ -3219,6 +3234,7 @@ window.drops = {
         {
             name: 'Supernova Burning with Ambition',
             thumb: 924,
+            showManual: true,
             global: true,
             nakama: 5092301,
             gamewith: 24038,
@@ -3229,6 +3245,7 @@ window.drops = {
         {
             name: 'Fire Fist Blaze',
             thumb: 951,
+            showManual: true,
             global: true,
             nakama: 5090001,
             gamewith: 25138,
@@ -3239,6 +3256,7 @@ window.drops = {
         {
             name: 'Cold-Hearted Gang',
             thumb: 1016,
+            showManual: true,
             global: true,
             nakama: 5101501,
             gamewith: 27619,
@@ -3249,6 +3267,7 @@ window.drops = {
         {
             name: 'Z, Destroyer of Evil',
             thumb: 1102,
+            showManual: true,
             global: true,
             nakama: 5110101,
             gamewith: 33485,
@@ -3259,6 +3278,7 @@ window.drops = {
         {
             name: 'Time-Bending Neo Navy Vice-Admiral',
             thumb: 1104,
+            showManual: true,
             global: true,
             nakama: 5110301,
             gamewith: 33486,
@@ -3271,6 +3291,7 @@ window.drops = {
         {
             name: 'A Hairy Situation!',
             thumb: 1106,
+            showManual: true,
             global: true,
             nakama: 5110501,
             gamewith: 33487,
@@ -3283,6 +3304,7 @@ window.drops = {
         {
             name: 'Something Wrong With Your Head?',
             thumb: 1143,
+            showManual: true,
             global: true,
             nakama: 5114201,
             gamewith: 34502,
@@ -3295,6 +3317,7 @@ window.drops = {
         {
             name: 'Revenge-Seeking World Destroyer',
             thumb: 1220,
+            showManual: true,
             global: true,
             nakama: 5121901,
             gamewith: 36719,
@@ -3305,6 +3328,7 @@ window.drops = {
         {
             name: 'Gentle Devil-Blood Warrior',
             thumb: 1222,
+            showManual: true,
             global: true,
             nakama: 5122101,
             gamewith: 36718,
@@ -3317,6 +3341,7 @@ window.drops = {
         {
             name: 'Flying Spearman',
             thumb: 1253,
+            showManual: true,
             global: true,
             nakama: 5125301,
             gamewith: 38054,
@@ -3328,6 +3353,7 @@ window.drops = {
         {
             name: 'Foxfire-Style Samurai',
             thumb: 1310,
+            showManual: true,
             global: true,
             nakama: 5130901,
             gamewith: 43749,
@@ -3338,6 +3364,7 @@ window.drops = {
         {
             name: 'Pure-Hearted Guardian Warrior',
             thumb: 1378,
+            showManual: true,
             global: true,
             nakama: 5137701,
             gamewith: 46329,
@@ -3350,6 +3377,7 @@ window.drops = {
         {
             name: 'Punishing Catapult Pop',
             thumb: 1401,
+            showManual: true,
             global: true,
             nakama: 5140001,
             gamewith: 47305,
@@ -3358,29 +3386,21 @@ window.drops = {
         },
 
         {
-            name: 'Provoking Hero of the Coliseum',
-            thumb: 1422,
+            name: 'Drum Island Civilian Guard',
+            thumb: 1402,
+            showManual: true,
             global: true,
-            nakama: 5142101,
-            gamewith: 48690,
+            nakama: 5140201,
+            gamewith: 47303,
             slefty: 'coliseums',
-            Chaos: [ 1421, -1422 ],
-        },
-
-        {
-            name: 'Inescapable Nez-Palm Cannon',
-            thumb: 1491,
-            global: true,
-            nakama: 5149001,
-            gamewith: 52212,
-            slefty: 'coliseums',
-            Underground: [ 1490, -1491 ],
-            Exebition: [ 1490, -1491 ],
+            Underground: [ 1402, -1402 ],
+            Exebition: [ 1402, -1402 ],
         },
 
         {
             name: 'Provoking Hero of the Coliseum',
             thumb: 1422,
+            showManual: true,
             global: true,
             nakama: 5142101,
             gamewith: 48690,
@@ -3391,6 +3411,7 @@ window.drops = {
         {
             name: 'Coliseum Neo vs. Diamante',
             thumb: 2017,
+            showManual: true,
             global: true,
             nakama: 5201601,
             gamewith: 95570,
@@ -3401,6 +3422,7 @@ window.drops = {
         {
             name: '12th Leader of the Happosui Army',
             thumb: 1456,
+            showManual: true,
             global: true,
             nakama: 5145501,
             gamewith: 50805,
@@ -3411,6 +3433,7 @@ window.drops = {
         {
             name: 'Lonely XXX-Weight Boxer',
             thumb: 1487,
+            showManual: true,
             global: true,
             nakama: 5148601,
             gamewith: 52185,
@@ -3419,8 +3442,21 @@ window.drops = {
         },
 
         {
+            name: 'Inescapable Nez-Palm Cannon',
+            thumb: 1491,
+            showManual: true,
+            global: true,
+            nakama: 5149001,
+            gamewith: 52212,
+            slefty: 'coliseums',
+            Underground: [ 1490, -1491 ],
+            Exebition: [ 1490, -1491 ],
+        },
+
+        {
             name: 'Wano Kingdom Hero',
             thumb: 1555,
+            showManual: true,
             global: true,
             nakama: 5155401,
             gamewith: 54673,
@@ -3431,8 +3467,20 @@ window.drops = {
         },
 
         {
+            name: 'Merciless Ex-Warden',
+            thumb: 1602,
+            showManual: true,
+            global: true,
+            nakama: 5160101,
+            gamewith: 57471,
+            slefty: 'coliseums',
+            Chaos: [ 1601, -1602 ],
+        },
+
+        {
             name: 'Captain of the Musketeers',
             thumb: 1828,
+            showManual: true,
             global: true,
             nakama: 5182701,
             gamewith: 74382,
@@ -3443,6 +3491,7 @@ window.drops = {
         {
             name: 'Invincible as a Ninja',
             thumb: 1861,
+            showManual: true,
             global: true,
             nakama: 5186001,
             gamewith: 80286,
@@ -3454,6 +3503,7 @@ window.drops = {
         {
             name: 'Omnipotent Kami of the Skies',
             thumb: 1897,
+            showManual: true,
             global: true,
             nakama: 5189601,
             gamewith: 84402,
@@ -3465,6 +3515,7 @@ window.drops = {
         {
             name: 'Master of Haki',
             thumb: 1978,
+            showManual: true,
             global: true,
             nakama: 5197701,
             gamewith: 92603,
@@ -3476,6 +3527,7 @@ window.drops = {
         {
             name: 'Steel Magnetic Arm',
             thumb: 2111,
+            showManual: true,
             global: true,
             nakama: 5211001,
             gamewith: 103562,
@@ -3487,6 +3539,7 @@ window.drops = {
         {
             name: 'Unhesitating Paw-Palmed Human',
             thumb: 2193,
+            showManual: true,
             global: true,
             nakama: 5219201,
             gamewith: 114952,
@@ -3498,6 +3551,7 @@ window.drops = {
         {
             name: 'Brawny Genie Master',
             thumb: 2249,
+            showManual: true,
             global: true,
             nakama: 5224801,
             gamewith: 118418,
@@ -3509,6 +3563,7 @@ window.drops = {
         {
             name: 'Evolution of a True Knight',
             thumb: 2290,
+            showManual: true,
             global: true,
             nakama: 5228801,
             gamewith: 121684,
@@ -3520,6 +3575,7 @@ window.drops = {
         {
             name: 'Law-Abiding Man',
             thumb: 2323,
+            showManual: true,
             global: true,
             nakama: 5232201,
             gamewith: 125294,
@@ -3531,6 +3587,7 @@ window.drops = {
         {
             name: 'Totto Land\'s Minister of Juice',
             thumb: 2375,
+            showManual: true,
             global: true,
             nakama: 5237401,
             gamewith: 137942,
@@ -3542,6 +3599,7 @@ window.drops = {
         {
             name: 'Coliseum EX Vs. Gecko Moria',
             thumb: 2512,
+            showManual: true,
             nakama: null,
             gamewith: 147896,
             slefty: 'coliseums',
@@ -3551,6 +3609,7 @@ window.drops = {
         {
             name: 'Coliseum EX Vs. King Neptune',
             thumb: 2529,
+            showManual: true,
             nakama: null,
             gamewith: 149444,
             slefty: 'coliseums',
@@ -3560,6 +3619,7 @@ window.drops = {
         {
             name: 'Doflamingo & Trebol',
             thumb: 2550,
+            showManual: true,
             nakama: null,
             gamewith: 150550,
             slefty: 'coliseums',
@@ -3569,6 +3629,7 @@ window.drops = {
         {
             name: 'Morley',
             thumb: 2569,
+            showManual: true,
             nakama: null,
             gamewith: null,
             slefty: 'coliseums',
