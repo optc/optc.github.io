@@ -3163,7 +3163,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1944, 2036, 2122, 2162, 2192, 2353, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1732, 1791, 1827, 1944, 2036, 2162, 2192, 2353, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3173,7 +3173,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 2036, 2162, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1791, 2036, 2162, 2192, 2488 ],
         },
         
         {
@@ -3182,7 +3182,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603 ],
         },
 
         {
@@ -3362,6 +3362,19 @@ window.drops = {
         },
 
         {
+            name: 'Human-Reindeer Sky Battle',
+            thumb: 1339,
+            showManual: true,
+            global: true,
+            nakama: 5133901,
+            gamewith: 44769,
+            slefty: 'coliseums',
+            Chaos: [ 1339, -1339 ],
+            Underground: [ 1339, -1339 ],
+            Exebition: [ 1339, -1339 ],
+        },
+
+        {
             name: 'Pure-Hearted Guardian Warrior',
             thumb: 1378,
             showManual: true,
@@ -3478,6 +3491,19 @@ window.drops = {
         },
 
         {
+            name: 'Of Course I\'ve Got a Backbone!!!',
+            thumb: 1630,
+            showManual: true,
+            global: true,
+            nakama: 5162901,
+            gamewith: 59476,
+            slefty: 'coliseums',
+            Chaos: [ 1629, -1630 ],
+            Underground: [ 1629, -1630 ],
+            Exebition: [ 1629, -1630 ],
+        },
+
+        {
             name: 'Captain of the Musketeers',
             thumb: 1828,
             showManual: true,
@@ -3534,6 +3560,28 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2110, -2111 ],
             Underground: [ 2110, -2111 ],
+        },
+
+        {
+            name: 'Sea God of the Ryugu Kingdom',
+            thumb: 2123,
+            showManual: true,
+            global: true,
+            nakama: 5212201,
+            gamewith: 107866,
+            slefty: 'coliseums',
+            Chaos: [ 2122, -2123 ],
+            Underground: [ 2122, -2123 ],
+        },
+
+        {
+            name: 'Coliseum EX Vs. King Neptune',
+            thumb: 2529,
+            showManual: true,
+            nakama: null,
+            gamewith: 149444,
+            slefty: 'coliseums',
+            'All Difficulties': [ 2528, 2530 ],
         },
 
         {
@@ -3604,16 +3652,6 @@ window.drops = {
             gamewith: 147896,
             slefty: 'coliseums',
             'All Difficulties': [ 2511, 2513 ],
-        },
-
-        {
-            name: 'Coliseum EX Vs. King Neptune',
-            thumb: 2529,
-            showManual: true,
-            nakama: null,
-            gamewith: 149444,
-            slefty: 'coliseums',
-            'All Difficulties': [ 2528, 2530 ],
         },
 
         {
