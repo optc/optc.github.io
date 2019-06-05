@@ -47872,13 +47872,13 @@ window.details = {
         captain: "Boosts ATK of Driven characters by ?x and their HP by ?x. Reduces ATK of [PSY] characters by ?%. If a character has a [STR] orb, boosts their ATK by ?x.",
         captainNotes: "All boosts are cumulative.",
         special: "Cuts the current HP of one enemy by 10%, boosts own ATK by 1.5x and amplifies the effects of own orb by 1.5x for 3 turns and changes [PSY], [TND] and [BOMB] orbs into [STR] orbs",
-        specialName: "Doflamingo Special",
+        specialName: "\"Power\" to Get Revenge",
     },
     2571: {//Doflamingo
         captain: "Boosts ATK of Driven characters by 2.25x and their HP by 1.25x. Reduces ATK of [PSY] characters by 50%. If a character has a [STR] orb, boosts their ATK by 1.1x.",
         captainNotes: "All boosts are cumulative.",
         special: "Cuts the current HP of one enemy by 10%, boosts own ATK by 1.5x and amplifies the effects of own orb by 1.5x for 3 turns and changes [PSY], [TND] and [BOMB] orbs into [STR] orbs",
-        specialName: "Doflamingo Special",
+        specialName: "\"Power\" to Get Revenge",
         support: [
             {
                 "Characters": "Corazon/Rosinante",
@@ -47895,12 +47895,12 @@ window.details = {
     2572: {//Rosinante
         captain: "Boosts ATK of Shooter characters by 1.5x.",
         special: "Reduces Paralysis duration by 2 turns and changes orbs in the bottom row into [TND] orbs.",
-        specialName: "Rosinante Special",
+        specialName: "Loser's Tears",
     },
     2573: {//Homing
         captain: "Boosts chain multiplier by 1.5x.",
         special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn.",
-        specialName: "Homing Special",
+        specialName: "Human Declaration",
     },
     2576: {//Inuarashi&Nekomamushi
         captain: {
