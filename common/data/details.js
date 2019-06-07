@@ -48138,7 +48138,7 @@ window.details = {
     },
     2583: {//TM Rob Lucci
         captain: {
-            "base": "Boosts ATK of Cerebral characters by 3.5x if they have a Matching orb, by 2.5x otherwise, their HP by 1.2x and reduces crew's RCV to 0.",
+            "base": "Boosts ATK of Cerebral characters by ?x if they have a Matching orb, by ?x otherwise, their HP by ?x and reduces crew's RCV to 0.",
             "level1": "Not Translated",
             "level2": "Not Translated",
             "level3": "Not Translated",
