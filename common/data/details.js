@@ -47966,6 +47966,229 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
+    2578: {//Akainu
+        captain: "Boosts ATK of [STR] characters by 3.25x. If a [STR] character has a [STR] orb, boosts their ATK by 4.225x instead. Boosts chances of getting [STR] orbs",
+        special: "Deals 120x character's ATK Typeless damage to all enemies and changes all orbs into [STR] orbs. Boosts ATK of [STR] characters by 2x for 1 turn",
+        specialName: "Hellhound Catastrophic Eruption",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts this character's damage against [QCK] characters by 2x",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire Sailor Ability 1: Boosts this character's damage against [QCK] characters by 2x" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 2: Enrage" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 3: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 50% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 20",
+                    "Level 2: Boosts base ATK by 40",
+                    "Level 3: Boosts base ATK by 60",
+                    "Level 4: Boosts base ATK by 80",
+                    "Level 5: Boosts base ATK by 100"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 2: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 10 turns on this character",
+                    "Level 5: Reduces Slot Bind completely on this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2579: {//Saint Mjosgard
+        captain: "Boosts amount of Beli received by 3x",
+        special: "Deals 50x character's ATK in Typeless damage to one enemy and reduces enemies' Percent Damage Reduction duration by 3 turns. If you are on a Treasure Map, boosts ATK of Cerebral characters depending on your Treasure Map Level for 1 turn.",
+        specialName: "Saint Mjosgard Special",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+        ],
+    },
+    2580: {//Don Sai
+        captain: "Boosts ATK of Striker characters by 1.5x",
+        special: "Deals 75x character's ATK in Typeless damage to one enemy and reduces Silence duration by 2 turns. If your crew has 4 or more characters with [STR] or [PSY] orbs, locks the chain multiplier at 2.75x for 2 turns.",
+        specialName: "Don Sai Special",
+        sailor: "Reduces Silence duration on this character by 2 turns",
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: Enrage" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2581: {//Neptune
+        captain: "Boosts ATK of [PSY] characters by 1.5x",
+        special: "If your Captain is a Striker or Cerebral character, randomizes all orbs for Striker and Cerebral characters into either [STR] or [PSY] orbs and locks all orbs for 1 turn.",
+        specialName: "Neptune Special",
+        sailor: "Reduces Silence duration on this character by 2 turns",
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+    },
+    2582: {//TM Rob Lucci
+        captain: "Boosts ATK of Cerebral characters by ?x if they have a Matching orb, by ?x otherwise, their HP by ?x and reduces crew's RCV to 0",
+        special: "Cuts the current HP of one enemy by 20%. If HP is above 99% at the time the special is activated, amplifies the effect of orbs for Cerebral characters by 2x for 3 turns and locks all orbs for 1 turn.",
+        specialName: "Lucci Special",
+    },
+    2583: {//TM Rob Lucci
+        captain: {
+            "base": "Boosts ATK of Cerebral characters by 3.5x if they have a Matching orb, by 2.5x otherwise, their HP by 1.2x and reduces crew's RCV to 0.",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts ATK of Cerebral characters by 3.5x if they have a Matching orb, by 2.5x otherwise, their HP by 1.2x and reduces crew's RCV to 0",
+        },
+        special: "Cuts the current HP of one enemy by 20%. If HP is above 99% at the time the special is activated, amplifies the effect of orbs for Cerebral characters by 2x for 3 turns and locks all orbs for 1 turn.",
+        specialName: "Lucci Special",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of Cerebral characters by 50",
+            "level2": "Makes [PSY], [RCV] and [TND] orbs beneficial for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Kaku and Stussy",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 12% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",

@@ -9091,6 +9091,25 @@ window.captains = {
     2573: {
         chainModifier: function(p) { return 1.5; }
     },
+    2578: {
+        atk: function(p) {
+            return p.unit.type == "STR" ? ((p.orb == 2) ? 4.225 : 3.25) : 1;
+        },
+    },
+    2580: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    2581: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    2582: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 1 : 1); },//change this
+        rcv: function(p) { return 0; }
+    },
+    2583: {
+        atk: function(p) { return !p.unit.class.has("Cerebral") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? p.actions[p.sourceSlot] ? 3.5 : 1 : p.actions[p.sourceSlot] ? 2.5 : 1); },//Change this
+        rcv: function(p) { return 0; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
