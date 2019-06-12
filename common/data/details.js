@@ -47932,35 +47932,67 @@ window.details = {
         special: "Boosts ATK of Cerebral and Striker characters by 1.75x for 1 turn and boosts the Color Affinity of Cerebral and Striker characters by 1.75x for 1 turn, and becomes Inuarashi & Nekomamushi for 3 turns. If during that turn, you hit 2 PERFECTS, amplifies the effect of orbs for Cerebral and Striker characters by 2.25x for 1 turn.",
         swap: "When Change is activated, this character removes all Despair and Slot Bind on themselves and reduces Paralysis duration by 1 turn.",
         specialName: "Two-King Onslaught",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of Cerebral and Striker characters by 75" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base HP by 120" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Enrage",
                 "description": [
-                    "Level 1: Boosts base ATK by ?",
-                    "Level 2: Boosts base ATK by ?",
-                    "Level 3: Boosts base ATK by ?",
-                    "Level 4: Boosts base ATK by ?",
-                    "Level 5: Boosts base ATK by ?"
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 80",
+                    "Level 3: Boosts base ATK by 120",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turns",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turns",
+                    "Level 3: Reduces No Healing duration by 4 turns",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
                 ]
             },
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 60% chance to deal % of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 9% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
         ],
@@ -48043,29 +48075,29 @@ window.details = {
     2579: {//Saint Mjosgard
         captain: "Boosts amount of Beli received by 3x",
         special: "Deals 50x character's ATK in Typeless damage to one enemy and reduces enemies' Percent Damage Reduction duration by 3 turns. If you are on a Treasure Map, boosts ATK of Cerebral characters depending on your Treasure Map Level for 1 turn.",
-        specialName: "Saint Mjosgard Special",
+        specialName: "Mjosgard Full Swing",
         specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 35" },
             { "description": "Acquire Potential 1: Critical Hit" },
         ],
         potential: [
             {
                 "Name": "Critical Hit",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 60% chance to deal 4% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
         ],
@@ -48073,28 +48105,28 @@ window.details = {
     2580: {//Don Sai
         captain: "Boosts ATK of Striker characters by 1.5x",
         special: "Deals 75x character's ATK in Typeless damage to one enemy and reduces Silence duration by 2 turns. If your crew has 4 or more characters with [STR] or [PSY] orbs, locks the chain multiplier at 2.75x for 2 turns.",
-        specialName: "Don Sai Special",
+        specialName: "Sympathetic Wujiaogen Heel",
         sailor: "Reduces Silence duration on this character by 2 turns",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 35" },
             { "description": "Acquire Potential 1: Enrage" },
         ],
         potential: [
             {
                 "Name": "Enrage",
                 "description": [
-                    "Level 1: Boosts base ATK by ?",
-                    "Level 2: Boosts base ATK by ?",
-                    "Level 3: Boosts base ATK by ?",
-                    "Level 4: Boosts base ATK by ?",
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
                     "Level 5: Boosts base ATK by 200"
                 ]
             },
@@ -48104,29 +48136,29 @@ window.details = {
     2581: {//Neptune
         captain: "Boosts ATK of [PSY] characters by 1.5x",
         special: "If your Captain is a Striker or Cerebral character, randomizes all orbs for Striker and Cerebral characters into either [STR] or [PSY] orbs and locks all orbs for 1 turn.",
-        specialName: "Neptune Special",
+        specialName: "Sea God's Anger",
         sailor: "Reduces Silence duration on this character by 2 turns",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 35" },
             { "description": "Acquire Potential 1: No Healing duration" },
         ],
         potential: [
             {
                 "Name": "No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turn",
-                    "Level 5: Reduces No Healing duration by ? turn"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 5 turn",
+                    "Level 5: Reduces No Healing duration by 7 turn"
                 ]
             },
         ],
@@ -48187,6 +48219,81 @@ window.details = {
                     "Level 5: Adds 12% of this character's base ATK to the supported character's base ATK."
                 ]
             }
+        ],
+    },
+    2584: {//Sanji
+        captain: "Boosts ATK of Fighter and Powerhouse characters by ?x if HP is below 50% at the start of the turn, ?x otherwise",
+        special: "Changes adjacent orbs into [RCV] orbs. If HP is below 30% at the time the special is activated, amplifies the effects of orbs for all characters by 2x for 2 turns, amplifies the effects of orbs for Fighter, Slasher and Powerhouse characters by 1.75x for 2 turns otherwise.",
+        specialName: "Sanji Special",
+    },
+    2585: {//Sanji
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.75x if HP is below 50% at the start of the turn, 2.5x otherwise",
+        special: "Changes adjacent orbs into [RCV] orbs. If HP is below 30% at the time the special is activated, amplifies the effects of orbs for all characters by 2x for 2 turns, amplifies the effects of orbs for Fighter, Slasher and Powerhouse characters by 1.75x for 2 turns otherwise.",
+        specialName: "Sanji Special",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [RCV] orbs beneficial for Fighter, Slasher and Powerhouse characters",
+            "level2": "Restores his own special cooldown by 2 turns when it is rewinded",
+        },
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by 150"
+                ]
+            },
+            {
+                "Name": "No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2586: {//Reiju
+        captain: "Boosts ATK of Slasher and Powerhouse characters by ?x and their RCV by ?x.",
+        special: "Removes Poison and Blindness duration completely. If your crew has 3 or more characters with [RCV] orbs, boosts ATK of all characters by 2x for 2 turns, boosts ATK of Fighter, Slasher and Powerhouse characters by 1.75x for 2 turns otherwise.",
+        specialName: "Reiju Special",
+    },
+    2587: {//Reiju
+        captain: "Boosts ATK of Slasher and Powerhouse characters by 2.5x and their RCV by 1.2x.",
+        special: "Removes Poison and Blindness duration completely. If your crew has 3 or more characters with [RCV] orbs, boosts ATK of all characters by 2x for 2 turns, boosts ATK of Fighter, Slasher and Powerhouse characters by 1.75x for 2 turns otherwise.",
+        specialName: "Reiju Special",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK and RCV of Fighter, Slasher and Powerhouse characters by 50",
+            "level2": "Restores his own special cooldown by 2 turns when it is rewinded",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
         ],
     },
     3333: {//Kung Fu Luffy
