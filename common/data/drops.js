@@ -2406,9 +2406,9 @@ window.drops = {
         {
             name: 'Hell\'s Past! Young Doflamingo',
             dropID: 'event121',
-            thumb: null,
+            thumb: 2571,
             nakama: null,
-            gamewith: null,
+            gamewith: 153186,
             'All Difficulties': [ 2570, 2572, 2573, -2418, -2465, -1045, -2001, -2369, -2185, -2183, -2287, -2119, -2082, -1993, -2031, -2103, -2105, -1987, -2229, -2317, -2318 ]
         },
         
@@ -3845,7 +3845,7 @@ window.drops = {
             global: true,
             nakama: 8238700,
             gamewith: 137053,
-            'Raging Sea': [ 2386 ]
+            'Roaring Sea': [ 2386 ]
         },
 
         {
@@ -3871,7 +3871,7 @@ window.drops = {
             dropID: 'treasuremap20',
             thumb: 2510,
             nakama: null,
-            gamewith: null,
+            gamewith: 148609,
             'Raging Sea': [ 2509 ]
         },
 
@@ -3880,7 +3880,7 @@ window.drops = {
             dropID: 'treasuremap21',
             thumb: 2557,
             nakama: null,
-            gamewith: null,
+            gamewith: 151643,
             'Raging Sea': [ 2556 ]
         },
 
@@ -3889,8 +3889,8 @@ window.drops = {
             dropID: 'treasuremap22',
             thumb: 2583,
             nakama: null,
-            gamewith: null,
-            'Raging Sea': [ 2582 ]
+            gamewith: 154065,
+            'Primordial Sea': [ 2582 ]
         },
         
     ],
