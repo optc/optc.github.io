@@ -7579,6 +7579,20 @@ window.specials = {
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName)}
     },
+    2574: {
+        atk: function(p) { return p.delayed > 0 ? window.specials[2574].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2574].multiplier = p.captain.class.has("Free Spirit") ? 2 : 1;
+        }
+    },
+    2575: {
+        atk: function(p) { return p.delayed > 0 ? window.specials[2574].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2574].multiplier = p.captain.class.has("Free Spirit") ? 2 : 1;
+        }
+    },
     2578: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: "class"

@@ -41436,14 +41436,14 @@ window.details = {
         ]
     },
     2364: {//Katakuri
-        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of all characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs beneficial for all characters. Recovers 50% of damage taken from enemies in the previous stage when entering a new stage.",
+        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs beneficial for all characters. Recovers 50% of damage taken from enemies in the previous stage when entering a new stage.",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>#{beneficial}",
         special: "Deals Typeless damage to all enemies equal to 30x the damage taken from enemies before the special is activated and adds Additional Typeless Damage equal to 15x the damage taken from enemies before the special is activated for 1 turn.",
         specialNotes: "The amount of damage possible caps at 200,000 damage taken, so 6,000,000 AOE Typeless damage and 3,000,000 Additional Damage.",
         specialName: "Burning Mochi",
     },
     2365: {//Katakuri
-        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of all characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs beneficial for all characters. Recovers 50% of damage taken from enemies in the previous stage when entering a new stage.",
+        captain: "Boosts ATK of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.825x, boosts the Color Affinity of Fighter, Slasher, Shooter, Driven and Powerhouse characters by 1.4x and makes [STR], [PSY], [RCV] and [TND] orbs beneficial for all characters. Recovers 50% of damage taken from enemies in the previous stage when entering a new stage.",
         captainNotes: "The bonus is cumulative. Characters with 2 of the boosted classes get a 3.330625x bonus<br>#{beneficial}",
         special: "Deals Typeless damage to all enemies equal to 30x the damage taken from enemies before the special is activated and adds Additional Typeless Damage equal to 15x the damage taken from enemies before the special is activated for 1 turn.",
         specialNotes: "The amount of damage possible caps at 200,000 damage taken, so 6,000,000 AOE Typeless damage and 3,000,000 Additional Damage.",
@@ -47902,12 +47902,29 @@ window.details = {
         special: "Recovers 3,000 HP and reduces damage received by 50% for 1 turn.",
         specialName: "Human Declaration",
     },
+    2574: {//Carrot
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Free Spirit characters by 3x.",
+        special: "Reduces enemies' Threshold Damage Reduction and Percent Damage Reduction duration by 3 turns, reduces Bind duration by 5 turns and changes [BOMB], [G], [EMPTY] and Badly Matching orbs into Matching orbs. If your Captain is a Free Spirit Character, boosts ATK against delayed enemies by 2x for 1 turn.",
+        specialName: "Carrot Special",
+        sailor: "Completely resists Silence on this character",
+    },
+    2575: {//Carrot
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Free Spirit characters by 3x.",
+        special: "Reduces enemies' Threshold Damage Reduction and Percent Damage Reduction duration by 3 turns, reduces Bind duration by 5 turns and changes [BOMB], [G], [EMPTY] and Badly Matching orbs into Matching orbs. If your Captain is a Free Spirit Character, boosts ATK against delayed enemies by 2x for 1 turn.",
+        specialName: "Carrot Special",
+        sailor: {
+            "base": "Completely resists Silence on this character",
+            "level1": "Makes [PSY] orbs beneficial for Free Spirit characters"
+        },
+        sailorNotes: "#{beneficial}",
+    },
     2576: {//Inuarashi&Nekomamushi
         captain: {
             "character1": "Boosts ATK of Cerebral characters by a variable factor between 3x and 3.3x based on the timing of the attack of the previous unit in the chain, Boosts ATK of Striker characters by 3x and makes [STR] orbs beneficial for Cerebral and Striker characters.",
             "character2": "Boosts ATK of Striker characters by a variable factor between 3x and 3.3x based on the timing of the attack of the previous unit in the chain, Boosts ATK of Cerebral characters by 3x and makes [PSY] orbs beneficial for Cerebral and Striker characters.",
             "combined": "Boosts ATK of Cerebral and Striker characters by a variable factor between 3.5x and 4x based on the timing of the attack of the previous unit in the chain, makes [STR] and [PSY] orbs beneficial for Cerebral and Striker characters and recovers 1.5x their RCV at the end of the turn each time you hit a PERFECT."
         },
+        captainNotes: "#{beneficial}",
         sailor: {
             "character1": "Boosts own base ATK by 150 if this character is the last in the chain to attack",
             "character2": "Boosts own base ATK by 150 if this character is the last in the chain to attack",
@@ -48294,6 +48311,23 @@ window.details = {
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+    },
+    2615: {//Perospero
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Cerebral characters by 2.25x.",
+        special: "Locks all orbs for 1 turn and changes Badly Matching orbs into Matching orbs.",
+        specialName: "Perospero Special",
+        support: [
+            {
+                "Characters": "Not Translated",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, locks Cerebral character's orbs for 1 turn."
+                ]
+            }
         ],
     },
     3333: {//Kung Fu Luffy

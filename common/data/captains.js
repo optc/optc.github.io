@@ -8326,7 +8326,7 @@ window.captains = {
             }
             return Math.pow(1.825, Katacount);
         },
-        affinity: function(p) { return 1.4; }
+        affinity: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.4 : 1; }
     },
     2365: {
         atk: function(p) {
@@ -8339,7 +8339,7 @@ window.captains = {
             }
             return Math.pow(1.825, Katacount);
         },
-        affinity: function(p) { return 1.4; }
+        affinity: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.4 : 1; }
     },
     2368: {
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 2.5, [ "STR", "PSY" ]); },
@@ -9091,6 +9091,12 @@ window.captains = {
     2573: {
         chainModifier: function(p) { return 1.5; }
     },
+    2574: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1 : 1; },//change this
+    },
+    2575: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 3 : 1; },
+    },
     2578: {
         atk: function(p) {
             return p.unit.type == "STR" ? ((p.orb == 2) ? 4.225 : 3.25) : 1;
@@ -9123,6 +9129,9 @@ window.captains = {
     2587: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 2.5 : 1; },
         rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.2 : 1; },
+    },
+    2615: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },
     3333: {
         hitAtk: function(p) {
