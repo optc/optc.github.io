@@ -47906,14 +47906,14 @@ window.details = {
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Free Spirit characters by 3x.",
         special: "Reduces enemies' Threshold Damage Reduction and Percent Damage Reduction duration by 3 turns, reduces Bind duration by 5 turns and changes [BOMB], [G], [EMPTY] and Badly Matching orbs into Matching orbs. If your Captain is a Free Spirit Character, boosts ATK against delayed enemies by 2x for 1 turn.",
         specialName: "Carrot Special",
-        sailor: "Completely resists Silence on this character",
+        sailor: "Completely resists Paralysis on this character",
     },
     2575: {//Carrot
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Free Spirit characters by 3x.",
         special: "Reduces enemies' Threshold Damage Reduction and Percent Damage Reduction duration by 3 turns, reduces Bind duration by 5 turns and changes [BOMB], [G], [EMPTY] and Badly Matching orbs into Matching orbs. If your Captain is a Free Spirit Character, boosts ATK against delayed enemies by 2x for 1 turn.",
         specialName: "Carrot Special",
         sailor: {
-            "base": "Completely resists Silence on this character",
+            "base": "Completely resists Paralysis on this character",
             "level1": "Makes [PSY] orbs beneficial for Free Spirit characters"
         },
         sailorNotes: "#{beneficial}",
