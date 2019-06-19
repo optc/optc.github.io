@@ -4019,7 +4019,9 @@ window.drops = {
             thumb: 2531,
             nakama: null,
             gamewith: 149563,
-            'All Difficulties': [ 2531, 2518 ]
+            'All Difficulties': [ 2531 ],
+            'Round 1': [ 2518 ],
+            'Round 2': [ 2615 ],
         },
         
     ],
