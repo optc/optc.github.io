@@ -802,6 +802,14 @@ window.sailors = {
         hpStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 50 : 0; },
     },
+    2586: {
+        atkStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 50 : 0; },
+    },
+    2587: {
+        atkStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

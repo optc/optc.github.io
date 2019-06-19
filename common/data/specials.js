@@ -6979,6 +6979,10 @@ window.specials = {
             window.specials[2425].turnedOn = p.captain.class.has("Slasher") ? true : false;
         },
     },
+    2434: {
+        delay: function(p) { return 1; },
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 2 : 1},
+    },
     2435: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1},
         type: "class"
@@ -7306,6 +7310,10 @@ window.specials = {
                 window.specials[2487].multiplier = 2;
             }
         },
+    },
+    2488: {
+        affinity: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? 1.75 : 1; },
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     2492: {
         chainAddition: function(p) { return 0.3; }

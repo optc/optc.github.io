@@ -730,6 +730,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    2434: { // Boa Hancock
+        type: 'healer',
+        amount: 1000
+    },
     2443: { // Doflamingo
         type: 'healer',
     },
