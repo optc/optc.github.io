@@ -2432,7 +2432,7 @@ window.units = [
     [ "Charlotte Pudding, Memory Flashback", "PSY", [ "Driven", "Shooter" ], 5, 30, 4, 5, 99, 4000000, 740, 494, 192, 1850, 1235, 480, 1 ],
     [ "Jack, Animal Kingdom Pirates, Lead Permormer, Captain of the Mammoth", "STR", [ "Striker", "Fighter" ], 5, 30, null, 3, 70, 1066998, null, null, null, null, null, null, null ],
     [ "Jack, Eleph-Eleph Fruit: Ancient Model User", "STR", [ "Striker", "Fighter" ], 6, 55, 5, 5, 99, 5000000, null, null, null, null, null, null, null ],
-    [ "Boa Hancock, Strawhat Luffy's Supporter", "Type", [ "Class1", "Class2" ], "6+", 65, 4, 5, 99, 5000000, 1, 1, 1, 3070, 1477, 496, null ],
+    [ "Boa Hancock, Strawhat Luffy's Supporter", "PSY", [ "Free Spirit", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 1, 1, 1, 3070, 1477, 496, null ],
     [ "Dagama, The Tactician's Order", "QCK", [ "Slasher", "Driven" ], 5, 1, 6, 4, 99, 4000000, 798, 734, 110, 2358, 1244, 331, 1 ],
     [ "Orlumbus, Grand Fleet Admiral's Dignity", "STR", [ "Striker", "Driven" ], 5, 1, 4, 4, 99, 4000000, 811, 812, 82, 2423, 1328, 245, 1 ],
     [ "Corazon, The Plan to Save Law", "PSY", [ "Cerebral", "Shooter" ], 5, 20, 4, 4, 99, 2000000, 1350, 753, 169, 2130, 1300, 353, 1 ],
