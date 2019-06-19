@@ -34659,7 +34659,7 @@ window.details = {
                     "Level 5: Boosts base ATK by 200"
                 ]
             },
-        
+
         ],
         potentialNotes: "#{enrage}"
     },
@@ -37765,7 +37765,7 @@ window.details = {
     },
     2232: {//Legend Enel
         captain: "Reduces HP of all characters by 20%, reduces damage received by 13%, boosts chances of getting [RCV] orbs, makes [RCV] orbs beneficial for all characters, boosts ATK of all characters proportionally to the amount healed in the last turn, by 3.75 at max.",
-        captainNotes: "The range of ATK boost is from 2x to 3.75x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000175 and maxes at 10,000k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.<br>#{beneficial}",
+        captainNotes: "The range of ATK boost is from 2x to 3.75x. The exact boost is calculated as 2 + <HP recovered in the previous turn> * 0.000175 and maxes at 10k HP healed. This ignores your max HP, so it doesn't stop counting if you over-heal.<br>#{beneficial}",
         special: "Deals Typeless damage to all enemies equal to 25x how much excess healing done before the special is activated.",
         specialNotes: "The excess healing is counted from the last time the special is used and accumulates when you heal more than your maximum HP. For example, if you are at max HP and you heal 1,000 HP, you will add 25k damage to the special. The amount of damage possible caps at 5,000,000 damage.",
         specialName: "Kingdom Come",
