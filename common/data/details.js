@@ -48536,7 +48536,7 @@ window.details = {
         specialName: "Poisonous Sword Stance",
         sailor: {
             "base": "Boosts base ATK and RCV of Fighter, Slasher and Powerhouse characters by 50",
-            "level1": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "level1": "Restores her own special cooldown by 2 turns when it is rewinded",
         },
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -48551,7 +48551,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 25" },
-            { "description": "Acquire Sailor Ability 1: Restores his own special cooldown by 2 turns when it is rewinded" },
+            { "description": "Acquire Sailor Ability 1: Restores her own special cooldown by 2 turns when it is rewinded" },
             { "description": "Boosts base ATK by 40" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
