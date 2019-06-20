@@ -23307,7 +23307,7 @@ window.details = {
         specialNotes: "#{stages}<br>#{beneficial}",
         specialName: "King Kong Gun",
         sailor: {
-            "base": "None",
+            "base": "Completely resists Paralysis on this character",
             "level1": "Boosts ATK, HP and RCV for all characters by 75",
         },
         limit: [
@@ -43227,30 +43227,30 @@ window.details = {
             {
                 "Name": "[DEX] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
-                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 1: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 5%",
                     "Level 5: Reduce damage taken from [DEX] characters by 7%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
                     "Level 5: Reduces Slot Bind duration by 7 turns on this character"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, heals for ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, heals for 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, heals for 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
