@@ -149,8 +149,8 @@
         ng-click="filters.worldClash = !filters.worldClash">Show World Clash Boosters</span-->
     <!--span class="filter width-12 exc" ng-model="filters.swordOrdeal" ng-class="{ active: filters.swordOrdeal }"
         ng-click="filters.swordOrdeal = !filters.swordOrdeal">Show Ordeal of the Blade Boosters</span-->
-    <span class="filter width-12 exc" ng-model="filters.luffyvkatakuri" ng-class="{ active: filters.luffyvkatakuri }"
-        ng-click="filters.luffyvkatakuri = !filters.luffyvkatakuri">Show Luffy v Katakuri Boosters</span>
+    <!--span class="filter width-12 exc" ng-model="filters.luffyvkatakuri" ng-class="{ active: filters.luffyvkatakuri }"
+        ng-click="filters.luffyvkatakuri = !filters.luffyvkatakuri">Show Luffy v Katakuri Boosters</span-->
 </div>
 
 <!--div class="filter-container">
@@ -174,6 +174,13 @@
     <span class="filter-header">Special filters</span>
     <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('special') == 0"
         ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" add-orb-options add-special-options
+        ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
+</div>
+
+<div class="filter-container">
+    <span class="filter-header">Swap ability filters</span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in filterData" ng-if="filter.target.indexOf('swap') == 0"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" 
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div>
 

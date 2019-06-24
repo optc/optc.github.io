@@ -12,7 +12,7 @@ Utils.parseUnits(false);
 
 var reverseMatcherMap = { };
 for (var i=0;i<window.matchers.length;++i) {
-    var data = window.matchers[i], type = (data.target == 'captain' ? 'captain' : data.target == 'special' ? 'special' : data.target == 'sailor' ? 'sailor' : 'limit' );
+    var data = window.matchers[i], type = (data.target == 'captain' ? 'captain' : data.target == 'special' ? 'special' : data.target == 'sailor' ? 'sailor' : data.target == 'limit' ? 'limit' : 'swap' );
     var name = data.name.replace(/-/g,' ').replace(/\s(.)/g,function(x,y) { return y.toUpperCase(); });
     reverseMatcherMap[type + '.' + name] = i;
 }
