@@ -4018,7 +4018,7 @@ window.drops = {
             dropID: 'bond1',
             thumb: 2531,
             nakama: null,
-            gamewith: 149563,
+            gamewith: [ 150056, 155125 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
@@ -4478,6 +4478,24 @@ window.drops = {
             gamewith: 143826,
             showManual: true,
             'All Difficulties': [ 9027, 9028, 9029, 9030, -2446, -2447, -2448, -2449, -2450, -2451, -2452, -2453, -2454 ],
+        },
+        
+        {
+            name: 'Beautiful Women\'s Relief - Nami',
+            thumb: 2588,
+            nakama: null,
+            gamewith: 155238,
+            showManual: true,
+            'All Difficulties': [ 9031, -2588, -1955, -1366, -2076 ],
+        },
+        
+        {
+            name: 'Beautiful Women\'s Relief - Hancock',
+            thumb: 2434,
+            nakama: null,
+            gamewith: 155240,
+            showManual: true,
+            'All Difficulties': [ 9032, -2434, -2183, -1747, -1445, -415 ],
         },
         
         {

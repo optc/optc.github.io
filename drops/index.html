@@ -84,7 +84,11 @@
                     <tr ng-if="island.gamewith" hide-when-empty>
                         <td>Gamewith (Japanese)</td>
                         <td colspan="2">
-                            <a href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}" target="_blank">Gamewith Page</a>
+                            <a ng-if="!island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}" target="_blank">Gamewith Page</a>
+                            <a ng-if="island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[0]}}" target="_blank">Gamewith Page: Part 1</a><br ng-if="island.gamewith[0]">
+                            <a ng-if="island.gamewith[1]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[1]}}" target="_blank">Gamewith Page: Part 2</a><br ng-if="island.gamewith[1]">
+                            <a ng-if="island.gamewith[2]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[2]}}" target="_blank">Gamewith Page: Part 3</a><br ng-if="island.gamewith[2]">
+                            <a ng-if="island.gamewith[3]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[3]}}" target="_blank">Gamewith Page: Part 4</a><br ng-if="island.gamewith[3]">
                         </td>
                     </tr>
                     <tr ng-if="island.slefty" hide-when-empty>
