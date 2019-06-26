@@ -757,6 +757,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2596: { // Big Mom
+        type: 'healer',
+        amount: 500
+    },
+    2598: { // Gastino
+        type: 'zombie',
+        threshold: 0.5//CHANGE THIS
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

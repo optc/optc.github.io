@@ -44249,7 +44249,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Judge, Ichiji, Niji and Yonji",
+                "Characters": "Judge, Ichiji, Niji, Sanji and Yonji",
                 "description": [
                     "Level 1: Adds 6% of this character's base RCV to the supported character's base RCV",
                     "Level 2: Adds 7% of this character's base RCV to the supported character's base RCV",
@@ -44311,7 +44311,7 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "Judge, Ichiji, Niji and Yonji",
+                "Characters": "Judge, Ichiji, Niji, Sanji and Yonji",
                 "description": [
                     "Level 1: Adds 6% of this character's base RCV to the supported character's base RCV",
                     "Level 2: Adds 7% of this character's base RCV to the supported character's base RCV",
@@ -48666,18 +48666,74 @@ window.details = {
             }
         ]
     },
+    2589: {//Pawn STR
+        captain: "Boosts ATK of [STR] characters by 1.75x.",
+        special: "Deals 20x character's ATK in [STR] damage to one enemy and reduces the defense of all enemies by 50% for 1 turn.",
+        specialName: "Pawn: Random Attack",
+    },
+    2590: {//Pawn DEX
+        captain: "Boosts ATK of [DEX] characters by 1.75x.",
+        special: "Deals 20x character's ATK in [DEX] damage to one enemy and boosts ATK against enemies with reduced defense by 1.5x for 1 turn.",
+        specialName: "Pawn: Random Thrust",
+    },
+    2591: {//Rook STR
+        captain: "Boosts ATK of [STR] characters by 2x and their HP by 1.1x.",
+        special: "Randomizes [PSY] and [INT] orbs, into either [STR] or [DEX] orbs and amplifies the effect of orbs by 1.5x for 1 turn.",
+        specialName: "Rook: Slot Power",
+    },
+    2592: {//Rook QCK
+        captain: "Boosts ATK of [QCK] characters by 2x and their RCV by 1.1x.",
+        special: "Randomizes [RCV] and [TND] orbs, into either [DEX] or [QCK] orbs and locks all orbs for 1 turn.",
+        specialName: "Rook: Slot Hold",
+    },
+    2593: {//King PSY
+        captain: "Boosts ATK of [PSY] characters by 2.25x and their RCV by 1.25x.",
+        special: "Adds 0.3x to Chain multiplier for 1 turn. If your crew has Orb Amplification, changes [TND] and [BOMB] orbs into Matching orbs.",
+        specialName: "King: Chain Up",
+    },
+    2594: {//King INT
+        captain: "Boosts ATK of [INT] characters by 2.25x and their HP by 1.25x.",
+        special: "Boosts the Color Affinity of all characters by 1.3x for 1 turn. If your crew has Orb Amplification, changes [RCV] and [BLOCK] orbs into Matching orbs.",
+        specialName: "King: Weak Boost",
+    },
+    2595: {//Mont-d'Or
+        captain: "Boosts ATK of Driven characters by 2.5x.",
+        special: "Cuts the current HP of one enemy by 20% and changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs.",
+        specialName: "Destroying Shoji",
+    },
+    2596: {//Big Mom
+        captain: "Boosts ATK of Driven and Fighter characters by 2.25x and recovers 500 HP at end of each turn.",
+        special: "Reduces Paralysis, Silence, Burn and Blindness duration by 2 turns, reduces Special Cooldown of Fighter and Driven specials by 1 turn.",
+        sailor: "Reduces Silence duration on this character by 2 turns",
+        specialName: "Dreaming Sweet Queen",
+    },
+    2597: {//Capone
+        captain: "Reduces cooldown of Driven specials by 2 turns at the start of the fight and boosts ATK of Driven characters by 2.5x and their HP by 1.35x.",
+        special: "Deals 16 hits of random Typeless damage to random enemies, boosts ATK against enemies with reduced defense by 1.5x for 1 turn and boosts the Color Affinity of Driven characters by 1.75x for 1 turn.",
+        specialName: "Father's Deal",
+    },
+    2598: {//Gastino
+        captain: "Boosts ATK of Driven and Cerebral characters by 1.75x and protects from defeat as long as HP is above ?% at the start of the turn.",
+        special: "Instantly defeats all enemies with HP equal to or below 90x character's ATK.",
+        specialName: "Extreme Mad Science",
+    },
+    2599: {//Gotti
+        captain: "Boosts ATK of Driven characters by 1.75x and their HP by 1.5x.",
+        special: "Reduces enemies' Percent Damage Reduction duration by 2 turns, delays all enemies for 1 turn and reduces the defense of all enemies by ?% for 1 turn.",
+        specialName: "Killer Threat",
+    },
     2615: {//Perospero
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Cerebral characters by 2.25x.",
         special: "Locks all orbs for 1 turn and changes Badly Matching orbs into Matching orbs.",
-        specialName: "Perospero Special",
+        specialName: "Candy Seaslug",
         support: [
             {
-                "Characters": "Not Translated",
+                "Characters": "Cerebral characters",
                 "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
-                    "Level 3: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
-                    "Level 4: Once per an adventure, when the supported character uses their special, locks ? character's orbs for 1 turn.",
+                    "Level 1: Once per an adventure, when the supported character uses their special, locks the supported character's orbs for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, locks the supported character's orbs for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, locks the supported character's orbs for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, locks the supported character's orbs for 1 turn.",
                     "Level 5: Once per an adventure, when the supported character uses their special, locks Cerebral character's orbs for 1 turn."
                 ]
             }

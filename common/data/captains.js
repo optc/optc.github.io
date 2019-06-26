@@ -9151,6 +9151,45 @@ window.captains = {
     2588: {
         atk: function(p) { return p.unit.type != "DEX" ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 4 : 3.75); }
     },
+    2589: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+    },
+    2590: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+    },
+    2591: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.1 : 1; },
+    },
+    2592: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.1 : 1; },
+    },
+    2593: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.25 : 1; },
+    },
+    2594: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.25 : 1; },
+    },
+    2595: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
+    2596: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven")) ? 2.25 : 1; },
+    },
+    2597: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.35 : 1; },
+    },
+    2598: {
+        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 1.75 : 1; },//change this for HP requirement
+    },
+    2599: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
     2615: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },

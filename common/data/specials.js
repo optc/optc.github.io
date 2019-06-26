@@ -7694,6 +7694,31 @@ window.specials = {
         affinity: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? 1.75 : 1; },
         orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
+    2589: {
+        def: function(p) { return 0.5; }
+    },
+    2590: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition"
+    },
+    2591: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2593: {
+        chainAddition: function(p) { return 0.3; }
+    },
+    2594: {
+        affinity: function(p) { return 1.3; },
+    },
+    2597: {
+        atk: function(p) { return p.defenseDown ? 1.5 : 1; },
+        type: "condition",
+        affinity: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+    },
+    2599: {
+        def: function(p) { return 0.2; },
+        delay: function(p) { return 1; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

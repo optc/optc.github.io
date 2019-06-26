@@ -1166,6 +1166,18 @@ window.matchers = [
     },
 
     {
+        name: 'Defense reducers',
+        target: 'support',
+        matcher: /Reduces the defense/i
+    },
+
+    {
+        name: 'Delayers',
+        target: 'support',
+        matcher: /delays/i
+    },
+
+    {
         name: 'Healers',
         target: 'support',
         matcher: /Recovers/i
