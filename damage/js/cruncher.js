@@ -275,6 +275,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
                             orb = 2;
                         }
+                        if ([ 2462, 2463 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Powerhouse")){
+                            orb = 2;
+                        }
                     }
                 }
             }
