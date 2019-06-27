@@ -47104,7 +47104,7 @@ window.details = {
         captain: "Boosts ATK of Free Spirit characters by 2.5x and makes [RCV] orbs beneficial for Free Spirit characters.",
         sailor: {
             "base": "None",
-            "Level1": "Restores his own special cooldown by 2 turns when it is rewinded",
+            "level1": "Restores his own special cooldown by 2 turns when it is rewinded",
         },
         special: "Binds self for 5 turns, reduces Special Cooldown of all characters by 2 turns and locks the chain multiplier at 3x for 2 turns.",
         specialName: "My Paced Feast",
