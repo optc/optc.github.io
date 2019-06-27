@@ -851,4 +851,40 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    5168: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5169: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5170: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
+    5171: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
+    5172: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5173: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5174: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
+    5175: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
 };

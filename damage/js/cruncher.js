@@ -1278,7 +1278,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if (x.hasOwnProperty('rcv') && x.sourceSlot > 1)
                             rcvmulttemp *= x.rcv(getParameters(i));
                     });
-                    if ([1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443, 5083, 5084, 5085, 5087, 5088, 5089 ].has(id)){
+                    if ([ 1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443, 5083, 5084, 5085, 5087, 5088, 5089 ].has(id)){
                         var hitsCount = { 'Perfect': 0, 'Great': 0, 'Good': 0, 'Below Good': 0, 'Miss': 0 };
                         var teamlength = 0;
                         
@@ -1303,10 +1303,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     else
                         healAmount += Math.floor((data.team[i].rcv + rcvtemp) * rcvmulttemp * zombie.multiplier);
                 }
-            } else if (zombie.type == 'reducer')
-                tankReducer = [ zombie.multiplier, zombie.threshold ];
-            else if (zombie.type == 'zombie')
-                zombieThreshold = zombie.threshold;
+        }
+        else if (zombie.type == 'reducer')
+            tankReducer = [ zombie.multiplier, zombie.threshold ];
+        else if (zombie.type == 'zombie')
+            zombieThreshold = zombie.threshold;
+        if ([ 5170, 5171, 5174, 5175 ].has(id))  
+            zombieThreshold = zombie.threshold;
         }
         if (shipBonus.bonus && shipBonus.bonus.heal)
             healAmount += shipBonus.bonus.heal({ boatLevel: shipBonus.level, classCount: classCounter() });

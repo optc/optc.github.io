@@ -792,6 +792,12 @@ window.matchers = [
         target: 'swap',
         matcher: /Recovers/i
     },
+    
+    {
+        name: 'Orb Controllers',
+        target: 'swap',
+        matcher: /(Changes.+(orb|orbs))/i
+    },
 
     {
         name: 'Self-orb controllers',

@@ -3718,6 +3718,16 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2568, -2569 ],
         },
+
+        {
+            name: 'Jinbe',
+            thumb: 2611,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2610, -2611 ],
+        },
         
     ],
 

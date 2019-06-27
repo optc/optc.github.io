@@ -7719,6 +7719,48 @@ window.specials = {
         def: function(p) { return 0.2; },
         delay: function(p) { return 1; }
     },
+    2600: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    2601: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    2606: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2606].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2 : 1.75);
+            window.specials[2606].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2606warning'
+            });
+        }
+    },
+    2607: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2607].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 50 ? 2 : 1.75);
+            window.specials[2607].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
+                name: '2607warning'
+            });
+        }
+    },
+    2608: {
+        orb: function(p) { return p.slot > 3 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2609: {
+        orb: function(p) { return p.slot > 3 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2610: {
+        chainAddition: function(p) { return 0.5; }
+    },
+    2611: {
+        chainAddition: function(p) { return 0.5; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
