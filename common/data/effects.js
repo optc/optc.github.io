@@ -951,4 +951,25 @@ window.effects = {
         id: 74, // don't change this
         atk: function(p) { return 1.75; }
     },
+    
+    '3 Stamina Ranking Mission - Daifuku': {
+        description: 'Stats of certain units boosted',
+        thumb: 2244,
+        id: 75, // don't change this
+        atk: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Carrot", "Stussy", "Charlotte Opera", "Charlotte Bavarois", "Charlotte Galette", "Pedro" ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        hp: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Carrot", "Stussy", "Charlotte Opera", "Charlotte Bavarois", "Charlotte Galette", "Pedro" ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+        rcv: function(p) {
+            var character = window.families[p.number];
+            matching = [ "Carrot", "Stussy", "Charlotte Opera", "Charlotte Bavarois", "Charlotte Galette", "Pedro" ].indexOf(character) != -1;
+            return !matching ? 1 : 1.25;
+        },    
+    },
 };

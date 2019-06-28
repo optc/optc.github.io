@@ -3630,6 +3630,18 @@ window.drops = {
         },
 
         {
+            name: 'Sweet Pain',
+            thumb: 2163,
+            showManual: true,
+            global: true,
+            nakama: 5216201,
+            gamewith: 110906,
+            slefty: 'coliseums',
+            Chaos: [ 2162, -2163 ],
+            Underground: [ 2162, -2163 ],
+        },
+
+        {
             name: 'Unhesitating Paw-Palmed Human',
             thumb: 2193,
             showManual: true,
@@ -4589,6 +4601,15 @@ window.drops = {
             nakama: 6217500,
             gamewith: 133004,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Daifuku',
+            thumb: 2244,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: "Challenge: Crew's Special gauge is maxed",
         },
    ],
 

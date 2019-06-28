@@ -4397,14 +4397,22 @@ window.specials = {
         },
     },
     1971: {
-        atk: function(p) { return (p.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
+        atk: function(p) { return (window.specials[1971].multiplier && p.defenseDown) ? 1.75 : 1; },
         type: "condition",
-        def: function(p) { return p.captain.class.has("Cerebral") ? .2 : 1; }
+        def: function(p) { return window.specials[1971].multiplier ? .2 : 1; },
+        onActivation: function(p) {
+            if (p.captain) if (p.captain.class.has("Cerebral")) window.specials[1971].multiplier = true;
+            else window.specials[1971].multiplier = false;
+        },
     },
     1972: {
-        atk: function(p) { return (p.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
+        atk: function(p) { return (window.specials[1972].multiplier && p.defenseDown) ? 1.75 : 1; },
         type: "condition",
-        def: function(p) { return p.captain.class.has("Cerebral") ? .2 : 1; }
+        def: function(p) { return window.specials[1972].multiplier ? .2 : 1; },
+        onActivation: function(p) {
+            if (p.captain) if (p.captain.class.has("Cerebral")) window.specials[1972].multiplier = true;
+            else window.specials[1972].multiplier = false;
+        },
     },
     1977: {
         turnedOn: false,
