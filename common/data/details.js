@@ -49673,6 +49673,23 @@ window.details = {
         ],
         potentialNotes: "#{enrage}"
     },
+    3355: {//Wanda
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Slasher and Cerebral characters by 2.25x.",
+        special: "Randomizes all non-Matching orbs, reduces Special Cooldown of Slasher and Cerebral characters by 1 turn and delays all enemies for 1 turn.",
+        specialName: "Friendly Minktimacy",
+        support: [
+            {
+                "Characters": "Carrot",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] orbs.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] or [RCV] orbs.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK], [RCV] or [TND] orbs.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, Randomizes all orbs, including [BLOCK] orbs, other than [QCK], [RCV] or [TND] orbs.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, Randomizes all orbs, including [BLOCK] orbs, other than [QCK], [RCV] or [TND] orbs and locks all orbs for 1 turn."
+                ]
+            }
+        ],
+    },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
         captainNotes: "#{beneficial}",

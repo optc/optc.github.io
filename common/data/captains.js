@@ -9324,6 +9324,9 @@ window.captains = {
     3354: {
         atk: function(p) { return p.percHP <= 50.0 ? 2.75 : 1; }
     },
+    3355: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
