@@ -24960,7 +24960,55 @@ window.details = {
     1680: {//Kai Mihawk
         special: "Cuts the current HP of each enemy by 30%",
         specialName: "Black Blade Ship Cutter [Neo]",
-        captain: "Boosts ATK of Slasher characters by 2.5x"
+        captain: {
+            "base": "Boosts ATK of Slasher characters by 2.5x",
+            "level1": "Boosts ATK of Slasher and Free Spirit characters by 2.5x and their HP by 1.3x",
+        },
+        sailor: {
+            "base": "None",
+            "level1": "Makes [STR], [RCV] and [TND] orbs beneficial for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
+            { "description": "Boosts base RCV by 40" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Acquire Sailor Ability 1: Makes [STR], [RCV] and [TND] orbs beneficial for this character" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 60" },
+            { "description": "Boosts base RCV by 60" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Slasher and Free Spirit characters by 2.5x and their HP by 1.3x" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        limitNotes: "This Limit Break is exclusive to Global ONLY",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
     },
     1681: {//20th Anni Luffy
         captain: "Boosts ATK of characters with cost 30 or less by 2.5x",
@@ -48755,6 +48803,38 @@ window.details = {
         special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
         swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
         specialName: "Memories of their Adventures",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs beneficial for Striker and Cerebral characters" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
+        ],
         potential: [
             {
                 "Name": "Enrage",
@@ -48821,6 +48901,38 @@ window.details = {
         specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "[PSY] Damage Reduction",
@@ -48870,20 +48982,20 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 100" },
             { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [STR] orbs beneficial for Cerebral characters" },
+            { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
@@ -48936,20 +49048,20 @@ window.details = {
             "level1": "Reduces Paralysis duration by 1 turn"
         },
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
             { "description": "Acquire Potential 1: Critical Hit" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 1: Reduces Paralysis duration by 1 turn" },
             { "description": "Acquire Potential 2: Double Special Activation" },
         ],
         potential: [
@@ -49003,20 +49115,20 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
             { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [RCV] orbs beneficial for Free Spirit and Cerebral characters" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
             { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
@@ -49069,41 +49181,41 @@ window.details = {
             "level1": "Cannot be blown away"
         },
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
             { "description": "Acquire Potential 1: Slot Bind Self-reduction" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Sailor Ability 1: Cannot be blown away" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
         ],
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turns",
+                    "Level 5: Reduces No Healing duration by 5 turns"
                 ]
             },
         ],
@@ -55321,5 +55433,677 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    5160: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 1.75x, makes [PSY] orbs beneficial for all characters and reduce damage received by 20%.",
+        captainNotes: "#{beneficial}",
+        sailor: "Boosts base HP and RCV of Striker and Cerebral characters by 50",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+    },
+    5161: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 2x and makes [INT] orbs beneficial for all characters.",
+        captainNotes: "#{beneficial}",
+        sailor: "Boosts base ATK of Striker and Cerebral characters by 50",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+    },
+    5162: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 2.5x, makes [PSY] and [INT] orbs beneficial for all characters and reduce damage received by 20%.",
+        captainNotes: "#{beneficial}",
+        sailor: "Boosts base ATK, HP and RCV of Striker and Cerebral characters by 75",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+    },
+    5163: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 2.5x, makes [PSY] and [INT] orbs beneficial for all characters and reduce damage received by 20%.",
+        captainNotes: "#{beneficial}",
+        sailor: "Boosts base ATK, HP and RCV of Striker and Cerebral characters by 75",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+    },
+    5164: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 1.75x, makes [PSY] orbs beneficial for all characters and reduce damage received by 20%.",
+        captainNotes: "#{beneficial}",
+        sailor: {
+            "base": "Boosts base HP and RCV of Striker and Cerebral characters by 50",
+            "level1": "Makes [QCK] orbs beneficial for Striker and Cerebral characters"
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs beneficial for Striker and Cerebral characters" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 125",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    5165: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 2x and makes [INT] orbs beneficial for all characters.",
+        captainNotes: "#{beneficial}",
+        sailor: {
+            "base": "Boosts base ATK of Striker and Cerebral characters by 50",
+            "level1": "Makes [QCK] orbs beneficial for Striker and Cerebral characters"
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs beneficial for Striker and Cerebral characters" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 125",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    5166: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 2.5x, makes [PSY] and [INT] orbs beneficial for all characters and reduce damage received by 20%.",
+        captainNotes: "#{beneficial}",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Striker and Cerebral characters by 75",
+            "level1": "Makes [QCK] orbs beneficial for Striker and Cerebral characters"
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs beneficial for Striker and Cerebral characters" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 125",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    5167: {//Vivi&Rebecca
+        captain: "Boosts ATK of all characters by 1.75x, their HP by 1.2x, their Color Affinity by 2.5x, makes [PSY] and [INT] orbs beneficial for all characters and reduce damage received by 20%.",
+        captainNotes: "#{beneficial}",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Striker and Cerebral characters by 75",
+            "level1": "Makes [QCK] orbs beneficial for Striker and Cerebral characters"
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Removes enemies Increased Defense and Percent Damage Reduction buffs duration completely, boosts the Color Affinity of Striker and Cerebral characters by 2x for 2 turns and becomes Vivi & Rebecca for 3 turns.",
+        swap: "When Change is activated, changes [STR] and [DEX] orbs on Striker and Cerebral characters into Matching orbs, recovers 2,000 HP at the end of each turn for 1 turn and locks the chain multiplier at 2.5x for 1 turn.",
+        specialName: "Memories of their Adventures",
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Sailor Ability 1: Makes [QCK] orbs beneficial for Striker and Cerebral characters" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 3: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 125",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    5168: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3x, but boosts her OWN attack by 1.2x and recovers 5x character's RCV in HP at the end of each turn.",
+        sailor: "Reduces Silence duration on this character by 7 turns",
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+    },
+    5169: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 2.75x and recovers 5x character's RCV in HP at the end of each turn.",
+        sailor: "Reduces Silence duration on this character by 7 turns",
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+    },
+    5170: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3.5x, recovers 5x character's RCV in HP at the end of each turn and protects from defeat as long as HP is above 50%.",
+        sailor: "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75",
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+    },
+    5171: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3.5x, recovers 5x character's RCV in HP at the end of each turn and protects from defeat as long as HP is above 50%.",
+        sailor: "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75",
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+    },
+    5172: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3x, but boosts her OWN attack by 1.2x and recovers 5x character's RCV in HP at the end of each turn.",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 7 turns",
+            "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
+        },
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 2%",
+                    "Level 2: Reduce damage taken from [INT] characters by 3%",
+                    "Level 3: Reduce damage taken from [INT] characters by 4%",
+                    "Level 4: Reduce damage taken from [INT] characters by 5%",
+                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
+    },
+    5173: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 2.75x and recovers 5x character's RCV in HP at the end of each turn.",
+        sailor: {
+            "base": "Reduces Silence duration on this character by 7 turns",
+            "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
+        },
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 2%",
+                    "Level 2: Reduce damage taken from [INT] characters by 3%",
+                    "Level 3: Reduce damage taken from [INT] characters by 4%",
+                    "Level 4: Reduce damage taken from [INT] characters by 5%",
+                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
+    },
+    5174: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3.5x, recovers 5x character's RCV in HP at the end of each turn and protects from defeat as long as HP is above 50%.",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75",
+            "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
+        },
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 2%",
+                    "Level 2: Reduce damage taken from [INT] characters by 3%",
+                    "Level 3: Reduce damage taken from [INT] characters by 4%",
+                    "Level 4: Reduce damage taken from [INT] characters by 5%",
+                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
+    },
+    5175: {//Shirahoshi&Mansherry
+        captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3.5x, recovers 5x character's RCV in HP at the end of each turn and protects from defeat as long as HP is above 50%.",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75",
+            "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
+        },
+        special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
+        specialName: "Lovely Healing",
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Acquire Potential 2: [INT] Damage Reduction" },
+            { "description": "Acquire Sailor Ability 1: Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 75" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 5%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 7%"
+                ]
+            },
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 2%",
+                    "Level 2: Reduce damage taken from [INT] characters by 3%",
+                    "Level 3: Reduce damage taken from [INT] characters by 4%",
+                    "Level 4: Reduce damage taken from [INT] characters by 5%",
+                    "Level 5: Reduce damage taken from [INT] characters by 7%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 5 turn",
+                    "Level 4: Reduces No Healing duration by 7 turns",
+                    "Level 5: Reduces No Healing duration by 10 turns"
+                ]
+            },
+        ],
     },
 };

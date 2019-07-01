@@ -148,6 +148,10 @@
             case 9029: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f8.png'; break;
             case 'skullReiju2':
             case 9030: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f9.png'; break;
+            case 'skullHancock':
+            case 9031: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Hancock_skull_f.png'; break;
+            case 'skullNami2':
+            case 9032: return 'https://onepiece-treasurecruise.com/wp-content/uploads/nami_skull_f.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -185,6 +189,7 @@
             case '3352': return '../res/character_10862_t1.png'; break;
             case '3353': return '../res/character_10994_t1.png'; break;
             case '3354': return '../res/character_10995_t1.png'; break;
+            case '3355': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5037.png'; break;
             //case '2440': return '../res/character_10643_t1.png'; break;
             //case '2441': return '../res/character_10644_t1.png'; break;
             case '5000': return '../res/character_10185_t1.png'; break;
@@ -341,6 +346,30 @@
             case '5149': return '../res/character_10913_t1.png'; break;
             case '5150': return '../res/character_10915_t1_str.png'; break;
             case '5151': return '../res/character_10915_t1_int.png'; break;
+            case '5152': return '../res/character_10916_t1.png'; break;
+            case '5153': return '../res/character_10917_t1.png'; break;
+            case '5154': return '../res/character_10920_t1_str.png'; break;
+            case '5155': return '../res/character_10920_t1_psy.png'; break;
+            case '5156': return '../res/character_10918_t1.png'; break;
+            case '5157': return '../res/character_10919_t1.png'; break;
+            case '5158': return '../res/character_10921_t1_str.png'; break;
+            case '5159': return '../res/character_10921_t1_psy.png'; break;
+            case '5160': return '../res/character_10954_t1.png'; break;
+            case '5161': return '../res/character_10955_t1.png'; break;
+            case '5162': return '../res/character_10958_t1_dex.png'; break;
+            case '5163': return '../res/character_10958_t1_str.png'; break;
+            case '5164': return '../res/character_10956_t1.png'; break;
+            case '5165': return '../res/character_10957_t1.png'; break;
+            case '5166': return '../res/character_10959_t1_dex.png'; break;
+            case '5167': return '../res/character_10959_t1_str.png'; break;
+            case '5168': return '../res/character_10960_t1.png'; break;
+            case '5169': return '../res/character_10961_t1.png'; break;
+            case '5170': return '../res/character_10964_t1_int.png'; break;
+            case '5171': return '../res/character_10964_t1_psy.png'; break;
+            case '5172': return '../res/character_10962_t1.png'; break;
+            case '5173': return '../res/character_10963_t1.png'; break;
+            case '5174': return '../res/character_10965_t1_int.png'; break;
+            case '5175': return '../res/character_10965_t1_psy.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
@@ -408,6 +437,10 @@
             case 9029: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_c8.png'; break;
             case 'skullReiju2':
             case 9030: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_c9.png'; break;
+            case 'skullHancock':
+            case 9031: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Hancock_skull_c.png'; break;
+            case 'skullNami2':
+            case 9032: return 'https://onepiece-treasurecruise.com/wp-content/uploads/nami_skull_c.png'; break;
         }
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -416,10 +449,11 @@
             //case '2262': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c5012.png'; break;
             //case '2263': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c5013.png'; break;
             //case '2500': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c2500.png'; break;
-            case '3333': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1719.png'; break;
-            case '3334': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1720.png'; break;
-            case '3345': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c10686.png'; break;
-            case '3346': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c10687.png'; break;
+            case '3333': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1719.png'; break;
+            case '3334': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1720.png'; break;
+            case '3345': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c10686.png'; break;
+            case '3346': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/c10687.png'; break;
+            case '3355': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_10993.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';

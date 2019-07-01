@@ -2351,6 +2351,8 @@ window.flags = {
     2350: { global: 1 },
     2351: { global: 1 },
     2352: { global: 1 },
+    2353: { global: 1 },
+    2354: { global: 1 },
     2357: { rr: 1, rro: 1 },
     2358: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     2359: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
@@ -2539,4 +2541,5 @@ window.flags = {
     3352: { global: 1 },
     3353: { global: 1 },
     3354: { global: 1 },
+    3355: { global: 1 },
 };

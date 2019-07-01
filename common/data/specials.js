@@ -7727,12 +7727,6 @@ window.specials = {
         def: function(p) { return 0.2; },
         delay: function(p) { return 1; }
     },
-    2600: {
-        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
-    },
-    2601: {
-        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
-    },
     2606: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2606].multiplier : 1; },
         type: "class",
@@ -8827,5 +8821,29 @@ window.specials = {
                 name: '5159warning'
             });
         },
+    },
+    5160: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5161: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5162: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5163: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5164: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5165: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5166: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    5167: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
     },
 };

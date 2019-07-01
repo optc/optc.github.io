@@ -3937,7 +3937,7 @@ window.evolutions = {
     },
     1747: {
         evolution: 2434,
-        evolvers: [  ]
+        evolvers: [ 'skullHancock', 'skullHancock', 'skullHancock', 'skullHancock', 'skullHancock' ]
     },
     2551: {
         evolution: 2552,
@@ -4177,27 +4177,27 @@ window.evolutions = {
     },
     2076: {
         evolution: 2588,
-        evolvers: [  ]
+        evolvers: [ 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2' ]
     },
     2600: {
         evolution: 2601,
-        evolvers: [  ]
+        evolvers: [ 118, 102, 100, 83, 267 ]
     },
     2602: {
         evolution: 2603,
-        evolvers: [  ]
+        evolvers: [ 118, 104, 103, 94, 267 ]
     },
     2604: {
         evolution: 2605,
-        evolvers: [  ]
+        evolvers: [ 266, 89, 95, 300, 100 ]
     },
     2606: {
         evolution: 2607,
-        evolvers: [  ]
+        evolvers: [ 266, 93, 99, 304, 104 ]
     },
     2608: {
         evolution: 2609,
-        evolvers: [  ]
+        evolvers: [ 266, 90, 96, 90, 101 ]
     },
     2610: {
         evolution: 2611,
