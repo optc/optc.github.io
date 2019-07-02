@@ -2613,7 +2613,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Charlotte Perospero, Candy Craftsman's Retaliation", "QCK", [ "Cerebral", "Striker" ], 5, 1, 6, 4, 99, 2000000, 634, 552, 86, 2930, 1142, 231, null ],
+    [ "Charlotte Perospero, Candy Craftsman's Retaliation", "QCK", [ "Cerebral", "Striker" ], 5, 1, 6, 4, 99, 4000000, 634, 552, 86, 2930, 1142, 231, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
