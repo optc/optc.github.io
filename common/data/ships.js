@@ -566,7 +566,7 @@ window.ships = [
     { //42
         name: "Hoe",
         thumb: null,
-        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.75x. Special: Recovers 3,500 HP at the end of the turn for 3 turns (Cooldown: 15 turns).',
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.75x. Special: Recovers 3,500 HP at the end of the turn for 2 turns (Cooldown: 15 turns).',
         atk: function(p) {
             return [ 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.5, 1.5 ][p.boatLevel - 1];
         },

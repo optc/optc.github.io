@@ -2616,7 +2616,7 @@ window.units = [
     [ "Charlotte Perospero, Candy Craftsman's Retaliation", "QCK", [ "Cerebral", "Striker" ], 5, 1, 6, 4, 99, 4000000, 634, 552, 86, 2930, 1142, 231, null ],
     [ "Akainu", "STR", [ "Striker", "Driven" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
     [ "Fujitora", "INT", [ "Striker", "Driven" ], 4, 30, null, 1, 50, 130703, null, null, null, null, null, null, null ],
-    [ "Sakazuki & Issho, Tiger and Dog", [ "STR", "INT" ], [[ "Striker", "Driven" ], [ "Striker", "Driven" ], [ "Striker", "Driven" ]], 6, 60, 4, 1, 99, 5000000, null, null, null, 3329, 1530, 341, null ],
+    [ "Sakazuki & Issho, Tiger and Dog", [ "STR", "INT" ], [[ "Striker", "Driven" ], [ "Striker", "Driven" ], [ "Striker", "Driven" ]], 5, 60, 4, 1, 99, 5000000, null, null, null, 3329, 1530, 341, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
