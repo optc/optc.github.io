@@ -1337,4 +1337,22 @@ window.sailors = {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
+    5176: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
+    },
+    5176: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
+    },
+    5176: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5176: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
+    },
 };

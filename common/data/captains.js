@@ -9220,8 +9220,18 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.75 : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 1.3 : 1; },
     },
+    2612: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    2613: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
     2615: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    2632: {
+        atk: function(p) { return ((window.specials[2632].turnedOn) && p.sourceSlot == 1) ? 4 : 2.5; },
+        hp: function(p) { return 1.2; },
     },
     3333: {
         hitAtk: function(p) {
@@ -10090,5 +10100,17 @@ window.captains = {
     },
     5175: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 3.5 : 1; }
+    },
+    5176: {
+        atk: function(p) { return p.unit.type == "STR" ? 3.25 : p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    5177: {
+        atk: function(p) { return p.unit.type == "INT" ? 3.25 : p.unit.type == "DEX" || p.unit.type == "STR" ? 2.5 : 1; },
+    },
+    5178: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 3.75 : 1; },
+    },
+    5179: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 3.75 : 1; },
     },
 };

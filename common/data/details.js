@@ -49232,6 +49232,23 @@ window.details = {
             }
         ],
     },
+    2612: {//Big Mom
+        captain: "Boosts ATK of Shooter characters by 1.5x.",
+        special: "Reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction duration by 4 turns. If you are on a Treasure Map, boosts ATK of Striker, Shooter and Cerebral characters depending on your Treasure Map Level for 3 turns.",
+        specialNotes: "Level 1-10: 1.5x ATK boost<br\>Level 11-20: 1.75x ATK boost<br\>Level 21+: 2x ATK boost",
+        specialName: "Incursion Proclamation",
+    },
+    2613: {//Kaido
+        captain: "Boosts ATK of Driven characters by 1.5x.",
+        special: "Randomizes orbs on Striker and Driven characters into either [STR] or [DEX] orbs and locks all orbs for 1 turn. If you are on a Treasure Map, amplifies the effect of orbs for Striker and Driven characters depending on your Treasure Map Level for 1 turn.",
+        specialNotes: "Level 1-10: 1.75x ATK boost<br\>Level 11-20: 2x ATK boost<br\>Level 21+: 2.25x ATK boost",
+        specialName: "Rejected Proclamation",
+    },
+    2614: {//Doffy
+        captain: "If you don't attack with him, reduces damage received by 30% for that turn.",
+        special: "Reduces Chain Coefficient Reduction duration by 4 turns. makes [DEX] orbs beneficial for all characters for 1 turn and boosts ATK of [STR] and [INT] characters by 1.75x for 1 turn.",
+        specialName: "Proclaiming a Power Struggle",
+    },
     2615: {//Perospero
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Cerebral characters by 2.25x.",
         special: "Locks all orbs for 1 turn and changes Badly Matching orbs into Matching orbs.",
@@ -49247,6 +49264,100 @@ window.details = {
                     "Level 5: Once per an adventure, when the supported character uses their special, locks Cerebral character's orbs for 1 turn."
                 ]
             }
+        ],
+    },
+    2618: {//Akainu&Fujitora
+        captain: {
+            "character1": "Boosts ATK of [STR] characters by 3.25x, boosts ATK of [DEX] and [INT] characters by 2.5x and makes [STR] orbs beneficial for [DEX] and [INT] characters.",
+            "character2": "Boosts ATK of [INT] characters by 3.25x, boosts ATK of [STR] and [DEX] characters by 2.5x and makes [INT] orbs beneficial for [STR] and [DEX] characters.",
+            "combined": "Boosts ATK of [STR], [DEX] and [INT] characters by 3.75x, makes [STR] and [INT] orbs beneficial for [STR], [DEX] and [INT] characters and cuts the current HP of each enemy by 10% at the end of each turn.",
+        },
+        sailor: {
+            "character1": "Boosts base ATK and HP of [STR], [DEX] and [INT] characters by 25",
+            "character2": "Boosts base ATK and RCV of [STR], [DEX] and [INT] characters by 25",
+            "combined": "Boosts base ATK, HP and RCV of [STR], [DEX] and [INT] characters by 50",
+            "level1": "When any other [STR], [DEX] or [INT] character uses a special, reduces own cooldown by 4 turns"
+        },
+        special: "Instantly defeats all enemies with HP equal to or below 120x character's ATK, randomizes all orbs into either [STR] or [INT] orbs, cuts the current HP of each enemy by 20% and becomes Sakazuki & Issho for 2 turns.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        swap: "When Change is activated, amplifies the effect of orbs on [STR], [DEX] and [INT] characters by 1.5x for 1 turn and cuts the current HP of each enemy by 10% at the end of each turn for 1 turn.",
+        specialName: "Heavenly Eruption",
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2632: {//Garp
+        captain: "Boosts ATK of all characters by 2.5x, their HP by 1.2x and makes [STR] and [DEX] orbs beneficial for all characters. If this character becomes your captain in the middle of an island, boosts ATK of all characters by 4x instead",
+        captainNotes: "#{beneficial}",
+        special: [
+            {
+                "description": "Deals 50x character's ATK in [DEX] damage to one enemy. If your Captain is a Free Spirit or Powerhouse character, reduces Special Cooldown of Powerhouse and Fighter specials by 1 turn, reduces enemy Barrier and Damage Nullification duration by 1 turn and swaps this unit with your captain for 1 turn.",
+                "cooldown": [ 28, null ],
+            },
+            {
+                "description": "Deals 200x character's ATK in [DEX] damage to one enemy. If your Captain is a Free Spirit or Powerhouse character, reduces Special Cooldown of Powerhouse and Fighter specials by 2 turns, reduces enemy Barrier and Damage Nullification duration by 3 turns and swaps this unit with your captain for 2 turns.",
+                "cooldown": [ 32, null ],
+            },
+        ],
+        specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
+        specialName: "Parental Fist",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [STR] orbs beneficial for this character",
+            "level2": "Restores his own special cooldown by 2 turns when it is rewinded",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
         ],
     },
     3333: {//Kung Fu Luffy
