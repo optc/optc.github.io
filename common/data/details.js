@@ -49168,13 +49168,13 @@ window.details = {
     },
     2610: {//Jinbe
         captain: "Boosts ATK of Fighter and Cerebral characters by 2.25x and their HP by 1.1x.",
-        special: "Adds 0.5x to Chain multiplier for 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns. If your Captain is a Fighter and Cerebral character, removes enemies Threshold Damage Reduction buff duration completely.",
+        special: "Adds 0.5x to Chain multiplier for 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns. If your Captain is a Fighter or Cerebral character, removes enemies Threshold Damage Reduction buff duration completely.",
         specialName: "Intruding on the Holy Land",
         sailor: "Boosts base ATK, HP and RCV of Fighter and Cerebral characters by 50",
     },
     2611: {//Jinbe
         captain: "Boosts ATK of Fighter and Cerebral characters by 2.75x and their HP by 1.3x.",
-        special: "Adds 0.5x to Chain multiplier for 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns. If your Captain is a Fighter and Cerebral character, removes enemies Threshold Damage Reduction buff duration completely.",
+        special: "Adds 0.5x to Chain multiplier for 2 turns and reduces any damage received above 3,000 HP by ?% for 2 turns. If your Captain is a Fighter or Cerebral character, removes enemies Threshold Damage Reduction buff duration completely.",
         specialName: "Intruding on the Holy Land",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Fighter and Cerebral characters by 50",
@@ -49279,8 +49279,7 @@ window.details = {
             "level1": "When any other [STR], [DEX] or [INT] character uses a special, reduces own cooldown by 4 turns"
         },
         special: "Instantly defeats all enemies with HP equal to or below 120x character's ATK, randomizes all orbs into either [STR] or [INT] orbs, cuts the current HP of each enemy by 20% and becomes Sakazuki & Issho for 2 turns.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
-        swap: "When Change is activated, amplifies the effect of orbs on [STR], [DEX] and [INT] characters by 1.5x for 1 turn and cuts the current HP of each enemy by 10% at the end of each turn for 1 turn.",
+        swap: "When Change is activated, amplifies the effect of orbs on [STR], [DEX] and [INT] characters by 1.5x for 1 turn and cuts the current HP of each enemy by 7% at the end of each turn for 1 turn.",
         specialName: "Heavenly Eruption",
         potential: [
             {
