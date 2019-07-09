@@ -4064,7 +4064,7 @@ window.drops = {
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
-        },
+        },/*
         
         {
             name: 'Garp',
@@ -4073,7 +4073,7 @@ window.drops = {
             nakama: null,
             gamewith: [ null ],
             'All Difficulties': [ 2632 ],
-        },
+        },*/
         
     ],
 
