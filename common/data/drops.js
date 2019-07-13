@@ -2516,6 +2516,7 @@ window.drops = {
             thumb: 3352,
             global: true,
             nakama: 4335200,
+            condition: 'Master: Powerhouse/Fighter/Shooter Only',
             gamewith: null,
             slefty: 'raid_bosses/6',
             Master: [ 3351 ],
@@ -2676,6 +2677,17 @@ window.drops = {
             condition: 'Take 10% current Health in Environmental Damage every 2 turns',
             Master: [ 794 ],
             Expert: [ 794 ]
+        },
+
+        {
+            name: 'Clash Neo!! Nightmare Luffy',
+            dropID: 'clashneo14',
+            thumb: 3357,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Take 10% current Health in Environmental Damage every 2 turns. Master: Free Spirit/Driven/Cerebral Only',
+            Expert: [ 3356 ]
         },
 
         {
@@ -3175,7 +3187,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1827, 1944, 2036, 2162, 2192, 2353, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1525, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1827, 1944, 2036, 2162, 2192, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3185,7 +3197,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 2036, 2162, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 1585, 1603, 2036, 2162, 2192, 2488 ],
         },
         
         {
@@ -3194,7 +3206,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 1585, 1603 ],
         },
 
         {
@@ -3456,6 +3468,19 @@ window.drops = {
         },
 
         {
+            name: 'Unhesitating Plan',
+            thumb: 1458,
+            showManual: true,
+            global: true,
+            nakama: 5145701,
+            gamewith: 50806,
+            slefty: 'coliseums',
+            Chaos: [ 1457, -1458 ],
+            Underground: [ 1457, -1458 ],
+            Exebition: [ 1457, -1458 ],
+        },
+
+        {
             name: 'Lonely XXX-Weight Boxer',
             thumb: 1487,
             showManual: true,
@@ -3476,6 +3501,19 @@ window.drops = {
             slefty: 'coliseums',
             Underground: [ 1490, -1491 ],
             Exebition: [ 1490, -1491 ],
+        },
+
+        {
+            name: 'Prejudice-Driven Ruler',
+            thumb: 1572,
+            showManual: true,
+            global: true,
+            nakama: 5152601,
+            gamewith: 53588,
+            slefty: 'coliseums',
+            Chaos: [ 1526, -1572 ],
+            Underground: [ 1526, -1572 ],
+            Exebition: [ 1526, -1572 ],
         },
 
         {
@@ -3691,6 +3729,18 @@ window.drops = {
         },
 
         {
+            name: 'Prohibited Poison',
+            thumb: 2354,
+            showManual: true,
+            global: true,
+            nakama: 5235301,
+            gamewith: 132845,
+            slefty: 'coliseums',
+            Chaos: [ 2353, -2354 ],
+            Underground: [ 2353, -2354 ],
+        },
+
+        {
             name: 'Totto Land\'s Minister of Juice',
             thumb: 2375,
             showManual: true,
@@ -3737,9 +3787,10 @@ window.drops = {
             thumb: 2611,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 156226,
             slefty: 'coliseums',
             Chaos: [ 2610, -2611 ],
+            Underground: [ 2610, -2611 ],
         },
         
     ],
@@ -4302,6 +4353,14 @@ window.drops = {
             thumb: 2363,
             gamewith: 136731,
             condition: 'Chance of dropping the Support Medallions.',
+        },
+
+        {
+            name: 'Battle Blitz! Girls of Summer Paradise',
+            thumb: 2626,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 2627 ],
         },
         
         {

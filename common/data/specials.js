@@ -4562,14 +4562,20 @@ window.specials = {
         type: "type"
     },
     2006: {
-        atk: function(p) { return (p.colorCount.STR>=4 && p.unit.type == "STR") ? 2.25 : (p.colorCount.DEX>=4 && p.unit.type == "DEX") ? 2.25 : (p.colorCount.QCK>=4 && p.unit.type == "QCK") ? 2.25 : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? 2.25 : (p.colorCount.INT>=4 && p.unit.type == "INT") ? 2.25 : 1; },
+        atk: function(p) { return p.unit.type == window.specials[2006].multiplier ? 2.25 : 1; },
         type: "type",
-        chainAddition: function(p) { return .9; }
+        chainAddition: function(p) { return .9; },
+        onActivation: function(p) {
+            window.specials[2006].multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
+        }
     },
     2007: {
-        atk: function(p) { return (p.colorCount.STR>=4 && p.unit.type == "STR") ? 2.25 : (p.colorCount.DEX>=4 && p.unit.type == "DEX") ? 2.25 : (p.colorCount.QCK>=4 && p.unit.type == "QCK") ? 2.25 : (p.colorCount.PSY>=4 && p.unit.type == "PSY") ? 2.25 : (p.colorCount.INT>=4 && p.unit.type == "INT") ? 2.25 : 1; },
+        atk: function(p) { return p.unit.type == window.specials[2007].multiplier ? 2.25 : 1; },
         type: "type",
-        chainAddition: function(p) { return .9; }
+        chainAddition: function(p) { return .9; },
+        onActivation: function(p) {
+            window.specials[2007].multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
+        }
     },
     2008: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? window.specials[2008].multiplier : 1; },
@@ -7791,6 +7797,96 @@ window.specials = {
     2614: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 1.75 : 1; },
         type: "type"
+    },
+    2619: {
+        atk: function(p) { return (p.unit.type == "INT" && window.specials[2619].turnedOn) ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.sourceSlot < 2) window.specials[2619].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2619].turnedOn = false;
+        }
+    },
+    2620: {
+        atk: function(p) { return (p.unit.type == "INT" && window.specials[2620].turnedOn) ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.sourceSlot < 2) window.specials[2620].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2620].turnedOn = false;
+        }
+    },
+    2621: {
+        atk: function(p) { return (p.unit.type == "PSY" && window.specials[2621].turnedOn) ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.sourceSlot < 2) window.specials[2621].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2621].turnedOn = false;
+        }
+    },
+    2622: {
+        atk: function(p) { return (p.unit.type == "PSY" && window.specials[2622].turnedOn) ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.sourceSlot < 2) window.specials[2622].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2622].turnedOn = false;
+        }
+    },
+    2623: {
+        atk: function(p) { return (p.unit.type == "DEX" && window.specials[2623].turnedOn) ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.sourceSlot < 2) window.specials[2623].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2623].turnedOn = false;
+        }
+    },
+    2624: {
+        atk: function(p) { return (p.unit.type == "DEX" && window.specials[2624].turnedOn) ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.sourceSlot < 2) window.specials[2624].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2624].turnedOn = false;
+        }
+    },
+    2625: {
+        orb: function(p) { return window.specials[2625].turnedOn ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2625].turnedOn = (p.colorCount.STR>=3 || p.colorCount.DEX>=3 || p.colorCount.QCK>=3 || p.colorCount.PSY>=3 || p.colorCount.INT>=3) ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2625].turnedOn = false;
+        }
+    },
+    2626: {
+        orb: function(p) { return window.specials[2626].turnedOn ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2626].turnedOn = (p.colorCount.STR>=3 || p.colorCount.DEX>=3 || p.colorCount.QCK>=3 || p.colorCount.PSY>=3 || p.colorCount.INT>=3) ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2626].turnedOn = false;
+        }
+    },
+    2627: {
+        chainAddition: function(p) { return 0.4; }
+    },
+    2628: {
+        chainAddition: function(p) { return 0.4; }
     },
     2632: {
         turnedOn: false,
