@@ -46428,10 +46428,10 @@ window.details = {
             {
                 "Characters": "Luffy, Zoro, Sanji, Usopp, Chopper, Robin, Franky and Brook",
                 "description": [
-                    "Level 1: Adds ?% of this character's base RCV to the supported character's base RCV.",
-                    "Level 2: Adds ?% of this character's base RCV to the supported character's base RCV.",
-                    "Level 3: Adds ?% of this character's base RCV to the supported character's base RCV.",
-                    "Level 4: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 1: Adds 1% of this character's base RCV to the supported character's base RCV.",
+                    "Level 2: Adds 1% of this character's base RCV to the supported character's base RCV.",
+                    "Level 3: Adds 2% of this character's base RCV to the supported character's base RCV.",
+                    "Level 4: Adds 2% of this character's base RCV to the supported character's base RCV.",
                     "Level 5: Adds 3% of this character's base RCV to the supported character's base RCV."
                 ]
             }
@@ -46445,10 +46445,10 @@ window.details = {
             {
                 "Characters": "Luffy, Nami, Sanji, Usopp, Chopper, Robin, Franky and Brook",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK.",
                     "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
                 ]
             }
@@ -46462,10 +46462,10 @@ window.details = {
             {
                 "Characters": "Luffy, Zoro, Nami, Sanji, Usopp, Robin, Franky and Brook",
                 "description": [
-                    "Level 1: Adds ?% of this character's base RCV to the supported character's base RCV.",
-                    "Level 2: Adds ?% of this character's base RCV to the supported character's base RCV.",
-                    "Level 3: Adds ?% of this character's base RCV to the supported character's base RCV.",
-                    "Level 4: Adds ?% of this character's base RCV to the supported character's base RCV.",
+                    "Level 1: Adds 1% of this character's base RCV to the supported character's base RCV.",
+                    "Level 2: Adds 1% of this character's base RCV to the supported character's base RCV.",
+                    "Level 3: Adds 2% of this character's base RCV to the supported character's base RCV.",
+                    "Level 4: Adds 2% of this character's base RCV to the supported character's base RCV.",
                     "Level 5: Adds 3% of this character's base RCV to the supported character's base RCV."
                 ]
             }
@@ -46479,10 +46479,10 @@ window.details = {
             {
                 "Characters": "Luffy, Zoro, Nami, Sanji, Usopp, Robin, Chopper and Brook",
                 "description": [
-                    "Level 1: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 2: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 3: Adds ?% of this character's base ATK to the supported character's base ATK.",
-                    "Level 4: Adds ?% of this character's base ATK to the supported character's base ATK.",
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK.",
                     "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
                 ]
             }
@@ -49496,11 +49496,11 @@ window.details = {
         special: [
             {
                 "description": "Deals 50x character's ATK in [DEX] damage to one enemy. If your Captain is a Free Spirit or Powerhouse character, reduces Special Cooldown of Powerhouse and Fighter specials by 1 turn, reduces enemy Barrier and Damage Nullification duration by 1 turn and swaps this unit with your captain for 1 turn.",
-                "cooldown": [ 28, null ],
+                "cooldown": [ 28, 28 ],
             },
             {
                 "description": "Deals 200x character's ATK in [DEX] damage to one enemy. If your Captain is a Free Spirit or Powerhouse character, reduces Special Cooldown of Powerhouse and Fighter specials by 2 turns, reduces enemy Barrier and Damage Nullification duration by 3 turns and swaps this unit with your captain for 2 turns.",
-                "cooldown": [ 32, null ],
+                "cooldown": [ 32, 32 ],
             },
         ],
         specialNotes: "This is the same type of ability as raid boss Shiki's swap. You cannot use it if another effect swaps your captain. (Such as if Shiki swaps first)",
@@ -49511,37 +49511,137 @@ window.details = {
             "level2": "Restores his own special cooldown by 2 turns when it is rewinded",
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 100" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 150" },
+            { "description": "Boosts base ATK by 100" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Sailor Ability 1: Makes [STR] orbs beneficial for this character" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base HP by 250" },
+            { "description": "Boosts base HP by 350" },
+            { "description": "Boosts base ATK by 100" },
+            { "description": "Acquire Sailor Ability 2: Restores his own special cooldown by 2 turns when it is rewinded" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base HP by 400" },
+            { "description": "Boosts base RCV by 100" },
+            { "description": "Boosts base ATK by 150" },
+            { "description": "Boosts base ATK by 200" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Boosts base HP by 420" },
+            { "description": "Boosts base HP by 500" },
+            { "description": "Boosts base ATK by 250" },
+            { "description": "Acquire Potential 3: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turns on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turns",
-                    "Level 3: Reduces No Healing duration by ? turns",
-                    "Level 4: Reduces No Healing duration by ? turns",
-                    "Level 5: Reduces No Healing duration by ? turns"
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turns",
+                    "Level 3: Reduces No Healing duration by 3 turns",
+                    "Level 4: Reduces No Healing duration by 5 turns",
+                    "Level 5: Reduces No Healing duration by 7 turns"
                 ]
             },
+        ],
+    },
+    2635: {//Sanji
+        captain: "Boosts ATK of Fighter characters by 1.5x and their RCV by 1.2x.",
+        special: "Reduces RCV DOWN and Blindness duration by 10 turns, recovers 5,000 HP and randomizes all orbs, including [BLOCK] orbs, on Free Spirit characters into either [STR], [RCV] or [TND] orbs.",
+        specialName: "The Chef's Recommended Summer Festival Food",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Adds 1% of this character's base RCV to the supported character's base RCV.",
+                    "Level 2: Adds 1% of this character's base RCV to the supported character's base RCV.",
+                    "Level 3: Adds 2% of this character's base RCV to the supported character's base RCV.",
+                    "Level 4: Adds 2% of this character's base RCV to the supported character's base RCV.",
+                    "Level 5: Adds 3% of this character's base RCV to the supported character's base RCV."
+                ]
+            }
+        ],
+    },
+    2636: {//Nami
+        captain: "Boosts ATK of Striker characters by 1.5x and their RCV by 1.2x.",
+        special: "Reduces damage received by 50% for 1 turn and reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 3 turns.",
+        specialName: "Cat Burglar's Speciality",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Sanji, Usopp, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
+    2637: {//Usopp
+        captain: "Boosts ATK of Free Spirit characters by 2.25x and their HP by 1.2x.",
+        special: "Deals 20x character's ATK in [INT] damage to all enemies, amplifies the effect of orbs for Free Spirit characters by 1.75x for 1 turn.",
+        specialName: "Summer Vacation is the Target",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Sanji, Nami, Chopper, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2638: {//Robin
+        captain: "Boosts ATK of [DEX] characters by 1.5x and their HP by 1.2x.",
+        special: "Reduces Paralysis and Despair duration by 3 turns.",
+        specialName: "A Refresh before the Treasure Hunt",
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Usopp, Sanji, Nami, Chopper, Franky and Brook",
+                "description": [
+                    "Level 1: Adds 1% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 1% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 2% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 2% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 3% of this character's base HP to the supported character's base HP."
+                ]
+            }
         ],
     },
     3333: {//Kung Fu Luffy

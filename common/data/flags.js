@@ -2537,6 +2537,8 @@ window.flags = {
     2624: { rr: 1, rro: 1, lrr: 1 },
     2625: { rr: 1, rro: 1, lrr: 1 },
     2626: { rr: 1, rro: 1, lrr: 1 },
+    2631: { rr: 1, rro: 1 },
+    2632: { tmshop: 1 },
     3333: { rr: 1, rro: 1, global: 1 },
     3334: { rr: 1, rro: 1, global: 1 },
     3336: { rr: 1, rro: 1, global: 1 },

@@ -177,6 +177,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     // rayleigh shop
                     if (filters.nonFarmable.shop && !flags.shop) return false;
                     if (filters.nonFarmable.shop === false && flags.shop) return false;
+                    // trade port
+                    if (filters.nonFarmable.tmshop && !flags.tmshop) return false;
+                    if (filters.nonFarmable.tmshop === false && flags.tmshop) return false;
                     // TM RR
                     if (filters.nonFarmable.tmlrr && !flags.tmlrr) return false;
                     if (filters.nonFarmable.tmlrr === false && flags.tmlrr) return false;

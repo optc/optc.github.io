@@ -9327,6 +9327,22 @@ window.captains = {
         atk: function(p) { return ((window.specials[2632].turnedOn) && p.sourceSlot == 1) ? 4 : 2.5; },
         hp: function(p) { return 1.2; },
     },
+    2635: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
+    },
+    2636: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
+    },
+    2637: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    2638: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
