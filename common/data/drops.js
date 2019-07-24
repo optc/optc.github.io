@@ -3551,15 +3551,15 @@ window.drops = {
 
         {
             name: 'Prejudice-Driven Ruler',
-            thumb: 1572,
+            thumb: 1527,
             showManual: true,
             global: true,
             nakama: 5152601,
             gamewith: 53588,
             slefty: 'coliseums',
-            Chaos: [ 1526, -1572 ],
-            Underground: [ 1526, -1572 ],
-            Exebition: [ 1526, -1572 ],
+            Chaos: [ 1526, -1527 ],
+            Underground: [ 1526, -1527 ],
+            Exebition: [ 1526, -1527 ],
         },
 
         {
