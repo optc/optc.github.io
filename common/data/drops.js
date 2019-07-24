@@ -3196,7 +3196,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 883, 902, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1525, 1528, 1552, 1554, 1583, 1585, 1603, 1627, 1666, 1693, 1827, 1944, 2036, 2162, 2192, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1552, 1554, 1583, 1627, 1827, 1944, 2036, 2162, 2192, 2415, 2470, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3206,7 +3206,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 1585, 1603, 2036, 2162, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 2036, 2162, 2192, 2488 ],
         },
         
         {
@@ -3215,7 +3215,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 1585, 1603 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552 ],
         },
 
         {
@@ -3254,6 +3254,19 @@ window.drops = {
         },
 
         {
+            name: 'Blue Ogre\'s Sovereignty',
+            thumb: 884,
+            showManual: true,
+            global: true,
+            nakama: 5088301,
+            gamewith: 22034,
+            slefty: 'coliseums',
+            Chaos: [ 883, -884 ],
+            Underground: [ 883, -884 ],
+            Exebition: [ 883, -884 ],
+        },
+
+        {
             name: 'Super Pervert',
             thumb: 901,
             showManual: true,
@@ -3262,6 +3275,19 @@ window.drops = {
             gamewith: 23129,
             slefty: 'coliseums',
             Chaos: [ 900, -901 ],
+        },
+
+        {
+            name: 'Red Ogre\'s Sovereignty',
+            thumb: 903,
+            showManual: true,
+            global: true,
+            nakama: 5090201,
+            gamewith: 23131,
+            slefty: 'coliseums',
+            Chaos: [ 902, -903 ],
+            Underground: [ 902, -903 ],
+            Exebition: [ 902, -903 ],
         },
 
         {
@@ -3513,6 +3539,17 @@ window.drops = {
         },
 
         {
+            name: 'Hero in Exile',
+            thumb: 1525,
+            showManual: true,
+            global: true,
+            nakama: 5152501,
+            gamewith: 53590,
+            slefty: 'coliseums',
+            Chaos: [ 1525, -1525 ],
+        },
+
+        {
             name: 'Prejudice-Driven Ruler',
             thumb: 1572,
             showManual: true,
@@ -3539,6 +3576,19 @@ window.drops = {
         },
 
         {
+            name: 'Riding Coattails',
+            thumb: 1586,
+            showManual: true,
+            global: true,
+            nakama: 5158501,
+            gamewith: 56051,
+            slefty: 'coliseums',
+            Chaos: [ 1585, -1586 ],
+            Underground: [ 1585, -1586 ],
+            Exebition: [ 1585, -1586 ],
+        },
+
+        {
             name: 'Merciless Ex-Warden',
             thumb: 1602,
             showManual: true,
@@ -3547,6 +3597,19 @@ window.drops = {
             gamewith: 57471,
             slefty: 'coliseums',
             Chaos: [ 1601, -1602 ],
+        },
+
+        {
+            name: 'Of Course I\'ve Got a Backbone!!!',
+            thumb: 1603,
+            showManual: true,
+            global: true,
+            nakama: 5160301,
+            gamewith: 57472,
+            slefty: 'coliseums',
+            Chaos: [ 1603, -1603 ],
+            Underground: [ 1603, -1603 ],
+            Exebition: [ 1603, -1603 ],
         },
 
         {
@@ -3560,6 +3623,28 @@ window.drops = {
             Chaos: [ 1629, -1630 ],
             Underground: [ 1629, -1630 ],
             Exebition: [ 1629, -1630 ],
+        },
+
+        {
+            name: 'Undefeated Gladiator',
+            thumb: 1667,
+            showManual: true,
+            global: true,
+            nakama: 5166601,
+            gamewith: 61260,
+            slefty: 'coliseums',
+            Chaos: [ 1666, -1667 ],
+        },
+
+        {
+            name: 'Mokomo Dukedom King of the Day',
+            thumb: 1694,
+            showManual: true,
+            global: true,
+            nakama: 5169301,
+            gamewith: 62895,
+            slefty: 'coliseums',
+            Chaos: [ 1693, -1694 ],
         },
 
         {
