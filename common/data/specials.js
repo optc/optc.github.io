@@ -7803,7 +7803,7 @@ window.specials = {
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            if (p.sourceSlot < 2) window.specials[2619].turnedOn = true;
+            if (p.slot < 2) window.specials[2619].turnedOn = true;
         },
         onDeactivation: function(p) {
             window.specials[2619].turnedOn = false;
@@ -7814,7 +7814,7 @@ window.specials = {
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            if (p.sourceSlot < 2) window.specials[2620].turnedOn = true;
+            if (p.slot < 2) window.specials[2620].turnedOn = true;
         },
         onDeactivation: function(p) {
             window.specials[2620].turnedOn = false;
@@ -7825,7 +7825,7 @@ window.specials = {
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            if (p.sourceSlot < 2) window.specials[2621].turnedOn = true;
+            if (p.slot < 2) window.specials[2621].turnedOn = true;
         },
         onDeactivation: function(p) {
             window.specials[2621].turnedOn = false;
@@ -7836,7 +7836,7 @@ window.specials = {
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            if (p.sourceSlot < 2) window.specials[2622].turnedOn = true;
+            if (p.slot < 2) window.specials[2622].turnedOn = true;
         },
         onDeactivation: function(p) {
             window.specials[2622].turnedOn = false;
@@ -7847,7 +7847,7 @@ window.specials = {
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            if (p.sourceSlot < 2) window.specials[2623].turnedOn = true;
+            if (p.slot < 2) window.specials[2623].turnedOn = true;
         },
         onDeactivation: function(p) {
             window.specials[2623].turnedOn = false;
@@ -7858,7 +7858,7 @@ window.specials = {
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            if (p.sourceSlot < 2) window.specials[2624].turnedOn = true;
+            if (p.slot < 2) window.specials[2624].turnedOn = true;
         },
         onDeactivation: function(p) {
             window.specials[2624].turnedOn = false;
