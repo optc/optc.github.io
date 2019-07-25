@@ -9320,6 +9320,13 @@ window.captains = {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
         hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" || p.unit.type == "INT" ? 1.25 : 1; },
     },
+    2629: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT" ? 2 : 1; },
+    },
+    2630: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT" ? 1.25 : 1; },
+    },
     2631: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.25 : 2.5; }
     },

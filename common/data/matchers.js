@@ -1178,6 +1178,12 @@ window.matchers = [
     },
 
     {
+        name: 'Orb randomizers',
+        target: 'support',
+        matcher: /randomizes.+orb/i
+    },
+
+    {
         name: 'Orb switchers',
         target: 'support',
         matcher: /switches orbs/i
@@ -1193,6 +1199,12 @@ window.matchers = [
         name: 'Damage Reduction supports',
         target: 'support',
         matcher: /Reduces damage received/i
+    },
+    
+    {
+        name: 'Damage Reduction Buff supports',
+        target: 'support',
+        matcher: /Reduces damage received.+turn/i
     },
 
     {

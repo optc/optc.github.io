@@ -4171,6 +4171,10 @@ window.evolutions = {
         evolution: 2588,
         evolvers: [ 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2' ]
     },
+    2229: {
+        evolution: 2597,
+        evolvers: [ 'skullINT', 83, 88, 99, 104 ]
+    },
     2600: {
         evolution: 2601,
         evolvers: [ 118, 102, 100, 83, 267 ]
@@ -4223,9 +4227,9 @@ window.evolutions = {
         evolution: 2628,
         evolvers: [ 116, 117, 80, 86, 97 ]
     },
-    2229: {
-        evolution: 2597,
-        evolvers: [ 'skullINT', 83, 88, 99, 104 ]
+    2629: {
+        evolution: 2630,
+        evolvers: [  ]
     },
     1473: {
         evolution: 2631,

@@ -7888,6 +7888,14 @@ window.specials = {
     2628: {
         chainAddition: function(p) { return 0.4; }
     },
+    2429: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        type: "type"
+    },
+    2429: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        type: "type"
+    },
     2632: {
         turnedOn: false,
         onActivation: function(p) {
