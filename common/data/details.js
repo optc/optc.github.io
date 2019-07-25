@@ -43439,7 +43439,7 @@ window.details = {
     },
     2434: {//Boa Hancock+
         captain: "Boosts ATK of Free Spirit characters by a variable factor between 3x and 3.75x based on the timing of the attack of the previous unit in the chain and recovers 1,200 HP at end of each turn.",
-        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 3x, a Good hit by 3.25x, a Great hit by 3.5x and a PERFECT hit by 3.75x. This bonus is applied only to Shooter characters.",
+        captainNotes: "A hit below Good or a Miss will boost the ATK of the next unit by 3x, a Good hit by 3.25x, a Great hit by 3.5x and a PERFECT hit by 3.75x. This bonus is applied only to Free Spirit characters.",
         special: "Deals 12 hits of 25,000 Fixed damage to random enemies, delays all enemies for 1 turn and boosts the Color Affinity of Free Spirit characters by 2x for 1 turn.",
         specialNotes: "#{beneficial}",
         specialName: "Melo-Melo Combination",
