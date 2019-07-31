@@ -5,7 +5,7 @@ window.ships = [
     { // 0
         name: 'Dinghy',
         thumb: 'ship_0001_c.png',
-        description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120',
+        description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120 and makes PERFECTs easier to hit',
         hp: function(p) {
             return p.boatLevel < 6  ? 1.0  :
                    p.boatLevel < 10 ? 1.1 :
@@ -20,7 +20,7 @@ window.ships = [
     { // 1
         name: 'Merry Go',
         thumb: 'ship_0002_c.png',
-        description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300',
+        description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300 and makes PERFECTs easier to hit',
         hpStatic: function(p) {
             return p.slot != 1 ? 0 :
                 [ 100, 130, 150, 170, 190, 210, 230, 250, 270, 300 ][p.boatLevel - 1];
@@ -583,6 +583,17 @@ window.ships = [
         },
         hp: function(p) {
             return [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.25 ][p.boatLevel - 1];
+        },
+    },
+    
+    
+    
+    { //44
+        name: "Thousand Sunny - Flying Model",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x and makes PERFECTs easier to hit.',
+        atk: function(p) {
+            return 1.5;
         },
     },
 
