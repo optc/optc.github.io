@@ -9346,9 +9346,47 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
     },
-    2638: {
+    2639: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    2642: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Slasher")) ? 2.5 : 1; },
+    },
+    2643: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 2.5 : 1; },
+    },
+    2644: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.25 : 1; },
+    },
+    2645: {
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher")) ? 2 : 1; },
+    },
+    2646: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
+    },
+    2647: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? 1.75 : 1; },
+    },
+    2648: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.1 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.1 : 1; },
+    },
+    2649: {
+        hitAtk: function(p) {
+            return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                minModifier: 'Good'
+            }, {
+                minModifier: 'Good'
+            }, {
+                minModifier: 'Good'
+            }]) ? 2.8 : 2.5 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
     },
     3333: {
         hitAtk: function(p) {

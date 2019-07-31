@@ -2429,8 +2429,8 @@ window.drops = {
             dropID: 'event122',
             thumb: 2635,
             nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2635, 2636, 2637, 2638, -1794, -1883, -2477, -1366, -1743, -1875, -1877, -2269, -2306, -2344, -2349, -2420, -2538, -2542, -2319 ]
+            gamewith: 159294,
+            'All Difficulties': [ 2635, 2636, 2637, 2639, -1794, -1883, -2477, -1366, -1743, -1875, -1877, -2269, -2306, -2344, -2349, -2420, -2538, -2542, -2319 ]
         },
         
     ],
@@ -3175,6 +3175,16 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! STAMPEDE',
+            thumb: 2642,
+            global: true,
+            nakama: null,
+            gamewith: 160324,
+            Master: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+            Expert: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,
@@ -3885,6 +3895,16 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2610, -2611 ],
             Underground: [ 2610, -2611 ],
+        },
+
+        {
+            name: 'Trafalgar Law',
+            thumb: 2649,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2648, -2649 ],
         },
         
     ],

@@ -4229,10 +4229,14 @@ window.evolutions = {
     },
     2629: {
         evolution: 2630,
-        evolvers: [  ]
+        evolvers: [ 116, 117, 79, 85, 96 ]
     },
     1473: {
         evolution: 2631,
+        evolvers: [ 'skullPSY', 118, 98, 303, 267 ]
+    },
+    2648: {
+        evolution: 2649,
         evolvers: [  ]
     },
     3333: {
