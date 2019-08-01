@@ -277,7 +277,7 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="cooldown && !isSpecialStaged">
-                                    <td>Cooldown</td>
+                                    <td>Cooldown<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span></td>
                                     <td>
                                         {{cooldown.length ? cooldown[0] : cooldown}} turns
                                         {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
