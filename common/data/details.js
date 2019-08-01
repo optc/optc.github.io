@@ -43546,13 +43546,13 @@ window.details = {
     2432: {//Jack
         captain: "Boosts ATK of all characters by 3x and their HP by 1.25x and EXP gained by 2x",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
-        special: "Cuts the current HP of each enemy by 30% that will ignore damage negating abilities and barriers and increases duration of any team Percent Damage Reduction buffs, Threshold Damage Reduction buffs, End of Turn Damage buffs and End of Turn Healing buffs by 1 turn.",
+        special: "Cuts the current HP of each enemy by 20% that will ignore damage negating abilities and barriers and increases duration of any team Percent Damage Reduction buffs, Threshold Damage Reduction buffs, End of Turn Damage buffs and End of Turn Healing buffs by 1 turn.",
         specialName: "Savage Drought",
     },
     2433: {//Jack
         captain: "Boosts ATK of all characters by 3x and their HP by 1.25x and EXP gained by 2x",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
-        special: "Cuts the current HP of each enemy by 30% that will ignore damage negating abilities and barriers and increases duration of any team Percent Damage Reduction buffs, Threshold Damage Reduction buffs, End of Turn Damage buffs and End of Turn Healing buffs by 1 turn.",
+        special: "Cuts the current HP of each enemy by 20% that will ignore damage negating abilities and barriers and increases duration of any team Percent Damage Reduction buffs, Threshold Damage Reduction buffs, End of Turn Damage buffs and End of Turn Healing buffs by 1 turn.",
         specialName: "Savage Drought",
         sailor: {
             "base": "None",
