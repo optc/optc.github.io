@@ -3622,7 +3622,7 @@ window.drops = {
         },
 
         {
-            name: 'Of Course I\'ve Got a Backbone!!!',
+            name: 'Lightning Swordsman',
             thumb: 1603,
             showManual: true,
             global: true,

@@ -9499,7 +9499,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1; }
     },
     3358: {
-        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
     },
     3359: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },

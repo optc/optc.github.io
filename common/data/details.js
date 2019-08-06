@@ -50976,7 +50976,7 @@ window.details = {
         potentialNotes: "#{enrage}"*/
     },
     3358: {//Vergo
-        captain: "Boosts ATK of Striker characters by 2x",
+        captain: "Boosts ATK of Striker characters by 2x and their HP by 1.2x",
         special: "Deals 100x character's ATK in [STR] damage to one enemy, reduces enemies' Percent Damage Reduction Buff duration by 4 turns and boosts ATK of Striker characters by 1.75x for 1 turn",
         specialName: "Pure-Black Demon [Neo]",
     },
