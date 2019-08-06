@@ -190,6 +190,8 @@
             case '3353': return '../res/character_10994_t1.png'; break;
             case '3354': return '../res/character_10995_t1.png'; break;
             case '3355': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5037.png'; break;
+            case '3356': return '../res/character_10869_t1.png'; break;
+            case '3357': return '../res/character_10870_t1.png'; break;
             //case '2440': return '../res/character_10643_t1.png'; break;
             //case '2441': return '../res/character_10644_t1.png'; break;
             case '5000': return '../res/character_10185_t1.png'; break;

@@ -2641,7 +2641,7 @@ window.families = [
     null,
     null,
     [ "Eustass Kid", "Killer" ],
-    [ "Scratchman Apoo", "Capone Bege" ],
+    [ "Scratchmen Apoo", "Capone Bege" ],
     [ "X Drake", "Urouge" ],
     [ "Jewelry Bonney", "Basil Hawkins" ],
     [ "Wapol", "Foxy" ],

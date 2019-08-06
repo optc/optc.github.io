@@ -2951,6 +2951,18 @@ window.drops = {
         },
         
         {
+            name: 'Clash Neo!! Vergo',
+            dropID: 'clashneo27',
+            thumb: 3359,
+            global: true,
+            condition: 'Master: Striker/Cerebral/Powerhouse Only',
+            nakama: 4169600,
+            gamewith: 63217,
+            Master: [ 3358 ],
+            Expert: [ 3358 ]
+        },
+        
+        {
             name: 'Clash!! Vinsmoke Sanji',
             dropID: 'clash28',
             thumb: 1815,
@@ -3206,7 +3218,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1552, 1554, 1583, 1627, 1827, 1944, 2036, 2162, 2192, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1552, 1554, 1583, 1627, 1827, 1944, 2036, 2162, 2192, 2415, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3854,6 +3866,18 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2374, -2375 ],
             Underground: [ 2374, -2375 ],
+        },
+
+        {
+            name: 'Man Who Can See The Future',
+            thumb: 2471,
+            showManual: true,
+            global: true,
+            nakama: 5247001,
+            gamewith: 145439,
+            slefty: 'coliseums',
+            Chaos: [ 2470, -2471 ],
+            Underground: [ 2470, -2471 ],
         },
 
         {

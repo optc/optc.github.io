@@ -8021,6 +8021,14 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
         type: "class"
     },
+    3358: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+        type: "class"
+    },
+    3359: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
+        type: "class"
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
         type: "type",

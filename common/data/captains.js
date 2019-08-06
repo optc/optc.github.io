@@ -9498,6 +9498,20 @@ window.captains = {
     3357: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? Math.max(1.0, 3.5 - 0.1 * p.turnCounter) : 1; }
     },
+    3358: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
+    3359: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; }
+    },
+    3360: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
+    3361: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
