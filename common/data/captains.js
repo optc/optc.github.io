@@ -9334,6 +9334,18 @@ window.captains = {
         atk: function(p) { return ((window.specials[2632].turnedOn) && p.sourceSlot == 1) ? 4 : 2.5; },
         hp: function(p) { return 1.2; },
     },
+    2633: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[2633].turnedOn[i]==true) { specialEnabled = true; }
+            }
+            return specialEnabled ? 2.5 : 2.25; },
+    },
+    2634: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2 : 1; },
+    },
     2635: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
@@ -9346,9 +9358,20 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; }
     },
+    2636: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; }
+    },
     2639: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    2640: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+    },
+    2641: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; }
     },
     2642: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Slasher")) ? 2.5 : 1; },

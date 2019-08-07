@@ -2425,12 +2425,21 @@ window.drops = {
         },
         
         {
-            name: 'Pirate World Fair! Vacation',
+            name: 'Pirate Expo! Vacation',
             dropID: 'event122',
             thumb: 2635,
             nakama: null,
             gamewith: 159294,
             'All Difficulties': [ 2635, 2636, 2637, 2639, -1794, -1883, -2477, -1366, -1743, -1875, -1877, -2269, -2306, -2344, -2349, -2420, -2538, -2542, -2319 ]
+        },
+        
+        {
+            name: 'Pirate Expo! Festival',
+            dropID: 'event123',
+            thumb: 2633,
+            nakama: null,
+            gamewith: 159294,
+            'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
         },
         
     ],

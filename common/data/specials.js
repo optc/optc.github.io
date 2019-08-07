@@ -7909,8 +7909,33 @@ window.specials = {
             window.specials[2632].turnedOn = false;
         }
     },
+    2633: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+        type: "class",
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[2633].turnedOn[p.slot] = true;
+            /*p.scope.notify({
+                text: 'Only affects damage if Luffy is your captain',
+                name: '2633warning'
+            });*/
+        },
+        onDeactivation: function(p) {
+            window.specials[2633].turnedOn[p.slot] = false;
+        }
+    },
+    2634: {
+        affinity: function(p) { return (p.unit.class.has("Free Spirit")) ? 1.75 : 1; },
+    },
     2637: {
         orb: function(p) { return p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2640: {
+        delay: function(p) { return 2; },
+    },
+    2641: {
+        def: function(p) { return .05; },
+        chainAddition: function(p) { return 0.4; }
     },
     2642: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1.75 : 1; },
