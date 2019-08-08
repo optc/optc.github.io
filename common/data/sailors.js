@@ -895,6 +895,18 @@ window.sailors = {
     2647: {
         atkStatic: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 25 : 0; },
     },
+    2652: {
+        atkStatic: function(p) { return 30; },
+    },
+    2653: {
+        atkStatic: function(p) { return 30; },
+    },
+    2654: {
+        rcvStatic: function(p) { return 30; },
+    },
+    2655: {
+        rcvStatic: function(p) { return 30; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

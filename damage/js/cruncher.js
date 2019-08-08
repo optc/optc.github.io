@@ -340,7 +340,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
-            multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x), 'type' ]); // type multiplier
+            multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x, n), 'type' ]); // type multiplier
             multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
             multipliers.push([ ship, 'ship' ]); // ship bonus (fixed)
             result.push({ unit: x, orb: orb, base: Math.floor(atk), multipliers: multipliers, position: n });
@@ -372,8 +372,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var override = $scope.tdata.typeOverride[type];
             for (var k=0;k<result.length;++k) {
                 if (!override[k]) continue;
-                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type, result[k].unit);
-                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k], result[k].unit);
+                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type, result[k].unit, n);
+                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k], result[k].unit, n);
                 result[k].multipliers.push([ newMultiplier / currentMultiplier, 'type override' ]);
             }
         }
@@ -504,7 +504,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         
         //Apply Static Bonus Damage From Specials
-        var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit, type);
+        var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit, type, position);
         if ((staticBonusDamage > 0) && ((staticBonusDamage - currentDefense)>0) && (result.result > 0)) {
             result.result += (staticBonusDamage - currentDefense);
         }
@@ -553,7 +553,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
-    var getTypeMultiplierOfUnit = function(attackerType,attackedType, unit) {
+    var getTypeMultiplierOfUnit = function(attackerType,attackedType, unit, teamSlot) {
         var typeMult = 1, affinityMult = 1, captAffinityMult = 1;
         
         if (attackerType == 'STR' && attackedType == 'DEX') typeMult = 2;
@@ -564,6 +564,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'STR' && attackedType == 'QCK') typeMult = 0.5;
         if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = 0.5;
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = 0.5;
+        
+        if ([2650, 2651].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = 2;
         
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
@@ -889,7 +891,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
     };
     
-    var computeFlatBonusDamage = function(hitModifier, unit, type) {
+    var computeFlatBonusDamage = function(hitModifier, unit, type, teamSlot) {
         for (var y=0;y<enabledEffects.length;++y) {
             if (enabledEffects[y].hasOwnProperty('staticMult')){
                 var sailor = true;
@@ -919,7 +921,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
-            if(unit.type != type){
+            if ([2650, 2651].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
+            else if(unit.type != type){
                 if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);
                 else if (unit.type == "DEX" && type == "STR") affinityMultiplier = Math.pow(affinityMultiplier, -1);
                 else if (unit.type == "QCK" && type == "DEX") affinityMultiplier = Math.pow(affinityMultiplier, -1);

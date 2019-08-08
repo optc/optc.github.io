@@ -46473,7 +46473,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -47785,7 +47785,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 3 turn",
                     "Level 2: Reduces No Healing duration by 4 turn",
@@ -48752,7 +48752,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -48906,7 +48906,7 @@ window.details = {
                 ]
             },
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -50373,7 +50373,7 @@ window.details = {
     },
     2646: {//Foxy & Wapol
         captain: "Boosts ATK of Fighter and Shooter characters by 1.75x",
-        special: "Delays all enemies for 1 turn and reduces the defense of all enemies by ?% for 1 turn.",
+        special: "Delays all enemies for 1 turn and reduces the defense of all enemies by 80% for 1 turn.",
         specialName: "Rescue Request to Strawhat",
         sailor: "Boosts base HP of Fighter and Shooter characters by 25",
         support: [
@@ -50463,13 +50463,224 @@ window.details = {
         ],
         support: [
             {
-                "Characters": "PSY characters",
+                "Characters": "[PSY] characters",
                 "description": [
                     "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2650: {//Douglass Bullet
+        captain: "Boosts ATK of [STR], [QCK] and [INT] characters by 4x, their HP by 1.2x, boosts own ATK by 4.5x and makes [STR], [QCK] and [INT] orbs beneficial for [STR] and [INT] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captainNotes: "Bullet will make only his own attacks type effective against all types",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
+        specialName: "Armor Assimilation: Union Armado",
+        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character each turn the buff is active, and can change each turn. (Untested)",
+        sailor: "Boosts this character's damage against [QCK] characters by 2x",
+    },
+    2651: {//Douglass Bullet
+        captain: "Boosts ATK of [STR], [QCK] and [INT] characters by 4x, their HP by 1.2x, boosts own ATK by 4.5x and makes [STR], [QCK] and [INT] orbs beneficial for [STR] and [INT] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captainNotes: "Bullet will make only his own attacks type effective against all types",
+        special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
+        specialName: "Armor Assimilation: Union Armado",
+        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character each turn the buff is active, and can change each turn. (Untested)",
+        sailor: {
+            "base": "Boosts this character's damage against [QCK] characters by 2x",
+            "level1": "Boosts own base ATK by 300 if this character is the last in the chain to attack",
+        },
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 12% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[STR], [QCK] and [INT] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2652: {//Chopper Stampede
+        captain: "Boosts ATK of [STR] characters by 2x and recovers 809 HP at the end of each turn.",
+        special: "Recovers 13x character's RCV in HP at the end of each turn for 3 turns and reduces Paralysis, Despair, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns.",
+        specialName: "Treasured Smile",
+        sailor: "Boosts base ATK of all characters by 30",
+    },
+    2653: {//Chopper Stampede
+        captain: "Boosts ATK of [STR] characters by 2.5x, boosts ATK of [QCK] and [INT] characters by 2x and recovers 809 HP at the end of each turn.",
+        special: "Recovers 13x character's RCV in HP at the end of each turn for 3 turns and reduces Paralysis, Despair, Chain Multiplier Limit and Chain Coefficient Reduction duration by 5 turns.",
+        specialName: "Treasured Smile",
+        sailor: {
+            "base": "Boosts base ATK of all characters by 30",
+            "level1": "Reduces Silence duration on this character by 3 turns",
+        },
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Sanji, Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Reduces damage received from [DEX] characters by 1%. Adds 1% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 2: Reduces damage received from [DEX] characters by 2%. Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 3: Reduces damage received from [DEX] characters by 3%. Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 4: Reduces damage received from [DEX] characters by 4%. Adds 7% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 5: Reduces damage received from [DEX] characters by 5%. Adds 9% of this character's base HP and RCV to the supported character's base HP and RCV."
+                ]
+            }
+        ],
+    },
+    2654: {//Robin Stampede
+        captain: "Boosts ATK of [INT] characters by 2x and reduce damage received by 20%.",
+        special: "Boosts the Color Affinity of [STR], [QCK] and [INT] characters by 1.75x for 3 turns and locks all orbs for 1 turn.",
+        specialName: "Mil Fleur",
+        sailor: "Boosts base RCV of all characters by 30",
+    },
+    2655: {//Robin Stampede
+        captain: "Boosts ATK of [INT] characters by 2.5x, boosts ATK of [STR] and [QCK] characters by 2x and reduce damage received by 20%.",
+        special: "Boosts the Color Affinity of [STR], [QCK] and [INT] characters by 1.75x for 3 turns and locks all orbs for 1 turn.",
+        specialName: "Mil Fleur",
+        sailor: {
+            "base": "Boosts base RCV of all characters by 30",
+            "level1": "Makes [TND] and [RCV] orbs beneficial for [STR], [QCK] and [INT] characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Sanji, Chopper, Franky and Brook",
+                "description": [
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 1% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 2% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 3% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 7% of this character's base ATK and RCV to the supported character's base ATK and RCV."
+                ]
+            }
+        ],
+    },
+    2656: {//Brook Stampede
+        captain: "Boosts ATK of [QCK] characters by 2x and boosts their HP by 1.2x.",
+        special: "Deals 50x character's ATK in [QCK] damage to one enemy and Boosts ATK of [STR], [QCK] and [INT] characters by 1.5x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [QCK] and [INT] characters by 2x for 2 turns in the following turn.",
+        specialName: "Song of Scratches: Freezing Rubble",
+        sailor: "Reduces Blindness duration by 10 turns",
+    },
+    2657: {//Brook Stampede
+        captain: "Boosts ATK of [QCK] characters by 2.5x, boosts their HP by 1.2x and boosts ATK of [STR] and [INT] characters by 2x.",
+        special: "Deals 50x character's ATK in [QCK] damage to one enemy and Boosts ATK of [STR], [QCK] and [INT] characters by 1.5x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [QCK] and [INT] characters by 2x for 2 turns in the following turn.",
+        specialName: "Song of Scratches: Freezing Rubble",
+        sailor: {
+            "base": "Reduces Blindness duration by 10 turns",
+            "level1": "Adds 3x character's ATK as Additional Damage",
+        },
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Sanji, Chopper, Robin and Franky",
+                "description": [
+                    "Level 1: Reduces damage received from [STR] characters by 1%. Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 2: Reduces damage received from [STR] characters by 2%. Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 3: Reduces damage received from [STR] characters by 3%. Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 4: Reduces damage received from [STR] characters by 4%. Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 5: Reduces damage received from [STR] characters by 5%. Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP."
                 ]
             }
         ],
@@ -50750,7 +50961,7 @@ window.details = {
                 ]
             },
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -50998,7 +51209,7 @@ window.details = {
                 ]
             },
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -56210,7 +56421,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -56284,7 +56495,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -56358,7 +56569,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",
@@ -56432,7 +56643,7 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Replace No Healing duration",
+                "Name": "Reduce No Healing duration",
                 "description": [
                     "Level 1: Reduces No Healing duration by 1 turn",
                     "Level 2: Reduces No Healing duration by 2 turn",

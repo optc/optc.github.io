@@ -9411,6 +9411,34 @@ window.captains = {
         hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
         rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
     },
+    2650: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.5 : (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; },
+    },
+    2651: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.5 : (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; },
+    },
+    2652: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
+    2653: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2654: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+    },
+    2655: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : (p.unit.type == "QCK" || p.unit.type == "STR") ? 2 : 1; },
+    },
+    2655: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    2657: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

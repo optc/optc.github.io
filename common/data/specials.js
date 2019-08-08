@@ -7979,6 +7979,36 @@ window.specials = {
             });
         }
     },
+    2654: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+    },
+    2655: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+    },
+    2656: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : window.specials[2656].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2656].multiplier == 1.5 ? 1 : 0);
+            window.specials[2656].multiplier = [1.5, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2656warning'
+            });
+        }
+    },
+    2657: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : window.specials[2657].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2657].multiplier == 1.5 ? 1 : 0);
+            window.specials[2657].multiplier = [1.5, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2657warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
