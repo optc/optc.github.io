@@ -579,10 +579,10 @@ window.ships = [
         thumb: null,
         description: 'Boosts HP of all characters by 1.25x. If your Captain is [PSY] or [INT], boosts ATK of all characters by 1.5x, boosts captain\'s RCV by 200 and reduces damage received by 10%. Special: Locks all orbs for 1 turn (Cooldown: 8 turns).',
         atk: function(p) {
-            return (p.captain.type == "PSY" || p.captain.type == "INT") ? [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.5 ][p.boatLevel - 1] : 1;
+            return (p.captain.type == "PSY" || p.captain.type == "INT") ? [ 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.5, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.25 ][p.boatLevel - 1];
+            return [ 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1];
         },
     },
     
