@@ -50479,7 +50479,7 @@ window.details = {
         captainNotes: "Bullet will make only his own attacks type effective against all types",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
         specialName: "Armor Assimilation: Union Armado",
-        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character each turn the buff is active, and can change each turn. (Untested)",
+        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character per each turn the buff is active, and can change each turn.",
         sailor: "Boosts this character's damage against [QCK] characters by 2x",
     },
     2651: {//Douglass Bullet
@@ -50487,7 +50487,7 @@ window.details = {
         captainNotes: "Bullet will make only his own attacks type effective against all types",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
         specialName: "Armor Assimilation: Union Armado",
-        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character each turn the buff is active, and can change each turn. (Untested)",
+        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character per each turn the buff is active, and can change each turn.",
         sailor: {
             "base": "Boosts this character's damage against [QCK] characters by 2x",
             "level1": "Boosts own base ATK by 300 if this character is the last in the chain to attack",
