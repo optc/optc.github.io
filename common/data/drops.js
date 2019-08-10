@@ -4164,8 +4164,17 @@ window.drops = {
             dropID: 'treasuremap23',
             thumb: 2618,
             nakama: null,
-            gamewith: null,
+            gamewith: 157969,
             'Primordial Sea': [ 2616, 2617 ]
+        },
+
+        {
+            name: 'Smoker',
+            dropID: 'treasuremap24',
+            thumb: 2659,
+            nakama: null,
+            gamewith: null,
+            'Expo Sea': [ 2658, 2660 ]
         },
         
     ],

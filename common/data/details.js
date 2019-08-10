@@ -50492,6 +50492,38 @@ window.details = {
             "base": "Boosts this character's damage against [QCK] characters by 2x",
             "level1": "Boosts own base ATK by 300 if this character is the last in the chain to attack",
         },
+        limit: [
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 300 if this character is the last in the chain to attack" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -50551,6 +50583,23 @@ window.details = {
             "base": "Boosts base ATK of all characters by 30",
             "level1": "Reduces Silence duration on this character by 3 turns",
         },
+        limit: [
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
         potential: [
             {
                 "Name": "[DEX] Damage Reduction",
@@ -50581,7 +50630,7 @@ window.details = {
                     "Level 2: Reduces damage received from [DEX] characters by 2%. Adds 3% of this character's base HP and RCV to the supported character's base HP and RCV.",
                     "Level 3: Reduces damage received from [DEX] characters by 3%. Adds 5% of this character's base HP and RCV to the supported character's base HP and RCV.",
                     "Level 4: Reduces damage received from [DEX] characters by 4%. Adds 7% of this character's base HP and RCV to the supported character's base HP and RCV.",
-                    "Level 5: Reduces damage received from [DEX] characters by 5%. Adds 9% of this character's base HP and RCV to the supported character's base HP and RCV."
+                    "Level 5: Reduces damage received from [DEX] characters by 5%. Adds 10% of this character's base HP and RCV to the supported character's base HP and RCV."
                 ]
             }
         ],
@@ -50601,6 +50650,23 @@ window.details = {
             "level1": "Makes [TND] and [RCV] orbs beneficial for [STR], [QCK] and [INT] characters",
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 90" },
+            { "description": "Boosts base HP by 120" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: Makes [TND] and [RCV] orbs beneficial for [STR], [QCK] and [INT] characters" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "[PSY] Damage Reduction",
@@ -50638,18 +50704,35 @@ window.details = {
     },
     2656: {//Brook Stampede
         captain: "Boosts ATK of [QCK] characters by 2x and boosts their HP by 1.2x.",
-        special: "Deals 50x character's ATK in [QCK] damage to one enemy and Boosts ATK of [STR], [QCK] and [INT] characters by 1.5x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [QCK] and [INT] characters by 2x for 2 turns in the following turn.",
+        special: "Deals 50x character's ATK in [QCK] damage to one enemy and boosts ATK of [STR], [QCK] and [INT] characters by 1.5x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [QCK] and [INT] characters by 2x for 2 turns in the following turn.",
         specialName: "Song of Scratches: Freezing Rubble",
         sailor: "Reduces Blindness duration by 10 turns",
     },
     2657: {//Brook Stampede
         captain: "Boosts ATK of [QCK] characters by 2.5x, boosts their HP by 1.2x and boosts ATK of [STR] and [INT] characters by 2x.",
-        special: "Deals 50x character's ATK in [QCK] damage to one enemy and Boosts ATK of [STR], [QCK] and [INT] characters by 1.5x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [QCK] and [INT] characters by 2x for 2 turns in the following turn.",
+        special: "Deals 50x character's ATK in [QCK] damage to one enemy and boosts ATK of [STR], [QCK] and [INT] characters by 1.5x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of [STR], [QCK] and [INT] characters by 2x for 2 turns in the following turn.",
         specialName: "Song of Scratches: Freezing Rubble",
         sailor: {
             "base": "Reduces Blindness duration by 10 turns",
             "level1": "Adds 3x character's ATK as Additional Damage",
         },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: Adds 3x character's ATK as Additional Damage" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
@@ -50683,6 +50766,103 @@ window.details = {
                     "Level 5: Reduces damage received from [STR] characters by 5%. Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP."
                 ]
             }
+        ],
+    },
+    2658: {//Smoker Stampede
+        captain: "Boosts ATK of Fighter and Driven characters by 1.5x.",
+        special: "Deals 100x character's ATK in Typeless damage to one enemy and amplifies the effect of orbs for Fighter and Driven characters by 2x for 1 turn. If your Captain is a Fighter or Driven character, adds 0.7x to Chain multiplier for 1 turn.",
+        specialName: "Armament Haki - White Blow",
+    },
+    2659: {//Smoker Stampede
+        captain: {
+            "base": "Boosts ATK of Fighter and Driven characters by 2x.",
+            "level1": "Not Translated.",
+            "level2": "Not Translated.",
+            "level3": "Not Translated.",
+            "level4": "Not Translated.",
+            "level5": "Not Translated.",
+            "level6": "Boosts ATK of Fighter and Driven characters by 3.25x and reduces damage received up to 40% depending on the crew's current HP.",
+        },
+        captainNotes: "Damage reduction is higher the lower the crew's HP is.",
+        special: "Deals 100x character's ATK in Typeless damage to one enemy and amplifies the effect of orbs for Fighter and Driven characters by 2x for 1 turn. If your Captain is a Fighter or Driven character, adds 0.7x to Chain multiplier for 1 turn.",
+        specialName: "Armament Haki - White Blow",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Fighter and Driven characters by 30",
+            "level2": "Makes [DEX] orbs beneficial for Fighter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Sabo, Law, Hancock and Buggy",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
+    2660: {//Sanji Stampede
+        captain: "Boosts ATK of Fighter characters by 2.5x and their HP by 1.2x.",
+        special: "Deals 90x character's ATK in Typeless damage to one enemy. If your Captain is a [STR], [QCK] or [INT] character, boosts ATK of [STR], [QCK] and [INT] characters by 1.75x for 2 turns and amplifies the effect of orbs by 1.75x for [STR], [QCK] and [INT] characters for 2 turns.",
+        specialName: "Diable Jambe Pirate Expo Concasse",
+        sailor: "Boosts base ATK of Fighter characters by 40",
+    },
+    2661: {//Sanji Stampede
+        captain: "Boosts ATK of Fighter characters by 3.25x, their HP by 1.2x and makes [INT] orbs beneficial for Fighter characters.",
+        special: "Deals 90x character's ATK in Typeless damage to one enemy. If your Captain is a [STR], [QCK] or [INT] character, boosts ATK of [STR], [QCK] and [INT] characters by 1.75x for 2 turns and amplifies the effect of orbs by 1.75x for [STR], [QCK] and [INT] characters for 2 turns.",
+        specialName: "Diable Jambe Pirate Expo Concasse",
+        sailor: {
+            "base": "Boosts base ATK of Fighter characters by 40",
+            "level1": "Makes [INT] orbs beneficial for Fighter characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
         ],
     },
     3333: {//Kung Fu Luffy

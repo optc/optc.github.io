@@ -9439,6 +9439,20 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 2.5 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
+    2658: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven")) ? 1.5 : 1; },
+    },
+    2659: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven")) ? p.actions[p.sourceSlot] ? 3.25 : 2 : 1; },
+    },
+    2660: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    2661: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
