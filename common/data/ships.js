@@ -5,7 +5,7 @@ window.ships = [
     { // 0
         name: 'Dinghy',
         thumb: 'ship_0001_c.png',
-        description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120',
+        description: 'Boosts HP by 1.3x, boosts captain\'s RCV by 120 and makes PERFECTs easier to hit',
         hp: function(p) {
             return p.boatLevel < 6  ? 1.0  :
                    p.boatLevel < 10 ? 1.1 :
@@ -20,7 +20,7 @@ window.ships = [
     { // 1
         name: 'Merry Go',
         thumb: 'ship_0002_c.png',
-        description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300',
+        description: 'Boosts ATK by 1.5x, boosts captain\'s HP by 300 and makes PERFECTs easier to hit',
         hpStatic: function(p) {
             return p.slot != 1 ? 0 :
                 [ 100, 130, 150, 170, 190, 210, 230, 250, 270, 300 ][p.boatLevel - 1];
@@ -554,8 +554,44 @@ window.ships = [
     
     { //41
         name: "5th Anniversary Thousand Sunny",
-        thumb: null,
+        thumb: 'ship_0043_c.png',
         description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge.',
+        atk: function(p) {
+            return 1.5;
+        },
+    },
+    
+    
+    
+    { //42
+        name: "Hoe",
+        thumb: 'ship_0044_c.png',
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.75x. Special: Recovers 3,500 HP at the end of the turn for 2 turns (Cooldown: 15 turns).',
+        atk: function(p) {
+            return [ 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.5, 1.5 ][p.boatLevel - 1];
+        },
+    },
+    
+    
+    
+    { //43
+        name: "Megalo",
+        thumb: null,
+        description: 'Boosts HP of all characters by 1.25x. If your Captain is [PSY] or [INT], boosts ATK of all characters by 1.5x, boosts captain\'s RCV by 200 and reduces damage received by 10%. Special: Locks all orbs for 1 turn (Cooldown: 8 turns).',
+        atk: function(p) {
+            return (p.captain.type == "PSY" || p.captain.type == "INT") ? [ 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.5, 1.5 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return [ 1.1, 1.1, 1.2, 1.2, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1];
+        },
+    },
+    
+    
+    
+    { //44
+        name: "Thousand Sunny - Flying Model",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x and makes PERFECTs easier to hit.',
         atk: function(p) {
             return 1.5;
         },

@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Fortnight': 4, 'Raid': 8, 'Coliseum': 16, 'Treasure Map': 64 };
+var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Fortnight': 4, 'Raid': 8, 'Coliseum': 16, 'Treasure Map': 64, 'Ambush': 256, 'Bond Battle': 1024 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
@@ -102,7 +102,7 @@ CharUtils.searchDropLocations = function(id) {
         for (var island=0;island<window.drops[type].length;++island) {
             var temp = [ ];
             for (var stage in window.drops[type][island]) {
-                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global' || stage == 'condition' || stage == 'completion' || stage == 'challenge' || stage == 'challengeData' || stage == 'showManual' || stage == 'gamewith'|| stage == 'slefty' || stage == 'nakama') continue;
+                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global' || stage == 'condition' || stage == 'completion' || stage == 'challenge' || stage == 'challengeData' || stage == 'showManual' || stage == 'gamewith'|| stage == 'slefty' || stage == 'nakama' || stage == 'dropID') continue;
                 if (window.drops[type][island][stage].indexOf(id) != -1)
                     temp.push(stage);
             }
@@ -161,14 +161,16 @@ CharUtils.searchSameSpecials = function(id) {
         if (Array.isArray(details[id].special) && Array.isArray(details[key].special))
             if (details[key].specialName == details[id].specialName && details[key].special[0].description == details[id].special[0].description)
                 result.push(parseInt(key, 10));
-        if (details[id].special.character1 && details[key].special.character1)
-                if (details[key].specialName == details[id].specialName && details[id].special.character1 == details[key].special.character1)
-                result.push(parseInt(key, 10));
-        if ((details[id].special.character1 && !details[key].special.character1) || (!details[id].special.character1 && details[key].special.character1)){
-                if(details[id].special.character1) if (details[key].specialName == details[id].specialName && (details[id].special.character1 == details[key].special || details[id].special.character2 == details[key].special))
-                result.push(parseInt(key, 10));
-                if(details[key].special.character1) if (details[key].specialName == details[id].specialName && (details[key].special.character1 == details[id].special || details[key].special.character2 == details[id].special))
-                result.push(parseInt(key, 10));
+        if (details[id].special){
+            if (details[id].special.character1 && details[key].special.character1)
+                    if (details[key].specialName == details[id].specialName && details[id].special.character1 == details[key].special.character1)
+                    result.push(parseInt(key, 10));
+            if ((details[id].special.character1 && !details[key].special.character1) || (!details[id].special.character1 && details[key].special.character1)){
+                    if(details[id].special.character1) if (details[key].specialName == details[id].specialName && (details[id].special.character1 == details[key].special || details[id].special.character2 == details[key].special))
+                    result.push(parseInt(key, 10));
+                    if(details[key].special.character1) if (details[key].specialName == details[id].specialName && (details[key].special.character1 == details[id].special || details[key].special.character2 == details[id].special))
+                    result.push(parseInt(key, 10));
+            }
         }
     }
     return result;

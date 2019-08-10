@@ -495,17 +495,17 @@ window.drops = {
             nakama: 1081600,
             completion: '5x Rainbow Gems',
             gamewith: 19269,
-            '01': [ 89, 90, 91, 387, 817, 818, 819, 820, 821 ],
-            '02': [ 89, 90, 91, 92, 93, 812, 817, 818, 819, 820, 821 ],
-            '03': [ 116, 817, 818, 819, 820, 821 ],
-            '04': [ 110, 111, 112, 814, 817, 818, 819 ],
-            '05': [ 113, 114, 425, 820, 821 ],
-            '06': [ 110, 111, 112, 814, 817, 818, 819 ],
-            '07': [ 80, 81, 82, 84, 85, 394, 822, 823, 824 ],
-            '08': [ 116, 117, 813, 817, 818, 819, 825, 826, 827 ],
-            '09': [ 116, 117, 820, 821, 825, 826, 827 ],
-            '10': [ 78, 79, 80, 81, 82, 393, 817, 818, 819, 820, 821, 822, 823, 824 ],
-            '11': [ 98, 99, 113, 114, 303, 304, 815, 817, 818, 819, 820, 821, 825, 826, 827 ]
+            '01': [ 89, 90, 91, 387, 817, 818, 819, 820, 821, 407 ],
+            '02': [ 89, 90, 91, 92, 93, 812, 817, 818, 819, 820, 821, 407 ],
+            '03': [ 116, 817, 818, 819, 820, 821, 407 ],
+            '04': [ 110, 111, 112, 814, 817, 818, 819, 407 ],
+            '05': [ 113, 114, 425, 820, 821, 407 ],
+            '06': [ 110, 111, 112, 814, 817, 818, 819, 407 ],
+            '07': [ 80, 81, 82, 84, 85, 394, 822, 823, 824, 407 ],
+            '08': [ 116, 117, 813, 817, 818, 819, 825, 826, 827, 407 ],
+            '09': [ 116, 117, 820, 821, 825, 826, 827, 407 ],
+            '10': [ 78, 79, 80, 81, 82, 393, 817, 818, 819, 820, 821, 822, 823, 824, 407 ],
+            '11': [ 98, 99, 113, 114, 303, 304, 815, 817, 818, 819, 820, 821, 825, 826, 827, 407 ]
         },
 
         {
@@ -938,15 +938,25 @@ window.drops = {
             '11': [ 2320 ],
         },
         
-        /*{
-            name: 'Outside of Town to Bege\'s Hideout',
+        {
+            name: 'Outside of Town - Bege\'s Hideout',
             dropID: 'story40',
             shortName: 'Whole Cake 2',
-            thumb: null,
+            thumb: 2597,
             nakama: null,
             completion: '5x Rainbow Gems',
-            gamewith: null,
-        },*/
+            gamewith: 155967,
+            '01': [ 2595, 2162 ],
+            '02': [  ],
+            '03': [ 2127, 2128, 2129, 2130 ],
+            '04': [ 2288 ],
+            '05': [ 2162 ],
+            '06': [  ],
+            '07': [  ],
+            '08': [ 2596 ],
+            '09': [  ],
+            '10': [ 2597, 2598, 2599 ],
+        },
     ], 
 
     'Booster and Evolver Island': [
@@ -1630,7 +1640,8 @@ window.drops = {
             nakama: 2092900,
             gamewith: 24198,
             condition: 'You can only bring STR units',
-            'All Difficulties': [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506, -1115 ]
+            'Japan': [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -506, -1115 ],
+            'Global': [ 928, 930, 931, -752, -758, -520, -729, -733, -787, -930, -544, -791, -1115 ]
         },
         
         {
@@ -2300,7 +2311,7 @@ window.drops = {
         },
         
         {
-            name: 'Recover! King of Day Duke Inuarashi',
+            name: 'Comeback! "King of the Day" Duke Dogstorm',
             dropID: 'event110',
             thumb: 2219,
             global: true,
@@ -2340,8 +2351,9 @@ window.drops = {
         },
         
         {
-            name: 'Banquet! The Best Tea Party Ever!',
+            name: 'The Finest of Tea Parties!',
             dropID: 'event114',
+            global: true,
             thumb: 2351,
             nakama: 2235100,
             gamewith: 133025,
@@ -2349,8 +2361,9 @@ window.drops = {
         },
         
         {
-            name: 'Our Lady\'s Motherly Love',
+            name: 'Holy Mother\'s Love - Mother Carmel',
             dropID: 'event115',
+            global: true,
             thumb: 2377,
             nakama: 2237700,
             gamewith: 136822,
@@ -2391,6 +2404,42 @@ window.drops = {
             nakama: null,
             gamewith: 149417,
             'All Difficulties': [ 2519, 2520, 2521, 2522, 2523, -2148, -2338, -1959, -1989, -2013, -2078, -2515, -2152, -2080, -2048, -2340, -2247, -2187, -2342, -2230 ]
+        },
+        
+        {
+            name: 'Dress Up for the Pirate Festival! Chic',
+            dropID: 'event120',
+            thumb: 2524,
+            nakama: null,
+            gamewith: 150791,
+            'All Difficulties': [ 2523, 2524, 2525, 2526, 2527, -2074, -2363, -2365, -2072, -2078, -2115, -2304, -2189, -2285, -2367, -2371, -2538, -2540, -2542, -2544, -2231 ]
+        },
+        
+        {
+            name: 'Hell\'s Past! Young Doflamingo',
+            dropID: 'event121',
+            thumb: 2571,
+            nakama: null,
+            gamewith: 153186,
+            'All Difficulties': [ 2570, 2572, 2573, -2418, -2465, -1045, -2001, -2369, -2185, -2183, -2287, -2119, -2082, -1993, -2031, -2103, -2105, -1987, -2229, -2317, -2318 ]
+        },
+        
+        {
+            name: 'Pirate Expo! Vacation',
+            dropID: 'event122',
+            thumb: 2635,
+            nakama: null,
+            gamewith: 159294,
+            'All Difficulties': [ 2635, 2636, 2637, 2639, -1794, -1883, -2477, -1366, -1743, -1875, -1877, -2269, -2306, -2344, -2349, -2420, -2538, -2542, -2319 ]
+        },
+        
+        {
+            name: 'Pirate Expo! Festival',
+            dropID: 'event123',
+            thumb: 2633,
+            nakama: null,
+            gamewith: 159294,
+            'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
         },
         
     ],
@@ -2485,6 +2534,7 @@ window.drops = {
             thumb: 3352,
             global: true,
             nakama: 4335200,
+            condition: 'Master: Powerhouse/Fighter/Shooter Only',
             gamewith: null,
             slefty: 'raid_bosses/6',
             Master: [ 3351 ],
@@ -2645,6 +2695,17 @@ window.drops = {
             condition: 'Take 10% current Health in Environmental Damage every 2 turns',
             Master: [ 794 ],
             Expert: [ 794 ]
+        },
+
+        {
+            name: 'Clash Neo!! Nightmare Luffy',
+            dropID: 'clashneo14',
+            thumb: 3357,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Take 10% current Health in Environmental Damage every 2 turns. Master: Free Spirit/Driven/Cerebral Only',
+            Expert: [ 3356 ]
         },
 
         {
@@ -2899,6 +2960,18 @@ window.drops = {
         },
         
         {
+            name: 'Clash Neo!! Vergo',
+            dropID: 'clashneo27',
+            thumb: 3359,
+            global: true,
+            condition: 'Master: Striker/Cerebral/Powerhouse Only',
+            nakama: 4169600,
+            gamewith: 63217,
+            Master: [ 3358 ],
+            Expert: [ 3358 ]
+        },
+        
+        {
             name: 'Clash!! Vinsmoke Sanji',
             dropID: 'clash28',
             thumb: 1815,
@@ -3071,6 +3144,7 @@ window.drops = {
         {
             name: 'Clash!! Big Emperor',
             dropID: 'clash41',
+            showManual: true,
             thumb: 2398,
             nakama: 4239800,
             gamewith: 140044,
@@ -3122,6 +3196,16 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! STAMPEDE',
+            thumb: 2642,
+            global: true,
+            nakama: null,
+            gamewith: 160324,
+            Master: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+            Expert: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,
@@ -3143,7 +3227,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 830, 832, 834, 859, 861, 883, 902, 925, 950, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1142, 1144, 1195, 1219, 1250, 1252, 1291, 1293, 1311, 1337, 1339, 1340, 1375, 1421, 1423, 1457, 1488, 1525, 1526, 1528, 1552, 1554, 1583, 1585, 1601, 1603, 1627, 1629, 1666, 1693, 1732, 1791, 1827, 1860, 1944, 1977, 2036, 2122, 2162, 2192, 2248, 2353, 2374, 2415, 2470, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1552, 1554, 1583, 1627, 1827, 1944, 2036, 2192, 2415, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3153,7 +3237,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1791, 1860, 1977, 2036, 2162, 2192, 2248, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 2036, 2192, 2488 ],
         },
         
         {
@@ -3162,12 +3246,13 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 883, 902, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1339, 1340, 1402, 1423, 1424, 1457, 1459, 1488, 1526, 1528, 1552, 1585, 1603, 1629, 1860 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552 ],
         },
 
         {
             name: 'Red-Hair Pirates Gunner',
             thumb: 777,
+            showManual: true,
             global: true,
             nakama: 5077601,
             gamewith: 17475,
@@ -3178,8 +3263,20 @@ window.drops = {
         },
 
         {
+            name: 'Sorcerer\'s Spell',
+            thumb: 831,
+            showManual: true,
+            global: true,
+            nakama: 5083001,
+            gamewith: 19419,
+            slefty: 'coliseums',
+            Chaos: [ 830, -831 ],
+        },
+
+        {
             name: 'Roar of the Sea\s Cha-Cha',
             thumb: 882,
+            showManual: true,
             global: true,
             nakama: 5088101,
             gamewith: 22035,
@@ -3188,8 +3285,22 @@ window.drops = {
         },
 
         {
+            name: 'Blue Ogre\'s Sovereignty',
+            thumb: 884,
+            showManual: true,
+            global: true,
+            nakama: 5088301,
+            gamewith: 22034,
+            slefty: 'coliseums',
+            Chaos: [ 883, -884 ],
+            Underground: [ 883, -884 ],
+            Exebition: [ 883, -884 ],
+        },
+
+        {
             name: 'Super Pervert',
             thumb: 901,
+            showManual: true,
             global: true,
             nakama: 5090001,
             gamewith: 23129,
@@ -3198,8 +3309,22 @@ window.drops = {
         },
 
         {
+            name: 'Red Ogre\'s Sovereignty',
+            thumb: 903,
+            showManual: true,
+            global: true,
+            nakama: 5090201,
+            gamewith: 23131,
+            slefty: 'coliseums',
+            Chaos: [ 902, -903 ],
+            Underground: [ 902, -903 ],
+            Exebition: [ 902, -903 ],
+        },
+
+        {
             name: 'Supernova Burning with Ambition',
             thumb: 924,
+            showManual: true,
             global: true,
             nakama: 5092301,
             gamewith: 24038,
@@ -3208,8 +3333,20 @@ window.drops = {
         },
 
         {
+            name: 'Fire Fist Blaze',
+            thumb: 951,
+            showManual: true,
+            global: true,
+            nakama: 5090001,
+            gamewith: 25138,
+            slefty: 'coliseums',
+            Chaos: [ 950, -951 ],
+        },
+
+        {
             name: 'Cold-Hearted Gang',
             thumb: 1016,
+            showManual: true,
             global: true,
             nakama: 5101501,
             gamewith: 27619,
@@ -3220,6 +3357,7 @@ window.drops = {
         {
             name: 'Z, Destroyer of Evil',
             thumb: 1102,
+            showManual: true,
             global: true,
             nakama: 5110101,
             gamewith: 33485,
@@ -3230,6 +3368,7 @@ window.drops = {
         {
             name: 'Time-Bending Neo Navy Vice-Admiral',
             thumb: 1104,
+            showManual: true,
             global: true,
             nakama: 5110301,
             gamewith: 33486,
@@ -3242,6 +3381,7 @@ window.drops = {
         {
             name: 'A Hairy Situation!',
             thumb: 1106,
+            showManual: true,
             global: true,
             nakama: 5110501,
             gamewith: 33487,
@@ -3252,8 +3392,33 @@ window.drops = {
         },
 
         {
+            name: 'Something Wrong With Your Head?',
+            thumb: 1143,
+            showManual: true,
+            global: true,
+            nakama: 5114201,
+            gamewith: 34502,
+            slefty: 'coliseums',
+            Chaos: [ 1142, -1143 ],
+            Underground: [ 1142, -1143 ],
+            Exebition: [ 1142, -1143 ],
+        },
+
+        {
+            name: 'Revenge-Seeking World Destroyer',
+            thumb: 1220,
+            showManual: true,
+            global: true,
+            nakama: 5121901,
+            gamewith: 36719,
+            slefty: 'coliseums',
+            Chaos: [ 1219, -1220 ],
+        },
+
+        {
             name: 'Gentle Devil-Blood Warrior',
             thumb: 1222,
+            showManual: true,
             global: true,
             nakama: 5122101,
             gamewith: 36718,
@@ -3266,6 +3431,7 @@ window.drops = {
         {
             name: 'Flying Spearman',
             thumb: 1253,
+            showManual: true,
             global: true,
             nakama: 5125301,
             gamewith: 38054,
@@ -3277,6 +3443,7 @@ window.drops = {
         {
             name: 'Foxfire-Style Samurai',
             thumb: 1310,
+            showManual: true,
             global: true,
             nakama: 5130901,
             gamewith: 43749,
@@ -3285,8 +3452,22 @@ window.drops = {
         },
 
         {
+            name: 'Human-Reindeer Sky Battle',
+            thumb: 1339,
+            showManual: true,
+            global: true,
+            nakama: 5133901,
+            gamewith: 44769,
+            slefty: 'coliseums',
+            Chaos: [ 1339, -1339 ],
+            Underground: [ 1339, -1339 ],
+            Exebition: [ 1339, -1339 ],
+        },
+
+        {
             name: 'Pure-Hearted Guardian Warrior',
             thumb: 1378,
+            showManual: true,
             global: true,
             nakama: 5137701,
             gamewith: 46329,
@@ -3299,6 +3480,7 @@ window.drops = {
         {
             name: 'Punishing Catapult Pop',
             thumb: 1401,
+            showManual: true,
             global: true,
             nakama: 5140001,
             gamewith: 47305,
@@ -3307,8 +3489,21 @@ window.drops = {
         },
 
         {
+            name: 'Drum Island Civilian Guard',
+            thumb: 1402,
+            showManual: true,
+            global: true,
+            nakama: 5140201,
+            gamewith: 47303,
+            slefty: 'coliseums',
+            Underground: [ 1402, -1402 ],
+            Exebition: [ 1402, -1402 ],
+        },
+
+        {
             name: 'Provoking Hero of the Coliseum',
             thumb: 1422,
+            showManual: true,
             global: true,
             nakama: 5142101,
             gamewith: 48690,
@@ -3317,19 +3512,9 @@ window.drops = {
         },
 
         {
-            name: 'Inescapable Nez-Palm Cannon',
-            thumb: 1491,
-            global: true,
-            nakama: 5149001,
-            gamewith: 52212,
-            slefty: 'coliseums',
-            Underground: [ 1490, -1491 ],
-            Exebition: [ 1490, -1491 ],
-        },
-
-        {
             name: 'Coliseum Neo vs. Diamante',
             thumb: 2017,
+            showManual: true,
             global: true,
             nakama: 5201601,
             gamewith: 95570,
@@ -3340,6 +3525,7 @@ window.drops = {
         {
             name: '12th Leader of the Happosui Army',
             thumb: 1456,
+            showManual: true,
             global: true,
             nakama: 5145501,
             gamewith: 50805,
@@ -3348,8 +3534,22 @@ window.drops = {
         },
 
         {
+            name: 'Unhesitating Plan',
+            thumb: 1458,
+            showManual: true,
+            global: true,
+            nakama: 5145701,
+            gamewith: 50806,
+            slefty: 'coliseums',
+            Chaos: [ 1457, -1458 ],
+            Underground: [ 1457, -1458 ],
+            Exebition: [ 1457, -1458 ],
+        },
+
+        {
             name: 'Lonely XXX-Weight Boxer',
             thumb: 1487,
+            showManual: true,
             global: true,
             nakama: 5148601,
             gamewith: 52185,
@@ -3358,8 +3558,45 @@ window.drops = {
         },
 
         {
+            name: 'Inescapable Nez-Palm Cannon',
+            thumb: 1491,
+            showManual: true,
+            global: true,
+            nakama: 5149001,
+            gamewith: 52212,
+            slefty: 'coliseums',
+            Underground: [ 1490, -1491 ],
+            Exebition: [ 1490, -1491 ],
+        },
+
+        {
+            name: 'Hero in Exile',
+            thumb: 1525,
+            showManual: true,
+            global: true,
+            nakama: 5152501,
+            gamewith: 53590,
+            slefty: 'coliseums',
+            Chaos: [ 1525, -1525 ],
+        },
+
+        {
+            name: 'Prejudice-Driven Ruler',
+            thumb: 1527,
+            showManual: true,
+            global: true,
+            nakama: 5152601,
+            gamewith: 53588,
+            slefty: 'coliseums',
+            Chaos: [ 1526, -1527 ],
+            Underground: [ 1526, -1527 ],
+            Exebition: [ 1526, -1527 ],
+        },
+
+        {
             name: 'Wano Kingdom Hero',
             thumb: 1555,
+            showManual: true,
             global: true,
             nakama: 5155401,
             gamewith: 54673,
@@ -3370,8 +3607,104 @@ window.drops = {
         },
 
         {
+            name: 'Riding Coattails',
+            thumb: 1586,
+            showManual: true,
+            global: true,
+            nakama: 5158501,
+            gamewith: 56051,
+            slefty: 'coliseums',
+            Chaos: [ 1585, -1586 ],
+            Underground: [ 1585, -1586 ],
+            Exebition: [ 1585, -1586 ],
+        },
+
+        {
+            name: 'Merciless Ex-Warden',
+            thumb: 1602,
+            showManual: true,
+            global: true,
+            nakama: 5160101,
+            gamewith: 57471,
+            slefty: 'coliseums',
+            Chaos: [ 1601, -1602 ],
+        },
+
+        {
+            name: 'Lightning Swordsman',
+            thumb: 1603,
+            showManual: true,
+            global: true,
+            nakama: 5160301,
+            gamewith: 57472,
+            slefty: 'coliseums',
+            Chaos: [ 1603, -1603 ],
+            Underground: [ 1603, -1603 ],
+            Exebition: [ 1603, -1603 ],
+        },
+
+        {
+            name: 'Of Course I\'ve Got a Backbone!!!',
+            thumb: 1630,
+            showManual: true,
+            global: true,
+            nakama: 5162901,
+            gamewith: 59476,
+            slefty: 'coliseums',
+            Chaos: [ 1629, -1630 ],
+            Underground: [ 1629, -1630 ],
+            Exebition: [ 1629, -1630 ],
+        },
+
+        {
+            name: 'Undefeated Gladiator',
+            thumb: 1667,
+            showManual: true,
+            global: true,
+            nakama: 5166601,
+            gamewith: 61260,
+            slefty: 'coliseums',
+            Chaos: [ 1666, -1667 ],
+        },
+
+        {
+            name: 'Mokomo Dukedom King of the Day',
+            thumb: 1694,
+            showManual: true,
+            global: true,
+            nakama: 5169301,
+            gamewith: 62895,
+            slefty: 'coliseums',
+            Chaos: [ 1693, -1694 ],
+        },
+
+        {
+            name: 'Whale Forest Guardian',
+            thumb: 1733,
+            showManual: true,
+            global: true,
+            nakama: 5173201,
+            gamewith: 66570,
+            slefty: 'coliseums',
+            Chaos: [ 1732, -1733 ],
+        },
+
+        {
+            name: 'Coliseum Up-and-Comer',
+            thumb: 1792,
+            showManual: true,
+            global: true,
+            nakama: 5179101,
+            gamewith: 70189,
+            slefty: 'coliseums',
+            Chaos: [ 1791, -1792 ],
+            Underground: [ 1791, -1792 ],
+        },
+
+        {
             name: 'Captain of the Musketeers',
             thumb: 1828,
+            showManual: true,
             global: true,
             nakama: 5182701,
             gamewith: 74382,
@@ -3382,6 +3715,7 @@ window.drops = {
         {
             name: 'Invincible as a Ninja',
             thumb: 1861,
+            showManual: true,
             global: true,
             nakama: 5186001,
             gamewith: 80286,
@@ -3393,6 +3727,7 @@ window.drops = {
         {
             name: 'Omnipotent Kami of the Skies',
             thumb: 1897,
+            showManual: true,
             global: true,
             nakama: 5189601,
             gamewith: 84402,
@@ -3402,8 +3737,32 @@ window.drops = {
         },
 
         {
+            name: 'Awaiting the World\'s Dawn',
+            thumb: 1945,
+            showManual: true,
+            global: true,
+            nakama: 5194401,
+            gamewith: 87083,
+            slefty: 'coliseums',
+            Chaos: [ 1944, -1945 ],
+        },
+
+        {
+            name: 'Master of Haki',
+            thumb: 1978,
+            showManual: true,
+            global: true,
+            nakama: 5197701,
+            gamewith: 92603,
+            slefty: 'coliseums',
+            Chaos: [ 1977, -1978 ],
+            Underground: [ 1977, -1978 ],
+        },
+
+        {
             name: 'Steel Magnetic Arm',
             thumb: 2111,
+            showManual: true,
             global: true,
             nakama: 5211001,
             gamewith: 103562,
@@ -3413,8 +3772,43 @@ window.drops = {
         },
 
         {
+            name: 'Sea God of the Ryugu Kingdom',
+            thumb: 2123,
+            showManual: true,
+            global: true,
+            nakama: 5212201,
+            gamewith: 107866,
+            slefty: 'coliseums',
+            Chaos: [ 2122, -2123 ],
+            Underground: [ 2122, -2123 ],
+        },
+
+        {
+            name: 'Coliseum EX Vs. King Neptune',
+            thumb: 2529,
+            showManual: true,
+            nakama: null,
+            gamewith: 149444,
+            slefty: 'coliseums',
+            'All Difficulties': [ 2528, 2530 ],
+        },
+
+        {
+            name: 'Sweet Pain',
+            thumb: 2163,
+            showManual: true,
+            global: true,
+            nakama: 5216201,
+            gamewith: 110906,
+            slefty: 'coliseums',
+            Chaos: [ 2162, -2163 ],
+            Underground: [ 2162, -2163 ],
+        },
+
+        {
             name: 'Unhesitating Paw-Palmed Human',
             thumb: 2193,
+            showManual: true,
             global: true,
             nakama: 5219201,
             gamewith: 114952,
@@ -3424,8 +3818,21 @@ window.drops = {
         },
 
         {
+            name: 'Brawny Genie Master',
+            thumb: 2249,
+            showManual: true,
+            global: true,
+            nakama: 5224801,
+            gamewith: 118418,
+            slefty: 'coliseums',
+            Chaos: [ 2248, -2249 ],
+            Underground: [ 2248, -2249 ],
+        },
+
+        {
             name: 'Evolution of a True Knight',
             thumb: 2290,
+            showManual: true,
             global: true,
             nakama: 5228801,
             gamewith: 121684,
@@ -3437,6 +3844,7 @@ window.drops = {
         {
             name: 'Law-Abiding Man',
             thumb: 2323,
+            showManual: true,
             global: true,
             nakama: 5232201,
             gamewith: 125294,
@@ -3446,8 +3854,45 @@ window.drops = {
         },
 
         {
+            name: 'Prohibited Poison',
+            thumb: 2354,
+            showManual: true,
+            global: true,
+            nakama: 5235301,
+            gamewith: 132845,
+            slefty: 'coliseums',
+            Chaos: [ 2353, -2354 ],
+            Underground: [ 2353, -2354 ],
+        },
+
+        {
+            name: 'Totto Land\'s Minister of Juice',
+            thumb: 2375,
+            showManual: true,
+            global: true,
+            nakama: 5237401,
+            gamewith: 137942,
+            slefty: 'coliseums',
+            Chaos: [ 2374, -2375 ],
+            Underground: [ 2374, -2375 ],
+        },
+
+        {
+            name: 'Man Who Can See The Future',
+            thumb: 2471,
+            showManual: true,
+            global: true,
+            nakama: 5247001,
+            gamewith: 145439,
+            slefty: 'coliseums',
+            Chaos: [ 2470, -2471 ],
+            Underground: [ 2470, -2471 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Gecko Moria',
             thumb: 2512,
+            showManual: true,
             nakama: null,
             gamewith: 147896,
             slefty: 'coliseums',
@@ -3455,21 +3900,44 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum EX Vs. King Neptune',
-            thumb: 2529,
+            name: 'Doflamingo & Trebol',
+            thumb: 2550,
+            showManual: true,
             nakama: null,
-            gamewith: 149444,
+            gamewith: 150550,
             slefty: 'coliseums',
-            'All Difficulties': [ 2528, 2530 ],
+            Chaos: [ 2549, -2550 ],
         },
 
         {
-            name: 'Doflamingo & Trebol',
-            thumb: 2550,
+            name: 'Morley',
+            thumb: 2569,
+            showManual: true,
             nakama: null,
             gamewith: null,
             slefty: 'coliseums',
-            Chaos: [ 2549, -2550 ],
+            Chaos: [ 2568, -2569 ],
+        },
+
+        {
+            name: 'Jinbe',
+            thumb: 2611,
+            showManual: true,
+            nakama: null,
+            gamewith: 156226,
+            slefty: 'coliseums',
+            Chaos: [ 2610, -2611 ],
+            Underground: [ 2610, -2611 ],
+        },
+
+        {
+            name: 'Trafalgar Law',
+            thumb: 2649,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2648, -2649 ],
         },
         
     ],
@@ -3633,25 +4101,26 @@ window.drops = {
             thumb: 2362,
             nakama: 8236200,
             gamewith: 134017,
-            'Winter Sea': [ 2361, 9025 ]
+            'Raging Sea': [ 2361, 9025 ]
         },
 
         {
             name: 'Kaido',
             dropID: 'treasuremap17',
             thumb: 2387,
+            global: true,
             nakama: 8238700,
             gamewith: 137053,
-            'Raging Sea': [ 2386 ]
+            'Roaring Sea': [ 2386 ]
         },
 
         {
             name: 'Doflamingo',
             dropID: 'treasuremap18',
             thumb: 2443,
-            nakama: 8244300,
-            gamewith: 143066,
-            'Primordial Sea': [ 2442, 9026 ]
+            nakama: 143066,
+            gamewith: 8244300,
+            'Primordial Sea': [ 2442, 2439, 9026 ]
         },
 
         {
@@ -3668,9 +4137,152 @@ window.drops = {
             dropID: 'treasuremap20',
             thumb: 2510,
             nakama: null,
-            gamewith: null,
-            'Sweet Sea': [ 2509 ]
+            gamewith: 148609,
+            'Raging Sea': [ 2509 ]
         },
+
+        {
+            name: 'Shanks & Ben Beckman',
+            dropID: 'treasuremap21',
+            thumb: 2557,
+            nakama: null,
+            gamewith: 151643,
+            'Raging Sea': [ 2556 ]
+        },
+
+        {
+            name: 'Rob Lucci',
+            dropID: 'treasuremap22',
+            thumb: 2583,
+            nakama: null,
+            gamewith: 154065,
+            'Primordial Sea': [ 2582 ]
+        },
+
+        {
+            name: 'Sakazuki & Issho',
+            dropID: 'treasuremap23',
+            thumb: 2618,
+            nakama: null,
+            gamewith: 157969,
+            'Primordial Sea': [ 2616, 2617 ]
+        },
+
+        {
+            name: 'Smoker',
+            dropID: 'treasuremap24',
+            thumb: 2659,
+            nakama: null,
+            gamewith: null,
+            'Expo Sea': [ 2658, 2660 ]
+        },
+        
+    ],
+
+            
+    'Ambush': [
+        
+        {
+            name: 'Ambush! Edward Newgate',
+            dropID: 'ambush1',
+            thumb: 1258,
+            global: true,
+            nakama: 6125800,
+            gamewith: 38237,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush Neo! Edward Newgate',
+            dropID: 'ambushneo1',
+            thumb: 3354,
+            global: true,
+            nakama: 6335400,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
+            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Red Hair Shanks',
+            dropID: 'ambush2',
+            thumb: 1380,
+            global: true,
+            nakama: 6138000,
+            gamewith: 46369,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.',
+            'All Difficulties': [ 1379, 952, 776, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Cavendish',
+            dropID: 'ambush3',
+            thumb: 1530,
+            global: true,
+            nakama: 6153000,
+            gamewith: 53621,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
+            'All Difficulties': [ 1529, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Garp',
+            dropID: 'ambush4',
+            thumb: 1846,
+            global: true,
+            nakama: 6184600,
+            gamewith: 75260,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
+            'All Difficulties': [ 1845, 771, 772, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Sengoku',
+            dropID: 'ambush5',
+            thumb: 2283,
+            global: true,
+            nakama: 6228300,
+            gamewith: 122270,
+            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
+            'All Difficulties': [ 2282, 1845, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+        {
+            name: 'Ambush! Charlotte Linlin',
+            dropID: 'ambush6',
+            thumb: 2381,
+            nakama: 6238100,
+            gamewith: 136823,
+            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
+            'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
+        },
+        
+    ],
+
+            
+    'Bond Battle': [
+        
+        {
+            name: 'Zoro & Sanji',
+            dropID: 'bond1',
+            thumb: 2531,
+            nakama: null,
+            gamewith: [ 150056, 155125 ],
+            'All Difficulties': [ 2531 ],
+            'Round 1': [ 2518 ],
+            'Round 2': [ 2615 ],
+            'Round 3': [ 2629 ],
+        },/*
+        
+        {
+            name: 'Garp',
+            dropID: 'bond2',
+            thumb: 2632,
+            nakama: null,
+            gamewith: [ null ],
+            'All Difficulties': [ 2632 ],
+        },*/
         
     ],
 
@@ -3757,6 +4369,15 @@ window.drops = {
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
             'Pudding': [ 1962, 83, 94, 266, 1180, 82, 88, 93, 99, 114 ],
         },
+        
+        {
+            name: 'Game! Leo',
+            thumb: 2559,
+            nakama: null,
+            gamewith: 152009,
+            condition: 'Drops the Leo specific Limit Break crystals.',
+            'All Difficulties': [ 2558 ]
+        },
 
         {
             name: 'Straw Hat Pirates!',
@@ -3785,81 +4406,12 @@ window.drops = {
         },
         
         {
-            name: 'Invasion! Young Whitebeard',
-            thumb: 1258,
+            name: 'Memories of Marineford',
+            thumb: 1985,
             global: true,
-            nakama: 6125800,
-            gamewith: 38237,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
-            'All Difficulties': [ 1257, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion Neo! Young Whitebeard',
-            thumb: 3354,
-            global: true,
-            nakama: 6335400,
-            gamewith: null,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
-            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Red Hair Shanks',
-            thumb: 1380,
-            global: true,
-            nakama: 6138000,
-            gamewith: 46369,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Shanks.',
-            'All Difficulties': [ 1379, 952, 776, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Cavendish',
-            thumb: 1530,
-            global: true,
-            nakama: 6153000,
-            gamewith: 53621,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Cavendish.',
-            'All Difficulties': [ 1529, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Garp',
-            thumb: 1846,
-            global: true,
-            nakama: 6184600,
-            gamewith: 75260,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Garp.',
-            'All Difficulties': [ 1845, 771, 772, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Sengoku',
-            thumb: 2283,
-            global: true,
-            nakama: 6228300,
-            gamewith: 122270,
-            condition: 'Has a chance of appearing at the end of ANY Chaos Coliseum boss. You MUST use the same team that you just used to complete the Coliseum boss to fight Sengoku.',
-            'All Difficulties': [ 2282, 1845, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Invasion! Charlotte Linlin',
-            thumb: 2381,
-            nakama: 6238100,
-            gamewith: 136823,
-            condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
-            'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
-        },
-        
-        {
-            name: 'Bond Battle',
-            thumb: 2531,
             nakama: null,
-            gamewith: 149563,
-            condition: 'Will have a unique tab in the drops page soon.',
-            'All Difficulties': [ 2531, 2518 ]
+            gamewith: 100030,
+            condition: 'Available for 30 minutes after starting, drops +10 Cotton Candy.',
         },
         
         {
@@ -3960,6 +4512,14 @@ window.drops = {
             gamewith: 136731,
             condition: 'Chance of dropping the Support Medallions.',
         },
+
+        {
+            name: 'Battle Blitz! Girls of Summer Paradise',
+            thumb: 2626,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 2627 ],
+        },
         
         {
             name: 'World Clash!',
@@ -4026,6 +4586,7 @@ window.drops = {
         {
             name: 'Champion Challenge! 4th Anniversary',
             thumb: 2076,
+            global: true,
             nakama: 6207600,
             gamewith: 100803,
             showManual: true,
@@ -4043,22 +4604,26 @@ window.drops = {
         },
         
         {
-            name: 'Champion Challenge! 5th Anniversary',
-            thumb: 2076,
+            name: 'Special Festival! 5th Anniversary',
+            thumb: 2534,
             nakama: 6207600,
             gamewith: 150408,
             showManual: true,
             condition: 'High chance of dropping 6* Manuals.',
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
-            '': [  ],
+            'Lucy': [ -562, -578, -669, -1121, -1492, -1794, -1816, -1877, -1873, -1802, -1800, -1798, -1129, -1125, -1079, -1033, -1029, -1025, -641 ],
+            'Nekomamushi': [ -530, -748, -1571, -1652, -1663, -1707, -2372, -2373, -524, -558, -1119, -1208, -1370, -1573, -1575, -1577, -1579, -1654, -1656, -1658, -1660, -16, -1446 ],
+            'Judge': [ -367, -1619, -1610, -1588, -1832, -2245, -2232, -2138, -410, -560, -675, -677, -912, -937, -1212, -1542, -1702, -1834, -1836, -1838, -1840, -2139, -2140, -2141, -2142 ],
+            'Monkey D. Luffy: Boundman': [ -416, -1404, -1445, -1532, -1543, -1747, -1593, -520, -671, -673, -906, -910, -1115, -1364, -1368, -1534, -1536, -1741, -1743, -1745 ],
+            'Blackbeard': [ -261, -649, -1268, -1413, -1698, -2159, -251, -255, -259, -449, -455, -647, -1186, -1190, -1270, -1272, -1276, -1278 ],
+            'Roronoa Zoro': [ -718, -1085, -1362, -1391, -1881, -1921, -2035, -310, -314, -357, -359, -361, -363, -365, -1540, -1612, -1616, -1618, -1706 ],
+            'Akainu': [ -459, -1192, -1240, -1314, -1764, -1847, -2034, -750, -752, -754, -756, -758, -760, -838, -1230, -1316, -1322, -1324, -1614 ],
+            'Trafalgar Law': [ -1001, -1045, -1751, -1763, -3336, -1922, -2001, -2195, -840, -842, -844, -846, -872, -874, -876, -878, -993, -999, -1749, -1875 ],
+            'Shirahoshi': [ -720, -935, -1434, -1473, -1880, -1927, -2066, -939, -1436, -1438, -1440, -1442, -1444, -1475, -1477, -1479, -1481, -1483, -1700 ],
+            'Fujitora': [ -870, -1035, -1123, -1869, -1928, -2357, -2444, -2505, -995, -1232, -1234, -1236, -1238, -1318, -1320, -1796, -1871, -1904, -1906, -1908 ],
+            'Whitebeard & Marco': [ -2007, -2023, -2025, -2181, -2302, -1902, -1989, -2027, -2029, -2031, -2068, -2117, -2199, -2240, -2244, -2247, -2308 ],
+            'Sabo': [ -1935, -1985, -2113, -2251, -2300, -2441, -1895, -1926, -1953, -1959, -1987, -1991, -1993, -2050, -2119, -2154, -2156, -2161, -2238 ],
+            'Vinsmoke Sanji': [ -1951, -2074, -2076, -2148, -2236, -2363, -1955, -1957, -2013, -2048, -2072, -2078, -2080, -2082, -2150, -2242, -2273, -2275 ],
+            'Jinbe': [ -2099, -2201, -2234, -2265, -2330, -2500, -1974, -2101, -2103, -2105, -2107, -2203, -2205, -2267, -2269, -2271, -2332, -2334 ],
         },
         
         {
@@ -4185,6 +4750,24 @@ window.drops = {
         },
         
         {
+            name: 'Beautiful Women\'s Relief - Nami',
+            thumb: 2588,
+            nakama: null,
+            gamewith: 155238,
+            showManual: true,
+            'All Difficulties': [ 9032, -2588, -1955, -1366, -2076 ],
+        },
+        
+        {
+            name: 'Beautiful Women\'s Relief - Hancock',
+            thumb: 2434,
+            nakama: null,
+            gamewith: 155240,
+            showManual: true,
+            'All Difficulties': [ 9031, -2434, -2183, -1747, -1445, -415 ],
+        },
+        
+        {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
             nakama: 6223400,
@@ -4241,6 +4824,7 @@ window.drops = {
         {
             name: '3 Stamina Ranking! Vs Sanji',
             thumb: 912,
+            global: true,
             nakama: 6091200,
             gamewith: 120486,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
@@ -4253,6 +4837,15 @@ window.drops = {
             nakama: 6217500,
             gamewith: 133004,
             condition: "Challenge: Characters with a cost of 49 or below. Crew's Special gauge is maxed",
+        },
+        
+        {
+            name: '3 Stamina Ranking! Vs Daifuku',
+            thumb: 2244,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: "Challenge: Crew's Special gauge is maxed",
         },
    ],
 

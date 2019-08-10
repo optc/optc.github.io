@@ -56,8 +56,8 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     });
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ], classes: [ ], type: [ ], stars: [ ], cost: [ 1, 99 ] };
-        $rootScope.filters = { custom: [ ], classes: [ ], type: [ ], stars: [ ], cost: [ 1, 99 ] };
+        filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ] };
+        $rootScope.filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ] };
     };
 
     $scope.onFilterClick = function(e, value) {

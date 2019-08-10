@@ -21,6 +21,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
 
     // damage numbers
     $scope.$watch('numbers',function(numbers) {
+        //console.log(numbers); Numbers contains all info about each indiviual hit thing SOLARIS
         [ 'STR', 'QCK', 'DEX', 'PSY', 'INT' ].forEach(function(which, n) {
             if (!numbers[which]) return;
             // rectangles

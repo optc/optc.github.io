@@ -437,6 +437,7 @@ directives.addTags = function($stateParams, $rootScope) {
             if (flags.tmlrr) element.append($('<span class="tag flag">Treasure Map Sugo-fest Limited Rare Recruit only</div>'));
             if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
             if (flags.shop) element.append($('<span class="tag flag">Rayleigh Shop Unit</div>'));
+            if (flags.tmshop) element.append($('<span class="tag flag">Trade Port Unit</div>'));
             if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
             if (CharUtils.checkFarmable(id, { 'Story Island': true }))
                 element.append($('<span class="tag flag">Story mode only</div>'));

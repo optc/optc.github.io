@@ -463,6 +463,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling [DEX] and [INT] orbs support.' });
         }
     },
+    2525: {
+        onInsertion: function($scope) {
+            if (++$scope.options.intOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [INT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.intOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [INT] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
@@ -521,6 +531,86 @@ window.events = {
         onRemoval: function($scope) {
             if (--$scope.options.meatOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    5168: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5169: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5170: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5171: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5172: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5173: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5174: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    5175: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
         }
     },
 };

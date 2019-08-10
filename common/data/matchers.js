@@ -299,6 +299,12 @@ window.matchers = [
         target: 'special',
         matcher: /(Following the activation.+boosts.+ATK|If during that turn.+boosts.+ATK)/i
     },
+
+    {
+        name: 'Following-turn Buff Enabler',
+        target: 'special',
+        matcher: /(Following the activation|If during that turn)/i
+    },
     
     {
         name: 'Color Affinity boosters',
@@ -316,12 +322,6 @@ window.matchers = [
         name: 'RCV boosters',
         target: 'special',
         matcher: /Boosts RCV/i
-    },
-
-    {
-        name: 'Orb lockers',
-        target: 'special',
-        matcher: /locks (orbs|all orbs|orb|own orb)/i
     },
 
     {
@@ -407,6 +407,12 @@ window.matchers = [
         name: 'Orb switchers',
         target: 'special',
         matcher: /switches orbs/i
+    },
+
+    {
+        name: 'Orb lockers',
+        target: 'special',
+        matcher: /locks (orbs|all orbs|orb|own orb)/i
     },
     
     {
@@ -640,6 +646,18 @@ window.matchers = [
     },
 
     {
+        name: 'Crew RCV DOWN reducer',
+        target: 'special',
+        matcher: /(removes|reduces).+RCV DOWN.+duration/i 
+    },
+
+    {
+        name: 'Crew No Healing reducer',
+        target: 'special',
+        matcher: /(removes|reduces).+No Healing.+duration/i 
+    },
+
+    {
         name: 'Crew Increase Damage Taken reducer',
         target: 'special',
         matcher: /(removes|reduces).+Increase Damage Taken.+duration/i 
@@ -758,6 +776,100 @@ window.matchers = [
         target: 'special',
         matcher: /makes PERFECTs easier to hit/i
     },
+    
+    /* * * * * Swap * * * * */
+
+    {
+        name: 'ATK boosters',
+        target: 'swap',
+        matcher: /Boosts.+ATK/i
+    },
+
+
+    {
+        name: 'Orb boosters',
+        target: 'swap',
+        matcher: /amplifies.+orb/i
+    },
+
+    
+    {
+        name: 'Color Affinity boosters',
+        target: 'swap',
+        matcher: /Boosts.+Color Affinity/i
+    },
+
+    {
+        name: 'Healers',
+        target: 'swap',
+        matcher: /Recovers/i
+    },
+    
+    {
+        name: 'Orb Controllers',
+        target: 'swap',
+        matcher: /(Changes.+(orb|orbs))/i
+    },
+
+    {
+        name: 'Self-orb controllers',
+        target: 'swap',
+        matcher: /Changes.+own orb.+into/i
+    },
+
+    {
+        name: 'Orb randomizers',
+        target: 'swap',
+        matcher: /randomizes.+orb/i
+    },
+
+    {
+        name: 'Damage reducers',
+        target: 'swap',
+        matcher: /Reduces (any )?damage received/i
+    },
+
+    {
+        name: 'Bind reducers',
+        target: 'swap',
+        matcher: /(reduces|removes)(.+and bind|.+, bind| bind).+duration/i
+    },
+
+    {
+        name: 'Despair reducers',
+        target: 'swap',
+        matcher: /(reduces|removes).+despair.+duration/i
+    },
+    
+    {
+        name: 'Silence reducers',
+        target: 'swap',
+        matcher: /(reduces|removes).+silence.+duration/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'swap',
+        matcher: /(reduces|removes).+Paralysis.+duration/i 
+    },
+    
+    /*{
+        name: 'Burn reducers',
+        target: 'swap',
+        matcher: /(reduces|removes).+Burn.+duration/i 
+    },*/
+    
+    {
+        name: 'Slot Bind reducers',
+        target: 'swap',
+        matcher: /(reduces|removes).+Slot Bind.+duration/i 
+    },
+
+    /*{
+        name: 'Blindness reducers',
+        target: 'swap',
+        matcher: /(reduces|removes).+blindness.+duration/i
+    },*/
     
     /* * * * * Sailor * * * * */
     
@@ -1006,13 +1118,37 @@ window.matchers = [
     },
     
     {
-        name: 'Type-boosting supports',
+        name: 'Final Stage Activated Support',
+        target: 'support',
+        matcher: /final stage/i
+    },
+    
+    {
+        name: 'First Special Activated Support',
+        target: 'support',
+        matcher: /uses (their|a).+special/i
+    },
+    
+    {
+        name: 'Debuff Activated Support',
+        target: 'support',
+        matcher: /when you are inflicted with/i
+    },
+    
+    {
+        name: 'Tap Timing Activated Support',
+        target: 'support',
+        matcher: /perfect|great|good/i
+    },
+    
+    {
+        name: 'Type-Supporting supports',
         target: 'support',
         matcher: /^[^,]+(STR|DEX|QCK|PSY|INT)\b/i
     },
 
     {
-        name: 'Class-boosting supports',
+        name: 'Class-Supporting supports',
         target: 'support',
         matcher: /^[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
     },
@@ -1040,11 +1176,53 @@ window.matchers = [
         target: 'support',
         matcher: /(Changes.+(orb|orbs))/i
     },
+
+    {
+        name: 'Orb randomizers',
+        target: 'support',
+        matcher: /randomizes.+orb/i
+    },
+
+    {
+        name: 'Orb switchers',
+        target: 'support',
+        matcher: /switches orbs/i
+    },
+
+    {
+        name: 'Orb lockers',
+        target: 'support',
+        matcher: /locks (the supported character's orb|orbs|all orbs|orb|own orb)/i
+    },
+    
+    {
+        name: 'Chain Lockers',
+        target: 'support',
+        matcher: /Locks the chain multiplier/i 
+    },
     
     {
         name: 'Damage Reduction supports',
         target: 'support',
         matcher: /Reduces damage received/i
+    },
+    
+    {
+        name: 'Damage Reduction Buff supports',
+        target: 'support',
+        matcher: /Reduces damage received.+turn/i
+    },
+
+    {
+        name: 'Defense reducers',
+        target: 'support',
+        matcher: /Reduces the defense/i
+    },
+
+    {
+        name: 'Delayers',
+        target: 'support',
+        matcher: /delays/i
     },
 
     {
@@ -1052,22 +1230,112 @@ window.matchers = [
         target: 'support',
         matcher: /Recovers/i
     },
-    
+
     {
-        name: 'Final Stage Activated Support',
+        name: 'Bind reducers',
         target: 'support',
-        matcher: /final stage/i
+        matcher: /(reduces|removes).+bind.+duration/i
+    },
+
+    {
+        name: 'Despair reducers',
+        target: 'support',
+        matcher: /(reduces|removes).+despair.+duration/i
     },
     
     {
-        name: 'First Special Activated Support',
+        name: 'Silence reducers',
         target: 'support',
-        matcher: /uses (their|a).+special/i
+        matcher: /(reduces|removes).+silence.+duration/i
     },
     
     {
-        name: 'Debuff Activated Support',
+        name: 'Paralysis reducers',
         target: 'support',
-        matcher: /when you are inflicted with/i
+        matcher: /(reduces|removes).+Paralysis.+duration/i 
+    },
+    
+    {
+        name: 'Burn reducers',
+        target: 'support',
+        matcher: /(reduces|removes).+Burn.+duration/i 
+    },
+
+    {
+        name: 'Blindness reducers',
+        target: 'support',
+        matcher: /(reduces|removes).+blindness.+duration/i
+    },
+
+    {
+        name: 'Crew ATK DOWN reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+ATK DOWN.+duration/i 
+    },
+
+    {
+        name: 'Crew Increase Damage Taken reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Increase Damage Taken.+duration/i 
+    },
+
+    /*{
+        name: 'Enemy End of Turn Heal buff reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+End of Turn Heal.+duration/i 
+    },*/
+
+    {
+        name: 'Enemy End of Turn Damage/Percent Cut buff reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+End of Turn Damage\/Percent Cut.+duration/i 
+    },
+
+    {
+        name: 'Enemy Enrage buff reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Enrage.+duration/i 
+    },
+
+    {
+        name: 'Enemy ATK UP buff reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+ATK UP.+duration/i 
+    },
+
+    {
+        name: 'Enemy Increased Defense reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Increased Defense.+duration/i 
+    },
+
+    /*{
+        name: 'Enemy Percent Damage Reduction reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Percent Damage Reduction.+duration/i 
+    },
+
+    {
+        name: 'Enemy Damage Nullification reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Damage Nullification.+duration/i 
+    },*/
+
+    {
+        name: 'Enemy Threshold Damage Reduction reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Threshold Damage Reduction.+duration/i 
+    },
+
+    {
+        name: 'Enemy Barrier reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Barrier .*duration/i 
+    },
+
+    {
+        name: 'Enemy Resilience reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Resilience.+duration/i 
     },
 ];

@@ -730,6 +730,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    2434: { // Boa Hancock
+        type: 'healer',
+        amount: 1200
+    },
     2443: { // Doflamingo
         type: 'healer',
     },
@@ -752,6 +756,30 @@ window.zombies = {
     2529: { // Neptune
         type: 'healer',
         multiplier: 5
+    },
+    2596: { // Big Mom
+        type: 'healer',
+        amount: 500
+    },
+    2598: { // Gastino
+        type: 'zombie',
+        threshold: 0.5//CHANGE THIS
+    },
+    2628: { // Smoothie
+        type: 'healer',
+        multiplier: 3
+    },
+    2630: { // Marguerite
+        type: 'healer',
+        multiplier: 3
+    },
+    2652: { // Chopper
+        type: 'healer',
+        amount: 809
+    },
+    2653: { // Chopper
+        type: 'healer',
+        amount: 809
     },
     5001: { // Smoker/Tashigi
         type: 'healer',
@@ -838,5 +866,41 @@ window.zombies = {
     5113: { // Ivan/Bon Clay
         type: 'healer',
         multiplier: 3
+    },
+    5168: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5169: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5170: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
+    5171: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
+    5172: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5173: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5
+    },
+    5174: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
+    },
+    5175: { // Shira/Mansherry
+        type: 'healer',
+        multiplier: 5,
+        threshold: 0.5
     },
 };

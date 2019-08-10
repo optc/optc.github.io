@@ -259,14 +259,16 @@ input[type="text"] {
 .stars-4:before { color: #f28e00; content: '\2605\2605\2605\2605'; }
 .stars-4:after  { color: #cccccc; content: '\2605\2605'; }
 
+*[class~="stars-4+"]:before { color: #AC6500; content: '\2605\2605\2605\2605\002B'; }
+
 .stars-5:before { color: #ff0000; content: '\2605\2605\2605\2605\2605'; }
 .stars-5:after  { color: #cccccc; content: '\2605'; }
 
-*[class~="stars-5+"]:before { color: #ff1493; content: '\2605\2605\2605\2605\2605\002B'; }
+*[class~="stars-5+"]:before { color: #990000; content: '\2605\2605\2605\2605\2605\002B'; }
 
 .stars-6:before { color: #9932cc; content: '\2605\2605\2605\2605\2605\2605'; }
 
-*[class~="stars-6+"]:before { color: #990000; content: '\2605\2605\2605\2605\2605\2605\002B'; }
+*[class~="stars-6+"]:before { color: #ff1493; content: '\2605\2605\2605\2605\2605\2605\002B'; }
 
 
 .block-icon:before, .tnd-icon:before {
