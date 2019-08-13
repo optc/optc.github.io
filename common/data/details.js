@@ -51419,14 +51419,14 @@ window.details = {
         ],
     },
     3356: {
-        special: "Deals 17 hits of random [QCK] damage to random enemies, reduces enemies' Threshold Damage Reduction duration by 4 turns and boosts ATK of Powerhouse characters by 1.75x for 1 turn.",
+        special: "Deals 17 hits of random [QCK] damage to random enemies, reduces enemies' Threshold Damage Reduction duration by 3 turns and boosts ATK of Powerhouse characters by 1.75x for 1 turn.",
         //specialNotes: "#{randomHits : 17}<br>#{random : 1,000 : 30,000 : for each hit}",
         specialName: "Gum-Gum Storm [Neo]",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 3x, reduces crew's current HP by 10% at the end of each turn and reduces his own ATK multiplier by 0.1x at the end of each turn",
         captainNotes: "His ATK multiplier will be 3.0x on the first turn, 2.9x on the second, 2.8x on the third and so on. The reduction stops once the multiplier is 1.0x. The multiplier affects all Powerhouse characters. You will not die to the HP reduction"
     },
     3357: {
-        special: "Deals 17 hits of random [QCK] damage to random enemies, reduces enemies' Threshold Damage Reduction duration by 4 turns and boosts ATK of Powerhouse characters by 1.75x for 1 turn.",
+        special: "Deals 17 hits of random [QCK] damage to random enemies, reduces enemies' Threshold Damage Reduction duration by 3 turns and boosts ATK of Powerhouse characters by 1.75x for 1 turn.",
         //specialNotes: "#{randomHits : 17}<br>#{random : 1,000 : 30,000 : for each hit}",
         specialName: "Gum-Gum Storm [Neo]",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 3.5x, reduces crew's current HP by 10% at the end of each turn and reduces his own ATK multiplier by 0.1x at the end of each turn",
