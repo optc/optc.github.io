@@ -2663,8 +2663,8 @@ window.cooldowns = [
     null,//Lobster
     null,
     null,
-    null,
-    null,
+    [ 18, 10 ],
+    [ 19, 11 ],
     null,
     null,
     null,

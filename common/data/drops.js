@@ -2442,6 +2442,15 @@ window.drops = {
             'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
         },
         
+        {
+            name: 'Diva Ann\'s Special Live Show',
+            dropID: 'event124',
+            thumb: 2665,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2665, 2666, -2485, -2483, -2481, -2479, -2475, -2431, -2271, -2247, -2244, -2152, -2150, -1763, -3336, -1749, -1192, -1764, -1131 ]
+        },
+        
     ],
 
             
@@ -3935,7 +3944,7 @@ window.drops = {
             thumb: 2649,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 160900,
             slefty: 'coliseums',
             Chaos: [ 2648, -2649 ],
         },
@@ -4173,7 +4182,7 @@ window.drops = {
             dropID: 'treasuremap24',
             thumb: 2659,
             nakama: null,
-            gamewith: null,
+            gamewith: 162014,
             'Expo Sea': [ 2658, 2660 ]
         },
         

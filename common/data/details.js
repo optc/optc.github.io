@@ -50483,7 +50483,7 @@ window.details = {
         sailor: "Boosts this character's damage against [QCK] characters by 2x",
     },
     2651: {//Douglass Bullet
-        captain: "Boosts ATK of [STR], [QCK] and [INT] characters by 4x, their HP by 1.2x, boosts own ATK by 4.5x and makes [STR], [QCK] and [INT] orbs beneficial for [STR] and [INT] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captain: "Boosts ATK of [STR], [QCK] and [INT] characters by 4x, their HP by 1.2x, boosts own ATK by 4.5x and makes [STR], [QCK] and [INT] orbs beneficial for [STR], [QCK] and [INT] characters. This character's own normal attacks count as Type Effective against all Types.",
         captainNotes: "Bullet will make only his own attacks type effective against all types",
         special: "Cuts the current HP of one enemy by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
         specialName: "Armor Assimilation: Union Armado",
@@ -50792,6 +50792,48 @@ window.details = {
             "level2": "Makes [DEX] orbs beneficial for Fighter characters",
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Fighter and Driven characters by 30" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs beneficial for Fighter characters" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire new Captain Ability: Boosts ATK of Fighter and Driven characters by 3.25x and reduces damage received up to 40% depending on the crew's current HP." },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
@@ -50842,6 +50884,23 @@ window.details = {
             "level1": "Makes [INT] orbs beneficial for Fighter characters",
         },
         sailorNotes: "#{beneficial}",
+        limit: [
+            { "description": "Boosts base HP by 90" },
+            { "description": "Boosts base HP by 120" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: Makes [INT] orbs beneficial for Fighter characters" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -50856,13 +50915,49 @@ window.details = {
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by 2 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
-                    "Level 3: Reduces Slot Bind duration by 4 turns on this character",
-                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
-                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
+        ],
+    },
+    2665: {//Ann
+        captain: "Boosts ATK of Free Spirit characters by 2.5x and recovers 2x character's RCV in HP at the end of each turn.",
+        special: "Reduces Silence and Paralysis duration by 3 turns and reduces Special Cooldown of Free Spirit characters by 1 turn.",
+        specialName: "Diva on Stage",
+        sailor: "Reduces own Silence duration by 3 turns",
+        support: [
+            {
+                "Characters": "Free Spirit characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2666: {//Donald Moderate
+        captain: "Boosts ATK of all characters by 1.2x and gives chance of duplicating a drop upon completion of the island.",
+        captainNotes: "Does not work if she was not your captain upon starting the island. Stacks with other additional drop captains, giving you two chances of getting an extra drop.",
+        special: "Reduces ATK DOWN duration by 3 turns, changes orbs in the top row into Matching orbs and boosts ATK of all characters by 1.5x for 1 turn.",
+        specialName: "The Partitioner Talk",
+        support: [
+            {
+                "Characters": "Powerhouse characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 3% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
         ],
     },
     3333: {//Kung Fu Luffy

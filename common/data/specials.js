@@ -8072,6 +8072,10 @@ window.specials = {
             window.specials[2661].multiplier = (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "INT") ? 1.75 : 1;
         },
     },
+    2666: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
