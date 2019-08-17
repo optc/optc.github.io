@@ -9453,11 +9453,29 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 3.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
     },
+    2663: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },
+        chainModifier: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1 && p.colorCount.INT >= 1) ? 1.5 : 1; }
+    },
+    2664: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },
+        chainModifier: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1) ? 1.5 : 1; }
+    },
     2665: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
     2666: {
         atk: function(p) { return 1.2; },
+    },
+    2667: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 1.2 : 1; },
+    },
+    2668: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 2.5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 1.25 : 1; },
     },
     3333: {
         hitAtk: function(p) {
@@ -9491,16 +9509,6 @@ window.captains = {
     3340: {
         atk: function(p) { return (p.unit.class.has("Fighter")) ? 2.25 : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter")) ? 1.5 : 1; },
-    },
-    3343: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
-        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },
-        chainModifier: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1 && p.colorCount.INT >= 1) ? 1.5 : 1; }
-    },
-    3344: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 2.75 : 1; },
-        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" ? 1.3 : 1; },
-        chainModifier: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1) ? 1.5 : 1; }
     },
     3345: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },

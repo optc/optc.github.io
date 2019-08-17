@@ -4794,6 +4794,15 @@ window.drops = {
         },
         
         {
+            name: 'Breakthrough the Marine Seige',
+            thumb: 2668,
+            nakama: null,
+            gamewith: null,
+            condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Simple Pistol, Swordsman\'s Loot」, 「Heavy Pistol, Swordsman\'s Loot」, and 「Luxorious Pistol, Marine\'s Loot」.',
+            'Chopperman Missions': [ 2667 ],
+        },
+        
+        {
             name: '21st Anniversary Island',
             thumb: 1682,
             nakama: 6168200,
