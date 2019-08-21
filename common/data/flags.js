@@ -2411,6 +2411,8 @@ window.flags = {
     2412: { rr: 1, rro: 1, lrr: 1, global: 1 },
     2413: { rr: 1, rro: 1, lrr: 1, global: 1 },
     2414: { rr: 1, rro: 1, lrr: 1, global: 1 },
+    2415: { global: 1 },
+    2416: { global: 1 },
     2417: { rr: 1, rro: 1 },
     2418: { rr: 1, rro: 1 },
     2419: { rr: 1, rro: 1 },
