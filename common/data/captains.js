@@ -9477,6 +9477,17 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 2.5 : 1; },
         hp: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? 1.25 : 1; },
     },
+    2669: {
+        atk: function(p) {
+            return Math.min(2.5, 2 + 0.05 * p.turnCounter);
+        }
+    },
+    2670: {
+        atk: function(p) {
+            return Math.min(3.25, 2.5 + 0.075 * p.turnCounter);
+        },
+        hp: function(p) { return 1.2; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

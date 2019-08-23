@@ -3218,6 +3218,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Rob Lucci',
+            thumb: 2670,
+            nakama: null,
+            gamewith: 160324,
+            Master: [ 2669 ],
+            Expert: [ 2669 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,

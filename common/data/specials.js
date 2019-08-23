@@ -8113,6 +8113,18 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         }
     },
+    2669: {
+        affinity: function(p) { return window.specials[2669].multiplier; },
+        onActivation: function(p) {
+            window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
+        },
+    },
+    2670: {
+        affinity: function(p) { return window.specials[2669].multiplier; },
+        onActivation: function(p) {
+            window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

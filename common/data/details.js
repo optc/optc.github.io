@@ -51114,6 +51114,74 @@ window.details = {
             },
         ],
     },
+    2669: {//Stampede Lucci
+        captain: "Boosts ATK of all characters by 2x and their HP by 1.2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 8 times to a maximum of 3.5x.",
+        captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
+        special: "Deals 100,000 Fixed damage to all enemies and randomizes all orbs, including [BLOCK] orbs, into either [STR], [QCK] or [INT] orbs. If your crew has 4 or more [STR] characters, boosts the Color Affinity of all characters by 2x for 1 turn. If your crew has 3 or more [QCK] or [INT] characters, reduces Bind duration by 5 turns and enemies' Percent Damage Reduction by 5 turns.",
+        specialName: "Zero Tempest Kick",
+    },
+    2670: {//Stampede Lucci
+        captain: "Boosts ATK of all characters by 2.5x and their HP by 1.2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 10 times to a maximum of 3.25x.",
+        captainNotes: "If a character dies and revives, it counts as killing a character. If you did not defeat an enemy, lose all ATK boost stacks.",
+        special: "Deals 100,000 Fixed damage to all enemies and randomizes all orbs, including [BLOCK] orbs, into either [STR], [QCK] or [INT] orbs. If your crew has 4 or more [STR] characters, boosts the Color Affinity of all characters by 2x for 1 turn. If your crew has 3 or more [QCK] or [INT] characters, reduces Bind duration by 5 turns and enemies' Percent Damage Reduction by 5 turns.",
+        specialName: "Zero Tempest Kick",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK of [STR] characters by 50",
+            "level2": "Makes [STR] orbs beneficial for Fighter and Slasher characters",
+        },
+        limit: [
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by 1%",
+                    "Level 2: Reduce damage taken from [DEX] characters by 2%",
+                    "Level 3: Reduce damage taken from [DEX] characters by 3%",
+                    "Level 4: Reduce damage taken from [DEX] characters by 4%",
+                    "Level 5: Reduce damage taken from [DEX] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[STR] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 2% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 5% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 7% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
