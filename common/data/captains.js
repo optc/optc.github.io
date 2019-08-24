@@ -8012,7 +8012,7 @@ window.captains = {
     2306: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.75, [ "Cerebral", "Slasher" ]); },
         hitAtk: function(p) {
-            if (!p.unit.class.has("Slasher") || !p.unit.class.has("Cerebral")) return 1;
+            if (!(p.unit.class.has("Slasher") || p.unit.class.has("Cerebral"))) return 1;
             return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 2.75 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
