@@ -7022,11 +7022,11 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
     2429: {
-        def: function(p) { return window.specials[2425].turnedOn ? 0.5 : 1; },
+        def: function(p) { return window.specials[2429].turnedOn ? 0.5 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2425].turnedOn = false;
-            window.specials[2425].turnedOn = p.captain.class.has("Slasher") ? true : false;
+            window.specials[2429].turnedOn = false;
+            window.specials[2429].turnedOn = p.captain.class.has("Slasher") ? true : false;
         },
     },
     2434: {
@@ -7038,6 +7038,7 @@ window.specials = {
         type: "class"
     },
     2437: {
+        def: function(p) { return 0.5; }, //change value 
         staticMult: function(p) { return 40; }
     },
     2438:{
@@ -7046,10 +7047,10 @@ window.specials = {
         type: "condition",
         onActivation: function(p) {
             window.specials[2438].turnedOn = p.defenseDown;
-            var n = (window.specials[2438].multiplier == 1 ? 1 : window.specials[2438].multiplier == 1.75 ? 2 : window.specials[1967].multiplier == 2 ? 3 : 0);
+            var n = (window.specials[2438].multiplier == 1 ? 1 : window.specials[2438].multiplier == 1.75 ? 2 : window.specials[2438].multiplier == 2 ? 3 : 0);
             window.specials[2438].multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x Orb boost, disable and re-enable this special',
+                text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x Reduced defense boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x Reduced defense boost, disable and re-enable this special',
                 name: '2438warning'
             });
         },

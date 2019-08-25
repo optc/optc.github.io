@@ -43776,7 +43776,7 @@ window.details = {
     },
     2437: {//Corazon
         captain: "Boosts ATK of [PSY] characters by 1.5x",
-        special: "Reduces enemy Percent Damage Reduction duration by 3 turns reduces Chain Multiplier Limit duration by 3 turns, reduces the defense of all enemies by ?% for 1 turn and adds 40x character's ATK as Additional Typeless Damage 1 turns",
+        special: "Reduces enemy Percent Damage Reduction duration by 3 turns, reduces Chain Multiplier Limit duration by 3 turns, reduces the defense of all enemies by ?% for 1 turn and adds 40x character's ATK as Additional Typeless Damage 1 turns",
         specialName: "The Gentle \"Heart\" Resolution",
         limit: [
             { "description": "Boosts base HP by 40" },
