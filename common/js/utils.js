@@ -177,8 +177,8 @@
             case '3336': return '../res/character_10642_t1.png'; break;
             case '3339': return '../res/character_10852_t1.png'; break;
             case '3340': return '../res/character_10853_t1.png'; break;
-            case '3343': return '../res/character_10713_t1.png'; break;
-            case '3344': return '../res/character_10714_t1.png'; break;
+            //case '2663': return '../res/character_10713_t1.png'; break;
+            //case '2664': return '../res/character_10714_t1.png'; break;
             case '3345': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5025.png'; break;
             case '3346': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5026.png'; break;
             case '3347': return '../res/character_1508_t1.png'; break;

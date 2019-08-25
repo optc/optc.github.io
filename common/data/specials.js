@@ -8072,6 +8072,59 @@ window.specials = {
             window.specials[2661].multiplier = (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "INT") ? 1.75 : 1;
         },
     },
+    2663: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK") ? 1 : window.specials[2663].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2663].multiplier == 1.75 ? 1 : 0);
+            window.specials[2663].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2663warning'
+            });
+        }
+    },
+    2664: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2664].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2664].multiplier == 1.75 ? 1 : 0);
+            window.specials[2664].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x orb boost. To switch to the ' + [2, 1.75][n] + 'x boost, disable and re-enable this special',
+                name: '2664warning'
+            });
+        }
+    },
+    2666: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+    },
+    2667: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
+    2668: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
+    2669: {
+        affinity: function(p) { return window.specials[2669].multiplier; },
+        onActivation: function(p) {
+            window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
+        },
+    },
+    2670: {
+        affinity: function(p) { return window.specials[2669].multiplier; },
+        onActivation: function(p) {
+            window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -8091,29 +8144,6 @@ window.specials = {
     3340: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },
         type: "class"
-    },
-    3343: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK") ? 1 : window.specials[3343].multiplier; },
-        type: "type",
-        onActivation: function(p) {
-            var n = (window.specials[3343].multiplier == 1.75 ? 1 : 0);
-            window.specials[3343].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3343warning'
-            });
-        }
-    },
-    3344: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3344].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
-        onActivation: function(p) {
-            var n = (window.specials[3344].multiplier == 1.75 ? 1 : 0);
-            window.specials[3344].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x orb boost. To switch to the ' + [2, 1.75][n] + 'x boost, disable and re-enable this special',
-                name: '3344warning'
-            });
-        }
     },
     3345: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },

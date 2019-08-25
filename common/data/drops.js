@@ -2371,8 +2371,9 @@ window.drops = {
         },
         
         {
-            name: 'Cavendish\'s Rose Colored Melancholy',
+            name: 'Rosy Melancholy',
             dropID: 'event116',
+            global: true,
             thumb: 2428,
             nakama: 2242800,
             gamewith: 141693,
@@ -2440,6 +2441,15 @@ window.drops = {
             nakama: null,
             gamewith: 159294,
             'All Difficulties': [ 2633, 2634, 2638, 2640, 2641, -2536, -2463, -2426, -2424, -2422, -2275, -2273, -2113, -2078, -2035, -1391, -1926, -1904, -1902, -1612, -2321 ]
+        },
+        
+        {
+            name: 'Diva Ann\'s Special Live Show',
+            dropID: 'event124',
+            thumb: 2665,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2665, 2666, -2485, -2483, -2481, -2479, -2475, -2431, -2271, -2247, -2244, -2152, -2150, -1763, -3336, -1749, -1192, -1764, -1131 ]
         },
         
     ],
@@ -2655,6 +2665,7 @@ window.drops = {
             name: 'Clash!! Eneru [Extra]',
             dropID: 'clashextra11',
             thumb: 603,
+            global: true,
             gamewith: 138206,
             'All Difficulties': [ 602 ],
             condition: "Chance of dropping the Support Medallions.",
@@ -3011,6 +3022,7 @@ window.drops = {
             name: 'Clash!! Bartolomeo [Extra]',
             dropID: 'clashextra30',
             thumb: 1879,
+            global: true,
             gamewith: 142094,
             'All Difficulties': [ 1878 ],
             condition: "Chance of dropping the Support Medallions.",
@@ -3198,11 +3210,20 @@ window.drops = {
         {
             name: 'Clash!! STAMPEDE',
             thumb: 2642,
-            global: true,
             nakama: null,
+            condition: 'Second Expert version with Bullet boss stage will drop Stampede Limit Break materials',
             gamewith: 160324,
             Master: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
             Expert: [ 2642, 2643, 2644, 2645, 2646, 2647, 2662 ],
+        },
+        
+        {
+            name: 'Clash!! Rob Lucci',
+            thumb: 2670,
+            nakama: null,
+            gamewith: 160324,
+            Master: [ 2669 ],
+            Expert: [ 2669 ],
         },
         
         {
@@ -3227,7 +3248,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1017, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1291, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1552, 1554, 1583, 1627, 1827, 1944, 2036, 2192, 2415, 2488 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1554, 1827, 2036, 2192, 2415, 2488 ],
             Neo: [ 1862, 1898, 1975, 2016 ],
         },
         
@@ -3237,7 +3258,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552, 2036, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 2036, 2192, 2488 ],
         },
         
         {
@@ -3246,7 +3267,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Exhibition: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1017, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 1552 ],
+            Exhibition: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528 ],
         },
 
         {
@@ -3355,6 +3376,19 @@ window.drops = {
         },
 
         {
+            name: 'Giant in Pigtails',
+            thumb: 1018,
+            showManual: true,
+            global: true,
+            nakama: 5101701,
+            gamewith: 27621,
+            slefty: 'coliseums',
+            Chaos: [ 1017, -1018 ],
+            Underground: [ 1017, -1018 ],
+            Exebition: [ 1017, -1018 ],
+        },
+
+        {
             name: 'Z, Destroyer of Evil',
             thumb: 1102,
             showManual: true,
@@ -3438,6 +3472,17 @@ window.drops = {
             slefty: 'coliseums',
             Underground: [ 1253, -1253 ],
             Exebition: [ 1253, -1253 ],
+        },
+
+        {
+            name: '"G" for Geo-Fist!',
+            thumb: 1292,
+            showManual: true,
+            global: true,
+            nakama: 5129101,
+            gamewith: 39532,
+            slefty: 'coliseums',
+            Chaos: [ 1291, -1292 ],
         },
 
         {
@@ -3594,6 +3639,32 @@ window.drops = {
         },
 
         {
+            name: 'Whitebeard\'s Ninth Division Commander',
+            thumb: 1528,
+            showManual: true,
+            global: true,
+            nakama: 5152801,
+            gamewith: 53591,
+            slefty: 'coliseums',
+            Chaos: [ 1528, -1528 ],
+            Underground: [ 1528, -1528 ],
+            Exebition: [ 1528, -1528 ],
+        },
+
+        {
+            name: 'Elbaph "New Generation" Warrior',
+            thumb: 1553,
+            showManual: true,
+            global: true,
+            nakama: 5155201,
+            gamewith: 54672,
+            slefty: 'coliseums',
+            Chaos: [ 1552, -1553 ],
+            Underground: [ 1552, -1553 ],
+            Exebition: [ 1552, -1553 ],
+        },
+
+        {
             name: 'Wano Kingdom Hero',
             thumb: 1555,
             showManual: true,
@@ -3604,6 +3675,17 @@ window.drops = {
             Chaos: [ 1554, -1555 ],
             Underground: [ 1554, -1555 ],
             Exebition: [ 1554, -1555 ],
+        },
+
+        {
+            name: 'Adventurer of Lies',
+            thumb: 1584,
+            showManual: true,
+            global: true,
+            nakama: 5158301,
+            gamewith: 56053,
+            slefty: 'coliseums',
+            Chaos: [ 1583, -1584 ],
         },
 
         {
@@ -3641,6 +3723,17 @@ window.drops = {
             Chaos: [ 1603, -1603 ],
             Underground: [ 1603, -1603 ],
             Exebition: [ 1603, -1603 ],
+        },
+
+        {
+            name: 'Destructive 1,000-Ton Vise',
+            thumb: 1628,
+            showManual: true,
+            global: true,
+            nakama: 5162701,
+            gamewith: 59479,
+            slefty: 'coliseums',
+            Chaos: [ 1627, -1628 ],
         },
 
         {
@@ -3935,7 +4028,7 @@ window.drops = {
             thumb: 2649,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 160900,
             slefty: 'coliseums',
             Chaos: [ 2648, -2649 ],
         },
@@ -4096,9 +4189,10 @@ window.drops = {
         },
 
         {
-            name: 'Cat Burglar Nami',
+            name: 'Nami',
             dropID: 'treasuremap16',
             thumb: 2362,
+            global: true,
             nakama: 8236200,
             gamewith: 134017,
             'Raging Sea': [ 2361, 9025 ]
@@ -4127,6 +4221,7 @@ window.drops = {
             name: 'Smoothie & Oven',
             dropID: 'treasuremap19',
             thumb: 2469,
+            global: true,
             nakama: 8246900,
             gamewith: 144785,
             'Sweet Sea': [ 2468 ]
@@ -4173,7 +4268,7 @@ window.drops = {
             dropID: 'treasuremap24',
             thumb: 2659,
             nakama: null,
-            gamewith: null,
+            gamewith: 162014,
             'Expo Sea': [ 2658, 2660 ]
         },
         
@@ -4252,6 +4347,7 @@ window.drops = {
             name: 'Ambush! Charlotte Linlin',
             dropID: 'ambush6',
             thumb: 2381,
+            global: true,
             nakama: 6238100,
             gamewith: 136823,
             condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
@@ -4268,11 +4364,11 @@ window.drops = {
             dropID: 'bond1',
             thumb: 2531,
             nakama: null,
-            gamewith: [ 150056, 155125 ],
+            gamewith: [ 150056, 155125, 159694, 156784, 159694 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
-            'Round 3': [ 2629 ],
+            'Round 4': [ 2629 ],
         },/*
         
         {
@@ -4508,6 +4604,7 @@ window.drops = {
         
         {
             name: 'Face Off! Luffy vs Katakuri',
+            global: true,
             thumb: 2363,
             gamewith: 136731,
             condition: 'Chance of dropping the Support Medallions.',
@@ -4743,6 +4840,7 @@ window.drops = {
         {
             name: 'Germa 66 Counterattack',
             thumb: 2446,
+            global: true,
             nakama: 6244600,
             gamewith: 143826,
             showManual: true,
@@ -4770,6 +4868,7 @@ window.drops = {
         {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
+            global: true,
             nakama: 6223400,
             gamewith: 143825,
             condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
@@ -4786,8 +4885,18 @@ window.drops = {
         },
         
         {
-            name: '21st Anniversary Island',
+            name: 'Breakthrough the Marine Seige',
+            thumb: 2668,
+            nakama: null,
+            gamewith: null,
+            condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Simple Pistol, Swordsman\'s Loot」, 「Heavy Pistol, Swordsman\'s Loot」, and 「Luxorious Pistol, Marine\'s Loot」.',
+            'Chopperman Missions': [ 2667 ],
+        },
+        
+        {
+            name: 'Straw Hat Day Anniversary Island',
             thumb: 1682,
+            global: true,
             nakama: 6168200,
             gamewith: null,
             showManual: true,
