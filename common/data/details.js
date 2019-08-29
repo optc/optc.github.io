@@ -51130,6 +51130,7 @@ window.details = {
             "level1": "Boosts base ATK of [STR] characters by 50",
             "level2": "Makes [STR] orbs beneficial for Fighter and Slasher characters",
         },
+        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "" },
             { "description": "" },
@@ -51178,6 +51179,337 @@ window.details = {
                     "Level 3: Adds 3% of this character's base ATK to the supported character's base ATK.",
                     "Level 4: Adds 5% of this character's base ATK to the supported character's base ATK.",
                     "Level 5: Adds 7% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
+    2671: {//Luffy Stampede
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captainNotes: "No confirmation on if the Despair and Paralysis reduction is once or multiple times",
+        special: "Deals 120x character's Atk in typless damage to all enemies, boosts own ATK by 2.5x for 2 turns, amplifies the effect of own orb by 2.5x for 2 turns and boosts own base ATK based on your current HP for 2 turns.",
+        specialName: "Gomu Gomu no King Kong Gatling",
+        specialNotes: "Base ATK boost is equal to current HP/20, the maximum effect at 20,000 HP will give a 1,000 base ATK boost.",
+    },
+    2672: {//Luffy Stampede
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captainNotes: "No confirmation on if the Despair and Paralysis reduction is once or multiple times",
+        special: "Deals 120x character's Atk in typless damage to all enemies, boosts own ATK by 2.5x for 2 turns, amplifies the effect of own orb by 2.5x for 2 turns and boosts own base ATK based on your current HP for 2 turns.",
+        specialName: "Gomu Gomu no King Kong Gatling",
+        specialNotes: "Base ATK boost is equal to current HP/20, the maximum effect at 20,000 HP will give a 1,000 base ATK boost.",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of [STR], [DEX] and [PSY] characters by 75",
+            "level2": "Makes [STR], [DEX], [RCV] and [TND] orbs beneficial for this character",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ? this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ? this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ? this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ? this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ? this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[STR], [DEX] and [PSY] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2673: {//Zoro Stampede
+        captain: "Boosts ATK of [DEX] characters by ?x and their HP by ?x.",
+        special: "Deals 200,000 fixed damage to one enemy, changes own and top row orbs into Matching orbs. If your crew has 5 or more [DEX] or [PSY] characters, amplifies the effect of orbs of [DEX] and [PSY] characters by 2x for 2 turns.",
+        specialName: "Three Sword Style - Ultra Tiger Hunting • Opposing the Tiger",
+        sailor: "Boosts base ATK of [DEX] and [PSY] characters by 50",
+    },
+    2674: {//Zoro Stampede
+        captain: "Boosts ATK of [DEX] characters by 2.75x and their HP by 1.25x.",
+        special: "Deals 200,000 fixed damage to one enemy, changes own and top row orbs into Matching orbs. If your crew has 5 or more [DEX] or [PSY] characters, amplifies the effect of orbs of [DEX] and [PSY] characters by 2x for 2 turns.",
+        specialName: "Three Sword Style - Ultra Tiger Hunting • Opposing the Tiger",
+        sailor: {
+            "base": "Boosts base ATK of [DEX] and [PSY] characters by 50",
+            "level1": "If your Captain is a [DEX] or [PSY] character, makes [QCK] orbs beneficial for [DEX] or [PSY] characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[QCK] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
+                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Nami, Usopp, Sanji, Chopper, Robin, Franky and Brook",
+                "description": [
+                        "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK.",
+                        "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK.",
+                        "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK.",
+                        "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK.",
+                        "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
+    },
+    2675: {//Nami Stampede
+        captain: "Boosts ATK of [PSY] characters by ?x, their RCV by ?x, and recovers ?x character's RCV at the end of each turn.",
+        special: [
+            {
+                "description": "Reduces Special Cooldown of [DEX] and [PSY] characters by 1 turn and reduces Bind duration by 2 turns.",
+                "cooldown": [ 12, 6 ],
+            },
+            {
+                "description": "Reduces Special Cooldown of [DEX] and [PSY] characters by 2 turns and reduces Bind, Silence and Chain Multiplier Limit duration by 5 turns.",
+                "cooldown": [ 20, 14 ],
+            },
+        ],
+        specialName: "Summer Sky - Zeus Breeze Tempo",
+        sailor: "Restores own special cooldown by 2 turns when it is rewinded",
+    },
+    2676: {//Nami Stampede
+        captain: "Boosts ATK of [PSY] characters by 2.5x, their RCV by 1.2x, and recovers 2x character's RCV at the end of each turn.",
+        special: [
+            {
+                "description": "Reduces Special Cooldown of [DEX] and [PSY] characters by 1 turn and reduces Bind duration by 2 turns.",
+                "cooldown": [ 12, 6 ],
+            },
+            {
+                "description": "Reduces Special Cooldown of [DEX] and [PSY] characters by 2 turns and reduces Bind, Silence and Chain Multiplier Limit duration by 5 turns.",
+                "cooldown": [ 20, 14 ],
+            },
+        ],
+        specialName: "Summer Sky - Zeus Breeze Tempo",
+        sailor: {
+            "base": "Restores own special cooldown by 2 turns when it is rewinded",
+            "level1": "Reduces own Silence duration by 5 turns",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Usopp, Sanji, Chopper, Robin, Franky and Brook",
+                "description": [
+                        "Level 1: Reduces damage received from [INT] characters by 1%. Adds 4% of this character's base RCV to the supported character's base RCV.",
+                        "Level 2: Reduces damage received from [INT] characters by 2%. Adds 5% of this character's base RCV to the supported character's base RCV.",
+                        "Level 3: Reduces damage received from [INT] characters by 3%. Adds 7% of this character's base RCV to the supported character's base RCV.",
+                        "Level 4: Reduces damage received from [INT] characters by 4%. Adds 10% of this character's base RCV to the supported character's base RCV.",
+                        "Level 5: Reduces damage received from [INT] characters by 5%. Adds 13% of this character's base RCV to the supported character's base RCV."
+                ]
+            }
+        ],
+    },
+    2677: {//Franky Stampede
+        captain: "Boosts ATK of [DEX] characters by ?x, boosts ATK of [PSY] characters by ?x and deals ?x character's Atk in DEX damage to all enemies at the end of each turn.",
+        special: "Reduces enemies' barrier duration by 1 turn and deals 75x character's ATK in [DEX] damage to all enemies. If your Captain's orb is [DEX] or [PSY], locks all orbs for 1 turn and boosts ATK of [DEX] and [PSY] characters by 2x for 2 turns",
+        specialName: "Franky Radical Beam Pirate Expo Version",
+        sailor: "Reduces Blindness duration by 5 turns",
+    },
+    2678: {//Franky Stampede
+        captain: "Boosts ATK of [DEX] characters by 2.5x, boosts ATK of [PSY] characters by 2x and deals 5x character's Atk in DEX damage to all enemies at the end of each turn.",
+        special: "Reduces enemies' barrier duration by 1 turn and deals 75x character's ATK in [DEX] damage to all enemies. If your Captain's orb is [DEX] or [PSY], locks all orbs for 1 turn and boosts ATK of [DEX] and [PSY] characters by 2x for 2 turns",
+        specialName: "Franky Radical Beam Pirate Expo Version",
+        sailor: {
+            "base": "Reduces Blindness duration by 5 turns",
+            "level1": "If your Captain is a [DEX] or [PSY] character, makes [RCV] and [TND] orbs benefical for [DEX] and [PSY] character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy, Zoro, Nami, Usopp, Sanji, Chopper, Robin and Brook",
+                "description": [
+                        "Level 1: Reduces damage received from [QCK] characters by 1%. Adds 4% of this character's base HP to the supported character's base HP.",
+                        "Level 2: Reduces damage received from [QCK] characters by 2%. Adds 5% of this character's base HP to the supported character's base HP.",
+                        "Level 3: Reduces damage received from [QCK] characters by 3%. Adds 7% of this character's base HP to the supported character's base HP.",
+                        "Level 4: Reduces damage received from [QCK] characters by 4%. Adds 10% of this character's base HP to the supported character's base HP.",
+                        "Level 5: Reduces damage received from [QCK] characters by 5%. Adds 13% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ],
+    },
+    2679: {//Usopp Stampede
+        captain: "Boosts ATK of Shooter characters by ?x and makes [STR], [DEX], [PSY], [RCV], and [END] orbs benefical for Shooter characters.",
+        special: "Cuts the HP of all enemies by 7% and delays all enemies proportional to the number of enemies on the stage when the special is activated.",
+        specialNotes: "The delay is exactly equal to the number of enemies on the stage.",
+        specialName: "Usopp Special",
+        sailor: "Reduces Paralysis duration by 1 turn",
+    },
+    2680: {//Usopp Stampede
+        captain: "Boosts ATK of Shooter characters by 2x and makes [STR], [DEX], [PSY], [RCV], and [END] orbs benefical for Shooter characters.",
+        special: "Cuts the HP of all enemies by 7% and delays all enemies proportional to the number of enemies on the stage when the special is activated.",
+        specialNotes: "The delay is exactly equal to the number of enemies on the stage.",
+        specialName: "Usopp Special",
+        sailor: "Reduces Paralysis duration by 1 turn",
+    },
+    2681: {//Douglass Bullet
+        captain: "Boosts ATK of [STR], [QCK] and [INT] characters by 4x, their HP by 1.2x, boosts own ATK by 4.75x and makes [STR], [QCK] and [INT] orbs beneficial for [STR], [QCK] and [INT] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captainNotes: "Bullet will make only his own attacks type effective against all types",
+        special: "Cuts the current HP of all enemies by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
+        specialName: "Armor Assimilation: Union Armado",
+        specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character per each turn the buff is active, and can change each turn.",
+        sailor: {
+            "base": "Boosts this character's damage against [QCK] characters by 2x",
+            "level1": "Boosts own base ATK by 300 if this character is the last in the chain to attack",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Sailor Ability 1: Boosts own base ATK by 300 if this character is the last in the chain to attack" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 7 turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 60% chance to deal 6% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 7% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 12% of this character's attack in extra damage"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[STR], [QCK] and [INT] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
                 ]
             }
         ],

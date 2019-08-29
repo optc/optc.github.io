@@ -9488,6 +9488,44 @@ window.captains = {
         },
         hp: function(p) { return 1.2; }
     },
+    2671: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.5 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 4 : 1; },
+    },
+    2672: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.5 : (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 4 : 1; },
+    },
+    2673: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.75 : 1; },//change this
+        hp: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },//change this
+    },
+    2674: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+    },
+    2675: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },//change this
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },//change this
+    },
+    2676: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    2677: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : p.unit.type == "PSY" ? 2 : 1; },//change this
+    },
+    2678: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : p.unit.type == "PSY" ? 2 : 1; },
+    },
+    2679: {
+        atk: function(p) { return (p.unit.class.has("Shooter")) ? 2.5 : 1; },
+    },
+    2680: {
+        atk: function(p) { return (p.unit.class.has("Shooter")) ? 2.5 : 1; },
+    },
+    2681: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.75 : (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

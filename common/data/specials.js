@@ -8125,6 +8125,46 @@ window.specials = {
             window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
         },
     },
+    2671: {
+        atkStatic: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
+        type: "base",
+        onActivation: function(p) {
+            window.specials[2671].momBoost = p.percHP*p.maxHP/20;
+        },
+    },
+    2672: {
+        atkStatic: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
+        type: "base",
+        onActivation: function(p) {
+            window.specials[2671].momBoost = p.percHP*p.maxHP/20;
+        },
+    },
+    2673: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2673].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2673].multiplier == (p.colorCount.DEX + p.colorCount.PSY >= 5) ? 2 : 1);
+        },
+    },
+    2674: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2674].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2674].multiplier == (p.colorCount.DEX + p.colorCount.PSY >= 5) ? 2 : 1);
+        },
+    },
+    2677: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2 : 1; },
+        type: "class",
+    },
+    2678: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2 : 1; },
+        type: "class",
+    },
+    2679: {
+        delay: function(p) { return 1; },
+    },
+    2680: {
+        delay: function(p) { return 1; },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -8681,7 +8721,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5090].multiplier = 3.5;
             }
-            window.specials[5090].momBoost = p.percHP*p.maxHP/100000;
+            window.specials[5090].momBoost = p.percHP*p.maxHP/100;
         },
     },
     5091: {
@@ -8698,7 +8738,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5091].multiplier = 3.5;
             }
-            window.specials[5091].momBoost = p.percHP*p.maxHP/100000;
+            window.specials[5091].momBoost = p.percHP*p.maxHP/100;
         },
     },
     5092: {
@@ -8715,7 +8755,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5092].multiplier = 3.5;
             }
-            window.specials[5092].momBoost = p.percHP*p.maxHP/100000;
+            window.specials[5092].momBoost = p.percHP*p.maxHP/100;
         },
     },
     5093: {
@@ -8732,7 +8772,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5093].multiplier = 3.5;
             }
-            window.specials[5093].momBoost = p.percHP*p.maxHP/100000;
+            window.specials[5093].momBoost = p.percHP*p.maxHP/100;
         },
     },
     5094: {
@@ -8749,7 +8789,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5094].multiplier = 3.5;
             }
-            window.specials[5094].momBoost = p.percHP*p.maxHP/100000;
+            window.specials[5094].momBoost = p.percHP*p.maxHP/100;
         },
     },
     5095: {
@@ -8766,7 +8806,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5095].multiplier = 3.5;
             }
-            window.specials[5095].momBoost = p.percHP*p.maxHP/100000;
+            window.specials[5095].momBoost = p.percHP*p.maxHP/100;
         },
     },
     5096: {

@@ -565,7 +565,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = 0.5;
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = 0.5;
         
-        if ([2650, 2651].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = 2;
+        if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = 2;
         
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
@@ -924,7 +924,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
-            if ([2650, 2651].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
+            if ([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
             else if(unit.type != type){
                 if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);
                 else if (unit.type == "DEX" && type == "STR") affinityMultiplier = Math.pow(affinityMultiplier, -1);
