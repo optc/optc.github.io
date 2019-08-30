@@ -51184,14 +51184,14 @@ window.details = {
         ],
     },
     2671: {//Luffy Stampede
-        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. Reduces Despair and Paralysis duration by 10 turns.",
         captainNotes: "No confirmation on if the Despair and Paralysis reduction is once or multiple times",
         special: "Deals 120x character's Atk in typless damage to all enemies, boosts own ATK by 2.5x for 2 turns, amplifies the effect of own orb by 2.5x for 2 turns and boosts own base ATK based on your current HP for 2 turns.",
         specialName: "Gomu Gomu no King Kong Gatling",
         specialNotes: "Base ATK boost is equal to current HP/20, the maximum effect at 20,000 HP will give a 1,000 base ATK boost.",
     },
     2672: {//Luffy Stampede
-        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. This character's own normal attacks count as Type Effective against all Types.",
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. Reduces Despair and Paralysis duration by 10 turns.",
         captainNotes: "No confirmation on if the Despair and Paralysis reduction is once or multiple times",
         special: "Deals 120x character's Atk in typless damage to all enemies, boosts own ATK by 2.5x for 2 turns, amplifies the effect of own orb by 2.5x for 2 turns and boosts own base ATK based on your current HP for 2 turns.",
         specialName: "Gomu Gomu no King Kong Gatling",
@@ -51414,14 +51414,14 @@ window.details = {
         ],
     },
     2679: {//Usopp Stampede
-        captain: "Boosts ATK of Shooter characters by ?x and makes [STR], [DEX], [PSY], [RCV], and [END] orbs benefical for Shooter characters.",
+        captain: "Boosts ATK of Shooter characters by ?x and makes [STR], [DEX], [PSY], [RCV], and [TND] orbs benefical for Shooter characters.",
         special: "Cuts the HP of all enemies by 7% and delays all enemies proportional to the number of enemies on the stage when the special is activated.",
         specialNotes: "The delay is exactly equal to the number of enemies on the stage.",
         specialName: "Usopp Special",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
     2680: {//Usopp Stampede
-        captain: "Boosts ATK of Shooter characters by 2x and makes [STR], [DEX], [PSY], [RCV], and [END] orbs benefical for Shooter characters.",
+        captain: "Boosts ATK of Shooter characters by 2x and makes [STR], [DEX], [PSY], [RCV], and [TND] orbs benefical for Shooter characters.",
         special: "Cuts the HP of all enemies by 7% and delays all enemies proportional to the number of enemies on the stage when the special is activated.",
         specialNotes: "The delay is exactly equal to the number of enemies on the stage.",
         specialName: "Usopp Special",
