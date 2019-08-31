@@ -9526,6 +9526,10 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 4.75 : (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.2 : 1; },
     },
+    2681: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.5 + .75 * ((p.percHP) / 100) : 1; },
+        rcv: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.25 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

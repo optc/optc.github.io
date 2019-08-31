@@ -51132,20 +51132,20 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
         limit: [
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
             { "description": "Acquire Potential 1: [DEX] Damage Reduction" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
-            { "description": "" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of [STR] characters by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 40" },
+            { "description": "Acquire Sailor Ability 2: Makes [STR] orbs beneficial for Fighter and Slasher characters" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 60" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
         potential: [
@@ -51162,10 +51162,10 @@ window.details = {
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
                     "Level 5: Reduces Slot Bind duration by 10 turns on this character"
                 ]
             },
@@ -51510,6 +51510,51 @@ window.details = {
                     "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 4: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
                     "Level 5: Adds 9% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
+    2682: {//Hancock Stampede
+        captain: "Boosts ATK of [DEX] and [PSY] characters proportionally to the crew's current HP, by 3.25x at max and their RCV by 1.25x.",
+        captainNotes: "#{captainProportional : higher : 2.5 + 0.75 * (remaining HP) / (total HP) : 3.25 : 2.5}",
+        special: "Cuts the current HP of one enemy by 20%, locks the chain multiplier at 3x for 1 turn and randomizes all orbs into either [DEX] or [PSY] orbs.",
+        specialName: "Boa Special",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of [DEX] and [PSY] characters by 50",
+            "level1": "If your Captain is a [DEX] or [PSY] character, makes [INT] orbs benefical for [DEX] and [PSY] character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Luffy",
+                "description": [
+                    "Level 1: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 2: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 3: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 4: Adds ?% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 5: Adds 11% of this character's base ATK and RCV to the supported character's base ATK and RCV."
                 ]
             }
         ],

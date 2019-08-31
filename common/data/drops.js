@@ -4847,6 +4847,16 @@ window.drops = {
         },
         
         {
+            name: 'Excape! The World\'s Strongest - Bullet',
+            thumb: 2446,
+            global: true,
+            nakama: 6244600,
+            gamewith: 143826,
+            showManual: true,
+            'All Difficulties': [  ],
+        },
+        
+        {
             name: 'Beautiful Women\'s Relief - Nami',
             thumb: 2588,
             nakama: null,
