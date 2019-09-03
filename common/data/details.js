@@ -40082,7 +40082,7 @@ window.details = {
         ]
     },
     2303: {//Charlotte Chiffon
-        captain: "Reduces damage received by ?% if HP is above 99% at the start of the turn",
+        captain: "Reduces damage received by 80% if HP is above 99% at the start of the turn",
         special: [
             {
                 "description": "Reduces Paralysis, Despair and Silence and ATK DOWN duration by 1 turn and recovers 3x character's RCV in HP at the end of each turn for 3 turns",
@@ -40099,7 +40099,7 @@ window.details = {
         sailorNotes: "#{silence}",
     },
     2304: {//Charlotte Chiffon
-        captain: "Boosts ATK of all characters by 1.5x and reduces damage received by ?% if HP is above 99% at the start of the turn",
+        captain: "Boosts ATK of all characters by 1.5x and reduces damage received by 80% if HP is above 99% at the start of the turn",
         special: [
             {
                 "description": "Reduces Paralysis, Despair and Silence and ATK DOWN duration by 1 turn and recovers 3x character's RCV in HP at the end of each turn for 3 turns",
@@ -40370,7 +40370,7 @@ window.details = {
         specialName: "A Punishment for the Disgraced",
     },
     2320: {//Story Cracker
-        captain: "Boosts ATK of Slasher characters by ?x and their HP by ?x and boosts chain by ?x if HP below ?% at the start of the turn",
+        captain: "Boosts ATK of Slasher characters by 2x and boosts chain by 1.2x if HP below ?% at the start of the turn",
         special: "Cuts the current HP of one enemy by 15%, reduces damage by 50% and deals 75x character's ATK as [INT] damage to all enemies at the end of the turn for 3 turns",
         specialName: "Baptism of the \"New World\"",
     },
@@ -46524,7 +46524,7 @@ window.details = {
         ]
     },
     2514: {//Urouge
-        captain: "Boosts ATK of Fighter characters by ?x and reduces damage received by ?%",
+        captain: "Boosts ATK of Fighter characters by 2.5x and reduces damage received by 3%",
         special: "Deals 150x character's ATK in [PSY] damage to one enemy, reduces Paralysis and Burn duration by 3 turns and reduces damage received by 80% for 1 turn. If during that turn you score 4 PERFECT hits, amplifies the effect of orbs of Fighter characters by 2.25x for 1 turn in the following turn.",
         specialName: "Karmic Punishment and Prayers",
         sailor: "If your Captain is a Fighter character, reduces Blindness duration by 3 turns",
@@ -48401,7 +48401,7 @@ window.details = {
         ],
     },
     2570: {//Doflamingo
-        captain: "Boosts ATK of Driven characters by ?x and their HP by ?x. Reduces ATK of [PSY] characters by ?%. If a character has a [STR] orb, boosts their ATK by ?x.",
+        captain: "Boosts ATK of Driven characters by 2x and their HP by 1.25x. Reduces ATK of [PSY] characters by 50%.",
         captainNotes: "All boosts are cumulative.",
         special: "Cuts the current HP of one enemy by 10%, boosts own ATK by 1.5x and amplifies the effects of own orb by 1.5x for 3 turns and changes [PSY], [TND] and [BOMB] orbs into [STR] orbs",
         specialName: "\"Power\" to Get Revenge",
@@ -51279,7 +51279,7 @@ window.details = {
         ],
     },
     2673: {//Zoro Stampede
-        captain: "Boosts ATK of [DEX] characters by ?x and their HP by ?x.",
+        captain: "Boosts ATK of [DEX] characters by 2.25x and their HP by 1.2x.",
         special: "Deals 200,000 fixed damage to one enemy, changes own and top row orbs into Matching orbs. If your crew has 5 or more [DEX] or [PSY] characters, amplifies the effect of orbs of [DEX] and [PSY] characters by 2x for 2 turns.",
         specialName: "Three Sword Style - Ultra Tiger Hunting • Opposing the Tiger",
         sailor: "Boosts base ATK of [DEX] and [PSY] characters by 50",
@@ -51346,7 +51346,7 @@ window.details = {
         ],
     },
     2675: {//Nami Stampede
-        captain: "Boosts ATK of [PSY] characters by ?x, their RCV by ?x, and recovers ?x character's RCV at the end of each turn.",
+        captain: "Boosts ATK of [PSY] characters by 2x, their RCV by 1.2x, and recovers 1x character's RCV at the end of each turn.",
         special: [
             {
                 "description": "Reduces Special Cooldown of [DEX] and [PSY] characters by 1 turn and reduces Bind duration by 2 turns.",
@@ -51430,13 +51430,13 @@ window.details = {
         ],
     },
     2677: {//Franky Stampede
-        captain: "Boosts ATK of [DEX] characters by ?x, boosts ATK of [PSY] characters by ?x and deals ?x character's Atk in DEX damage to all enemies at the end of each turn.",
+        captain: "Boosts ATK of [DEX] characters by 2x, boosts ATK of [PSY] characters by 1.5x and deals 3x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces enemies' barrier duration by 1 turn and deals 75x character's ATK in [DEX] damage to all enemies. If your Captain's orb is [DEX] or [PSY], locks all orbs for 1 turn and boosts ATK of [DEX] and [PSY] characters by 2x for 2 turns",
         specialName: "Franky Radical Beam Pirate Expo Version",
         sailor: "Reduces Blindness duration by 5 turns",
     },
     2678: {//Franky Stampede
-        captain: "Boosts ATK of [DEX] characters by 2.5x, boosts ATK of [PSY] characters by 2x and deals 5x character's Atk in DEX damage to all enemies at the end of each turn.",
+        captain: "Boosts ATK of [DEX] characters by 2.5x, boosts ATK of [PSY] characters by 2x and deals 5x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces enemies' barrier duration by 1 turn and deals 75x character's ATK in [DEX] damage to all enemies. If your Captain's orb is [DEX] or [PSY], locks all orbs for 1 turn and boosts ATK of [DEX] and [PSY] characters by 2x for 2 turns",
         specialName: "Franky Radical Beam Pirate Expo Version",
         sailor: {
