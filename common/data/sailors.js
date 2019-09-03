@@ -913,6 +913,17 @@ window.sailors = {
     2661: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
     },
+    2673: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2674: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2682: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

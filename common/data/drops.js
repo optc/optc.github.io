@@ -2684,6 +2684,17 @@ window.drops = {
         },
 
         {
+            name: 'Clash Neo!! Duval',
+            dropID: 'clashneo12',
+            condition: '4 Master versions with different conditions. Slasher/Striker/Free Spirit Only, Slasher Only, Striker Only and Free Spirit Only',
+            thumb: 654,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 3365 ],
+        },
+
+        {
             name: 'Clash!! Buster Call',
             dropID: 'clash13',
             thumb: 771,
