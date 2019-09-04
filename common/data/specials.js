@@ -8126,6 +8126,9 @@ window.specials = {
         },
     },
     2671: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName)}
         atkStatic: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
         type: "base",
         onActivation: function(p) {
@@ -8133,6 +8136,9 @@ window.specials = {
         },
     },
     2672: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName)}
         atkStatic: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
         type: "base",
         onActivation: function(p) {
