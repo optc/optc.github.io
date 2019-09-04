@@ -2687,11 +2687,11 @@ window.drops = {
             name: 'Clash Neo!! Duval',
             dropID: 'clashneo12',
             condition: '4 Master versions with different conditions. Slasher/Striker/Free Spirit Only, Slasher Only, Striker Only and Free Spirit Only',
-            thumb: 654,
+            thumb: 3368,
             global: true,
-            nakama: null,
+            nakama: 4065400,
             gamewith: null,
-            Master: [ 3365 ],
+            Master: [ 3366 ],
         },
 
         {
@@ -3259,8 +3259,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1040, 1042, 1086, 1088, 1090, 1140, 1144, 1195, 1250, 1252, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1554, 1827, 2036, 2192, 2415, 2488 ],
-            Neo: [ 1862, 1898, 1975, 2016 ],
+            Chaos: [ 778, 780, 803, 805, 832, 834, 859, 861, 925, 952, 982, 984, 1040, 1086, 1088, 1144, 1195, 1250, 1252, 1293, 1311, 1337, 1340, 1375, 1423, 1488, 1528, 1554],
         },
         
         {
@@ -3269,7 +3268,7 @@ window.drops = {
             global: true,
             gamewith: 17473,
             slefty: 'coliseums',
-            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528, 2036, 2192, 2488 ],
+            Underground: [ 778, 803, 832, 834, 859, 861, 904, 925, 927, 952, 984, 1019, 1195, 1197, 1252, 1293, 1311, 1340, 1423, 1424, 1459, 1488, 1528 ],
         },
         
         {
@@ -3398,6 +3397,50 @@ window.drops = {
             Underground: [ 1017, -1018 ],
             Exebition: [ 1017, -1018 ],
         },
+        
+        {
+            name: 'Killer',
+            thumb: 1042,
+            showManual: true,
+            global: true,
+            nakama: 5104201,
+            gamewith: 29617,
+            slefty: 'coliseums',
+            Chaos: [ 1042, -1043 ],
+        },
+        
+        {
+            name: 'Coliseum Neo vs. Killer',
+            thumb: 1899,
+            showManual: true,
+            global: true,
+            nakama: 5189801,
+            gamewith: 84586,
+            slefty: 'coliseums',
+            Chaos: [ 1898, -1899 ],
+        },
+        
+        {
+            name: 'X Drake',
+            thumb: 1091,
+            showManual: true,
+            global: true,
+            nakama: 5109001,
+            gamewith: 58332,
+            slefty: 'coliseums',
+            Chaos: [ 1090, -1091 ],
+        },
+        
+        {
+            name: 'Coliseum Neo vs. X Drake',
+            thumb: 1976,
+            showManual: true,
+            global: true,
+            nakama: 5197501,
+            gamewith: 92469,
+            slefty: 'coliseums',
+            Chaos: [ 1975, -1976 ],
+        },
 
         {
             name: 'Z, Destroyer of Evil',
@@ -3434,6 +3477,27 @@ window.drops = {
             Chaos: [ 1105, -1106 ],
             Underground: [ 1105, -1106 ],
             Exebition: [ 1105, -1106 ],
+        },
+        
+        {
+            name: 'Gecko Moria',
+            thumb: 1141,
+            showManual: true,
+            global: true,
+            nakama: 5114001,
+            gamewith: 58401,
+            slefty: 'coliseums',
+            Chaos: [ 1140, -1141 ],
+        },
+        
+        {
+            name: 'Coliseum EXTRA Vs. Gecko Moria',
+            thumb: 2512,
+            showManual: true,
+            nakama: null,
+            gamewith: 147896,
+            slefty: 'coliseums',
+            'All Difficulties': [ 2511, 2513 ],
         },
 
         {
@@ -3505,6 +3569,17 @@ window.drops = {
             gamewith: 43749,
             slefty: 'coliseums',
             Chaos: [ 1309, -1310 ],
+        },
+
+        {
+            name: 'Coliseum Neo vs. Kinemon',
+            thumb: 1863,
+            showManual: true,
+            global: true,
+            nakama: 5186201,
+            gamewith: 80292,
+            slefty: 'coliseums',
+            Chaos: [ 1862, -1863 ],
         },
 
         {
@@ -3864,6 +3939,18 @@ window.drops = {
         },
 
         {
+            name: 'Mr. Store',
+            thumb: 2037,
+            showManual: true,
+            global: true,
+            nakama: 5203601,
+            gamewith: 97356,
+            slefty: 'coliseums',
+            Chaos: [ 2036, -2037 ],
+            Underground: [ 2036, -2037 ],
+        },
+
+        {
             name: 'Steel Magnetic Arm',
             thumb: 2111,
             showManual: true,
@@ -3888,7 +3975,7 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum EX Vs. King Neptune',
+            name: 'Coliseum EXTRA Vs. King Neptune',
             thumb: 2529,
             showManual: true,
             nakama: null,
@@ -3994,20 +4081,33 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum EX Vs. Gecko Moria',
-            thumb: 2512,
+            name: 'Lord of the Land',
+            thumb: 2416,
             showManual: true,
-            nakama: null,
-            gamewith: 147896,
+            global: true,
+            nakama: 5241501,
+            gamewith: 140953,
             slefty: 'coliseums',
-            'All Difficulties': [ 2511, 2513 ],
+            Chaos: [ 2415, -2416 ],
+            Underground: [ 2415, -2416 ],
+        },
+        
+        {
+            name: 'Brook',
+            thumb: 2489,
+            showManual: true,
+            nakama: 5248801,
+            gamewith: 146819,
+            slefty: 'coliseums',
+            Chaos: [ 2488, -2611 ],
+            Underground: [ 2488, -2489 ],
         },
 
         {
             name: 'Doflamingo & Trebol',
             thumb: 2550,
             showManual: true,
-            nakama: null,
+            nakama: 5254901,
             gamewith: 150550,
             slefty: 'coliseums',
             Chaos: [ 2549, -2550 ],
@@ -4017,7 +4117,7 @@ window.drops = {
             name: 'Morley',
             thumb: 2569,
             showManual: true,
-            nakama: null,
+            nakama: 5256801,
             gamewith: null,
             slefty: 'coliseums',
             Chaos: [ 2568, -2569 ],
@@ -4027,7 +4127,7 @@ window.drops = {
             name: 'Jinbe',
             thumb: 2611,
             showManual: true,
-            nakama: null,
+            nakama: 5261001,
             gamewith: 156226,
             slefty: 'coliseums',
             Chaos: [ 2610, -2611 ],
@@ -4038,7 +4138,7 @@ window.drops = {
             name: 'Trafalgar Law',
             thumb: 2649,
             showManual: true,
-            nakama: null,
+            nakama: 5264801,
             gamewith: 160900,
             slefty: 'coliseums',
             Chaos: [ 2648, -2649 ],

@@ -4298,6 +4298,7 @@ window.evolutions = {
     2651: {
         evolution: 2681,
         evolvers: [  ]
+        // evolvers: [ skullBullet, skullBullet, skullBullet, skullBullet, skullBullet ]
     },
     3333: {
         evolution: 3334,

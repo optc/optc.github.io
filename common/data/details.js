@@ -51434,13 +51434,13 @@ window.details = {
     2677: {//Franky Stampede
         captain: "Boosts ATK of [DEX] characters by 2x, boosts ATK of [PSY] characters by 1.5x and deals 3x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces enemies' barrier duration by 1 turn and deals 75x character's ATK in [DEX] damage to all enemies. If your Captain's orb is [DEX] or [PSY], locks all orbs for 1 turn and boosts ATK of [DEX] and [PSY] characters by 2x for 2 turns",
-        specialName: "Franky Radical Beam Pirate Expo Version",
+        specialName: "Franky Radical Beam: Pirate Expo Version",
         sailor: "Reduces Blindness duration by 5 turns",
     },
     2678: {//Franky Stampede
         captain: "Boosts ATK of [DEX] characters by 2.5x, boosts ATK of [PSY] characters by 2x and deals 5x character's ATK in [DEX] damage to all enemies at the end of each turn.",
         special: "Reduces enemies' barrier duration by 1 turn and deals 75x character's ATK in [DEX] damage to all enemies. If your Captain's orb is [DEX] or [PSY], locks all orbs for 1 turn and boosts ATK of [DEX] and [PSY] characters by 2x for 2 turns",
-        specialName: "Franky Radical Beam Pirate Expo Version",
+        specialName: "Franky Radical Beam: Pirate Expo Version",
         sailor: {
             "base": "Reduces Blindness duration by 5 turns",
             "level1": "If your Captain is a [DEX] or [PSY] character, makes [RCV] and [TND] orbs benefical for [DEX] and [PSY] character",
@@ -51502,21 +51502,21 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by ?x and makes [STR], [DEX], [PSY], [RCV], and [TND] orbs benefical for Shooter characters.",
         special: "Cuts the HP of all enemies by 7% and delays all enemies proportional to the number of enemies on the stage when the special is activated.",
         specialNotes: "The delay is exactly equal to the number of enemies on the stage.",
-        specialName: "Usopp Special",
+        specialName: "Green Star-Treasure Aim: Impact Wolf Grass",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
     2680: {//Usopp Stampede
         captain: "Boosts ATK of Shooter characters by 2x and makes [STR], [DEX], [PSY], [RCV], and [TND] orbs benefical for Shooter characters.",
         special: "Cuts the HP of all enemies by 7% and delays all enemies proportional to the number of enemies on the stage when the special is activated.",
         specialNotes: "The delay is exactly equal to the number of enemies on the stage.",
-        specialName: "Usopp Special",
+        specialName: "Green Star-Treasure Aim: Impact Wolf Grass",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
     2681: {//Douglass Bullet
         captain: "Boosts ATK of [STR], [QCK] and [INT] characters by 4x, their HP by 1.2x, boosts own ATK by 4.75x and makes [STR], [QCK] and [INT] orbs beneficial for [STR], [QCK] and [INT] characters. This character's own normal attacks count as Type Effective against all Types.",
         captainNotes: "Bullet will make only his own attacks type effective against all types",
         special: "Cuts the current HP of all enemies by 20% that will ignore damage negating abilities and barriers and deals 2x the damage dealt by this character with normal attacks to all enemies at the end of each turn for 2 turns.",
-        specialName: "Armor Assimilation: Union Armado",
+        specialName: "Ultimate Fist",
         specialNotes: "End of Turn damage is based on the damage dealt by the Bullet who activated the buff and is dependent on how much damage in normal attacks by that character per each turn the buff is active, and can change each turn.",
         sailor: {
             "base": "Boosts this character's damage against [QCK] characters by 2x",
@@ -52255,7 +52255,7 @@ window.details = {
         special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
         sailor: "Makes [DEX] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
-        specialName: "Absolute Pruning",
+        specialName: "Bonsai Rest & Recuperation",
     },
     3363: {//Kimono Akainu
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
@@ -52265,26 +52265,43 @@ window.details = {
             "level1": "Boosts base ATK of [QCK] and [PSY] characters by 50",
         },
         sailorNotes: "#{beneficial}",
-        specialName: "Absolute Pruning",
+        specialName: "Bonsai Rest & Recuperation",
+        /*limit: [
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability: Boosts base ATK of [QCK] and [PSY] characters by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential: Pinch Healing" },
+        ],*/
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [STR] characters by ?%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
@@ -52293,11 +52310,11 @@ window.details = {
             {
                 "Characters": "Aokiji and Kizaru",
                 "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by ?% for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by ?% for 1 turn.",
-                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by ?% for 1 turn.",
-                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by ?% for 1 turn.",
-                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by ?% for 1 turn."
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 95% for 1 turn."
                 ]
             }
         ]
@@ -52318,25 +52335,42 @@ window.details = {
         },
         sailorNotes: "#{beneficial}",
         specialName: "Boat Rest & Recuperation",
+        limit: [
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability: Boosts base ATK of [STR] and [INT] characters by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential: Pinch Healing" },
+        ],
         potential: [
             {
                 "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
-                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
         ],
