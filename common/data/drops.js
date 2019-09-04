@@ -2448,7 +2448,7 @@ window.drops = {
             dropID: 'event124',
             thumb: 2665,
             nakama: null,
-            gamewith: null,
+            gamewith: 162860,
             'All Difficulties': [ 2665, 2666, -2485, -2483, -2481, -2479, -2475, -2431, -2271, -2247, -2244, -2152, -2150, -1763, -3336, -1749, -1192, -1764, -1131 ]
         },
         
@@ -2681,6 +2681,17 @@ window.drops = {
             slefty: 'raid_bosses/12',
             Master: [ 112, 118, 302, 652 ],
             Expert: [ 86, 97, 112, 652 ]
+        },
+
+        {
+            name: 'Clash Neo!! Duval',
+            dropID: 'clashneo12',
+            condition: '4 Master versions with different conditions. Slasher/Striker/Free Spirit Only, Slasher Only, Striker Only and Free Spirit Only',
+            thumb: 654,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 3365 ],
         },
 
         {
@@ -3218,10 +3229,10 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Rob Lucci',
+            name: 'Showdown!! Lucci',
             thumb: 2670,
             nakama: null,
-            gamewith: 160324,
+            gamewith: 163423,
             Master: [ 2669 ],
             Expert: [ 2669 ],
         },
@@ -4364,11 +4375,12 @@ window.drops = {
             dropID: 'bond1',
             thumb: 2531,
             nakama: null,
-            gamewith: [ 150056, 155125, 159694, 156784, 159694 ],
+            gamewith: [ 150056, 155125, 159694, 156784, 159694, 164568 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
             'Round 4': [ 2629 ],
+            'Round 6': [ 2682 ],
         },/*
         
         {
@@ -4848,6 +4860,16 @@ window.drops = {
         },
         
         {
+            name: 'Excape! The World\'s Strongest - Bullet',
+            thumb: 2681,
+            global: true,
+            nakama: null,
+            gamewith: 164245,
+            showManual: true,
+            'All Difficulties': [  ],
+        },
+        
+        {
             name: 'Beautiful Women\'s Relief - Nami',
             thumb: 2588,
             nakama: null,
@@ -4888,7 +4910,7 @@ window.drops = {
             name: 'Breakthrough the Marine Seige',
             thumb: 2668,
             nakama: null,
-            gamewith: null,
+            gamewith: 162504,
             condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Simple Pistol, Swordsman\'s Loot」, 「Heavy Pistol, Swordsman\'s Loot」, and 「Luxorious Pistol, Marine\'s Loot」.',
             'Chopperman Missions': [ 2667 ],
         },
