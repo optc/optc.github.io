@@ -51659,6 +51659,55 @@ window.details = {
             }
         ],
     },
+    2441: {//Sabo Stampede
+        captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 2.5x.",
+        special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
+        specialName: "Sabo Special",
+        sailor: "Boosts base HP of [PSY] characters by 30",
+    },
+    2441: {//Sabo Stampede
+        captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2.75x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 3.25x.",
+        special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
+        specialName: "Sabo Special",
+        sailor: {
+            "base": "Boosts base HP of [PSY] characters by 30",
+            "level1": "Completely resists Silence on this character",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[PSY] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",

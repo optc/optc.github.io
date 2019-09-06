@@ -9528,6 +9528,12 @@ window.captains = {
         atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.5 + .75 * ((p.percHP) / 100) : 1; },
         rcv: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.25 : 1; },
     },
+    2421: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? Math.min(2.5, 2 + .1 * p.turnCounter) : 1; }
+    },
+    2422: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? Math.min(3.25, 2.75 + .1 * p.turnCounter) : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

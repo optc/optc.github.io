@@ -8178,6 +8178,12 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
         }
     },
+    2683: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.75 : 1; },
+    },
+    2684: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.75 : 1; },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
