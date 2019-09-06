@@ -8129,20 +8129,18 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName)},
-        atkStatic: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
-        type: "base",
+        atkbase: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
         onActivation: function(p) {
-            window.specials[2671].momBoost = p.percHP*p.maxHP/20;
+            window.specials[2671].momBoost = Math.floor(p.percHP*p.maxHP/2000);
         },
     },
     2672: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName)},
-        atkStatic: function(p) { return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2671].momBoost) : 0; },
-        type: "base",
+        atkbase: function(p) { console.log(p); return p.slot == p.sourceSlot ? Math.min(1000,window.specials[2672].momBoost) : 0; },
         onActivation: function(p) {
-            window.specials[2671].momBoost = p.percHP*p.maxHP/20;
+            window.specials[2672].momBoost = Math.floor(p.percHP*p.maxHP/2000);
         },
     },
     2673: {
@@ -8765,8 +8763,7 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName); }
     },
     5090: {
-        atkStatic: function(p) { return Math.min(1000,window.specials[5090].momBoost); },
-        type: "base",
+        atkbase: function(p) { return Math.min(1000,window.specials[5090].momBoost); },
         chain: function(p) { return window.specials[5090].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -8778,12 +8775,11 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5090].multiplier = 3.5;
             }
-            window.specials[5090].momBoost = p.percHP*p.maxHP/100;
+            window.specials[5090].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     5091: {
-        atkStatic: function(p) { return Math.min(1000,window.specials[5091].momBoost); },
-        type: "base",
+        atkbase: function(p) { return Math.min(1000,window.specials[5091].momBoost); },
         chain: function(p) { return window.specials[5091].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -8795,12 +8791,11 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5091].multiplier = 3.5;
             }
-            window.specials[5091].momBoost = p.percHP*p.maxHP/100;
+            window.specials[5091].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     5092: {
-        atkStatic: function(p) { return Math.min(1000,window.specials[5092].momBoost); },
-        type: "base",
+        atkbase: function(p) { return Math.min(1000,window.specials[5092].momBoost); },
         chain: function(p) { return window.specials[5092].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -8812,12 +8807,11 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5092].multiplier = 3.5;
             }
-            window.specials[5092].momBoost = p.percHP*p.maxHP/100;
+            window.specials[5092].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     5093: {
-        atkStatic: function(p) { return Math.min(1000,window.specials[5093].momBoost); },
-        type: "base",
+        atkbase: function(p) { return Math.min(1000,window.specials[5093].momBoost); },
         chain: function(p) { return window.specials[5093].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -8829,12 +8823,11 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5093].multiplier = 3.5;
             }
-            window.specials[5093].momBoost = p.percHP*p.maxHP/100;
+            window.specials[5093].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     5094: {
-        atkStatic: function(p) { return Math.min(1000,window.specials[5094].momBoost); },
-        type: "base",
+        atkbase: function(p) { return Math.min(1000,window.specials[5094].momBoost); },
         chain: function(p) { return window.specials[5094].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -8846,12 +8839,11 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5094].multiplier = 3.5;
             }
-            window.specials[5094].momBoost = p.percHP*p.maxHP/100;
+            window.specials[5094].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     5095: {
-        atkStatic: function(p) { return Math.min(1000,window.specials[5095].momBoost); },
-        type: "base",
+        atkbase: function(p) { return Math.min(1000,window.specials[5095].momBoost); },
         chain: function(p) { return window.specials[5095].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -8863,7 +8855,7 @@ window.specials = {
             if (p.percHP >= 50) {
                 window.specials[5095].multiplier = 3.5;
             }
-            window.specials[5095].momBoost = p.percHP*p.maxHP/100;
+            window.specials[5095].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     5096: {
