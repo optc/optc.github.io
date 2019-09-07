@@ -51661,13 +51661,13 @@ window.details = {
             }
         ],
     },
-    2441: {//Sabo Stampede
+    2683: {//Sabo Stampede
         captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 2.5x.",
         special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
         specialName: "Burning Dragon Claw Fist: Blaze Dragon King",
         sailor: "Boosts base HP of [PSY] characters by 30",
     },
-    2441: {//Sabo Stampede
+    2684: {//Sabo Stampede
         captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2.75x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 3.25x.",
         special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
         specialName: "Burning Dragon Claw Fist: Blaze Dragon King",
