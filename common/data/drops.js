@@ -3987,6 +3987,7 @@ window.drops = {
             name: 'Coliseum EXTRA Vs. King Neptune',
             thumb: 2529,
             showManual: true,
+            global: true,
             nakama: null,
             gamewith: 149444,
             slefty: 'coliseums',
