@@ -924,6 +924,12 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
     },
+    2683: {
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+    },
+    2684: {
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

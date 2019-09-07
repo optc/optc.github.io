@@ -128,14 +128,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (n > 5 || x.unit === null) return;
             var shipParam = getParameters(n);
             // hp
-            var hp = getStatOfUnit(x,'hp');
+            var hp = getStatOfUnit(x,'hp',n);
             hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n,shipParam);
             hp = applyStaticEffectsToHP(n,hp);
             hp *= getEffectBonus('hp',x.unit);
             hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n,shipParam);
             hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
             // rcv
-            var rcv = getStatOfUnit(x,'rcv');
+            var rcv = getStatOfUnit(x,'rcv',n);
             rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n,shipParam);
             rcv *= getShipBonus('rcv',false,x.unit,n,team[1].unit,n,shipParam);
             rcv *= getEffectBonus('rcv',x.unit);
@@ -222,7 +222,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var friendCaptain = $scope.tdata.team[0];
             var captain = $scope.tdata.team[1];
             var orb = $scope.tdata.team[n].orb;
-            var atk = getStatOfUnit(x,'atk'); // basic attack (scales with level);
+            var atk = getStatOfUnit(x,'atk',n); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n,shipParam), againstType = type;//Same problem as above, so yeah
             var multipliers = [ ];
             if (orb == 'g') orb = 1.5;
@@ -421,13 +421,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     /* * * * * * Basic operations * * * * */
 
-    var getStatOfUnit = function(data,stat) {
+    var getStatOfUnit = function(data,stat,slot) {
+        var atkbaseDamage = 0
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
-        return Math.floor(result) + candyBonus;
+        enabledSpecials.forEach(function(data) {
+            if (data.hasOwnProperty('atkbase') && stat == "atk"){
+                var params = getParameters(slot);
+                params["sourceSlot"] = data.sourceSlot;
+                atkbaseDamage = data.atkbase(params);
+            }
+        });
+        return Math.floor(result) + candyBonus + atkbaseDamage;
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -863,6 +871,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         chainSpecials = [ ];
         chainAddition = [ ];
         affinityMultiplier = [ ];
+        atkbase = [ ];
         captAffinityMultiplier = [ ];
         staticMultiplier = [ ];
         enabledSpecials.forEach(function(data) {
@@ -874,6 +883,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
             if (data.hasOwnProperty('affinity'))
                 result.affinity.push({ sourceSlot: data.sourceSlot, f: data.affinity });
+            if (data.hasOwnProperty('atkbase'))
+                atkbase.push({ sourceSlot: data.sourceSlot, f: data.atkbase });
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainAddition'))
@@ -943,15 +954,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         specialid = team[slot].unit.number + 1;
                         multSpecial = enabledSpecials[y].staticMult(params);
-                        baseDamage = getStatOfUnit(team[slot],'atk');
+                        baseDamage = getStatOfUnit(team[slot],'atk', slot);
                         enabledEffects.forEach(function(x) {
                             if (x.hasOwnProperty('atkStatic'))
                                 baseDamage += x.atkStatic(getParameters(slot));
                         });
-                        enabledSpecials.forEach(function(x) {
-                            if (x.hasOwnProperty('atkStatic'))
-                                baseDamage += x.atkStatic(getParameters(slot));
-                        });
+                        /*enabledSpecials.forEach(function(x) {
+                            if (x.hasOwnProperty('atkbase'))
+                                var params = getParameters(slot);
+                                params["sourceSlot"] = x.sourceSlot;
+                                baseDamage += x.atkbase(params);
+                        });*/
                     }
                 }
             }
@@ -963,15 +976,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             for (var y=0;y<enabledEffects.length;++y) {
                 if (enabledEffects[y].hasOwnProperty('staticMult')){
                     var slot = enabledEffects[y].sourceSlot;
-                    var baseDamage2 = getStatOfUnit(team[slot],'atk');
+                    var baseDamage2 = getStatOfUnit(team[slot],'atk',slot);
                     var mult = enabledEffects[y].staticMult(params);
                     enabledEffects.forEach(function(x) {
                         if (x.hasOwnProperty('atkStatic'))
                             baseDamage2 += x.atkStatic(getParameters(slot));
                     });
                     enabledSpecials.forEach(function(x) {
-                        if (x.hasOwnProperty('atkStatic'))
-                            baseDamage += x.atkStatic(getParameters(slot));
+                        if (x.hasOwnProperty('atkbase'))
+                            baseDamage += x.atkbase(getParameters(slot));
                     });
                     var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
@@ -1108,7 +1121,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         hitModifiers = getPossibleHitModifiers(cptsWith.hitModifiers);
         // compute special combinations
         computeSpecialsCombinations();
-        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1 || affinityMultiplier.length > 1);
+        $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1 || affinityMultiplier.length > 1 || atkbase.length > 1);
         $scope.conflictingMultipliers = ( staticMultiplier.length > 1 )
     };
     
@@ -1255,9 +1268,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (x.unit === null) return null;
             return {
                 name : x.unit.name,
-                hp   : Math.floor(getStatOfUnit(x,'hp') * getEffectBonus('hp', x)),
-                atk  : Math.floor(getStatOfUnit(x,'atk') * getEffectBonus('atk', x)),
-                rcv  : Math.floor(getStatOfUnit(x,'rcv') * getEffectBonus('rcv', x)),
+                hp   : Math.floor(getStatOfUnit(x,'hp',n) * getEffectBonus('hp', x)),
+                atk  : Math.floor(getStatOfUnit(x,'atk',n) * getEffectBonus('atk', x)),
+                rcv  : Math.floor(getStatOfUnit(x,'rcv',n) * getEffectBonus('rcv', x)),
                 cmb  :  x.unit.combo
             };
         });

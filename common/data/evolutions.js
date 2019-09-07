@@ -4300,6 +4300,10 @@ window.evolutions = {
         evolvers: [  ]
         // evolvers: [ skullBullet, skullBullet, skullBullet, skullBullet, skullBullet ]
     },
+    2683: {
+        evolution: 2684,
+        evolvers: [  ]
+    },
     3333: {
         evolution: 3334,
         evolvers: [ 118, 86, 266, 302, 267 ]
@@ -4350,18 +4354,18 @@ window.evolutions = {
     },
     3362: {
         evolution: 3363,
-        evolvers: [  ]
+        evolvers: [ 117, 83, 89, 95, 100 ]
     },
     3364: {
         evolution: 3365,
-        evolvers: [  ]
+        evolvers: [ 117, 83, 93, 99, 104 ]
     },
     3366: {
         evolution: 3367,
-        evolvers: [  ]
+        evolvers: [ 116, 117, 79, 90, 96 ]
     },
     3367: {
         evolution: 3368,
-        evolvers: [  ]
+        evolvers: [[ 118, 85, 266, 96, 101 ], [ 18 ]]
     },
 };
