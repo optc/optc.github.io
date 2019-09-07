@@ -46444,12 +46444,12 @@ window.details = {
     2511: {// Coliseum Moria EX
         captain: "Boosts ATK of Slasher characters by 2x",
         special: "Changes own orb, including [BLOCK] orbs, into [STR], recovers 5% of crew's MAX HP and deals 300,000 Fixed damage to one enemy",
-        specialName: "Horn Blade Shadow [EX]"
+        specialName: "Horn Blade Shadow [EXTRA]"
     },
     2512: {// Coliseum Moria EX
         captain: "Boosts ATK of Slasher characters by 2.25x, recovers 3x character's RCV in HP at the end of each turn",
         special: "Changes own orb, including [BLOCK] orbs, into [STR], recovers 5% of crew's MAX HP and deals 300,000 Fixed damage to one enemy",
-        specialName: "Horn Blade Shadow [EX]",
+        specialName: "Horn Blade Shadow [EXTRA]",
         sailor: {
             "base": "None",
             "level1": "If your Captain is a Slasher character, boosts own base ATK by 100",
@@ -46510,7 +46510,7 @@ window.details = {
     },
     2513: {//Oars EX
         captain: "Boosts ATK of Powerhouse characters by 3x after scoring 3 PERFECTs in a row",
-        specialName: "Oars Ball [EX]",
+        specialName: "Oars Ball [EXTRA]",
         special: "Reduces damage received by 50% for 1 turn, deals 30x character's ATK in [DEX] damage to all enemies",
         support: [
             {
@@ -46840,13 +46840,13 @@ window.details = {
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Changes own orb into [DEX], reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs duration by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Striker and Powerhouse characters for 3 turns",
         sailor: "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
-        specialName: "Great Ocean Current of Resuscitation [EX]",
+        specialName: "Great Ocean Current of Resuscitation [EXTRA]",
     },
     2529: {//Neptune
         captain: "Boosts ATK of all characters by 2x, boosts EXP gained by 1.5x and recovers 5x character's RCV in HP at the end of each turn",
         captainNotes: "EXP boost does not take effect if he becomes your captain in the middle of the adventure.",
         special: "Changes own orb into [DEX], reduces Despair and ATK DOWN duration by 5 turns and reduces enemies' Resilience Buffs duration by 5 turns. Reduces the defense of all enemies by 80% and amplifies the effect of orbs by 1.75x for Striker and Powerhouse characters for 3 turns",
-        specialName: "Great Ocean Current of Resuscitation [EX]",
+        specialName: "Great Ocean Current of Resuscitation [EXTRA]",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Powerhouse characters by 50",
             "level1": "When any other character uses a special, reduces own cooldown by 1 turn",
@@ -46906,7 +46906,7 @@ window.details = {
     2530: {//Shirahoshi
         captain: "Boosts ATK and RCV of [PSY] characters by 1.75x",
         special: "Reduces Bind, Despair and Paralysis duration by 2 turns, reduces damage received by 70% for 1 turn",
-        specialName: "Great Dinner Buffet [EX]",
+        specialName: "Great Dinner Buffet [EXTRA]",
         support: [
             {
                 "Characters": "Neptune",
@@ -51664,13 +51664,13 @@ window.details = {
     2441: {//Sabo Stampede
         captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 2.5x.",
         special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
-        specialName: "Sabo Special",
+        specialName: "Burning Dragon Claw Fist: Blaze Dragon King",
         sailor: "Boosts base HP of [PSY] characters by 30",
     },
     2441: {//Sabo Stampede
         captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2.75x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 3.25x.",
         special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
-        specialName: "Sabo Special",
+        specialName: "Burning Dragon Claw Fist: Blaze Dragon King",
         sailor: {
             "base": "Boosts base HP of [PSY] characters by 30",
             "level1": "Completely resists Silence on this character",
