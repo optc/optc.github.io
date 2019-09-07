@@ -978,7 +978,7 @@ window.effects = {
     
     'Face Off! Akainu vs. Aokiji: Rematch': {
         description: 'Stats of certain units boosted.',
-        thumb: 2363,
+        thumb: 3363,
         id: 76, // don't change this
         atk: function(p) {
             var id = p.number + 1;
