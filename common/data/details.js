@@ -9377,7 +9377,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Acquire Sailor Ability 2: Makes [STR] orbs beneficial for this character" },
-            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
@@ -9386,20 +9386,20 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
         ],
@@ -51659,13 +51659,13 @@ window.details = {
             }
         ],
     },
-    2441: {//Sabo Stampede
+    2683: {//Sabo Stampede
         captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 2.5x.",
         special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
         specialName: "Sabo Special",
         sailor: "Boosts base HP of [PSY] characters by 30",
     },
-    2441: {//Sabo Stampede
+    2684: {//Sabo Stampede
         captain:  "Boosts ATK of [PSY], [DEX] and [STR] characters by 2.75x. If you defeat an enemy, increases ATK boost slightly. Stacks up to 5 times to a maximum of 3.25x.",
         special: "Reduces Burn and ATK DOWN duration by 5 turns, boosts the Color Affinity of [PSY], [DEX] and [STR] characters by 1.75x for 2 turns and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for [PSY], [DEX] and [STR] characters for 2 turns",
         specialName: "Sabo Special",
