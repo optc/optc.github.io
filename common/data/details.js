@@ -42726,6 +42726,56 @@ window.details = {
             }
         ]
     },
+    2393: {//Ace
+        captain:  "Boosts ATK of Fighter, Free Spirit and Powerhouse characters by 2.5x if HP is below 50% at the start of the turn, 2x otherwise.",
+        special: "Deals 40x character's ATK in [STR] damage to one enemy and changes [BLOCK] orbs into Matching orbs. If HP is below 30% at the time the special is activated, amplifies the effect of orbs for Fighter, Free Spirit and Powerhouse characters by 2.25x for 1 turn, by 2x otherwise.",
+        specialName: "Ace Special",
+        sailor: "Boosts base ATK of characters in the top row by 80",
+    },
+    2394: {//Ace
+        captain:  "Boosts ATK of Fighter, Free Spirit and Powerhouse characters by 3x if HP is below 50% at the start of the turn, 2.5x otherwise.",
+        special: "Deals 40x character's ATK in [STR] damage to one enemy and changes [BLOCK] orbs into Matching orbs. If HP is below 30% at the time the special is activated, amplifies the effect of orbs for Fighter, Free Spirit and Powerhouse characters by 2.25x for 1 turn, by 2x otherwise.",
+        specialName: "Ace Special",
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 80",
+            "level1": "If your Captain is a Fighter, Free Spirit or Powerhouse character, completely removes Blindness duration completely",
+        },
+        potential: [
+            {
+                "Name": "[DEX] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 2: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 3: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 4: Reduce damage taken from [DEX] characters by ?%",
+                    "Level 5: Reduce damage taken from [DEX] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Whitebeard",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes [EMPTY] orbs on Free Spirit characters into Matching orbs.",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes [EMPTY] orbs on Free Spirit characters into Matching orbs.",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes [EMPTY] orbs on Free Spirit characters into Matching orbs.",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes [EMPTY] and Badly Matching orbs on Free Spirit characters into Matching orbs.",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes [EMPTY] and Badly Matching orbs on Free Spirit and Powerhouse characters into Matching orbs."
+                ]
+            }
+        ]
+    },
     2398: {//Big Emperor
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x. If you use \"Tactics Fifteen \"Big Emperor\"\" in this turn boosts ATK of Shooter characters by 2.75x instead.",
         special: "Increases damage received by 1.25x for 2 turns and amplifies the effect of orbs for Shooter characters by 1.75x for 2 turns. If during that turn you score 5 PERFECT hits, changes all orbs on Shooter characters into Matching orbs in the following turn.",
@@ -51673,24 +51723,41 @@ window.details = {
             "base": "Boosts base HP of [PSY] characters by 30",
             "level1": "Completely resists Silence on this character",
         },
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 1: Completely resists Silence on this character" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 70" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
         potential: [
             {
                 "Name": "[INT] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [INT] characters by ?%",
-                    "Level 2: Reduce damage taken from [INT] characters by ?%",
-                    "Level 3: Reduce damage taken from [INT] characters by ?%",
-                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
                     "Level 5: Reduce damage taken from [INT] characters by 5%"
                 ]
             },
             {
                 "Name": "Pinch Healing",
                 "description": [
-                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },

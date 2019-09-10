@@ -8441,6 +8441,12 @@ window.captains = {
     2392: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
+    2393: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.percHP <= 50.0 ? 2.5 : 2 : 1; }
+    },
+    2934: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.percHP <= 50.0 ? 3 : 2.5 : 1; }
+    },
     2398: {
         atk: function(p) {
             var specialEnabled = false;

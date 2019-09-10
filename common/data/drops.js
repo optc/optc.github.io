@@ -3233,8 +3233,8 @@ window.drops = {
             thumb: 2670,
             nakama: null,
             gamewith: 163423,
-            Master: [ 2669 ],
             Expert: [ 2669 ],
+            Ultimate: [ 2669 ],
         },
         
         {
@@ -3242,8 +3242,18 @@ window.drops = {
             thumb: 2684,
             nakama: null,
             gamewith: null,
-            Master: [ 2683 ],
             Expert: [ 2683 ],
+            Ultimate: [ 2683 ],
+        },
+        
+        {
+            name: 'Clash!! Ace',
+            thumb: 2394,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2393 ],
+            Expert: [ 2393 ],
+            Ultimate: [ 2393 ],
         },
         
         {
