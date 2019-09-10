@@ -33911,7 +33911,7 @@ window.details = {
         specialName: "Ama no Murakumo",
         sailor: {
             "base": "None",
-            "level1": "Restores his own special cooldown by 3 turns when it is rewinded",
+            "level1": "Restores his own special cooldown by 1 turn when it is rewinded",
             "level2": "Makes [DEX] orbs beneficial for all characters",
         },
         sailorNotes: "#{rewind : 1}<br/>#{beneficial}",
@@ -33922,7 +33922,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Acquire Potential 1: Reduce No Healing duration" },
             { "description": "Acquire new Captain Ability: Boosts ATK of [DEX], [PSY] and [INT] characters by 2.25x" },
-            { "description": "Acquire Sailor Ability 1: Restores his own special cooldown by 3 turns when it is rewinded" },
+            { "description": "Acquire Sailor Ability 1: Restores his own special cooldown by 1 turn when it is rewinded" },
             { "description": "Boosts base ATK by 15" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 15" },
