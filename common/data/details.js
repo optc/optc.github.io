@@ -9363,7 +9363,7 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of all characters by 20",
             "level2": "Makes [STR] orbs beneficial for this character",
         },
-        specialNotes: "#{beneficial}",
+        sailorNotes: "#{beneficial}",
         limit: [
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base HP by 30" },
@@ -9377,7 +9377,7 @@ window.details = {
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 60" },
             { "description": "Acquire Sailor Ability 2: Makes [STR] orbs beneficial for this character" },
-            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
             { "description": "Boosts base HP by 70" },
             { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
         ],
@@ -9386,20 +9386,20 @@ window.details = {
                 "Name": "[STR] Damage Reduction",
                 "description": [
                     "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
                     "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
         ],
@@ -52311,15 +52311,15 @@ window.details = {
         special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
         sailor: {
             "base": "Makes [DEX] orbs beneficial for this character",
-            "level1": "Boosts base ATK of [QCK] and [PSY] characters by 50",
+            "level1": "Boosts base ATK and HP of [QCK] and [PSY] characters by 50",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Bonsai Rest & Recuperation",
-        /*limit: [
+        limit: [
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Potential: [STR] Damage Reduction" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 25" },
             { "description": "Boosts base RCV by 25" },
@@ -52328,10 +52328,10 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of [QCK] and [PSY] characters by 50" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK and HP of [QCK] and [PSY] characters by 50" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Potential: Pinch Healing" },
-        ],*/
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
@@ -52363,7 +52363,7 @@ window.details = {
                     "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
                     "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
                     "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn.",
-                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 95% for 1 turn."
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn."
                 ]
             }
         ]
@@ -52380,7 +52380,7 @@ window.details = {
         special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
         sailor: {
             "base": "Makes [DEX] orbs beneficial for this character",
-            "level1": "Boosts base ATK of [STR] and [INT] characters by 50",
+            "level1": "Boosts base ATK and HP of [STR] and [INT] characters by 50",
         },
         sailorNotes: "#{beneficial}",
         specialName: "Boat Rest & Recuperation",
@@ -52388,7 +52388,7 @@ window.details = {
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base ATK by 25" },
             { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Potential: [PSY] Damage Reduction" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base RCV by 25" },
             { "description": "Boosts base RCV by 25" },
@@ -52397,9 +52397,9 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 80" },
             { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability: Boosts base ATK of [STR] and [INT] characters by 50" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK and HP of [STR] and [INT] characters by 50" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Potential: Pinch Healing" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
         ],
         potential: [
             {
