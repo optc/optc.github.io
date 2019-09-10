@@ -33682,19 +33682,31 @@ window.details = {
         },
         specialName: "The Gentle Breeze of the Feast",
     },
-    2042: {//Kizaru
+    2042: {//Kimono Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 1.75x",
         special: "Changes adjacent orbs into Matching Orbs. If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of each Type by 1 turn.",
         specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
     },
-    2043: {//Kizaru
+    2043: {//Kimono Kizaru
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Free Spirit and Shooter characters by 2.25x and their HP by 1.2x",
         special: "Changes adjacent orbs into Matching Orbs. If your crew has 2 or more characters of the same Type, reduces Special Cooldown of characters of each Type by 1 turn.",
         specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
+        support: [
+            {
+                "Characters": "Akainu and Aokiji",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] characters by 5% for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] characters by 10% for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] characters by 15% for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] characters by 20% for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] characters by 25% for 1 turn.",
+                ]
+            }
+        ]
     },
     2044: {//Ben Beckman
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
