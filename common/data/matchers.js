@@ -1266,6 +1266,12 @@ window.matchers = [
         target: 'support',
         matcher: /(reduces|removes).+blindness.+duration/i
     },
+    
+    {
+        name: 'Special cooldown reducers',
+        target: 'support',
+        matcher: /reduces special cooldown/i
+    },
 
     {
         name: 'Crew ATK DOWN reducer',
