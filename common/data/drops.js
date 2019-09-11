@@ -4301,6 +4301,15 @@ window.drops = {
             gamewith: 162014,
             'Expo Sea': [ 2658, 2660 ]
         },
+
+        {
+            name: 'Blackbeard',
+            dropID: 'treasuremap25',
+            thumb: 2690,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2689 ]
+        },
         
     ],
 

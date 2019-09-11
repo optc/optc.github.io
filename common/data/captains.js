@@ -9534,11 +9534,29 @@ window.captains = {
         atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.5 + .75 * ((p.percHP) / 100) : 1; },
         rcv: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.25 : 1; },
     },
-    2421: {
+    2683: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? Math.min(2.5, 2 + .1 * p.turnCounter) : 1; }
     },
-    2422: {
+    2684: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? Math.min(3.25, 2.75 + .1 * p.turnCounter) : 1; }
+    },
+    2685: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
+    },
+    2686: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
+    },
+    2687: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    2688: {
+        atk: function(p) { return (p.unit.class.has("Slasher")) ? 1.5 : 1; },
+    },
+    2689: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2690: {
+        atk: function(p) { return p.unit.type == "INT" ? p.actions[p.sourceSlot] ? 4 : 1.75 : 1; },
     },
     3333: {
         hitAtk: function(p) {
@@ -9572,12 +9590,6 @@ window.captains = {
     3340: {
         atk: function(p) { return (p.unit.class.has("Fighter")) ? 2.25 : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter")) ? 1.5 : 1; },
-    },
-    3345: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
-    },
-    3346: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
     },
     3347: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? 1.5 : 1; },

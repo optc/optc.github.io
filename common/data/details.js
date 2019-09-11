@@ -51235,14 +51235,14 @@ window.details = {
     },
     2671: {//Luffy Stampede
         captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. Reduces Despair and Paralysis duration by 10 turns.",
-        captainNotes: "No confirmation on if the Despair and Paralysis reduction is once or multiple times",
+        captainNotes: "The Despair and Paralysis reduction can activate multiple times",
         special: "Deals 120x character's Atk in typless damage to all enemies, boosts own ATK by 2.5x for 2 turns, amplifies the effect of own orb by 2.5x for 2 turns and boosts own base ATK based on your current HP for 2 turns.",
         specialName: "Gomu Gomu no King Kong Gatling",
         specialNotes: "Base ATK boost is equal to current HP/20, the maximum effect at 20,000 HP will give a 1,000 base ATK boost.",
     },
     2672: {//Luffy Stampede
         captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 4x, reduces damage recieved by 20%, boosts own ATK by 4.5x, makes [STR], [DEX] and [PSY] orbs beneficial for [STR], [DEX] and [PSY] characters. Reduces Despair and Paralysis duration by 10 turns.",
-        captainNotes: "No confirmation on if the Despair and Paralysis reduction is once or multiple times",
+        captainNotes: "The Despair and Paralysis reduction can activate multiple times",
         special: "Deals 120x character's Atk in typless damage to all enemies, boosts own ATK by 2.5x for 2 turns, amplifies the effect of own orb by 2.5x for 2 turns and boosts own base ATK based on your current HP for 2 turns.",
         specialName: "Gomu Gomu no King Kong Gatling",
         specialNotes: "Base ATK boost is equal to current HP/20, the maximum effect at 20,000 HP will give a 1,000 base ATK boost.",
@@ -51775,6 +51775,161 @@ window.details = {
             }
         ]
     },
+    2685: {//V2 Whitebeard
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
+        captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
+        special: "Deals 400,000 Fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
+        specialName: "Seismic Strike",
+    },
+    2686: {//V2 Whitebeard
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
+        captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
+        special: "Deals 400,000 Fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
+        specialName: "Seismic Strike",
+        sailor: {
+            "base": "None",
+            "level1": "Cannot be blown away",
+            "level2": "Boosts base ATK of all characters by 70",
+        },
+        limit: [
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Critical Hit" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Sailor Ability 1: Cannot be blown away" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK of all characters by 70" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Potential 3: Enrage" },
+        ],
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 50% chance to deal 7% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
+                ]
+            },
+            {
+               "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 75",
+                    "Level 2: Boosts base ATK by 100",
+                    "Level 3: Boosts base ATK by 200",
+                    "Level 4: Boosts base ATK by 250",
+                    "Level 5: Boosts base ATK by 300"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}"
+    },
+    2687: {//Sengoku
+        captain: "Boosts ATK of [DEX] characters by 1.5x",
+        special: "Reduces crew's current HP by 80%, reduces Bind and Burn duration by 5 turns and boosts the Color Affinity of [DEX], [QCK] and [PSY] characters depending on your Treasure Map Level for 1 turn.",
+        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+        specialName: "Resourceful General's Naval Tactic",
+    },
+    2688: {//Vista
+        captain: "Boosts ATK of Slasher characters by 1.5x",
+        special: "Reduces enemies' Threshold Damage Reduction duration by 3 turns. If your Captain is a [QCK] or [PSY] character, changes all orbs on [DEX], [QCK] and [PSY] characters into Matching orbs.",
+        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+        specialName: "Flower Sword Cross Cut",
+    },
+    2689: {//TM Blackbeard
+        captain: "Increases damage received by 1.25x and boosts ATK of [INT] characters by 1.5x",
+        special: "Boosts ATK of [INT] characters by 2x for 1 turn, amplifies the effect of orbs for [INT] characters by 2x for 1 turn, reduces Special Cooldown of [INT] specials by 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for [INT] characters for 1 turn.",
+        specialNotes: "This special can only be activated if at most one other special has been activated this turn and restricts activation of any other specials this turn to one special",
+        specialName: "Declaration of a New Era",
+    },
+    2690: {//TM Blackbeard
+        captain: {
+            "base": "Increases damage received by 1.25x and boosts ATK of [INT] characters by 1.75x",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Increases damage received by 1.25x, boosts ATK of [INT] characters by 4x and restores special cooldowns by 2 turns when they are rewinded",
+        },
+        captainNotes: "The Special Rewind Restore can activate multiple times",
+        special: "Boosts ATK of [INT] characters by 2x for 1 turn, amplifies the effect of orbs for [INT] characters by 2x for 1 turn, reduces Special Cooldown of [INT] specials by 1 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for [INT] characters for 1 turn.",
+        specialNotes: "This special can only be activated if at most one other special has been activated this turn and restricts activation of any other specials this turn to one special",
+        specialName: "Declaration of a New Era",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of [INT] characters by 50",
+            "level2": "Makes [PSY] orbs beneficial for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Van Augur, Shiryu, Doc Q, Jesus Burgess, Laffitte",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
@@ -52011,88 +52166,6 @@ window.details = {
                 ]
             },
         ]
-    },
-    3345: {//V2 Whitebeard
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
-        captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
-        special: "Deals 400,000 Fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
-        specialName: "Seismic Strike",
-    },
-    3346: {//V2 Whitebeard
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse and Striker characters proportionally to the crew's current HP, by 4.5x at max and reduce damage received by 20%",
-        captainNotes: "#{captainProportional : lower : 2.5 + 2 * (1 - (remaining HP) / (total HP)) : 2.5 : 4.5}",
-        special: "Deals 400,000 Fixed damage to one enemy that will ignore damage negating abilities and barriers, adds 0.7x to Chain multiplier for 1 turn, boosts ATK of Striker and Powerhouse characters by 2x for 1 turn. If HP is below 30% at the time the special is activated, reduces damage received by 95% for 1 turn and reduces Despair duration by 20 turns.",
-        specialName: "Seismic Strike",
-        sailor: {
-            "base": "None",
-            "level1": "Cannot be blown away",
-            "level2": "Boosts base ATK of all characters by 70",
-        },
-        limit: [
-            { "description": "Boosts base ATK by 5" },
-            { "description": "Boosts base ATK by 10" },
-            { "description": "Boosts base RCV by 5" },
-            { "description": "Acquire Potential 1: Critical Hit" },
-            { "description": "Boosts base ATK by 10" },
-            { "description": "Boosts base ATK by 10" },
-            { "description": "Boosts base HP by 20" },
-            { "description": "Boosts base HP by 30" },
-            { "description": "Boosts base ATK by 15" },
-            { "description": "Boosts base RCV by 15" },
-            { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Sailor Ability 1: Cannot be blown away" },
-            { "description": "Boosts base RCV by 20" },
-            { "description": "Boosts base ATK by 20" },
-            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
-            { "description": "Boosts base ATK by 15" },
-            { "description": "Boosts base ATK by 15" },
-            { "description": "Boosts base HP by 30" },
-            { "description": "Boosts base ATK by 20" },
-            { "description": "Boosts base RCV by 30" },
-            { "description": "Boosts base ATK by 40" },
-            { "description": "Boosts base RCV by 30" },
-            { "description": "Boosts base ATK by 60" },
-            { "description": "Boosts base HP by 50" },
-            { "description": "Boosts base HP by 60" },
-            { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK of all characters by 70" },
-            { "description": "Boosts base HP by 70" },
-            { "description": "Boosts base HP by 110" },
-            { "description": "Acquire Potential 3: Enrage" },
-        ],
-        potential: [
-            {
-                "Name": "Critical Hit",
-                "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a 10% chance to deal 3% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a 20% chance to deal 5% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a 30% chance to deal 5% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a 50% chance to deal 7% of this character's attack in extra damage"
-                ]
-            },
-            {
-                "Name": "Slot Bind Self-reduction",
-                "description": [
-                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
-                    "Level 2: Reduces Slot Bind duration by 3 turns on this character",
-                    "Level 3: Reduces Slot Bind duration by 5 turns on this character",
-                    "Level 4: Reduces Slot Bind duration by 7 turns on this character",
-                    "Level 5: Reduces Slot Bind duration by 10 turns on this character"
-                ]
-            },
-            {
-               "Name": "Enrage",
-                "description": [
-                    "Level 1: Boosts base ATK by 75",
-                    "Level 2: Boosts base ATK by 100",
-                    "Level 3: Boosts base ATK by 200",
-                    "Level 4: Boosts base ATK by 250",
-                    "Level 5: Boosts base ATK by 300"
-                ]
-            },
-        ],
-        potentialNotes: "#{enrage}"
     },
     3347:{//Log Vivi
         captain: "Boosts ATK of Slasher and Striker characters by 1.5x. Boosts EXP gained by 1.25x",
