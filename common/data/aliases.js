@@ -2743,7 +2743,7 @@ window.aliases = {
     3366: [ '', '', 'Neo Duval', 'Kai Duval', 'Raid Duval' ],
     3367: [ '', '', 'Neo Duval', 'Kai Duval', 'Raid Duval' ],
     3368: [ '', '', 'Neo Duval', 'Kai Duval', 'Raid Duval' ],
-    3368: [ '', '', '' ],
+    3369: [ '', '', 'Sanji&Pudding', 'Sanji and Pudding', 'Sanji Pudding', 'SanjiPudding', 'Pudding&Sanji', 'Pudding and Sanji', 'Pudding Sanji', 'PuddingSanji' ],
     3370: [ '', '', '' ],
     3371: [ '', '', '' ],
     3372: [ '', '', '' ],
@@ -2934,6 +2934,10 @@ window.aliases = {
     5177: [ 'イッショウ 虎と犬', '', 'Akainu', 'Fujitora', 'Akainu&Fujitora', 'Akainu & Fujitora', 'Akainu and Fujitora', 'Akainu Fujitora', 'AkainuFujitora', 'Fujitora&Akainu', 'Fujitora and Akainu', 'Fujitora Akainu', 'FujitoraAkainu', 'Sakazuki&Issho', 'Sakazuki & Issho', 'Sakazuki and Issho', 'Sakazuki Issho', 'SakazukiIssho', 'Issho&Sakazuki', 'Issho and Sakazuki', 'Issho Sakazuki', 'IsshoSakazuki' ],
     5178: [ 'サカズキ＆イッショウ 虎と犬', '', 'Akainu', 'Fujitora', 'Akainu&Fujitora', 'Akainu & Fujitora', 'Akainu and Fujitora', 'Akainu Fujitora', 'AkainuFujitora', 'Fujitora&Akainu', 'Fujitora and Akainu', 'Fujitora Akainu', 'FujitoraAkainu', 'Sakazuki&Issho', 'Sakazuki & Issho', 'Sakazuki and Issho', 'Sakazuki Issho', 'SakazukiIssho', 'Issho&Sakazuki', 'Issho and Sakazuki', 'Issho Sakazuki', 'IsshoSakazuki' ],
     5179: [ 'サカズキ＆イッショウ 虎と犬', '', 'Akainu', 'Fujitora', 'Akainu&Fujitora', 'Akainu & Fujitora', 'Akainu and Fujitora', 'Akainu Fujitora', 'AkainuFujitora', 'Fujitora&Akainu', 'Fujitora and Akainu', 'Fujitora Akainu', 'FujitoraAkainu', 'Sakazuki&Issho', 'Sakazuki & Issho', 'Sakazuki and Issho', 'Sakazuki Issho', 'SakazukiIssho', 'Issho&Sakazuki', 'Issho and Sakazuki', 'Issho Sakazuki', 'IsshoSakazuki' ],
+    5180: [ '', '', 'Sanji&Pudding', 'Sanji and Pudding', 'Sanji Pudding', 'SanjiPudding', 'Pudding&Sanji', 'Pudding and Sanji', 'Pudding Sanji', 'PuddingSanji' ],
+    5181: [ '', '', 'Sanji&Pudding', 'Sanji and Pudding', 'Sanji Pudding', 'SanjiPudding', 'Pudding&Sanji', 'Pudding and Sanji', 'Pudding Sanji', 'PuddingSanji' ],
+    5182: [ '', '', 'Sanji&Pudding', 'Sanji and Pudding', 'Sanji Pudding', 'SanjiPudding', 'Pudding&Sanji', 'Pudding and Sanji', 'Pudding Sanji', 'PuddingSanji' ],
+    5183: [ '', '', 'Sanji&Pudding', 'Sanji and Pudding', 'Sanji Pudding', 'SanjiPudding', 'Pudding&Sanji', 'Pudding and Sanji', 'Pudding Sanji', 'PuddingSanji' ],
 };
 
 //  xxxx: [ 'JPN', 'FR', 'Other' ],

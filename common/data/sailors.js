@@ -1462,4 +1462,16 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
     },
+    5180: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    5181: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    5182: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    5183: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
 };

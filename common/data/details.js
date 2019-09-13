@@ -52575,17 +52575,17 @@ window.details = {
             }
         ]
     },
-    3366: {
+    3366: {//Neo Duval
         special: "Deals 5,000 Fixed damage to all enemies, reduces damage received by 50% for 1 turn, reduces Increase Damage Taken duration by 4 turns and boosts ATK of Shooter characters by 1.75x for 1 turn",
         specialName: "Heart-Smashing Horn [Neo]",
         captain: "Boosts ATK of Shooter characters by 2x"
     },
-    3367: {
+    3367: {//Neo Duval
         special: "Deals 5,000 Fixed damage to all enemies, reduces damage received by 50% for 1 turn, reduces Increase Damage Taken duration by 4 turns and boosts ATK of Shooter characters by 1.75x for 1 turn",
         specialName: "Heart-Smashing Horn [Neo]",
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Shooter characters by 2.25x and their RCV by 1.5x"
     },
-    3368: {
+    3368: {//Neo Duval
         special: "Deals 5,000 Fixed damage to all enemies, reduces damage received by 50% for 1 turn, reduces Increase Damage Taken duration by 4 turns and boosts ATK of Shooter characters by 1.75x for 1 turn",
         specialName: "Heart-Smashing Horn [Neo]",
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight and boosts ATK of Shooter characters by 2.25x and their RCV by 1.5x"
@@ -52635,6 +52635,43 @@ window.details = {
                 ]
             },
         ]*/
+    },
+    3369: {//Sanji&Pudding
+        captain: {
+            "character1": "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.2x and boosts chances of getting [RCV] orbs",
+            "character2": "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.2x and makes [RCV] orbs beneficial for all characters",
+            "combined": "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.5x, boosts chances of getting [RCV] orbs and makes [RCV] orbs beneficial for all characters"
+        },
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 60",
+            "level1": "Makes [RCV] orbs beneficial for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
+        swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
+        specialName: "Couple's Oath",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
@@ -59239,5 +59276,137 @@ window.details = {
             },
         ],
         potentialNotes: "#{enrage}"
+    },
+    5180: {//Sanji&Pudding
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.2x and boosts chances of getting [RCV] orbs",
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 60",
+            "level1": "Makes [RCV] orbs beneficial for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
+        swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
+        specialName: "Couple's Oath",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+    },
+    5181: {//Sanji&Pudding
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.2x and makes [RCV] orbs beneficial for all characters",
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 60",
+            "level1": "Makes [RCV] orbs beneficial for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
+        swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
+        specialName: "Couple's Oath",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+    },
+    5182: {//Sanji&Pudding
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.5x, boosts chances of getting [RCV] orbs and makes [RCV] orbs beneficial for all characters",
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 60",
+            "level1": "Makes [RCV] orbs beneficial for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
+        swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
+        specialName: "Couple's Oath",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+    },
+    5183: {//Sanji&Pudding
+        captain: "Boosts ATK of [STR], [DEX] and [QCK] characters by 2.5x, their RCV by 1.5x, boosts chances of getting [RCV] orbs and makes [RCV] orbs beneficial for all characters",
+        sailor: {
+            "base": "Boosts base ATK of characters in the top row by 60",
+            "level1": "Makes [RCV] orbs beneficial for Powerhouse characters",
+        },
+        sailorNotes: "#{beneficial}",
+        special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
+        swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
+        specialName: "Couple's Oath",
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
     },
 };
