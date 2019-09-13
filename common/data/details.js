@@ -52649,7 +52649,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
         swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
-        specialName: "Couple's Oath",
+        specialName: "Wedding Vows",
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -59286,7 +59286,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
         swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
-        specialName: "Couple's Oath",
+        specialName: "Wedding Vows",
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -59319,7 +59319,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
         swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
-        specialName: "Couple's Oath",
+        specialName: "Wedding Vows",
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -59352,7 +59352,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
         swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
-        specialName: "Couple's Oath",
+        specialName: "Wedding Vows",
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
@@ -59385,7 +59385,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         special: "Changes adjacent orbs into [RCV] orbs, reduces any damage received above 3,000 HP by ?% for 1 turn, boosts the Color Affinity of [STR], [DEX] and [QCK] characters by 1.75x for 1 turn and becomes Sanji & Pudding for 2 turns",
         swap: "When Change is activated, randomizes [PSY] and [INT] orbs on [STR], [DEX] and [QCK] characters into either [RCV], [TND], [STR], [DEX] or [QCK] orbs",
-        specialName: "Couple's Oath",
+        specialName: "Wedding Vows",
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
