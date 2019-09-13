@@ -596,5 +596,19 @@ window.ships = [
             return 1.5;
         },
     },
+    
+    
+    
+    { //43
+        name: "Piece of Spadille",
+        thumb: null,
+        description: 'Boosts ATK of Fighter, Powerhouse and Free Spirit characters by 1.5x and their HP by 1.2x. If HP is below 30% at the start of the turn, boosts ATK of Fighter, Powerhouse and Free Spirit characters by 1.6x.',
+        atk: function(p) {
+            return p.unit.class.has('Fighter') || p.unit.class.has('Powerhouse') || p.unit.class.has('Free Spirit') ? (p.p.percHP <= 30.0) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return p.unit.class.has('Fighter') || p.unit.class.has('Powerhouse') || p.unit.class.has('Free Spirit') ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1] : 1;
+        },
+    },
 
 ];
