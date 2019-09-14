@@ -532,6 +532,12 @@ window.matchers = [
     },
 
     {
+        name: 'Remaining Health Healers',
+        target: 'special',
+        matcher: /Recovers.+missing HP/i
+    },
+
+    {
         name: 'Health reducers',
         target: 'special',
         matcher: /Reduces crew's (current )?HP/i
