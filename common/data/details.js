@@ -10556,7 +10556,7 @@ window.details = {
         special: "Seals himself for 1 turn, changes [BLOCK] orbs into Matching orbs, randomizes Badly Matching orbs into either [STR], [QCK], [DEX], [PSY] or [INT] orbs",
         sailor: {
             "base": "None",
-            "level1": "Completely removes Blindness duration completely",
+            "level1": "Removes Blindness duration completely",
             "level2": "Makes [STR], [QCK], [DEX], [PSY] and [INT] orbs beneficial for this character",
         },
         sailorNotes: "#{beneficial}",
@@ -10567,7 +10567,7 @@ window.details = {
             { "description": "Acquire Potential 1: Reduce No Healing duration" },
             { "description": "Boosts base ATK by 20" },
             { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability 1: Completely removes Blindness duration completely" },
+            { "description": "Acquire Sailor Ability 1: Removes Blindness duration completely" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire 1 additional Socket slot" },
@@ -10721,7 +10721,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV for all characters by 50",
-            "level2": "If your Captain is a Free Spirit or Striker character, completely removes Blindness duration completely",
+            "level2": "If your Captain is a Free Spirit or Striker character, removes Blindness duration completely",
         },
         limit: [
             { "description": "Boosts base HP by 30" },
@@ -10735,7 +10735,7 @@ window.details = {
             { "description": "Boosts base RCV by 50" },
             { "description": "Reduce base Special Cooldown by 4 turns" },
             { "description": "Boosts base HP by 110" },
-            { "description": "Acquire Sailor Ability 2: If your Captain is a Free Spirit or Striker character, completely removes Blindness duration completely" },
+            { "description": "Acquire Sailor Ability 2: If your Captain is a Free Spirit or Striker character, removes Blindness duration completely" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 2: Pinch Healing" },
@@ -16186,7 +16186,7 @@ window.details = {
         specialName: "Sword of Silence",
         sailor: {
             "base": "Reduces Blindness duration for 3 turns",
-            "level1": "Completely removes Blindness duration completely",
+            "level1": "Removes Blindness duration completely",
         },
         limit: [
             { "description": "Boosts base RCV by 20" },
@@ -16200,7 +16200,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base HP by 40" },
-            { "description": "Acquire Sailor Ability 1: Completely removes Blindness duration completely" },
+            { "description": "Acquire Sailor Ability 1: Removes Blindness duration completely" },
             { "description": "Reduce base Special Cooldown by 5 turns" },
             { "description": "Boosts base HP by 50" },
             { "description": "Acquire Potential 2: Reduce No Healing duration" },
@@ -20332,7 +20332,7 @@ window.details = {
         special: "Makes PERFECTs easier to hit, locks all orbs and locks the chain multiplier at 2.5x for 1 turn",
         specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)",
         specialName: "Flail Hidden From God",
-        sailor: "If your Captain is a Powerhouse character, completely removes Blindness duration completely",
+        sailor: "If your Captain is a Powerhouse character, removes Blindness duration completely",
     },
     1442: {//Zeo
         captain: "Boosts ATK of [INT] characters by 2.25x and reduces damage received by 20%",
@@ -20340,7 +20340,7 @@ window.details = {
         specialNotes: "Increases timing window to hit a PERFECT. (Animation remains the same)",
         specialName: "Flail Hidden From God",
         sailor: {
-            "base": "If your Captain is a Powerhouse character, completely removes Blindness duration completely",
+            "base": "If your Captain is a Powerhouse character, removes Blindness duration completely",
             "level1": "Makes [TND] orbs beneficial for Powerhouse characters",
         },
         sailorNotes: "#{beneficial}",
@@ -21912,7 +21912,7 @@ window.details = {
             },
         ],
         specialNotes: "#{stages}",
-        sailor: "Completely removes Blindness duration completely",
+        sailor: "Removes Blindness duration completely",
         specialName: "Long-Range Attack: Bagworm",
     },
     1532: {//Legend Usopp
@@ -21934,7 +21934,7 @@ window.details = {
         ],
         specialNotes: "#{stages}",
         sailor: {
-            "base": "Completely removes Blindness duration completely",
+            "base": "Removes Blindness duration completely",
             "level1": "Boosts base HP of Shooter characters by 100",
         },
         specialName: "Long-Range Attack: Bagworm",
@@ -22360,7 +22360,7 @@ window.details = {
         captainNotes: "The Attack Timer increase is NOT a delay, so the enemies can still be delayed. Attack Timer increase ignores Debuff Prevention barriers<br>#{beneficial}",
         special: "Cuts the current HP of each enemy by 10%. If enemies have Delay Debuff Protection, ignores it and Delays all enemies for 1 turn. Otherwise, Delays all enemies for 3 turns",
         sailor: {
-            "base": "Completely removes Blindness duration completely",
+            "base": "Removes Blindness duration completely",
             "level1": "Boosts base HP of Shooter characters by 100",
         },
         specialName: "Green Star, Impact Wolf",
@@ -33781,7 +33781,7 @@ window.details = {
         sailorNotes: "#{beneficial}",
         sailor: {
             "base": "Makes [INT] orbs beneficial for Powerhouse characters",
-            "level1": "If your Captain is a Powerhouse character, completely removes Blindness duration completely",
+            "level1": "If your Captain is a Powerhouse character, removes Blindness duration completely",
         },
         limit: [
             { "description": "Boosts base RCV by 10" },
@@ -33796,7 +33796,7 @@ window.details = {
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability 1: If your Captain is a Powerhouse character, completely removes Blindness duration completely" },
+            { "description": "Acquire Sailor Ability 1: If your Captain is a Powerhouse character, removes Blindness duration completely" },
             { "description": "Boosts base ATK by 50" },
             { "description": "Acquire Potential 2: Cooldown Reduction" },
         ],
@@ -40215,14 +40215,14 @@ window.details = {
         captain: "Boosts ATK of Shooter characters by 2.25x and makes [DEX] orbs beneficial for Shooter characters",
         special: "Cuts the current HP of one enemy by 20%, changes orbs in the top row into Matching orbs, reduces enemies' Increased Defense and Percent Damage Reduction duration by 3 turns. If there are 6 Shooter characters in your crew when the special is activated, reduces damage received by 90% for 1 turn.",
         specialName: "Phantom Gun Shot",
-        sailor: "If your Captain is a Shooter character, completely removes Blindness duration completely",
+        sailor: "If your Captain is a Shooter character, removes Blindness duration completely",
     },
     2308: {//Vito
         captain: "Boosts ATK of Shooter characters by 2.5x and makes [DEX] orbs beneficial for Shooter characters",
         special: "Cuts the current HP of one enemy by 20%, changes orbs in the top row into Matching orbs, reduces enemies' Increased Defense and Percent Damage Reduction duration by 3 turns. If there are 6 Shooter characters in your crew when the special is activated, reduces damage received by 90% for 1 turn.",
         specialName: "Phantom Gun Shot",
         sailor: {
-            "base": "If your Captain is a Shooter character, completely removes Blindness duration completely",
+            "base": "If your Captain is a Shooter character, removes Blindness duration completely",
             "level1": "Makes [DEX] orbs beneficial for Shooter characters",
         },
         sailorNotes: "#{beneficial}",
@@ -42738,7 +42738,7 @@ window.details = {
         specialName: "Ace Special",
         sailor: {
             "base": "Boosts base ATK of characters in the top row by 80",
-            "level1": "If your Captain is a Fighter, Free Spirit or Powerhouse character, completely removes Blindness duration completely",
+            "level1": "If your Captain is a Fighter, Free Spirit or Powerhouse character, removes Blindness duration completely",
         },
         potential: [
             {
