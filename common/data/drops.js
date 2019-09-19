@@ -4887,13 +4887,14 @@ window.drops = {
         },
         
         {
-            name: 'Excape! The World\'s Strongest - Bullet',
+            name: 'The World\'s Strongest - Bullet',
             thumb: 2681,
             global: true,
             nakama: null,
             gamewith: 164245,
             showManual: true,
             'All Difficulties': [  ],
+            'Chopperman Missions': [ 2679 ],
         },
         
         {
