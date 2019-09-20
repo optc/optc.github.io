@@ -936,6 +936,12 @@ window.sailors = {
     2684: {
         hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
     },
+    2695: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    2696: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

@@ -52051,6 +52051,109 @@ window.details = {
         special: "Reduces enemies' Enrage and Resilience Buffs duration by 2 turns.",
         specialName: "Buggy Special",
     },
+    2695: {//Marco
+        captain: "Boosts ATK of Powerhouse characters by 2.5x if HP is below 50% at the start of the turn, 2x otherwise.",
+        special: "Reduces crew's HP to 1, boosts the Color Affinity of Powerhouse characters by 2x for 1 turn and Removes Blindness, Poison, RCV DOWN and No Healing duration completely",
+        specialName: "Marco Special",
+        sailor: "Boosts base ATK of Powerhouse characters by 75",
+    },
+    2696: {//Marco
+        captain: "Boosts ATK of Powerhouse characters by 3.5x if HP is below 50% at the start of the turn, 2.5x otherwise.",
+        special: "Reduces crew's HP to 1, boosts the Color Affinity of Powerhouse characters by 2x for 1 turn and Removes Blindness, Poison, RCV DOWN and No Healing duration completely",
+        specialName: "Marco Special",
+        sailor: {
+            "base": "Boosts base ATK of Powerhouse characters by 75",
+            "level1": "Makes [STR] orbs beneficial for Free Spirit characters",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Whitebeard and Ace",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 2: Adds 8% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 3: Adds 10% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 4: Adds 12% of this character's base ATK and RCV to the supported character's base ATK and RCV.",
+                    "Level 5: Adds 15% of this character's base ATK and RCV to the supported character's base ATK and RCV."
+                ]
+            }
+        ],
+    },
+    2696: {//Crocodile
+        captain: "Boosts ATK of characters with rarity of 4 or 4+ by 1.75x, boosts ATK of characters with rarity of 5 or 5+ by 2x and boosts ATK of characters with rarity of 6 or 6+ by 2.25x.",
+        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x.",
+        specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
+        specialName: "Battlefield Sables",
+    },
+    2697: {//Crocodile
+        captain: "Boosts ATK of characters with rarity of 4 or 4+ by 2.5x, boosts ATK of characters with rarity of 5 or 5+ by 3x and boosts ATK of characters with rarity of 6 or 6+ by 3.5x.",
+        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x.",
+        specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
+        specialName: "Battlefield Sables",
+        sailor: {
+            "base": "None",
+            "level1": "Cannot be Blown Away",
+            "level2": "Makes [STR] and [QCK] orbs beneficial for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Daz Bones",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ],
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK in Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",

@@ -3266,6 +3266,16 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Crocodile',
+            thumb: 2698,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2697 ],
+            Expert: [ 2697 ],
+            Ultimate: [ 2697 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,

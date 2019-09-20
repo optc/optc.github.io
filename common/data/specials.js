@@ -8244,6 +8244,26 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         type: "type"
     },
+    2695: {
+        affinity: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    2696: {
+        affinity: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    2697: {
+        chainBase: function(p) { return 2; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+        }
+    },
+    2698: {
+        chainBase: function(p) { return 2; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
