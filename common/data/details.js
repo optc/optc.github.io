@@ -52104,13 +52104,13 @@ window.details = {
     },
     2696: {//Crocodile
         captain: "Boosts ATK of characters with rarity of 4 or 4+ by 1.75x, boosts ATK of characters with rarity of 5 or 5+ by 2x and boosts ATK of characters with rarity of 6 or 6+ by 2.25x.",
-        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x.",
+        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x for 3 turns.",
         specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
         specialName: "Battlefield Sables",
     },
     2697: {//Crocodile
         captain: "Boosts ATK of characters with rarity of 4 or 4+ by 2.5x, boosts ATK of characters with rarity of 5 or 5+ by 3x and boosts ATK of characters with rarity of 6 or 6+ by 3.5x.",
-        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x.",
+        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x for 3 turns.",
         specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
         specialName: "Battlefield Sables",
         sailor: {
