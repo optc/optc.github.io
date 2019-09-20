@@ -43868,6 +43868,19 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Doflamingo, Trafalgar Law",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, adds 10x supported character's ATK as Additional Damage to Slasher and Driven character's attacks for 1 turn",
+                    "Level 2: Once per adventure, when you reach the final stage, adds 10x supported character's ATK as Additional Damage to Slasher and Driven character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 15x supported character's ATK as Additional Damage to Slasher and Driven character's attacks for 1 turn",
+                    "Level 4: Once per adventure, when you reach the final stage, adds 15x supported character's ATK as Additional Damage to Slasher and Driven character's attacks for 1 turn",
+                    "Level 5: Once per adventure, when you reach the final stage, adds 25x supported character's ATK as Additional Damage to Slasher and Driven character's attacks for 1 turn"
+                ]
+            }
+        ],
+        supportNotes: "This Support Ability is Global/Korea exclusive"
     },
     2438: {//Law
         captain: "Boosts ATK of Slasher characters by 1.5x",
@@ -43898,6 +43911,19 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Doflamingo",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Reducing special, increases damage received by 2x for 1 turn, reduces RCV by ?% for 1 turn and locks all orbs for 1 turn",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Reducing special, increases damage received by 2x for 1 turn, reduces RCV by ?% for 1 turn and locks all orbs for 1 turn",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Reducing special, increases damage received by 2x for 1 turn, reduces RCV by ?% for 1 turn and locks all orbs for 2 turn",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Reducing special, increases damage received by 2x for 1 turn, reduces RCV by ?% for 1 turn and locks all orbs for 2 turn",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Reducing special, increases damage received by 2x for 1 turn, reduces RCV by ?% for 1 turn, locks all orbs for 2 turn and makes Badly Matching and [BLOCK] orbs not reduce damage for 2 turns"
+                ]
+            }
+        ],
+        supportNotes: "This Support Ability is Global/Korea exclusive"
     },
     2439: {//Ussop
         captain: "Boosts ATK of Free Spirit characters by 2.75x if HP is below ?% at the start of the turn, by 1.5x otherwise",
