@@ -52053,13 +52053,13 @@ window.details = {
     },
     2695: {//Marco
         captain: "Boosts ATK of Powerhouse characters by 2.5x if HP is below 50% at the start of the turn, 2x otherwise.",
-        special: "Reduces crew's HP to 1, boosts the Color Affinity of Powerhouse characters by 2x for 1 turn and Removes Blindness, Poison, RCV DOWN and No Healing duration completely",
+        special: "Reduces crew's HP to 1, boosts the Color Affinity of Powerhouse characters by 2x for 1 turn and removes Blindness, Poison, RCV DOWN and No Healing duration completely",
         specialName: "Soaring Blue Flames",
         sailor: "Boosts base ATK of Powerhouse characters by 75",
     },
     2696: {//Marco
         captain: "Boosts ATK of Powerhouse characters by 3.5x if HP is below 50% at the start of the turn, 2.5x otherwise.",
-        special: "Reduces crew's HP to 1, boosts the Color Affinity of Powerhouse characters by 2x for 1 turn and Removes Blindness, Poison, RCV DOWN and No Healing duration completely",
+        special: "Reduces crew's HP to 1, boosts the Color Affinity of Powerhouse characters by 2x for 1 turn and removes Blindness, Poison, RCV DOWN and No Healing duration completely",
         specialName: "Soaring Blue Flames",
         sailor: {
             "base": "Boosts base ATK of Powerhouse characters by 75",
