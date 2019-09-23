@@ -13549,13 +13549,13 @@ window.details = {
     1092: {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 1.5x",
-        special: "Changes the Friend Captains orb into a Matching Orb, recovers 3.000HP",
+        special: "Changes the Friend Captains orb into a Matching Orb, recovers 3.000 HP",
         specialName: "Present After the Rain"
     },
     1093: {
         captain: "Boosts RCV of all characters depending on the current Health.",
         captainNotes: "The Lower the Health the Higher the Bonus, at 1HP the multiplier is 2x",
-        special: "Changes the Friend Captains orb into a Matching Orb, recovers 3.000HP",
+        special: "Changes the Friend Captains orb into a Matching Orb, recovers 3.000 HP",
         specialName: "Present After the Rain"
     },
     1094: {
@@ -38251,14 +38251,14 @@ window.details = {
     2235: {//Brook
         captain: "Boosts ATK of all characters by 2.75x if HP is above 99% at the start of the turn, by 2x otherwise, cuts the current HP of each enemy by 10% at the end of each turn and revives the team after a GAME OVER once per adventure.",
         captainNotes: "The revive is not Resilience since you can still die, it's similar to using a gem to revive. This does not work when you are despaired as it nullifies all captain effects.",
-        special: "Recovers 14,343, reduces damage received by 90% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 2 turns. If the HP of the enemy with the highest Maximum HP is below 434,300, instantly defeats all enemies, otherwise, delays all enemies for 1 turn, cuts the current HP of each enemy by 20%.",
+        special: "Recovers 14,343 HP, reduces damage received by 90% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 2 turns. If the HP of the enemy with the highest Maximum HP is below 434,300, instantly defeats all enemies, otherwise, delays all enemies for 1 turn, cuts the current HP of each enemy by 20%.",
         specialNotes: "#{beneficial}",
         specialName: "Tenacious \"Shout of the Soul\"",
     },
     2236: {//Brook
         captain: "Boosts ATK of all characters by 2.75x if HP is above 99% at the start of the turn, by 2x otherwise, cuts the current HP of each enemy by 10% at the end of each turn and revives the team after a GAME OVER once per adventure.",
         captainNotes: "The revive is not Resilience since you can still die, it's similar to using a gem to revive. This does not work when you are despaired as it nullifies all captain effects.",
-        special: "Recovers 14,343, reduces damage received by 90% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 2 turns. If the HP of the enemy with the highest Maximum HP is below 434,300, instantly defeats all enemies, otherwise, delays all enemies for 1 turn, cuts the current HP of each enemy by 20%.",
+        special: "Recovers 14,343 HP, reduces damage received by 90% for 1 turn and makes [STR], [DEX], [QCK], [PSY] and [INT] orbs beneficial for all characters for 2 turns. If the HP of the enemy with the highest Maximum HP is below 434,300, instantly defeats all enemies, otherwise, delays all enemies for 1 turn, cuts the current HP of each enemy by 20%.",
         specialNotes: "#{beneficial}",
         specialName: "Tenacious \"Shout of the Soul\"",
         sailor: {
