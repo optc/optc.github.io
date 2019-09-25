@@ -22800,13 +22800,13 @@ window.details = {
         specialName: "ROOM Shambles・Junction",
     },
     1570: {//Inuarashi
-        captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
+        captain: "Boosts ATK of Cerebral characters by 2.75x and chain multiplier by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
         special: "Reduces crew's current HP by 80%, deals 60x character's ATK in [STR] damage to one enemy and adds 80x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 80x}",
         specialName: "King Sword Shine",
     },
     1571: {//Inuarashi
-        captain: "Boosts ATK of Cerebral characters by 2.75x and chain by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
+        captain: "Boosts ATK of Cerebral characters by 2.75x and chain multiplier by 1.5x if HP is below 30% at the start of the turn, boosts ATK of Cerebral characters by 2.5x otherwise",
         special: "Reduces crew's current HP by 80%, deals 60x character's ATK in [STR] damage to one enemy and adds 80x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 80x}",
         specialName: "King Sword Shine",
@@ -42104,7 +42104,7 @@ window.details = {
         ]
     },
     2372: {//Inuarashi
-        captain: "Boosts ATK of Cerebral characters by 3x and if HP is below 30% at the start of the turn boosts chain by 1.5x",
+        captain: "Boosts ATK of Cerebral characters by 3x and if HP is below 30% at the start of the turn boosts chain multiplier by 1.5x",
         special: "Reduces crew's current HP by 80%, cuts the current HP of one enemy by 20% and adds 130x character's ATK as Additional Typeless Damage for 1 turn",
         specialNotes: "#{additionalDamage : 130x}",
         specialName: "Sword Attack of Reconciliation",
@@ -45458,12 +45458,12 @@ window.details = {
         ]
     },
     2476: {//Zoro
-        captain: "Boosts ATK of Slaher characters by 3.25x, their HP by 1.5x and makes [DEX] and [INT] orbs beneficial for Slasher characters. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
+        captain: "Boosts ATK of Slasher characters by 3.25x, their HP by 1.5x and makes [DEX] and [INT] orbs beneficial for Slasher characters. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
         special: "Deals 120x character's ATK as Typeless damage to all enemies and makes [RCV] and [TND] orbs beneficial for Slasher characters for 3 turns. Boosts ATK of Slasher characters by 2x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Slasher characters by 2.25x in the following turn.",
         specialName: "Three Sword Style - 1080 Pound Phoenix",
     },
     2477: {//Zoro
-        captain: "Boosts ATK of Slaher characters by 3.25x, their HP by 1.5x and makes [DEX] and [INT] orbs beneficial for Slasher characters. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
+        captain: "Boosts ATK of Slasher characters by 3.25x, their HP by 1.5x and makes [DEX] and [INT] orbs beneficial for Slasher characters. If a character has a [DEX] or [INT] orb, boosts their ATK by 4.0625x instead.",
         special: "Deals 120x character's ATK as Typeless damage to all enemies and makes [RCV] and [TND] orbs beneficial for Slasher characters for 3 turns. Boosts ATK of Slasher characters by 2x for 1 turn. If during that turn you score 4 PERFECT hits, boosts ATK of Slasher characters by 2.25x in the following turn.",
         specialName: "Three Sword Style - 1080 Pound Phoenix",
         sailor: {
@@ -52104,13 +52104,13 @@ window.details = {
     },
     2697: {//Crocodile
         captain: "Boosts ATK of characters with rarity of 4 or 4+ by 1.75x, boosts ATK of characters with rarity of 5 or 5+ by 2x and boosts ATK of characters with rarity of 6 or 6+ by 2.25x.",
-        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x for 3 turns.",
+        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker or Cerebral character, boosts base Chain to 2.0x for 3 turns.",
         specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
         specialName: "Battlefield Sables",
     },
     2698: {//Crocodile
         captain: "Boosts ATK of characters with rarity of 4 or 4+ by 2.5x, boosts ATK of characters with rarity of 5 or 5+ by 3x and boosts ATK of characters with rarity of 6 or 6+ by 3.5x.",
-        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker character, boosts base Chain to 2.0x for 3 turns.",
+        special: "Deals 50x character's ATK in Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker or Cerebral character, boosts base Chain to 2.0x for 3 turns.",
         specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
         specialName: "Battlefield Sables",
         sailor: {
@@ -52153,6 +52153,20 @@ window.details = {
                 ]
             }
         ],
+    },
+    2699: {//Kaido
+        captain: "Boosts ATK of Striker and Powerhouse characters by 4x, their HP by 1.25x, reduces cooldown of Striker and Powerhouse specials by 2 turns at the start of the fight and deals 400x character's ATK in [DEX] damage to all enemies at the end of each turn. At the start of the fight, this character activates their own special.",
+        captainNotes: "Special Activation will not reset the special cooldown.",
+        special: "Cuts the current HP of all enemies by 20% and deals 400x character's ATK as [DEX] damage to all enemies at the end of the turn for 1 turn. Applies a continuous effect that: cuts the current HP of all enemies by 20% at the start of every stage, and deals 400x character's ATK in [DEX] damage to all enemies at the end of each turn.",
+        specialNotes: "The continuous special effect that triggers at the start of each stage will not stack with other continuous special effects.",
+        specialName: "Boro Breath",
+    },
+    2700: {//Kaido
+        captain: "Boosts ATK of Striker and Powerhouse characters by 4x, their HP by 1.25x, reduces cooldown of Striker and Powerhouse specials by 2 turns at the start of the fight and deals 400x character's ATK in [DEX] damage to all enemies at the end of each turn. At the start of the fight, this character activates their own special.",
+        captainNotes: "Special Activation will not reset the special cooldown.",
+        special: "Cuts the current HP of all enemies by 20% and deals 400x character's ATK as [DEX] damage to all enemies at the end of the turn for 1 turn. Applies a continuous effect that: cuts the current HP of all enemies by 20% at the start of every stage, and deals 400x character's ATK in [DEX] damage to all enemies at the end of each turn.",
+        specialNotes: "The continuous special effect that triggers at the start of each stage will not stack with other continuous special effects.",
+        specialName: "Boro Breath",
     },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",

@@ -9583,6 +9583,12 @@ window.captains = {
     2698: {
         atk: function(p) { return (p.unit.stars == 4 || p.unit.stars == "4+") ? 2.5 : (p.unit.stars == 5 || p.unit.stars == "5+") ? 2.75 : (p.unit.stars == 6 || p.unit.stars == "6+") ? 3 : 1; }
     },
+    2699: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 4 : 1; },
+    },
+    2700: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 4 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

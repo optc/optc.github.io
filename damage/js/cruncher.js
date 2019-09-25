@@ -608,8 +608,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         var result = chainBase;
         for (var i=0;i<hitModifiers.length;++i) {
-            if (hitModifiers[i] == 'Perfect') result += chainBase * chainModifier * 0.3;
-            else if (hitModifiers[i] == 'Great') result += chainBase * chainModifier * 0.1;
+            if (hitModifiers[i] == 'Perfect') result += chainModifier * 0.3;
+            else if (hitModifiers[i] == 'Great') result += chainModifier * 0.1;
             else if (hitModifiers[i] == 'Good') result += 0;
             else result = chainBase;
         }

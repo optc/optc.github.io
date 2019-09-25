@@ -8251,18 +8251,25 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     2697: {
-        chainBase: function(p) { return 2; },
+        chain: function(p) { return 2; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
         }
     },
     2698: {
-        chainBase: function(p) { return 2; },
+        chain: function(p) { return window.specials[2698].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
-        }
+            if (window.specials[2698].multiplier == 2) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[2698].multiplier = 1;
+            if (p.captain.class.has("Striker") || p.captain.class.has("Cerebral")) {
+                window.specials[2698].multiplier = 2;
+            }
+        },
     },
     3333: {
         atk: function(p) { return 1.75; },
