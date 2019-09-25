@@ -3228,6 +3228,15 @@ window.drops = {
         },
         
         {
+            name: 'Game!! Leo',
+            thumb: 2559,
+            nakama: null,
+            gamewith: 152009,
+            condition: 'Drops the Leo specific Limit Break crystals.',
+            'All Difficulties': [ 2558 ]
+        },
+        
+        {
             name: 'Clash!! STAMPEDE',
             thumb: 2642,
             nakama: null,
@@ -3266,7 +3275,7 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Crocodile',
+            name: 'Showdown!! Crocodile',
             thumb: 2698,
             nakama: null,
             gamewith: null,
@@ -4523,15 +4532,6 @@ window.drops = {
             gamewith: 88896,
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
             'Pudding': [ 1962, 83, 94, 266, 1180, 82, 88, 93, 99, 114 ],
-        },
-        
-        {
-            name: 'Game! Leo',
-            thumb: 2559,
-            nakama: null,
-            gamewith: 152009,
-            condition: 'Drops the Leo specific Limit Break crystals.',
-            'All Difficulties': [ 2558 ]
         },
 
         {
