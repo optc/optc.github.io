@@ -49322,7 +49322,7 @@ window.details = {
             "combined": "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75"
         },
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
     },
@@ -49339,7 +49339,7 @@ window.details = {
             "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
         },
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
         limit: [
@@ -58887,7 +58887,7 @@ window.details = {
         captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3x, but boosts her OWN attack by 1.2x and recovers 5x character's RCV in HP at the end of each turn.",
         sailor: "Reduces Silence duration on this character by 7 turns",
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
     },
@@ -58895,7 +58895,7 @@ window.details = {
         captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 2.75x and recovers 5x character's RCV in HP at the end of each turn.",
         sailor: "Reduces Silence duration on this character by 7 turns",
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
     },
@@ -58903,7 +58903,7 @@ window.details = {
         captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3.5x, recovers 5x character's RCV in HP at the end of each turn and protects from defeat as long as HP is above 50%.",
         sailor: "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75",
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
     },
@@ -58911,7 +58911,7 @@ window.details = {
         captain: "Boosts ATK of Striker, Cerebral and Free Spirit characters by 3.5x, recovers 5x character's RCV in HP at the end of each turn and protects from defeat as long as HP is above 50%.",
         sailor: "Boosts base ATK, HP and RCV of Striker, Cerebral and Free Spirit characters by 75",
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
     },
@@ -58922,7 +58922,7 @@ window.details = {
             "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
         },
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
         limit: [
@@ -58997,7 +58997,7 @@ window.details = {
             "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
         },
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
         limit: [
@@ -59072,7 +59072,7 @@ window.details = {
             "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
         },
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
         limit: [
@@ -59147,7 +59147,7 @@ window.details = {
             "level1": "Boosts base HP and RCV of Striker, Cerebral and Free Spirit characters by 100"
         },
         special: "Changes all orbs, including [BLOCK] orbs, into Matching orbs, recovers 100x character's RCV in HP, reduces 2 selected debuffs duration by 10 turns and becomes Shirahoshi & Mansherry for 1 turn.",
-        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, and Slot Bind. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
+        specialNotes: "The debuff reduction only works on debuffs whose icons are located in the bottom left of the adventure screen, above the HP bar. This DOES NOT include: Bind, Despair, Paralysis, Silence, Slot Bind, and Target Lock. Additionally, this debuff reduction will not trigger any enemy interupts, however the healing or orb manipulation of the special may still activate interupts.",
         swap: "When Change is activated, reduces Slot Bind and Silence duration by 1 turn and changes own and Matching orbs into [RAINBOW] orbs.",
         specialName: "Lovely Healing",
         limit: [
