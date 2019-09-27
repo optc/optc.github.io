@@ -18,6 +18,7 @@ window.CrunchUtils.okamaCheck = function(array, modifiers, data) {
     return false;
 };
 
+//Sorts the hit order to proc a Raid-Ivan style captain boost
 window.CrunchUtils.okamaSort = function(array, data) {
     var that = jQuery.extend([], array), temp = [ ];
     for (var i=0;i<data.length;++i) {
