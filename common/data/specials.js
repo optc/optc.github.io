@@ -8333,13 +8333,13 @@ window.specials = {
         def: function(p) { return 0; },
     },
     2708: {
-        chainAddition: function(p) { return window.specials[2708].multiplier : 0; },
+        chainAddition: function(p) { return window.specials[2708].multiplier; },
         onActivation: function(p) {
             window.specials[2708].multiplier = (p.captain.type == "DEX" || p.captain.type == "PSY") ? 0.8 : 0;
         },
     },
     2709: {
-        chainAddition: function(p) { return window.specials[2709].multiplier : 0; },
+        chainAddition: function(p) { return window.specials[2709].multiplier; },
         onActivation: function(p) {
             window.specials[2709].multiplier = (p.captain.type == "DEX" || p.captain.type == "PSY") ? 0.8 : 0;
         },
