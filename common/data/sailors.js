@@ -942,6 +942,26 @@ window.sailors = {
     2696: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
+    2703: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    2704: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    2708: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2709: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2720: {
+        atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+    },
+    2721: {
+        atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

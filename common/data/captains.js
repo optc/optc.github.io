@@ -9589,6 +9589,58 @@ window.captains = {
     2700: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 4 : 1; },
     },
+    2701: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    2702: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+    },
+    2703: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 2.75 - 0.1 * p.turnCounter) : 1; }
+    },
+    2704: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse")) ? Math.max(1.0, 3.0 - 0.1 * p.turnCounter) : 1; }
+    },
+    2705: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 2.5 : 1; },
+    },
+    2706: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 2.75 : 1; },
+    },
+    2707: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 2.25 : 1; },
+    },
+    2708: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2 : 1; },
+    },
+    2709: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.25 : 1; },
+    },
+    2710: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2711: {
+        chainModifier: function(p) { return 1.5; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
+    },
+    2712: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    2713: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; }
+    },
+    2714: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
+    },
+    2713: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        rcv: function(p) { return 0; },
+    },
+    2714: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+        rcv: function(p) { return 0; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

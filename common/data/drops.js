@@ -3285,6 +3285,25 @@ window.drops = {
         },
         
         {
+            name: 'Game!! Zorojuro',
+            thumb: 2707,
+            nakama: null,
+            gamewith: null,
+            condition: 'Drops the Zorojuro specific Limit Break crystals.',
+            'All Difficulties': [ 2707 ]
+        },
+        
+        {
+            name: 'Clash!! Law',
+            thumb: 2709,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2708 ],
+            Expert: [ 2708 ],
+            Ultimate: [ 2708 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,
