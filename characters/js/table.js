@@ -204,7 +204,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if(allClass.indexOf(unit.class) != -1) return false;
         }
         if (filters.dualUnits){
-            if (unit.type.length == 3) return false;
+            if (unit.type.length == 3 || unit.type == "Type") return false;
         }
         if (filters.luffyvkatakuri){
             var evolved = !(id in window.evolutions);
