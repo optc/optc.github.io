@@ -3863,6 +3863,10 @@ window.evolutions = {
         evolution: 2387,
         evolvers: [ 115, 116, 117, 118, 100 ]
     },
+    2393: {
+        evolution: 2394,
+        evolvers: [ 118, 84, 266, 300, 100 ]
+    },
     2395: {
         evolution: 2398,
         evolvers: [ 2396, 2397 ]
@@ -4302,6 +4306,58 @@ window.evolutions = {
     },
     2683: {
         evolution: 2684,
+        evolvers: [ 118, 87, 266, 303, 103 ]
+    },
+    2685: {
+        evolution: 2686,
+        evolvers: [ 118, 79, 1180, 301, 267 ]
+    },
+    2689: {
+        evolution: 2690,
+        evolvers: [ 115, 116, 117, 118, 104 ]
+    },
+    2691: {
+        evolution: 2692,
+        evolvers: [ 117, 81, 86, 97, 102 ]
+    },
+    2695: {
+        evolution: 2696,
+        evolvers: [ 118, 84, 95, 300, 100 ]
+    },
+    2697: {
+        evolution: 2698,
+        evolvers: [ 118, 102, 86, 302, 2662 ]
+    },
+    2699: {
+        evolution: 2700,
+        evolvers: [ 118, 302, 2662, 102, 267 ]
+    },
+    2701: {
+        evolution: 2702,
+        evolvers: [ 94, 2662, 302, 302, 102 ]
+    },
+    2703: {
+        evolution: 2704,
+        evolvers: [ 94, 1180, 98, 303, 103 ]
+    },
+    2705: {
+        evolution: 2706,
+        evolvers: [ 94, 1180, 301, 96, 101 ]
+    },
+    2708: {
+        evolution: 2709,
+        evolvers: [ 118, 102, 86, 302, 2662 ]
+    },
+    2710: {
+        evolution: 2711,
+        evolvers: [ 117, 82, 88, 99, 104 ]
+    },
+    2713: {
+        evolution: 2714,
+        evolvers: [ 117, 81, 87, 98, 103 ]
+    },
+    2720: {
+        evolution: 2721,
         evolvers: [  ]
     },
     3333: {
@@ -4319,10 +4375,6 @@ window.evolutions = {
     3341: {
         evolution: 3342,
         evolvers: [ 118, 96, 1180, 83, 104 ]
-    },
-    3345: {
-        evolution: 3346,
-        evolvers: [ 118, 79, 1180, 301, 267 ]
     },
     3347: {
         evolution: 3348,
@@ -4365,7 +4417,7 @@ window.evolutions = {
         evolvers: [ 116, 117, 79, 90, 96 ]
     },
     3367: {
-        evolution: 3368,
+        evolution: [3368, 3368],
         evolvers: [[ 118, 85, 266, 96, 101 ], [ 18 ]]
     },
 };

@@ -532,6 +532,12 @@ window.matchers = [
     },
 
     {
+        name: 'Remaining Health Healers',
+        target: 'special',
+        matcher: /Recovers.+missing HP/i
+    },
+
+    {
         name: 'Health reducers',
         target: 'special',
         matcher: /Reduces crew's (current )?HP/i
@@ -1265,6 +1271,12 @@ window.matchers = [
         name: 'Blindness reducers',
         target: 'support',
         matcher: /(reduces|removes).+blindness.+duration/i
+    },
+    
+    {
+        name: 'Special cooldown reducers',
+        target: 'support',
+        matcher: /reduces special cooldown/i
     },
 
     {
