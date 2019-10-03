@@ -4393,6 +4393,15 @@ window.drops = {
             gamewith: null,
             'Raging Sea': [ 2689 ]
         },
+
+        {
+            name: 'Basil Hawkins',
+            dropID: 'treasuremap26',
+            thumb: 2729,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2728 ]
+        },
         
     ],
 
