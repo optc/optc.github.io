@@ -8407,6 +8407,7 @@ window.specials = {
         type: "class"
     },
     3362: {
+        def: function(p) { return 0; },
         atk: function(p) { return p.defenseDown ? window.specials[3362].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
@@ -8414,6 +8415,7 @@ window.specials = {
         },
     },
     3363: {
+        def: function(p) { return 0; },
         atk: function(p) { return p.defenseDown ? window.specials[3363].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
