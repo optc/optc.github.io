@@ -797,6 +797,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 2
     },
+    2722: { // Marco
+        type: 'healer',
+        multiplier: 1
+    },
+    2723: { // Marco
+        type: 'healer',
+        multiplier: 2
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

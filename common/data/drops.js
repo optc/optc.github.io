@@ -1200,6 +1200,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash!! Lucci - Preparation Adventure',
+            dropID: 'eventneo11.1',
+            thumb: 2714,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2713 ]
+        },
+
+        {
             name: 'Lucci\'s Artisan Spirit',
             dropID: 'event12',
             thumb: 322,
@@ -1987,6 +1996,15 @@ window.drops = {
             gamewith: 56038,
             'All Difficulties': [ 1580, 1582, -1391, -357, -910, -995, -896, -1436, -1444, -890, -1342, -1551, -2035 ],
         },
+
+        {
+            name: 'Clash!! Zoro - Preparation Adventure',
+            dropID: 'eventneo78.1',
+            thumb: 2712,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2712 ]
+        },
         
         {
             name: 'Targeted Mermaid Princess!',
@@ -2083,6 +2101,15 @@ window.drops = {
             gamewith: 67118,
             'Japan': [ 1765, 1767, 1768, -1192, -1764, -520, -1115, -1184, -1190, -554, -1175, -1612, -1614, -1353, -1393 ],
             'Global': [ 1765, 1767, 1768, -520, -554, -1192, -1763, -1764, -1614, -1612, -1115, -1190, -1184, -1175, -1393, -1353 ]
+        },
+
+        {
+            name: 'Clash!! Bartolomeo - Preparation Adventure',
+            dropID: 'eventneo87.1',
+            thumb: 2711,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2710 ]
         },
         
         {
@@ -2459,6 +2486,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2691, 2693, 2694, -2609, -2605, -2563, -2561, -2534, -2487, -2121, -2115, -2050 ]
+        },
+        
+        {
+            name: 'Thinking about Pops',
+            dropID: 'event126',
+            thumb: 2723,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2722, 2724, -2607, -2577, -2575, -2567, -2346, -2119, -2117, -2027, -1794, -2005 ]
         },
         
     ],
