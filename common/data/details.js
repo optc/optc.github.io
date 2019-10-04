@@ -40213,7 +40213,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability 2: " },
+            { "description": "Acquire Sailor Ability 2: Makes [PSY] and [INT] orbs beneficial for Shooter characters" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 80" },
             { "description": "Acquire Potential 3: Barrier Penetration" },
