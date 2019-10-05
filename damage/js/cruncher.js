@@ -372,8 +372,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var override = $scope.tdata.typeOverride[type];
             for (var k=0;k<result.length;++k) {
                 if (!override[k]) continue;
-                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type, result[k].unit, n);
-                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k], result[k].unit, n);
+                var currentMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, type, result[k].unit, result[k].position);
+                var newMultiplier = getTypeMultiplierOfUnit(result[k].unit.unit.type, override[k], result[k].unit, result[k].position);
                 result[k].multipliers.push([ newMultiplier / currentMultiplier, 'type override' ]);
             }
         }
