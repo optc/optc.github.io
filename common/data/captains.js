@@ -8917,7 +8917,7 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 40 ? p.actions[p.sourceSlot] ? 3 : 2.5 : 1; },
         hp: function(p) { return p.unit.cost <= 40 ? 1.2 : 1; },
     },
-    2493: {
+    2498: {
         atk: function(p) { return p.unit.cost <= 40 ? p.actions[p.sourceSlot] ? 3.5 : 3 : 1; },
         hp: function(p) { return p.unit.cost <= 40 ? 1.2 : 1; },
     },
