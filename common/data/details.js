@@ -40227,7 +40227,7 @@ window.details = {
             { "description": "Boosts base HP by 30" },
             { "description": "Boosts base HP by 50" },
             { "description": "Boosts base HP by 50" },
-            { "description": "Acquire Sailor Ability 2: " },
+            { "description": "Acquire Sailor Ability 2: Makes [PSY] and [INT] orbs beneficial for Shooter characters" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 80" },
             { "description": "Acquire Potential 3: Barrier Penetration" },
@@ -52329,7 +52329,7 @@ window.details = {
         specialName: "Battlefield Sables",
     },
     2698: {//Crocodile
-        captain: "Boosts ATK of characters with rarity of 4 or 4+ by 2.5x, boosts ATK of characters with rarity of 5 or 5+ by 3x and boosts ATK of characters with rarity of 6 or 6+ by 3.5x.",
+        captain: "Boosts ATK of characters with rarity of 4 or 4+ by 2.5x, boosts ATK of characters with rarity of 5 or 5+ by 2.75x and boosts ATK of characters with rarity of 6 or 6+ by 3x.",
         special: "Deals 50x character's ATK as Typeless damage to all enemies that will ignore damage negating abilities and barriers, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and reduces Chain Multiplier Limit duration by 8 turns. If your Captain is a Striker or Cerebral character, boosts base Chain to 2.0x for 3 turns.",
         specialNotes: "Chain Multiplier will cap at 35.0x upon using this special",
         specialName: "Battlefield Sables",
@@ -52919,6 +52919,127 @@ window.details = {
                     "Level 3: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP.",
                     "Level 4: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP.",
                     "Level 5: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP."
+                ]
+            }
+        ]
+    },
+    2722: {//Marco
+        captain: "Boosts ATK of Powerhouse characters by 2x and recovers 1x character's RCV at the end of each turn.",
+        special: "Reduces Paralysis duration by 3 turns, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Powerhouse characters into Matching orbs and recovers 8x character's RCV in HP at the end of each turn for 3 turns.",
+        specialName: "Blue Flames of Healing",
+    },
+    2723: {//Marco
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and recovers 2x character's RCV at the end of each turn.",
+        special: "Reduces Paralysis duration by 3 turns, changes [RCV], [TND], [EMPTY], [BLOCK] and [BOMB] orbs on Powerhouse characters into Matching orbs and recovers 8x character's RCV in HP at the end of each turn for 3 turns.",
+        specialName: "Blue Flames of Healing",
+        support: [
+            {
+                "Characters": "Powerhouse characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ]
+    },
+    2724: {//Nekomamushi
+        captain: "Boosts ATK of [STR] characters by 2x.",
+        special: "Reduces Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and adds 0.5x to Chain multiplier for 1 turn.",
+        specialName: "Visit Solicitation",
+    },
+    2725: {//Kanjuro
+        captain: "Boosts ATK of Striker characters by 1.5x.",
+        special: "Reduces Paralysis and ATK DOWN duration by 3 turns. If you are on a Treasure Map, boosts the Color Affinity of Powerhouse characters depending on your Treasure Map Level for 1 turn",
+        specialName: "Escaping Sparrow",
+        specialNotes: "Level 1-10: 1.75x affinity boost<br\>Level 11-20: 2x affinity boost<br\>Level 21+: 2.25x affinity boost",
+    },
+    2726: {//Raizo
+        captain: "Boosts ATK of Shooter characters by 1.5x.",
+        special: "If your Captain is a Powerhouse or Shooter character character, changes all orbs on Shooter and Powerhouse characters into Matching orbs and locks all orbs for 1 turn.",
+        specialName: "Smoke Escape Technique",
+    },
+    2727: {//Kinemon
+        captain: "Boosts ATK of Powerhouse characters by 2.5x and their HP by 1.2x. If you use \"Flaming Flash\" on this Kinemon boosts ATK of Powerhouse characters by 3.5x instead for 3 turns.",
+        special: "Deals 30x character's ATK in [STR] damage to one enemy, reduces enemies' Percent Damage Reduction and Threshold Damage Reduction duration by 3 turns. If you are on a Treasure Map, boosts ATK of Powerhouse characters depending on your Treasure Map Level for 1 turn",
+        specialNotes: "Level 1-10: 1.75x atk boost<br\>Level 11-20: 2x atk boost<br\>Level 21+: 2.25x atk boost",
+        specialName: "Flaming Flash",
+    },
+    2728: {//TM Hawkins
+        captain: "Boosts ATK of Striker and Cerebral characters by 1.5x",
+        special: [
+            {
+                "description": "Changes adjacent orbs into Matching Orbs and delays all enemies for 1 turn.",
+                "cooldown": [ 29, null ],
+            },
+            {
+                "description": "Changes adjacent orbs into Matching Orbs. If the HP of the enemy with the highest Maximum HP is below 70% at the time the special is activated,  ignores Delay Debuff Protection and delays all enemies for 1 turn, delays all enemies for 1 turn otherwise.",
+                "cooldown": [ 37, null ],
+            },
+        ],
+        specialName: "Strawman Cards Pursuit",
+    },
+    2729: {//TM Hawkins
+        captain: {
+            "base": "Boosts ATK of Striker and Cerebral characters by 1.75x",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts ATK of Striker and Cerebral characters by 3.25x and makes [QCK] orbs beneficial for Cerebral and Striker characters",
+        },
+        special: [
+            {
+                "description": "Changes adjacent orbs into Matching Orbs and delays all enemies for 1 turn.",
+                "cooldown": [ 29, null ],
+            },
+            {
+                "description": "Changes adjacent orbs into Matching Orbs. If the HP of the enemy with the highest Maximum HP is below 70% at the time the special is activated,  ignores Delay Debuff Protection and delays all enemies for 1 turn, delays all enemies for 1 turn otherwise.",
+                "cooldown": [ 37, null ],
+            },
+        ],
+        specialName: "Strawman Cards Pursuit",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Striker characters by 50",
+            "level2": "Makes [DEX] orbs beneficial for this character",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Kaido",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
                 ]
             }
         ]

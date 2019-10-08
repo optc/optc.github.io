@@ -8917,7 +8917,7 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 40 ? p.actions[p.sourceSlot] ? 3 : 2.5 : 1; },
         hp: function(p) { return p.unit.cost <= 40 ? 1.2 : 1; },
     },
-    2493: {
+    2498: {
         atk: function(p) { return p.unit.cost <= 40 ? p.actions[p.sourceSlot] ? 3.5 : 3 : 1; },
         hp: function(p) { return p.unit.cost <= 40 ? 1.2 : 1; },
     },
@@ -9633,13 +9633,38 @@ window.captains = {
     2714: {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
-    2713: {
+    2720: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
         rcv: function(p) { return 0; },
     },
-    2714: {
+    2721: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
         rcv: function(p) { return 0; },
+    },
+    2722: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    2723: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    2724: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
+    2725: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    2726: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    2727: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.actions[p.sourceSlot] ? 3.5 : 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    2728: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? 1.5 : 1; },
+    },
+    2729: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 3.25 : 1.75 : 1; },
     },
     3333: {
         hitAtk: function(p) {

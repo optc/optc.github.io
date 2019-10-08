@@ -8356,6 +8356,38 @@ window.specials = {
     2714:{
         def: function(p) { return 0; },
     },
+    2724: {
+        chainAddition: function(p) { return 0.5; },
+    },
+    2725:{
+        affinity: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2725].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2725].multiplier == 1.75 ? 1 : window.specials[2725].multiplier == 2 ? 2 : 0);
+            window.specials[2725].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '2725warning'
+            });
+        },
+    },
+    2727:{
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2727].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2727].multiplier == 1.75 ? 1 : window.specials[2727].multiplier == 2 ? 2 : 0);
+            window.specials[2727].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2727warning'
+            });
+        },
+    },
+    2728:{
+        delay: function(p) { return 1; },
+    },
+    2729:{
+        delay: function(p) { return 1; },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
