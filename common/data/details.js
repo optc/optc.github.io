@@ -52754,13 +52754,13 @@ window.details = {
     2708: {//Law
         captain: "Boosts ATK of [DEX] and [PSY] characters by 2x.",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies' Percent Damage Reduction, Increased Defense and Resilience Buffs duration by 2 turns. If your Captain is a [DEX] or [PSY] character, adds 0.8x to Chain multiplier for 1 turn.",
-        specialName: "The Lion's Attack on the Jewels",
+        specialName: "Room - Shambles Assault",
         sailor: "Boosts base ATK of [DEX] and [PSY] characters by 50",
     },
     2709: {//Law
         captain: "Boosts ATK of [DEX] and [PSY] characters by 3x if they have a Matching orb, by 2.25x otherwise.",
         special: "Deals 200,000 fixed damage to one enemy that will ignore damage negating abilities and barriers and reduces enemies' Percent Damage Reduction, Increased Defense and Resilience Buffs duration by 2 turns. If your Captain is a [DEX] or [PSY] character, adds 0.8x to Chain multiplier for 1 turn.",
-        specialName: "The Lion's Attack on the Jewels",
+        specialName: "Room - Shambles Assault",
         sailor: {
             "base": "Boosts base ATK of [DEX] and [PSY] characters by 50",
             "level1": "If this character has an [DEX] orb and you hit a PERFECT with him, keep his [DEX] orb for the next turn",
