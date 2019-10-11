@@ -962,6 +962,16 @@ window.sailors = {
         atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
         atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
     },
+    2728: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
+    2728: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

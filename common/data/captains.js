@@ -9666,6 +9666,18 @@ window.captains = {
     2729: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 3.25 : 1.75 : 1; },
     },
+    2730: {
+        atk: function(p) { return (p.unit.class.has("Cerebral")) ? 2.75 : 1; },
+    },
+    2731: {
+        atk: function(p) { return (p.unit.class.has("Cerebral")) ? 3 : 1; },
+    },
+    2732: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
+    },
+    2733: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

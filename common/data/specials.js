@@ -8388,6 +8388,38 @@ window.specials = {
     2729:{
         delay: function(p) { return 1; },
     },
+    2730: {
+        chainAddition: function(p) {return window.specials[2730].multiplier;},
+        onActivation: function(p) {
+            var n = (window.specials[2730].multiplier == 0.5 ? 1 : 0);
+            window.specials[2730].multiplier = [0.5, 1.1][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
+                name: '2730warning'
+            });
+        }
+    },
+    2731: {
+        chainAddition: function(p) {return window.specials[2731].multiplier;},
+        onActivation: function(p) {
+            var n = (window.specials[2731].multiplier == 0.5 ? 1 : 0);
+            window.specials[2731].multiplier = [0.5, 1.1][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
+                name: '2731warning'
+            });
+        }
+    },
+    2732: {
+        atk: function(p) { return 1.3; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+    },
+    2733: {
+        atk: function(p) { return 1.3; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
