@@ -46565,7 +46565,7 @@ window.details = {
     },
     2507: {//Kizaru
         captain: "Boosts ATK of Shooter characters by 1.75x",
-        special: "Reduces Bind duration by 3 turns, reduces crew's ATK DOWN duration by 4 turns. If you are on a Treasure Map, amplifies the effects of orbs for [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn.",
+        special: "Reduces Bind duration by 3 turns, reduces crew's ATK DOWN duration by 4 turns. If you are on a Treasure Map, amplifies the effects of orbs for [PSY] and [INT] characters depending on your Treasure Map Level for 3 turns.",
         specialName: "Radiant Light Arrow",
         specialNotes: "Level 1-10: 1.5x orb boost<br\>Level 11-20: 1.75x orb boost<br\>Level 21+: 2x orb boost",
         limit: [
@@ -52210,12 +52210,12 @@ window.details = {
     },
     2691: {//Ivankov
         captain: "Boosts ATK of Cerebral characters by 2x.",
-        special: "Reduces enemy Threshold Damage Reduction duration by 3 turns and boosts ATK of Cerebral characters by 1.75x for 1 turn.",
+        special: "Reduces enemy Percent Damage Reduction duration by 3 turns and boosts ATK of Cerebral characters by 1.75x for 1 turn.",
         specialName: "Don't Think I Will Hold Back Any Longer!!!",
     },
     2692: {//Ivankov
         captain: "Boosts ATK of Cerebral characters by 2.5x and their RCV by 1.2x.",
-        special: "Reduces enemy Threshold Damage Reduction duration by 3 turns and boosts ATK of Cerebral characters by 1.75x for 1 turn.",
+        special: "Reduces enemy Percent Damage Reduction duration by 3 turns and boosts ATK of Cerebral characters by 1.75x for 1 turn.",
         specialName: "Don't Think I Will Hold Back Any Longer!!!",
         support: [
             {
@@ -52983,7 +52983,7 @@ window.details = {
                 "cooldown": [ 29, null ],
             },
             {
-                "description": "Changes adjacent orbs into Matching Orbs. If the HP of the enemy with the highest Maximum HP is below 70% at the time the special is activated,  ignores Delay Debuff Protection and delays all enemies for 1 turn, delays all enemies for 1 turn otherwise.",
+                "description": "Changes all orbs into Matching Orbs. If the HP of the enemy with the highest Maximum HP is below 70% at the time the special is activated,  ignores Delay Debuff Protection and delays all enemies for 1 turn, delays all enemies for 1 turn otherwise.",
                 "cooldown": [ 37, null ],
             },
         ],
