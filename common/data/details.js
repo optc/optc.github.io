@@ -53123,7 +53123,7 @@ window.details = {
     },
     2732: {//Magellan
         captain: "Boosts ATK of [INT] characters by 2x.",
-        special: "Poisons all enemies and boosts ATK against Poisoned enemies by 1.75x for 99+ turns. Applies a continuous effect that poisons all enemies at the start of every stage for 99+ turns.",
+        special: "Poisons all enemies and boosts ATK against Poisoned enemies by 1.3x for 99+ turns. Applies a continuous effect that poisons all enemies at the start of every stage for 99+ turns.",
         specialName: "Poison Punishment: Hydra",
         sailor: "Completely resists Paralysis on this character",
     },
