@@ -53084,8 +53084,9 @@ window.details = {
         specialName: "Public Experiment: Blue Sword",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Cerebral characters by 75",
-            "level1": "Not Translated",
+            "level1": "Makes [INT] orbs beneficial for Cerebral characters",
         },
+        sailorNotes: "#{beneficial}",
         potential: [
             {
                 "Name": "Slot Bind Self-reduction",
