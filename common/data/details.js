@@ -12754,11 +12754,11 @@ window.details = {
         specialName: "Gamma Knife",
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in [PSY] damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, Barriers and Defense, deals 20x character's ATK in [PSY] damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in [PSY] damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, Barriers and Defense, deals 50x character's ATK in [PSY] damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -12775,11 +12775,11 @@ window.details = {
         sailorNotes: "#{beneficial}",
         special: [
             {
-                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, deals 20x character's ATK in [PSY] damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of Slasher and Free Spirit characters bypass all defensive Buffs, Barriers and Defense, deals 20x character's ATK in [PSY] damage to one enemy.",
                 "cooldown": [ 18, 13 ]
             },
             {
-                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 50x character's ATK in [PSY] damage to one enemy.",
+                "description": "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, Barriers and Defense, deals 50x character's ATK in [PSY] damage to one enemy.",
                 "cooldown": [ 25, 20 ]
             }
         ],
@@ -32842,7 +32842,7 @@ window.details = {
             },
         ],
     },
-    2001: {//6+ [PSY] Law
+    2001: {//6+ PSY Law
         captain: "Boosts Slasher and Free Spirit character's ATK by 2.5x, by 3.5x after 3 consecutive PERFECTs, by 4x after 5 consecutive PERFECTs. Recover 1,000 HP at the end of each turn",
         specialName: "Sterben",
         sailor: {
@@ -32851,7 +32851,7 @@ window.details = {
             "level2": "Makes [INT], [RCV] and [TND] orbs beneficial for this character"
         },
         sailorNotes: "#{beneficial}",
-        special: "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, deals 100x character's ATK in [PSY] damage to one enemy and reduces Special Cooldown of all characters by 1 turn",
+        special: "Makes Damage and Health Cutting Specials of all characters bypass all defensive Buffs, Barriers and Defense, deals 100x character's ATK in [PSY] damage to one enemy and reduces Special Cooldown of all characters by 1 turn",
         limit: [
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
@@ -36873,13 +36873,13 @@ window.details = {
     },
     2160: {//Doflamingo
         captain: "Boosts ATK of Shooter characters by 2.25x. If you use \"Punishment for the Weak\" in this turn boosts ATK of Shooter characters by 2.7x instead.",
-        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV], [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
+        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, Barriers and Defense, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV], [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
         specialName: "Punishment for the Weak",
         sailor: "Boosts base ATK of Shooter characters by 75",
     },
     2161: {//Doflamingo
         captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x. If you use \"Punishment for the Weak\" in this turn boosts ATK of Shooter characters by 3.25x instead.",
-        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV], [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
+        special: "Makes Damage and Health Cutting Specials of Shooter characters bypass all defensive Buffs, Barriers and Defense, deals 150x character's ATK in [QCK] damage to one enemy, changes [RCV], [TND] and [BLOCK] orbs into Matching orbs and amplifies the effect of orbs for Shooter characters by 2x for 1 turn",
         specialName: "Punishment for the Weak",
         sailor: {
             "base": "Boosts base ATK of Shooter characters by 75",
