@@ -4575,7 +4575,7 @@ window.drops = {
     ],
 
             
-    'Kisuna Clash': [
+    'Kizuna Clash': [
         
         {
             name: 'Zoro & Sanji',

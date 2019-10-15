@@ -487,7 +487,7 @@ window.effects = {
         },    
     },
 	
-	'Kisuna Clash': {
+	'Kizuna Clash': {
         description: 'Certain units boosted',
         thumb: 2531,
         id: 46, // don't change this
