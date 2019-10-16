@@ -46562,6 +46562,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Slasher characters",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 4% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 5% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 6% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 8% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ],
     },
     2507: {//Kizaru
         captain: "Boosts ATK of Shooter characters by 1.75x",
@@ -46592,6 +46604,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Edward Weevil",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with ATK DOWN, boosts base ATK of the supported character by 1.05x until the next stage.",
+                    "Level 2: Once per adventure, when you are inflicted with ATK DOWN, boosts base ATK of the supported character by 1.05x until the next stage.",
+                    "Level 3: Once per adventure, when you are inflicted with ATK DOWN, boosts base ATK of the supported character by 1.1x until the next stage.",
+                    "Level 4: Once per adventure, when you are inflicted with ATK DOWN, boosts base ATK of the supported character by 1.1x until the next stage.",
+                    "Level 5: Once per adventure, when you are inflicted with ATK DOWN, boosts base ATK of the supported character by 1.2x until the next stage."
+                ]
+            }
+        ]
     },
     2508: {//Marco
         captain: "Boosts ATK of [PSY] and [INT] characters by 2.5x and their HP by 1.2x. If you use \"Phoenix Claw\" on this Marco boosts ATK of [PSY] and [INT] characters by 3.5x instead for 3 turns.",
@@ -46621,6 +46645,18 @@ window.details = {
                     "Level 5: If you hit a PERFECT with this character, there is a 100% chance to deal 10% of this character's attack in extra damage"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "[PSY] characters",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 3% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Reduces damage received from [INT] characters by 2%. Adds 4% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Reduces damage received from [INT] characters by 3%. Adds 5% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Reduces damage received from [INT] characters by 4%. Adds 6% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Reduces damage received from [INT] characters by 5%. Adds 8% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
         ],
     },
     2509: {//TM Weevil
