@@ -8420,6 +8420,28 @@ window.specials = {
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     },
+    2735: {
+        atk: function(p) { return window.specials[2735].turnedOn ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.slot < 2) window.specials[2735].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2735].turnedOn = false;
+        }
+    },
+    2736: {
+        atk: function(p) { return window.specials[2736].turnedOn ? 2.25 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            if (p.slot < 2) window.specials[2736].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2736].turnedOn = false;
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

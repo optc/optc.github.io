@@ -53215,6 +53215,36 @@ window.details = {
             }
         ]
     },
+    2734: {//Luffy
+        captain: "Recovers 3x character's RCV in HP at the end of each turn.",
+        special: "Changes [STR], [DEX] and [PSY] orbs into Matching orbs. If your crew has 3 or more characters of the same Type, amplifies the effect of orbs for all characters by 2x for 1 turn.",
+        specialName: "Gomu Gomu no Grizzly Corkscrew Magnum",
+        sailor: "Boosts own base ATK by 100 if this character is the last in the chain to attack",
+    },
+    2735: {//Capone
+        captain: "If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of all characters by 2.75x.<br><b>Boosted Ability:</b> If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of all characters by 4.5x.",
+        special: "Reduces enemies' Increased Defense duration by 3 turns, reduces Paralysis and Bind duration by 3 turns and changes right column orbs into Matching orbs. If this character is your Captain or Friend/Guest Captain, boosts ATK of all characters by 2.25x for 1 turn.",
+        specialName: "Bullet of Rebellion",
+        sailor: "Boosts base ATK, HP and RCV of [STR], [DEX] and [PSY] characters by 30",
+    },
+    2736: {//Kidd
+        captain: "If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of all characters by 2.75x.<br><b>Boosted Ability:</b> If there is a [STR], [DEX] and [PSY] character in your crew, boosts ATK of all characters by 4.5x.",
+        special: "Reduces enemies' Threshold Damage Reduction and Resilience duration by 3 turns, reduces Despair duration by 3 turns and changes left column orbs into Matching orbs. If this character is your Captain or Friend/Guest Captain, boosts ATK of all characters by 2.25x for 1 turn.",
+        specialName: "The Glare that Vows for Revenge",
+        sailor: "Boosts base ATK, HP and RCV of [STR], [DEX] and [PSY] characters by 30",
+    },
+    2737: {//Shanks
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 2.5x if they have a Matching orb, by 2x otherwise.",
+        special: "Deals 15x character's ATK in DEX damage to all enemies, reduces ATK DOWN, Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and reduces Special Cooldown of all characters by 1 turn.",
+        specialName: "Four Emperors",
+        sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
+    },
+    2738: {//Shanks
+        captain: "Boosts ATK of [STR], [DEX] and [PSY] characters by 2.75x if they have a Matching orb, by 2.25x otherwise and their HP by 1.2x.",
+        special: "Deals 15x character's ATK in DEX damage to all enemies, reduces ATK DOWN, Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and reduces Special Cooldown of all characters by 1 turn.",
+        specialName: "Four Emperors",
+        sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK as Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
