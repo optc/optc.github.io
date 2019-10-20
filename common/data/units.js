@@ -2720,7 +2720,7 @@ window.units = [
     [ "Probably Fodder", "Type", "Slasher", 3, 12, 5, 1, 60, 449516, 130, 90, 5, null, null, null, null ],
     [ "Hody Jones, The Monster Taken Over by his Grudge", "DEX", [ "Powerhouse", "Striker" ], 4, 25, 6, 3, 70, 1066998, 804, 245, 66, 2035, 754, 80, 1 ],
     [ "Hody Jones, The Monster Created by his Grudge", "DEX", [ "Powerhouse", "Striker" ], 5, 40, 4, 4, 99, 4000000, 1603, 700, 70, 2950, 1465, 220, 1 ],
-    [ "Marco, Former Whitebeard Pirates 1st Div. Commander : Ship Doctor", "INT", [ "Powerhouse", "Fighter" ], 3, 1, 4, 3, 50, 130703, 472, 242, 71, 1068, 577, 166, 1 ],
+    [ "Marco, Former Whitebeard Pirates 1st Div. Commander: Ship Doctor", "INT", [ "Powerhouse", "Fighter" ], 3, 1, 4, 3, 50, 130703, 472, 242, 71, 1068, 577, 166, 1 ],
     [ "Marco, Blue Flame Tears", "INT", [ "Powerhouse", "Fighter" ], 4, 1, 4, 4, 99, 1000000, 955, 530, 149, 1812, 1074, 313, 1 ],
     [ "Nekomamushi, A Requested Message", "STR", [ "Powerhouse", "Striker" ], 3, 1, 5, 2, 70, 355666, 434, 258, 32, 1512, 1125, 117, 1 ],
     [ "Evening Shower Kanjuro, A Samurai Returning From 20 Years Past", "DEX", [ "Striker", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1190, 524, 107, 2974, 1309, 268, 1 ],
