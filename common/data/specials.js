@@ -5393,24 +5393,24 @@ window.specials = {
         }
     },
     2149: {
-        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2049].multiplier; },
+        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2149].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
-                window.specials[2049].multiplier = 1.75;
+                window.specials[2149].multiplier = 1.75;
             }
             else{
-                window.specials[2049].multiplier = 1;
+                window.specials[2149].multiplier = 1;
             }
         }
     },
     2150: {
-        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2050].multiplier; },
+        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2150].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
-                window.specials[2050].multiplier = 1.75;
+                window.specials[2150].multiplier = 1.75;
             }
             else{
-                window.specials[2050].multiplier = 1;
+                window.specials[2150].multiplier = 1;
             }
         }
     },
@@ -7541,6 +7541,20 @@ window.specials = {
     2529: {
         def: function(p) { return 0.2; },
         orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }
+    },
+    2545: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    2546: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
     },
     2553: {
         delay: function(p) { return 1; },
