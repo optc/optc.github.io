@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Fortnight': 4, 'Raid': 8, 'Coliseum': 16, 'Treasure Map': 64, 'Ambush': 256, 'Kisuna Clash': 1024 };
+var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Fortnight': 4, 'Raid': 8, 'Coliseum': 16, 'Treasure Map': 64, 'Ambush': 256, 'Kizuna Clash': 1024 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };

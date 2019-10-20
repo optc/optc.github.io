@@ -4648,7 +4648,7 @@ window.drops = {
     ],
 
             
-    'Kisuna Clash': [
+    'Kizuna Clash': [
         
         {
             name: 'Zoro & Sanji',
@@ -4661,6 +4661,7 @@ window.drops = {
             'Round 2': [ 2615 ],
             'Round 4': [ 2629 ],
             'Round 5': [ 2682 ],
+            'Round 6': [ 2733 ],
         },/*
         
         {
