@@ -53278,6 +53278,18 @@ window.details = {
         special: "Deals 15x character's ATK in DEX damage to all enemies, reduces ATK DOWN, Chain Multiplier Limit and Chain Coefficient Reduction duration by 2 turns and reduces Special Cooldown of all characters by 1 turn.",
         specialName: "Four Emperors",
         sailor: "Restores his own special cooldown by 2 turns when it is rewinded",
+        support: [
+            {
+                "Characters": "Luffy",
+                "description": [
+                    "Level 1: Adds 4% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 9% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 11% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
