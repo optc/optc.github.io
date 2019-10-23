@@ -126,7 +126,16 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     if(!singleQuery) if(!filters.classes.includes(unit.class[0]) || !filters.classes.includes(unit.class[1])) return false;
                 }
                 else{
-                    if(singleQuery) return false;
+                    if(singleQuery) {
+                        var temp1 = false;
+                        var temp2 = false;
+                        var temp3 = false;
+                        if (unit.class[0].length != 2) { if(filters.classes[0] == unit.class[0]) temp1 = true;}
+                        if (unit.class[1].length != 2) { if(filters.classes[0] == unit.class[1]) temp2 = true;}
+                        if (unit.class[2].length != 2) { if(filters.classes[0] == unit.class[2]) temp3 = true;}
+                        if (!(temp1 || temp2 || temp3)) return false;
+                        
+                    }
                     if(!singleQuery){
                         if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
                           && (!filters.classes.includes(unit.class[1][0]) || !filters.classes.includes(unit.class[1][1]))

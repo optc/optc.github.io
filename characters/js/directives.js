@@ -48,7 +48,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
                         while ((classes.match(new RegExp(",", "g")) || []).length >= 1) classes = classes.replace(",", "/");
                         var classess = classes.split('/');
                         //console.log(classess);
-                        var classesHtml = '<span class="cell-' + classess[4] + '">' + classess[4] + '</span>, <span class="cell-' + classess[5] + '">' + classess[5] + '</span>';
+                        var classesHtml = '<span class="cell-' + classess[classess.length - 2] + '">' + classess[classess.length - 2] + '</span>, <span class="cell-' + classess[classess.length - 1] + '">' + classess[classess.length - 1] + '</span>';
                         $(classBox).html(classesHtml);
                     }
                     $(typeBox).addClass('cell-' + type);
