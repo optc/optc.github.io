@@ -9554,4 +9554,46 @@ window.specials = {
     5183: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; },
     },
+    5184: {
+        atk: function(p) { return [ 1.5, 1.75 ][window.specials[5184].multiplier]; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, [ 1.5, 1.75 ][window.specials[5184].multiplier], [p.friendCaptain, p.captain], p.effectName); },
+        delay: function(p) { return 1; },
+        onActivation: function(p) {
+            var n = (window.specials[5184].multiplier == 0 ? 1 : 0);
+            window.specials[5184].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
+                name: '5184warning'
+            });
+        },
+    },
+    5185: {
+        atk: function(p) { return [ 1.5, 1.75 ][window.specials[5185].multiplier]; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, [ 1.5, 1.75 ][window.specials[5185].multiplier], [p.friendCaptain, p.captain], p.effectName); },
+        delay: function(p) { return 1; },
+        onActivation: function(p) {
+            var n = (window.specials[5185].multiplier == 0 ? 1 : 0);
+            window.specials[5185].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
+                name: '5185warning'
+            });
+        },
+    },
+    5186: {
+        atk: function(p) { return [ 1.5, 1.75 ][window.specials[5186].multiplier]; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, [ 1.5, 1.75 ][window.specials[5186].multiplier], [p.friendCaptain, p.captain], p.effectName); },
+        delay: function(p) { return 1; },
+        onActivation: function(p) {
+            var n = (window.specials[5186].multiplier == 0 ? 1 : 0);
+            window.specials[5186].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
+                name: '5186warning'
+            });
+        },
+    },
 };

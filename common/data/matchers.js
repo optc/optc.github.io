@@ -246,7 +246,7 @@ window.matchers = [
         matcher: /Boosts ATK[^,]+(all characters)/i
     },
     
-    {
+    /*{
         name: '1.5x ATK specials',
         target: 'special',
         matcher: /Boosts ATK\D*by 1.5x/i
@@ -268,7 +268,7 @@ window.matchers = [
         name: '2.25x ATK specials',
         target: 'special',
         matcher: /Boosts ATK\D*by 2.25x/i
-    },
+    },*/
 
     {
         name: 'Conditional ATK boosters',
@@ -313,6 +313,42 @@ window.matchers = [
     },
     
     {
+        name: '1.5x Boost specials',
+        target: 'special',
+        matcher: /[Boosts |Amplifies ]\D*by 1.5x/i
+    },
+
+    {
+        name: '1.75x Boost specials',
+        target: 'special',
+        matcher: /[Boosts |Amplifies ]\D*by 1.75x/i
+    },
+
+    {
+        name: '2x Boost specials',
+        target: 'special',
+        matcher: /[Boosts |Amplifies ]\D*by 2x/i
+    },
+    
+    {
+        name: '2.25x Boost specials',
+        target: 'special',
+        matcher: /[Boosts |Amplifies ]\D*by 2.25x/i
+    },
+    
+    {
+        name: '2.5x Boost specials',
+        target: 'special',
+        matcher: /[Boosts |Amplifies ]\D*by 2.5x/i
+    },
+    
+    {
+        name: '2.75x Boost specials',
+        target: 'special',
+        matcher: /[Boosts |Amplifies ]\D*by 2.75x/i
+    },
+    
+    {
         name: 'Combo Boost Specials',
         target: 'special',
         matcher: /Boost.+hit in the chain/i
@@ -330,7 +366,7 @@ window.matchers = [
         matcher: /amplifies.+orb/i
     },
     
-    {
+    /*{
         name: '1.5x Orb boost specials',
         target: 'special',
         matcher: /amplifies.+orb\D*by 1.5x/i
@@ -352,7 +388,7 @@ window.matchers = [
         name: '2.25x Orb boost specials',
         target: 'special',
         matcher: /amplifies.+orb\D*by 2.25x/i
-    },
+    },*/
     
     {
         name: 'Chain Boosters',

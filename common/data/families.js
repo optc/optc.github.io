@@ -3368,7 +3368,7 @@ window.families = [
     "Duval",
     "Duval",
     [ "Sanji", "Charlotte Pudding" ],
-    null,
+    [ "Usopp", "Tony Tony Chopper" ],
     null,
     null,
     null,
