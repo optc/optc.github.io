@@ -4913,6 +4913,13 @@ window.drops = {
         },
         
         {
+            name: 'Outpost Battle! Four Emperors on the Move!',
+            thumb: 2738,
+            gamewith: 173400,
+            'All Difficulties': [ 2737 ],
+        },
+        
+        {
             name: 'The Flashback Before the Reunion! Fight all your Enemies!',
             thumb: 1353,
             global: true,
