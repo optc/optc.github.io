@@ -54048,6 +54048,62 @@ window.details = {
             },
         ],
     },
+    3370: {//Usopp&Chopper
+        captain: {
+            "character1": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2.75x, their HP by 1.25x and makes [TND] and [RCV] orbs beneficial for all characters.",
+            "character2": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2.75x, their HP by 1.25x and boosts chances of getting Matching orbs.",
+            "combined": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.25x, their HP by 1.25x, boosts chances of getting Matching orbs and makes [TND] and [RCV] orbs beneficial for all characters."
+        },
+        captainNotes: "#{beneficial}",
+        special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by ?x for 2 turns and boosts ATK of all characters by ?x for 2 turns, delays all enemies for 1 turn, amplifies the effect of orbs by ?x for 1 turn and boosts ATK of all characters by ?x for 1 turn otherwise.",
+        swap: "When Change is activated, recovers 3% of crew's MAX HP and adds 0.3x to Chain multiplier for 1 turn",
+        specialName: "Killer UsoCho Horn Explosion",
+        sailor: {
+            "character1": "Makes [STR] orbs beneficial for this character",
+            "character2": "Makes [STR] orbs beneficial for this character",
+            "combined": "Makes [STR] orbs beneficial for this character",
+            "level1": "Not Translated",
+        },
+        /*limit: [
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
+                ]
+            },
+        ]*/
+    },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
         captainNotes: "#{beneficial}",

@@ -43,10 +43,14 @@
                                     <th ng-if="hybrid" colspan=2>Character 2 Class 2</th>
                                 </tr>
                                 <tr ng-if="dualunit">
-                                    <td>{{unit.class[0][0]}}</td>
-                                    <td>{{unit.class[0][1]}}</td>
-                                    <td>{{unit.class[1][0]}}</td>
-                                    <td colspan=2>{{unit.class[1][1]}}</td>
+                                    <td ng-if="unit.class[0].length == 2">{{unit.class[0][0]}}</td>
+                                    <td ng-if="unit.class[0].length != 2">{{unit.class[0]}}</td>
+                                    <td ng-if="unit.class[0].length == 2">{{unit.class[0][1]}}</td>
+                                    <td ng-if="unit.class[0].length != 2"></td>
+                                    <td ng-if="unit.class[1].length == 2">{{unit.class[1][0]}}</td>
+                                    <td ng-if="unit.class[1].length != 2">{{unit.class[1]}}</td>
+                                    <td ng-if="unit.class[1].length == 2" colspan=2>{{unit.class[1][1]}}</td>
+                                    <td ng-if="unit.class[1].length != 2" colspan=2>None    </td>
                                 </tr>
                                 <tr>
                                     <th ng-if="!hybrid">Class</th>

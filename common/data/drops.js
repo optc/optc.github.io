@@ -2430,8 +2430,9 @@ window.drops = {
         },
         
         {
-            name: 'Dress Up for the Pirate Festival!',
+            name: 'Dress Up for the Pirate Festival! Pop',
             dropID: 'event119',
+            global: true,
             thumb: 2519,
             nakama: 2251900,
             gamewith: 149417,
@@ -2441,6 +2442,7 @@ window.drops = {
         {
             name: 'Dress Up for the Pirate Festival! Chic',
             dropID: 'event120',
+            global: true,
             thumb: 2524,
             nakama: 2252400,
             gamewith: 150791,
@@ -3255,6 +3257,7 @@ window.drops = {
             name: 'Clash!! Magellan & Hannyabal',
             dropID: 'clash44',
             thumb: 2517,
+            global: true,
             nakama: 4251700,
             gamewith: 149117,
             Master: [ 2516 ],
@@ -3263,6 +3266,7 @@ window.drops = {
         
         {
             name: 'Clash!! Sengoku & Garp',
+            dropID: 'clash45',
             thumb: 2552,
             global: true,
             nakama: 4255200,
@@ -3273,6 +3277,7 @@ window.drops = {
         
         {
             name: 'Game!! Leo',
+            dropID: 'clash46',
             thumb: 2559,
             nakama: 4255900,
             gamewith: 152009,
@@ -3282,6 +3287,7 @@ window.drops = {
         
         {
             name: 'Clash!! STAMPEDE',
+            dropID: 'clash47',
             thumb: 2642,
             nakama: 4264200,
             condition: 'Second Expert version with Bullet boss stage will drop Stampede Limit Break materials',
@@ -3292,6 +3298,7 @@ window.drops = {
         
         {
             name: 'Showdown!! Lucci',
+            dropID: 'clash48',
             thumb: 2670,
             nakama: 4267000,
             gamewith: 163423,
@@ -3300,7 +3307,8 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Sabo STAMPEDE',
+            name: 'Clash!! Sabo',
+            dropID: 'clash49',
             thumb: 2684,
             nakama: 4268400,
             gamewith: 165289,
@@ -3310,6 +3318,7 @@ window.drops = {
         
         {
             name: 'Clash!! Ace',
+            dropID: 'clash50',
             thumb: 2394,
             global: true,
             nakama: 4239400,
@@ -3321,6 +3330,7 @@ window.drops = {
         
         {
             name: 'Showdown!! Crocodile',
+            dropID: 'clash51',
             thumb: 2698,
             nakama: 4269800,
             gamewith: 168159,
@@ -3331,6 +3341,7 @@ window.drops = {
         
         {
             name: 'Game!! Zorojuro',
+            dropID: 'clash52',
             thumb: 2707,
             nakama: 4270700,
             gamewith: 168824,
@@ -3340,6 +3351,7 @@ window.drops = {
         
         {
             name: 'Clash!! Law',
+            dropID: 'clash53',
             thumb: 2709,
             nakama: 4270900,
             gamewith: 168822,
@@ -3357,6 +3369,16 @@ window.drops = {
             Master: [ 3341 ],
             Expert: [ 3341 ],
             Ultimate: [ 3341 ],
+        },
+        
+        {
+            name: 'Showdown!! Usopp & Chopper',
+            thumb: 3370,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Expert: [ 3370 ],
+            Ultimate: [ 3370 ],
         },
 
     ],
@@ -4504,6 +4526,7 @@ window.drops = {
             name: 'Edward Weevil',
             dropID: 'treasuremap20',
             thumb: 2510,
+            global: true,
             nakama: 8251000,
             gamewith: 148609,
             'Raging Sea': [ 2509 ]
@@ -4797,10 +4820,10 @@ window.drops = {
         {
             name: 'Beginner Adventure: Whole Cake Island Special Edition',
             thumb: 2532,
+            global: true,
             nakama: 6253200,
             gamewith: 149693,
-            condition: 'Will have a unique tab in the drops page soon.',
-            'All Difficulties': [ 2532, 2518 ]
+            'All Difficulties': [ 2532 ]
         },
         
         {
@@ -4992,8 +5015,9 @@ window.drops = {
         },
         
         {
-            name: 'Special Festival! 5th Anniversary',
+            name: 'Manual Festival!',
             thumb: 2534,
+            global: true,
             nakama: 6207600,
             gamewith: 150408,
             showManual: true,
