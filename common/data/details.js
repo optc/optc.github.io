@@ -54048,7 +54048,7 @@ window.details = {
             "character1": "Makes [STR] orbs beneficial for this character",
             "character2": "Makes [STR] orbs beneficial for this character",
             "combined": "Makes [STR] orbs beneficial for this character",
-            "level1": "Not Translated",
+            "level1": "Boosts base ATK of characters in the top row by 40",
         },
         /*limit: [
             { "description": "Boosts base RCV by 20" },
@@ -54065,30 +54065,30 @@ window.details = {
             { "description": "Boosts base HP by 70" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Boosts base ATK by 60" },
-            { "description": "Acquire Potential 2: Critical Hit" },
-        ],
+            { "description": "Reduce No Healing duration" },
+        ],*/
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by 2%",
-                    "Level 3: Reduce damage taken from [STR] characters by 3%",
-                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
                     "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
-                "Name": "Critical Hit",
+                "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a 30% chance to deal 4% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a 40% chance to deal 5% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a 50% chance to deal 6% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a 60% chance to deal 7% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a 70% chance to deal 8% of this character's attack in extra damage"
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by 7 turn"
                 ]
             },
-        ]*/
+        ]
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
