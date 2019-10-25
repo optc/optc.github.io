@@ -1070,7 +1070,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         //isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
         for(var kata = 0; kata < 2; kata++){
             if(team[kata].unit !== null){
-                if(team[kata].unit.number == 2112 || team[kata].unit.number == 2113)
+                var temp = team[kata].unit.number + 1;
+                if(temp == 2112 || temp == 2113 || temp == 2739)
                     katakuri = true;
             }
         }

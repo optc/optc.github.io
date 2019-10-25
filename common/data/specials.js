@@ -8442,6 +8442,19 @@ window.specials = {
             window.specials[2736].turnedOn = false;
         }
     },
+    2739: {
+        staticMult: function(p) { return [ 100, 0 ][window.specials[2739].multiplier]; },
+        atk: function(p) { return p.delayed > 0 ? [ 1, 2 ][window.specials[2739].multiplier] : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2739].multiplier == 0 ? 1 : 0);
+            window.specials[2739].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Tap Timing Bonus', 'Conditional Boost'][n] + ' boost. To switch to the ' + ['Conditional Boost', 'Tap Timing Bonus'][n] + ', disable and re-enable this special',
+                name: '2739warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

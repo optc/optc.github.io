@@ -9692,6 +9692,18 @@ window.captains = {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 2.75 : 2.25 : 1; },
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.2 : 1; },
     },
+    2739: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Slasher", "Striker", "Driven", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(1.95, Katacount);
+        },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

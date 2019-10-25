@@ -2737,7 +2737,7 @@ window.aliases = {
     2736: [ 'ユースタス・キッド 心折れぬ敗北者', '', 'Blitz Battle Kidd' ],
     2737: [ 'シャンクス 迫る約束の時', '', 'Blitz Battle Shanks' ],
     2738: [ '赤髪のシャンクス 迫る約束の時', '', 'Blitz Battle Shanks' ],
-    2739: [ '', '', '' ],
+    2739: [ '', '', 'V1 Katakuri', 'Super Katakuri', 'Mega Katakuri', 'Charlotte Katakuri' ],
     2740: [ '', '', '' ],
     2741: [ '', '', '' ],
     2742: [ '', '', '' ],
