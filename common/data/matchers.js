@@ -1180,7 +1180,7 @@ window.matchers = [
     {
         name: 'Tap Timing Activated Support',
         target: 'support',
-        matcher: /perfect|great|good/i
+        matcher: /PERFECT|GREAT|GOOD/
     },
     
     {
