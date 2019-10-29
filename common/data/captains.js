@@ -9704,6 +9704,41 @@ window.captains = {
             return Math.pow(1.95, Katacount);
         },
     },
+    2740: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 4 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.5 : 1; },
+    },
+    2741: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 4 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.5 : 1; },
+    },
+    2742: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+    },
+    2743: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2.5 : 1; },
+    },
+    2743: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    2745: {
+        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ?  3 : 2.25); },
+        hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 1.2 : 1; }
+    },
+    2746: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 2.25 : 1; },
+    },
+    2747: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.5 : 1; },
+    },
+    2748: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+    },
+    2749: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.75 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

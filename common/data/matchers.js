@@ -1238,6 +1238,12 @@ window.matchers = [
     },
     
     {
+        name: 'Chain Boosters',
+        target: 'support',
+        matcher: /Adds.+to Chain/i 
+    },
+    
+    {
         name: 'Chain Lockers',
         target: 'support',
         matcher: /Locks the chain multiplier/i 

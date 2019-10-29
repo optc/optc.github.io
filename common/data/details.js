@@ -53366,6 +53366,158 @@ window.details = {
             },
         ]
     },
+    2740: {//Ace V2
+        captain: "Boosts ATK of Fighter and Shooter characters by 4x, their HP by 1.5x, makes [PSY] and [INT] orbs beneficial for Fighter and Shooter characters, reduces Silence duration by 10 turns and restores special cooldowns by 10 turns when they are rewinded.",
+        captainNotes: "The Silence and Special Rewind reduction can activate multiple times",
+        special: "Reduces Bind duration by 10 turns and boosts ATK of Fighter and Shooter characters by 2.5x for 1 turn.",
+        specialName: "Flame Emperor - Flame of Halloween",
+    },
+    2741: {//Ace V2
+        captain: "Boosts ATK of Fighter and Shooter characters by 4x, their HP by 1.5x, makes [PSY] and [INT] orbs beneficial for Fighter and Shooter characters, reduces Silence duration by 10 turns and restores special cooldowns by 10 turns when they are rewinded.",
+        captainNotes: "The Silence and Special Rewind reduction can activate multiple times",
+        special: "Reduces Bind duration by 10 turns and boosts ATK of Fighter and Shooter characters by 2.5x for 1 turn.",
+        specialName: "Flame Emperor - Flame of Halloween",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Fighter and Shooter characters by 75",
+            "level2": "Makes [PSY], [RCV], [TND] orbs beneficial for this character",
+        },
+        support: [
+            {
+                "Characters": "Luffy and Sabo",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Bind, reduces Bind duration by 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with Bind, reduces Bind duration by 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Bind, reduces Bind duration by 2 turns",
+                    "Level 4: Once per adventure, when you are inflicted with Bind, reduces Bind duration by 2 turns",
+                    "Level 5: Once per adventure, when you are inflicted with Bind, reduces Bind duration by 3 turns"
+                ]
+            }
+        ]
+    },
+    2742: {//Koala
+        captain: "Boosts ATK of Fighter and Cerebral characters by 2.25x recovers 500 HP at the end of each turn.",
+        special: "Reduces Increase Damage Taken duration by 5 turns, reduces damage received by 50% for 3 turns, recovers 10x character's RCV in HP at the end of each turn for 3 turns.",
+        specialName: "Little Devil's Treat and Smile",
+        sailor: "Boosts base RCV of Fighter and Cerebral characters by 30",
+    },
+    2743: {//Koala
+        captain: "Boosts ATK of Fighter and Cerebral characters by 2.5x recovers 1,000 HP at the end of each turn.",
+        special: "Reduces Increase Damage Taken duration by 5 turns, reduces damage received by 50% for 3 turns, recovers 10x character's RCV in HP at the end of each turn for 3 turns.",
+        specialName: "Little Devil's Treat and Smile",
+        sailor: {
+            "base": "Boosts base RCV of Fighter and Cerebral characters by 30",
+            "level1": "If your Captain is a Fighter or Cerebral character, makes [DEX] orbs beneficial for all characters",
+        },
+        support: [
+            {
+                "Characters": "Sabo, Morley, Belo Betty, Karasu and Lindbergh",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 2: Reduces damage received from [INT] characters by 2%. Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 3: Reduces damage received from [INT] characters by 3%. Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 4: Reduces damage received from [INT] characters by 4%. Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 5: Reduces damage received from [INT] characters by 5%. Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP."
+                ]
+            }
+        ]
+    },
+    2744: {//Reiju
+        captain: "Boosts ATK of Shooter and Cerebral characters by 2.25x and boosts HP of Shooter and Cerebral characters by 1.2x.",
+        special: "Removes Poison duration completely and reduces Paralysis and Burn duration by 3 turns. If your Captain is a Shooter or Cerebral character, changes all orbs on Shooter and Cerebral characters into Matching orbs and boosts chances of getting Matching orbs for 2 turns.",
+        specialName: "Trick or Wedding",
+        sailor: "Boosts base HP of Shooter and Cerebral characters by 30",
+    },
+    2745: {//Reiju
+        captain: "Boosts ATK of Shooter and Cerebral characters by 3x if they have a Matching orb, by 2.25x otherwise and boosts HP of Shooter and Cerebral characters by 1.2x.",
+        special: "Removes Poison duration completely and reduces Paralysis and Burn duration by 3 turns. If your Captain is a Shooter or Cerebral character, changes all orbs on Shooter and Cerebral characters into Matching orbs and boosts chances of getting Matching orbs for 2 turns.",
+        specialName: "Trick or Wedding",
+        sailor: {
+            "base": "Boosts base HP of Shooter and Cerebral characters by 30",
+            "level1": "If your Captain is a Shooter or Cerebral character, makes [QCK] orbs beneficial for all characters",
+        },
+        support: [
+            {
+                "Characters": "Shooter characters",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses an Orb Controlling or Orb Manipulation special, boosts chances of getting Matching orbs for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses an Orb Controlling or Orb Manipulation special, boosts chances of getting Matching orbs for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses an Orb Controlling or Orb Manipulation special, boosts chances of getting Matching orbs for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses an Orb Controlling or Orb Manipulation special, boosts chances of getting Matching orbs for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses an Orb Controlling or Orb Manipulation special, boosts chances of getting Matching orbs for 2 turns."
+                ]
+            }
+        ]
+    },
+    2746: {//Doflamingo
+        captain: "Boosts ATK of Shooter and Fighter characters by 2.25x and deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn.",
+        special: "Removes enemies Resilience buff duration completely. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, boosts ATK of Fighter and Shooter characters by 1.75x and amplifies the effect of orbs for Fighter and Shooter characters by 1.75x for 1 turn.",
+        specialName: "The Mocking King Sitting Atop of the Grave",
+        sailor: "Boosts base ATK of Shooter and Fighter characters by 30",
+    },
+    2747: {//Doflamingo
+        captain: "Boosts ATK of Shooter and Fighter characters by 2.25x, their HP by 1.5x and deals 5 times the damage received in the previous turn in [INT] damage to all enemies at the end of each turn.",
+        special: "Removes enemies Resilience buff duration completely. If enemies have Delay Debuff Protection or All Debuff Protection at the time the special was activated, boosts ATK of Fighter and Shooter characters by 1.75x and amplifies the effect of orbs for Fighter and Shooter characters by 1.75x for 1 turn.",
+        specialName: "The Mocking King Sitting Atop of the Grave",
+        sailor: {
+            "base": "Boosts base ATK of Shooter and Fighter characters by 30",
+            "level1": "When HP is below ?% at the start of the turn, boosts base ATK of Shooter and Fighter characters by 75",
+        },
+        support: [
+            {
+                "Characters": "[INT] characters",
+                "description": [
+                    "Level 1: Adds 6% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 7% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 9% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 12% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 15% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ]
+    },
+    2748: {//Luffy
+        captain: "Boosts ATK of Fighter characters by 2.25x and makes [TND] orbs beneficial for Fighter characters.",
+        special: "Binds self for 7 turns, cuts the current HP of one enemy by 25%, reduces Despair duration by 4 turns and changes all orbs, including [BLOCK] orbs, to [TND] orbs. If your crew has Orb Amplification, locks the chain multiplier at 2.75x for 3 turns, locks the chain multiplier at 3x for 1 turn otherwise.",
+        specialName: "Demon Lord's Gomu Gomu no Elephant Gun",
+        sailor: {
+            "base": "If your Captain is a Fighter character, makes [TND] orbs beneficial for Fighter characters",
+            "level1": "If your Captain is a Fighter character, boosts base HP of all characters by 1.1x",
+        },
+        support: [
+            {
+                "Characters": "Fighter characters",
+                "description": [
+                    "Level 1: Adds 4% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 5% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 7% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 9% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 12% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ]
+    },
+    2749: {//Luffy
+        captain: "Boosts ATK of Fighter characters by 2.75x and makes [TND] orbs beneficial for Fighter characters.",
+        special: "Binds self for 7 turns, cuts the current HP of one enemy by 25%, reduces Despair duration by 4 turns and changes all orbs, including [BLOCK] orbs, to [TND] orbs. If your crew has Orb Amplification, locks the chain multiplier at 2.75x for 3 turns, locks the chain multiplier at 3x for 1 turn otherwise.",
+        specialName: "Demon Lord's Gomu Gomu no Elephant Gun",
+        sailor: {
+            "base": "If your Captain is a Fighter character, makes [TND] orbs beneficial for Fighter characters",
+            "level1": "If your Captain is a Fighter character, boosts base HP of all characters by 1.1x",
+        },
+        support: [
+            {
+                "Characters": "Fighter characters",
+                "description": [
+                    "Level 1: Adds 4% of this character's base HP to the supported character's base HP.",
+                    "Level 2: Adds 5% of this character's base HP to the supported character's base HP.",
+                    "Level 3: Adds 7% of this character's base HP to the supported character's base HP.",
+                    "Level 4: Adds 9% of this character's base HP to the supported character's base HP.",
+                    "Level 5: Adds 12% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ]
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK as Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",

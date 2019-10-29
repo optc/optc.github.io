@@ -8469,6 +8469,56 @@ window.specials = {
             });
         },
     },
+    2740: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter")) ? 2.5 : 1; },
+        type: "class"
+    },
+    2741: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter")) ? 2.5 : 1; },
+        type: "class"
+    },
+    2746: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2747: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2748: {
+        chain: function(p) { return window.specials[2748].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2748].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2748].multiplier == 2.75 ? 1 : 0);
+            window.specials[2748].multiplier = [2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
+                name: '2748warning'
+            });
+        },
+    },
+    2749: {
+        chain: function(p) { return window.specials[2749].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2749].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2749].multiplier == 2.75 ? 1 : 0);
+            window.specials[2749].multiplier = [2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
+                name: '2749warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

@@ -813,6 +813,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    2742: { // Koala
+        type: 'healer',
+        amount: 500
+    },
+    2743: { // Koala
+        type: 'healer',
+        amount: 500
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

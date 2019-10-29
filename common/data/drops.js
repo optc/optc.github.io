@@ -4688,6 +4688,13 @@ window.drops = {
         },
         
         {
+            name: 'Dead or Treat!! Devilish Party',
+            thumb: 2749,
+            gamewith: null,
+            'All Difficulties': [ 2478 ],
+        },
+        
+        {
             name: 'Sweet Tea Time',
             thumb: 1463,
             global: true,

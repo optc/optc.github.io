@@ -956,11 +956,11 @@ window.sailors = {
     },
     2720: {
         atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
-        atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
     },
     2721: {
         atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
-        atkStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
     },
     2728: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
@@ -981,6 +981,24 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 30 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 30 : 0; },
+    },
+    2742: {
+        rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 30 : 0; },
+    },
+    2743: {
+        rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 30 : 0; },
+    },
+    2744: {
+        hpStatic: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 30 : 0; },
+    },
+    2745: {
+        hpStatic: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 30 : 0; },
+    },
+    2746: {
+        atkStatic: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 30 : 0; },
+    },
+    2747: {
+        atkStatic: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 30 : 0; },
     },
     3333: {
         staticMult: function(p) { return 3; }
