@@ -47881,7 +47881,7 @@ window.details = {
         captain: "Boosts ATK and RCV of Driven characters by 1.75x.",
         sailor: {
             "base": "None",
-            "Level1": "Reduces Silence duration on this character by 2 turns",
+            "level1": "Reduces Silence duration on this character by 2 turns",
         },
         special: "Recovers 50% of crew's MAX HP and reduces damage received by 70% for 3 turns.",
         specialName: "Party Ghost Greeting",
