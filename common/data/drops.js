@@ -2502,6 +2502,15 @@ window.drops = {
             'All Difficulties': [ 2722, 2724, -2607, -2577, -2575, -2567, -2346, -2119, -2117, -2027, -1794, -2005, -2565 ]
         },
         
+        {
+            name: 'Revenge of the Assassins! Galette',
+            dropID: 'event126',
+            thumb: 2723,
+            nakama: 2272300,
+            gamewith: 171113,
+            'All Difficulties': [ 2750, 2751, 2752, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ]
+        },
+        
     ],
 
             
@@ -4253,6 +4262,16 @@ window.drops = {
             gamewith: 170522,
             slefty: 'coliseums',
             Chaos: [ 2720, -2721 ],
+        },
+
+        {
+            name: 'Devil Oars',
+            thumb: 2755,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2754, -2755 ],
         },
         
     ],

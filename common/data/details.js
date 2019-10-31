@@ -53382,6 +53382,38 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Fighter and Shooter characters by 75",
             "level2": "Makes [PSY], [RCV], [TND] orbs beneficial for this character",
         },
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a 40% chance to deal 4% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a 50% chance to deal 5% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a 70% chance to deal 6% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a 80% chance to deal 8% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a 90% chance to deal 10% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 90% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 70% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+        ],
         support: [
             {
                 "Characters": "Luffy and Sabo",
@@ -53409,6 +53441,29 @@ window.details = {
             "base": "Boosts base RCV of Fighter and Cerebral characters by 30",
             "level1": "If your Captain is a Fighter or Cerebral character, makes [DEX] orbs beneficial for all characters",
         },
+        potential: [
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 40% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
         support: [
             {
                 "Characters": "Sabo, Morley, Belo Betty, Karasu and Lindbergh",
@@ -53436,6 +53491,29 @@ window.details = {
             "base": "Boosts base HP of Shooter and Cerebral characters by 30",
             "level1": "If your Captain is a Shooter or Cerebral character, makes [QCK] orbs beneficial for all characters",
         },
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
         support: [
             {
                 "Characters": "Shooter characters",
@@ -53463,6 +53541,29 @@ window.details = {
             "base": "Boosts base ATK of Shooter and Fighter characters by 30",
             "level1": "When HP is below ?% at the start of the turn, boosts base ATK of Shooter and Fighter characters by 75",
         },
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by 50",
+                    "Level 2: Boosts base ATK by 75",
+                    "Level 3: Boosts base ATK by 100",
+                    "Level 4: Boosts base ATK by 150",
+                    "Level 5: Boosts base ATK by 200"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
         support: [
             {
                 "Characters": "[INT] characters",
@@ -53514,6 +53615,122 @@ window.details = {
                     "Level 3: Adds 7% of this character's base HP to the supported character's base HP.",
                     "Level 4: Adds 9% of this character's base HP to the supported character's base HP.",
                     "Level 5: Adds 12% of this character's base HP to the supported character's base HP."
+                ]
+            }
+        ]
+    },
+    2750: {//Galette
+        captain: "Boosts ATK of Shooter characters by 2x.",
+        special: "Deals 20x character's ATK as Typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Shooter and Driven characters into Matching orbs and boosts the Color Affinity of Shooter and Driven characters by 1.5x for 2 turns.",
+        specialName: "Liquid Handcuffs",
+    },
+    2751: {//Galette
+        captain: "Boosts ATK of Shooter characters by 2.5x and their HP by 1.2x.",
+        special: "Deals 20x character's ATK as Typeless damage to all enemies, changes [STR], [DEX], [QCK], [INT] and [PSY] orbs on Shooter and Driven characters into Matching orbs and boosts the Color Affinity of Shooter and Driven characters by 1.5x for 2 turns.",
+        specialName: "Liquid Handcuffs",
+        support: [
+            {
+                "Characters": "Shooter characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ]
+    },
+    2752: {//Poire
+        captain: "Boosts ATK of [INT] characters by 1.5x.",
+        special: "Boosts ATK of Shooter and Free Spirit characters by 1.3x for 1 turn and adds 0.3x to Chain multiplier for 1 turn.",
+        specialName: "Poire Gattling",
+    },
+    2753: {//Montdor
+        captain: "Boosts ATK of [DEX] characters by 2x.",
+        special: "Locks all orbs for 2 turns and reduces Bind and Silence duration by 3 turns.",
+        specialName: "Angry Shots",
+        support: [
+            {
+                "Characters": "Galette and Poire",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK to the supported character's base ATK.",
+                    "Level 2: Adds 4% of this character's base ATK to the supported character's base ATK.",
+                    "Level 3: Adds 5% of this character's base ATK to the supported character's base ATK.",
+                    "Level 4: Adds 7% of this character's base ATK to the supported character's base ATK.",
+                    "Level 5: Adds 9% of this character's base ATK to the supported character's base ATK."
+                ]
+            }
+        ]
+    },
+    2754: {//Oars
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.25x and their HP by 1.2x.",
+        special: "Deals 200x character's ATK as [QCK] damage to all enemies, reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction and Increased Defense Buffs duration by 4 turns. If there are 6 Driven characters in your crew when the special is activated, increases duration of any Class/Type boosting buffs by 1 turn.",
+        specialName: "\"Shadow Revolution\" Gomu Gomu no Pistol",
+        sailor: "Cannot be Blown Away",
+    },
+    2755: {//Oars
+        captain: "Boosts ATK of Fighter and Powerhouse characters by 2.75x and their HP by 1.35x.",
+        special: "Deals 200x character's ATK as [QCK] damage to all enemies, reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction and Increased Defense Buffs duration by 4 turns. If there are 6 Driven characters in your crew when the special is activated, increases duration of any Class/Type boosting buffs by 1 turn.",
+        specialName: "\"Shadow Revolution\" Gomu Gomu no Pistol",
+        sailor: {
+            "base": "Cannot be Blown Away",
+            "level1": "Boosts own base ATK by 150 if this character is the last in the chain to attack",
+        },
+        support: [
+            {
+                "Characters": "Gecko Moria, Perona, Absalom, Doctor Hogback",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 2: Adds 2% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 3: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 4: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP.",
+                    "Level 5: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP."
+                ]
+            }
+        ]
+    },
+    2758: {//Sabo
+        captain: "Boosts ATK of Striker and Fighter characters by 3x, their HP by 1.2x, makes [INT] orbs beneficial for Striker and Fighter characters.",
+        special: "Locks all orbs for 1 turn. If your crew has 6 [TND] orbs, amplifies the effects of orbs for Striker, Fighter and Shooter characters by 2.25x for 1 turn, by 1.75x for 3 turns otherwise.",
+        specialName: "Claws of the God of Death",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Striker and Fighter characters by 50",
+            "level2": "If your Captain is a Striker or Fighter character, makes [STR] orbs beneficial for all characters",
+        },
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+            {
+                "Name": "Enrage",
+                "description": [
+                    "Level 1: Boosts base ATK by ?",
+                    "Level 2: Boosts base ATK by ?",
+                    "Level 3: Boosts base ATK by ?",
+                    "Level 4: Boosts base ATK by ?",
+                    "Level 5: Boosts base ATK by ?"
+                ]
+            },
+        ],
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Luffy and Ace",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 4% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 9% of this character's base ATK and HP to the supported character's base ATK and HP"
                 ]
             }
         ]
