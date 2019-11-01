@@ -8530,6 +8530,17 @@ window.specials = {
         type: "class",
         chainAddition: function(p) { return 0.3; },
     },
+    2757: {
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2757].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2757].multiplier == 1.75 ? 1 : 0);
+            window.specials[2757].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
+                name: '2757warning'
+            });
+        },
+    },
     2758: {
         orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2758].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {

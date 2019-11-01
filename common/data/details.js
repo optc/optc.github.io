@@ -53382,6 +53382,38 @@ window.details = {
             "level1": "Boosts base ATK, HP and RCV of Fighter and Shooter characters by 75",
             "level2": "Makes [PSY], [RCV], [TND] orbs beneficial for this character",
         },
+        limit: [
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Boosts base RCV by 5" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 15" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Fighter and Shooter characters by 75" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base HP by 10" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Acquire Potential 2: Critical Hit" },
+            { "description": "Boosts base RCV by 15" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Acquire Sailor Ability 2: Makes [PSY], [RCV], [TND] orbs beneficial for this character" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 3: Barrier Penetration" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -53441,6 +53473,23 @@ window.details = {
             "base": "Boosts base RCV of Fighter and Cerebral characters by 30",
             "level1": "If your Captain is a Fighter or Cerebral character, makes [DEX] orbs beneficial for all characters",
         },
+        limit: [
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Pinch Healing" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: If your Captain is a Fighter or Cerebral character, makes [DEX] orbs beneficial for all characters" },
+            { "description": "Acquire Potential 2: Enrage" },
+        ],
         potential: [
             {
                 "Name": "Pinch Healing",
@@ -53491,6 +53540,23 @@ window.details = {
             "base": "Boosts base HP of Shooter and Cerebral characters by 30",
             "level1": "If your Captain is a Shooter or Cerebral character, makes [QCK] orbs beneficial for all characters",
         },
+        limit: [
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: If your Captain is a Shooter or Cerebral character, makes [QCK] orbs beneficial for all characters" },
+            { "description": "Acquire Potential 2: Enrage" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -53541,6 +53607,23 @@ window.details = {
             "base": "Boosts base ATK of Shooter and Fighter characters by 30",
             "level1": "When HP is below ?% at the start of the turn, boosts base ATK of Shooter and Fighter characters by 75",
         },
+        limit: [
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Acquire Sailor Ability 1: If your Captain is a Shooter or Cerebral character, makes [QCK] orbs beneficial for all characters" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Enrage" },
+        ],
         potential: [
             {
                 "Name": "Reduce No Healing duration",
@@ -53581,22 +53664,7 @@ window.details = {
         captain: "Boosts ATK of Fighter characters by 2.25x and makes [TND] orbs beneficial for Fighter characters.",
         special: "Binds self for 7 turns, cuts the current HP of one enemy by 25%, reduces Despair duration by 4 turns and changes all orbs, including [BLOCK] orbs, to [TND] orbs. If your crew has Orb Amplification, locks the chain multiplier at 2.75x for 3 turns, locks the chain multiplier at 3x for 1 turn otherwise.",
         specialName: "Demon Lord's Gomu Gomu no Elephant Gun",
-        sailor: {
-            "base": "If your Captain is a Fighter character, makes [TND] orbs beneficial for Fighter characters",
-            "level1": "If your Captain is a Fighter character, boosts base HP of all characters by 1.1x",
-        },
-        support: [
-            {
-                "Characters": "Fighter characters",
-                "description": [
-                    "Level 1: Adds 4% of this character's base HP to the supported character's base HP.",
-                    "Level 2: Adds 5% of this character's base HP to the supported character's base HP.",
-                    "Level 3: Adds 7% of this character's base HP to the supported character's base HP.",
-                    "Level 4: Adds 9% of this character's base HP to the supported character's base HP.",
-                    "Level 5: Adds 12% of this character's base HP to the supported character's base HP."
-                ]
-            }
-        ]
+        sailor: "If your Captain is a Fighter character, makes [TND] orbs beneficial for Fighter characters",
     },
     2749: {//Luffy
         captain: "Boosts ATK of Fighter characters by 2.75x and makes [TND] orbs beneficial for Fighter characters.",
@@ -53606,6 +53674,45 @@ window.details = {
             "base": "If your Captain is a Fighter character, makes [TND] orbs beneficial for Fighter characters",
             "level1": "If your Captain is a Fighter character, boosts base HP of all characters by 1.1x",
         },
+        limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Acquire Potential 1: Reduce No Healing duration" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Sailor Ability 1: If your Captain is a Fighter character, boosts base HP of all characters by 1.1x" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by 2 turn",
+                    "Level 3: Reduces No Healing duration by 3 turn",
+                    "Level 4: Reduces No Healing duration by 4 turn",
+                    "Level 5: Reduces No Healing duration by 5 turn"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 0.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 30% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 40% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
         support: [
             {
                 "Characters": "Fighter characters",
@@ -53690,14 +53797,37 @@ window.details = {
             }
         ]
     },
+    2756: {//Chopper
+        captain: "Boosts ATK of [STR] characters by 2.5x and their HP by 1.2x.",
+        special: "Deals 10 hits of random Typeless damage to random enemies, reduces Paralysis and ATK DOWN duration by 3 turns and makes [RCV] and [TND] orbs beneficial for Fighter and Free Spirit characters for 3 turns.",
+        sailor: "Makes QCK orbs beneficial for this character",
+        specialName: "Kung Fu Point",
+        support: [
+            {
+                "Characters": "Sanji",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis or ATK DOWN, reduces Paralysis and ATK DOWN duration by 1 turn and recovers 500 HP.",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis or ATK DOWN, reduces Paralysis and ATK DOWN duration by 1 turn and recovers 1,000 HP.",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis or ATK DOWN, reduces Paralysis and ATK DOWN duration by 1 turn and recovers 1,500 HP.",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis or ATK DOWN, reduces Paralysis and ATK DOWN duration by 1 turn and recovers 2,000 HP.",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis or ATK DOWN, reduces Paralysis and ATK DOWN duration by 1 turn and recovers 3,000 HP."
+                ]
+            }
+        ]
+    },
+    2757: {//Sabo
+        captain: "Boosts ATK of Striker and Fighter characters by 2x, their HP by 1.2x, makes [INT] orbs beneficial for Striker and Fighter characters.",
+        special: "Locks all orbs for 1 turn. If your crew has 6 [TND] orbs, amplifies the effects of orbs for Striker, Fighter and Shooter characters by 2.25x for 1 turn, by 1.75x for 3 turns otherwise.",
+        specialName: "Claws of the God of Death",
+        sailor: "Boosts base ATK, HP and RCV of Striker and Fighter characters by 50",
+    },
     2758: {//Sabo
         captain: "Boosts ATK of Striker and Fighter characters by 3x, their HP by 1.2x, makes [INT] orbs beneficial for Striker and Fighter characters.",
         special: "Locks all orbs for 1 turn. If your crew has 6 [TND] orbs, amplifies the effects of orbs for Striker, Fighter and Shooter characters by 2.25x for 1 turn, by 1.75x for 3 turns otherwise.",
         specialName: "Claws of the God of Death",
         sailor: {
-            "base": "None",
-            "level1": "Boosts base ATK, HP and RCV of Striker and Fighter characters by 50",
-            "level2": "If your Captain is a Striker or Fighter character, makes [STR] orbs beneficial for all characters",
+            "base": "Boosts base ATK, HP and RCV of Striker and Fighter characters by 50",
+            "level1": "If your Captain is a Striker or Fighter character, makes [STR] orbs beneficial for all characters",
         },
         potential: [
             {
@@ -54494,41 +54624,41 @@ window.details = {
             "combined": "Makes [STR] orbs beneficial for this character",
             "level1": "Boosts base ATK of characters in the top row by 40",
         },
-        /*limit: [
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 20" },
-            { "description": "Boosts base HP by 10" },
-            { "description": "Boosts base HP by 30" },
             { "description": "Acquire Potential 1: [STR] Damage Reduction" },
-            { "description": "Boosts base HP by 40" },
-            { "description": "Boosts base ATK by 40" },
-            { "description": "Boosts base ATK by 30" },
-            { "description": "Acquire Sailor Ability 1: Reduces Silence duration on this character by 3 turns" },
-            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 45" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Boosts base HP by 70" },
-            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 60" },
             { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of characters in the top row by 40" },
             { "description": "Reduce No Healing duration" },
-        ],*/
+        ],
         potential: [
             {
                 "Name": "[STR] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [STR] characters by ?%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
                     "Level 5: Reduce damage taken from [STR] characters by 5%"
                 ]
             },
             {
                 "Name": "Reduce No Healing duration",
                 "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turn",
                     "Level 5: Reduces No Healing duration by 7 turn"
                 ]
             },

@@ -9760,6 +9760,14 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 2.75 : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.35 : 1; },
     },
+    2756: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    2757: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 2 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 1.2 : 1; },
+    },
     2758: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 3 : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 1.2 : 1; },

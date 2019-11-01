@@ -1000,6 +1000,16 @@ window.sailors = {
     2747: {
         atkStatic: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 30 : 0; },
     },
+    2757: {
+        atkStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
+    },
+    2758: {
+        atkStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
