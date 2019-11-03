@@ -4624,23 +4624,22 @@ window.drops = {
             dropID: 'bond1',
             thumb: 2531,
             nakama: null,
-            gamewith: [ 150056, 155125, 159694, 156784, 164568 ],
+            gamewith: [ 150056, 155125, 159694, 156784, 164568, 172467 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
             'Round 4': [ 2629 ],
             'Round 5': [ 2682 ],
             'Round 6': [ 2733 ],
-        },/*
         
         {
-            name: 'Garp',
+            name: 'Grim Reaper Sabo',
             dropID: 'bond2',
-            thumb: 2632,
+            thumb: 2758,
             nakama: null,
             gamewith: [ null ],
-            'All Difficulties': [ 2632 ],
-        },*/
+            'All Difficulties': [ 2757 ],
+        },
         
     ],
 
