@@ -225,7 +225,7 @@ window.matchers = [
     {
         name: 'Type-boosting specials',
         target: 'special',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT)\b/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT|Type)\b/i
     },
 
     {
@@ -271,6 +271,30 @@ window.matchers = [
     },*/
 
     {
+        name: 'ATK boosters',
+        target: 'special',
+        matcher: /boosts( own ATK| ATK of)/i
+    },
+    
+    {
+        name: 'Combo Boost Specials',
+        target: 'special',
+        matcher: /Boost.+hit in the chain/i
+    },
+
+    {
+        name: 'Orb boosters',
+        target: 'special',
+        matcher: /amplifies.+orb/i
+    },
+    
+    {
+        name: 'Color Affinity boosters',
+        target: 'special',
+        matcher: /Boosts the Color Affinity/i
+    },
+
+    {
         name: 'Conditional ATK boosters',
         target: 'special',
         matcher: /Boosts ATK.+against.+enemies/i
@@ -304,12 +328,6 @@ window.matchers = [
         name: 'Following-turn Buff Enabler',
         target: 'special',
         matcher: /(Following the activation|If during that turn)/i
-    },
-    
-    {
-        name: 'Color Affinity boosters',
-        target: 'special',
-        matcher: /Boosts the Color Affinity/i
     },
     
     {
@@ -349,21 +367,9 @@ window.matchers = [
     },
     
     {
-        name: 'Combo Boost Specials',
-        target: 'special',
-        matcher: /Boost.+hit in the chain/i
-    },
-    
-    {
         name: 'RCV boosters',
         target: 'special',
         matcher: /Boosts RCV/i
-    },
-
-    {
-        name: 'Orb boosters',
-        target: 'special',
-        matcher: /amplifies.+orb/i
     },
     
     /*{

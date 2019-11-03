@@ -45212,7 +45212,7 @@ window.details = {
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 70" },
             { "description": "Boosts base HP by 70" },
@@ -47798,23 +47798,23 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Barrier Penetration",
+                "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -53772,13 +53772,13 @@ window.details = {
     },
     2754: {//Oars
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2.25x and their HP by 1.2x.",
-        special: "Deals 200x character's ATK as [QCK] damage to all enemies, reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction and Increased Defense Buffs duration by 4 turns. If there are 6 Driven characters in your crew when the special is activated, increases duration of any Class/Type boosting buffs by 1 turn.",
+        special: "Deals 200x character's ATK as [QCK] damage to all enemies, reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction and Increased Defense Buffs duration by 4 turns. If there are 6 Fighter characters in your crew when the special is activated, increases duration of any Class/Type boosting buffs by 1 turn.",
         specialName: "\"Shadow Revolution\" Gomu Gomu no Pistol",
         sailor: "Cannot be Blown Away",
     },
     2755: {//Oars
         captain: "Boosts ATK of Fighter and Powerhouse characters by 2.75x and their HP by 1.35x.",
-        special: "Deals 200x character's ATK as [QCK] damage to all enemies, reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction and Increased Defense Buffs duration by 4 turns. If there are 6 Driven characters in your crew when the special is activated, increases duration of any Class/Type boosting buffs by 1 turn.",
+        special: "Deals 200x character's ATK as [QCK] damage to all enemies, reduces ATK DOWN duration by 4 turns and reduces enemies' Threshold Damage Reduction and Increased Defense Buffs duration by 4 turns. If there are 6 Fighter characters in your crew when the special is activated, increases duration of any Class/Type boosting buffs by 1 turn.",
         specialName: "\"Shadow Revolution\" Gomu Gomu no Pistol",
         sailor: {
             "base": "Cannot be Blown Away",
@@ -54615,7 +54615,7 @@ window.details = {
             "combined": "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.25x, their HP by 1.25x, boosts chances of getting Matching orbs and makes [TND] and [RCV] orbs beneficial for all characters."
         },
         captainNotes: "#{beneficial}",
-        special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by ?x for 2 turns and boosts ATK of all characters by ?x for 2 turns, delays all enemies for 1 turn, amplifies the effect of orbs by ?x for 1 turn and boosts ATK of all characters by ?x for 1 turn otherwise.",
+        special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by 1.75x for 2 turns and boosts ATK of all characters by 1.75x for 2 turns. Otherwise, delays all enemies for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and boosts ATK of all characters by 1.5x for 1 turn.",
         swap: "When Change is activated, recovers 3% of crew's MAX HP and adds 0.3x to Chain multiplier for 1 turn",
         specialName: "Killer UsoCho Horn Explosion",
         sailor: {
@@ -58956,23 +58956,23 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Barrier Penetration",
+                "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -59005,23 +59005,23 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Barrier Penetration",
+                "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -59054,23 +59054,23 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Barrier Penetration",
+                "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]
@@ -59103,23 +59103,23 @@ window.details = {
         ],
         potential: [
             {
-                "Name": "Barrier Penetration",
+                "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
-                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
-                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
-                "Name": "Pinch Healing",
+                "Name": "[PSY] Damage Reduction",
                 "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 25% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
         ]

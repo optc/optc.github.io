@@ -2804,7 +2804,7 @@ window.aliases = {
     3367: [ '', '', 'Neo Duval', 'Kai Duval', 'Raid Duval' ],
     3368: [ '', '', 'Neo Duval', 'Kai Duval', 'Raid Duval' ],
     3369: [ '', '', 'Sanji&Pudding', 'Sanji and Pudding', 'Sanji Pudding', 'SanjiPudding', 'Pudding&Sanji', 'Pudding and Sanji', 'Pudding Sanji', 'PuddingSanji', 'Limited Snaji', 'Limited Pudding', 'Secret Sanji', 'Secret Pudding' ],
-    3370: [ '', '', 'Usopp&Chopper', 'Usopp and Chopper', 'Usopp Chopper', 'UsoppChopper', 'Chopper&Usopp', 'Chopper and Usopp', 'Chopper Usopp', 'ChopperUsopp', 'Raid Usopp', 'Raid Chopper' ],
+    3370: [ '', '', 'Usopp&Chopper', 'Usopp and Chopper', 'Usopp Chopper', 'UsoppChopper', 'Chopper&Usopp', 'Chopper and Usopp', 'Chopper Usopp', 'ChopperUsopp', 'Raid Usopp', 'Raid Chopper', 'UsoCho' ],
     3371: [ '', '', '' ],
     3372: [ '', '', '' ],
     3373: [ '', '', '' ],

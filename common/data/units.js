@@ -2635,7 +2635,7 @@ window.units = [
     [ "Roronoa Zoro, Summer Vacation Outfit", "STR", [ "Free Spirit", "Slasher" ], 4, 1, 5, 4, 99, 1000000, 979, 524, 42, 2448, 1311, 105, 1 ],
     [ "Sanji, Straw Hat Pirates' Summer Vacation Outfit", "STR", [ "Free Spirit", "Fighter" ], 4, 1, 5, 4, 99, 1000000, 752, 500, 88, 1880, 1250, 220, 1 ],
     [ "Nami, Straw Hat Pirates' Summer Vacation Outfit", "DEX", [ "Free Spirit", "Striker" ], 4, 1, 5, 4, 99, 1000000, 928, 436, 80, 2320, 1090, 200, 1 ],
-    [ "Ussop, Straw Hat Pirates' Summer Vacation Outfit", "INT", [ "Free Spirit", "Shooter" ], 4, 1, 4, 4, 99, 1000000, 828, 468, 86, 2070, 1170, 215, 1 ],
+    [ "Usopp, Straw Hat Pirates' Summer Vacation Outfit", "INT", [ "Free Spirit", "Shooter" ], 4, 1, 4, 4, 99, 1000000, 828, 468, 86, 2070, 1170, 215, 1 ],
     [ "Tony Tony Chopper, Summer Vacation Outfit", "INT", [ "Free Spirit", "Powerhouse" ], 4, 1, 5, 1, 99, 1000000, 756, 401, 120, 1890, 1002, 301, 1 ],
     [ "Nico Robin, Straw Hat Pirates' Summer Vacation Outfit", "DEX", [ "Free Spirit", "Cerebral" ], 4, 1, 4, 4, 99, 1000000, 973, 416, 79, 2432, 1040, 198, 1 ],
     [ "Franky, Summer Vacation Outfit", "QCK", [ "Free Spirit", "Powerhouse" ], 4, 1, 5, 4, 99, 1000000, 982, 518, 44, 2454, 1296, 109, 1 ],
