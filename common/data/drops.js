@@ -4631,6 +4631,7 @@ window.drops = {
             'Round 4': [ 2629 ],
             'Round 5': [ 2682 ],
             'Round 6': [ 2733 ],
+        },
         
         {
             name: 'Grim Reaper Sabo',
