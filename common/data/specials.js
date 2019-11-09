@@ -8552,6 +8552,70 @@ window.specials = {
             });
         },
     },
+    2759:{
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2759].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2759].multiplier == 1.75 ? 1 : window.specials[2759].multiplier == 2 ? 2 : 0);
+            window.specials[2759].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '2759warning'
+            });
+        },
+    },
+    2760: {
+        chain: function(p) { return window.specials[2760].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2760].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2760].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[2760].multiplier = 1;
+            if (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) {
+                window.specials[2760].multiplier = 2.5;
+            }
+        },
+    },
+    2761: {
+        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2761].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2761].multiplier == 1.5 ? 1 : window.specials[2761].multiplier == 1.75 ? 2 : 0);
+            window.specials[2761].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
+                name: '2761warning'
+            });
+        }
+    },
+    2762:{
+        affinity: function(p) { return window.specials[2762].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.class.has("Shooter")) {
+                var n = (window.specials[2762].multiplier == 1.75 ? 1 : 0);
+                window.specials[2762].multiplier = [1.75, 2][n];
+                p.scope.notify({
+                    text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                    name: '2762warning'
+                });
+            }
+            else window.specials[2762].multiplier = 1;
+        },
+    },
+    2763:{
+        affinity: function(p) { return window.specials[2763].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.class.has("Shooter")) {
+                var n = (window.specials[2763].multiplier == 1.75 ? 1 : 0);
+                window.specials[2763].multiplier = [1.75, 2][n];
+                p.scope.notify({
+                    text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                    name: '2763warning'
+                });
+            }
+            else window.specials[2763].multiplier = 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

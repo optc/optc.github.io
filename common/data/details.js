@@ -47783,7 +47783,7 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 1: Barrier Penetration" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 100" },
@@ -47794,7 +47794,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
             {
@@ -53865,6 +53865,123 @@ window.details = {
             }
         ]
     },
+    2759: {//Arlong
+        captain: "Boosts ATK of [INT] characters by 1.5x.",
+        special: "Deals 30x character's ATK in [INT] damage to one enemy, changes [EMPTY], [BOMB] and [BLOCK] orbs on [PSY] and [INT] characters into Matching orbs. If you are on a Treasure Map, boosts Color Affinity of [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialNotes: "Level 1-10: 1.75x affinity boost<br\>Level 11-20: 2x affinity boost<br\>Level 21+: 2.25x affinity boost",
+        specialName: "Heart Skewer: Shark on Darts",
+    },
+    2760: {//Miss Doublefinger
+        captain: "Boosts ATK of Fighter characters by 1.5x.",
+        special: "Reduces Paralysis duration by 2 turns. If your Captain is a Fighter or Cerebral character, locks the chain multiplier at 2.5x for 2 turns.",
+        specialName: "Stinger Hedgehog",
+    },
+    2761: {//Kalifa
+        captain: "Boosts ATK of Cerebral characters by 1.5x.",
+        special: "Reduces enemies' Threshold Damage Reduction and Percent Damage Reduction duration by 3 turns. If you are on a Treasure Map, amplifies the effect of orbs for [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn",
+        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+        specialName: "Golden Hour",
+    },
+    2762: {//TM Nami Again
+        captain: "Boosts ATK of Striker characters by 1.5x",
+        special: "Deals 200,000 Fixed damage to all enemies. If your Captain is a Shooter character, boosts the Color Affinity of all characters by 1.75x for 1 turn. If during that turn you score 3 PERFECT hits, boosts the Color Affinity of all characters by 2x for 1 turn.",
+        specialName: "Mischievious Witch Thundercloud Rod",
+    },
+    2763: {//TM Nami Again
+        captain: {
+            "base": "Boosts ATK of Shooter characters by 1.75x",
+            "level1": "Not Translated",
+            "level2": "Not Translated",
+            "level3": "Not Translated",
+            "level4": "Not Translated",
+            "level5": "Not Translated",
+            "level6": "Boosts ATK of Shooter characters by 2.25x, their Color Affinity by 1.5x and recovers 1.5x character's RCV in HP at the end of each turn",
+        },
+        special: "Deals 200,000 Fixed damage to all enemies. If your Captain is a Shooter character, boosts the Color Affinity of all characters by 1.75x for 1 turn. If during that turn you score 3 PERFECT hits, boosts the Color Affinity of all characters by 2x for 1 turn.",
+        specialName: "Mischievious Witch Thundercloud Rod",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of Shooter characters by 30",
+            "level2": "Reduces Blindness duration by 10 turns",
+        },
+        /*limit: [
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 5" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Acquire Potential 1: Enrage" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV of Striker characters by 50" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base HP by 20" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Boosts base RCV by 35" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Reduce base Special Cooldown by 2 turns" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base HP by 50" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire Sailor Ability 2: Makes [DEX] orbs beneficial for this character" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Reduce base Special Cooldown by 5 turns" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base HP by 100" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],*/
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above ?% at the start of the turn",
+                    //"Level 5: This character's normal attack will ignore barriers"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[INT] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK as Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
@@ -58941,7 +59058,7 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 1: Barrier Penetration" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 100" },
@@ -58952,7 +59069,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
             {
@@ -58990,7 +59107,7 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 1: Barrier Penetration" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 100" },
@@ -59001,7 +59118,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
             {
@@ -59039,7 +59156,7 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 1: Barrier Penetration" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 100" },
@@ -59050,7 +59167,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
             {
@@ -59088,7 +59205,7 @@ window.details = {
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 5" },
             { "description": "Boosts base RCV by 10" },
-            { "description": "Acquire Potential 1: Barrier Penetration" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
             { "description": "Boosts base HP by 40" },
             { "description": "Boosts base HP by 60" },
             { "description": "Boosts base HP by 100" },
@@ -59099,7 +59216,7 @@ window.details = {
             { "description": "Boosts base ATK by 30" },
             { "description": "Acquire 1 additional Socket slot" },
             { "description": "Boosts base ATK by 50" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
+            { "description": "Acquire Potential 2: [PSY] Damage Reduction" },
         ],
         potential: [
             {

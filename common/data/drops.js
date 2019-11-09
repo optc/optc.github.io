@@ -4531,6 +4531,15 @@ window.drops = {
             gamewith: null,
             'Raging Sea': [ 2728 ]
         },
+
+        {
+            name: 'Witch Nami',
+            dropID: 'treasuremap27',
+            thumb: 2763,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2762 ]
+        },
         
     ],
 

@@ -9772,6 +9772,22 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 3 : 1; },
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 1.2 : 1; },
     },
+    2759: {
+        atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2760: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2761: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    2762: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    2762: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 2.25 : 1.5 : 1; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.5 : 1 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
