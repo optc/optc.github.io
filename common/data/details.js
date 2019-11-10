@@ -53975,7 +53975,7 @@ window.details = {
     2761: {//Kalifa
         captain: "Boosts ATK of Cerebral characters by 1.5x.",
         special: "Reduces enemies' Threshold Damage Reduction and Percent Damage Reduction duration by 3 turns. If you are on a Treasure Map, amplifies the effect of orbs for [PSY] and [INT] characters depending on your Treasure Map Level for 1 turn",
-        specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
+        specialNotes: "Level 1-10: 1.5x orb boost<br\>Level 11-20: 1.75x orb boost<br\>Level 21+: 2x orb boost",
         specialName: "Golden Hour",
     },
     2762: {//TM Nami Again
