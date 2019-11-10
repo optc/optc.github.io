@@ -2506,8 +2506,8 @@ window.drops = {
             name: 'Revenge of the Assassins! Galette',
             dropID: 'event126',
             thumb: 2723,
-            nakama: 2272300,
-            gamewith: 171113,
+            nakama: null,
+            gamewith: 174577,
             'All Difficulties': [ 2750, 2751, 2752, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ]
         },
         
@@ -4269,7 +4269,7 @@ window.drops = {
             thumb: 2755,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 174652,
             slefty: 'coliseums',
             Chaos: [ 2754, -2755 ],
         },
@@ -4528,7 +4528,7 @@ window.drops = {
             dropID: 'treasuremap26',
             thumb: 2729,
             nakama: null,
-            gamewith: null,
+            gamewith: 171580,
             'Raging Sea': [ 2728 ]
         },
 
@@ -4647,7 +4647,7 @@ window.drops = {
             dropID: 'bond2',
             thumb: 2758,
             nakama: null,
-            gamewith: [ null ],
+            gamewith: [ 174864 ],
             'All Difficulties': [ 2757 ],
         },
         
@@ -4718,7 +4718,7 @@ window.drops = {
         {
             name: 'Dead or Treat!! Devilish Party',
             thumb: 2749,
-            gamewith: null,
+            gamewith: 174437,
             'All Difficulties': [ 2748 ],
         },
         
