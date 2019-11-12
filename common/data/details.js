@@ -61651,4 +61651,153 @@ window.details = {
             },
         ],
     },
+    5184: {//Usopp&Chopper
+        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2.75x, their HP by 1.25x and makes [TND] and [RCV] orbs beneficial for all characters.",
+        captainNotes: "#{beneficial}",
+        special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by 1.75x for 2 turns and boosts ATK of all characters by 1.75x for 2 turns. Otherwise, delays all enemies for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and boosts ATK of all characters by 1.5x for 1 turn.",
+        swap: "When Change is activated, recovers 3% of crew's MAX HP and adds 0.3x to Chain multiplier for 1 turn",
+        specialName: "Killer UsoCho Horn Explosion",
+        sailor: {
+            "base": "Makes [STR] orbs beneficial for this character",
+            "level1": "Boosts base ATK of characters in the top row by 40",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of characters in the top row by 40" },
+            { "description": "Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turn",
+                    "Level 5: Reduces No Healing duration by 7 turn"
+                ]
+            },
+        ]
+    },
+    5185: {//Usopp&Chopper
+        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 2.75x, their HP by 1.25x and boosts chances of getting Matching orbs.",
+        special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by 1.75x for 2 turns and boosts ATK of all characters by 1.75x for 2 turns. Otherwise, delays all enemies for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and boosts ATK of all characters by 1.5x for 1 turn.",
+        swap: "When Change is activated, recovers 3% of crew's MAX HP and adds 0.3x to Chain multiplier for 1 turn",
+        specialName: "Killer UsoCho Horn Explosion",
+        sailor: {
+            "base": "Makes [STR] orbs beneficial for this character",
+            "level1": "Boosts base ATK of characters in the top row by 40",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of characters in the top row by 40" },
+            { "description": "Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turn",
+                    "Level 5: Reduces No Healing duration by 7 turn"
+                ]
+            },
+        ]
+    },
+    5186: {//Usopp&Chopper
+        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.25x, their HP by 1.25x, boosts chances of getting Matching orbs and makes [TND] and [RCV] orbs beneficial for all characters."
+        captainNotes: "#{beneficial}",
+        special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by 1.75x for 2 turns and boosts ATK of all characters by 1.75x for 2 turns. Otherwise, delays all enemies for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and boosts ATK of all characters by 1.5x for 1 turn.",
+        swap: "When Change is activated, recovers 3% of crew's MAX HP and adds 0.3x to Chain multiplier for 1 turn",
+        specialName: "Killer UsoCho Horn Explosion",
+        sailor: {
+            "base": "Makes [STR] orbs beneficial for this character",
+            "level1": "Boosts base ATK of characters in the top row by 40",
+        },
+        limit: [
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 10" },
+            { "description": "Boosts base RCV by 20" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 45" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 35" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Boosts base ATK by 60" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK of characters in the top row by 40" },
+            { "description": "Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 2 turn",
+                    "Level 2: Reduces No Healing duration by 3 turn",
+                    "Level 3: Reduces No Healing duration by 4 turn",
+                    "Level 4: Reduces No Healing duration by 5 turn",
+                    "Level 5: Reduces No Healing duration by 7 turn"
+                ]
+            },
+        ]
+    },
 };
