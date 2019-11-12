@@ -61751,7 +61751,7 @@ window.details = {
         ]
     },
     5186: {//Usopp&Chopper
-        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.25x, their HP by 1.25x, boosts chances of getting Matching orbs and makes [TND] and [RCV] orbs beneficial for all characters."
+        captain: "If there is a [STR], [DEX], [QCK], [PSY] and [INT] character in your crew, boosts ATK of all characters by 3.25x, their HP by 1.25x, boosts chances of getting Matching orbs and makes [TND] and [RCV] orbs beneficial for all characters.",
         captainNotes: "#{beneficial}",
         special: "Deals 80x character's ATK in [QCK] damage to one enemy and becomes Usopp & Chopper for 2 turns. If the enemy is delayed, recovers 20% of crew's MAX HP, amplifies the effect of orbs by 1.75x for 2 turns and boosts ATK of all characters by 1.75x for 2 turns. Otherwise, delays all enemies for 1 turn, amplifies the effect of orbs by 1.5x for 1 turn and boosts ATK of all characters by 1.5x for 1 turn.",
         swap: "When Change is activated, recovers 3% of crew's MAX HP and adds 0.3x to Chain multiplier for 1 turn",
