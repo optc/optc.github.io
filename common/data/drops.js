@@ -4273,6 +4273,16 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 2754, -2755 ],
         },
+
+        {
+            name: 'Coliseum EX Vs. Coby',
+            thumb: 3372,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            'All Difficulties': [ 3371, 3373 ],
+        },
         
     ],
 

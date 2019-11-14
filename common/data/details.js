@@ -54875,6 +54875,90 @@ window.details = {
             },
         ]
     },
+    3371: {
+        captain: "Boosts ATK of Fighter characters by 1.5x, reduces damage received up to 10% depending on the crew's current HP",
+        specialName: "Pleading at the Risk of One's Life [EX]",
+        special: "Locks all orbs for 1 turn and changes adjacent orbs into [STR] orbs. If the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
+        specialNotes: "#{zombie}"
+    },
+    3372: {
+        captain: "Boosts ATK of Fighter characters by 2x, reduces damage received up to 30% depending on the crew's current HP",
+        specialName: "Pleading at the Risk of One's Life [EX]",
+        special: "Locks all orbs for 1 turn and changes adjacent orbs into [STR] orbs. If the special is activated with more than 50% health remaining, protects from defeat for 1 turn",
+        specialNotes: "#{zombie}",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV for all characters by 50",
+            "level1": "Not Translated",
+        },
+        /*limit: [
+            { "description": "Boosts base HP by 30" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base ATK by 20" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Acquire Sailor Ability 1: Boosts base ATK, HP and RCV for all characters by 50" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Boosts base RCV by 50" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Boosts base HP by 110" },
+            { "description": "Acquire Sailor Ability 2: Boosts amount healed from [RCV] orbs by 200 each" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base ATK by 50" },
+            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by 1 turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],*/
+        support: [
+            {
+                "Characters": "[STR] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ]
+    },
+    3373: {
+        special: "Reduces Bind duration by 3 turns",
+        specialName: "Tempered Kukris [EX]",
+        captain: "Boosts ATK and HP of Driven characters by 1.5x",
+        support: [
+            {
+                "Characters": "Coby",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses an Orb Locking special, changes [BLOCK] orbs on the supported character into a Matching orb.",
+                    "Level 2: Once per an adventure, when the supported character uses an Orb Locking special, changes [BLOCK] orbs on the supported character into a Matching orb.",
+                    "Level 3: Once per an adventure, when the supported character uses an Orb Locking special, changes [BLOCK] orbs on all characters into Matching orbs.",
+                    "Level 4: Once per an adventure, when the supported character uses an Orb Locking special, changes [BLOCK] orbs on all characters into Matching orbs.",
+                    "Level 5: Once per an adventure, when the supported character uses an Orb Locking special, changes [BLOCK] orbs on all characters into Matching orbs. Removes enemies' End of Turn Damage/Percent Cut duration completely."
+                ]
+            }
+        ]
+    },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
         captainNotes: "#{beneficial}",
