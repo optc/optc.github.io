@@ -550,6 +550,18 @@ window.matchers = [
     },
     
     {
+        name: 'End of Turn Damage Dealer',
+        target: 'special',
+        matcher: /(deals|cuts).+end of the turn/i
+    },
+    
+    {
+        name: 'Defense and Barrier Buff Ignoring damage dealer',
+        target: 'special',
+        matcher: /(Deals|Cuts).+ignore damage negating abilities and barriers/i
+    },
+    
+    {
         name: 'Additional Damage dealer',
         target: 'special',
         matcher: /Additional.+Damage/i
@@ -559,12 +571,6 @@ window.matchers = [
         name: 'Instant Defeat special',
         target: 'special',
         matcher: /instantly defeat/i
-    },
-    
-    {
-        name: 'Defense and Barrier Buff Ignoring damage dealer',
-        target: 'special',
-        matcher: /(Deals|Cuts).+ignore damage negating abilities and barriers/i
     },
 
     {
@@ -793,12 +799,6 @@ window.matchers = [
         name: 'Zombies',
         target: 'special',
         matcher: /Protects from defeat/i
-    },
-    
-    {
-        name: 'End of Turn Damage Dealer',
-        target: 'special',
-        matcher: /(deals|cuts).+end of the turn/i
     },
     
     {
