@@ -8616,6 +8616,29 @@ window.specials = {
             else window.specials[2763].multiplier = 1;
         },
     },
+    2765: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    2766: {
+        //TODO
+        hit: function(n,p) { return n > 12 ? 2 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '2767warning'
+            });
+        }
+    },
+    2767: {
+        //TODO
+        hit: function(n,p) { return n > 12 ? 2 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '2767warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

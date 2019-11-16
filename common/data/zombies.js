@@ -821,6 +821,14 @@ window.zombies = {
         type: 'healer',
         amount: 500
     },
+    2766: { // Doffy
+        type: 'healer',
+        amount: 150
+    },
+    2767: { // Doffy
+        type: 'healer',
+        amount: 1000
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

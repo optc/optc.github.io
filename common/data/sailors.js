@@ -1010,6 +1010,16 @@ window.sailors = {
         hpStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
+    2766: {
+        atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
+    },
+    2767: {
+        atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
