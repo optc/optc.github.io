@@ -41994,7 +41994,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts base ATK, HP and RCV of all characters by 75",
-            "level2": "Boosts this character's damage against [INT] characters by 1.1x",
+            "level2": "Boosts all characters' damage against [INT] characters by 1.1x",
         },
         limit: [
             { "description": "Boosts base ATK by 5" },
