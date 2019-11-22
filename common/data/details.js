@@ -54124,38 +54124,58 @@ window.details = {
         ]
     },
     2766: {//Doflamingo
-        captain: "boosts ATK of Cerebral and Driven characters by 2x and recovers 150 HP at end of each turn.",
+        captain: "Boosts ATK of Cerebral and Driven characters by 2x and recovers 150 HP at end of each turn.",
         special: "Changes [EMPTY] and Badly Matching orbs into Matching orbs, locks all orbs for 1 turn and boosts ATK of all characters by 2x after 12th hit in the chain for 1 turn.",
         specialName: "Devil Fruit \"SMILE\" Business",
         sailor: "Boosts base ATK, HP and RCV of Driven and Cerebral characters by 30",
     },
     2767: {//Doflamingo
-        captain: "boosts ATK of Cerebral and Driven characters by 3x if they have a Matching orb, by 2.5x otherwise and recovers 1,000 HP at end of each turn.",
+        captain: {
+            "base": "Boosts ATK of Cerebral and Driven characters by 2.5x and recovers 500 HP at end of each turn.",
+            "level1": "Boosts ATK of Cerebral and Driven characters by 3x if they have a Matching orb, by 2.5x otherwise and recovers 1,000 HP at end of each turn.",
+        },
         special: "Changes [EMPTY] and Badly Matching orbs into Matching orbs, locks all orbs for 1 turn and boosts ATK of all characters by 2x after 12th hit in the chain for 1 turn.",
         specialName: "Devil Fruit \"SMILE\" Business",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Driven and Cerebral characters by 30",
             "level1": "Adds 3x character's ATK as Additional Damage",
         },
+        limit: [
+            { "description": "Boosts base RCV by 150" },
+            { "description": "Boosts base HP by 200" },
+            { "description": "Boosts base ATK by 200" },
+            { "description": "Acquire Potential 1: [QCK] Damage Reduction" },
+            { "description": "Reduce base Special Cooldown by 3 turns" },
+            { "description": "Boosts base HP by 400" },
+            { "description": "Boosts base ATK by 200" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Reduce base Special Cooldown by 4 turns" },
+            { "description": "Acquire Sailor Ability 1: Adds 3x character's ATK as Additional Damage" },
+            { "description": "Boosts base HP by 600" },
+            { "description": "Boosts base ATK by 300" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire new Captain Ability: " },
+            { "description": "Acquire Potential 2: Slot Bind Self-reduction" },
+        ],
         potential: [
             {
                 "Name": "[QCK] Damage Reduction",
                 "description": [
-                    "Level 1: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 2: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 3: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 4: Reduce damage taken from [QCK] characters by ?%",
-                    "Level 5: Reduce damage taken from [QCK] characters by ?%"
+                    "Level 1: Reduce damage taken from [QCK] characters by 1%",
+                    "Level 2: Reduce damage taken from [QCK] characters by 2%",
+                    "Level 3: Reduce damage taken from [QCK] characters by 3%",
+                    "Level 4: Reduce damage taken from [QCK] characters by 4%",
+                    "Level 5: Reduce damage taken from [QCK] characters by 5%"
                 ]
             },
             {
                 "Name": "Slot Bind Self-reduction",
                 "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                    "Level 1: Reduces Slot Bind duration by 1 turn on this character",
+                    "Level 2: Reduces Slot Bind duration by 2 turns on this character",
+                    "Level 3: Reduces Slot Bind duration by 3 turns on this character",
+                    "Level 4: Reduces Slot Bind duration by 4 turns on this character",
+                    "Level 5: Reduces Slot Bind duration by 5 turns on this character"
                 ]
             },
         ]
