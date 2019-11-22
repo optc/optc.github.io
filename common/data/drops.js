@@ -2929,7 +2929,7 @@ window.drops = {
             thumb: 1108,
             global: true,
             nakama: 4110800,
-            gamewith: 33648,
+            gamewith: 27708,
             slefty: 'raid_bosses/25',
             Ultimate: [ 1107 ],
             Master: [ 1107 ],

@@ -196,10 +196,10 @@
             case '3359': return '../res/character_10868_t1.png'; break;
             case '3360': return '../res/character_11037_t1.png'; break;
             case '3361': return '../res/character_11038_t1.png'; break;
-            case '3362': return '../res/character_10258_t1.png'; break;
-            case '3363': return '../res/character_10259_t1.png'; break;
-            case '3364': return '../res/character_10262_t1.png'; break;
-            case '3365': return '../res/character_10263_t1.png'; break;
+            case '2768': return '../res/character_10258_t1.png'; break;
+            case '2769': return '../res/character_10259_t1.png'; break;
+            case '2770': return '../res/character_10262_t1.png'; break;
+            case '2771': return '../res/character_10263_t1.png'; break;
             case '3366': return '../res/character_10858_t1.png'; break;
             case '3367': return '../res/character_10859_t1.png'; break;
             case '3368': return '../res/character_10860_t1.png'; break;

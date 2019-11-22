@@ -9803,6 +9803,22 @@ window.captains = {
     2767: {
         atk: function(p) { return !(p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ?  3 : 2.5); },
     },
+    2768: {
+        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 2.5 : 2; },
+        rcv: function(p) { return 1.2; },
+    },
+    2769: {
+        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3 : 2.5; },
+        rcv: function(p) { return 1.2; },
+    },
+    2770: {
+        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 2.5 : 2; },
+        rcv: function(p) { return 1.2; },
+    },
+    2771: {
+        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3 : 2.5; },
+        rcv: function(p) { return 1.2; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -9911,22 +9927,6 @@ window.captains = {
     3361: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.25 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
-    },
-    3362: {
-        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 2.5 : 2; },
-        rcv: function(p) { return 1.2; },
-    },
-    3363: {
-        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3 : 2.5; },
-        rcv: function(p) { return 1.2; },
-    },
-    3364: {
-        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 2.5 : 2; },
-        rcv: function(p) { return 1.2; },
-    },
-    3365: {
-        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? 3 : 2.5; },
-        rcv: function(p) { return 1.2; },
     },
     3366: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },

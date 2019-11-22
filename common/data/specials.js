@@ -8639,6 +8639,34 @@ window.specials = {
             });
         }
     },
+    2768: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? window.specials[2768].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2768].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
+        },
+    },
+    2769: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? window.specials[2769].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2769].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
+        },
+    },
+    2770: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[2770].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2770].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
+        },
+    },
+    2771: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[2771].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2771].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -8688,34 +8716,6 @@ window.specials = {
     3359: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: "class"
-    },
-    3362: {
-        def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[3362].multiplier : 1; },
-        type: "condition",
-        onActivation: function(p) {
-            window.specials[3362].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
-        },
-    },
-    3363: {
-        def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[3363].multiplier : 1; },
-        type: "condition",
-        onActivation: function(p) {
-            window.specials[3363].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
-        },
-    },
-    3364: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[3364].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[3364].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
-        },
-    },
-    3365: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[3365].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[3365].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
-        },
     },
     3366: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },

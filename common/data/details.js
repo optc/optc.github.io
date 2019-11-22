@@ -54667,14 +54667,14 @@ window.details = {
         specialName: "Eyes Hiding Shyness",
         sailor: "Reduces Paralysis duration by 1 turn",
     },
-    3362: {//Kimono Akainu
+    2768: {//Kimono Akainu
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 2.5x, by 2x otherwise and boosts RCV of all characters by 1.2x.",
         special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
         sailor: "Makes [DEX] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
         specialName: "Absolute Pruning",
     },
-    3363: {//Kimono Akainu
+    2769: {//Kimono Akainu
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
         special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
         sailor: {
@@ -54735,14 +54735,14 @@ window.details = {
             }
         ]
     },
-    3364: {//Kimono Aokiji
+    2770: {//Kimono Aokiji
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 2.5x, by 2x otherwise and boosts RCV of all characters by 1.2x.",
         special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
         sailor: "Makes [DEX] orbs beneficial for this character",
         sailorNotes: "#{beneficial}",
         specialName: "Boat Rest & Recuperation",
     },
-    3365: {//Kimono Aokiji
+    2771: {//Kimono Aokiji
         captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
         special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
         sailor: {
