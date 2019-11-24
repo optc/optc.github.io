@@ -33842,6 +33842,18 @@ window.details = {
         specialNotes: "Cooldown Reduction works for any Type that you have 2 or more characters of on your crew",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         specialName: "The Afterglow of a Fight",
+        support: [
+            {
+                "Characters": "Aokiji and Akainu",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] enemies by 5% for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] enemies by 10% for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] enemies by 15% for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] enemies by 20% for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces damage received from [PSY] and [INT] enemies by 25% for 1 turn."
+                ]
+            }
+        ]
     },
     2044: {//Ben Beckman
         captain: "Reduces cooldown of all specials by 2 turns at the start of the fight, boosts ATK of Cerebral characters by 1.5x",
