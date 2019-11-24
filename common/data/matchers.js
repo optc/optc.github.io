@@ -317,6 +317,18 @@ window.matchers = [
         target: 'special',
         matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
     },
+    
+    {
+        name: 'Chain Boosters',
+        target: 'special',
+        matcher: /Adds.+to Chain/i 
+    },
+    
+    {
+        name: 'Chain Lockers',
+        target: 'special',
+        matcher: /Locks the chain multiplier/i 
+    },
 
     {
         name: 'Following-turn ATK boosters',
@@ -395,18 +407,6 @@ window.matchers = [
         target: 'special',
         matcher: /amplifies.+orb\D*by 2.25x/i
     },*/
-    
-    {
-        name: 'Chain Boosters',
-        target: 'special',
-        matcher: /Adds.+to Chain/i 
-    },
-    
-    {
-        name: 'Chain Lockers',
-        target: 'special',
-        matcher: /Locks the chain multiplier/i 
-    },
 
     {
         name: 'Orb chance boosters',
@@ -1230,6 +1230,66 @@ window.matchers = [
         target: 'support',
         matcher: /Adds.+RCV/i
     },
+
+    {
+        name: 'ATK boosters',
+        target: 'support',
+        matcher: /boosts( own ATK| ATK of)/i
+    },
+    
+    /*{
+        name: 'Combo Boost Specials',
+        target: 'support',
+        matcher: /Boost.+hit in the chain/i
+    },*/
+
+    {
+        name: 'Orb boosters',
+        target: 'support',
+        matcher: /amplifies.+orb/i
+    },
+    
+    {
+        name: 'Color Affinity boosters',
+        target: 'support',
+        matcher: /Boosts the Color Affinity/i
+    },
+
+    {
+        name: 'Conditional ATK boosters',
+        target: 'support',
+        matcher: /Boosts ATK.+against.+enemies/i
+    },
+
+    {
+        name: 'Delay Conditional ATK boosters',
+        target: 'support',
+        matcher: /Boosts ATK.+against.+delayed.+enemies/i
+    },
+
+    {
+        name: 'Defense Reduction Conditional ATK boosters',
+        target: 'support',
+        matcher: /Boosts ATK.+against.+enemies.+reduced defense/i
+    },
+
+    {
+        name: 'Poison Conditional ATK boosters',
+        target: 'support',
+        matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
+    },
+    
+    {
+        name: 'Chain Boosters',
+        target: 'support',
+        matcher: /Adds.+to Chain/i 
+    },
+    
+    {
+        name: 'Chain Lockers',
+        target: 'support',
+        matcher: /Locks the chain multiplier/i 
+    },
     
     {
         name: 'Orb Controllers',
@@ -1253,18 +1313,6 @@ window.matchers = [
         name: 'Orb lockers',
         target: 'support',
         matcher: /locks (the supported character's orb|orbs|all orbs|orb|own orb)/i
-    },
-    
-    {
-        name: 'Chain Boosters',
-        target: 'support',
-        matcher: /Adds.+to Chain/i 
-    },
-    
-    {
-        name: 'Chain Lockers',
-        target: 'support',
-        matcher: /Locks the chain multiplier/i 
     },
     
     {
