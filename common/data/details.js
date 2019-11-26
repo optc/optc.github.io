@@ -55787,7 +55787,7 @@ window.details = {
         specialName: "Friendly Minktimacy",
         support: [
             {
-                "Characters": "Carrot",
+                "Characters": "Carrot and Nami",
                 "description": [
                     "Level 1: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] orbs.",
                     "Level 2: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] or [RCV] orbs.",
@@ -55797,6 +55797,125 @@ window.details = {
                 ]
             }
         ],
+    },
+    2773: {//V2 Nami
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of all characters by 3x. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 3.75x and boosts Affinity of the Dominant Type characters by 1.1x.",
+        special: "If HP is above 99% at the time the special is activated, removes enemies' Defense Reduction Debuff Protection duration completely, reduces the defense of all enemies by 100% for 2 turns and boosts ATK against enemies with reduced defense by 2x for 2 turns. Otherwise, recovers 50% of crew's MAX HP, reduces the defense of all enemies by 100% for 1 turn and boosts ATK against enemies with reduced defense by 2x for 1 turn.",
+        specialName: "Ninja Arts: Murderous Smile",
+    },
+    2774: {//V2 Nami
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of all characters by 3x. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 3.75x and boosts Affinity of the Dominant Type characters by 1.1x.",
+        special: "If HP is above 99% at the time the special is activated, removes enemies' Defense Reduction Debuff Protection duration completely, reduces the defense of all enemies by 100% for 2 turns and boosts ATK against enemies with reduced defense by 2x for 2 turns. Otherwise, recovers 50% of crew's MAX HP, reduces the defense of all enemies by 100% for 1 turn and boosts ATK against enemies with reduced defense by 2x for 1 turn.",
+        sailor: {
+            "base": "None",
+            "level1": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 150",
+            "level2": "Restores her own special cooldown by 3 turn when it is rewinded",
+        },
+        specialName: "Ninja Arts: Murderous Smile",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turn on this character",
+                    //"Level 5: Reduces Slot Bind duration completely on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Sanji and Kinemon",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 100% for 1 turns",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 100% for 2 turns"
+                ]
+            }
+        ]
+    },
+    2775: {//Komurasaki
+        captain: "Boosts ATK of [QCK] and [INT] characters by 4x, makes [QCK] and [INT] orbs beneficial for [QCK] and [INT] characters, recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT and reduce damage received by 20%. Boosts amount of Beli received by 2x",
+        special: "Randomizes all orbs into either [QCK] or [INT] orbs. If HP is above 99% at the time the special is activated, boosts ATK of [QCK] and [INT] characters by 2x for 2 turns and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 2 turns. Otherwise, boosts ATK of [QCK] and [INT] characters by 2x for 1 turn and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 1 turn.",
+        specialName: "Oiran's Bewitching Smile",
+    },
+    2776: {//Komurasaki
+        captain: "Boosts ATK of [QCK] and [INT] characters by 4x, makes [QCK] and [INT] orbs beneficial for [QCK] and [INT] characters, recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT and reduce damage received by 20%. Boosts amount of Beli received by 2x",
+        special: "Randomizes all orbs into either [QCK] or [INT] orbs. If HP is above 99% at the time the special is activated, boosts ATK of [QCK] and [INT] characters by 2x for 2 turns and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 2 turns. Otherwise, boosts ATK of [QCK] and [INT] characters by 2x for 1 turn and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 1 turn.",
+        specialName: "Oiran's Bewitching Smile",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 50",
+            "level2": "Makes [QCK] orbs beneficial for all characters",
+        },
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[QCK] characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     3366: {//Neo Duval
         special: "Deals 5,000 Fixed damage to all enemies, reduces damage received by 50% for 1 turn, reduces Increase Damage Taken duration by 4 turns and boosts ATK of Shooter characters by 1.75x for 1 turn",

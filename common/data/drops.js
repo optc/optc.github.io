@@ -3284,7 +3284,7 @@ window.drops = {
         },
         
         {
-            name: 'Game!! Leo',
+            name: 'Fight, Leo',
             dropID: 'clash46',
             thumb: 2559,
             nakama: 4255900,
@@ -3348,7 +3348,7 @@ window.drops = {
         },
         
         {
-            name: 'Game!! Zorojuro',
+            name: 'Fight, Zorojuro',
             dropID: 'clash52',
             thumb: 2707,
             nakama: 4270700,

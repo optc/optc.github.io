@@ -9822,6 +9822,20 @@ window.captains = {
     2772: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
     },
+    2773: {
+        atk: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 3.75 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 3.75 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 3.75 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 3.75 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 3.75 : 3; },
+        affinity: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 1.1 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 1.1 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 1.1 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 1.1 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 1.1 : 1; },
+    },
+    2774: {
+        atk: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 3.75 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 3.75 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 3.75 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 3.75 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 3.75 : 3; },
+        affinity: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 1.1 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 1.1 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 1.1 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 1.1 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 1.1 : 1; },
+    },
+    2775: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
+    },
+    2776: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
