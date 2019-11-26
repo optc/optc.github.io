@@ -180,9 +180,9 @@
                                         <!-- different captain abilities -->
                                         <div ng-if="isCaptainHybrid">
                                             <span class="badge badge-japan" ng-show="details.captain.japan">Japan</span>
-                                            <div  ng-show="details.captain.japan" ng-bind-html="details.limit.japan | decorate"></div>
+                                            <div  ng-show="details.captain.japan" ng-bind-html="details.captain.japan | decorate"></div>
                                             <span class="badge badge-global" ng-show="details.captain.global">Global</span>
-                                            <div  ng-show="details.captain.global" ng-bind-html="details.limit.global | decorate"></div>
+                                            <div  ng-show="details.captain.global" ng-bind-html="details.captain.global | decorate"></div>
                                             <span class="badge badge-base" ng-show="details.captain.base">Base Captain Ability</span>
                                             <div ng-show="details.captain.base" ng-bind-html="details.captain.base | decorate"></div>
                                             <span class="badge badge-level1" ng-show="details.captain.level1">Limit Break Level 1 Captain Ability</span>
@@ -258,9 +258,9 @@
                                             <span class="badge badge-global" ng-show="details.special.global">Global</span>
                                             <div ng-show="details.special.global" ng-bind-html="details.special.global | decorate"></div>
                                             <span class="badge badge-character1" ng-show="details.special.character1">Character 1 Special Ability</span>
-                                            <div ng-bind-html="details.special.character1 | decorate"></div>
+                                            <div ng-show="details.special.character1" ng-bind-html="details.special.character1 | decorate"></div>
                                             <span class="badge badge-character2" ng-show="details.special.character2">Character 2 Special Ability</span>
-                                            <div ng-bind-html="details.special.character2 | decorate"></div>
+                                            <div ng-show="details.special.character2" ng-bind-html="details.special.character2 | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
                                     </td>
@@ -280,13 +280,27 @@
                                         <span class="notes" ng-if="details.swapNotes" ng-bind-html="details.swapNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                                <tr ng-if="cooldown && !isSpecialStaged">
+                                <tr ng-if="cooldown && !isSpecialStaged && !isCooldownHybrid">
                                     <td>Cooldown<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span></td>
                                     <td>
                                         {{cooldown.length ? cooldown[0] : cooldown}} turns
                                         {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
                                         {{cooldown.length ? (cooldown[0] - unit.limitCD) : (cooldown - unit.limitCD)}} turns
                                         {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitCD) + ' turns' : ''}}</span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="cooldown && !isSpecialStaged && isCooldownHybrid">
+                                    <td>Cooldown Japan<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span><br><br>
+                                        Cooldown Global<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span></td>
+                                    <td>
+                                        {{cooldown[0].length ? cooldown[0][0] : cooldown[0]}} turns
+                                        {{cooldown[0].length ? ' \u2192 ' + cooldown[0][1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
+                                        {{cooldown[0].length ? (cooldown[0][0] - unit.limitCD) : (cooldown[0] - unit.limitCD)}} turns
+                                        {{cooldown[0].length ? ' \u2192 ' + (cooldown[0][1] - unit.limitCD) + ' turns' : ''}}</span><br><br>
+                                        {{cooldown[1].length ? cooldown[1][0] : cooldown[1]}} turns
+                                        {{cooldown[1].length ? ' \u2192 ' + cooldown[1][1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
+                                        {{cooldown[1].length ? (cooldown[1][0] - unit.limitCD) : (cooldown[1] - unit.limitCD)}} turns
+                                        {{cooldown[1].length ? ' \u2192 ' + (cooldown[1][1] - unit.limitCD) + ' turns' : ''}}</span>
                                     </td>
                                 </tr>
                             </tbody>

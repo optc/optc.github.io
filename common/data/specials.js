@@ -54,6 +54,14 @@ window.specials = {
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
         type: "type"
     },
+    248: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type" 
+    },
+    249: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type" 
+    },
     263: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); }
     },
@@ -68,6 +76,12 @@ window.specials = {
     },
     295: {
         def: function(p) { return 0.5; }
+    },
+    305: {
+        orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
+    },
+    306: {
+        orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
     },
     309: {
         def: function(p) { return 0.5; }
@@ -7080,6 +7094,9 @@ window.specials = {
             });
         },
     },
+    2439: {
+        delay: function(p) { return 1; },
+    },
     2440: {
         chain: function(p) { return window.specials[2440].multiplier; },
         chainLimiter: function(p) {
@@ -8456,6 +8473,255 @@ window.specials = {
             window.specials[2736].turnedOn = false;
         }
     },
+    2739: {
+        staticMult: function(p) { return [ 100, 0 ][window.specials[2739].multiplier]; },
+        atk: function(p) { return p.delayed > 0 ? [ 1, 2 ][window.specials[2739].multiplier] : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2739].multiplier == 0 ? 1 : 0);
+            window.specials[2739].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Tap Timing Bonus', 'Conditional Boost'][n] + ' boost. To switch to the ' + ['Conditional Boost', 'Tap Timing Bonus'][n] + ', disable and re-enable this special',
+                name: '2739warning'
+            });
+        },
+    },
+    2740: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter")) ? 2.5 : 1; },
+        type: "class"
+    },
+    2741: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter")) ? 2.5 : 1; },
+        type: "class"
+    },
+    2746: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2747: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    2748: {
+        chain: function(p) { return window.specials[2748].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2748].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2748].multiplier == 2.75 ? 1 : 0);
+            window.specials[2748].multiplier = [2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
+                name: '2748warning'
+            });
+        },
+    },
+    2749: {
+        chain: function(p) { return window.specials[2749].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2749].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2749].multiplier == 2.75 ? 1 : 0);
+            window.specials[2749].multiplier = [2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
+                name: '2749warning'
+            });
+        },
+    },
+    2750: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.5 : 1; }
+    },
+    2751: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.5 : 1; }
+    },
+    2752: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+        type: "class",
+        chainAddition: function(p) { return 0.3; },
+    },
+    2757: {
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2757].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2757].multiplier == 1.75 ? 1 : 0);
+            window.specials[2757].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
+                name: '2757warning'
+            });
+        },
+    },
+    2758: {
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2758].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2758].multiplier == 1.75 ? 1 : 0);
+            window.specials[2758].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
+                name: '2758warning'
+            });
+        },
+    },
+    2759:{
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2759].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2759].multiplier == 1.75 ? 1 : window.specials[2759].multiplier == 2 ? 2 : 0);
+            window.specials[2759].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '2759warning'
+            });
+        },
+    },
+    2760: {
+        chain: function(p) { return window.specials[2760].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2760].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2760].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[2760].multiplier = 1;
+            if (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) {
+                window.specials[2760].multiplier = 2.5;
+            }
+        },
+    },
+    2761: {
+        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2761].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2761].multiplier == 1.5 ? 1 : window.specials[2761].multiplier == 1.75 ? 2 : 0);
+            window.specials[2761].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
+                name: '2761warning'
+            });
+        }
+    },
+    2762:{
+        affinity: function(p) { return window.specials[2762].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.class.has("Shooter")) {
+                var n = (window.specials[2762].multiplier == 1.75 ? 1 : 0);
+                window.specials[2762].multiplier = [1.75, 2][n];
+                p.scope.notify({
+                    text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                    name: '2762warning'
+                });
+            }
+            else window.specials[2762].multiplier = 1;
+        },
+    },
+    2763:{
+        affinity: function(p) { return window.specials[2763].multiplier; },
+        onActivation: function(p) {
+            if (p.captain.class.has("Shooter")) {
+                var n = (window.specials[2763].multiplier == 1.75 ? 1 : 0);
+                window.specials[2763].multiplier = [1.75, 2][n];
+                p.scope.notify({
+                    text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                    name: '2763warning'
+                });
+            }
+            else window.specials[2763].multiplier = 1;
+        },
+    },
+    2765: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; }
+    },
+    2766: {
+        //TODO
+        hit: function(n,p) { return n > 12 ? 2 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '2767warning'
+            });
+        }
+    },
+    2767: {
+        //TODO
+        hit: function(n,p) { return n > 12 ? 2 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '2767warning'
+            });
+        }
+    },
+    2768: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? window.specials[2768].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2768].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
+        },
+    },
+    2769: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? window.specials[2769].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[2769].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
+        },
+    },
+    2770: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[2770].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2770].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
+        },
+    },
+    2771: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[2771].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[2771].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
+        },
+    },
+    2773: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? 2 : 1; },
+        type: "condition",
+    },
+    2774: {
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? 2 : 1; },
+        type: "condition",
+    },
+    2775: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        type: "type",
+    },
+    2776: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        type: "type",
+    },
+    2777:{
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2778:{
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2781: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2781].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2781].multiplier == 1.75 ? 1 : 0);
+            window.specials[2781].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2781warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -8505,34 +8771,6 @@ window.specials = {
     3359: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.75 : 1; },
         type: "class"
-    },
-    3362: {
-        def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[3362].multiplier : 1; },
-        type: "condition",
-        onActivation: function(p) {
-            window.specials[3362].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
-        },
-    },
-    3363: {
-        def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[3363].multiplier : 1; },
-        type: "condition",
-        onActivation: function(p) {
-            window.specials[3363].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
-        },
-    },
-    3364: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[3364].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[3364].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
-        },
-    },
-    3365: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[3365].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[3365].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
-        },
     },
     3366: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },

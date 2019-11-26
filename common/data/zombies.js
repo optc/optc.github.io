@@ -813,6 +813,36 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    2742: { // Koala
+        type: 'healer',
+        amount: 500
+    },
+    2743: { // Koala
+        type: 'healer',
+        amount: 500
+    },
+    2766: { // Doffy
+        type: 'healer',
+        amount: 150
+    },
+    2767: { // Doffy
+        type: 'healer',
+        amount: 1000
+    },
+    2775: { // Komurasaki
+        type: 'healer',
+    },
+    2776: { // Komurasaki
+        type: 'healer',
+    },
+    2779: { // Chopper/Carrot
+        type: 'healer',
+        amount: 500
+    },
+    2780: { // Chopper/Carrot
+        type: 'healer',
+        amount: 1000
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
