@@ -54,6 +54,14 @@ window.specials = {
         atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
         type: "type"
     },
+    248: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type" 
+    },
+    249: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type" 
+    },
     263: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); }
     },
@@ -68,6 +76,12 @@ window.specials = {
     },
     295: {
         def: function(p) { return 0.5; }
+    },
+    305: {
+        orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
+    },
+    306: {
+        orb: function(p) { return p.unit.type == "PSY" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
     },
     309: {
         def: function(p) { return 0.5; }
