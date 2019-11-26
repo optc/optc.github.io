@@ -23621,7 +23621,7 @@ window.details = {
                 "description": [
                     "Level 1: Once per adventure, when you reach the final stage, adds 50x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 2: Once per adventure, when you reach the final stage, adds 70x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
-                    "Level 3: Once per adventure, when you reach the final stage, adds 60x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 90x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 4: Once per adventure, when you reach the final stage, adds 110x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 5: Once per adventure, when you reach the final stage, adds 130x supported character's ATK as Additional Damage to the supported character's attacks for 2 turns"
                 ]
@@ -43326,7 +43326,7 @@ window.details = {
                 "description": [
                     "Level 1: Once per adventure, when you reach the final stage, adds 50x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 2: Once per adventure, when you reach the final stage, adds 70x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
-                    "Level 3: Once per adventure, when you reach the final stage, adds 60x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 90x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 4: Once per adventure, when you reach the final stage, adds 110x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
                     "Level 5: Once per adventure, when you reach the final stage, adds 130x supported character's ATK as Additional Damage to the supported character's attacks for 2 turns"
                 ]
