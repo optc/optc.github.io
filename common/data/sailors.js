@@ -1020,6 +1020,22 @@ window.sailors = {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 25 : 0; },
     },
+    2777: {
+        atkStatic: function(p) { return 50; },
+    },
+    2778: {
+        atkStatic: function(p) { return 50; },
+    },
+    2779: {
+        atkStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+    },
+    2780: {
+        atkStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

@@ -55155,6 +55155,438 @@ window.details = {
             },
         ]
     },
+    2768: {//Kimono Akainu
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 2.5x, by 2x otherwise and boosts RCV of all characters by 1.2x.",
+        special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
+        sailor: "Makes [DEX] orbs beneficial for this character",
+        sailorNotes: "#{beneficial}",
+        specialName: "Absolute Pruning",
+    },
+    2769: {//Kimono Akainu
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
+        special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
+        sailor: {
+            "base": "Makes [DEX] orbs beneficial for this character",
+            "level1": "Boosts base ATK and HP of [QCK] and [PSY] characters by 50",
+        },
+        sailorNotes: "#{beneficial}",
+        specialName: "Absolute Pruning",
+        limit: [
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK and HP of [QCK] and [PSY] characters by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by 1%",
+                    "Level 2: Reduce damage taken from [STR] characters by 2%",
+                    "Level 3: Reduce damage taken from [STR] characters by 3%",
+                    "Level 4: Reduce damage taken from [STR] characters by 4%",
+                    "Level 5: Reduce damage taken from [STR] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Aokiji and Kizaru",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn."
+                ]
+            }
+        ]
+    },
+    2770: {//Kimono Aokiji
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 2.5x, by 2x otherwise and boosts RCV of all characters by 1.2x.",
+        special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
+        sailor: "Makes [DEX] orbs beneficial for this character",
+        sailorNotes: "#{beneficial}",
+        specialName: "Boat Rest & Recuperation",
+    },
+    2771: {//Kimono Aokiji
+        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
+        special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
+        sailor: {
+            "base": "Makes [DEX] orbs beneficial for this character",
+            "level1": "Boosts base ATK and HP of [STR] and [INT] characters by 50",
+        },
+        sailorNotes: "#{beneficial}",
+        specialName: "Boat Rest & Recuperation",
+        limit: [
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base ATK by 25" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
+            { "description": "Boosts base HP by 40" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base RCV by 25" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 60" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Boosts base ATK by 40" },
+            { "description": "Acquire Sailor Ability 2: Boosts base ATK and HP of [STR] and [INT] characters by 50" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Acquire Potential 2: Pinch Healing" },
+        ],
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
+                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
+                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
+                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
+                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Akainu, Kizaru and Tsuru",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemies' Percent Damage Reduction duration by 1 turn."
+                ]
+            }
+        ]
+    },
+    2772: {//Wanda
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Slasher and Cerebral characters by 2.25x.",
+        special: "Randomizes all non-Matching orbs, reduces Special Cooldown of Slasher and Cerebral characters by 1 turn and delays all enemies for 1 turn.",
+        specialName: "Friendly Minktimacy",
+        support: [
+            {
+                "Characters": "Carrot and Nami",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] orbs.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] or [RCV] orbs.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK], [RCV] or [TND] orbs.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, Randomizes all orbs, including [BLOCK] orbs, other than [QCK], [RCV] or [TND] orbs.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, Randomizes all orbs, including [BLOCK] orbs, other than [QCK], [RCV] or [TND] orbs and locks all orbs for 1 turn."
+                ]
+            }
+        ],
+    },
+    2773: {//V2 Nami
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of all characters by 3x. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 3.75x and boosts Affinity of the Dominant Type characters by 1.1x.",
+        special: "If HP is above 99% at the time the special is activated, removes enemies' Defense Reduction Debuff Protection duration completely, reduces the defense of all enemies by 100% for 2 turns and boosts ATK against enemies with reduced defense by 2x for 2 turns. Otherwise, recovers 50% of crew's MAX HP, reduces the defense of all enemies by 100% for 1 turn and boosts ATK against enemies with reduced defense by 2x for 1 turn.",
+        specialName: "Ninja Arts: Murderous Smile",
+    },
+    2774: {//V2 Nami
+        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of all characters by 3x. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 3.75x and boosts Affinity of the Dominant Type characters by 1.1x.",
+        special: "If HP is above 99% at the time the special is activated, removes enemies' Defense Reduction Debuff Protection duration completely, reduces the defense of all enemies by 100% for 2 turns and boosts ATK against enemies with reduced defense by 2x for 2 turns. Otherwise, recovers 50% of crew's MAX HP, reduces the defense of all enemies by 100% for 1 turn and boosts ATK against enemies with reduced defense by 2x for 1 turn.",
+        sailor: {
+            "base": "None",
+            "level1": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 150",
+            "level2": "Restores her own special cooldown by 3 turn when it is rewinded",
+        },
+        specialName: "Ninja Arts: Murderous Smile",
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turn on this character",
+                    //"Level 5: Reduces Slot Bind duration completely on this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Sanji and Kinemon",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 100% for 1 turns",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 100% for 2 turns"
+                ]
+            }
+        ]
+    },
+    2775: {//Komurasaki
+        captain: "Boosts ATK of [QCK] and [INT] characters by 4x, makes [QCK] and [INT] orbs beneficial for [QCK] and [INT] characters, recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT and reduce damage received by 20%. Boosts amount of Beli received by 2x",
+        special: "Randomizes all orbs into either [QCK] or [INT] orbs. If HP is above 99% at the time the special is activated, boosts ATK of [QCK] and [INT] characters by 2x for 2 turns and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 2 turns. Otherwise, boosts ATK of [QCK] and [INT] characters by 2x for 1 turn and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 1 turn.",
+        specialName: "Oiran's Bewitching Smile",
+    },
+    2776: {//Komurasaki
+        captain: "Boosts ATK of [QCK] and [INT] characters by 4x, makes [QCK] and [INT] orbs beneficial for [QCK] and [INT] characters, recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT and reduce damage received by 20%. Boosts amount of Beli received by 2x",
+        special: "Randomizes all orbs into either [QCK] or [INT] orbs. If HP is above 99% at the time the special is activated, boosts ATK of [QCK] and [INT] characters by 2x for 2 turns and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 2 turns. Otherwise, boosts ATK of [QCK] and [INT] characters by 2x for 1 turn and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 1 turn.",
+        specialName: "Oiran's Bewitching Smile",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts base ATK, HP and RCV of all characters by 50",
+            "level2": "Makes [QCK] orbs beneficial for all characters",
+        },
+        potential: [
+            {
+                "Name": "[STR] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [STR] characters by ?%",
+                    "Level 2: Reduce damage taken from [STR] characters by ?%",
+                    "Level 3: Reduce damage taken from [STR] characters by ?%",
+                    "Level 4: Reduce damage taken from [STR] characters by ?%",
+                    "Level 5: Reduce damage taken from [STR] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turn",
+                    "Level 3: Reduces No Healing duration by ? turn",
+                    "Level 4: Reduces No Healing duration by ? turn",
+                    "Level 5: Reduces No Healing duration by ? turn"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[QCK] characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
+    },
+    2777: {//Kikunojo
+        captain: "Boosts ATK of [QCK] characters by 2.5x",
+        special: "Deals 50x character's ATK as Typeless damage to one enemy that will ignore damage negating abilities and barriers, locks all orbs for one turn, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of [QCK] and [INT] characters by 1.75x for 1 turn..",
+        specialName: "Quickdraw Slice",
+        sailor: "Boosts base ATK of all characters by 50",
+    },
+    2778: {//Kikunojo
+        captain: "Boosts ATK of [QCK] characters by 2.75x",
+        special: "Deals 50x character's ATK as Typeless damage to one enemy that will ignore damage negating abilities and barriers, locks all orbs for one turn, reduces Bind and Despair duration by 2 turns and boosts the Color Affinity of [QCK] and [INT] characters by 1.75x for 1 turn..",
+        specialName: "Quickdraw Slice",
+        sailor: {
+            "base": "Boosts base ATK of all characters by 50",
+            "level1": "Makes [INT] orbs beneficial for this character",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Double Special Activation",
+                "description": [
+                    "Level 1: Once per an adventure, reduce own Special Cooldown by ? turn after the first time this special is used",
+                    "Level 2: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 3: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 4: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    "Level 5: Once per an adventure, reduce own Special Cooldown by ? turns after the first time this special is used",
+                    //"Level 5: Once per an adventure, sets your Special Gauge to MAX after the first time this special is used"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Monkey D. Luffy, Roronoa Zoro and O-Tama",
+                "description": [
+                    "Level 1: Reduces damage received from [STR] characters by 1%. Adds 2% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Reduces damage received from [STR] characters by 2%. Adds 3% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Reduces damage received from [STR] characters by 3%. Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Reduces damage received from [STR] characters by 4%. Adds 7% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Reduces damage received from [STR] characters by 5%. Adds 9% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
+    },
+    2779: {//Tama
+        captain: "Boosts ATK of all characters by 2.25x and recovers 500 HP at the end of each turn.",
+        special: [
+            {
+                "description": "Reduces Burn, Paralysis, Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and recovers 8x character's RCV in HP.",
+                "cooldown": [ 16, 10 ]
+            },
+            {
+                "description": "Reduces Burn, Paralysis, Chain Multiplier Limit and Chain Coefficient Reduction duration by 7 turns and recovers 30x character's RCV in HP.",
+                "cooldown": [ 21, 15 ]
+            }
+        ],
+        specialName: "It's a Big Dango!!",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 20",
+    },
+    2780: {//Tama
+        captain: "Boosts ATK of all characters by 2.25x and recovers 1,000 HP at the end of each turn.",
+        special: [
+            {
+                "description": "Reduces Burn, Paralysis, Chain Multiplier Limit and Chain Coefficient Reduction duration by 3 turns and recovers 8x character's RCV in HP.",
+                "cooldown": [ 16, 10 ]
+            },
+            {
+                "description": "Reduces Burn, Paralysis, Chain Multiplier Limit and Chain Coefficient Reduction duration by 7 turns and recovers 30x character's RCV in HP.",
+                "cooldown": [ 21, 15 ]
+            }
+        ],
+        specialName: "It's a Big Dango!!",
+        sailor: {
+            "base": "Boosts base ATK, HP and RCV of all characters by 20",
+            "level1": "Makes [QCK] orbs beneficial for all characters",
+        },
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[INT] characters",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Burn, Paralysis or Chain Coefficient Reduction, recovers 500 HP.",
+                    "Level 2: Once per adventure, when you are inflicted with Burn, Paralysis or Chain Coefficient Reduction, recovers 1,000 HP.",
+                    "Level 3: Once per adventure, when you are inflicted with Burn, Paralysis or Chain Coefficient Reduction, recovers 2,000 HP.",
+                    "Level 4: Once per adventure, when you are inflicted with Burn, Paralysis or Chain Coefficient Reduction, recovers 3,000 HP.",
+                    "Level 5: Once per adventure, when you are inflicted with Burn, Paralysis or Chain Coefficient Reduction, recovers 5,000 HP."
+                ]
+            }
+        ]
+    },
+    2781: {//Carrot
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight. Boosts ATK of [QCK] and [INT] characters by 3x.",
+        special: "Reduces enemies' Increased Defense duration by 3 turns, reduces Increase Damage Taken duration by 3 turns, deals 30x character's ATK in [INT] damage to all enemies and boosts ATK of [QCK] and [INT] characters by 1.75x for 1 turn. If \"Electric Charge Drive\" is used again in the same turn the special is activated in, boosts ATK of [QCK] and [INT] characters by 2.25x for 1 turn.",
+        specialName: "Electric Charge Drive",
+        sailor: {
+            "base": "When any other [QCK] or [INT] character uses a special, reduces own cooldown by 3 turns",
+            "level1": "Makes [QCK] and [RCV] orbs beneficial for this character",
+        },
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Cooldown Reduction",
+                "description": [
+                    "Level 1: Reduce own Special Cooldown by 1 turn at the start of the fight",
+                    "Level 2: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 3: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 4: Reduce own Special Cooldown by ? turn at the start of the fight",
+                    "Level 5: Reduce own Special Cooldown by ? turn at the start of the fight"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "[INT] characters",
+                "description": [
+                    "Level 1: Adds 1% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 2: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 3: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 4: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
+                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV."
+                ]
+            }
+        ]
+    },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
         special: "Deals 120x character's ATK as Typeless damage to all enemies, changes adjacent orbs into Matching Orbs, boosts ATK of all characters by 1.75x, reduces any damage received above 5,656 HP by 97% and makes PERFECTs easier to hit for 2 turns",
@@ -55644,278 +56076,6 @@ window.details = {
         special: "Recovers 7,000 HP, reduces crew's ATK DOWN and enemies' Resilience Buffs duration by 5 turns and changes adjacent orbs into Matching Orbs",
         specialName: "Eyes Hiding Shyness",
         sailor: "Reduces Paralysis duration by 1 turn",
-    },
-    2768: {//Kimono Akainu
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 2.5x, by 2x otherwise and boosts RCV of all characters by 1.2x.",
-        special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
-        sailor: "Makes [DEX] orbs beneficial for this character",
-        sailorNotes: "#{beneficial}",
-        specialName: "Absolute Pruning",
-    },
-    2769: {//Kimono Akainu
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
-        special: "Reduces the defense of all enemies by 100% for 2 turns and reduces crew's Paralysis and ATK DOWN duration by 5 turns. If your crew has 4 or more [QCK] or [PSY] characters, boosts ATK against enemies with reduced defense by 1.75x for 2 turns.",
-        sailor: {
-            "base": "Makes [DEX] orbs beneficial for this character",
-            "level1": "Boosts base ATK and HP of [QCK] and [PSY] characters by 50",
-        },
-        sailorNotes: "#{beneficial}",
-        specialName: "Absolute Pruning",
-        limit: [
-            { "description": "Boosts base ATK by 25" },
-            { "description": "Boosts base ATK by 25" },
-            { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Potential 1: [STR] Damage Reduction" },
-            { "description": "Boosts base HP by 40" },
-            { "description": "Boosts base RCV by 25" },
-            { "description": "Boosts base RCV by 25" },
-            { "description": "Boosts base ATK by 30" },
-            { "description": "Boosts base HP by 60" },
-            { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Boosts base HP by 80" },
-            { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK and HP of [QCK] and [PSY] characters by 50" },
-            { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
-        ],
-        potential: [
-            {
-                "Name": "[STR] Damage Reduction",
-                "description": [
-                    "Level 1: Reduce damage taken from [STR] characters by 1%",
-                    "Level 2: Reduce damage taken from [STR] characters by 2%",
-                    "Level 3: Reduce damage taken from [STR] characters by 3%",
-                    "Level 4: Reduce damage taken from [STR] characters by 4%",
-                    "Level 5: Reduce damage taken from [STR] characters by 5%"
-                ]
-            },
-            {
-                "Name": "Pinch Healing",
-                "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
-                ]
-            },
-        ],
-        support: [
-            {
-                "Characters": "Aokiji and Kizaru",
-                "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
-                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turn.",
-                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn.",
-                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turn."
-                ]
-            }
-        ]
-    },
-    2770: {//Kimono Aokiji
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 2.5x, by 2x otherwise and boosts RCV of all characters by 1.2x.",
-        special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
-        sailor: "Makes [DEX] orbs beneficial for this character",
-        sailorNotes: "#{beneficial}",
-        specialName: "Boat Rest & Recuperation",
-    },
-    2771: {//Kimono Aokiji
-        captain: "If your crew has 4 or more characters of the same Type, boosts ATK of all characters by 3x, by 2.5x otherwise and boosts RCV of all characters by 1.2x.",
-        special: "Recovers 30x character's RCV in HP and reduces enemies' Threshold Damage Reduction, Percent Damage Reduction and Increased Defense duration by 5 turns. If your crew has 4 or more [STR] or [INT] characters, boosts the Color Affinity of [STR] and [INT] characters by 1.75x for 2 turns.",
-        sailor: {
-            "base": "Makes [DEX] orbs beneficial for this character",
-            "level1": "Boosts base ATK and HP of [STR] and [INT] characters by 50",
-        },
-        sailorNotes: "#{beneficial}",
-        specialName: "Boat Rest & Recuperation",
-        limit: [
-            { "description": "Boosts base ATK by 25" },
-            { "description": "Boosts base ATK by 25" },
-            { "description": "Boosts base HP by 30" },
-            { "description": "Acquire Potential 1: [PSY] Damage Reduction" },
-            { "description": "Boosts base HP by 40" },
-            { "description": "Boosts base RCV by 25" },
-            { "description": "Boosts base RCV by 25" },
-            { "description": "Boosts base ATK by 30" },
-            { "description": "Boosts base HP by 60" },
-            { "description": "Reduce base Special Cooldown by 1 turn" },
-            { "description": "Boosts base HP by 80" },
-            { "description": "Boosts base ATK by 40" },
-            { "description": "Acquire Sailor Ability 2: Boosts base ATK and HP of [STR] and [INT] characters by 50" },
-            { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Potential 2: Pinch Healing" },
-        ],
-        potential: [
-            {
-                "Name": "[PSY] Damage Reduction",
-                "description": [
-                    "Level 1: Reduce damage taken from [PSY] characters by 1%",
-                    "Level 2: Reduce damage taken from [PSY] characters by 2%",
-                    "Level 3: Reduce damage taken from [PSY] characters by 3%",
-                    "Level 4: Reduce damage taken from [PSY] characters by 4%",
-                    "Level 5: Reduce damage taken from [PSY] characters by 5%"
-                ]
-            },
-            {
-                "Name": "Pinch Healing",
-                "description": [
-                    "Level 1: If HP is below 10% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 2: If HP is below 15% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 3: If HP is below 20% at the start of the turn, recovers 1x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 4: If HP is below 30% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
-                    "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
-                ]
-            },
-        ],
-        support: [
-            {
-                "Characters": "Akainu, Kizaru and Tsuru",
-                "description": [
-                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV.",
-                    "Level 5: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV. When the supported character hits a PERFECT, reduces enemies' Percent Damage Reduction duration by 1 turn."
-                ]
-            }
-        ]
-    },
-    2772: {//Wanda
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight and boosts ATK of Slasher and Cerebral characters by 2.25x.",
-        special: "Randomizes all non-Matching orbs, reduces Special Cooldown of Slasher and Cerebral characters by 1 turn and delays all enemies for 1 turn.",
-        specialName: "Friendly Minktimacy",
-        support: [
-            {
-                "Characters": "Carrot and Nami",
-                "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] orbs.",
-                    "Level 2: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK] or [RCV] orbs.",
-                    "Level 3: Once per an adventure, when the supported character uses their special, Randomizes all orbs other than [QCK], [RCV] or [TND] orbs.",
-                    "Level 4: Once per an adventure, when the supported character uses their special, Randomizes all orbs, including [BLOCK] orbs, other than [QCK], [RCV] or [TND] orbs.",
-                    "Level 5: Once per an adventure, when the supported character uses their special, Randomizes all orbs, including [BLOCK] orbs, other than [QCK], [RCV] or [TND] orbs and locks all orbs for 1 turn."
-                ]
-            }
-        ],
-    },
-    2773: {//V2 Nami
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of all characters by 3x. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 3.75x and boosts Affinity of the Dominant Type characters by 1.1x.",
-        special: "If HP is above 99% at the time the special is activated, removes enemies' Defense Reduction Debuff Protection duration completely, reduces the defense of all enemies by 100% for 2 turns and boosts ATK against enemies with reduced defense by 2x for 2 turns. Otherwise, recovers 50% of crew's MAX HP, reduces the defense of all enemies by 100% for 1 turn and boosts ATK against enemies with reduced defense by 2x for 1 turn.",
-        specialName: "Ninja Arts: Murderous Smile",
-    },
-    2774: {//V2 Nami
-        captain: "Reduces cooldown of all specials by 2 turns at the start of the fight. Boosts ATK of all characters by 3x. If your crew has 4 or more characters of the same Type, boosts ATK of the Dominant Type characters by 3.75x and boosts Affinity of the Dominant Type characters by 1.1x.",
-        special: "If HP is above 99% at the time the special is activated, removes enemies' Defense Reduction Debuff Protection duration completely, reduces the defense of all enemies by 100% for 2 turns and boosts ATK against enemies with reduced defense by 2x for 2 turns. Otherwise, recovers 50% of crew's MAX HP, reduces the defense of all enemies by 100% for 1 turn and boosts ATK against enemies with reduced defense by 2x for 1 turn.",
-        sailor: {
-            "base": "None",
-            "level1": "If your crew has 4 or more characters of the same Type, boosts base ATK of the Dominant Type by 150",
-            "level2": "Restores her own special cooldown by 3 turn when it is rewinded",
-        },
-        specialName: "Ninja Arts: Murderous Smile",
-        potential: [
-            {
-                "Name": "[STR] Damage Reduction",
-                "description": [
-                    "Level 1: Reduce damage taken from [STR] characters by ?%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
-                ]
-            },
-            {
-                "Name": "Reduce No Healing duration",
-                "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turn",
-                    "Level 5: Reduces No Healing duration by ? turn"
-                ]
-            },
-            {
-                "Name": "Slot Bind Self-reduction",
-                "description": [
-                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 2: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 3: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 4: Reduces Slot Bind duration by ? turn on this character",
-                    "Level 5: Reduces Slot Bind duration by ? turn on this character",
-                    //"Level 5: Reduces Slot Bind duration completely on this character"
-                ]
-            },
-        ],
-        support: [
-            {
-                "Characters": "Sanji and Kinemon",
-                "description": [
-                    "Level 1: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns",
-                    "Level 2: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 50% for 1 turns",
-                    "Level 3: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 80% for 1 turns",
-                    "Level 4: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 100% for 1 turns",
-                    "Level 5: Once per an adventure, when the supported character uses their special, reduces the defense of all enemies by 100% for 2 turns"
-                ]
-            }
-        ]
-    },
-    2775: {//Komurasaki
-        captain: "Boosts ATK of [QCK] and [INT] characters by 4x, makes [QCK] and [INT] orbs beneficial for [QCK] and [INT] characters, recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT and reduce damage received by 20%. Boosts amount of Beli received by 2x",
-        special: "Randomizes all orbs into either [QCK] or [INT] orbs. If HP is above 99% at the time the special is activated, boosts ATK of [QCK] and [INT] characters by 2x for 2 turns and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 2 turns. Otherwise, boosts ATK of [QCK] and [INT] characters by 2x for 1 turn and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 1 turn.",
-        specialName: "Oiran's Bewitching Smile",
-    },
-    2776: {//Komurasaki
-        captain: "Boosts ATK of [QCK] and [INT] characters by 4x, makes [QCK] and [INT] orbs beneficial for [QCK] and [INT] characters, recovers 0.5x her RCV at the end of the turn each time you hit a PERFECT and reduce damage received by 20%. Boosts amount of Beli received by 2x",
-        special: "Randomizes all orbs into either [QCK] or [INT] orbs. If HP is above 99% at the time the special is activated, boosts ATK of [QCK] and [INT] characters by 2x for 2 turns and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 2 turns. Otherwise, boosts ATK of [QCK] and [INT] characters by 2x for 1 turn and amplifies the effect of orbs by 2x for [QCK] and [INT] characters for 1 turn.",
-        specialName: "Oiran's Bewitching Smile",
-        sailor: {
-            "base": "None",
-            "level1": "Boosts base ATK, HP and RCV of all characters by 50",
-            "level2": "Makes [QCK] orbs beneficial for all characters",
-        },
-        potential: [
-            {
-                "Name": "[STR] Damage Reduction",
-                "description": [
-                    "Level 1: Reduce damage taken from [STR] characters by ?%",
-                    "Level 2: Reduce damage taken from [STR] characters by ?%",
-                    "Level 3: Reduce damage taken from [STR] characters by ?%",
-                    "Level 4: Reduce damage taken from [STR] characters by ?%",
-                    "Level 5: Reduce damage taken from [STR] characters by ?%"
-                ]
-            },
-            {
-                "Name": "Critical Hit",
-                "description": [
-                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
-                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
-                ]
-            },
-            {
-                "Name": "Reduce No Healing duration",
-                "description": [
-                    "Level 1: Reduces No Healing duration by ? turn",
-                    "Level 2: Reduces No Healing duration by ? turn",
-                    "Level 3: Reduces No Healing duration by ? turn",
-                    "Level 4: Reduces No Healing duration by ? turn",
-                    "Level 5: Reduces No Healing duration by ? turn"
-                ]
-            },
-        ],
-        support: [
-            {
-                "Characters": "[QCK] characters",
-                "description": [
-                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
-                    "Level 5: Adds 12% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
-                ]
-            }
-        ]
     },
     3366: {//Neo Duval
         special: "Deals 5,000 Fixed damage to all enemies, reduces damage received by 50% for 1 turn, reduces Increase Damage Taken duration by 4 turns and boosts ATK of Shooter characters by 1.75x for 1 turn",

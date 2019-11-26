@@ -588,7 +588,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
-                    captAffinityMult *= captain.captAffinityMultiplier(unit);
+                    //captAffinityMult *= captain.captAffinityMultiplier(unit);
+                    var params = getParameters(teamSlot)
+                    params["sourceSlot"] = captain.sourceSlot;
+                    captAffinityMult *= captain.captAffinityMultiplier(params);
                 });
         
         //console.log(affinityMult);
@@ -896,7 +899,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))
-                captAffinityMultiplier.push({captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
+                captAffinityMultiplier.push({ sourceSlot: data.sourceSlot, captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({

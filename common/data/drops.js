@@ -3388,6 +3388,17 @@ window.drops = {
             Expert: [ 3370 ],
             Ultimate: [ 3370 ],
         },
+        
+        {
+            name: 'Clash!! Carrot',
+            dropID: 'clash53',
+            thumb: 2781,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2781 ],
+            Expert: [ 2781 ],
+            Ultimate: [ 2781 ],
+        },
 
     ],
 

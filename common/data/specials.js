@@ -7094,6 +7094,9 @@ window.specials = {
             });
         },
     },
+    2439: {
+        delay: function(p) { return 1; },
+    },
     2440: {
         chain: function(p) { return window.specials[2440].multiplier; },
         chainLimiter: function(p) {
@@ -8700,6 +8703,24 @@ window.specials = {
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
         orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         type: "type",
+    },
+    2777:{
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2778:{
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2781: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2781].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2781].multiplier == 1.75 ? 1 : 0);
+            window.specials[2781].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2781warning'
+            });
+        },
     },
     3333: {
         atk: function(p) { return 1.75; },

@@ -9786,7 +9786,7 @@ window.captains = {
     },
     2763: {
         atk: function(p) { return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 2.25 : 1.5 : 1; },
-        affinity: function(p) { return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.5 : 1 : 1; },
+        affinity: function(p) { console.log(p); return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.5 : 1 : 1; },
     },
     2764: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
@@ -9835,6 +9835,21 @@ window.captains = {
     },
     2776: {
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 4 : 1; },
+    },
+    2777: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; },
+    },
+    2778: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.75 : 1; },
+    },
+    2779: {
+        atk: function(p) { return 2.25; },
+    },
+    2780: {
+        atk: function(p) { return 2.25; },
+    },
+    2781: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 3 : 1; },
     },
     3333: {
         hitAtk: function(p) {

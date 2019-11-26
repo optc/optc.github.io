@@ -832,8 +832,16 @@ window.zombies = {
     2775: { // Komurasaki
         type: 'healer',
     },
-    2775: { // Komurasaki
+    2776: { // Komurasaki
         type: 'healer',
+    },
+    2779: { // Chopper/Carrot
+        type: 'healer',
+        amount: 500
+    },
+    2780: { // Chopper/Carrot
+        type: 'healer',
+        amount: 1000
     },
     5001: { // Smoker/Tashigi
         type: 'healer',
