@@ -53116,7 +53116,7 @@ window.details = {
         potentialNotes: "#{enrage}"
     },
     2687: {//Sengoku
-        captain: "Boosts ATK of [DEX] characters by 1.5x",
+        captain: "Boosts ATK of Cerebral characters by 1.5x",
         special: "Reduces crew's current HP by 80%, reduces Bind and Burn duration by 5 turns and boosts the Color Affinity of [DEX], [QCK] and [PSY] characters depending on your Treasure Map Level for 1 turn.",
         specialNotes: "Level 1-10: 1.5x affinity boost<br\>Level 11-20: 1.75x affinity boost<br\>Level 21+: 2x affinity boost",
         specialName: "Resourceful General's Naval Tactic",

@@ -9547,10 +9547,10 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
     },
     2687: {
-        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     2688: {
-        atk: function(p) { return (p.unit.class.has("Slasher")) ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2689: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
