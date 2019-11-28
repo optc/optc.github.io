@@ -7062,11 +7062,10 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
     },
     2429: {
-        def: function(p) { return window.specials[2425].turnedOn ? 0.5 : 1; },
+        def: function(p) { return window.specials[2429].turnedOn ? 0.5 : 1; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2425].turnedOn = false;
-            window.specials[2425].turnedOn = p.captain.class.has("Slasher") ? true : false;
+            window.specials[2429].turnedOn = p.captain.class.has("Slasher") ? true : false;
         },
     },
     2434: {
