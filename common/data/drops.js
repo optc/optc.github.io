@@ -2511,6 +2511,15 @@ window.drops = {
             'All Difficulties': [ 2750, 2751, 2752, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ]
         },
         
+        {
+            name: 'The Charming Tea House Owner',
+            dropID: 'event127',
+            thumb: 2782,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2782, 2783, -1001, -1953, -2080, -2156, -2195, -2603, -2605, -2674, -2676, -2678, -2596 ]
+        },
+        
     ],
 
             
