@@ -487,23 +487,23 @@ window.effects = {
         },    
     },
 	
-	'Kizuna Clash': {
+	'Kizuna Clash [Global]': {
         description: 'Certain units boosted',
         thumb: 2531,
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([ 2510, 2515, 2534, 5086, 5087, 5088, 5089, 2536, 5093, 5094, 5095, 2538, 5100, 5101, 5102, 5103, 2540, 5108, 5109, 5110, 5111, 2542, 5116, 5117, 5118, 5119, 2544, 5124, 5125, 5126, 5127 ].indexOf(id) != -1);
+                matching = ([ 2561, 2563, 2565, 2567, 2569, 5148, 5149, 5150, 5151, 2575, 2557, 5140, 5141, 5142, 5143, 2577, 5156, 5157, 5158, 5159 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([ 2510, 2515, 2534, 5086, 5087, 5088, 5089, 2536, 5093, 5094, 5095, 2538, 5100, 5101, 5102, 5103, 2540, 5108, 5109, 5110, 5111, 2542, 5116, 5117, 5118, 5119, 2544, 5124, 5125, 5126, 5127 ].indexOf(id) != -1);
+                matching = ([ 2561, 2563, 2565, 2567, 2569, 5148, 5149, 5150, 5151, 2575, 2557, 5140, 5141, 5142, 5143, 2577, 5156, 5157, 5158, 5159 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([ 2510, 2515, 2534, 5086, 5087, 5088, 5089, 2536, 5093, 5094, 5095, 2538, 5100, 5101, 5102, 5103, 2540, 5108, 5109, 5110, 5111, 2542, 5116, 5117, 5118, 5119, 2544, 5124, 5125, 5126, 5127 ].indexOf(id) != -1);
+                matching = ([ 2561, 2563, 2565, 2567, 2569, 5148, 5149, 5150, 5151, 2575, 2557, 5140, 5141, 5142, 5143, 2577, 5156, 5157, 5158, 5159 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},
@@ -1008,4 +1008,25 @@ window.effects = {
             return matching;
         },
     },
+	
+	'Kizuna Clash [Japan]': {
+        description: 'Certain units boosted (Not Updated)',
+        thumb: 2531,
+        id: 77, // don't change this
+        atk: function(p) {
+            var id = p.number + 1,
+                matching = ([  ].indexOf(id) != -1);
+            return !matching ? 1 : 2;
+        },
+        hp: function(p) {
+            var id = p.number + 1,
+                matching = ([  ].indexOf(id) != -1);
+            return !matching ? 1 : 2;
+        },
+        rcv: function(p) {
+            var id = p.number + 1,
+                matching = ([  ].indexOf(id) != -1);
+            return !matching ? 1 : 2;
+        },
+	},
 };
