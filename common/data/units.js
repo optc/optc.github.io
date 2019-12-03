@@ -2783,7 +2783,7 @@ window.units = [
     [ "O-Tsuru", "QCK", [ "Cerebral", "Free Spirit" ], 4, 1, 5, 4, 99, 1000000, 753, 465, 202, 1642, 961, 356, null ],
     [ "Kinemon, Over Watching Samurai", "PSY", [ "Free Spirit", "Slasher" ], 3, 1, 5, 2, 70, 355666, 432, 211, 52, 1098, 852, 173, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Napping Kyoshiro", "INT", [ "Slasher", "Cerebral" ], 5, 40, 4, 4, 99, 4000000, 1286, 705, 114, null, 1493, 207, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

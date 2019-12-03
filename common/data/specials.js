@@ -8721,6 +8721,17 @@ window.specials = {
             });
         },
     },
+    2785: {
+        chainAddition: function(p) { return window.specials[2785].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 0.9 : 0.7);
+            window.specials[2582].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 0.9 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '2582warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

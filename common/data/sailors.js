@@ -1036,6 +1036,11 @@ window.sailors = {
         hpStatic: function(p) { return 20; },
         rcvStatic: function(p) { return 20; },
     },
+    2785: {
+        atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
