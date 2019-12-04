@@ -8721,6 +8721,10 @@ window.specials = {
             });
         },
     },
+    2784: {
+        def: function(p) { return .2; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
     2785: {
         chainAddition: function(p) { return window.specials[2785].multiplier; },
         onActivation: function(p) {
@@ -8739,10 +8743,6 @@ window.specials = {
     3334: {
         atk: function(p) { return 1.75; },
         type: "type",
-    },
-    3336: {
-        def: function(p) { return .2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
     3339: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.75 : 1; },

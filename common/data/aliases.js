@@ -2785,7 +2785,7 @@ window.aliases = {
     2784: [ '', '', '' ],
     3333: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy' ],
     3334: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy' ],
-    3336: [ '', '', 'Mega Lucci', 'Super Lucci', 'Mega Rob Lucci', 'Super Rob Lucci', '6+ Lucci', '6+ Rob Lucci' ],
+    2784: [ '', '', 'Mega Lucci', 'Super Lucci', 'Mega Rob Lucci', 'Super Rob Lucci', '6+ Lucci', '6+ Rob Lucci' ],
     3337: [ '', '', '' ],
     3338: [ '', '', '' ],
     3339: [ '', '', 'Neo Garp', 'Kai Garp', 'Raid Garp' ],
