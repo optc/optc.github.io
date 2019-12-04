@@ -2819,7 +2819,7 @@ window.aliases = {
     3371: [ '', '', 'Neo Coby', 'Extra Coby', 'EX Coby' ],
     3372: [ '', '', 'Neo Coby', 'Extra Coby', 'EX Coby' ],
     3373: [ '', '', 'Neo Helmeppo', 'Extra Helmeppo', 'EX Helmeppo' ],
-    3374: [ '', '', '' ],
+    3374: [ '', '', 'Support Sengoku', 'Limited Sengoku', 'Secret Sengoku' ],
     3375: [ '', '', '' ],
     3376: [ '', '', '' ],
     3377: [ '', '', '' ],

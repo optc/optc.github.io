@@ -9989,6 +9989,10 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Driven")) ? 1.5 : 1; },
         hp: function(p) { return (p.unit.class.has("Driven")) ? 1.5 : 1; },
     },
+    3374: {
+        atk: function(p) { return (p.unit.class.has("Cerebral")) ? 1.75 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Cerebral")) ? 1.75 : 1; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },

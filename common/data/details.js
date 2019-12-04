@@ -56518,6 +56518,23 @@ window.details = {
             }
         ]
     },
+    3374: {//Sengoku
+        captain: "Boosts ATK and RCV of Cerebral characters by 1.75x",
+        special: "Reduces damage received by 70% and amplifies the effect of orbs by ?x for 1 turn.",
+        specialName: "Not Translated",
+        support: [
+            {
+                "Characters": "Trafalgar Law",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes all orbs on all characters into the supported character's orb.",
+                    "Level 2: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes all orbs on all characters into the supported character's orb and adds 0.2x to Chain multiplier for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes all orbs on all characters into the supported character's orb and adds 0.3x to Chain multiplier for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes all orbs on all characters into the supported character's orb and adds 0.5x to Chain multiplier for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses a Damage Dealing or Health Cutting special, changes all orbs on all characters into the supported character's orb and adds 0.7x to Chain multiplier for 1 turn."
+                ]
+            }
+        ]
+    },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
         captainNotes: "#{beneficial}",

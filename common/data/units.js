@@ -3372,7 +3372,7 @@ window.units = [
     [ "Coby [EX], Navy HQ Petty Officer", "STR", [ "Fighter", "Driven" ], 4, 25, 5, 3, 70, 1066998, 450, 240, 35, null, null, null, null ],
     [ "War Hero Coby [EX], Navy HQ Petty Officer", "STR", [ "Fighter", "Driven" ], 5, 40, 4, 5, 99, 4000000, 1250, 650, 160, null, null, null, null ],
     [ "Sergeant Helmeppo [EX]", "DEX", [ "Slasher", "Driven" ], 4, 1, 5, 3, 99, 4000000, 807, 555, 150, 1998, 1060, 260, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Sengoku", "PSY", [ "Cerebral", "Free Spirit" ], 5, 1, 5, 4, 99, 4000000, 620, 572, 102, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

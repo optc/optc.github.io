@@ -2711,4 +2711,5 @@ window.flags = {
     3371: { global: 1 },
     3372: { global: 1 },
     3373: { global: 1 },
+    3374: { rr: 1, rro: 1, lrr: 1, global: 1 },
 };
