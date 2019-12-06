@@ -9871,6 +9871,28 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.75 : 1; },
         hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
     },
+    2786: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2787: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.25 : 1; },
+    },
+    2788: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 2 : 1; },
+    },
+    2789: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    2790: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    2791: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 1.5 : 1; },
+    },
+    2792: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? p.actions[p.sourceSlot] ? 3.25 : 1.75 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

@@ -1036,10 +1036,18 @@ window.sailors = {
         hpStatic: function(p) { return 20; },
         rcvStatic: function(p) { return 20; },
     },
-    2785: {
-        atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? 50 : 0; },
-        hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? 50 : 0; },
-        rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? 50 : 0; },
+    2788: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    2789: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    5003: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
     3333: {
         staticMult: function(p) { return 3; }

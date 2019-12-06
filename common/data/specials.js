@@ -8736,6 +8736,29 @@ window.specials = {
             });
         }
     },
+    2786: {
+        delay: function(p) { return 2; },
+    },
+    2787: {
+        delay: function(p) { return 2; },
+    },
+    2788: {
+        chainAddition: function(p) { return 0.7; }
+    },
+    2789: {
+        chainAddition: function(p) { return 0.7; }
+    },
+    2790: {
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2790].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2790].multiplier == 1.75 ? 1 : window.specials[2790].multiplier == 2 ? 2.25 : 0);
+            window.specials[2790].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x affinity boost, disable and re-enable this special',
+                name: '2790warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
