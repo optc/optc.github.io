@@ -53904,7 +53904,7 @@ window.details = {
             { "description": "Boosts base HP by 60" },
             { "description": "Reduce base Special Cooldown by 1 turn" },
             { "description": "Acquire 1 additional Socket slot" },
-            { "description": "Acquire Potential 2: Reduce No Healing duration" },
+            { "description": "Acquire Potential 2: Critical Hit" },
         ],
         potential: [
             {
