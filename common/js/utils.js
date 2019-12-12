@@ -5,7 +5,7 @@
         'Skypiea (Guard|Enforcer)', '(Adept|Nomad|Hunter), Shandian',
         '(Seaman|Major|Corporal) Navy', 'Hoodlum.+Bounty Hunter', 'Black Cat Pirates',
         'Arlong crewmember', 'Gunner|Cannoneer|Assassin Master', '^(Female|Giant).*(Red|Blue|Green|Yellow|Black) Pirates',
-        '(Soldier|General) Zombie.*Shadow', 'Wild Zombie', 'Street Punk', 'Kuja Warriors', '(Naginata|Rifle|Saber|Bazooka|Knuckle) (Corporal|Major)', '(Strong|Speedy|Crafty|Hate-Filled|Egotistical) Soldier Zombie', '(Powerful|Sneaky|Blazing) General Zombie', '(Quick-Draw|Scheming|Technical|Quick-Strike|Strong-Arm|Bold) Gunman', '(Suppressor|Emergency|Perimeter) Jailer', '(Contemplative|All-Action) Guard', 'Fishman (Guard|Outlaw)', 'Punk Hazard Gas Mask Patrol Soldier', 'Punk Hazard Patrol Troop Corps', 'Donquixote Pirates Member', '(Tactical|Elite) Musketeers', '(Fighter Group|Reconnaissance Group|Electro Group), Guardians', 'Germa Kingdom Clone Soldier', 'Soul Homie', 'Chess Mercenaries'
+        '(Soldier|General) Zombie.*Shadow', 'Wild Zombie', 'Street Punk', 'Kuja Warriors', '(Naginata|Rifle|Saber|Bazooka|Knuckle) (Corporal|Major)', '(Strong|Speedy|Crafty|Hate-Filled|Egotistical) Soldier Zombie', '(Powerful|Sneaky|Blazing) General Zombie', '(Quick-Draw|Scheming|Technical|Quick-Strike|Strong-Arm|Bold) Gunman', '(Suppressor|Emergency|Perimeter) Jailer', '(Contemplative|All-Action) Guard', 'Fishman (Guard|Outlaw)', 'Punk Hazard Gas Mask Patrol Soldier', 'Punk Hazard Patrol Troop Corps', 'Donquixote Pirates Member', '(Tactical|Elite) Musketeers', '(Fighter Group|Reconnaissance Group|Electro Group), Guardians', 'Germa Kingdom Clone Soldier', 'Soul Homie', 'Chess Mercenaries', 'Wano Country Official'
     ].join(')|(') + ')', 'i');
 
     var utils = {};
@@ -176,7 +176,7 @@
             case '3333': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5013.png'; break;
             case '3334': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5014.png'; break;
             //case '2399': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5015.png'; break;
-            case '3336': return '../res/character_10642_t1.png'; break;
+            //case '2784': return '../res/character_10642_t1.png'; break;
             case '3339': return '../res/character_10852_t1.png'; break;
             case '3340': return '../res/character_10853_t1.png'; break;
             //case '2663': return '../res/character_10713_t1.png'; break;
