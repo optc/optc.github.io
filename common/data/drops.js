@@ -2450,8 +2450,9 @@ window.drops = {
         },
         
         {
-            name: 'Hell\'s Past! Young Doflamingo',
+            name: 'Doflamingo\'s Childhood',
             dropID: 'event121',
+            global: true,
             thumb: 2571,
             nakama: 2257100,
             gamewith: 153186,
@@ -3297,6 +3298,7 @@ window.drops = {
             name: 'Fight, Leo',
             dropID: 'clash46',
             thumb: 2559,
+            global: true,
             nakama: 4255900,
             gamewith: 152009,
             condition: 'Drops the Leo specific Limit Break crystals.',
@@ -4305,6 +4307,7 @@ window.drops = {
             name: 'Doflamingo & Trebol',
             thumb: 2550,
             showManual: true,
+            global: true,
             nakama: 5254901,
             gamewith: 150550,
             slefty: 'coliseums',
@@ -4316,6 +4319,7 @@ window.drops = {
             name: 'Morley',
             thumb: 2569,
             showManual: true,
+            global: true,
             nakama: 5256801,
             gamewith: 152008,
             slefty: 'coliseums',
@@ -4377,7 +4381,7 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum EX Vs. Coby',
+            name: 'Coliseum EXTRA Vs. Coby',
             thumb: 3372,
             showManual: true,
             nakama: null,
@@ -4595,6 +4599,7 @@ window.drops = {
             name: 'Shanks & Ben Beckman',
             dropID: 'treasuremap21',
             thumb: 2557,
+            global: true,
             nakama: 8255700,
             gamewith: 151643,
             'Raging Sea': [ 2556 ]
@@ -4604,6 +4609,7 @@ window.drops = {
             name: 'Rob Lucci',
             dropID: 'treasuremap22',
             thumb: 2583,
+            global: true,
             nakama: 8258300,
             gamewith: 154065,
             'Primordial Sea': [ 2582 ]
@@ -4754,7 +4760,8 @@ window.drops = {
             name: 'Zoro & Sanji',
             dropID: 'bond1',
             thumb: 2531,
-            nakama: 6253100,
+            global: true,
+            nakama: 9261501,
             gamewith: [ 150056, 155125, 159694, 156784, 164568, 172467 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
@@ -5257,6 +5264,7 @@ window.drops = {
         {
             name: 'Beautiful Women\'s Relief - Nami',
             thumb: 2588,
+            global: true,
             nakama: 6258800,
             gamewith: 155238,
             showManual: true,
@@ -5266,6 +5274,7 @@ window.drops = {
         {
             name: 'Beautiful Women\'s Relief - Hancock',
             thumb: 2434,
+            global: true,
             nakama: 6243400,
             gamewith: 155240,
             showManual: true,
