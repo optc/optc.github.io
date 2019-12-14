@@ -3381,6 +3381,28 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Carrot',
+            dropID: 'clash54',
+            thumb: 2781,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2781 ],
+            Expert: [ 2781 ],
+            Ultimate: [ 2781 ],
+        },
+        
+        {
+            name: 'Clash!! Coby & Helmeppo',
+            dropID: 'clash55',
+            thumb: 2795,
+            nakama: null,
+            gamewith: null,
+            Master: [ 2795 ],
+            Expert: [ 2795 ],
+            Ultimate: [ 2795 ],
+        },
+        
+        {
             name: 'Showdown!! Shanks & Mihawk',
             thumb: 3342,
             global: true,
@@ -3399,17 +3421,6 @@ window.drops = {
             gamewith: null,
             Expert: [ 3370 ],
             Ultimate: [ 3370 ],
-        },
-        
-        {
-            name: 'Clash!! Carrot',
-            dropID: 'clash53',
-            thumb: 2781,
-            nakama: null,
-            gamewith: null,
-            Master: [ 2781 ],
-            Expert: [ 2781 ],
-            Ultimate: [ 2781 ],
         },
 
     ],
@@ -4778,6 +4789,15 @@ window.drops = {
             nakama: null,
             gamewith: [ 174864 ],
             'All Difficulties': [ 2757 ],
+        },
+        
+        {
+            name: 'Christmas Party Shirahoshi',
+            dropID: 'bond2',
+            thumb: 2794,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2794 ],
         },
         
     ],
