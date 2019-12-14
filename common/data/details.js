@@ -49262,7 +49262,7 @@ window.details = {
         ],
     },
     2558: {//Leo
-        captain: "Boosts ATK of Striker and Free Spirit characters by ?x and their RCV by ?x.",
+        captain: "Boosts ATK of Striker and Free Spirit characters by 1.75x and their RCV by 1.5x.",
         special: "Reduces Bind and Increase Damage Taken duration by 4 turns and reduces enemies' Increased Defense duration by 4 turns.",
         specialName: "Tontatta Technique: Swift Pierce",
         sailor: "Adds 2x character's ATK as Additional Damage",
