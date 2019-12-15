@@ -49653,13 +49653,13 @@ window.details = {
     },
     2568: {//Morley
         captain: "Boosts ATK of Free Spirit characters by 2.25x and their HP by 1.1x",
-        special: "Reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 5 turns and reduces the defense of all enemies by 50% for 1 turn. If your Captain is a Free Spirit character, boosts ATK against enemies with reduced defense by 1.75x for 3 turns and if during that turn, you hit 2 PERFECTS, reduces the defense of all enemies by 100% for 2 turns.",
+        special: "Reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 5 turns and reduces the defense of all enemies by 50% for 1 turn. If your Captain is a Free Spirit character, boosts ATK against enemies with reduced defense by 1.75x for 3 turns and if during that turn, you hit 2 PERFECTS, reduces the defense of all enemies by 100% for 1 turn.",
         specialName: "Morley Special",
         sailor: "Boosts base ATK, HP and RCV of Free Spirit characters by 50",
     },
     2569: {//Morley
         captain: "Boosts ATK of Free Spirit characters by 2.75x and their HP by 1.2x",
-        special: "Reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 5 turns and reduces the defense of all enemies by 50% for 1 turn. If your Captain is a Free Spirit character, boosts ATK against enemies with reduced defense by 1.75x for 3 turns and if during that turn, you hit 2 PERFECTS, reduces the defense of all enemies by 100% for 2 turns.",
+        special: "Reduces enemies' Threshold Damage Reduction and Resilience Buffs duration by 5 turns and reduces the defense of all enemies by 50% for 1 turn. If your Captain is a Free Spirit character, boosts ATK against enemies with reduced defense by 1.75x for 3 turns and if during that turn, you hit 2 PERFECTS, reduces the defense of all enemies by 100% for 1 turn.",
         specialName: "Morley Special",
         sailor: {
             "base": "Boosts base ATK, HP and RCV of Free Spirit characters by 50",

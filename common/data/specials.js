@@ -8729,10 +8729,10 @@ window.specials = {
         chainAddition: function(p) { return window.specials[2785].multiplier; },
         onActivation: function(p) {
             var n = (p.percHP >= 99 ? 0.9 : 0.7);
-            window.specials[2582].multiplier = n;
+            window.specials[2785].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 0.9 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '2582warning'
+                name: '2785warning'
             });
         }
     },
