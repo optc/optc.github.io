@@ -2451,6 +2451,7 @@ window.drops = {
         {
             name: 'Hell\'s Past! Young Doflamingo',
             dropID: 'event121',
+            global: true,
             thumb: 2571,
             nakama: 2257100,
             gamewith: 153186,
@@ -5212,8 +5213,9 @@ window.drops = {
         },
         
         {
-            name: 'Beautiful Women\'s Relief - Nami',
+            name: 'Ladies\' Repose - Nami',
             thumb: 2588,
+            global: true,
             nakama: null,
             gamewith: 155238,
             showManual: true,
@@ -5221,8 +5223,9 @@ window.drops = {
         },
         
         {
-            name: 'Beautiful Women\'s Relief - Hancock',
+            name: 'Ladies\' Repose - Hancock',
             thumb: 2434,
+            global: true,
             nakama: null,
             gamewith: 155240,
             showManual: true,
