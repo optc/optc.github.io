@@ -2680,6 +2680,17 @@ window.drops = {
         },
 
         {
+            name: 'Clash Neo!! Heracles\'n',
+            dropID: 'clashneo9',
+            thumb: 3376,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'raid_bosses/9',
+            Expert: [ 3375 ]
+        },
+
+        {
             name: 'Clash!! Aokiji',
             dropID: 'clash10',
             thumb: 575,
