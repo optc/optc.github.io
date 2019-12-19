@@ -56221,7 +56221,7 @@ window.details = {
             }
         ]
     },
-    3370: {//Coby&Helmeppo
+    2795: {//Coby&Helmeppo
         captain: {
             "character1": "Boosts ATK of [PSY] characters by 2.5x, boosts ATK of [INT] characters by 2.25x and makes [PSY] orbs beneficial for all characters. Boosts ATK of all characters by an additional 1.2x after 4 PERFECTs in a row.",
             "character2": "Boosts ATK of [INT] characters by 2.5x, boosts ATK of [PSY] characters by 2.25x and makes [INT] orbs beneficial for all characters. Boosts ATK of all characters by an additional 1.2x after 4 PERFECTs in a row.",
@@ -56275,6 +56275,67 @@ window.details = {
                     "Level 5: Reduce damage taken from [INT] characters by ?%"
                 ]
             },
+        ]
+    },
+    2796: {//Chopper
+        captain: "Boosts ATK all characters by 3.5x and their HP by 1.25x. Guarantees duplicating all Cotton Candy drops upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you multiple extra drops.",
+        special: "Reduces Paralysis, Burn, Bind, Despair, Silence, ATK DOWN, Increased Damage Taken, RCV DOWN and Blindness duration by 5 turns, removes Poison duration completely and recovers 12,024 HP at the end of the turn for 3 turns.",
+        specialName: "The Doctor Decorating the Tree Top",
+    },
+    2797: {//Chopper
+        captain: "Boosts ATK all characters by 3.5x and their HP by 1.25x. Guarantees duplicating all Cotton Candy drops upon completion of the island.",
+        captainNotes: "Does not work if he was not your captain upon starting the island. Stacks with other additional drop captains, giving you multiple extra drops.",
+        special: "Reduces Paralysis, Burn, Bind, Despair, Silence, ATK DOWN, Increased Damage Taken, RCV DOWN and Blindness duration by 5 turns, removes Poison duration completely and recovers 12,024 HP at the end of the turn for 3 turns.",
+        specialName: "The Doctor Decorating the Tree Top",
+        sailor: {
+            "base": "None",
+            "level1": "Boosts amount healed from RCV orbs by 150 each",
+            "level2": "Reduces Silence duration on this character by 3 turns",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Monkey D. Luffy, Roronoa Zoro, Nami, Usopp, Sanji, Nico Robin, Franky and Brook",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 2%. Adds 6% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 2: Reduces damage received from [INT] characters by 3%. Adds 7% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 3: Reduces damage received from [INT] characters by 4%. Adds 9% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 4: Reduces damage received from [INT] characters by 5%. Adds 11% of this character's base HP and RCV to the supported character's base HP and RCV.",
+                    "Level 5: Reduces damage received from [INT] characters by 6%. Adds 13% of this character's base HP and RCV to the supported character's base HP and RCV."
+                ]
+            }
         ]
     },
     3333: {//Kung Fu Luffy
@@ -56947,6 +57008,62 @@ window.details = {
                 ]
             }
         ]
+    },
+    3375: {//Heracles'n Neo
+        special: "Reduces Bind duration by 2 turns, boosts ATK of Cerebral characters by 1.75x for 1 turn and changes the orbs in the left column into [PSY], [INT] and [RCV], the orbs in the right column into [DEX], [STR] and [QCK], switches orbs between slots 2 times",
+        specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [PSY], [DEX], [STR], [QCK], [RCV] and [INT]",
+        specialName: "Pop Green [Neo]",
+        captain: "Boosts ATK, HP and RCV of Cerebral characters by 1.5x",
+        sailor: "Not Translated",
+    },
+    3376: {//Heracles'n Neo
+        special: "Reduces Bind duration by 2 turns, boosts ATK of Cerebral characters by 1.75x for 1 turn and changes the orbs in the left column into [PSY], [INT] and [RCV], the orbs in the right column into [DEX], [STR] and [QCK], switches orbs between slots 2 times",
+        specialNotes: "The special is not based on chance, the orbs are always changed with the same pattern. Starting from the top left orb and proceeding clockwise, after the special is used the orbs will be: [PSY], [DEX], [STR], [QCK], [RCV] and [INT]",
+        specialName: "Pop Green [Neo]",
+        captain: "Boosts ATK, HP and RCV of Cerebral characters by 1.5x and recovers 1x character's RCV in HP at the end of each turn",
+        sailor: {
+            "base": "Not Translated",
+            "level1": "Not Translated",
+        },
+        /*limit: [
+            { "description": "Boosts base HP by 20" },
+            { "description": "Boosts base ATK by 10" },
+            { "description": "Boosts base HP by 30" },
+            { "description": "Acquire Potential 1: [INT] Damage Reduction" },
+            { "description": "Boosts base ATK by 30" },
+            { "description": "Boosts base HP by 70" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base RCV by 30" },
+            { "description": "Acquire 1 additional Socket slot" },
+            { "description": "Boosts base HP by 80" },
+            { "description": "Acquire Sailor Ability 1: When any other character uses a special, reduces own cooldown by 2 turns" },
+            { "description": "Boosts base ATK by 80" },
+            { "description": "Reduce base Special Cooldown by 1 turn" },
+            { "description": "Acquire Sailor Ability 2: If your Captain is a Shooter chracter, makes [STR], [QCK], [DEX], [PSY] and [INT] orbs beneficial for this character" },
+            { "description": "Acquire Potential 2: Barrier Penetration" },
+        ],
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by 1%",
+                    "Level 2: Reduce damage taken from [INT] characters by 2%",
+                    "Level 3: Reduce damage taken from [INT] characters by 3%",
+                    "Level 4: Reduce damage taken from [INT] characters by 4%",
+                    "Level 5: Reduce damage taken from [INT] characters by 5%"
+                ]
+            },
+            {
+                "Name": "Barrier Penetration",
+                "description": [
+                    "Level 1: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 2: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 3: This character's normal attack will ignore barriers if HP is above 99% at the start of the turn",
+                    "Level 4: This character's normal attack will ignore barriers if HP is above 80% at the start of the turn",
+                    "Level 5: This character's normal attack will ignore barriers if HP is above 50% at the start of the turn"
+                ]
+            },
+        ]*/
     },
     5000: {//Smoker&Tashigi
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x, reduce damage received by 7% and makes [INT] and [PSY] orbs beneficial for [INT] and [PSY] characters",
