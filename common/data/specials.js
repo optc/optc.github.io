@@ -8782,6 +8782,29 @@ window.specials = {
             });
         }
     },
+    2798: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1.75 : 1; },
+    },
+    2799: {
+        atk: function(p) { return (p.defenseDown && window.specials[2799].multiplier != 0) ? 1.75 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2799].multiplier == 1 ? 2 : (window.specials[2799].multiplier == 2 | window.specials[2799].multiplier == undefined) ? 0 : 1);
+            window.specials[2799].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Chain Lock', 'Conditional boost', 'Conditional boost and Chain Lock'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Chain Lock', 'Chain Lock'][n] + ', disable and re-enable this special',
+                name: '2799warning'
+            });
+        },
+        chain: function(p) { return window.specials[2799].multiplier != 1 ? 2.75 : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2799].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

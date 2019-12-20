@@ -56291,7 +56291,7 @@ window.details = {
         sailor: {
             "base": "None",
             "level1": "Boosts amount healed from RCV orbs by 150 each",
-            "level2": "Reduces Silence duration on this character by 3 turns",
+            "level2": "Reduces Silence duration on this character by 5 turns",
         },
         potential: [
             {
@@ -56337,6 +56337,77 @@ window.details = {
                 ]
             }
         ]
+    },
+    2798: {//Kureha&Hiriluk
+        captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x and recovers 1,000 HP at end of each turn",
+        special: "Changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, boosts ATK of all characters by 1.75x for 1 turn and boosts the Color Affinity of [PSY] and [INT] characters by 1.75x for 1 turn.",
+        specialName: "White Slash",
+        sailor: {
+            "base": "Makes [RCV] orbs beneficial for this character",
+            "level1": "Restores their own special cooldown by 2 turns when it is rewinded and reduces Silence duration on this character by 2 turns",
+        },
+        potential: [
+            {
+                "Name": "[INT] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [INT] characters by ?%",
+                    "Level 2: Reduce damage taken from [INT] characters by ?%",
+                    "Level 3: Reduce damage taken from [INT] characters by ?%",
+                    "Level 4: Reduce damage taken from [INT] characters by ?%",
+                    "Level 5: Reduce damage taken from [INT] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],
+        support: [
+            {
+                "Characters": "Tony Tony Chopper",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, changes supported character's [BOMB] orb into a Matching orb and boosts ATK of supported character by 1.1x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, changes supported character's [BOMB] orb into a Matching orb and boosts ATK of supported character by 1.2x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, changes supported character's [BOMB] orb into a Matching orb and boosts ATK of supported character by 1.3x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, changes supported character's [BOMB] orb into a Matching orb and boosts ATK of supported character by 1.4x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs and boosts ATK of supported character by 1.5x for 1 turn."
+                ]
+            }
+        ]
+    },
+    2799: {//Wapol
+        captain: "Boosts ATK of all characters by 2.5x and reduce damage received by 10% and boosts amount of Beli received by 1.5x.",
+        special: "Barriers your captain's orb for 1 PERFECT hit. If your crew has 3 or more characters with [STR], [DEX] or [QCK] orbs, locks the chain multiplier at 2.75x for 1 turn. If your crew has 3 or more characters with [PSY] or [INT] orbs, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
+        specialName: "White Slash",
+        sailor: "Boosts base ATK, HP and RCV of all characters by 20",
+        potential: [
+            {
+                "Name": "[PSY] Damage Reduction",
+                "description": [
+                    "Level 1: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 2: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 3: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 4: Reduce damage taken from [PSY] characters by ?%",
+                    "Level 5: Reduce damage taken from [PSY] characters by ?%"
+                ]
+            },
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+        ],
     },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",

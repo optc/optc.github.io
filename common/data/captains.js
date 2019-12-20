@@ -9899,6 +9899,20 @@ window.captains = {
     2794: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1 : (p.unit.type == "PSY" || p.unit.type == "INT") ? 3 : 1; }
     },
+    2796: {
+        atk: function(p) { return 3.5; },
+        hp: function(p) { return 1.25; },
+    },
+    2797: {
+        atk: function(p) { return 3.5; },
+        hp: function(p) { return 1.25; },
+    },
+    2798: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    2799: {
+        atk: function(p) { return 2.5; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
