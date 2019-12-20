@@ -2517,7 +2517,7 @@ window.drops = {
             dropID: 'event127',
             thumb: 2782,
             nakama: null,
-            gamewith: null,
+            gamewith: 178712,
             'All Difficulties': [ 2782, 2783, -1001, -1953, -2080, -2156, -2195, -2603, -2605, -2674, -2676, -2678, -2596 ]
         },
         
@@ -4322,7 +4322,7 @@ window.drops = {
             thumb: 2785,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 178924,
             slefty: 'coliseums',
             Chaos: [ 2785, -2785 ],
         },
@@ -5269,6 +5269,15 @@ window.drops = {
             gamewith: 162504,
             condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Simple Pistol, Swordsman\'s Loot」, 「Heavy Pistol, Swordsman\'s Loot」, and 「Luxorious Pistol, Marine\'s Loot」.',
             'Chopperman Missions': [ 2667 ],
+        },
+        
+        {
+            name: 'Tragic Country\'s Conflict',
+            thumb: 2767,
+            nakama: null,
+            gamewith: 176351,
+            condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Toy Bear」, 「Armored Toy Bear」, and 「Fully Armored Toy Bear」.',
+            'Chopperman Missions': [ 2766 ],
         },
         
         {

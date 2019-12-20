@@ -2798,7 +2798,7 @@ window.families = [
     "Tony Tony Chopper",
     [ "Kureha", "Hiriluk" ],
     "Wapol",
-    null,
+    "Charlotte Brûlée",
     null,
     null,
     null,

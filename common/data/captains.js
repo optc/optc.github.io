@@ -9913,6 +9913,9 @@ window.captains = {
     2799: {
         atk: function(p) { return 2.5; },
     },
+    2800: {
+        atk: function(p) { return 1.5; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

@@ -1499,7 +1499,19 @@ window.details = {
                     "Level 5: Reduce damage taken from [PSY] characters by 5%"
                 ]
             },
-        ]
+        ],
+        support: [
+            {
+                "Characters": "[INT] characters",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, boosts the Color Affinity of [INT] characters by 1.1x for 1 turn.",
+                    "Level 2: Once per adventure, when you reach the final stage, boosts the Color Affinity of [INT] characters by 1.1x for 1 turn.",
+                    "Level 3: Once per adventure, when you reach the final stage, boosts the Color Affinity of [INT] characters by 1.2x for 1 turn.",
+                    "Level 4: Once per adventure, when you reach the final stage, boosts the Color Affinity of [INT] characters by 1.2x for 1 turn.",
+                    "Level 5: Once per adventure, when you reach the final stage, boosts the Color Affinity of [INT] characters by 1.3x for 1 turn."
+                ]
+            }
+        ],
     },
     222: {
         special: "Boosts ATK of [PSY] characters by 1.5x for 1 turn",
@@ -2167,7 +2179,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[STR] characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 12% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     262: {
         captain: "Recovers 2x character's RCV in HP at the end of each turn"
@@ -2679,7 +2703,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Striker characters",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, adds 50x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 2: Once per adventure, when you reach the final stage, adds 75x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 3: Once per adventure, when you reach the final stage, adds 100x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 4: Once per adventure, when you reach the final stage, adds 125x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn",
+                    "Level 5: Once per adventure, when you reach the final stage, adds 150x supported character's ATK as Additional Damage to the supported character's attacks for 1 turn"
+                ]
+            }
+        ]
     },
     315: {
         special: "Changes [PSY] and [INT] orbs into [STR] orbs, empties slots with [DEX] and [QCK] orbs",
@@ -3789,6 +3825,18 @@ window.details = {
                     "Level 5: Reduce damage taken from [INT] characters by ?%"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Hogback, Perona and Absalom",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.1x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.2x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.3x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.4x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK against enemies with reduced defense by 1.5x for 1 turn."
+                ]
+            }
         ]
     },
     415: {
@@ -7167,6 +7215,18 @@ window.details = {
                     "Level 5: If HP is below 50% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Monkey D. Luffy and Koala",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 14% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     670: {
@@ -13075,7 +13135,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Nico Robin and Cavendish",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 2 turns.",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 3 turns."
+                ]
+            }
+        ]
     },
     1036: {
         captain: "Boosts ATK of Free Spirit characters by 2x after scoring 3 PERFECTs in a row",
@@ -17398,7 +17470,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Striker and Powerhouse characters",
+                "description": [
+                    "Level 1: Reduces damage received from [INT] characters by 1%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [INT] characters by 2%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [INT] characters by 3%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [INT] characters by 4%. Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [INT] characters by 5%. Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     1259: {//Young Doflamingo
         captain: "Boosts ATK of Driven characters by 2.5x",
@@ -17539,7 +17623,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[DEX] Characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 2: Adds 6% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 3: Adds 7% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 4: Adds 8% of this character's base ATK and HP to the supported character's base ATK and HP",
+                    "Level 5: Adds 10% of this character's base ATK and HP to the supported character's base ATK and HP"
+                ]
+            }
+        ]
     },
     1269: {//Laffitte
         captain: "Recovers 3x character's RCV in HP at the end of each turn. Deals 3x character's ATK in [DEX] damage to all enemies at the end of each turn.",
@@ -19656,6 +19752,18 @@ window.details = {
                     "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Ben Beckman and Lucky Roux",
+                "description": [
+                    "Level 1: Reduces damage received from [PSY] characters by 1%. Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Reduces damage received from [PSY] characters by 2%. Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Reduces damage received from [PSY] characters by 3%. Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Reduces damage received from [PSY] characters by 4%. Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Reduces damage received from [PSY] characters by 5%. Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1381: {//Christmas Tashigi
@@ -19962,6 +20070,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Characters with cost 40 or less",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.5x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.6x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.7x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.8x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 2x for 1 turn."
+                ]
+            }
         ]
     },
     1392: {//Sentomaru
@@ -20530,7 +20650,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "[STR] characters",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK to the supported character's base ATK",
+                    "Level 2: Adds 6% of this character's base ATK to the supported character's base ATK",
+                    "Level 3: Adds 8% of this character's base ATK to the supported character's base ATK",
+                    "Level 4: Adds 10% of this character's base ATK to the supported character's base ATK",
+                    "Level 5: Adds 12% of this character's base ATK to the supported character's base ATK"
+                ]
+            }
+        ]
     },
     1414: {//Shop Sanji
         captain: "Boosts ATK of Powerhouse characters by 2.5x",
@@ -21740,6 +21872,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 10 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Monkey D. Luffy, Fukaboshi and Neptune",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 500 HP",
+                    "Level 2: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 800 HP",
+                    "Level 3: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 1,200 HP",
+                    "Level 4: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 1,500 HP",
+                    "Level 5: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 2,000 HP"
+                ]
+            }
         ]
     },
     1474: {//King Neptune
@@ -22221,6 +22365,18 @@ window.details = {
                     "Level 5: If HP is below 50% at the start of the turn, recovers 2x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Monkey D. Luffy and Koala",
+                "description": [
+                    "Level 1: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 6% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 8% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 10% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 14% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1493: {//STR Fishman Outlaw
@@ -22607,6 +22763,18 @@ window.details = {
                     "Level 5: If HP is below 50% at the start of the turn, recovers 1.5x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Suleiman and Bartolomeo",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 11% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1531: {//Legend Usopp
@@ -25221,6 +25389,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration completely on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Tony Tony Chopper, Inuarashi and Pedro",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Silence or ATK DOWN, reduces Silence and ATK DOWN duration by 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Silence or ATK DOWN, reduces Silence and ATK DOWN duration by 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Silence or ATK DOWN, reduces Silence and ATK DOWN duration by 2 turns"
+                ]
+            }
         ]
     },
     1653: {//Pedro
@@ -29694,6 +29874,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration by 5 turn on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Sengoku and Aokiji",
+                "description": [
+                    "Level 1: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 11% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
         ]
     },
     1847: {//Sengoku+
@@ -30263,7 +30455,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Donquixote Doflamingo",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, reduces enemies' Increased Defense duration by 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, reduces enemies' Increased Defense duration by 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, reduces enemies' Threshold Damage Reduction and Increased Defense duration by 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, reduces enemies' Threshold Damage Reduction and Increased Defense duration by 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, reduces enemies' Threshold Damage Reduction and Increased Defense duration by 2 turns."
+                ]
+            }
+        ],
     },
     1872: {//Kyros
         captain: "Boosts ATK of Slasher and Striker characters by 2.25x",
@@ -32058,7 +32262,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Nico Robin and Cavendish",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Level 2: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Level 3: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 1 turn.",
+                    "Level 4: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 2 turns.",
+                    "Level 5: Once per adventure, when you are inflicted with Paralysis, reduces Paralysis duration by 3 turns."
+                ]
+            }
+        ]
     },
     1929: {//Enel Neo
         special: "Reduces crew's current HP by 90%, deals 20,000 Fixed damage to all enemies, boosts ATK of [DEX] characters by 2x for 1 turn",
@@ -34537,6 +34753,18 @@ window.details = {
                     "Level 5: This character's normal attack will ignore barriers"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Characters with cost 40 or less",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.5x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.6x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.7x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 1.8x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK of supported character by 2x for 1 turn."
+                ]
+            }
         ]
     },
     2036: {//Jesus Burgess
@@ -40546,6 +40774,18 @@ window.details = {
                 ]
             },
         ],
+        support: [
+            {
+                "Characters": "Sanji, Hatchan and Pappagu",
+                "description": [
+                    "Level 1: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.1x for 1 turn.",
+                    "Level 2: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.1x for 1 turn.",
+                    "Level 3: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.2x for 1 turn.",
+                    "Level 4: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.2x for 1 turn.",
+                    "Level 5: Once per an adventure, when the supported character uses their special, boosts ATK against delayed enemies by 1.3x for 1 turn."
+                ]
+            }
+        ]
     },
     2276: {//Buggy
         captain: "Boosts ATK of characters with fewer than or equal to 4 stars by 2x and reduce damage received by ?%",
@@ -40690,7 +40930,19 @@ window.details = {
                 ]
             },
         ],
-        potentialNotes: "#{enrage}"
+        potentialNotes: "#{enrage}",
+        support: [
+            {
+                "Characters": "Tsuru and Monkey D. Garp",
+                "description": [
+                    "Level 1: Adds 2% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 2: Adds 3% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 3: Adds 4% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 4: Adds 5% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV",
+                    "Level 5: Adds 7% of this character's base ATK, HP and RCV to the supported character's base ATK, HP and RCV"
+                ]
+            }
+        ]
     },
     2284: {//Hody Jones
         captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of Powerhouse characters by 2.75x and increases damage received by ?x.",
@@ -43419,6 +43671,18 @@ window.details = {
                     "Level 5: Reduces Slot Bind duration completely on this character"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Tony Tony Chopper, Inuarashi and Pedro",
+                "description": [
+                    "Level 1: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 1 turn",
+                    "Level 2: Once per adventure, when you are inflicted with ATK DOWN, reduces ATK DOWN duration by 1 turn",
+                    "Level 3: Once per adventure, when you are inflicted with Silence or ATK DOWN, reduces Silence and ATK DOWN duration by 1 turn",
+                    "Level 4: Once per adventure, when you are inflicted with Silence or ATK DOWN, reduces Silence and ATK DOWN duration by 1 turn",
+                    "Level 5: Once per adventure, when you are inflicted with Silence or ATK DOWN, reduces Silence and ATK DOWN duration by 2 turns"
+                ]
+            }
         ]
     },
     2374: {//Smoothie
@@ -51175,6 +51439,18 @@ window.details = {
                     "Level 5: Reduces No Healing duration by 10 turns"
                 ]
             },
+        ],
+        support: [
+            {
+                "Characters": "Monkey D. Luffy, Fukaboshi and Neptune",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 500 HP",
+                    "Level 2: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 800 HP",
+                    "Level 3: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 1,200 HP",
+                    "Level 4: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 1,500 HP",
+                    "Level 5: Once per adventure, when you reach the final stage, changes supported character's orb into a [RAINBOW] orb and recovers 2,000 HP"
+                ]
+            }
         ]
     },
     2632: {//Garp
@@ -56341,7 +56617,7 @@ window.details = {
     2798: {//Kureha&Hiriluk
         captain: "Boosts ATK of [INT] and [PSY] characters by 2.5x and recovers 1,000 HP at end of each turn",
         special: "Changes [EMPTY], [BLOCK] and [BOMB] orbs into Matching orbs, boosts ATK of all characters by 1.75x for 1 turn and boosts the Color Affinity of [PSY] and [INT] characters by 1.75x for 1 turn.",
-        specialName: "White Slash",
+        specialName: "K&H Special",
         sailor: {
             "base": "Makes [RCV] orbs beneficial for this character",
             "level1": "Restores their own special cooldown by 2 turns when it is rewinded and reduces Silence duration on this character by 2 turns",
@@ -56384,7 +56660,7 @@ window.details = {
     2799: {//Wapol
         captain: "Boosts ATK of all characters by 2.5x and reduce damage received by 10% and boosts amount of Beli received by 1.5x.",
         special: "Barriers your captain's orb for 1 PERFECT hit. If your crew has 3 or more characters with [STR], [DEX] or [QCK] orbs, locks the chain multiplier at 2.75x for 1 turn. If your crew has 3 or more characters with [PSY] or [INT] orbs, boosts ATK against enemies with reduced defense by 1.75x for 1 turn.",
-        specialName: "White Slash",
+        specialName: "Wapol Special",
         sailor: "Boosts base ATK, HP and RCV of all characters by 20",
         potential: [
             {
@@ -56408,6 +56684,23 @@ window.details = {
                 ]
             },
         ],
+    },
+    2800: {//Brulee
+        captain: "Boosts ATK of all characters by 1.5x and recovers 2,000 HP at end of each turn",
+        special: "Changes [BLOCK] orbs into Matching orbs and recovers 2,000 HP.",
+        specialName: "Brulee Special",
+        support: [
+            {
+                "Characters": "Monkey D. Luffy, Nami, Tony Tony Chopper, Pekoms, Carrot and Charlotte Katakuri",
+                "description": [
+                    "Level 1: Once per adventure, when you reach the final stage, changes supported character's orb into a Matching orb and recovers 500 HP.",
+                    "Level 2: Once per adventure, when you reach the final stage, changes supported character's orb into a Matching orb and recovers 1,000 HP.",
+                    "Level 3: Once per adventure, when you reach the final stage, changes supported character's orb into a Matching orb and recovers 1,500 HP.",
+                    "Level 4: Once per adventure, when you reach the final stage, changes [BLOCK] orbs into Matching orbs, changes supported character's orb into a Matching orb, reduces Special Cooldown of supported character by 1 turn and recovers 2,000 HP.",
+                    "Level 5: Once per adventure, when you reach the final stage, changes [BLOCK] orbs into Matching orbs, changes supported character's orb into a Matching orb, reduces Special Cooldown of supported character by 2 turns and recovers 2,000 HP."
+                ]
+            }
+        ]
     },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
