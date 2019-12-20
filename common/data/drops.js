@@ -4725,10 +4725,10 @@ window.drops = {
         
         {
             name: 'Christmas Party Shirahoshi',
-            dropID: 'bond2',
+            dropID: 'bond3',
             thumb: 2794,
             nakama: null,
-            gamewith: null,
+            gamewith: 148537,
             'All Difficulties': [ 2794 ],
         },
         
