@@ -9894,7 +9894,8 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? p.actions[p.sourceSlot] ? 3.25 : 1.75 : 1; },
     },
     2793: {
-        atk: function(p) { return p.unit.type == "INT" ? 2.75 : 1; },
+        atk: function(p) { return p.unit.type == "INT" ? p.actions[p.sourceSlot] ? 3.5 : 2.75 : 1; },
+        affinity: function(p) { return p.unit.type == "INT" ? p.actions[p.sourceSlot] ? 1.2 : 1 : 1; },
     },
     2794: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1 : (p.unit.type == "PSY" || p.unit.type == "INT") ? 3 : 1; }
