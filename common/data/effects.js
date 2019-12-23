@@ -1010,8 +1010,8 @@ window.effects = {
     },
 	
 	'Kizuna Clash [Japan]': {
-        description: 'Certain units boosted (Not Updated)',
-        thumb: 2531,
+        description: 'Certain units boosted',
+        thumb: 2794,
         id: 77, // don't change this
         atk: function(p) {
             var id = p.number + 1,
