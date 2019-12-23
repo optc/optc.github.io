@@ -493,17 +493,17 @@ window.effects = {
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([ 2561, 2563, 2565, 2567, 2569, 5148, 5149, 5150, 5151, 2575, 2557, 5140, 5141, 5142, 5143, 2577, 5156, 5157, 5158, 5159 ].indexOf(id) != -1);
+                matching = ([ 2605, 2607, 2609, 2603, 5172, 5173, 5174, 5175, 2601, 5164, 5165, 5166, 5167, 2583, 2434, 2588, 2561, 5148, 5149, 5150, 5151 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([ 2561, 2563, 2565, 2567, 2569, 5148, 5149, 5150, 5151, 2575, 2557, 5140, 5141, 5142, 5143, 2577, 5156, 5157, 5158, 5159 ].indexOf(id) != -1);
+                matching = ([ 2605, 2607, 2609, 2603, 5172, 5173, 5174, 5175, 2601, 5164, 5165, 5166, 5167, 2583, 2434, 2588, 2561, 5148, 5149, 5150, 5151 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([ 2561, 2563, 2565, 2567, 2569, 5148, 5149, 5150, 5151, 2575, 2557, 5140, 5141, 5142, 5143, 2577, 5156, 5157, 5158, 5159 ].indexOf(id) != -1);
+                matching = ([ 2605, 2607, 2609, 2603, 5172, 5173, 5174, 5175, 2601, 5164, 5165, 5166, 5167, 2583, 2434, 2588, 2561, 5148, 5149, 5150, 5151 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},
@@ -1015,17 +1015,17 @@ window.effects = {
         id: 77, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([  ].indexOf(id) != -1);
+                matching = ([ 2793, 2792, 2789, 2787, 2785, 2784, 2781, 2780, 2778, 2776, 2774 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([  ].indexOf(id) != -1);
+                matching = ([ 2793, 2792, 2789, 2787, 2785, 2784, 2781, 2780, 2778, 2776, 2774 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([  ].indexOf(id) != -1);
+                matching = ([ 2793, 2792, 2789, 2787, 2785, 2784, 2781, 2780, 2778, 2776, 2774 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},
