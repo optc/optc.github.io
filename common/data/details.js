@@ -40210,14 +40210,14 @@ window.details = {
         ]
     },
     2233: {//Big Mom
-        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.2x, makes [SEMLA] orbs beneficial for all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 10x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x",
-        captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
+        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.2x.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 10x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x",
+        captainNotes: "[SEMLA] orbs replace [RCV] orbs, are beneficial to all characters and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
         special: "Deals 250x character's ATK as Typeless damage to one enemy and changes own orb into [STR]. If Big Mom is your Captain or Friend/Guest Captain, boosts ATK of characters in the top row by 2x and amplifies the effects of orbs for characters in the top row by 2x for 3 turns. If she is a Sailor, boosts own ATK by 2x and amplifies the effects of own orb by 2x for 1 turn instead",
         specialName: "Temper Tantrum",
     },
     2234: {//Big Mom
-        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.2x, makes [SEMLA] orbs beneficial for all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 10x and own attacks will ignore defensive barriers and buffs and boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x",
-        captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
+        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.2x.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 10x and own attacks will ignore defensive barriers and buffs and boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x",
+        captainNotes: "[SEMLA] orbs replace [RCV] orbs, are beneficial to all characters and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
         special: "Deals 250x character's ATK as Typeless damage to one enemy and changes own orb into a [STR] orb. If Big Mom is your Captain or Friend/Guest Captain, boosts ATK of characters in the top row by 2x and amplifies the effects of orbs for characters in the top row by 2x for 3 turns. If she is a Sailor, boosts own ATK by 2x and amplifies the effects of own orb by 2x for 1 turn instead",
         specialName: "Temper Tantrum",
         sailor: {
@@ -48329,8 +48329,8 @@ window.details = {
         ]
     },
     2500: {//Big Mom
-        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.3x, makes [SEMLA] orbs beneficial for all characters.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts own ATK by 4.25x, boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 12x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x and boosts chances of getting [SEMLA] orbs",
-        captainNotes: "[SEMLA] orbs replace [RCV] orbs and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
+        captain: "<b>Always Active: </b>Boosts HP of [STR], [DEX] and [QCK] characters by 1.3x.<br><b>Standard Captain: </b>Boosts ATK of [STR], [DEX] and [QCK] characters by 3.5x<br><b>Powered Up Captain: </b>Boosts own ATK by 4.25x, boosts ATK of [STR], [DEX] and [QCK] characters by 4x and reduce damage received by 15%<br><b>Rampage Captain: </b>Boosts own ATK by 12x and own attacks will ignore defensive barriers and buffs, boosts ATK of [STR], [DEX] and [QCK] characters by 3.75x and boosts chances of getting [SEMLA] orbs",
+        captainNotes: "[SEMLA] orbs replace [RCV] orbs, are beneficial to all characters and heal at the end of the enemy turn and can not be swapped by special abilities.<br>In order to Power Up Big Mom, you must eat a [SEMLA] orb and will be powered up the following turn.<br>While in Rampage, Big Mom will always attack a random enemy on her own, even while Binded or Paralyzed and hit a HUNGRY, which deals the same damage as a PERFECT. This attack occurs after your chain, so Big Mom's attack will not be affected by Chain Limiters, Chain Boosters, or Chain Lockers. You can not activate Big Mom's special while in Rampage. To exit Rampage, you must consume a [SEMLA] orb.",
         special: "Deals 300x character's ATK as Typeless damage to one enemy and changes own orb, including [BLOCK] orbs, into a [STR] orb. If Big Mom is your Captain or Friend/Guest Captain, boosts ATK of characters in the top row by 2x, amplifies the effects of orbs for characters in the top row by 2x for 3 turns and locks top row orbs for 2 turns. If she is a Sailor, boosts own ATK by 2x and amplifies the effects of own orb by 2x for 1 turn instead",
         specialName: "Ikoku Sovereignty",
         sailor: {
@@ -57355,7 +57355,7 @@ window.details = {
         captain: {
             "character1": "Boosts ATK of [PSY] characters by 2.5x, boosts ATK of [INT] characters by 2.25x and makes [PSY] orbs beneficial for all characters. Boosts ATK of all characters by an additional 1.2x after 4 PERFECTs in a row.",
             "character2": "Boosts ATK of [INT] characters by 2.5x, boosts ATK of [PSY] characters by 2.25x and makes [INT] orbs beneficial for all characters. Boosts ATK of all characters by an additional 1.2x after 4 PERFECTs in a row.",
-            "combined": "Boosts ATK of [PSY] and [INT] characters by 3x and makes [PSY] and [INT] orbs beneficial for all characters. Boosts ATK of all characters by an additional 1.2x after 4 PERFECTs in a ro.w"
+            "combined": "Boosts ATK of [PSY] and [INT] characters by 3x and makes [PSY] and [INT] orbs beneficial for all characters. Boosts ATK of all characters by an additional 1.2x after 4 PERFECTs in a row."
         },
         captainNotes: "#{beneficial}",
         special: "Reduces enemies' Threshold Damage Reduction duration by 4 turns, cuts the current HP of each enemy by 10% and becomes Coby & Helmeppo for 2 turns. If your crew has 5 or more [PSY] or [INT] characters, boosts ATK of [PSY] and [INT] characters by 2x for 1 turn, by 1.75x for 1 turn otherwise.",
@@ -57603,6 +57603,123 @@ window.details = {
                 ]
             }
         ]
+    },
+    2801: {//Luffy&Zoro
+        captain: {
+            "character1": "Boosts ATK of Slasher and Free Spirit characters by 3x, their HP by 1.3x and boosts chances of getting [WANO] orbs.",
+            "character2": "Boosts ATK of Slasher and Free Spirit characters by 3.25x and their HP by 1.3x.",
+            "combined": "Boosts ATK of Slasher and Free Spirit characters by 4x, their HP by 1.3x and boosts chances of getting [WANO] orbs."
+        },
+        captainNotes: "[和]/[WANO] orbs replace [TND] orbs, count as beneficial to all characters, but boost by 2.5x instead, and can not be swapped by special abilities. Characters who attack with a type advantage will gain a [WANO] orb after attacking.",
+        special: "Deals 250x character's ATK in character's Type damage to all enemies, locks the chain multiplier at 3x for 1 turn and becomes Luffy & Zoro for 3 turns. Amplifies the effects of orbs for Slasher and Free Spirit characters depending on how many [WANO] or [TND] orbs used in attacks for 1 turn.",
+        specialNotes: "0-7 Orbs: 2x orb boost<br\>8-14 Orbs: 2.5x orb boost<br\>15+ Orbs: 2.75x orb boost",
+        swap: "When Change is activated, changes their own orb into a [TND] orb and reduces Bind, Despair, Silence and Slot Bind duration by 1 turn",
+        specialName: "Gomu Gomu no Tourou Red Hawk",
+        sailor: {
+            "character1": "Not Translated",
+            "character2": "Not Translated",
+            "combined": "Boosts base ATK, HP and RCV of Slasher and Free Spirit characters by 75",
+        },
+    },
+    2802: {//Luffy&Zoro
+        captain: {
+            "character1": "Boosts ATK of Slasher and Free Spirit characters by 3x, their HP by 1.3x and boosts chances of getting [WANO] orbs.",
+            "character2": "Boosts ATK of Slasher and Free Spirit characters by 3.25x and their HP by 1.3x.",
+            "combined": "Boosts ATK of Slasher and Free Spirit characters by 4x, their HP by 1.3x and boosts chances of getting [WANO] orbs."
+        },
+        captainNotes: "[和]/[WANO] orbs replace [TND] orbs, count as beneficial to all characters, but boost by 2.5x instead, and can not be swapped by special abilities. Characters who attack with a type advantage will gain a [WANO] orb after attacking.",
+        special: "Deals 250x character's ATK in character's Type damage to all enemies, locks the chain multiplier at 3x for 1 turn and becomes Luffy & Zoro for 3 turns. Amplifies the effects of orbs for Slasher and Free Spirit characters depending on how many [WANO] or [TND] orbs used in attacks for 1 turn.",
+        specialNotes: "0-7 Orbs: 2x orb boost<br\>8-14 Orbs: 2.5x orb boost<br\>15+ Orbs: 2.75x orb boost",
+        swap: "When Change is activated, changes their own orb into a [TND] orb and reduces Bind, Despair, Silence and Slot Bind duration by 1 turn",
+        specialName: "Gomu Gomu no Tourou Red Hawk",
+        sailor: {
+            "character1": "Not Translated",
+            "character2": "Not Translated",
+            "combined": "Boosts base ATK, HP and RCV of Slasher and Free Spirit characters by 75",
+            "level1": "Makes [TND] orbs beneficial for all characters",
+        },
+        potential: [
+            {
+                "Name": "Slot Bind Self-reduction",
+                "description": [
+                    "Level 1: Reduces Slot Bind duration by ? turn on this character",
+                    "Level 2: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 3: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 4: Reduces Slot Bind duration by ? turns on this character",
+                    "Level 5: Reduces Slot Bind duration by ? turns on this character"
+                ]
+            },
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+        ]
+    },
+    2803: {//Sanji Black
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.5x, boosts chances of getting [TND] orbs and makes [TND] orbs beneficial for all characters. If a character have a [TND] orb, boosts their ATK by 4.25x instead.<br><b>Action:</b> Sanji becomes Transparent and prevents all debuffs to himself (Including, but not limited to, Bind, Despair, Silence, Slot Bind, Special Rewind and Paralysis), makes own normal attacks ignore defense, defensive barriers and buffs and adds 300x character's ATK as Additional Typeless Damage to own's attacks.",
+        captainNotes: "Sanji Captain Action lasts for 3 turns and can be reactivated after 4 turns.",
+        special: "Changes all orbs, including [BLOCK] orbs, to [TND] orbs and boosts ATK of all characters by 1.75x for 1 turn. If \"Fire! Soba Mask\" is used again in the same turn the special is activated in, boosts ATK of all characters by 2.25x for 1 turn.",
+        specialName: "Fire! Soba Mask",
+    },
+    2804: {//Sanji Black
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.5x, boosts chances of getting [TND] orbs and makes [TND] orbs beneficial for all characters. If a character have a [TND] orb, boosts their ATK by 4.25x instead.<br><b>Action:</b> Sanji becomes Transparent and prevents all debuffs to himself (Including, but not limited to, Bind, Despair, Silence, Slot Bind, Special Rewind and Paralysis), makes own normal attacks ignore defense, defensive barriers and buffs and adds 300x character's ATK as Additional Typeless Damage to own's attacks.",
+        captainNotes: "Sanji Captain Action lasts for 3 turns and can be reactivated after 4 turns.",
+        special: "Changes all orbs, including [BLOCK] orbs, to [TND] orbs and boosts ATK of all characters by 1.75x for 1 turn. If \"Fire! Soba Mask\" is used again in the same turn the special is activated in, boosts ATK of all characters by 2.25x for 1 turn.",
+        specialName: "Fire! Soba Mask",
+        sailor: {
+            "base": "None",
+            "level1": "Makes [TND] orbs beneficial for all characters",
+            "level2": "When any other character uses a special, reduces own cooldown by 4 turns",
+        },
+        sailorNotes: "#{beneficial}",
+        potential: [
+            {
+                "Name": "Critical Hit",
+                "description": [
+                    "Level 1: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 2: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 3: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 4: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage",
+                    "Level 5: If you hit a PERFECT with this character, there is a ?% chance to deal ?% of this character's attack in extra damage"
+                ]
+            },
+            {
+                "Name": "Pinch Healing",
+                "description": [
+                    "Level 1: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 2: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 3: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 4: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character",
+                    "Level 5: If HP is below ?% at the start of the turn, recovers ?x this character's RCV at the end of the turn each time you hit a PERFECT with this character"
+                ]
+            },
+            {
+                "Name": "Reduce No Healing duration",
+                "description": [
+                    "Level 1: Reduces No Healing duration by ? turn",
+                    "Level 2: Reduces No Healing duration by ? turns",
+                    "Level 3: Reduces No Healing duration by ? turns",
+                    "Level 4: Reduces No Healing duration by ? turns",
+                    "Level 5: Reduces No Healing duration by ? turns"
+                ]
+            },
+        ],
     },
     3333: {//Kung Fu Luffy
         captain: "Boosts ATK of all characters by 3.5x after the 2nd PERFECTs in a row, by 4x after the 5th PERFECTs in a row and boosts HP of all characters by 1.5x",
