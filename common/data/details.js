@@ -57672,15 +57672,15 @@ window.details = {
         ]
     },
     2803: {//Sanji Black
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.5x, boosts chances of getting [TND] orbs and makes [TND] orbs beneficial for all characters. If a character have a [TND] orb, boosts their ATK by 4.25x instead.<br><b>Action:</b> Sanji becomes Transparent and prevents all debuffs to himself (Including, but not limited to, Bind, Despair, Silence, Slot Bind, Special Rewind and Paralysis), makes own normal attacks ignore defense, defensive barriers and buffs and adds 300x character's ATK as Additional Typeless Damage to own's attacks.",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.5x, boosts chances of getting [TND] orbs and makes [TND] orbs beneficial for all characters. If a character have a [TND] orb, boosts their ATK by 4.25x instead.<br><b>Action:</b> Sanji becomes Transparent and prevents all debuffs to himself (Including, but not limited to, Bind, Despair, Silence, Slot Bind, Special Rewind and Paralysis), makes own normal attacks ignore defense, defensive barriers and buffs and adds 500x character's ATK as Additional Typeless Damage to own's attacks.",
         captainNotes: "Sanji Captain Action lasts for 3 turns and can be reactivated after 4 turns.",
-        special: "Changes all orbs, including [BLOCK] orbs, to [TND] orbs and boosts ATK of all characters by 1.75x for 1 turn. If \"Fire! Soba Mask\" is used again in the same turn the special is activated in, boosts ATK of all characters by 2.25x for 1 turn.",
+        special: "Changes all orbs, including [BLOCK] orbs, to [TND] orbs and boosts ATK of all characters by 1.75x for 1 turn. If \"Fire! Soba Mask\" is used again in the same turn the special is activated in, boosts ATK of all characters by 2.5x for 1 turn.",
         specialName: "Fire! Soba Mask",
     },
     2804: {//Sanji Black
-        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.5x, boosts chances of getting [TND] orbs and makes [TND] orbs beneficial for all characters. If a character have a [TND] orb, boosts their ATK by 4.25x instead.<br><b>Action:</b> Sanji becomes Transparent and prevents all debuffs to himself (Including, but not limited to, Bind, Despair, Silence, Slot Bind, Special Rewind and Paralysis), makes own normal attacks ignore defense, defensive barriers and buffs and adds 300x character's ATK as Additional Typeless Damage to own's attacks.",
+        captain: "Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of all characters by 3.5x, boosts chances of getting [TND] orbs and makes [TND] orbs beneficial for all characters. If a character have a [TND] orb, boosts their ATK by 4.25x instead.<br><b>Action:</b> Sanji becomes Transparent and prevents all debuffs to himself (Including, but not limited to, Bind, Despair, Silence, Slot Bind, Special Rewind and Paralysis), makes own normal attacks ignore defense, defensive barriers and buffs and adds 500x character's ATK as Additional Typeless Damage to own's attacks.",
         captainNotes: "Sanji Captain Action lasts for 3 turns and can be reactivated after 4 turns.",
-        special: "Changes all orbs, including [BLOCK] orbs, to [TND] orbs and boosts ATK of all characters by 1.75x for 1 turn. If \"Fire! Soba Mask\" is used again in the same turn the special is activated in, boosts ATK of all characters by 2.25x for 1 turn.",
+        special: "Changes all orbs, including [BLOCK] orbs, to [TND] orbs and boosts ATK of all characters by 1.75x for 1 turn. If \"Fire! Soba Mask\" is used again in the same turn the special is activated in, boosts ATK of all characters by 2.5x for 1 turn.",
         specialName: "Fire! Soba Mask",
         sailor: {
             "base": "None",
