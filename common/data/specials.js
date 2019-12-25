@@ -8777,7 +8777,7 @@ window.specials = {
             var n = (window.specials[2794].multiplier == 1.75 ? 1 : 0);
             window.specials[2794].multiplier = [1.75, 2][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2794warning'
             });
         }
