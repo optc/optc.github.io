@@ -1064,6 +1064,11 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
     },
+    2813: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

@@ -9950,10 +9950,47 @@ window.captains = {
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     2811: {
-        atk: function(p) { return  1.75 + 0.5*(p.percHP / 100); }
+        atk: function(p) { return 1.75 + 0.5*(p.percHP / 100); }
     },
     2812: {
-        atk: function(p) { return  2 + 1.0*(p.percHP / 100); }
+        atk: function(p) { return p.actions[p.sourceSlot] ? 2 + 1.0*(p.percHP / 100) : 2 + 0.5*(p.percHP / 100); }
+    },
+    2813: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 2.75 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.2 : 1; },
+    },
+    2814: {
+        atk: function(p) {
+            if(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") {
+                if(p.colorCount.INT==0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
+                    return 3.85;
+                else if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
+                    return 2.75;
+                else if(p.colorCount.INT==0 && p.colorCount.PSY==0)
+                    return 1.4;
+                else
+                    return 1;
+                }
+                else
+                    return 1;
+        },
+        hp: function(p) {
+            if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1)
+                return 1.3;
+            else
+                return 1;
+               },
+    },
+    2815: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.25 : 2.5 : 1; },
+    },
+    2816: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    2817: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     3333: {
         hitAtk: function(p) {

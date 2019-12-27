@@ -8841,6 +8841,40 @@ window.specials = {
     2810: {
         affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
+    2813: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class"
+    },
+    2814: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : window.specials[2814].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2814].multiplier == 1.75 ? 1 : 0);
+            window.specials[2814].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2814warning'
+            });
+        }
+    },
+    2816: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability assumes the enemy has a Barrier or Percent Damage Reduction.',
+                name: '2816warning'
+            });
+        }
+    },
+    2817: {
+        chainAddition: function(p) { return 1.1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability assumes the enemy has a Barrier or Percent Damage Reduction.',
+                name: '2817warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
