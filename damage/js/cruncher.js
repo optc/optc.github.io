@@ -265,11 +265,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn) ? 1 : .5;
             
-            //Captain Meat orbs because Nekomamushi
+            //Captain Meat orbs because Nekomamushi/also counts as TND because lazy
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 5052, 5054, 5055, 5057 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -337,6 +337,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) || 
                 ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
+            if (orb == 'wano') orb = 2.5;
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
@@ -923,6 +924,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
             var params = getParameters(0);
             params['unit'] = unit;
+            params['slot'] = teamSlot;
             //Check if conditional Boosts are activated since they raise 
             for (var x=0;x<enabledSpecials.length;++x) {
                 if  (enabledSpecials[x].type=='condition'){
@@ -954,6 +956,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
                     params.sourceSlot = slot;
+                    console.log(params);
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         specialid = team[slot].unit.number + 1;
                         multSpecial = enabledSpecials[y].staticMult(params);
@@ -978,6 +981,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
             for (var y=0;y<enabledEffects.length;++y) {
                 if (enabledEffects[y].hasOwnProperty('staticMult')){
+                    var params = getParameters(enabledEffects[y].sourceSlot);
+                    params['sourceSlot'] = enabledEffects[y].sourceSlot;
                     var slot = enabledEffects[y].sourceSlot;
                     var baseDamage2 = getStatOfUnit(team[slot],'atk',slot);
                     var mult = enabledEffects[y].staticMult(params);

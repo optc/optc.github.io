@@ -9917,6 +9917,44 @@ window.captains = {
     2800: {
         atk: function(p) { return 1.5; },
     },
+    2803: {
+        staticMult: function(p) { return p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0; },
+        atk: function(p) { return (p.orb == 'meat') ? 4.25 : 3.5; },
+    },
+    2804: {
+        staticMult: function(p) { return p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0; },
+        atk: function(p) { return (p.orb == 'meat') ? 4.25 : 3.5; },
+    },
+    2805: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+    },
+    2806: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
+    },
+    2807: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    2808: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.75 : 1; },
+    },
+    2809: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2810: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 3.25 : 1;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    2811: {
+        atk: function(p) { return  1.75 + 0.5*(p.percHP / 100); }
+    },
+    2812: {
+        atk: function(p) { return  2 + 1.0*(p.percHP / 100); }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -10870,5 +10908,37 @@ window.captains = {
             return (p.unit.type == "PSY" || p.unit.type == "INT") ? 3 * boost : boost;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    5191: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5192: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 3.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5193: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 4 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5194: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 4 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5195: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5196: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 3.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5197: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 4 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
+    },
+    5198: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 4 : 1; },
+        hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.3 : 1; },
     },
 };

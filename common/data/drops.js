@@ -4732,6 +4732,15 @@ window.drops = {
             'All Difficulties': [ 2794 ],
         },
         
+        {
+            name: 'Kikunojo',
+            dropID: 'bond5',
+            thumb: 2812,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2811 ],
+        },
+        
     ],
 
     'Special': [

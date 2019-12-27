@@ -1029,4 +1029,11 @@ window.effects = {
             return !matching ? 1 : 2;
         },
 	},
+    
+    '[和]/[Wano] Orbs': {
+        description: 'Activates [WANO] orb support',
+        thumb: 2802,
+        id: 78, // don't change this
+        wanoOrbsEnabled: true
+    },
 };

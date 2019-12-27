@@ -709,6 +709,7 @@ directives.unitOrb = function($rootScope) {
                 if (unit.orb == 'int') return 'I';
                 if (unit.orb == 'rainbow') return 'R';
                 if (unit.orb == 'meat') return 'M';
+                if (unit.orb == 'wano') return 'W';
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
             };
             var onShortPress = function(e) {
@@ -724,6 +725,9 @@ directives.unitOrb = function($rootScope) {
                     }
                     if($rootScope.areMeatOrbsEnabled()){
                         ORBS.push('meat');
+                    }
+                    if($rootScope.areWanoOrbsEnabled()){
+                        ORBS.push('wano');
                     }
                     if($rootScope.areSTROrbsEnabled()){
                         ORBS.push('str');
@@ -802,6 +806,9 @@ directives.unitOrb = function($rootScope) {
                 }
                 if($rootScope.areMeatOrbsEnabled()){
                     ORBS.push('meat');
+                }
+                if($rootScope.areWanoOrbsEnabled()){
+                    ORBS.push('wano');
                 }
                 if($rootScope.areSTROrbsEnabled()){
                     ORBS.push('str');

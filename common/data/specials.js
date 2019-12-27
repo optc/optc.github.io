@@ -8805,6 +8805,42 @@ window.specials = {
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
     },
+    2803: {
+        atk: function(p) { return window.specials[2803].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2803].multiplier == 1.75 ? 1 : 0);
+            window.specials[2803].multiplier = [1.75, 2.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2803warning'
+            });
+        },
+    },
+    2804: {
+        atk: function(p) { return window.specials[2804].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2804].multiplier == 1.75 ? 1 : 0);
+            window.specials[2804].multiplier = [1.75, 2.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2804warning'
+            });
+        },
+    },
+    2805: {
+        delay: function(p) { return 2; },
+    },
+    2806: {
+        delay: function(p) { return 2; },
+    },
+    2809: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    2810: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -9929,5 +9965,141 @@ window.specials = {
                 name: '5186warning'
             });
         },
+    },
+    5187: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[5187].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.PSY + p.colorCount.INT >= 5) {
+                window.specials[5187].multiplier = 2;
+            }
+            else {
+                window.specials[5187].multiplier = 1.75;
+            }
+        },
+    },
+    5188: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[5188].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.PSY + p.colorCount.INT >= 5) {
+                window.specials[5188].multiplier = 2;
+            }
+            else {
+                window.specials[5188].multiplier = 1.75;
+            }
+        },
+    },
+    5189: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[5189].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.PSY + p.colorCount.INT >= 5) {
+                window.specials[5189].multiplier = 2;
+            }
+            else {
+                window.specials[5189].multiplier = 1.75;
+            }
+        },
+    },
+    5190: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[5190].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.PSY + p.colorCount.INT >= 5) {
+                window.specials[5190].multiplier = 2;
+            }
+            else {
+                window.specials[5190].multiplier = 1.75;
+            }
+        },
+    },
+    5191: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5191].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5191].multiplier == 2 ? 1 : window.specials[5191].multiplier == 2.5 ? 2 : 0);
+            window.specials[5191].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5191warning'
+            });
+        }
+    },
+    5192: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5192].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5192].multiplier == 2 ? 1 : window.specials[5192].multiplier == 2.5 ? 2 : 0);
+            window.specials[5192].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5192warning'
+            });
+        }
+    },
+    5193: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5193].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5193].multiplier == 2 ? 1 : window.specials[5193].multiplier == 2.5 ? 2 : 0);
+            window.specials[5193].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5193warning'
+            });
+        }
+    },
+    5194: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5194].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5194].multiplier == 2 ? 1 : window.specials[5194].multiplier == 2.5 ? 2 : 0);
+            window.specials[5194].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5194warning'
+            });
+        }
+    },
+    5195: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5195].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5195].multiplier == 2 ? 1 : window.specials[5195].multiplier == 2.5 ? 2 : 0);
+            window.specials[5195].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5195warning'
+            });
+        }
+    },
+    5196: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5196].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5196].multiplier == 2 ? 1 : window.specials[5196].multiplier == 2.5 ? 2 : 0);
+            window.specials[5196].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5196warning'
+            });
+        }
+    },
+    5197: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5197].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5197].multiplier == 2 ? 1 : window.specials[5197].multiplier == 2.5 ? 2 : 0);
+            window.specials[5197].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5197warning'
+            });
+        }
+    },
+    5198: {
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[5198].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[5198].multiplier == 2 ? 1 : window.specials[5198].multiplier == 2.5 ? 2 : 0);
+            window.specials[5198].multiplier = [2, 2.5, 2.75][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '5198warning'
+            });
+        }
     },
 };
