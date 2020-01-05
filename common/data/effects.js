@@ -1036,4 +1036,64 @@ window.effects = {
         id: 78, // don't change this
         wanoOrbsEnabled: true
     },
+	
+	'Girls of Summer Paradise! Blitz Battle': {
+        description: 'Certain units boosted',
+        thumb: 2626,
+        id: 79, // don't change this
+        atk: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2626 ].indexOf(id) != -1) boost = 2;
+            if([ 2624, 2622, 2620, 2631, 2603, 2601, 5164, 5165, 5166, 5167, 5172, 5173, 5174, 5175 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2588, 2561, 5148, 5149, 5150, 51515434, 5338, 5076, 1951, 1747, 1473, 1445, 416, 3361, 2217, 2215, 2213, 2191, 2173, 1731, 1729, 1711, 1709, 1674, 1214, 1201, 1199, 1194, 1161, 686, 685, 683, 681, 662, 514 ].indexOf(id) != -1) boost = 1.5;
+            return boost;
+        },
+        hp: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2626 ].indexOf(id) != -1) boost = 2;
+            if([ 2624, 2622, 2620, 2631, 2603, 2601, 5164, 5165, 5166, 5167, 5172, 5173, 5174, 5175 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2588, 2561, 5148, 5149, 5150, 51515434, 5338, 5076, 1951, 1747, 1473, 1445, 416, 3361, 2217, 2215, 2213, 2191, 2173, 1731, 1729, 1711, 1709, 1674, 1214, 1201, 1199, 1194, 1161, 686, 685, 683, 681, 662, 514 ].indexOf(id) != -1) boost = 1.5;
+            return boost;
+        },
+        rcv: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2626 ].indexOf(id) != -1) boost = 2;
+            if([ 2624, 2622, 2620, 2631, 2603, 2601, 5164, 5165, 5166, 5167, 5172, 5173, 5174, 5175 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2588, 2561, 5148, 5149, 5150, 51515434, 5338, 5076, 1951, 1747, 1473, 1445, 416, 3361, 2217, 2215, 2213, 2191, 2173, 1731, 1729, 1711, 1709, 1674, 1214, 1201, 1199, 1194, 1161, 686, 685, 683, 681, 662, 514 ].indexOf(id) != -1) boost = 1.5;
+            return boost;
+        },
+	},
+	
+	'Beast Pirates! Blitz Battle': {
+        description: 'Certain units boosted',
+        thumb: 2700,
+        id: 80, // don't change this
+        atk: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2840, 2802, 5195, 5196, 5197, 5198 ].indexOf(id) != -1) boost = 2;
+            if([ 2812 ].indexOf(id) != -1) boost = 1.5;
+            if([ 2810, 2808, 2806, 2792, 2789, 2787, 2780, 2778, 2776, 2774, 2709, 2707, 2782, 2785 ].indexOf(id) != -1) boost = 1.3;
+            return boost;
+        },
+        hp: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2840, 2802, 5195, 5196, 5197, 5198 ].indexOf(id) != -1) boost = 2;
+            if([ 2812 ].indexOf(id) != -1) boost = 1.5;
+            if([ 2810, 2808, 2806, 2792, 2789, 2787, 2780, 2778, 2776, 2774, 2709, 2707, 2782, 2785 ].indexOf(id) != -1) boost = 1.3;
+            return boost;
+        },
+        rcv: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2840, 2802, 5195, 5196, 5197, 5198 ].indexOf(id) != -1) boost = 2;
+            if([ 2812 ].indexOf(id) != -1) boost = 1.5;
+            if([ 2810, 2808, 2806, 2792, 2789, 2787, 2780, 2778, 2776, 2774, 2709, 2707, 2782, 2785 ].indexOf(id) != -1) boost = 1.3;
+            return boost;
+        },
+	},
 };
