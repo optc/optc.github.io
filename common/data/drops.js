@@ -2461,6 +2461,7 @@ window.drops = {
         {
             name: 'Pirate Expo! Vacation',
             dropID: 'event122',
+            global: true,
             thumb: 2635,
             nakama: 2263500,
             gamewith: 159294,
@@ -2470,6 +2471,7 @@ window.drops = {
         {
             name: 'Pirate Expo! Festival',
             dropID: 'event123',
+            global: true,
             thumb: 2633,
             nakama: 2263300,
             gamewith: 159294,
@@ -2479,6 +2481,7 @@ window.drops = {
         {
             name: 'Diva Ann\'s Special Live Show',
             dropID: 'event124',
+            global: true,
             thumb: 2665,
             nakama: 2266500,
             gamewith: 162860,
@@ -2506,10 +2509,10 @@ window.drops = {
         {
             name: 'Revenge of the Assassins! Galette',
             dropID: 'event126',
-            thumb: 2723,
+            thumb: 2751,
             nakama: null,
             gamewith: 174577,
-            'All Difficulties': [ 2750, 2751, 2752, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ]
+            'All Difficulties': [ 2750, 2752, 2753, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ]
         },
         
         {
@@ -3307,6 +3310,7 @@ window.drops = {
         {
             name: 'Fight, Leo',
             dropID: 'clash46',
+            global: true,
             thumb: 2559,
             nakama: 4255900,
             gamewith: 152009,
@@ -3317,6 +3321,7 @@ window.drops = {
         {
             name: 'Clash!! STAMPEDE',
             dropID: 'clash47',
+            global: true,
             thumb: 2642,
             nakama: 4264200,
             condition: 'Second Expert version with Bullet boss stage will drop Stampede Limit Break materials',
@@ -3413,13 +3418,13 @@ window.drops = {
         
         {
             name: 'Showdown!! Shanks & Mihawk',
-            thumb: 3342,
+            thumb: 2819,
             global: true,
-            nakama: 4334200,
+            nakama: 4281900,
             gamewith: null,
-            Master: [ 3341 ],
-            Expert: [ 3341 ],
-            Ultimate: [ 3341 ],
+            Master: [ 2818 ],
+            Expert: [ 2818 ],
+            Ultimate: [ 2818 ],
         },
         
         {
@@ -4666,6 +4671,7 @@ window.drops = {
             name: 'Shanks & Ben Beckman',
             dropID: 'treasuremap21',
             thumb: 2557,
+            global: true,
             nakama: null,
             gamewith: 151643,
             'Raging Sea': [ 2556 ]
@@ -4675,6 +4681,7 @@ window.drops = {
             name: 'Rob Lucci',
             dropID: 'treasuremap22',
             thumb: 2583,
+            global: true,
             nakama: null,
             gamewith: 154065,
             'Primordial Sea': [ 2582 ]
@@ -4684,6 +4691,7 @@ window.drops = {
             name: 'Sakazuki & Issho',
             dropID: 'treasuremap23',
             thumb: 2618,
+            global: true,
             nakama: null,
             gamewith: 157969,
             'Primordial Sea': [ 2616, 2617 ]
@@ -4825,6 +4833,7 @@ window.drops = {
             name: 'Zoro & Sanji',
             dropID: 'bond1',
             thumb: 2531,
+            global: true,
             nakama: null,
             gamewith: [ 150056, 155125, 156784, 159694, 164568, 172467 ],
             'All Difficulties': [ 2531 ],
@@ -5100,7 +5109,8 @@ window.drops = {
         {
             name: 'Battle Blitz! Girls of Summer Paradise',
             thumb: 2626,
-            nakama: null,
+            global: true,
+            nakama: 6262600,
             gamewith: 158510,
             'Chopperman Missions': [ 2627 ],
         },
@@ -5386,6 +5396,7 @@ window.drops = {
         {
             name: 'Black Blade Training',
             thumb: 2475,
+            global: true,
             nakama: null,
             gamewith: 147515,
             condition: 'Certain units stats boosted by 1.25x and 8 turns special cooldown reduction. Challenge Difficulty: Total Crew Cost must be 180 Cost or less.\nChance to drop the 「Old Sword, Swordsman\'s Loot」, 「Baboon Sword, Swordsman\'s Loot」, and 「Muggy Kingdom Sword, Swordsman\'s Loot」.',
@@ -5423,7 +5434,6 @@ window.drops = {
         {
             name: 'Wano Country Reunion! Strawhat Pirates',
             thumb: 2803,
-            global: true,
             nakama: null,
             gamewith: 181636,
             showManual: true,
@@ -5433,7 +5443,6 @@ window.drops = {
         {
             name: 'Today is the Best Day of My Life!',
             thumb: 2816,
-            global: true,
             nakama: null,
             gamewith: null,
             showManual: true,
@@ -5443,7 +5452,6 @@ window.drops = {
         {
             name: 'O-Tama\'s Full Stomach Plan',
             thumb: 2815,
-            global: true,
             nakama: null,
             gamewith: null,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
@@ -5651,6 +5659,7 @@ var bonuses = [
     { type: 'stamina' , x: 6 , y: 19 },
     { type: 'stamina' , x: 6 , y: 26 },
     { type: 'stamina' , x: 6 , y: 33 },
+    { type: 'stamina' , x: 6 , y: 40 },
     { type: 'drop'    , x: 6 , y: 1  },
     { type: 'drop'    , x: 6 , y: 8  },
     { type: 'drop'    , x: 6 , y: 15 },
