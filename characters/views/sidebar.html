@@ -425,8 +425,12 @@
         ng-click="filters.custom[n] = !filters.custom[n]">{{filter.name}}</span>
 </div-->
 
-<div class="filter-container" ng-if="showLogFilters">
-    <span class="filter-header">Character Log filters</span>
+<div class="filter-container expandable" id="charLog-container" ng-if="showLogFilters"
+        ng-class="{ expanded: filters.charLogEnabled }">
+    <span class="filter-header" ng-click="filters.charLogEnabled = !filters.charLogEnabled">
+        Character Log filters
+        <i class="pull-right fa fa-{{filters.charLogEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
+    </span>
     <span class="filter width-12 custom" ng-model="filters.noLog" ng-class="{ active: filters.noLog }"
         ng-click="filters.noLog = !filters.noLog">Hide units in Character Log</span>
     <span class="filter width-12 custom" ng-model="filters.noMissing" ng-class="{ active: filters.noMissing }"
