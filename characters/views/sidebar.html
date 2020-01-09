@@ -1,7 +1,7 @@
 <div id="clear-button" class="filter-header" ng-click="clearFilters()">Clear filters</div>
 
 <div class="filter-container expandable" id="type-filter"
-     ng-class="{ expanded: filters.typeEnabled }">
+     ng-class="{ expanded: !filters.typeEnabled }">
     <span class="filter-header" ng-click="filters.typeEnabled = !filters.typeEnabled">
         Type filters
         <i class="pull-right fa fa-{{filters.typeEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
@@ -12,7 +12,7 @@
 </div>
 
 <div class="filter-container expandable" id="character-filter"
-     ng-class="{ expanded: filters.characterEnabled }">
+     ng-class="{ expanded: !filters.characterEnabled }">
     <span class="filter-header" ng-click="filters.characterEnabled = !filters.characterEnabled">
         Character filters
         <i class="pull-right fa fa-{{filters.characterEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
@@ -22,7 +22,7 @@
 </div>
 
 <div class="filter-container expandable" id="class-filter"
-     ng-class="{ expanded: filters.classEnabled }">
+     ng-class="{ expanded: !filters.classEnabled }">
     <span class="filter-header" ng-click="filters.classEnabled = !filters.classEnabled">
         Class filters
         <i class="pull-right fa fa-{{filters.classEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
