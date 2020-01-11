@@ -4301,7 +4301,7 @@ window.evolutions = {
     },
     2651: {
         evolution: 2681,
-        evolvers: [  ]
+        evolvers: [ 'skullBullet', 'skullBullet', 'skullBullet', 'skullBullet', 'skullBullet' ]
     },
     2683: {
         evolution: 2684,
@@ -4381,7 +4381,7 @@ window.evolutions = {
     },
     2113: {
         evolution: 2739,
-        evolvers: [  ]
+        evolvers: [ 'skullKatakuri', 'skullKatakuri', 'skullKatakuri', 'skullKatakuri', 'skullKatakuri' ]
     },
     2740: {
         evolution: 2741,
