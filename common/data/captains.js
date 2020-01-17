@@ -9435,7 +9435,7 @@ window.captains = {
     2655: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : (p.unit.type == "QCK" || p.unit.type == "STR") ? 2 : 1; },
     },
-    2655: {
+    2656: {
         atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
