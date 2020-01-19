@@ -398,8 +398,18 @@ input[type="text"] {
     color: white;
 }
 
+#toggle-button {
+    cursor: pointer;
+    background: darkorchid;
+    color: white;
+}
+
 #clear-button:hover {
     background: orangered;
+}
+
+#toggle-button:hover {
+    background: darkviolet;
 }
 
 .dataTables_info, .dataTables_paginate {

@@ -391,9 +391,15 @@ window.matchers = [
     },
 
     {
-        name: 'Multiple turn boosting specials',
+        name: 'Multiple-Turn boosting specials',
         target: 'special',
         matcher: /x for \d{1,} turns/i
+    },
+
+    {
+        name: 'Multiple-Turn Buff/Debuff specials',
+        target: 'special',
+        matcher: /for \d{1,} turns/i
     },
     
     {
@@ -667,6 +673,12 @@ window.matchers = [
         name: 'HP-based damage dealers',
         target: 'specialNotes',
         matcher: /specialProportional/i
+    },
+
+    {
+        name: 'Multiple-Turn Buff/Debuff Removing specials',
+        target: 'special',
+        matcher: /by \d{1,} turns/i
     },
 
     {
