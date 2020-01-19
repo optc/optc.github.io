@@ -389,6 +389,12 @@ window.matchers = [
         target: 'special',
         matcher: /(Following the activation|If during that turn)/i
     },
+
+    {
+        name: 'Multiple turn boosting specials',
+        target: 'special',
+        matcher: /x for \d{1,} turns/i
+    },
     
     {
         name: '1.5x Boost specials',
@@ -1433,6 +1439,18 @@ window.matchers = [
         name: 'Blindness reducers',
         target: 'support',
         matcher: /(reduces|removes).+blindness.+duration/i
+    },
+    
+    {
+        name: 'Chain Multiplier Limit and Chain Lock reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Chain Multiplier Limit/i 
+    },
+    
+    {
+        name: 'Chain Coefficient Reduction reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Chain Coefficient Reduction/i 
     },
     
     {
