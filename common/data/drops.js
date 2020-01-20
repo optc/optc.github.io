@@ -1913,6 +1913,15 @@ window.drops = {
         },
         
         {
+            name: 'Kizuna Clash! - Preparation Battle',
+            dropID: 'eventneo70',
+            thumb: 2833,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2833 ]
+        },
+        
+        {
             name: 'Chinjao Family!',
             dropID: 'event71',
             thumb: 1426,
@@ -4880,6 +4889,15 @@ window.drops = {
             'All Difficulties': [ 2811 ],
         },
         
+        {
+            name: 'Marco & Ace',
+            dropID: 'bond6',
+            thumb: 2831,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2831 ],
+        },
+        
     ],
 
     'Special': [
@@ -5464,6 +5482,14 @@ window.drops = {
             nakama: null,
             gamewith: null,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
+        },
+
+        {
+            name: 'World Journey Mission',
+            thumb: 2825,
+            nakama: null,
+            condition: 'Mihawk: Slasher or Cerebral only. Hancock: Shooter or Free Spirit only. Crocodile: Striker or Driven only',
+            gamewith: 183779,
         },
         
         {

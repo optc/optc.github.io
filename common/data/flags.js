@@ -2755,6 +2755,7 @@ window.flags = {
     2827: { rr: 1, rro: 1, lrr: 1 },
     2828: { rr: 1, rro: 1, lrr: 1 },
     2829: { rr: 1, rro: 1, lrr: 1 },
+    2832: { rr: 1, rro: 1, lrr: 1 },
     3333: { rr: 1, rro: 1, global: 1 },
     3334: { rr: 1, rro: 1, global: 1 },
     3339: { global: 1 },
@@ -2784,4 +2785,6 @@ window.flags = {
     3374: { rr: 1, rro: 1, lrr: 1, global: 1 },
     3375: { global: 1 },
     3376: { global: 1 },
+    3377: { rr: 1, rro: 1, global: 1 },
+    3378: { rr: 1, rro: 1, global: 1 },
 };
