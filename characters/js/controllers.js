@@ -4,7 +4,7 @@
  * Common data *
  ***************/
 
-var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ] };
+var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
 
 /***************
  * Controllers *
@@ -56,8 +56,18 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     });
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ] };
-        $rootScope.filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ] };
+        filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
+        $rootScope.filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
+    };
+
+    $scope.toggleFilters = function() {
+        for (x in filters){
+            if (x.includes("Enabled")){
+                if (x == "typeEnabled" || x == "characterEnabled" || x == "classEnabled") { filters[x] = !filters["toggle"]; $rootScope.filters[x] = !filters["toggle"]; }
+                else { filters[x] = filters["toggle"]; $rootScope.filters[x] = filters["toggle"]; }
+            }
+        }
+        filters["toggle"] = !filters["toggle"];
     };
 
     $scope.onFilterClick = function(e, value) {

@@ -1049,6 +1049,32 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
+    2799: {
+        atkStatic: function(p) { return 20; },
+        hpStatic: function(p) { return 20; },
+        rcvStatic: function(p) { return 20; },
+    },
+    2811: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
+    },
+    2812: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 25 : 0; },
+    },
+    2813: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+    },
+    2828: {
+        atkStatic: function(p) { return p.percHP <= 30.0 && p.slot == p.sourceSlot ? 150 : 0; },
+    },
+    2829: {
+        atkStatic: function(p) { return p.percHP <= 30.0 && p.slot == p.sourceSlot ? 150 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

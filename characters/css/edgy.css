@@ -31,7 +31,7 @@ html, body,
     background: #ff9090 !important;
 }
 
-.filter-header:not(#clear-button) {
+.filter-header:not(#clear-button, #toggle-button) {
     background: #202020 !important;
     border-color: #333;
 }

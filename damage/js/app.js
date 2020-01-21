@@ -83,6 +83,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         intOrbsEnabled: 0,
         rainbowOrbsEnabled: 0,
         meatOrbsEnabled: 0,
+        wanoOrbsEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -341,6 +342,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.meatOrbsEnabled) return true;
+        }
+        return false;
+    };
+    
+    /* * * * * [WANO] orb control * * * * */
+
+    var resetWanoOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'wano')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset wano slots automatically
+    $scope.$watch('options.wanoOrbsEnabled',function() {
+        if (!$rootScope.areWanoOrbsEnabled())
+            resetWanoOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areWanoOrbsEnabled())
+            resetWanoOrbs();
+    });
+
+    $rootScope.areWanoOrbsEnabled = function() {
+        if ($rootScope.options.wanoOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.wanoOrbsEnabled) return true;
         }
         return false;
     };

@@ -142,6 +142,24 @@ window.matchers = [
     },
 
     {
+        name: 'HP Threshold Requirement captains',
+        target: 'captain',
+        matcher: /if HP is (below|above)/i
+    },
+
+    {
+        name: 'Team Composition Requirement captains',
+        target: 'captain',
+        matcher: /your crew/i
+    },
+
+    {
+        name: 'Captain Swap Requirement captains',
+        target: 'captain',
+        matcher: /becomes your captain/i
+    },
+
+    {
         name: 'Positional captains',
         target: 'captain',
         matcher: /(after scoring|following a chain|perfect|great|good)/i
@@ -241,6 +259,30 @@ window.matchers = [
     },
 
     {
+        name: 'HP Threshold Requirement specials',
+        target: 'special',
+        matcher: /if HP is (below|above)/i
+    },
+
+    {
+        name: 'Team Composition Requirement specials',
+        target: 'special',
+        matcher: /your crew/i
+    },
+
+    {
+        name: 'Team Orb Composition Requirement specials',
+        target: 'special',
+        matcher: /your( crew.+characters with|.+Captain's orb is)/i
+    },
+
+    {
+        name: 'Captain Composition Requirement specials',
+        target: 'special',
+        matcher: /your captain /i
+    },
+
+    {
         name: 'Universal ATK boosting specials',
         target: 'special',
         matcher: /Boosts ATK[^,]+(all characters)/i
@@ -295,25 +337,31 @@ window.matchers = [
     },
 
     {
-        name: 'Conditional ATK boosters',
+        name: 'Status ATK boosters',
         target: 'special',
         matcher: /Boosts ATK.+against.+enemies/i
     },
 
     {
-        name: 'Delay Conditional ATK boosters',
+        name: 'Delay Status ATK boosters',
         target: 'special',
         matcher: /Boosts ATK.+against.+delayed.+enemies/i
     },
 
     {
-        name: 'Defense Reduction Conditional ATK boosters',
+        name: 'Defense Reduction Status ATK boosters',
         target: 'special',
         matcher: /Boosts ATK.+against.+enemies.+reduced defense/i
     },
 
     {
-        name: 'Poison Conditional ATK boosters',
+        name: 'Increase Defense Status ATK boosters',
+        target: 'special',
+        matcher: /Boosts ATK.+against.+enemies.+increased defense/i
+    },
+
+    {
+        name: 'Poison Status ATK boosters',
         target: 'special',
         matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
     },
@@ -340,6 +388,18 @@ window.matchers = [
         name: 'Following-turn Buff Enabler',
         target: 'special',
         matcher: /(Following the activation|If during that turn)/i
+    },
+
+    {
+        name: 'Multiple-Turn boosting specials',
+        target: 'special',
+        matcher: /x for \d{1,} turns/i
+    },
+
+    {
+        name: 'Multiple-Turn Buff/Debuff specials',
+        target: 'special',
+        matcher: /for \d{1,} turns/i
     },
     
     {
@@ -613,6 +673,12 @@ window.matchers = [
         name: 'HP-based damage dealers',
         target: 'specialNotes',
         matcher: /specialProportional/i
+    },
+
+    {
+        name: 'Multiple-Turn Buff/Debuff Removing specials',
+        target: 'special',
+        matcher: /by \d{1,} turns/i
     },
 
     {
@@ -1086,6 +1152,12 @@ window.matchers = [
     },
     
     {
+        name: 'Key Locked Limit Break',
+        target: 'limit',
+        matcher: /Locked/i
+    },
+    
+    {
         name: 'Enrage Potential Ability',
         target: 'limit',
         matcher: /Enrage/i
@@ -1256,25 +1328,25 @@ window.matchers = [
     },
 
     {
-        name: 'Conditional ATK boosters',
+        name: 'Status ATK boosters',
         target: 'support',
         matcher: /Boosts ATK.+against.+enemies/i
     },
 
     {
-        name: 'Delay Conditional ATK boosters',
+        name: 'Delay Status ATK boosters',
         target: 'support',
         matcher: /Boosts ATK.+against.+delayed.+enemies/i
     },
 
     {
-        name: 'Defense Reduction Conditional ATK boosters',
+        name: 'Defense Reduction Status ATK boosters',
         target: 'support',
         matcher: /Boosts ATK.+against.+enemies.+reduced defense/i
     },
 
     {
-        name: 'Poison Conditional ATK boosters',
+        name: 'Poison Status ATK boosters',
         target: 'support',
         matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
     },
@@ -1379,6 +1451,18 @@ window.matchers = [
         name: 'Blindness reducers',
         target: 'support',
         matcher: /(reduces|removes).+blindness.+duration/i
+    },
+    
+    {
+        name: 'Chain Multiplier Limit and Chain Lock reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Chain Multiplier Limit/i 
+    },
+    
+    {
+        name: 'Chain Coefficient Reduction reducer',
+        target: 'support',
+        matcher: /(removes|reduces).+Chain Coefficient Reduction/i 
     },
     
     {
