@@ -3376,7 +3376,7 @@ window.units = [
     [ "Heracles-un [Neo]", "INT", [ "Shooter", "Cerebral" ], 4, 30, 6, 3, 70, 1066998, 430, 340, 43, 1480, 840, 130, 1 ],
     [ "Heracles-un [Neo], Hero of the Forest", "INT", [ "Shooter", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1222, 780, 108, 2588, 1310, 300, 1 ],
     [ "Aokiji, Unyielding Beliefs of Justice", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 840, 320, 51, null, null, null, null ],
-    [ "Kuzan, Unfaithful Beliefs of Justice", "QCK", [ "Free Spirit", "Shooter" ], 6, 55, 5, 5, 99, 5000000, 1620, 624, 121, null, null, null, null ],
+    [ "Kuzan, Unfaithful Beliefs of Justice", "QCK", [ "Free Spirit", "Shooter" ], 6, 55, 5, 5, 99, 5000000, 1620, 624, 121, 3189, 1325, 190, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
