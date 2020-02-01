@@ -2639,7 +2639,7 @@ window.units = [
     [ "Tony Tony Chopper, Summer Vacation Outfit", "INT", [ "Free Spirit", "Powerhouse" ], 4, 1, 5, 1, 99, 1000000, 756, 401, 120, 1890, 1002, 301, 1 ],
     [ "Nico Robin, Straw Hat Pirates' Summer Vacation Outfit", "DEX", [ "Free Spirit", "Cerebral" ], 4, 1, 4, 4, 99, 1000000, 973, 416, 79, 2432, 1040, 198, 1 ],
     [ "Franky, Summer Vacation Outfit", "QCK", [ "Free Spirit", "Powerhouse" ], 4, 1, 5, 4, 99, 1000000, 982, 518, 44, 2454, 1296, 109, 1 ],
-    [ "Brook, Sumer Vacation Outfit", "PSY", [ "Free Spirit", "Slasher" ], 4, 1, 4, 4, 99, 1000000, 833, 457, 89, 2082, 1143, 222, 1 ],
+    [ "Brook, Summer Vacation Outfit", "PSY", [ "Free Spirit", "Slasher" ], 4, 1, 4, 4, 99, 1000000, 833, 457, 89, 2082, 1143, 222, 1 ],
     [ "Kid & Killer, \"Worst\" Versus \"Strongest\"", "STR", [ "Striker", "Slasher" ], 5, 50, 4, 5, 99, 3000000, 999, 722, 112, 2676, 1311, 217, 1 ],
     [ "Bege & Apoo, \"Worst\" Versus \"Strongest\"", "QCK", [ "Shooter", "Free Spirit" ], 5, 50, 6, 5, 99, 3000000, 1052, 655, 122, 2754, 1230, 231, 1 ],
     [ "Drake & Urouge, \"Worst\" Versus \"Strongest\"", "DEX", [ "Fighter", "Powerhouse" ], 5, 50, 4, 5, 99, 3000000, 1200, 590, 117, 3011, 1131, 222, 1 ],
