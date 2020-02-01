@@ -84,6 +84,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         rainbowOrbsEnabled: 0,
         meatOrbsEnabled: 0,
         wanoOrbsEnabled: 0,
+        emptyOrbsEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -371,6 +372,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.wanoOrbsEnabled) return true;
+        }
+        return false;
+    };
+
+    /* * * * * [EMPTY] orb control * * * * */
+
+    var resetEmptyOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'empty')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset empty slots automatically
+    $scope.$watch('options.emptyOrbsEnabled',function() {
+        if (!$rootScope.areEmptyOrbsEnabled())
+            resetEmptyOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areEmptyOrbsEnabled())
+            resetEmptyOrbs();
+    });
+
+    $rootScope.areEmptyOrbsEnabled = function() {
+        if ($rootScope.options.emptyOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.emptyOrbsEnabled) return true;
         }
         return false;
     };

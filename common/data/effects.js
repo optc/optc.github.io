@@ -489,21 +489,21 @@ window.effects = {
 	
 	'Kizuna Clash [Global]': {
         description: 'Certain units boosted',
-        thumb: 2531,
+        thumb: 2682,
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([ 2605, 2607, 2609, 2603, 5172, 5173, 5174, 5175, 2601, 5164, 5165, 5166, 5167, 2583, 2434, 2588, 2561, 5148, 5149, 5150, 5151 ].indexOf(id) != -1);
+                matching = ([ 2681, 2680, 2678, 2676, 2674, 2671, 2670, 2668, 2661, 2659, 2657, 2655, 2653, 2649, 2647, 2646, 2645, 2644, 2643, 2642 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([ 2605, 2607, 2609, 2603, 5172, 5173, 5174, 5175, 2601, 5164, 5165, 5166, 5167, 2583, 2434, 2588, 2561, 5148, 5149, 5150, 5151 ].indexOf(id) != -1);
+                matching = ([ 2681, 2680, 2678, 2676, 2674, 2671, 2670, 2668, 2661, 2659, 2657, 2655, 2653, 2649, 2647, 2646, 2645, 2644, 2643, 2642 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([ 2605, 2607, 2609, 2603, 5172, 5173, 5174, 5175, 2601, 5164, 5165, 5166, 5167, 2583, 2434, 2588, 2561, 5148, 5149, 5150, 5151 ].indexOf(id) != -1);
+                matching = ([ 2681, 2680, 2678, 2676, 2674, 2671, 2670, 2668, 2661, 2659, 2657, 2655, 2653, 2649, 2647, 2646, 2645, 2644, 2643, 2642 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},
@@ -1096,4 +1096,11 @@ window.effects = {
             return boost;
         },
 	},
+    
+    'EMPTY Orbs': {
+        description: 'Activates [EMPTY] orb support',
+        thumb: 1652,
+        id: 81, // don't change this
+        emptyOrbsEnabled: true
+    },
 };

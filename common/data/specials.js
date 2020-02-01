@@ -8889,6 +8889,84 @@ window.specials = {
     2822: {
         staticMult: function(p) { return 35; }
     },
+    2838: {
+        chainAddition: function(p) { return window.specials[2838].multiplier; },
+        onActivation: function(p) {
+            var n = (window.specials[2838].multiplier == .5 ? 1 : 0);
+            if (p.colorCount.DEX + p.colorCount.INT >= 3) {
+                window.specials[2838].multiplier = [.5, .8][n];
+            }
+            else {
+                window.specials[2838].multiplier = 0;
+            }
+            p.scope.notify({
+                text: 'Using the ' + [.5, .8][n] + 'x chain boost multiplier. To switch to the ' + [.8, .5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2838warning'
+            });
+        },
+    },
+    2839: {
+        chainAddition: function(p) { return window.specials[2839].multiplier; },
+        onActivation: function(p) {
+            var n = (window.specials[2839].multiplier == .5 ? 1 : 0);
+            if (p.colorCount.DEX + p.colorCount.INT >= 3) {
+                window.specials[2839].multiplier = [.5, .8][n];
+            }
+            else {
+                window.specials[2839].multiplier = 0;
+            }
+            p.scope.notify({
+                text: 'Using the ' + [.5, .8][n] + 'x chain boost multiplier. To switch to the ' + [.8, .5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2839warning'
+            });
+        },
+    },
+    2840: {
+        atk: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : window.specials[2840].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2840].multiplier == 2 ? 1 : 0);
+            window.specials[2840].multiplier = [2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '2840warning'
+            });
+        }
+    },
+    2841: {
+        atk: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : window.specials[2841].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2841].multiplier == 2 ? 1 : 0);
+            window.specials[2841].multiplier = [2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
+                name: '2841warning'
+            });
+        }
+    },
+    2844: {
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2844].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2844].multiplier == 1.75 ? 1 : 0);
+            window.specials[2844].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2844warning'
+            });
+        }
+    },
+    2845: {
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2845].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2845].multiplier == 1.75 ? 1 : 0);
+            window.specials[2845].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2845warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -10217,5 +10295,29 @@ window.specials = {
     5201: {
         atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
         type: "type",
+    },
+    5202: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5203: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5204: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5205: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5206: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5207: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5208: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    5209: {
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
 };

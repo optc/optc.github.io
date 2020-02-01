@@ -98,6 +98,12 @@
     background-image: radial-gradient(9px 3px, circle cover, gold, orangered, rgb(50,50,50));
 }
 
+.unitOrb.E {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, grey, gainsboro, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, grey, gainsboro, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, grey, gainsboro, rgb(50,50,50));
+}
+
 .unitOrb .fa {
     position: relative;
     font-size: 2em;
@@ -196,6 +202,17 @@
 }
 
 .wano-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
+.empty-orb {
     color: white;
     font-weight: bold;
     font-style: normal;

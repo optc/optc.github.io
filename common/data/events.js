@@ -743,4 +743,84 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    5202: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5203: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5204: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5205: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5206: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5207: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5208: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5209: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
 };

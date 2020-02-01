@@ -10032,6 +10032,38 @@ window.captains = {
     2833: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
+    2836: {
+        atk: function(p) { return (p.unit.type == "INT") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 4.25 : 3.5 : 1; },
+    },
+    2837: {
+        atk: function(p) { return (p.unit.type == "INT") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 4.25 : 3.5 : 1; },
+    },
+    2838: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    2839: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2.75 : 1; },
+    },
+    2840: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 1.25 : 1; },
+    },
+    2841: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 1.25 : 1; },
+    },
+    2842: {
+        atk: function(p) { return (p.colorCount.DEX > 0 && p.colorCount.INT > 0) ? (p.unit.type == "DEX" || p.unit.type == "INT") ? 2.25 : 1 : 1; },
+    },
+    2843: {
+        atk: function(p) { return (p.colorCount.DEX > 0 && p.colorCount.INT > 0) ? (p.unit.type == "DEX" || p.unit.type == "INT") ? p.actions[p.sourceSlot] ? 3 : 2.5 : 1 : 1; },
+    },
+    2844: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+    },
+    2845: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.75 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -10171,6 +10203,10 @@ window.captains = {
     3378: {
         atk: function(p) { return (p.colorCount.STR + p.colorCount.DEX + p.colorCount.QCK == 6) ? p.classCount.Slasher == 6 ? 1.75 : 1 : 1; },
         chainModifier: function(p) { return  (p.colorCount.INT==0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? 4 : 1; }
+    },
+    3379: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 3.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
@@ -11047,5 +11083,29 @@ window.captains = {
     5201: {
         atk: function(p) { return (p.unit.type == "STR") ? 3.75 : 1; },
         rcv: function(p) { return (p.unit.type == "STR") ? 1.25 : 1; },
+    },
+    5202: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 4 : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.75 : 3.5 : 1; },
+    },
+    5203: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 4 : 3.25 : 1; },
+    },
+    5204: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 6 : 4.5 : 1; },
+    },
+    5205: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 6 : 4.5 : 1; },
+    },
+    5206: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 4 : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.75 : 3.5 : 1; },
+    },
+    5207: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 4 : 3.25 : 1; },
+    },
+    5208: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 6 : 4.5 : 1; },
+    },
+    5209: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? (p.orb == 'empty') ? 6 : 4.5 : 1; },
     },
 };

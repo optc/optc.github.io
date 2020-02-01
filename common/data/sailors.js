@@ -1075,6 +1075,22 @@ window.sailors = {
     2829: {
         atkStatic: function(p) { return p.percHP <= 30.0 && p.slot == p.sourceSlot ? 150 : 0; },
     },
+    2838: {
+        hpStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    2839: {
+        hpStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    2840: {
+        atkStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
+    },
+    2841: {
+        atkStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
