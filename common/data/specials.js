@@ -8761,6 +8761,7 @@ window.specials = {
     },
     2793: {
         delay: function(p) { return 1; },
+        chainAddition: function(p) { return 0.7; },
         atk: function(p) { return p.delayed > 0 ? window.specials[2793].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
