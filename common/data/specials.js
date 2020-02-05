@@ -8760,6 +8760,7 @@ window.specials = {
         }
     },
     2793: {
+        delay: function(p) { return 1; },
         atk: function(p) { return p.delayed > 0 ? window.specials[2793].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
@@ -8959,13 +8960,11 @@ window.specials = {
     2845: {
         affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2845].multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2845].multiplier == 1.75 ? 1 : 0);
-            window.specials[2845].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2845warning'
-            });
-        }
+            window.specials[2845].multiplier = 1.75;
+            if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse")) {
+                window.specials[2845].multiplier = 2;
+            }
+        },
     },
     2846: {
         rcv: function(p) { return 1.5; },
