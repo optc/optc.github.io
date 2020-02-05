@@ -8967,6 +8967,9 @@ window.specials = {
             });
         }
     },
+    2846: {
+        rcv: function(p) { return 1.5; },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
