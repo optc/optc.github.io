@@ -89,6 +89,7 @@ filters.decorate = function() {
             .replace(/\[BOMB\]/g,'<span class="badge BOMB"><i class="fa fa-bomb"></i> BOMB</span>')
             .replace(/\[RAINBOW\]/g,'<span class="badge RAINBOW"></i> RAINBOW</span>')
             .replace(/\[SEMLA\]/g,'<span class="badge SEMLA"></i> SEMLA</span>')
+            .replace(/\[WANO\]/g,'<span class="badge WANO"></i> WANO</span>')
             .replace(/\[G\]/g,'<span class="badge G">G</span>');
     };
 };

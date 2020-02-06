@@ -134,6 +134,7 @@ input[type="text"] {
 .BLOCK   { background: darkslateblue; }
 .BOMB    { background: maroon; }
 .SEMLA    { background: saddlebrown; }
+.WANO    { background: firebrick; }
 .RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
 .G       { background: orange; }
 .EMPTY   { background: #777; }

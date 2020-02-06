@@ -313,7 +313,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             }
         }
     }
-    if (orb == 1.0 || orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int' || orb == 'meat') return baseMultiplier;
+    if (orb == 1.0 || orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int' || orb == 'meat' || orb == 'empty') return baseMultiplier;
     if (orb == 2.0 || orb == 'g' || orb == 'rainbow' || orb == 'wano') return boostedMultiplier;
     if (orb == 0.5) return 1 / boostedMultiplier;
     return 1;

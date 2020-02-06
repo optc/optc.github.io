@@ -4514,6 +4514,16 @@ window.drops = {
         },
 
         {
+            name: 'Sangoro',
+            thumb: 2845,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2844, -2845 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             showManual: true,
@@ -5536,6 +5546,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
+        },
+        
+        {
+            name: 'Anniversary Party',
+            thumb: 2843,
+            nakama: null,
+            gamewith: null,
+            condition: "Complete Missions to get Bingo",
+            'All Difficulties': [ 2842 ],
         },
 
         {
