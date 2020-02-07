@@ -3427,6 +3427,7 @@ window.drops = {
         
         {
             name: 'Showdown!! Shanks & Mihawk',
+            dropID: 'clash56',
             thumb: 2819,
             global: true,
             nakama: 4281900,
@@ -3434,6 +3435,16 @@ window.drops = {
             Master: [ 2818 ],
             Expert: [ 2818 ],
             Ultimate: [ 2818 ],
+        },
+        
+        {
+            name: 'Clash!! Bonney',
+            dropID: 'clash57',
+            thumb: 2846,
+            nakama: null,
+            gamewith: null,
+            Expert: [ 2846 ],
+            Ultimate: [ 2846 ],
         },
         
         {
@@ -4722,7 +4733,7 @@ window.drops = {
             thumb: 2659,
             nakama: null,
             gamewith: 162014,
-            'Expo Sea': [ 2658, 2660 ]
+            'Sea Near the Pirate Expo': [ 2658, 2660 ]
         },
 
         {
@@ -4768,6 +4779,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 2823 ]
+        },
+
+        {
+            name: 'Rebecca & Viola',
+            dropID: 'treasuremap30',
+            thumb: 2850,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2850 ]
         },
         
     ],
