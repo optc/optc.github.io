@@ -8248,8 +8248,8 @@ window.specials = {
     2687: {
         affinity: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2687].multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[1492].multiplier == 1.5 ? 1 : window.specials[2687].multiplier == 1.75 ? 2 : 0);
-            window.specials[1492].multiplier = [1.5, 1.75, 2][n];
+            var n = (window.specials[2687].multiplier == 1.5 ? 1 : window.specials[2687].multiplier == 1.75 ? 2 : 0);
+            window.specials[2687].multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2687warning'
