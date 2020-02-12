@@ -5020,6 +5020,15 @@ window.drops = {
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
             'Pudding': [ 1962, 83, 94, 266, 1180, 82, 88, 93, 99, 114 ],
         },
+        
+        {
+            name: 'Kizuna Clash! - Preparation Battle',
+            thumb: 2833,
+            nakama: null,
+            gamewith: null,
+            'Round 1': [ 2833 ],
+            'Round 2': [ 2852 ]
+        },
 
         {
             name: 'Straw Hat Pirates!',
