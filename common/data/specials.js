@@ -8891,6 +8891,10 @@ window.specials = {
     2822: {
         staticMult: function(p) { return 35; }
     },
+    2830: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        type: "class"
+    },
     2838: {
         chainAddition: function(p) { return window.specials[2838].multiplier; },
         onActivation: function(p) {
@@ -8974,7 +8978,7 @@ window.specials = {
         atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2848].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2848].multiplier == 1.75 ? 1 : window.specials[2848].multiplier == 2 ? 2.25 : 0);
+            var n = (window.specials[2848].multiplier == 1.75 ? 1 : window.specials[2848].multiplier == 2 ? 2 : 0);
             window.specials[2848].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x attack boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x attack boost, disable and re-enable this special',
