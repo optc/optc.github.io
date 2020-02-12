@@ -4593,6 +4593,6 @@ window.evolutions = {
     },
     2686: {
         evolution: 3379,
-        evolvers: [  ]
+        evolvers: [ 'skullWhitebeard', 'skullWhitebeard', 'skullWhitebeard', 'skullWhitebeard', 'skullWhitebeard' ]
     },
 };
