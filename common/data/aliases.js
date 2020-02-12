@@ -2936,7 +2936,7 @@ window.aliases = {
     3376: [ '', '', 'Neo Heracles\'n', 'Kai Heracles\'n' ],
     3377: [ '', '', 'Korea Aokiji', 'Korea Kuzan', 'Legend Aokiji', 'Legend Kuzan', 'V3 Kuzan V3', 'V3 Aokiji V3' ],
     3378: [ '', '', 'Korea Aokiji', 'Korea Kuzan', 'Legend Aokiji', 'Legend Kuzan', 'V3 Kuzan V3', 'V3 Aokiji V3' ],
-    3379: [ '', '', '' ],
+    3379: [ '', '', 'QCK WB', 'V2 WB V2', 'Edward Newgate', 'Super Whitebeard', 'Mega Whitebeard', '6+ WB 6+' ],
     5000: [ 'スモーカー 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker', 'Smoshigi' ],
     5001: [ 'たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker', 'Smoshigi' ],
     5002: [ 'スモーカー＆たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker', 'Smoshigi' ],
