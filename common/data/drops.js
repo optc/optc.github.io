@@ -3429,6 +3429,7 @@ window.drops = {
         
         {
             name: 'Showdown!! Shanks & Mihawk',
+            dropID: 'clash56',
             thumb: 2819,
             global: true,
             nakama: 4281900,
@@ -3436,6 +3437,16 @@ window.drops = {
             Master: [ 2818 ],
             Expert: [ 2818 ],
             Ultimate: [ 2818 ],
+        },
+        
+        {
+            name: 'Clash!! Bonney',
+            dropID: 'clash57',
+            thumb: 2846,
+            nakama: null,
+            gamewith: null,
+            Expert: [ 2846 ],
+            Ultimate: [ 2846 ],
         },
         
         {
@@ -4775,7 +4786,7 @@ window.drops = {
             global: true,
             nakama: 8265900,
             gamewith: 162014,
-            'Expo Sea': [ 2658, 2660 ]
+            'Sea Near the Pirate Expo': [ 2658, 2660 ]
         },
 
         {
@@ -4821,6 +4832,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 2823 ]
+        },
+
+        {
+            name: 'Rebecca & Viola',
+            dropID: 'treasuremap30',
+            thumb: 2850,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2850 ]
         },
         
     ],
@@ -5052,6 +5072,15 @@ window.drops = {
             gamewith: 88896,
             'Sanji': [ 1960, 83, 94, 266, 1180, 81, 87, 92, 98, 113 ],
             'Pudding': [ 1962, 83, 94, 266, 1180, 82, 88, 93, 99, 114 ],
+        },
+        
+        {
+            name: 'Kizuna Clash! - Preparation Battle',
+            thumb: 2833,
+            nakama: null,
+            gamewith: null,
+            'Round 1': [ 2833 ],
+            'Round 2': [ 2852 ]
         },
 
         {
@@ -5464,6 +5493,27 @@ window.drops = {
         },
         
         {
+            name: 'The World\'s Strongest - Bullet',
+            thumb: 2681,
+            global: true,
+            nakama: null,
+            gamewith: 164245,
+            showManual: true,
+            'All Difficulties': [  ],
+            'Chopperman Missions': [ 2679 ],
+        },
+        
+        {
+            name: 'The Great Pirate\'s Legacy',
+            thumb: 3379,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            'All Difficulties': [ 9035, -261, -1413, -2686, -3379 ],
+        },
+        
+        {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
             global: true,
@@ -5481,17 +5531,6 @@ window.drops = {
             gamewith: 147515,
             condition: 'Certain units stats boosted by 1.25x and 8 turns special cooldown reduction. Challenge Difficulty: Total Crew Cost must be 180 Cost or less.\nChance to drop the 「Old Sword, Swordsman\'s Loot」, 「Baboon Sword, Swordsman\'s Loot」, and 「Muggy Kingdom Sword, Swordsman\'s Loot」.',
             'Chopperman Missions': [ 2499 ],
-        },
-        
-        {
-            name: 'The World\'s Strongest - Bullet',
-            thumb: 2681,
-            global: true,
-            nakama: null,
-            gamewith: 164245,
-            showManual: true,
-            'All Difficulties': [  ],
-            'Chopperman Missions': [ 2679 ],
         },
         
         {
@@ -5560,7 +5599,8 @@ window.drops = {
         {
             name: 'World Journey Mission',
             thumb: 2825,
-            nakama: null,
+            global: true,
+            nakama: 6282500,
             condition: 'Mihawk: Slasher or Cerebral only. Hancock: Shooter or Free Spirit only. Crocodile: Striker or Driven only',
             gamewith: 183779,
         },

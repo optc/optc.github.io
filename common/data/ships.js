@@ -452,7 +452,7 @@ window.ships = [
     
     
     { //34
-        name: "Zunisha",
+        name: "Zunisha (Zunesha|Zou)",
         thumb: 'ship_0036_c.png',
         description: 'Boost ATK of Powerhouse and Cerebral characters by 1.55x and their HP by 1.25x, makes PERFECTs easier to hit, and makes TND and Meat orbs beneficial to Powerhouse and Cerebral characters.',
         atk: function(p) {
@@ -576,7 +576,7 @@ window.ships = [
     
     { //43
         name: "Megalo",
-        thumb: null,
+        thumb: 'ship_0045_c.png',
         description: 'Boosts HP of all characters by 1.25x. If your Captain is [PSY] or [INT], boosts ATK of all characters by 1.5x, boosts captain\'s RCV by 200 and reduces damage received by 10%. Special: Locks all orbs for 1 turn (Cooldown: 8 turns).',
         atk: function(p) {
             return (p.captain.type == "PSY" || p.captain.type == "INT") ? [ 1.2, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5, 1.5, 1.5, 1.5 ][p.boatLevel - 1] : 1;
@@ -590,7 +590,7 @@ window.ships = [
     
     { //44
         name: "Thousand Sunny - Flying Model",
-        thumb: null,
+        thumb: 'ship_0046_c.png',
         description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 1.5x and makes PERFECTs easier to hit.',
         atk: function(p) {
             return 1.5;
@@ -623,6 +623,23 @@ window.ships = [
         hp: function(p) {
             return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1] : 1;
         },
+    },
+    
+    
+    
+    { //46
+        name: "Grudge Dolph",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, boosts HP of Slasher and Striker by 1.25x and recovers 1,000 HP at the end of the turn. If a Striker or Slasher character has a Matching, [WANO] or [RAINBOW] orb, boosts ATK by 1.6x, by 1.5x otherwise.',
+        atk: function(p) {
+            return p.unit.class.has('Slasher') || p.unit.class.has('Striker') ? (p.p.orb == 2 || p.p.orb == 'rainbow' || p.p.orb == 'wano') ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return p.unit.class.has('Slasher') || p.unit.class.has('Striker') ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.25 ][p.boatLevel - 1] : 1;
+        },
+        heal: function(p) {
+            return [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000 ][p.boatLevel - 1];
+        }
     },
 
 ];

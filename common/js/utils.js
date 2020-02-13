@@ -156,6 +156,8 @@
             case 9033: return '../res/skullBullet.png'; break;
             case 'skullKatakuri':
             case 9034: return '../res/skullKatakuri.png'; break;
+            case 'skullWhitebeard':
+            case 9035: return '../res/skullWhitebeard.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -215,6 +217,9 @@
             case '3374': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5053.png'; break;
             case '3375': return '../res/character_10863_t.png'; break;
             case '3376': return '../res/character_10864_t.png'; break;
+            case '3377': return '../res/character_11199_t1.png'; break;
+            case '3378': return '../res/character_11221_t1.png'; break;
+            case '3379': return '../res/character_11173_t1.png'; break;
             //case '3370': return '../res/character_10891_t1.png'; break;
             //case '2440': return '../res/character_10643_t1.png'; break;
             //case '2441': return '../res/character_10644_t1.png'; break;
@@ -430,6 +435,10 @@
             case '5207': return '../res/character_11230_t1.png'; break;
             case '5208': return '../res/character_11232_t1_dex.png'; break;
             case '5209': return '../res/character_11232_t1_int.png'; break;
+            case '5210': return '../res/character_11260_t1.png'; break;
+            case '5211': return '../res/character_11261_t1.png'; break;
+            case '5212': return '../res/character_11262_t1_dex.png'; break;
+            case '5213': return '../res/character_11262_t1_int.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
@@ -505,6 +514,8 @@
             case 9033: return '../res/skullBullet.png'; break;
             case 'skullKatakuri':
             case 9034: return '../res/skullKatakuri.png'; break;
+            case 'skullWhitebeard':
+            case 9035: return '../res/skullWhitebeard.png'; break;
         }
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
