@@ -5451,7 +5451,7 @@ window.drops = {
         
         {
             name: 'The Great Pirate\'s Legacy',
-            thumb: 3380,
+            thumb: 3379,
             global: true,
             nakama: null,
             gamewith: null,
