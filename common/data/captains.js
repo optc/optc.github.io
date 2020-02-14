@@ -10080,6 +10080,12 @@ window.captains = {
     2852: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
     },
+    2853: {
+        atk: function(p) { return p.unit.type == "PSY" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? p.actions[p.sourceSlot] ? 4.2 : 3 : p.actions[p.sourceSlot] ? 3 : 2.5 : 1; },
+    },
+    2854: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

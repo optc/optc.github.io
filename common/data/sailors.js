@@ -1091,6 +1091,15 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 30 : 0; },
     },
+    2853: {
+        atkStatic: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 75 : 0; },
+    },
+    2854: {
+        atkStatic: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter")) ? 50 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter")) ? 50 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter")) ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

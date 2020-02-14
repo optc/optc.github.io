@@ -4926,6 +4926,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2831 ],
+            'Round 2': [ 2854 ],
         },
         
     ],

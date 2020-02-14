@@ -8997,6 +8997,19 @@ window.specials = {
             });
         }
     },
+    2853: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2854: {
+        atk: function(p) { return p.defenseDown ? window.specials[2854].multiplier : 1; },
+        type: "conditional",
+        onActivation: function(p) {
+            window.specials[2854].multiplier = 1;
+            if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) {
+                window.specials[2854].multiplier = 2;
+            }
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
