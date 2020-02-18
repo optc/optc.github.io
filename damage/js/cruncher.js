@@ -337,6 +337,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) || 
                 ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
+            if (orb == 'empty') orb = 1;
             if (orb == 'wano') orb = 2.5;
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
@@ -397,7 +398,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = applySpecialMultipliersAndCaptainEffects(damage,hitModifiers,noSorting);
         // apply chain and bonus multipliers
         result = applyChainAndBonusMultipliers(result,hitModifiers,type);
-        if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);        
+        if (mapEffect.damage) result.result = applyEffectDamage(result.result, mapEffect.damage);  
+        //console.log(result);
         
         var overallDamage = result.result.reduce(function(prev,x) { return prev + x.damage; },0);
         
