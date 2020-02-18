@@ -1103,4 +1103,12 @@ window.effects = {
         id: 81, // don't change this
         emptyOrbsEnabled: true
     },
+
+    '2.5x Chain Lock - Vivi Rebecca Change Action': {
+        description: 'Limits chain multiplier to 2.5x',
+        thumb: 2601,
+        id: 82, // don't change this
+        chainLimiter: function() { return 2.5; },
+        chainAddition: function() { return 2.5; }
+    },
 };

@@ -724,6 +724,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ($scope.data.effect == '0.3x Chain Boost - Lucci Kaku Change Action'){
             addition = 0.3;
         }
+        if ($scope.data.effect == '2.5x Chain Lock - Vivi Rebecca Change Action'){
+            addition = 2.5;
+        }
         
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
