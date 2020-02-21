@@ -10086,6 +10086,10 @@ window.captains = {
     2854: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
     },
+    2855: {
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY" || p.unit.type == "INT") ? 1.25 : 1; },
+    },
     2856: {
         atk: function(p) { return (p.colorCount.DEX>=1 || p.colorCount.PSY>=1 || p.colorCount.INT>=1) ? p.actions[p.sourceSlot] ? 4.5 : 2.75 : 1; },
     },

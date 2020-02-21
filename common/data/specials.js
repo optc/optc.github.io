@@ -9002,7 +9002,7 @@ window.specials = {
     },
     2854: {
         atk: function(p) { return p.defenseDown ? window.specials[2854].multiplier : 1; },
-        type: "conditional",
+        type: "condition",
         onActivation: function(p) {
             window.specials[2854].multiplier = 1;
             if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) {

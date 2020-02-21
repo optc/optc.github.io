@@ -5552,6 +5552,13 @@ window.drops = {
         },
         
         {
+            name: 'Sweet Party!',
+            thumb: 2857,
+            gamewith: null,
+            'Chopperman Missions': [ 2855 ],
+        },
+        
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,
