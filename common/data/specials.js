@@ -9010,6 +9010,40 @@ window.specials = {
             }
         },
     },
+    2856: {
+        atk: function(p) { return window.specials[2856].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2856].multiplier == 1.75 ? 1 : 0);
+            window.specials[2856].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2856warning'
+            });
+        }
+    },
+    2857: {
+        affinity: function(p) { return window.specials[2857].multiplier; },
+        onActivation: function(p) {
+            var n = (window.specials[2857].multiplier == 1.75 ? 1 : 0);
+            window.specials[2857].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2857warning'
+            });
+        }
+    },
+    2858: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2858].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2858].multiplier == 1.75 ? 1 : 0);
+            window.specials[2858].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2858warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

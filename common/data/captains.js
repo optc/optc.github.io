@@ -10086,6 +10086,15 @@ window.captains = {
     2854: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
     },
+    2856: {
+        atk: function(p) { return (p.colorCount.DEX>=1 || p.colorCount.PSY>=1 || p.colorCount.INT>=1) ? p.actions[p.sourceSlot] ? 4.5 : 2.75 : 1; },
+    },
+    2857: {
+        //atk: function(p) { return (p.colorCount.DEX>=1 || p.colorCount.PSY>=1 || p.colorCount.INT>=1) ? p.actions[p.sourceSlot] ? 4.5 : 2.75 : 1; }, Change this eventually I guess
+    },
+    2858: {
+        atk: function(p) { return (p.colorCount.DEX>=1 || p.colorCount.PSY>=1 || p.colorCount.INT>=1) ? p.actions[p.sourceSlot] ? 4.5 : 2.75 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
