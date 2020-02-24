@@ -1917,7 +1917,7 @@ window.drops = {
             dropID: 'eventneo70',
             thumb: 2833,
             nakama: null,
-            gamewith: null,
+            gamewith: 186699,
             'All Difficulties': [ 2833 ]
         },
         
@@ -3408,7 +3408,7 @@ window.drops = {
             dropID: 'clash54',
             thumb: 2781,
             nakama: null,
-            gamewith: null,
+            gamewith: 178033,
             Master: [ 2781 ],
             Expert: [ 2781 ],
             Ultimate: [ 2781 ],
@@ -3419,7 +3419,7 @@ window.drops = {
             dropID: 'clash55',
             thumb: 2795,
             nakama: null,
-            gamewith: null,
+            gamewith: 180268,
             Master: [ 2795 ],
             Expert: [ 2795 ],
             Ultimate: [ 2795 ],
@@ -3431,7 +3431,7 @@ window.drops = {
             thumb: 2819,
             global: true,
             nakama: 4281900,
-            gamewith: null,
+            gamewith: 182533,
             Master: [ 2818 ],
             Expert: [ 2818 ],
             Ultimate: [ 2818 ],
@@ -3442,7 +3442,7 @@ window.drops = {
             dropID: 'clash57',
             thumb: 2846,
             nakama: null,
-            gamewith: null,
+            gamewith: 185672,
             Expert: [ 2846 ],
             Ultimate: [ 2846 ],
         },
@@ -4468,7 +4468,7 @@ window.drops = {
             thumb: 2813,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 181684,
             slefty: 'coliseums',
             Chaos: [ 2813, -2813 ],
         },
@@ -4478,7 +4478,7 @@ window.drops = {
             thumb: 2845,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 185012,
             slefty: 'coliseums',
             Chaos: [ 2844, -2845 ],
         },
@@ -4759,7 +4759,7 @@ window.drops = {
             dropID: 'treasuremap27',
             thumb: 2763,
             nakama: null,
-            gamewith: null,
+            gamewith: 175499,
             'Raging Sea': [ 2762 ]
         },
 
@@ -4768,7 +4768,7 @@ window.drops = {
             dropID: 'treasuremap28',
             thumb: 2792,
             nakama: null,
-            gamewith: null,
+            gamewith: 179702,
             'Raging Sea': [ 2791 ]
         },
 
@@ -4777,7 +4777,7 @@ window.drops = {
             dropID: 'treasuremap29',
             thumb: 2823,
             nakama: null,
-            gamewith: null,
+            gamewith: 182929,
             'Raging Sea': [ 2823 ]
         },
 
@@ -4786,7 +4786,7 @@ window.drops = {
             dropID: 'treasuremap30',
             thumb: 2850,
             nakama: null,
-            gamewith: null,
+            gamewith: 186492,
             'Raging Sea': [ 2850 ]
         },
         
@@ -4924,7 +4924,7 @@ window.drops = {
             dropID: 'bond6',
             thumb: 2831,
             nakama: null,
-            gamewith: null,
+            gamewith: 148537,
             'All Difficulties': [ 2831 ],
             'Round 2': [ 2854 ],
         },
@@ -5026,7 +5026,7 @@ window.drops = {
             name: 'Kizuna Clash! - Preparation Battle',
             thumb: 2833,
             nakama: null,
-            gamewith: null,
+            gamewith: [ 183973, 186699 ],
             'Round 1': [ 2833 ],
             'Round 2': [ 2852 ]
         },
@@ -5521,7 +5521,7 @@ window.drops = {
             name: 'Today is the Best Day of My Life!',
             thumb: 2816,
             nakama: null,
-            gamewith: null,
+            gamewith: 182349,
             showManual: true,
             'All Difficulties': [ 2815, -2815 ],
         },
@@ -5530,7 +5530,7 @@ window.drops = {
             name: 'O-Tama\'s Full Stomach Plan',
             thumb: 2815,
             nakama: null,
-            gamewith: null,
+            gamewith: 182349,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
         },
         
@@ -5538,7 +5538,7 @@ window.drops = {
             name: 'Anniversary Party',
             thumb: 2843,
             nakama: null,
-            gamewith: null,
+            gamewith: 184761,
             condition: "Complete Missions to get Bingo",
             'All Difficulties': [ 2842 ],
         },
@@ -5554,7 +5554,7 @@ window.drops = {
         {
             name: 'Sweet Party!',
             thumb: 2857,
-            gamewith: null,
+            gamewith: 187864,
             'Chopperman Missions': [ 2855 ],
         },
         

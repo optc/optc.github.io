@@ -2797,7 +2797,7 @@ window.units = [
     [ "Tony Tony Chopper, Awaiting for Christmas", "PSY", [ "Fighter", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 873, 351, 164, 1600, 772, 250, 1 ],
     [ "Tony Tony Chopper, Looking Foward to the Presents", "PSY", [ "Shooter", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1568, 759, 241, 3090, 1390, 431, 1 ],
     [ "Kureha & Hiriluk, Drum Island Doctors", "PSY", [ "Cerebral", "Driven" ], 5, 30, 4, 4, 99, 2000000, 1164, 678, 202, 2459, 1252, 352, 1 ],
-    [ "Wapol", "INT", [ "Shooter", "Driven" ], 5, 20, 4, 4, 99, 2000000, 1045, 420, 98, 2302, 1218, 156, 1 ],
+    [ "Wapol, Holy Night Hippopotamus", "INT", [ "Shooter", "Driven" ], 5, 20, 4, 4, 99, 2000000, 1045, 420, 98, 2302, 1218, 156, 1 ],
     [ "Charlotte Brûlée, Sister Snuggling with her Brother", "PSY", [ "Slasher", "Cerebral" ], 5, 1, 5, 4, 99, 2000000, 916, 404, 152, 2290, 1012, 381, 1 ],
     [ "Luffytaro & Zorojuro, Wano Country Visitors", [ "STR", "DEX" ], [[ "Free Spirit", "Slasher" ],[ "Free Spirit", "Slasher" ],[ "Free Spirit", "Slasher" ]], 5, 30, 4, 3, 70, 1066998, 632, 291, 21, 1822, 748, 197, 1 ],
     [ "Luffytaro & Zorojuro, Wano Country's Saviors", [ "STR", "DEX" ], [[ "Free Spirit", "Slasher" ],[ "Free Spirit", "Slasher" ],[ "Free Spirit", "Slasher" ]], 6, 55, 4, 5, 99, 5000000, 1762, 732, 182, 3722, 1628, 412, 1 ],
