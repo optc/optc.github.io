@@ -2498,21 +2498,23 @@ window.drops = {
         },
         
         {
-            name: 'Impel Down Breakout',
+            name: 'Escapees, Join the Fight!',
             dropID: 'event125',
+            global: true,
             thumb: 2692,
             nakama: 2269200,
             gamewith: 167197,
-            'All Difficulties': [ 2691, 2693, 2694, -2609, -2605, -2563, -2561, -2534, -2487, -2121, -2115, -2050 ]
+            'All Difficulties': [ 2691, 2693, 2694, -2609, -2605, -2563, -2561, -2534, -2487, -2121, -2115, -2119, -2050 ]
         },
         
         {
-            name: 'Thinking about Pops',
+            name: 'Remembering Pops',
             dropID: 'event126',
+            global: true,
             thumb: 2723,
             nakama: 2272300,
             gamewith: 171113,
-            'All Difficulties': [ 2722, 2724, -2607, -2577, -2575, -2567, -2346, -2119, -2117, -2027, -1794, -2005, -2565 ]
+            'All Difficulties': [ 2722, 2724, -2607, -2577, -2575, -2567, -2346, -2119, -2117, -2027, -1794, -1906, -2565 ]
         },
         
         {
@@ -3374,6 +3376,7 @@ window.drops = {
         {
             name: 'Showdown!! Crocodile',
             dropID: 'clash51',
+            global: true,
             thumb: 2698,
             nakama: 4269800,
             gamewith: 168159,
@@ -3385,6 +3388,7 @@ window.drops = {
         {
             name: 'Fight, Zorojuro',
             dropID: 'clash52',
+            global: true,
             thumb: 2707,
             nakama: 4270700,
             gamewith: 168824,
@@ -3393,8 +3397,9 @@ window.drops = {
         },
         
         {
-            name: 'Clash!! Law',
+            name: 'Those Who Gather in Wano: Trafalgar Law',
             dropID: 'clash53',
+            global: true,
             thumb: 2709,
             nakama: 4270900,
             gamewith: 168822,
@@ -3445,6 +3450,15 @@ window.drops = {
             gamewith: 185672,
             Expert: [ 2846 ],
             Ultimate: [ 2846 ],
+        },
+        
+        {
+            name: 'Attack!? Buggy Pirates',
+            dropID: 'clash58',
+            thumb: 2867,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2867 ]
         },
         
         {
