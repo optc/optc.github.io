@@ -3707,6 +3707,18 @@ window.drops = {
             Exebition: [ 1017, -1018 ],
         },
 
+
+        {
+            name: 'Exiled Spore Man',
+            thumb: 1087,
+            showManual: true,
+            global: true,
+            nakama: 5108601,
+            gamewith: 30801,
+            slefty: 'coliseums',
+            Chaos: [ 1086, -1087 ],
+        },
+
         {
             name: 'Z, Destroyer of Evil',
             thumb: 1102,
@@ -4438,7 +4450,7 @@ window.drops = {
         },
 
         {
-            name: 'Trafalgar Law',
+            name: 'Surgeon of Death\'s Operation',
             thumb: 2649,
             showManual: true,
             nakama: null,

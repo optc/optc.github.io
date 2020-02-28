@@ -10462,4 +10462,205 @@ window.specials = {
             });
         },
     },
+    5214: {
+        atk: function(p) { return window.specials[5214].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 30 ? 2.5 : 2);
+            window.specials[5214].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '5214warning'
+            });
+        }
+    },
+    5215: {
+        atk: function(p) { return window.specials[5215].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 30 ? 2.5 : 2);
+            window.specials[5215].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '5215warning'
+            });
+        }
+    },
+    5216: {
+        atk: function(p) { return window.specials[5216].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 30 ? 2.5 : 2);
+            window.specials[5216].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '5216warning'
+            });
+        }
+    },
+    5217: {
+        atk: function(p) { return window.specials[5217].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 30 ? 2.5 : 2);
+            window.specials[5217].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '5217warning'
+            });
+        }
+    },
+    5218: {
+        atk: function(p) { return window.specials[5218].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 30 ? 2.5 : 2);
+            window.specials[5218].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '5218warning'
+            });
+        }
+    },
+    5219: {
+        atk: function(p) { return window.specials[5219].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 30 ? 2.5 : 2);
+            window.specials[5219].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
+                name: '5219warning'
+            });
+        }
+    },
+    5220: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5221: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5222: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5223: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5224: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5225: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5226: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5227: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    5228: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5229: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5230: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5231: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5232: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5233: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5234: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5235: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    5236: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5237: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5238: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5239: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5240: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5241: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5242: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5243: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    5244: {
+        delay: function(p) { return 2; },
+    },
+    5245: {
+        delay: function(p) { return 2; },
+    },
+    5246: {
+        delay: function(p) { return 2; },
+    },
 };
