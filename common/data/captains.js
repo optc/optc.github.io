@@ -9634,11 +9634,11 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 2 : 1; }
     },
     2720: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
+        atk: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 2 : 1; },
         rcv: function(p) { return 0; },
     },
     2721: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+        atk: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 2.75 : 1; },
         rcv: function(p) { return 0; },
     },
     2722: {
