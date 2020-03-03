@@ -10099,6 +10099,11 @@ window.captains = {
     2858: {
         atk: function(p) { return (p.colorCount.DEX>=1 || p.colorCount.PSY>=1 || p.colorCount.INT>=1) ? p.actions[p.sourceSlot] ? 4.5 : 2.75 : 1; },
     },
+    2868: {
+        atk: function(p) {
+            return (p.unit.type == "QCK" || p.unit.type == "PSY") ? p.percHP >= 99.0 ? 4 : 3.5 : 1;
+        }
+    },
     2869: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.75 : 1; },
         hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },

@@ -2866,7 +2866,7 @@ window.units = [
     [ "Klahadore & Django, Young Lady Assassination Plan", [ "DEX", "QCK" ], [[ "Slasher", "Cerebral" ],[ "Slasher", "Cerebral" ],[ "Slasher", "Cerebral" ]], 4, 15, 4, 3, 50, 392109, 515, 233, 49, 1114, 630, 150, 1 ],
     [ "Kuro & Django, Black Cat Pirates' Captains", [ "DEX", "QCK" ], [[ "Slasher", "Cerebral" ],[ "Slasher", "Cerebral" ],[ "Slasher", "Cerebral" ]], 5, 30, 4, 4, 99, 4000000, 1102, 628, 138, 2778, 1461, 350, 1 ],
     [ "Buggy Pirates, The Clowns Seeking Vast Treasure", [ "INT", "INT" ], [[ "Driven", "Slasher" ],[ "Driven", "Slasher" ],[ "Driven", "Slasher" ]], 5, 30, 6, 4, 99, 5000000, 1283, 385, 116, 2914, 1255, 296, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Marco the Phoenix, Illusion Flame Beast", "QCK", [ "Fighter", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1692, 756, 303, 3150, 1424, 500, null ],
     [ "Komurasaki, Kitsune Mask", "PSY", [ "Cerebral", "Slasher" ], 5, 40, 5, 4, 99, 4000000, 1297, 432, 134, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

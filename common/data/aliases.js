@@ -2866,7 +2866,7 @@ window.aliases = {
     2865: [ 'クラハドール＆ジャンゴ “お嬢様暗殺計画”', '', 'Kuro&Django', 'Kuro and Django', 'Kuro Django', 'KuroDjango', 'Django&Kuro', 'Django and Kuro', 'Django Kuro', 'DjangoKuro' ],
     2866: [ 'クロ＆ジャンゴ クロネコ海賊団の船長達', '', 'Kuro&Django', 'Kuro and Django', 'Kuro Django', 'KuroDjango', 'Django&Kuro', 'Django and Kuro', 'Django Kuro', 'DjangoKuro' ],
     2867: [ 'バギー海賊団 莫大な財宝求める道化達', '', 'Buggy Pirates' ],
-    2868: [ '', '', '' ],
+    2868: [ '', '', 'Super Marco', 'Mega Marco', '6+ Marco' ],
     2869: [ '', '', 'Coliseum Komurasaki' ],
     2870: [ '', '', '' ],
     2871: [ '', '', '' ],

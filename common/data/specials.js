@@ -9044,6 +9044,9 @@ window.specials = {
             });
         }
     },
+    2868: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
