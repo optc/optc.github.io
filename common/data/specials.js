@@ -10469,7 +10469,7 @@ window.specials = {
         atk: function(p) { return window.specials[5214].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 30 ? 2.5 : 2);
+            var n = (p.percHP >= 30 ? 2 : 2.5);
             window.specials[5214].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
@@ -10481,7 +10481,7 @@ window.specials = {
         atk: function(p) { return window.specials[5215].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 30 ? 2.5 : 2);
+            var n = (p.percHP >= 30 ? 2 : 2.5);
             window.specials[5215].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
@@ -10493,7 +10493,7 @@ window.specials = {
         atk: function(p) { return window.specials[5216].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 30 ? 2.5 : 2);
+            var n = (p.percHP >= 30 ? 2 : 2.5);
             window.specials[5216].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
@@ -10505,7 +10505,7 @@ window.specials = {
         atk: function(p) { return window.specials[5217].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 30 ? 2.5 : 2);
+            var n = (p.percHP >= 30 ? 2 : 2.5);
             window.specials[5217].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
@@ -10517,7 +10517,7 @@ window.specials = {
         atk: function(p) { return window.specials[5218].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 30 ? 2.5 : 2);
+            var n = (p.percHP >= 30 ? 2 : 2.5);
             window.specials[5218].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
@@ -10529,7 +10529,7 @@ window.specials = {
         atk: function(p) { return window.specials[5219].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 30 ? 2.5 : 2);
+            var n = (p.percHP >= 30 ? 2 : 2.5);
             window.specials[5219].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',

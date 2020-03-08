@@ -1400,6 +1400,12 @@ window.matchers = [
     },
     
     {
+        name: 'Beneficial Orb support',
+        target: 'support',
+        matcher: /beneficial/i
+    },
+    
+    {
         name: 'Damage Reduction supports',
         target: 'support',
         matcher: /Reduces damage received/i
