@@ -10133,7 +10133,7 @@ window.captains = {
         chainModifier: function(p) { return 1.5; },
     },
     2879: {
-        atk: function(p) { return p.unit.type == "PSY" ? window.specials[2879].turnedOn ? p.actions[p.sourceSlot] ? 3.75 : 2 : p.actions[p.sourceSlot] ? 2.75 : 2) : 1; },
+        atk: function(p) { return p.unit.type == "PSY" ? window.specials[2879].turnedOn ? p.actions[p.sourceSlot] ? 3.75 : 2 : p.actions[p.sourceSlot] ? 2.75 : 2 : 1; },
         rcv: function(p) { return p.unit.type == "PSY" ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; }
     },
     2880: {
