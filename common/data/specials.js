@@ -2599,18 +2599,6 @@ window.specials = {
             });
         }
     },
-    1492: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1492].multiplier; },
-        type: "class",
-        onActivation: function(p) {
-            var n = (window.specials[1492].multiplier == 1.5 ? 1 : window.specials[1492].multiplier == 1.75 ? 2 : 0);
-            window.specials[1492].multiplier = [1.5, 1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1492warning'
-            });
-        }
-    },
     1497: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type"
@@ -9046,6 +9034,80 @@ window.specials = {
     },
     2868: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); }
+    },
+    2870: {
+        atk: function(p) { return 1.75; },
+        type: "class",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2871: {
+        def: function(p) { return 0.2; },
+        chain: function(p) { return window.specials[2871].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[2871].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2871].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2871].turnedOn = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "STR") ? 2.75 : 1;
+        },
+    },
+    2872: {
+        delay: function(p) { return 1; },
+        chainAddition: function(p) { return window.specials[2872].multiplier; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2872].turnedOn = p.captain != null && (p.captain.type == "INT" || p.captain.type == "STR") ? 0.5 : 0;
+        },
+    },
+    2873: {
+        atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+        type: "condition",
+    },
+    2874: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition"
+    },
+    2876:{
+        atk: function(p) { return p.defenseDown ? window.specials[2876].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[2876].multiplier == 1.5 ? 1 : window.specials[2876].multiplier == 1.75 ? 2 : 0);
+            window.specials[2876].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Conditional boost, disable and re-enable this special',
+                name: '2876warning'
+            });
+        },
+    },
+    2878:{
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2878].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2878].multiplier == 1.75 ? 1 : window.specials[2878].multiplier == 2 ? 2 : 0);
+            window.specials[2878].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2878warning'
+            });
+        },
+    },
+    2879: {
+        atk: function(p) { return window.specials[2879].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[2879].multiplier == 1.75 ? 1 : 0);
+            window.specials[2879].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '2804warning'
+            });
+        },
+    },
+    2880: {
+        atk: function(p) { return 2.25; },
+        type: "type",
+        warning: "Selected special (%name%) assumes that the enemy has ATK UP."
     },
     3333: {
         atk: function(p) { return 1.75; },
