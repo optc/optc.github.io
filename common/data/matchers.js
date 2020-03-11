@@ -1176,21 +1176,21 @@ window.matchers = [
     },
     
     {
-        name: 'Slot Bind Reduction Potential Ability',
+        name: 'Reduce Reduce Slot Bind duration Potential Ability',
         target: 'limit',
-        matcher: /Slot Bind Reduction/i
+        matcher: /Reduce Reduce Slot Bind duration/i
     },
     
     {
         name: 'Ship Bind Reduction Potential Ability',
         target: 'limit',
-        matcher: /Ship-Bind Reduction/i
+        matcher: /Ship Bind Reduction/i
     },
     
     {
         name: 'Sailor Despair Reduction Potential Ability',
         target: 'limit',
-        matcher: /Sailor-Despair Reduction/i
+        matcher: /Sailor Despair Reduction/i
     },
     
     {
@@ -1321,11 +1321,11 @@ window.matchers = [
         matcher: /boosts( own ATK| ATK of)/i
     },
     
-    /*{
+    {
         name: 'Combo Boost Specials',
         target: 'support',
         matcher: /Boost.+hit in the chain/i
-    },*/
+    },
 
     {
         name: 'Orb boosters',
@@ -1537,13 +1537,13 @@ window.matchers = [
         matcher: /(removes|reduces).+Increased Defense.+duration/i 
     },
 
-    /*{
+    {
         name: 'Enemy Percent Damage Reduction reducer',
         target: 'support',
         matcher: /(removes|reduces).+Percent Damage Reduction.+duration/i 
     },
 
-    {
+    /*{
         name: 'Enemy Damage Nullification reducer',
         target: 'support',
         matcher: /(removes|reduces).+Damage Nullification.+duration/i 
