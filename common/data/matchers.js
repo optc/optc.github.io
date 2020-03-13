@@ -1176,9 +1176,9 @@ window.matchers = [
     },
     
     {
-        name: 'Reduce Reduce Slot Bind duration Potential Ability',
+        name: 'Reduce Slot Bind duration Potential Ability',
         target: 'limit',
-        matcher: /Reduce Reduce Slot Bind duration/i
+        matcher: /Reduce Slot Bind duration/i
     },
     
     {
