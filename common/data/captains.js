@@ -10139,6 +10139,21 @@ window.captains = {
     2880: {
         atk: function(p) { return p.unit.type == "PSY" ? 3 : 1; },
     },
+    2881: {
+        atk: function(p) { return p.actions[p.sourceSlot] ? ((p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? 2.75 + 0.5 * (1 - (p.percHP) / 100) : 1) : (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? 2.25 + 0.75 * (1 - (p.percHP) / 100) : 1; },
+    },
+    2882: {
+        atk: function(p) { return p.actions[p.sourceSlot] ? ((p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? 3 : 1) : (p.unit.class.has("Driven") || p.unit.class.has("Shooter")) ? 2.75 : 1; },
+    },
+    2883: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? 3 : 1; },
+    },
+    2884: {
+        hitAtk: function(p) {
+            return (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.7 : 2.25 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -10272,12 +10287,12 @@ window.captains = {
         rcv: function(p) { return (p.unit.class.has("Cerebral")) ? 1.5 : 1; },
     },
     3377: {
-        atk: function(p) { return (p.colorCount.STR + p.colorCount.DEX + p.colorCount.QCK == 6) ? p.classCount.Slasher == 6 ? 1.75 : 1 : 1; },
-        chainModifier: function(p) { return  (p.colorCount.INT==0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? 4 : 1; }
+        atk: function(p) { return (p.colorCount.INT==0 && p.colorCount.PSY==0) ? 1.75 : 1; },
+        chainModifier: function(p) { return  (p.colorCount.INT==0 && p.colorCount.PSY==0) ? 4 : 1; }
     },
     3378: {
-        atk: function(p) { return (p.colorCount.STR + p.colorCount.DEX + p.colorCount.QCK == 6) ? p.classCount.Slasher == 6 ? 1.75 : 1 : 1; },
-        chainModifier: function(p) { return  (p.colorCount.INT==0 && p.colorCount.PSY==0 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? 4 : 1; }
+        atk: function(p) { return (p.colorCount.INT==0 && p.colorCount.PSY==0) ? 1.75 : 1; },
+        chainModifier: function(p) { return  (p.colorCount.INT==0 && p.colorCount.PSY==0) ? 4 : 1; }
     },
     3379: {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 3.25 + 1.25 * (1 - (p.percHP) / 100) : 1; },

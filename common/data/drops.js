@@ -3462,6 +3462,15 @@ window.drops = {
         },
         
         {
+            name: '"Free Spirit" vs "Strongest"',
+            dropID: 'clash59',
+            thumb: 2883,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2883 ]
+        },
+        
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
@@ -5503,6 +5512,17 @@ window.drops = {
             gamewith: 143825,
             condition: 'Sanji & Judge batch (ID 2445-2454) are stat boosted by 1.25x ATK, HP and RCV',
             'Challenge Unit': [ 2455 ],
+        },
+        
+        {
+            name: 'Proof of "The World\'s Strongest"',
+            thumb: 2674,
+            nakama: null,
+            gamewith: null,
+            condition: 'Certain Stampede units have boosted stats',
+            challenge: 'Damage in one turn',
+            challengeData: [['15,000,000','3x Rainbow Gems'],['30,000,000','10x Rainbow Gems'],['55,000,000','6x Buena Festa']],
+            'Challenge Unit': [ 2884 ],
         },
         
         {

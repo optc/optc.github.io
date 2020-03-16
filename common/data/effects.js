@@ -493,17 +493,17 @@ window.effects = {
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([ 2181, 5020, 5021, 5022, 5023, 2265, 2302, 2338, 2418, 5040, 5041, 5042, 5043, 2441, 2534, 5086, 5087, 5088, 5089, 2601, 5164, 5165, 5166, 5167, 2603, 5172, 5173, 5174, 5175, 2700, 2702, 2704, 2706 ].indexOf(id) != -1);
+                matching = ([ 3378, 2408, 2407, 2405, 2403, 2401, 2265 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([ 2181, 5020, 5021, 5022, 5023, 2265, 2302, 2338, 2418, 5040, 5041, 5042, 5043, 2441, 2534, 5086, 5087, 5088, 5089, 2601, 5164, 5165, 5166, 5167, 2603, 5172, 5173, 5174, 5175, 2700, 2702, 2704, 2706 ].indexOf(id) != -1);
+                matching = ([ 3378, 2408, 2407, 2405, 2403, 2401, 2265 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([ 2181, 5020, 5021, 5022, 5023, 2265, 2302, 2338, 2418, 5040, 5041, 5042, 5043, 2441, 2534, 5086, 5087, 5088, 5089, 2601, 5164, 5165, 5166, 5167, 2603, 5172, 5173, 5174, 5175, 2700, 2702, 2704, 2706 ].indexOf(id) != -1);
+                matching = ([ 3378, 2408, 2407, 2405, 2403, 2401, 2265 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},
@@ -1110,5 +1110,35 @@ window.effects = {
         id: 82, // don't change this
         chainLimiter: function() { return 2.5; },
         chainAddition: function() { return 2.5; }
+    },
+    
+    'Proof of "The World\s Strongest"': {
+        description: 'Stats of certain units boosted.',
+        thumb: 2672,
+        id: 83, // don't change this
+        atk: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2883 ].indexOf(id) != -1) boost = 2;
+            if([ 2881, 2882 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2684, 2682, 2681, 2672, 2670, 2659, 2649 ].indexOf(id) != -1) boost = 1.25;
+            return boost;
+        },    
+        hp: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2883 ].indexOf(id) != -1) boost = 2;
+            if([ 2881, 2882 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2684, 2682, 2681, 2672, 2670, 2659, 2649 ].indexOf(id) != -1) boost = 1.25;
+            return boost;
+        },    
+        rcv: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2883 ].indexOf(id) != -1) boost = 2;
+            if([ 2881, 2882 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2684, 2682, 2681, 2672, 2670, 2659, 2649 ].indexOf(id) != -1) boost = 1.25;
+            return boost;
+        },    
     },
 };

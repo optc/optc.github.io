@@ -9109,6 +9109,28 @@ window.specials = {
         type: "type",
         warning: "Selected special (%name%) assumes that the enemy has ATK UP."
     },
+    2881: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2881].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            if (p.colorCount.STR + p.colorCount.QCK + p.colorCount.PSY >= 3) {
+                window.specials[2881].multiplier = 2;
+            }
+            else {
+                window.specials[2881].multiplier = 1;
+            }
+        },
+    },
+    2883: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2883].multiplier : 1; },
+        onActivation: function(p) {
+            if (p.colorCount.STR + p.colorCount.QCK + p.colorCount.PSY >= 6) {
+                window.specials[2883].multiplier = 2;
+            }
+            else {
+                window.specials[2883].multiplier = 1.75;
+            }
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
