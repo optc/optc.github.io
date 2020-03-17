@@ -641,5 +641,16 @@ window.ships = [
             return [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000 ][p.boatLevel - 1];
         }
     },
+    
+    
+    
+    { //47
+        name: "Merry Go Goodbye",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x, reduces cooldown of all specials by 5 turns.',
+        atk: function(p) {
+            return 1.5;
+        },
+    },
 
 ];

@@ -9131,6 +9131,43 @@ window.specials = {
             }
         },
     },
+    2885: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2885].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects captain damage if CP9 is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
+                name: '2885warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2885].turnedOn = false;
+        }
+    },
+    2886: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2886].turnedOn = true;
+            p.scope.notify({
+                text: 'Only affects captain damage if CP9 is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
+                name: '2886warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2886].turnedOn = false;
+        }
+    },
+    2892: {
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2892].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2892].multiplier == 1.75 ? 1 : 0);
+            window.specials[2892].multiplier = [1.75, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
+                name: '2892warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

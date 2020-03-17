@@ -1120,6 +1120,11 @@ window.sailors = {
         hpStatic: function(p) { return (p.unit.class.has("Driven")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Driven")) ? 50 : 0; },
     },
+    2892: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 40 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
