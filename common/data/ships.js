@@ -618,10 +618,10 @@ window.ships = [
         thumb: null,
         description: 'Boosts ATK of [QCK] and [INT] characters by 1.5x and their HP by 1.2x. Makes [RCV] orbs beneficial for [QCK] and [INT] characters. If HP is above 99% at the start of the turn, boosts ATK of [QCK] and [INT] characters by 1.6x.',
         atk: function(p) {
-            return p.unit.type == "PSY" || p.unit.type == "STR" ? (p.p.percHP > 99.0) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "QCK" || p.unit.type == "INT" ? (p.p.percHP > 99.0) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.type == "PSY" || p.unit.type == "STR" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1] : 1;
+            return p.unit.type == "QCK" || p.unit.type == "INT" ? [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2 ][p.boatLevel - 1] : 1;
         },
     },
     
@@ -640,6 +640,17 @@ window.ships = [
         heal: function(p) {
             return [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000 ][p.boatLevel - 1];
         }
+    },
+    
+    
+    
+    { //47
+        name: "Merry Go Goodbye",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x, reduces cooldown of all specials by 5 turns.',
+        atk: function(p) {
+            return 1.5;
+        },
     },
 
 ];
