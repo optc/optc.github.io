@@ -10155,11 +10155,18 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
     2885: {
-        atk: function(p) { return ((window.specials[2632].turnedOn) && p.sourceSlot == 1) ? p.slot == p.sourceSlot ? 4.25 : 3.5 : 2.75; },
+        atk: function(p) { return ((window.specials[2885].turnedOn) && p.sourceSlot == 1) ? p.slot == p.sourceSlot ? 4.25 : 3.5 : 2.75; },
         hp: function(p) { return 1.2; },
     },
     2886: {
-        atk: function(p) { return ((window.specials[2632].turnedOn) && p.sourceSlot == 1) ? p.slot == p.sourceSlot ? 4.25 : (p.unit.class.has("Driven") || p.unit.class.has("Slasher")) ? ((window.specials[2632].turnedOn) && p.sourceSlot == 1) ? 3.75 : 3 : 1; },
+        atk: function(p) { 
+            if ((window.specials[2886].turnedOn) && p.sourceSlot == 1){
+                if (p.slot == p.sourceSlot) return 4.25;
+                else if (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) return 3.75;
+            }
+            else if (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) return 3;
+            return 1;
+        },
         hp: function(p) { return 1.2; },
     },
     2892: {
