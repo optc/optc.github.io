@@ -4509,6 +4509,7 @@ window.drops = {
             name: 'Invincible Ship Guardsman',
             thumb: 2611,
             showManual: true,
+            global: true,
             nakama: 5261001,
             gamewith: 156226,
             slefty: 'coliseums',
@@ -4520,6 +4521,7 @@ window.drops = {
             name: 'Surgeon of Death\'s Operation',
             thumb: 2649,
             showManual: true,
+            global: true,
             nakama: 5264801,
             gamewith: 160900,
             slefty: 'coliseums',
@@ -4528,10 +4530,11 @@ window.drops = {
         },
 
         {
-            name: 'Hody Jones',
+            name: 'Monster Made from Hatred',
             thumb: 2721,
             showManual: true,
-            nakama: null,
+            global: true,
+            nakama: 5272001,
             gamewith: 170522,
             slefty: 'coliseums',
             Chaos: [ 2720, -2721 ],
@@ -4837,6 +4840,7 @@ window.drops = {
             name: 'Blackbeard',
             dropID: 'treasuremap25',
             thumb: 2690,
+            global: true,
             nakama: 8269000,
             gamewith: 167160,
             'Raging Sea': [ 2689 ]
@@ -4846,6 +4850,7 @@ window.drops = {
             name: 'Basil Hawkins',
             dropID: 'treasuremap26',
             thumb: 2729,
+            global: true,
             nakama: null,
             gamewith: 171580,
             'Raging Sea': [ 2728 ]
@@ -4994,6 +4999,7 @@ window.drops = {
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
             'Round 3': [ 2629 ],
+            'Round 4': [ 2405 ],
             'Round 5': [ 2682 ],
             'Round 6': [ 2733 ],
         },
@@ -5601,6 +5607,7 @@ window.drops = {
         {
             name: 'Breakthrough the Marine Seige',
             thumb: 2668,
+            global: true,
             nakama: 626680,
             gamewith: 162504,
             condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Simple Pistol, Swordsman\'s Loot」, 「Heavy Pistol, Swordsman\'s Loot」, and 「Luxorious Pistol, Marine\'s Loot」.',
