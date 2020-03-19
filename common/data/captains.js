@@ -10169,6 +10169,21 @@ window.captains = {
         },
         hp: function(p) { return 1.2; },
     },
+    2887: {
+        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) ? 3 : 2.5; },
+    },
+    2888: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
+    },
+    2889: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+    },
+    2890: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ||) ? 3 : 1; },
+    },
+    2891: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+    },
     2892: {
         hitAtk: function(p) {
             return (p.unit.type == "QCK" || p.unit.type == "PSY") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.25 : 
