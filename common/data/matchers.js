@@ -1184,13 +1184,13 @@ window.matchers = [
     {
         name: 'Ship Bind Reduction Potential Ability',
         target: 'limit',
-        matcher: /Ship Bind Reduction/i
+        matcher: /Reduce Ship Bind duration/i
     },
     
     {
         name: 'Sailor Despair Reduction Potential Ability',
         target: 'limit',
-        matcher: /Sailor Despair Reduction/i
+        matcher: /Reduce Sailor Despair duration/i
     },
     
     {
