@@ -4982,6 +4982,15 @@ window.drops = {
             'Round 2': [ 2854 ],
         },
         
+        {
+            name: 'Moria',
+            dropID: 'bond7',
+            thumb: 2890,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2890, 2891 ],
+        },
+        
     ],
 
     'Special': [
