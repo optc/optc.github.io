@@ -9093,9 +9093,11 @@ window.specials = {
         },
     },
     2879: {
+        turnedOn: false,
         atk: function(p) { return window.specials[2879].multiplier; },
         type: "type",
         onActivation: function(p) {
+            window.specials[2879].turnedOn = true;
             var n = (window.specials[2879].multiplier == 1.75 ? 1 : 0);
             window.specials[2879].multiplier = [1.75, 2][n];
             p.scope.notify({
@@ -9103,6 +9105,9 @@ window.specials = {
                 name: '2804warning'
             });
         },
+        onDeactivation: function(p) {
+            window.specials[2879].turnedOn = false;
+        }
     },
     2880: {
         atk: function(p) { return 2.25; },
