@@ -10170,7 +10170,7 @@ window.captains = {
         hp: function(p) { return 1.2; },
     },
     2887: {
-        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) ? 3 : 2.5; },
+        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) ? p.actions[p.sourceSlot] ? 4.5 : 3 : p.actions[p.sourceSlot] ? 3.25 : 2.5; },
     },
     2888: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
