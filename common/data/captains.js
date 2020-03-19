@@ -10179,7 +10179,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
     },
     2890: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ||) ? 3 : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 3 : 1; },
     },
     2891: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? 2.25 : 1; },
