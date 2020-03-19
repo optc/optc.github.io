@@ -736,7 +736,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'special',
         matcher: /(reduces|removes).+silence.+duration/i
     },
@@ -962,7 +962,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'swap',
         matcher: /(reduces|removes).+silence.+duration/i
     },
@@ -1048,7 +1048,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'sailor',
         matcher: /(reduces|removes|resists).+silence/i
     },
@@ -1448,7 +1448,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'support',
         matcher: /(reduces|removes).+silence.+duration/i
     },
