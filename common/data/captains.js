@@ -7093,10 +7093,10 @@ window.captains = {
         hitAtk: function(p) {
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             var tesoroModifier = (p.chainPosition === 0 ? 1 : (prev == 'Good' ? 1 : (prev == 'Great' ? 1 : (prev == 'Perfect' ? .7 : 1))));
-            return (p.classCount.Striker>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1 && p.classCount.FreeSpirit>=1 && p.classCount.Cerebral>=1 && p.classCount.Powerhouse>=1 && p.classCount.Driven>=1) ? p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great", "Great"]) ? 4.5 * tesoroModifier : 3.75 * tesoroModifier : 1;
+            return p.actions[p.sourceSlot] ? p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great", "Great"]) ? 4.75 * tesoroModifier : 3.75 * tesoroModifier : (p.classCount.Striker>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1 && p.classCount.FreeSpirit>=1 && p.classCount.Cerebral>=1 && p.classCount.Powerhouse>=1 && p.classCount.Driven>=1) ? p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great", "Great"]) ? 4.5 * tesoroModifier : 3.75 * tesoroModifier : 1;
         },
         hitModifiers: ["Perfect", "Great", "Great", "Great", "Great", "Perfect"],
-        hp: function(p) { return (p.classCount.Striker>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1 && p.classCount.FreeSpirit>=1 && p.classCount.Cerebral>=1 && p.classCount.Powerhouse>=1 && p.classCount.Driven>=1) ? 1.35 : 1; },
+        hp: function(p) { return p.actions[p.sourceSlot] ? 1.35 : (p.classCount.Striker>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1 && p.classCount.FreeSpirit>=1 && p.classCount.Cerebral>=1 && p.classCount.Powerhouse>=1 && p.classCount.Driven>=1) ? 1.35 : 1; },
     },
     2100: {
         atk: function(p) {
@@ -8113,11 +8113,16 @@ window.captains = {
     },
     2330: {
         atk: function(p) {
-            if(p.classCount.Shooter == 6) {
-                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.9 : 3.25;
+            if (p.actions[p.sourceSlot]){
+                return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 4 : 3.5;
             }
-            else
-                return 1;
+            else{
+                if(p.classCount.Shooter == 6) {
+                    return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.9 : 3.25;
+                }
+                else
+                    return 1;
+            }
         },
     },
     2331: {

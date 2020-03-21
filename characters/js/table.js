@@ -396,6 +396,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else if (c == 'Limit Break HP') temp = x.limitHP;
             else if (c == 'Limit Break ATK') temp = x.limitATK;
             else if (c == 'Limit Break RCV') temp = x.limitRCV;
+            else if (c == 'Limit Break: Expansion HP') temp = x.limitexHP;
+            else if (c == 'Limit Break: Expansion ATK') temp = x.limitexATK;
+            else if (c == 'Limit Break: Expansion RCV') temp = x.limitexRCV;
             else if (c == 'Limit Break Slots') temp = x.limitSlot;
             else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
                 var d = cooldowns[x.number];
@@ -409,6 +412,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                 if (!d) temp = 'N/A';
                 else if (c == 'Minimum Limit Break cooldown' && d.constructor == Array) temp = (d[1] - x.limitCD);
                 else if (c == 'Initial Limit Break cooldown') temp = (d.constructor == Array ? (d[0] - x.limitCD) : (d - x.limitCD));
+                else temp = 'Unknown';
+            }
+            else if (c == 'Minimum Limit Break Expansion cooldown' || c == 'Initial Limit Break Expansion cooldown') { 
+                var d = cooldowns[x.number];
+                if (!d) temp = 'N/A';
+                else if (c == 'Minimum Limit Break cooldown' && d.constructor == Array) temp = (d[1] - x.limitexCD);
+                else if (c == 'Initial Limit Break cooldown') temp = (d.constructor == Array ? (d[0] - x.limitexCD) : (d - x.limitexCD));
                 else temp = 'Unknown';
             }
             if (temp && temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';
