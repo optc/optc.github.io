@@ -1300,19 +1300,19 @@ window.matchers = [
     {
         name: 'ATK Boosting Support',
         target: 'support',
-        matcher: /Adds.+ATK/i
+        matcher: /Adds.+%.+ATK/i
     },
     
     {
         name: 'HP Boosting Support',
         target: 'support',
-        matcher: /Adds.+HP/i
+        matcher: /Adds.+%.+HP/i
     },
     
     {
         name: 'RCV Boosting Support',
         target: 'support',
-        matcher: /Adds.+RCV/i
+        matcher: /Adds.+%.+RCV/i
     },
 
     {
@@ -1373,6 +1373,12 @@ window.matchers = [
         name: 'Chain Lockers',
         target: 'support',
         matcher: /Locks the chain multiplier/i 
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'support',
+        matcher: /Additional.+Damage/i
     },
     
     {

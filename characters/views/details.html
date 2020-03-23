@@ -135,7 +135,7 @@
                                         <td ng-if="!compare">{{unit.limitRCV | number}} (+{{unit.limitRCV-unit.maxRCV | number}})</td>
                                         <td ng-if="compare" comparison="positive">{{unit.limitRCV - compare.limitRCV | number}}</td>
                                     </tr>
-                                    <tr ng-if="!((unit.limitexHP-unit.maxHP == 0) && (unit.limitexATK-unit.maxATK == 0) && (unit.limitexRCV-unit.maxRCV == 0))">
+                                    <tr ng-if="!((unit.limitexHP == unit.limitHP) && (unit.limitexATK == unit.limitATK) && (unit.limitexRCV == unit.limitRCV))">
                                         <td>Limit Break Expansion</td>
                                         <td ng-if="!compare">{{unit.limitexHP | number}} (+{{unit.limitexHP-unit.maxHP | number}})</td>
                                         <td ng-if="compare" comparison="positive">{{unit.limitexHP - compare.limitexHP | number}}</td>

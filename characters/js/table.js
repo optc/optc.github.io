@@ -417,8 +417,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else if (c == 'Minimum Limit Break Expansion cooldown' || c == 'Initial Limit Break Expansion cooldown') { 
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
-                else if (c == 'Minimum Limit Break cooldown' && d.constructor == Array) temp = (d[1] - x.limitexCD);
-                else if (c == 'Initial Limit Break cooldown') temp = (d.constructor == Array ? (d[0] - x.limitexCD) : (d - x.limitexCD));
+                else if (c == 'Minimum Limit Break Expansion cooldown' && d.constructor == Array) temp = (d[1] - x.limitexCD);
+                else if (c == 'Initial Limit Break Expansion cooldown') temp = (d.constructor == Array ? (d[0] - x.limitexCD) : (d - x.limitexCD));
                 else temp = 'Unknown';
             }
             if (temp && temp.constructor != String && !isNaN(temp) && !isFinite(temp)) temp = '&#8734;';

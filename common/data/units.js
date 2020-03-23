@@ -2881,7 +2881,7 @@ window.units = [
     [ "Mr. 2 Bon Clay, First Class Okama", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 99, 4000000, 1199, 539, 120, 2998, 1348, 301, 1 ],
     [ "Sir Crocodile, The Battlefront's Secret Maneuverer", "STR", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1184, 711, 111, 2806, 1444, 251, 1 ],
     [ "Buggy, United Battlefront", "STR", [ "Driven", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1202, 701, 132, 2910, 1335, 270, 1 ],
-    [ "Douglas Bullet, Bearer of Unrivaled Strength", "QCK", [ "Driven", "Fighter" ], 5, 50, 4, 4, 99, 5000000, 999, 551, 52, 2425, 1235, 151, 1 ],
+    [ "Douglas Bullet, Bearer of Unrivaled Strength", "QCK", [ "Driven", "Fighter" ], 5, 50, 4, 4, 99, 4000000, 999, 551, 52, 2425, 1235, 151, 1 ],
     [ "Buena Festa, Pirate Expo's Mastermind", "QCK", [ "Driven", "Fighter" ], 5, 1, 4, 4, 99, 1000000, 1042, 666, 171, 2456, 1250, 374, 1 ],
     [ "Cipher Pol No. 9, Spandam & his Trusty Subordinates", "STR", [ "Driven", "Slasher" ], 5, 50, 4, 3, 99, 5000000, 1320, 547, 78, 3300, 1368, 194, 1 ],
     [ "Cipher Pol No. 9 [Neo], Spandam & his Trusty Subordinates", "QCK", [ "Driven", "Slasher" ], "5+", 50, 4, 3, 99, 5000000, 1388, 579, 96, 3470, 1448, 239, 1 ],
