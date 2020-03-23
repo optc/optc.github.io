@@ -3462,7 +3462,7 @@ window.drops = {
         },
         
         {
-            name: '"Free Spirit" vs "Strongest"',
+            name: '"Freedom" vs "Strongest"',
             dropID: 'clash59',
             thumb: 2883,
             nakama: null,
