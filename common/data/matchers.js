@@ -1362,6 +1362,12 @@ window.matchers = [
         target: 'support',
         matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
     },
+
+    {
+        name: 'Specific Enemy ATK boosters',
+        target: 'support',
+        matcher: /Boosts the supported character's ATK.+against/i
+    },
     
     {
         name: 'Chain Boosters',

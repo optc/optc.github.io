@@ -2665,7 +2665,7 @@ window.aliases = {
     2664: [ 'サンジ 銀鎧の一流コック', '', 'Armor Sanji', 'Knight Sanji' ],
     2665: [ 'アン 歌姫', '', 'Fortnight Ann', 'Stampede Ann' ],
     2666: [ 'ドナルド・モデラート 仕切り屋', '', 'Fortnight Donald Moderate', 'Stampede Donald Moderate' ],
-    2667: [ '藤虎 『海賊万博』への襲撃', '', 'Stampede Fujitora' ],
+    2667: [ '藤虎 『海賊万博』への襲撃', '', 'Stampede Fujitora', 'Stampede Issho' ],
     2668: [ 'イッショウ 海賊への餞別', '', 'Stampede Fujitora' ],
     2669: [ 'ロブ・ルッチ 『海賊万博』の静観者', '', 'Raid Lucci', 'Stampede Lucci' ],
     2670: [ 'ロブ・ルッチ 共同戦線の追撃者', '', 'Raid Lucci', 'Stampede Lucci' ],
