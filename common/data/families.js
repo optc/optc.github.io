@@ -2865,6 +2865,7 @@ window.families = [
     [ "Don Krieg", "Gin" ],
     [ "Kuro", "Django" ],
     [ "Kuro", "Django" ],
+    [ "Buggy", "Cabaji", "Mohji & Richie" ]
     "Marco",
     "Kozuki Hiyori",
     "Monkey D. Luffy",
@@ -2891,7 +2892,6 @@ window.families = [
     null,
     null,
     "Usopp",
-    null,
     null,
     null,
     null,
