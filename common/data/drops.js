@@ -4944,6 +4944,17 @@ window.drops = {
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
         },
         
+        {
+            name: 'Ambush!? Condoriano',
+            //dropID: 'ambush',
+            thumb: 3380,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of something. You MUST use the same team that you just used to complete the Raid boss to fight Condoriano.',
+            'All Difficulties': [ 3380 ]
+        },
+        
     ],
 
             

@@ -10368,6 +10368,9 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 3.25 + 1.25 * (1 - (p.percHP) / 100) : 1; },
         rcv: function(p) { return 0; },
     },
+    3380: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
