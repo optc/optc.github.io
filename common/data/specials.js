@@ -9204,6 +9204,77 @@ window.specials = {
             });
         },
     },
+    2893: {
+        affinity: function(p) { return p.unit.type == "STR" ? window.specials[2893].multiplier : 1; },
+        onActivation: function(p) {
+            if (p.captain.type == "STR") {
+                window.specials[2893].multiplier = 2;
+            }
+            else {
+                window.specials[2893].multiplier = 1;
+            }
+        },
+    },
+    2896: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[2896].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Kizaru is your captain',
+                name: '2896warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2896].turnedOn[p.slot] = false;
+        }
+    },
+    2897: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? 2 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[2897].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Kizaru is your captain',
+                name: '2897warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[2897].turnedOn[p.slot] = false;
+        }
+    },
+    2900: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2900].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            if (p.colorCount.STR + p.colorCount.PSY >= 5) {
+                window.specials[2900].multiplier = 2;
+            }
+            else {
+                window.specials[2900].multiplier = 1;
+            }
+        },
+    },
+    2901: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2901].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            if (p.colorCount.STR + p.colorCount.PSY >= 5) {
+                window.specials[2901].multiplier = 2;
+            }
+            else {
+                window.specials[2901].multiplier = 1;
+            }
+        },
+    },
+    2902: {
+        chainAddition: function(p) { return 0.6; }
+    },
+    2903: {
+        chainAddition: function(p) { return 0.6; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -10822,5 +10893,37 @@ window.specials = {
     },
     5246: {
         delay: function(p) { return 2; },
+    },
+    5247: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5248: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5249: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5250: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5251: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5252: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5253: {
+        atk: function(p) { return 2; },
+        type: "condition",
+    },
+    5254: {
+        atk: function(p) { return 2; },
+        type: "condition",
     },
 };
