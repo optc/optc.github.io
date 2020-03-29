@@ -724,7 +724,7 @@ window.drops = {
         },
         
         {
-            name: 'King Neptune\'s Execution Site - Noah\'s Ark',
+            name: 'Execution Platform of the King to Ark of Noah',
             dropID: 'story31',
             shortName: 'Fishman Island 2',
             thumb: 1562,
@@ -749,7 +749,7 @@ window.drops = {
         },
         
         {
-            name: 'Punk Hazard - Burning Lands to Laboratory',
+            name: 'Burning Island to Research Lab Entrance',
             dropID: 'story32',
             shortName: 'Punk Hazard 1',
             thumb: 1637,
@@ -775,7 +775,7 @@ window.drops = {
         },
         
         {
-            name: 'Punk Hazard - Ice Lands to First Floor Room R',
+            name: 'Land of Ice to Lab R-1',
             dropID: 'story33',
             shortName: 'Punk Hazard 2',
             thumb: 1716,
@@ -800,7 +800,7 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Port Town Acacia to Coliseum',
+            name: 'Port Town Acacia to Coliseum',
             dropID: 'story34',
             shortName: 'Dressrosa 1',
             thumb: 1782,
@@ -823,7 +823,7 @@ window.drops = {
         },
         
         {
-            name: 'Dressrosa - Coliseum Lodging to Executive Tower',
+            name: 'Coliseum Lodging to Officer’s Tower',
             dropID: 'story35',
             shortName: 'Dressrosa 2',
             thumb: 2004,
@@ -879,7 +879,7 @@ window.drops = {
             gamewith: 111173,
             '01': [ 2003 ],
             '02': [  ],
-            '03': [  ],
+            '03': [ 1627 ],
             '04': [ 1292 ],
             '05': [ 1400 ],
             '06': [  ],
@@ -939,7 +939,7 @@ window.drops = {
         },
         
         {
-            name: 'Outside of Town - Bege\'s Hideout',
+            name: 'Town Outskirts to Bege\'s Hideout',
             dropID: 'story40',
             shortName: 'Whole Cake 2',
             thumb: 2597,
@@ -2458,7 +2458,7 @@ window.drops = {
         },
         
         {
-            name: 'Hell\'s Past! Young Doflamingo',
+            name: 'Doflamingo\'s Childhood',
             dropID: 'event121',
             global: true,
             thumb: 2571,
@@ -2783,7 +2783,7 @@ window.drops = {
             condition: '4 Master versions with different conditions. Slasher/Striker/Free Spirit Only, Slasher Only, Striker Only and Free Spirit Only',
             thumb: 3368,
             global: true,
-            nakama: null,
+            nakama: 4065400,
             gamewith: null,
             Master: [ 3366 ],
         },
@@ -2818,7 +2818,7 @@ window.drops = {
             dropID: 'clashneo14',
             thumb: 3357,
             global: true,
-            nakama: null,
+            nakama: 4335700,
             gamewith: null,
             condition: 'Take 10% current Health in Environmental Damage every 2 turns. Master: Free Spirit/Driven/Cerebral Only',
             Expert: [ 3356 ]
@@ -5161,7 +5161,7 @@ window.drops = {
             name: 'Memories of Marineford',
             thumb: 1985,
             global: true,
-            nakama: null,
+            nakama: 6198500,
             gamewith: 100030,
             condition: 'Available for 30 minutes after starting, drops +10 Cotton Candy.',
         },
@@ -5170,7 +5170,7 @@ window.drops = {
             name: 'Beginner Adventure: Whole Cake Island Special Edition',
             thumb: 2532,
             global: true,
-            nakama: null,
+            nakama: 6253200,
             gamewith: 149693,
             'All Difficulties': [ 2532 ]
         },
@@ -5483,7 +5483,7 @@ window.drops = {
         },
         
         {
-            name: 'Higuma - The Bandit Who Rowed Out to Sea',
+            name: 'Higuma - Mountain Bandit at Sea',
             thumb: 2259,
             global: true,
             nakama: 6225900,
@@ -5565,6 +5565,7 @@ window.drops = {
         {
             name: 'Proof of "The World\'s Strongest"',
             thumb: 2674,
+            global: true,
             nakama: null,
             gamewith: null,
             condition: 'Certain Stampede units have boosted stats',
@@ -5577,7 +5578,7 @@ window.drops = {
             name: 'Black Blade Training',
             thumb: 2475,
             global: true,
-            nakama: null,
+            nakama: 6247500,
             gamewith: 147515,
             condition: 'Certain units stats boosted by 1.25x and 8 turns special cooldown reduction. Challenge Difficulty: Total Crew Cost must be 180 Cost or less.\nChance to drop the 「Old Sword, Swordsman\'s Loot」, 「Baboon Sword, Swordsman\'s Loot」, and 「Muggy Kingdom Sword, Swordsman\'s Loot」.',
             'Chopperman Missions': [ 2499 ],
@@ -5586,7 +5587,8 @@ window.drops = {
         {
             name: 'Breakthrough the Marine Seige',
             thumb: 2668,
-            nakama: null,
+            global: true,
+            nakama: 626680,
             gamewith: 162504,
             condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Simple Pistol, Swordsman\'s Loot」, 「Heavy Pistol, Swordsman\'s Loot」, and 「Luxorious Pistol, Marine\'s Loot」.',
             'Chopperman Missions': [ 2667 ],
@@ -5649,7 +5651,8 @@ window.drops = {
         {
             name: 'World Journey Mission',
             thumb: 2825,
-            nakama: null,
+            global: true,
+            nakama: 6282500,
             condition: 'Mihawk: Slasher or Cerebral only. Hancock: Shooter or Free Spirit only. Crocodile: Striker or Driven only',
             gamewith: 183779,
         },

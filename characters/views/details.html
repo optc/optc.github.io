@@ -291,12 +291,12 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="cooldown && !isSpecialStaged && !isCooldownHybrid">
-                                    <td>Cooldown<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span><span ng-if="unit.limitexCD != 0"><br>Cooldown w/ LB expansion</span></td>
+                                    <td>Cooldown<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span><span ng-if="unit.limitexCD != 0 && unit.limitCD != unit.limitexCD"><br>Cooldown w/ LB expansion</span></td>
                                     <td>
                                         {{cooldown.length ? cooldown[0] : cooldown}} turns
                                         {{cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
                                         {{cooldown.length ? (cooldown[0] - unit.limitCD) : (cooldown - unit.limitCD)}} turns
-                                        {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitCD) + ' turns' : ''}}</span><span ng-if="unit.limitexCD != 0"><br>
+                                        {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitCD) + ' turns' : ''}}</span><span ng-if="unit.limitexCD != 0 && unit.limitCD != unit.limitexCD"><br>
                                         {{cooldown.length ? (cooldown[0] - unit.limitexCD) : (cooldown - unit.limitexCD)}} turns
                                         {{cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitexCD) + ' turns' : ''}}</span>
                                     </td>

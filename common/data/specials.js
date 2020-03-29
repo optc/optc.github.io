@@ -5395,24 +5395,24 @@ window.specials = {
         }
     },
     2149: {
-        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2049].multiplier; },
+        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2149].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
-                window.specials[2049].multiplier = 1.75;
+                window.specials[2149].multiplier = 1.75;
             }
             else{
-                window.specials[2049].multiplier = 1;
+                window.specials[2149].multiplier = 1;
             }
         }
     },
     2150: {
-        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2050].multiplier; },
+        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2150].multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Fighter")) {
-                window.specials[2050].multiplier = 1.75;
+                window.specials[2150].multiplier = 1.75;
             }
             else{
-                window.specials[2050].multiplier = 1;
+                window.specials[2150].multiplier = 1;
             }
         }
     },

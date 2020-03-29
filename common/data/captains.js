@@ -9064,6 +9064,14 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
     },
+    2558: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Free Spirit")) ? 1.75 : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
+    },
+    2559: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Free Spirit")) ? 2 : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Free Spirit")) ? 1.75 : 1; },
+    },
     2562: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
     },
