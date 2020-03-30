@@ -10232,6 +10232,18 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.25 : 1; },
     },
+    2904: {
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.75); },
+    },
+    2905: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.75 : 1; },
+    },
+    2906: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.75 : 1; },
+    },
+    2907: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

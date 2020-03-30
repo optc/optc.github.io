@@ -9275,6 +9275,14 @@ window.specials = {
     2903: {
         chainAddition: function(p) { return 0.6; }
     },
+    2904: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2905: {
+        delay: function(p) { return 1; },	
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
