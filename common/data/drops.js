@@ -724,7 +724,7 @@ window.drops = {
         },
         
         {
-            name: 'Execution Platform of The King to Ark of Noah',
+            name: 'Execution Platform of the King to Ark of Noah',
             dropID: 'story31',
             shortName: 'Fishman Island 2',
             thumb: 1562,
@@ -823,7 +823,7 @@ window.drops = {
         },
         
         {
-            name: 'Coliseum Lodging to Officer\'s Tower',
+            name: 'Coliseum Lodging to Officer’s Tower',
             dropID: 'story35',
             shortName: 'Dressrosa 2',
             thumb: 2004,
@@ -879,7 +879,7 @@ window.drops = {
             gamewith: 111173,
             '01': [ 2003 ],
             '02': [  ],
-            '03': [ 1628 ],
+            '03': [ 1627 ],
             '04': [ 1292 ],
             '05': [ 1401 ],
             '06': [ 1401 ],
@@ -3464,7 +3464,7 @@ window.drops = {
         },
         
         {
-            name: '"Free Spirit" vs "Strongest"',
+            name: '"Freedom" vs "Strongest"',
             dropID: 'clash59',
             thumb: 2883,
             nakama: null,
@@ -3479,6 +3479,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2884 ]
+        },
+        
+        {
+            name: 'Clash!! Jinbe',
+            dropID: 'clash61',
+            thumb: 2893,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2893 ]
         },
         
         {
@@ -4582,6 +4591,16 @@ window.drops = {
         },
 
         {
+            name: 'Komurasaki',
+            thumb: 2869,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2869, -2869 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             showManual: true,
@@ -4983,6 +5002,17 @@ window.drops = {
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
         },
         
+        {
+            name: 'Ambush!? Condoriano',
+            //dropID: 'ambush',
+            thumb: 3380,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of something. You MUST use the same team that you just used to complete the Raid boss to fight Condoriano.',
+            'All Difficulties': [ 3380 ]
+        },
+        
     ],
 
             
@@ -5039,6 +5069,15 @@ window.drops = {
             gamewith: 148537,
             'All Difficulties': [ 2831 ],
             'Round 2': [ 2854 ],
+        },
+        
+        {
+            name: 'Moria',
+            dropID: 'bond7',
+            thumb: 2890,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2890, 2891 ],
         },
         
     ],
@@ -5586,6 +5625,7 @@ window.drops = {
         {
             name: 'Proof of "The World\'s Strongest"',
             thumb: 2674,
+            global: true,
             nakama: null,
             gamewith: null,
             condition: 'Certain Stampede units have boosted stats',

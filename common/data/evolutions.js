@@ -4563,6 +4563,26 @@ window.evolutions = {
         evolution: 2886,
         evolvers: [ 'skullCP9', 'skullCP9', 'skullCP9', 'skullCP9', 'skullCP9' ]
     },
+    2894: {
+        evolution: 2895,
+        evolvers: [  ]
+    },
+    2896: {
+        evolution: 2897,
+        evolvers: [  ]
+    },
+    2898: {
+        evolution: 2899,
+        evolvers: [  ]
+    },
+    2900: {
+        evolution: 2901,
+        evolvers: [  ]
+    },
+    2902: {
+        evolution: 2903,
+        evolvers: [  ]
+    },
     3333: {
         evolution: 3334,
         evolvers: [ 118, 86, 266, 302, 267 ]

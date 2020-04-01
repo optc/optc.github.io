@@ -168,7 +168,7 @@ window.matchers = [
     {
         name: 'Beneficial Orb captains',
         target: 'captain',
-        matcher: /beneficial/i
+        matcher: /orbs beneficial/i
         //matcher: /Makes ((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\])|((STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]) and (STR|DEX|QCK|PSY|INT|\[RCV\]|\[TND\]))) orbs "beneficial"/i
     },
 
@@ -736,7 +736,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'special',
         matcher: /(reduces|removes).+silence.+duration/i
     },
@@ -962,7 +962,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'swap',
         matcher: /(reduces|removes).+silence.+duration/i
     },
@@ -1048,7 +1048,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'sailor',
         matcher: /(reduces|removes|resists).+silence/i
     },
@@ -1184,13 +1184,13 @@ window.matchers = [
     {
         name: 'Ship Bind Reduction Potential Ability',
         target: 'limit',
-        matcher: /Ship Bind Reduction/i
+        matcher: /Reduce Ship Bind duration/i
     },
     
     {
         name: 'Sailor Despair Reduction Potential Ability',
         target: 'limit',
-        matcher: /Sailor Despair Reduction/i
+        matcher: /Reduce Sailor Despair duration/i
     },
     
     {
@@ -1300,19 +1300,19 @@ window.matchers = [
     {
         name: 'ATK Boosting Support',
         target: 'support',
-        matcher: /Adds.+ATK/i
+        matcher: /Adds.+%.+ATK/i
     },
     
     {
         name: 'HP Boosting Support',
         target: 'support',
-        matcher: /Adds.+HP/i
+        matcher: /Adds.+%.+HP/i
     },
     
     {
         name: 'RCV Boosting Support',
         target: 'support',
-        matcher: /Adds.+RCV/i
+        matcher: /Adds.+%.+RCV/i
     },
 
     {
@@ -1362,6 +1362,12 @@ window.matchers = [
         target: 'support',
         matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
     },
+
+    {
+        name: 'Specific Enemy ATK boosters',
+        target: 'support',
+        matcher: /Boosts the supported character's ATK.+against/i
+    },
     
     {
         name: 'Chain Boosters',
@@ -1373,6 +1379,12 @@ window.matchers = [
         name: 'Chain Lockers',
         target: 'support',
         matcher: /Locks the chain multiplier/i 
+    },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'support',
+        matcher: /Additional.+Damage/i
     },
     
     {
@@ -1448,7 +1460,7 @@ window.matchers = [
     },
     
     {
-        name: 'Silence reducers',
+        name: 'Silence/Special Bind reducers',
         target: 'support',
         matcher: /(reduces|removes).+silence.+duration/i
     },
