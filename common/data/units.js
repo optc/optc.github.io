@@ -3378,7 +3378,7 @@ window.units = [
     [ "Aokiji, Unyielding Beliefs of Justice", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 840, 320, 51, 1920, 801, 163, 1 ],
     [ "Kuzan, Unfaithful Beliefs of Justice", "QCK", [ "Free Spirit", "Shooter" ], 6, 55, 5, 5, 99, 5000000, 1620, 624, 121, 3849, 1620, 219, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Condoriano", "INT", "Fighter", 5, 1, 4, 4, 99, 4000000, 724, 604, 182, 1942, 912, 470, null ],
+    [ "Condoriano", "INT", "Fighter", 5, 1, 4, 4, 99, 4000000, 724, 604, 182, 1942, 912, 470, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
