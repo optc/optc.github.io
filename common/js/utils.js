@@ -234,7 +234,7 @@
             case '3376': return '../res/character_10864_t.png'; break;
             case '3377': return '../res/character_11221_t1.png'; break;
             case '3378': return '../res/character_11199_t1.png'; break;
-            case '3379': return '../res/character_11173_t1.png'; break;
+            case '2909': return '../res/character_11173_t1.png'; break;
             //case '3370': return '../res/character_10891_t1.png'; break;
             //case '2440': return '../res/character_10643_t1.png'; break;
             //case '2441': return '../res/character_10644_t1.png'; break;

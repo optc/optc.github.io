@@ -5544,12 +5544,12 @@ window.drops = {
         
         {
             name: 'The Great Pirate\'s Legacy',
-            thumb: 3379,
+            thumb: 2909,
             global: true,
             nakama: null,
             gamewith: null,
             showManual: true,
-            'All Difficulties': [ 9035, -261, -1413, -2686, -3379 ],
+            'All Difficulties': [ 9035, -261, -1413, -2686, -2909 ],
         },
         
         {
