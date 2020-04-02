@@ -9283,6 +9283,15 @@ window.specials = {
     2905: {
         delay: function(p) { return 1; },	
     },
+    2908:{
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 2 : 1; },
+        type: "type",
+    },
+    2909: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "class",
+        chainAddition: function(p) { return 0.7; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -9359,11 +9368,6 @@ window.specials = {
     3378: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; },
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
-    },
-    3379: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
-        type: "class",
-        chainAddition: function(p) { return 0.7; }
     },
     5000: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
