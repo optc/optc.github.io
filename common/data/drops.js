@@ -4814,7 +4814,7 @@ window.drops = {
             thumb: 2729,
             nakama: null,
             gamewith: 171580,
-            'Raging Sea': [ 2728 ]
+            'Coast of Wano': [ 2728 ]
         },
 
         {
@@ -4860,6 +4860,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 2879, 2880 ]
+        },
+
+        {
+            name: 'Shirahoshi',
+            dropID: 'treasuremap32',
+            thumb: 2913,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2913 ]
         },
         
     ],
