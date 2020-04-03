@@ -874,6 +874,13 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2911: { // Camie
+        type: 'healer',
+        multiplier: 5
+    },
+    2913: { // Shirahoshi
+        type: 'healer',
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1
