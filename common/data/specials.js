@@ -9284,7 +9284,7 @@ window.specials = {
         delay: function(p) { return 1; },	
     },
     2908:{
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 2 : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 2 : 1; },
         type: "type",
     },
     2909: {
