@@ -560,6 +560,12 @@ window.matchers = [
         target: 'special',
         matcher: /delays/i
     },
+
+    {
+        name: 'Delay Immunity Ignorers',
+        target: 'special',
+        matcher: /ignores Delay Debuff Protection/i
+    },
     
     {
         name: 'Damage dealer',
