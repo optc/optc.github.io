@@ -5562,6 +5562,16 @@ window.drops = {
         },
         
         {
+            name: 'Perfect Superhuman',
+            thumb: 2739,
+            global: true,
+            nakama: null,
+            gamewith: 173943,
+            showManual: true,
+            'All Difficulties': [ 9034, -2739, -2113, -2471 ],
+        },
+        
+        {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
             global: true,
