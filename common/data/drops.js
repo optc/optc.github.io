@@ -5684,6 +5684,22 @@ window.drops = {
         },
         
         {
+            name: 'The Truth of the Mera Mera - Competition Semifinal Battle',
+            thumb: 2915,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2915 ],
+        },
+        
+        {
+            name: 'The Truth of the Mera Mera - Competition 2nd Round',
+            thumb: 2917,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2917 ],
+        },
+        
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,

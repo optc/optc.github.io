@@ -203,6 +203,12 @@ window.matchers = [
     },
 
     {
+        name: 'RCV based Healers',
+        target: 'captain',
+        matcher: /Recovers.+ character\'s RCV/i
+    },
+
+    {
         name: 'Tankers',
         target: 'captain',
         matcher: /Reduces (any )?damage.+if HP.+99/i
@@ -646,6 +652,12 @@ window.matchers = [
     },
 
     {
+        name: 'RCV based Healers',
+        target: 'special',
+        matcher: /Recovers.+ character\'s RCV/i
+    },
+
+    {
         name: 'Remaining Health Healers',
         target: 'special',
         matcher: /Recovers.+missing HP/i
@@ -923,6 +935,12 @@ window.matchers = [
         name: 'Healers',
         target: 'swap',
         matcher: /Recovers/i
+    },
+
+    {
+        name: 'RCV based Healers',
+        target: 'swap',
+        matcher: /Recovers.+ character\'s RCV/i
     },
     
     {
@@ -1451,6 +1469,12 @@ window.matchers = [
         name: 'Healers',
         target: 'support',
         matcher: /Recovers/i
+    },
+
+    {
+        name: 'RCV based Healers',
+        target: 'support',
+        matcher: /Recovers.+ character\'s RCV/i
     },
 
     {

@@ -9315,6 +9315,32 @@ window.specials = {
             });
         },
     },
+    2914: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2914].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.STR + p.colorCount.PSY >= 4) {
+                window.specials[2914].multiplier = 2.25;
+            }
+            else {
+                window.specials[2914].multiplier = 1;
+            }
+        },
+    },
+    2915: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 1.75 : 1; },
+    },
+    2917: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
+    },
+    2918: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type",
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
