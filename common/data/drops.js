@@ -5688,15 +5688,11 @@ window.drops = {
             thumb: 2915,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 2915 ],
-        },
-        
-        {
-            name: 'The Truth of the Mera Mera - Competition 2nd Round',
-            thumb: 2917,
-            nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 2917 ],
+            condition: 'Limit Break material for Rebecca and Jesus Burgess will be available',
+            'Competition Semifinal Battle': [ 2915 ],
+            'Competition 2nd Round': [ 2917 ],
+            'Competition VS Diamante': [ 2918 ],
+            'Chopperman Missions': [ 2916 ],
         },
         
         {

@@ -2866,8 +2866,6 @@ window.flags = {
     2911: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     2912: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     2914: { rr: 1, rro: 1, lrr: 1 },
-    2916: { rr: 1, rro: 1, lrr: 1 },
-    2918: { rr: 1, rro: 1, lrr: 1 },
     3333: { rr: 1, rro: 1, global: 1 },
     3334: { rr: 1, rro: 1, global: 1 },
     3339: { global: 1 },
