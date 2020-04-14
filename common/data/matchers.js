@@ -249,13 +249,13 @@ window.matchers = [
     {
         name: 'Type-boosting specials',
         target: 'special',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(STR|DEX|QCK|PSY|INT|Type)\b/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^(,.)]+(STR|DEX|QCK|PSY|INT|Type)\b/i
     },
 
     {
         name: 'Class-boosting specials',
         target: 'special',
-        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^,]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^(,.)]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
     },
     
     {
@@ -291,7 +291,7 @@ window.matchers = [
     {
         name: 'Universal ATK boosting specials',
         target: 'special',
-        matcher: /Boosts ATK[^,]+(all characters)/i
+        matcher: /Boosts ATK[^(,.)]+(all characters)/i
     },
     
     /*{
@@ -328,6 +328,24 @@ window.matchers = [
         name: 'Combo Boost Specials',
         target: 'special',
         matcher: /Boost.+hit in the chain/i
+    },
+
+    {
+        name: 'Universal Orb boosting specials',
+        target: 'special',
+        matcher: /amplifies\D+orb[^(,.)]+(all characters)/i
+    },
+
+    {
+        name: 'Type-boosting Orb boosting specials',
+        target: 'special',
+        matcher: /amplifies\D+orb([^,.]+)(STR|DEX|QCK|PSY|INT|Type)\b/i
+    },
+
+    {
+        name: 'Class-boosting Orb boosting specials',
+        target: 'special',
+        matcher: /amplifies\D+orb[^(,.)]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
     },
 
     {
@@ -394,6 +412,12 @@ window.matchers = [
         name: 'Following-turn Buff Enabler',
         target: 'special',
         matcher: /(Following the activation|If during that turn)/i
+    },
+
+    {
+        name: 'Buff Duration Extender',
+        target: 'special',
+        matcher: /increases duration of any/i
     },
 
     {
