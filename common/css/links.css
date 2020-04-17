@@ -198,18 +198,24 @@
 }
 
 #links-button.active .rotater:nth-child(11) > a {
+    -webkit-transform: translateX(-33em);
+    -ms-transform: translateX(-33em);
+    transform: translateX(-33em);
+}
+
+#links-button.active .rotater:nth-child(12) > a {
     -webkit-transform: translateY(0em);
     -ms-transform: translateY(0em);
     transform: translateY(0em);
 }
 
-#links-button.active .rotater:nth-child(12) > a {
+#links-button.active .rotater:nth-child(13) > a {
     -webkit-transform: translateY(-4em);
     -ms-transform: translateY(-4em);
     transform: translateY(-4em);
 }
 
-#links-button.active .rotater:nth-child(13) > a {
+#links-button.active .rotater:nth-child(14) > a {
     -webkit-transform: translateY(-8em);
     -ms-transform: translateY(-8em);
     transform: translateY(-8em);
@@ -226,6 +232,7 @@
 #link-ship > .btn { background: #9932CC; }
 #link-planner > .btn { background: #DAAD13; }
 #link-nakama > .btn { background: #3c6ee0; }
+#link-supports > .btn { background: #2ECC71; }
 #link-turtles > .btn { background: #ce4500; }
 #link-es > .btn { background: linear-gradient(#ff0000 30%, #ffff00 30%, #ffff00 70%, #ff0000 30%); }
 #link-fr > .btn { background: linear-gradient(90deg, #002295 30%, #ffffff 30%, #ffffff 70%, #ff0000 30%); }

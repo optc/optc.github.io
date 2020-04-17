@@ -4872,7 +4872,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 171580,
-            'Raging Sea': [ 2728 ]
+            'Coast of Wano': [ 2728 ]
         },
 
         {
@@ -4918,6 +4918,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 2879, 2880 ]
+        },
+
+        {
+            name: 'Shirahoshi',
+            dropID: 'treasuremap32',
+            thumb: 2913,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2913 ]
         },
         
     ],
@@ -5613,6 +5622,16 @@ window.drops = {
         },
         
         {
+            name: 'Perfect Superhuman',
+            thumb: 2739,
+            global: true,
+            nakama: null,
+            gamewith: 173943,
+            showManual: true,
+            'All Difficulties': [ 9034, -2739, -2113, -2471 ],
+        },
+        
+        {
             name: 'Escape! Whole Cake Island',
             thumb: 2234,
             global: true,
@@ -5722,6 +5741,18 @@ window.drops = {
             thumb: 2857,
             gamewith: 187864,
             'Chopperman Missions': [ 2855 ],
+        },
+        
+        {
+            name: 'The Truth of the Mera Mera - Competition Semifinal Battle',
+            thumb: 2915,
+            nakama: null,
+            gamewith: null,
+            condition: 'Limit Break material for Rebecca and Jesus Burgess will be available',
+            'Competition Semifinal Battle': [ 2915 ],
+            'Competition 2nd Round': [ 2917 ],
+            'Competition VS Diamante': [ 2918 ],
+            'Chopperman Missions': [ 2916 ],
         },
         
         {

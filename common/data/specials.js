@@ -9284,13 +9284,62 @@ window.specials = {
         delay: function(p) { return 1; },	
     },
     2908:{
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 2 : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 2 : 1; },
         type: "type",
     },
     2909: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
         type: "class",
         chainAddition: function(p) { return 0.7; }
+    },
+    2910: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2910].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2910].multiplier == 1.5 ? 1 : window.specials[2910].multiplier == 1.75 ? 2 : 0);
+            window.specials[2910].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
+                name: '2910warning'
+            });
+        }
+    },
+    2912:{
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2912].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[2912].multiplier == 1.75 ? 1 : window.specials[2912].multiplier == 2 ? 2 : 0);
+            window.specials[2912].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '2912warning'
+            });
+        },
+    },
+    2914: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2914].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            if (p.colorCount.STR + p.colorCount.PSY >= 4) {
+                window.specials[2914].multiplier = 2.25;
+            }
+            else {
+                window.specials[2914].multiplier = 1;
+            }
+        },
+    },
+    2915: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 1.75 : 1; },
+    },
+    2917: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+        }
+    },
+    2918: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type",
     },
     3333: {
         atk: function(p) { return 1.75; },

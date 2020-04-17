@@ -10252,6 +10252,34 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 3.25 + 1.25 * (1 - (p.percHP) / 100) : 1; },
         rcv: function(p) { return 0; },
     },
+    2910: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2912: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    2913: {
+        atk: function(p) { return p.slot == p.sourceSlot ? p.actions[p.sourceSlot] ? 2 : 1.5 : p.actions[p.sourceSlot] ? 3 : 2; },
+    },
+    2914: {
+        hitAtk: function(p) {
+            return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    2915: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 3 : 1; },
+    },
+    2916: {
+        atk: function(p) { return 1.5; },
+    },
+    2917: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    2918: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
