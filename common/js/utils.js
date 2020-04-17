@@ -224,7 +224,7 @@
             case '3366': return '../res/character_10858_t1.png'; break;
             case '3367': return '../res/character_10859_t1.png'; break;
             case '3368': return '../res/character_10860_t1.png'; break;
-            case '3369': return '../res/character_10891_t1.png'; break;
+            case '2919': return '../res/character_10891_t1.png'; break;
             case '3370': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5052.png'; break;
             case '3371': return '../res/character_11243_t.png'; break;
             case '3372': return '../res/character_11244_t.png'; break;

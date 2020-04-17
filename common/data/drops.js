@@ -5030,6 +5030,15 @@ window.drops = {
             'All Difficulties': [ 2890, 2891 ],
         },
         
+        {
+            name: 'Big Mom',
+            dropID: 'bond8',
+            thumb: 2920,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2920 ],
+        },
+        
     ],
 
     'Special': [
@@ -5129,7 +5138,8 @@ window.drops = {
             nakama: null,
             gamewith: [ 183973, 186699 ],
             'Round 1': [ 2833 ],
-            'Round 2': [ 2852 ]
+            'Round 2': [ 2852 ],
+            'Round 3': [ 2921 ],
         },
 
         {

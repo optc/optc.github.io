@@ -10280,6 +10280,13 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
     },
+    2920: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.25 : 1; },
+    },
+    2921: {
+        atk: function(p) { return (p.unit.type == "STR") ? 1.5 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

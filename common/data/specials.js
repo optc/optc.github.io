@@ -9341,6 +9341,12 @@ window.specials = {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
         type: "type",
     },
+    2920: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        warning: "Selected special (%name%) assumes that the enemy has All Debuff Protection."
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
