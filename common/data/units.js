@@ -2919,7 +2919,7 @@ window.units = [
     [ "Diamante, Corrida Colosseum Final Round Battle Royale", "STR", [ "Driven", "Slasher" ], 5, 1, 5, 4, 99, 2000000, 1300, 515, 92, 3250, 1288, 229, 1 ],
     [ "Sanji & Pudding, Royal Matrimony", [ "DEX", "QCK" ], [[ "Powerhouse", "Fighter" ],[ "Shooter", "Cerebral" ],[ "Powerhouse", "Shooter" ]], 5, 30, 6, 4, 99, 4000000, 1158, 604, 160, 2887, 1458, 380, 1 ],
     [ "Big Mom, Woeful Emperor", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 5, 4, 99, null, 1083, 722, 76, null, null, null, null ],
-    [ "\"Garuda\" Vinsmoke Judge [Neo]", "QCK", [ "Powerhouse", "Driven" ], 4, 20, 4, 4, 99, null, 1260, 459, 46, 2249, 1128, 200, null ],
+    [ "\"Garuda\" Vinsmoke Judge [Neo]", "STR", [ "Powerhouse", "Driven" ], 4, 20, 4, 4, 99, null, 1260, 459, 46, 2249, 1128, 200, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

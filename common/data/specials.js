@@ -5641,6 +5641,14 @@ window.specials = {
             }
         },
     },
+    2190: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class",
+    },
+    2191: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class",
+    },
     2196: {
         atk: function(p) { return window.specials[2196].multiplier; },
         type: "type",
@@ -9328,7 +9336,15 @@ window.specials = {
         },
     },
     2915: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 1.75 : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2915].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2915].multiplier == 1.5 ? 1 : window.specials[2915].multiplier == 1.75 ? 2 : 0);
+            window.specials[2915].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
+                name: '2915warning'
+            });
+        }
     },
     2917: {
         chain: function(p) { return 2.5; },
