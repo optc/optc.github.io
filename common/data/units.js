@@ -2854,7 +2854,7 @@ window.units = [
     [ "Belo Betty, Revolutionary Army Strategy Meeting", "PSY", [ "Free Spirit", "Cerebral" ], 5, 20, 4, 4, 99, 4000000, 1117, 799, 89, 2482, 1405, 318, 1 ],
     [ "Koala, Revolutionary Army Strategy Meeting", "PSY", [ "Fighter", "Free Spirit" ], 5, 50, 5, 3, 99, 5000000, 1211, 810, 112, 2708, 1415, 352, 1 ],
     [ "Charlotte Custard, Sweet Party!", "INT", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 2000000, 982, 481, 183, 2067, 1302, 382, 1 ],
-    [ "Charlotte Smoothie, Sweet Party!", "DEX", [ "SLasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 785, 513, 115, 2300, 1389, 274, 1 ],
+    [ "Charlotte Smoothie, Sweet Party!", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 785, 513, 115, 2300, 1389, 274, 1 ],
     [ "Charlotte Flampe, Sweet Party!", "PSY", [ "Shooter", "Driven" ], 5, 30, 4, 4, 99, 4000000, 696, 472, 152, 1882, 1276, 412, 1 ],
     [ "Charlotte Brûlée, Sweet Party!", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 739, 472, 141, 2001, 1332, 371, 1 ],
     [ "Arlong's Crew, East Blue Invanders", [ "STR", "STR" ], [[ "Powerhouse", "Fighter" ],[ "Powerhouse", "Fighter" ],[ "Powerhouse", "Slasher" ]], 5, 30, 6, 3, 70, 1066998, 698, 352, 30, 1702, 988, 60, 1 ],
