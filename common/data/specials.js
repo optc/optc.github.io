@@ -5641,6 +5641,14 @@ window.specials = {
             }
         },
     },
+    2190: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class",
+    },
+    2191: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class",
+    },
     2196: {
         atk: function(p) { return window.specials[2196].multiplier; },
         type: "type",
@@ -8438,6 +8446,13 @@ window.specials = {
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     },
+    2734: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2734].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            if (p.colorCount.STR >= 3 || p.colorCount.DEX >= 3 || p.colorCount.QCK >= 3 || p.colorCount.PSY >= 3 || p.colorCount.INT >= 3) window.specials[2734].multiplier = 2;
+            else window.specials[2734].multiplier = 1;
+        },
+    },
     2735: {
         atk: function(p) { return window.specials[2735].turnedOn ? 2.25 : 1; },
         type: "type",
@@ -9328,7 +9343,15 @@ window.specials = {
         },
     },
     2915: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 1.75 : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2915].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2915].multiplier == 1.5 ? 1 : window.specials[2915].multiplier == 1.75 ? 2 : 0);
+            window.specials[2915].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
+                name: '2915warning'
+            });
+        }
     },
     2917: {
         chain: function(p) { return 2.5; },
@@ -9340,6 +9363,12 @@ window.specials = {
     2918: {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
         type: "type",
+    },
+    2920: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        warning: "Selected special (%name%) assumes that the enemy has All Debuff Protection."
     },
     3333: {
         atk: function(p) { return 1.75; },

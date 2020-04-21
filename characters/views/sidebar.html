@@ -12,6 +12,16 @@
         ng-click="onTypeClick($event,type)">{{type}}</span>
 </div>
 
+<div class="filter-container" ng-show="false">
+    <span class="filter-header">Dev. filters</span>
+    <span class="filter width-12 exc" ng-model="filters.noLB" ng-class="{ active: filters.noLB }"
+        ng-click="filters.noLB = !filters.noLB">Show Characters with no limit break</span>
+    <span class="filter width-12 exc" ng-model="filters.noSupport" ng-class="{ active: filters.noSupport }"
+        ng-click="filters.noSupport = !filters.noSupport">Show Characters with no support</span>
+    <span class="filter width-12 exc" ng-model="filters.typoClass" ng-class="{ active: filters.typoClass }"
+        ng-click="filters.typoClass = !filters.typoClass">Show Characters with Misspelt Classes</span>
+</div>
+
 <div class="filter-container expandable" id="character-filter"
      ng-class="{ expanded: !filters.characterEnabled }">
     <span class="filter-header" ng-click="filters.characterEnabled = !filters.characterEnabled">
@@ -312,16 +322,6 @@
         ng-click="filters.luffyvkatakuri = !filters.luffyvkatakuri">Show Luffy v Katakuri Boosters</span>
     <span class="filter width-12 exc" ng-model="filters.faceoffAA" ng-class="{ active: filters.faceoffAA }"
         ng-click="filters.faceoffAA = !filters.faceoffAA">Show Akainu v Aokiji Boosters</span>
-</div-->
-
-<!--div class="filter-container">
-    <span class="filter-header">Dev. filters</span>
-    <span class="filter width-12 exc" ng-model="filters.noLB" ng-class="{ active: filters.noLB }"
-        ng-click="filters.noLB = !filters.noLB">Show Characters with no limit break</span>
-    <span class="filter width-12 exc" ng-model="filters.noSupport" ng-class="{ active: filters.noSupport }"
-        ng-click="filters.noSupport = !filters.noSupport">Show Characters with no support</span>
-    <span class="filter width-12 exc" ng-model="filters.typoClass" ng-class="{ active: filters.typoClass }"
-        ng-click="filters.typoClass = !filters.typoClass">Show Characters with Misspelt Classes</span>
 </div-->
 
 <div class="filter-container expandable" id="captain-container"
