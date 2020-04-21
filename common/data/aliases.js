@@ -2754,7 +2754,7 @@ window.aliases = {
     2753: [ 'モンドール 書司', '', 'Montdor' ],
     2754: [ 'オーズ モリア様の部下（しもべ）', '', 'Coliseum Oars' ],
     2755: [ '魔人オーズ モリア様の部下（しもべ）', '', 'Coliseum Oars' ],
-    2756: [ 'トニートニー・チョッパー カンフーの舞', '', 'Kung Fu Point' ],
+    2756: [ 'トニートニー・チョッパー カンフーの舞', '', 'Kung Fu Point', 'Limited Chopper', 'Secret Chopper' ],
     2757: [ 'サボ グリムリーパー Happy Halloween', '', 'Halloween Sabo', 'Shinigami Sabo' ],
     2758: [ 'サボ ハロウィンサイズ・グリムリーパー Happy Halloween', '', 'Halloween Sabo', 'Shinigami Sabo' ],
     2759: [ 'アーロン ココヤシ村の支配者', '', 'Limited Arlong', 'Secret Arlong' ],
