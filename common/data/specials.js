@@ -9388,7 +9388,7 @@ window.specials = {
     },
     2922: {
         //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.type == "INT") ? 2.25 : 1; },
+        hit: function(n,p) { return (n > 12 && (p.unit.type == "INT")) ? 2.25 : 1; },
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
@@ -9398,7 +9398,7 @@ window.specials = {
     },
     2923: {
         //TODO
-        hit: function(n,p) { return (n > 12 && (p.unit.type == "STR") ? 2.25 : 1; },
+        hit: function(n,p) { return (n > 12 && (p.unit.type == "STR")) ? 2.25 : 1; },
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
