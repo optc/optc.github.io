@@ -435,6 +435,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
         if(params.limit[slot] != null && params.limit[slot] != 0){
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
+            if(!LBaddition) LBaddition = 0;
         }
         enabledSpecials.forEach(function(data) {
             if (data.hasOwnProperty('atkbase') && stat == "atk"){
