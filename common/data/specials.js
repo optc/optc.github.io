@@ -8382,6 +8382,22 @@ window.specials = {
     2714:{
         def: function(p) { return 0; },
     },
+    2715: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+        type: "type"
+    },
+    2716: {
+        chainAddition: function(p) { return 0.25; },
+    },
+    2717: {
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    2718: {
+        staticMult: function(p) { return 2.5; },
+    },
+    2719: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
     2724: {
         chainAddition: function(p) { return 0.5; },
     },
@@ -9369,6 +9385,36 @@ window.specials = {
         type: "type",
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
         warning: "Selected special (%name%) assumes that the enemy has All Debuff Protection."
+    },
+    2922: {
+        //TODO
+        hit: function(n,p) { return (n > 12 && (p.unit.type == "INT") ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '2381warning'
+            });
+        }
+    },
+    2923: {
+        //TODO
+        hit: function(n,p) { return (n > 12 && (p.unit.type == "STR") ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '2381warning'
+            });
+        }
+    },
+    2924: {
+        atk: function(p) { return 1.3; },
+        type: "type"
+    },
+    2925: {
+        affinity: function(p) { return 1.3; },
+    },
+    2926: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.3, [p.friendCaptain, p.captain], p.effectName); },
     },
     3333: {
         atk: function(p) { return 1.75; },
