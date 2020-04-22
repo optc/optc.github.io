@@ -425,20 +425,25 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Basic operations * * * * */
 
     var getStatOfUnit = function(data,stat,slot) {
-        var atkbaseDamage = 0
+        var params = getParameters(slot);
+        var atkbaseDamage = 0;
+        var LBaddition = 0;
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
+        if(params.limit[slot] != null && params.limit[slot] != 0){
+            LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
+            if(!LBaddition) LBaddition = 0;
+        }
         enabledSpecials.forEach(function(data) {
             if (data.hasOwnProperty('atkbase') && stat == "atk"){
-                var params = getParameters(slot);
                 params["sourceSlot"] = data.sourceSlot;
                 atkbaseDamage = data.atkbase(params);
             }
         });
-        return Math.floor(result) + candyBonus + atkbaseDamage;
+        return Math.floor(result) + candyBonus + atkbaseDamage + LBaddition;
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -1269,6 +1274,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             captain: team[1].unit,
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
+            limit: [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ],
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,

@@ -71,6 +71,15 @@
                                                                       </select> 
             </div>
         </li>
+        
+        <li>
+            <div id="limit">
+                <i class="fa fa-angle-double-up"></i>
+                Limit Break Level: <br><input type="number" name="crew0" min = 0 max = 40 ng-model="data.limit0"><input type="number" name="crew1" min = 0 max = 40 ng-model="data.limit1">
+                <br><input type="number" name="crew2" min = 0 max = 40 ng-model="data.limit2"><input type="number" name="crew3" min = 0 max = 40 ng-model="data.limit3">
+                <br><input type="number" name="crew4" min = 0 max = 40 ng-model="data.limit4"><input type="number" name="crew5" min = 0 max = 40 ng-model="data.limit5">
+            </div>
+        </li>
 
         <li>
             <div id="sliderToggle" status="{{options.slidersEnabled ? 0 : 1}}"
