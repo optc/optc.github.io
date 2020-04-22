@@ -22,6 +22,8 @@
         var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0, limitSlots = element[6];
         var limitexHealth = element[12], limitexAttack = element[13], limitexRecovery = element[14], limitexCooldown = 0, limitexSlots = element[6];
         var keylevel = 0;
+        var LBhp = [], LBatk = [], LBrcv = [], LBsailor = [];
+        var LBhptotal = 0, LBatktotal = 0, LBrcvtotal = 0, LBsailors = 0;
         if (window.details) if(window.details[n + 1]) if(window.details[n + 1].limit){
             keylevel = Object.keys(window.details[n + 1].limit).length;
             for(var x in window.details[n + 1].limit) if (window.details[n + 1].limit[x].description.includes("LOCKED WITH KEY")) keylevel = x;
@@ -34,11 +36,31 @@
                     if (window.details[n + 1].limit[x].description.includes("Reduce base Special Cooldown by ")) limitCooldown += parseInt(window.details[n + 1].limit[x].description.substring(32, 33), 10);
                     if (window.details[n + 1].limit[x].description.includes("additional Socket slot")) limitSlots += parseInt(window.details[n + 1].limit[x].description.substring(8, 9), 10);
                 }
-                if (window.details[n + 1].limit[x].description.includes("Boosts base HP by ")) limitexHealth += parseInt(window.details[n + 1].limit[x].description.substring(18), 10);
-                if (window.details[n + 1].limit[x].description.includes("Boosts base ATK by ")) limitexAttack += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
-                if (window.details[n + 1].limit[x].description.includes("Boosts base RCV by ")) limitexRecovery += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
-                if (window.details[n + 1].limit[x].description.includes("Reduce base Special Cooldown by ")) limitexCooldown += parseInt(window.details[n + 1].limit[x].description.substring(32, 33), 10);
-                if (window.details[n + 1].limit[x].description.includes("additional Socket slot")) limitexSlots += parseInt(window.details[n + 1].limit[x].description.substring(8, 9), 10);
+                if (window.details[n + 1].limit[x].description.includes("Boosts base HP by ")) {
+                    limitexHealth += parseInt(window.details[n + 1].limit[x].description.substring(18), 10);
+                    LBhptotal += parseInt(window.details[n + 1].limit[x].description.substring(18), 10)
+                }
+                if (window.details[n + 1].limit[x].description.includes("Boosts base ATK by ")){
+                    limitexAttack += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
+                    LBatktotal += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
+                }
+                if (window.details[n + 1].limit[x].description.includes("Boosts base RCV by ")){
+                    limitexRecovery += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
+                    LBrcvtotal += parseInt(window.details[n + 1].limit[x].description.substring(19), 10);
+                }
+                if (window.details[n + 1].limit[x].description.includes("Reduce base Special Cooldown by ")){
+                    limitexCooldown += parseInt(window.details[n + 1].limit[x].description.substring(32, 33), 10);
+                }
+                if (window.details[n + 1].limit[x].description.includes("additional Socket slot")){
+                    limitexSlots += parseInt(window.details[n + 1].limit[x].description.substring(8, 9), 10);
+                }
+                if (window.details[n + 1].limit[x].description.includes("Acquire Sailor Ability")){
+                    LBsailors++;
+                }
+                LBhp.push(LBhptotal);
+                LBatk.push(LBatktotal);
+                LBrcv.push(LBrcvtotal);
+                LBsailor.push(LBsailors);
             }
         }
         var result = {
@@ -60,7 +82,10 @@
                 atk: element[15] ? element[15][1] : 0,
                 rcv: element[15] ? element[15][2] : 0
             },
-            number: n
+            number: n,
+            limitStats: {
+            hp: LBhp, atk: LBatk, rcv: LBrcv, sailors: LBsailor
+            }
         };
         if (element.indexOf(null) != -1)
             result.incomplete = true;
