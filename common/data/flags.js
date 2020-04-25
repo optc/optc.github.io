@@ -2758,6 +2758,8 @@ window.flags = {
     2754: { global: 1 },
     2755: { global: 1 },
     2756: { rr: 1, rro: 1, lrr: 1, global: 1 },
+    2757: { global: 1 },
+    2758: { global: 1 },
     2759: { rr: 1, rro: 1, lrr: 1, tmlrr: 1, global: 1 },
     2760: { rr: 1, rro: 1, lrr: 1, tmlrr: 1, global: 1 },
     2761: { rr: 1, rro: 1, lrr: 1, tmlrr: 1, global: 1 },
