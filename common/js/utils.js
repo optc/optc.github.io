@@ -15,6 +15,7 @@
     /* * * * * Unit control * * * * */
 
     var parseUnit = function (element, n) {
+        var piratefest = window.festival[n];
         if (element.length === 0)
             return [];
         if (element[15] && element[15].constructor != Array)
@@ -22,8 +23,8 @@
         var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0, limitSlots = element[6];
         var limitexHealth = element[12], limitexAttack = element[13], limitexRecovery = element[14], limitexCooldown = 0, limitexSlots = element[6];
         var keylevel = 0;
-        var LBhp = [], LBatk = [], LBrcv = [], LBsailor = [];
-        var LBhptotal = 0, LBatktotal = 0, LBrcvtotal = 0, LBsailors = 0;
+        var LBhp = [], LBatk = [], LBrcv = [], LBsailor = [], LBcaptain = [];
+        var LBhptotal = 0, LBatktotal = 0, LBrcvtotal = 0, LBsailors = 0, LBcaptains = 0;
         if (window.details) if(window.details[n + 1]) if(window.details[n + 1].limit){
             keylevel = Object.keys(window.details[n + 1].limit).length;
             for(var x in window.details[n + 1].limit) if (window.details[n + 1].limit[x].description.includes("LOCKED WITH KEY")) keylevel = x;
@@ -57,10 +58,14 @@
                 if (window.details[n + 1].limit[x].description.includes("Acquire Sailor Ability")){
                     LBsailors++;
                 }
+                if (window.details[n + 1].limit[x].description.includes("Acquire new Captain Ability")){
+                    LBcaptains++;
+                }
                 LBhp.push(LBhptotal);
                 LBatk.push(LBatktotal);
                 LBrcv.push(LBrcvtotal);
                 LBsailor.push(LBsailors);
+                LBcaptain.push(LBcaptains);
             }
         }
         var result = {
@@ -84,7 +89,12 @@
             },
             number: n,
             limitStats: {
-            hp: LBhp, atk: LBatk, rcv: LBrcv, sailors: LBsailor
+                hp: LBhp, atk: LBatk, rcv: LBrcv,
+                sailors: LBsailor, captains: LBcaptains
+            },
+            pirateFest: {
+                class: piratefest ? piratefest[0] : "",
+                DEF: piratefest ? piratefest[1] : null, SPD: piratefest ? piratefest[2] : null, minCP: piratefest ? piratefest[3] : null, maxCP: piratefest ? piratefest[4] : null,
             }
         };
         if (element.indexOf(null) != -1)

@@ -155,6 +155,31 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        <div class="panel panel-default">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Pirate Festival</th>
+                                        <th>Class</th>
+                                        <th>DEF</th>
+                                        <th>SPD</th>
+                                        <th>Combat Power</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td >{{unit.pirateFest.class | decorate}}</td>
+                                        <td ng-if="!compare">{{unit.pirateFest.DEF | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest.DEF - compare.pirateFest.DEF | number}}</td>
+                                        <td ng-if="!compare">{{unit.pirateFest.SPD | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest.SPD - compare.pirateFest.SPD | number}}</td>
+                                        <td ng-if="!compare">{{unit.pirateFest.maxCP | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest.maxCP - compare.pirateFest.maxCP | number}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         </uib-tab>
                         <uib-tab heading="Chart" ng-if="!unit.incomplete">
                             <canvas id="radar-chart" class="chart chart-radar" chart-data="radar.data"
@@ -315,6 +340,15 @@
                                         {{cooldown[1].length ? ' \u2192 ' + (cooldown[1][1] - unit.limitCD) + ' turns' : ''}}</span>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.superSpecialCriteria">
+                                    <td>Super Special Criteria</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.superSpecialCriteria | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.superSpecialCriteriaNotes" ng-bind-html="details.superSpecialCriteriaNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
                                 <tr ng-if="details.superSpecial">
                                     <td>Super Special</td>
                                     <td>
@@ -383,11 +417,18 @@
                                                 <strong>Potential Ability {{$index + 1}}:</strong>
                                                  {{stage.Name}}
                                                 <br>
+                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                                <!--strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="stage.description[0] | decorate"></span><br>
+                                                <strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="stage.description[1] | decorate"></span><br>
+                                                <strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="stage.description[2] | decorate"></span><br>
+                                                <strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="stage.description[3] | decorate"></span><br>
-                                                <span ng-bind-html="stage.description[4] | decorate"></span><br>
+                                                <strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="stage.description[4] | decorate"></span><br-->
                                             </div>
                                         </div>
                                         <div ng-if="isPotentialHybrid">
@@ -418,11 +459,8 @@
                                                 <strong>Supported Characters:</strong>
                                                  {{stage.Characters}}
                                                 <br>
-                                                <span ng-bind-html="stage.description[0] | decorate"></span><br>
-                                                <span ng-bind-html="stage.description[1] | decorate"></span><br>
-                                                <span ng-bind-html="stage.description[2] | decorate"></span><br>
-                                                <span ng-bind-html="stage.description[3] | decorate"></span><br>
-                                                <span ng-bind-html="stage.description[4] | decorate"></span><br>
+                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item | decorate"></span><br></div>
                                             </div>
                                         </div>
                                         <span class="notes" ng-if="details.supportNotes" ng-bind-html="details.supportNotes | notes | decorate"></span>
@@ -432,6 +470,59 @@
                                             <span class="badge badge-global">Global</span>
                                             <div ng-bind-html="details.potential.global | decorate"></div>
                                         </div>
+                                    </td>
+                                </tr>
+                            </tbody>                            
+                        </table>
+                    </div>
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility">
+                        <table class="table table-striped-column abilities">
+                            <tbody>
+                                <tr ng-if="details.festAttackPattern">
+                                    <td>Pirate Festival Attack Pattern</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAttackPattern track by $index"> <span ng-bind-html="item.description | decorate"></span> </div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAttackTarget">
+                                    <td>Pirate Festival Attack Target</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.festAttackTarget | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festResistance">
+                                    <td>Pirate Festival Resistance</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.festResistance | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAbility">
+                                    <td>Pirate Festival Ability</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbility track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festSpecial">
+                                    <td>Pirate Festival Special</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festSpecial track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                             </tbody>                            
