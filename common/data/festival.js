@@ -2,7 +2,7 @@ window.festival = [
     [ "", null, null, null, null ],
     [ "", null, null, null, null ],
     [ "", null, null, null, null ],
-    [ "Attacker", null, null, null, null ],
+    [ "", null, null, null, null ],
     [ "", null, null, null, null ],
     [ "", null, null, null, null ],
     [ "", null, null, null, null ],

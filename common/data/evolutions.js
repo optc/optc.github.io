@@ -4591,6 +4591,46 @@ window.evolutions = {
         evolution: 2923,
         evolvers: [ 'skullRaidKaido', 'skullRaidKaido', 'skullRaidKaido', 'skullRaidKaido', 'skullRaidKaido' ]
     },
+    2929: {
+        evolution: 2930,
+        evolvers: [ 118, 266, 301, 101, 267 ]
+    },
+    2935: {
+        evolution: 2936,
+        evolvers: [  ]
+    },
+    2937: {
+        evolution: 2938,
+        evolvers: [  ]
+    },
+    2939: {
+        evolution: 2940,
+        evolvers: [  ]
+    },
+    2940: {
+        evolution: 2942,
+        evolvers: [  ]
+    },
+    2943: {
+        evolution: 2944,
+        evolvers: [  ]
+    },
+    2945: {
+        evolution: 2946,
+        evolvers: [  ]
+    },
+    2947: {
+        evolution: 2948,
+        evolvers: [  ]
+    },
+    2949: {
+        evolution: 2950,
+        evolvers: [  ]
+    },
+    2951: {
+        evolution: 2952,
+        evolvers: [  ]
+    },
     3333: {
         evolution: 3334,
         evolvers: [ 118, 86, 266, 302, 267 ]
@@ -4642,9 +4682,5 @@ window.evolutions = {
     3375: {
         evolution: 3376,
         evolvers: [ 118, 88, 266, 304, 104 ]
-    },
-    3377: {
-        evolution: 3378,
-        evolvers: [ 118, 266, 301, 101, 267 ]
     },
 };

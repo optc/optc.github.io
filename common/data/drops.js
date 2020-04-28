@@ -3476,7 +3476,8 @@ window.drops = {
             thumb: 2885,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 2884 ]
+            'All Difficulties': [ 2885 ],
+            'Ambush': [ 9036 ]
         },
         
         {
@@ -3494,7 +3495,8 @@ window.drops = {
             thumb: 2922,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 2922 ]
+            'All Difficulties': [ 2922 ],
+            'Ambush': [ 9037 ]
         },
         
         {
@@ -5272,7 +5274,7 @@ window.drops = {
             'Round 2': [ 2615 ],
             'Round 3': [ 2629 ],
             'Round 5': [ 2682 ],
-            'Round 6': [ 2733 ],
+            'Round 6': [ 2732 ],
         },
         
         {
@@ -5439,6 +5441,15 @@ window.drops = {
             global: true,
             nakama: 6138700,
             'All Difficulties': [ 2, 5, 9, 13, 17, 21, 708, 629, 895 ],
+        },
+
+        {
+            name: 'Straw Hat Pirates Adventure',
+            thumb: 2936,
+            global: true,
+            nakama: 6138700,
+            'All Difficulties': [ 2937, 2943, 2947, 2951 ],
+            'Chopperman Missions': [ 2935, 2939, 2941, 2945, 2949 ],
         },
         
         {

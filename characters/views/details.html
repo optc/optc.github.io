@@ -481,9 +481,7 @@
                                 <tr ng-if="details.festAttackPattern">
                                     <td>Pirate Festival Attack Pattern</td>
                                     <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festAttackPattern track by $index"> <span ng-bind-html="item.description | decorate"></span> </div>
-                                        </div>
+                                        <span ng-repeat="item in details.festAttackPattern track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.length - 1 ? ' \u2192 ' : ''}}</span>
                                         <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
                                     </td>
                                 </tr>

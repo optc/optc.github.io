@@ -166,6 +166,14 @@
         ng-model="filters.nonFarmable.tmlrr" ng-click="onDropFilterClick($event,true)">TM Limited RR-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.tmlrr === false }"
         ng-model="filters.nonFarmable.tmlrr" ng-click="onDropFilterClick($event,false)">Hide TM lim. RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.kclrr }"
+        ng-model="filters.nonFarmable.kclrr" ng-click="onDropFilterClick($event,true)">KC Limited RR-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.kclrr === false }"
+        ng-model="filters.nonFarmable.kclrr" ng-click="onDropFilterClick($event,false)">Hide KC lim. RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.pflrr }"
+        ng-model="filters.nonFarmable.pflrr" ng-click="onDropFilterClick($event,true)">PF Limited RR-only</span><!--
+ --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.pflrr === false }"
+        ng-model="filters.nonFarmable.pflrr" ng-click="onDropFilterClick($event,false)">Hide PF lim. RR-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo }"
         ng-model="filters.nonFarmable.promo" ng-click="onDropFilterClick($event,true)">Promo-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo === false }"
@@ -209,7 +217,7 @@
  --><span class="filter width-6 exc" ng-model="filters.japanTM" ng-class="{ active: filters.japanTM }"
         ng-click="filters.japanTM = !filters.japanTM">Show Japan TM Boosters [Shirahoshi]</span>
     <span class="filter width-6 exc" ng-model="filters.globalKC" ng-class="{ active: filters.globalKC }"
-        ng-click="filters.globalKC = !filters.globalKC">Show Global KC Boosters [Halloween Sabo]<!--br></br--></span><!--
+        ng-click="filters.globalKC = !filters.globalKC">Show Global KC Boosters [Zoro & Sanji Round 6]<!--br></br--></span><!--
  --><span class="filter width-6 exc" ng-model="filters.japanKC" ng-class="{ active: filters.japanKC }"
         ng-click="filters.japanKC = !filters.japanKC">Show Japan KC Boosters [Big Mom]<!--br></br--></span>
 </div>
