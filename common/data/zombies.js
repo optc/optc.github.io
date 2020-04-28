@@ -885,6 +885,26 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    2931: { // Otama
+        type: 'healer',
+        amount: 401
+    },
+    2939: { // Nami
+        type: 'healer',
+        multiplier: 3
+    },
+    2940: { // Nami
+        type: 'healer',
+        multiplier: 5
+    },
+    2951: { // Brook
+        type: 'zombie',
+        threshold: 0.99
+    },
+    2952: { // Brook
+        type: 'zombie',
+        threshold: 0.50//CHANGE THIS
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1
