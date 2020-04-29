@@ -163,7 +163,6 @@
                                         <th>Class</th>
                                         <th>DEF</th>
                                         <th>SPD</th>
-                                        <th>Combat Power</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -174,8 +173,6 @@
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.DEF - compare.pirateFest.DEF | number}}</td>
                                         <td ng-if="!compare">{{unit.pirateFest.SPD | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.SPD - compare.pirateFest.SPD | number}}</td>
-                                        <td ng-if="!compare">{{unit.pirateFest.maxCP | number}}</td>
-                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest.maxCP - compare.pirateFest.maxCP | number}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -354,7 +351,7 @@
                                     <td>
                                         <strong class="specialName" ng-if="details.superSpecialName">{{details.superSpecialName}}</strong>
                                         <!-- same special, no stages -->
-                                        <div ng-if="!isSuperSpecialHybrid && !isSuperSpecialStaged" ng-bind-html="details.special | decorate"></div>
+                                        <div ng-if="!isSuperSpecialHybrid && !isSuperSpecialStaged" ng-bind-html="details.superSpecial | decorate"></div>
                                         <!-- same special, with stages -->
                                         <div ng-if="!isSuperSpecialHybrid && isSuperSpecialStaged">
                                             <div ng-repeat="stage in details.superSpecial track by $index">

@@ -23,7 +23,7 @@
         var limitHealth = element[12], limitAttack = element[13], limitRecovery = element[14], limitCooldown = 0, limitSlots = element[6];
         var limitexHealth = element[12], limitexAttack = element[13], limitexRecovery = element[14], limitexCooldown = 0, limitexSlots = element[6];
         var keylevel = 0;
-        var LBhp = [], LBatk = [], LBrcv = [], LBsailor = [], LBcaptain = [];
+        var LBhp = [], LBatk = [], LBrcv = [], LBsailor = [ 0 ], LBcaptain = [ 0 ];
         var LBhptotal = 0, LBatktotal = 0, LBrcvtotal = 0, LBsailors = 0, LBcaptains = 0;
         if (window.details) if(window.details[n + 1]) if(window.details[n + 1].limit){
             keylevel = Object.keys(window.details[n + 1].limit).length;
@@ -90,7 +90,7 @@
             number: n,
             limitStats: {
                 hp: LBhp, atk: LBatk, rcv: LBrcv,
-                sailors: LBsailor, captains: LBcaptains
+                sailors: LBsailor, captains: LBcaptain
             },
             pirateFest: {
                 class: piratefest ? piratefest[0] : "",
@@ -271,8 +271,8 @@
             case '3374': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5053.png'; break;
             case '3375': return '../res/character_10863_t.png'; break;
             case '3376': return '../res/character_10864_t.png'; break;
-            case '2929': return '../res/character_11221_t1.png'; break;
-            case '2930': return '../res/character_11199_t1.png'; break;
+            //case '2929': return '../res/character_11221_t1.png'; break;
+            //case '2930': return '../res/character_11199_t1.png'; break;
             case '3380': return '../res/character_11333_t1.png'; break;
             //case '2909': return '../res/character_11173_t1.png'; break;
             //case '3370': return '../res/character_10891_t1.png'; break;

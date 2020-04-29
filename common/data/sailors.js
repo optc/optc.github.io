@@ -1148,6 +1148,62 @@ window.sailors = {
     2903: {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
     },
+    2920: {
+        atkStatic: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 50 : 0; },
+    },
+    2931: {
+        atkStatic: function(p) { return 25; },
+        hpStatic: function(p) { return 25; },
+        rcvStatic: function(p) { return 25; },
+    },
+    2932: {
+        hpStatic: function(p) { return p.unit.type == "INT" ? 100 : 0; },
+    },
+    2934: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    2935: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    2936: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    2937: {
+        atkStatic: function(p) { return 50; },
+    },
+    2938: {
+        atkStatic: function(p) { return 50; },
+    },
+    2943: {
+        atkStatic: function(p) { return 50; },
+    },
+    2944: {
+        atkStatic: function(p) { return 50; },
+    },
+    2945: {
+        rcvStatic: function(p) { return 50; },
+    },
+    2946: {
+        rcvStatic: function(p) { return 50; },
+    },
+    2949: {
+        atkStatic: function(p) { return 50; },
+    },
+    2950: {
+        atkStatic: function(p) { return 50; },
+    },
+    2951: {
+        atkStatic: function(p) { return 50; },
+    },
+    2952: {
+        atkStatic: function(p) { return 50; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

@@ -10324,8 +10324,9 @@ window.captains = {
         hp: function(p) { return 1.1; },
     },
     2936: {
-        atk: function(p) { return p.unit.type == "PSY" ? 3 : 2.5; },//Limit Break change this
-        hp: function(p) { return 1.1; },//Limit Break change this
+        //p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]
+        atk: function(p) { return p.unit.type == "PSY" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return [1.1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     2937: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
