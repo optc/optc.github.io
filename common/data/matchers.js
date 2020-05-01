@@ -650,6 +650,18 @@ window.matchers = [
         target: 'special',
         matcher: /(deals|cuts).+end of the turn/i
     },
+
+    {
+        name: 'Health cutters',
+        target: 'special',
+        matcher: /Cuts.+current HP.+enem/i
+    },
+
+    {
+        name: 'HP-based damage dealers',
+        target: 'specialNotes',
+        matcher: /specialProportional/i
+    },
     
     {
         name: 'Defense and Barrier Buff Ignoring damage dealer',
@@ -703,18 +715,6 @@ window.matchers = [
         name: 'Poison removers',
         target: 'special',
         matcher: /removes.+poison.+duration completely/i 
-    },
-
-    {
-        name: 'Health cutters',
-        target: 'special',
-        matcher: /Cuts.+current HP.+enem/i
-    },
-
-    {
-        name: 'HP-based damage dealers',
-        target: 'specialNotes',
-        matcher: /specialProportional/i
     },
 
     {
