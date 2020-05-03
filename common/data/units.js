@@ -2952,7 +2952,7 @@ window.units = [
     [ "Brook, Straw Hat Pirates: Trail to Adventure", "PSY", [ "Slasher", "Free Spirit" ], 4, 9, 4, 3, 50, 261406, 139, 72, 36, 1252, 583, 147, 1 ],
     [ "Brook, Straw Hat Pirates: Outcome of a Hard-fought Battle", "PSY", [ "Slasher", "Free Spirit" ], 5, 20, 4, 4, 99, 3000000, 1249, 580, 142, 2732, 1271, 321, 1 ],
     [ "Borsalino, Strong Flash", "INT", [ "Shooter", "Free Spirit" ], 5, 40, 4, 4, 99, 4000000, 1233, 691, 132, 2920, 1433, 255, 1 ],
-    [ "Fujitora, Surefire Gravity", "INT", [ "Driven", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1830, 789, 241, 4047, 1610, 350, null ],
+    [ "Fujitora, Surefire Gravity", "INT", [ "Driven", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1830, 789, 241, 4147, 1510, 350, null ],
     [ "Carrot, Awakening Sulong", "STR", [ "Fighter", "Slasher" ], 5, 50, 4, 4, 99, 5000000, 1096, 712, 82, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
