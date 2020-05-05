@@ -2689,7 +2689,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
     },
     1085: {
-        atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 1.5); },
+        atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1.5); },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
     },
     1086:{
@@ -10324,8 +10324,9 @@ window.captains = {
         hp: function(p) { return 1.1; },
     },
     2936: {
-        atk: function(p) { return p.unit.type == "PSY" ? 3 : 2.5; },//Limit Break change this
-        hp: function(p) { return 1.1; },//Limit Break change this
+        //p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]
+        atk: function(p) { return p.unit.type == "PSY" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return [1.1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     2937: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
@@ -10369,8 +10370,21 @@ window.captains = {
     2946: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; },
     },
-    2934: {
+    2953: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2.75 : 1; },
+    },
+    2954: {
+        atk: function(p) { return !p.unit.class.has("Driven") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? [3.5, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]); },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; }
+    },
+    2955: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 3.25, [ "STR", "INT" ]); },
+        hitAtk: function(p) {
+            if (!(p.unit.type == "STR" || p.unit.type == "INT")) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 2.75 : (prev == 'Good' ? 2.75+(0.5/3) : (prev == 'Great' ? 2.75+(1.0/3) : (prev == 'Perfect' ? 3.25 : 2.75)));
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
     3333: {
         hitAtk: function(p) {

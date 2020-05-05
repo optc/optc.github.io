@@ -8770,7 +8770,7 @@ window.specials = {
     2790: {
         affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2790].multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2790].multiplier == 1.75 ? 1 : window.specials[2790].multiplier == 2 ? 2.25 : 0);
+            var n = (window.specials[2790].multiplier == 1.75 ? 1 : window.specials[2790].multiplier == 2 ? 2 : 0);
             window.specials[2790].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x affinity boost, disable and re-enable this special',
@@ -9480,6 +9480,15 @@ window.specials = {
     },
     2953: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    2955:{
+        atk: function(p) { return window.specials[2955].turnedOn ? 1.75 : 1; },
+        type: "type",
+        chainAddition: function(p) { return window.specials[2955].turnedOn ? 0.65 : 0; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2955].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");
+        },
     },
     3333: {
         atk: function(p) { return 1.75; },

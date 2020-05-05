@@ -4890,6 +4890,16 @@ window.drops = {
         },
 
         {
+            name: 'Inuarashi',
+            thumb: 2908,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2908, -2908 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             showManual: true,

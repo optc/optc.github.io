@@ -44,14 +44,14 @@
                 <td>{{data.team[slot].unit.combo}}</td>
                 <td>{{data.team[slot].unit.slots}}</td>
             </tr>
-            <tr class="header" ng-if="(data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 && data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 && data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
+            <tr class="header" ng-if="(data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 || data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 || data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
                 <td>Limit Break HP</td>
                 <td>Limit Break ATK</td>
                 <td>Limit Break RCV</td>
                 <td></td>
                 <td></td>
             </tr>
-            <tr ng-if="(data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 && data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 && data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
+            <tr ng-if="(data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 || data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 || data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
                 <td>
                     {{data.team[slot].unit.limitHP | number}} (+{{data.team[slot].unit.limitHP - data.team[slot].unit.maxHP | number}})
                 </td>
@@ -64,14 +64,14 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr class="header" ng-if="(data.team[slot].unit.limitexHP - data.team[slot].unit.maxHP != 0 && data.team[slot].unit.limitexATK - data.team[slot].unit.maxATK != 0 && data.team[slot].unit.limitexRCV - data.team[slot].unit.maxRCV != 0 && data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 && data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 && data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
+            <tr class="header" ng-if="(data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 || data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 || data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
                 <td>Limit Break Ex. HP</td>
                 <td>Limit Break Ex. ATK</td>
                 <td>Limit Break Ex. RCV</td>
                 <td></td>
                 <td></td>
             </tr>
-            <tr ng-if="(data.team[slot].unit.limitexHP - data.team[slot].unit.maxHP != 0 && data.team[slot].unit.limitexATK - data.team[slot].unit.maxATK != 0 && data.team[slot].unit.limitexRCV - data.team[slot].unit.maxRCV != 0 && data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 && data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 && data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
+            <tr ng-if="(data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 || data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 || data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
                 <td>
                     {{data.team[slot].unit.limitexHP | number}} (+{{data.team[slot].unit.limitexHP - data.team[slot].unit.maxHP | number}})
                 </td>

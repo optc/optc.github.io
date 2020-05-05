@@ -2838,6 +2838,7 @@ window.flags = {
     2848: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     2849: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     2851: { rr: 1, rro: 1, lrr: 1 },
+    2853: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
     2856: { rr: 1, rro: 1, lrr: 1 },
     2857: { rr: 1, rro: 1, lrr: 1 },
     2858: { rr: 1, rro: 1, lrr: 1 },
