@@ -3526,7 +3526,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 776, -777 ],
             Underground: [ 776, -777 ],
-            Exebition: [ 776, -777 ],
+            Exhibition: [ 776, -777 ],
         },
 
         {
@@ -3539,7 +3539,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 778, -779 ],
             Underground: [ 778, -779 ],
-            Exebition: [ 778, -779 ],
+            Exhibition: [ 778, -779 ],
         },
 
         {
@@ -3563,7 +3563,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 803, -804 ],
             Underground: [ 803, -804 ],
-            Exebition: [ 803, -804 ],
+            Exhibition: [ 803, -804 ],
         },
 
         {
@@ -3599,7 +3599,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 832, -833 ],
             Underground: [ 832, -833 ],
-            Exebition: [ 832, -833 ],
+            Exhibition: [ 832, -833 ],
         },
 
         {
@@ -3612,7 +3612,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 834, -834 ],
             Underground: [ 834, -834 ],
-            Exebition: [ 834, -834 ],
+            Exhibition: [ 834, -834 ],
         },
 
         {
@@ -3625,7 +3625,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 859, -860 ],
             Underground: [ 859, -860 ],
-            Exebition: [ 859, -860 ],
+            Exhibition: [ 859, -860 ],
         },
 
         {
@@ -3638,7 +3638,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 861, -862 ],
             Underground: [ 861, -862 ],
-            Exebition: [ 861, -862 ],
+            Exhibition: [ 861, -862 ],
         },
 
         {
@@ -3662,7 +3662,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 883, -884 ],
             Underground: [ 883, -884 ],
-            Exebition: [ 883, -884 ],
+            Exhibition: [ 883, -884 ],
         },
 
         {
@@ -3686,7 +3686,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 902, -903 ],
             Underground: [ 902, -903 ],
-            Exebition: [ 902, -903 ],
+            Exhibition: [ 902, -903 ],
         },
 
         {
@@ -3698,7 +3698,7 @@ window.drops = {
             gamewith: 23130,
             slefty: 'coliseums',
             Underground: [ 904, -904 ],
-            Exebition: [ 904, -904 ],
+            Exhibition: [ 904, -904 ],
         },
 
         {
@@ -3722,7 +3722,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 925, -926 ],
             Underground: [ 925, -926 ],
-            Exebition: [ 925, -926 ],
+            Exhibition: [ 925, -926 ],
         },
 
         {
@@ -3734,7 +3734,7 @@ window.drops = {
             gamewith: 24040,
             slefty: 'coliseums',
             Underground: [ 927, -927 ],
-            Exebition: [ 927, -927 ],
+            Exhibition: [ 927, -927 ],
         },
 
         {
@@ -3758,7 +3758,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 952, -953 ],
             Underground: [ 952, -953 ],
-            Exebition: [ 952, -953 ],
+            Exhibition: [ 952, -953 ],
         },
 
         {
@@ -3782,7 +3782,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 984, -984 ],
             Underground: [ 984, -984 ],
-            Exebition: [ 984, -984 ],
+            Exhibition: [ 984, -984 ],
         },
 
         {
@@ -3806,7 +3806,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1017, -1018 ],
             Underground: [ 1017, -1018 ],
-            Exebition: [ 1017, -1018 ],
+            Exhibition: [ 1017, -1018 ],
         },
         
         {
@@ -3862,7 +3862,7 @@ window.drops = {
             gamewith: 27623,
             slefty: 'coliseums',
             Underground: [ 1019, -1019 ],
-            Exebition: [ 1019, -1019 ],
+            Exhibition: [ 1019, -1019 ],
         },
 
         {
@@ -3964,7 +3964,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1103, -1104 ],
             Underground: [ 1103, -1104 ],
-            Exebition: [ 1103, -1104 ],
+            Exhibition: [ 1103, -1104 ],
         },
 
         {
@@ -3977,7 +3977,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1105, -1106 ],
             Underground: [ 1105, -1106 ],
-            Exebition: [ 1105, -1106 ],
+            Exhibition: [ 1105, -1106 ],
         },
         
         {
@@ -3992,7 +3992,7 @@ window.drops = {
         },
         
         {
-            name: 'Coliseum EXTRA Vs. Gecko Moria',
+            name: 'Coliseum Extra Vs. Gecko Moria',
             thumb: 2512,
             showManual: true,
             nakama: 5251301,
@@ -4011,7 +4011,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1142, -1143 ],
             Underground: [ 1142, -1143 ],
-            Exebition: [ 1142, -1143 ],
+            Exhibition: [ 1142, -1143 ],
         },
 
         {
@@ -4023,7 +4023,7 @@ window.drops = {
             gamewith: 34503,
             slefty: 'coliseums',
             Underground: [ 1144, -1145 ],
-            Exebition: [ 1144, -1145 ],
+            Exhibition: [ 1144, -1145 ],
         },
 
         {
@@ -4047,7 +4047,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1195, -1196 ],
             Underground: [ 1195, -1196 ],
-            Exebition: [ 1195, -1196 ],
+            Exhibition: [ 1195, -1196 ],
         },
 
         {
@@ -4059,7 +4059,7 @@ window.drops = {
             gamewith: 35524,
             slefty: 'coliseums',
             Underground: [ 1197, -1197 ],
-            Exebition: [ 1197, -1197 ],
+            Exhibition: [ 1197, -1197 ],
         },
 
         {
@@ -4072,7 +4072,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1221, -1222 ],
             Underground: [ 1221, -1222 ],
-            Exebition: [ 1221, -1222 ],
+            Exhibition: [ 1221, -1222 ],
         },
 
         {
@@ -4096,7 +4096,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1252, -1252 ],
             Underground: [ 1252, -1252 ],
-            Exebition: [ 1252, -1252 ],
+            Exhibition: [ 1252, -1252 ],
         },
 
         {
@@ -4108,7 +4108,7 @@ window.drops = {
             gamewith: 38054,
             slefty: 'coliseums',
             Underground: [ 1253, -1253 ],
-            Exebition: [ 1253, -1253 ],
+            Exhibition: [ 1253, -1253 ],
         },
 
         {
@@ -4132,7 +4132,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1293, -1294 ],
             Underground: [ 1293, -1294 ],
-            Exebition: [ 1293, -1294 ],
+            Exhibition: [ 1293, -1294 ],
         },
 
         {
@@ -4167,7 +4167,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1311, -1312 ],
             Underground: [ 1311, -1312 ],
-            Exebition: [ 1311, -1312 ],
+            Exhibition: [ 1311, -1312 ],
         },
 
         {
@@ -4191,7 +4191,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1339, -1339 ],
             Underground: [ 1339, -1339 ],
-            Exebition: [ 1339, -1339 ],
+            Exhibition: [ 1339, -1339 ],
         },
 
         {
@@ -4204,7 +4204,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1340, -1341 ],
             Underground: [ 1340, -1341 ],
-            Exebition: [ 1340, -1341 ],
+            Exhibition: [ 1340, -1341 ],
         },
 
         {
@@ -4228,7 +4228,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1377, -1378 ],
             Underground: [ 1377, -1378 ],
-            Exebition: [ 1377, -1378 ],
+            Exhibition: [ 1377, -1378 ],
         },
 
         {
@@ -4251,7 +4251,7 @@ window.drops = {
             gamewith: 47303,
             slefty: 'coliseums',
             Underground: [ 1402, -1402 ],
-            Exebition: [ 1402, -1402 ],
+            Exhibition: [ 1402, -1402 ],
         },
 
         {
@@ -4286,7 +4286,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1423, -1423 ],
             Underground: [ 1423, -1423 ],
-            Exebition: [ 1423, -1423 ],
+            Exhibition: [ 1423, -1423 ],
         },
 
         {
@@ -4298,7 +4298,7 @@ window.drops = {
             gamewith: 48805,
             slefty: 'coliseums',
             Underground: [ 1424, -1424 ],
-            Exebition: [ 1424, -1424 ],
+            Exhibition: [ 1424, -1424 ],
         },
 
         {
@@ -4322,7 +4322,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1457, -1458 ],
             Underground: [ 1457, -1458 ],
-            Exebition: [ 1457, -1458 ],
+            Exhibition: [ 1457, -1458 ],
         },
 
         {
@@ -4334,7 +4334,7 @@ window.drops = {
             gamewith: 50807,
             slefty: 'coliseums',
             Underground: [ 1459, -1459 ],
-            Exebition: [ 1459, -1459 ],
+            Exhibition: [ 1459, -1459 ],
         },
 
         {
@@ -4358,7 +4358,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1488, -1489 ],
             Underground: [ 1488, -1489 ],
-            Exebition: [ 1488, -1489 ],
+            Exhibition: [ 1488, -1489 ],
         },
 
         {
@@ -4370,7 +4370,7 @@ window.drops = {
             gamewith: 52212,
             slefty: 'coliseums',
             Underground: [ 1490, -1491 ],
-            Exebition: [ 1490, -1491 ],
+            Exhibition: [ 1490, -1491 ],
         },
 
         {
@@ -4394,7 +4394,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1526, -1527 ],
             Underground: [ 1526, -1527 ],
-            Exebition: [ 1526, -1527 ],
+            Exhibition: [ 1526, -1527 ],
         },
 
         {
@@ -4407,7 +4407,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1528, -1528 ],
             Underground: [ 1528, -1528 ],
-            Exebition: [ 1528, -1528 ],
+            Exhibition: [ 1528, -1528 ],
         },
 
         {
@@ -4420,7 +4420,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1552, -1553 ],
             Underground: [ 1552, -1553 ],
-            Exebition: [ 1552, -1553 ],
+            Exhibition: [ 1552, -1553 ],
         },
 
         {
@@ -4433,7 +4433,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1554, -1555 ],
             Underground: [ 1554, -1555 ],
-            Exebition: [ 1554, -1555 ],
+            Exhibition: [ 1554, -1555 ],
         },
 
         {
@@ -4457,7 +4457,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1585, -1586 ],
             Underground: [ 1585, -1586 ],
-            Exebition: [ 1585, -1586 ],
+            Exhibition: [ 1585, -1586 ],
         },
 
         {
@@ -4481,7 +4481,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1603, -1603 ],
             Underground: [ 1603, -1603 ],
-            Exebition: [ 1603, -1603 ],
+            Exhibition: [ 1603, -1603 ],
         },
 
         {
@@ -4505,7 +4505,7 @@ window.drops = {
             slefty: 'coliseums',
             Chaos: [ 1629, -1630 ],
             Underground: [ 1629, -1630 ],
-            Exebition: [ 1629, -1630 ],
+            Exhibition: [ 1629, -1630 ],
         },
 
         {
@@ -4648,7 +4648,7 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum EXTRA Vs. King Neptune',
+            name: 'Coliseum Extra Vs. King Neptune',
             thumb: 2529,
             showManual: true,
             global: true,
@@ -4900,7 +4900,7 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum EX Vs. Coby',
+            name: 'Coliseum Extra Vs. Coby',
             thumb: 3372,
             showManual: true,
             nakama: null,
