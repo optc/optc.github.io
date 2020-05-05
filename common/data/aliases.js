@@ -2780,7 +2780,7 @@ window.aliases = {
     2779: [ 'お玉', '', 'Tama', 'Otama' ],
     2780: [ 'お玉 編笠村の娘', '', 'Tama', 'Otama' ],
     2781: [ 'キャロット 想いを引き継ぐ“月の獅子（スーロン）”', '', 'Raid Carrot' ],
-    2782: [ 'お鶴', '', 'Fortnight' ],
+    2782: [ 'お鶴', '', 'Fortnight', 'Otsuru' ],
     2783: [ '錦えもん 見守る侍', '', 'Fortnight' ],
     2784: [ 'ルッチ 獣人 悪の絶対阻止', '', 'Mega Lucci', 'Super Lucci', 'Mega Rob Lucci', 'Super Rob Lucci', '6+ Lucci', '6+ Rob Lucci' ],
     2785: [ '居眠り狂死郎', '', 'Coliseum Kyoshiro' ],
