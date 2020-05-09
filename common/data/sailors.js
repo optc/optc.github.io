@@ -1204,6 +1204,9 @@ window.sailors = {
     2952: {
         atkStatic: function(p) { return 50; },
     },
+    2956: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

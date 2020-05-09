@@ -2917,4 +2917,5 @@ window.flags = {
     3375: { global: 1 },
     3376: { global: 1 },
     3380: { global: 1 },
+    3381: { global: 1, special: 1 },
 };
