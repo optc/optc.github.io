@@ -9490,6 +9490,13 @@ window.specials = {
             window.specials[2955].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");
         },
     },
+    2956:{
+        chainAddition: function(p) { return window.specials[2956].turnedOn ? 0.8 : 0; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2956].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

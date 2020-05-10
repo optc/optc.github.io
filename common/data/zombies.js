@@ -1035,4 +1035,13 @@ window.zombies = {
         multiplier: 5,
         threshold: 0.5
     },
+    5255: { // Law/Chopper
+        type: 'healer',
+    },
+    5257: { // Law/Chopper
+        type: 'healer',
+    },
+    5258: { // Law/Chopper
+        type: 'healer',
+    },
 };

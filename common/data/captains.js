@@ -10386,6 +10386,9 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    2956: {
+        atk: function(p) { return p.unit.type == "INT" ? p.percHP <= 30.0 ? 3.25 : 2.5 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -11574,5 +11577,17 @@ window.captains = {
     5254: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? (p.orb == 'meat' || p.orb == 'g' || p.orb == 'wano' || p.orb == 'rainbow') ? 4 : 4.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? 1.3 : 1; }
+    },
+    5255: {
+        atk: function(p) { return 2.5; },
+    },
+    5256: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 1 : 2.5; },
+    },
+    5257: {
+        atk: function(p) { return 2.75; },
+    },
+    5258: {
+        atk: function(p) { return 2.75; },
     },
 };
