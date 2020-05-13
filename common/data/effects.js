@@ -493,17 +493,17 @@ window.effects = {
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([ 2731, 2729, 2709, 2707, 2706, 2704, 2702, 2700 ].indexOf(id) != -1);
+                matching = ([ 2793, 2789, 2787, 2785, 2784, 2781, 2780, 2778, 2776, 2774 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([ 2731, 2729, 2709, 2707, 2706, 2704, 2702, 2700 ].indexOf(id) != -1);
+                matching = ([ 2793, 2789, 2787, 2785, 2784, 2781, 2780, 2778, 2776, 2774 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([ 2731, 2729, 2709, 2707, 2706, 2704, 2702, 2700 ].indexOf(id) != -1);
+                matching = ([ 2793, 2789, 2787, 2785, 2784, 2781, 2780, 2778, 2776, 2774 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},

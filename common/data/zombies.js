@@ -905,6 +905,20 @@ window.zombies = {
         type: 'zombie',
         threshold: 0.50//CHANGE THIS
     },
+    2959: { // Sabo
+        type: 'healer',
+    },
+    2960: { // Sabo
+        type: 'healer',
+    },
+    2969: { // Enel
+        type: 'healer',
+        multiplier: 3
+    },
+    2970: { // Enel
+        type: 'healer',
+        multiplier: 5
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1
