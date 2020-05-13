@@ -2390,7 +2390,7 @@ window.aliases = {
     2389: [ 'つる 見守りし大参謀', '', 'Support Tsuru' ],
     2390: [ 'コニス 裁きを恐れぬ天使', '', 'Support Conis', 'Support Konis' ],
     2391: [ 'サボ 弟を守る意志', '', 'Support Sabo' ],
-    2392: [ 'アイスバーグ 背中を押す兄弟子', '', 'Support Iceburg' ],
+    2392: [ 'アイスバーグ 背中を押す兄弟子', '', 'Support Iceburg', 'Support Iceberg' ],
     2393: [ 'ポートガス・D・エース “白ひげ”時代の海賊', '', 'Raid Ace' ],
     2394: [ 'ポートガス・D・エース “白ひげ”時代の体現者', '', 'Raid Ace' ],
     2395: [ 'チョッパー＆フランキー 皇帝（エンペラー）の魂持つ戦士たち', '', 'Raid Tony Tony Chopper', 'Raid Franky', 'Raid Chopper' ],

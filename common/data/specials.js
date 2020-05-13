@@ -9504,9 +9504,9 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName); }
     },
     2959:{
-        affinity: function(p) { return (window.specials[2959].turnedOn != 1 && p.unit.type == "STR") ? 2 : 1; },
+        affinity: function(p) { return (window.specials[2959].multiplier != 1 && p.unit.type == "STR") ? 2 : 1; },
         type: "type",
-        chainAddition: function(p) { return window.specials[2959].turnedOn != 0 ? 1.0 : 0; },
+        chainAddition: function(p) { return window.specials[2959].multiplier != 0 ? 1.0 : 0; },
         turnedOn: false,
         onActivation: function(p) {
             var n = (window.specials[2959].multiplier == 0 ? 1 : window.specials[2959].multiplier == 1 ? 2 : 0);
@@ -9518,9 +9518,9 @@ window.specials = {
         },
     },
     2960:{
-        affinity: function(p) { return (window.specials[2959].turnedOn != 1 && p.unit.type == "STR") ? 2 : 1; },
+        affinity: function(p) { return (window.specials[2959].multiplier != 1 && p.unit.type == "STR") ? 2 : 1; },
         type: "type",
-        chainAddition: function(p) { return window.specials[2959].turnedOn != 0 ? 1.0 : 0; },
+        chainAddition: function(p) { return window.specials[2959].multiplier != 0 ? 1.0 : 0; },
         turnedOn: false,
         onActivation: function(p) {
             var n = (window.specials[2959].multiplier == 0 ? 1 : window.specials[2959].multiplier == 1 ? 2 : 0);
