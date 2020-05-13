@@ -2974,7 +2974,7 @@ window.units = [
     [ "Nami, Celebrate 6th Anniversary Cruise", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 991, 550, 132, 2478, 1374, 329, 1 ],
     [ "Chopper, Celebrate 6th Anniversary Cruise", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1014, 552, 127, 2536, 1381, 317, 1 ],
     [ "Fleet Admiral Sakazuki, Evil-Burning Justice", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 5, 99, 4000000, 506, 350, 34, 1880, 1344, 138, 1 ],
-    [ "Cavenidsh, Beautiful Prince of the Colloseum", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 5, 99, 4000000, 445, 321, 56, 1823, 1282, 168, 1 ],
+    [ "Cavendish, Beautiful Prince of the Colloseum", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 5, 99, 4000000, 445, 321, 56, 1823, 1282, 168, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
