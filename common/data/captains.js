@@ -10389,6 +10389,103 @@ window.captains = {
     2956: {
         atk: function(p) { return p.unit.type == "INT" ? p.percHP <= 30.0 ? 3.25 : 2.5 : 1; }
     },
+    2957: {
+        atk: function(p) {
+            return p.unit.type == "STR" ? ((p.orb == 2 || p.orb == 'rcv') ? 5 : 4) : 3.75;
+        },
+        hp: function(p) { return 1.3; },
+        rcv: function(p) { return 1.3; }
+    },
+    2958: {
+        atk: function(p) {
+            return p.unit.type == "STR" ? ((p.orb == 2 || p.orb == 'rcv') ? 5 : 4) : 3.75;
+        },
+        hp: function(p) { return 1.3; },
+        rcv: function(p) { return 1.3; }
+    },
+    2959: {
+        atk: function(p) { return p.unit.type == "STR" ? 4 : 1; },
+        hp: function(p) { return 1.2; },
+        chainModifier: function(p) { return 1.5; }
+    },
+    2960: {
+        atk: function(p) { return p.unit.type == "STR" ? 4 : 1; },
+        hp: function(p) { return 1.2; },
+        chainModifier: function(p) { return 1.5; }
+    },
+    2961: {
+        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 5 : 4; }
+    },
+    2962: {
+        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 5 : 4; }
+    },
+    2963: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 5 : p.unit.type == "INT" ? 4.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return 0.15; },
+    },
+    2964: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 5 : p.unit.type == "INT" ? 4.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+        rcv: function(p) { return 0.15; },
+    },
+    2965: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    2966: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    2967: {
+        hitAtk: function(p) {
+            return (p.unit.type == "STR") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                minModifier: 'Good'
+            }, {
+                minModifier: 'Good'
+            }, {
+                minModifier: 'Good'
+            }]) ? 2 : 2.2 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    2968: {
+        hitAtk: function(p) {
+            return (p.unit.type == "STR") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                minModifier: 'Good'
+            }, {
+                minModifier: 'Good'
+            }, {
+                minModifier: 'Good'
+            }]) ? 2.5 : 2.8 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    2969: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2970: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2.5 : 1; },
+    },
+    2971: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2.25 : 1; },
+    },
+    2972: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2.75 : 1; },
+    },
+    2973: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2 : 1; },
+        rcv: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 1.75 : 1; },
+    },
+    2974: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2 : 1; },
+    },
+    2975: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.75 : 1; },
+    },
+    2976: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.75 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
