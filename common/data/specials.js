@@ -9623,6 +9623,9 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         },
     },
+    2977: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

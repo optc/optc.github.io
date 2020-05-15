@@ -10486,6 +10486,10 @@ window.captains = {
     2976: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.75 : 1; }
     },
+    2977: {
+        //p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]
+        atk: function(p) { return [1.5, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

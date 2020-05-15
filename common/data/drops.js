@@ -5182,6 +5182,15 @@ window.drops = {
             gamewith: null,
             'Raging Sea': [ 2913 ]
         },
+
+        {
+            name: '6th Anniversary Luffy',
+            dropID: 'treasuremap33',
+            thumb: 2977,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 2977 ]
+        },
         
     ],
 
@@ -6033,6 +6042,15 @@ window.drops = {
             'Competition 2nd Round': [ 2917 ],
             'Competition VS Diamante': [ 2918 ],
             'Chopperman Missions': [ 2916 ],
+        },
+        
+        {
+            name: 'Treasure Hunt!',
+            thumb: 2957,
+            nakama: null,
+            gamewith: null,
+            condition: 'Drops portions of a Log Pose map and a Treasure Key map to fullfil community rewards.',
+            'Chopperman Missions': [ 2975, 2976 ],
         },
         
         {
