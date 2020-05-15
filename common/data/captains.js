@@ -10414,10 +10414,10 @@ window.captains = {
         chainModifier: function(p) { return 1.5; }
     },
     2961: {
-        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 5 : 4; }
+        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 50.0 ? 5 : 4; }
     },
     2962: {
-        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 5 : 4; }
+        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 50.0 ? 5 : 4; }
     },
     2963: {
         atk: function(p) { return p.slot == p.sourceSlot ? 5 : p.unit.type == "INT" ? 4.25 : 1; },
