@@ -10414,10 +10414,10 @@ window.captains = {
         chainModifier: function(p) { return 1.5; }
     },
     2961: {
-        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 5 : 4; }
+        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 50.0 ? 5 : 4; }
     },
     2962: {
-        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 30.0 ? 5 : 4; }
+        atk: function(p) { return p.unit.type == "INT" && p.percHP <= 50.0 ? 5 : 4; }
     },
     2963: {
         atk: function(p) { return p.slot == p.sourceSlot ? 5 : p.unit.type == "INT" ? 4.25 : 1; },
@@ -10485,6 +10485,10 @@ window.captains = {
     },
     2976: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.75 : 1; }
+    },
+    2977: {
+        //p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]
+        atk: function(p) { return [1.5, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     3333: {
         hitAtk: function(p) {
