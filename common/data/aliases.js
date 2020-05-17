@@ -2375,7 +2375,7 @@ window.aliases = {
     2374: [ 'シャーロット・スムージー シャーロット家１４女', '', 'Colo Smoothie', 'Coliseum Smoothie', 'SmooThicc' ],
     2375: [ '将星スムージー シャーロット家１４女', '', 'Colo Smoothie', 'Coliseum Smoothie', 'SmooThicc' ],
     2376: [ 'マザー・カルメル', '', '' ],
-    2377: [ 'マザー・カルメル マザー・カルメル', '', '' ],
+    2377: [ 'マザー・カルメル 羊の家の聖母', '', '' ],
     2378: [ 'ハイルディン 巨人族の少年戦士', '', 'Kid Hajrudin' ],
     2379: [ 'シュトロイゼン ククククの実の能力者', '', 'Young Streusen' ],
     2380: [ 'シャーロット・リンリン 羊の家の少女', '', 'Young Big Mom', 'Ambush Big Mom', 'Invasion Big Mom' ],
