@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 62
+    // last ID used: 85
     // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {
@@ -1168,6 +1168,36 @@ window.effects = {
             if([ 2734 ].indexOf(id) != -1) boost = 2;
             if([ 2736, 2735, 2738 ].indexOf(id) != -1) boost = 1.75;
             if([ 2557, 5140, 5141, 5142, 5143, 2347, 2019, 2007, 1707, 1380, 2536, 5093, 5094, 5095, 2500, 2473, 2381, 2109, 2700, 2387, 2690, 2197, 1268, 2302, 2504, 1980, 1016, 365, 2477, 1921, 2097, 2525, 2707, 2534, 5086, 5087, 5088, 5089, 1922, 2001, 1751, 2709, 2336, 1581, 2672, 1985, 5008, 5009, 5010, 5011, 1916, 2087, 2519, 2245, 2148, 2919, 5180, 5181, 5182, 5183, 1961, 2459, 2523, 314, 781, 1865, 312, 1043, 2609, 1982, 359, 882, 361, 1091, 1857, 1855, 310, 2729, 1867, 831, 357, 2111, 1690, 2152, 1963, 2457 ].indexOf(id) != -1) boost = 1.5;
+            return boost;
+        },
+	},
+    
+    'Wapol\'s Assault': {
+        description: 'Boost stats of characters, check in-game news for lists.',
+        thumb: 2799,
+        id: 85, // don't change this
+        atk: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2797 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2798 ].indexOf(id) != -1) boost = 1.5;
+            if([ 2362, 2676, 1889, 2704, 2745, 2304, 2365, 2446, 2577, 2603, 2672, 2181, 3381, 2369, 2371, 2794 ].indexOf(id) != -1) boost = 1.3;
+            return boost;
+        },
+        hp: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2797 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2798 ].indexOf(id) != -1) boost = 1.5;
+            if([ 2362, 2676, 1889, 2704, 2745, 2304, 2365, 2446, 2577, 2603, 2672, 2181, 3381, 2369, 2371, 2794 ].indexOf(id) != -1) boost = 1.3;
+            return boost;
+        },
+        rcv: function(p) {
+            var boost = 1;
+            var id = p.number + 1;
+            if([ 2797 ].indexOf(id) != -1) boost = 1.75;
+            if([ 2798 ].indexOf(id) != -1) boost = 1.5;
+            if([ 2362, 2676, 1889, 2704, 2745, 2304, 2365, 2446, 2577, 2603, 2672, 2181, 3381, 2369, 2371, 2794 ].indexOf(id) != -1) boost = 1.3;
             return boost;
         },
 	},
