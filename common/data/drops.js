@@ -4880,6 +4880,7 @@ window.drops = {
             name: 'Shutenmaru',
             thumb: 2813,
             showManual: true,
+            global: true,
             nakama: 5281301,
             gamewith: 181684,
             slefty: 'coliseums',
@@ -6082,20 +6083,24 @@ window.drops = {
         },
         
         {
-            name: 'Today is the Best Day of My Life!',
-            thumb: 2816,
+            name: 'Today is the Bestest Day Ever!!',
+            thumb: 2815,
+            //global: true,
             nakama: 6281600,
-            gamewith: 182349,
+            gamewith: 182347,
             showManual: true,
             'All Difficulties': [ 2815, -2815 ],
         },
         
         {
-            name: 'O-Tama\'s Full Stomach Plan',
+            name: 'OTama\'s Stuffed Belly Initiative',
             thumb: 2815,
+            //global: true,
             nakama: 6281500,
             gamewith: 182349,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
+            challenge: 'Cumulative Damage dealt to enemies in a single run',
+            //challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']]
         },
         
         {
