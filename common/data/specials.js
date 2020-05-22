@@ -9560,6 +9560,7 @@ window.specials = {
     2963:{
         orb: function(p) { return (p.slot == p.sourceSlot) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2963].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         atk: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2963].multiplier : 1; },
+        type: "type",
         onActivation: function(p) {
             var n = (window.specials[2963].multiplier == 2 ? 1 : window.specials[2963].multiplier == 3 ? 2 : 0);
             window.specials[2963].multiplier = [2, 3, 4][n];
@@ -9570,14 +9571,15 @@ window.specials = {
         },
     },
     2964:{
-        orb: function(p) { return (p.slot == p.sourceSlot) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2963].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
-        atk: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2963].multiplier : 1; },
+        orb: function(p) { return (p.slot == p.sourceSlot) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2964].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        atk: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2964].multiplier : 1; },
+        type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2963].multiplier == 2 ? 1 : window.specials[2963].multiplier == 3 ? 2 : 0);
-            window.specials[2963].multiplier = [2, 3, 4][n];
+            var n = (window.specials[2964].multiplier == 2 ? 1 : window.specials[2964].multiplier == 3 ? 2 : 0);
+            window.specials[2964].multiplier = [2, 3, 4][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 3, 4][n] + 'x Orb boost. To switch to the ' + [3, 4, 2][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2963warning'
+                name: '2964warning'
             });
         },
     },
