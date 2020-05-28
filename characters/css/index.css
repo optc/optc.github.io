@@ -124,20 +124,21 @@ input[type="text"] {
     height: 73px;
 }
 
-.STR     { background: salmon; }
-.QCK     { background: lightskyblue; }
-.DEX     { background: lightgreen; }
-.PSY     { background: gold; }
-.INT     { background: orchid; }
-.RCV     { background: sandybrown; }
-.TND     { background: peru; }
-.BLOCK   { background: darkslateblue; }
-.BOMB    { background: maroon; }
-.SEMLA    { background: saddlebrown; }
-.WANO    { background: firebrick; }
-.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
-.G       { background: orange; }
-.EMPTY   { background: #777; }
+.STR       { background: salmon; }
+.QCK       { background: lightskyblue; }
+.DEX       { background: lightgreen; }
+.PSY       { background: gold; }
+.INT       { background: orchid; }
+.RCV       { background: sandybrown; }
+.TND       { background: peru; }
+.BLOCK     { background: darkslateblue; }
+.BOMB      { background: maroon; }
+.SEMLA     { background: saddlebrown; }
+.WANO      { background: firebrick; }
+.RAINBOW   { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
+.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }
+.G         { background: orange; }
+.EMPTY     { background: #777; }
 
 .cell-STR { font-weight: bold; color: red; }
 .cell-QCK { font-weight: bold; color: blue; }

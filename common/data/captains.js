@@ -9935,7 +9935,7 @@ window.captains = {
         atk: function(p) { return (p.orb == 'meat') ? 4.25 : 3.5; },
     },
     2804: {
-        staticMult: function(p) { return p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0; },
+        staticMult: function(p) { console.log(p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0); return p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0; },
         atk: function(p) { return (p.orb == 'meat') ? 4.25 : 3.5; },
     },
     2805: {

@@ -934,6 +934,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var params = getParameters(0);
             params['unit'] = unit;
             params['slot'] = teamSlot;
+            var unitParams = params;
             //Check if conditional Boosts are activated since they raise 
             for (var x=0;x<enabledSpecials.length;++x) {
                 if  (enabledSpecials[x].type=='condition'){
@@ -992,9 +993,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (enabledEffects[y].hasOwnProperty('staticMult')){
                     var params = getParameters(enabledEffects[y].sourceSlot);
                     params['sourceSlot'] = enabledEffects[y].sourceSlot;
+                    unitParams['sourceSlot'] = enabledEffects[y].sourceSlot;
                     var slot = enabledEffects[y].sourceSlot;
                     var baseDamage2 = getStatOfUnit(team[slot],'atk',slot);
-                    var mult = enabledEffects[y].staticMult(params);
+                    var mult = enabledEffects[y].staticMult(unitParams);
                     enabledEffects.forEach(function(x) {
                         if (x.hasOwnProperty('atkStatic'))
                             baseDamage2 += x.atkStatic(getParameters(slot));

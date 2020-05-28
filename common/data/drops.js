@@ -3509,6 +3509,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Sobamask',
+            dropID: 'clash64',
+            thumb: 2987,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2987 ],
+        },
+        
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
@@ -6005,6 +6014,13 @@ window.drops = {
             nakama: null,
             gamewith: 182349,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
+        },
+        
+        {
+            name: 'Overwhelming Smile - Delightful Soba',
+            thumb: 2988,
+            nakama: null,
+            'All Difficulties': [ 2988, -2988 ],
         },
         
         {

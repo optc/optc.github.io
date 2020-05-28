@@ -8857,10 +8857,10 @@ window.specials = {
         delay: function(p) { return 2; },
     },
     2809: {
-        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; }
     },
     2810: {
-        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; }
     },
     2813: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
