@@ -225,7 +225,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var atk = getStatOfUnit(x,'atk',n); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n,shipParam), againstType = type;//Same problem as above, so yeah
             var multipliers = [ ];
-            if (orb == 'g') orb = 1.5;
             if (orb == 0.5 && x.unit.type == 'DEX') orb = (window.specials[1221].turnedOn || window.specials[1222].turnedOn || window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2363].turnedOn || window.specials[2370].turnedOn || window.specials[2371].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Driven")) orb = (window.specials[1259].turnedOn || window.specials[1260].turnedOn || window.specials[1323].turnedOn || window.specials[1324].turnedOn || window.specials[2425].turnedOn || window.specials[2426].turnedOn) ? 2 : 0.5;
             if (orb == 0.5 && x.unit.type == 'DEX' && x.unit.class.has("Slasher")) orb = (window.specials[1323].turnedOn || window.specials[1324].turnedOn) ? 2 : 0.5;
@@ -300,6 +299,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             orb = 2;
                         }
                     }
+                    if (orb == 'superbomb'){
+                        if ([ 2979, 2980 ].includes(team[temp].unit.number + 1)){
+                            orb = 2;
+                        }
+                    }
                     if (orb == 'dex'){
                         if ([ 2476, 2477 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Slasher"))){
                             orb = 2;
@@ -339,6 +343,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'rainbow') orb = 2;
             if (orb == 'empty') orb = 1;
             if (orb == 'wano') orb = 2.5;
+            if (orb == 'g') orb = 1.5;
+            if (orb == 'superbomb') orb = 1.5;
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)

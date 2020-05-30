@@ -104,6 +104,12 @@
     background-image: radial-gradient(9px 3px, circle cover, grey, gainsboro, rgb(50,50,50));
 }
 
+.unitOrb.SB {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, gold, orangered, rgb(50,50,50));
+    background-image: -moz-radial-gradient(9px 3px, circle cover, gold, orangered, rgb(50,50,50));
+    background-image: radial-gradient(9px 3px, circle cover, gold, orangered, rgb(50,50,50));
+}
+
 .unitOrb .fa {
     position: relative;
     font-size: 2em;
@@ -223,6 +229,17 @@
     top: 1px;
 }
 
+.superbomb-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
 /***********************
  *     ORB GLOWING     *
  ***********************/
@@ -236,6 +253,7 @@
 .unitOrb.S { animation: glowS .5s linear infinite alternate; }
 .unitOrb.R { animation: glowR .5s linear infinite alternate; }
 .unitOrb.W { animation: glowS .5s linear infinite alternate; }
+.unitOrb.SB { animation: glowG .5s linear infinite alternate; }
 .unitOrb.opposite { animation: glowBlack .5s linear infinite alternate; }
 
 @keyframes glowRed {

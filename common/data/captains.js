@@ -10493,6 +10493,44 @@ window.captains = {
     2978: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.25 : 1; }
     },
+    2979: {
+        atk: function(p) {
+            return p.unit.type == "DEX" ? ((p.orb == 'superbomb') ? 5 : 4) : 3.75;
+        },
+    },
+    2980: {
+        atk: function(p) {
+            return p.unit.type == "DEX" ? ((p.orb == 'superbomb') ? 5 : 4) : 3.75;
+        },
+    },
+    2981: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 2.75; },
+        hp: function(p) { return 1.3; },
+    },
+    2982: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 2.75; },
+        hp: function(p) { return 1.3; },
+    },
+    2983: {
+        atk: function(p) { return p.unit.type == "DEX" ? p.percHP <= 50.0 ? 2.5 : 2 : 1; }
+    },
+    2984: {
+        atk: function(p) { return p.unit.type == "DEX" ? p.percHP <= 50.0 ? 2.75 : 2.25 : 1; }
+    },
+    2985: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.1 : 1; },
+    },
+    2986: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+    },
+    2987: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+    },
+    2988: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

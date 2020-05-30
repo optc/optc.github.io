@@ -2816,7 +2816,7 @@ window.flags = {
     2812: { global: 1 },
     2813: { global: 1 },
     2814: { rr: 1, rro: 1 },
-    2816: { rr: 1, rro: 1 },
+    2816: { rr: 1, rro: 1, lrr: 1 },
     2817: { rr: 1, rro: 1 },
     2820: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     2821: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
