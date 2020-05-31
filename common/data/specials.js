@@ -6590,10 +6590,10 @@ window.specials = {
         }
     },
     2364: {
-        staticMult: function(p) { return p.damageCounter * 15; }
+        staticMult: function(p) { return Math.min(p.damageCounter,2000000) * 15; }
     },
     2365: {
-        staticMult: function(p) { return p.damageCounter * 15; }
+        staticMult: function(p) { return Math.min(p.damageCounter,2000000) * 15; }
     },
     2366: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
@@ -9627,6 +9627,46 @@ window.specials = {
     },
     2977: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); }
+    },
+    2979: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
+        type: "class",
+    },
+    2980: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
+        type: "class",
+    },
+    2981: {
+        staticMult: function(p) { return Math.min(p.damageCounter,50000) * 20; }
+    },
+    2982: {
+        staticMult: function(p) { return Math.min(p.damageCounter,50000) * 20; }
+    },
+    2985: {
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2985].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2985].multiplier = (p.captain != null && p.captain.type == "DEX") ? 2.25 : 1;
+        },
+    },
+    2986: {
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2986].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2986].multiplier = (p.captain != null && p.captain.type == "DEX") ? 2.25 : 1;
+        },
+    },
+    2987: {
+        chainAddition: function(p) {return window.specials[2987].multiplier;},
+        onActivation: function(p) {
+            var n = ((window.specials[2987].multiplier == 0.5 && p.colorCount.DEX >= 3) ? 1 : 0);
+            window.specials[2987].multiplier = [0.5, 1.1][n];
+            p.scope.notify({
+                text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
+                name: '2731warning'
+            });
+        }
+    },
+    2989: {
+        affinity: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
     },
     3333: {
         atk: function(p) { return 1.75; },

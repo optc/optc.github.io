@@ -3485,7 +3485,7 @@ window.drops = {
             dropID: 'clash61',
             thumb: 2893,
             nakama: null,
-            gamewith: null,
+            gamewith: 193895,
             'All Difficulties': [ 2893 ]
         },
         
@@ -3504,7 +3504,7 @@ window.drops = {
             dropID: 'clash63',
             thumb: 2956,
             nakama: null,
-            gamewith: null,
+            gamewith: 201909,
             'All Difficulties': [ 2956 ],
         },
         
@@ -3513,7 +3513,7 @@ window.drops = {
             dropID: 'clash64',
             thumb: 2987,
             nakama: null,
-            gamewith: null,
+            gamewith: 205055,
             'All Difficulties': [ 2987 ],
         },
         
@@ -4818,7 +4818,7 @@ window.drops = {
         },
 
         {
-            name: 'Kyoshiro',
+            name: 'Samurai\'s Mercy Towards the Guilty',
             thumb: 2785,
             showManual: true,
             nakama: null,
@@ -4828,7 +4828,7 @@ window.drops = {
         },
 
         {
-            name: 'Shutenmaru',
+            name: 'Chief, Atamayama Thieves Brigade',
             thumb: 2813,
             showManual: true,
             nakama: null,
@@ -4862,9 +4862,19 @@ window.drops = {
             thumb: 2908,
             showManual: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 194224,
             slefty: 'coliseums',
             Chaos: [ 2908, -2908 ],
+        },
+
+        {
+            name: 'Kizaru',
+            thumb: 2953,
+            showManual: true,
+            nakama: null,
+            gamewith: 199860,
+            slefty: 'coliseums',
+            Chaos: [ 2953, -2953 ],
         },
 
         {
@@ -5179,8 +5189,8 @@ window.drops = {
             dropID: 'treasuremap31',
             thumb: 2879,
             nakama: null,
-            gamewith: null,
-            'Raging Sea': [ 2879, 2880 ]
+            gamewith: 189792,
+            'Primordial Sea': [ 2879, 2880 ]
         },
 
         {
@@ -5188,8 +5198,8 @@ window.drops = {
             dropID: 'treasuremap32',
             thumb: 2913,
             nakama: null,
-            gamewith: null,
-            'Raging Sea': [ 2913 ]
+            gamewith: 194893,
+            'Calm Sea': [ 2913 ]
         },
 
         {
@@ -5367,6 +5377,29 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2920 ],
+        },
+        
+    ],
+
+            
+    'Pirate Festival': [
+        
+        {
+            name: 'Round One',
+            dropID: 'piratefestival1',
+            thumb: 2934,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2934 ],
+        },
+        
+        {
+            name: 'Round Two',
+            dropID: 'piratefestival2',
+            thumb: 2989,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2989 ],
         },
         
     ],
@@ -6020,6 +6053,7 @@ window.drops = {
             name: 'Overwhelming Smile - Delightful Soba',
             thumb: 2988,
             nakama: null,
+            gamewith: 205053,
             'All Difficulties': [ 2988, -2988 ],
         },
         

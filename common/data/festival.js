@@ -2987,7 +2987,7 @@ window.festival = [
     [ "Attacker", 119, 140 ],
     [ "Supporter", 171, 157 ],
     [ "", null, null ],
-    [ "", null, null ],
+    [ "Attacker", 131, 202 ],
     [ "", null, null ],
     [ "", null, null ],
     [ "", null, null ],

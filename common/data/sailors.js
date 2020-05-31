@@ -1207,6 +1207,20 @@ window.sailors = {
     2956: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
     },
+    2985: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2986: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2987: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    2988: {
+        atkStatic: function(p) { return 50; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
