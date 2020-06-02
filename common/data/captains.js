@@ -9935,7 +9935,7 @@ window.captains = {
         atk: function(p) { return (p.orb == 'meat') ? 4.25 : 3.5; },
     },
     2804: {
-        staticMult: function(p) { return p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0; },
+        staticMult: function(p) { console.log(p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0); return p.actions[p.sourceSlot] ? p.slot == p.sourceSlot ? 300 : 0 : 0; },
         atk: function(p) { return (p.orb == 'meat') ? 4.25 : 3.5; },
     },
     2805: {
@@ -10492,6 +10492,47 @@ window.captains = {
     },
     2978: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.25 : 1; }
+    },
+    2979: {
+        atk: function(p) {
+            return p.unit.type == "DEX" ? ((p.orb == 'superbomb') ? 5 : 4) : 3.75;
+        },
+    },
+    2980: {
+        atk: function(p) {
+            return p.unit.type == "DEX" ? ((p.orb == 'superbomb') ? 5 : 4) : 3.75;
+        },
+    },
+    2981: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 2.75; },
+        hp: function(p) { return 1.3; },
+    },
+    2982: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 2.75; },
+        hp: function(p) { return 1.3; },
+    },
+    2983: {
+        atk: function(p) { return p.unit.type == "DEX" ? p.percHP <= 50.0 ? 2.5 : 2 : 1; }
+    },
+    2984: {
+        atk: function(p) { return p.unit.type == "DEX" ? p.percHP <= 50.0 ? 2.75 : 2.25 : 1; }
+    },
+    2985: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.1 : 1; },
+    },
+    2986: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
+    },
+    2987: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+    },
+    2988: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
+    },
+    2989: {
+        atk: function(p) { return p.unit.type == "DEX" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.5 : 1; },
     },
     3333: {
         hitAtk: function(p) {

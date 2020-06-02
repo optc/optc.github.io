@@ -87,6 +87,7 @@ filters.decorate = function() {
             .replace(/\[EMPTY\]/g,'<span class="badge EMPTY"><i class="fa fa-circle-o"></i> EMPTY</span>')
             .replace(/\[BLOCK\]/g,'<span class="badge BLOCK"><i class="block-icon"></i> BLOCK</span>')
             .replace(/\[BOMB\]/g,'<span class="badge BOMB"><i class="fa fa-bomb"></i> BOMB</span>')
+            .replace(/\[SUPERBOMB\]/g,'<span class="badge SUPERBOMB"><i class="fa fa-bomb"></i> SUPERBOMB</span>')
             .replace(/\[RAINBOW\]/g,'<span class="badge RAINBOW"></i> RAINBOW</span>')
             .replace(/\[SEMLA\]/g,'<span class="badge SEMLA"></i> SEMLA</span>')
             .replace(/\[WANO\]/g,'<span class="badge WANO"></i> WANO</span>')

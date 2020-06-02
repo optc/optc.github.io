@@ -3519,6 +3519,15 @@ window.drops = {
         },
         
         {
+            name: 'Clash!! Sobamask',
+            dropID: 'clash64',
+            thumb: 2987,
+            nakama: null,
+            gamewith: 205055,
+            'All Difficulties': [ 2987 ],
+        },
+        
+        {
             name: 'Showdown!! Usopp & Chopper',
             global: true,
             thumb: 3370,
@@ -4877,7 +4886,7 @@ window.drops = {
         },
 
         {
-            name: 'Shutenmaru',
+            name: 'Chief, Atamayama Thieves Brigade',
             thumb: 2813,
             showManual: true,
             global: true,
@@ -4922,14 +4931,13 @@ window.drops = {
         },
 
         {
-            name: 'Borsalino',
+            name: 'Kizaru',
             thumb: 2953,
             showManual: true,
             nakama: null,
-            gamewith: 194224,
+            gamewith: 199860,
             slefty: 'coliseums',
             Chaos: [ 2953, -2953 ],
-            Underground: [ 2953, -2953 ],
         },
 
         {
@@ -5250,7 +5258,7 @@ window.drops = {
             thumb: 2879,
             nakama: 8287900,
             gamewith: null,
-            'Raging Sea': [ 2879, 2880 ]
+            'Primordial Sea': [ 2879, 2880 ]
         },
 
         {
@@ -5259,7 +5267,7 @@ window.drops = {
             thumb: 2913,
             nakama: 8291300,
             gamewith: 194893,
-            'Raging Sea': [ 2913 ]
+            'Calm Sea': [ 2913 ]
         },
 
         {
@@ -5447,6 +5455,29 @@ window.drops = {
             nakama: null,
             gamewith: 148537,
             'All Difficulties': [ 2955 ],
+        },
+        
+    ],
+
+            
+    'Pirate Festival': [
+        
+        {
+            name: 'Round One',
+            dropID: 'piratefestival1',
+            thumb: 2934,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2934 ],
+        },
+        
+        {
+            name: 'Round Two',
+            dropID: 'piratefestival2',
+            thumb: 2989,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2989 ],
         },
         
     ],
@@ -6101,6 +6132,14 @@ window.drops = {
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             //challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']]
+        },
+        
+        {
+            name: 'Overwhelming Smile - Delightful Soba',
+            thumb: 2988,
+            nakama: null,
+            gamewith: 205053,
+            'All Difficulties': [ 2988, -2988 ],
         },
         
         {
