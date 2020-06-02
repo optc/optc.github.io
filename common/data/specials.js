@@ -9668,6 +9668,14 @@ window.specials = {
     2989: {
         affinity: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
     },
+    2990: {
+        atk: function(p) { return p.delayed > 0 ? window.specials[2990].multiplier : 1; },
+        type: "condition",
+        delay: function(p) { return window.specials[2990].multiplier == 1.75 ? 2 : 0; },
+        onActivation: function(p) {
+            window.specials[2990].multiplier = (p.captain != null && p.captain.type == "DEX") ? 1.75 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

@@ -4878,6 +4878,16 @@ window.drops = {
         },
 
         {
+            name: 'King',
+            thumb: 2990,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2990, -2990 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             showManual: true,
@@ -5377,6 +5387,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2920 ],
+        },
+        
+        {
+            name: 'Carrot',
+            dropID: 'bond9',
+            thumb: 2955,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2955 ],
         },
         
     ],

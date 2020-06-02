@@ -1258,6 +1258,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
     
     var getParameters = function(slotNumber, chainPosition) {
+        $scope.data.limit0 = $scope.data.limit0 == undefined ? 0 : $scope.data.limit0;
+        $scope.data.limit1 = $scope.data.limit1 == undefined ? 0 : $scope.data.limit1;
+        $scope.data.limit2 = $scope.data.limit2 == undefined ? 0 : $scope.data.limit2;
+        $scope.data.limit3 = $scope.data.limit3 == undefined ? 0 : $scope.data.limit3;
+        $scope.data.limit4 = $scope.data.limit4 == undefined ? 0 : $scope.data.limit4;
+        $scope.data.limit5 = $scope.data.limit5 == undefined ? 0 : $scope.data.limit5;
         return {
             unit: team[slotNumber].unit,
             orb: $scope.tdata.team[slotNumber].orb,
