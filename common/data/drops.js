@@ -5220,6 +5220,15 @@ window.drops = {
             gamewith: null,
             'Raging Sea': [ 2977 ]
         },
+
+        {
+            name: 'Zorojuro',
+            dropID: 'treasuremap34',
+            thumb: 2995,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 2995 ]
+        },
         
     ],
 

@@ -9676,6 +9676,28 @@ window.specials = {
             window.specials[2990].multiplier = (p.captain != null && p.captain.type == "DEX") ? 1.75 : 1;
         },
     },
+    2992:{
+        affinity: function(p) { return p.unit.type == "DEX" ? window.specials[2992].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2992].multiplier == 1.75 ? 1 : window.specials[2992].multiplier == 2 ? 2 : 0);
+            window.specials[2992].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '2992warning'
+            });
+        },
+    },
+    2993:{
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2993].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[2993].multiplier == 1.75 ? 1 : window.specials[2993].multiplier == 2 ? 2 : 0);
+            window.specials[2993].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
+                name: '2993warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

@@ -5569,7 +5569,7 @@ window.captains = {
             }
             return p.unit.class.has("Slasher") ? specialEnabled ? p.actions[p.sourceSlot] ? 3.5 : 1.62 : p.actions[p.sourceSlot] ? 2.5 : 1.2 : 1;
         },
-        hp: function(p) { return p.actions[p.sourceSlot] ? 1.3 : 1.1 }
+        hp: function(p) { return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; }
     },
     1809: {
         hitAtk: function(p) {
@@ -10545,6 +10545,27 @@ window.captains = {
         },
         hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.5; },
+    },
+    2992: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2993: {
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2994: {
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2995: {
+        atk: function(p) {
+            var specialEnabled = false;
+            var mult = 1;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[2995].turnedOn[i]==true) { mult = [1, 1, 1, 1, 1, 1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
+            }
+            return p.unit.type == "STR" ? [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]*mult : 1;
+        },
+        hp: function(p) { return p.unit.type == "STR" ? [1, 1, 1, 1, 1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; }
     },
     3333: {
         hitAtk: function(p) {
