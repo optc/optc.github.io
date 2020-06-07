@@ -4941,7 +4941,17 @@ window.drops = {
         },
 
         {
-            name: 'Coliseum Extra Vs. Coby',
+            name: 'King',
+            thumb: 2990,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 2990, -2990 ],
+        },
+
+        {
+            name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             showManual: true,
             nakama: 5337301,
@@ -5277,6 +5287,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 2977 ]
+        },
+
+        {
+            name: 'Zorojuro',
+            dropID: 'treasuremap34',
+            thumb: 2995,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 2995 ]
         },
         
     ],

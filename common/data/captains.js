@@ -4012,9 +4012,9 @@ window.captains = {
     },
     1434: {
         atk: function(p) {
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1 : 1; },
         hp: function(p) {
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.5 : p.classCount.Powerhouse==4 ? 1.4 : p.classCount.Powerhouse==3 ? 1.3 : p.classCount.Powerhouse==2 ? 1.2 : p.classCount.Powerhouse==1 ? 1.1 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? [[1, 1.1, 1.2, 1.3, 1.4, 1.5, 2][p.classCount.Powerhouse],[1, 1.1, 1.2, 1.3, 1.4, 1.5, 2.5][p.classCount.Powerhouse]][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },//Change this
     },
     1435: {
         atk: function(p) {
@@ -5569,7 +5569,7 @@ window.captains = {
             }
             return p.unit.class.has("Slasher") ? specialEnabled ? p.actions[p.sourceSlot] ? 3.5 : 1.62 : p.actions[p.sourceSlot] ? 2.5 : 1.2 : 1;
         },
-        hp: function(p) { return p.actions[p.sourceSlot] ? 1.3 : 1.1 }
+        hp: function(p) { return p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; }
     },
     1809: {
         hitAtk: function(p) {
@@ -5930,9 +5930,10 @@ window.captains = {
     },
     1880: {
         atk: function(p) {
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 3.25 : 1 : 1; },
+            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1 : 1; },
         hp: function(p) {
-            return p.unit.class.has("Powerhouse") ? p.classCount.Powerhouse==6 ? 2 : p.classCount.Powerhouse==5 ? 1.5 : p.classCount.Powerhouse==4 ? 1.4 : p.classCount.Powerhouse==3 ? 1.3 : p.classCount.Powerhouse==2 ? 1.2 : p.classCount.Powerhouse==1 ? 1.1 : 1 : 1; },
+            console.log([[1, 1.1, 1.2, 1.3, 1.4, 1.5, 2][p.classCount.Powerhouse],[1, 1.1, 1.2, 1.3, 1.4, 1.5, 2.5][p.classCount.Powerhouse]][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]);
+            return p.unit.class.has("Powerhouse") ? [[1, 1.1, 1.2, 1.3, 1.4, 1.5, 2][p.classCount.Powerhouse],[1, 1.1, 1.2, 1.3, 1.4, 1.5, 2.5][p.classCount.Powerhouse]][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },//Change this
     },
     1881: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.5, [ "Slasher" ]); },
@@ -6721,7 +6722,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 3.25 : 1; },
     },
     2023: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 3.25 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? [3.25, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     2024: {
         damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['PSY', 'PSY', 'QCK']); },
@@ -7168,7 +7169,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1.825, Katacount); 
+            return Math.pow([1.825, 1.9][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]], Katacount); 
         },
     },
     2114: {
@@ -9714,7 +9715,7 @@ window.captains = {
                     Katacount++;
                 }
             }
-            return Math.pow(1.95, Katacount);
+            return Math.pow([1.95, 2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]], Katacount);
         },
     },
     2740: {
@@ -10533,6 +10534,38 @@ window.captains = {
     },
     2989: {
         atk: function(p) { return p.unit.type == "DEX" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.5 : 1; },
+    },
+    2990: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    2991: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Good", "Great", "Perfect"]) ? 4.25 : 3;
+        },
+        hitModifiers: ["Good", "Great", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return 1.5; },
+    },
+    2992: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2993: {
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2994: {
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    2995: {
+        atk: function(p) {
+            var specialEnabled = false;
+            var mult = 1;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[2995].turnedOn[i]==true) { mult = [1, 1, 1, 1, 1, 1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
+            }
+            return p.unit.type == "STR" ? [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]*mult : 1;
+        },
+        hp: function(p) { return p.unit.type == "STR" ? [1, 1, 1, 1, 1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; }
     },
     3333: {
         hitAtk: function(p) {

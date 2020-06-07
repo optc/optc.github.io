@@ -341,6 +341,12 @@ window.matchers = [
         target: 'special',
         matcher: /boosts( own ATK| ATK of)/i
     },
+
+    {
+        name: 'Base ATK boosters',
+        target: 'special',
+        matcher: /boosts( own base ATK| base ATK of)/i
+    },
     
     {
         name: 'Combo Boost Specials',
@@ -959,6 +965,12 @@ window.matchers = [
         matcher: /Boosts.+ATK/i
     },
 
+    {
+        name: 'Base ATK boosters',
+        target: 'swap',
+        matcher: /boosts( own base ATK| base ATK of)/i
+    },
+
 
     {
         name: 'Orb boosters',
@@ -1221,6 +1233,12 @@ window.matchers = [
         name: 'Key Locked Limit Break',
         target: 'limit',
         matcher: /Locked/i
+    },
+    
+    {
+        name: '3rd Potential Ability',
+        target: 'limit',
+        matcher: /Acquire Potential 3/i
     },
     
     {
