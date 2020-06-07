@@ -5950,7 +5950,7 @@ window.captains = {
         rcv: function(p) { return 1.2; },
     },
     1883: {
-        atk: function(p) { return p.percHP <= 30.0 ? 3.5 : 2.5; },
+        atk: function(p) { return p.percHP <= 30.0 ? [3.5, 3.9875][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; },
     },
@@ -9167,7 +9167,7 @@ window.captains = {
         rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.2 : 1; },
     },
     2588: {
-        atk: function(p) { return p.unit.type != "DEX" ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 4 : 3.75); }
+        atk: function(p) { return p.unit.type != "DEX" ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? [4, 4.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 3.75); }
     },
     2589: {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
