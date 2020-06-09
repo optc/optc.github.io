@@ -4838,7 +4838,7 @@ window.drops = {
         },
 
         {
-            name: 'Sangoro',
+            name: 'Famous Soba Cart Cook in the Flower Capital',
             thumb: 2845,
             showManual: true,
             nakama: null,
