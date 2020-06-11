@@ -2993,7 +2993,7 @@ window.units = [
     [ "Kyoshiro, Compassion for a Fiend", "DEX", [ "Slasher", "Cerebral" ], 5, 20, 4, 4, 99, 2000000, 1135, 563, 103, 2838, 1407, 258, 1 ],
     [ "Gyukimaru", "DEX", [ "Slasher", "Powerhouse" ], 5, 20, 5, 4, 99, 2000000, 1090, 560, 112, 2726, 1400, 279, 1 ],
     [ "Okiku, A Mysterious Pretty Shop Girl", "DEX", [ "Slasher", "Cerebral" ], 5, 20, 5, 4, 99, 2000000, 992, 556, 129, 2480, 1391, 323, 1 ],
-    [ "Zorojuro, Strawhat Swordsman", "STR", [ "Slasher", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1173, 561, 98, null, null, null, null ],
+    [ "Zorojuro, Strawhat Swordsman", "STR", [ "Slasher", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1173, 561, 98, 2932, 1402, 244, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

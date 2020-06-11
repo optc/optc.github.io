@@ -1711,7 +1711,7 @@ window.drops = {
             nakama: 2103700,
             gamewith: 29442,
             condition: 'Only [DEX], [RCV] and [TND] orbs appear',
-            'All Dificulties': [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
+            'All Difficulties': [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
         },
         
         {
@@ -2519,7 +2519,7 @@ window.drops = {
         
         {
             name: 'Revenge of the Assassins! Galette',
-            dropID: 'event126',
+            dropID: 'event127',
             thumb: 2751,
             nakama: null,
             gamewith: 174577,
@@ -2528,7 +2528,7 @@ window.drops = {
         
         {
             name: 'The Charming Tea House Owner',
-            dropID: 'event127',
+            dropID: 'event128',
             thumb: 2782,
             nakama: null,
             gamewith: 178712,
@@ -5226,7 +5226,7 @@ window.drops = {
             dropID: 'treasuremap34',
             thumb: 2995,
             nakama: null,
-            gamewith: null,
+            gamewith: 207706,
             'Coast of Wano': [ 2995 ]
         },
         
@@ -6320,6 +6320,24 @@ window.drops = {
             nakama: 7223400,
             gamewith: 118924,
             completion: 'Ship: Queen Mama Chanter',
+        },
+        
+        {
+            name: 'Forest of Training: Straw',
+            thumb: 2729,
+            global: true,
+            nakama: null,
+            gamewith: 184394,
+            completion: 'Ship: Grudge Dolph',
+        },
+        
+        {
+            name: 'Forest of Training: Magnetic Field',
+            thumb: 2980,
+            global: true,
+            nakama: null,
+            gamewith: 207708,
+            completion: 'Ship: Victoria Punk',
         },
 
    ]
