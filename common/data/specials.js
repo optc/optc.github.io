@@ -9698,6 +9698,30 @@ window.specials = {
             });
         },
     },
+    2996:{
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2996].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[2996].multiplier == 1.75 ? 1 : window.specials[2996].multiplier == 2 ? 2 : 0);
+            window.specials[2996].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
+                name: '2996warning'
+            });
+        },
+    },
+    2997: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2997].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            window.specials[2997].multiplier = (p.colorCount.STR + p.colorCount.DEX + p.colorCount.INT >= 5) ? 2 : 1;
+        },
+    },
+    2998: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -11335,5 +11359,17 @@ window.specials = {
     5254: {
         atk: function(p) { return 2; },
         type: "condition",
+    },
+    5259:{
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 2.25 : 1; },
+    },
+    5260:{
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 2.25 : 1; },
+    },
+    5261:{
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 2.25 : 1; },
+    },
+    5262:{
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 2.25 : 1; },
     },
 };

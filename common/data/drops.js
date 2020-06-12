@@ -5407,6 +5407,15 @@ window.drops = {
             'All Difficulties': [ 2955 ],
         },
         
+        {
+            name: 'Luffy & Hancock',
+            dropID: 'bond10',
+            thumb: 2999,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2999 ],
+        },
+        
     ],
 
             
