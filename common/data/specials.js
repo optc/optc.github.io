@@ -8914,6 +8914,23 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
         type: "class"
     },
+    2832: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+        chain: function(p) { return window.specials[2832].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2832].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[2832].multiplier == 2.5 ? 1 : 0);
+            window.specials[2832].multiplier = [2.5,3][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.5, 3][n] + 'x Chain Lock. To switch to the ' + [3, 2.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '2832warning'
+            });
+        },
+    },
     2838: {
         chainAddition: function(p) { return window.specials[2838].multiplier; },
         onActivation: function(p) {
