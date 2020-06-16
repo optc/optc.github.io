@@ -20,6 +20,8 @@
         ng-click="filters.noSupport = !filters.noSupport">Show Characters with no support</span>
     <span class="filter width-12 exc" ng-model="filters.typoClass" ng-class="{ active: filters.typoClass }"
         ng-click="filters.typoClass = !filters.typoClass">Show Characters with Misspelt Classes</span>
+    <span class="filter width-12 exc" ng-model="filters.nodualUnits" ng-class="{ active: filters.nodualUnits }"
+        ng-click="filters.nodualUnits = !filters.nodualUnits">Hide Dual Character Units</span>
 </div>
 
 <div class="filter-container expandable" id="character-filter"
@@ -213,13 +215,13 @@
         <i class="pull-right fa fa-{{filters.tmkcEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
     </span>
     <span class="filter width-6 exc" ng-model="filters.globalTM" ng-class="{ active: filters.globalTM }"
-        ng-click="filters.globalTM = !filters.globalTM">Show Global TM Boosters [O-Robi]<!--br></br--></span><!--
+        ng-click="filters.globalTM = !filters.globalTM">Show Global TM Boosters [X Drake]<!--br></br--></span><!--
  --><span class="filter width-6 exc" ng-model="filters.japanTM" ng-class="{ active: filters.japanTM }"
-        ng-click="filters.japanTM = !filters.japanTM">Show Japan TM Boosters [Shirahoshi]</span>
+        ng-click="filters.japanTM = !filters.japanTM">Show Japan TM Boosters [Zorojuro]</span>
     <span class="filter width-6 exc" ng-model="filters.globalKC" ng-class="{ active: filters.globalKC }"
-        ng-click="filters.globalKC = !filters.globalKC">Show Global KC Boosters [Kikunojo]<!--br></br--></span><!--
+        ng-click="filters.globalKC = !filters.globalKC">Show Global KC Boosters [Marco & Ace]<!--br></br--></span><!--
  --><span class="filter width-6 exc" ng-model="filters.japanKC" ng-class="{ active: filters.japanKC }"
-        ng-click="filters.japanKC = !filters.japanKC">Show Japan KC Boosters [Big Mom]<!--br></br--></span>
+        ng-click="filters.japanKC = !filters.japanKC">Show Japan KC Boosters [Luffy & Hancock]<!--br></br--></span>
 </div>
 
 <div class="filter-container expandable" id="specCapt-filter"

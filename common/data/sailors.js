@@ -1221,6 +1221,11 @@ window.sailors = {
     2988: {
         atkStatic: function(p) { return 50; },
     },
+    2998: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

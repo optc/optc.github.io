@@ -1712,7 +1712,7 @@ window.drops = {
             nakama: 2103700,
             gamewith: 29442,
             condition: 'Only [DEX], [RCV] and [TND] orbs appear',
-            'All Dificulties': [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
+            'All Difficulties': [ 1036, 1038, -874, -876, -878, -554, -813, -814, -566, -1175 ]
         },
         
         {
@@ -4898,7 +4898,7 @@ window.drops = {
         },
 
         {
-            name: 'Sangoro',
+            name: 'Famous Soba Cart Cook in the Flower Capital',
             thumb: 2845,
             showManual: true,
             nakama: 5284401,
@@ -5294,7 +5294,7 @@ window.drops = {
             dropID: 'treasuremap34',
             thumb: 2995,
             nakama: null,
-            gamewith: null,
+            gamewith: 207706,
             'Coast of Wano': [ 2995 ]
         },
         
@@ -5474,6 +5474,15 @@ window.drops = {
             nakama: null,
             gamewith: 148537,
             'All Difficulties': [ 2955 ],
+        },
+        
+        {
+            name: 'Luffy & Hancock',
+            dropID: 'bond10',
+            thumb: 2999,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 2999 ],
         },
         
     ],
@@ -6402,9 +6411,19 @@ window.drops = {
         {
             name: 'Forest of Training: Straw',
             thumb: 2729,
+            global: true,
             nakama: null,
             gamewith: 184394,
             completion: 'Ship: Grudge Dolph',
+        },
+        
+        {
+            name: 'Forest of Training: Magnetic Field',
+            thumb: 2980,
+            global: true,
+            nakama: null,
+            gamewith: 207708,
+            completion: 'Ship: Victoria Punk',
         },
 
    ]

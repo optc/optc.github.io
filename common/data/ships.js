@@ -487,7 +487,7 @@ window.ships = [
     
     
     
-    { //38
+    { //37
         name: "Thousand Sunny - 4th Anniversary Model",
         thumb: 'ship_0039_c.png',
         description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP gained by 3x and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge.',
@@ -601,7 +601,7 @@ window.ships = [
     
     { //45
         name: "Piece of Spadille",
-        thumb: null,
+        thumb: 'ship_0047_c.png',
         description: 'Boosts ATK of Fighter, Powerhouse and Free Spirit characters by 1.5x and their HP by 1.2x. If HP is below 30% at the start of the turn, boosts ATK of Fighter, Powerhouse and Free Spirit characters by 1.6x.',
         atk: function(p) {
             return p.unit.class.has('Fighter') || p.unit.class.has('Powerhouse') || p.unit.class.has('Free Spirit') ? (p.p.percHP <= 30.0) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
@@ -613,9 +613,9 @@ window.ships = [
     
     
     
-    { //45
-        name: "Koi",
-        thumb: null,
+    { //46
+        name: "Giant Koi",
+        thumb: 'ship_0048_c.png',
         description: 'Boosts ATK of [QCK] and [INT] characters by 1.5x and their HP by 1.2x. Makes [RCV] orbs beneficial for [QCK] and [INT] characters. If HP is above 99% at the start of the turn, boosts ATK of [QCK] and [INT] characters by 1.6x.',
         atk: function(p) {
             return p.unit.type == "QCK" || p.unit.type == "INT" ? (p.p.percHP > 99.0) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
@@ -627,9 +627,9 @@ window.ships = [
     
     
     
-    { //46
+    { //47
         name: "Grudge Dolph",
-        thumb: null,
+        thumb: 'ship_0049_c.png',
         description: 'Reduces cooldown of all specials by 1 turn, boosts HP of Slasher and Striker by 1.25x and recovers 1,000 HP at the end of the turn. If a Striker or Slasher character has a Matching, [WANO] or [RAINBOW] orb, boosts ATK by 1.6x, by 1.5x otherwise.',
         atk: function(p) {
             return p.unit.class.has('Slasher') || p.unit.class.has('Striker') ? (p.p.orb == 2 || p.p.orb == 'rainbow' || p.p.orb == 'wano') ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.4, 1.5, 1.5, 1.6 ][p.boatLevel - 1] : [ 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 ][p.boatLevel - 1] : 1;
@@ -644,10 +644,10 @@ window.ships = [
     
     
     
-    { //47
+    { //48
         name: "Merry Go Goodbye",
-        thumb: null,
-        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x, reduces cooldown of all specials by 5 turns at the start of the fight and makes PERFECTs earier to hit.',
+        thumb: 'ship_0050_c.png',
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x, reduces cooldown of all specials by 5 turns at the start of the fight and makes PERFECTs earier to hit. Special: Recovers 32% of crew\'s MAX HP (Cooldown: 12 turns).',
         atk: function(p) {
             return 1.5;
         },
@@ -655,13 +655,39 @@ window.ships = [
     
     
     
-    { //47
+    { //49
         name: "Shark Superb",
-        thumb: null,
+        thumb: 'ship_0051_c.png',
         description: 'If your Captain is a [STR], [DEX] or [QCK] character, boosts ATK of all characters by 2x, reduces cooldown of all specials by 1 turn at the start of the fight, makes PERFECTs easier to hit and reduces ATK boost at the end of each turn until ATK boost is 1.3x after 10 turns.',
         atk: function(p) {
             if (p.captain) return (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? [ 1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 2 ][p.boatLevel - 1] - Math.min([0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.7][p.boatLevel - 1]*p.p.turnCounter/10,[0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.7][p.boatLevel - 1]) : 1;
             else return 1;
+        },
+    },
+    
+    
+    
+    { //50
+        name: "Thousand Sunny - Treasure Cruise 6th Anniversary Model",
+        thumb: 'ship_0052_c.png',
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge.',
+        atk: function(p) {
+            return 1.5;
+        },
+    },
+    
+    
+    
+    { //51
+        name: "Victoria Punk",
+        thumb: null,
+        description: 'Boosts HP by 1.2x and slightly increases the appearance rate of TND orbs. If your captain is [STR] or [DEX], boosts ATK of all characters by 1.55x. If a character has a [TND], [BOMB], [WANO] or [SUPERBOMB] orb, boost their ATK by 1.65x instead. Special: Reduces all enemies\' Barrier duration by 1 turn (Cooldown: 10 turns).',
+        atk: function(p) {
+            if (p.captain) return (p.captain.type == "STR" || p.captain.type == "DEX") ? (p.p.orb == 'superbomb' || p.p.orb == 'meat' || p.p.orb == 'wano') ? [ 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.55, 1.6, 1.65 ][p.boatLevel - 1] : [ 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.55 ][p.boatLevel - 1] : 1;
+            else return 1;
+        },
+        hp: function(p) {
+            return [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.2 ][p.boatLevel - 1];
         },
     },
 
