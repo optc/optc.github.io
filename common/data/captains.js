@@ -11581,7 +11581,6 @@ window.captains = {
     },
     5200: {
         atk: function(p) { return (p.unit.type == "STR") ? 3 : 1; },
-        rcv: function(p) { return (p.unit.type == "STR") ? 1.25 : 1; },
     },
     5201: {
         atk: function(p) { return (p.unit.type == "STR") ? 3.75 : 1; },

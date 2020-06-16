@@ -1780,7 +1780,7 @@ window.units = [
     [ "Kizaru [Neo]", "DEX", [ "Fighter", "Shooter" ], 4, 30, 4, 2, 70, 1066998, 217, 171, 37, 1221, 746, 162, 1 ],
     [ "Kizaru [Neo], Light Human", "DEX", [ "Fighter", "Shooter" ], 5, 50, 5, 4, 99, 5000000, 1164, 670, 132, 2486, 1415, 279, 1 ],
     [ "Fighting Fish", "STR", [ "Fighter", "Powerhouse" ], 3, 15, 4, 2, 70, 1066998, 177, 122, 24, 1239, 854, 171, 1 ],
-    [ "Don Chinjao", "QCK", [ "Fighter", "Striker" ], 4, 20, 4, 2, 99, 3000000, 669, 652, 67, 1339, 1305, 135, 1 ],
+    [ "Don Chinjao, Chinjao Family", "QCK", [ "Fighter", "Striker" ], 4, 20, 4, 2, 99, 3000000, 669, 652, 67, 1339, 1305, 135, 1 ],
     [ "Hajrudin", "STR", [ "Fighter", "Powerhouse" ], 4, 20, 5, 2, 99, 4000000, 521, 301, 0, 2084, 1205, 0, 1 ],
     [ "Fujitora", "INT", [ "Slasher", "Shooter" ], 4, 20, 5, 2, 99, 3000000, 896, 425, 30, 2690, 1276, 120, 1 ],
     [ "Spartan", "PSY", [ "Fighter", "Driven" ], 3, 15, 6, 2, 70, 1066998, 415, 247, 20, 1660, 991, 93, 1 ],

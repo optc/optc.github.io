@@ -8923,12 +8923,7 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2832].multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2832].multiplier == 2.5 ? 1 : 0);
-            window.specials[2832].multiplier = [2.5,3][n];
-            p.scope.notify({
-                text: 'Using the ' + [2.5, 3][n] + 'x Chain Lock. To switch to the ' + [3, 2.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2832warning'
-            });
+            window.specials[2832].multiplier = p.captain != null ? p.captain.type == "DEX" ? 3 : 2.5 : 2.5;
         },
     },
     2838: {

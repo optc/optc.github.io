@@ -489,21 +489,21 @@ window.effects = {
 	
 	'Kizuna Clash [Global]': {
         description: 'Certain units boosted',
-        thumb: 2733,
+        thumb: 2831,
         id: 46, // don't change this
         atk: function(p) {
             var id = p.number + 1,
-                matching = ([ 2810, 2808, 2806, 2802, 2789, 2787, 2785, 2780, 2778, 2776, 2774, 2709, 2707, 5195, 5196, 5197, 5198 ].indexOf(id) != -1);
+                matching = ([ 2832, 2833, 2829, 2827, 2825, 2823, 2815, 2814, 2810, 2808, 2806, 2804, 2802, 5195, 5196, 5197, 5198 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         hp: function(p) {
             var id = p.number + 1,
-                matching = ([ 2810, 2808, 2806, 2802, 2789, 2787, 2785, 2780, 2778, 2776, 2774, 2709, 2707, 5195, 5196, 5197, 5198 ].indexOf(id) != -1);
+                matching = ([ 2832, 2833, 2829, 2827, 2825, 2823, 2815, 2814, 2810, 2808, 2806, 2804, 2802, 5195, 5196, 5197, 5198 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
         rcv: function(p) {
             var id = p.number + 1,
-                matching = ([ 2810, 2808, 2806, 2802, 2789, 2787, 2785, 2780, 2778, 2776, 2774, 2709, 2707, 5195, 5196, 5197, 5198 ].indexOf(id) != -1);
+                matching = ([ 2832, 2833, 2829, 2827, 2825, 2823, 2815, 2814, 2810, 2808, 2806, 2804, 2802, 5195, 5196, 5197, 5198 ].indexOf(id) != -1);
             return !matching ? 1 : 2;
         },
 	},
