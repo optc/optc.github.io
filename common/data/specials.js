@@ -9711,14 +9711,22 @@ window.specials = {
         },
     },
     2996:{
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2996].multiplier : 1; },
+        affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") && window.specials[2996].switch != 1 && window.specials[2996].turnedOn) ? 2.25 : 1; },
+        atk: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") && window.specials[2996].switch == 1) ? window.specials[2996].multiplier : 1; },
+        type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2996].multiplier == 1.75 ? 1 : window.specials[2996].multiplier == 2 ? 2 : 0);
-            window.specials[2996].multiplier = [1.75, 2, 2.25][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
-                name: '2996warning'
-            });
+            window.specials[2996].turnedOn = (p.slot < 2) ? true : false;
+            var m = window.specials[2996].switch == 0 ? 1 : 0;
+            console.log(window.specials[2996].switch);
+            window.specials[2996].switch = [0,1][m];
+            if (m == 1){
+                var n = window.specials[2996].multiplier == 1.75 ? 1 : window.specials[2996].multiplier == 2 ? 2 : 0;
+                window.specials[2996].multiplier = [1.75, 2, 2.25, 1][n];
+                p.scope.notify({
+                    text: 'Using the ' + [1.75, 2, 2.25, 1][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75, 1][n] + 'x ATK boost, disable and re-enable this special',
+                    name: '2996warning'
+                });
+            }
         },
     },
     2997: {
