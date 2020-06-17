@@ -135,8 +135,9 @@ input[type="text"] {
 .BOMB      { background: maroon; }
 .SEMLA     { background: saddlebrown; }
 .WANO      { background: firebrick; }
-.RAINBOW   { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
-.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }
+.RAINBOW   { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); color: #333333; }
+/*.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }*/
+.SUPERBOMB { background: maroon; color: #ffe97d; }
 .G         { background: orange; }
 .EMPTY     { background: #777; }
 

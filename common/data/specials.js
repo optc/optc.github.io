@@ -9711,22 +9711,25 @@ window.specials = {
         },
     },
     2996:{
-        affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") && window.specials[2996].switch != 1 && window.specials[2996].turnedOn) ? 2.25 : 1; },
-        atk: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") && window.specials[2996].switch == 1) ? window.specials[2996].multiplier : 1; },
+        affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")) ? window.specials[2996].boostAffinity[p.sourceSlot] : 1; },
+        atk: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")) ? window.specials[2996].boostATK[p.sourceSlot] : 1; },
         type: "type",
         onActivation: function(p) {
             window.specials[2996].turnedOn = (p.slot < 2) ? true : false;
-            var m = window.specials[2996].switch == 0 ? 1 : 0;
-            console.log(window.specials[2996].switch);
-            window.specials[2996].switch = [0,1][m];
-            if (m == 1){
-                var n = window.specials[2996].multiplier == 1.75 ? 1 : window.specials[2996].multiplier == 2 ? 2 : 0;
-                window.specials[2996].multiplier = [1.75, 2, 2.25, 1][n];
-                p.scope.notify({
-                    text: 'Using the ' + [1.75, 2, 2.25, 1][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75, 1][n] + 'x ATK boost, disable and re-enable this special',
-                    name: '2996warning'
-                });
-            }
+            window.specials[2996].switch = window.specials[2996].switch ? window.specials[2996].switch : [undefined, undefined, undefined, undefined, undefined, undefined];
+            window.specials[2996].switch[p.slot] = window.specials[2996].switch[p.slot] != undefined ? (window.specials[2996].switch[p.slot] + 1) % 4 : 0;
+            
+            window.specials[2996].boostAffinity = window.specials[2996].boostAffinity ? window.specials[2996].boostAffinity : [undefined, undefined, undefined, undefined, undefined, undefined];
+            window.specials[2996].boostATK = window.specials[2996].boostATK ? window.specials[2996].boostATK : [undefined, undefined, undefined, undefined, undefined, undefined];
+            window.specials[2996].boostAffinity[p.slot] = window.specials[2996].turnedOn ? [2.25, 1, 1, 1][window.specials[2996].switch[p.slot]] : 1;
+            window.specials[2996].boostATK[p.slot] = [1, 1.75, 2, 2.25][window.specials[2996].switch[p.slot]];
+            
+            //console.log(window.specials[2996].boostATK);
+            //console.log(window.specials[2996].boostAffinity);
+            p.scope.notify({
+                text: 'Using the ' + ['2.25x Affinity Boost', '1.75x ATK Boost', '2x ATK Boost', '2.25x ATK Boost'][window.specials[2996].switch[p.slot]] + '. To switch to the ' + ['1.75x ATK Boost', '2x ATK Boost', '2.25x ATK Boost', '2.25x Affinity Boost'][window.specials[2996].switch[p.slot]] + ', disable and re-enable this special',
+                name: '2996warning'
+            });
         },
     },
     2997: {
