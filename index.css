@@ -86,7 +86,10 @@ body {
 .button:last-child {
     border-radius: 0 0 5px 5px;
 }
-
+.button:hover {
+	transform: scale(1.1);
+	font-weight:bold;
+}
 .green  { background-color: #7FCA9F; }
 .blue   { background-color: #85C1F5; }
 .red    { background-color: #E96D63; }

@@ -592,8 +592,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
             affinityMultiplier.forEach(function(special){
-                    if(affinityMult<special.affinityMultiplier(unit))
-                        affinityMult = special.affinityMultiplier(unit);
+                team.forEach(function(space){
+                    var params = getParameters(teamSlot)
+                    params["sourceSlot"] = special.sourceSlot;
+                    if (space.unit != null) if(affinityMult<special.affinityMultiplier(params)) affinityMult = special.affinityMultiplier(params);
+                })
                 });
         }
         else{
@@ -911,7 +914,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('staticMult'))
                 staticMultiplier.push({staticMultiplier: data.staticMult, sourceSlot: data.sourceSlot});
             if (data.hasOwnProperty('affinity'))
-                affinityMultiplier.push({affinityMultiplier: data.affinity || function(){ return 1.0; }});
+                affinityMultiplier.push({sourceSlot: data.sourceSlot, affinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))
