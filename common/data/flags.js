@@ -2740,7 +2740,7 @@ window.flags = {
     2736: { rr: 1, rro: 1, lrr: 1, global: 1 },
     2737: { global: 1 },
     2738: { global: 1 },
-    2739: { rr: 1, rro: 1, lrr: 1, global: 1 },
+    2739: { rr: 1, rro: 1, global: 1 },
     2740: { rr: 1, rro: 1, global: 1 },
     2741: { rr: 1, rro: 1, global: 1 },
     2742: { rr: 1, rro: 1, global: 1 },

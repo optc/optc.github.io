@@ -9688,6 +9688,13 @@ window.specials = {
             window.specials[2990].multiplier = (p.captain != null && p.captain.type == "DEX") ? 1.75 : 1;
         },
     },
+    2991: {
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
+        }
+    },
     2992:{
         affinity: function(p) { return p.unit.type == "DEX" ? window.specials[2992].multiplier : 1; },
         onActivation: function(p) {
