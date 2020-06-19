@@ -10576,6 +10576,12 @@ window.captains = {
     2998: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.75 : 1; },
     },
+    3000: {
+        hitAtk: function(p) {
+            return p.unit.type == "QCK" ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 2.5 : 2.25 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

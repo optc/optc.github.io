@@ -2998,7 +2998,7 @@ window.families = [
     "Marguerite",
     "Glorisa",
     [ "Monkey D. Luffy", "Boa Hancock" ],
-    null,
+    "Stussy",
     null,
     null,
     null,
