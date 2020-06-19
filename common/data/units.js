@@ -2998,7 +2998,7 @@ window.units = [
     [ "Marguerite, Straw Hat Luffy's Lifesaver", "STR", [ "Fighter", "Slasher" ], 5, 20, 5, 4, 99, 4000000, 985, 713, 85, 2470, 1387, 326, 1],
     [ "Elder Nyon", "INT", [ "Cerebral", "Fighter" ], 5, 20, 4, 4, 99, 4000000, 962, 671, 90, 2418, 1308, 361, 1],
     [ "Luffy & Hancock, Joint Front for Training", ["PSY", "INT"], [[ "Fighter", "Free Spirit" ],[ "Shooter", "Free Spirit" ],[ "Fighter", "Shooter" ]], 5, 60, 4, 4, 99, 5000000, 976, 229, 53, 2288, 830, 119, 1],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Stussy, Secret Justice from the Darkness", "QCK", [ "Shooter", "Free Spirit" ], 5, 30, 5, 99, 4000000, 1232, 646, 38, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
