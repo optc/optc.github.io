@@ -105,6 +105,36 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             specials[id].onDeactivation(getParameters(slot));
         }
     });
+    
+    $rootScope.$on('altspecialToggled', function(e, slot, enabled) {
+        var unit = $scope.data.team[slot].unit;
+        if (!unit) return;
+        var id = unit.number + 1;
+        if (!specials.hasOwnProperty(id)) return;
+        if (enabled && altspecials[id].hasOwnProperty('onActivation')) {
+            if (!initDone) initializeDataStructs();
+            
+            /*var kataActivate = false;
+            for(var kata = 0; kata < 2; kata++){
+            if(team[kata].unit !== null){
+                if(team[kata].unit.number == 2112 || team[kata].unit.number == 2113)
+                    kataActivate = true;
+                else
+                    kataActivate = false;
+                }
+            }
+            if(team[0].unit == null && team[1].unit == null)
+                kataActivate = false;
+            isDelayed = kataActivate;
+            var params = ;
+            params["isDelayed"] = isDelayed;*/
+            
+            altspecials[id].onActivation(getParameters(slot));
+        } else if (!enabled && specials[id].hasOwnProperty('onDeactivation')) {
+            if (!initDone) initializeDataStructs();
+            specials[id].onDeactivation(getParameters(slot));
+        }
+    });
 
     $scope.$watch('data',crunch,true);
     $scope.$watch('tdata',crunch,true);
@@ -432,6 +462,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getStatOfUnit = function(data,stat,slot) {
         var params = getParameters(slot);
+        if (stat == "atk" && params.sugarToy[slot]){
+            return 2500;
+        }
         var atkbaseDamage = 0;
         var LBaddition = 0;
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
@@ -620,11 +653,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return typeMult;
     };
 
-    var getChainMultiplier = function(chainBase, hitModifiers, chainModifier) {
-        var sanjijudge = 1;
+    var getChainMultiplier = function(chainBase, hitModifiers, chainModifier, params) {
+        var chainSpecialMult = 1;
         if ($scope.data.effect == '1.25x Chain Multiplier - Sanji Judge Change Action'){
-            sanjijudge = 1.25;
+            chainSpecialMult = 1.25;
         }
+        
+        chainSpecMultiplication.forEach(function(special){
+            var params = getParameters(special.sourceSlot);
+            if(chainSpecialMult<special.chainMultiplication(params)){
+                chainSpecialMult = special.chainMultiplication(params);
+            }
+        });
+        
         var result = chainBase;
         for (var i=0;i<hitModifiers.length;++i) {
             if (hitModifiers[i] == 'Perfect') result += chainModifier * 0.3;
@@ -632,7 +673,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             else if (hitModifiers[i] == 'Good') result += 0;
             else result = chainBase;
         }
-        result = result != 1 ? result * sanjijudge : result;
+        result = result != 1 ? result * chainSpecialMult : result;
+        
+        if (params.sugarToy[params.slot]){
+            result = result + 0.7;
+        }
+        
         return result;
     };
 
@@ -765,7 +811,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     //chain modifier without chain boosting captain
                     chainModifier = Math.min(mapEffect.chainModifier(params[n]), chainModifier);
                     }
-                var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier);
+                var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier, params[n]);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
@@ -892,6 +938,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ]};
         chainSpecials = [ ];
         chainAddition = [ ];
+        chainSpecMultiplication = [ ];
         affinityMultiplier = [ ];
         atkbase = [ ];
         captAffinityMultiplier = [ ];
@@ -911,6 +958,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
+            if (data.hasOwnProperty('chainMultiplication'))
+                chainSpecMultiplication.push({ sourceSlot: data.sourceSlot, chainMultiplication: data.chainMultiplication || function(){ return 1.0; } });
             if (data.hasOwnProperty('staticMult'))
                 staticMultiplier.push({staticMultiplier: data.staticMult, sourceSlot: data.sourceSlot});
             if (data.hasOwnProperty('affinity'))
@@ -975,7 +1024,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
                     params.sourceSlot = slot;
-                    console.log(params);
+                    //console.log(params);
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         specialid = team[slot].unit.number + 1;
                         multSpecial = enabledSpecials[y].staticMult(params);
@@ -1027,6 +1076,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Utility functions * * * * */
 
     var initializeDataStructs = function() {
+        //console.log(enabledSpecials);
         initDone = true;
         // get enabled specials
         var conflictWarning = false;
@@ -1080,6 +1130,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
                 else
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
+            }
+            if (x.altspecial && altspecials.hasOwnProperty(id)) {
+                if (altspecials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent){
+                    conflictWarning = true;
+                    var disabledSpecial = {}
+                    for (var i in specials[id]){
+                        if(i != 'orb')
+                            disabledSpecial[i] = specials[id][i];
+                    }
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },disabledSpecial));
+                }
+                else
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },altspecials[id]));
             }
             // activate turn counter if necessary
             if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441 || id == 5074 || id == 5534 || id == 5535 || id == 2669 || id == 2670 || id == 2683 || id == 2684))
@@ -1267,8 +1330,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.data.limit3 = $scope.data.limit3 == undefined ? 0 : $scope.data.limit3;
         $scope.data.limit4 = $scope.data.limit4 == undefined ? 0 : $scope.data.limit4;
         $scope.data.limit5 = $scope.data.limit5 == undefined ? 0 : $scope.data.limit5;
+        var sugarToyTemp =  [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ];
+        var unitTemp = Object.assign({},team[slotNumber].unit);
+        unitTemp.cost = sugarToyTemp[slotNumber] ? 40 : window.units[team[slotNumber].unit.number].cost;
         return {
-            unit: team[slotNumber].unit,
+            unit: unitTemp,
             orb: $scope.tdata.team[slotNumber].orb,
             maxHP: $scope.numbers.hp,
             percHP: $scope.data.percHP,
@@ -1293,6 +1359,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ],
             superType: [ $scope.data.superType0, $scope.data.superType1, $scope.data.superType2, $scope.data.superType3, $scope.data.superType4, $scope.data.superType5 ],
+            sugarToy: [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ],
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,

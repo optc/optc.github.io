@@ -919,6 +919,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    3014: { // Ivancov
+        type: 'healer',
+        amount: 500
+    },
+    3015: { // Ivancov
+        type: 'healer',
+        amount: 1000
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1

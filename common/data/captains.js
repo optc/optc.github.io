@@ -10582,6 +10582,81 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    3001: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    3002: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3003: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
+    3004: {
+        atk: function(p) { return p.percHP >= 70.0 ? p.unit.type == "QCK" ? 3.5 : 1 : 1; }
+    },
+    3005: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    3006: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .6 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .8 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 1 : addit;
+            return (p.unit.type == "QCK") ? 4 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" ? 1.3 : 1; },
+    },
+    3007: {
+        hitAtk: function(p) {
+            var addit = 0;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? .2 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? .4 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? .6 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? .8 : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 1 : addit;
+            return (p.unit.type == "QCK") ? 4 + addit : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" ? 1.3 : 1; },
+    },
+    3008: {
+        atk: function(p) { return p.unit.cost <= 40 ? 4.5 : 3; },
+        hp: function(p) { return 1.2; }
+    },
+    3009: {
+        atk: function(p) { return p.unit.cost <= 40 ? 4.5 : 3; },
+        hp: function(p) { return 1.2; }
+    },
+    3010: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2.5 : 1; }
+    },
+    3011: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2.75 : 1; }
+    },
+    3012: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    3013: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    3014: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2.25 : 1; }
+    },
+    3015: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2.5 : 1; }
+    },
+    3016: {
+        atk: function(p) { return p.unit.type == "QCK" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
