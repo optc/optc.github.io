@@ -52,22 +52,22 @@ window.altspecials = {
     5043: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5044: {
+    5052: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5045: {
+    5053: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5046: {
+    5054: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5047: {
+    5055: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5048: {
+    5056: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5049: {
+    5057: {
         chainMultiplication: function(p) { return 1.25; },
     },
     5082: {
