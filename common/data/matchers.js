@@ -1218,6 +1218,12 @@ window.matchers = [
     },
     
     {
+        name: 'Captain Upgrade Limit Break',
+        target: 'limit',
+        matcher: /Captain Ability/i
+    },
+    
+    {
         name: '3rd Potential Ability',
         target: 'limit',
         matcher: /Acquire Potential 3/i

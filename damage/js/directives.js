@@ -1073,7 +1073,6 @@ directives.special = function($rootScope) {
                 removeType();
                 if (scope.tdata.team[scope.slot].special) element.addClass(unit.type);
                 scope.hasSpecial = unit && window.specials.hasOwnProperty(unit.number+1);
-                scope.hasAltSpecial = unit && window.altspecials.hasOwnProperty(unit.number+1);
             });
             element.click(function(e) {
                 isSelected = !isSelected;
@@ -1090,7 +1089,7 @@ directives.altspecial = function($rootScope) {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<li class="altspecial" ng-show="hasAltSpecial"><div>{{data.team[slot].unit.name}}</div></li>',
+        template: '<li class="altspecial" ng-show="hasAltSpecial"><div>[Alt. Special] {{data.team[slot].unit.name}}</div></li>',
         link: function(scope, element, attrs) {
             scope.slot = element.prevAll('.altspecial').length;
             var isSelected = scope.tdata.team[scope.slot].altspecial;

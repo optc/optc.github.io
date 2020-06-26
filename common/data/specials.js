@@ -9717,6 +9717,15 @@ window.specials = {
             });
         },
     },
+    2995: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[2995].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[2995].turnedOn = false;
+        }
+    },
     2996:{
         affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")) ? window.specials[2996].boostAffinity[p.sourceSlot] : 1; },
         atk: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")) ? window.specials[2996].boostATK[p.sourceSlot] : 1; },
