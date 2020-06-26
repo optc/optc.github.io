@@ -653,31 +653,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return typeMult;
     };
 
-    var getChainMultiplier = function(chainBase, hitModifiers, chainModifier, params) {
+    var getChainMultiplier = function(chainBase, hitModifiers, chainModifier, params, damage) {
         var chainSpecialMult = 1;
         if ($scope.data.effect == '1.25x Chain Multiplier - Sanji Judge Change Action'){
             chainSpecialMult = 1.25;
         }
-        
+        //console.log(params);
         chainSpecMultiplication.forEach(function(special){
             var params = getParameters(special.sourceSlot);
             if(chainSpecialMult<special.chainMultiplication(params)){
                 chainSpecialMult = special.chainMultiplication(params);
             }
         });
-        
         var result = chainBase;
         for (var i=0;i<hitModifiers.length;++i) {
-            if (hitModifiers[i] == 'Perfect') result += chainModifier * 0.3;
+            if (hitModifiers[i] == 'Perfect' && params.sugarToy[damage[i].position]) result += chainModifier * 0.7;
+            else if (hitModifiers[i] == 'Perfect' && !params.sugarToy[damage[i].position]) result += chainModifier * 0.3;
             else if (hitModifiers[i] == 'Great') result += chainModifier * 0.1;
             else if (hitModifiers[i] == 'Good') result += 0;
             else result = chainBase;
         }
         result = result != 1 ? result * chainSpecialMult : result;
-        
-        if (params.sugarToy[params.slot]){
-            result = result + 0.7;
-        }
         
         return result;
     };
@@ -811,7 +807,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     //chain modifier without chain boosting captain
                     chainModifier = Math.min(mapEffect.chainModifier(params[n]), chainModifier);
                     }
-                var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier, params[n]);
+                //console.log(x,n);
+                var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier, params[n], damage);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
