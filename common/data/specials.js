@@ -9546,28 +9546,12 @@ window.specials = {
     2961: {
         atk: function(p) { return 2; },
         type: "type",
-        onActivation: function(p) {
-            var n = (window.specials[2961].multiplier == 0 ? 1 : 0);
-            window.specials[2961].multiplier = n;
-            p.scope.notify({
-                //text: 'Using the ' + ['Delay', 'Not Delay'][n] + '. To switch to the ' + ['Not Delay', 'Delay'][n] + ', disable and re-enable this special',
-                text: 'WIP',
-                name: '2961warning'
-            });
-        },
+        status: function(p) { return p.delayed > 0 ? 2 : 1; },
     },
     2962: {
         atk: function(p) { return 2; },
         type: "type",
-        onActivation: function(p) {
-            var n = (window.specials[2962].multiplier == 0 ? 1 : 0);
-            window.specials[2962].multiplier = n;
-            p.scope.notify({
-                //text: 'Using the ' + ['Delay', 'Not Delay'][n] + '. To switch to the ' + ['Not Delay', 'Delay'][n] + ', disable and re-enable this special',
-                text: 'WIP',
-                name: '2962warning'
-            });
-        },
+        status: function(p) { return p.delayed > 0 ? 2 : 1; },
     },
     2963:{
         orb: function(p) { return (p.slot == p.sourceSlot) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2963].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },

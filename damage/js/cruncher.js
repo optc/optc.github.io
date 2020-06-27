@@ -945,6 +945,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // notice specials with both atk and atkStatic defined are not supported right now
             if (data.hasOwnProperty('atk') || data.hasOwnProperty('atkStatic'))
                 result[data.type].push({ sourceSlot: data.sourceSlot, f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
+            if (data.hasOwnProperty('status'))
+                result['condition'].push({ sourceSlot: data.sourceSlot, f: (data.status) });
             if (data.hasOwnProperty('orb'))
                 result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
             if (data.hasOwnProperty('affinity'))
