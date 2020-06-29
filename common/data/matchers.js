@@ -724,9 +724,33 @@ window.matchers = [
     },
 
     {
-        name: 'Multiple-Turn Buff/Debuff Removing specials',
+        name: 'Multiple-Turn Buff/Debuff Reducing specials',
         target: 'special',
         matcher: /by \d{1,} turns/i
+    },
+
+    {
+        name: '2-3 Turn Buff/Debuff Reducing specials',
+        target: 'special',
+        matcher: /by (2|3){1,} turns/i
+    },
+
+    {
+        name: '4-5 Turn Buff/Debuff Reducing specials',
+        target: 'special',
+        matcher: /by (4|5){1,} turns/i
+    },
+
+    {
+        name: '7+ Turn Buff/Debuff Reducing specials',
+        target: 'special',
+        matcher: /by (7|8|9|10|11|12|13|14|15|16|17|18|19|20){1,} turns/i
+    },
+
+    {
+        name: 'Buff/Debuff Removing specials',
+        target: 'special',
+        matcher: /duration completely/i
     },
 
     {

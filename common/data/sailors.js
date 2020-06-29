@@ -1232,18 +1232,29 @@ window.sailors = {
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 30 : 0; },
     },
     3011: {
-        hpStatic: function(p) { return p.unit.type == "QCK" ? 100 : 0; },
+        atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 30 : 0; },
+        hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 30 : 0; },
+        rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 30 : 0; },
     },
     3012: {
         hpStatic: function(p) { return p.unit.type == "QCK" ? 100 : 0; },
     },
     3013: {
-        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 100 : 0; },
     },
     3014: {
         atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    3015: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    3016: {
+        hpStatic: function(p) { return 50; },
+    },
+    3017: {
+        atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
     },
     3333: {
         staticMult: function(p) { return 3; }
