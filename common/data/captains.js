@@ -5967,13 +5967,13 @@ window.captains = {
     },
     1882: {
         atk: function(p) { return p.percHP <= 30.0 ? 3.5 : 2.5; },
-        hp: function(p) { return 1.2; },
-        rcv: function(p) { return 1.2; },
+        hp: function(p) { return 1.25; },
+        rcv: function(p) { return 1.25; },
     },
     1883: {
         atk: function(p) { return p.percHP <= 30.0 ? [3.5, 3.9875][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
-        hp: function(p) { return 1.2; },
-        rcv: function(p) { return 1.2; },
+        hp: function(p) { return 1.25; },
+        rcv: function(p) { return 1.25; },
     },
     1884: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
@@ -10583,6 +10583,11 @@ window.captains = {
     3017: {
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 2.75 : 1; },
         hp: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1.25 : 1; }
+    },
+    3018: {
+        atk: function(p) { return p.percHP <= 30.0 ? [3.9875, 4.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return 1.25; },
+        rcv: function(p) { return 1.25; },
     },
     3333: {
         hitAtk: function(p) {
