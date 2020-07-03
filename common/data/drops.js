@@ -5261,6 +5261,15 @@ window.drops = {
             gamewith: 207706,
             'Coast of Wano': [ 2995 ]
         },
+
+        {
+            name: 'Vinsmoke Reiju',
+            dropID: 'treasuremap35',
+            thumb: 3022,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3022 ]
+        },
         
     ],
 

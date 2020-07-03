@@ -1372,7 +1372,7 @@ window.matchers = [
     {
         name: 'Debuff Activated Support',
         target: 'support',
-        matcher: /when an enemy inflicts you with/i
+        matcher: /when an enemy inflicts/i
     },
     
     {
