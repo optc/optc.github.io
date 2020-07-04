@@ -1055,6 +1055,7 @@ directives.special = function($rootScope) {
             var isSelected = scope.tdata.team[scope.slot].special;
             var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
             scope.hasSpecial = false;
+            scope.hasAltSpecial = false;
             scope.$watch('tdata.team[slot].special',function(enabled) {
                 removeType();
                 var unit = scope.data.team[scope.slot].unit;
@@ -1077,6 +1078,45 @@ directives.special = function($rootScope) {
                 isSelected = !isSelected;
                 $rootScope.$emit('specialToggled', scope.slot, isSelected);
                 scope.tdata.team[scope.slot].special = isSelected;
+                scope.$apply();
+            });
+        }
+    };
+};
+
+directives.altspecial = function($rootScope) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<li class="altspecial" ng-show="hasAltSpecial"><div>[Alt. Special] {{data.team[slot].unit.name}}</div></li>',
+        link: function(scope, element, attrs) {
+            scope.slot = element.prevAll('.altspecial').length;
+            var isSelected = scope.tdata.team[scope.slot].altspecial;
+            var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
+            scope.hasAltSpecial = false;
+            scope.$watch('tdata.team[slot].altspecial',function(enabled) {
+                removeType();
+                var unit = scope.data.team[scope.slot].unit;
+                if (enabled) element.addClass(unit.type);
+                type = (unit ? unit.type : null);
+                isSelected = enabled;
+                if (enabled && window.altspecials[unit.number+1].warning) {
+                    scope.notify({
+                        text: window.altspecials[unit.number+1].warning.replace(/%name%/g, window.units[unit.number].name),
+                        type: 'warning'
+                    });
+                }
+            });
+            scope.$watch('data.team[slot].unit',function(unit) {
+                removeType();
+                if (scope.tdata.team[scope.slot].altspecial) element.addClass(unit.type);
+                scope.hasAltSpecial = unit && window.altspecials.hasOwnProperty(unit.number+1);
+            });
+            element.click(function(e) {
+                isSelected = !isSelected;
+                $rootScope.$emit('altspecialToggled', scope.slot, isSelected);
+                scope.tdata.team[scope.slot].altspecial = isSelected;
                 scope.$apply();
             });
         }

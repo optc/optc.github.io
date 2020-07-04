@@ -96,6 +96,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         // toggle special if active so deactivation methods run
         if ($scope.tdata.team[n].special)
             $rootScope.$emit('specialToggled', n, false);
+        if ($scope.tdata.team[n].altspecial)
+            $rootScope.$emit('altspecialToggled', n, false);
         // toggle events if any
         if ($scope.data.team[n].unit) {
             var uid = $scope.data.team[n].unit.number + 1;

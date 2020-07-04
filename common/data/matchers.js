@@ -742,9 +742,33 @@ window.matchers = [
     },
 
     {
-        name: 'Multiple-Turn Buff/Debuff Removing specials',
+        name: 'Multiple-Turn Buff/Debuff Reducing specials',
         target: 'special',
         matcher: /by \d{1,} turns/i
+    },
+
+    {
+        name: '2-3 Turn Buff/Debuff Reducing specials',
+        target: 'special',
+        matcher: /by (2|3){1,} turns/i
+    },
+
+    {
+        name: '4-5 Turn Buff/Debuff Reducing specials',
+        target: 'special',
+        matcher: /by (4|5){1,} turns/i
+    },
+
+    {
+        name: '7+ Turn Buff/Debuff Reducing specials',
+        target: 'special',
+        matcher: /by (7|8|9|10|11|12|13|14|15|16|17|18|19|20){1,} turns/i
+    },
+
+    {
+        name: 'Buff/Debuff Removing specials',
+        target: 'special',
+        matcher: /duration completely/i
     },
 
     {
@@ -1236,6 +1260,12 @@ window.matchers = [
     },
     
     {
+        name: 'Captain Upgrade Limit Break',
+        target: 'limit',
+        matcher: /Captain Ability/i
+    },
+    
+    {
         name: '3rd Potential Ability',
         target: 'limit',
         matcher: /Acquire Potential 3/i
@@ -1360,7 +1390,7 @@ window.matchers = [
     {
         name: 'Debuff Activated Support',
         target: 'support',
-        matcher: /when you are inflicted with/i
+        matcher: /when an enemy inflicts/i
     },
     
     {

@@ -1076,7 +1076,7 @@ body > .popover .popover-content {
 .popover-data .BLOCK { background: darkslateblue; }
 .popover-data .BOMB  { background: maroon; }
 .popover-data .SEMLA  { background: saddlebrown; }
-.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
+.popover-data .RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
 .popover-data .G     { background: orange; }
 
 .block-icon:before, .tnd-icon:before {

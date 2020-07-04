@@ -65,6 +65,9 @@ window.zombies = {
         type: 'healer',
         multiplier: 10
     },
+    353: { // Zephyr
+        type: 'healer',
+    },
     423: { // Brook
         type: 'zombie',
         threshold: 0.7
@@ -471,7 +474,7 @@ window.zombies = {
     },
     1747: { // Boa
         type: 'healer',
-        amount: 1000
+        //amount: 1000
     },
     1750: { // Law
         type: 'healer',
@@ -564,6 +567,13 @@ window.zombies = {
     2054: { // Headcracker
         type: 'zombie',
         threshold: 0.5
+    },
+    2108: { // Big Mom
+        type: 'healer',
+        multiplier: 0.5
+    },
+    2109: { // Big Mom
+        type: 'healer',
     },
     2123: { // Neptune
         type: 'healer',
@@ -821,6 +831,9 @@ window.zombies = {
         type: 'healer',
         amount: 500
     },
+    2763: { // Nami
+        type: 'healer',
+    },
     2766: { // Doffy
         type: 'healer',
         amount: 150
@@ -918,6 +931,14 @@ window.zombies = {
     2970: { // Enel
         type: 'healer',
         multiplier: 5
+    },
+    3014: { // Ivancov
+        type: 'healer',
+        amount: 500
+    },
+    3015: { // Ivancov
+        type: 'healer',
+        amount: 1000
     },
     3376: {//Hera
         type: 'healer',

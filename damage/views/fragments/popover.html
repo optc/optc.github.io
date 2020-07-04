@@ -45,9 +45,9 @@
                 <td>{{data.team[slot].unit.slots}}</td>
             </tr>
             <tr class="header" ng-if="(data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 || data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 || data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
-                <td>Limit Break HP</td>
-                <td>Limit Break ATK</td>
-                <td>Limit Break RCV</td>
+                <td>LB HP</td>
+                <td>LB ATK</td>
+                <td>LB RCV</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -65,9 +65,9 @@
                 <td></td>
             </tr>
             <tr class="header" ng-if="(data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 || data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 || data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
-                <td>Limit Break Ex. HP</td>
-                <td>Limit Break Ex. ATK</td>
-                <td>Limit Break Ex. RCV</td>
+                <td>LB Ex. HP</td>
+                <td>LB Ex. ATK</td>
+                <td>LB Ex. RCV</td>
                 <td></td>
                 <td></td>
             </tr>
@@ -110,7 +110,7 @@
                     <span class="badge badge-combined" ng-show="details.captain.combined">Dual Characters Captain Ability</span>
                     <div ng-show="details.captain.combined" ng-bind-html="details.captain.combined | decorate"></div> -->
                     <div ng-bind-html="details.captain | decorate"></div>
-                    <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
+<!--                    <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>-->
                 </td>
             </tr>
             <tr class="header" ng-if="slot > 1">
@@ -133,7 +133,7 @@
                     <div ng-show="details.sailor.level1" ng-bind-html="details.sailor.level1 | decorate"></div>
                     <span class="badge badge-slevel2" ng-show="details.sailor.level2">Limit Break Sailor Ability 2</span>
                     <div ng-show="details.sailor.level2" ng-bind-html="details.sailor.level2 | decorate"></div>
-                    <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
+<!--                    <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>-->
                 </td>
             </tr>
             <tr class="header">
@@ -147,7 +147,7 @@
                         {{cooldown.length ? ' (maxed: ' + cooldown[1] + ' turns)' : ''}}
                         <!--Show LB and Staged Special-->
                     </div>
-                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
+<!--                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>-->
                 </td>
             </tr>
             <!--Show Potential and Support Abilities if it can work -->

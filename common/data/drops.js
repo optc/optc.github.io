@@ -958,6 +958,28 @@ window.drops = {
             '09': [  ],
             '10': [ 2597, 2598, 2599 ],
         },
+        
+        {
+            name: 'Tea Ceremony Venue to Southwest Coast',
+            dropID: 'story41',
+            shortName: 'Whole Cake 3',
+            thumb: 2597,
+            global: true,
+            nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: 210836,
+            '01': [  ],
+            '02': [ 3001 ],
+            '03': [ 3002 ],
+            '04': [ 3002, 2374, 2248 ],
+            '05': [ 3001 ],
+            '06': [ 3001 ],
+            '07': [  ],
+            '08': [  ],
+            '09': [  ],
+            '10': [ 3003 ],
+            '11': [ 3002, 3003 ],
+        },
     ], 
 
     'Booster and Evolver Island': [
@@ -4951,6 +4973,16 @@ window.drops = {
         },
 
         {
+            name: 'Gyukimaru',
+            thumb: 3017,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 3017, -3017 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             showManual: true,
@@ -5297,6 +5329,15 @@ window.drops = {
             gamewith: 207706,
             'Coast of Wano': [ 2995 ]
         },
+
+        {
+            name: 'Vinsmoke Reiju',
+            dropID: 'treasuremap35',
+            thumb: 3022,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3022 ]
+        },
         
     ],
            
@@ -5506,6 +5547,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2989 ],
+        },
+        
+        {
+            name: 'Round Three',
+            dropID: 'piratefestival3',
+            thumb: 3016,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3016 ],
         },
         
     ],
@@ -6215,6 +6265,15 @@ window.drops = {
             gamewith: 202523,
             condition: 'Drops portions of a Log Pose map and a Treasure Key map to fullfil community rewards.',
             'Chopperman Missions': [ 2975, 2976 ],
+        },
+        
+        {
+            name: 'Warlords at Thriller Bark!',
+            thumb: 3004,
+            nakama: null,
+            gamewith: null,
+            'vs Kuma': [ 3004 ],
+            'vs Moria': [ 3005 ],
         },
         
         {
