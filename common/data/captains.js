@@ -10600,7 +10600,13 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
     },
     3022: {
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? [1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? [1.75, 2, 2.25, 2.5, 2.75, 3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3023: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2.5 : 1; }
+    },
+    3024: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2.5 : 1; }
     },
     3333: {
         hitAtk: function(p) {
