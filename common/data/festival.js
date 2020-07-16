@@ -3020,7 +3020,7 @@ window.festival = [
     [ "", null, null ],
     [ "", null, null ],
     [ "", null, null ],
-    [ "", null, null ],
+    [ "Supporter", 163, 168 ],
     [ "", null, null ],
     [ "", null, null ],
     [ "", null, null ],

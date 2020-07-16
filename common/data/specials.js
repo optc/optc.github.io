@@ -9812,10 +9812,14 @@ window.specials = {
         }
     },
     3014: {
-        affinity: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; },
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        type: "type",
     },
     3015: {
-        affinity: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; },
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
+        type: "type",
     },
     3016: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
