@@ -277,22 +277,28 @@ window.altspecials = {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     5214: {
-        atkbase: function(p) { return 10 + 240*p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5214].multiplier/100)); },
+        onActivation: function(p) { window.altspecials[5214].multiplier = p.percHP; },
     },
     5215: {
-        atkbase: function(p) { return 10 + 240*p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5215].multiplier/100)); },
+        onActivation: function(p) { window.altspecials[5215].multiplier = p.percHP; },
     },
     5216: {
-        atkbase: function(p) { return 10 + 240*p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5216].multiplier/100)); },
+        onActivation: function(p) { window.altspecials[5216].multiplier = p.percHP; },
     },
     5217: {
-        atkbase: function(p) { return 10 + 240*p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5217].multiplier/100)); },
+        onActivation: function(p) { window.altspecials[5217].multiplier = p.percHP; },
     },
     5218: {
-        atkbase: function(p) { return 10 + 240*p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5218].multiplier/100)); },
+        onActivation: function(p) { window.altspecials[5218].multiplier = p.percHP; },
     },
     5219: {
-        atkbase: function(p) { return 10 + 240*p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5219].multiplier/100)); },
+        onActivation: function(p) { window.altspecials[5219].multiplier = p.percHP; },
     },
     5220: {
         atk: function(p) { return 1.5; },
