@@ -3023,7 +3023,7 @@ window.units = [
     [ "Vinsmoke Reiju, True Force of the Science Military Force", "INT", [ "Powerhouse", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1053, 546, 122, 2632, 1366, 306, 1],
     [ "Tony Tony Chopper, The Fifth with the Cured Heart", "PSY", [ "Striker", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 896, 517, 158, 2242, 1294, 395, 1 ],
     [ "Nico Robin, The Sixth Shouting her Wish", "INT", [ "Cerebral", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1026, 512, 138, 2566, 1282, 345, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Whitebeard, Unchallenged Pinnacle for the Throne", "QCK", [ "Fighter", "Striker" ], 5, 30, 4, 4, 99, null, 1235, 648, 40, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

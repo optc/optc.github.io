@@ -3023,7 +3023,7 @@ window.families = [
     "Vinsmoke Reiju",
     "Tony Tony Chopper",
     "Nico Robin",
-    null,
+    "Edward Newgate",
     null,
     null,
     null,

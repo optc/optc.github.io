@@ -10608,6 +10608,9 @@ window.captains = {
     3024: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2.5 : 1; }
     },
+    3025: {
+        atk: function(p) { return p.unit.type == "QCK" ? p.percHP <= 30.0 ? 3 : 2 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
