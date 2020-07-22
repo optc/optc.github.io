@@ -5457,6 +5457,15 @@ window.drops = {
             'All Difficulties': [ 2999 ],
         },
         
+        {
+            name: 'Kaido',
+            dropID: 'bond11',
+            thumb: 3036,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3036 ],
+        },
+        
     ],
 
             
@@ -6197,6 +6206,14 @@ window.drops = {
             gamewith: null,
             'vs Kuma': [ 3004 ],
             'vs Moria': [ 3005 ],
+        },
+        
+        {
+            name: 'Gather! Strawhat Pirates',
+            thumb: 3033,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3032, 3033, 3034, 3035 ],
         },
         
         {

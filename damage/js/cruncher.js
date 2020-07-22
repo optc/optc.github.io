@@ -462,15 +462,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getStatOfUnit = function(data,stat,slot) {
         var params = getParameters(slot);
-        if (stat == "atk" && params.sugarToy[slot]){
-            return 2500;
-        }
         var atkbaseDamage = 0;
         var LBaddition = 0;
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
+        
+        if (stat == "atk" && params.sugarToy[slot]){
+            result = 2500;
+        }
+        
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
         if(params.limit[slot] != null && params.limit[slot] != 0){
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
@@ -1253,6 +1255,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return classes;
     };
     
+    //Returns an Object with a counter of classes in the current Team
+    var teamCounter = function() {
+        var numunits = 0;
+        for(var z=0;z<team.length;z++){
+            if(team[z].unit) numunits++;
+        }
+        return numunits;
+    };
+    
     var frankyCheck = function() {
         var classes = {};
         var classTypes = ['Primary', 'Secondary'];
@@ -1351,6 +1362,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),
+            teamCount: teamCounter(),
             frankyCheck: frankyCheck(),
             frankyClass: frankyClass(),
             captain: team[1].unit,
