@@ -468,12 +468,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
+        var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
         
         if (stat == "atk" && params.sugarToy[slot]){
             result = 2500;
+            candyBonus = 0;
         }
         
-        var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
         if(params.limit[slot] != null && params.limit[slot] != 0){
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
             if(!LBaddition) LBaddition = 0;
