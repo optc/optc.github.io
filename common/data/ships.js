@@ -699,12 +699,12 @@ window.ships = [
         description: 'Reduces cooldown of all specials by 1 turn, boosts captain\'s RCV by 500, recovers 1,000 HP at the end of the turn. If your captain is a Free Spirit, Slasher or Cerebral character, boosts ATK of all characters by 1.6x. If there is 6 [PSY] characters in your crew, boosts ATK by 1.1x additionaly. Special: Reduces Special Cooldown of [PSY] characters by 1 turn (Cooldown: 10 turns).',
         atk: function(p) {
             var mult = 1;
-            if (p.colorCount.PSY>=6) mult = 1.1
-            if (p.captain) return (p.captain.class.has("Free Spirit") || p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) ? mult*[ 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.6 ][p.boatLevel - 1] : mult;
+            if (p.colorCount.PSY>=6) mult = [ 1, 1, 1, 1.05, 1.1, 1.1, 1.1, 1.1, 1.1, 1.1 ][p.boatLevel - 1];
+            if (p.captain) return (p.captain.class.has("Free Spirit") || p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) ? mult*[ 1.2, 1.25, 1.3, 1.3, 1.3, 1.3, 1.35, 1.4, 1.5, 1.6 ][p.boatLevel - 1] : mult;
             else return mult;
         },
         heal: function(p) {
-            return [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000 ][p.boatLevel - 1];
+            return [ 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 ][p.boatLevel - 1];
         }
     },
 

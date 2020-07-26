@@ -6689,7 +6689,7 @@ window.captains = {
             }, {
                 type: 'QCK',
                 minModifier: 'Good'
-            }]) ? 4.0625 : 3.25 : 1;
+            }]) ? [4.0625, 4.375][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
@@ -6729,7 +6729,7 @@ window.captains = {
             {
                 if(window.specials[2034].turnedOn[i]==true) { specialEnabled = true; }
             }
-            return specialEnabled ? 3.5 : 2; },
+            return specialEnabled ? [3.5, 4.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
         rcv: function(p) { return 1.35 }
     },
     2035: {
@@ -10177,7 +10177,7 @@ window.captains = {
         chainModifier: function(p) { return  p.percHP <= 30.0 ? 1.5 : 1; }
     },
     2909: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 3.25 + 1.25 * (1 - (p.percHP) / 100) : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? [3.25, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] + [1.25, 0.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] * (1 - (p.percHP) / 100) : 1; },
         rcv: function(p) { return 0; },
     },
     2910: {
