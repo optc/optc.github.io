@@ -10653,6 +10653,44 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 3.25 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; }
     },
+    3037: {
+        atk: function(p) { return p.unit.type == "PSY" ? Math.max(4.0, Math.min(5.0, 4.0 + 1/7000 * p.healCounter)) : 3.75; },
+    },
+    3038: {
+        atk: function(p) { return p.unit.type == "PSY" ? Math.max(4.0, Math.min(5.0, 4.0 + 1/7000 * p.healCounter)) : 3.75; },
+    },
+    3039: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    3040: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+        rcv: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    3041: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+    },
+    3042: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+    },
+    3043: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
+    },
+    3044: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+    },
+    3045: {
+        atk: function(p) { return p.unit.type == "PSY" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return p.unit.type == "PSY" ? [1.2, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3044: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+    },
+    3045: {
+        atk: function(p) {
+            return p.unit.type == "PSY" ? Math.min(3.5, 2.5 + 1/3 * p.turnCounter) : 1;
+        },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

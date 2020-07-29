@@ -9947,6 +9947,51 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
         type: "class"
     },
+    3039: {
+        affinity: function(p) { return 1.75; },
+    },
+    3040: {
+        affinity: function(p) { return 1.75; },
+    },
+    3043:{
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3043].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3043].multiplier == 1.75 ? 1 : 0);
+            window.specials[3043].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
+                name: '3043warning'
+            });
+        },
+    },
+    3044:{
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3044].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3044].multiplier == 1.75 ? 1 : 0);
+            window.specials[3044].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
+                name: '3044warning'
+            });
+        },
+    },
+    3045: {
+        chain: function(p) { return window.specials[3045].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[3045].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3045].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[3045].multiplier = 1;
+            if (p.colorCount.PSY >= 3) {
+                window.specials[3045].multiplier = 2.75;
+            }
+        },
+    },
+    3047: {
+        chainAddition: function(p) { return 0.8; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

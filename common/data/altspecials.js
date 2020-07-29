@@ -16,6 +16,14 @@ window.altspecials = {
     3009: {
         orb: function(p) { return p.unit.cost <= 40  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
+    3037: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+        type: "type",
+    },
+    3038: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+        type: "type",
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },

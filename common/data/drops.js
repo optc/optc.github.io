@@ -3364,7 +3364,7 @@ window.drops = {
         },
         
         {
-            name: 'Showdown!! Lucci',
+            name: 'Clash!! Lucci',
             dropID: 'clash48',
             thumb: 2670,
             nakama: 4267000,
@@ -3547,6 +3547,17 @@ window.drops = {
             gamewith: null,
             Expert: [ 3370 ],
             Ultimate: [ 3370 ],
+        },
+        
+        {
+            name: 'Co-op!! Local Sea Monster',
+            thumb: 3382,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 3382 ],
+            Expert: [ 3382 ],
+            Ultimate: [ 3382 ],
         },
 
     ],
@@ -5498,6 +5509,15 @@ window.drops = {
             'All Difficulties': [ 3016 ],
         },
         
+        {
+            name: 'Round Four',
+            dropID: 'piratefestival4',
+            thumb: 3047,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3047 ],
+        },
+        
     ],
 
     'Special': [
@@ -5541,6 +5561,7 @@ window.drops = {
             'Part 2': [ 659, 1200, 1198 ],
             'Part 3': [ 1708, 1710 ],
             'Part 4': [ 2214, 2216 ],
+            'Part 5': [ 3045, 3046 ],
             'Challenge Unit': [ 686 ],
         },
         
