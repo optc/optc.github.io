@@ -3369,7 +3369,7 @@ window.drops = {
         },
         
         {
-            name: 'Showdown!! Lucci',
+            name: 'Clash!! Lucci',
             dropID: 'clash48',
             global: true,
             thumb: 2670,
@@ -3557,6 +3557,17 @@ window.drops = {
             gamewith: null,
             Expert: [ 3370 ],
             Ultimate: [ 3370 ],
+        },
+        
+        {
+            name: 'Co-op!! Local Sea Monster',
+            thumb: 3382,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            Master: [ 3382 ],
+            Expert: [ 3382 ],
+            Ultimate: [ 3382 ],
         },
 
     ],
@@ -5526,6 +5537,15 @@ window.drops = {
             'All Difficulties': [ 2999 ],
         },
         
+        {
+            name: 'Kaido',
+            dropID: 'bond11',
+            thumb: 3036,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3036 ],
+        },
+        
     ],
 
             
@@ -5556,6 +5576,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3016 ],
+        },
+        
+        {
+            name: 'Round Four',
+            dropID: 'piratefestival4',
+            thumb: 3047,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3047 ],
         },
         
     ],
@@ -5601,6 +5630,7 @@ window.drops = {
             'Part 2': [ 659, 1200, 1198 ],
             'Part 3': [ 1708, 1710 ],
             'Part 4': [ 2214, 2216 ],
+            'Part 5': [ 3045, 3046 ],
             'Challenge Unit': [ 686 ],
         },
         
@@ -6274,6 +6304,14 @@ window.drops = {
             gamewith: null,
             'vs Kuma': [ 3004 ],
             'vs Moria': [ 3005 ],
+        },
+        
+        {
+            name: 'Gather! Strawhat Pirates',
+            thumb: 3033,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3032, 3033, 3034, 3035 ],
         },
         
         {

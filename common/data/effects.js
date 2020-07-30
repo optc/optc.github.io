@@ -1180,34 +1180,10 @@ window.effects = {
             return boost;
         },
 	},
-    
-    'Wapol\'s Assault': {
-        description: 'Boost stats of characters, check in-game news for lists.',
-        thumb: 2799,
+
+    '80% DEF reduction': {
+        description: 'Reduces enemy DEF by 80%',
+        thumb: 2853,
         id: 85, // don't change this
-        atk: function(p) {
-            var boost = 1;
-            var id = p.number + 1;
-            if([ 2797 ].indexOf(id) != -1) boost = 1.75;
-            if([ 2798 ].indexOf(id) != -1) boost = 1.5;
-            if([ 2362, 2676, 1889, 2704, 2745, 2304, 2365, 2446, 2577, 2603, 2672, 2181, 3381, 2369, 2371, 2794 ].indexOf(id) != -1) boost = 1.3;
-            return boost;
-        },
-        hp: function(p) {
-            var boost = 1;
-            var id = p.number + 1;
-            if([ 2797 ].indexOf(id) != -1) boost = 1.75;
-            if([ 2798 ].indexOf(id) != -1) boost = 1.5;
-            if([ 2362, 2676, 1889, 2704, 2745, 2304, 2365, 2446, 2577, 2603, 2672, 2181, 3381, 2369, 2371, 2794 ].indexOf(id) != -1) boost = 1.3;
-            return boost;
-        },
-        rcv: function(p) {
-            var boost = 1;
-            var id = p.number + 1;
-            if([ 2797 ].indexOf(id) != -1) boost = 1.75;
-            if([ 2798 ].indexOf(id) != -1) boost = 1.5;
-            if([ 2362, 2676, 1889, 2704, 2745, 2304, 2365, 2446, 2577, 2603, 2672, 2181, 3381, 2369, 2371, 2794 ].indexOf(id) != -1) boost = 1.3;
-            return boost;
-        },
-	},
+    },
 };

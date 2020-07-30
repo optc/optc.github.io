@@ -462,9 +462,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getStatOfUnit = function(data,stat,slot) {
         var params = getParameters(slot);
-        if (stat == "atk" && params.sugarToy[slot]){
-            return 2500;
-        }
         var atkbaseDamage = 0;
         var LBaddition = 0;
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
@@ -472,6 +469,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
+        
+        if (stat == "atk" && params.sugarToy[slot]){
+            result = 2500;
+            candyBonus = 0;
+        }
+        
         if(params.limit[slot] != null && params.limit[slot] != 0){
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
             if(!LBaddition) LBaddition = 0;
@@ -584,6 +587,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             currentDefense = Math.min(currentDefense,baseDefense * x.def(getParameters(x.sourceSlot)));
             if (x.def(getParameters(x.sourceSlot)) < 1) defreduced = true;
         });
+        if($scope.data.effect == "80% DEF reduction"){
+            currentDefense = Math.min(currentDefense,baseDefense * .20);
+            defreduced = true;
+        }
         if(shipName=="Flying Dutchman - Special ACTIVATED"){
             currentDefense = Math.min(currentDefense,baseDefense * .75);
             defreduced = true;
@@ -1144,11 +1151,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },altspecials[id]));
             }
             // activate turn counter if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441 || id == 5074 || id == 5534 || id == 5535 || id == 2669 || id == 2670 || id == 2683 || id == 2684))
+            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441 || id == 5074 || id == 5534 || id == 5535 || id == 2669 || id == 2670 || id == 2683 || id == 2684 || id == 3047))
                 $scope.tdata.turnCounter.enabled = true;
             if(shipBonus.bonus.name=="Shark Superb")
                 $scope.tdata.turnCounter.enabled = true;
-            if (n < 2 && (id == 1609 || id == 1610 || id == 2232))
+            if (n < 2 && (id == 1609 || id == 1610 || id == 2232 || id == 3037 || id == 3038))
                 $scope.tdata.healCounter.enabled = true;
             if (id == 2364 || id == 2365 || id == 2981 || id == 2982)
                 $scope.tdata.damageCounter.enabled = true;
@@ -1253,6 +1260,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return classes;
     };
     
+    //Returns an Object with a counter of classes in the current Team
+    var teamCounter = function() {
+        var numunits = 0;
+        for(var z=0;z<team.length;z++){
+            if(team[z].unit) numunits++;
+        }
+        return numunits;
+    };
+    
     var frankyCheck = function() {
         var classes = {};
         var classTypes = ['Primary', 'Secondary'];
@@ -1351,6 +1367,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),
+            teamCount: teamCounter(),
             frankyCheck: frankyCheck(),
             frankyClass: frankyClass(),
             captain: team[1].unit,
