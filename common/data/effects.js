@@ -1180,4 +1180,10 @@ window.effects = {
             return boost;
         },
 	},
+
+    '80% DEF reduction': {
+        description: 'Reduces enemy DEF by 80%',
+        thumb: 2853,
+        id: 85, // don't change this
+    },
 };

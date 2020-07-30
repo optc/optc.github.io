@@ -587,6 +587,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             currentDefense = Math.min(currentDefense,baseDefense * x.def(getParameters(x.sourceSlot)));
             if (x.def(getParameters(x.sourceSlot)) < 1) defreduced = true;
         });
+        if($scope.data.effect == "80% DEF reduction"){
+            currentDefense = Math.min(currentDefense,baseDefense * .20);
+            defreduced = true;
+        }
         if(shipName=="Flying Dutchman - Special ACTIVATED"){
             currentDefense = Math.min(currentDefense,baseDefense * .75);
             defreduced = true;
