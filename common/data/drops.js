@@ -963,7 +963,7 @@ window.drops = {
             name: 'Tea Ceremony Venue to Southwest Coast',
             dropID: 'story41',
             shortName: 'Whole Cake 3',
-            thumb: 2597,
+            thumb: 3001,
             global: true,
             nakama: null,
             completion: '5x Rainbow Gems',
@@ -3476,6 +3476,7 @@ window.drops = {
         {
             name: 'Clash!! Bonney',
             dropID: 'clash57',
+            global: true,
             thumb: 2846,
             nakama: 4284600,
             gamewith: 185672,
@@ -3486,6 +3487,7 @@ window.drops = {
         {
             name: 'Attack!? Buggy Pirates',
             dropID: 'clash58',
+            global: true,
             thumb: 2867,
             nakama: 4286700,
             gamewith: 188620,
@@ -3559,16 +3561,6 @@ window.drops = {
             Ultimate: [ 3370 ],
         },
         
-        {
-            name: 'Co-op!! Local Sea Monster',
-            thumb: 3382,
-            global: true,
-            nakama: null,
-            gamewith: null,
-            Master: [ 3382 ],
-            Expert: [ 3382 ],
-            Ultimate: [ 3382 ],
-        },
 
     ],
             
@@ -4934,6 +4926,7 @@ window.drops = {
             name: 'Famous Soba Cart Cook in the Flower Capital',
             thumb: 2845,
             showManual: true,
+            global: true,
             nakama: 5284401,
             gamewith: 185012,
             slefty: 'coliseums',
@@ -4942,9 +4935,10 @@ window.drops = {
         },
 
         {
-            name: 'Komurasaki',
+            name: 'Komurasaki Oiran with the Kitsune Mask',
             thumb: 2869,
             showManual: true,
+            global: true,
             nakama: 5286901,
             gamewith: 189127,
             slefty: 'coliseums',
@@ -4996,6 +4990,7 @@ window.drops = {
         {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
+            global: true,
             showManual: true,
             nakama: 5337301,
             gamewith: null,
@@ -5291,6 +5286,7 @@ window.drops = {
             name: 'X Drake',
             dropID: 'treasuremap29',
             thumb: 2823,
+            global: true,
             nakama: 8282300,
             gamewith: 182929,
             'Raging Sea': [ 2823 ]
@@ -5300,6 +5296,7 @@ window.drops = {
             name: 'Rebecca & Viola',
             dropID: 'treasuremap30',
             thumb: 2850,
+            global: true,
             nakama: 8285000,
             gamewith: 186492,
             'Raging Sea': [ 2850 ]
@@ -5486,6 +5483,7 @@ window.drops = {
             name: 'Kikunojo',
             dropID: 'bond5',
             thumb: 2812,
+            global: true,
             nakama: 9281200,
             gamewith: 148537,
             'All Difficulties': [ 2811 ],
@@ -5495,6 +5493,7 @@ window.drops = {
             name: 'Marco & Ace',
             dropID: 'bond6',
             thumb: 2831,
+            global: true,
             nakama: 9285401,
             gamewith: 148537,
             'All Difficulties': [ 2831 ],
@@ -6196,6 +6195,7 @@ window.drops = {
         {
             name: 'Tragic Country\'s Conflict',
             thumb: 2767,
+            global: true,
             nakama: 6276700,
             gamewith: 176351,
             condition: 'Certain units stats boosted by 1.5x and 5 turns special cooldown reduction. Some units will increase drop chance of items.\nChance to drop the 「Toy Bear」, 「Armored Toy Bear」, and 「Fully Armored Toy Bear」.',
@@ -6215,6 +6215,7 @@ window.drops = {
         {
             name: 'Wano Country Reunion! Strawhat Pirates',
             thumb: 2803,
+            global: true,
             nakama: 6280300,
             gamewith: 181636,
             showManual: true,
@@ -6224,7 +6225,7 @@ window.drops = {
         {
             name: 'Today is the Bestest Day Ever!!',
             thumb: 2815,
-            //global: true,
+            global: true,
             nakama: 6281600,
             gamewith: 182347,
             showManual: true,
@@ -6234,7 +6235,7 @@ window.drops = {
         {
             name: 'OTama\'s Stuffed Belly Initiative',
             thumb: 2815,
-            //global: true,
+            global: true,
             nakama: 6281500,
             gamewith: 182349,
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
@@ -6253,6 +6254,7 @@ window.drops = {
         {
             name: 'Anniversary Party',
             thumb: 2843,
+            global: true,
             nakama: 6284300,
             gamewith: 184761,
             condition: "Complete Missions to get Bingo",
@@ -6312,6 +6314,17 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3032, 3033, 3034, 3035 ],
+        },
+        
+        {
+            name: 'Co-op!! Local Sea Monster',
+            thumb: 3382,
+            global: true,
+            nakama: 6338200,
+            gamewith: null,
+            condition: 'Drops Manual, Tomes, Proof of Friendship, lobster and limit break bottles. Monster is only obtainable from Chopperman missions',
+            showManual: true,
+            'All Difficulties': [ -3382 ],
         },
         
         {
