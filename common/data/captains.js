@@ -10691,6 +10691,26 @@ window.captains = {
             return p.unit.type == "PSY" ? Math.min(3.5, 2.5 + 1/3 * p.turnCounter) : 1;
         },
     },
+    3048: {
+        atk: function(p) {
+            if(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") {
+                if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) {
+                    return 4;
+                }
+                else return 1;
+            }
+            else return 1;
+        },
+        hp: function(p) {
+            if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1)
+                return 1.35;
+            else
+                return 1;
+               },
+    },
+    3049: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -10825,6 +10845,13 @@ window.captains = {
     },
     3380: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
+    3382: {
+        atk: function(p) { return p.unit.type == "QCK" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3383: {
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
     },
     3382: {
         atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
