@@ -3046,7 +3046,7 @@ window.festival = [
     [ "Attacker", 125, 146 ],
     [ "", null, null ],
     [ "Attacker", 162, 210 ],
-    [ "", null, null ],
+    [ "Defender", 324, 128 ],
     [ "", null, null ],
 ];
 // [ "Class", DEF, SPD ],
