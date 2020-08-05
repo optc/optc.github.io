@@ -1254,6 +1254,12 @@ window.matchers = [
     },
     
     {
+        name: 'No 3rd Potential Ability',
+        target: 'limit',
+        matcher: /^(.(?!Acquire Potential 3))*$/i
+    },
+    
+    {
         name: 'Enrage Potential Ability',
         target: 'limit',
         matcher: /Enrage/i
