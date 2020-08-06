@@ -1331,6 +1331,9 @@ window.sailors = {
         rcvStatic: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? 30 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? 30 : 0; },
     },
+    3050: {
+        atkStatic: function(p) { return p.unit.type == "PSY" ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

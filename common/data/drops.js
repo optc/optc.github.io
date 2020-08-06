@@ -5573,6 +5573,7 @@ window.drops = {
             'Part 4': [ 2214, 2216 ],
             'Part 5': [ 3045, 3046 ],
             'Challenge Unit': [ 686 ],
+            'Chopperman Missions': [ 3050 ],
         },
         
         {
