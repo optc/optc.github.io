@@ -10021,6 +10021,9 @@ window.specials = {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? 2 : 1; },
         type: "class"
     },
+    3351: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

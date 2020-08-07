@@ -5244,7 +5244,7 @@ window.drops = {
             thumb: 2850,
             nakama: null,
             gamewith: 186492,
-            'Raging Sea': [ 2850 ]
+            'Sea of Celebration': [ 2850 ]
         },
 
         {
@@ -5487,6 +5487,15 @@ window.drops = {
             'All Difficulties': [ 3036 ],
         },
         
+        {
+            name: 'Buggy',
+            dropID: 'bond12',
+            thumb: 3052,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3052 ],
+        },
+        
     ],
 
             
@@ -5631,6 +5640,7 @@ window.drops = {
             'Round 1': [ 2833 ],
             'Round 2': [ 2852 ],
             'Round 3': [ 2921 ],
+            'Round 4': [ 3053 ],
         },
 
         {

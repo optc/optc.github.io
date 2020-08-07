@@ -10111,7 +10111,7 @@ window.captains = {
         hp: function(p) { return 1.2; },
     },
     2887: {
-        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) ? p.actions[p.sourceSlot] ? 4.5 : 3 : p.actions[p.sourceSlot] ? 3.25 : 2.5; },
+        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.actions[p.sourceSlot] ? 4.5 : 3 : p.actions[p.sourceSlot] ? 3.25 : 2.5; },
     },
     2888: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
@@ -10713,6 +10713,16 @@ window.captains = {
     },
     3050: {
         atk: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    3051: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 3 : 1; }
+    },
+    3052: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Driven")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Driven")) ? 1.25 : 1; }
+    },
+    3053: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
     3333: {
         hitAtk: function(p) {
