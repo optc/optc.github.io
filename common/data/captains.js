@@ -7549,7 +7549,7 @@ window.captains = {
         atk: function(p) { return 1.5; },
     },
     2211: {
-        atk: function(p) { return [2, 2, 2, 2, 2, 2, 2.5];[p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] },
+        atk: function(p) { return [2, 2, 2, 2, 2, 2, 2.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     2212: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
@@ -10111,7 +10111,7 @@ window.captains = {
         hp: function(p) { return 1.2; },
     },
     2887: {
-        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) ? p.actions[p.sourceSlot] ? 4.5 : 3 : p.actions[p.sourceSlot] ? 3.25 : 2.5; },
+        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.actions[p.sourceSlot] ? 4.5 : 3 : p.actions[p.sourceSlot] ? 3.25 : 2.5; },
     },
     2888: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
@@ -10691,6 +10691,39 @@ window.captains = {
             return p.unit.type == "PSY" ? Math.min(3.5, 2.5 + 1/3 * p.turnCounter) : 1;
         },
     },
+    3048: {
+        atk: function(p) {
+            if(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") {
+                if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1) {
+                    return 4;
+                }
+                else return 1;
+            }
+            else return 1;
+        },
+        hp: function(p) {
+            if(p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.PSY>=1)
+                return 1.35;
+            else
+                return 1;
+               },
+    },
+    3049: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
+    },
+    3050: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    3051: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 3 : 1; }
+    },
+    3052: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Driven")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Driven")) ? 1.25 : 1; }
+    },
+    3053: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -10825,6 +10858,13 @@ window.captains = {
     },
     3380: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
+    },
+    3382: {
+        atk: function(p) { return p.unit.type == "QCK" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3383: {
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
     },
     3382: {
         atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },

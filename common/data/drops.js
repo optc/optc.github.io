@@ -4988,6 +4988,16 @@ window.drops = {
         },
 
         {
+            name: 'Orochi',
+            thumb: 3049,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 3049, -3049 ],
+        },
+
+        {
             name: 'Coliseum EX Vs. Coby',
             thumb: 3372,
             global: true,
@@ -5299,7 +5309,7 @@ window.drops = {
             global: true,
             nakama: 8285000,
             gamewith: 186492,
-            'Raging Sea': [ 2850 ]
+            'Sea of Celebration': [ 2850 ]
         },
 
         {
@@ -5545,6 +5555,15 @@ window.drops = {
             'All Difficulties': [ 3036 ],
         },
         
+        {
+            name: 'Buggy',
+            dropID: 'bond12',
+            thumb: 3052,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3052 ],
+        },
+        
     ],
 
             
@@ -5631,6 +5650,7 @@ window.drops = {
             'Part 4': [ 2214, 2216 ],
             'Part 5': [ 3045, 3046 ],
             'Challenge Unit': [ 686 ],
+            'Chopperman Missions': [ 3050 ],
         },
         
         {
@@ -5689,6 +5709,7 @@ window.drops = {
             'Round 1': [ 2833 ],
             'Round 2': [ 2852 ],
             'Round 3': [ 2921 ],
+            'Round 4': [ 3053 ],
         },
 
         {
