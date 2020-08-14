@@ -9208,15 +9208,24 @@ window.specials = {
         }
     },
     2887:{
-        atk: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") && window.specials[2887].multiplier == 1) ? 2 : 1; },
+        atk: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK")) ? window.specials[2887].boostATK[p.sourceSlot] : 1; },
         type: "type",
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2887].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2887].boostOrb[p.sourceSlot], [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
-            var n = (window.specials[2887].multiplier == 1 ? 1 : window.specials[2887].multiplier == 1.75 ? 2 : window.specials[2887].multiplier == 2 ? 3 : 0);
-            window.specials[2887].multiplier = [1, 1.75, 2, 2.25][n];
+            window.specials[2887].turnedOn = (p.slot < 2) ? true : false;
+            window.specials[2887].switch = window.specials[2887].switch ? window.specials[2887].switch : [undefined, undefined, undefined, undefined, undefined, undefined];
+            window.specials[2887].switch[p.slot] = window.specials[2887].switch[p.slot] != undefined ? (window.specials[2887].switch[p.slot] + 1) % 4 : 0;
+            
+            window.specials[2887].boostATK = window.specials[2887].boostATK ? window.specials[2887].boostATK : [undefined, undefined, undefined, undefined, undefined, undefined];
+            window.specials[2887].boostOrb = window.specials[2887].boostOrb ? window.specials[2887].boostOrb : [undefined, undefined, undefined, undefined, undefined, undefined];
+            window.specials[2887].boostATK[p.slot] = window.specials[2887].turnedOn ? [2, 1, 1, 1][window.specials[2887].switch[p.slot]] : 1;
+            window.specials[2887].boostOrb[p.slot] = [1, 1.75, 2, 2.25][window.specials[2887].switch[p.slot]];
+            
+            //console.log(window.specials[2887].boostOrb);
+            //console.log(window.specials[2887].boostATK);
             p.scope.notify({
-                text: 'Using the ' + ['ATK boost', '1.75x Orb boost', '2x Orb boost', '2.25x Orb boost'][n] + '. To switch to the ' + ['1.75x Orb boost', '2x Orb boost', '2.25x Orb boost', 'ATK boost'][n] + ', disable and re-enable this special',
-                name: '1967warning'
+                text: 'Using the ' + ['2x ATK Boost', '1.75x Orb Boost', '2x Orb Boost', '2.25x Orb Boost'][window.specials[2887].switch[p.slot]] + '. To switch to the ' + ['1.75x Orb Boost', '2x Orb Boost', '2.25x Orb Boost', '2x ATK Boost'][window.specials[2887].switch[p.slot]] + ', disable and re-enable this special',
+                name: '2887warning'
             });
         },
     },
