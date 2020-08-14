@@ -9221,7 +9221,7 @@ window.specials = {
         },
     },
     2888:{
-        affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") && window.specials[2887].multiplier == 1) ? 1.75 : 1; },
+        affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK")) ? 1.75 : 1; },
     },
     2889: {
         chainAddition: function(p) { return window.specials[2889].multiplier; },
