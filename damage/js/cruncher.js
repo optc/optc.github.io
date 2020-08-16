@@ -628,6 +628,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getParameters(teamSlot).superType[teamSlot] ? 0.75 : 0.5;
         
         if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        if ($scope.data.effect == 'Kizuna Clash [Global]'){
+            if ([2887, 2888, 2889].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        }
+        if ($scope.data.effect == 'Kizuna Clash [Japan]'){
+            if ([3051, 3053].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        }
         
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
@@ -1015,6 +1021,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
             }
             if ([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
+            
+            if ($scope.data.effect == 'Kizuna Clash [Global]'){
+                if ([2887, 2888, 2889].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+            }
+            if ($scope.data.effect == 'Kizuna Clash [Japan]'){
+                if ([3051, 3053].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+            }
             else if(unit.type != type){
                 if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);
                 else if (unit.type == "DEX" && type == "STR") affinityMultiplier = Math.pow(affinityMultiplier, -1);
