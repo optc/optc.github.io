@@ -206,6 +206,12 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
         //console.log(window.details[id] ? "limit" in window.details[id] ? id : "no" : "no details");
         if (filters.noLB && window.details[id]) if("limit" in window.details[id]) return false;
+        //console.log(window.details[id].limit);
+        if (filters.noLBex && window.details[id]) if("limit" in window.details[id]) {
+            for (x in window.details[id].limit){
+                if (window.details[id].limit[x].description.includes("LOCKED WITH KEY")) return false;
+            }
+        }
         if (filters.noSupport && window.details[id]) if("support" in window.details[id]) return false;
         if (filters.globalTM && [ 2876, 2878, 2877, 2860, 5217, 5218, 5219, 2862, 5224, 5225, 5226, 5227, 2868, 3027, 2864, 5232, 5233, 5234, 5235, 2866, 5240, 5241, 5242, 5243, 3029, 3031, 2870, 2871, 2872, 2873, 2874, 2867, 5244, 5245, 5246, 2869, 2850, 5210, 5211, 5212, 5213, 2879, 2875, 3382, 2099, 2201, 2330, 2672, 2681, 2835, 5206, 5207, 5208, 5209, 2837, 2205, 2334, 2653, 2655, 2657, 2674, 2676, 2678, 2881, 2882, 2847, 2848, 2849, 353, 418, 865, 1108, 1163, 1298, 1432, 2670, 2684, 2781, 862, 951, 1378, 1792, 1828, 1897, 1978, 2249, 2375, 2416, 2550, 5132, 5133, 5134, 5135, 2649, 2813, 2845, 1003, 1597, 1649, 1650, 1997, 2091, 2127, 2146, 2350, 2459, 2520, 1808, 1853, 1941, 2064, 2175, 2211, 2261, 2469, 5062, 5063, 5064, 5065, 2510, 2557, 5140, 5141, 5142, 5143, 2618, 5176, 5177, 5178, 5179, 2659, 2690, 2729, 1258, 1380, 1530, 1846, 2283, 2381, 2399, 5024, 5025, 5026, 5027, 2668, 1889, 1916, 1972, 2000, 5012, 5013, 5014, 5015, 2109, 2137, 2299, 2336, 2362, 2387, 2443, 2583, 2763, 2792, 2823, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551 ].indexOf(id) == -1) return false;
         if (filters.globalKC && [ 2881, 2882, 2883, 2869, 2879, 2880, 2860, 2862, 2866, 2867, 2868, 2887, 2888, 2889, 5217, 5218, 5219, 5224, 5225, 5226, 5227, 5232, 5234, 5235, 5236, 5240, 5241, 5242, 5243, 5244, 5255, 5256 ].indexOf(id) == -1) return false;
