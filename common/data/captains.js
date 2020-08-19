@@ -5391,7 +5391,7 @@ window.captains = {
     },
     1764: {
         atk: function(p) {
-            return Math.min(3.5, 2.25 + 0.25 * p.turnCounter);
+            return [Math.min(3.5, 2.25 + 0.25 * p.turnCounter),Math.min(4, 3 + 0.2 * p.turnCounter)][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]];
         },
         hp: function(p) { return 1.25; }
     },
