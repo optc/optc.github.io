@@ -3381,7 +3381,7 @@ window.units = [
     [ "Condoriano", "INT", "Fighter", 5, 1, 4, 4, 99, 4000000, 724, 604, 182, 1942, 912, 470, 1 ],
     [ "Law & Chopper, Dynamic Doctor Duo", [ "QCK", "INT" ], [[ "Slasher", "Cerebral" ],[ "Fighter", "Cerebral" ],[ "Slasher", "Cerebral" ]], 5, 30, 4, 4, 99, 4000000, 1012, 540, 145, 2347, 1210, 406, 1 ],
     [ "Local Sea Monster, Man-Eating Monster", "QCK", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1180, 648, 43, 2704, 1430, 104, 1 ],
-    [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, null, 563, 644, 160, null, null, null, null ],
+    [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
