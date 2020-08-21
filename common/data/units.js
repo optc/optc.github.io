@@ -3055,7 +3055,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Nefertari Vivi, Princess at the Summer Festival", "PSY", [ "Free Spirit", "Cerebral" ], 4, 15, 5, 3, 50, 392109, 492, 300, 86, null, null, null, null ],
-    [ "Nefertari Vivi, Princess Emjoying the Summer Festival", "PSY", [ "Free Spirit", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1022, 530, 133, null, null, null, null ],
+    [ "Nefertari Vivi, Princess Enjoying the Summer Festival", "PSY", [ "Free Spirit", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1022, 530, 133, null, null, null, null ],
     [ "Perona, Ghost Princess at the Summer Festival", "DEX", [ "Free Spirit", "Driven" ], 4, 15, 4, 3, 50, 392109, 495, 315, 80, null, null, null, null ],
     [ "Perona, Ghost Princess Enjoying the Summer Festival", "DEX", [ "Free Spirit", "Driven" ], 5, 30, 4, 4, 99, 4000000, 1019, 537, 131, null, null, null, null ],
     [ "Nami & Sanji, Exciting Summer Festival", ["DEX", "PSY"], [[ "Free Spirit", "Striker" ],[ "Free Spirit", "Fighter" ],[ "Free Spirit", "Fighter" ]], 5, 60, 5, 1, 99, 5000000, 1281, 578, 134, null, null, null, null ],
