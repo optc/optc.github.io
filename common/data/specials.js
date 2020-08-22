@@ -10071,6 +10071,13 @@ window.specials = {
             window.specials[3059].multiplier = p.classCount.FreeSpirit >= 5 ? 1.75 : 1;
         }
     },
+    3061: {
+        chainAddition: function(p) { return 0.7; }
+    },
+    3063: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "class"
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

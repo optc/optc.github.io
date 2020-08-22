@@ -4741,15 +4741,15 @@ window.evolutions = {
     },
     2265: {
         evolution: 3048,
-        evolvers: [  ]
+        evolvers: [ 'skullDEX', 118, 86, 302, 267 ]
     },
     3056: {
         evolution: 3057,
-        evolvers: [  ]
+        evolvers: [ 117, 81, 83, 87, 98 ]
     },
     3058: {
         evolution: 3059,
-        evolvers: [  ]
+        evolvers: [ 86, 266, 97, 302, 102 ]
     },
     3333: {
         evolution: 3334,

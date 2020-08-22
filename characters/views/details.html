@@ -453,9 +453,7 @@
                                         <!-- different potential abilities -->
                                         <div ng-if="!isSupportHybrid && isSupportStaged">
                                             <div ng-repeat="stage in details.support track by $index">
-                                                <strong>Supported Characters:</strong>
-                                                 {{stage.Characters}}
-                                                <br>
+                                                <strong>Supported Characters:</strong> <span ng-bind-html="stage.Characters | decorate"></span>
                                                 <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="item | decorate"></span><br></div>
                                             </div>
