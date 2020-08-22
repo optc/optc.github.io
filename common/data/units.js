@@ -2911,7 +2911,7 @@ window.units = [
     [ "Hody Jones, Disloyal Coup", "STR", [ "Powerhouse", "Fighter" ], 5, 20, 4, 4, 99, 2000000, 1399, 563, 59, 3498, 1407, 148, 1 ],
     [ "Camie, Surrounded by Friends", "PSY", [ "Free Spirit", "Fighter" ], 5, 20, 4, 4, 99, 2000000, 1046, 551, 122, 2616, 1377, 305, 1 ],
     [ "Vander Decken IX, Extreme Love", "STR", [ "Shooter", "Cerebral" ], 5, 20, 4, 4, 99, 2000000, 1186, 555, 97, 2966, 1388, 243, 1 ],
-    [ "Shirahoshi, Devoted Island Protector", "INT", [ "Cerebral", "Striker" ], 5, 6, 4, 1, 99, 5000000, 993, 516, 142, 2482, 1291, 356, 1 ],
+    [ "Shirahoshi, Devoted Island Protector", "INT", [ "Cerebral", "Striker" ], 5, 60, 4, 1, 99, 5000000, 993, 516, 142, 2482, 1291, 356, 1 ],
     [ "Lucy, Corrida Colosseum Final Round Battle Royale", "STR", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 980, 550, 101, 2450, 1376, 253, 1 ],
     [ "Rebecca, Corrida Colosseum Final Round Battle Royale", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 5, 4, 99, 2000000, 1088, 481, 138, 2720, 1202, 346, 1 ],
     [ "Bartolomeo, Corrida Colosseum Final Round Battle Royale", "DEX", [ "Striker", "Driven" ], 5, 1, 4, 4, 99, 2000000, 1061, 504, 135, 2652, 1260, 338, 1 ],
