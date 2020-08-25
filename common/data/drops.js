@@ -37,7 +37,7 @@ window.drops = {
             nakama: 1003500,
             completion: 'Ship: Navy Ship',
             gamewith: 3423,
-            'Completion Units': [5, 80, 97, 116 ],
+            'Completion Units': [ 5, 80, 97, 116 ],
             '01': [ 81, 82, 179, 180, 181, 182 ],
             '02': [ 78, 79, 80, 179, 180, 181, 183 ],
             '03': [ 33, 81, 82, 179, 180, 181, 182, 183 ],
@@ -80,7 +80,7 @@ window.drops = {
             nakama: 1004500,
             completion: 'Ship: Merry Go - 5x Rainbow Gems',
             gamewith: 3424,
-            'Completion Units': [13],
+            'Completion Units': [ 13 ],
             '01': [ 13, 78, 79, 80, 81, 82, 89, 90, 91, 95, 96, 97, 105, 106, 107, 115 ],
             '02': [ 108, 109, 163, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188 ],
             '03': [ 92, 93, 124, 125, 126, 127, 128, 147, 148, 149, 160, 161, 165, 166, 174 ],
@@ -104,7 +104,7 @@ window.drops = {
             nakama: 1005700,
             completion: 'Ship: Baratie - 5x Rainbow Gems',
             gamewith: 3416,
-            'Completion Units': [17],
+            'Completion Units': [ 17 ],
             '01': [ 48, 131, 132, 133, 136, 137, 138, 140 ],
             '02': [ 49, 116, 117, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188 ],
             '03': [ 50, 51, 52, 184, 185, 186, 187, 188 ],
@@ -130,7 +130,7 @@ window.drops = {
             nakama: 1006500,
             completion: '5x Rainbow Gems',
             gamewith: 3408,
-            'Completion Units': [9],
+            'Completion Units': [ 9 ],
             '01': [ 89, 121, 126, 131, 136, 141, 142, 147, 152, 156, 157, 158, 159, 160, 162, 170, 173, 175, 178 ],
             '02': [ 90, 122, 127, 132, 137, 141, 143, 148, 153, 155, 157, 158, 159, 161, 162, 172, 174, 177 ],
             '03': [ 91, 123, 128, 133, 138, 141, 144, 149, 154, 157, 158, 159, 160, 161, 162, 171, 173, 175, 176, 177 ],
@@ -248,7 +248,7 @@ window.drops = {
             nakama: 1032600,
             completion: '5x Rainbow Gems',
             gamewith: 6658,
-            'Completion Units': [21],
+            'Completion Units': [ 21 ],
             '01': [ 328, 94, 117 ],
             '02': [ 84, 94, 116, 334 ],
             '03': [ 78, 79, 80, 81, 82, 94, 334 ],
@@ -447,7 +447,7 @@ window.drops = {
             nakama: 1070600,
             completion: '5x Rainbow Gems',
             gamewith: 15599,
-            'Completion Units': [708],
+            'Completion Units': [ 708 ],
             '01': [ 78, 79, 80, 81, 82, 185, 186, 188, 694 ],
             '02': [ 78, 79, 80, 81, 184, 185, 187, 692 ],
             '03': [ 304, 695, 702 ],
@@ -469,7 +469,7 @@ window.drops = {
             nakama: 1073700,
             completion: 'Ship: Thousand Sunny - 5x Rainbow Gems',
             gamewith: 16618,
-            'Completion Units': [739],
+            'Completion Units': [ 739 ],
             '01': [ 110 ],
             '02': [ 111 ],
             '03': [ 112 ],
@@ -517,7 +517,7 @@ window.drops = {
             nakama: 1089400,
             completion: '5x Rainbow Gems',
             gamewith: 22436,
-            'Completion Units': [895],
+            'Completion Units': [ 895 ],
             '01': [ 817, 818, 819, 888 ],
             '02': [ 393, 888, 889 ],
             '03': [ 425 ],
@@ -982,6 +982,7 @@ window.drops = {
         },
     ],
 
+
     'Booster and Evolver Island': [
 
         {
@@ -1084,6 +1085,178 @@ window.drops = {
             ' ': [ 342, 343, 344, 345, 346, 347, 348, 349, 350, 351 ]
         },
     ],
+
+    'Rookie Mission': [
+
+        {
+            name: 'Character Acquirement Quest: Fighter',
+            dropID: 'rookie1',
+            thumb: 1581,
+            global: true,
+            'Carrot': [ 1812, -1812 ],
+            'Luffy': [ 2087, -2087 ],
+            'Law': [ 1581, -1581 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Slasher',
+            dropID: 'rookie2',
+            thumb: 2428,
+            global: true,
+            'Wanda': [ 1810, -1810 ],
+            'Amande': [ 2327, -2327 ],
+            'Cavendish': [ 2428, -2428 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Striker',
+            dropID: 'rookie3',
+            thumb: 2146,
+            global: true,
+            'Cat Viper': [ 2177, -2177 ],
+            'Hawkins': [ 1867, -1867 ],
+            'Rebecca': [ 2146, -2146 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Shooter',
+            dropID: 'rookie4',
+            thumb: 15,
+            global: true,
+            'Perona': [ 1891, -1891 ],
+            'Giolla': [ 1649, -1649 ],
+            'Usopp': [ 15, -15 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Free Spirit',
+            dropID: 'rookie5',
+            thumb: 2491,
+            global: true,
+            'Shanks': [ 2019, -2019 ],
+            'Apoo': [ 1855, -1855 ],
+            'Hiriluk': [ 2491, -2491 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Cerebral',
+            dropID: 'rookie6',
+            thumb: 2127,
+            global: true,
+            'Nami': [ 2524, -2524 ],
+            'Dogstorm': [ 2219, -2219 ],
+            'Brulee': [ 2127, -2127 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Driven',
+            dropID: 'rookie7',
+            thumb: 2277,
+            global: true,
+            'Caribou': [ 1842, -1842 ],
+            'Kid': [ 1690, -1690 ],
+            'Buggy': [ 2277, -2277 ],
+        },
+
+        {
+            name: 'Character Acquirement Quest: Powerhouse',
+            dropID: 'rookie8',
+            thumb: 1965,
+            global: true,
+            'Caribou': [ 1997, -1997 ],
+            'Kid': [ 1564, -1564 ],
+            'Buggy': [ 1965, -1965 ],
+        },
+
+        {
+            name: 'Manual Acquirement Quest (STR)',
+            dropID: 'rookie9',
+            thumb: 1387,
+            global: true,
+            day: 0,
+            'Retrieve the Candy!': [ -1571, -2372, -412, -880, -1188, -1444, -1618, -1873, -2080, -2448, -2447, -2 ],
+            'Sentomaru, Guard of the New World!': [ -578, -1121, -1794, -2814, -217, -455, -906, -1412, -1908, -2150, -2285, -2485 ],
+            'The Finest of Art': [ -2363, -2074, -943, -1212, -1387, -4, -1706, -1974, -2142, -1840, -2371, -216, -508, -560 ],
+            'Perona\'s Peculiar Living Situation': [ -2739, -2113, -647, -999, -1238, -1475, -1682, -2013, -2369, -3 ],
+            'Last Wish for Sanji': [ -1663, -748, -2578, -1314, -673, -1033, -1274, -1621, -1957, -2101, -24 ],
+            'Red-Hair Pirates at the Harbor!': [ -1927, -720, -259, -1083, -1318, -1665, -1757, -2238, -2420, -785 ],
+            'Comeback! "King of the Day" Duke Dogstorm': [ -2500, -2234, -316, -760, -1131, -1368, -1660, -1743, -1987, -2267 ],
+            'The Finest of Tea Parties! (Perorin!)': [ -1413, -261, -357, -844, -1115, -1538, -1824, -2287, -2271, -2463, -520 ],
+        },
+
+        {
+            name: 'Manual Acquirement Quest (DEX)',
+            dropID: 'rookie10',
+            thumb: 1388,
+            global: true,
+            day: 1,
+            'Catch the Big Person!': [ -1543, -1532, -1362, -1921, -941, -1388, -8, -1688, -2141, -1838, -2452, -2451, -2538, -500, -5 ],
+            'Smokey and the Captain!': [ -2159, -1698, -2441, -451, -912, -1232, -1481, -1800, -2308, -6 ],
+            'Passionate Exile!': [ -1268, -2588, -2076, -641, -997, -1440, -1761, -1959, -2121, -7 ],
+            'Mystery of the Seven Warlords, Trafalgar Law!!': [ -2265, -2418, -671, -1029, -1270, -1542, -1713, -2105, -26, -3048 ],
+            'Branded in Shackles': [ -3018, -1883, -2236, -219, -1081, -1322, -1577, -1741, -2481, -789 ],
+            'Commotion at Makino\'s Tavern?!': [ -1816, -562, -2475, -257, -750, -1127, -1177, -528, -1658, -2154, -2240 ],
+            'Coliseum Executioner': [ -2195, -1001, -2534, -308, -838, -1182, -1408, -1614, -1877, -2203, -2349 ],
+            'Holy Mother\'s Lover: Mother Caramel': [ -3334, -1910, -359, -878, -1175, -1551, -896, -1798, -2306, -2269, -2544 ],
+            'Escapees, Join the Fight!': [ -2601, -2700, -2835, -2563, -2674, -2678, -2702, -2810, -2839 ],
+        },
+
+        {
+            name: 'Manual Acquirement Quest (QCK)',
+            dropID: 'rookie11',
+            thumb: 1447,
+            global: true,
+            day: 2,
+            'Strong for your Happiness!': [ -2232, -1610, -75, -937, -993, -1272, -1573, -2152, -2048, -2422, -2483 ],
+            'Intense Combat! Chin Jao Family!!': [ -2099, -2357, -1123, -677, -846, -1320, -1684, -1759, -2082, -2487, -18 ],
+            'Cheer on Your Soul!': [ -2784, -1763, -1035, -1928, -253, -410, -872, -1077, -1778, -1702, -2340, -2542 ],
+            'Revenge is Nigh! The New Fishman Pirates!': [ -2201, -312, -365, -1133, -1234, -1370, -1904, -1991, -2247 ],
+            'Fukaboshi and Neptune': [ -1445, -416, -1985, -449, -914, -1447, -20, -1721, -1875, -2029, -2119, -74 ],
+            'The Beast\'s Return': [ -2338, -752, -1027, -1802, -1895, -2242, -2161, -19, -506 ],
+            'Baby 5\'s Wedding Plans': [ -1751, -1922, -2330, -754, -1190, -1436, -1796, -2310, -590, -17 ],
+            'Let\'s Go See The Cat Viper!': [ -2868, -649, -1764, -1192, -2300, -1935, -556, -1210, -1479, -1993, -2140, -1836, -225, -791 ],
+            'Forces of Rage: Amande and Bobbin': [ -2465, -2930, -639, -1119, -524, -1534, -1656, -1955, -2244, -2450, -2449, -25 ],
+            'The Charming Tea House Owner': [ -2776, -2774, -1749, -2567, -2609, -2657, -2706, -2778, -2787, -2866 ],
+        },
+
+        {
+            name: 'Manual Acquirement Quest (PSY)',
+            dropID: 'rookie12',
+            thumb: 1446,
+            global: true,
+            day: 3,
+            'Rumbar Pirates!': [ -2991, -2251, -2631, -1473, -363, -842, -1184, -1632, -1700, -2139, -1834, -2344, -13 ],
+            'World Pirates!': [ -2034, -1240, -2373, -1652, -874, -1446, -16, -1579, -1755, -2334, -2540, -14, -502 ],
+            'Donquixote Family\'s Children!': [ -2181, -314, -910, -1278, -1438, -1477, -2115, -2367, -223 ],
+            'Find the Beloved Prince?!': [ -2365, -453, -939, -1316, -1536, -1871, -2027, -2185, -15 ],
+            'Full Defense!': [ -1707, -530, -2025, -758, -526, -1173, -1549, -709, -2078, -2342, -2479, -222 ],
+            'Bandits! The Dadan Family!!': [ -1404, -1593, -2148, -251, -995, -1364, -1906, -2187, -2431, -21 ],
+            'Kingsbird Flying High': [ -1492, -669, -2830, -1951, -1031, -1236, -2515, -2107, -2426, -586, -71 ],
+            'Let\'s Play in The Seducing Woods!': [ -2446, -73, -643, -1079, -1406, -1989, -2068, -2273, -1557 ],
+            'Rosy Melancholy': [ -2001, -1045, -2434, -3038, -77, -1125, -1448, -22, -1612, -2304, -2275, -787 ],
+            'Dress Up for the Pirate Festival! Chic': [ -2797, -2862, -2575, -2565, -2676, -2704, -2743, -2745, -2899, -2903 ],
+        },
+
+        {
+            name: 'Manual Acquirement Quest (INT)',
+            dropID: 'rookie13',
+            thumb: 1389,
+            global: true,
+            day: 4,
+            'Mermaid Under Siege': [ -2536, -1129, -1186, -1678, -1686, -1926, -2050, -504, -9 ],
+            'Brutal Fiend! Eustass Kid': [ -1881, -718, -1588, -2245, -414, -876, -1208, -1483, -1953, -2117, -10, -558 ],
+            'Foxfire Kin\'emon': [ -2035, -1391, -2302, -457, -908, -1230, -1540, -1753, -2205, -11 ],
+            '800-Year-Old Kingdom in Danger': [ -2007, -221, -361, -991, -1276, -1575, -1770, -2332, -2277 ],
+            'I\'m Now Your Ideal Type! I Think': [ -2066, -935, -2505, -1869, -310, -756, -1117, -1550, -739, -1704, -1859, -2199, -522 ],
+            'The Germa Bloodline Elements': [ -1619, -367, -2023, -1025, -1324, -1745, -2183, -2424, -23, -588 ],
+            'Brûlée\'s Cauldron Party': [ -459, -1847, -870, -2444, -645, -1075, -1366, -1442, -2072, -2189, -209 ],
+            'The Genius Jester! Buggy\'s Festival!': [ -1880, -1434, -1832, -2138, -210, -675, -840, -1389, -12, -1654, -2156, -2454, -2453 ],
+            'Miracle Cherry Blossoms': [ -2954, -1085, -2477, -255, -1410, -1616, -1902, -2031, -2103, -793 ],
+            'Revenge of the Assassins! Galette': [ -2603, -2837, -2346, -2607, -2655, -2731, -2747, -2780, -2789, -2808, -2841 ],
+        },
+        
+    ],
+
 
     'Fortnight': [
 
@@ -1756,7 +1929,7 @@ window.drops = {
             gamewith: 30767,
             //OLD condition: 'STR/DEX/QCK units get their ATK boosted by 1.6x and their HP reduced by 90%. INT/PSY units get their ATK reduced by 80% and their HP boosted by 2.0x',
             condition: 'STR/DEX/QCK units get their ATK boosted by 1.6x. INT/PSY units get their HP boosted by 2.0x',
-            'All Difficulties': [ 1069, 1071, 1073, -562, -1816, -906, -914, -645, -890, -587, -629, -888, -1070]
+            'All Difficulties': [ 1069, 1071, 1073, -562, -1816, -906, -914, -645, -890, -587, -629, -888, -1070 ]
         },
 
         {
@@ -1768,7 +1941,7 @@ window.drops = {
             gamewith: 33039,
             //OLD condition: 'Boosts ATK of Driven and Powerhouse characters by 2x, other classes get .5x ATK. Boosts HP of Slasher and Fighter characters by 2x, other classes get .5x HP. (This STACKS for characters with multiple classes)',
             condition: 'Boosts ATK of Driven characters by 2x and boosts HP for Powerhouse characters by 2x.',
-            'All Difficulties': [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -611, -893, -1098, -912]
+            'All Difficulties': [ 1094, 1096, 1098, -649, -910, -647, -891, -590, -611, -893, -1098, -912 ]
         },
 
         {
@@ -1812,7 +1985,6 @@ window.drops = {
             gamewith: 35905,
             condition: '\'Musical\' units get their stats boosted by 1.5x (Dancers, Singers, Playing an instrument, etc)',
             'All Difficulties': [ 1202, 1204, 1206, -1001, -997, -558, -1208, -677, -896, -1551, -631, -954, -1206, -617, -1027 ],
-            'PSY Manuals': [-2991, -2251, -2631, -1473, -363, -842, -1184, -1632, -1700, -2139, -1834, -2344, -13],
         },
 
         {
@@ -1824,7 +1996,6 @@ window.drops = {
             gamewith: 36738,
             condition: 'Total Crew Cost must be lower than 180 (Including friend captain)',
             'All Difficulties': [ 1215, 1216, 1217, 1218, -1025, -1029, -1033, -671, -956, -964, -633, -504, -1218 ],
-            'PSY Manuals': [-2034, -1240, -2373, -1652, -874, -1446, -16, -1579, -1755, -2334, -2540, -14, -502],
         },
 
         {
@@ -1850,7 +2021,7 @@ window.drops = {
         },
 
         {
-            name: 'Young Donquixote Pirates - Baby 5 And Buffalo',
+            name: 'Donquixote Family\'s Children!',
             dropID: 'event63',
             thumb: 1287,
             global: true,
@@ -1858,7 +2029,6 @@ window.drops = {
             gamewith: 39522,
             condition: 'Child-like characters get their ATK and HP boosted by 3.5x, RCV by 1.5x, and cooldowns reduced by 7 turns at the start of the fight',
             'All Difficulties': [ 1286, 1288, 1290, -963, -1045, -251, -760, -1083, -1129, -506, -1062, -702, -2001 ],
-            'PSY Manuals': [-2181, -314, -910, -1278, -1438, -1477, -2115, -2367, -223],
         },
 
         {
@@ -1873,7 +2043,7 @@ window.drops = {
         },
 
         {
-            name: 'Tontatta Tribe: Catch the Big Person!',
+            name: 'Catch the Big Person!',
             dropID: 'event65',
             thumb: 1328,
             global: true,
@@ -1881,11 +2051,10 @@ window.drops = {
             gamewith: 44164,
             condition: 'Slasher characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (75% on 30 stamina)',
             'All Difficulties': [ 1327, 1329, 1330, -1085, -4, -758, -760, -1127, -1131, -508, -735, -1058, -1387 ],
-            'DEX Manuals': [-1543, -1532, -1362, -1921, -941, -1388, -8, -1688, -2141, -1838, -2452, -2451, -2538, -500, -5],
         },
 
         {
-            name: 'Tontatta Tribe: Find the Beloved Prince?!',
+            name: 'Find the Beloved Prince?!',
             dropID: 'event66',
             thumb: 1332,
             global: true,
@@ -1893,22 +2062,20 @@ window.drops = {
             gamewith: 44747,
             condition: 'Striker characters are Silenced for 99 turns and have their ATK reduced by a variable amount. (70% on 30 stamina)',
             'All Difficulties': [ 1331, 1333, 1334, -720, -1186, -1190, -756, -1188, -1151, -1153, -738, -1927 ],
-            'PSY Manuals': [-2365, -453, -939, -1316, -1536, -1871, -2027, -2185, -15],
         },
 
         {
-            name: 'Gather the Candy!',
+            name: 'Retrieve the Candy!',
             dropID: 'event67',
             thumb: 1357,
             global: true,
             nakama: 2135700,
             gamewith: 45801,
             'All Difficulties': [ 1356, 1358, -1123, -1184, -1182, -1152, -1157, -8, -840, -736, -610, -1388 ],
-            'STR Manuals': [-1571, -2372, -412, -880, -1188, -1444, -1618, -1873, -2080, -2448, -2447, -2],
         },
 
         {
-            name: 'Fight for your Happiness!',
+            name: 'Strong for your Happiness!',
             dropID: 'event68',
             thumb: 1384,
             global: true,
@@ -1916,11 +2083,10 @@ window.drops = {
             gamewith: 46658,
             condition: 'Limited amount of turns to complete the mission.',
             'All Difficulties': [ 1383, 1385, -748, -1663, -1234, -1075, -1230, -1155, -1154, -846, -842, -739, -1550 ],
-            'QCK Manuals': [-2232, -1610, -75, -937, -993, -1272, -1573, -2152, -2048, -2422, -2483],
         },
 
         {
-            name: 'Shambles! Tashigi and Smoker?!?',
+            name: 'Smokey and the Captain!',
             dropID: 'event69',
             thumb: 1397,
             global: true,
@@ -1928,11 +2094,10 @@ window.drops = {
             gamewith: 47247,
             condition: 'Your captain will be switched with your middle right character when you encounter Law.',
             'All Difficulties': [ 1396, 1398, -1192, -1764, -1232, -1238, -844, -838, -1159, -1389, -12, -737, -257 ],
-            'DEX Manuals': [-2159, -1698, -2441, -451, -912, -1232, -1481, -1800, -2308, -6],
         },
 
         {
-            name: 'Full Defense! Buddha Sengoku!',
+            name: 'Full Defense!',
             dropID: 'event70',
             thumb: 1416,
             global: true,
@@ -1940,7 +2105,6 @@ window.drops = {
             gamewith: 48079,
             condition: 'You can only bring INT units',
             'All Difficulties': [ 1415, 1417, 1418, -1418, -870, -2444, -1276, -1274, -1236, -874, -253, -1223, -813 ],
-            'PSY Manuals': [-1707, -530, -2025, -758, -526, -1173, -1549, -709, -2078, -2342, -2479, -222],
         },
 
         {
@@ -1953,7 +2117,7 @@ window.drops = {
         },
 
         {
-            name: 'Chinjao Family!',
+            name: 'Intense Combat! Chin Jao Family!!',
             dropID: 'event71',
             thumb: 1426,
             global: true,
@@ -1961,11 +2125,10 @@ window.drops = {
             gamewith: 49862,
             condition: 'You can only bring DEX units',
             'All Difficulties': [ 1425, 1427, 1428, -1240, -1272, -1270, -1227, -1224, -872, -878, -255, -812, -2034 ],
-            'QCK Manuals': [-2099, -2357, -1123, -677, -846, -1320, -1684, -1759, -2082, -2487, -18],
         },
 
         {
-            name: 'Fugitive of Love and Passion!!',
+            name: 'Passionate Exile!',
             dropID: 'event72',
             thumb: 1450,
             global: true,
@@ -1973,11 +2136,10 @@ window.drops = {
             gamewith: 50895,
             condition: 'You can only bring STR units',
             'All Difficulties': [ 1449, 1451, -935, -1278, -1318, -1324, -880, -876, -259, -1226, -814, -2066 ],
-            'DEX Manuals': [-1268, -2588, -2076, -641, -997, -1440, -1761, -1959, -2121, -7]
         },
 
         {
-            name: 'Gatekeeper of the New World!',
+            name: 'Sentomaru, Guard of the New World!',
             dropID: 'event73',
             thumb: 1469,
             global: true,
@@ -1985,7 +2147,6 @@ window.drops = {
             gamewith: 51926,
             condition: 'You can only bring QCK units',
             'All Difficulties': [ 1468, 1470, 1471, -1268, -1322, -1228, -906, -914, -310, -1061, -1470, -1320 ],
-            'STR Manuals': [-578, -1121, -1794, -2814, -217, -455, -906, -1412, -1908, -2150, -2285, -2485],
         },
 
         {
@@ -2000,18 +2161,17 @@ window.drops = {
         },
 
         {
-            name: 'Bandits! Dadan Family!',
+            name: 'Bandits! The Dadan Family!!',
             dropID: 'event75',
             thumb: 1520,
             global: true,
             nakama: 2152000,
             gamewith: 53569,
             'All Difficulties': [ 1519, 1521, 1522, -1314, -2578, -1366, -1364, -912, -937, -316, -1281, -891, -22, -1448 ],
-            'PSY Manuals': [-1404, -1593, -2148, -251, -995, -1364, -1906, -2187, -2431, -21],
         },
 
         {
-            name: 'Encourage the Soul!',
+            name: 'Cheer on Your Soul!',
             dropID: 'event76',
             thumb: 1547,
             global: true,
@@ -2019,7 +2179,6 @@ window.drops = {
             gamewith: 54302,
             condition: 'Strawhat Pirates get ATK, HP, and RCV boosted by 1.5x and reduces cooldown of specials by 9 turns at the start of the fight',
             'All Difficulties': [ 1546, 1548, -1035, -1410, -1406, -939, -943, -312, -1279, -1282, -1447, -20, -1928 ],
-            'QCK Manuals': [-2784, -1763, -1035, -1928, -253, -410, -872, -1077, -1778, -1702, -2340, -2542],
         },
 
         {
@@ -2034,14 +2193,13 @@ window.drops = {
         },
 
         {
-            name: 'The Mysterious Warlord!',
+            name: 'Mystery of the Seven Warlords, Trafalgar Law!!',
             dropID: 'event78',
             thumb: 1581,
             global: true,
             nakama: 2158100,
             gamewith: 56038,
             'All Difficulties': [ 1580, 1582, -1391, -357, -910, -995, -896, -1436, -1444, -890, -1342, -1551, -2035 ],
-            'DEX Manuals': [-2265, -2418, -671, -1029, -1270, -1542, -1713, -2105, -26, -3048],
         },
 
         {
@@ -2054,7 +2212,7 @@ window.drops = {
         },
 
         {
-            name: 'Targeted Mermaid Princess!',
+            name: 'Mermaid Under Siege',
             dropID: 'event79',
             thumb: 1597,
             global: true,
@@ -2062,7 +2220,6 @@ window.drops = {
             gamewith: 57039,
             'Japan': [ 1596, 1598, 1599, -1045, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343, -2001 ],
             'Global': [ 1596, 1598, 1599, -1045, -1751, -1922, -359, -999, -1033, -1550, -739, -1438, -1440, -893, -1343, -2001 ],
-            'INT Manuals': [-2536, -1129, -1186, -1678, -1686, -1926, -2050, -504, -9],
         },
 
         {
@@ -2076,18 +2233,17 @@ window.drops = {
         },
 
         {
-            name: 'The Time of Revenge has Come! New Fishman Pirates!',
+            name: 'Revenge is Nigh! The New Fishman Pirates!',
             dropID: 'event81',
             thumb: 1624,
             global: true,
             nakama: 2162400,
             gamewith: 59321,
             'All Difficulties': [ 1624, 1625, 1626, -1434, -1880, -1477, -1475, -410, -365, -993, -1031, -954, -1347 ],
-            'QCK Manuals': [-2201, -312, -365, -1133, -1234, -1370, -1904, -1991, -2247],
         },
 
         {
-            name: 'Seeking The Best Art! Giolla and Brook!',
+            name: 'The Finest of Art!',
             dropID: 'event82',
             thumb: 1649,
             global: true,
@@ -2095,7 +2251,6 @@ window.drops = {
             gamewith: 60685,
             condition: 'You must have at least one character of each type on your team: STR, DEX, QCK, PSY, and INT.',
             'All Difficulties': [ 1648, 1650, -1473, -2631, -1483, -412, -414, -1075, -1027, -1479, -1348, -956 ],
-            'STR Manuals': [-2363, -2074, -943, -1212, -1387, -4, -1706, -1974, -2142, -1840, -2371, -216, -508, -560],
         },
 
         {
@@ -2118,11 +2273,10 @@ window.drops = {
             gamewith: 62883,
             condition: 'Only [INT] and [PSY] orbs appear',
             'All Difficulties': [ 1689, 1691, 1692, -1543, -449, -453, -1079, -1538, -1542, -967, -1346, -1349, -1532 ],
-            'INT Manuals': [-1881, -718, -1588, -2245, -414, -876, -1208, -1483, -1953, -2117, -10, -558],
         },
 
         {
-            name: 'Royal Neptune Family!',
+            name: 'Fukaboshi and Neptune',
             dropID: 'event85',
             thumb: 1723,
             global: true,
@@ -2130,7 +2284,6 @@ window.drops = {
             gamewith: 64138,
             condition: 'Strikers and Powerhouse characters get a boost (1.5x ATK boost on 30 stamina)',
             'All Difficulties': [ 1722, 1724, -1123, -455, -1077, -560, -1212, -1536, -1577, -1579, -966, -1352 ],
-            'QCK Manuals': [-1445, -416, -1985, -449, -914, -1447, -20, -1721, -1875, -2029, -2119, -74],
         },
 
         {
@@ -2165,7 +2318,7 @@ window.drops = {
         },
 
         {
-            name: 'Wano Samurai!',
+            name: 'Foxfire Kin\'emon',
             dropID: 'event88',
             thumb: 1774,
             global: true,
@@ -2173,11 +2326,10 @@ window.drops = {
             condition: 'Shooter and Free Spirit characters get a boost (1.2x ATK, HP and RCV boost on 30 stamina)',
             gamewith: 68608,
             'All Difficulties': [ 1773, 1775, -963, -1588, -2245, -451, -1186, -528, -1177, -1208, -558, -1616, -1618, -1392 ],
-            'INT Manuals': [-2035, -1391, -2302, -457, -908, -1230, -1540, -1753, -2205, -11],
         },
 
         {
-            name: 'Zou Royal Guard!',
+            name: 'Kingsbird Flying High',
             dropID: 'event89',
             thumb: 1812,
             global: true,
@@ -2185,18 +2337,16 @@ window.drops = {
             condition: 'Powerhouse Characters recieves a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
             gamewith: 71416,
             'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503, -2034 ],
-            'PSY Manuals': [-1492, -669, -2830, -1951, -1031, -1236, -2515, -2107, -2426, -586, -71],
         },
 
         {
-            name: 'Crisis in the 800 Year Old Kingdom!',
+            name: '800-Year-Old Kingdom in Danger',
             dropID: 'event90',
             thumb: 1818,
             global: true,
             nakama: 2181800,
             gamewith: 72655,
             'All Difficulties': [ 1817, 1819, 1820, -1610, -2232, -1656, -1660, -1230, -1236, -1173, -526, -643, -1506, -964 ],
-            'INT Manuals': [-2007, -221, -361, -991, -1276, -1575, -1770, -2332, -2277],
         },
 
         {
@@ -2239,22 +2389,20 @@ window.drops = {
             gamewith: 84032,
             condition: '99% health cut at the start of the adventure and an increase rate of RCV orbs until stage 4',
             'All Difficulties': [ 1890, 1892, -1314, -2578, -1316, -1322, -1741, -1743, -1559 ],
-            'STR Manuals': [-2739, -2113, -647, -999, -1238, -1475, -1682, -2013, -2369, -3],
         },
 
         {
-            name: 'Last Wish for Sanji!',
+            name: 'Last Wish for Sanji',
             dropID: 'event95',
             thumb: 1918,
             global: true,
             nakama: 2191800,
             gamewith: 85780,
             'All Difficulties': [ 1917, 1919, -1922, -1751, -1745, -1665, -1320, -1370, -1560 ],
-            'STR Manuals': [-1663, -748, -2578, -1314, -673, -1033, -1274, -1621, -1957, -2101, -24],
         },
 
         {
-            name: 'Branded in Shackles!',
+            name: 'Branded in Shackles',
             dropID: 'event96',
             thumb: 1933,
             global: true,
@@ -2262,7 +2410,6 @@ window.drops = {
             gamewith: 86343,
             condition: 'Take 7% current Health in Environmental Damage every 2 turns',
             'All Difficulties': [ 1931, 1932, 1933, -1747, -2434 , -1318, -1324, -1798, -1749, -1561 ],
-            'DEX Manuals': [-3018, -1883, -2236, -219, -1081, -1322, -1577, -1741, -2481, -789],
         },
 
         {
@@ -2273,7 +2420,6 @@ window.drops = {
             nakama: 2194700,
             gamewith: 88584,
             'All Difficulties': [ 1946, 1948, -1763, -2784, -1796, -1800, -1364, -1678, -1562 ],
-            'INT Manuals': [-2066, -935, -2505, -1869, -310, -756, -1117, -1550, -739, -1704, -1859, -2199, -522],
         },
 
         {
@@ -2284,7 +2430,6 @@ window.drops = {
             nakama: 2196500,
             gamewith: 91449,
             'All Difficulties': [ 1964, 1966, -1794, -1368, -1802, -1713, -1840, -2142, -1557 ],
-            'QCK Manuals': [-2338, -752, -1027, -1802, -1895, -2242, -2161, -19, -506],
         },
 
         {
@@ -2315,18 +2460,16 @@ window.drops = {
             nakama: 2202100,
             gamewith: 96636,
             'All Difficulties': [ 2018, 2020, -1404, -1593, -1410, -1778, -1873, -1877, -1635 ],
-            'DEX Manuals': [-1816, -562, -2475, -257, -750, -1127, -1177, -528, -1658, -2154, -2240]
         },
 
         {
-            name: 'Red Hair Pirates at the Harbor!',
+            name: 'Red-Hair Pirates at the Harbor!',
             dropID: 'event102',
             thumb: 2044,
             global: true,
             nakama: 2204400,
             gamewith: 98267,
             'All Difficulties': [ 2044, 2045, 2046, -1869, -2505, -1406, -1824, -1875, -1904, -2044, -1225 ],
-            'STR Manuals': [-1927, -720, -259, -1083, -1318, -1665, -1757, -2238, -2420, -785],
         },
 
         {
@@ -2337,7 +2480,6 @@ window.drops = {
             nakama: 2205600,
             gamewith: 99699,
             'All Difficulties': [ 2056, 2057, 2058, -1880, -1434, -1412, -1906, -1908, -1859, -1637 ],
-            'INT Manuals': [-1619, -367, -2023, -1025, -1324, -1745, -2183, -2424, -23, -588],
         },
 
         {
@@ -2368,7 +2510,6 @@ window.drops = {
             nakama: 2212700,
             gamewith: 108421,
             'All Difficulties': [ 2127, 2128, 2129, 2130, -1473, -2631, -1477, -1974, -1953, -1957, -1717 ],
-            'INT Manuals': [-459, -1847, -870, -2444, -645, -1075, -1366, -1442, -2072, -2189, -209],
         },
 
         {
@@ -2379,7 +2520,6 @@ window.drops = {
             nakama: 2214600,
             gamewith: 109800,
             'All Difficulties': [ 2143, 2145, -2013, -1991, -1989, -1951, -1718, -1475 ],
-            'DEX Manuals': [-2195, -1001, -2534, -308, -838, -1182, -1408, -1614, -1877, -2203, -2349],
         },
 
         {
@@ -2390,7 +2530,6 @@ window.drops = {
             nakama: 2216500,
             gamewith: 111404,
             'All Difficulties': [ 2166, 2164, -1985, -1987, -1993, -1719, -1479, -1481 ],
-            'QCK Manuals': [-1751, -1922, -2330, -754, -1190, -1436, -1796, -2310, -590, -17],
         },
 
         {
@@ -2401,7 +2540,6 @@ window.drops = {
             nakama: 2217700,
             gamewith: 114148,
             'All Difficulties': [ 2176, 2178, 2179, -2048, -2029, -1883, -1483, -1353, -1785 ],
-            'QCK Manuals': [-2868, -649, -1764, -1192, -2300, -1935, -556, -1210, -1479, -1993, -2140, -1836, -225, -791],
         },
 
         {
@@ -2412,18 +2550,16 @@ window.drops = {
             nakama: 2221900,
             gamewith: 116883,
             'All Difficulties': [ 2218, 2220, 2221, -2007, -2027, -2031, -1783, -1538, -1536 ],
-            'STR Manuals': [-2500, -2234, -316, -760, -1131, -1368, -1660, -1743, -1987, -2267],
         },
 
         {
-            name: 'Lets Play in The Seducing Woods',
+            name: 'Let\'s Play in The Seducing Woods!',
             dropID: 'event111',
             thumb: 2253,
             global: true,
             nakama: 2225300,
             gamewith: 118916,
             'All Difficulties': [ 2252, 2254, 2255, -2023, -2025, -1959, -2082, -2080, -2068, -1782, -1781 ],
-            'PSY Manuals': [-2446, -73, -643, -1079, -1406, -1989, -2068, -2273, -1557],
         },
 
         {
@@ -2434,40 +2570,36 @@ window.drops = {
             nakama: 2227700,
             gamewith: 121547,
             'All Difficulties': [ 2276, 2278, 2279, -2074, -2363, -2076, -2588, -2078, -2072, -2050, -2115, -1784, -2053 ],
-            'INT Manuals': [-1880, -1434, -1832, -2138, -210, -675, -840, -1389, -12, -1654, -2156, -2454, -2453],
         },
 
         {
-            name: 'Forces of Rage - Amande and Bobbin',
+            name: 'Forces of Rage: Amande and Bobbin',
             dropID: 'event113',
             thumb: 2327,
             global: true,
             nakama: 2232700,
             gamewith: 127786,
             'All Difficulties': [ 2326, 2328, -2099, -2101, -2103, -2113, -2739, -2117, -2119, -2002, -2005 ],
-            'QCK Manuals': [-2465, -2930, -639, -1119, -524, -1534, -1656, -1955, -2244, -2450, -2449, -25],
         },
 
         {
-            name: 'The Finest of Tea Parties!',
+            name: 'The Finest of Tea Parties! (Perorin!)',
             dropID: 'event114',
             global: true,
             thumb: 2351,
             nakama: 2235100,
             gamewith: 133025,
             'All Difficulties': [ 2350, 2351, 2352, -2055, -2105, -2107, -2121, -2126, -2004, -2148, -2181, -2350 ],
-            'STR Manuals': [-1413, -261, -357, -844, -1115, -1538, -1824, -2287, -2271, -2463, -520],
         },
 
         {
-            name: 'Holy Mother\'s Love - Mother Carmel',
+            name: 'Holy Mother\'s Love: Mother Carmel',
             dropID: 'event115',
             global: true,
             thumb: 2377,
             nakama: 2237700,
             gamewith: 136822,
             'All Difficulties': [ 2376, 2378, 2379, -2234, -2500, -2201, -2203, -2242, -2161, -2244 ],
-            'DEX Manuals': [-3334, -1910, -359, -878, -1175, -1551, -896, -1798, -2306, -2269, -2544],
         },
 
         {
@@ -2478,7 +2610,6 @@ window.drops = {
             nakama: 2242800,
             gamewith: 141693,
             'All Difficulties': [ 2427, 2429, -2236, -2265, -2205, -2238, -2267, -2269, -2125, -2240 ],
-            'PSY Manuals': [-2001, -1045, -2434, -3038, -77, -1125, -1448, -22, -1612, -2304, -2275, -787],
         },
 
         {
@@ -2499,7 +2630,6 @@ window.drops = {
             nakama: 2249100,
             gamewith: 146866,
             'All Difficulties': [ 2490, 2492, 2493, -2330, -2251, -1869, -2505, -2334, -2332, -2156, -2154, -2150, -2107, -1877, -1802, -1800, -1796, -1577, -1540, -2052 ],
-            'INT Manuals': [-2954, -1085, -2477, -255, -1410, -1616, -1902, -2031, -2103, -793],
         },
 
         {
@@ -2520,7 +2650,6 @@ window.drops = {
             nakama: 2252400,
             gamewith: 150791,
             'All Difficulties': [ 2523, 2524, 2525, 2526, 2527, -2074, -2363, -2365, -2072, -1957, -2115, -2304, -2189, -2285, -2367, -2371, -2538, -2540, -2542, -2544, -2231 ],
-            'PSY Manuals': [-2797, -2862, -2575, -2565, -2676, -2704, -2743, -2745, -2899, -2903],
         },
 
         {
@@ -2571,7 +2700,6 @@ window.drops = {
             nakama: 2269200,
             gamewith: 167197,
             'All Difficulties': [ 2691, 2693, 2694, -2609, -2605, -2563, -2561, -2534, -2487, -2121, -2115, -2119, -2050 ],
-            'DEX Manuals': [-2601, -2700, -2835, -2563, -2674, -2678, -2702, -2810, -2839],
         },
 
         {
@@ -2592,7 +2720,6 @@ window.drops = {
             nakama: null,
             gamewith: 174577,
             'All Difficulties': [ 2750, 2752, 2753, -2446, -2601, -2426, -2657, -2653, -1904, -2655, -2598, -2275, -2332 ],
-            'INT Manuals': [-2603, -2837, -2346, -2607, -2655, -2731, -2747, -2780, -2789, -2808, -2841],
         },
 
         {
@@ -2603,7 +2730,6 @@ window.drops = {
             nakama: null,
             gamewith: 178712,
             'All Difficulties': [ 2782, 2783, -1001, -1953, -2080, -2156, -2195, -2603, -2605, -2674, -2676, -2678, -2596 ],
-            'QCK Manuals': [-2776, -2774, -1749, -2567, -2609, -2657, -2706, -2778, -2787, -2866],
         },
 
         {
@@ -2613,8 +2739,8 @@ window.drops = {
             thumb: 2802,
             nakama: null,
             gamewith: 181636,
-            'All Difficulties': [-2802, -2804, -2797, -2810, -2808, -2806, -2787, -2789],
-            'STR Manuals': [-2561, -2577, -2802, -2605, -2653, -2696, -2806, -2864, -2901],
+            'All Difficulties': [ -2802, -2804, -2797, -2810, -2808, -2806, -2787, -2789 ],
+            'STR Manuals': [ -2561, -2577, -2802, -2605, -2653, -2696, -2806, -2864, -2901 ],
         },
 
         {
@@ -2624,7 +2750,7 @@ window.drops = {
             thumb: 2835,
             nakama: null,
             gamewith: 184722,
-            'All Difficulties': [-2835, -2837, -2700, -2696, -2841, -2839, -2702, -2706, -2704],
+            'All Difficulties': [ -2835, -2837, -2700, -2696, -2841, -2839, -2702, -2706, -2704 ],
         },
 
         {
@@ -2634,7 +2760,7 @@ window.drops = {
             thumb: 2860,
             nakama: null,
             gamewith: 188625,
-            'All Difficulties': [-2860, -2862, -3027, -3029, -3031, -2731, -2743, -2745, -2747, -2864, -2866],
+            'All Difficulties': [ -2860, -2862, -3027, -3029, -3031, -2731, -2743, -2745, -2747, -2864, -2866 ],
         },
 
         {
@@ -2644,7 +2770,7 @@ window.drops = {
             thumb: 2897,
             nakama: null,
             // gamewith: ,
-            'All Difficulties': [-2897, -2776, -2774, -2895, -2780, -2778, -2899, -2901, -2903],
+            'All Difficulties': [ -2897, -2776, -2774, -2895, -2780, -2778, -2899, -2901, -2903 ],
         },
 
         {
@@ -2653,7 +2779,7 @@ window.drops = {
             thumb: 2964,
             nakama: null,
             gamewith: 202519,
-            'All Difficulties': [-2958, -2960, -2962, -2964, -2966, -2968, -2970, -2972],
+            'All Difficulties': [ -2958, -2960, -2962, -2964, -2966, -2968, -2970, -2972 ],
         },
 
         {
@@ -2662,7 +2788,7 @@ window.drops = {
             thumb: 2982,
             nakama: null,
             gamewith: 205071,
-            'All Difficulties': [-2980, -2982, -2741, -2672, -2986, -2984, -2515, -2607, -2609],
+            'All Difficulties': [ -2980, -2982, -2741, -2672, -2986, -2984, -2515, -2607, -2609 ],
         },
 
         {
@@ -2671,7 +2797,7 @@ window.drops = {
             thumb: 3038,
             nakama: null,
             gamewith: 218747,
-            'All Difficulties':  [-3038, -3040, -3044, -3042, -3031, -3029, -2027, -2078],
+            'All Difficulties':  [ -3038, -3040, -3044, -3042, -3031, -3029, -2027, -2078 ],
         },
     ],
 
