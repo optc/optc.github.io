@@ -10078,6 +10078,52 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: "class"
     },
+    3074: {
+        affinity: function(p) { return window.specials[3074].multiplier; },
+        onActivation: function(p) {
+            var n = (window.specials[3074].multiplier == 1.75 ? 1 : 0);
+            window.specials[3074].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3074warning'
+            });
+        }
+    },
+    3075: {
+        affinity: function(p) { return window.specials[3075].multiplier; },
+        onActivation: function(p) {
+            var n = (window.specials[3075].multiplier == 1.75 ? 1 : 0);
+            window.specials[3075].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3075warning'
+            });
+        }
+    },
+    3076: {
+        atk: function(p) { return window.specials[3076].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[3076].multiplier == 1.75 ? 1 : 0);
+            window.specials[3076].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3076warning'
+            });
+        }
+    },
+    3077: {
+        atk: function(p) { return window.specials[3077].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[3077].multiplier == 1.75 ? 1 : 0);
+            window.specials[3077].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3077warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
