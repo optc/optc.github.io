@@ -66,13 +66,14 @@
                     <i class="fa fa-chevron-right"></i>
                     <i class="fa fa-chevron-down"></i>
                     <span>{{island.name}}</span>
-                    <i class="fa fa-globe" ng-show="island.global" title="Available On Global"></i>
+                    <i class="fa fa-globe-americas" ng-show="island.global" title="Available On Global"></i>
                     <i class="fa fa-star" ng-show="island.challenge" title="Challenge Available"></i>
                     <!-- Flag next to the FN/Raid name if its permanent on either/both. Messes up the character view making it like its trying to get a tag or something
                     <i class="far fa-flag" ng-show="island.permglobal" title="Permanent on Global"></i>
                     <i class="fas fa-flag" ng-show="island.permjapan" title="Permanent on Japan"></i>
                     <i class="fas fa-flag-checkered" ng-show="island.permboth" title="Permanent on Japan and Global"></i>-->
                     <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
+                    <day-label ng-if="type == 'Rookie Mission'"></day-label>
                 </h3>
             </div>
         </script>
@@ -140,7 +141,7 @@
                                 uib-tooltip="{{getTooltipText(uid)}}"
                                 tooltip-placement="bottom" tooltip-trigger="mouseenter"
                                 tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a>
-                            <h4 ng-if="type == 'Fortnight' || island.showManual">Manuals:</h4>
+                            <h4 ng-if="type == 'Fortnight' || type == 'Rookie Mission' || island.showManual">Manuals:</h4>
                             <a ng-repeat="uid in data | smartSort:'true'" ng-if="uid < 0"
                                 decorate-slot uid="-uid" class="slot small"
                                 href="../characters/#/view/{{-uid}}" target="_blank"
@@ -165,7 +166,7 @@
                     ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()" id="search">
             </h1>
 
-            <div ng-repeat="type in [ 'Story Island', 'Booster and Evolver Island', 'Fortnight', 'Raid', 'Coliseum', 'Treasure Map', 'Ambush', 'Kizuna Clash', 'Pirate Festival', 'Special', 'Training Forest' ]"
+            <div ng-repeat="type in [ 'Story Island', 'Booster and Evolver Island', 'Rookie Mission', 'Fortnight', 'Raid', 'Coliseum', 'Treasure Map', 'Ambush', 'Kizuna Clash', 'Pirate Festival', 'Special', 'Training Forest' ]"
                 class="type collapsed" collapsable hidden-units="hiddenUnits" only-global="onlyGlobal"
                 target="type.html" type="type" data="data" query="query">
                 <h2>
