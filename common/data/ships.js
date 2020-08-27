@@ -707,5 +707,19 @@ window.ships = [
             return [ 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 ][p.boatLevel - 1];
         }
     },
+    
+    
+    
+    { //53
+        name: "Amphibious Nostra Castello",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, Boosts ATK of [STR], [PSY] and [INT] characters by 1.55x and their HP by 1.4x. If HP is above 99% or below 30% at the start of the turn, boosts ATK of [STR], [PSY] and [INT] characters by 1.7x.',
+        atk: function(p) {
+            return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? (p.p.percHP <= 30.0 || p.p.percHP >= 99.0) ? [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.7 ][p.boatLevel - 1] : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.55 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.4 ][p.boatLevel - 1] : 1;
+        },
+    },
 
 ];

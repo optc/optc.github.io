@@ -3782,6 +3782,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash!! Soul King',
+            dropID: 'clash65',
+            thumb: 3078,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3078 ],
+        },
+
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
@@ -5788,6 +5797,15 @@ window.drops = {
             'All Difficulties': [ 3047 ],
         },
 
+        {
+            name: 'Round Five',
+            dropID: 'piratefestival5',
+            thumb: 3082,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3082 ],
+        },
+
     ],
 
     'Special': [
@@ -6499,6 +6517,15 @@ window.drops = {
             gamewith: null,
             'vs Kuma': [ 3004 ],
             'vs Moria': [ 3005 ],
+        },
+
+        {
+            name: 'Face-Off! Sanji vs. Luffy',
+            thumb: 3081,
+            nakama: null,
+            gamewith: null,
+            //condition: 'Drops portions of a Log Pose map and a Treasure Key map to fullfil community rewards.',
+            'Chopperman Missions': [ 3080, 3081 ],
         },
 
         {

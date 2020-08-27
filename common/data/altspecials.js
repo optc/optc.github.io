@@ -24,6 +24,9 @@ window.altspecials = {
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
         type: "type",
     },
+    3071: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },
