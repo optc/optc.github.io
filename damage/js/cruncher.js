@@ -628,6 +628,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getParameters(teamSlot).superType[teamSlot] ? 0.75 : 0.5;
         
         if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        if ([3070].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3070].turnedOn[teamSlot]) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        if ([3071].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
             if ([2887, 2888, 2889].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
         }
@@ -1021,6 +1024,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
             }
             if ([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
+            if ([3070].indexOf(unit.number + 1) != -1 && teamSlot == 1 && window.specials[3070].turnedOn[teamSlot]) affinityMultiplier = affinityMultiplier;
+            if ([3071].indexOf(unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) affinityMultiplier = affinityMultiplier;
             
             if ($scope.data.effect == 'Kizuna Clash [Global]'){
                 if ([2887, 2888, 2889].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
@@ -1360,7 +1365,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.data.limit5 = $scope.data.limit5 == undefined ? 0 : $scope.data.limit5;
         var sugarToyTemp =  [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ];
         var unitTemp = Object.assign({},team[slotNumber].unit);
-        unitTemp.cost = sugarToyTemp[slotNumber] ? 40 : window.units[team[slotNumber].unit.number].cost;
+        if (team[slotNumber].unit) unitTemp.cost = sugarToyTemp[slotNumber] ? 40 : window.units[team[slotNumber].unit.number].cost;
         return {
             unit: unitTemp,
             orb: $scope.tdata.team[slotNumber].orb,
