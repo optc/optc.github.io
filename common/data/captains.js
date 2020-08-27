@@ -10761,6 +10761,10 @@ window.captains = {
     3077: {
         atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? p.percHP >= 99.0 ? 3.5 : 3 : 1; }
     },
+    3079: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Driven")) ? 4 : 1; },
+        hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Driven")) ? 1.35 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

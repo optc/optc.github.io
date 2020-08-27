@@ -3077,7 +3077,7 @@ window.aliases = {
     3076: [ '', '', 'World Journey Vivi', 'Chinese Vivi' ],
     3077: [ '', '', 'World Journey Vivi', 'Chinese Vivi' ],
     3078: [ '', '', '' ],
-    3079: [ '', '', '' ],
+    3079: [ '', '', 'Super Capone', '6+ Capone 6+', 'Mega Capone' ],
     3080: [ '', '', '' ],
     3081: [ '', '', '' ],
     3082: [ '', '', '' ],

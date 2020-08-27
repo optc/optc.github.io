@@ -3077,7 +3077,7 @@ window.units = [
     [ "Nefertari Vivi, Girl Performing a Dance", "QCK", [ "Fighter", "Free Spirit" ], 4, 15, 5, 3, 50, 392109, 694, 516, 67, null, null, null, null ],
     [ "Nefertari Vivi, Praincess's Dance", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1230, 916, 113, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Capone \"Gang\" Bege, Immovable Fortress", "INT", [ "Shooter", "Driven" ], "6+", 65, 6, 5, 99, 5000000, 2204, 1322, 76, 4630, 1647, 179, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

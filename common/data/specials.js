@@ -10124,6 +10124,10 @@ window.specials = {
             });
         }
     },
+    3079: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2 : 1; },
+        type: "class"
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
