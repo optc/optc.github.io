@@ -948,6 +948,12 @@ window.zombies = {
         type: 'healer',
         amount: 1500
     },
+    3079: { // Capone
+        type: 'healer',
+    },
+    3082: { // Usoland
+        type: 'healer',
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1
