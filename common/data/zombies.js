@@ -1093,4 +1093,28 @@ window.zombies = {
     5258: { // Law/Chopper
         type: 'healer',
     },
+    5268: { // Luffy/Sanji
+        type: 'healer',
+        amount: 1000
+    },
+    5269: { // Luffy/Sanji
+        type: 'healer',
+        amount: 2000
+    },
+    5270: { // Luffy/Sanji
+        type: 'healer',
+        amount: 2000
+    },
+    5272: { // Luffy/Sanji
+        type: 'healer',
+        amount: 1000
+    },
+    5273: { // Luffy/Sanji
+        type: 'healer',
+        amount: 2000
+    },
+    5274: { // Luffy/Sanji
+        type: 'healer',
+        amount: 2000
+    },
 };

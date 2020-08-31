@@ -10813,6 +10813,12 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" ? p.percHP >= 70.0 ? 3.5 : 2.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" ? [1, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3083: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.75 : 1; },
+    },
+    3085: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

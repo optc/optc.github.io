@@ -1381,12 +1381,16 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 30 : 0; },
     },
-    3081: {
+    3082: {
         atkStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
     },
-    3082: {
+    3083: {
+        atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
+    },
+    3085: {
         atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
