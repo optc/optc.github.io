@@ -6074,6 +6074,21 @@ window.drops = {
         },
 
         {
+            name: 'Face Off! Luffy vs Sanji',
+            global: true,
+            thumb: 3065,
+            gamewith: null,
+        },
+
+        {
+            name: 'The Tea Party From Hell',
+            global: true,
+            thumb: 3079,
+            gamewith: null,
+            'Chopperman Missions': [ 3086 ],
+        },
+
+        {
             name: 'Battle Blitz! Girls of Summer Paradise',
             thumb: 2626,
             global: true,

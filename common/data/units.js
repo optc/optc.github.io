@@ -3084,7 +3084,7 @@ window.units = [
     [ "O-Kiku, Masked Swordswoman", "STR", [ "Slasher", "Driven" ], 5, 40, 5, 4, 99, 4000000, 1025, 642, 227, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Perospero, Path-Blocking Candy", "STR", [ "Driven", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1241, 843, 82, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Pedro, Fate From 5 Years Ago", "STR", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1231, 621, 68, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

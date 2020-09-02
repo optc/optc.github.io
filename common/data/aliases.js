@@ -3084,7 +3084,7 @@ window.aliases = {
     3083: [ '', '', 'Kikunojo', 'Coliseum Kikunojo', 'Okiku' ],
     3084: [ '', '', '' ],
     3085: [ '', '', 'Limited Perospero', 'Secret Perospero' ],
-    3086: [ '', '', '' ],
+    3086: [ '', '', 'WCI Pedro' ],
     3087: [ '', '', '' ],
     3088: [ '', '', '' ],
     3089: [ '', '', '' ],
