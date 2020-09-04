@@ -9366,7 +9366,7 @@ window.specials = {
         },
         onActivation: function(p) {
             window.specials[2911].multiplier = 1;
-            if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT")) {
+            if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "PSY")) {
                 window.specials[2911].multiplier = 2.75;
             }
         },
