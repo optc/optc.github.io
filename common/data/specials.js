@@ -9357,6 +9357,20 @@ window.specials = {
             });
         }
     },
+    2911: {
+        chain: function(p) { return window.specials[1657].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[1657].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[1657].multiplier = 1;
+            if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");) {
+                window.specials[1657].multiplier = 2.75;
+            }
+        },
+    },
     2912:{
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2912].multiplier : 1; },
         type: "class",
