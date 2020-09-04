@@ -9094,7 +9094,7 @@ window.specials = {
         },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2871].turnedOn = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "STR") ? 2.75 : 1;
+            window.specials[2871].multiplier = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "STR") ? 2.75 : 1;
         },
     },
     2872: {
@@ -9102,7 +9102,7 @@ window.specials = {
         chainAddition: function(p) { return window.specials[2872].multiplier; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2872].turnedOn = p.captain != null && (p.captain.type == "INT" || p.captain.type == "STR") ? 0.5 : 0;
+            window.specials[2872].multiplier = p.captain != null && (p.captain.type == "INT" || p.captain.type == "STR") ? 0.5 : 0;
         },
     },
     2873: {
@@ -9358,16 +9358,16 @@ window.specials = {
         }
     },
     2911: {
-        chain: function(p) { return window.specials[1657].multiplier; },
+        chain: function(p) { return window.specials[2911].multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[1657].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+            if (window.specials[2911].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2911].multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[1657].multiplier = 1;
-            if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");) {
-                window.specials[1657].multiplier = 2.75;
+            window.specials[2911].multiplier = 1;
+            if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT")) {
+                window.specials[2911].multiplier = 2.75;
             }
         },
     },
