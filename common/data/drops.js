@@ -5224,6 +5224,16 @@ window.drops = {
         },
 
         {
+            name: 'Kikunojo',
+            thumb: 3083,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            Chaos: [ 3083, -3083 ],
+        },
+
+        {
             name: 'Coliseum Extra Vs. Coby',
             thumb: 3372,
             showManual: true,
@@ -6111,6 +6121,21 @@ window.drops = {
             thumb: 2363,
             gamewith: 136731,
             condition: 'Chance of dropping the Support Medallions.',
+        },
+
+        {
+            name: 'Face Off! Luffy vs Sanji',
+            global: true,
+            thumb: 3065,
+            gamewith: null,
+        },
+
+        {
+            name: 'The Tea Party From Hell',
+            global: true,
+            thumb: 3079,
+            gamewith: null,
+            'Chopperman Missions': [ 3086 ],
         },
 
         {

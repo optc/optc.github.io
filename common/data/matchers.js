@@ -1158,7 +1158,7 @@ window.matchers = [
     {
         name: 'Special Rewind Restorers',
         target: 'sailor',
-        matcher: /Restores (his|her) own special/i
+        matcher: /Restores own special/i
     },
     
     {

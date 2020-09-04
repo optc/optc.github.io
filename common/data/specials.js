@@ -9357,6 +9357,20 @@ window.specials = {
             });
         }
     },
+    2911: {
+        chain: function(p) { return window.specials[1657].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[1657].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[1657].multiplier = 1;
+            if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");) {
+                window.specials[1657].multiplier = 2.75;
+            }
+        },
+    },
     2912:{
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2912].multiplier : 1; },
         type: "class",
@@ -10210,11 +10224,22 @@ window.specials = {
         atk: function(p) { return p.delayed > 0 ? 1.75 : 1; },
         type: "condition",
     },
-    3083:{
-        orb: function(p) { return window.specials[3083].turnedOn ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    3083: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3080].turnedOn, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2 : 1.75);
+            window.specials[3083].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '3083warning'
+            });
+        }
+    },
+    3085:{
+        orb: function(p) { return window.specials[3085].turnedOn ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[3083].turnedOn = p.captain != null && (p.captain.type == "STR");
+            window.specials[3085].turnedOn = p.captain != null && (p.captain.type == "STR");
         },
     },
     3333: {
