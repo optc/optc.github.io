@@ -9277,7 +9277,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[2896].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Kizaru is your captain',
+                text: 'Additionally affects damage if Rayleigh is your captain',
                 name: '2896warning'
             });
         },
@@ -9293,7 +9293,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[2897].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Kizaru is your captain',
+                text: 'Additionally affects damage if Rayleigh is your captain',
                 name: '2897warning'
             });
         },
@@ -10240,6 +10240,30 @@ window.specials = {
         turnedOn: false,
         onActivation: function(p) {
             window.specials[3085].turnedOn = p.captain != null && (p.captain.type == "STR");
+        },
+    },
+    3088: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3088].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3088].multiplier == 1.5 ? 1 : window.specials[3088].multiplier == 1.75 ? 2 : 0);
+            window.specials[3088].multiplier = [1.5, 1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
+                name: '3088warning'
+            });
+        }
+    },
+    3089:{
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? window.specials[3089].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[3089].multiplier == 1.75 ? 1 : window.specials[3089].multiplier == 2 ? 2 : 0);
+            window.specials[3089].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Conditional boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Conditional boost, disable and re-enable this special',
+                name: '2132warning'
+            });
         },
     },
     3333: {

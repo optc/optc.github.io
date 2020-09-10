@@ -10822,8 +10822,17 @@ window.captains = {
     3085: {
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
     },
-    3076: {
+    3086: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? p.percHP <= 50.0 ? 3.25 : 2.75 : 1; }
+    },
+    3087: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    3088: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    3089: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
     },
     3333: {
         hitAtk: function(p) {
