@@ -9277,7 +9277,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[2896].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Kizaru is your captain',
+                text: 'Only affects damage if Rayliegh is your captain',
                 name: '2896warning'
             });
         },
@@ -9293,7 +9293,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[2897].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Kizaru is your captain',
+                text: 'Only affects damage if Rayliegh is your captain',
                 name: '2897warning'
             });
         },
