@@ -4302,7 +4302,7 @@ window.captains = {
         hitModifiers: ["Good", "Good", "Great", "Perfect", "Perfect", "Perfect"]
     },
     1492: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
@@ -8573,8 +8573,8 @@ window.captains = {
         hp: function(p) { return 1.25; }
     },
     2433: {
-        atk: function(p) { return 3; },
-        hp: function(p) { return 1.25; }
+        atk: function(p) { return [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return [1.25, 1.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
     },
     2434: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 3.25, [ "Free Spirit" ]); },
@@ -10833,6 +10833,9 @@ window.captains = {
     },
     3089: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    3094: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? [1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3333: {
         hitAtk: function(p) {

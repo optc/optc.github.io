@@ -10266,6 +10266,17 @@ window.specials = {
             });
         },
     },
+    3094: {
+        affintiy: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[3094].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2 : 1.75);
+            window.specials[3094].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '3094warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -11866,5 +11877,101 @@ window.specials = {
     },
     5266: {
         orb: function(p) { return (p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); }	
+    },
+    5267: {
+        atk: function(p) { return window.specials[5267].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5267].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5267warning'
+            });
+        }
+    },
+    5268: {
+        atk: function(p) { return window.specials[5268].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5268].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5268warning'
+            });
+        }
+    },
+    5269: {
+        atk: function(p) { return window.specials[5269].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5269].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5269warning'
+            });
+        }
+    },
+    5270: {
+        atk: function(p) { return window.specials[5270].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5270].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5270warning'
+            });
+        }
+    },
+    5271: {
+        atk: function(p) { return window.specials[5271].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5271].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5271warning'
+            });
+        }
+    },
+    5272: {
+        atk: function(p) { return window.specials[5272].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5272].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5272warning'
+            });
+        }
+    },
+    5273: {
+        atk: function(p) { return window.specials[5273].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5273].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5273warning'
+            });
+        }
+    },
+    5274: {
+        atk: function(p) { return window.specials[5274].multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.5 : 2);
+            window.specials[5274].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5274warning'
+            });
+        }
     },
 };
