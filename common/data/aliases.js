@@ -3116,7 +3116,6 @@ window.aliases = {
     3352: [ '', '', 'Neo Ivankov', 'Kai Ivankov', 'Raid Ivankov' ],
     3353: [ '', '', 'Neo Whitebeard', 'Kai Whitebeard', 'Ambush Whitebeard', 'Invasion Whitebeard' ],
     3354: [ '', '', 'Neo Whitebeard', 'Kai Whitebeard', 'Ambush Whitebeard', 'Invasion Whitebeard' ],
-    2772: [ '王の鳥 ワンダ 大恩人へのもてなし', '', 'Support Wanda', 'Limited Wanda', 'Secret Wanda' ],
     3356: [ '', '', 'Neo Nightmare Luffy', 'Neo Luffy', 'Kai Luffy' ],
     3357: [ '', '', 'Neo Nightmare Luffy', 'Neo Luffy', 'Kai Luffy' ],
     3358: [ '', '', 'Neo Vergo', 'Kai Vergo' ],

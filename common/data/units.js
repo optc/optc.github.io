@@ -3092,7 +3092,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "PSY", [ "Fighter", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1091, 562, 111, null, null, null, null ],
+    [ "Jinbe, Attack from the Sea", "PSY", [ "Fighter", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1091, 562, 111, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
