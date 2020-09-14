@@ -954,6 +954,10 @@ window.zombies = {
     3082: { // Usoland
         type: 'healer',
     },
+    3093: { // Perospero
+        type: 'healer',
+        multiplier: 5
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1

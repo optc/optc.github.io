@@ -10266,6 +10266,17 @@ window.specials = {
             });
         },
     },
+    3090: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+        type: "class"
+    },
+    3090: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "class"
+    },
+    3090: {
+        def: function(p) { return 0; },
+    },
     3094: {
         affintiy: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[3094].multiplier : 1; },
         onActivation: function(p) {
