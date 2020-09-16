@@ -3046,4 +3046,6 @@ window.flags = {
     3381: { global: 1, special: 1 },
     3382: { global: 1 },
     3383: { global: 1, special: 1 },
+    3384: { global: 1, rr: 1, rro: 1 },
+    3385: { global: 1, rr: 1, rro: 1 },
 };

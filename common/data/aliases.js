@@ -3135,6 +3135,8 @@ window.aliases = {
     3376: [ '', '', 'Neo Heracles\'n', 'Kai Heracles\'n' ],
     3380: [ '', '', 'Con D. Oriano' ],
     3381: [ '', '', 'Law&Chopper', 'Law and Chopper', 'Law Chopper', 'LawChopper', 'Chopper&Law', 'Chopper and Law', 'Chopper Law', 'ChopperLaw' ],
+    3384: [ '', '', 'Sakazuki' ],
+    3385: [ '', '', 'Akainu' ],
     5000: [ 'スモーカー 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker', 'Smoshigi' ],
     5001: [ 'たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker', 'Smoshigi' ],
     5002: [ 'スモーカー＆たしぎ 麦わらを追う海兵', '', 'Smoker&Tashigi', 'Smoker and Tashigi', 'Smoker Tashigi', 'SmokerTashigi', 'Tashigi&Smoker', 'Tashigi and Smoker', 'Tashigi Smoker', 'TashigiSmoker', 'Smoshigi' ],

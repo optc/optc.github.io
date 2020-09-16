@@ -3375,4 +3375,12 @@ window.families = [
     "Sengoku",
     "Heracles'n",
     "Heracles'n",
+    null,
+    null,
+    null,
+    "Condoriano",
+    [ "Trafalgar Law", "Tony Tony Chopper" ],
+    "Master of the Near Sea",
+    "Makino",
+    "Akainu",
 ];
