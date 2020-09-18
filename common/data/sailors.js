@@ -1400,6 +1400,14 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? 30 : 0; },
     },
+    3095: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    3096: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

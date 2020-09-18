@@ -10852,6 +10852,13 @@ window.captains = {
     3094: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? [1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3095: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.75 : 1; },
+    },
+    3096: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.75 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

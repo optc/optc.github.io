@@ -10288,6 +10288,9 @@ window.specials = {
             });
         }
     },
+    3095: {
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
