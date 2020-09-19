@@ -1408,6 +1408,9 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
     },
+    3097: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

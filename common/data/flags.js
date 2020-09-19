@@ -3016,6 +3016,7 @@ window.flags = {
     3089: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     3095: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     3096: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    3097: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
     3333: { rr: 1, rro: 1, global: 1 },
     3334: { rr: 1, rro: 1, global: 1 },
     3339: { global: 1 },

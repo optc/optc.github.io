@@ -10859,6 +10859,13 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 2.75 : 1; },
         rcv: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
     },
+    3097: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 5 : 3 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 1.25 : 1.2 : 1; },
+    },
+    3111: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
@@ -12135,5 +12142,21 @@ window.captains = {
     5274: {
         atk: function(p) { return p.percHP >= 99.0 ? 5 : 4.5 },
         hp: function(p) { return 1.2; },
+    },
+    5275: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    5276: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    5277: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    5278: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.25 : 1; },
     },
 };

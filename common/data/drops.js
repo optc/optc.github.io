@@ -5799,6 +5799,15 @@ window.drops = {
             'All Difficulties': [ 3052 ],
         },
 
+        {
+            name: 'Sakazuki & Borsalino',
+            dropID: 'bond13',
+            thumb: 3098,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3098 ],
+        },
+
     ],
 
 
@@ -5953,6 +5962,7 @@ window.drops = {
             'Round 2': [ 2852 ],
             'Round 3': [ 2921 ],
             'Round 4': [ 3053 ],
+            'Round 5': [ 3111 ],
         },
 
         {
