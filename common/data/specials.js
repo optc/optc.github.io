@@ -4022,10 +4022,24 @@ window.specials = {
         },
     },
     1892: {
+        atk: function(p) { return (p.delayed > 0) ? window.specials[1892].multiplier : 1; },
+        type: "condition",
         delay: function(p) { return 1; },
+        onActivation: function(p) {
+            window.specials[1892].multiplier = false;
+            if (p.captain) if (p.captain.type == "PSY") window.specials[1892].multiplier = 1.5;
+            else window.specials[1892].multiplier = 1;
+        },
     },
     1893: {
+        atk: function(p) { return (p.delayed > 0) ? window.specials[1893].multiplier : 1; },
+        type: "condition",
         delay: function(p) { return 1; },
+        onActivation: function(p) {
+            window.specials[1893].multiplier = false;
+            if (p.captain) if (p.captain.type == "PSY") window.specials[1893].multiplier = 1.5;
+            else window.specials[1893].multiplier = 1;
+        },
     },
     1894: {
         atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1894].multiplier : 1; },
@@ -4275,12 +4289,22 @@ window.specials = {
         type: "type"
     },
     1942: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Free Spirit"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0) ? window.specials[1942].multiplier : 1; },
         type: "condition",
+        onActivation: function(p) {
+            window.specials[1942].multiplier = false;
+            if (p.captain) if (p.captain.class.has("Free Spirit")) window.specials[1942].multiplier = 1.75;
+            else window.specials[1942].multiplier = 1;
+        },
     },
     1943: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Free Spirit"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0) ? window.specials[1943].multiplier : 1; },
         type: "condition",
+        onActivation: function(p) {
+            window.specials[1943].multiplier = false;
+            if (p.captain) if (p.captain.class.has("Free Spirit")) window.specials[1943].multiplier = 1.75;
+            else window.specials[1943].multiplier = 1;
+        },
     },
     1944: {
         affinity: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; }
