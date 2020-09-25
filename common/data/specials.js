@@ -7513,7 +7513,7 @@ window.specials = {
     2510:{
         atk: function(p) { return window.specials[2510].turnedOn ? 2 : 1; },
         type: "class",
-        staticMult: function(p) { console.log(p); return p.slot == p.sourceSlot ? 300 : 0; },
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2510].turnedOn = !window.specials[2510].turnedOn;
@@ -10313,13 +10313,62 @@ window.specials = {
         }
     },
     3095: {
-        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
     3097: {
         orb: function(p) { return (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3097].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },	
         onActivation: function(p) {
             window.specials[3097].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) ? 2.25 : 1;
         }
+    },
+    3099: {
+        atk: function(p) { return p.unit.type == "INT" ? window.specials[3099].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[3099].multiplier == 2.25 ? 1 : 0);
+            window.specials[3099].multiplier = [2.25, 2.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
+                name: '3099warning'
+            });
+        },
+    },
+    3100: {
+        atk: function(p) { return p.unit.type == "INT" ? window.specials[3100].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[3100].multiplier == 2.25 ? 1 : 0);
+            window.specials[3100].multiplier = [2.25, 2.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
+                name: '3100warning'
+            });
+        },
+    },
+    3101: {
+        orb: function(p) { return p.unit.type == "INT" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3101].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3101].multiplier == 2.25 ? 1 : 0);
+            window.specials[3101].multiplier = [2.25, 2.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
+                name: '3101warning'
+            });
+        },
+    },
+    3102: {
+        orb: function(p) { return p.unit.type == "INT" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3102].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3102].multiplier == 2.25 ? 1 : 0);
+            window.specials[3102].multiplier = [2.25, 2.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
+                name: '3102warning'
+            });
+        },
+    },
+    3108: {
+        affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },
     3333: {
         atk: function(p) { return 1.75; },
