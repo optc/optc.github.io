@@ -159,7 +159,7 @@
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Pirate Festival</th>
+                                        <th>Pirate Rumble</th>
                                         <th>Class</th>
                                         <th>DEF</th>
                                         <th>SPD</th>
@@ -474,14 +474,14 @@
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr ng-if="details.festAttackPattern">
-                                    <td>Pirate Festival Attack Pattern</td>
+                                    <td>Pirate Rumble Attack Pattern</td>
                                     <td>
                                         <span ng-repeat="item in details.festAttackPattern track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.length - 1 ? ' \u2192 ' : ''}}</span>
                                         <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="details.festAttackTarget">
-                                    <td>Pirate Festival Attack Target</td>
+                                    <td>Pirate Rumble Attack Target</td>
                                     <td>
                                         <div>
                                                 <span ng-bind-html="details.festAttackTarget | decorate"></span></div>
@@ -490,7 +490,7 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="details.festResistance">
-                                    <td>Pirate Festival Resistance</td>
+                                    <td>Pirate Rumble Resistance</td>
                                     <td>
                                         <div>
                                                 <span ng-bind-html="details.festResistance | decorate"></span></div>
@@ -499,7 +499,7 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="details.festAbility">
-                                    <td>Pirate Festival Ability</td>
+                                    <td>Pirate Rumble Ability</td>
                                     <td>
                                         <div>
                                                 <div ng-repeat="item in details.festAbility track by $index"><strong>Level {{$index + 1}}:</strong>
@@ -509,7 +509,7 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="details.festSpecial">
-                                    <td>Pirate Festival Special</td>
+                                    <td>Pirate Rumble Special</td>
                                     <td>
                                         <div>
                                                 <div ng-repeat="item in details.festSpecial track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
@@ -757,7 +757,7 @@
 
                     <!-- Family -->
 
-                    <h3 class="page-header" ng-if="families.length > 0">Family: {{family}}</h3>
+                    <h3 class="page-header" ng-if="families.length > 0">Family: {{displayfamily}}</h3>
 
                     <table ng-if="collapsed.families && families.length > 3" class="table table-striped table-centered table-bordered table-textless">
                         <tbody>

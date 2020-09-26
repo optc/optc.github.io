@@ -1417,6 +1417,9 @@ window.sailors = {
     3104: {
         rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
+    3107: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
     3108: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
     },

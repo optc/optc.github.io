@@ -3105,7 +3105,7 @@ window.families = [
     "Boa Hancock",
     "Buggy",
     "Buggy",
-    null,
+    [ "Gecko Moria", "Perona" ],
     "Crocodile",
     "Nico Robin",
     null,

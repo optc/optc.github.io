@@ -5811,7 +5811,7 @@ window.drops = {
     ],
 
 
-    'Pirate Festival': [
+    'Pirate Rumble': [
 
         {
             name: 'Round One',
@@ -5856,6 +5856,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3082 ],
+        },
+
+        {
+            name: 'Round Six',
+            dropID: 'piratefestival6',
+            thumb: 3107,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3107 ],
         },
 
     ],

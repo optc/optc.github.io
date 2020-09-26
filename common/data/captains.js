@@ -10921,6 +10921,9 @@ window.captains = {
     3106: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
     },
+    3107: {
+        atk: function(p) { return p.unit.type == "INT" ? Math.min(3.5, 2.5 + (1/3) * p.turnCounter) : 1; }
+    },
     3108: {
         atk: function(p) { return p.unit.type == "INT" ? 3 : 2.5; },
         hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },

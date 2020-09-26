@@ -10367,6 +10367,10 @@ window.specials = {
             });
         },
     },
+    3107: {
+        def: function(p) { return 0.2; },
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+    },
     3108: {
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },

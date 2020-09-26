@@ -291,10 +291,20 @@ CharUtils.hasFarmableSocket = function(id) {
     if (unit.slots<1) return farmableSocket;
     
     window.families.forEach(function(family,n){
-       if (ownFamily == family) {
-           var famId = n+1;
-           if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
-       }
+        if (Array.isArray(family)){
+            family.forEach(function(duo,n){
+                if (ownFamily == duo) {
+                    var famId = n+1;
+                    if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+                }
+            })
+        }
+        else{
+            if (ownFamily == family) {
+                var famId = n+1;
+                if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+            }
+        }
     });
     
     return farmableSocket;
