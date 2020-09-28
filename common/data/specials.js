@@ -10455,13 +10455,13 @@ window.specials = {
         }
     },
     3384: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.type == "INT" ? 2.25 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
         type: "type",
         def: function(p) { return 0; },
         status: function(p) { return p.defenseDown > 0 ? 1.75 : 1; },
     },
     3385: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.type == "INT" ? 2.25 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
         type: "type",
         def: function(p) { return 0; },
         status: function(p) { return p.defenseDown > 0 ? 1.75 : 1; },
