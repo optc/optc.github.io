@@ -136,6 +136,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.evolution = window.evolutions[id];
     $scope.family = window.families[id - 1];
     $scope.customLevel = { };
+    $scope.isArray = Array.isArray;
 
     // derived data
     var evolvesFrom = Utils.searchBaseForms(id);
@@ -150,46 +151,127 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.manuals = CharUtils.searchDropLocations(-id);
     $scope.sameSpecials = CharUtils.searchSameSpecials(id);
     $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true, families: true }; 
+    
+    if (Array.isArray($scope.family)){
+        var tempName = "";
+        $scope.family.forEach(function(name){
+            tempName += name + " & ";
+        });
+        tempName = tempName.substring(0, tempName.length - 3);
+        $scope.displayfamily = tempName;
+    }
+    else{
+        $scope.displayfamily = window.families[id - 1];
+    }
 
     $scope.families = [ ];
     if ($scope.family) {
-        window.families.forEach(function(family,n) {
-            if (Array.isArray(family)){
-                
-            }
-            if (family != $scope.family || n+1 == $scope.id) return;
-            var id = n +1;
-            if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id)) return;
-            var name = units[id - 1].name;
-            if (name.length  > 25) name = name.slice(0,22) + '...';
-            CharUtils.searchDropLocations(id).forEach(function(location) {
-                $scope.families.push({
-                    uid: n + 1,
-                    name: name,
-                    location: location
+        if (Array.isArray($scope.family)){
+            $scope.family.forEach(function(scopefam){
+                window.families.forEach(function(family,n) {
+                if (Array.isArray(family)){
+                    family.forEach(function(duo){
+                        if (duo != scopefam || n+1 == $scope.id) return;
+                        var id = n+1;
+                        if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id)) return;
+                        var name = units[id - 1].name;
+                        if (name.length  > 25) name = name.slice(0,22) + '...';
+                        CharUtils.searchDropLocations(id).forEach(function(location) {
+                            $scope.families.push({
+                                uid: n + 1,
+                                name: name,
+                                location: location
+                            });
+                        });
+                    });
+                }
+                if (family != scopefam || n+1 == $scope.id) return;
+                var id = n +1;
+                if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id)) return;
+                var name = units[id - 1].name;
+                if (name.length  > 25) name = name.slice(0,22) + '...';
+                CharUtils.searchDropLocations(id).forEach(function(location) {
+                    $scope.families.push({
+                        uid: n + 1,
+                        name: name,
+                        location: location
+                    });
                 });
+
+                //Super Hack Job to show Karoo as a socket for Vivi
+                if (family == "Nefertari Vivi"){
+                    if (!$scope.families.filter(function(e) { return e.uid == 445; }).length>0){
+                        $scope.families.push({
+                            uid: 445,
+                            name: units[444].name,
+                            location:  {data: ["All Difficulties"], name: "Supersonic Duck Squadron! Fortnight", thumb:445}
+                        });
+                    }
+                }
+                if (family == "Demalo Black"){
+                    if (!$scope.families.filter(function(e) { return e.uid == 985; }).length>0){
+                        $scope.families.push({
+                            uid: 985,
+                            name: units[985].name,
+                            location:  {data: ["Ultimate"], name: "Clash!? Impostor Straw Hat Pirates", thumb:989}
+                        });
+                    }
+                }
             });
-            
-            //Super Hack Job to show Karoo as a socket for Vivi
-            if (family == "Nefertari Vivi"){
-                if (!$scope.families.filter(function(e) { return e.uid == 445; }).length>0){
-                    $scope.families.push({
-                        uid: 445,
-                        name: units[444].name,
-                        location:  {data: ["All Difficulties"], name: "Supersonic Duck Squadron! Fortnight", thumb:445}
+            });
+        }
+        else{
+            window.families.forEach(function(family,n) {
+                if (Array.isArray(family)){
+                    family.forEach(function(duo){
+                        if (duo != $scope.family || n+1 == $scope.id) return;
+                        var id = n+1;
+                        if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id)) return;
+                        var name = units[id - 1].name;
+                        if (name.length  > 25) name = name.slice(0,22) + '...';
+                        CharUtils.searchDropLocations(id).forEach(function(location) {
+                            $scope.families.push({
+                                uid: n + 1,
+                                name: name,
+                                location: location
+                            });
+                        });
                     });
                 }
-            }
-            if (family == "Demalo Black"){
-                if (!$scope.families.filter(function(e) { return e.uid == 985; }).length>0){
+                if (family != $scope.family || n+1 == $scope.id) return;
+                var id = n +1;
+                if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id)) return;
+                var name = units[id - 1].name;
+                if (name.length  > 25) name = name.slice(0,22) + '...';
+                CharUtils.searchDropLocations(id).forEach(function(location) {
                     $scope.families.push({
-                        uid: 985,
-                        name: units[985].name,
-                        location:  {data: ["Ultimate"], name: "Clash!? Impostor Straw Hat Pirates", thumb:989}
+                        uid: n + 1,
+                        name: name,
+                        location: location
                     });
+                });
+
+                //Super Hack Job to show Karoo as a socket for Vivi
+                if (family == "Nefertari Vivi"){
+                    if (!$scope.families.filter(function(e) { return e.uid == 445; }).length>0){
+                        $scope.families.push({
+                            uid: 445,
+                            name: units[444].name,
+                            location:  {data: ["All Difficulties"], name: "Supersonic Duck Squadron! Fortnight", thumb:445}
+                        });
+                    }
                 }
-            }
-        });
+                if (family == "Demalo Black"){
+                    if (!$scope.families.filter(function(e) { return e.uid == 985; }).length>0){
+                        $scope.families.push({
+                            uid: 985,
+                            name: units[985].name,
+                            location:  {data: ["Ultimate"], name: "Clash!? Impostor Straw Hat Pirates", thumb:989}
+                        });
+                    }
+                }
+            });
+        }
     }
 
     // hidden elements

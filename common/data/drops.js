@@ -980,6 +980,30 @@ window.drops = {
             '10': [ 3003 ],
             '11': [ 3002, 3003 ],
         },
+
+        {
+            name: 'Totto Land Inner Sea to Cacao Island',
+            dropID: 'story42',
+            shortName: 'Whole Cake 4',
+            thumb: 3090,
+            global: true,
+            nakama: null,
+            completion: '10x Rainbow Gems',
+            gamewith: null,
+            '01': [ 3002 ],
+            '02': [ 3002 ],
+            '03': [ 3093, 3001 ],
+            '04': [  ],
+            '05': [  ],
+            '06': [  ],
+            '07': [ 3091 ],
+            '08': [ 3002 ],
+            '09': [  ],
+            '10': [ 3092 ],
+            '11': [ 3090 ],
+            '12': [  ],
+            '13': [  ],
+        },
     ],
 
 
@@ -5822,10 +5846,19 @@ window.drops = {
             'All Difficulties': [ 3052 ],
         },
 
+        {
+            name: 'Sakazuki & Borsalino',
+            dropID: 'bond13',
+            thumb: 3098,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3098 ],
+        },
+
     ],
 
 
-    'Pirate Festival': [
+    'Pirate Rumble': [
 
         {
             name: 'Round One',
@@ -5870,6 +5903,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3082 ],
+        },
+
+        {
+            name: 'Round Six',
+            dropID: 'piratefestival6',
+            thumb: 3107,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3107 ],
         },
 
     ],
@@ -5948,6 +5990,13 @@ window.drops = {
         },
 
         {
+            name: 'Dead or Treat!! Horror Night Party',
+            thumb: 3108,
+            gamewith: null,
+            'All Difficulties': [ 3108, 3109 ],
+        },
+
+        {
             name: 'Sweet Tea Time',
             thumb: 1463,
             global: true,
@@ -5979,6 +6028,7 @@ window.drops = {
             'Round 2': [ 2852 ],
             'Round 3': [ 2921 ],
             'Round 4': [ 3053 ],
+            'Round 5': [ 3111 ],
         },
 
         {

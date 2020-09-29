@@ -27,6 +27,9 @@ window.altspecials = {
     3071: {
         chainMultiplication: function(p) { return 1.25; },
     },
+    3100:{
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },
