@@ -10931,6 +10931,10 @@ window.captains = {
     3109: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
     },
+    3110: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; }
+    },
     3111: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },

@@ -10374,6 +10374,21 @@ window.specials = {
     3108: {
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },
+    3110: {
+        chain: function(p) { return window.specials[3110].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3110].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[3110].multiplier == 3 ? 1 : window.specials[3110].multiplier == 3.25 ? 2 : 0);
+            window.specials[3110].multiplier = [3, 3.25, 3.5][n];
+            p.scope.notify({
+                text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
+                name: '3110warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

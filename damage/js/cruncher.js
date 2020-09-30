@@ -635,7 +635,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ([2921, 2919, 5180, 5181, 5182, 5183].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
-            if ([3051, 3053].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+            if ([3097, 3111].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
         }
         
         //Get the strongest Color affinity Mult if it exists and apply it
