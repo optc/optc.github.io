@@ -3108,7 +3108,7 @@ window.units = [
     [ "Moria & Perona, The Beginning of a Nightmare", "INT", [ "Slasher", "Shooter" ], 5, 50, 4, 5, 99, null, 1045, 555, 103, null, null, null, null ],
     [ "Crocodile: Ruler of the Night, Happy Scary Halloween", "INT", [ "Cerebral", "Driven" ], 5, 30, 4, 4, 99, null, 1091, 532, 113, 2859, 1341, 271, null ],
     [ "Robin: Sweet Night, Happy Scary Halloween", "INT", [ "Cerebral", "Fighter" ], 5, 30, 4, 4, 99, null, 1082, 502, 102, 2354, 1280, 381, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Page One, Spinosaurus Rampage", "INT", [ "Driven", "Powerhouse" ], 5, 40, 6, 4, 99, 4000000, 1335, 633, 119, null, null, null, null ],
     [ "Petty Officer Coby [Neo]", "INT", [ "Cerebral", "Fighter" ], 4, 20, 6, 4, 99, 2000000, 1214, 461, 39, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

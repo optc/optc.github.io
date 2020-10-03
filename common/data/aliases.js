@@ -3108,7 +3108,7 @@ window.aliases = {
     3107: [ '', '', 'Pirate Festival Moria', 'Pirate Festival Perona' ],
     3108: [ '', '', 'Halloween Crocodile' ],
     3109: [ '', '', 'Halloween Robin' ],
-    3110: [ '', '', '' ],
+    3110: [ '', '', 'Coliseum Page One', 'Coliseum Page 1' ],
     3111: [ '', '', 'Neo Coby', 'Kai Coby' ],
     3112: [ '', '', '' ],
     3113: [ '', '', '' ],
