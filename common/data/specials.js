@@ -10389,6 +10389,10 @@ window.specials = {
             });
         },
     },
+    3122: {
+        atk: function(p) { return 2; },
+        type: "type",
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

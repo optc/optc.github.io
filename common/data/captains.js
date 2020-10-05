@@ -10925,8 +10925,8 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? Math.min(3.5, 2.5 + (1/3) * p.turnCounter) : 1; }
     },
     3108: {
-        atk: function(p) { return p.unit.type == "INT" ? 3 : 2.5; },
-        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+        atk: function(p) { return p.unit.type == "INT" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return p.unit.type == "INT" ? [1.2, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3109: {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
@@ -10937,6 +10937,14 @@ window.captains = {
     },
     3111: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    3122: {
+        atk: function(p) { return 3.25; },
+        rcv: function(p) { return 1.3; },
+    },
+    3123: {
+        atk: function(p) { return 2.5; },
+        rcv: function(p) { return 1.2; },
     },
     3333: {
         hitAtk: function(p) {
