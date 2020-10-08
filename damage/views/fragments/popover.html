@@ -150,6 +150,22 @@
 <!--                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>-->
                 </td>
             </tr>
+            <tr class="header" ng-if="slot < 2">
+                <td colspan="5">Super Special Criteria</td>
+            </tr>
+            <tr ng-if="slot < 2">
+                <td colspan="5">
+                    <div ng-bind-html="details.superSpecialCriteria | decorate"></div>
+                </td>
+            </tr>
+            <tr class="header" ng-if="slot < 2">
+                <td colspan="5">Super Special</td>
+            </tr>
+            <tr ng-if="slot < 2">
+                <td colspan="5">
+                    <div ng-bind-html="details.superSpecial | decorate"></div>
+                </td>
+            </tr>
             <!--Show Potential and Support Abilities if it can work -->
         </tbody>
     </table>
