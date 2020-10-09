@@ -10389,6 +10389,33 @@ window.specials = {
             });
         },
     },
+    3112:{
+        affinity: function(p) { return p.unit.type == "INT" ? window.specials[3113].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (window.specials[3113].multiplier == 1.75 ? 1 : window.specials[3113].multiplier == 2 ? 2 : 0);
+            window.specials[3113].multiplier = [1.75, 2, 2.25][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
+                name: '3113warning'
+            });
+        },
+    },
+    3114: {
+        chain: function(p) { return window.specials[3114].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3114].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var n = (window.specials[3114].multiplier == 2.5 ? 1 : window.specials[3114].multiplier == 2.75 ? 2 : 0);
+            window.specials[3114].multiplier = [2.5, 2.75, 3][n];
+            p.scope.notify({
+                text: 'Using the ' + ['2.5x', '2.75x', '3x'][n] + ' chain lock. To switch to the ' + ['2.5x', '2.75x', '3x'][n] + ' chain lock, disable and re-enable this special',
+                name: '3114warning'
+            });
+        },
+    },
     3122: {
         atk: function(p) { return 2; },
         type: "type",

@@ -10938,6 +10938,19 @@ window.captains = {
     3111: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
+    3112: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    3113: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    3114: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    3115: {
+        atk: function(p) { return p.unit.type == "INT" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
     3122: {
         atk: function(p) { return 3.25; },
         rcv: function(p) { return 1.3; },
