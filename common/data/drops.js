@@ -5652,6 +5652,15 @@ window.drops = {
             'Raging Sea': [ 3094 ]
         },
 
+        {
+            name: 'Witch Pudding',
+            dropID: 'treasuremap38',
+            thumb: 3115,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3115 ]
+        },
+
     ],
 
 
