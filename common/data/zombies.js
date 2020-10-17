@@ -958,6 +958,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    3124: { // Kid
+        type: 'healer',
+        multiplier: 3
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1

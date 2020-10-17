@@ -10416,6 +10416,29 @@ window.specials = {
             });
         },
     },
+    3117: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
+        chainAddition: function(p) { return window.specials[3117].multiplier; },
+        onActivation: function(p) {
+            window.specials[3117].multiplier = 0;
+            if (p.colorCount.INT >= 4) {
+                window.specials[3117].multiplier = 1;
+            }
+        },
+    },
+    3118: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
+        chainAddition: function(p) { return window.specials[3118].multiplier; },
+        onActivation: function(p) {
+            window.specials[3118].multiplier = 0;
+            if (p.colorCount.INT >= 4) {
+                window.specials[3118].multiplier = 1;
+            }
+        },
+    },
+    3120: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
     3122: {
         atk: function(p) { return 2; },
         type: "type",
