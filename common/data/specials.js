@@ -10443,6 +10443,9 @@ window.specials = {
         atk: function(p) { return 2; },
         type: "type",
     },
+    3125: {
+        affinity: function(p) { return 1.75; }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

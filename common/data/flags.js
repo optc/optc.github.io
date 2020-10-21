@@ -3042,6 +3042,7 @@ window.flags = {
     3121: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
     3122: { rr: 1, rro: 1, lrr: 1 },
     3123: { rr: 1, rro: 1, lrr: 1 },
+    3125: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     3333: { rr: 1, rro: 1, global: 1 },
     3334: { rr: 1, rro: 1, global: 1 },
     3339: { global: 1 },

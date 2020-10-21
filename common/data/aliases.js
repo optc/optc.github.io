@@ -3123,7 +3123,7 @@ window.aliases = {
     3122: [ '', '', 'Ichiban Kuji Luffy' ],
     3123: [ '', '', 'Ichiban Kuji Nami' ],
     3124: [ '', '', 'Kizuna Kid', 'Halloween Kid' ],
-    3125: [ '', '', '' ],
+    3125: [ '', '', 'PF Oars', 'Limited Oars', 'Secret Oars' ],
     3126: [ '', '', '' ],
     3127: [ '', '', '' ],
     3128: [ '', '', '' ],

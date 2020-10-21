@@ -3123,7 +3123,7 @@ window.units = [
     [ "Monkey D. Luffy, Captain Inheriting His Brother's Will", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1112, 821, 132, 3000, 1500, 300, null ],
     [ "Nami, Navigator Knowledgeable of the Weather", "STR", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1095, 816, 146, 3000, 1500, 300, null ],
     [ "Kid: Horror Supper, Happy Scary Halloween", "INT", [ "Driven", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1212, 632, 82, 3000, 1500, 300, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Oars, Destructive Power in the Mansion", "INT", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1602, 645, 20, 3000, 1500, 300, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
