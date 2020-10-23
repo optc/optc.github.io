@@ -10990,6 +10990,24 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 2.75 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
     },
+    3126: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? 3 : 1; },
+    },
+    3127: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? 3 : 1; },
+    },
+    3128: {
+        hitAtk: function(p) {
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    3129: {
+        hitAtk: function(p) {
+            return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.5 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :
