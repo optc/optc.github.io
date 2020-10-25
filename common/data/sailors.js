@@ -1423,10 +1423,31 @@ window.sailors = {
     3108: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
     },
-    3096: {
+    3110: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    3120: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3126: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    3127: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    3127: {
+        atkStatic: function(p) { return 75; },
+    },
+    3128: {
+        atkStatic: function(p) { return 75; },
     },
     3333: {
         staticMult: function(p) { return 3; }

@@ -10416,9 +10416,81 @@ window.specials = {
             });
         },
     },
+    3117: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
+        chainAddition: function(p) { return window.specials[3117].multiplier; },
+        onActivation: function(p) {
+            window.specials[3117].multiplier = 0;
+            if (p.colorCount.INT >= 4) {
+                window.specials[3117].multiplier = 1;
+            }
+        },
+    },
+    3118: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
+        chainAddition: function(p) { return window.specials[3118].multiplier; },
+        onActivation: function(p) {
+            window.specials[3118].multiplier = 0;
+            if (p.colorCount.INT >= 4) {
+                window.specials[3118].multiplier = 1;
+            }
+        },
+    },
+    3120: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
     3122: {
         atk: function(p) { return 2; },
         type: "type",
+    },
+    3125: {
+        affinity: function(p) { return 1.75; }
+    },
+    3126: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[3126].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[3126].multiplier == 1.75 ? 1 : 0);
+            window.specials[3126].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3126warning'
+            });
+        }
+    },
+    3127: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[3127].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (window.specials[3127].multiplier == 1.75 ? 1 : 0);
+            window.specials[3127].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3127warning'
+            });
+        }
+    },
+    3128: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3128].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3128].multiplier == 1.75 ? 1 : 0);
+            window.specials[3128].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3128warning'
+            });
+        }
+    },
+    3129: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3129].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3129].multiplier == 1.75 ? 1 : 0);
+            window.specials[3129].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3129warning'
+            });
+        }
     },
     3333: {
         atk: function(p) { return 1.75; },
