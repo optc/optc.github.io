@@ -376,6 +376,44 @@
                                         <span class="notes" ng-if="details.superSpecialNotes" ng-bind-html="details.superSpecialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.VSCondition">
+                                    <td>VS Gauge Condition</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.VSCondition | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.VSConditionNotes" ng-bind-html="details.VSConditionNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.VSSpecial">
+                                    <td>VS Ability</td>
+                                    <td>
+                                        <!-- same special, no stages -->
+                                        <div ng-if="!isVSSpecialHybrid && !isVSSpecialStaged" ng-bind-html="details.superSpecial | decorate"></div>
+                                        <!-- same special, with stages -->
+                                        <div ng-if="!isVSSpecialHybrid && isVSSpecialStaged">
+                                            <div ng-repeat="stage in details.VSSpecial track by $index">
+                                                <strong>Stage {{$index + 1}}</strong>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns) <span ng-if="unit.limitCD != 0"><strong>➤</strong>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] - unit.limitCD : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + (stage.cooldown[1] - unit.limitCD) : ''}} turns):</span><span ng-if="unit.limitexCD != 0 && unit.limitexCD != unit.limitCD"><strong>➤</strong>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] - unit.limitexCD : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + (stage.cooldown[1] - unit.limitexCD) : ''}} turns):</span>
+                                                <span ng-bind-html="stage.description | decorate"></span>
+                                            </div>
+                                        </div>
+                                        <!-- different specials -->
+                                        <div ng-if="isVSSpecialHybrid">
+                                            <span class="badge badge-japan" ng-show="details.VSSpecial.japan">Japan</span>
+                                            <div ng-show="details.VSSpecial.japan" ng-bind-html="details.VSSpecial.japan | decorate"></div>
+                                            <span class="badge badge-global" ng-show="details.VSSpecial.global">Global</span>
+                                            <div ng-show="details.VSSpecial.global" ng-bind-html="details.VSSpecial.global | decorate"></div>
+                                            <span class="badge badge-character1" ng-show="details.VSSpecial.character1">Character 1 Special Ability</span>
+                                            <div ng-show="details.VSSpecial.character1" ng-bind-html="details.VSSpecial.character1 | decorate"></div>
+                                            <span class="badge badge-character2" ng-show="details.VSSpecial.character2">Character 2 Special Ability</span>
+                                            <div ng-show="details.VSSpecial.character2" ng-bind-html="details.VSSpecial.character2 | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.VSSpecialNotes" ng-bind-html="details.VSSpecialNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -470,7 +508,7 @@
                             </tbody>                            
                         </table>
                     </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility">
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && !isfestAbilityHybrid">
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr ng-if="details.festAttackPattern">
@@ -513,6 +551,102 @@
                                     <td>
                                         <div>
                                                 <div ng-repeat="item in details.festSpecial track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                            </tbody>                            
+                        </table>
+                    </div>
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && isfestAbilityHybrid">
+                        <table class="table table-striped-column abilities">
+                            <tbody>
+                                <tr ng-if="details.festAttackPattern && isfestAttackPatternHybrid">
+                                    <td>Character 1 Pirate Rumble Attack Pattern</td>
+                                    <td>
+                                        <span ng-repeat="item in details.festAttackPattern.character1 track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.character1.length - 1 ? ' \u2192 ' : ''}}</span>
+                                        <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAttackTarget && isfestAttackTargetHybrid">
+                                    <td>Character 1 Pirate Rumble Attack Target</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.festAttackTarget.character1 | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festResistance && isfestResistanceHybrid">
+                                    <td>Character 1 Pirate Rumble Resistance</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.festResistance.character1 | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAbility && isfestAbilityHybrid">
+                                    <td>Character 1 Pirate Rumble Ability</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbility.character1 track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festSpecial && isfestSpecialHybrid">
+                                    <td>Character 1 Pirate Rumble Special</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festSpecial.character1 track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAttackPattern && isfestAttackPatternHybrid">
+                                    <td>Character 2 Pirate Rumble Attack Pattern</td>
+                                    <td>
+                                        <span ng-repeat="item in details.festAttackPattern.character2 track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.character2.length - 1 ? ' \u2192 ' : ''}}</span>
+                                        <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAttackTarget && isfestAttackTargetHybrid">
+                                    <td>Character 2 Pirate Rumble Attack Target</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.festAttackTarget.character2 | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festResistance && isfestResistanceHybrid">
+                                    <td>Character 2 Pirate Rumble Resistance</td>
+                                    <td>
+                                        <div>
+                                                <span ng-bind-html="details.festResistance.character2 | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAbility && isfestAbilityHybrid">
+                                    <td>Character 2 Pirate Rumble Ability</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbility.character2 track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festSpecial && isfestSpecialHybrid">
+                                    <td>Character 2 Pirate Rumble Special</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festSpecial.character2 track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
                                                 <span ng-bind-html="item.description | decorate"></span><br></div>
                                         </div>
                                         <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>

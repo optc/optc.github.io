@@ -3829,6 +3829,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash!! Onami & Shinobu',
+            dropID: 'clash66',
+            thumb: 3143,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3143 ],
+        },
+
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
@@ -5950,6 +5959,15 @@ window.drops = {
             'All Difficulties': [ 3107 ],
         },
 
+        {
+            name: 'Round Seven',
+            dropID: 'piratefestival7',
+            thumb: 3142,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3142 ],
+        },
+
     ],
 
     'Special': [
@@ -6712,6 +6730,13 @@ window.drops = {
             nakama: 6303300,
             gamewith: null,
             'All Difficulties': [ 3032, 3033, 3034, 3035 ],
+        },
+
+        {
+            name: 'Big Mom VS Kaido!',
+            thumb: 3135,
+            gamewith: null,
+            'Chopperman Missions': [ 3144 ],
         },
 
         {

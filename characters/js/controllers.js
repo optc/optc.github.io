@@ -296,8 +296,8 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').prop('disabled', false);
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
-    $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base || $scope.details.captain.combined));
-    $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.base || $scope.details.sailor.combined));
+    $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base || $scope.details.captain.combined || $scope.details.captain.character1));
+    $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.base || $scope.details.sailor.combined || $scope.details.sailor.character1));
     $scope.isSpecialHybrid = ($scope.details && $scope.details.special && ($scope.details.special.global || $scope.details.special.character1));
     $scope.isCooldownHybrid = ($scope.cooldown && (Array.isArray($scope.cooldown[0])));
     $scope.isSpecialStaged = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
@@ -305,7 +305,14 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.isPotentialStaged = ($scope.details && $scope.details.potential && $scope.details.potential.constructor == Array);
     $scope.isSupportStaged = ($scope.details && $scope.details.support && $scope.details.support.constructor == Array);
     $scope.isSwapHybrid = ($scope.details && $scope.details.swap && $scope.details.swap.global);
-
+    $scope.isfestAbilityHybrid = ($scope.details && $scope.details.festAbility && ($scope.details.festAbility.character1));
+    $scope.isfestSpecialHybrid = ($scope.details && $scope.details.festSpecial && ($scope.details.festSpecial.character1));
+    $scope.isfestAttackPatternHybrid = ($scope.details && $scope.details.festAttackPattern && ($scope.details.festAttackPattern.character1));
+    $scope.isfestAttackTargetHybrid = ($scope.details && $scope.details.festAttackTarget && ($scope.details.festAttackTarget.character1));
+    $scope.isfestResistanceHybrid = ($scope.details && $scope.details.festResistance && ($scope.details.festResistance.character1));
+    $scope.isVSConditionHybrid = ($scope.details && $scope.details.VSCondition && ($scope.details.VSCondition.character1));
+    $scope.isVSSpecialHybrid = ($scope.details && $scope.details.VSSpecial && ($scope.details.VSSpecial.character1));
+    
     $scope.$watch('customLevel.level',function(level) {
         if (isNaN(level) || level < 1 || level > $scope.unit.maxLevel) {
             $scope.customLevel.enabled = false;
