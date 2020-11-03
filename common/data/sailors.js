@@ -1470,6 +1470,11 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 30 : 0; },
     },
+    3145: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

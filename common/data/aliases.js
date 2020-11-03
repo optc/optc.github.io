@@ -3143,7 +3143,7 @@ window.aliases = {
     3142: [ '', '', 'PF Drake', 'PR Drake', 'PF X Drake', 'PR X Drake' ],
     3143: [ '', '', 'Raid Shinobu', 'Raid Onami', 'Raid Nami' ],
     3144: [ '', '', 'Otama' ],
-    3145: [ '', '', '' ],
+    3145: [ '', '', 'Arena Kamazo', 'Arena Killer' ],
     3146: [ '', '', '' ],
     3147: [ '', '', '' ],
     3148: [ '', '', '' ],
