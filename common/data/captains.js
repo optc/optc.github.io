@@ -11030,7 +11030,7 @@ window.captains = {
     },
     3142: {
         atk: function(p) { return p.unit.type == "STR" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.5 : 2.5 : 1; },
-        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; }
     },
     3143: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 3 : 1; },
@@ -11038,6 +11038,9 @@ window.captains = {
     },
     3144: {
         atk: function(p) { return 2.75; },
+    },
+    3145: {
+        atk: function(p) { return p.unit.type == "DEX" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.5 : 1; },
     },
     3333: {
         hitAtk: function(p) {

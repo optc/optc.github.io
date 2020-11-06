@@ -3143,7 +3143,7 @@ window.families = [
     "X Drake",
     [ "Shinobu", "Nami" ],
     "Tama",
-    null,
+    "Killer",
     null,
     null,
     null,
