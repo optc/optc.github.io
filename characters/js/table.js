@@ -213,7 +213,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             }
         }
         if (filters.noSupport && window.details[id]) if("support" in window.details[id]) return false;
-        if (filters.globalTM && [ 2973, 2974, 2958, 2960, 2962, 2964, 3385, 2931, 2932, 2933, 2954, 2966, 2968, 2970, 2972, 2914, 2922, 2923, 2956, 2953, 2913, 2977, 2920, 2955, 2915, 2917, 2975, 2976, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 2930, 2910, 2911, 2912, 575, 836, 1298, 1374, 1815, 1830, 1943, 2197, 2263, 2356, 2517, 5070, 5071, 5072, 5073, 2552, 5032, 5033, 5034, 5035, 2670, 2781, 2885, 2886, 1102, 1220, 1310, 1422, 1487, 1897, 2323, 2375, 2845, 550, 690, 899, 1049, 1384, 1893, 1918, 1947, 1995, 2046, 2091, 2095, 2177, 2219, 2351, 2522, 2523, 2723, 2782, 1853, 1941, 2109, 2137, 2175, 2299, 2362, 2387, 2618, 5176, 5177, 5178, 5179, 2792, 2879, 2921, 1808, 1889, 1916, 1972, 2000, 5012, 5013, 5014, 5015, 2064, 2211, 2261, 2336, 2443, 2469, 5062, 5063, 5064, 5065, 2510, 2557, 5140, 5141, 5142, 5143, 2583, 2659, 2690, 2729, 2763, 2823, 2850, 5210, 5211, 5212, 5213, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551 ].indexOf(id) == -1) return false;
+        if (filters.globalTM && [ 2992, 2993, 2994, 2980, 2982, 2958, 2960, 2962, 2964, 2991, 2984, 2986, 2853, 2978, 2987, 2990, 2977, 2995, 2854, 2989, 2988, 1883, 2534, 5086, 5087, 5088, 5089, 2577, 5156, 5157, 5158, 5159, 2588, 1440, 1614, 1658, 1800, 2544, 5124, 5125, 5126, 5127, 418, 654, 795, 1830, 1924, 2281, 2394, 2670, 2698, 2707, 2709, 2781, 2846, 1091, 1792, 2249, 2354, 2416, 2611, 1581, 1920, 2089, 2092, 2519, 2666, 1889, 1916, 1972, 2000, 5012, 5013, 5014, 5015, 2064, 2109, 2387, 2469, 5062, 5063, 5064, 5065, 2557, 5140, 5141, 5142, 5143, 2618, 5176, 5177, 5178, 5179, 2879, 2913, 1060, 2283, 2815, 2852, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 1808, 1853, 1941, 2211, 2137, 2175, 2261, 2299, 2336, 2362, 2443, 2510, 2583, 2659, 2690, 2729, 2763, 2792, 2823, 2850, 5210, 5211, 5212, 5213, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551 ].indexOf(id) == -1) return false;
         if (filters.globalKC && [ 2852, 2853, 2850, 5210, 5211, 5212, 5213, 2846, 2845, 2843, 2841, 2839, 2837, 2835, 5206, 5207, 5208, 5209, 2830 ].indexOf(id) == -1) return false;
         if (filters.japanTM && [ 3112, 3114, 3113, 3100, 3102, 3094, 3065, 5271, 5272, 5273, 5274, 3071, 3073, 3104, 3106, 3110, 3107, 2292, 2294, 2749, 3108, 3109, 3067, 3069, 3083, 3082, 3080, 3081, 3086, 1853, 1941, 2137, 2299, 2510, 2583, 2659, 2690, 2763, 2792, 2823, 2850, 5210, 5211, 5212, 5213, 3060, 5263, 5264, 5265, 5266, 3115, 2138, 2477, 2505, 3040, 3042, 3044, 353, 1374, 1432, 1595, 1879, 2015, 2197, 2263, 2517, 5070, 5071, 5072, 5073, 2552, 5032, 5033, 5034, 5035, 2684, 2781, 2795, 5187, 5188, 5189, 5190, 2956, 1628, 1792, 2111, 2123, 2354, 2416, 2550, 5132, 5133, 5134, 5135, 2755, 2845, 2953, 3049, 762, 1386, 1963, 2491, 2638, 2751, 3045, 3046, 2283, 3047, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952 ].indexOf(id) == -1) return false;
         if (filters.japanKC && [ 3118, 3120, 3121, 3100, 3102, 3104, 3106, 3107, 3108, 3109, 3110, 3115, 2749, 2292, 2294, 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998, 3073, 3071, 3069, 3067, 3065, 5271, 5272, 5273, 5274, 3086, 3081, 3080, 2952, 2950, 2948, 2946, 2944, 2942, 2940, 2938, 2936, 1855, 1810, 16, 2491, 2428, 2219, 2146, 2127, 1891, 2956, 2781, 2473, 2097, 1830, 1595, 1163, 516 ].indexOf(id) == -1) return false;
@@ -263,7 +263,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else { 
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
-                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
+                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
             }
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
@@ -274,7 +274,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else { 
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
-                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
+                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
             }
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
@@ -285,7 +285,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else { 
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
-                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
+                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
             }
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
@@ -296,7 +296,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else { 
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
-                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
+                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
             }
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
@@ -307,7 +307,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else { 
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
-                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
+                for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
             }
             if (Katacount !== 2 && Katacount1 !== 2 && Katacount2 !== 2 && Katacount3 !== 2) return false;
         }
