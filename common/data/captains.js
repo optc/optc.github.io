@@ -10479,13 +10479,13 @@ window.captains = {
         hp: function(p) { return 1.5; },
     },
     2992: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2993: {
-        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2994: {
-        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2995: {
         atk: function(p) {
