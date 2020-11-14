@@ -9784,7 +9784,7 @@ window.specials = {
     2997: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2997].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
-            window.specials[2997].multiplier = (p.colorCount.STR + p.colorCount.DEX + p.colorCount.INT >= 5) ? 2 : 1;
+            window.specials[2997].multiplier = (p.colorCount.STR + p.colorCount.DEX + p.colorCount.INT >= 3) ? 2 : 1;
         },
     },
     2998: {
@@ -10530,6 +10530,49 @@ window.specials = {
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x Orb boost, disable and re-enable this special',
                 name: '3145warning'
+            });
+        },
+    },
+    3146: {
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? window.specials[3146].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[3146].multiplier == 1.75 ? 1 : 0);
+            window.specials[3146].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3146warning'
+            });
+        }
+    },
+    3147: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3147].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3147].multiplier == 1.75 ? 1 : 0);
+            window.specials[3147].multiplier = [1.75, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                name: '3147warning'
+            });
+        }
+    },
+    3148: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        },
+    },
+    3150: {
+        atk: function(p) { return [ 2, 1, 1, 2, 1, 2, 2 ][window.specials[3150].multiplier]; },
+        type: "class",
+        affinity: function(p) { return [ 1, 1.75, 1, 1.75, 1.75, 1, 1.75 ][window.specials[3150].multiplier]; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, [ 1, 1, 1.75, 1, 1.75, 1.75, 1.75 ][window.specials[3150].multiplier], [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var n = (window.specials[3150].multiplier == undefined ? 0 : (window.specials[3150].multiplier + 1) % 7);
+            window.specials[3150].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + [ 2, 1, 1, 2, 1, 2, 2 ][n] + 'x ATK boost, the ' + [ 1, 1.75, 1, 1.75, 1.75, 1, 1.75 ][n] + 'x Affinity boost and the ' + [ 1, 1, 1.75, 1, 1.75, 1.75, 1.75 ][n] + 'x Orb boost. To switch disable and re-enable this special',
+                name: '3150warning'
             });
         },
     },

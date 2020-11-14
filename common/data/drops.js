@@ -5676,6 +5676,15 @@ window.drops = {
             'Raging Sea': [ 3115 ]
         },
 
+        {
+            name: 'Eustass Kid',
+            dropID: 'treasuremap39',
+            thumb: 3150,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3150 ]
+        },
+
     ],
 
 

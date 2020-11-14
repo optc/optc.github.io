@@ -10479,13 +10479,13 @@ window.captains = {
         hp: function(p) { return 1.5; },
     },
     2992: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2993: {
-        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2994: {
-        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     2995: {
         atk: function(p) {
@@ -11041,6 +11041,18 @@ window.captains = {
     },
     3145: {
         atk: function(p) { return p.unit.type == "DEX" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.5 : 1; },
+    },
+    3146: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    3147: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    3148: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
+    3150: {
+        atk: function(p) { return p.unit.type == "STR" ? [2, 2, 2, 2, 2, 2, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3333: {
         hitAtk: function(p) {
