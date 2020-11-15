@@ -10576,6 +10576,31 @@ window.specials = {
             });
         },
     },
+    3151: {
+        chainAddition: function(p) { return window.specials[2854].multiplier; },
+        onActivation: function(p) {
+            window.specials[2854].multiplier = 0;
+            if (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit")) {
+                window.specials[2854].multiplier = 1;
+            }
+        },
+    },
+    3152: {
+        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        warning: "Selected special (%name%) assumes that the enemy has All Debuff Protection."
+    },
+    3160: {
+        atk: function(p) { return 1.5; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
+    },
+    3161: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3162: {
+        atk: function(p) { return 1.5; },
+        type: "type",
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

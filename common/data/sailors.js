@@ -1478,6 +1478,15 @@ window.sailors = {
     3146: {
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 50 : 0; },
     },
+    3149: {
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 75 : 0; },
+    },
+    3151: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 75 : 0; },
+    },
+    3152: {
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

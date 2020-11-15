@@ -5854,6 +5854,15 @@ window.drops = {
             'All Difficulties': [ 3124 ],
         },
 
+        {
+            name: 'Hawkins',
+            dropID: 'bond15',
+            thumb: 3153,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3153 ],
+        },
+
     ],
 
 
