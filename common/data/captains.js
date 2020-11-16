@@ -11051,8 +11051,48 @@ window.captains = {
     3148: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
+    3149: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
+    },
     3150: {
         atk: function(p) { return p.unit.type == "STR" ? [2, 2, 2, 2, 2, 2, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3151: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
+    },
+    3152: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.25 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    3153: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
+    },
+    3154: {
+        atk: function(p) { if(p.classCount.Striker>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1)
+                return [3.75,4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]];
+            else
+                return 1;
+               },
+        hp: function(p) { if(p.classCount.Striker>=1 && p.classCount.Fighter>=1 && p.classCount.Shooter>=1 && p.classCount.Slasher>=1)
+                return 1.5;
+            else
+                return 1;
+               },
+    },
+    3159: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    3160: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    3161: {
+        atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
+    3162: {
+        atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },
     3333: {
         hitAtk: function(p) {
