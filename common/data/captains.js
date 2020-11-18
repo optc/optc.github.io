@@ -11062,7 +11062,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
     },
     3152: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.25 : 3 : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? p.actions[p.sourceSlot] ? 5 : 3.25 : p.actions[p.sourceSlot] ? 5 : 3 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
     },
     3153: {
