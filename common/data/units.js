@@ -3143,7 +3143,7 @@ window.units = [
     [ "Drake, Ancient Menace", "STR", [ "Striker", "Powerhouse" ], 5, 50, 4, 5, 99, 5000000, 1055, 563, 99, 3038, 1608, 347, null ],
     [ "Onami & Shinobu, Two Pretty Flowering Female Ninjas", "INT", [ "Free Spirit", "Cerebral" ], 5, 50, 4, 3, 99, 5000000, 1296, 521, 84, 3170, 1507, 286, null ],
     [ "Otama, Benefactor Treated with Rice", "INT", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, null, 557, 253, 21, 2310, 1173, 324, null ],
-    [ "Kamazo the Manslayer", "DEX", [ "Slasher", "Driven" ], 5, 40, 4, 4, 99, 4000000, 1411, 641, 95, 3372, 1411, 167, null ],
+    [ "Kamazo the Manslayer", "DEX", [ "Slasher", "Driven" ], 5, 40, 4, 4, 99, 4000000, 1411, 641, 95, 3372, 1411, 167, 1 ],
     [ "Luffytaro, Prisoner's Hope", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1199, 564, 92, 3000, 1500, 300, null ],
     [ "Grandpa Hyo", "INT", [ "Cerebral", "Fighter" ], 5, 20, 4, 4, 99, 2000000, 1147, 553, 104, 2868, 1383, 261, 1 ],
     [ "Dobon, Vice Warden of the Prisoner Mine", "STR", [ "Slasher", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1184, 564, 95, 2960, 1409, 237, 1 ],

@@ -5165,7 +5165,7 @@ window.drops = {
         },
 
         {
-            name: 'Komurasaki',
+            name: 'Oiran with the Kitsune Mask',
             thumb: 2869,
             showManual: true,
             nakama: null,
@@ -5175,7 +5175,7 @@ window.drops = {
         },
 
         {
-            name: 'Inuarashi',
+            name: 'Samurai, 20 Years Later',
             thumb: 2908,
             showManual: true,
             nakama: null,
@@ -5185,7 +5185,7 @@ window.drops = {
         },
 
         {
-            name: 'Kizaru',
+            name: 'Unclear Justice',
             thumb: 2953,
             showManual: true,
             nakama: null,
@@ -5195,7 +5195,7 @@ window.drops = {
         },
 
         {
-            name: 'King',
+            name: 'King the Wildfire',
             thumb: 2990,
             showManual: true,
             nakama: null,
@@ -5252,6 +5252,21 @@ window.drops = {
             gamewith: null,
             slefty: 'coliseums',
             'All Difficulties': [ 3371, 3373 ],
+        },
+
+    ],
+
+
+    'Arena': [
+        
+        {
+            name: 'Kamazo',
+            thumb: 3145,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            slefty: 'coliseums',
+            'All Difficulties': [ 3145, -3145 ],
         },
 
     ],
@@ -5575,7 +5590,7 @@ window.drops = {
             thumb: 2977,
             nakama: null,
             gamewith: null,
-            'Raging Sea': [ 2977 ]
+            'Sea of Celebration': [ 2977 ]
         },
 
         {
