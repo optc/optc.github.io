@@ -212,6 +212,8 @@
             case 9036: return '../res/skullCP9.png'; break;
             case 'skullRaidKaido':
             case 9037: return '../res/skullKaidoRaid.png'; break;
+            case 'skullBlackbeard':
+            case 9038: return '../res/skullBlackbeard.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -648,6 +650,10 @@
             case '5272': return '../res/character_11585_t1.png'; break;
             case '5273': return '../res/character_11587_t1_str.png'; break;
             case '5274': return '../res/character_11587_t1_psy.png'; break;
+            case '5275': return '../res/character_11712_t1.png'; break;
+            case '5276': return '../res/character_11713_t1.png'; break;
+            case '5277': return '../res/character_11714_t1_str.png'; break;
+            case '5278': return '../res/character_11714_t1_psy.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';

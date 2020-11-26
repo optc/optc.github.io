@@ -3765,7 +3765,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2885 ],
-            'Ambush': [ 9036 ]
+            //'Ambush': [ 9036 ]
         },
 
         {
@@ -3784,7 +3784,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2922 ],
-            'Ambush': [ 9037 ]
+            //'Ambush': [ 9037 ]
         },
 
         {
@@ -5730,6 +5730,36 @@ window.drops = {
         },
 
         {
+            name: 'Ambush! CP9',
+            dropID: 'ambush7',
+            thumb: 2886,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of CP9 Raid at hardest difficulty.',
+            'Ambush': [ 2885, 9036 ]
+        },
+
+        {
+            name: 'Ambush! Kaido',
+            dropID: 'ambush7',
+            thumb: 2923,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Kaido Raid at hardest difficulty.',
+            'Ambush': [ 2922, 9037 ]
+        },
+
+        {
+            name: 'Ambush! Hina',
+            dropID: 'ambush8',
+            thumb: 3172,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
+            'Ambush': [ 3172 ]
+        },
+
+        {
             name: 'Ambush!? Condoriano',
             //dropID: 'ambush',
             thumb: 3380,
@@ -6704,6 +6734,13 @@ window.drops = {
             thumb: 3135,
             gamewith: null,
             'Chopperman Missions': [ 3144 ],
+        },
+
+        {
+            name: 'Navy Christmas Night',
+            thumb: 3171,
+            gamewith: null,
+            'Chopperman Missions': [ 3171, 3172 ],
         },
 
         {
