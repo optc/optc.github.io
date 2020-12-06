@@ -10633,6 +10633,49 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         },
     },
+    3189: {
+        atk: function(p) { return (p.defenseDown && window.specials[3189].multiplier != 0) ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return window.specials[3189].multiplier != 1 ? 0 : 1; },
+        onActivation: function(p) {
+            var n = (window.specials[3189].multiplier == 1 ? 2 : (window.specials[3189].multiplier == 2 | window.specials[3189].multiplier == undefined) ? 0 : 1);
+            window.specials[3189].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['Defense Reduction', 'Conditional boost', 'Conditional boost and Defense Reduction'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Defense Reduction', 'Defense Reduction'][n] + ', disable and re-enable this special',
+                name: '3189warning'
+            });
+        },
+    },
+    3190: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+    },
+    3191: {
+        atk: function(p) { return p.defenseDown ? window.specials[3191].multiplier : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            var n = (window.specials[3191].multiplier == 1.5 ? 1 : 0);
+            window.specials[3191].multiplier = [1.5, 2][n];
+            p.scope.notify({
+                text: 'Using the ' + [1.5, 2][n] + 'x Conditional multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
+                name: '3191warning'
+            });
+        }
+    },
+    3192: {
+        affinity: function(p) { return 1.75; }
+    },
+    3197: {
+        atk: function(p) { return window.specials[3197].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            window.specials[3197].multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[3197].multiplier = 1.75;
+        },
+        onDeactivation: function(p) {
+            window.specials[3197].multiplier = 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

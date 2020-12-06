@@ -11131,6 +11131,25 @@ window.captains = {
         atk: function(p) { return p.unit.type == "DEX" ? p.percHP >= 70.0 ? 3.5 : 2.5 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
     },
+    3189: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+    },
+    3190: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    3191: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    3192: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    3197: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 3.5 : 1; },//ADD LB TO THIS CHANGE THIS
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },//ADD LB TO THIS CHANGE THIS
+    },
+    3190: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

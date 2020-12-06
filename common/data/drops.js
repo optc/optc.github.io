@@ -5265,8 +5265,16 @@ window.drops = {
             showManual: true,
             nakama: null,
             gamewith: null,
-            slefty: 'coliseums',
             'All Difficulties': [ 3145, -3145 ],
+        },
+        
+        {
+            name: 'Kamazo',
+            thumb: 3189,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3189, -3189 ],
         },
 
     ],
@@ -5645,6 +5653,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 3150 ]
+        },
+
+        {
+            name: 'Garp',
+            dropID: 'treasuremap40',
+            thumb: 3197,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3197 ]
         },
 
     ],
