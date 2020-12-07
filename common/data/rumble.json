@@ -13835,7 +13835,7 @@
             {
               "amount": 23,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13853,7 +13853,7 @@
             {
               "amount": 24,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13871,7 +13871,7 @@
             {
               "amount": 25,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13889,7 +13889,7 @@
             {
               "amount": 26,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13907,7 +13907,7 @@
             {
               "amount": 27,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13925,7 +13925,7 @@
             {
               "amount": 28,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13943,7 +13943,7 @@
             {
               "amount": 29,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13961,7 +13961,7 @@
             {
               "amount": 30,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13979,7 +13979,7 @@
             {
               "amount": 31,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -13997,7 +13997,7 @@
             {
               "amount": 32,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14125,7 +14125,7 @@
             {
               "amount": 23,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14143,7 +14143,7 @@
             {
               "amount": 24,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14161,7 +14161,7 @@
             {
               "amount": 25,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14179,7 +14179,7 @@
             {
               "amount": 26,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14197,7 +14197,7 @@
             {
               "amount": 27,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14215,7 +14215,7 @@
             {
               "amount": 28,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14233,7 +14233,7 @@
             {
               "amount": 29,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14251,7 +14251,7 @@
             {
               "amount": 30,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14269,7 +14269,7 @@
             {
               "amount": 31,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14287,7 +14287,7 @@
             {
               "amount": 32,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14415,7 +14415,7 @@
             {
               "amount": 23,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14433,7 +14433,7 @@
             {
               "amount": 24,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14451,7 +14451,7 @@
             {
               "amount": 25,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14469,7 +14469,7 @@
             {
               "amount": 26,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14487,7 +14487,7 @@
             {
               "amount": 27,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14505,7 +14505,7 @@
             {
               "amount": 28,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14523,7 +14523,7 @@
             {
               "amount": 29,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14541,7 +14541,7 @@
             {
               "amount": 30,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14559,7 +14559,7 @@
             {
               "amount": 31,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14577,7 +14577,7 @@
             {
               "amount": 32,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -14709,7 +14709,7 @@
             {
               "amount": 0.3,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14717,7 +14717,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14734,7 +14734,7 @@
             {
               "amount": 0.32,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14742,7 +14742,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14759,7 +14759,7 @@
             {
               "amount": 0.33,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14767,7 +14767,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14784,7 +14784,7 @@
             {
               "amount": 0.35,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14792,7 +14792,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14809,7 +14809,7 @@
             {
               "amount": 0.37,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14817,7 +14817,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14834,7 +14834,7 @@
             {
               "amount": 0.39,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14842,7 +14842,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14859,7 +14859,7 @@
             {
               "amount": 0.4,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14867,7 +14867,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14884,7 +14884,7 @@
             {
               "amount": 0.42,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14892,7 +14892,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14909,7 +14909,7 @@
             {
               "amount": 0.44,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14917,7 +14917,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -14934,7 +14934,7 @@
             {
               "amount": 0.55,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -14942,7 +14942,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 3,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15074,7 +15074,7 @@
             {
               "amount": 0.3,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15082,7 +15082,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15099,7 +15099,7 @@
             {
               "amount": 0.32,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15107,7 +15107,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15124,7 +15124,7 @@
             {
               "amount": 0.33,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15132,7 +15132,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15149,7 +15149,7 @@
             {
               "amount": 0.35,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15157,7 +15157,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15174,7 +15174,7 @@
             {
               "amount": 0.37,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15182,7 +15182,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15199,7 +15199,7 @@
             {
               "amount": 0.39,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15207,7 +15207,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15224,7 +15224,7 @@
             {
               "amount": 0.4,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15232,7 +15232,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15249,7 +15249,7 @@
             {
               "amount": 0.42,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15257,7 +15257,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15274,7 +15274,7 @@
             {
               "amount": 0.44,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15282,7 +15282,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -15299,7 +15299,7 @@
             {
               "amount": 0.55,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
@@ -15307,7 +15307,7 @@
               "duration": 15,
               "effect": "debuff",
               "level": 3,
-              "targeting": { "count": 1, "priority": "highest", "stat": "current HP", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
@@ -43501,7 +43501,7 @@
             {
               "amount": 20,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43526,7 +43526,7 @@
             {
               "amount": 23,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43551,7 +43551,7 @@
             {
               "amount": 26,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43576,7 +43576,7 @@
             {
               "amount": 29,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43601,7 +43601,7 @@
             {
               "amount": 32,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43626,7 +43626,7 @@
             {
               "amount": 35,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43651,7 +43651,7 @@
             {
               "amount": 38,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43676,7 +43676,7 @@
             {
               "amount": 41,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43701,7 +43701,7 @@
             {
               "amount": 44,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -43726,7 +43726,7 @@
             {
               "amount": 50,
               "effect": "damage",
-              "targeting": { "count": 1, "priority": "highest", "stat": "remaining HP", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -50446,7 +50446,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Medium Rage Heal",
+        {
+          "action": "heal",
+          "area": "Medium",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
