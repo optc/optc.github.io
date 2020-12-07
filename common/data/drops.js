@@ -3765,7 +3765,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2885 ],
-            'Ambush': [ 9036 ]
+            //'Ambush': [ 9036 ]
         },
 
         {
@@ -3784,7 +3784,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 2922 ],
-            'Ambush': [ 9037 ]
+            //'Ambush': [ 9037 ]
         },
 
         {
@@ -5165,7 +5165,7 @@ window.drops = {
         },
 
         {
-            name: 'Komurasaki',
+            name: 'Oiran with the Kitsune Mask',
             thumb: 2869,
             showManual: true,
             nakama: null,
@@ -5175,7 +5175,7 @@ window.drops = {
         },
 
         {
-            name: 'Inuarashi',
+            name: 'Samurai, 20 Years Later',
             thumb: 2908,
             showManual: true,
             nakama: null,
@@ -5185,7 +5185,7 @@ window.drops = {
         },
 
         {
-            name: 'Kizaru',
+            name: 'Unclear Justice',
             thumb: 2953,
             showManual: true,
             nakama: null,
@@ -5195,7 +5195,7 @@ window.drops = {
         },
 
         {
-            name: 'King',
+            name: 'King the Wildfire',
             thumb: 2990,
             showManual: true,
             nakama: null,
@@ -5252,6 +5252,29 @@ window.drops = {
             gamewith: null,
             slefty: 'coliseums',
             'All Difficulties': [ 3371, 3373 ],
+        },
+
+    ],
+
+
+    'Arena': [
+        
+        {
+            name: 'Kamazo',
+            thumb: 3145,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3145, -3145 ],
+        },
+        
+        {
+            name: 'Kamazo',
+            thumb: 3189,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3189, -3189 ],
         },
 
     ],
@@ -5575,7 +5598,7 @@ window.drops = {
             thumb: 2977,
             nakama: null,
             gamewith: null,
-            'Raging Sea': [ 2977 ]
+            'Sea of Celebration': [ 2977 ]
         },
 
         {
@@ -5630,6 +5653,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 3150 ]
+        },
+
+        {
+            name: 'Garp',
+            dropID: 'treasuremap40',
+            thumb: 3197,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3197 ]
         },
 
     ],
@@ -5712,6 +5744,36 @@ window.drops = {
             gamewith: 136823,
             condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
+        },
+
+        {
+            name: 'Ambush! CP9',
+            dropID: 'ambush7',
+            thumb: 2886,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of CP9 Raid at hardest difficulty.',
+            'Ambush': [ 2885, 9036 ]
+        },
+
+        {
+            name: 'Ambush! Kaido',
+            dropID: 'ambush7',
+            thumb: 2923,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Kaido Raid at hardest difficulty.',
+            'Ambush': [ 2922, 9037 ]
+        },
+
+        {
+            name: 'Ambush! Hina',
+            dropID: 'ambush8',
+            thumb: 3172,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
+            'Ambush': [ 3172 ]
         },
 
         {
@@ -5852,6 +5914,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3124 ],
+        },
+
+        {
+            name: 'Hawkins',
+            dropID: 'bond15',
+            thumb: 3153,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3153 ],
         },
 
     ],
@@ -6680,6 +6751,13 @@ window.drops = {
             thumb: 3135,
             gamewith: null,
             'Chopperman Missions': [ 3144 ],
+        },
+
+        {
+            name: 'Navy Christmas Night',
+            thumb: 3171,
+            gamewith: null,
+            'Chopperman Missions': [ 3171, 3172 ],
         },
 
         {

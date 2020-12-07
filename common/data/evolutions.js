@@ -4827,6 +4827,30 @@ window.evolutions = {
         evolution: 3141,
         evolvers: [  ]
     },
+    1268: {
+        evolution: 3154,
+        evolvers: [ 'skullBlackbeard', 'skullBlackbeard', 'skullBlackbeard', 'skullBlackbeard', 'skullBlackbeard' ]
+    },
+    3163: {
+        evolution: 3164,
+        evolvers: [  ]
+    },
+    3165: {
+        evolution: 3166,
+        evolvers: [  ]
+    },
+    3167: {
+        evolution: 3168,
+        evolvers: [  ]
+    },
+    3169: {
+        evolution: 3170,
+        evolvers: [  ]
+    },
+    3156: {
+        evolution: 3157,
+        evolvers: [ 118, 266, 300, 100, 267 ]
+    },
     3333: {
         evolution: 3334,
         evolvers: [ 118, 86, 266, 302, 267 ]
@@ -4878,9 +4902,5 @@ window.evolutions = {
     3375: {
         evolution: 3376,
         evolvers: [ 118, 88, 266, 304, 104 ]
-    },
-    3384: {
-        evolution: 3385,
-        evolvers: [ 118, 266, 300, 100, 267 ]
     },
 };

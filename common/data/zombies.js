@@ -962,6 +962,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    3162: { // Moria
+        type: 'healer',
+        amount: 1000
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1
@@ -1124,5 +1128,61 @@ window.zombies = {
     5274: { // Luffy/Sanji
         type: 'healer',
         amount: 2000
+    },
+    5283: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 2000
+    },
+    5284: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 2000
+    },
+    5285: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 4000
+    },
+    5286: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 4000
+    },
+    5287: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 2000
+    },
+    5288: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 2000
+    },
+    5289: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 4000
+    },
+    5290: { // Vivi/Rebecca
+        type: 'healer',
+        amount: 4000
+    },
+    5291: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5292: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5293: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5294: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5295: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5296: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5297: { // Shirahoshi/Mansherry
+        type: 'healer',
+    },
+    5298: { // Shirahoshi/Mansherry
+        type: 'healer',
     },
 };
