@@ -59,7 +59,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -315,7 +319,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -581,7 +589,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -847,7 +859,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -1907,7 +1923,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -2102,7 +2122,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -2684,7 +2708,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -2870,7 +2898,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -5441,7 +5473,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -5746,7 +5782,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -6030,7 +6070,11 @@
           "action": "attack",
           "type": "Power"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -6316,7 +6360,11 @@
           "action": "attack",
           "type": "Power"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -7911,7 +7959,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -8247,7 +8299,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -9846,7 +9902,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -10186,7 +10246,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -13011,7 +13075,11 @@
           "action": "attack",
           "type": "Power"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -13383,7 +13451,11 @@
           "action": "attack",
           "type": "Power"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -13750,7 +13822,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -14036,7 +14112,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -14322,7 +14402,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -17473,7 +17557,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -17874,7 +17962,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -20122,7 +20214,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -21620,7 +21716,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -21830,7 +21930,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -22040,7 +22144,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -22250,7 +22358,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -23420,7 +23532,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -23620,7 +23736,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -23824,7 +23944,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -24020,7 +24144,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -24212,7 +24340,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -24412,7 +24544,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -24791,7 +24927,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -25077,7 +25217,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -26626,7 +26770,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -26901,7 +27049,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -28869,7 +29021,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -29135,7 +29291,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -30357,7 +30517,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -30647,7 +30811,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -30900,12 +31068,20 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -31287,12 +31463,20 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -34974,12 +35158,20 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -35276,12 +35468,20 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -37503,7 +37703,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -40999,12 +41203,20 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -41301,12 +41513,20 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.1 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 1
+        },
         {
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -42964,7 +43184,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -43260,7 +43484,11 @@
           "action": "attack",
           "type": "Power"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Normal"
@@ -48452,7 +48680,11 @@
           "action": "attack",
           "type": "Power"
         },
-        "Lv.2 Self Heal"
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        }
       ],
       "special": [
         {
@@ -53526,7 +53758,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
@@ -57120,7 +57356,11 @@
           "action": "attack",
           "type": "Normal"
         },
-        "Lv.2 Self Heal",
+        {
+          "action": "heal",
+          "area": "Self",
+          "level": 2
+        },
         {
           "action": "attack",
           "type": "Power"
