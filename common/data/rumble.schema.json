@@ -87,20 +87,11 @@
                 "comparator": {
                     "$ref": "#/definitions/ConditionComparator"
                 },
-                "percentage": {
-                    "type": "integer"
-                },
                 "stat": {
                     "$ref": "#/definitions/Attribute"
                 },
                 "type": {
                     "$ref": "#/definitions/ConditionType"
-                },
-                "time": {
-                    "type": "integer"
-                },
-                "limit": {
-                    "type": "integer"
                 },
                 "count": {
                     "type": "integer"
@@ -343,9 +334,9 @@
         "ConditionComparator": {
             "type": "string",
             "enum": [
+                "above",
                 "below",
                 "remaining",
-                "above",
                 "first",
                 "after",
                 "more",
