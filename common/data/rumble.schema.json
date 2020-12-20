@@ -75,7 +75,10 @@
                     "$ref": "#/definitions/TargetClass"
                 },
                 "resilience": {
-                    "$ref": "#/definitions/Resilience"
+                    "oneOf": [
+                        { "$ref": "#/definitions/DebuffResilience" },
+                        { "$ref": "#/definitions/HealingResilience" }
+                    ]
                 }
             },
             "required": [
@@ -171,7 +174,7 @@
             ],
             "title": "AttackPattern"
         },
-        "Resilience": {
+        "DebuffResilience": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -186,7 +189,27 @@
                 "attribute",
                 "chance"
             ],
-            "title": "Resilience"
+            "title": "DebuffResilience"
+        },
+        "HealingResilience": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "condition": {
+                    "$ref": "#/definitions/Condition"
+                },
+                "amount": {
+                    "type": "integer"
+                },
+                "interval": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "amount",
+                "interval"
+            ],
+            "title": "HealingResilience"
         },
         "Special": {
             "type": "object",
@@ -349,8 +372,9 @@
                 "Silence",
                 "Provoke",
                 "Paralysis",
+                "Damage Over Time",
                 "Bind",
-                "Movement Bind",
+                "Action Bind",
                 "near"
             ],
             "title": "Attribute"

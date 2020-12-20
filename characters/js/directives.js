@@ -622,6 +622,9 @@ filters.patternToString = function() {
 filters.resilienceToString = function() {
   return function(input) {
       if (!input) return 'N/A';
+      if (input.amount) {
+        return `${conditionToString(input.condition)}Heals ${input.amount} HP every ${input.interval} seconds.`
+      }
       return `${input.chance}% to resist ${input.attribute}.`;
     }
 };
@@ -649,7 +652,7 @@ filters.abilityToString = function() {
             case "damage":
               switch (effect.type){
                 case "time":
-                  e += `Deals Lv.${effect.level} Damage over Time`;
+                  e += `Deals Lv.${effect.level} Damage Over Time`;
                   break;
                 case "atk":
                   e += `Deals ${new Intl.NumberFormat().format(effect.amount)}x ATK in damage`;
