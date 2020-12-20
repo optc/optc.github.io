@@ -146,6 +146,9 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $http(rumbleRequest)
         .success(function (jsonData) {
             $scope.rumble = jsonData.units.filter(unit => unit.id == id)[0];
+            if ( $scope.rumble.basedOn ) {
+              $scope.rumble = jsonData.units.filter(unit => unit.id == $scope.rumble.basedOn)[0];
+            }
         })
         .error(function () {
 

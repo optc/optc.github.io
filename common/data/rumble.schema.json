@@ -9,7 +9,10 @@
                 "units": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Unit"
+                        "oneOf": [
+                            { "$ref": "#/definitions/Unit" },
+                            { "$ref": "#/definitions/Reference" }
+                        ]
                     }
                 }
             },
@@ -17,6 +20,23 @@
                 "units"
             ],
             "title": "PirateRumbleData"
+        },
+        "Reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "basedOn": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "id",
+                "basedOn"
+            ],
+            "title": "Reference"
         },
         "Unit": {
             "type": "object",
@@ -48,6 +68,9 @@
                     "minItems": 10,
                     "maxItems": 10
                 },
+                "stats": {
+                    "$ref": "#/definitions/Stats"
+                },
                 "target": {
                     "$ref": "#/definitions/TargetClass"
                 },
@@ -60,6 +83,7 @@
                 "id",
                 "pattern",
                 "special",
+                "stats",
                 "target"
             ],
             "title": "Unit"
@@ -244,7 +268,7 @@
                         }
                     }
                 }
-            ], 
+            ],
             "required": [
                 "effect",
                 "targeting"
@@ -476,6 +500,34 @@
                 "time"
             ],
             "title": "AttackEffectType"
+        },
+        "Stats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "rumbleType": {
+                    "type": "string",
+                    "enum": [
+                        "ATK",
+                        "DEF",
+                        "SPT",
+                        "DBF",
+                        "RCV"
+                    ]
+                },
+                "def": {
+                    "type": "integer"
+                },
+                "spd": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "rumbleType",
+                "def",
+                "spd"
+            ],
+            "title": "Stats"
         }
     }
 }

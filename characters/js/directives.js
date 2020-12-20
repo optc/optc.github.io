@@ -619,6 +619,13 @@ filters.patternToString = function() {
     };
 };
 
+filters.resilienceToString = function() {
+  return function(input) {
+      if (!input) return 'N/A';
+      return `${input.chance}% to resist ${input.attribute}.`;
+    }
+};
+
 filters.specialToString = function() {
   return function(input) {
       if (!input) return 'N/A';

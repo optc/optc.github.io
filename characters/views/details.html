@@ -512,7 +512,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && !isfestAbilityHybrid && rumbleBeta">
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability && !isfestAbilityHybrid && rumbleBeta">
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr ng-if="rumble.pattern">
@@ -527,10 +527,10 @@
                                       <span ng-bind-html="rumble.target | targetToString"></span>
                                     </td>
                                 </tr>
-                                <tr ng-if="rumble.resistance">
+                                <tr ng-if="rumble.resilience">
                                     <td>Pirate Rumble Resistance</td>
                                     <td>
-                                      TODO:::<span ng-bind-html="rumble.resistance | decorate"></span>
+                                      <span ng-bind-html="rumble.resilience | resilienceToString| decorate"></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.ability">
