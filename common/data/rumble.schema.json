@@ -50,8 +50,14 @@
                     "minItems": 5,
                     "maxItems": 5
                 },
+                "global": {
+                  "$ref": "#/definitions/Unit"
+                },
                 "id": {
                     "type": "number"
+                },
+                "japan": {
+                  "$ref": "#/definitions/Unit"
                 },
                 "pattern": {
                     "type": "array",
@@ -373,7 +379,6 @@
                 "Provoke",
                 "Paralysis",
                 "Damage Over Time",
-                "Bind",
                 "Action Bind",
                 "near"
             ],

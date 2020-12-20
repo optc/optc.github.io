@@ -23406,7 +23406,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 15,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23424,7 +23424,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 15,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23442,7 +23442,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 16,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23460,7 +23460,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 17,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23478,7 +23478,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 18,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23496,7 +23496,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 19,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23514,7 +23514,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 19,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23532,7 +23532,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 20,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23550,7 +23550,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 21,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -23568,7 +23568,7 @@
               "type": "fixed"
             },
             {
-              "attributes": [ "Silence", "Paralysis", "Bind" ],
+              "attributes": [ "Silence", "Paralysis", "Action Bind" ],
               "duration": 22,
               "effect": "boon",
               "targeting": { "targets": [ "crew" ] }
@@ -35575,7 +35575,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 50,
               "duration": 3,
               "effect": "hinderance",
@@ -35594,7 +35594,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 55,
               "duration": 3,
               "effect": "hinderance",
@@ -35613,7 +35613,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 60,
               "duration": 3,
               "effect": "hinderance",
@@ -35632,7 +35632,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 65,
               "duration": 3,
               "effect": "hinderance",
@@ -35651,7 +35651,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 70,
               "duration": 3,
               "effect": "hinderance",
@@ -35670,7 +35670,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 75,
               "duration": 3,
               "effect": "hinderance",
@@ -35689,7 +35689,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 80,
               "duration": 3,
               "effect": "hinderance",
@@ -35708,7 +35708,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 85,
               "duration": 3,
               "effect": "hinderance",
@@ -35727,7 +35727,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 90,
               "duration": 3,
               "effect": "hinderance",
@@ -35746,7 +35746,7 @@
           "cooldown": 34,
           "effects": [
             {
-              "attributes": [ "Bind" ],
+              "attributes": [ "Action Bind" ],
               "chance": 100,
               "duration": 3,
               "effect": "hinderance",
