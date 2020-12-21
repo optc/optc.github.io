@@ -6,6 +6,23 @@
 
 var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
 
+function denormalizeEffects(ability) {
+  let lastEffect = [];
+  let mergedEffect = [];
+  ability.forEach((ability, abilityIdx) => {
+    mergedEffect = [...lastEffect];
+    ability.effects.forEach((effect, effectIdx) => {
+      if(effect.effect) {
+        lastEffect[effectIdx] = effect;
+        mergedEffect[effectIdx] = effect;
+      } else if (effect.override){
+        mergedEffect[effectIdx] = {...lastEffect[effectIdx], ...effect.override};
+      }
+    });
+    ability.effects = mergedEffect;
+  });
+}
+
 /***************
  * Controllers *
  ***************/
@@ -149,9 +166,12 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             if ( $scope.rumble.basedOn ) {
               $scope.rumble = jsonData.units.filter(unit => unit.id == $scope.rumble.basedOn)[0];
             }
+            // normalize the data here:
+            denormalizeEffects($scope.rumble.ability);
+            denormalizeEffects($scope.rumble.special);
         })
-        .error(function () {
-
+        .error(function (out) {
+          console.log( "Failure in loading or parsing json" + out);
         });
     $scope.customLevel = { };
     $scope.isArray = Array.isArray;

@@ -9594,6 +9594,239 @@
         {
           "effects": [
             {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "Slasher", "Free Spirit" ] }
+            },
+            {
+              "attributes": [ "RCV" ],
+              "condition": { "comparator": "remaining", "count": 70, "type": "time" },
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "Slasher", "Free Spirit" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 3 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 4 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 5 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 6 }
+            }
+          ]
+        }
+      ],
+      "id": 2001,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "amount": 950,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "small" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "duration": 30,
+              "effect": "damage",
+              "level": 2,
+              "range": { "direction": "radial", "size": "small" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "time"
+            },
+            {
+              "attributes": [ "DEF" ],
+              "duration": 10,
+              "effect": "debuff",
+              "level": 2,
+              "range": { "direction": "radial", "size": "small" },
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 975 }
+            },
+            {
+              "override": { "duration": 31 }
+            },
+            {
+              "override": { "duration": 11 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1000 }
+            },
+            {
+              "override": { "duration": 32 }
+            },
+            {
+              "override": { "duration": 12 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1025 }
+            },
+            {
+              "override": { "duration": 33 }
+            },
+            {
+              "override": { "duration": 13 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1050 }
+            },
+            {
+              "override": { "duration": 34 }
+            },
+            {
+              "override": { "duration": 14 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1075 }
+            },
+            {
+              "override": { "duration": 35 }
+            },
+            {
+              "override": { "duration": 15 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1100 }
+            },
+            {
+              "override": { "duration": 36 }
+            },
+            {
+              "override": { "duration": 16, "level": 3 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1125 }
+            },
+            {
+              "override": { "duration": 37 }
+            },
+            {
+              "override": { "duration": 17, "level": 3 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1150 }
+            },
+            {
+              "override": { "duration": 38 }
+            },
+            {
+              "override": { "duration": 18, "level": 3 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1300 }
+            },
+            {
+              "override": { "duration": 40, "level": 3 }
+            },
+            {
+              "override": { "duration": 20, "level": 4 }
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 159,
+        "rumbleType": "ATK",
+        "spd": 194
+      },
+      "target": {
+        "comparator": "highest",
+        "criteria": "DEF"
+      }
+    },
+    {
+      "ability": [
+        {
+          "effects": [
+            {
               "attributes": [ "ATK" ],
               "effect": "buff",
               "level": 2,
@@ -40934,7 +41167,7 @@
         {
           "effects": [
             {
-              "attributes": [ "Knockback" ],
+              "attributes": [ "Blow Away" ],
               "effect": "buff",
               "level": 2,
               "targeting": { "targets": [ "Slasher" ] }
@@ -40956,7 +41189,7 @@
         {
           "effects": [
             {
-              "attributes": [ "Knockback" ],
+              "attributes": [ "Blow Away" ],
               "effect": "buff",
               "level": 3,
               "targeting": { "targets": [ "Slasher" ] }
@@ -40978,7 +41211,7 @@
         {
           "effects": [
             {
-              "attributes": [ "Knockback" ],
+              "attributes": [ "Blow Away" ],
               "effect": "buff",
               "level": 4,
               "targeting": { "targets": [ "Slasher" ] }
@@ -41000,7 +41233,7 @@
         {
           "effects": [
             {
-              "attributes": [ "Knockback" ],
+              "attributes": [ "Blow Away" ],
               "effect": "buff",
               "level": 5,
               "targeting": { "targets": [ "Slasher" ] }
@@ -41022,7 +41255,7 @@
         {
           "effects": [
             {
-              "attributes": [ "Knockback" ],
+              "attributes": [ "Blow Away" ],
               "effect": "buff",
               "level": 6,
               "targeting": { "targets": [ "Slasher" ] }
@@ -41061,15 +41294,19 @@
           "type": "Full"
         }
       ],
+      "resilience": {
+        "attribute": "Paralysis",
+        "chance": 100
+      },
       "special": [
         {
           "cooldown": 36,
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 2,
               "duration": 11,
               "effect": "buff",
+              "level": 2,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41086,9 +41323,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 2,
               "duration": 12,
               "effect": "buff",
+              "level": 2,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41105,9 +41342,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 2,
               "duration": 13,
               "effect": "buff",
+              "level": 2,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41124,9 +41361,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 3,
               "duration": 14,
               "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41143,9 +41380,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 3,
               "duration": 15,
               "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41162,9 +41399,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 4,
               "duration": 16,
               "effect": "buff",
+              "level": 4,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41181,9 +41418,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 4,
               "duration": 17,
               "effect": "buff",
+              "level": 4,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41200,9 +41437,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 4,
               "duration": 18,
               "effect": "buff",
+              "level": 4,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41219,9 +41456,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 5,
               "duration": 19,
               "effect": "buff",
+              "level": 5,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41238,9 +41475,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 6,
               "duration": 20,
               "effect": "buff",
+              "level": 6,
               "targeting": { "targets": [ "Slasher" ] }
             },
             {
@@ -41261,10 +41498,6 @@
       "target": {
         "comparator": "highest",
         "criteria": "DEF"
-      },
-      "resilience": {
-        "attribute": "Paralysis",
-        "chance": 100
       }
     },
     {
@@ -41277,9 +41510,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 2,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41300,9 +41533,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 3,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41323,9 +41556,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 4,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41346,9 +41579,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 5,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41369,9 +41602,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 6,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41408,15 +41641,19 @@
           "type": "Full"
         }
       ],
+      "resilience": {
+        "attribute": "Silence",
+        "chance": 100
+      },
       "special": [
         {
           "cooldown": 35,
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 1,
               "duration": 11,
               "effect": "debuff",
+              "level": 1,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41432,9 +41669,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 1,
               "duration": 12,
               "effect": "debuff",
+              "level": 1,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41450,9 +41687,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 2,
               "duration": 13,
               "effect": "debuff",
+              "level": 2,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41468,9 +41705,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 3,
               "duration": 14,
               "effect": "debuff",
+              "level": 3,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41486,9 +41723,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 4,
               "duration": 15,
               "effect": "debuff",
+              "level": 4,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41504,9 +41741,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 5,
               "duration": 16,
               "effect": "debuff",
+              "level": 5,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41522,9 +41759,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 5,
               "duration": 17,
               "effect": "debuff",
+              "level": 5,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41540,9 +41777,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 6,
               "duration": 18,
               "effect": "debuff",
+              "level": 6,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41558,9 +41795,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 7,
               "duration": 19,
               "effect": "debuff",
+              "level": 7,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41576,9 +41813,9 @@
           "effects": [
             {
               "attributes": [ "SPD" ],
-              "level": 9,
               "duration": 20,
               "effect": "debuff",
+              "level": 9,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -41597,10 +41834,6 @@
       },
       "target": {
         "criteria": "near"
-      },
-      "resilience": {
-        "attribute": "Silence",
-        "chance": 100
       }
     },
     {
@@ -41608,115 +41841,115 @@
         {
           "effects": [
             {
-              "attributes": [ "Crit" ],
+              "attributes": [ "Critical Hit" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 3,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             },
             {
               "attributes": [ "Guard" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             }
           ]
         },
         {
           "effects": [
             {
-              "attributes": [ "Crit" ],
+              "attributes": [ "Critical Hit" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 4,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
               "level": 2,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             },
             {
               "attributes": [ "Guard" ],
               "effect": "buff",
               "level": 2,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             }
           ]
         },
         {
           "effects": [
             {
-              "attributes": [ "Crit" ],
+              "attributes": [ "Critical Hit" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 5,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
               "level": 3,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             },
             {
               "attributes": [ "Guard" ],
               "effect": "buff",
               "level": 3,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             }
           ]
         },
         {
           "effects": [
             {
-              "attributes": [ "Crit" ],
+              "attributes": [ "Critical Hit" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 6,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
               "level": 4,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             },
             {
               "attributes": [ "Guard" ],
               "effect": "buff",
               "level": 4,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             }
           ]
         },
         {
           "effects": [
             {
-              "attributes": [ "Crit" ],
+              "attributes": [ "Critical Hit" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "debuff",
               "level": 7,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
               "level": 4,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             },
             {
               "attributes": [ "Guard" ],
               "effect": "buff",
               "level": 5,
-              "targeting": { "targets": [ "DEX" ] }
+              "targeting": { "targets": [ "[DEX]" ] }
             }
           ]
         }
@@ -41740,15 +41973,19 @@
           "type": "Full"
         }
       ],
+      "resilience": {
+        "attribute": "Paralysis",
+        "chance": 100
+      },
       "special": [
         {
           "cooldown": 28,
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 11,
               "effect": "buff",
+              "level": 1,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41764,9 +42001,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 12,
               "effect": "buff",
+              "level": 1,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41782,9 +42019,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 13,
               "effect": "buff",
+              "level": 1,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41800,9 +42037,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 14,
               "effect": "buff",
+              "level": 1,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41818,9 +42055,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 2,
               "duration": 15,
               "effect": "buff",
+              "level": 2,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41836,9 +42073,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 2,
               "duration": 16,
               "effect": "buff",
+              "level": 2,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41854,9 +42091,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 2,
               "duration": 17,
               "effect": "buff",
+              "level": 2,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41872,9 +42109,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 3,
               "duration": 18,
               "effect": "buff",
+              "level": 3,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41890,9 +42127,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 3,
               "duration": 19,
               "effect": "buff",
+              "level": 3,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41908,9 +42145,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 4,
               "duration": 20,
               "effect": "buff",
+              "level": 4,
               "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
@@ -41929,10 +42166,6 @@
       },
       "target": {
         "criteria": "near"
-      },
-      "resilience": {
-        "attribute": "Paralysis",
-        "chance": 100
       }
     },
     {
@@ -42039,15 +42272,19 @@
           "level": 2
         }
       ],
+      "resilience": {
+        "amount": 250,
+        "interval": 5
+      },
       "special": [
         {
           "cooldown": 36,
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 10,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42063,9 +42300,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 10,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42081,9 +42318,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 10,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42099,9 +42336,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 2,
               "duration": 10,
               "effect": "buff",
+              "level": 2,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42117,9 +42354,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 2,
               "duration": 10,
               "effect": "buff",
+              "level": 2,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42135,9 +42372,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 3,
               "duration": 10,
               "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42153,9 +42390,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 3,
               "duration": 10,
               "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42171,9 +42408,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 3,
               "duration": 10,
               "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42189,9 +42426,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 4,
               "duration": 10,
               "effect": "buff",
+              "level": 4,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42207,9 +42444,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
-              "level": 4,
               "duration": 10,
               "effect": "buff",
+              "level": 4,
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -42228,10 +42465,6 @@
       },
       "target": {
         "criteria": "near"
-      },
-      "resilience": {
-        "amount": 250,
-        "interval": 5
       }
     },
     {
