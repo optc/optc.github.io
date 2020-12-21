@@ -104,7 +104,10 @@
                 "effects": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Effect"
+                        "oneOf": [
+                            { "$ref": "#/definitions/Effect" },
+                            { "$ref": "#/definitions/EffectOverride" }
+                        ]
                     }
                 }
             },
@@ -227,7 +230,10 @@
                 "effects": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Effect"
+                        "oneOf": [
+                            { "$ref": "#/definitions/Effect" },
+                            { "$ref": "#/definitions/EffectOverride" }
+                        ]
                     }
                 }
             },
@@ -239,7 +245,12 @@
         },
         "Effect": {
             "type": "object",
-            "additionalProperties": { "type": "string" },
+            "additionalProperties": {
+                "anyOf": [
+                    { "$ref": "#/definitions/AttackEffectType" },
+                    { "$ref": "#/definitions/RechargeEffectType" }
+                ]
+            },
             "properties": {
                 "attributes": {
                     "type": "array",
@@ -303,6 +314,44 @@
                 "targeting"
             ],
             "title": "Effect"
+        },
+        "EffectOverride": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "override" : {
+                    "properties": {
+                        "attributes": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Attribute"
+                            }
+                        },
+                        "chance": {
+                            "type": "integer"
+                        },
+                        "duration": {
+                            "type": "integer"
+                        },
+                        "targeting": {
+                            "$ref": "#/definitions/Targeting"
+                        },
+                        "amount": {
+                            "type": "number"
+                        },
+                        "level": {
+                            "type": "integer"
+                        },
+                        "range": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "condition": {
+                            "$ref": "#/definitions/Condition"
+                        }
+                    }
+                }
+            },
+            "title": "EffectOverride"
         },
         "Range": {
             "type": "object",
@@ -425,6 +474,7 @@
             "anyOf": [
                 {
                     "type": "string",
+                    "title": "Targets",
                     "enum": [
                         "self",
                         "crew",
@@ -433,6 +483,7 @@
                 },
                 {
                     "type": "string",
+                    "title": "Classes",
                     "enum": [
                         "Fighter",
                         "Slasher",
@@ -446,6 +497,7 @@
                 },
                 {
                     "type": "string",
+                    "title": "Colors",
                     "enum": [
                         "[STR]",
                         "[DEX]",
@@ -536,6 +588,7 @@
             "properties": {
                 "rumbleType": {
                     "type": "string",
+                    "title": "Rumble Type",
                     "enum": [
                         "ATK",
                         "DEF",
