@@ -40930,6 +40930,1311 @@
       }
     },
     {
+      "ability": [
+        {
+          "effects": [
+            {
+              "attributes": [ "Knockback" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Knockback" ],
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Knockback" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Knockback" ],
+              "effect": "buff",
+              "level": 5,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Knockback" ],
+              "effect": "buff",
+              "level": 6,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 5,
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        }
+      ],
+      "id": 3202,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 2,
+              "duration": 11,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.15,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 2,
+              "duration": 12,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.25,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 2,
+              "duration": 13,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.35,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 3,
+              "duration": 14,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.45,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 3,
+              "duration": 15,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.55,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 4,
+              "duration": 16,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.65,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 4,
+              "duration": 17,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.75,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 4,
+              "duration": 18,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.85,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 5,
+              "duration": 19,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 1.95,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "level": 6,
+              "duration": 20,
+              "effect": "buff",
+              "targeting": { "targets": [ "Slasher" ] }
+            },
+            {
+              "amount": 2,
+              "effect": "damage",
+              "range": { "direction": "forward", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 166,
+        "rumbleType": "ATK",
+        "spd": 166
+      },
+      "target": {
+        "comparator": "highest",
+        "criteria": "DEF"
+      },
+      "resilience": {
+        "attribute": "Paralysis",
+        "chance": 100
+      }
+    },
+    {
+      "basedOn": 3204,
+      "id": 3203
+    },
+    {
+      "ability": [
+        {
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "effect": "debuff",
+              "level": 2,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "effect": "debuff",
+              "level": 3,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "effect": "debuff",
+              "level": 4,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "effect": "debuff",
+              "level": 5,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "effect": "debuff",
+              "level": 6,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        }
+      ],
+      "id": 3204,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 1,
+              "duration": 11,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 1.5,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 1,
+              "duration": 12,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 1.6,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 2,
+              "duration": 13,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 1.7,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 3,
+              "duration": 14,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 1.8,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 4,
+              "duration": 15,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 1.9,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 5,
+              "duration": 16,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 2,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 5,
+              "duration": 17,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 2.1,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 6,
+              "duration": 18,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 2.2,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 7,
+              "duration": 19,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 2.3,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 35,
+          "effects": [
+            {
+              "attributes": [ "SPD" ],
+              "level": 9,
+              "duration": 20,
+              "effect": "debuff",
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 2.5,
+              "effect": "damage",
+              "targeting": { "count": 3, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 173,
+        "rumbleType": "ATK",
+        "spd": 213
+      },
+      "target": {
+        "criteria": "near"
+      },
+      "resilience": {
+        "attribute": "Silence",
+        "chance": 100
+      }
+    },
+    {
+      "ability": [
+        {
+          "effects": [
+            {
+              "attributes": [ "Crit" ],
+              "effect": "debuff",
+              "level": 3,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "DEX" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "DEX" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Crit" ],
+              "effect": "debuff",
+              "level": 4,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "DEX" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "DEX" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Crit" ],
+              "effect": "debuff",
+              "level": 5,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "DEX" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "DEX" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Crit" ],
+              "effect": "debuff",
+              "level": 6,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "DEX" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "DEX" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "Crit" ],
+              "effect": "debuff",
+              "level": 7,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "DEX" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "effect": "buff",
+              "level": 5,
+              "targeting": { "targets": [ "DEX" ] }
+            }
+          ]
+        }
+      ],
+      "id": 3206,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 11,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 12,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.1,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 13,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.2,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 14,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.3,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 2,
+              "duration": 15,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.4,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 2,
+              "duration": 16,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.5,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 2,
+              "duration": 17,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.6,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 3,
+              "duration": 18,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.7,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 3,
+              "duration": 19,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2.8,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 4,
+              "duration": 20,
+              "effect": "buff",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+            },
+            {
+              "amount": 3,
+              "effect": "damage",
+              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 174,
+        "rumbleType": "ATK",
+        "spd": 189
+      },
+      "target": {
+        "criteria": "near"
+      },
+      "resilience": {
+        "attribute": "Paralysis",
+        "chance": 100
+      }
+    },
+    {
+      "ability": [
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 5,
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        }
+      ],
+      "id": 3207,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "heal",
+          "area": "Medium",
+          "level": 2
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "heal",
+          "area": "Small",
+          "level": 2
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.1,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 1,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.2,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 2,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.3,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 2,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.4,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 3,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.5,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 3,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.6,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 3,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.7,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 4,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 1.8,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        },
+        {
+          "cooldown": 36,
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "level": 4,
+              "duration": 10,
+              "effect": "buff",
+              "targeting": { "targets": [ "crew" ] }
+            },
+            {
+              "amount": 2,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 280,
+        "rumbleType": "ATK",
+        "spd": 113
+      },
+      "target": {
+        "criteria": "near"
+      },
+      "resilience": {
+        "amount": 250,
+        "interval": 5
+      }
+    },
+    {
       "basedOn": 2999,
       "id": 5259
     },

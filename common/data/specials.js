@@ -10665,6 +10665,17 @@ window.specials = {
     3192: {
         affinity: function(p) { return 1.75; }
     },
+    3194: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+        type: "class"
+    },
+    3195: {
+        delay: function(p) { return 1; },
+    },
+    3196: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type"
+    },
     3197: {
         atk: function(p) { return window.specials[3197].multiplier; },
         type: "type",
@@ -10675,6 +10686,35 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[3197].multiplier = 1;
         },
+    },
+    3198:{
+        affinity: function(p) { return window.specials[3198].turnedOn ? 1.75 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[3198].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK");
+        },
+    },
+    3199:{
+        orb: function(p) { return window.specials[3199].turnedOn ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[3199].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "INT");
+        },
+    },
+    3201:{
+        affinity: function(p) { return 1.5; },
+    },
+    3202: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
+        type: "class"
+    },
+    3206: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        type: "class"
+    },
+    3207: {
+        atk: function(p) { return 2; },
+        type: "type",
     },
     3333: {
         atk: function(p) { return 1.75; },

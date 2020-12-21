@@ -1004,6 +1004,18 @@ window.drops = {
             '12': [  ],
             '13': [  ],
         },
+
+        {
+            name: 'Reverie',
+            dropID: 'story43',
+            shortName: 'Reverie 1',
+            thumb: 3195,
+            //global: true,
+            nakama: null,
+            //completion: '10x Rainbow Gems',
+            gamewith: null,
+            '01': [ 3193, 3194, 3195, 3196 ],
+        },
     ],
 
 
@@ -5923,6 +5935,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3153 ],
+        },
+
+        {
+            name: 'Christmas Capone',
+            dropID: 'bond16',
+            thumb: 3207,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3207 ],
         },
 
     ],
