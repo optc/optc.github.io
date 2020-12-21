@@ -148,10 +148,10 @@ directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
         }
     };
 };
-    
+
 directives.addSailorOptions = function($timeout, $compile, MATCHER_IDS) {
     //TO DO ONCE WE FIND OUT WHAT SAILOR ABILITIES DO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
+
     var TARGET = MATCHER_IDS['sailor.ClassBoostingSailors'];
     return {
         restrict: 'A',
@@ -247,7 +247,7 @@ directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
         }
     };
 };
-    
+
 directives.addDebuffOptions = function($timeout, $compile, MATCHER_IDS) {
     var TARGET = MATCHER_IDS['special.DebuffReducingSpecials'];
     return {
@@ -331,13 +331,13 @@ directives.compare = function() {
                     templates: {
                         suggestion: function(id) {
                             if (Number.isInteger(id)){
-                                
+
                                 var name = units[id].name, url = Utils.getThumbnailUrl(id+1);
                                 //var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
                                 if (name.length > 63) name = name.slice(0,60) + '...';
                                 var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
                                 //var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
-                                
+
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
                             else{
@@ -352,7 +352,7 @@ directives.compare = function() {
                     }
                 }
             );
-            
+
             target.bind('typeahead:select',function(e,suggestion) {
                 $(e.currentTarget).prop('disabled', true);
                 scope.compare = window.units[suggestion];
@@ -417,9 +417,9 @@ directives.addNames = function($stateParams, $rootScope) {
                 }
                 }
     }
-};    
-    
-    
+};
+
+
 directives.addTags = function($stateParams, $rootScope) {
     return {
         restrict: 'E',
@@ -582,6 +582,181 @@ directives.costSlider = function($timeout) {
         }
     };
 };
+
+
+filters.targetToString = function() {
+    return function(input) {
+        if (!input) return 'N/A';
+        if (input.criteria == "near") {
+          return `Nearby Enemies.`;
+        }
+        else {
+          return `Enemies with the ${input.comparator} ${input.criteria}.`;
+        }
+    };
+};
+
+filters.patternToString = function() {
+    return function(input) {
+        if (!input) return 'N/A';
+        if (input.action == "attack") {
+          let htmlWrapper = "";
+          switch (input.type) {
+            case "Normal":
+            return `${input.type} Attack`;
+            case "Power":
+              return `<b><i>${input.type} Attack</i></b>`;
+            case "Full":
+              return `<b>${input.type} Attack</b>`;
+          }
+        }
+        else if  (input.action == "heal") {
+          return `<i>Level ${input.level} ${input.area == "Self" ? input.area : input.area + " Range"} Heal</i>`;
+        }
+        else {
+          return "UNKNOWN";
+        }
+    };
+};
+
+filters.resilienceToString = function() {
+  return function(input) {
+      if (!input) return 'N/A';
+      if (input.amount) {
+        return `${conditionToString(input.condition)}Heals ${input.amount} HP every ${input.interval} seconds.`
+      }
+      return `${input.chance}% to resist ${input.attribute}.`;
+    }
+};
+
+filters.specialToString = function() {
+  return function(input) {
+      if (!input) return 'N/A';
+      return filters.abilityToString()(input);
+    }
+};
+
+filters.abilityToString = function() {
+    return function(input) {
+        if (!input) return 'N/A';
+        let retVal = `<ul style="margin-bottom:3px;">`;
+        for (var effect of input){
+          let e = `<li>${conditionToString(effect.condition)}`;
+          switch (effect.effect) {
+            case "buff":
+              e += `Applies Lv.${effect.level} ${arrayToString(effect.attributes)} buff`;
+              break;
+            case "debuff":
+              e += `Inflicts Lv.${effect.level} ${arrayToString(effect.attributes)} debuff`;
+              break;
+            case "damage":
+              switch (effect.type){
+                case "time":
+                  e += `Deals Lv.${effect.level} Damage Over Time`;
+                  break;
+                case "atk":
+                  e += `Deals ${new Intl.NumberFormat().format(effect.amount)}x ATK in damage`;
+                  break;
+                case "fixed":
+                  e += `Deals ${new Intl.NumberFormat().format(effect.amount)} fixed damage`;
+                  break;
+                case "cut":
+                  e += `${new Intl.NumberFormat().format(effect.amount)}% health cut`;
+                  break;
+                default:
+                  e += "TODO:  " + JSON.stringify(effect);
+              }
+              break;
+            case "recharge":
+              switch (effect.type){
+                case "RCV":
+                  e += `Restores ${new Intl.NumberFormat().format(effect.amount)}x RCV of HP`;
+                  break;
+                case "percentage":
+                  e += `Restores ${new Intl.NumberFormat().format(effect.amount)}% of HP`;
+                  break;
+                case "fixed":
+                  e += `Restores ${new Intl.NumberFormat().format(effect.amount)} fixed HP`;
+                  break;
+                case "Special CT":
+                  e += `Reduces ${new Intl.NumberFormat().format(effect.amount)}% of ${effect.type}`;
+                  break;
+                default:
+                  e += "TODO:  " + JSON.stringify(effect);
+              }
+              break;
+            case "hinderance":
+              e += `${effect.chance}% chance to ${arrayToString(effect.attributes)}`;
+              break;
+            case "boon":
+              e += `${effect.chance ? effect.chance+ "% chance to " : ""}${"Provoke" == arrayToString(effect.attributes) ? "Provoke enemies" : "reduce " + arrayToString(effect.attributes)}`;
+              break;
+            case "penalty":
+              let tmpStr = arrayToString(effect.attributes);
+              if(tmpStr == "HP" && effect.amount)
+                e += `${new Intl.NumberFormat().format(effect.amount)}% health cut`;
+              else
+                e += `${effect.chance}% chance to ${arrayToString(effect.attributes)}`;
+              break;
+            default:
+              e = "UNKNOWN EFFECT " + JSON.stringify(effect)
+              break;
+          }
+          retVal += e + `${targetToString(effect.targeting)}${rangeToString(effect.range)}${effect.duration ? " for " + effect.duration + " seconds" : ""}.</li>`;
+        }
+        return retVal+"</ul>";
+    };
+};
+
+function arrayToString(array) {
+  let tmpStr = new Intl.ListFormat().format(array);
+  return tmpStr;
+}
+
+function conditionToString(condition, suffix) {
+  if (!condition) return '';
+
+  switch (condition.type){
+    case "stat":
+      return `When ${condition.stat} is ${condition.comparator} ${condition.count}%, `
+    case "time":
+      switch (condition.comparator){
+        case "first":
+          return `For the first ${condition.count} seconds, `
+        case "after":
+          return `After the first ${condition.count} seconds, `
+        case "remaining":
+          return `When there are ${condition.count} seconds or less remaining, `
+        default:
+          return `UNKNOWN TIME CONDITION ${JSON.stringify(condition)}`;
+      }
+    case "crew":
+    case "enemies":
+      return `When there are ${condition.count} or ${condition.comparator} ${condition.type} remaining, `
+    case "trigger":
+      return `The first ${condition.count} times this character lands a ${condition.stat}, `
+    default:
+      return `UNKNOWN CONDITION ${JSON.stringify(condition)}`;
+  }
+}
+
+function rangeToString(range) {
+  if (!range) return '';
+  return ` in a ${range.size}, ${range.direction} range`;
+}
+
+function targetToString(target) {
+  if (!target) return '';
+  let targetStr = arrayToString(target.targets);
+  if (targetStr == "crew") targetStr = "crew member(s)";
+  if (targetStr == "enemies") {
+    if (!target.count)
+      targetStr = "all enemies";
+    else if (target.count == 1)
+      targetStr = "enemy";
+  }
+  return ` to ${target.count ? target.count + " " : ""}${targetStr}${target.stat ? " with the " + target.priority + " " + target.stat : ""}`;
+}
 
 /******************
  * Initialization *

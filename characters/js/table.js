@@ -72,7 +72,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         var id = parseInt(data[0],10), unit = window.units[id - 1];
         var flags = window.flags[unit.number + 1] || { };
         var farmableSocket = CharUtils.hasFarmableSocket(unit.number);
-        
+
         /* * * * * Query filters * * * * */
         // filter by matchers
         for (var matcher in tableData.parameters.matchers) {
@@ -134,7 +134,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                         if (unit.class[1].length != 2) { if(filters.classes[0] == unit.class[1]) temp2 = true;}
                         if (unit.class[2].length != 2) { if(filters.classes[0] == unit.class[2]) temp3 = true;}
                         if (!(temp1 || temp2 || temp3)) return false;
-                        
+
                     }
                     if(!singleQuery){
                         if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
@@ -169,7 +169,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     if (!farmable) return false;
                 }
             } else if (filters.drop != 'Farmable') {
-                if (id != 1 && isFarmable) return false; 
+                if (id != 1 && isFarmable) return false;
                 if (filters.nonFarmable) {
                     // RR
                     if (filters.nonFarmable.rro && !flags.rro) return false;
@@ -260,7 +260,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
-            else { 
+            else {
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
@@ -271,7 +271,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Slasher", "Striker", "Driven", "Cerebral", "Powerhouse" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
-            else { 
+            else {
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
@@ -282,7 +282,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
-            else { 
+            else {
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
@@ -293,7 +293,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Slasher", "Cerebral", "Free Spirit" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
-            else { 
+            else {
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
@@ -304,7 +304,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             var Katacount = 0; var Katacount1 = 0; var Katacount2 = 0; var Katacount3 = 0;
             var Kataclass = [ "Fighter", "Slasher", "Striker", "Shooter", "Cerebral" ];
             if (!Array.isArray(unit.class[0])){ for(var i = 0; i < Kataclass.length; i++) if(unit.class.indexOf(Kataclass[i]) != -1) Katacount++; }
-            else { 
+            else {
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[0].indexOf(Kataclass[i]) != -1) { Katacount1++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[1].indexOf(Kataclass[i]) != -1) { Katacount2++; }
                 for(var i = 0; i < Kataclass.length; i++) if(unit.class[2]) if(unit.class[2].indexOf(Kataclass[i]) != -1) { Katacount3++; }
@@ -351,7 +351,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             }
             if (mismatch) return false;
         }
-        // filter by class-filters  
+        // filter by class-filters
         if ($rootScope.filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && filters.classCaptain &&
                 !CharUtils.isClassBooster('captain', id, filters.classCaptain)) return false;
         if ($rootScope.filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && filters.classSpecial &&
@@ -388,7 +388,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             ('000' + (x.number+1)).slice(-padding),
             x.name,
             x.type,
-            
+
         x.class.constructor == Array ? x.class.join(', ') : x.class,
             x.maxHP,
             x.maxATK,
@@ -416,21 +416,21 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             else if (c == 'Limit Break: Expansion ATK') temp = x.limitexATK;
             else if (c == 'Limit Break: Expansion RCV') temp = x.limitexRCV;
             else if (c == 'Limit Break Slots') temp = x.limitSlot;
-            else if (c == 'Minimum cooldown' || c == 'Initial cooldown') { 
+            else if (c == 'Minimum cooldown' || c == 'Initial cooldown') {
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
                 else if (c == 'Minimum cooldown' && d.constructor == Array) temp = d[1];
                 else if (c == 'Initial cooldown') temp = (d.constructor == Array ? d[0] : d);
                 else temp = 'Unknown';
             }
-            else if (c == 'Minimum Limit Break cooldown' || c == 'Initial Limit Break cooldown') { 
+            else if (c == 'Minimum Limit Break cooldown' || c == 'Initial Limit Break cooldown') {
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
                 else if (c == 'Minimum Limit Break cooldown' && d.constructor == Array) temp = (d[1] - x.limitCD);
                 else if (c == 'Initial Limit Break cooldown') temp = (d.constructor == Array ? (d[0] - x.limitCD) : (d - x.limitCD));
                 else temp = 'Unknown';
             }
-            else if (c == 'Minimum Limit Break Expansion cooldown' || c == 'Initial Limit Break Expansion cooldown') { 
+            else if (c == 'Minimum Limit Break Expansion cooldown' || c == 'Initial Limit Break Expansion cooldown') {
                 var d = cooldowns[x.number];
                 if (!d) temp = 'N/A';
                 else if (c == 'Minimum Limit Break Expansion cooldown' && d.constructor == Array) temp = (d[1] - x.limitexCD);
@@ -456,6 +456,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
     $rootScope.table = tableData;
 
     $rootScope.characterLog = characterLog;
+    $rootScope.rumbleBeta = true;
     $rootScope.showLogFilters = log.length > 0;
 
     $timeout(function() {
@@ -477,7 +478,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         },true);
     });
 
-    $rootScope.$on('table.refresh',function() { 
+    $rootScope.$on('table.refresh',function() {
         fused = null;
         /*var types = {
         'STR' : '<span class="cell-STR">STR</span>',
@@ -503,6 +504,10 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         $storage.set('characterLog', temp);
         $rootScope.showLogFilters = temp.length > 0;
     };
+
+    $rootScope.toggleRumbleBeta = function() {
+        $rootScope.rumbleBeta = !$rootScope.rumbleBeta;
+    }
 
 });
 
