@@ -10643,10 +10643,11 @@ window.specials = {
         atk: function(p) { return window.specials[3176].multiplier; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3176].multiplier == 2.5 ? 1 : window.specials[3176].multiplier == 2.75 ? 2 : 0);
-            window.specials[3176].multiplier = [2, 2.5, 3][n];
+            var levels = [2, 2.5, 3];
+            var n = (levels.indexOf(window.specials[3176].multiplier) + 1) % levels.length;
+            window.specials[3176].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + [2, 2.5, 3][n] + 'x ATK boost. To switch to the ' + [2.5, 3, 2]][n] + ' ATK boost, disable and re-enable this special',
+                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
                 name: '3176warning'
             });
         },
@@ -10655,10 +10656,11 @@ window.specials = {
         atk: function(p) { return window.specials[3177].multiplier; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3177].multiplier == 2.5 ? 1 : window.specials[3177].multiplier == 2.75 ? 2 : 0);
-            window.specials[3177].multiplier = [2, 2.5, 3][n];
+            var levels = [2, 2.5, 3];
+            var n = (levels.indexOf(window.specials[3177].multiplier) + 1) % levels.length;
+            window.specials[3177].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + [2, 2.5, 3][n] + 'x ATK boost. To switch to the ' + [2.5, 3, 2]][n] + ' ATK boost, disable and re-enable this special',
+                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
                 name: '3177warning'
             });
         },
@@ -10696,7 +10698,7 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     3188: {
-        atk: function(p) { return window.specials[3188].multiplier2 : 1; },
+        atk: function(p) { return window.specials[3188].multiplier2; },
         type: "type",
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3188].multiplier1, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
