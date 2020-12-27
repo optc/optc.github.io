@@ -3836,6 +3836,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash!! Luffytaro',
+            dropID: 'clash67',
+            thumb: 3209,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3209 ],
+        },
+
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
@@ -6012,6 +6021,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3142 ],
+        },
+
+        {
+            name: 'Round Eight',
+            dropID: 'piratefestival8',
+            thumb: 3208,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3208 ],
         },
 
     ],
