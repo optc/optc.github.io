@@ -3208,7 +3208,7 @@ window.units = [
     [ "Bege & Pez, Enjoying the Evening With My Son", "DEX", [ "Driven", "Shooter" ], 5, 50, 5, 4, 99, 5000000, 1241, 627, 83, 3012, 1424, 295, 1 ],
     [ "Hawkins, Plan-Thwarting Headliner", "STR", [ "Slasher", "Cerebral" ], 5, 50, 4, 5, 99, 5000000, 1107, 565, 90, null, null, null, null ],
     [ "Luffytaro, Facing Death", "PSY", [ "Free Spirit", "Fighter" ], 5, 50, 4, 3, 99, 5000000, 1378, 673, 79, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "X Drake, Allosaurus Power", "STR", [ "Powerhouse", "Striker" ], 5, 40, 5, 4, 99, 4000000, 1430, 659, 85, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

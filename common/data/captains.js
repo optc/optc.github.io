@@ -11242,6 +11242,24 @@ window.captains = {
         atk: function(p) { return p.unit.type == "DEX" ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "DEX" ? 1.25 : 1; },
     },
+    3208: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "STR") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.5 : 2.5 : 1; },
+    },
+    3209: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.25 : 3;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return 1.25; },
+    },
+    3210: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 3.6, [ "STR" ]); },
+        hitAtk: function(p) {
+            var addit =  p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 1.2 : 1;
+            return p.unit.type == "STR" ? 3 * addit : 2.75 * addit;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

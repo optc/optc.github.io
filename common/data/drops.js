@@ -5290,12 +5290,21 @@ window.drops = {
         },
         
         {
-            name: 'Kamazo',
+            name: 'Franosuke',
             thumb: 3189,
             showManual: true,
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3189, -3189 ],
+        },
+        
+        {
+            name: 'X Drake',
+            thumb: 3210,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3210, -3210 ],
         },
 
     ],

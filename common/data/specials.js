@@ -10789,6 +10789,33 @@ window.specials = {
         atk: function(p) { return 2; },
         type: "type",
     },
+    3209: {
+        atk: function(p) { return window.specials[3209].multiplier == 0 ? 1.75 : 1; },
+        orb: function(p) { return window.specials[3209].turnedOn == 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.specials[3209].multiplier) + 1) % levels.length;
+            window.specials[3209].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK", "ORB"][levels[n]] + ' boost. To switch to the ' + ["ATK", "ORB"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: '3209warning'
+            });
+        },
+    },
+    3210: {
+        chainAddition: function(p) { return window.specials[3210].multiplier1; },
+        chain: function(p) { return window.specials[3210].multiplier2; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[3210].multiplier2 != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3210].multiplier2 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[3210].multiplier1 = p.colorCount.PSY >= 3 ? 0.75 : 0;
+            window.specials[3210].multiplier2 = (p.colorCount.QCK + p.colorCount.DEX + p.colorCount.INT) >= 3 ? 3 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
