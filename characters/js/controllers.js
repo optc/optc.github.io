@@ -6,6 +6,23 @@
 
 var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
 
+function denormalizeEffects(ability) {
+  let lastEffect = [];
+  let mergedEffect = [];
+  ability.forEach((ability, abilityIdx) => {
+    mergedEffect = [...lastEffect];
+    ability.effects.forEach((effect, effectIdx) => {
+      if(effect.effect) {
+        lastEffect[effectIdx] = effect;
+        mergedEffect[effectIdx] = effect;
+      } else if (effect.override){
+        mergedEffect[effectIdx] = {...lastEffect[effectIdx], ...effect.override};
+      }
+    });
+    ability.effects = mergedEffect;
+  });
+}
+
 /***************
  * Controllers *
  ***************/
@@ -18,7 +35,6 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
     //Change Default Chart Colors
     Chart.defaults.global.colours = ["#0e91d3", "#F7464A", "#4D5360", "#97BBCD", "#F7464A", "#4D5360", "#4D5360"];
     colors = colors.splice(2,0,colors.splice(1,1)[0]);
-    
 
     if (!$rootScope.hasOwnProperty('nightMode')) {
         $rootScope.nightMode = $storage.get('chars.night', false);
@@ -34,7 +50,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
     });
 
     $controller('DismissalCtrl');
-    
+
     $scope.getRandChar = function(){
         var range = parseInt($rootScope.table.data.length) + 1;
         return $rootScope.table.data[Math.floor(Math.random() * range)][0];
@@ -123,7 +139,16 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
 
 });
 
-app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage) {
+app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, $timeout, $storage, $http) {
+
+    var rumbleRequest = {
+      method: 'get',
+      url: '../common/data/rumble.json',
+      dataType: 'json',
+      contentType: "application/json"
+    };
+
+    $scope.rumble = {};
 
     // data
     var id = parseInt($stateParams.id, 10);
@@ -135,6 +160,19 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.cooldown = window.cooldowns[id - 1];
     $scope.evolution = window.evolutions[id];
     $scope.family = window.families[id - 1];
+    $http(rumbleRequest)
+        .success(function (jsonData) {
+            $scope.rumble = jsonData.units.filter(unit => unit.id == id)[0];
+            if ( $scope.rumble.basedOn ) {
+              $scope.rumble = jsonData.units.filter(unit => unit.id == $scope.rumble.basedOn)[0];
+            }
+            // normalize the data here:
+            denormalizeEffects($scope.rumble.ability);
+            denormalizeEffects($scope.rumble.special);
+        })
+        .error(function (out) {
+          console.log( "Failure in loading or parsing json" + out);
+        });
     $scope.customLevel = { };
     $scope.isArray = Array.isArray;
 
@@ -150,8 +188,8 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.tandems = CharUtils.searchTandems(id);
     $scope.manuals = CharUtils.searchDropLocations(-id);
     $scope.sameSpecials = CharUtils.searchSameSpecials(id);
-    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true, families: true }; 
-    
+    $scope.collapsed = { to: true, from: true, used: true, drops: true, manuals: true, families: true };
+
     if (Array.isArray($scope.family)){
         var tempName = "";
         $scope.family.forEach(function(name){
@@ -312,7 +350,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.isfestResistanceHybrid = ($scope.details && $scope.details.festResistance && ($scope.details.festResistance.character1));
     $scope.isVSConditionHybrid = ($scope.details && $scope.details.VSCondition && ($scope.details.VSCondition.character1));
     $scope.isVSSpecialHybrid = ($scope.details && $scope.details.VSSpecial && ($scope.details.VSSpecial.character1));
-    
+
     $scope.$watch('customLevel.level',function(level) {
         if (isNaN(level) || level < 1 || level > $scope.unit.maxLevel) {
             $scope.customLevel.enabled = false;
@@ -344,10 +382,10 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             multiTooltipTemplate: '<%= Math.round(value * { HP: 4000, ATK: 1500, RCV: 550 }[label] / 100) %>'
         }
     };
-    
+
     if($scope.unit.maxLevel<6)
         $scope.showLine = false;
-    
+
     // radars for Line Graph
     if ($scope.unit.incomplete) return;
     if ($scope.unit.maxLevel>6){
@@ -422,7 +460,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             ]
         };
     }
-    
+
     $scope.$watch('compare',function(compare) {
         //Delete old Comparison data
         $scope.radar.data = $scope.radar.data.slice(0,1);
@@ -438,7 +476,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
                 $scope.compare.maxATK / 1500 * 100,
                 Math.max(0, $scope.compare.maxRCV / 550 * 100)
             ]);
-            
+
             $scope.radarHP.series.push($scope.compare.name+' HP');
             $scope.radarHP.data.push(
                 [CharUtils.getStatOfUnit($scope.compare, 'hp', 1),

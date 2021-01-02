@@ -36,6 +36,9 @@ window.altspecials = {
     3122: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
     },
+    3175: {
+        atkbase: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },
@@ -369,5 +372,29 @@ window.altspecials = {
     },
     5186: {
         chainAddition: function(p) { return 0.3; },
+    },
+    5283: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5284: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5285: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5286: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5287: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5288: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5289: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    5290: {
+        chainMultiplication: function(p) { return 1.25; },
     },
 };

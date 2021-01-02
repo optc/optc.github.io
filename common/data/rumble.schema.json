@@ -1,0 +1,615 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/PirateRumbleData",
+    "definitions": {
+        "PirateRumbleData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "units": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/Unit" },
+                            { "$ref": "#/definitions/Reference" }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "units"
+            ],
+            "title": "PirateRumbleData"
+        },
+        "Reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "basedOn": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "id",
+                "basedOn"
+            ],
+            "title": "Reference"
+        },
+        "Unit": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ability": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ability"
+                    },
+                    "minItems": 5,
+                    "maxItems": 5
+                },
+                "global": {
+                  "$ref": "#/definitions/Unit"
+                },
+                "id": {
+                    "type": "number"
+                },
+                "japan": {
+                  "$ref": "#/definitions/Unit"
+                },
+                "pattern": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Pattern"
+                    },
+                    "minItems": 1
+                },
+                "special": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Special"
+                    },
+                    "minItems": 10,
+                    "maxItems": 10
+                },
+                "stats": {
+                    "$ref": "#/definitions/Stats"
+                },
+                "target": {
+                    "$ref": "#/definitions/TargetClass"
+                },
+                "resilience": {
+                    "oneOf": [
+                        { "$ref": "#/definitions/DebuffResilience" },
+                        { "$ref": "#/definitions/HealingResilience" }
+                    ]
+                }
+            },
+            "required": [
+                "ability",
+                "id",
+                "pattern",
+                "special",
+                "stats",
+                "target"
+            ],
+            "title": "Unit"
+        },
+        "Ability": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/Effect" },
+                            { "$ref": "#/definitions/EffectOverride" }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "effects"
+            ],
+            "title": "Ability"
+        },
+        "Condition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "comparator": {
+                    "$ref": "#/definitions/ConditionComparator"
+                },
+                "stat": {
+                    "$ref": "#/definitions/Attribute"
+                },
+                "type": {
+                    "$ref": "#/definitions/ConditionType"
+                },
+                "count": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "Condition"
+        },
+        "Pattern": {
+            "oneOf": [
+                { "$ref": "#/definitions/AttackPattern" },
+                { "$ref": "#/definitions/HealPattern" }
+            ],
+            "title": "Pattern"
+        },
+        "HealPattern": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "action": {
+                    "$ref": "#/definitions/Action"
+                },
+                "area": {
+                    "$ref": "#/definitions/Area"
+                },
+                "level": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "action",
+                "area",
+                "level"
+            ],
+            "title": "HealPattern"
+        },
+        "AttackPattern": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "action": {
+                    "$ref": "#/definitions/Action"
+                },
+                "type": {
+                    "$ref": "#/definitions/PatternType"
+                }
+            },
+            "required": [
+                "action",
+                "type"
+            ],
+            "title": "AttackPattern"
+        },
+        "DebuffResilience": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "attribute": {
+                    "$ref": "#/definitions/Attribute"
+                },
+                "chance": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "attribute",
+                "chance"
+            ],
+            "title": "DebuffResilience"
+        },
+        "HealingResilience": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "condition": {
+                    "$ref": "#/definitions/Condition"
+                },
+                "amount": {
+                    "type": "integer"
+                },
+                "interval": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "amount",
+                "interval"
+            ],
+            "title": "HealingResilience"
+        },
+        "Special": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "cooldown": {
+                    "type": "integer"
+                },
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/Effect" },
+                            { "$ref": "#/definitions/EffectOverride" }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "cooldown",
+                "effects"
+            ],
+            "title": "Special"
+        },
+        "Effect": {
+            "type": "object",
+            "additionalProperties": {
+                "anyOf": [
+                    { "$ref": "#/definitions/AttackEffectType" },
+                    { "$ref": "#/definitions/RechargeEffectType" }
+                ]
+            },
+            "properties": {
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Attribute"
+                    }
+                },
+                "chance": {
+                    "type": "integer"
+                },
+                "duration": {
+                    "type": "integer"
+                },
+                "effect": {
+                    "$ref": "#/definitions/EffectEnum"
+                },
+                "targeting": {
+                    "$ref": "#/definitions/Targeting"
+                },
+                "amount": {
+                    "type": "number"
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "range": {
+                    "$ref": "#/definitions/Range"
+                },
+                "condition": {
+                    "$ref": "#/definitions/Condition"
+                }
+            },
+            "allOf": [
+                {
+                    "if": {
+                        "properties": { "effect": { "const": "damage" } }
+                    },
+                    "then": {
+                        "properties": {
+                            "type": {
+                                "$ref": "#/definitions/AttackEffectType"
+                            }
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": { "effect": { "const": "recharge" } }
+                    },
+                    "then": {
+                        "properties": {
+                            "type": {
+                                "$ref": "#/definitions/RechargeEffectType"
+                            }
+                        }
+                    }
+                }
+            ],
+            "required": [
+                "effect",
+                "targeting"
+            ],
+            "title": "Effect"
+        },
+        "EffectOverride": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "override" : {
+                    "properties": {
+                        "attributes": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Attribute"
+                            }
+                        },
+                        "chance": {
+                            "type": "integer"
+                        },
+                        "duration": {
+                            "type": "integer"
+                        },
+                        "targeting": {
+                            "$ref": "#/definitions/Targeting"
+                        },
+                        "amount": {
+                            "type": "number"
+                        },
+                        "level": {
+                            "type": "integer"
+                        },
+                        "range": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "condition": {
+                            "$ref": "#/definitions/Condition"
+                        }
+                    }
+                }
+            },
+            "title": "EffectOverride"
+        },
+        "Range": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "direction": {
+                    "$ref": "#/definitions/Direction"
+                },
+                "size": {
+                    "$ref": "#/definitions/Size"
+                }
+            },
+            "required": [
+                "direction",
+                "size"
+            ],
+            "title": "Range"
+        },
+        "Targeting": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "priority": {
+                    "$ref": "#/definitions/TargetingPriority"
+                },
+                "stat": {
+                    "$ref": "#/definitions/Attribute"
+                },
+                "targets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TargetElement"
+                    }
+                }
+            },
+            "required": [
+                "targets"
+            ],
+            "title": "Targeting"
+        },
+        "TargetClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "comparator": {
+                    "$ref": "#/definitions/TargetingPriority"
+                },
+                "criteria": {
+                    "$ref": "#/definitions/Attribute"
+                }
+            },
+            "required": [
+                "criteria"
+            ],
+            "title": "TargetClass"
+        },
+        "Attribute": {
+            "type": "string",
+            "enum": [
+                "SPD",
+                "ATK",
+                "DEF",
+                "HP",
+                "RCV",
+                "Critical Hit",
+                "Guard",
+                "Accuracy",
+                "Blow Away",
+                "Special CT",
+                "Silence",
+                "Provoke",
+                "Paralysis",
+                "Damage Over Time",
+                "Action Bind",
+                "near"
+            ],
+            "title": "Attribute"
+        },
+        "ConditionComparator": {
+            "type": "string",
+            "enum": [
+                "above",
+                "below",
+                "remaining",
+                "first",
+                "after",
+                "more",
+                "less"
+            ],
+            "title": "ConditionComparator"
+        },
+        "ConditionType": {
+            "type": "string",
+            "enum": [
+                "stat",
+                "time",
+                "crew",
+                "enemies",
+                "trigger"
+            ],
+            "title": "ConditionType"
+        },
+        "EffectEnum": {
+            "type": "string",
+            "enum": [
+                "buff",
+                "debuff",
+                "hinderance",
+                "damage",
+                "recharge",
+                "boon",
+                "penalty"
+            ],
+            "title": "EffectEnum"
+        },
+        "TargetElement": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "title": "Targets",
+                    "enum": [
+                        "self",
+                        "crew",
+                        "enemies"
+                    ]
+                },
+                {
+                    "type": "string",
+                    "title": "Classes",
+                    "enum": [
+                        "Fighter",
+                        "Slasher",
+                        "Shooter",
+                        "Striker",
+                        "Driven",
+                        "Free Spirit",
+                        "Cerebral",
+                        "Powerhouse"
+                    ]
+                },
+                {
+                    "type": "string",
+                    "title": "Colors",
+                    "enum": [
+                        "[STR]",
+                        "[DEX]",
+                        "[QCK]",
+                        "[PSY]",
+                        "[INT]"
+                    ]
+                }
+            ],
+            "title": "TargetElement"
+        },
+        "Action": {
+            "type": "string",
+            "enum": [
+                "attack",
+                "heal"
+            ],
+            "title": "Action"
+        },
+        "Area": {
+            "type": "string",
+            "enum": [
+                "Self",
+                "Small",
+                "Large",
+                "Medium"
+            ],
+            "title": "Area"
+        },
+        "PatternType": {
+            "type": "string",
+            "enum": [
+                "Normal",
+                "Power",
+                "Full"
+            ],
+            "title": "PatternType"
+        },
+        "Direction": {
+            "type": "string",
+            "enum": [
+                "forward",
+                "radial",
+                "sideways"
+            ],
+            "title": "Direction"
+        },
+        "Size": {
+            "type": "string",
+            "enum": [
+                "large",
+                "small",
+                "medium"
+            ],
+            "title": "Size"
+        },
+        "TargetingPriority": {
+            "type": "string",
+            "enum": [
+                "highest",
+                "lowest"
+            ],
+            "title": "TargetingPriority"
+        },
+        "RechargeEffectType": {
+            "type": "string",
+            "enum": [
+                "fixed",
+                "percentage",
+                "Special CT",
+                "RCV"
+            ],
+            "title": "RechargeEffectType"
+        },
+        "AttackEffectType": {
+            "type": "string",
+            "enum": [
+                "fixed",
+                "cut",
+                "atk",
+                "time"
+            ],
+            "title": "AttackEffectType"
+        },
+        "Stats": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "rumbleType": {
+                    "type": "string",
+                    "title": "Rumble Type",
+                    "enum": [
+                        "ATK",
+                        "DEF",
+                        "SPT",
+                        "DBF",
+                        "RCV"
+                    ]
+                },
+                "def": {
+                    "type": "integer"
+                },
+                "spd": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "rumbleType",
+                "def",
+                "spd"
+            ],
+            "title": "Stats"
+        }
+    }
+}

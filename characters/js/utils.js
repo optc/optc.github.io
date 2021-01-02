@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Rookie Mission': 4, 'Fortnight': 8, 'Raid': 16, 'Coliseum': 64, 'Treasure Map': 256, 'Ambush': 1024, 'Kizuna Clash': 4096 };
+var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Rookie Mission': 4, 'Fortnight': 8, 'Raid': 16, 'Coliseum': 64, 'Treasure Map': 256, 'Ambush': 1024, 'Kizuna Clash': 4096, 'Areana': 16384 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
@@ -18,6 +18,8 @@ var generateReverseDropMap = function() {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
                     if (drops[type][island].name == 'Coliseum')
                         flagUnit(data[i], 'Coliseum');
+                    else if (drops[type][island].name == 'Arena')
+                        flagUnit(data[i], 'Arena');
                     else
                         flagUnit(data[i], type);
                 }
@@ -112,6 +114,7 @@ CharUtils.searchDropLocations = function(id) {
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
                 else if (type == 'Coliseum') name += ' Coliseum';
+                else if (type == 'Arena') name += ' Arena';
                 else if (type == 'Treasure Map') name += ' Treasure Map';
                 else if (type == 'Kizuna Clash') name += ' Kizuna';
                 var data = { name: name, thumb: window.drops[type][island].thumb, data: temp };

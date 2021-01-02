@@ -7,7 +7,7 @@
             <div class="modal-content animated rollIn">
 
                 <div class="modal-header">
-                    <div class="btn btn-default back-button" ng-if="withButton" ng-click="onBackClick()"><i class="fas fa-arrow-left"></i></div>    
+                    <div class="btn btn-default back-button" ng-if="withButton" ng-click="onBackClick()"><i class="fas fa-arrow-left"></i></div>
                     {{unit.name}}
                 </div>
 
@@ -30,6 +30,10 @@
                         <label class="pull-right">
                             <input type="checkbox" ng-model="characterLog[id]" ng-change="checkLog()"></input>
                             In Character Log
+                        </label>
+                        <label class="pull-right">
+                            <input type="checkbox" ng-model="rumbleBeta" ng-change="toggleRumbleBeta()"></input>
+                            New Rumble Stats (Beta)
                         </label>
                     </h3>
 
@@ -475,7 +479,7 @@
                                         <span class="notes" ng-if="details.potentialNotes" ng-bind-html="details.potentialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                            </tbody>                     
+                            </tbody>
                         </table>
                     </div>
                     <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
@@ -505,13 +509,56 @@
                                         </div>
                                     </td>
                                 </tr>
-                            </tbody>                            
+                            </tbody>
                         </table>
                     </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && !isfestAbilityHybrid">
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability && !isfestAbilityHybrid && rumbleBeta">
                         <table class="table table-striped-column abilities">
                             <tbody>
-                                <tr ng-if="details.festAttackPattern">
+                                <tr ng-if="rumble.pattern">
+                                    <td>Pirate Rumble Attack Pattern</td>
+                                    <td>
+                                      <span ng-repeat="item in rumble.pattern track by $index"><span ng-bind-html="item | patternToString"></span>{{$index != rumble.pattern.length - 1 ? ' \u21e8 ' : ''}}</span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.target">
+                                    <td>Pirate Rumble Attack Target</td>
+                                    <td>
+                                      <span ng-bind-html="rumble.target | targetToString"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.resilience">
+                                    <td>Pirate Rumble Resistance</td>
+                                    <td>
+                                      <span ng-bind-html="rumble.resilience | resilienceToString| decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.ability">
+                                    <td>Pirate Rumble Ability</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in rumble.ability track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.special">
+                                    <td>Pirate Rumble Special</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in rumble.special track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} second cooldown] </strong>
+                                                  <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && !isfestAbilityHybrid && !rumbleBeta">
+                              <table class="table table-striped-column abilities">
+                                <tbody>
+                                  <tr ng-if="details.festAttackPattern">
                                     <td>Pirate Rumble Attack Pattern</td>
                                     <td>
                                         <span ng-repeat="item in details.festAttackPattern track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.length - 1 ? ' \u2192 ' : ''}}</span>
@@ -556,7 +603,7 @@
                                         <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                            </tbody>                            
+                            </tbody>
                         </table>
                     </div>
                     <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && isfestAbilityHybrid">
@@ -652,7 +699,7 @@
                                         <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                            </tbody>                            
+                            </tbody>
                         </table>
                     </div>
 
@@ -748,7 +795,7 @@
                             <tr ng-repeat="evolverSet in evolution.evolvers">
                                 <td>
                                     <evolution unit="unit" evolvers="evolverSet" evolution="evolution.evolution[$index]"
-                                        size="medium"></evolution> 
+                                        size="medium"></evolution>
                                 </td>
                             </tr>
                         </tbody>
@@ -921,24 +968,24 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <!-- Other Names -->
-                    
+
                     <h3 class="page-header">Other Names</h3>
-                    
+
                     <add-names></add-names>
 
                     <!-- Tags -->
 
                     <h3 class="page-header">Tags</h3>
-                    
+
                     <add-tags></add-tags>
 
                     <!-- Links -->
 
                     <br/>
                     <h3 class="page-header">Links</h3>
-                    
+
                     <add-links></add-links>
 
                     <!-- Data gathering -->

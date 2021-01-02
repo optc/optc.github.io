@@ -1003,6 +1003,18 @@ window.drops = {
             '12': [  ],
             '13': [  ],
         },
+
+        {
+            name: 'Reverie',
+            dropID: 'story43',
+            shortName: 'Reverie 1',
+            thumb: 3195,
+            //global: true,
+            nakama: null,
+            //completion: '10x Rainbow Gems',
+            gamewith: null,
+            '01': [ 3193, 3194, 3195, 3196 ],
+        },
     ],
 
 
@@ -3778,7 +3790,7 @@ window.drops = {
             nakama: 4288500,
             gamewith: 191379,
             'All Difficulties': [ 2885 ],
-            'Ambush': [ 9036 ]
+            //'Ambush': [ 9036 ]
         },
 
         {
@@ -3799,7 +3811,7 @@ window.drops = {
             nakama: 4292200,
             gamewith: 198796,
             'All Difficulties': [ 2922 ],
-            'Ambush': [ 9037 ]
+            //'Ambush': [ 9037 ]
         },
 
         {
@@ -3838,6 +3850,15 @@ window.drops = {
             nakama: 4314300,
             gamewith: 234898,
             'All Difficulties': [ 3143 ],
+        },
+
+        {
+            name: 'Clash!! Luffytaro',
+            dropID: 'clash67',
+            thumb: 3209,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3209 ],
         },
 
         {
@@ -5195,7 +5216,7 @@ window.drops = {
         },
 
         {
-            name: 'Komurasaki Oiran with the Kitsune Mask',
+            name: 'Oiran with the Kitsune Mask',
             thumb: 2869,
             showManual: true,
             global: true,
@@ -5207,7 +5228,7 @@ window.drops = {
         },
 
         {
-            name: 'Inuarashi',
+            name: 'Samurai, 20 Years Later',
             thumb: 2908,
             showManual: true,
             global: true,
@@ -5219,7 +5240,7 @@ window.drops = {
         },
 
         {
-            name: 'Kizaru',
+            name: 'Unclear Justice',
             thumb: 2953,
             showManual: true,
             global: true,
@@ -5231,7 +5252,7 @@ window.drops = {
         },
 
         {
-            name: 'King',
+            name: 'King the Wildfire',
             thumb: 2990,
             showManual: true,
             global: true,
@@ -5293,6 +5314,38 @@ window.drops = {
             gamewith: null,
             slefty: 'coliseums',
             'All Difficulties': [ 3371, 3373 ],
+        },
+
+    ],
+
+
+    'Arena': [
+        
+        {
+            name: 'Kamazo',
+            thumb: 3145,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3145, -3145 ],
+        },
+        
+        {
+            name: 'Franosuke',
+            thumb: 3189,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3189, -3189 ],
+        },
+        
+        {
+            name: 'X Drake',
+            thumb: 3210,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3210, -3210 ],
         },
 
     ],
@@ -5627,7 +5680,7 @@ window.drops = {
             global: true,
             nakama: 8297700,
             gamewith: 203463,
-            'Raging Sea': [ 2977 ]
+            'Sea of Celebration': [ 2977 ]
         },
 
         {
@@ -5683,6 +5736,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Raging Sea': [ 3150 ]
+        },
+
+        {
+            name: 'Garp',
+            dropID: 'treasuremap40',
+            thumb: 3197,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3197 ]
         },
 
     ],
@@ -5765,6 +5827,36 @@ window.drops = {
             gamewith: 136823,
             condition: 'Has a chance of appearing at the end of ANY Raid boss. You MUST use the same team that you just used to complete the Raid boss to fight Charlotte Linlin.',
             'All Difficulties': [ 2380, 9010, 9011, 9012, 9013, 9014 ]
+        },
+
+        {
+            name: 'Ambush! CP9',
+            dropID: 'ambush7',
+            thumb: 2886,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of CP9 Raid at hardest difficulty.',
+            'Ambush': [ 2885, 9036 ]
+        },
+
+        {
+            name: 'Ambush! Kaido',
+            dropID: 'ambush7',
+            thumb: 2923,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Kaido Raid at hardest difficulty.',
+            'Ambush': [ 2922, 9037 ]
+        },
+
+        {
+            name: 'Ambush! Hina',
+            dropID: 'ambush8',
+            thumb: 3172,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
+            'Ambush': [ 3172 ]
         },
 
         {
@@ -5924,6 +6016,15 @@ window.drops = {
             'All Difficulties': [ 3153 ],
         },
 
+        {
+            name: 'Christmas Capone',
+            dropID: 'bond16',
+            thumb: 3207,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3207 ],
+        },
+
     ],
 
 
@@ -5992,6 +6093,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3142 ],
+        },
+
+        {
+            name: 'Round Eight',
+            dropID: 'piratefestival8',
+            thumb: 3208,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3208 ],
         },
 
     ],
@@ -6765,6 +6875,13 @@ window.drops = {
             thumb: 3135,
             gamewith: null,
             'Chopperman Missions': [ 3144 ],
+        },
+
+        {
+            name: 'Navy Christmas Night',
+            thumb: 3171,
+            gamewith: null,
+            'Chopperman Missions': [ 3171, 3172 ],
         },
 
         {
