@@ -10302,7 +10302,7 @@ window.specials = {
         def: function(p) { return 0; },
     },
     3094: {
-        affintiy: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[3094].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[3094].multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP >= 99 ? 2 : 1.75);
             window.specials[3094].multiplier = n;
