@@ -10720,7 +10720,7 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
     },
     3051: {
-        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 3 : 1; }
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? p.actions[p.sourceSlot] ? 5 : 3 : 1; }
     },
     3052: {
         atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Driven")) ? 3 : 1; },
@@ -11259,6 +11259,22 @@ window.captains = {
             return p.unit.type == "STR" ? 3 * addit : 2.75 * addit;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+    },
+    3211: {
+        atk: function(p) { return p.classCount.Fighter == p.teamCount ? 1.75 : 1; },
+        hp: function(p) { return p.classCount.Fighter == p.teamCount ? 1.2 : 1; },
+        chainModifier: function(p) { return  p.classCount.Fighter == p.teamCount ? 4 : 1; }
+    },
+    3212: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? p.actions[p.sourceSlot] ? 5 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? 1.2 : 1; },
+    },
+    3213: {
+        atk: function(p) { return 3; },
+        hp: function(p) { return 1.2; },
+    },
+    3234: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     3333: {
         hitAtk: function(p) {

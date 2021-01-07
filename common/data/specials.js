@@ -10294,11 +10294,11 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
         type: "class"
     },
-    3090: {
+    3091: {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
         type: "class"
     },
-    3090: {
+    3092: {
         def: function(p) { return 0; },
     },
     3094: {
@@ -10815,6 +10815,18 @@ window.specials = {
             window.specials[3210].multiplier1 = p.colorCount.PSY >= 3 ? 0.75 : 0;
             window.specials[3210].multiplier2 = (p.colorCount.QCK + p.colorCount.DEX + p.colorCount.INT) >= 3 ? 3 : 1;
         },
+    },
+    3211: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
+        type: "class",
+    },
+    3212: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        type: "class",
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+    },
+    3213: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
     },
     3333: {
         atk: function(p) { return 1.75; },
