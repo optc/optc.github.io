@@ -23650,7 +23650,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1200,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23668,7 +23668,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1300,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23686,7 +23686,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1400,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23704,7 +23704,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1500,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23722,7 +23722,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1600,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23740,7 +23740,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1700,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23758,7 +23758,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1800,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23776,7 +23776,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 1900,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
@@ -23794,7 +23794,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "amount": 1100,
+              "amount": 2200,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },

@@ -1308,6 +1308,12 @@ window.matchers = [
     },
     
     {
+        name: 'Nutrition Potential Ability',
+        target: 'limit',
+        matcher: /Nutrition/i
+    },
+    
+    {
         name: 'Cooldown Reduction Potential Ability',
         target: 'limit',
         matcher: /Cooldown Reduction/i
