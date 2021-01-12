@@ -33718,7 +33718,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 50,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33737,7 +33737,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 55,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33756,7 +33756,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 60,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33775,7 +33775,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 65,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33794,7 +33794,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 70,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33813,7 +33813,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 75,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33832,7 +33832,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 80,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33851,7 +33851,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 85,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33870,7 +33870,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 90,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -33889,7 +33889,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 100,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34022,7 +34022,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 50,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34041,7 +34041,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 55,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34060,7 +34060,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 60,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34079,7 +34079,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 65,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34098,7 +34098,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 70,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34117,7 +34117,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 75,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34136,7 +34136,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 80,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34155,7 +34155,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 85,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34174,7 +34174,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 90,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34193,7 +34193,7 @@
             {
               "attributes": [ "Silence" ],
               "chance": 100,
-              "duration": 84,
+              "duration": 8,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
