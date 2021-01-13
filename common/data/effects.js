@@ -494,7 +494,7 @@ window.effects = {
         atk: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3051, 3053, 3038, 3040, 3042, 3044, 3045, 3046, 3050, 3047, 3048, 3049 ].indexOf(id) != -1) boost = 2;
+            if([ 3051, 3053, 3038, 3040, 3042, 3044, 3045, 3046, 3050, 3047, 3048, 3049, 3177, 3175 ].indexOf(id) != -1) boost = 2;
             //if([ 0 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
@@ -502,7 +502,7 @@ window.effects = {
         hp: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3051, 3053, 3038, 3040, 3042, 3044, 3045, 3046, 3050, 3047, 3048, 3049 ].indexOf(id) != -1) boost = 2;
+            if([ 3051, 3053, 3038, 3040, 3042, 3044, 3045, 3046, 3050, 3047, 3048, 3049, 3177, 3175 ].indexOf(id) != -1) boost = 2;
             //if([ 0 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
@@ -510,7 +510,7 @@ window.effects = {
         rcv: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3051, 3053, 3038, 3040, 3042, 3044, 3045, 3046, 3050, 3047, 3048, 3049 ].indexOf(id) != -1) boost = 2;
+            if([ 3051, 3053, 3038, 3040, 3042, 3044, 3045, 3046, 3050, 3047, 3048, 3049, 3177, 3175 ].indexOf(id) != -1) boost = 2;
             //if([ 0 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
