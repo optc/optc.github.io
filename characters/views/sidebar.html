@@ -34,6 +34,10 @@
     </span>
     <span class="filter width-12 exc" ng-model="filters.dualUnits" ng-class="{ active: filters.dualUnits }"
         ng-click="filters.dualUnits = !filters.dualUnits">Show Dual Character Units</span>
+    <span class="filter width-12 exc" ng-model="filters.vsUnits" ng-class="{ active: filters.vsUnits }"
+        ng-click="filters.vsUnits = !filters.vsUnits">Show VS Character Units</span>
+    <span class="filter width-12 exc" ng-model="filters.superTypeUnits" ng-class="{ active: filters.superTypeUnits }"
+        ng-click="filters.superTypeUnits = !filters.superTypeUnits">Show Super Type Character Units</span>
 </div>
 
 <div class="filter-container expandable" id="class-filter"
@@ -122,9 +126,9 @@
         ng-class="{ active: filters.socket == type }" ng-click="onFilterClick($event,type)">{{type}}</span>
 </div>
 
-<div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.drop == 'Farmable'" ng-class="{ expanded: filters.farmEnabled }">
+<div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.dropEnabled" ng-class="{ expanded: filters.farmEnabled }">
     <span class="filter-header" ng-click="filters.farmEnabled = !filters.farmEnabled">
-        Farmable filters
+        Farmable filters (Click Farmable Filter Above)
         <i class="pull-right fa fa-{{filters.farmEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
     </span>
     <span class="filter width-6 drop" ng-class="{ active: filters.farmable.story }"
@@ -157,9 +161,9 @@
         ng-model="filters.farmable.Bond" ng-click="onDropFilterClick($event,false)">Hide BoBattle-only</span>
 </div>
 
-<div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.drop == 'Non-farmable'" ng-class="{ expanded: filters.nonfarmEnabled }">
+<div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.dropEnabled" ng-class="{ expanded: filters.nonfarmEnabled }">
     <span class="filter-header" ng-click="filters.nonfarmEnabled = !filters.nonfarmEnabled">
-        Non-farmable filters filters
+        Non-farmable filters (Click Non-Farmable Filter Above)
         <i class="pull-right fa fa-{{filters.nonfarmEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
     </span>
     <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr }"

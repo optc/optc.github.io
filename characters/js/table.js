@@ -232,7 +232,19 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             if(allClass.indexOf(unit.class) != -1) return false;
         }
         if (filters.dualUnits){
-            if (unit.type.length == 3 || unit.type == "Type") return false;
+            //if (unit.class.length != 3) return false;
+            if (window.details[unit.number+1]) { if (!Object.keys(window.details[unit.number+1]).includes("swap")) return false; }
+            else return false
+        }
+        if (filters.vsUnits){
+            //if (unit.class.length != 2 || unit.type.length != 2)  return false;
+            if (window.details[unit.number+1]) { if (!Object.keys(window.details[unit.number+1]).includes("VSSpecial")) return false; }
+            else return false
+        }
+        if (filters.superTypeUnits){
+            //if (unit.class.length != 2 || unit.type.length != 2)  return false;
+            if (window.details[unit.number+1]) { if (!Object.keys(window.details[unit.number+1]).includes("superSpecial")) return false; }
+            else return false
         }
         if (filters.nodualUnits){
             if (unit.type.length == 2) return false;
