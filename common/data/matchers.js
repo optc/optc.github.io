@@ -407,6 +407,12 @@ window.matchers = [
         target: 'special',
         matcher: /Locks the chain multiplier/i 
     },
+    
+    {
+        name: 'Boundary Chain Limiters',
+        target: 'special',
+        matcher: /Sets chain boundaries/i
+    },
 
     {
         name: 'Following-turn ATK boosters',
@@ -1523,6 +1529,12 @@ window.matchers = [
         name: 'Beneficial Orb support',
         target: 'support',
         matcher: /beneficial/i
+    },
+    
+    {
+        name: 'End of Turn Damage Dealer support',
+        target: 'support',
+        matcher: /(deals|cuts).+end of the turn/i
     },
     
     {
