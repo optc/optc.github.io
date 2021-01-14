@@ -3197,7 +3197,7 @@ window.units = [
     [ "Rob Lucci, Fulfilling the Role of Cipher Pol", "QCK", [ "Fighter", "Cerebral" ], 3, 15, 5, 2, 70, 1066998, 545, 562, 11, 1200, 1011, 33, 1 ],
     [ "Monkey D. Garp, A Substance over Style Christmas", "PSY", [ "Free Spirit", "Fighter" ], 5, 60, 5, 1, 99, 5000000, 1030, 564, 120, 2576, 1409, 301, 1 ],
     [ "Franky, The Seventh to Fulfill His Wish", "QCK", [ "Free Spirit", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1265, 540, 89, null, null, null, null ],
-    [ "Brook, The Eigth to Keep His Promise", "INT", [ "Slasher", "Striker" ], 5, 30, 6, 4, 99, 4000000, 924, 516, 154, null, null, null, null ],
+    [ "Brook, The Eight to Keep His Promise", "INT", [ "Slasher", "Striker" ], 5, 30, 6, 4, 99, 4000000, 924, 516, 154, null, null, null, null ],
     [ "Nico Robin, Blooming Beauty", "QCK", [ "Cerebral", "Fighter" ], 5, 1, 4, 4, 99, 4000000, 776, 600, 87, 2560, 1261, 253, 1 ],
     [ "Tony Tony Chopper, Becoming a Panacea", "QCK", [ "Cerebral", "Fighter" ], 5, 1, 4, 4, 99, 4000000, 731, 583, 76, 2412, 1224, 290, 1 ],
     [ "Roronoa Zoro, Breaking Out of the Cage", "INT", [ "Slasher", "Driven" ], "6+", 65, 4, 5, 99, 5000000, 1633, 595, 162, 3592, 1666, 356, 1 ],
