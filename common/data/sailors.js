@@ -1575,6 +1575,12 @@ window.sailors = {
         hpStatic: function(p) { return 40; },
         rcvStatic: function(p) { return 40; },
     },
+    3214: {
+        atkStatic: function(p) { return 50; },
+    },
+    3216: {
+        hpStatic: function(p) { return 50; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

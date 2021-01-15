@@ -11273,6 +11273,18 @@ window.captains = {
         atk: function(p) { return 3; },
         hp: function(p) { return 1.2; },
     },
+    3214: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    3215: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    3216: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    3217: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3.75 : 1; },
+    },
     3234: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },

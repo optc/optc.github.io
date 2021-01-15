@@ -958,7 +958,7 @@
         query = query.toLowerCase().trim();
         var result = {matchers: {}, ranges: {}, query: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class|support):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
             return x.length > 0;
         });
@@ -996,6 +996,7 @@
                 }
             } else // matcher
                 result.matchers[temp[2]] = new RegExp(temp[3], 'i');
+                //console.log(result.matchers); Here for stuff to try to do custom
         });
         if (result.query.length > 0)
             result.query = utils.getRegex(result.query.join(' '));
