@@ -10698,9 +10698,9 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     3188: {
-        atk: function(p) { return window.specials[3188].multiplier2; },
+        atk: function(p) { return window.specials[3188].multiplier1; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3188].multiplier1, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3188].multiplier2, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             window.specials[3188].multiplier1 = p.colorCount.STR >= 4 ? 1.75 : 1;
             window.specials[3188].multiplier2 = p.colorCount.PSY >= 4 ? 1.75 : 1;
