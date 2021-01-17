@@ -1523,6 +1523,22 @@ window.sailors = {
         hpStatic: function(p) { return 30; },
         rcvStatic: function(p) { return 30; },
     },
+    3178: {
+        atkStatic: function(p) { return p.percHP <= 50.0 && p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3179: {
+        atkStatic: function(p) { return p.percHP <= 50.0 && p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3184: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    3185: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
     3190: {
         rcvStatic: function(p) { return 30; },
     },
@@ -1541,7 +1557,7 @@ window.sailors = {
         rcvStatic: function(p) { return 30; },
     },
     3205: {
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
     },
     3206: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
@@ -1550,6 +1566,20 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    3212: {
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 75 : 0; },
+    },
+    3213: {
+        atkStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
+    },
+    3214: {
+        atkStatic: function(p) { return 50; },
+    },
+    3216: {
+        hpStatic: function(p) { return 50; },
     },
     3333: {
         staticMult: function(p) { return 3; }

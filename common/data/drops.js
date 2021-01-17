@@ -3836,6 +3836,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash!! Luffytaro',
+            dropID: 'clash67',
+            thumb: 3209,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3209 ],
+        },
+
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
@@ -5281,12 +5290,21 @@ window.drops = {
         },
         
         {
-            name: 'Kamazo',
+            name: 'Franosuke',
             thumb: 3189,
             showManual: true,
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3189, -3189 ],
+        },
+        
+        {
+            name: 'X Drake',
+            thumb: 3210,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3210, -3210 ],
         },
 
     ],
@@ -5676,6 +5694,15 @@ window.drops = {
             'Raging Sea': [ 3197 ]
         },
 
+        {
+            name: 'Komurasaki',
+            dropID: 'treasuremap41',
+            thumb: 3217,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3217 ]
+        },
+
     ],
 
 
@@ -5946,6 +5973,15 @@ window.drops = {
             'All Difficulties': [ 3207 ],
         },
 
+        {
+            name: 'Orobi & Onami',
+            dropID: 'bond17',
+            thumb: 3213,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3213 ],
+        },
+
     ],
 
 
@@ -6012,6 +6048,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3142 ],
+        },
+
+        {
+            name: 'Round Eight',
+            dropID: 'piratefestival8',
+            thumb: 3208,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3208 ],
         },
 
     ],
@@ -6126,6 +6171,7 @@ window.drops = {
             'Round 3': [ 2921 ],
             'Round 4': [ 3053 ],
             'Round 5': [ 3111 ],
+            'Round 6': [ 3234 ],
         },
 
         {

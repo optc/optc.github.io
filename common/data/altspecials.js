@@ -36,6 +36,9 @@ window.altspecials = {
     3122: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
     },
+    3175: {
+        atkbase: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },

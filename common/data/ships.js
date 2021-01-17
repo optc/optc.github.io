@@ -77,10 +77,14 @@ window.ships = [
     { // 5
         name: 'Miss Love Duck',
         thumb: 'ship_0006_c.png',
-        description: 'Reduces damage received by 10%, boosts ATK of Striker characters by 100',
+        description: 'Boosts ATK of Striker characters by 1.5x, boosts chances of getting Matching orbs on Striker charracters and reduces damage received by 10%',
         atkStatic: function(p) {
-            return !p.unit.class.has('Striker') ? 0 : [ 0, 0, 0, 0, 0, 0, 50, 50, 50, 100 ][p.boatLevel -1];
-        }
+            return !p.unit.class.has('Striker') ? 0 : [ 0, 0, 0, 0, 0, 0, 50, 50, 50, 0 ][p.boatLevel -1];
+        },
+        atk: function(p) {
+            return !p.unit.class.has('Striker') ? 1 :
+                [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.5 ][p.boatLevel - 1];
+        },
     },
 
     { // 6
@@ -110,22 +114,22 @@ window.ships = [
     { // 8
         name: 'Big Top',
         thumb: 'ship_0009_c1.png',
-        description: 'Boosts ATK of characters with 20 cost or less by 1.5x, boosts HP of characters with 4 stars and below by 1.4x',
+        description: 'Boosts ATK of characters with 40 cost or less by 1.5x and boosts HP of all characters by 1.4x.',
         atk: function(p) {
-            var matching = p.unit.cost <= 15 || (p.unit.cost <= 20 && p.boatLevel >= 6);
+            var matching = p.unit.cost <= 15 || (p.unit.cost <= 20 && p.boatLevel >= 6) || (p.unit.cost <= 40 && p.boatLevel >= 10);
             return matching ? [ 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.5 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return p.unit.stars <= 4 ? [ 1.1, 1.2, 1.3, 1.3 ,1.3, 1.3, 1.3, 1.4, 1.4, 1.4 ][p.boatLevel - 1] : 1;
+            return p.unit.stars <= 4 ? [ 1.1, 1.2, 1.3, 1.3 ,1.3, 1.3, 1.3, 1.4, 1.4, 1 ][p.boatLevel - 1] : [ 1, 1, 1, 1 ,1, 1, 1, 1, 1, 1.4 ][p.boatLevel - 1];
         }
     },
 
     { // 9
         name: 'Bezan Black',
         thumb: 'ship_0010_c1.png',
-        description: 'Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of QCK characters by 1.4x and their HP by 1.3x',
+        description: 'Reduces cooldown of all specials by 1 turn at the start of the fight, boosts ATK of QCK characters by 1.5x and their HP by 1.3x',
         atk: function(p) {
-            return p.unit.type != 'QCK' ? 1 : [ 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.25, 1.3, 1.3, 1.4 ][p.boatLevel - 1];
+            return p.unit.type != 'QCK' ? 1 : [ 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.25, 1.3, 1.3, 1.5 ][p.boatLevel - 1];
         },
         hp: function(p) {
             return p.unit.type != 'QCK' ? 1 : [ 1, 1.1, 1.1, 1.1, 1.15, 1.2, 1.2, 1.2, 1.3, 1.3 ][p.boatLevel - 1];
@@ -163,7 +167,7 @@ window.ships = [
     { // 12
         name: 'Dreadnaught Sabre',
         thumb: 'ship_0014_c1.png',
-        description: 'Boosts HP by 1.5x, deals 5,000 typeless damage at the end of the turn',
+        description: 'Boosts HP by 1.5x, deals 10,000 typeless damage at the end of the turn',
         hp: function(p) {
             return [ 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.5][p.boatLevel - 1];
         }
@@ -720,6 +724,23 @@ window.ships = [
         hp: function(p) {
             return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? [ 1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4 ][p.boatLevel - 1] : 1;
         },
+    },
+    
+    
+    
+    { //54
+        name: "Oro Jackson",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of Slasher and Free Spirit characters by 1.6x, their HP by 1.3x, makes [RCV] and [TND] orbs beneficial for Slasher and Free Spirit characters, makes Slasher and Free Spirit character\'s PERFECTs easier to hit and recovers 1,000 HP at the end of the turn. Special: Reduces Paralysis duration by 2 turns (Cooldown: 9 turns).',
+        atk: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.2, 1.25, 1.3, 1.3, 1.35, 1.4, 1.45, 1.45, 1.5, 1.6 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.3 ][p.boatLevel - 1];
+        },
+        heal: function(p) {
+            return [ 0, 0, 0, 0, 0, 0, 0, 500, 750, 1000 ][p.boatLevel - 1];
+        }
     },
 
 ];
