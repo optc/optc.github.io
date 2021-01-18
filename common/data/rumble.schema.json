@@ -320,6 +320,8 @@
             "additionalProperties": false,
             "properties": {
                 "override" : {
+                    "type": "object",
+                    "additionalProperties": false,
                     "properties": {
                         "attributes": {
                             "type": "array",
