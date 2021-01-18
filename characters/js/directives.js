@@ -644,10 +644,10 @@ filters.abilityToString = function() {
           let e = `<li>${conditionToString(effect.condition)}`;
           switch (effect.effect) {
             case "buff":
-              e += `Applies Lv.${effect.level} ${arrayToString(effect.attributes)} buff`;
+              e += `Applies Lv.${effect.level} ${arrayToString(effect.attributes)} up buff`;
               break;
             case "debuff":
-              e += `Inflicts Lv.${effect.level} ${arrayToString(effect.attributes)} debuff`;
+              e += `Inflicts Lv.${effect.level} ${arrayToString(effect.attributes)} down debuff`;
               break;
             case "damage":
               switch (effect.type){
@@ -695,6 +695,8 @@ filters.abilityToString = function() {
               let tmpStr = arrayToString(effect.attributes);
               if(tmpStr == "HP" && effect.amount)
                 e += `${new Intl.NumberFormat().format(effect.amount)}% health cut`;
+              else if(effect.level)
+                e += `Inflicts Lv.${new Intl.NumberFormat().format(effect.level)} ${arrayToString(effect.attributes)} down penalty`;
               else
                 e += `${effect.chance}% chance to ${arrayToString(effect.attributes)}`;
               break;
