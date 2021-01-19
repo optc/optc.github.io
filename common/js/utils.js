@@ -365,10 +365,10 @@
             case '3211': return '../res/sadBandai/character_11927_t1.png'; break;
             case '3212': return '../res/sadBandai/character_11913_t1.png'; break;
             case '3213': return '../res/sadBandai/character_11914_t1.png'; break;
-            case '3214': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3215': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3216': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3217': return '../res/sadBandai/character_11_t1.png'; break;
+            case '3214': return '../res/sadBandai/character_11916_t1.png'; break;
+            case '3215': return '../res/sadBandai/character_11917_t1.png'; break;
+            case '3216': return '../res/sadBandai/character_11918_t1.png'; break;
+            case '3217': return '../res/sadBandai/character_11915_t1.png'; break;
             case '3218': return '../res/sadBandai/character_11_t1.png'; break;
             case '3219': return '../res/sadBandai/character_11_t1.png'; break;
             case '3220': return '../res/sadBandai/character_11_t1.png'; break;
