@@ -3080,6 +3080,7 @@ window.flags = {
     3127: { rr: 1, rro: 1, lrr: 1 },
     3128: { rr: 1, rro: 1, lrr: 1 },
     3129: { rr: 1, rro: 1, lrr: 1 },
+    3130: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     3134: { rr: 1, rro: 1 },
     3135: { rr: 1, rro: 1 },
     3136: { rr: 1, rro: 1 },

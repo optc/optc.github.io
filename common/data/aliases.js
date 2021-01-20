@@ -3128,7 +3128,7 @@ window.aliases = {
     3127: [ '', '', 'World Journey Marco', 'Limited Marco', 'Secret Marco' ],
     3128: [ '', '', 'World Journey Ace', 'Limited Ace', 'Secret Ace' ],
     3129: [ '', '', 'World Journey Ace', 'Limited Ace', 'Secret Ace' ],
-    3130: [ '', '', '' ],
+    3130: [ '', '', 'Pirate Rumble Law', 'Secret Law', 'Limited Law' ],
     3131: [ '', '', '' ],
     3132: [ '', '', '' ],
     3133: [ '', '', '' ],

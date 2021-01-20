@@ -11008,6 +11008,9 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    3130: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; }
+    },
     3136: {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
     },

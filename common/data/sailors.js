@@ -1449,6 +1449,11 @@ window.sailors = {
     3128: {
         atkStatic: function(p) { return 75; },
     },
+    3130: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+    },
     3140: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },

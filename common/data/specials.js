@@ -10492,6 +10492,9 @@ window.specials = {
             });
         }
     },
+    3130: {
+        orb: function(p) { return p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
     3138: {
         chain: function(p) { return 3; },
         chainLimiter: function(p) {
