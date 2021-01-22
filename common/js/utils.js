@@ -365,10 +365,10 @@
             case '3211': return '../res/sadBandai/character_11927_t1.png'; break;
             case '3212': return '../res/sadBandai/character_11913_t1.png'; break;
             case '3213': return '../res/sadBandai/character_11914_t1.png'; break;
-            case '3214': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3215': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3216': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3217': return '../res/sadBandai/character_11_t1.png'; break;
+            case '3214': return '../res/sadBandai/character_11916_t1.png'; break;
+            case '3215': return '../res/sadBandai/character_11917_t1.png'; break;
+            case '3216': return '../res/sadBandai/character_11918_t1.png'; break;
+            case '3217': return '../res/sadBandai/character_11915_t1.png'; break;
             case '3218': return '../res/sadBandai/character_11_t1.png'; break;
             case '3219': return '../res/sadBandai/character_11_t1.png'; break;
             case '3220': return '../res/sadBandai/character_11_t1.png'; break;
@@ -962,7 +962,7 @@
         query = query.toLowerCase().trim();
         var result = {matchers: {}, ranges: {}, query: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class|support):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
             return x.length > 0;
         });
@@ -1000,6 +1000,7 @@
                 }
             } else // matcher
                 result.matchers[temp[2]] = new RegExp(temp[3], 'i');
+                //console.log(result.matchers); Here for stuff to try to do custom
         });
         if (result.query.length > 0)
             result.query = utils.getRegex(result.query.join(' '));

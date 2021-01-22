@@ -5761,6 +5761,15 @@ window.drops = {
             'Raging Sea': [ 3197 ]
         },
 
+        {
+            name: 'Komurasaki',
+            dropID: 'treasuremap41',
+            thumb: 3217,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3217 ]
+        },
+
     ],
 
 
@@ -6247,6 +6256,7 @@ window.drops = {
             'Round 3': [ 2921 ],
             'Round 4': [ 3053 ],
             'Round 5': [ 3111 ],
+            'Round 6': [ 3234 ],
         },
 
         {

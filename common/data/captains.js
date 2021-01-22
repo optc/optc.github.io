@@ -11008,6 +11008,9 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
     },
+    3130: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5 : 1; }
+    },
     3136: {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
     },
@@ -11272,6 +11275,18 @@ window.captains = {
     3213: {
         atk: function(p) { return 3; },
         hp: function(p) { return 1.2; },
+    },
+    3214: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    3215: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    3216: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    3217: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3.75 : 1; },
     },
     3234: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },

@@ -1449,6 +1449,11 @@ window.sailors = {
     3128: {
         atkStatic: function(p) { return 75; },
     },
+    3130: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+    },
     3140: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
@@ -1574,6 +1579,12 @@ window.sailors = {
         atkStatic: function(p) { return 40; },
         hpStatic: function(p) { return 40; },
         rcvStatic: function(p) { return 40; },
+    },
+    3214: {
+        atkStatic: function(p) { return 50; },
+    },
+    3216: {
+        hpStatic: function(p) { return 50; },
     },
     3333: {
         staticMult: function(p) { return 3; }
