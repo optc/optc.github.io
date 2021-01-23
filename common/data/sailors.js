@@ -1586,6 +1586,20 @@ window.sailors = {
     3216: {
         hpStatic: function(p) { return 50; },
     },
+    3218: {
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3219: {
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3220: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 50 : 0; },
+    },
+    3221: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? 50 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

@@ -966,6 +966,20 @@ window.zombies = {
         type: 'healer',
         amount: 1000
     },
+    3218: { // Koala
+        type: 'healer',
+        amount: 1000
+    },
+    3219: { // Koala
+        type: 'healer',
+        amount: 1000
+    },
+    3220: { // Sabo
+        type: 'healer',
+    },
+    3221: { // Sabo
+        type: 'healer',
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1

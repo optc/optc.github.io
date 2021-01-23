@@ -10859,6 +10859,46 @@ window.specials = {
             });
         },
     },
+    3218: {
+        chainAddition: function(p) { return window.specials[3218].multiplier; },
+        onActivation: function(p) {
+            window.specials[3218].multiplier = 0;
+            if (p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) {
+                window.specials[3218].multiplier = 1;
+            }
+        },
+    },
+    3219: {
+        chainAddition: function(p) { return window.specials[3219].multiplier; },
+        onActivation: function(p) {
+            window.specials[3219].multiplier = 0;
+            if (p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) {
+                window.specials[3219].multiplier = 1;
+            }
+        },
+    },
+    3220: {
+        affinity: function(p) { return window.specials[3220].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2 : 1.75);
+            window.specials[3220].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '3220warning'
+            });
+        }
+    },
+    3221: {
+        affinity: function(p) { return window.specials[3221].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2 : 1.75);
+            window.specials[3221].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '3221warning'
+            });
+        }
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
