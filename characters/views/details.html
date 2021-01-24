@@ -170,13 +170,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr ng-if="!rumbleBeta">
                                         <td></td>
                                         <td >{{unit.pirateFest.class | decorate}}</td>
                                         <td ng-if="!compare">{{unit.pirateFest.DEF | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.DEF - compare.pirateFest.DEF | number}}</td>
                                         <td ng-if="!compare">{{unit.pirateFest.SPD | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.SPD - compare.pirateFest.SPD | number}}</td>
+                                    </tr>
+                                    <tr ng-if="rumbleBeta">
+                                        <td></td>
+                                        <td >{{rumble.stats.rumbleType | decorate}}</td>
+                                        <td ng-if="!compare">{{rumble.stats.def | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{rumble.stats.def - compare.rumble.stats.def | number}}</td>
+                                        <td ng-if="!compare">{{rumble.stats.spd | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{rumble.stats.spd - compare.rumble.stats.spd | number}}</td>
                                     </tr>
                                 </tbody>
                             </table>
