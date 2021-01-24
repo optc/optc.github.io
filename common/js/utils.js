@@ -281,7 +281,7 @@
             case '3127': return '../res/sadBandai/character_11581_t1.png'; break;
             case '3128': return '../res/sadBandai/character_11569_t1.png'; break;
             case '3129': return '../res/sadBandai/character_11570_t1.png'; break;
-            case '3130': return '../res/sadBandai/character_11_t1.png'; break;
+            case '3130': return '../res/sadBandai/character_11911_t1.png'; break;
             case '3131': return '../res/sadBandai/character_11_t1.png'; break;
             case '3132': return '../res/sadBandai/character_11_t1.png'; break;
             case '3133': return '../res/sadBandai/character_11_t1.png'; break;
@@ -369,10 +369,10 @@
             case '3215': return '../res/sadBandai/character_11917_t1.png'; break;
             case '3216': return '../res/sadBandai/character_11918_t1.png'; break;
             case '3217': return '../res/sadBandai/character_11915_t1.png'; break;
-            case '3218': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3219': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3220': return '../res/sadBandai/character_11_t1.png'; break;
-            case '3221': return '../res/sadBandai/character_11_t1.png'; break;
+            case '3218': return '../res/sadBandai/character_11919_t1.png'; break;
+            case '3219': return '../res/sadBandai/character_11920_t1.png'; break;
+            case '3220': return '../res/sadBandai/character_11921_t1.png'; break;
+            case '3221': return '../res/sadBandai/character_11922_t1.png'; break;
             case '3222': return '../res/sadBandai/character_11_t1.png'; break;
             case '3223': return '../res/sadBandai/character_11_t1.png'; break;
             case '3224': return '../res/sadBandai/character_11_t1.png'; break;
