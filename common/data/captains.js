@@ -11300,6 +11300,60 @@ window.captains = {
     3221: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.5 : 3 : 1; },
     },
+    3222: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" ? 3 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3223: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.75 : 1; },
+    },
+    3224: {
+        atk: function(p) { return p.unit.type == "DEX" ? p.damageCounter >= 20000 ? 5 : 4.5 : 4; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    3225: {
+        atk: function(p) { return p.unit.type == "DEX" ? p.damageCounter >= 20000 ? 5 : 4.5 : 4; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    3226: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[3226].turnedOn[i]==true) { specialEnabled = true; }
+                if(window.specials[3227].turnedOn[i]==true) { specialEnabled = true; }
+            }
+            return p.unit.type == "QCK" ? specialEnabled ? 5 : 4.5 : 4; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    3227: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[3226].turnedOn[i]==true) { specialEnabled = true; }
+                if(window.specials[3227].turnedOn[i]==true) { specialEnabled = true; }
+            }
+            return p.unit.type == "QCK" ? specialEnabled ? 5 : 4.5 : 4; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    3228: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3229: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3230: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+    },
+    3231: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; },
+    },
+    3233: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? Math.min(3.5, 2.5 + (1/3) * p.turnCounter) : 1; }
+    },
     3234: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },

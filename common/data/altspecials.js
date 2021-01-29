@@ -39,6 +39,9 @@ window.altspecials = {
     3175: {
         atkbase: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
     },
+    3225:{
+        affinity: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },

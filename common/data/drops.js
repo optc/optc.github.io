@@ -5812,7 +5812,17 @@ window.drops = {
             nakama: null,
             gamewith: null,
             condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
-            'Ambush': [ 3172 ]
+            'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'Ambush! Kamazo',
+            dropID: 'ambush9',
+            thumb: 3172,
+            nakama: null,
+            gamewith: null,
+            condition: 'Has a chance of appearing at the end of Please Help The Swordsmen!!.',
+            'Chopperman Missions': [ 3222, 3223 ],
         },
 
         {
@@ -6057,6 +6067,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3208 ],
+        },
+
+        {
+            name: 'Round Nine',
+            dropID: 'piratefestival9',
+            thumb: 3233,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3233 ],
         },
 
     ],
@@ -6825,6 +6844,13 @@ window.drops = {
             thumb: 3171,
             gamewith: null,
             'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'Please Help The Swordsmen!!',
+            thumb: 3222,
+            gamewith: null,
+            'Chopperman Missions': [ 3222, 3223 ],
         },
 
         {
