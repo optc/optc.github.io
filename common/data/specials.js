@@ -10859,6 +10859,130 @@ window.specials = {
             });
         },
     },
+    3218: {
+        chainAddition: function(p) { return window.specials[3218].multiplier; },
+        onActivation: function(p) {
+            window.specials[3218].multiplier = 0;
+            if (p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) {
+                window.specials[3218].multiplier = 1;
+            }
+        },
+    },
+    3219: {
+        chainAddition: function(p) { return window.specials[3219].multiplier; },
+        onActivation: function(p) {
+            window.specials[3219].multiplier = 0;
+            if (p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) {
+                window.specials[3219].multiplier = 1;
+            }
+        },
+    },
+    3220: {
+        affinity: function(p) { return window.specials[3220].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2 : 1.75);
+            window.specials[3220].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '3220warning'
+            });
+        }
+    },
+    3221: {
+        affinity: function(p) { return window.specials[3221].multiplier; },
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2 : 1.75);
+            window.specials[3221].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '3221warning'
+            });
+        }
+    },
+    3222: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? 1.75 : 1; },
+        type: "type",
+    },
+    3223: {
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? 1.75 : 1; },
+    },
+    3224: {
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3224].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) { window.specials[3224].multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
+    },
+    3225: {
+        orb: function(p) { return p.unit.type == "DEX" ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3225].multiplier, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) { window.specials[3225].multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
+    },
+    3226: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[3226].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Kaido is your captain',
+                name: '3226warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[3226].turnedOn[p.slot] = false;
+        }
+    },
+    3227: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[3227].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Only affects damage if Kaido is your captain',
+                name: '3227warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[3227].turnedOn[p.slot] = false;
+        }
+    },
+    3228: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    3229: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    3233: {
+        atk: function(p) { return window.specials[3233].multiplier == 0 ? 1.75 : 1; },
+        type: "type",
+        orb: function(p) { return window.specials[3233].multiplier == 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = ['Orb Boost', 'ATK Boost'];
+            var n = (window.specials[3233].multiplier == undefined ? 0 : (window.specials[3233].multiplier + 1) % 2);
+            window.specials[3233].multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + '. To switch to the ' + levels[(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: '3176warning'
+            });
+        },
+    },
+    3235: {
+        delay: function(p) { return 2; },
+        def: function(p) { return 0; },
+        atk: function(p) { return [p.defenseDown ? 2 : 1, p.delayed > 0 ? 2 : 1][window.specials[3235].multiplier]; },
+        type: "condition",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.specials[3235].multiplier) + 1) % levels.length;
+            window.specials[3235].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["DEF Down", "Delay"][levels[n]] + ' boost. To switch to the ' + ["DEF Down", "Delay"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: '3235warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

@@ -960,7 +960,7 @@ window.drops = {
         },
 
         {
-            name: 'Tea Ceremony Venue to Southwest Coast',
+            name: 'Tea Party Venue to Southwest Coast',
             dropID: 'story41',
             shortName: 'Whole Cake 3',
             thumb: 3001,
@@ -2844,12 +2844,22 @@ window.drops = {
 
         {
             name: 'Like Cats and Dogs',
-            dropID: 'event136',
+            dropID: 'event137',
             global: true,
             thumb: 3177,
             nakama: null,
             gamewith: null,
-            'All Difficulties':  [ -3038, -3040, -3175, -3177, -3179, -3181, -3183, -3185],
+            'All Difficulties':  [ -3038, -3040, -3175, -3177, -3179, -3181, -3183, -3185 ],
+        },
+
+        {
+            name: 'Costume Party With Warlords of the Sea',
+            dropID: 'event138',
+            global: true,
+            thumb: 3100,
+            nakama: null,
+            gamewith: 230163,
+            'All Difficulties':  [ -3100, -3102, -3104, -3106 ],
         },
     ],
 
@@ -5312,6 +5322,7 @@ window.drops = {
             name: 'Page One',
             thumb: 3110,
             showManual: true,
+            global: true,
             nakama: 5311001,
             gamewith: 230435,
             slefty: 'coliseums',
@@ -5359,6 +5370,15 @@ window.drops = {
             nakama: 321000,
             gamewith: 249370,
             'All Difficulties': [ 3210, -3210 ],
+        },
+        
+        {
+            name: 'Bonekichi',
+            thumb: 3235,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3235, -3235 ],
         },
 
     ],
@@ -5720,6 +5740,7 @@ window.drops = {
             name: 'Nami & Sanji',
             dropID: 'treasuremap36',
             thumb: 3060,
+            global: true,
             nakama: 8306000,
             gamewith: 223196,
             'Raging Sea': [ 3060 ]
@@ -5881,7 +5902,17 @@ window.drops = {
             nakama: 6317200,
             gamewith: 243155,
             condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
-            'Ambush': [ 3172 ]
+            'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'Ambush! Kamazo',
+            dropID: 'ambush9',
+            thumb: 3229,
+            nakama: 314500,
+            gamewith: 252960,
+            condition: 'Has a chance of appearing at the end of Please Help The Swordsmen!!.',
+            'Chopperman Missions': [ 3222, 3223 ],
         },
 
         {
@@ -6000,6 +6031,7 @@ window.drops = {
             name: 'Kaido',
             dropID: 'bond11',
             thumb: 3036,
+            global: true,
             nakama: 9303600,
             gamewith: 148537,
             'All Difficulties': [ 3036 ],
@@ -6055,7 +6087,7 @@ window.drops = {
             name: 'Onami & Orobi',
             dropID: 'bond17',
             thumb: 3213,
-            nakama: null,
+            nakama: 9321300,
             gamewith: 148537,
             'All Difficulties': [ 3213 ],
         },
@@ -6118,6 +6150,7 @@ window.drops = {
             name: 'Round Six',
             dropID: 'piratefestival6',
             thumb: 3107,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3107 ],
@@ -6139,6 +6172,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3208 ],
+        },
+
+        {
+            name: 'Round Nine',
+            dropID: 'piratefestival9',
+            thumb: 3233,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3233 ],
         },
 
     ],
@@ -6199,9 +6241,10 @@ window.drops = {
         },
 
         {
-            name: 'Dead or Treat!! Sweetie Party',
+            name: 'Dead or Treat!! Sweet & Spooky Party',
             thumb: 2292,
             global: true,
+            nakaka: 6229200,
             gamewith: 122996,
             condition: 'Katakuri: Can not use characters who are both Driven and Powerhouse classes.',
             'All Difficulties': [ 2291, 2293 ],
@@ -6211,14 +6254,16 @@ window.drops = {
             name: 'Dead or Treat!! Devilish Party',
             thumb: 2749,
             global: true,
-            gamewith: 6274900,
+            nakama: 6274900,
             gamewith: 174437,
             'All Difficulties': [ 2748 ],
         },
 
         {
-            name: 'Dead or Treat!! Horror Night Party',
+            name: 'Dead or Treat!! Party of Horror!',
             thumb: 3108,
+            global: true,
+            nakama: 6310800,
             gamewith: null,
             'All Difficulties': [ 3108, 3109 ],
         },
@@ -6847,13 +6892,22 @@ window.drops = {
             thumb: 2825,
             global: true,
             nakama: 6282500,
-            condition: 'Mihawk: Slasher or Cerebral only. Hancock: Shooter or Free Spirit only. Crocodile: Striker or Driven only',
             gamewith: 183779,
+            condition: 'Mihawk: Slasher or Cerebral only. Hancock: Shooter or Free Spirit only. Crocodile: Striker or Driven only',
+        },
+
+        {
+            name: 'World Journey Mission 4',
+            thumb: 3221,
+            global: false,
+            nakama: 6282500,
+            gamewith: 252583,
         },
 
         {
             name: 'Sweet Party!',
             thumb: 2857,
+            global: false,
             nakama: 6285700,
             gamewith: 187864,
             'Chopperman Missions': [ 2855 ],
@@ -6904,6 +6958,7 @@ window.drops = {
         {
             name: 'Gather! Strawhat Pirates',
             thumb: 3033,
+            global: true,
             nakama: 6303300,
             gamewith: null,
             'All Difficulties': [ 3032, 3033, 3034, 3035 ],
@@ -6912,6 +6967,7 @@ window.drops = {
         {
             name: 'Big Mom VS Kaido!',
             thumb: 3135,
+            nakama: 6313500,
             gamewith: null,
             'Chopperman Missions': [ 3144 ],
         },
@@ -6919,8 +6975,17 @@ window.drops = {
         {
             name: 'Navy Christmas Night',
             thumb: 3171,
+            nakama: 6317100,
             gamewith: null,
             'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'Please Help The Swordsmen!!',
+            thumb: 3231,
+            nakama: null,
+            gamewith: 252958,
+            'Chopperman Missions': [ 3222, 3223 ],
         },
 
         {
