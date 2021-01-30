@@ -5306,6 +5306,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3210, -3210 ],
         },
+        
+        {
+            name: 'Bonekichi',
+            thumb: 3235,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3235, -3235 ],
+        },
 
     ],
 

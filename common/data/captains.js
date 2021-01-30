@@ -11357,6 +11357,10 @@ window.captains = {
     3234: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
+    3235: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

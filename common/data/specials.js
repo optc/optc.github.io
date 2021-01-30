@@ -10919,7 +10919,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[3226].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Kizaru is your captain',
+                text: 'Only affects damage if Kaido is your captain',
                 name: '3226warning'
             });
         },
@@ -10932,7 +10932,7 @@ window.specials = {
         onActivation: function(p) {
             window.specials[3227].turnedOn[p.slot] = true;
             p.scope.notify({
-                text: 'Only affects damage if Kizaru is your captain',
+                text: 'Only affects damage if Kaido is your captain',
                 name: '3227warning'
             });
         },
@@ -10965,6 +10965,21 @@ window.specials = {
             p.scope.notify({
                 text: 'Using the ' + levels[n] + '. To switch to the ' + levels[(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: '3176warning'
+            });
+        },
+    },
+    3235: {
+        delay: function(p) { return 2; },
+        def: function(p) { return 0; },
+        atk: function(p) { return [p.defenseDown ? 2 : 1, p.delayed > 0 ? 2 : 1][window.specials[3235].multiplier]; },
+        type: "condition",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.specials[3235].multiplier) + 1) % levels.length;
+            window.specials[3235].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["DEF Down", "Delay"][levels[n]] + ' boost. To switch to the ' + ["DEF Down", "Delay"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: '3235warning'
             });
         },
     },

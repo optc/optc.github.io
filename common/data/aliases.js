@@ -3233,7 +3233,7 @@ window.aliases = {
     3232: [ '', '', '' ],
     3233: [ '', '', 'Sabo', 'Pirate Rumble Lucy', 'Pirate Rumble Sabo' ],
     3234: [ '', '', 'Neo Kinemon' ],
-    3235: [ '', '', '' ],
+    3235: [ '', '', 'Arena Brook' ],
     3236: [ '', '', '' ],
     3237: [ '', '', '' ],
     3238: [ '', '', '' ],
