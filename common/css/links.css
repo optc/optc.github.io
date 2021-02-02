@@ -143,7 +143,7 @@
     transform: translateX(-3em);
 }
 
-#links-button.active .rotater:nth-child(2) > a {
+#links-button.active .rotater:nth-child(4) > a {
     -webkit-transform: translateX(-6em);
     -ms-transform: translateX(-6em);
     transform: translateX(-6em);
@@ -155,19 +155,19 @@
     transform: translateX(-9em);
 }
 
-#links-button.active .rotater:nth-child(4) > a {
+#links-button.active .rotater:nth-child(6) > a {
     -webkit-transform: translateX(-12em);
     -ms-transform: translateX(-12em);
     transform: translateX(-12em);
 }
 
-#links-button.active .rotater:nth-child(5) > a {
+#links-button.active .rotater:nth-child(2) > a {
     -webkit-transform: translateX(-15em);
     -ms-transform: translateX(-15em);
     transform: translateX(-15em);
 }
 
-#links-button.active .rotater:nth-child(6) > a {
+#links-button.active .rotater:nth-child(5) > a {
     -webkit-transform: translateX(-18em);
     -ms-transform: translateX(-18em);
     transform: translateX(-18em);
@@ -204,18 +204,24 @@
 }
 
 #links-button.active .rotater:nth-child(12) > a {
+    -webkit-transform: translateX(-36em);
+    -ms-transform: translateX(-36em);
+    transform: translateX(-36em);
+}
+
+#links-button.active .rotater:nth-child(13) > a {
     -webkit-transform: translateY(0em);
     -ms-transform: translateY(0em);
     transform: translateY(0em);
 }
 
-#links-button.active .rotater:nth-child(13) > a {
+#links-button.active .rotater:nth-child(14) > a {
     -webkit-transform: translateY(-4em);
     -ms-transform: translateY(-4em);
     transform: translateY(-4em);
 }
 
-#links-button.active .rotater:nth-child(14) > a {
+#links-button.active .rotater:nth-child(15) > a {
     -webkit-transform: translateY(-8em);
     -ms-transform: translateY(-8em);
     transform: translateY(-8em);
