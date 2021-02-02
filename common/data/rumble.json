@@ -39630,7 +39630,7 @@
       }
     },
     {
-      "basedOn": 309,
+      "basedOn": 3099,
       "id": 3100
     },
     {
@@ -51403,8 +51403,8 @@
             },
             {
               "attributes": [ "DEF" ],
-              "effect": "buff",
               "duration": 6,
+              "effect": "buff",
               "level": 2,
               "targeting": { "targets": [ "[DEX]" ] }
             }
@@ -51636,8 +51636,8 @@
             },
             {
               "attributes": [ "Guard" ],
-              "effect": "buff",
               "duration": 21,
+              "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[DEX]" ] }
             }
@@ -51650,7 +51650,7 @@
               "override": { "duration": 22 }
             },
             {
-              "override": { "level": 1, "duration": 22 }
+              "override": { "duration": 22, "level": 1 }
             }
           ]
         },
@@ -51661,7 +51661,7 @@
               "override": { "duration": 23 }
             },
             {
-              "override": { "level": 1, "duration": 23 }
+              "override": { "duration": 23, "level": 1 }
             }
           ]
         },
@@ -51672,7 +51672,7 @@
               "override": { "duration": 24 }
             },
             {
-              "override": { "level": 2, "duration": 24 }
+              "override": { "duration": 24, "level": 2 }
             }
           ]
         },
@@ -51683,7 +51683,7 @@
               "override": { "duration": 25 }
             },
             {
-              "override": { "level": 2, "duration": 25 }
+              "override": { "duration": 25, "level": 2 }
             }
           ]
         },
@@ -51694,7 +51694,7 @@
               "override": { "duration": 26 }
             },
             {
-              "override": { "level": 3, "duration": 26 }
+              "override": { "duration": 26, "level": 3 }
             }
           ]
         },
@@ -51705,7 +51705,7 @@
               "override": { "duration": 27 }
             },
             {
-              "override": { "level": 3, "duration": 27 }
+              "override": { "duration": 27, "level": 3 }
             }
           ]
         },
@@ -51716,7 +51716,7 @@
               "override": { "duration": 28 }
             },
             {
-              "override": { "level": 3, "duration": 28 }
+              "override": { "duration": 28, "level": 3 }
             }
           ]
         },
@@ -51727,7 +51727,7 @@
               "override": { "duration": 29 }
             },
             {
-              "override": { "level": 4, "duration": 29 }
+              "override": { "duration": 29, "level": 4 }
             }
           ]
         },
@@ -51738,7 +51738,7 @@
               "override": { "duration": 50 }
             },
             {
-              "override": { "level": 5, "duration": 50 }
+              "override": { "duration": 50, "level": 5 }
             }
           ]
         }
@@ -51871,15 +51871,15 @@
             },
             {
               "amount": 1,
-              "effect": "damage",
               "condition": { "comparator": "remaining", "count": 50, "type": "time" },
+              "effect": "damage",
               "targeting": { "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
               "amount": 1,
-              "effect": "damage",
               "condition": { "comparator": "remaining", "count": 30, "type": "time" },
+              "effect": "damage",
               "targeting": { "targets": [ "enemies" ] },
               "type": "atk"
             }
@@ -52104,7 +52104,7 @@
           ]
         }
       ],
-      "id": 3225,
+      "id": 3227,
       "pattern": [
         {
           "action": "attack",
@@ -52133,9 +52133,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
+              "duration": 5,
               "effect": "debuff",
               "level": 1,
-              "duration": 5,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -52383,9 +52383,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "duration": 11,
               "effect": "debuff",
               "level": 1,
-              "duration": 11,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -52401,7 +52401,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 1, "duration": 12 }
+              "override": { "duration": 12, "level": 1 }
             },
             {
               "override": { "amount": 0.8 }
@@ -52412,7 +52412,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 1, "duration": 13 }
+              "override": { "duration": 13, "level": 1 }
             },
             {
               "override": { "amount": 0.9 }
@@ -52423,7 +52423,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 2, "duration": 14 }
+              "override": { "duration": 14, "level": 2 }
             },
             {
               "override": { "amount": 1 }
@@ -52434,7 +52434,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 2, "duration": 15 }
+              "override": { "duration": 15, "level": 2 }
             },
             {
               "override": { "amount": 1.1 }
@@ -52445,7 +52445,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 3, "duration": 16 }
+              "override": { "duration": 16, "level": 3 }
             },
             {
               "override": { "amount": 1.2 }
@@ -52456,7 +52456,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 3, "duration": 17 }
+              "override": { "duration": 17, "level": 3 }
             },
             {
               "override": { "amount": 1.3 }
@@ -52467,7 +52467,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 3, "duration": 18 }
+              "override": { "duration": 18, "level": 3 }
             },
             {
               "override": { "amount": 1.4 }
@@ -52478,7 +52478,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 4, "duration": 19 }
+              "override": { "duration": 19, "level": 4 }
             },
             {
               "override": { "amount": 1.5 }
@@ -52489,7 +52489,7 @@
           "cooldown": 28,
           "effects": [
             {
-              "override": { "level": 5, "duration": 20 }
+              "override": { "duration": 20, "level": 5 }
             },
             {
               "override": { "amount": 1.7 }
@@ -52569,7 +52569,7 @@
           ]
         }
       ],
-      "id": 3229,
+      "id": 3231,
       "pattern": [
         {
           "action": "attack",
@@ -52598,9 +52598,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
+              "duration": 6,
               "effect": "buff",
               "level": 2,
-              "duration": 6,
               "targeting": { "targets": [ "[DEX]" ] }
             },
             {
@@ -52615,7 +52615,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 7 }
+              "override": { "duration": 7, "level": 2 }
             },
             {
               "override": { "amount": 1.1 }
@@ -52626,7 +52626,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 8 }
+              "override": { "duration": 8, "level": 2 }
             },
             {
               "override": { "amount": 1.2 }
@@ -52637,7 +52637,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 9 }
+              "override": { "duration": 9, "level": 2 }
             },
             {
               "override": { "amount": 1.3 }
@@ -52648,7 +52648,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 10 }
+              "override": { "duration": 10, "level": 2 }
             },
             {
               "override": { "amount": 1.4 }
@@ -52659,7 +52659,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 11 }
+              "override": { "duration": 11, "level": 2 }
             },
             {
               "override": { "amount": 1.5 }
@@ -52670,7 +52670,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 12 }
+              "override": { "duration": 12, "level": 2 }
             },
             {
               "override": { "amount": 1.6 }
@@ -52681,7 +52681,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 13 }
+              "override": { "duration": 13, "level": 2 }
             },
             {
               "override": { "amount": 1.7 }
@@ -52692,7 +52692,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 14 }
+              "override": { "duration": 14, "level": 2 }
             },
             {
               "override": { "amount": 1.8 }
@@ -52703,7 +52703,7 @@
           "cooldown": 35,
           "effects": [
             {
-              "override": { "level": 2, "duration": 15 }
+              "override": { "duration": 15, "level": 2 }
             },
             {
               "override": { "amount": 2 }
@@ -52808,9 +52808,9 @@
           "effects": [
             {
               "attributes": [ "DEF" ],
+              "duration": 5,
               "effect": "buff",
               "level": 3,
-              "duration": 5,
               "targeting": { "targets": [ "[STR]" ] }
             },
             {
