@@ -5377,17 +5377,23 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
-        rcv: function(p) { return 0.5; },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 0.5 : 1; },
     },
     1763: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Powerhouse" ]); },
         hitAtk: function(p) {
-            if (!p.unit.class.has("Powerhouse")) return 1;
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.026275 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.66025 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.3275 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.025 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 2.75 : 2.5;
+            var addit = 1;
+            var factor = 1.1;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? Math.pow(factor,1) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? Math.pow(factor,2) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? Math.pow(factor,3) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? Math.pow(factor,4) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? Math.pow(factor,5) : addit;
+            return (p.unit.class.has("Powerhouse")) ? [2.5, 2.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] * addit : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
-        rcv: function(p) { return 0.5; },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 0.5 : 1; },
     },
     1764: {
         atk: function(p) {
@@ -9804,11 +9810,17 @@ window.captains = {
     2784: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Shooter" ]); },
         hitAtk: function(p) {
-            if (!p.unit.class.has("Shooter")) return 1;
-            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.147915078125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.9503953125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.76228125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.583125 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? 3.4125 : 3.25;
+            var addit = 1;
+            var factor = 1.05;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect"]) ? Math.pow(factor,1) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? Math.pow(factor,2) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? Math.pow(factor,3) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? Math.pow(factor,4) : addit;
+            addit = p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? Math.pow(factor,5) : addit;
+            return (p.unit.class.has("Shooter")) ? [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] * addit : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
-        rcv: function(p) { return 0; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 0 : 1; },
     },
     2785: {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.75 : 1; },
@@ -9848,7 +9860,7 @@ window.captains = {
         hp: function(p) { return 1.25; },
     },
     2797: {
-        atk: function(p) { return 3.5; },
+        atk: function(p) { return [3.5, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
         hp: function(p) { return 1.25; },
     },
     2798: {
@@ -11360,6 +11372,18 @@ window.captains = {
     3235: {
         atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3214: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    3215: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; }
+    },
+    3216: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; }
+    },
+    3217: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3.75 : 1; },
     },
     3333: {
         hitAtk: function(p) {
