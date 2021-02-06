@@ -10975,6 +10975,7 @@ window.captains = {
     3118: {
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 4, [ "INT" ]); },
         hitAtk: function(p) {
+            if p.actions[p.sourceSlot] return 5;
             if (!p.unit.type == "INT") return 3.75;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             return p.chainPosition === 0 ? 4 : (prev == 'Good' ? 4+(1/3) : (prev == 'Great' ? 4+(2/3) : (prev == 'Perfect' ? 5 : 4)));
