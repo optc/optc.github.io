@@ -101,6 +101,7 @@ body {
 .gold   { background-color: #B38F15; }
 .darkblue   { background-color: #183578; }
 .limegreen   { background-color: #32CD32; }
+.darkorange   { background-color: #CF5300; }
 
 .green:hover  { background-color: #6EB98E; }
 .blue:hover   { background-color: #74B0E4; }
@@ -113,6 +114,7 @@ body {
 .gold:hover   { background-color: #947713; }
 .darkblue:hover   { background-color: #092056; }
 .limegreen:hover   { background-color: #228B22; }
+.darkorange:hover   { background-color: #B54C05; }
 
 .overlay {
     position: absolute;

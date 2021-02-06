@@ -5743,7 +5743,7 @@ window.drops = {
             global: true,
             nakama: 8306000,
             gamewith: 223196,
-            'Raging Sea': [ 3060 ]
+            'Calm Sea': [ 3060 ]
         },
 
         {
@@ -5788,7 +5788,16 @@ window.drops = {
             thumb: 3217,
             nakama: null,
             gamewith: null,
-            'Raging Sea': [ 3217 ]
+            'Coast of Wano': [ 3217 ]
+        },
+
+        {
+            name: 'Queen',
+            dropID: 'treasuremap42',
+            thumb: 3239,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3239 ]
         },
 
     ],

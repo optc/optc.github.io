@@ -10983,6 +10983,34 @@ window.specials = {
             });
         },
     },
+    3236: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[3236].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1.75, 2.25];
+            var n = (levels.indexOf(window.specials[3236].multiplier) + 1) % levels.length;
+            window.specials[3236].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
+                name: '3236warning'
+            });
+        },
+    },
+    3237: {
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[3237].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 2.25];
+            var n = (levels.indexOf(window.specials[3237].multiplier) + 1) % levels.length;
+            window.specials[3237].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
+                name: '3237warning'
+            });
+        },
+    },
+    3238: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -12819,5 +12847,29 @@ window.specials = {
     },
     5298: {
         chainAddition: function(p) { return 1.2; }
+    },
+    5299: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5300: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5301: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5302: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5303: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5304: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5305: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5306: {
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },
 };
