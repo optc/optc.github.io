@@ -52135,12 +52135,14 @@
               "attributes": [ "DEF" ],
               "duration": 5,
               "effect": "debuff",
+              "range": { "direction": "radial", "size": "large" },
               "level": 1,
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "amount": 0.8,
               "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
               "type": "atk"
             },
