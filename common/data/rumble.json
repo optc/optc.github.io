@@ -53995,7 +53995,7 @@
               "attributes": [ "ATK" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "INT" ] }
+              "targeting": { "targets": "[INT]" }
             }
           ]
         },
@@ -54057,7 +54057,7 @@
               "duration": 10,
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "INT" ] }
+              "targeting": { "targets": "[INT]" }
             },
             {
               "attributes": [ "ATK" ],
@@ -54404,8 +54404,8 @@
       ],
       "stats": {
         "def": 215,
-	      "rumbleType": "SPT",
-	      "spd": 155
+        "rumbleType": "SPT",
+        "spd": 155
       },
       "target": {
         "comparator": "highest",
@@ -54645,8 +54645,8 @@
       ],
       "stats": {
         "def": 160,
-	      "rumbleType": "SPT",
-	      "spd": 146
+        "rumbleType": "SPT",
+        "spd": 146
       },
       "target": {
         "criteria": "near"
@@ -54802,8 +54802,8 @@
       ],
       "stats": {
         "def": 122,
-	      "rumbleType": "DBF",
-	      "spd": 128
+        "rumbleType": "DBF",
+        "spd": 128
       },
       "target": {
         "criteria": "near"
@@ -55015,8 +55015,8 @@
       ],
       "stats": {
         "def": 153,
-	      "rumbleType": "ATK",
-	      "spd": 184
+        "rumbleType": "ATK",
+        "spd": 184
       },
       "target": {
         "comparator": "highest",
@@ -55214,8 +55214,8 @@
       ],
       "stats": {
         "def": 120,
-	      "rumbleType": "ATK",
-	      "spd": 194
+        "rumbleType": "ATK",
+        "spd": 194
       },
       "target": {
         "criteria": "near"
