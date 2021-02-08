@@ -54186,7 +54186,7 @@
               "attributes": [ "SPD" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "STR", "DEX", "PSY" ] }
+              "targeting": { "targets": [ "[STR]", "[DEX]", "[PSY]" ] }
             },
             {
               "attributes": [ "DEF" ],
@@ -54264,14 +54264,14 @@
               "effect": "buff",
               "duration": 10,
               "level": 1,
-              "targeting": { "targets": [ "STR", "DEX", "PSY" ] }
+              "targeting": { "targets": [ "[STR]", "[DEX]", "[PSY]" ] }
             },
             {
               "attributes": [ "Critical Hit" ],
               "effect": "buff",
               "duration": 10,
               "level": 1,
-              "targeting": { "targets": [ "STR", "DEX", "PSY" ] }
+              "targeting": { "targets": [ "[STR]", "[DEX]", "[PSY]" ] }
             }
           ]
         },
@@ -54824,14 +54824,14 @@
               "condition": { "comparator": "less", "count": 5, "type": "crew" },
               "effect": "buff",
               "level": 4,
-              "targeting": { "targets": [ "Self" ] }
+              "targeting": { "targets": [ "self" ] }
             },
             {
               "attribute": [ "ATK" ],
               "condition": { "comparator": "less", "count": 3, "type": "crew" },
               "effect": "buff",
               "level": 7,
-              "targeting": { "targets": [ "Self" ] }
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -55037,7 +55037,7 @@
               "attribute": [ "ATK" ],
               "effect": "buff",
               "level": 5,
-              "targeting": { "targets": [ "Self" ] }
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
