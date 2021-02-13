@@ -6010,6 +6010,15 @@ window.drops = {
             'All Difficulties': [ 3213 ],
         },
 
+        {
+            name: 'King',
+            dropID: 'bond18',
+            thumb: 3421,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3421 ],
+        },
+
     ],
 
 
@@ -6209,6 +6218,7 @@ window.drops = {
             'Round 4': [ 3053 ],
             'Round 5': [ 3111 ],
             'Round 6': [ 3234 ],
+            'Round 7': [ 3264 ],
         },
 
         {

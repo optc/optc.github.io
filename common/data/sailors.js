@@ -1411,6 +1411,9 @@ window.sailors = {
     3097: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
+    3111: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 50 : 0; },
+    },
     3103: {
         rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
@@ -1631,6 +1634,9 @@ window.sailors = {
     },
     3238: {
         rcvStatic: function(p) { return 30; },
+    },
+    3264: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 50 : 0; },
     },
     3333: {
         staticMult: function(p) { return 3; }

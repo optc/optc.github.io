@@ -10370,6 +10370,7 @@ window.specials = {
     3107: {
         def: function(p) { return 0.2; },
         atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition",
     },
     3108: {
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; },
@@ -10391,7 +10392,6 @@ window.specials = {
     },
     3112:{
         affinity: function(p) { return p.unit.type == "INT" ? window.specials[3113].multiplier : 1; },
-        type: "class",
         onActivation: function(p) {
             var n = (window.specials[3113].multiplier == 1.75 ? 1 : window.specials[3113].multiplier == 2 ? 2 : 0);
             window.specials[3113].multiplier = [1.75, 2, 2.25][n];
@@ -11010,6 +11010,31 @@ window.specials = {
     },
     3238: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3240: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3241: {
+        //TODO
+        hit: function(n,p) { return (n > 12 && (p.unit.type == "QCK")) ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '3241warning'
+            });
+        }
+    },
+    3242: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? window.specials[3242].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.25 : 2);
+            window.specials[3242].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5074warning'
+            });
+        }
     },
     3333: {
         atk: function(p) { return 1.75; },
