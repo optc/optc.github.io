@@ -10391,13 +10391,13 @@ window.specials = {
         },
     },
     3112:{
-        affinity: function(p) { return p.unit.type == "INT" ? window.specials[3113].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "INT" ? window.specials[3112].multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3113].multiplier == 1.75 ? 1 : window.specials[3113].multiplier == 2 ? 2 : 0);
-            window.specials[3113].multiplier = [1.75, 2, 2.25][n];
+            var n = (window.specials[3112].multiplier == 1.75 ? 1 : window.specials[3112].multiplier == 2 ? 2 : 0);
+            window.specials[3112].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '3113warning'
+                name: '3112warning'
             });
         },
     },
