@@ -3238,7 +3238,7 @@ window.units = [
     [ "Chopperemon, Shocking Encounter", "DEX", [ "Shooter", "Free Spirit" ], 5, 20, 4, 4, 99, 2000000, 1001, 563, 126, 2502, 1407, 314, 1 ],
     [ "O-Tama, Raging March", "DEX", [ "Fighter", "Free Spirit" ], 5, 20, 4, 4, 99, 2000000, 934, 555, 139, 2336, 1388, 348, 1 ],
     [ "Queen, Brachiosaurus Rampage", "QCK", [ "Powerhouse", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1184, 574, 91, 2960, 1436, 228, 1 ],
-    [ "Hawk Eyes Mihawk, Teachings From the Strongest Swordsman in the World", "DEX", [ "Slasher", "Free Spirit" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Hawk Eyes Mihawk, Teachings From the Strongest Swordsman in the World", "DEX", [ "Slasher", "Free Spirit" ], "6+", 65, 5, 5, 99, 5000000, 1831, 598, 118, null, null, null, null ],
     [ "King, Approaching Pteranodon", "QCK", [ "Powerhouse", "Driven" ], 5, 50, 5, 4, 99, 5000000, 1099, 728, 89, null, null, null, null ],
     [ "Perospero, Arriving on Enemy Land", "INT", [ "Driven", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1187, 639, 105, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
