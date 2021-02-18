@@ -81,10 +81,14 @@
                     "$ref": "#/definitions/TargetClass"
                 },
                 "resilience": {
-                    "oneOf": [
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
                         { "$ref": "#/definitions/DebuffResilience" },
+                        { "$ref": "#/definitions/DamageResilience" },
                         { "$ref": "#/definitions/HealingResilience" }
                     ]
+                  }
                 }
             },
             "required": [
@@ -192,13 +196,37 @@
                 },
                 "chance": {
                     "type": "integer"
+                },
+                "type":{
+                  "const": "debuff"
                 }
             },
             "required": [
                 "attribute",
-                "chance"
+                "chance",
+                "type"
             ],
             "title": "DebuffResilience"
+        },
+        "DamageResilience": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "attribute": {
+                    "$ref": "#/definitions/Damage"
+                },
+                "percentage": {
+                    "type": "integer"
+                },
+                "type":{
+                  "const": "damage"
+                }
+            },
+            "required": [
+                "type",
+                "percentage"
+            ],
+            "title": "DamageResilience"
         },
         "HealingResilience": {
             "type": "object",
@@ -212,11 +240,15 @@
                 },
                 "interval": {
                     "type": "integer"
+                },
+                "type":{
+                  "const": "healing"
                 }
             },
             "required": [
                 "amount",
-                "interval"
+                "interval",
+                "type"
             ],
             "title": "HealingResilience"
         },
@@ -434,6 +466,25 @@
                 "near"
             ],
             "title": "Attribute"
+        },
+        "Damage": {
+            "type": "string",
+            "enum": [
+                "[STR]",
+                "[DEX]",
+                "[QCK]",
+                "[PSY]",
+                "[INT]",
+                "Slasher",
+                "Fighter",
+                "Striker",
+                "Shooter",
+                "Cerebral",
+                "Free Spirit",
+                "Driven",
+                "all"
+            ],
+            "title": "Damage"
         },
         "ConditionComparator": {
             "type": "string",

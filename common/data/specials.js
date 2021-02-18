@@ -10370,6 +10370,7 @@ window.specials = {
     3107: {
         def: function(p) { return 0.2; },
         atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition",
     },
     3108: {
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; },
@@ -10390,14 +10391,13 @@ window.specials = {
         },
     },
     3112:{
-        affinity: function(p) { return p.unit.type == "INT" ? window.specials[3113].multiplier : 1; },
-        type: "class",
+        affinity: function(p) { return p.unit.type == "INT" ? window.specials[3112].multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3113].multiplier == 1.75 ? 1 : window.specials[3113].multiplier == 2 ? 2 : 0);
-            window.specials[3113].multiplier = [1.75, 2, 2.25][n];
+            var n = (window.specials[3112].multiplier == 1.75 ? 1 : window.specials[3112].multiplier == 2 ? 2 : 0);
+            window.specials[3112].multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '3113warning'
+                name: '3112warning'
             });
         },
     },
@@ -10437,7 +10437,7 @@ window.specials = {
         },
     },
     3120: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName); },
     },
     3122: {
         atk: function(p) { return 2; },
@@ -11010,6 +11010,76 @@ window.specials = {
     },
     3238: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3240: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3241: {
+        //TODO
+        hit: function(n,p) { return (n > 12 && (p.unit.type == "QCK")) ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.scope.notify({
+                text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
+                name: '3241warning'
+            });
+        }
+    },
+    3242: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? window.specials[3242].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var n = (p.percHP >= 99 ? 2.25 : 2);
+            window.specials[3242].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5074warning'
+            });
+        }
+    },
+    3244: {
+        affinity: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    3245: {
+        affinity: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    3246:{
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[3246].multiplier : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[3198].multiplier = p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? 2 : 1.75;
+        },
+    },
+    3247: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3248: {
+        atk: function(p) { return p.delayed > 0 ? window.specials[3248].multiplier : 1; },
+        type: "condition",
+        delay: function(p) { return 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 1];
+            var n = (levels.indexOf(window.specials[3248].multiplier) + 1) % levels.length;
+            window.specials[3248].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3248warning'
+            });
+        },
+    },
+    3249: {
+        atk: function(p) { return p.defenseDown ? window.specials[3249].multiplier : 1 },
+        type: "condition",
+        def: function(p) { return 0; },
+        onActivation: function(p) {
+            var levels = [1.75, 1];
+            var n = (levels.indexOf(window.specials[3249].multiplier) + 1) % levels.length;
+            window.specials[3249].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3249warning'
+            });
+        },
     },
     3333: {
         atk: function(p) { return 1.75; },

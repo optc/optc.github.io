@@ -980,6 +980,10 @@ window.zombies = {
     3221: { // Sabo
         type: 'healer',
     },
+    3243: { // RebeccaKyros
+        type: 'healer',
+        multiplier: 3
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1

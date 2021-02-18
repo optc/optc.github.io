@@ -6101,6 +6101,15 @@ window.drops = {
             'All Difficulties': [ 3213 ],
         },
 
+        {
+            name: 'King',
+            dropID: 'bond18',
+            thumb: 3421,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3421 ],
+        },
+
     ],
 
 
@@ -6311,6 +6320,7 @@ window.drops = {
             'Round 4': [ 3053 ],
             'Round 5': [ 3111 ],
             'Round 6': [ 3234 ],
+            'Round 7': [ 3264 ],
         },
 
         {
@@ -6492,6 +6502,15 @@ window.drops = {
             global: true,
             nakama: 6273400,
             gamewith: 173429,
+        },
+
+        {
+            name: 'Blitz Battle: Seven Warlords',
+            thumb: 3246,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3247 ],
         },
 
         {
@@ -6987,6 +7006,13 @@ window.drops = {
             nakama: 6317100,
             gamewith: null,
             'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'World Cruise!',
+            thumb: 3177,
+            gamewith: null,
+            'Chopperman Missions': [ 3186, 3187 ],
         },
 
         {

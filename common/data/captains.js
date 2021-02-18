@@ -10975,6 +10975,7 @@ window.captains = {
     3118: {
         damageSorter: function(d) { return CrunchUtils.typeSort(d, 4, [ "INT" ]); },
         hitAtk: function(p) {
+            if (p.actions[p.sourceSlot]) return 5;
             if (!p.unit.type == "INT") return 3.75;
             var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
             return p.chainPosition === 0 ? 4 : (prev == 'Good' ? 4+(1/3) : (prev == 'Great' ? 4+(2/3) : (prev == 'Perfect' ? 5 : 4)));
@@ -11372,6 +11373,59 @@ window.captains = {
     3235: {
         atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3236: {
+        atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    3237: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    3238: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    3239: {
+        atk: function(p) { return p.unit.type == "QCK" ? [2, 2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? [1, 1, 1, 1, 1.1, 1.1, 1.2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3240: {
+        atk: function(p) { return p.classCount.Slasher == p.teamCount ? 1.75 : 1; },
+        chainModifier: function(p) { return  p.classCount.Slasher == p.teamCount ? 4 : 1; },
+        hp: function(p) { return p.classCount.Slasher == p.teamCount ? [1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3241: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3242: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3243: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.75 : 1; },
+    },
+    3244: {
+        atk: function(p) { return p.unit.type == "PSY" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 5 : 4.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
+    },
+    3245: {
+        atk: function(p) { return p.unit.type == "PSY" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 5 : 4.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
+    },
+    3246: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.actions[p.sourceSlot] ? 4.75 : 3 : 1; },
+    },
+    3247: {
+        atk: function(p) { return p.unit.type == "STR" ? 3.25 : p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.75 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3248: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.actions[p.sourceSlot] ? 4.75 : 3 : 1; },
+    },
+    3249: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.actions[p.sourceSlot] ? 4.75 : 3 : 1; },
+    },
+    3264: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
     3214: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
