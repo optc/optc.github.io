@@ -538,7 +538,7 @@
                                 <tr ng-if="rumble.resilience">
                                     <td>Pirate Rumble Resistance</td>
                                     <td>
-                                      <span ng-bind-html="rumble.resilience | resilienceToString| decorate"></span>
+                                      <span ng-repeat="item in rumble.resilience track by $index"><span ng-bind-html="item | resilienceToString| decorate"></span><br></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.ability">
