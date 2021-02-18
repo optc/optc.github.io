@@ -6405,6 +6405,15 @@ window.drops = {
         },
 
         {
+            name: 'Blitz Battle: Seven Warlords',
+            thumb: 3246,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3247 ],
+        },
+
+        {
             name: 'World Clash!',
             thumb: 2407,
             global: true,
@@ -6872,6 +6881,13 @@ window.drops = {
             thumb: 3171,
             gamewith: null,
             'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'World Cruise!',
+            thumb: 3177,
+            gamewith: null,
+            'Chopperman Missions': [ 3186, 3187 ],
         },
 
         {

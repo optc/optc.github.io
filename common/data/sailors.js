@@ -1635,6 +1635,26 @@ window.sailors = {
     3238: {
         rcvStatic: function(p) { return 30; },
     },
+    3243: {
+        atkStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+    },
+    3246: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+    },
+    3248: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+    },
+    3249: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
+    },
     3264: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 50 : 0; },
     },

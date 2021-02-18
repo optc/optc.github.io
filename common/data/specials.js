@@ -11036,6 +11036,51 @@ window.specials = {
             });
         }
     },
+    3244: {
+        affinity: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    3245: {
+        affinity: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
+    },
+    3246:{
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[3246].multiplier : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[3198].multiplier = p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? 2 : 1.75;
+        },
+    },
+    3247: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+    },
+    3248: {
+        atk: function(p) { return p.delayed > 0 ? window.specials[3248].multiplier : 1; },
+        type: "condition",
+        delay: function(p) { return 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 1];
+            var n = (levels.indexOf(window.specials[3248].multiplier) + 1) % levels.length;
+            window.specials[3248].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3248warning'
+            });
+        },
+    },
+    3249: {
+        atk: function(p) { return p.defenseDown ? window.specials[3249].multiplier : 1 },
+        type: "condition",
+        def: function(p) { return 0; },
+        onActivation: function(p) {
+            var levels = [1.75, 1];
+            var n = (levels.indexOf(window.specials[3249].multiplier) + 1) % levels.length;
+            window.specials[3249].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3249warning'
+            });
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
