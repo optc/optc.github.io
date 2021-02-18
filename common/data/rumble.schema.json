@@ -213,7 +213,7 @@
             "additionalProperties": false,
             "properties": {
                 "attribute": {
-                    "$ref": "#/definitions/Attribute"
+                    "$ref": "#/definitions/Damage"
                 },
                 "percentage": {
                     "type": "integer"
@@ -466,6 +466,25 @@
                 "near"
             ],
             "title": "Attribute"
+        },
+        "Damage": {
+            "type": "string",
+            "enum": [
+                "[STR]",
+                "[DEX]",
+                "[QCK]",
+                "[PSY]",
+                "[INT]",
+                "Slasher",
+                "Fighter",
+                "Striker",
+                "Shooter",
+                "Cerebral",
+                "Free Spirit",
+                "Driven",
+                "all"
+            ],
+            "title": "Damage"
         },
         "ConditionComparator": {
             "type": "string",

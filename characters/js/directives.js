@@ -625,6 +625,9 @@ filters.resilienceToString = function() {
       if (input.amount) {
         return `${conditionToString(input.condition)}Heals ${input.amount} HP every ${input.interval} seconds.`
       }
+      if (input.type == "damage") {
+        return `${input.percentage}% reduction to ${input.attribute} damage.`
+      }
       return `${input.chance}% to resist ${input.attribute}.`;
     }
 };
