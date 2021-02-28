@@ -162,13 +162,35 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.family = window.families[id - 1];
     $http(rumbleRequest)
         .success(function (jsonData) {
-            $scope.rumble = jsonData.units.filter(unit => unit.id == id)[0];
+            var key = id;
+            $scope.rumble = jsonData.units.filter(unit =>{
+                return Math.floor(unit.id) == key;
+              })[0];
             if ( $scope.rumble.basedOn ) {
-              $scope.rumble = jsonData.units.filter(unit => unit.id == $scope.rumble.basedOn)[0];
+              key = $scope.rumble.basedOn
+              $scope.rumble = jsonData.units.filter(unit => unit.id == key)[0];
+            }
+            if ($scope.rumble === undefined ) {
+              console.log("Couldn't find unit with id " + id);
+              $scope.rumble={};
             }
             // normalize the data here:
             denormalizeEffects($scope.rumble.ability);
             denormalizeEffects($scope.rumble.special);
+
+            // Check for VS unit
+            if ( $scope.rumble.id != Math.floor($scope.rumble.id) ) {
+              key = Math.floor(key);
+              $scope.rumble2 = jsonData.units.filter(unit =>{
+                  return Math.floor(unit.id) == key;
+                })[1];
+              if ($scope.rumble === undefined ) {
+                console.log("Couldn't find unit with id " + id);
+                $scope.rumble2={};
+              }
+              denormalizeEffects($scope.rumble2.ability);
+              denormalizeEffects($scope.rumble2.special);
+            }
         })
         .error(function (out) {
           console.log( "Failure in loading or parsing json" + out);
