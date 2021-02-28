@@ -179,12 +179,20 @@
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.SPD - compare.pirateFest.SPD | number}}</td>
                                     </tr>
                                     <tr ng-if="rumbleBeta">
-                                        <td></td>
+                                        <td><span ng-if="rumble2">Character 1</span></td>
                                         <td >{{rumble.stats.rumbleType | decorate}}</td>
                                         <td ng-if="!compare">{{rumble.stats.def | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{rumble.stats.def - compare.rumble.stats.def | number}}</td>
                                         <td ng-if="!compare">{{rumble.stats.spd | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{rumble.stats.spd - compare.rumble.stats.spd | number}}</td>
+                                    </tr>
+                                    <tr ng-if="rumbleBeta && rumble2">
+                                        <td>Character 2</td>
+                                        <td >{{rumble2.stats.rumbleType | decorate}}</td>
+                                        <td ng-if="!compare">{{rumble2.stats.def | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{rumble2.stats.def - compare.rumble2.stats.def | number}}</td>
+                                        <td ng-if="!compare">{{rumble2.stats.spd | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{rumble.stats.spd - compare.rumble2.stats.spd | number}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -520,49 +528,90 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability && !isfestAbilityHybrid && rumbleBeta">
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability && rumbleBeta">
                         <table class="table table-striped-column abilities">
                             <tbody>
+                                <tr ng-if="rumble2">
+                                    <th colspan="2">Character 1</th>
+                                </tr>
                                 <tr ng-if="rumble.pattern">
-                                    <td>Pirate Rumble Attack Pattern</td>
+                                    <td><span ng-if="rumble2">Character 1 </span>Pirate Rumble Attack Pattern</td>
                                     <td>
-                                      <span ng-repeat="item in rumble.pattern track by $index"><span ng-bind-html="item | patternToString"></span>{{$index != rumble.pattern.length - 1 ? ' \u21e8 ' : ''}}</span>
+                                        <span ng-repeat="item in rumble.pattern track by $index"><span ng-bind-html="item | patternToString"></span>{{$index != rumble.pattern.length - 1 ? ' \u21e8 ' : ''}}</span>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.target">
-                                    <td>Pirate Rumble Attack Target</td>
+                                    <td><span ng-if="rumble2">Character 1 </span>Pirate Rumble Attack Target</td>
                                     <td>
-                                      <span ng-bind-html="rumble.target | targetToString"></span>
+                                        <span ng-bind-html="rumble.target | targetToString"></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.resilience">
-                                    <td>Pirate Rumble Resistance</td>
+                                    <td><span ng-if="rumble2">Character 1 </span>Pirate Rumble Resistance</td>
                                     <td>
-                                      <span ng-repeat="item in rumble.resilience track by $index"><span ng-bind-html="item | resilienceToString| decorate"></span><br></span>
+                                        <span ng-repeat="item in rumble.resilience track by $index"><span ng-bind-html="item | resilienceToString| decorate"></span><br /></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.ability">
-                                    <td>Pirate Rumble Ability</td>
+                                    <td><span ng-if="rumble2">Character 1 </span>Pirate Rumble Ability</td>
                                     <td>
                                         <div>
-                                                <div ng-repeat="item in rumble.ability track by $index"><strong>Level {{$index + 1}}:</strong>
-                                                <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
+                                            <div ng-repeat="item in rumble.ability track by $index"><strong>Level {{$index + 1}}:</strong> <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.special">
-                                    <td>Pirate Rumble Special</td>
+                                    <td><span ng-if="rumble2">Character 1 </span>Pirate Rumble Special</td>
                                     <td>
                                         <div>
-                                                <div ng-repeat="item in rumble.special track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} second cooldown] </strong>
-                                                  <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
+                                            <div ng-repeat="item in rumble.special track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} second cooldown] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
                                         </div>
                                     </td>
                                 </tr>
-
-                                </tbody>
-                              </table>
-                            </div>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped-column abilities" ng-if="rumble2">
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">Character 2</th>
+                                </tr>
+                                <tr ng-if="rumble.pattern">
+                                    <td>Character 2 Pirate Rumble Attack Pattern</td>
+                                    <td>
+                                        <span ng-repeat="item in rumble2.pattern track by $index"><span ng-bind-html="item | patternToString"></span>{{$index != rumble2.pattern.length - 1 ? ' \u21e8 ' : ''}}</span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.target">
+                                    <td>Character 2 Pirate Rumble Attack Target</td>
+                                    <td>
+                                        <span ng-bind-html="rumble2.target | targetToString"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.resilience">
+                                    <td>Character 2 Pirate Rumble Resistance</td>
+                                    <td>
+                                        <span ng-repeat="item in rumble2.resilience track by $index"><span ng-bind-html="item | resilienceToString| decorate"></span><br /></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.ability">
+                                    <td>Character 2 Pirate Rumble Ability</td>
+                                    <td>
+                                        <div>
+                                            <div ng-repeat="item in rumble2.ability track by $index"><strong>Level {{$index + 1}}:</strong> <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.special">
+                                    <td>Character 2 Pirate Rumble Special</td>
+                                    <td>
+                                        <div>
+                                            <div ng-repeat="item in rumble2.special track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} second cooldown] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                             <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && !isfestAbilityHybrid && !rumbleBeta">
                               <table class="table table-striped-column abilities">
                                 <tbody>
@@ -614,7 +663,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && isfestAbilityHybrid">
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && isfestAbilityHybrid && !rumbleBeta">
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr ng-if="details.festAttackPattern && isfestAttackPatternHybrid">
