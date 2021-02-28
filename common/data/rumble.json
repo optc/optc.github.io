@@ -3068,7 +3068,7 @@
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
-              "level": 2,
+              "level": 1,
               "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
             },
             {
@@ -3084,55 +3084,55 @@
             {
               "attributes": [ "DEF" ],
               "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
+            },
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
+            },
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 5,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
+            },
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 6,
+              "targeting": { "targets": [ "self" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "DEF" ],
+              "effect": "buff",
               "level": 3,
-              "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
-            },
-            {
-              "attributes": [ "HP" ],
-              "effect": "buff",
-              "level": 4,
-              "targeting": { "targets": [ "self" ] }
-            }
-          ]
-        },
-        {
-          "effects": [
-            {
-              "attributes": [ "DEF" ],
-              "effect": "buff",
-              "level": 4,
-              "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
-            },
-            {
-              "attributes": [ "HP" ],
-              "effect": "buff",
-              "level": 5,
-              "targeting": { "targets": [ "self" ] }
-            }
-          ]
-        },
-        {
-          "effects": [
-            {
-              "attributes": [ "DEF" ],
-              "effect": "buff",
-              "level": 5,
-              "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
-            },
-            {
-              "attributes": [ "HP" ],
-              "effect": "buff",
-              "level": 6,
-              "targeting": { "targets": [ "self" ] }
-            }
-          ]
-        },
-        {
-          "effects": [
-            {
-              "attributes": [ "DEF" ],
-              "effect": "buff",
-              "level": 6,
               "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] }
             },
             {
@@ -39691,7 +39691,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 20,
-              "duration": 164,
+              "duration": 16,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39717,7 +39717,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 24,
-              "duration": 164,
+              "duration": 16,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39743,7 +39743,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 28,
-              "duration": 174,
+              "duration": 17,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39769,7 +39769,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 32,
-              "duration": 184,
+              "duration": 18,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39795,7 +39795,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 36,
-              "duration": 194,
+              "duration": 19,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39821,7 +39821,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 40,
-              "duration": 204,
+              "duration": 20,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39847,7 +39847,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 44,
-              "duration": 204,
+              "duration": 20,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39873,7 +39873,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 48,
-              "duration": 214,
+              "duration": 21,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39899,7 +39899,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 52,
-              "duration": 224,
+              "duration": 22,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -39925,7 +39925,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 60,
-              "duration": 234,
+              "duration": 23,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
