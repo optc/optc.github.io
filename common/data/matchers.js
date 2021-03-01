@@ -134,6 +134,24 @@ window.matchers = [
         target: 'captain',
         matcher: /Boosts (their )?ATK\D*by 4.25x/i
     },
+    
+    {
+        name: '4.5x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK\D*by 4.5x/i
+    },
+    
+    /*{
+        name: '4.75x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK\D*by 4.75x/i
+    },*/
+    
+    {
+        name: '5x ATK captains',
+        target: 'captain',
+        matcher: /Boosts (their )?ATK\D*by 5x/i
+    },
 
     {
         name: 'HP-based ATK captains',

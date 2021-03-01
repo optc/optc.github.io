@@ -2,7 +2,7 @@ window.effects = {
 
     // always use unique IDs, and don't ever change an ID once you've set it
     // IDs must always be greater than 0
-    // last ID used: 62
+    // last ID used: 85
     // Use p.type instead of p.unit.type here
 
     'Baroque Works (pre-v4.0)': {

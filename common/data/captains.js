@@ -8513,7 +8513,7 @@ window.captains = {
     },
     2411: {
         atk: function(p) {
-            return (p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1 + 1.75 * (p.percHP / 100) : 1;//change this
+            return (p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1 + 1.75 * (p.percHP / 100) : 1;
         }
     },
     2412: {
