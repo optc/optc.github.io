@@ -197,6 +197,30 @@ window.matchers = [
     },
 
     {
+        name: 'Despair reducers',
+        target: 'captain',
+        matcher: /(reduces|removes).+despair.+duration/i
+    },
+    
+    {
+        name: 'Silence/Special Bind reducers',
+        target: 'captain',
+        matcher: /(reduces|removes).+silence.+duration/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'captain',
+        matcher: /(reduces|removes).+paralysis.+duration/i 
+    },
+
+    {
+        name: 'Special Rewind Restorers',
+        target: 'captain',
+        matcher: /restores.+special cooldowns?.+rewinded/i
+    },
+
+    {
         name: 'Healers',
         target: 'captain',
         matcher: /Recovers/i
