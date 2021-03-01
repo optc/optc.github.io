@@ -1302,7 +1302,6 @@ window.drops = {
             thumb: 39,
             global: true,
             nakama: 2003900,
-            condition: 'None',
             gamewith: 6600,
             condition: 'Cabaji does not drop in Rookie difficulty',
             'All Difficulties': [ 36, 37, 38, -4, -3, -2, -1387 ]
@@ -1314,7 +1313,6 @@ window.drops = {
             thumb: 30,
             global: true,
             nakama: 2003000,
-            condition: 'None',
             gamewith: 7457,
             'All Difficulties': [ 28, 29, 31, 40, -8, -6, -30, -5, -21, -1388 ]
         },
@@ -1325,7 +1323,6 @@ window.drops = {
             thumb: 46,
             global: true,
             nakama: 2004600,
-            condition: 'None',
             gamewith: 7784,
             condition: 'Siam and Butchie do not drop in Rookie difficulty',
             'All Difficulties': [ 41, 42, 43, 45, -16, -14, -15, -13, -1446 ]
@@ -1337,7 +1334,6 @@ window.drops = {
             thumb: 66,
             global: true,
             nakama: 2006600,
-            condition: 'None',
             gamewith: 5852,
             condition: 'Choo and Kuroobi do not drop in Rookie difficulty',
             'All Difficulties': [ 61, 62, 63, 65, -12, -10, -11, -66, -9, -1389 ]
@@ -1349,7 +1345,6 @@ window.drops = {
             thumb: 58,
             global: true,
             nakama: 2005800,
-            condition: 'None',
             gamewith: 8111,
             condition: 'Gin does not drop in Rookie difficulty',
             'All Difficulties': [ 53, 55, 57, -20, -18, -19, -58, -17, -1447 ]
@@ -1361,7 +1356,6 @@ window.drops = {
             thumb: 228,
             global: true,
             nakama: 2022800,
-            condition: 'None',
             gamewith: 22603,
             condition: 'Helmeppo does not drop in Rookie difficulty',
             'All Difficulties': [ 33, 35, -228, -34, -26, -25, -24, -23, -22, -1448 ]
@@ -1373,7 +1367,6 @@ window.drops = {
             thumb: 232,
             global: true,
             nakama: 2023200,
-            condition: 'None',
             gamewith: 5853,
             condition: 'Iron Fist Fullbody does not drop in Rookie difficulty',
             challenge: 'High Score calculated with Crew Cost, Turns Taken and Tap Accuracy',
@@ -1387,7 +1380,6 @@ window.drops = {
             thumb: 263,
             global: true,
             nakama: 2026300,
-            condition: 'None',
             gamewith: 5777,
             condition: 'Training Coby does not drop in Rookie difficulty',
             challenge:'Total number of hits above 50,000',
@@ -1401,7 +1393,6 @@ window.drops = {
             thumb: 268,
             global: true,
             nakama: 2026800,
-            condition: 'None',
             gamewith: 6725,
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
@@ -1414,7 +1405,6 @@ window.drops = {
             thumb: 297,
             global: true,
             nakama: 2029700,
-            condition: 'None',
             gamewith: 9181,
             condition: 'Momonga does not drop in Rookie difficulty',
             'All Difficulties': [ 296, 298, 299, -217, -223, -200, -202, -199, -234, -236 ]
@@ -6262,7 +6252,7 @@ window.drops = {
             name: 'Dead or Treat!! Sweet & Spooky Party',
             thumb: 2292,
             global: true,
-            nakaka: 6229200,
+            nakama: 6229200,
             gamewith: 122996,
             condition: 'Katakuri: Can not use characters who are both Driven and Powerhouse classes.',
             'All Difficulties': [ 2291, 2293 ],
