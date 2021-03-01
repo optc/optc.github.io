@@ -10233,7 +10233,7 @@ window.specials = {
         orb: function(p) { return window.specials[3080].turnedOn ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[3080].turnedOn = p.captain != null && (p.captain.type == "PSY");
+            window.specials[3080].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "PSY");
         },
     },
     3081:{
@@ -10241,7 +10241,7 @@ window.specials = {
         type: "class",
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[3081].turnedOn = p.captain != null && (p.captain.type == "STR");
+            window.specials[3081].turnedOn = p.captain != null && (p.captain.type == "STR" || p.captain.type == "PSY");
         },
     },
     3082: {
