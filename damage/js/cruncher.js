@@ -618,24 +618,24 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var getTypeMultiplierOfUnit = function(attackerType,attackedType, unit, teamSlot) {
         var typeMult = 1, affinityMult = 1, captAffinityMult = 1;
         
-        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = getParameters(teamSlot).superType[teamSlot] ? 0.75 : 0.5;
-        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = getParameters(teamSlot).superType[teamSlot] ? 0.75 : 0.5;
-        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getParameters(teamSlot).superType[teamSlot] ? 0.75 : 0.5;
+        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
+        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = $scope.data.superTypeQCK ? 2.5 : 2;
+        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
+        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = $scope.data.superTypeINT ? 2.5 : 2;
+        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = $scope.data.superTypePSY ? 2.5 : 2;
+        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = $scope.data.superTypeSTR ? 0.75 : 0.5;
+        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = $scope.data.superTypeQCK ? 0.75 : 0.5;
+        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = $scope.data.superTypeDEX ? 0.75 : 0.5;
         
-        if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if ([3070].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3070].turnedOn[teamSlot]) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
-        if ([3071].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+        if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
+        if ([3070].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3070].turnedOn[teamSlot]) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
+        if ([3071].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
-            if ([ 3120, 3121, 3118 ].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+            if ([ 3120, 3121, 3118 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
-            if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = getParameters(teamSlot).superType[teamSlot] ? 2.5 : 2;
+            if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
         }
         
         //Get the strongest Color affinity Mult if it exists and apply it
@@ -1392,7 +1392,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ],
-            superType: [ $scope.data.superType0, $scope.data.superType1, $scope.data.superType2, $scope.data.superType3, $scope.data.superType4, $scope.data.superType5 ],
             sugarToy: [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ],
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
