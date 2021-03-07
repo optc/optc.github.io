@@ -198,6 +198,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     // PF RR
                     if (filters.nonFarmable.pflrr && !flags.pflrr) return false;
                     if (filters.nonFarmable.pflrr === false && flags.pflrr) return false;
+                    // Support RR
+                    if (filters.nonFarmable.slrr && !flags.slrr) return false;
+                    if (filters.nonFarmable.slrr === false && flags.slrr) return false;
                 }
             }
         }

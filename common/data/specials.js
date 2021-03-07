@@ -11081,6 +11081,94 @@ window.specials = {
             });
         },
     },
+    3251: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been poisoned, STRONGLY Poisoned OR INFLICTED WITH tOXIC."
+    },
+    3256: {
+        chainAddition: function(p) { return 0.8; }
+    },
+    3257: {
+        chainAddition: function(p) { return 0.8; }
+    },
+    3258: {
+        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : window.specials[3258].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            window.specials[3258].multiplier = (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 2 : 1;
+        }
+    },
+    3259: {
+        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : window.specials[3259].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            window.specials[3259].multiplier = (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 2 : 1;
+        }
+    },
+    3260: {
+        staticMult: function(p) { return 80; }
+    },
+    3261: {
+        staticMult: function(p) { return 80; }
+    },
+    3262: {
+        affinity: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.75 : 1; }
+    },
+    3265: {
+        chainAddition: function(p) { return 0.7; }
+    },
+    3267: {
+        affinity: function(p) { return p.unit.type == "QCK" ? 1.5 : 1; }
+    },
+    3268: {
+        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : 1.5; },
+        type: "type",
+    },
+    3269: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[3269].multiplier != 1 ? 1.75 : 1 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[3269].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[3269].multiplier) + 1) % levels.length;
+            window.specials[3269].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3249warning'
+            });
+        },
+    },
+    3270: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? window.specials[3270].multiplier : 1 },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1.75, 2.25];
+            var n = (levels.indexOf(window.specials[3270].multiplier) + 1) % levels.length;
+            window.specials[3270].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3270warning'
+            });
+        },
+    },
+    3271: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? window.specials[3271].multiplier : 1 },
+        onActivation: function(p) {
+            var levels = [1.75, 2.25];
+            var n = (levels.indexOf(window.specials[3271].multiplier) + 1) % levels.length;
+            window.specials[3271].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '3271warning'
+            });
+        },
+    },
+    3273: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.75 : 1 },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",
@@ -12941,5 +13029,75 @@ window.specials = {
     },
     5306: {
         affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    5307: {
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        chain: function(p) { return window.specials[5307].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[5307].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var levels = [2.5, 1];
+            var n = (levels.indexOf(window.specials[5307].multiplier) + 1) % levels.length;
+            window.specials[5307].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Activating Chain Boundary", "Not Activating Chain Boundary"][n] + ' boost. To ' + ["Enable the Chain Boundary", "Disable the Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5307warning'
+            });
+        },
+    },
+    5308: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        chain: function(p) { return window.specials[5308].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5308].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var levels = [3, 3.25, 3.5];
+            var n = (levels.indexOf(window.specials[5308].multiplier) + 1) % levels.length;
+            window.specials[5308].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Chain Lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
+                name: '3110warning'
+            });
+        },
+    },
+    5309: {
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        chain: function(p) { return window.specials[5309].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[5309].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var levels = [2.5, 1];
+            var n = (levels.indexOf(window.specials[5309].multiplier) + 1) % levels.length;
+            window.specials[5309].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Activating Chain Boundary", "Not Activating Chain Boundary"][n] + ' boost. To ' + ["Enable the Chain Boundary", "Disable the Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5309warning'
+            });
+        },
+    },
+    5310: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        chain: function(p) { return window.specials[5310].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[5310].multiplier : 1;
+        },
+        onActivation: function(p) {
+            var levels = [3, 3.25, 3.5];
+            var n = (levels.indexOf(window.specials[5310].multiplier) + 1) % levels.length;
+            window.specials[5310].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Chain Lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
+                name: '5310warning'
+            });
+        },
     },
 };

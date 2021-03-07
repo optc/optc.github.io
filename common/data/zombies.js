@@ -984,6 +984,9 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    3251: { // Hannyabal
+        type: 'healer',
+    },
     3376: {//Hera
         type: 'healer',
         multiplier: 1
