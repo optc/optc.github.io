@@ -5370,6 +5370,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3235, -3235 ],
         },
+        
+        {
+            name: 'Kawamatsu',
+            thumb: 3269,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3269, -3269 ],
+        },
 
     ],
 
@@ -5788,6 +5797,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Coast of Wano': [ 3239 ]
+        },
+
+        {
+            name: 'Luffy & Ace',
+            dropID: 'treasuremap43',
+            thumb: 3273,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3273 ]
         },
 
     ],

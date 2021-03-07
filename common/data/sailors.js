@@ -1658,6 +1658,9 @@ window.sailors = {
     3264: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 50 : 0; },
     },
+    3272: {
+        atkStatic: function(p) { return 30; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

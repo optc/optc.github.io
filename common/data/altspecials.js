@@ -400,4 +400,24 @@ window.altspecials = {
     5290: {
         chainMultiplication: function(p) { return 1.25; },
     },
+    5307: {
+        atk: function(p) { return 2; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
+    5308: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
+    5309: {
+        atk: function(p) { return 2; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
+    5310: {
+        atk: function(p) { return 1.75; },
+        type: "condition",
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
 };
