@@ -1655,6 +1655,12 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 30 : 0; },
     },
+    3258: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
+    3259: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 50 : 0; },
+    },
     3264: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 50 : 0; },
     },
@@ -1800,11 +1806,11 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
     5038: {
-        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
     5039: {
-        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
     5040: {
@@ -1814,11 +1820,11 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
     5042: {
-        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
     5043: {
-        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
     5044: {

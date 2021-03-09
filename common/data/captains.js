@@ -3272,13 +3272,13 @@ window.captains = {
         },
     },
     1245: {
-        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : p.percHP <= 10.0 && p.unit.class.has("Fighter") ? [3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1.75; }
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : p.percHP <= [10, 30][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] && p.unit.class.has("Fighter") ? [3, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [1.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
     },
     1246: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
     },
     1247: {
-        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? [2.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 2); },
+        atk: function(p) { return !p.unit.class.has("Fighter") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? [2.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]); },
         hp: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; }
     },
     1248: {
@@ -10792,12 +10792,12 @@ window.captains = {
     },
     3072: {
         atk: function(p) {
-            return p.unit.type == "STR" ? p.turnCounter >= 1 ? 5 : 4 : 3.75;
+            return p.unit.type == "STR" ? p.turnCounter >= 1 ? 5 : 4.25 : 3.75;
         },
     },
     3073: {
         atk: function(p) {
-            return p.unit.type == "STR" ? p.turnCounter >= 1 ? 5 : 4 : 3.75;
+            return p.unit.type == "STR" ? p.turnCounter >= 1 ? 5 : 4.25 : 3.75;
         },
     },
     3074: {
