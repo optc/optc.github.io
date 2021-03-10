@@ -7037,7 +7037,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: null,
-            condition: "Challenge: Complete with [PSY] units only. Complete with Sanji, Pudding and Bege. Complete with Jinbe, Carrot and Chopper.",
+            condition: "Chopperman Mission: Complete with [PSY] units only. Complete with Sanji, Pudding and Bege. Complete with Jinbe, Carrot and Chopper.",
         },
 
         {
