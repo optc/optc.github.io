@@ -7032,6 +7032,15 @@ window.drops = {
         },
 
         {
+            name: 'Escape Cacao Island',
+            thumb: 2121,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: "Challenge: Complete with [PSY] units only. Complete with Sanji, Pudding and Bege. Complete with Jinbe, Carrot and Chopper.",
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,
