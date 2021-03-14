@@ -6112,10 +6112,19 @@ window.drops = {
         {
             name: 'King',
             dropID: 'bond18',
-            thumb: 3421,
+            thumb: 3241,
             nakama: null,
             gamewith: null,
-            'All Difficulties': [ 3421 ],
+            'All Difficulties': [ 3241 ],
+        },
+
+        {
+            name: 'Doflamingo',
+            dropID: 'bond19',
+            thumb: 3276,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3276 ],
         },
 
     ],
