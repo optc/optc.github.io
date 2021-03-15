@@ -880,6 +880,12 @@ window.matchers = [
     },
 
     {
+        name: 'Stun reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+stun.+duration/i
+    },
+
+    {
         name: 'Crew ATK DOWN reducer',
         target: 'special',
         matcher: /(removes|reduces).+ATK DOWN.+duration/i 
