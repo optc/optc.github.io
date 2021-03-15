@@ -6089,6 +6089,7 @@ window.drops = {
             nakama: 9315300,
             gamewith: 148537,
             'All Difficulties': [ 3153 ],
+            'Kizuna Exchange': [ 9038 ],
         },
 
         {
@@ -6098,6 +6099,7 @@ window.drops = {
             nakama: 9320700,
             gamewith: 148537,
             'All Difficulties': [ 3207 ],
+            'Kizuna Exchange': [ 9039 ],
         },
 
         {
@@ -6107,6 +6109,7 @@ window.drops = {
             nakama: 9321300,
             gamewith: 148537,
             'All Difficulties': [ 3213 ],
+            'Kizuna Exchange': [ 9040 ],
         },
 
         {
@@ -6116,6 +6119,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3241 ],
+            'Kizuna Exchange': [ 9041 ],
         },
 
         {
@@ -6125,6 +6129,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3276 ],
+            'Kizuna Exchange': [ 9042 ],
         },
 
     ],

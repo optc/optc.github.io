@@ -4785,47 +4785,47 @@ window.evolutions = {
     },
     3099: {
         evolution: 3100,
-        evolvers: [  ]
+        evolvers: [ 118, 99, 1180, 304, 267 ]
     },
     3101: {
         evolution: 3102,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 266, 304, 267 ]
     },
     3103: {
         evolution: 3104,
-        evolvers: [  ]
+        evolvers: [ 117, 82, 83, 88, 104 ]
     },
     3105: {
         evolution: 3106,
-        evolvers: [  ]
+        evolvers: [ 117, 93, 94, 99, 104 ]
     },
     3117: {
         evolution: 3118,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 266, 304, 267 ]
     },
     3126: {
         evolution: 3127,
-        evolvers: [  ]
+        evolvers: [ 118, 87, 98, 303, 103 ]
     },
     3128: {
         evolution: 3129,
-        evolvers: [  ]
+        evolvers: [ 118, 88, 99, 304, 104 ]
     },
     3134: {
         evolution: 3135,
-        evolvers: [  ]
+        evolvers: [ 118, 100, 104, 266, 2662 ]
     },
     3136: {
         evolution: 3137,
-        evolvers: [  ]
+        evolvers: [ 83, 78, 94, 300, 100 ]
     },
     3138: {
         evolution: 3139,
-        evolvers: [  ]
+        evolvers: [ 1180, 92, 98, 303, 103 ]
     },
     3140: {
         evolution: 3141,
-        evolvers: [  ]
+        evolvers: [ 1180, 93, 99, 304, 104 ]
     },
     1268: {
         evolution: 3154,
@@ -4877,7 +4877,7 @@ window.evolutions = {
     },
     2477: {
         evolution: 3202,
-        evolvers: [  ]
+        evolvers: [ "skullZoro2", "skullZoro2", "skullZoro2", "skullZoro2", "skullZoro2" ]
     },
     3203: {
         evolution: 3204,
@@ -4885,7 +4885,7 @@ window.evolutions = {
     },
     2148: {
         evolution: 3211,
-        evolvers: [  ]
+        evolvers: [ "skullSanji2", "skullSanji2", "skullSanji2", "skullSanji2", "skullSanji2" ]
     },
     3218: {
         evolution: 3219,
@@ -4913,7 +4913,7 @@ window.evolutions = {
     },
     2475: {
         evolution: 3240,
-        evolvers: [  ]
+        evolvers: [ "skullMihawk", "skullMihawk", "skullMihawk", "skullMihawk", "skullMihawk" ]
     },
     3244: {
         evolution: 3245,
@@ -4921,27 +4921,27 @@ window.evolutions = {
     },
     3252: {
         evolution: 3253,
-        evolvers: [  ]
+        evolvers: [ 118, 100, 101, 266, 2662 ]
     },
     3254: {
         evolution: 3255,
-        evolvers: [  ]
+        evolvers: [ 1180, 89, 95, 300, 100 ]
     },
     3256: {
         evolution: 3257,
-        evolvers: [  ]
+        evolvers: [ 117, 89, 95, 300, 1180 ]
     },
     3258: {
         evolution: 3259,
-        evolvers: [  ]
+        evolvers: [ 1180, 90, 96, 301, 101 ]
     },
     3260: {
         evolution: 3261,
-        evolvers: [  ]
+        evolvers: [ 117, 90, 96, 301, 1180 ]
     },
     2774: {
         evolution: 3275,
-        evolvers: [  ]
+        evolvers: [ "skullNami2", "skullNami2", "skullNami2", "skullNami2", "skullNami2" ]
     },
     3333: {
         evolution: 3334,
