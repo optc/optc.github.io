@@ -11489,6 +11489,21 @@ window.captains = {
     3273: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? [2, 2, 2, 2, 2, 2, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2, 2, 2, 2, 2, 2, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3274: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3.5 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    3275: {
+        atk: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 4 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 4 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 4 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 4 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 4 : 3.5; },
+        affinity: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 1.1 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 1.1 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 1.1 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 1.1 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 1.1 : 1; },
+    },
+    3276: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    3311: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
     3333: {
         hitAtk: function(p) {
             return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 :

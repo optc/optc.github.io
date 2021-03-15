@@ -11169,6 +11169,21 @@ window.specials = {
         type: "type",
         affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.75 : 1 },
     },
+    3274: {
+        affinity: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? window.specials[3274].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[3274].multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Cerebral")) ? 2 : 1;
+        }
+    },
+    3275: {
+        affinity: function(p) { return window.specials[3275].multiplier; },
+        def: function(p) { return 0; },
+        atk: function(p) { return p.defenseDown ? 2 : 1; },
+        type: "condition",
+        onActivation: function(p) {
+            window.specials[3275].multiplier = (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) ? 1.75 : 1;
+        },
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

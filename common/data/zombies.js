@@ -958,6 +958,12 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    3117: { // Shanks
+        type: 'healer',
+    },
+    3118: { // Shanks
+        type: 'healer',
+    },
     3124: { // Kid
         type: 'healer',
         multiplier: 3
@@ -994,6 +1000,9 @@ window.zombies = {
     3380: { // Condoriano
         type: 'healer',
         amount: 401
+    },
+    3275: { // Onami
+        type: 'healer',
     },
     5001: { // Smoker/Tashigi
         type: 'healer',
