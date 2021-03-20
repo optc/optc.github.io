@@ -442,6 +442,7 @@ directives.addTags = function($stateParams, $rootScope) {
             if (flags.shop) element.append($('<span class="tag flag">Rayleigh Shop Unit</div>'));
             if (flags.tmshop) element.append($('<span class="tag flag">Trade Port Unit</div>'));
             if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
+            if (flags.inkable) element.append($('<span class="tag flag">Inkable</div>'));
             if (CharUtils.checkFarmable(id, { 'Story Island': true }))
                 element.append($('<span class="tag flag">Story mode only</div>'));
             if (CharUtils.checkFarmable(id, { Fortnight: true }))

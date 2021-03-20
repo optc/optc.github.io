@@ -201,6 +201,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     // Support RR
                     if (filters.nonFarmable.slrr && !flags.slrr) return false;
                     if (filters.nonFarmable.slrr === false && flags.slrr) return false;
+                    // Inkable
+                    if (filters.nonFarmable.inkable && !flags.inkable) return false;
+                    if (filters.nonFarmable.inkable === false && flags.inkable) return false;
                 }
             }
         }
