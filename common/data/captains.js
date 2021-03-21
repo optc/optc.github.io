@@ -11455,6 +11455,10 @@ window.captains = {
     3262: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? p.percHP <= 50.0 ? 3.25 : 2.5 : 1; }
     },
+    3263: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
     3264: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },

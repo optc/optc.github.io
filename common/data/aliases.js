@@ -3261,7 +3261,7 @@ window.aliases = {
     3260: [ '', '', '' ],
     3261: [ '', '', '' ],
     3262: [ '', '', 'Edward Newgate' ],
-    3263: [ '', '', '' ],
+    3263: [ '', '', 'Raid Marco', 'Marco the Phoenix' ],
     3264: [ '', '', '' ],
     3265: [ '', '', 'Daz Bones', 'Zala' ],
     3266: [ '', '', 'Galdino', 'Marianne' ],

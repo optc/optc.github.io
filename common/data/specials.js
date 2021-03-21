@@ -11115,6 +11115,9 @@ window.specials = {
     3262: {
         affinity: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.75 : 1; }
     },
+    3263: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+    },
     3265: {
         chainAddition: function(p) { return 0.7; }
     },

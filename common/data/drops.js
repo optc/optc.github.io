@@ -3873,6 +3873,15 @@ window.drops = {
         },
 
         {
+            name: 'Clash!! Marco',
+            dropID: 'clash68',
+            thumb: 3263,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3263 ],
+        },
+
+        {
             name: 'Showdown!! Usopp & Chopper',
             thumb: 3370,
             global: true,
