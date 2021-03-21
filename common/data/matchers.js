@@ -1186,9 +1186,15 @@ window.matchers = [
     },
     
     {
-        name: 'Silence/Special Bind reducers',
+        name: 'Own Silence/Special Bind reducers',
         target: 'sailor',
-        matcher: /(reduces|removes|resists).+silence/i
+        matcher: /(reduces|removes|resists).+silence.+on this/i
+    },
+
+    {
+        name: 'Crew Silence/Special Bind reducers',
+        target: 'sailor',
+        matcher: /(reduces|removes|resists).+silence(?!.*on this)/i
     },
     
     {
