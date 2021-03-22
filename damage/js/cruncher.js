@@ -632,7 +632,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ([3071].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
-            if ([ 3111, 3097 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
+            if ([ 3097 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
+            if ([ 3111 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
             if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
