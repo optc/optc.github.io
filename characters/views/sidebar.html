@@ -202,6 +202,10 @@
         ng-model="filters.nonFarmable.tmshop" ng-click="onDropFilterClick($event,true)">Trade Port Unit</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.tmshop === false }"
         ng-model="filters.nonFarmable.tmshop" ng-click="onDropFilterClick($event,false)">Hide Trade Port Unit</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.inkable }"
+    ng-model="filters.nonFarmable.inkable" ng-click="onDropFilterClick($event,true)">Inkable</span><!--
+--><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.inkable === false }"
+    ng-model="filters.nonFarmable.inkable" ng-click="onDropFilterClick($event,false)">Hide Inkable</span>
 </div>
 
 <div class="filter-container expandable" id="exclusion-filter"
@@ -229,7 +233,7 @@
  --><span class="filter width-6 exc" ng-model="filters.japanTM" ng-class="{ active: filters.japanTM }"
         ng-click="filters.japanTM = !filters.japanTM">Show Japan TM Boosters [Luffy & Ace]</span>
     <span class="filter width-6 exc" ng-model="filters.globalKC" ng-class="{ active: filters.globalKC }"
-        ng-click="filters.globalKC = !filters.globalKC">Show Global KC Boosters [Halloween Kid]<!--br></br--></span><!--
+        ng-click="filters.globalKC = !filters.globalKC">Show Global KC Boosters [Akainu & Kizaru]<!--br></br--></span><!--
  --><span class="filter width-6 exc" ng-model="filters.japanKC" ng-class="{ active: filters.japanKC }"
         ng-click="filters.japanKC = !filters.japanKC">Show Japan KC Boosters [Basil Hawkins]<!--br></br--></span>
 </div>

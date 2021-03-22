@@ -489,32 +489,32 @@ window.effects = {
 	
 	'Kizuna Clash [Global]': {
         description: 'Certain units boosted',
-        thumb: 3124,
+        thumb: 3098,
         id: 46, // don't change this
         atk: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3121, 3120, 3118 ].indexOf(id) != -1) boost = 2.5;
-            if([ 3109, 3108, 3106, 3104, 3102, 3100, 3110, 3107, 2749, 2294, 2292 ].indexOf(id) != -1) boost = 2;
-            if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
+            //if([ 3121, 3120, 3118 ].indexOf(id) != -1) boost = 2.5;
+            if([ 3111, 3097, 3094, 3085, 3083, 3082, 3081, 3080, 3079, 3078, 3073, 3071, 3069, 3067, 3065, 5271, 5272, 5273, 5274 ].indexOf(id) != -1) boost = 2;
+            //if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
         },
         hp: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3121, 3120, 3118 ].indexOf(id) != -1) boost = 2.5;
-            if([ 3109, 3108, 3106, 3104, 3102, 3100, 3110, 3107, 2749, 2294, 2292 ].indexOf(id) != -1) boost = 2;
-            if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
+            //if([ 3121, 3120, 3118 ].indexOf(id) != -1) boost = 2.5;
+            if([ 3111, 3097, 3094, 3085, 3083, 3082, 3081, 3080, 3079, 3078, 3073, 3071, 3069, 3067, 3065, 5271, 5272, 5273, 5274 ].indexOf(id) != -1) boost = 2;
+            //if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
         },
         rcv: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3121, 3120, 3118 ].indexOf(id) != -1) boost = 2.5;
-            if([ 3109, 3108, 3106, 3104, 3102, 3100, 3110, 3107, 2749, 2294, 2292 ].indexOf(id) != -1) boost = 2;
-            if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
+            //if([ 3121, 3120, 3118 ].indexOf(id) != -1) boost = 2.5;
+            if([ 3111, 3097, 3094, 3085, 3083, 3082, 3081, 3080, 3079, 3078, 3073, 3071, 3069, 3067, 3065, 5271, 5272, 5273, 5274 ].indexOf(id) != -1) boost = 2;
+            //if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
         },
@@ -526,17 +526,17 @@ window.effects = {
         id: 47, // don't change this
         atk: function(p) {
             var character = window.families[p.number];
-            matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
+            matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Kozuki Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
             return !matching ? 1 : 1.5;
         },
         hp: function(p) {
             var character = window.families[p.number];
-            matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
+            matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Kozuki Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
             return !matching ? 1 : 1.5;
         },  
         rcv: function(p) {
             var character = window.families[p.number];
-            matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
+            matching = [ "Monkey D. Luffy", "Buggy", "Portgas D. Ace", "Marco", "Jozu", "Vista", "Whitebeard", "Crocodile", "Emporio Ivankov", "Jimbe", "Boa Hancock", "Namule", "Rakuyo", "Fossa", "Curiel", "Doma", "Decalvan Brothers", "Squard", "Whitey Bay", "Little Oars Jr.", "Inazuma", "Blenheim", "Kingdew", "Atmos", "Speed Jiru", "Blackbeard", "Rob Lucci", "Thatch", "Silvers Rayleigh", "Eneru", "Dracule Mihawk", "Perona", "Kinemon", "Kanjuro", "Inuarashi", "Wanda", "Sicilian", "Kozuki Momonosuke", "Nekomamushi", "Pedro", "Carrot", "Raizo" ].indexOf(character) != -1;
             return !matching ? 1 : 1.5;
         }, 
     },

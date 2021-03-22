@@ -1342,7 +1342,7 @@ window.captains = {
         rcv: function(p) { return 1.2; }
     },
     669: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2 + 0.75 * p.percHP / 100 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2 + 0.75 * p.percHP / 100, 2.5 + 0.75 * p.percHP / 100][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return 1.2; },
         rcv: function(p) { return 1.2; }
     },
@@ -3247,8 +3247,8 @@ window.captains = {
                 if(window.specials[1239].turnedOn[i]==true) {specialEnabled = true;}
                 if(window.specials[1240].turnedOn[i]==true) {specialEnabled = true;}
             }
-            return specialEnabled ? 3 : 2; },
-        rcv: function(p) { return 1.3 }
+            return specialEnabled ? [ 3, 3.5 ][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 2; },
+        rcv: function(p) { return [ 1.3, 1.35 ][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] }
     },
     1241: {
         chainModifier: function(p) { return 1.5; }
@@ -4211,7 +4211,7 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.125 : 2.25; }
     },
     1473: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 1.125 : 2.25; }
+        atk: function(p) { return p.slot == p.sourceSlot ? [ 1.125, 1.25 ][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [ 2.25, 2.5 ][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
     },
     1474: {
         atk: function(p) { return 1.5; }
@@ -9491,7 +9491,7 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
     },
     2686: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 2.5 + 2 * (1 - (p.percHP) / 100) : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? [2.5 + 2 * (1 - (p.percHP) / 100), 3.25 + 1.25 * (1 - (p.percHP) / 100)][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     2687: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
@@ -11454,6 +11454,10 @@ window.captains = {
     },
     3262: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? p.percHP <= 50.0 ? 3.25 : 2.5 : 1; }
+    },
+    3263: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     3264: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
