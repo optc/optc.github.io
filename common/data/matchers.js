@@ -1174,9 +1174,15 @@ window.matchers = [
     },
     
     {
-        name: 'Paralysis reducers',
+        name: 'Own paralysis reducers',
         target: 'sailor',
-        matcher: /(reduces|removes|resists).+Paralysis/i 
+        matcher: /(reduces|removes|resists).+Paralysis.+on this/i
+    },
+
+    {
+        name: 'Crew paralysis reducers',
+        target: 'sailor',
+        matcher: /(reduces|removes|resists).+Paralysis(?!.*on this)/i
     },
 
     {
