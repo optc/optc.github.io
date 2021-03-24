@@ -11068,7 +11068,7 @@ window.specials = {
         },
     },
     3249: {
-        atk: function(p) { return p.defenseDown ? window.specials[3249].multiplier : 1 },
+        atk: function(p) { return p.defenseDown ? window.specials[3249].multiplier : 1; },
         type: "condition",
         def: function(p) { return 0; },
         onActivation: function(p) {
@@ -11138,7 +11138,7 @@ window.specials = {
             window.specials[3269].multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3249warning'
+                name: '3269warning'
             });
         },
     },
@@ -11185,6 +11185,36 @@ window.specials = {
         type: "condition",
         onActivation: function(p) {
             window.specials[3275].multiplier = (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) ? 1.75 : 1;
+        },
+    },
+    3277: {
+        atk: function(p) { return window.specials[3277].multiplier; },
+        affinity: function(p) { return 2; },
+        type: "type",
+        def: function(p) { return 0; },
+        onActivation: function(p) {
+            var levels = [2.5, 1];
+            var n = (levels.indexOf(window.specials[3277].multiplier) + 1) % levels.length;
+            window.specials[3277].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x ATK boost. To ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
+                name: '3277warning'
+            });
+        },
+    },
+    3278: {
+        atk: function(p) { return window.specials[3278].multiplier; },
+        affinity: function(p) { return 2; },
+        type: "type",
+        def: function(p) { return 0; },
+        onActivation: function(p) {
+            var levels = [2.5, 1];
+            var n = (levels.indexOf(window.specials[3278].multiplier) + 1) % levels.length;
+            window.specials[3278].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x ATK boost. To ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
+                name: '3278warning'
+            });
         },
     },
     3333: {

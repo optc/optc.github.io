@@ -11505,6 +11505,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.25 : 1; },
     },
+    3278: {
+        atk: function(p) { return p.unit.type == "QCK" ? p.percHP >= 70.0 ? 5 : 4.5 : 4; },
+        hp: function(p) { return 1.3; },
+    },
     3311: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
