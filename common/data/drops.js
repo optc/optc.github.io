@@ -928,7 +928,7 @@ window.drops = {
             '01': [ 2317 ],
             '02': [  ],
             '03': [  ],
-            '04': [ 2314 ],
+            '04': [  ],
             '05': [ 2128 ],
             '06': [ 2318 ],
             '07': [ 2127 ],
@@ -956,7 +956,7 @@ window.drops = {
             '07': [  ],
             '08': [ 2596 ],
             '09': [  ],
-            '10': [ 2597, 2598, 2599 ],
+            '10': [ 2229, 2598, 2599 ],
         },
 
         {
@@ -971,7 +971,7 @@ window.drops = {
             '01': [  ],
             '02': [ 3001 ],
             '03': [ 3002 ],
-            '04': [ 3002, 2374, 2248 ],
+            '04': [ 3002 ],
             '05': [ 3001 ],
             '06': [ 3001 ],
             '07': [  ],
@@ -982,21 +982,22 @@ window.drops = {
         },
 
         {
-            name: 'Totto Land Inner Sea to Cacao Island',
+            name: 'Seas of Totto Land to Cacao Island',
             dropID: 'story42',
             shortName: 'Whole Cake 4',
             thumb: 3090,
-            nakama: null,
+            global: true,
+            nakama: 1309000,
             completion: '10x Rainbow Gems',
             gamewith: 228636,
-            '01': [ 3002 ],
-            '02': [ 3002 ],
-            '03': [ 3093, 3001 ],
+            '01': [  ],
+            '02': [  ],
+            '03': [ 3093 ],
             '04': [  ],
             '05': [  ],
             '06': [  ],
             '07': [ 3091 ],
-            '08': [ 3002 ],
+            '08': [  ],
             '09': [  ],
             '10': [ 3092 ],
             '11': [ 3090 ],
@@ -1005,15 +1006,31 @@ window.drops = {
         },
 
         {
-            name: 'Reverie',
+            name: 'Reverie: The World Council',
             dropID: 'story43',
             shortName: 'Reverie 1',
             thumb: 3195,
             //global: true,
             nakama: null,
+            completion: '5x Rainbow Gems',
+            gamewith: 246450,
+            '01': [ 3194 ],
+            '02': [ 3195 ],
+            '03': [  ],
+            '04': [  ],
+            '05': [  ],
+            '06': [ 3196 ],
+        },
+
+        {
+            name: 'Land of Wano - Kuri',
+            dropID: 'story44',
+            shortName: 'Wano 1',
+            thumb: 2780,
+            //global: true,
+            nakama: null,
             //completion: '10x Rainbow Gems',
             gamewith: null,
-            '01': [ 3193, 3194, 3195, 3196 ],
         },
     ],
 
@@ -2761,7 +2778,7 @@ window.drops = {
             gamewith: 178712,
             'All Difficulties': [ 2782, 2783, -1001, -1953, -2080, -2156, -2195, -2603, -2605, -2674, -2676, -2678, -2596 ],
         },
-
+                
         {
             name: 'Reunited in Wano! Straw Hat Pirates',
             dropID: 'event129',
@@ -2850,6 +2867,16 @@ window.drops = {
             nakama: null,
             gamewith: 230163,
             'All Difficulties':  [ -3100, -3102, -3104, -3106 ],
+        },
+
+        {
+            name: 'Commotion on Whole Cake Island!?',
+            dropID: 'event139',
+            global: true,
+            thumb: 3065,
+            nakama: null,
+            gamewith: 225163,
+            'All Difficulties':  [ -3057, -3059, -3065, -3067, -3069, -3071, -3073 ],
         },
     ],
 
@@ -3849,6 +3876,7 @@ window.drops = {
             name: 'Clash!! Soul King',
             dropID: 'clash65',
             thumb: 3078,
+            global: true,
             nakama: 4307800,
             gamewith: 225142,
             'All Difficulties': [ 3078 ],
@@ -5311,10 +5339,12 @@ window.drops = {
             name: 'Kikunojo',
             thumb: 3083,
             showManual: true,
+            global: true,
             nakama: 5308301,
             gamewith: 225889,
             slefty: 'coliseums',
             Chaos: [ 3083, -3083 ],
+            Underground: [ 3083, -3083 ],
         },
 
         {
@@ -5326,6 +5356,7 @@ window.drops = {
             gamewith: 230435,
             slefty: 'coliseums',
             Chaos: [ 3110, -3110 ],
+            Underground: [ 3110, -3110 ],
         },
 
         {
@@ -5758,6 +5789,7 @@ window.drops = {
             name: 'Jinbe',
             dropID: 'treasuremap37',
             thumb: 3094,
+            global: true,
             nakama: 8309400,
             gamewith: 228862,
             'Raging Sea': [ 3094 ]
@@ -5767,6 +5799,7 @@ window.drops = {
             name: 'Witch Pudding',
             dropID: 'treasuremap38',
             thumb: 3115,
+            global: true,
             nakama: 8311500,
             gamewith: 232511,
             'Raging Sea': [ 3115 ]
@@ -6077,6 +6110,7 @@ window.drops = {
             name: 'Sakazuki & Borsalino',
             dropID: 'bond13',
             thumb: 3098,
+            global: true,
             nakama: 9309800,
             gamewith: 148537,
             'All Difficulties': [ 3098 ],
@@ -6086,6 +6120,7 @@ window.drops = {
             name: 'Halloween Kid',
             dropID: 'bond14',
             thumb: 3124,
+            global: true,
             nakama: 9312400,
             gamewith: 148537,
             'All Difficulties': [ 3124 ],
@@ -6190,6 +6225,7 @@ window.drops = {
             name: 'Round Five',
             dropID: 'piratefestival5',
             thumb: 3082,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3082 ],
@@ -6499,8 +6535,8 @@ window.drops = {
 
         {
             name: 'Face Off! Luffy vs Katakuri',
-            global: true,
             thumb: 2363,
+            global: true,
             gamewith: 136731,
             condition: 'Chance of dropping the Support Medallions.',
         },
@@ -6508,12 +6544,15 @@ window.drops = {
         {
             name: 'Face Off! Luffy vs Sanji',
             thumb: 3065,
+            global: true,
             gamewith: null,
+            'Chopperman Missions': [ 3080, 3081 ],
         },
 
         {
             name: 'The Tea Party From Hell',
             thumb: 3079,
+            global: true,
             gamewith: null,
             'Chopperman Missions': [ 3086 ],
         },
@@ -7006,15 +7045,6 @@ window.drops = {
         },
 
         {
-            name: 'Face-Off! Sanji vs. Luffy',
-            thumb: 3081,
-            nakama: null,
-            gamewith: null,
-            //condition: 'Drops portions of a Log Pose map and a Treasure Key map to fulfill community rewards.',
-            'Chopperman Missions': [ 3080, 3081 ],
-        },
-
-        {
             name: 'Gather! Strawhat Pirates',
             thumb: 3033,
             global: true,
@@ -7042,6 +7072,7 @@ window.drops = {
         {
             name: 'World Cruise!',
             thumb: 3177,
+            global: true,
             gamewith: null,
             'Chopperman Missions': [ 3186, 3187 ],
         },
