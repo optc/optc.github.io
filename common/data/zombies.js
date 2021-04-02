@@ -993,15 +993,21 @@ window.zombies = {
     3251: { // Hannyabal
         type: 'healer',
     },
-    3376: {//Hera
+    3326: {//Hera
         type: 'healer',
         multiplier: 1
     },
-    3380: { // Condoriano
+    3327: { // Condoriano
         type: 'healer',
         amount: 401
     },
     3275: { // Onami
+        type: 'healer',
+    },
+    3281: { // Moria
+        type: 'healer',
+    },
+    3282: { // Moria
         type: 'healer',
     },
     5001: { // Smoker/Tashigi

@@ -762,7 +762,8 @@ function targetToString(target) {
     else if (target.count == 1)
       targetStr = "enemy";
   }
-  return ` to ${target.count ? target.count + " " : ""}${targetStr}${target.stat ? " with the " + target.priority + " " + target.stat : ""}`;
+  if (!target.comparator) return ` to ${target.count ? target.count + " " : ""}${targetStr}${target.stat ? " with the " + target.priority + " " + target.stat : ""}`;
+  else return ` to ${target.count ? target.count + " " : ""}${targetStr}${target.perc ? " with " + target.comparator + " " + target.perc + "%" + " " + target.stat : ""}`;
 }
 
 /******************

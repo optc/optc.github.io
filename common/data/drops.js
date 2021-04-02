@@ -2932,12 +2932,12 @@ window.drops = {
         {
             name: 'Clash Neo!! Vice-Admiral Garp',
             dropID: 'clashneo3',
-            thumb: 3340,
+            thumb: 3313,
             global: true,
             nakama: 4334000,
             gamewith: null,
             condition: 'Master: Fighter/Slasher/Shooter Only',
-            Master: [ 3339 ],
+            Master: [ 3312 ],
         },
 
         {
@@ -2967,14 +2967,14 @@ window.drops = {
         {
             name: 'Clash Neo!! Ivankov',
             dropID: 'clashneo5',
-            thumb: 3352,
+            thumb: 3315,
             global: true,
             nakama: 4335200,
             condition: 'Master: Powerhouse/Fighter/Shooter Only',
             gamewith: null,
             slefty: 'raid_bosses/6',
-            Master: [ 3351 ],
-            Expert: [ 3351 ]
+            Master: [ 3314 ],
+            Expert: [ 3314 ]
         },
 
         {
@@ -3039,12 +3039,12 @@ window.drops = {
         {
             name: 'Clash Neo!! Heracles\'n',
             dropID: 'clashneo9',
-            thumb: 3376,
+            thumb: 3326,
             global: true,
             nakama: 4337600,
             gamewith: null,
             slefty: 'raid_bosses/9',
-            Expert: [ 3375 ]
+            Expert: [ 3325 ]
         },
 
         {
@@ -3124,11 +3124,11 @@ window.drops = {
             name: 'Clash Neo!! Duval',
             dropID: 'clashneo12',
             condition: '4 Master versions with different conditions. Slasher/Striker/Free Spirit Only, Slasher Only, Striker Only and Free Spirit Only',
-            thumb: 3368,
+            thumb: 3320,
             global: true,
             nakama: 4065400,
             gamewith: null,
-            Master: [ 3366 ],
+            Master: [ 3318 ],
         },
 
         {
@@ -3159,12 +3159,12 @@ window.drops = {
         {
             name: 'Clash Neo!! Nightmare Luffy',
             dropID: 'clashneo14',
-            thumb: 3357,
+            thumb: 3322,
             global: true,
             nakama: 4335700,
             gamewith: null,
             condition: 'Take 10% current Health in Environmental Damage every 2 turns. Master: Free Spirit/Driven/Cerebral Only',
-            Expert: [ 3356 ]
+            Expert: [ 3321 ]
         },
 
         {
@@ -3421,13 +3421,13 @@ window.drops = {
         {
             name: 'Clash Neo!! Vergo',
             dropID: 'clashneo27',
-            thumb: 3359,
+            thumb: 3324,
             global: true,
             condition: 'Master: Striker/Cerebral/Powerhouse Only',
             nakama: 4169600,
             gamewith: 63217,
-            Master: [ 3358 ],
-            Expert: [ 3358 ]
+            Master: [ 3323 ],
+            Expert: [ 3323 ]
         },
 
         {
@@ -3907,6 +3907,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3263 ],
+        },
+
+        {
+            name: 'Clash!? Shambles! Straw Hat Pirates',
+            dropID: 'clash69',
+            thumb: 3289,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3288, 3289, 3290, 3291 ],
         },
 
         {
@@ -5869,12 +5878,12 @@ window.drops = {
         {
             name: 'Ambush Neo! Edward Newgate',
             dropID: 'ambushneo1',
-            thumb: 3354,
+            thumb: 3317,
             global: true,
             nakama: 6335400,
             gamewith: null,
             condition: 'Has a chance of appearing at the end of ANY Raid boss when available. You MUST use the same team that you just used to complete the raid boss to fight Young Whitebeard.',
-            'All Difficulties': [ 3353, 9010, 9011, 9012, 9013, 9014 ]
+            'All Difficulties': [ 3316, 9010, 9011, 9012, 9013, 9014 ]
         },
 
         {
@@ -5976,13 +5985,13 @@ window.drops = {
 
         {
             name: 'Ambush!? Condoriano',
-            //dropID: 'ambush',
-            thumb: 3380,
+            dropID: 'ambush10',
+            thumb: 3327,
             global: true,
             nakama: null,
             gamewith: null,
             condition: 'Has a chance of appearing at the end of something. You MUST use the same team that you just used to complete the Raid boss to fight Condoriano.',
-            'All Difficulties': [ 3380 ]
+            'All Difficulties': [ 3327 ]
         },
 
     ],
@@ -7083,6 +7092,14 @@ window.drops = {
             nakama: null,
             gamewith: 252958,
             'Chopperman Missions': [ 3222, 3223 ],
+        },
+
+        {
+            name: 'Pirate Paradise!!',
+            thumb: 3280,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3286, 3287 ],
         },
 
         {

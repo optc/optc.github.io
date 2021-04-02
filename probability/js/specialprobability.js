@@ -3,10 +3,10 @@ onmessage = function(e) {
 	var copies = parseInt(e.data.copies);
 	var skillups = parseInt(e.data.skillups);
 
-	var probability = 0.2;
-    if (e.data.server == 1) {//2 for Japan, 1 for Global
-		probability = .2;
-	}
+	var probability = 0.36;
+    /*if (e.data.server == 1) {//2 for Japan, 1 for Global
+		probability = 0.2;
+	}*/
 	// if special event selected probability is affected
     probability *= e.data.special_event;
 

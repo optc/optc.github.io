@@ -414,8 +414,17 @@
                 "priority": {
                     "$ref": "#/definitions/TargetingPriority"
                 },
+                "comparator": {
+                    "$ref": "#/definitions/ConditionComparator"
+                },
+                "perc": {
+                    "type": "integer"
+                },
                 "stat": {
                     "$ref": "#/definitions/Attribute"
+                },
+                "type": {
+                    "$ref": "#/definitions/ConditionType"
                 },
                 "targets": {
                     "type": "array",
@@ -463,6 +472,8 @@
                 "Paralysis",
                 "Damage Over Time",
                 "Action Bind",
+                "Half Stats",
+                "Haste",
                 "near"
             ],
             "title": "Attribute"

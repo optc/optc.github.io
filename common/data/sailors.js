@@ -1672,6 +1672,25 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
+    3283: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    3284: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    3286: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 50 : 0; },
+    },
+    3287: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? 30 : 0; },
+    },
+    3292: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? 30 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
