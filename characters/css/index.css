@@ -26,26 +26,18 @@ body, html {
     overflow-y: hidden;
 }
 
-#leftContainer {
-    margin-left: -1px;
-    display: block;
-    overflow-x: hidden;
-}
-
 #queryContainer {
     padding: 10px;
-    display: table;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #queryContainer > input {
-    display: table-cell;
-    width: 100%;
+    flex: 1;
 }
 
 #queryContainer > span {
-    display: table-cell;
-    width: 1px;
     cursor: help;
     padding-left: 10px;
     font-weight: bold;
@@ -59,8 +51,158 @@ body, html {
     text-decoration: underline;
 }
 
-input[type="text"] {
-    width: 100%;
+#leftContainer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#tableContainer {
+    overflow: hidden;
+    padding: 0 10px 10px 10px;
+}
+
+#mainTable_wrapper {
+    display: grid;
+    height: 100%;
+}
+
+input#burgerMenuState {
+    position: absolute;
+    left: -100vw;
+}
+
+#burgerMenu {
+    margin: 5px 10px 5px 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    #mainContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #leftContainer {        
+        position: absolute;
+        top: 44px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background: white;
+        transition: transform 0.2s;
+    }
+
+    input#burgerMenuState:not(:checked) + #leftContainer {
+        transform: translateX(-100%);
+    }
+
+    input#burgerMenuState:checked + #leftContainer {
+        transform: translateX(0);
+    }
+
+    .abilities tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popover {
+        top: initial !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        overflow: auto;
+        max-height: 60vh;
+        max-width: none;
+        margin: auto;
+    }
+}
+
+.popover > .arrow {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    #mainContainer {
+        display: grid;
+        grid-template: 
+            "filters  query" auto
+            "filters  grid" 1fr
+            / 275px 1fr;
+        ;
+        height: 100vh;
+    }
+    
+    #leftContainer {
+        grid-area: filters;
+    }
+    
+    #queryContainer {
+        grid-area: query;
+    }
+
+    #burgerMenu {
+        display: none;
+    }
+    
+    #tableContainer {
+        grid-area: grid;
+    }
+
+    .slot.medium {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+        margin: 2px;
+    }
+
+    .arrow {
+        font-size: 2em;
+        bottom: 32px;
+    }
+
+    #mainTable td:nth-child(2) {
+        white-space: normal !important;
+    }
+
+    #mainTable td:nth-child(2) > img {
+        float: left;
+        margin-right: 5px;
+    }
+
+    #mainTable td:nth-child(2) > a {
+        height: 40px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .popover:not([title="Additional Columns"]) {
+        width: 500px !important;
+        max-width: 500px;
+        left: initial !important;
+        right: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #links-button {
+        display: none !important;
+    }
+
+}
+
+/**********
+ * Other *
+ **********/
+.panel-x-scroll {
+    overflow-x: auto;
+}
+
+.stats-pane {
+    clear: both;
 }
 
 #type-container {
@@ -342,14 +484,6 @@ input[type="text"] {
 .width-4 { width: 33.33%; }
 .width-3 { width: 25%; }
 
-#mainTable {
-    margin-top: 0 !important;
-}
-
-#mainTable_wrapper {
-    width: 99%;
-}
-
 .help-link {
     float: right;
     margin-right: 10px;
@@ -402,17 +536,6 @@ input[type="text"] {
 
 .filter-container.expanded > .irs {
     margin: 5px 5% 5px 5%;
-}
-
-.popover:not([title="Additional Columns"]) {
-    width: 500px !important;
-    max-width: 500px;
-    left: initial !important;
-    right: 25px;
-}
-
-.popover > .arrow {
-    display: none;
 }
 
 #clear-button {
@@ -735,6 +858,10 @@ tr.preview td:nth-child(2) > a:after {
     width: 100%;
 }
 
+#mainTable_wrapper :nth-child(2) {
+    overflow: auto;
+}
+
 .dataTables_length > label {
     margin-bottom: 0;
 }
@@ -780,12 +907,11 @@ tr.preview td:nth-child(2) > a:after {
     height: 100%;
     vertical-align: middle;
     z-index: 101;
+    padding: 10px;
 }
 
 .custom-modal {
-    z-index: 101;
-    width: 80%;
-    height: 80%;
+    height: 90%;
     max-width: 800px;
     margin: auto;
 }
@@ -904,7 +1030,6 @@ tr.preview td:nth-child(2) > a:after {
 
 .drop-table {
     position: relative;
-    top: -10px;
 }
 
 .drop-table td:first-child {
@@ -978,11 +1103,11 @@ unit > a:hover, .clickable:hover {
 }
 
 .chart-container {
-    height: 320px;
+    max-height: 320px;
 }
 
 .chart-line {
-    height: 338px !important;
+    max-height: 338px !important;
 }
 
 /*******************
@@ -998,6 +1123,15 @@ unit > a:hover, .clickable:hover {
     height: 256px;
     background-size: 320px 256px;
     margin: 10px;
+}
+
+.slot.responsive {
+    height: 256px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+    display: flex;
 }
 
 .slot.big {
@@ -1024,99 +1158,3 @@ unit > a:hover, .clickable:hover {
 /**********
  * MOBILE *
  **********/
-
-@media (min-width: 1024px) {
-
-    .slot.medium {
-        width: 80px;
-        height: 80px;
-        background-size: 80px 80px;
-        margin: 2px;
-    }
-
-    .arrow {
-        font-size: 2em;
-        bottom: 32px;
-    }
-
-    #mainContainer {
-        min-width: 1000px;
-        width: 100%;
-        height: 100%;
-        position: static;
-    }
-
-    #leftContainer {
-        min-width: 275px;
-        max-width: 275px;
-        width: 250px;
-        position: relative;
-        float: left;
-        overflow-y: scroll;
-        height: 100%;
-    }
-
-    #rightContainer {
-        height: 100%;
-        overflow: auto;
-        position: relative;
-        border-collapse: collapse;
-        padding: 10px 10px 0 10px;
-        left: 0;
-    }
-
-    #mainTable td:nth-child(2) {
-        white-space: normal !important;
-    }
-
-    #mainTable td:nth-child(2) > img {
-        float: left;
-        margin-right: 5px;
-    }
-
-    #mainTable td:nth-child(2) > a {
-        height: 40px;
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    #footer {
-        height: 55px;
-    }
-
-}
-
-@media (max-width: 1024px) {
-
-    #links-button {
-        display: none !important;
-    }
-
-    #mainContainer {
-        height: 100%;
-        position: relative;
-        overflow-y: auto;
-    }
-
-    #leftContainer {
-        min-width: 275px;
-        max-width: 275px;
-        width: 250px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        overflow-y: scroll;
-        float: left;
-        height: 100%;
-    }
-
-    #rightContainer {
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        left: 275px;
-        background: white;
-        height: 100%;
-    }
-
-}
