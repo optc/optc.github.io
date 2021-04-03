@@ -414,17 +414,11 @@
                 "priority": {
                     "$ref": "#/definitions/TargetingPriority"
                 },
-                "comparator": {
-                    "$ref": "#/definitions/ConditionComparator"
-                },
-                "perc": {
+                "percentage": {
                     "type": "integer"
                 },
                 "stat": {
                     "$ref": "#/definitions/Attribute"
-                },
-                "type": {
-                    "$ref": "#/definitions/ConditionType"
                 },
                 "targets": {
                     "type": "array",
@@ -622,7 +616,9 @@
             "type": "string",
             "enum": [
                 "highest",
-                "lowest"
+                "lowest",
+                "above",
+                "below"
             ],
             "title": "TargetingPriority"
         },

@@ -691,10 +691,22 @@ filters.abilityToString = function() {
               }
               break;
             case "hinderance":
-              e += `${effect.chance}% chance to ${arrayToString(effect.attributes)}`;
+              e += `${effect.chance}% chance to inflict ${arrayToString(effect.attributes)}`;
               break;
             case "boon":
-              e += `${effect.chance ? effect.chance+ "% chance to " : ""}${"Provoke" == arrayToString(effect.attributes) ? "Provoke enemies" : "reduce " + arrayToString(effect.attributes)}`;
+              e += `${effect.chance ? effect.chance+ "% chance to " : ""}`;
+              let attrStr = arrayToString(effect.attributes);
+              switch (attrStr){
+                case "Provoke":
+                  e += "Provoke enemies"
+                break;
+                case "Haste":
+                  e += "grant Haste"
+                break;
+                default:
+                  e += `${"reduce " + attrStr}`;
+                break;
+              }
               break;
             case "penalty":
               let tmpStr = arrayToString(effect.attributes);
@@ -762,8 +774,9 @@ function targetToString(target) {
     else if (target.count == 1)
       targetStr = "enemy";
   }
-  if (!target.comparator) return ` to ${target.count ? target.count + " " : ""}${targetStr}${target.stat ? " with the " + target.priority + " " + target.stat : ""}`;
-  else return ` to ${target.count ? target.count + " " : ""}${targetStr}${target.perc ? " with " + target.comparator + " " + target.perc + "%" + " " + target.stat : ""}`;
+  let retVal = ` to ${target.count ? target.count + " " : ""}${targetStr}`;
+  retVal = retVal + `${target.stat ? (" with " + (target.percentage ? "a " + target.percentage + "% or " :"the ") + target.priority + " " + target.stat) : ""}`;
+  return retVal;
 }
 
 /******************
