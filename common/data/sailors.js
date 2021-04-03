@@ -2438,4 +2438,22 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
+    5311: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 75 : 0; },
+    },
+    5312: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    5313: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 125 : 0; },
+    },
+    5314: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 75 : 0; },
+    },
+    5315: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    5316: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 125 : 0; },
+    },
 };
