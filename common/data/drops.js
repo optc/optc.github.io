@@ -2878,6 +2878,16 @@ window.drops = {
             gamewith: 225163,
             'All Difficulties':  [ -3057, -3059, -3065, -3067, -3069, -3071, -3073 ],
         },
+
+        {
+            name: 'Conflict of the Emperors!',
+            dropID: 'event140',
+            global: true,
+            thumb: 3135,
+            nakama: null,
+            gamewith: 234904,
+            'All Difficulties':  [ -2914, -3118, -3120, -3121, -3135, -3137, -3139, -3141 ],
+        },
     ],
 
 
@@ -3886,6 +3896,7 @@ window.drops = {
             name: 'Clash!! Onami & Shinobu',
             dropID: 'clash66',
             thumb: 3143,
+            global: true,
             nakama: 4314300,
             gamewith: 234898,
             'All Difficulties': [ 3143 ],
@@ -5388,6 +5399,7 @@ window.drops = {
             name: 'Kamazo',
             thumb: 3145,
             showManual: true,
+            global: true,
             nakama: 314500,
             gamewith: 235988,
             'All Difficulties': [ 3145, -3145 ],
@@ -5818,6 +5830,7 @@ window.drops = {
             name: 'Eustass Kid',
             dropID: 'treasuremap39',
             thumb: 3150,
+            global: true,
             nakama: 8315000,
             gamewith: 236917,
             'Raging Sea': [ 3150 ]
@@ -6254,6 +6267,7 @@ window.drops = {
             name: 'Round Seven',
             dropID: 'piratefestival7',
             thumb: 3142,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3142 ],
@@ -7065,8 +7079,9 @@ window.drops = {
         {
             name: 'Big Mom VS Kaido!',
             thumb: 3135,
+            global: true,
             nakama: 6313500,
-            gamewith: null,
+            gamewith: 235518,
             'Chopperman Missions': [ 3144 ],
         },
 
