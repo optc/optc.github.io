@@ -59686,8 +59686,8 @@
               "attributes": [ "DEF" ],
               "duration": 11,
               "effect": "debuff",
-              "range": { "direction": "radial", "size": "medium" },
               "level": 1,
+              "range": { "direction": "radial", "size": "medium" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -59700,20 +59700,20 @@
             {
               "attributes": [ "Haste" ],
               "chance": 50,
-              "effect": "buff",
+              "effect": "boon",
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Haste" ],
               "chance": 30,
-              "effect": "buff",
+              "effect": "boon",
               "targeting": { "count": 1, "targets": [ "[QCK]" ] }
             },
             {
               "attributes": [ "DEF" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "duration": 11,
               "effect": "debuff",
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "level": 1,
               "targeting": { "targets": [ "enemies" ] }
             }
@@ -60041,10 +60041,10 @@
             },
             {
               "attributes": [ "Action Bind" ],
-              "duration" : 5,
               "chance": 10,
+              "duration": 5,
               "effect": "hinderance",
-              "targeting": { "count": 2, "comparator": "above", "perc": 80, "stat": "Special CT", "type": "stat", "targets": [ "enemies" ] }
+              "targeting": { "count": 2, "percentage": 80, "priority": "above", "stat": "Special CT", "targets": [ "enemies" ] }
             }
           ]
         },
@@ -60310,8 +60310,8 @@
             },
             {
               "attributes": [ "Half Stats" ],
-              "duration" : 11,
               "chance": 100,
+              "duration": 11,
               "effect": "hinderance",
               "targeting": { "count": 3, "targets": [ "enemies" ] }
             }
@@ -60508,9 +60508,9 @@
             },
             {
               "attributes": [ "Guard" ],
+              "duration": 6,
               "effect": "buff",
               "level": 1,
-              "duration": 6,
               "targeting": { "targets": [ "crew" ] }
             }
           ]
@@ -60522,7 +60522,7 @@
               "override": { "amount": 1.2 }
             },
             {
-              "override": { "level": 1, "duration": 7 }
+              "override": { "duration": 7, "level": 1 }
             }
           ]
         },
@@ -60533,7 +60533,7 @@
               "override": { "amount": 1.4 }
             },
             {
-              "override": { "level": 2, "duration": 8 }
+              "override": { "duration": 8, "level": 2 }
             }
           ]
         },
@@ -60544,7 +60544,7 @@
               "override": { "amount": 1.6 }
             },
             {
-              "override": { "level": 2, "duration": 9 }
+              "override": { "duration": 9, "level": 2 }
             }
           ]
         },
@@ -60555,7 +60555,7 @@
               "override": { "amount": 1.8 }
             },
             {
-              "override": { "level": 3, "duration": 10 }
+              "override": { "duration": 10, "level": 3 }
             }
           ]
         },
@@ -60566,7 +60566,7 @@
               "override": { "amount": 2 }
             },
             {
-              "override": { "level": 3, "duration": 11 }
+              "override": { "duration": 11, "level": 3 }
             }
           ]
         },
@@ -60577,7 +60577,7 @@
               "override": { "amount": 2.2 }
             },
             {
-              "override": { "level": 4, "duration": 12 }
+              "override": { "duration": 12, "level": 4 }
             }
           ]
         },
@@ -60588,7 +60588,7 @@
               "override": { "amount": 2.4 }
             },
             {
-              "override": { "level": 4, "duration": 13 }
+              "override": { "duration": 13, "level": 4 }
             }
           ]
         },
@@ -60599,7 +60599,7 @@
               "override": { "amount": 2.6 }
             },
             {
-              "override": { "level": 5, "duration": 14 }
+              "override": { "duration": 14, "level": 5 }
             }
           ]
         },
@@ -60610,7 +60610,7 @@
               "override": { "amount": 3 }
             },
             {
-              "override": { "level": 5, "duration": 15 }
+              "override": { "duration": 15, "level": 5 }
             }
           ]
         }
@@ -60630,9 +60630,9 @@
           "effects": [
             {
               "attributes": [ "ATK", "SPD" ],
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "effect": "buff",
               "level": 1,
-              "condition": { "comparator": "first", "count": 40, "type": "time" },
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -60705,9 +60705,9 @@
             },
             {
               "attributes": [ "Paralysis" ],
-              "effect": "hinderance",
               "chance": 20,
               "duration": 6,
+              "effect": "hinderance",
               "targeting": { "count": 1, "targets": [ "enemies" ] }
             }
           ]
@@ -60827,9 +60827,9 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
+              "condition": { "comparator": "first", "count": 30, "type": "time" },
               "effect": "buff",
               "level": 1,
-              "condition": { "comparator": "first", "count": 30, "type": "time" },
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -61065,10 +61065,10 @@
               "attributes": [ "DEF" ],
               "duration": 6,
               "effect": "debuff",
-              "range": { "direction": "radial", "size": "large" },
               "level": 1,
+              "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] }
-            },
+            }
           ]
         },
         {
@@ -61192,8 +61192,8 @@
             },
             {
               "attributes": [ "Special CT" ],
-              "effect": "buff",
               "condition": { "comparator": "first", "count": 30, "type": "time" },
+              "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[QCK]" ] }
             }
@@ -61284,8 +61284,8 @@
             },
             {
               "amount": 1000,
-              "effect": "damage",
               "condition": { "comparator": "first", "count": 30, "type": "time" },
+              "effect": "damage",
               "targeting": { "count": 1, "targets": [ "[STR]" ] },
               "type": "fixed"
             }
