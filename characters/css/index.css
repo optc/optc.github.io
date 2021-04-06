@@ -606,23 +606,36 @@ input#burgerMenuState {
 /*************
  * TYPEAHEAD *
  *************/
+.page-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
-h3 > span, h3 > label {
-    float: right;
+.page-header label {
     font-size: 14px;
+    margin: 0;
 }
 
-h3 > span > input, h3 > label {
-    position: relative;
-    bottom: 2px;
+.comparer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
 }
 
-h3 > label {
-    margin-right: 10px;
+.comparer .compare-clear {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.comparer .compare-clear:hover {
+    color: red;
 }
 
 #compare {
-    width: 200px;
+    width: 250px;
 }
 
 #compare + pre {
@@ -635,7 +648,7 @@ h3 > label {
     border: 1px solid gray;
     border-top: none;
     top: 22px !important;
-    width: 200px;
+    width: 250px;
 }
 
 .tt-suggestion {
@@ -685,17 +698,6 @@ h3 > label {
 
 .withPlus:before {
     content: '+';
-}
-
-#compare-clear {
-    cursor: pointer;
-    position: relative;
-    bottom: 4px;
-    right: 4px;
-}
-
-#compare-clear:hover {
-    color: red;
 }
 
 /***********
