@@ -31,6 +31,7 @@ body, html {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    flex: 0 0 auto;
 }
 
 #queryContainer > input {
@@ -60,11 +61,13 @@ body, html {
 #tableContainer {
     overflow: hidden;
     padding: 0 10px 10px 10px;
+    height: fit-content;
 }
 
 #mainTable_wrapper {
     display: grid;
     height: 100%;
+    grid-template-rows: auto 1fr auto;
 }
 
 input#burgerMenuState {
