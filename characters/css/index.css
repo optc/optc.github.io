@@ -30,7 +30,7 @@ body, html {
     padding: 10px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex: 0 0 auto;
 }
 
@@ -38,18 +38,11 @@ body, html {
     flex: 1;
 }
 
-#queryContainer > span {
-    cursor: help;
-    padding-left: 10px;
+#queryContainer > button {
+    padding: 8px;
     font-weight: bold;
-}
-
-#queryContainer > .clickable {
-    cursor: pointer;
-}
-
-#queryContainer > .clickable:hover {
-    text-decoration: underline;
+    background: none;
+    border: none;
 }
 
 #leftContainer {
@@ -61,7 +54,6 @@ body, html {
 #tableContainer {
     overflow: hidden;
     padding: 0 10px 10px 10px;
-    height: fit-content;
 }
 
 #mainTable_wrapper {
@@ -89,7 +81,7 @@ input#burgerMenuState {
 
     #leftContainer {        
         position: absolute;
-        top: 44px;
+        top: 56px;
         bottom: 0;
         left: 0;
         right: 0;
@@ -104,6 +96,14 @@ input#burgerMenuState {
 
     input#burgerMenuState:checked + #leftContainer {
         transform: translateX(0);
+    }
+
+    #queryContainer > button > span {
+        display: none;
+    }
+
+    #tableContainer {
+        height: fit-content;
     }
 
     .abilities tr {
@@ -152,6 +152,10 @@ input#burgerMenuState {
     
     #tableContainer {
         grid-area: grid;
+    }
+
+    #queryContainer > button > i {
+        display: none;
     }
 
     .slot.medium {
@@ -994,20 +998,8 @@ tr.preview td:nth-child(2) > a:after {
     text-align: left;
 }
 
-.clickable, #clear-input-button {
+.clickable {
     cursor: pointer !important;
-}
-
-#clear-input-button:hover {
-    text-decoration: underline;
-}
-
-.clickable, #random-button {
-    cursor: pointer !important;
-}
-
-#random-button:hover {
-    text-decoration: underline;
 }
 
 .arrow {

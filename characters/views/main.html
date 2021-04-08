@@ -6,12 +6,25 @@
 
 <div id="queryContainer">
     <label for="burgerMenuState" id="burgerMenu" class="fa fa-bars fa-lg"></label>
+    
     <input type="text" id="picker" placeholder="type to filter"
         ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
-    <span id="clear-input-button" ng-click="query = ''">Clear</span>
-    <span id="random-button" ng-click="query = getRandChar();">Random</span>
-    <span popover-trigger="mouseenter" popover-placement="bottom"
-        uib-popover-template="'operators.html'" popover-append-to-body="'true'" class="operator"><i>Operators</i></span>
+
+    <button ng-if="query" ng-click="clearQuery()" title="clear">
+        <i class="fa fa-times"></i>
+        <span>Clear</span>
+    </button>
+
+    <button ng-click="query = getRandChar();" title="random">
+        <i class="fa fa-random"></i>
+        <span>Random</span>
+    </button>
+
+    <button popover-trigger="mouseenter" popover-placement="bottom"
+        uib-popover-template="'operators.html'" popover-append-to-body="'true'" title="operators">
+        <i class="fa fa-info-circle"></i>
+        <span>Operators</span>
+    </button>
 </div>
 
 <div id="tableContainer">
