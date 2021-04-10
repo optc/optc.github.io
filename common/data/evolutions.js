@@ -4941,7 +4941,7 @@ window.evolutions = {
     },
     2774: {
         evolution: 3275,
-        evolvers: [ "skullNami2", "skullNami2", "skullNami2", "skullNami2", "skullNami2" ]
+        evolvers: [ "skullNami3", "skullNami3", "skullNami3", "skullNami3", "skullNami3" ]
     },
     3277: {
         evolution: 3278,

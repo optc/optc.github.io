@@ -5859,6 +5859,15 @@ window.drops = {
             'Coast of Wano': [ 3273 ]
         },
 
+        {
+            name: 'Shiryu',
+            dropID: 'treasuremap44',
+            thumb: 3297,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3297 ]
+        },
+
     ],
 
 
@@ -6261,7 +6270,16 @@ window.drops = {
 
         {
             name: 'Round Eight',
-            dropID: 'piratefestival8',
+            dropID: 'piratefestival7',
+            thumb: 3173,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3173 ],
+        },
+
+        {
+            name: 'Round Nine',
+            dropID: 'piratefestival9',
             thumb: 3208,
             nakama: null,
             gamewith: 196547,
@@ -6269,12 +6287,21 @@ window.drops = {
         },
 
         {
-            name: 'Round Nine',
-            dropID: 'piratefestival9',
+            name: 'Round Ten',
+            dropID: 'piratefestival10',
             thumb: 3233,
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3233 ],
+        },
+
+        {
+            name: 'Round Eleven',
+            dropID: 'piratefestival11',
+            thumb: 3285,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3285 ],
         },
 
     ],

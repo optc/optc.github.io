@@ -11525,6 +11525,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    3285: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.percHP >= 70.0 ? [2.5, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? [1, 1.2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
     3286: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName) == 2) && (p.orb != 'g')) ? 3 : 2.5 : 1; },
     },
@@ -11551,6 +11555,18 @@ window.captains = {
     3293: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3294: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
+    3295: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
+    },
+    3296: {
+        atk: function(p) { p.unit.type == "PSY" ? 1.5 : 1; },
+    },
+    3297: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? [2, 2, 2, 2, 2, 2, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3311: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
