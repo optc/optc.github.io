@@ -289,7 +289,7 @@
             //case '3127': return '../res/sadBandai/character_11581_t1.png'; break;
             //case '3128': return '../res/sadBandai/character_11569_t1.png'; break;
             //case '3129': return '../res/sadBandai/character_11570_t1.png'; break;
-            //case '3130': return '../res/sadBandai/character_11911_t1.png'; break;
+            case '3130': return '../res/sadBandai/character_11911_t1.png'; break;
             //case '3131': return '../res/sadBandai/character_11_t1.png'; break;
             //case '3132': return '../res/sadBandai/character_11_t1.png'; break;
             //case '3133': return '../res/sadBandai/character_11_t1.png'; break;

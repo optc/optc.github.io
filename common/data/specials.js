@@ -10550,9 +10550,9 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3147].multiplier, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             var n = (window.specials[3147].multiplier == 1.75 ? 1 : 0);
-            window.specials[3147].multiplier = [1.75, 2][n];
+            window.specials[3147].multiplier = [1.75, 2.25][n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
+                text: 'Using the ' + [1.75, 2.25][n] + 'x Orb multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3147warning'
             });
         }
