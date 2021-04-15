@@ -115,7 +115,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if(!Array.isArray(unit.class) && filters.noSingleClass) return false;
         if (filters.classes && filters.classes.length) {
             var inclusive = !filters.classInclusive;
-            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2, dualCharacter = Array.isArray(unit.class) && unit.class.length == 3;
+            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2 ? Array.isArray(unit.class[0]) ? false : true : false, dualCharacter = Array.isArray(unit.class) && unit.class.length == 3, vsCharacter = Array.isArray(unit.class) && unit.class.length == 2 ? Array.isArray(unit.class[0]) ? true : false: false;
             if(!inclusive){
                 if (singleClass){
                     if(singleQuery) if(filters.classes[0] != unit.class) return false;
@@ -132,21 +132,23 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                         var temp3 = false;
                         if (unit.class[0].length != 2) { if(filters.classes[0] == unit.class[0]) temp1 = true;}
                         if (unit.class[1].length != 2) { if(filters.classes[0] == unit.class[1]) temp2 = true;}
-                        if (unit.class[2].length != 2) { if(filters.classes[0] == unit.class[2]) temp3 = true;}
+                        if(dualCharacter) if (unit.class[2].length != 2) { if(filters.classes[0] == unit.class[2]) temp3 = true;}
                         if (!(temp1 || temp2 || temp3)) return false;
 
                     }
                     if(!singleQuery){
-                        if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
+                        if(dualCharacter) if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
                           && (!filters.classes.includes(unit.class[1][0]) || !filters.classes.includes(unit.class[1][1]))
                           && (!filters.classes.includes(unit.class[2][0]) || !filters.classes.includes(unit.class[2][1]))) return false;
+                        if(vsCharacter) if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
+                          && (!filters.classes.includes(unit.class[1][0]) || !filters.classes.includes(unit.class[1][1]))) return false;
                     }
                 }
             }
             else{
                 if (singleClass) if(!filters.classes.includes(unit.class)) return false;
                 if (doubleClass) if(!filters.classes.includes(unit.class[0]) && !filters.classes.includes(unit.class[1])) return false;
-                if (dualCharacter) {
+                if (dualCharacter || vsCharacter) {
                     var uclasses = [];
                     for(i = 0; i < unit.class.length; i++) { uclasses.push(unit.class[i][0]); uclasses.push(unit.class[i][1]); }
                     var temp = false;
