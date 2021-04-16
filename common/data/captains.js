@@ -10782,11 +10782,13 @@ window.captains = {
         atk: function(p) {
             return p.unit.type == "STR" ? p.turnCounter >= 1 ? 5 : 4.25 : 3.75;
         },
+        hp: function(p) { return 1.3; },
     },
     3073: {
         atk: function(p) {
             return p.unit.type == "STR" ? p.turnCounter >= 1 ? 5 : 4.25 : 3.75;
         },
+        hp: function(p) { return 1.3; },
     },
     3074: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 3 : 1; },
