@@ -1705,6 +1705,16 @@ window.sailors = {
     3296: {
         hpStatic: function(p) { return 30; },
     },
+    3301: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 30 : 0; },
+    },
+    3301: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 30 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },

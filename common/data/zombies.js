@@ -1221,4 +1221,28 @@ window.zombies = {
     5298: { // Shirahoshi/Mansherry
         type: 'healer',
     },
+    5318: { // FireTank
+        type: 'healer',
+        multiplier: 3
+    },
+    5319: { // FireTank
+        type: 'healer',
+        multiplier: 5
+    },
+    5320: { // FireTank
+        type: 'healer',
+        multiplier: 5
+    },
+    5322: { // FireTank
+        type: 'healer',
+        multiplier: 3
+    },
+    5323: { // FireTank
+        type: 'healer',
+        multiplier: 5
+    },
+    5324: { // FireTank
+        type: 'healer',
+        multiplier: 5
+    },
 };

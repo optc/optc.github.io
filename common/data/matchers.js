@@ -287,7 +287,7 @@ window.matchers = [
     },
 
     /* * * * * Specials * * * * */
-
+    
     {
         name: 'Type-boosting specials',
         target: 'special',
@@ -598,7 +598,13 @@ window.matchers = [
     {
         name: 'Orb lockers',
         target: 'special',
-        matcher: /locks (orbs|all orbs|orb|own orb)/i
+        matcher: /locks (orbs|all orbs|orb|own orb|your captain's orb)/i
+    },
+
+    {
+        name: 'Orb barrierers',
+        target: 'special',
+        matcher: /Barriers (orbs|all orbs|orb|own orb|your captain's orb|^\D+$)/i
     },
     
     {

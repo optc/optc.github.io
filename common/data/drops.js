@@ -5385,7 +5385,7 @@ window.drops = {
     'Arena': [
         
         {
-            name: 'Kamazo',
+            name: 'Wanted Man of the Flower Capital',
             thumb: 3145,
             showManual: true,
             nakama: 314500,
@@ -6200,7 +6200,7 @@ window.drops = {
     'Pirate Rumble': [
 
         {
-            name: 'Round One',
+            name: 'Strength of Unyielding Flame',
             dropID: 'piratefestival1',
             thumb: 2934,
             global: true,
@@ -6210,7 +6210,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Two',
+            name: 'Penetrating Dark Justice',
             dropID: 'piratefestival2',
             thumb: 2989,
             global: true,
@@ -6220,7 +6220,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Three',
+            name: 'Darkness Writhing in Hell',
             dropID: 'piratefestival3',
             thumb: 3016,
             global: true,
@@ -6230,7 +6230,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Four',
+            name: 'Diety Seeking the World of Dreams',
             dropID: 'piratefestival4',
             thumb: 3047,
             global: true,
@@ -6240,7 +6240,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Five',
+            name: 'The Sniper\'s Path',
             dropID: 'piratefestival5',
             thumb: 3082,
             global: true,
@@ -6250,7 +6250,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Six',
+            name: 'Beginning of the Nightmare',
             dropID: 'piratefestival6',
             thumb: 3107,
             global: true,
@@ -6260,7 +6260,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Seven',
+            name: 'An Ancient Threat',
             dropID: 'piratefestival7',
             thumb: 3142,
             nakama: null,

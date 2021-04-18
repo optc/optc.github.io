@@ -11558,6 +11558,22 @@ window.captains = {
     3297: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? [2, 2, 2, 2, 2, 2, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3298: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 4.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    3301: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    3302: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    3303: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
     3311: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
@@ -13015,5 +13031,37 @@ window.captains = {
     5316: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.75 : 1; }
+    },
+    5317: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.5 : p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5318: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 4.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5319: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5320: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5321: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4.5 : p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5322: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 4.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5323: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+    },
+    5324: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
     },
 };
