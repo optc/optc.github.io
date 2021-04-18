@@ -1454,9 +1454,15 @@ window.matchers = [
     },
     
     {
+        name: 'Buff Activated Support',
+        target: 'support',
+        matcher: /when (the|an) enemy gains/i
+    },
+    
+    {
         name: 'Debuff Activated Support',
         target: 'support',
-        matcher: /when an enemy inflicts/i
+        matcher: /when (the|an) enemy inflicts/i
     },
     
     {
