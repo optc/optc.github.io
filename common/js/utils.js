@@ -220,8 +220,8 @@
             case 9040: return '../res/skullSanji2.png'; break;
             case 'skullMihawk':
             case 9041: return '../res/skullMihawk.png'; break;
-            case 'skullNami2':
-            case 9042: return '../res/skullNami2.png'; break;
+            case 'skullNami3':
+            case 9042: return '../res/skullNamiv2.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -289,7 +289,7 @@
             //case '3127': return '../res/sadBandai/character_11581_t1.png'; break;
             //case '3128': return '../res/sadBandai/character_11569_t1.png'; break;
             //case '3129': return '../res/sadBandai/character_11570_t1.png'; break;
-            //case '3130': return '../res/sadBandai/character_11911_t1.png'; break;
+            case '3130': return '../res/sadBandai/character_11911_t1.png'; break;
             //case '3131': return '../res/sadBandai/character_11_t1.png'; break;
             //case '3132': return '../res/sadBandai/character_11_t1.png'; break;
             //case '3133': return '../res/sadBandai/character_11_t1.png'; break;
@@ -809,6 +809,14 @@
             case '5314': return '../res/character_12011_t1.png'; break;
             case '5315': return '../res/character_12012_t1.png'; break;
             case '5316': return '../res/character_12014_t1_int.png'; break;
+            case '5317': return '../res/character_11420_t1.png'; break;
+            case '5318': return '../res/character_11421_t1.png'; break;
+            case '5319': return '../res/character_11424_t1_dex.png'; break;
+            case '5320': return '../res/character_11424_t1_psy.png'; break;
+            case '5321': return '../res/character_11422_t1.png'; break;
+            case '5322': return '../res/character_11423_t1.png'; break;
+            case '5323': return '../res/character_11425_t1_dex.png'; break;
+            case '5324': return '../res/character_11425_t1_psy.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';

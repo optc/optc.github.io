@@ -115,7 +115,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if(!Array.isArray(unit.class) && filters.noSingleClass) return false;
         if (filters.classes && filters.classes.length) {
             var inclusive = !filters.classInclusive;
-            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2, dualCharacter = Array.isArray(unit.class) && unit.class.length == 3;
+            var singleQuery = filters.classes.length == 1, singleClass = !Array.isArray(unit.class), doubleClass = Array.isArray(unit.class) && unit.class.length == 2 ? Array.isArray(unit.class[0]) ? false : true : false, dualCharacter = Array.isArray(unit.class) && unit.class.length == 3, vsCharacter = Array.isArray(unit.class) && unit.class.length == 2 ? Array.isArray(unit.class[0]) ? true : false: false;
             if(!inclusive){
                 if (singleClass){
                     if(singleQuery) if(filters.classes[0] != unit.class) return false;
@@ -132,21 +132,23 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                         var temp3 = false;
                         if (unit.class[0].length != 2) { if(filters.classes[0] == unit.class[0]) temp1 = true;}
                         if (unit.class[1].length != 2) { if(filters.classes[0] == unit.class[1]) temp2 = true;}
-                        if (unit.class[2].length != 2) { if(filters.classes[0] == unit.class[2]) temp3 = true;}
+                        if(dualCharacter) if (unit.class[2].length != 2) { if(filters.classes[0] == unit.class[2]) temp3 = true;}
                         if (!(temp1 || temp2 || temp3)) return false;
 
                     }
                     if(!singleQuery){
-                        if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
+                        if(dualCharacter) if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
                           && (!filters.classes.includes(unit.class[1][0]) || !filters.classes.includes(unit.class[1][1]))
                           && (!filters.classes.includes(unit.class[2][0]) || !filters.classes.includes(unit.class[2][1]))) return false;
+                        if(vsCharacter) if((!filters.classes.includes(unit.class[0][0]) || !filters.classes.includes(unit.class[0][1]))
+                          && (!filters.classes.includes(unit.class[1][0]) || !filters.classes.includes(unit.class[1][1]))) return false;
                     }
                 }
             }
             else{
                 if (singleClass) if(!filters.classes.includes(unit.class)) return false;
                 if (doubleClass) if(!filters.classes.includes(unit.class[0]) && !filters.classes.includes(unit.class[1])) return false;
-                if (dualCharacter) {
+                if (dualCharacter || vsCharacter) {
                     var uclasses = [];
                     for(i = 0; i < unit.class.length; i++) { uclasses.push(unit.class[i][0]); uclasses.push(unit.class[i][1]); }
                     var temp = false;
@@ -219,9 +221,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             }
         }
         if (filters.noSupport && window.details[id]) if("support" in window.details[id]) return false;
-        if (filters.globalTM && [ 3089, 3088, 3087, 3065, 5271, 5272, 5273, 5274, 3071, 3073, 3079, 3067, 3069, 3085, 3125, 3078, 3083, 3094, 3115, 3082, 3080, 3081, 3086, 3038, 3040, 3042, 3044, 3112, 3113, 3114, 353, 575, 865, 1298, 1374, 1432, 1595, 1943, 2263, 2394, 2504, 2670, 2684, 2885, 2886, 2893, 2922, 2923, 1733, 1978, 2037, 2111, 2193, 2471, 2721, 2908, 3049, 601, 1357, 1416, 1947, 2091, 2751, 1808, 2109, 2261, 2299, 2336, 2362, 2443, 2469, 5062, 5063, 5064, 5065, 2510, 2763, 2823, 2850, 5210, 5211, 5212, 5213, 2879, 3045, 3046, 3090, 3091, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 1853, 1889, 1916, 1941, 1972, 2000, 5012, 5013, 5014, 5015, 2064, 2137, 2175, 2211, 2387, 2557, 5140, 5141, 5142, 5143, 2583, 2618, 5176, 5177, 5178, 5179, 2659, 2690, 2729, 2792, 2913, 2977, 2995, 3022, 3060, 5263, 5264, 5265, 5266, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551 ].indexOf(id) == -1) return false;
-        if (filters.globalKC && [ 3111, 3097, 3094, 3085, 3083, 3082, 3081, 3080, 3079, 3078, 3073, 3071, 3069, 3067, 3065, 5271, 5272, 5273, 5274 ].indexOf(id) == -1) return false;
-        if (filters.japanTM && [ 3271, 3270, 3272, 5309, 3253, 5310, 3239, 3225, 3227, 3240, 3245, 3229, 3231, 3255, 3257, 3259, 3261, 3269, 3241, 3251, 3247, 3262, 3235, 3233, 3222, 3223, 1916, 2109, 2175, 2443, 2763, 2879, 2995, 3115, 3217, 3273, 3175, 3177, 3179, 3181, 3183, 3185, 447, 603, 978, 989, 1432, 1943, 2097, 2473, 2504, 2885, 2886, 3078, 3209, 983, 1089, 1143, 1251, 1310, 1376, 1401, 2249, 2569, 2813, 2869, 2908, 3017, 3049, 3210, 713, 1037, 1918, 2429, 2523, 2634, 3207, 3213, 3208, 3186, 3187, 3188, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952 ].indexOf(id) == -1) return false;
+        if (filters.globalTM && [ 3146, 3147, 3148, 5281, 3135, 5282, 3137, 3139, 3141, 3097, 3095, 3096, 3143, 3145, 3094, 3150, 3098, 5275, 5276, 5277, 5278, 3142, 3144, 3065, 5271, 5272, 5273, 5274, 3071, 3073, 3100, 3102, 3118, 3067, 3069, 3087, 3088, 3089, 1924, 2158, 2197, 2263, 2281, 2394, 2504, 2670, 2846, 2956, 2987, 2123, 2354, 2375, 2416, 2550, 5132, 5133, 5134, 5135, 2721, 2813, 2869, 3049, 3083, 1916, 2000, 5012, 5013, 5014, 5015, 2175, 2583, 2387, 2729, 2792, 2823, 3082, 3080, 3081, 3086, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 2781, 2908, 690, 1242, 1300, 1737, 1980, 2088, 2641, 1808, 1853, 1889, 1941, 1972, 2064, 2109, 2137, 2211, 2261, 2299, 2336, 2362, 2443, 2469, 5062, 5063, 5064, 5065, 2510, 2557, 5140, 5141, 5142, 5143, 2618, 5176, 5177, 5178, 5179, 2659, 2690, 2763, 2850, 5210, 5211, 5212, 5213, 2879, 2913, 2977, 2995, 3022, 3060, 5263, 5264, 5265, 5266, 3115, 1387, 1388, 1389, 1446, 1447, 1448, 1549, 1550, 1551 ].indexOf(id) == -1) return false;
+        if (filters.globalKC && [ 3149, 3151, 3152, 3150, 3145, 3143, 3142, 3141, 3139, 3137, 3124, 3135, 5281, 5282, 1268, 3154 ].indexOf(id) == -1) return false;
+        if (filters.japanTM && [ 3294, 3296, 3295, 3280, 5314, 5315, 5316, 3282, 3273, 3245, 5309, 3253, 5310, 3275, 3278, 3255, 3257, 3259, 3261, 3283, 3284, 3263, 3288, 3289, 3290, 3291, 3293, 3276, 3285, 3286, 3287, 3269, 3241, 3251, 3247, 3262, 1853, 1889, 1916, 2261, 2469, 5062, 5063, 5064, 5065, 2659, 3022, 3115, 3217, 3239, 3297, 3225, 3227, 3240, 3229, 3231, 603, 933, 1432, 1518, 1595, 1830, 2015, 2398, 2517, 5070, 5071, 5072, 5073, 2846, 2922, 2923, 2987, 926, 1422, 1528, 1667, 1828, 2111, 2123, 2354, 2375, 2471, 2845, 3235, 1328, 1511, 1581, 1857, 2088, 2666, 3233, 3222, 3223, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952 ].indexOf(id) == -1) return false;
         if (filters.japanKC && [ 3149, 3151, 3152, 3154, 3150, 3145, 3143, 3142, 3141, 3139, 3137, 3135, 5283, 5284, 3124, 1268, 3121, 3120, 2998, 2997, 2996, 2889, 2888, 2887, 2853, 2832, 2793, 2756, 3118, 3106, 3104, 3102, 3100, 2987, 2956, 2952, 2950, 2948, 2946, 2944, 2942, 2940, 2938, 2936, 2923, 2922, 2886, 2885, 2281, 2158, 2019, 2015, 1997, 1855, 1815, 1812, 1564, 1108, 2146 ].indexOf(id) == -1) return false;
         if (filters.worldClash && [ 253, 1041, 255, 257, 259, 979, 980, 983, 453, 455, 457, 946, 947, 948, 1182, 1528, 1186, 1188, 1190, 1270, 1509, 1510, 1511, 1606, 451, 981, 1184, 1272, 1512, 1607, 1222, 1276, 1278, 1602, 1608, 1700, 1798, 1989, 2037, 1047, 1492, 1972, 447, 1268, 575, 2025, 978, 2034, 1298, 2023, 1380, 2007, 1846, 1416, 1847, 2066, 408, 1927, 1345, 1593, 649, 1251, 1991, 1387, 2401, 2403, 2405 ].indexOf(id) == -1) return false;
         if (filters.swordOrdeal && [ 77, 255, 308, 449, 455, 530, 639, 645, 677, 750, 914, 1033, 1081, 1125, 1129, 1173, 1182, 1186, 1188, 1175, 1230, 1234, 1236, 1238, 1276, 1278, 1322, 1324, 1410, 1436, 1481, 1534, 1536, 1573, 1575, 1577, 1654, 1614, 1796, 1753, 1800, 1759, 1881, 2505, 1873, 1875, 1877, 1921, 1989, 2001, 2242, 2306, 2031, 2034, 2080, 2082, 2332, 2185, 2189, 2117, 2119, 2107, 2336, 2338, 2346, 2372, 2338, 2371, 2418, 2465, 2475, 2477, 2479, 2481, 2483, 2485, 2496, 2498 ].indexOf(id) == -1) return false;

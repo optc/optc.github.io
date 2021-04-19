@@ -5396,7 +5396,7 @@ window.drops = {
     'Arena': [
         
         {
-            name: 'Kamazo',
+            name: 'Wanted Man of the Flower Capital',
             thumb: 3145,
             showManual: true,
             global: true,
@@ -5872,6 +5872,15 @@ window.drops = {
             'Coast of Wano': [ 3273 ]
         },
 
+        {
+            name: 'Shiryu',
+            dropID: 'treasuremap44',
+            thumb: 3297,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3297 ]
+        },
+
     ],
 
 
@@ -6204,7 +6213,7 @@ window.drops = {
     'Pirate Rumble': [
 
         {
-            name: 'Round One',
+            name: 'Strength of Unyielding Flame',
             dropID: 'piratefestival1',
             thumb: 2934,
             global: true,
@@ -6214,7 +6223,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Two',
+            name: 'Penetrating Dark Justice',
             dropID: 'piratefestival2',
             thumb: 2989,
             global: true,
@@ -6224,7 +6233,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Three',
+            name: 'Darkness Writhing in Hell',
             dropID: 'piratefestival3',
             thumb: 3016,
             global: true,
@@ -6234,7 +6243,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Four',
+            name: 'Diety Seeking the World of Dreams',
             dropID: 'piratefestival4',
             thumb: 3047,
             global: true,
@@ -6244,7 +6253,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Five',
+            name: 'The Sniper\'s Path',
             dropID: 'piratefestival5',
             thumb: 3082,
             global: true,
@@ -6254,7 +6263,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Six',
+            name: 'Beginning of the Nightmare',
             dropID: 'piratefestival6',
             thumb: 3107,
             global: true,
@@ -6264,7 +6273,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Seven',
+            name: 'An Ancient Threat',
             dropID: 'piratefestival7',
             thumb: 3142,
             global: true,
@@ -6275,7 +6284,16 @@ window.drops = {
 
         {
             name: 'Round Eight',
-            dropID: 'piratefestival8',
+            dropID: 'piratefestival7',
+            thumb: 3173,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3173 ],
+        },
+
+        {
+            name: 'Round Nine',
+            dropID: 'piratefestival9',
             thumb: 3208,
             nakama: null,
             gamewith: 196547,
@@ -6283,12 +6301,21 @@ window.drops = {
         },
 
         {
-            name: 'Round Nine',
-            dropID: 'piratefestival9',
+            name: 'Round Ten',
+            dropID: 'piratefestival10',
             thumb: 3233,
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3233 ],
+        },
+
+        {
+            name: 'Round Eleven',
+            dropID: 'piratefestival11',
+            thumb: 3285,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3285 ],
         },
 
     ],

@@ -287,7 +287,7 @@ window.matchers = [
     },
 
     /* * * * * Specials * * * * */
-
+    
     {
         name: 'Type-boosting specials',
         target: 'special',
@@ -598,7 +598,13 @@ window.matchers = [
     {
         name: 'Orb lockers',
         target: 'special',
-        matcher: /locks (orbs|all orbs|orb|own orb)/i
+        matcher: /locks (orbs|all orbs|orb|own orb|your captain's orb)/i
+    },
+
+    {
+        name: 'Orb barrierers',
+        target: 'special',
+        matcher: /Barriers (orbs|all orbs|orb|own orb|your captain's orb|^\D+$)/i
     },
     
     {
@@ -1448,9 +1454,15 @@ window.matchers = [
     },
     
     {
+        name: 'Buff Activated Support',
+        target: 'support',
+        matcher: /when (the|an) enemy gains/i
+    },
+    
+    {
         name: 'Debuff Activated Support',
         target: 'support',
-        matcher: /when an enemy inflicts/i
+        matcher: /when (the|an) enemy inflicts/i
     },
     
     {
