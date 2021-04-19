@@ -34740,7 +34740,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 124,
+              "duration": 12,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34765,7 +34765,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 134,
+              "duration": 13,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34790,7 +34790,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 144,
+              "duration": 14,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34815,7 +34815,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 154,
+              "duration": 15,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34840,7 +34840,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 164,
+              "duration": 16,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34890,7 +34890,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 184,
+              "duration": 18,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34915,7 +34915,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 194,
+              "duration": 19,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -34940,7 +34940,7 @@
             {
               "attributes": [ "Paralysis" ],
               "chance": 30,
-              "duration": 204,
+              "duration": 20,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
