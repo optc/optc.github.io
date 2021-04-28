@@ -36,6 +36,16 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
             });
         }
     });
+    
+    $scope.$watch('conflictingMultipliers',function(value) {
+        if (value) {
+            $scope.notify({
+                text: 'Only one Static Attack Multiplier may be active at a time,'+
+                        'please check yourself which combination is better.',
+                type: 'error'
+            });
+        }
+    });
 
     var zombieNoty = null;
     $scope.$watch('numbers.zombie',function(zombie) {

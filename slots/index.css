@@ -25,6 +25,7 @@ html, body, body > [ui-view] {
 #content {
     display: inline-block;
     width: 408px;
+    height 300px;
 }
 
 #summary > #table-container {
@@ -52,7 +53,8 @@ html, body, body > [ui-view] {
 .column {
     width: 65px;
     margin: 1px;
-    height: 100%;
+    height: 375px;
+    top: -100px;
     vertical-align: top;
     position: relative;
     display: inline-block;
@@ -75,7 +77,7 @@ html, body, body > [ui-view] {
 
 .slots {
     position: absolute;
-    top: 94px;
+    top: 135px;
 }
 
 .unit {
@@ -123,7 +125,6 @@ html, body, body > [ui-view] {
 .unitContainer, .ghostContainer {
     width: 100%;
     position: absolute;
-    top: 27px;
     left: -1px;
 }
 
@@ -203,6 +204,10 @@ slot-wheel > .ghoster {
 
 #transient-explanation {
     padding: 10px;
+}
+
+.limit-break {
+    visibility: show;
 }
 
 .quick-fill {

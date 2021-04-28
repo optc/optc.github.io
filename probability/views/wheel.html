@@ -1,0 +1,22 @@
+<div class="menu ability-button">
+
+    <div class="slot-container">
+        <div class="slot-frame"></div>
+        <div class="btn trigger" add-ability></div>
+    </div>
+
+    <div class="icons">
+
+        <div class="abilitySlot" ng-repeat="k in range(0,10)">
+            <div class="ability" ng-if="!isUsed(k)" ng-click="pickAbility($event,k)"></div>
+        </div>
+
+        <div class="abilityBackground"></div>
+
+        <div class="abilityLevel" ng-show="character.slots[slotNumber]" ng-click="pickLevel($event)">
+            {{character.slots[slotNumber].level}}
+        </div>
+
+    </div>
+
+</div>

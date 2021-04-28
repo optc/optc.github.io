@@ -1,4 +1,4 @@
-﻿<nav id="menu" class="panel" role="navigation">
+<nav id="menu" class="panel" role="navigation">
 
     <ul>
 
@@ -17,19 +17,96 @@
                 <div id="ship-background"></div>
             </div>
         </li>
+        
+        <li>
+            <div id="heal">
+                <i class="fa fa-heart"></i>
+                Heal Socket Level: <input type="number" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
+            </div>
+        </li>
 
         <li>
             <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
                 <i class="fa fa-level-up comodity" ui-sref="main.defense"></i>
                 <i class="fa fa-shield"></i>
-                Enemy defense: <input type="number" id="defense" to-int ng-model="data.defense"></input>
+                Enemy Defense: <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>
+            </div>
+        </li>
+
+        <li>
+            <div id="shieldContainer">
+                <i class="fa fa-shield"></i>
+                Barrier: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">
+                                                                      <select style="color: black" id="comboType" ng-model="data.comboType">
+                                                                        <option value="" selected>Hits</option>
+                                                                        <option value="Good">Good</option>
+                                                                        <option value="Great">Great</option>
+                                                                        <option value="Perfect">Perfect</option>
+                                                                      </select> 
             </div>
         </li>
 
         <li ui-sref=".candy">
             <div id="candyContainer">
                 <i class="fa fa-sliders"></i>
-                <a>Cotton candies</a>
+                <a>Cotton Candies</a>
+            </div>
+        </li>
+        
+        <li>
+            <div id="action">
+                <i class="fa fa-check-square"></i>
+                Captain Actions/Boosted Abilities: <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">Friend/Guest Captain<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">Captain
+                <br>Gear Levels: <br>Friend/Guest Captain: <select style="color: black" id="gearLevelLeft" ng-model="data.gearLevelLeft">
+                                                                        <option value=0 selected>Gear 2</option>
+                                                                        <option value=1>Gear 3</option>
+                                                                        <option value=2>Gear 4: Boundman</option>
+                                                                        <option value=3>Gear 4: Tankman</option>
+                                                                      </select>
+                                <br> Captain: <select style="color: black" id="gearLevelRight" ng-model="data.gearLevelRight">
+                                                                        <option value=0 selected>Gear 2</option>
+                                                                        <option value=1>Gear 3</option>
+                                                                        <option value=2>Gear 4: Boundman</option>
+                                                                        <option value=3>Gear 4: Tankman</option>
+                                                                      </select> 
+            </div>
+        </li>
+        
+        <li>
+            <div id="limit">
+                <i class="fa fa-angle-double-up"></i>
+                Limit Break Level: <br><input type="number" class="wheelable" name="crew0" min = 0 max = 50 ng-model="data.limit0"><input type="number" class="wheelable" name="crew1" min = 0 max = 50 ng-model="data.limit1">
+                <br><input type="number" class="wheelable" name="crew2" min = 0 max = 50 ng-model="data.limit2"><input type="number" class="wheelable" name="crew3" min = 0 max = 50 ng-model="data.limit3">
+                <br><input type="number" class="wheelable" name="crew4" min = 0 max = 50 ng-model="data.limit4"><input type="number" class="wheelable" name="crew5" min = 0 max = 50 ng-model="data.limit5">
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <i class="fa fa-atom"></i> 
+                Super Typing: 
+            </div>
+            <div id="supertypeContainer">
+                <input id="supertypeSTR" type="checkbox" name="STR" ng-model="data.superTypeSTR"><label for="supertypeSTR" 
+                    class="width-4 supertype STR">STR
+                </label><input id="supertypeDEX" type="checkbox" name="DEX" ng-model="data.superTypeDEX"><label for="supertypeDEX" 
+                    class="width-4 supertype DEX">DEX
+                </label><input id="supertypeQCK" type="checkbox" name="QCK" ng-model="data.superTypeQCK"><label for="supertypeQCK" 
+                    class="width-4 supertype QCK">QCK
+                </label><input id="supertypePSY" type="checkbox" name="PSY" ng-model="data.superTypePSY"><label for="supertypePSY" 
+                    class="width-6 supertype PSY">PSY
+                </label><input id="supertypeINT" type="checkbox" name="INT" ng-model="data.superTypeINT"><label for="supertypeINT" 
+                    class="width-6 supertype INT">INT
+                </label>
+            </div>
+        </li>
+
+        <li>
+            <div id="sugarToy">
+                <i class="fa fa-paw"></i>
+                Sugar Transformation: <br>Crew 1: <input type="checkbox" class="wheelable" name="crew0" ng-model="data.sugarToy0"> Crew 2: <input type="checkbox" class="wheelable" name="crew1" ng-model="data.sugarToy1">
+                <br>Crew 3: <input type="checkbox" class="wheelable" name="crew2" ng-model="data.sugarToy2"> Crew 4: <input type="checkbox" class="wheelable" name="crew3" ng-model="data.sugarToy3">
+                <br>Crew 5: <input type="checkbox" class="wheelable" name="crew4" ng-model="data.sugarToy4"> Crew 6: <input type="checkbox" class="wheelable" name="crew5" ng-model="data.sugarToy5">
             </div>
         </li>
 
@@ -43,7 +120,7 @@
         <li ng-show="showGatherButton">
             <div id="gather" ui-sref=".gather">
                 <i class="fa fa-heartbeat"></i>
-                Data gathering
+                Data Gathering
             </div>
         </li>
 
@@ -57,6 +134,12 @@
         <special slot="3"></special>
         <special slot="4"></special>
         <special slot="5"></special>
+        <altspecial slot="0"></altspecial>
+        <altspecial slot="1"></altspecial>
+        <altspecial slot="2"></altspecial>
+        <altspecial slot="3"></altspecial>
+        <altspecial slot="4"></altspecial>
+        <altspecial slot="5"></altspecial>
 
     </ul>
 

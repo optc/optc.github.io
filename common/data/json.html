@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="units.js"></script>
+        <script src="details.js"></script>
+        <script src="cooldowns.js"></script>
+        <script>
+            var getQuery = location.search.replace('?','');
+            var result = "No Correct GET value found <br> Please use one of the following: <br>units<br>details<br>cooldowns";
+            
+            switch(getQuery) {
+                case "units":
+                    result = JSON.stringify(window.units);
+                    break;
+                case "details":
+                    result = JSON.stringify(window.details);
+                    break;
+                case "cooldowns":
+                    result = JSON.stringify(window.cooldowns);
+                    break;
+            }
+            
+            document.write(result);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

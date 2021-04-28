@@ -44,7 +44,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
     $scope.pickUnit = function(unitNumber) {
         $scope.resetSlot($stateParams.slot);
         $scope.data.team[$stateParams.slot].unit = units[unitNumber];
-        $scope.data.team[$stateParams.slot].level = 1;
+        $scope.data.team[$stateParams.slot].level = $scope.data.team[$stateParams.slot].unit.maxLevel;
         $scope.slotChanged($stateParams.slot);
         updateRecent(unitNumber);
         // captain warning
@@ -66,7 +66,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
+        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number') && !(Array.isArray(x.type)); });
         // filter by matchers
         for (var matcher in parameters.matchers) {
             result = result.filter(function(unit) {
@@ -199,7 +199,7 @@ controllers.ShipCtrl = function($scope, $state) {
 
     $scope.getThumbnail = function(ship) {
         if (!ship.thumb) return 'background-image: url(' + Utils.getThumbnailUrl(null) + ')';
-        return 'background-image: url(http://onepiece-treasurecruise.com/wp-content/uploads/' + ship.thumb + ')';
+        return 'background-image: url(https://onepiece-treasurecruise.com/wp-content/uploads/' + ship.thumb + ')';
     };
 
     $scope.pickShip = function(name) {
@@ -223,6 +223,14 @@ controllers.ResetCtrl = function($scope, $state, $storage) {
         for (var i=0;i<6;++i) $scope.resetSlot(i);
         $state.go('^');
     };
+};
+    
+/*******************
+ * InstructionCtrl *
+ ******************/
+
+controllers.InstructionCtrl = function() {
+    //Do nothing
 };
 
 /*************
@@ -260,6 +268,32 @@ controllers.PopoverCtrl = function($scope) {
     if (!$scope.details || !$scope.details.special) return;
     if ($scope.details.special.japan)
         $scope.details.special = $scope.details.special.japan;
+    if ($scope.details.captain){
+        if ($scope.details.captain.combined){
+            $scope.details.captain = $scope.details.captain.combined;
+        }
+        else if ($scope.details.captain.level6){
+            $scope.details.captain = $scope.details.captain.level6;
+        }
+        else if ($scope.details.captain.level5){
+            $scope.details.captain = $scope.details.captain.level5;
+        }
+        else if ($scope.details.captain.level4){
+            $scope.details.captain = $scope.details.captain.level4;
+        }
+        else if ($scope.details.captain.level3){
+            $scope.details.captain = $scope.details.captain.level3;
+        }
+        else if ($scope.details.captain.level2){
+            $scope.details.captain = $scope.details.captain.level2;
+        }
+        else if ($scope.details.captain.level1){
+            $scope.details.captain = $scope.details.captain.level1;
+        }
+        else if ($scope.details.captain.base){
+            $scope.details.captain = $scope.details.captain.base;
+        }
+    }
     if ($scope.details.special.constructor == Array) {
         var lastStage = $scope.details.special.slice(-1)[0];
         $scope.cooldown = lastStage.cooldown;

@@ -10,6 +10,7 @@
         <input type="text" id="picker" placeholder="type to filter"
             ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
         <span id="clear-input-button" ng-click="query = ''">Clear</span>
+        <span id="random-button" ng-click="query = getRandChar();">Random</span>
         <span popover-trigger="mouseenter" popover-placement="bottom"
             uib-popover-template="'operators.html'" popover-append-to-body="'true'"><i>Operators</i></span>
     </div>
@@ -25,6 +26,7 @@
             <ul>
                 <li><tt>type:X</tt>: shows only units of type X (STR, DEX, QCK, ...)</li>
                 <li><tt>class:X</tt>: shows only units of class X (fighter, slasher, ...)</li>
+                <ul><li>For Free Spirit units enter free_spirit or just free</li></ul>
             </ul>
             <br>
             Supported mathematical operators:

@@ -5,7 +5,7 @@ var CharUtils = { };
 /* * * * * Reverse drop map * * * * */
 
 var reverseDropMap = null;
-var marks = { 'Story Island': 1, 'Weekly Island': 2, 'Fortnight': 4, 'Raid': 8, 'Colosseum': 16 };
+var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Rookie Mission': 4, 'Fortnight': 8, 'Raid': 16, 'Coliseum': 64, 'Treasure Map': 256, 'Ambush': 1024, 'Kizuna Clash': 4096, 'Areana': 16384 };
 
 var generateReverseDropMap = function() {
     reverseDropMap = { };
@@ -16,8 +16,10 @@ var generateReverseDropMap = function() {
                 if (!data || data.constructor != Array) continue;
                 for (var i=0;i<data.length;++i) {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
-                    if (drops[type][island].name == 'Colosseum')
-                        flagUnit(data[i], 'Colosseum');
+                    if (drops[type][island].name == 'Coliseum')
+                        flagUnit(data[i], 'Coliseum');
+                    else if (drops[type][island].name == 'Arena')
+                        flagUnit(data[i], 'Arena');
                     else
                         flagUnit(data[i], type);
                 }
@@ -102,7 +104,7 @@ CharUtils.searchDropLocations = function(id) {
         for (var island=0;island<window.drops[type].length;++island) {
             var temp = [ ];
             for (var stage in window.drops[type][island]) {
-                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global') continue;
+                if (stage == 'thumb' || stage == 'name' || stage == 'shortName' || stage == 'day' || stage == 'global' || stage == 'condition' || stage == 'completion' || stage == 'challenge' || stage == 'challengeData' || stage == 'showManual' || stage == 'gamewith'|| stage == 'slefty' || stage == 'nakama' || stage == 'dropID') continue;
                 if (window.drops[type][island][stage].indexOf(id) != -1)
                     temp.push(stage);
             }
@@ -111,6 +113,10 @@ CharUtils.searchDropLocations = function(id) {
                 var name = window.drops[type][island].name;
                 if (type == 'Fortnight') name += ' Fortnight';
                 else if (type == 'Raid') name += ' Raid';
+                else if (type == 'Coliseum') name += ' Coliseum';
+                else if (type == 'Arena') name += ' Arena';
+                else if (type == 'Treasure Map') name += ' Treasure Map';
+                else if (type == 'Kizuna Clash') name += ' Kizuna';
                 var data = { name: name, thumb: window.drops[type][island].thumb, data: temp };
                 if (type == 'Story Island' || window.drops[type][island].hasOwnProperty('day'))
                     data.bonuses = CharUtils.getIslandBonuses(island, window.drops[type][island].day);
@@ -155,9 +161,23 @@ CharUtils.searchSameSpecials = function(id) {
     if (!details[id]) return [ ];
     var result = [ ];
     for (var key in details) {
-        if (key == id || !details[key].special) continue; 
+        if (key == id || !details[key].special) continue;
         if (details[key].specialName == details[id].specialName && details[key].special == details[id].special)
             result.push(parseInt(key, 10));
+        if (Array.isArray(details[id].special) && Array.isArray(details[key].special))
+            if (details[key].specialName == details[id].specialName && details[key].special[0].description == details[id].special[0].description)
+                result.push(parseInt(key, 10));
+        if (details[id].special){
+            if (details[id].special.character1 && details[key].special.character1)
+                    if (details[key].specialName == details[id].specialName && details[id].special.character1 == details[key].special.character1)
+                    result.push(parseInt(key, 10));
+            if ((details[id].special.character1 && !details[key].special.character1) || (!details[id].special.character1 && details[key].special.character1)){
+                    if(details[id].special.character1) if (details[key].specialName == details[id].specialName && (details[id].special.character1 == details[key].special || details[id].special.character2 == details[key].special))
+                    result.push(parseInt(key, 10));
+                    if(details[key].special.character1) if (details[key].specialName == details[id].specialName && (details[key].special.character1 == details[id].special || details[key].special.character2 == details[id].special))
+                    result.push(parseInt(key, 10));
+            }
+        }
     }
     return result;
 };
@@ -202,7 +222,7 @@ CharUtils.getStatOfUnit = function(unit, stat, level) {
  * Caching *
  ***********/
 
-var orbControllerCache = { }, regexCache = { }, classCache = { captain: { }, special: { } };
+var orbControllerCache = { }, regexCache = { }, classCache = { captain: { }, special: { }, sailor: { } };
 
 CharUtils.getOrbControllerData = function(id) {
     if (orbControllerCache.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
@@ -264,6 +284,34 @@ CharUtils.isClassBooster = function(target, id, clazz) {
     classCache[target][clazz][id] = result;
     return result;
 };
+    
+CharUtils.hasFarmableSocket = function(id) {
+    var farmableSocket = false;
+    var ownFamily = window.families[id];
+    
+    //return false if unit has no Sockets?
+    var unit = window.units[id];
+    if (unit.slots<1) return farmableSocket;
+    
+    window.families.forEach(function(family,n){
+        if (Array.isArray(family)){
+            family.forEach(function(duo,n){
+                if (ownFamily == duo) {
+                    var famId = n+1;
+                    if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+                }
+            })
+        }
+        else{
+            if (ownFamily == family) {
+                var famId = n+1;
+                if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+            }
+        }
+    });
+    
+    return farmableSocket;
+}
 
 /******************
  * Initialization *

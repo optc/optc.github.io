@@ -27,11 +27,11 @@ window.abilities = [
     },
 
     {
-        name: 'Silence resistance',
+        name: 'Despair resistance',
         levels: [
-            [ 10, 'Silence duration reduced by 1 turn' ],
-            [ 15, 'Silence duration reduced by 2 turns' ],
-            [ 20, 'Silence duration reduced by 3 turns' ]
+            [ 10, 'Despair duration reduced by 1 turn' ],
+            [ 15, 'Despair duration reduced by 2 turns' ],
+            [ 20, 'Despair duration reduced by 3 turns' ]
         ]
     },
 
@@ -62,7 +62,7 @@ window.abilities = [
         levels: [
             [ 5, 'Boosted chances (20%) of getting matching orbs' ],
             [ 10, 'Boosted chances (22.2%) of getting matching orbs' ],
-            [ 20, 'Boosted chances (25%) of getting matching orbs' ],
+            [ 20, 'Boosted chances (25%) of getting matching orbs' ]
         ]
     },
 
@@ -71,7 +71,7 @@ window.abilities = [
         levels: [
             [ 10, 'Poison damage reduced by 20%' ],
             [ 15, 'Poison damage reduced by 50%' ],
-            [ 20, 'Poison damage reduced by 100%' ],
+            [ 20, 'Poison damage reduced by 100%' ]
         ]
     },
 
@@ -79,7 +79,7 @@ window.abilities = [
         name: 'Map damage resistance',
         levels: [
             [ 10, 'Map damage reduced by 50%' ],
-            [ 20, 'Map damage reduced by 100%' ],
+            [ 20, 'Map damage reduced by 100%' ]
         ]
     },
 

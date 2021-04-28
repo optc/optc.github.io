@@ -57,6 +57,10 @@ var StorageCtrl = function($scope, $storage) {
     for (var d in data)
         $scope.data[d] = data[d];
     
+    var team = loadValue('team',{ });
+    for (var d in team)
+        $scope.tdata.team[d] = team[d];
+
     var options = loadValue('options',{ });
     for (var o in options) {
         if (o != 'slidersEnabled') continue;
@@ -89,6 +93,11 @@ var StorageCtrl = function($scope, $storage) {
     $scope.$watch('data',function() {
         if (!$scope.options.transientMode)
             save('data',$scope.data);
+    },true);
+
+    $scope.$watch('tdata.team',function() {
+        if (!$scope.options.transientMode)
+            save('team',$scope.tdata.team);
     },true);
 
     $scope.$watch('options',function() {
