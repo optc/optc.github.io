@@ -3919,13 +3919,14 @@ window.drops = {
         },
 
         {
-            name: 'Showdown!! Usopp & Chopper',
-            thumb: 3370,
+            name: 'Clash!! Usopp & Chopper',
+            dropID: 'clash70',
+            thumb: 3331,
             global: true,
             nakama: 4337000,
             gamewith: null,
-            Expert: [ 3370 ],
-            Ultimate: [ 3370 ],
+            Expert: [ 3331 ],
+            Ultimate: [ 3331 ],
         },
 
         {
@@ -7127,6 +7128,14 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Chopperman Missions': [ 3286, 3287 ],
+        },
+
+        {
+            name: 'Adventurers\' Quarrel',
+            thumb: 3304,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3304, 3305 ],
         },
 
         {

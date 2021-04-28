@@ -1456,7 +1456,7 @@ window.matchers = [
     {
         name: 'Buff Activated Support',
         target: 'support',
-        matcher: /when (the|an) enemy gains/i
+        matcher: /when (the|an) enemy (gains|applies)/i
     },
     
     {
