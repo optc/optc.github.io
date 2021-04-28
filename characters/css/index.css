@@ -45,6 +45,10 @@ body, html {
     border: none;
 }
 
+#queryContainer > button:hover {
+    text-decoration: underline;
+}
+
 #leftContainer {
     display: flex;
     flex-direction: column;
