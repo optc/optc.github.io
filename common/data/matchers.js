@@ -1634,6 +1634,12 @@ window.matchers = [
     },
 
     {
+        name: 'Poisoners',
+        target: 'support',
+        matcher: /(poisons|Inflicts Toxic)/i
+    },
+
+    {
         name: 'Healers',
         target: 'support',
         matcher: /Recovers/i
