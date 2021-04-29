@@ -294,10 +294,10 @@
                                         <div ng-if="!isSwapHybrid" ng-bind-html="details.swap | decorate"></div>
                                         <!-- different sailor abilities -->
                                         <div ng-if="isSwapHybrid">
-                                            <span class="badge badge-japan" ng-show="details.Swap.japan">Japan</span>
-                                            <div ng-show="details.Swap.japan" ng-bind-html="details.sailor.japan | decorate"></div>
-                                            <span class="badge badge-global" ng-show="details.Swap.global">Global</span>
-                                            <div ng-show="details.Swap.global" ng-bind-html="details.Swap.global | decorate"></div>
+                                            <span class="badge badge-swap" ng-show="details.swap.base">Base Swap</span>
+                                            <div ng-show="details.swap.base" ng-bind-html="details.swap.base | decorate"></div>
+                                            <span class="badge badge-superswap" ng-show="details.swap.super">Super Swap [{{details.swap.superTurns}} Swaps]</span>
+                                            <div ng-show="details.swap.super" ng-bind-html="details.swap.super | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="details.swapNotes" ng-bind-html="details.swapNotes | notes | decorate"></span>
                                     </td>

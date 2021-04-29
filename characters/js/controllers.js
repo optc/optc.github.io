@@ -166,7 +166,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             $scope.rumble = jsonData.units.filter(unit =>{
                 return Math.floor(unit.id) == key;
               })[0];
-            if ( $scope.rumble.basedOn ) {
+            if ($scope.rumble) if ($scope.rumble.basedOn) {
               key = $scope.rumble.basedOn
               $scope.rumble = jsonData.units.filter(unit => unit.id == key)[0];
             }
@@ -364,7 +364,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.isLimitStaged = ($scope.details && $scope.details.limit && $scope.details.limit.constructor == Array);
     $scope.isPotentialStaged = ($scope.details && $scope.details.potential && $scope.details.potential.constructor == Array);
     $scope.isSupportStaged = ($scope.details && $scope.details.support && $scope.details.support.constructor == Array);
-    $scope.isSwapHybrid = ($scope.details && $scope.details.swap && $scope.details.swap.global);
+    $scope.isSwapHybrid = ($scope.details && $scope.details.swap && $scope.details.swap.base);
     $scope.isfestAbilityHybrid = ($scope.details && $scope.details.festAbility && ($scope.details.festAbility.character1));
     $scope.isfestSpecialHybrid = ($scope.details && $scope.details.festSpecial && ($scope.details.festSpecial.character1));
     $scope.isfestAttackPatternHybrid = ($scope.details && $scope.details.festAttackPattern && ($scope.details.festAttackPattern.character1));

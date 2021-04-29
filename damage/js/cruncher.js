@@ -298,7 +298,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -632,8 +632,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ([3071].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
-            if ([ 3097 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
-            if ([ 3111 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
+            if ([ 3152 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
+            if ([ 3151, 3149 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeQCK ? 2.5 : 2;
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
             if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
@@ -1029,7 +1032,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ([3071].indexOf(unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) affinityMultiplier = affinityMultiplier;
             
             if ($scope.data.effect == 'Kizuna Clash [Global]'){
-                if ([ 3111, 3097 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+                if ([ 3152, 3151, 3149 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
             if ($scope.data.effect == 'Kizuna Clash [Japan]'){
                 if ([ 3234, 3212 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
@@ -1448,7 +1451,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         
                         healAmount += id == 1250 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp) * rcvmulttemp) : 0;
                         healAmount += id == 1251 ? Math.floor(([0, .5, .75, 1, 1.5, 2, 3.5][classCounter().Powerhouse]) * (data.team[i].rcv + rcvtemp) * rcvmulttemp) : 0;
-                        healAmount += (id == 1000 || id == 1001) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
+                        healAmount += (id == 1000) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + ([.1, .3][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1750 || id == 1751 || id == 1922  || id == 2775  || id == 2776 || id == 5083 || id == 5087 || id == 2959 || id == 2960 || id == 3220 || id == 3221 || id == 3117 || id == 3118 || id == 3275 || id == 3281 || id == 3282) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
@@ -1460,6 +1463,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += (id == 5293 || id == 5294 || id == 5297 || id == 5298) ? (2 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) + (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         
                         healAmount += (id == 2195) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + ([0, 0.3][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) + ([0.5, 0.8][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
+                        healAmount += (id == 1001) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + ([0, 0.3][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) + ([0.5, 0.8][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
                         healAmount += id == 1889 ? [1.5, 1.6, 1.7, 1.8, 1.9, 2, 2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2109 ? [1, 1, 1, 1.5, 1.5, 1.5, 2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2211 ? [51, 151, 251, 351, 451, 510, 510][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
