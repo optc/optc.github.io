@@ -56,6 +56,10 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         return $rootScope.table.data[Math.floor(Math.random() * range)][0];
     };
 
+    $scope.clearQuery = function(){
+        $scope.query= "";
+    };
+
 });
 
 app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout, MATCHER_IDS) {

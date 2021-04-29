@@ -1,55 +1,63 @@
+<input type="checkbox" id="burgerMenuState" />
+
 <div id="leftContainer">
     <ng-include src="'views/sidebar.html'" ng-controller="SidebarCtrl"></ng-include>
 </div>
 
+<div id="queryContainer">
+    <label for="burgerMenuState" id="burgerMenu" class="fa fa-bars fa-lg"></label>
+    
+    <input type="text" id="picker" placeholder="type to filter"
+        ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
+
+    <button ng-if="query" ng-click="clearQuery()" title="clear">
+        <i class="fa fa-times"></i>
+        <span>Clear</span>
+    </button>
+
+    <button ng-click="query = getRandChar();" title="random">
+        <i class="fa fa-random"></i>
+        <span>Random</span>
+    </button>
+
+    <button popover-trigger="mouseenter" popover-placement="bottom"
+        uib-popover-template="'operators.html'" popover-append-to-body="'true'" title="operators">
+        <i class="fa fa-info-circle"></i>
+        <span>Operators</span>
+    </button>
 </div>
 
-<div id="rightContainer">
-
-    <div id="queryContainer">
-        <input type="text" id="picker" placeholder="type to filter"
-            ng-model="query" ng-model-options="{ updateOn: 'change blur' }" auto-focus>
-        <span id="clear-input-button" ng-click="query = ''">Clear</span>
-        <span id="random-button" ng-click="query = getRandChar();">Random</span>
-        <span popover-trigger="mouseenter" popover-placement="bottom"
-            uib-popover-template="'operators.html'" popover-append-to-body="'true'"><i>Operators</i></span>
-    </div>
-
-    <div id="tableContainer">
-        <character-table></character-table>
-    </div>
-
-    <script id="operators.html" type="text/ng-template">
-        <div>
-            Supported string operators:
-            <br>
-            <ul>
-                <li><tt>type:X</tt>: shows only units of type X (STR, DEX, QCK, ...)</li>
-                <li><tt>class:X</tt>: shows only units of class X (fighter, slasher, ...)</li>
-                <ul><li>For Free Spirit units enter free_spirit or just free</li></ul>
-            </ul>
-            <br>
-            Supported mathematical operators:
-            <ul>
-                <li><tt>hp&gt;X</tt>: shows only units with max HP &gt; X</li>
-                <li><tt>atk&gt;X</tt>: shows only units with max ATK &gt; X</li>
-                <li><tt>cost&gt;X</tt>: shows only units with a cost higher than X</li>
-                <li><tt>stars&gt;X</tt>: shows only units with more than X stars</li>
-                <li><tt>id&gt;X</tt>: shows only units with ID greater than X</li>
-                <li><tt>slots&gt;X</tt>: shows only units with more than X slots</li>
-                <li><tt>combo&gt;X</tt>: shows only units with CMB &gt; X</li>
-                <li><tt>exp&gt;X</tt>: shows only units that require more than X EXP to max</li>
-                <li><tt>minCD&gt;X</tt>: shows only units with a minimum CD higher than X</li>
-                <li><tt>maxCD&gt;X</tt>: shows only units with a maximum CD higher than X</li>
-            </ul>
-            Mathematical operators also work with "<tt>&lt;</tt>", "<tt>&gt;=</tt>", "<tt>&lt;=</tt>" and "<tt>=</tt>".
-            <br><br>
-            Example query:
-            <br>
-            <tt>type:str class:fighter atk>1300 cost>20</tt>
-        </div>
-    </script>
-
-    <div id="footer"></div>
-
+<div id="tableContainer">
+    <character-table></character-table>
 </div>
+
+<script id="operators.html" type="text/ng-template">
+    <div>
+        Supported string operators:
+        <br>
+        <ul>
+            <li><tt>type:X</tt>: shows only units of type X (STR, DEX, QCK, ...)</li>
+            <li><tt>class:X</tt>: shows only units of class X (fighter, slasher, ...)</li>
+            <ul><li>For Free Spirit units enter free_spirit or just free</li></ul>
+        </ul>
+        <br>
+        Supported mathematical operators:
+        <ul>
+            <li><tt>hp&gt;X</tt>: shows only units with max HP &gt; X</li>
+            <li><tt>atk&gt;X</tt>: shows only units with max ATK &gt; X</li>
+            <li><tt>cost&gt;X</tt>: shows only units with a cost higher than X</li>
+            <li><tt>stars&gt;X</tt>: shows only units with more than X stars</li>
+            <li><tt>id&gt;X</tt>: shows only units with ID greater than X</li>
+            <li><tt>slots&gt;X</tt>: shows only units with more than X slots</li>
+            <li><tt>combo&gt;X</tt>: shows only units with CMB &gt; X</li>
+            <li><tt>exp&gt;X</tt>: shows only units that require more than X EXP to max</li>
+            <li><tt>minCD&gt;X</tt>: shows only units with a minimum CD higher than X</li>
+            <li><tt>maxCD&gt;X</tt>: shows only units with a maximum CD higher than X</li>
+        </ul>
+        Mathematical operators also work with "<tt>&lt;</tt>", "<tt>&gt;=</tt>", "<tt>&lt;=</tt>" and "<tt>=</tt>".
+        <br><br>
+        Example query:
+        <br>
+        <tt>type:str class:fighter atk>1300 cost>20</tt>
+    </div>
+</script>

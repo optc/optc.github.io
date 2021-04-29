@@ -45,7 +45,7 @@ a:hover { color: #53dccd; }
 .help-link { color: #cc9393; }
 #pick-link { color: #a893cc; }
 
-.fuzzy-toggle, .night-toggle, #mainTable, #queryContainer > span, .dataTables_length > label {
+.fuzzy-toggle, .night-toggle, #mainTable, #queryContainer > button, #burgerMenu, .dataTables_length > label {
     color: #f6f3e8;
 }
 
@@ -133,7 +133,7 @@ a:hover { color: #53dccd; }
 }
 
 @media (max-width: 1024px) {
-    #rightContainer {
+    #rightContainer, #leftContainer {
       background:   #404040;
     }
     
