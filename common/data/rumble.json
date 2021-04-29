@@ -9109,7 +9109,7 @@
         "spd": 225
       },
       "target": {
-        "comparator": "near"
+        "criteria": "near"
       }
     },
     {
@@ -18506,7 +18506,7 @@
         "spd": 134
       },
       "target": {
-        "comparator": "near"
+        "criteria": "near"
       }
     },
     {
@@ -18787,7 +18787,7 @@
               "condition": { "comparator": "remaining", "count": 70, "type": "time" },
               "effect": "buff",
               "level": 3,
-              "targeting": { "targets": [ "Self" ] }
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -18838,7 +18838,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Special Bind",
+          "attribute": "Silence",
           "chance": 50,
           "type": "debuff"
         }
@@ -29246,7 +29246,7 @@
             {
               "amount": 0.6,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29265,7 +29265,7 @@
             {
               "amount": 0.8,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29284,7 +29284,7 @@
             {
               "amount": 1,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29303,7 +29303,7 @@
             {
               "amount": 1.2,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29322,7 +29322,7 @@
             {
               "amount": 1.4,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29341,7 +29341,7 @@
             {
               "amount": 1.6,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29360,7 +29360,7 @@
             {
               "amount": 1.8,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29379,7 +29379,7 @@
             {
               "amount": 2,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29398,7 +29398,7 @@
             {
               "amount": 2.2,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -29417,7 +29417,7 @@
             {
               "amount": 3,
               "effect": "damage",
-              "range": { "direction": "hoizontal", "size": "small" },
+              "range": { "direction": "sideways", "size": "small" },
               "targeting": { "count": 1, "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -62554,17 +62554,17 @@
             },
             {
               "attributes": [ "Critical Hit" ],
-              "level": 2,
               "duration": 15,
               "effect": "buff",
+              "level": 2,
               "targeting": { "targets": [ "Slasher", "Powerhouse" ] }
             },
             {
+              "amount": 16,
               "condition": { "comparator": "below", "count": 50, "stat": "HP", "type": "stat" },
               "effect": "recharge",
-              "amount": 16,
-              "type": "Special CT",
-              "targeting": { "targets": [ "self" ] }
+              "targeting": { "targets": [ "self" ] },
+              "type": "Special CT"
             }
           ]
         },
@@ -62867,14 +62867,14 @@
             },
             {
               "attributes": [ "Blow Away" ],
-              "level": 1,
               "duration": 11,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             },
             {
-              "condition": { "comparator": "below", "count": 50, "stat": "HP", "type": "stat" },
               "amount": 1.1,
+              "condition": { "comparator": "below", "count": 50, "stat": "HP", "type": "stat" },
               "effect": "recharge",
               "range": { "direction": "radial", "size": "small" },
               "targeting": { "targets": [ "crew" ] },
@@ -62889,7 +62889,7 @@
               "override": { "amount": 600 }
             },
             {
-              "override": { "level": 1, "duration": 12 }
+              "override": { "duration": 12, "level": 1 }
             },
             {
               "override": { "amount": 1.24 }
@@ -62903,7 +62903,7 @@
               "override": { "amount": 700 }
             },
             {
-              "override": { "level": 1, "duration": 13 }
+              "override": { "duration": 13, "level": 1 }
             },
             {
               "override": { "amount": 1.38 }
@@ -62917,7 +62917,7 @@
               "override": { "amount": 800 }
             },
             {
-              "override": { "level": 2, "duration": 14 }
+              "override": { "duration": 14, "level": 2 }
             },
             {
               "override": { "amount": 1.52 }
@@ -62931,7 +62931,7 @@
               "override": { "amount": 900 }
             },
             {
-              "override": { "level": 2, "duration": 15 }
+              "override": { "duration": 15, "level": 2 }
             },
             {
               "override": { "amount": 1.66 }
@@ -62945,7 +62945,7 @@
               "override": { "amount": 1000 }
             },
             {
-              "override": { "level": 3, "duration": 16 }
+              "override": { "duration": 16, "level": 3 }
             },
             {
               "override": { "amount": 1.8 }
@@ -62959,7 +62959,7 @@
               "override": { "amount": 1100 }
             },
             {
-              "override": { "level": 3, "duration": 17 }
+              "override": { "duration": 17, "level": 3 }
             },
             {
               "override": { "amount": 1.94 }
@@ -62973,7 +62973,7 @@
               "override": { "amount": 1200 }
             },
             {
-              "override": { "level": 3, "duration": 18 }
+              "override": { "duration": 18, "level": 3 }
             },
             {
               "override": { "amount": 2.08 }
@@ -62987,7 +62987,7 @@
               "override": { "amount": 1300 }
             },
             {
-              "override": { "level": 4, "duration": 19 }
+              "override": { "duration": 19, "level": 4 }
             },
             {
               "override": { "amount": 2.22 }
@@ -63001,7 +63001,7 @@
               "override": { "amount": 1500 }
             },
             {
-              "override": { "level": 5, "duration": 20 }
+              "override": { "duration": 20, "level": 5 }
             },
             {
               "override": { "amount": 2.5 }
@@ -63117,8 +63117,8 @@
             },
             {
               "attributes": [ "SPD" ],
-              "level": 1,
               "effect": "debuff",
+              "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -63313,9 +63313,9 @@
             },
             {
               "attributes": [ "ATK" ],
-              "level": 1,
               "duration": 11,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -63327,7 +63327,7 @@
               "override": { "amount": 0.2 }
             },
             {
-              "override": { "level": 1, "duration": 12 }
+              "override": { "duration": 12, "level": 1 }
             }
           ]
         },
@@ -63338,7 +63338,7 @@
               "override": { "amount": 0.3 }
             },
             {
-              "override": { "level": 2, "duration": 13 }
+              "override": { "duration": 13, "level": 2 }
             }
           ]
         },
@@ -63349,7 +63349,7 @@
               "override": { "amount": 0.4 }
             },
             {
-              "override": { "level": 2, "duration": 14 }
+              "override": { "duration": 14, "level": 2 }
             }
           ]
         },
@@ -63360,7 +63360,7 @@
               "override": { "amount": 0.5 }
             },
             {
-              "override": { "level": 3, "duration": 15 }
+              "override": { "duration": 15, "level": 3 }
             }
           ]
         },
@@ -63371,7 +63371,7 @@
               "override": { "amount": 0.6 }
             },
             {
-              "override": { "level": 3, "duration": 16 }
+              "override": { "duration": 16, "level": 3 }
             }
           ]
         },
@@ -63382,7 +63382,7 @@
               "override": { "amount": 0.7 }
             },
             {
-              "override": { "level": 4, "duration": 17 }
+              "override": { "duration": 17, "level": 4 }
             }
           ]
         },
@@ -63393,7 +63393,7 @@
               "override": { "amount": 0.8 }
             },
             {
-              "override": { "level": 4, "duration": 18 }
+              "override": { "duration": 18, "level": 4 }
             }
           ]
         },
@@ -63404,7 +63404,7 @@
               "override": { "amount": 0.9 }
             },
             {
-              "override": { "level": 5, "duration": 19 }
+              "override": { "duration": 19, "level": 5 }
             }
           ]
         },
@@ -63415,7 +63415,7 @@
               "override": { "amount": 1 }
             },
             {
-              "override": { "level": 5, "duration": 20 }
+              "override": { "duration": 20, "level": 5 }
             }
           ]
         }
@@ -63510,9 +63510,9 @@
             },
             {
               "attributes": [ "DEF" ],
-              "level": 1,
               "duration": 11,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -63521,10 +63521,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 12 }
+              "override": { "duration": 12, "level": 1 }
             }
           ]
         },
@@ -63532,10 +63532,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 13 }
+              "override": { "duration": 13, "level": 1 }
             }
           ]
         },
@@ -63543,10 +63543,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 14 }
+              "override": { "duration": 14, "level": 1 }
             }
           ]
         },
@@ -63554,10 +63554,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 15 }
+              "override": { "duration": 15, "level": 1 }
             }
           ]
         },
@@ -63565,10 +63565,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 16 }
+              "override": { "duration": 16, "level": 1 }
             }
           ]
         },
@@ -63576,10 +63576,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 17 }
+              "override": { "duration": 17, "level": 1 }
             }
           ]
         },
@@ -63587,10 +63587,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 18 }
+              "override": { "duration": 18, "level": 1 }
             }
           ]
         },
@@ -63598,10 +63598,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 1, "duration": 19 }
+              "override": { "duration": 19, "level": 1 }
             }
           ]
         },
@@ -63609,10 +63609,10 @@
           "cooldown": 19,
           "effects": [
             {
-              "override": {  }
+              "override": {}
             },
             {
-              "override": { "level": 2, "duration": 20 }
+              "override": { "duration": 20, "level": 2 }
             }
           ]
         }
@@ -63711,7 +63711,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Movement Bind",
+          "attribute": "Action Bind",
           "chance": 100,
           "type": "debuff"
         },
@@ -63727,22 +63727,22 @@
           "effects": [
             {
               "attributes": [ "ATK" ],
-              "level": 1,
               "duration": 6,
-              "range": { "direction": "radial", "size": "large" },
               "effect": "debuff",
+              "level": 1,
+              "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "ATK" ],
-              "level": 1,
               "duration": 6,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
+              "amount": 16,
               "attributes": [ "Special CT" ],
-              "percent": 16,
               "effect": "hinderance",
               "targeting": { "count": 2, "percentage": 80, "priority": "above", "stat": "Special CT", "targets": [ "enemies" ] }
             }
@@ -63752,13 +63752,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 1, "duration": 7 }
+              "override": { "duration": 7, "level": 1 }
             },
             {
-              "override": { "level": 1, "duration": 7 }
+              "override": { "duration": 7, "level": 1 }
             },
             {
-              "override": { "percent": 17 }
+              "override": { "amount": 17 }
             }
           ]
         },
@@ -63766,13 +63766,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 1, "duration": 8 }
+              "override": { "duration": 8, "level": 1 }
             },
             {
-              "override": { "level": 1, "duration": 8 }
+              "override": { "duration": 8, "level": 1 }
             },
             {
-              "override": { "percent": 18 }
+              "override": { "amount": 18 }
             }
           ]
         },
@@ -63780,13 +63780,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 2, "duration": 9 }
+              "override": { "duration": 9, "level": 2 }
             },
             {
-              "override": { "level": 2, "duration": 9 }
+              "override": { "duration": 9, "level": 2 }
             },
             {
-              "override": { "percent": 19 }
+              "override": { "amount": 19 }
             }
           ]
         },
@@ -63794,13 +63794,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 2, "duration": 10 }
+              "override": { "duration": 10, "level": 2 }
             },
             {
-              "override": { "level": 2, "duration": 10 }
+              "override": { "duration": 10, "level": 2 }
             },
             {
-              "override": { "percent": 20 }
+              "override": { "amount": 20 }
             }
           ]
         },
@@ -63808,13 +63808,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 3, "duration": 11 }
+              "override": { "duration": 11, "level": 3 }
             },
             {
-              "override": { "level": 3, "duration": 11 }
+              "override": { "duration": 11, "level": 3 }
             },
             {
-              "override": { "percent": 21 }
+              "override": { "amount": 21 }
             }
           ]
         },
@@ -63822,13 +63822,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 3, "duration": 12 }
+              "override": { "duration": 12, "level": 3 }
             },
             {
-              "override": { "level": 3, "duration": 12 }
+              "override": { "duration": 12, "level": 3 }
             },
             {
-              "override": { "percent": 22 }
+              "override": { "amount": 22 }
             }
           ]
         },
@@ -63836,13 +63836,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 3, "duration": 13 }
+              "override": { "duration": 13, "level": 3 }
             },
             {
-              "override": { "level": 3, "duration": 13 }
+              "override": { "duration": 13, "level": 3 }
             },
             {
-              "override": { "percent": 23 }
+              "override": { "amount": 23 }
             }
           ]
         },
@@ -63850,13 +63850,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 4, "duration": 14 }
+              "override": { "duration": 14, "level": 4 }
             },
             {
-              "override": { "level": 4, "duration": 14 }
+              "override": { "duration": 14, "level": 4 }
             },
             {
-              "override": { "percent": 24 }
+              "override": { "amount": 24 }
             }
           ]
         },
@@ -63864,13 +63864,13 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "level": 4, "duration": 15 }
+              "override": { "duration": 15, "level": 4 }
             },
             {
-              "override": { "level": 4, "duration": 15 }
+              "override": { "duration": 15, "level": 4 }
             },
             {
-              "override": { "percent": 25 }
+              "override": { "amount": 25 }
             }
           ]
         }
@@ -63984,9 +63984,9 @@
             },
             {
               "attributes": [ "SPD" ],
+              "effect": "debuff",
               "level": 1,
               "range": { "direction": "radial", "size": "large" },
-              "effect": "debuff",
               "targeting": { "targets": [ "enemies" ] }
             }
           ]
@@ -64199,9 +64199,9 @@
             },
             {
               "attributes": [ "Guard" ],
-              "level": 1,
               "duration": 11,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
@@ -64220,10 +64220,10 @@
               "override": { "duration": 12 }
             },
             {
-              "override": { "level": 1, "duration": 12 }
+              "override": { "duration": 12, "level": 1 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64234,10 +64234,10 @@
               "override": { "duration": 13 }
             },
             {
-              "override": { "level": 1, "duration": 13 }
+              "override": { "duration": 13, "level": 1 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64248,10 +64248,10 @@
               "override": { "duration": 14 }
             },
             {
-              "override": { "level": 2, "duration": 14 }
+              "override": { "duration": 14, "level": 2 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64262,10 +64262,10 @@
               "override": { "duration": 15 }
             },
             {
-              "override": { "level": 2, "duration": 15 }
+              "override": { "duration": 15, "level": 2 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64276,10 +64276,10 @@
               "override": { "duration": 16 }
             },
             {
-              "override": { "level": 3, "duration": 16 }
+              "override": { "duration": 16, "level": 3 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64290,10 +64290,10 @@
               "override": { "duration": 17 }
             },
             {
-              "override": { "level": 3, "duration": 17 }
+              "override": { "duration": 17, "level": 3 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64304,10 +64304,10 @@
               "override": { "duration": 18 }
             },
             {
-              "override": { "level": 3, "duration": 18 }
+              "override": { "duration": 18, "level": 3 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64318,10 +64318,10 @@
               "override": { "duration": 19 }
             },
             {
-              "override": { "level": 4, "duration": 19 }
+              "override": { "duration": 19, "level": 4 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         },
@@ -64332,10 +64332,10 @@
               "override": { "duration": 20 }
             },
             {
-              "override": { "level": 5, "duration": 20 }
+              "override": { "duration": 20, "level": 5 }
             },
             {
-              "override": {  }
+              "override": {}
             }
           ]
         }
@@ -64429,7 +64429,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Movement Bind",
+          "attribute": "Action Bind",
           "chance": 60,
           "type": "debuff"
         }
@@ -64447,9 +64447,9 @@
             },
             {
               "attributes": [ "Critical Hit", "SPD" ],
-              "level": 1,
               "duration": 6,
               "effect": "buff",
+              "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -64461,7 +64461,7 @@
               "override": { "amount": 0.7 }
             },
             {
-              "override": { "level": 1, "duration": 7 }
+              "override": { "duration": 7, "level": 1 }
             }
           ]
         },
@@ -64472,7 +64472,7 @@
               "override": { "amount": 0.8 }
             },
             {
-              "override": { "level": 1, "duration": 8 }
+              "override": { "duration": 8, "level": 1 }
             }
           ]
         },
@@ -64483,7 +64483,7 @@
               "override": { "amount": 0.9 }
             },
             {
-              "override": { "level": 1, "duration": 9 }
+              "override": { "duration": 9, "level": 1 }
             }
           ]
         },
@@ -64494,7 +64494,7 @@
               "override": { "amount": 1 }
             },
             {
-              "override": { "level": 1, "duration": 10 }
+              "override": { "duration": 10, "level": 1 }
             }
           ]
         },
@@ -64505,7 +64505,7 @@
               "override": { "amount": 1.1 }
             },
             {
-              "override": { "level": 2, "duration": 11 }
+              "override": { "duration": 11, "level": 2 }
             }
           ]
         },
@@ -64516,7 +64516,7 @@
               "override": { "amount": 1.2 }
             },
             {
-              "override": { "level": 2, "duration": 12 }
+              "override": { "duration": 12, "level": 2 }
             }
           ]
         },
@@ -64527,7 +64527,7 @@
               "override": { "amount": 1.3 }
             },
             {
-              "override": { "level": 2, "duration": 13 }
+              "override": { "duration": 13, "level": 2 }
             }
           ]
         },
@@ -64538,7 +64538,7 @@
               "override": { "amount": 1.4 }
             },
             {
-              "override": { "level": 2, "duration": 14 }
+              "override": { "duration": 14, "level": 2 }
             }
           ]
         },
@@ -64549,7 +64549,7 @@
               "override": { "amount": 1.5 }
             },
             {
-              "override": { "level": 3, "duration": 15 }
+              "override": { "duration": 15, "level": 3 }
             }
           ]
         }
