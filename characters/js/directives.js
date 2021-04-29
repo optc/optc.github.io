@@ -691,7 +691,7 @@ filters.abilityToString = function() {
               }
               break;
             case "hinderance":
-              e += `${effect.chance}% chance to inflict ${arrayToString(effect.attributes)}`;
+              e += effect.amount ? `Removes ${new Intl.NumberFormat().format(effect.amount)}% of ${arrayToString(effect.attributes)}` : `${effect.chance}% chance to inflict ${arrayToString(effect.attributes)}`;
               break;
             case "boon":
               e += `${effect.chance ? effect.chance+ "% chance to " : ""}`;
