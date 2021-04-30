@@ -107,7 +107,7 @@ input#burgerMenuState {
     }
 
     #tableContainer {
-        height: fit-content;
+	flex: 1;
     }
 
     .abilities tr {
