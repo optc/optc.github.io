@@ -11440,6 +11440,13 @@ window.specials = {
     3310: {
         affinity: function(p) { return 1.75; },
     },
+    3328: {
+        chainAddition: function(p) { return 0.7; }
+    },
+    3329: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+    },
     3333: {
         atk: function(p) { return 1.75; },
         type: "type",

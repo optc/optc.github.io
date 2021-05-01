@@ -11736,6 +11736,13 @@ window.captains = {
     3327: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
+    3328: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.75 : 1; },
+    },
+    3329: {
+        atk: function(p) { return p.unit.type == "STR" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
     3382: {
         atk: function(p) { return p.unit.type == "QCK" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },

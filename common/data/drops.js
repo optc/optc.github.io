@@ -5389,6 +5389,7 @@ window.drops = {
             name: 'Wanted Man of the Flower Capital',
             thumb: 3145,
             showManual: true,
+            global: true,
             nakama: 314500,
             gamewith: 235988,
             'All Difficulties': [ 3145, -3145 ],
@@ -5398,6 +5399,7 @@ window.drops = {
             name: 'Franosuke',
             thumb: 3189,
             showManual: true,
+            global: true,
             nakama: 318900,
             gamewith: 244657,
             'All Difficulties': [ 3189, -3189 ],
@@ -5428,6 +5430,24 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3269, -3269 ],
+        },
+        
+        {
+            name: 'Sanjuan Wolf',
+            thumb: 3293,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3293, -3293 ],
+        },
+        
+        {
+            name: 'Shinobu',
+            thumb: 3329,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3329, -3329 ],
         },
 
     ],

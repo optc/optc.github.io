@@ -1727,6 +1727,11 @@ window.sailors = {
         atkStatic: function(p) { return 30; },
         hpStatic: function(p) { return 30; },
     },
+    3328: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Striker") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Striker") ? 30 : 0; },
+    },
     3333: {
         staticMult: function(p) { return 3; }
     },
