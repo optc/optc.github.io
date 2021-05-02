@@ -6235,8 +6235,8 @@ window.drops = {
             thumb: 3303,
             nakama: null,
             gamewith: 148537,
-            'All Difficulties': [ 3276 ],
-            'Kizuna Exchange': [ 9042 ],
+            'All Difficulties': [ 3303 ],
+            'Kizuna Exchange': [ 9043 ],
         },
 
     ],
