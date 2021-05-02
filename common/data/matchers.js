@@ -1456,7 +1456,7 @@ window.matchers = [
     {
         name: 'Buff Activated Support',
         target: 'support',
-        matcher: /when (the|an) enemy gains/i
+        matcher: /when (the|an) enemy (gains|applies)/i
     },
     
     {
@@ -1631,6 +1631,12 @@ window.matchers = [
         name: 'Delayers',
         target: 'support',
         matcher: /delays/i
+    },
+
+    {
+        name: 'Poisoners',
+        target: 'support',
+        matcher: /(poisons|Inflicts Toxic)/i
     },
 
     {

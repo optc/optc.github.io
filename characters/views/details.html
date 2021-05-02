@@ -13,7 +13,7 @@
 
                 <div class="modal-body" ng-class="{ preview: unit.preview }">
 
-                    <div ng-if="!unit.incomplete" class="slot huge" decorate-slot big="true" uid="unit.number + 1"></div>
+                    <div ng-if="!unit.incomplete" class="slot responsive" decorate-slot big="true" uid="unit.number + 1"></div>
 
                     <div ng-if="unit.preview" class="alert alert-warning">
                         <b>WARNING:</b> Currently viewing the preview of an upcoming unit not yet released, the information provided may not be accurate.
@@ -25,19 +25,19 @@
 
                     <h3 class="page-header">
                         Details
-                        <i ng-if="compare" ng-click="clearComparison()" class="fa fa-times pull-right" id="compare-clear" title="clear"></i>
-                        <input compare type="text" id="compare" class="pull-right" placeholder="Compare with..."></input>
-                        <label class="pull-right">
+
+                        <label>
                             <input type="checkbox" ng-model="characterLog[id]" ng-change="checkLog()"></input>
                             In Character Log
                         </label>
-                        <label class="pull-right">
-                            <input type="checkbox" ng-model="rumbleBeta" ng-change="toggleRumbleBeta()"></input>
-                            New Rumble Stats (Beta)
-                        </label>
                     </h3>
 
-                    <div class="panel panel-default stats-pane">
+                    <div class="comparer">
+                        <input compare type="text" id="compare" placeholder="Compare with..."></input>
+                        <i ng-if="compare" ng-click="clearComparison()" class="fa fa-times compare-clear" title="clear"></i>
+                    </div>
+
+                    <div class="panel panel-default stats-pane panel-x-scroll">
                         <table class="table table-striped">
                             <tbody>
                                 <tr ng-if="dualunit">
@@ -102,6 +102,7 @@
 
                     <uib-tabset ng-hide="hidden.stats">
                         <uib-tab heading="Stats">
+                        <div class="panel panel-default panel-x-scroll">
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
@@ -159,7 +160,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        <div class="panel panel-default">
+                        </div>
+                        <div class="panel panel-default panel-x-scroll">
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
@@ -294,10 +296,10 @@
                                         <div ng-if="!isSwapHybrid" ng-bind-html="details.swap | decorate"></div>
                                         <!-- different sailor abilities -->
                                         <div ng-if="isSwapHybrid">
-                                            <span class="badge badge-japan" ng-show="details.Swap.japan">Japan</span>
-                                            <div ng-show="details.Swap.japan" ng-bind-html="details.sailor.japan | decorate"></div>
-                                            <span class="badge badge-global" ng-show="details.Swap.global">Global</span>
-                                            <div ng-show="details.Swap.global" ng-bind-html="details.Swap.global | decorate"></div>
+                                            <span class="badge badge-swap" ng-show="details.swap.base">Base Swap</span>
+                                            <div ng-show="details.swap.base" ng-bind-html="details.swap.base | decorate"></div>
+                                            <span class="badge badge-superswap" ng-show="details.swap.super">Super Swap [{{details.swap.superTurns}} Swaps]</span>
+                                            <div ng-show="details.swap.super" ng-bind-html="details.swap.super | decorate"></div>
                                         </div>
                                         <span class="notes" ng-if="details.swapNotes" ng-bind-html="details.swapNotes | notes | decorate"></span>
                                     </td>
@@ -437,6 +439,9 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <h3 class="page-header" ng-hide="hidden.abilities"  ng-if="details.limit || details.potential">Limit Break</h3>
+                    
                     <div class="panel panel-default" ng-hide="hidden.abilities"  ng-if="details.limit || details.potential">
                         <table class="table table-striped-column abilities">
                             <tbody>
@@ -498,6 +503,9 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <h3 class="page-header" ng-hide="hidden.abilities" ng-if="details.support">Support</h3>
+
                     <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
                         <table class="table table-striped-column abilities">
                             <!--------------    Support Abilities    -------------->
@@ -528,6 +536,16 @@
                             </tbody>
                         </table>
                     </div>
+                    
+                    <h3 class="page-header" ng-hide="hidden.abilities" ng-if="rumble.ability">
+                        Pirate Rumble
+                        
+                        <label>
+                            <input type="checkbox" ng-model="rumbleBeta" ng-change="toggleRumbleBeta()"></input>
+                            New Rumble Stats (Beta)
+                        </label>
+                    </h3>
+
                     <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability && rumbleBeta">
                         <table class="table table-striped-column abilities">
                             <tbody>
@@ -943,24 +961,26 @@
                         </tbody>
                     </table>
 
-                    <table ng-if="drops.length > 0" class="table table-striped drop-table">
-                        <thead ng-show="!collapsed.drops || drops.length < 4">
-                            <tr>
-                                <th>Location</th>
-                                <th>Chapter/Difficulty</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-if="!collapsed.drops || drops.length < 4" ng-repeat="drop in drops">
-                                <td>
-                                    <div class="slot small" decorate-slot uid="drop.thumb"></div>
-                                    <a href="{{'../drops/?'+drop.name}}" target="_blank">{{drop.name}}</a>
-                                    <span ng-repeat="bonus in drop.bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>
-                                </td>
-                                <td>{{drop.data.join(', ')}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div ng-if="drops.length > 0" class="panel panel-default panel-x-scroll">
+                        <table  class="table table-striped drop-table">
+                            <thead ng-show="!collapsed.drops || drops.length < 4">
+                                <tr>
+                                    <th>Location</th>
+                                    <th>Chapter/Difficulty</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-if="!collapsed.drops || drops.length < 4" ng-repeat="drop in drops">
+                                    <td>
+                                        <div class="slot small" decorate-slot uid="drop.thumb"></div>
+                                        <a href="{{'../drops/?'+drop.name}}" target="_blank">{{drop.name}}</a>
+                                        <span ng-repeat="bonus in drop.bonuses" class="bonus {{bonus.slice(0,2)}} {{bonus.slice(3)}}"></span>
+                                    </td>
+                                    <td>{{drop.data.join(', ')}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <!-- Manuals -->
 
@@ -975,23 +995,25 @@
                         </tbody>
                     </table>
 
-                    <table ng-if="manuals.length > 0" class="table table-striped drop-table">
-                        <thead ng-show="!collapsed.manuals || manuals.length < 4">
-                            <tr>
-                                <th>Location</th>
-                                <th>Stage/Difficulty</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-if="!collapsed.manuals || manuals.length < 4" ng-repeat="drop in manuals">
-                                <td>
-                                    <div class="slot small" decorate-slot uid="drop.thumb"></div>
-                                    <a href="{{'../drops/?'+drop.name}}" target="_blank">{{drop.name}}</a>
-                                </td>
-                                <td>{{drop.data.join(', ')}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div ng-if="manuals.length > 0" class="panel panel-default panel-x-scroll">
+                        <table class="table table-striped drop-table">
+                            <thead ng-show="!collapsed.manuals || manuals.length < 4">
+                                <tr>
+                                    <th>Location</th>
+                                    <th>Stage/Difficulty</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-if="!collapsed.manuals || manuals.length < 4" ng-repeat="drop in manuals">
+                                    <td>
+                                        <div class="slot small" decorate-slot uid="drop.thumb"></div>
+                                        <a href="{{'../drops/?'+drop.name}}" target="_blank">{{drop.name}}</a>
+                                    </td>
+                                    <td>{{drop.data.join(', ')}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <!-- Family -->
 
@@ -1006,25 +1028,27 @@
                         </tbody>
                     </table>
 
-                    <table ng-if="families.length > 0" class="table table-striped drop-table">
-                        <thead ng-show="!collapsed.families || families.length < 4">
-                            <tr>
-                                <th>Variant</th>
-                                <th>Farm Location</th>
-                                <th>Chapter/Difficulty</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-if="!collapsed.families || families.length < 4" ng-repeat="data in families">
-                                <td>
-                                    <div class="slot small" decorate-slot uid="data.uid"></div>
-                                    <a ui-sref="main.search.view({ id: data.uid, previous: getPrevious() })">{{data.name}}</a>
-                                </td>
-                                <td><a href="{{'../drops/?'+data.location.name}}" target="_blank">{{data.location.name}}</a></td>
-                                <td>{{data.location.data.join(', ')}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div ng-if="families.length > 0" class="panel panel-default panel-x-scroll">
+                        <table class="table table-striped drop-table">
+                            <thead ng-show="!collapsed.families || families.length < 4">
+                                <tr>
+                                    <th>Variant</th>
+                                    <th>Farm Location</th>
+                                    <th>Chapter/Difficulty</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-if="!collapsed.families || families.length < 4" ng-repeat="data in families">
+                                    <td>
+                                        <div class="slot small" decorate-slot uid="data.uid"></div>
+                                        <a ui-sref="main.search.view({ id: data.uid, previous: getPrevious() })">{{data.name}}</a>
+                                    </td>
+                                    <td><a href="{{'../drops/?'+data.location.name}}" target="_blank">{{data.location.name}}</a></td>
+                                    <td>{{data.location.data.join(', ')}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     <!-- Other Names -->
 

@@ -1286,7 +1286,7 @@ window.drops = {
             'Bandits! The Dadan Family!!': [ -1404, -1593, -2148, -251, -995, -1364, -1906, -2187, -2431, -21 ],
             'Kingsbird Flying High': [ -1492, -669, -2830, -1951, -1031, -1236, -2515, -2107, -2426, -586, -71 ],
             'Let\'s Play in The Seducing Woods!': [ -2446, -73, -643, -1079, -1406, -1989, -2068, -2273, -1557 ],
-            'Rosy Melancholy': [ -2001, -1045, -2434, -3038, -77, -1125, -1448, -22, -1612, -2304, -2275, -787 ],
+            'Rosy Melancholy': [ -2001, -1045, -2434, -1747, -77, -1125, -1448, -22, -1612, -2304, -2275, -787 ],
             'Dress Up for the Pirate Festival! Chic': [ -2797, -2862, -2575, -2565, -2676, -2704, -2743, -2745, -2899, -2903 ],
         },
 
@@ -3930,13 +3930,14 @@ window.drops = {
         },
 
         {
-            name: 'Showdown!! Usopp & Chopper',
-            thumb: 3370,
+            name: 'Clash!! Usopp & Chopper',
+            dropID: 'clash70',
+            thumb: 3331,
             global: true,
             nakama: 4337000,
             gamewith: null,
-            Expert: [ 3370 ],
-            Ultimate: [ 3370 ],
+            Expert: [ 3331 ],
+            Ultimate: [ 3331 ],
         },
 
         {
@@ -5440,6 +5441,24 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3269, -3269 ],
+        },
+        
+        {
+            name: 'Sanjuan Wolf',
+            thumb: 3293,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3293, -3293 ],
+        },
+        
+        {
+            name: 'Shinobu',
+            thumb: 3329,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3329, -3329 ],
         },
 
     ],
@@ -7156,6 +7175,14 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Chopperman Missions': [ 3286, 3287 ],
+        },
+
+        {
+            name: 'Adventurers\' Quarrel',
+            thumb: 3304,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3304, 3305 ],
         },
 
         {
