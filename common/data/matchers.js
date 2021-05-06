@@ -1332,7 +1332,7 @@ window.matchers = [
     },
     
     {
-        name: 'Enrage Potential Ability',
+        name: 'Enrage/Reduce Increase Damage Taken Potential Ability',
         target: 'limit',
         matcher: /Enrage/i
     },
@@ -1380,7 +1380,7 @@ window.matchers = [
     },
     
     {
-        name: 'Nutrition Potential Ability',
+        name: 'Nutrition/Reduce Hunger Duration Potential Ability',
         target: 'limit',
         matcher: /Nutrition/i
     },
