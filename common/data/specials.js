@@ -10364,7 +10364,7 @@ window.specials = {
             var n = (window.specials[3101].multiplier == 2.25 ? 1 : 0);
             window.specials[3101].multiplier = [2.25, 2.5][n];
             p.scope.notify({
-                text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
+                text: 'Using the ' + [2.25, 2.5][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '3101warning'
             });
         },
@@ -10375,7 +10375,7 @@ window.specials = {
             var n = (window.specials[3102].multiplier == 2.25 ? 1 : 0);
             window.specials[3102].multiplier = [2.25, 2.5][n];
             p.scope.notify({
-                text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
+                text: 'Using the ' + [2.25, 2.5][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '3102warning'
             });
         },
