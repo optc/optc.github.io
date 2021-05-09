@@ -6325,6 +6325,15 @@ window.drops = {
             'All Difficulties': [ 3285 ],
         },
 
+        {
+            name: 'Round Twelve',
+            dropID: 'piratefestival12',
+            thumb: 3332,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3332 ],
+        },
+
     ],
 
     'Special': [

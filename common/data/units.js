@@ -3330,7 +3330,7 @@ window.units = [
     [ "Shinobu, Walking a Path of Thorns", "STR", [ "Free Spirit", "Shooter" ], 5, 40, 4, 3, 99, 4000000, 1756, 748, 66, null, null, null, null ],
     [ "Law & Chopper, Dynamic Doctor Duo", [ "QCK", "INT" ], [[ "Slasher", "Cerebral" ],[ "Fighter", "Cerebral" ],[ "Slasher", "Cerebral" ]], 5, 30, 4, 4, 99, 4000000, 1012, 540, 145, 2347, 1210, 406, 1 ],
     [ "Usopp & Chopper, Ex-Weakling Duo", [ "QCK", "QCK" ], [[ "Shooter", "Free Spirit" ],[ "Striker", "Powerhouse" ],[ "Shooter", "Striker" ]], 5, 30, 4, 4, 99, 5000000, 1021, 555, 165, 2852, 1417, 275, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Urouge, Rookie's Series of Battles", "DEX", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1472, 696, 95, null, null, null, null ],
     [ "Monkey D. Luffy, Kung Fu Training", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 70, 1066998, 520, 256, 66, 1603, 675, 146, 1 ],
     [ "Monkey D. Luffy, To Become a True Kung Fu Master", "DEX", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1510, 652, 132, 3000, 1505, 265, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

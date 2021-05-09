@@ -10722,7 +10722,7 @@ window.specials = {
         },
     },
     3189: {
-        atk: function(p) { return (p.defenseDown && window.specials[3189].multiplier != 0) ? 1.75 : 1; },
+        atk: function(p) { return (p.defenseDown && window.specials[3189].multiplier != 0) ? 2 : 1; },
         type: "condition",
         def: function(p) { return window.specials[3189].multiplier != 1 ? 0 : 1; },
         onActivation: function(p) {
@@ -10739,6 +10739,7 @@ window.specials = {
         type: "type",
     },
     3191: {
+        def: function(p) { return 0; },
         atk: function(p) { return p.defenseDown ? window.specials[3191].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
