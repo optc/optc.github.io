@@ -5407,7 +5407,7 @@ window.drops = {
         },
         
         {
-            name: 'Franosuke',
+            name: 'Land of Wano\'s Carpenter',
             thumb: 3189,
             showManual: true,
             global: true,
@@ -6013,7 +6013,7 @@ window.drops = {
             global: true,
             nakama: 6317200,
             gamewith: 243155,
-            condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
+            condition: 'Has a chance of appearing at the end of Navy Christmas Night 7* difficulty',
             'Chopperman Missions': [ 3171, 3172 ],
         },
 
@@ -6317,7 +6317,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Eight',
+            name: 'Worth Risking One\'s Life For',
             dropID: 'piratefestival7',
             thumb: 3173,
             global: true,
@@ -7159,8 +7159,9 @@ window.drops = {
         {
             name: 'Navy Christmas Night',
             thumb: 3171,
+            global: true,
             nakama: 6317100,
-            gamewith: null,
+            gamewith: 241547,
             'Chopperman Missions': [ 3171, 3172 ],
         },
 
