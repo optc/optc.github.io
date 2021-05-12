@@ -3330,7 +3330,7 @@ window.aliases = {
     3329: [ '', '', 'Arena Shinobu', 'Young Shinobu' ],
     3330: [ '', '', 'Law&Chopper', 'Law and Chopper', 'Law Chopper', 'LawChopper', 'Chopper&Law', 'Chopper and Law', 'Chopper Law', 'ChopperLaw' ],
     3331: [ '', '', 'Usopp&Chopper', 'Usopp and Chopper', 'Usopp Chopper', 'UsoppChopper', 'Chopper&Usopp', 'Chopper and Usopp', 'Chopper Usopp', 'ChopperUsopp', 'Raid Usopp', 'Raid Chopper', 'UsoCho' ],
-    3332: [ '', '', '' ],
+    3332: [ '', '', 'Rumble Urouge' ],
     3333: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy', 'Best Cup of Coffee' ],
     3334: [ '', '', 'Kung Fu Luffy', 'KFL', 'LINE Luffy', 'The Hero Global Needed', 'Another Legend Luffy', 'Best Cup of Coffee' ],
     3347: [ '', '', 'Log Vivi' ],
