@@ -1006,11 +1006,11 @@ window.drops = {
         },
 
         {
-            name: 'Reverie: The World Council',
+            name: 'Holy Land Mariejois',
             dropID: 'story43',
             shortName: 'Reverie 1',
             thumb: 3195,
-            //global: true,
+            global: 1319500,
             nakama: null,
             completion: '5x Rainbow Gems',
             gamewith: 246450,
@@ -5860,6 +5860,7 @@ window.drops = {
             name: 'Garp',
             dropID: 'treasuremap40',
             thumb: 3197,
+            global: true,
             nakama: 8319700,
             gamewith: 245551,
             'Raging Sea': [ 3197 ]
@@ -5869,8 +5870,8 @@ window.drops = {
             name: 'Komurasaki',
             dropID: 'treasuremap41',
             thumb: 3217,
-            nakama: null,
-            gamewith: null,
+            nakama: 8321700,
+            gamewith: 251248,
             'Coast of Wano': [ 3217 ]
         },
 
@@ -5878,8 +5879,8 @@ window.drops = {
             name: 'Queen',
             dropID: 'treasuremap42',
             thumb: 3239,
-            nakama: null,
-            gamewith: null,
+            nakama: 8323900,
+            gamewith: 254943,
             'Coast of Wano': [ 3239 ]
         },
 
@@ -5887,8 +5888,8 @@ window.drops = {
             name: 'Luffy & Ace',
             dropID: 'treasuremap43',
             thumb: 3273,
-            nakama: null,
-            gamewith: null,
+            nakama: 8327300,
+            gamewith: 260519,
             'Coast of Wano': [ 3273 ]
         },
 
@@ -5896,8 +5897,8 @@ window.drops = {
             name: 'Shiryu',
             dropID: 'treasuremap44',
             thumb: 3297,
-            nakama: null,
-            gamewith: null,
+            nakama: 8329700,
+            gamewith: 269110,
             'Coast of Wano': [ 3297 ]
         },
 
@@ -6193,6 +6194,7 @@ window.drops = {
             name: 'Christmas Capone',
             dropID: 'bond16',
             thumb: 3207,
+            global: true,
             nakama: 9320700,
             gamewith: 148537,
             'All Difficulties': [ 3207 ],
