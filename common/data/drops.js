@@ -1006,11 +1006,11 @@ window.drops = {
         },
 
         {
-            name: 'Reverie: The World Council',
+            name: 'Holy Land Mariejois',
             dropID: 'story43',
             shortName: 'Reverie 1',
             thumb: 3195,
-            //global: true,
+            global: 1319500,
             nakama: null,
             completion: '5x Rainbow Gems',
             gamewith: 246450,
@@ -2878,6 +2878,16 @@ window.drops = {
             gamewith: 225163,
             'All Difficulties':  [ -3057, -3059, -3065, -3067, -3069, -3071, -3073 ],
         },
+
+        {
+            name: 'Conflict of the Emperors!',
+            dropID: 'event140',
+            global: true,
+            thumb: 3135,
+            nakama: null,
+            gamewith: 234904,
+            'All Difficulties':  [ -2914, -3118, -3120, -3121, -3135, -3137, -3139, -3141 ],
+        },
     ],
 
 
@@ -3886,6 +3896,7 @@ window.drops = {
             name: 'Clash!! Onami & Shinobu',
             dropID: 'clash66',
             thumb: 3143,
+            global: true,
             nakama: 4314300,
             gamewith: 234898,
             'All Difficulties': [ 3143 ],
@@ -5396,7 +5407,7 @@ window.drops = {
         },
         
         {
-            name: 'Franosuke',
+            name: 'Land of Wano\'s Carpenter',
             thumb: 3189,
             showManual: true,
             global: true,
@@ -5839,6 +5850,7 @@ window.drops = {
             name: 'Eustass Kid',
             dropID: 'treasuremap39',
             thumb: 3150,
+            global: true,
             nakama: 8315000,
             gamewith: 236917,
             'Raging Sea': [ 3150 ]
@@ -5848,6 +5860,7 @@ window.drops = {
             name: 'Garp',
             dropID: 'treasuremap40',
             thumb: 3197,
+            global: true,
             nakama: 8319700,
             gamewith: 245551,
             'Raging Sea': [ 3197 ]
@@ -5857,8 +5870,8 @@ window.drops = {
             name: 'Komurasaki',
             dropID: 'treasuremap41',
             thumb: 3217,
-            nakama: null,
-            gamewith: null,
+            nakama: 8321700,
+            gamewith: 251248,
             'Coast of Wano': [ 3217 ]
         },
 
@@ -5866,8 +5879,8 @@ window.drops = {
             name: 'Queen',
             dropID: 'treasuremap42',
             thumb: 3239,
-            nakama: null,
-            gamewith: null,
+            nakama: 8323900,
+            gamewith: 254943,
             'Coast of Wano': [ 3239 ]
         },
 
@@ -5875,8 +5888,8 @@ window.drops = {
             name: 'Luffy & Ace',
             dropID: 'treasuremap43',
             thumb: 3273,
-            nakama: null,
-            gamewith: null,
+            nakama: 8327300,
+            gamewith: 260519,
             'Coast of Wano': [ 3273 ]
         },
 
@@ -5884,8 +5897,8 @@ window.drops = {
             name: 'Shiryu',
             dropID: 'treasuremap44',
             thumb: 3297,
-            nakama: null,
-            gamewith: null,
+            nakama: 8329700,
+            gamewith: 269110,
             'Coast of Wano': [ 3297 ]
         },
 
@@ -5997,9 +6010,10 @@ window.drops = {
             name: 'Ambush! Hina',
             dropID: 'ambush8',
             thumb: 3172,
+            global: true,
             nakama: 6317200,
             gamewith: 243155,
-            condition: 'Has a chance of appearing at the end of Navy Christmas Night.',
+            condition: 'Has a chance of appearing at the end of Navy Christmas Night 7* difficulty',
             'Chopperman Missions': [ 3171, 3172 ],
         },
 
@@ -6169,6 +6183,7 @@ window.drops = {
             name: 'Hawkins',
             dropID: 'bond15',
             thumb: 3153,
+            global: true,
             nakama: 9315300,
             gamewith: 148537,
             'All Difficulties': [ 3153 ],
@@ -6179,6 +6194,7 @@ window.drops = {
             name: 'Christmas Capone',
             dropID: 'bond16',
             thumb: 3207,
+            global: true,
             nakama: 9320700,
             gamewith: 148537,
             'All Difficulties': [ 3207 ],
@@ -6199,8 +6215,8 @@ window.drops = {
             name: 'King',
             dropID: 'bond18',
             thumb: 3241,
-            nakama: null,
-            gamewith: null,
+            nakama: 9324100,
+            gamewith: 148537,
             'All Difficulties': [ 3241 ],
             'Kizuna Exchange': [ 9041 ],
         },
@@ -6209,10 +6225,20 @@ window.drops = {
             name: 'Doflamingo',
             dropID: 'bond19',
             thumb: 3276,
-            nakama: null,
-            gamewith: null,
+            nakama: 9327600,
+            gamewith: 148537,
             'All Difficulties': [ 3276 ],
             'Kizuna Exchange': [ 9042 ],
+        },
+
+        {
+            name: 'Katakuri',
+            dropID: 'bond20',
+            thumb: 3303,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 3303 ],
+            'Kizuna Exchange': [ 9043 ],
         },
 
     ],
@@ -6284,17 +6310,19 @@ window.drops = {
             name: 'An Ancient Threat',
             dropID: 'piratefestival7',
             thumb: 3142,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3142 ],
         },
 
         {
-            name: 'Round Eight',
+            name: 'Worth Risking One\'s Life For',
             dropID: 'piratefestival7',
             thumb: 3173,
+            global: true,
             nakama: null,
-            gamewith: null,
+            gamewith: 196547,
             'All Difficulties': [ 3173 ],
         },
 
@@ -6312,7 +6340,7 @@ window.drops = {
             dropID: 'piratefestival10',
             thumb: 3233,
             nakama: null,
-            gamewith: null,
+            gamewith: 196547,
             'All Difficulties': [ 3233 ],
         },
 
@@ -6321,7 +6349,7 @@ window.drops = {
             dropID: 'piratefestival11',
             thumb: 3285,
             nakama: null,
-            gamewith: null,
+            gamewith: 196547,
             'All Difficulties': [ 3285 ],
         },
 
@@ -7122,16 +7150,18 @@ window.drops = {
         {
             name: 'Big Mom VS Kaido!',
             thumb: 3135,
+            global: true,
             nakama: 6313500,
-            gamewith: null,
+            gamewith: 235518,
             'Chopperman Missions': [ 3144 ],
         },
 
         {
             name: 'Navy Christmas Night',
             thumb: 3171,
+            global: true,
             nakama: 6317100,
-            gamewith: null,
+            gamewith: 241547,
             'Chopperman Missions': [ 3171, 3172 ],
         },
 
