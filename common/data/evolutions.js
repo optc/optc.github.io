@@ -4967,21 +4967,9 @@ window.evolutions = {
         evolution: 3307,
         evolvers: [ 118, 304, 2662, 104, 267 ]
     },
-    3333: {
-        evolution: 3334,
-        evolvers: [ 118, 86, 266, 302, 267 ]
-    },
     3312: {
         evolution: 3313,
         evolvers: [ 118, 84, 300, 100, 266 ]
-    },
-    3347: {
-        evolution: 3348,
-        evolvers: [ 117, 83, 86, 302, 102 ]
-    },
-    3349: {
-        evolution: 3350,
-        evolvers: [ 117, 83, 84, 300, 100 ]
     },
     3314: {
         evolution: 3315,
@@ -4999,10 +4987,6 @@ window.evolutions = {
         evolution: 3324,
         evolvers: [ 118, 84, 266, 300, 100 ]
     },
-    3360: {
-        evolution: 3361,
-        evolvers: [ 117, 79, 90, 96, 101 ]
-    },
     3318: {
         evolution: 3319,
         evolvers: [ 116, 117, 79, 90, 96 ]
@@ -5011,12 +4995,52 @@ window.evolutions = {
         evolution: [3320, 3320],
         evolvers: [[ 118, 85, 266, 96, 101 ], [ 18 ]]
     },
-    3371: {
-        evolution: 3372,
-        evolvers: [ 117, 84, 95, 95, 300 ]
-    },
     3325: {
         evolution: 3326,
         evolvers: [ 118, 88, 266, 304, 104 ]
+    },
+    3333: {
+        evolution: 3334,
+        evolvers: [ 118, 96, 94, 101, 267 ]
+    },
+    3335: {
+        evolution: 3336,
+        evolvers: [ 118, 302, 1180, 102, 267 ]
+    },
+    3337: {
+        evolution: 3338,
+        evolvers: [ 118, 300, 2662, 100, 267 ]
+    },
+    3348: {
+        evolution: 3349,
+        evolvers: [  ]
+    },
+    2776: {
+        evolution: 3350,
+        evolvers: [ "skullKomurasaki", "skullKomurasaki", "skullKomurasaki", "skullKomurasaki", "skullKomurasaki" ]
+    },
+    3351: {
+        evolution: 3352,
+        evolvers: [ "skullKuja", "skullKuja", "skullKuja", "skullKuja", "skullKuja" ]
+    },
+    4986: {
+        evolution: 4987,
+        evolvers: [ 118, 86, 266, 302, 267 ]
+    },
+    4988: {
+        evolution: 4989,
+        evolvers: [ 117, 83, 86, 302, 102 ]
+    },
+    4990: {
+        evolution: 4991,
+        evolvers: [ 117, 83, 84, 300, 100 ]
+    },
+    4992: {
+        evolution: 4993,
+        evolvers: [ 117, 79, 90, 96, 101 ]
+    },
+    4994: {
+        evolution: 4995,
+        evolvers: [ 117, 84, 95, 95, 300 ]
     },
 };

@@ -1737,24 +1737,49 @@ window.sailors = {
         hpStatic: function(p) { return 30; },
         rcvStatic: function(p) { return 30; },
     },
-    3333: {
-        staticMult: function(p) { return 3; }
+    3340: {
+        atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
     },
-    3334: {
-        staticMult: function(p) { return 3; }
+    3341: {
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    3342: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    3344: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 50 : 0; },
+    },
+    3345: {
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 50 : 0; },
     },
     3347: {
+        atkStatic: function(p) { return 30; },
+        hpStatic: function(p) { return 30; },
+        rcvStatic: function(p) { return 30; },
+    },
+    3351: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 30 : 0; },
+    },
+    4986: {
+        staticMult: function(p) { return 3; }
+    },
+    4987: {
+        staticMult: function(p) { return 3; }
+    },
+    4988: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
-    3348: {
+    4989: {
         atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
     },
-    3371: {
+    4994: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-    3372: {
+    4995: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
@@ -2501,5 +2526,17 @@ window.sailors = {
     },
     5316: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 125 : 0; },
+    },
+    5325: {
+        atkStatic: function(p) { return 50; },
+    },
+    5326: {
+        atkStatic: function(p) { return 50; },
+    },
+    5327: {
+        atkStatic: function(p) { return 100; },
+    },
+    5328: {
+        atkStatic: function(p) { return 100; },
     },
 };

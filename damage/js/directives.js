@@ -529,6 +529,43 @@ directives.healCounter = function() {
     };
 };
     
+directives.rcvCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="rcvs"><div id="rcvSlider"></div>' +
+            '<div id="rcvLabel">{{currentRCVs}} {{currentRCVs == 1 ? "RCV Orb" : "RCV Orbs"}} consumed</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentRCVs = 0;
+
+            var slider = element.find('#rcvSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 20 ] },
+                step: 1,
+                connect: 'lower'
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentRCVs = parseInt(value, 10);
+                if (event == 'change') scope.tdata.rcvCounter.value = scope.currentRCVs;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+    
 directives.semlaCounter = function() {
     return {
         retrict: 'E',

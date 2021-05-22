@@ -42,6 +42,9 @@ window.altspecials = {
     3225:{
         affinity: function(p) { return p.unit.type == "DEX" ? 2 : 1; },
     },
+    3334: {
+        chainAddition: function(p) { return 1; },
+    },
     5012: {
         chainAddition: function(p) { return 0.5; },
     },
@@ -419,5 +422,117 @@ window.altspecials = {
         atk: function(p) { return 1.75; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
+    5325: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+    },
+    5326: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+    },
+    5327: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+    },
+    5328: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        type: "type",
+    },
+    5329: {
+        affinity: function(p) { return window.altspecials[5329].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5329].multiplier) + 1) % levels.length;
+            window.altspecials[5329].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5329warning'
+            });
+        },
+    },
+    5330: {
+        affinity: function(p) { return window.altspecials[5330].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5330].multiplier) + 1) % levels.length;
+            window.altspecials[5330].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5330warning'
+            });
+        },
+    },
+    5331: {
+        affinity: function(p) { return window.altspecials[5331].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5331].multiplier) + 1) % levels.length;
+            window.altspecials[5331].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5331warning'
+            });
+        },
+    },
+    5332: {
+        affinity: function(p) { return window.altspecials[5332].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5332].multiplier) + 1) % levels.length;
+            window.altspecials[5332].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5332warning'
+            });
+        },
+    },
+    5333: {
+        affinity: function(p) { return window.altspecials[5333].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5333].multiplier) + 1) % levels.length;
+            window.altspecials[5333].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5333warning'
+            });
+        },
+    },
+    5334: {
+        affinity: function(p) { return window.altspecials[5334].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5334].multiplier) + 1) % levels.length;
+            window.altspecials[5334].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5334warning'
+            });
+        },
+    },
+    5335: {
+        affinity: function(p) { return window.altspecials[5335].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5335].multiplier) + 1) % levels.length;
+            window.altspecials[5335].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5335warning'
+            });
+        },
+    },
+    5336: {
+        affinity: function(p) { return window.altspecials[5336].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(window.altspecials[5336].multiplier) + 1) % levels.length;
+            window.altspecials[5336].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5336warning'
+            });
+        },
     },
 };

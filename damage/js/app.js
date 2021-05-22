@@ -57,6 +57,11 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             value: 0
         },
         
+        rcvCounter: {
+            enabled: false,
+            value: 0
+        },
+        
         semlaCounter: {
             enabled: false,
             value: 0

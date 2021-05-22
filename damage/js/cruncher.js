@@ -1112,6 +1112,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
         $scope.tdata.healCounter.enabled = false;
+        $scope.tdata.rcvCounter.enabled = false;
         $scope.tdata.semlaCounter.enabled = false;
         $scope.tdata.damageCounter.enabled = false;
         // get ship bonus
@@ -1183,6 +1184,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && (id == 2233 || id == 2234 || id == 2500))
                 $scope.tdata.semlaCounter.enabled = true;
+            if ((id == 3333 || id == 3334))
+                $scope.tdata.rcvCounter.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
@@ -1384,6 +1387,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             slot: slotNumber,
             turnCounter: $scope.tdata.turnCounter.value,
             healCounter: $scope.tdata.healCounter.value,
+            rcvCounter: $scope.tdata.rcvCounter.value,
             semlaCounter: $scope.tdata.semlaCounter.value,
             damageCounter: $scope.tdata.damageCounter.value,
             chainPosition: chainPosition,

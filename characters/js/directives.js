@@ -671,6 +671,7 @@ filters.abilityToString = function() {
                 default:
                   e += "TODO:  " + JSON.stringify(effect);
               }
+              e += effect.defbypass ? ` that will ignore DEF` : ``;
               break;
             case "recharge":
               switch (effect.type){
@@ -701,7 +702,10 @@ filters.abilityToString = function() {
                   e += "Provoke enemies"
                 break;
                 case "Haste":
-                  e += "grant Haste"
+                  e += `${effect.chance ? "g" : "G"}rant Haste`
+                break;
+                case "Counter":
+                  e += `${effect.chance ? "g" : "G"}rant ${effect.amount}x Counter`
                 break;
                 default:
                   e += `${"reduce " + attrStr}`;
@@ -754,6 +758,8 @@ function conditionToString(condition, suffix) {
       return `When there are ${condition.count} or ${condition.comparator} ${condition.type} remaining, `
     case "trigger":
       return `The first ${condition.count} times this character lands a ${condition.stat}, `
+    case "defeat":
+      return `When ${condition.count} characters ${condition.team == "enemies" ? "on the enemy team " : condition.team == "crew" ? "on your crew " : ""}are defeated, `
     default:
       return `UNKNOWN CONDITION ${JSON.stringify(condition)}`;
   }
@@ -774,7 +780,7 @@ function targetToString(target) {
     else if (target.count == 1)
       targetStr = "enemy";
   }
-  let retVal = ` to ${target.count ? target.count + " " : ""}${targetStr}`;
+  let retVal = ` to ${target.count ? target.count + " " : ""}${targetStr}${target.targets.includes("self") || target.targets.includes("crew") || target.targets.includes("enemies") ? "" : target.count == 1 ? " character" : " characters"}`;
   retVal = retVal + `${target.stat ? (" with " + (target.percentage ? "a " + target.percentage + "% or " :"the ") + target.priority + " " + target.stat) : ""}`;
   return retVal;
 }

@@ -1010,8 +1010,8 @@ window.drops = {
             dropID: 'story43',
             shortName: 'Reverie 1',
             thumb: 3195,
-            global: 1319500,
-            nakama: null,
+            global: true,
+            nakama: 1319500,
             completion: '5x Rainbow Gems',
             gamewith: 246450,
             '01': [ 3194 ],
@@ -1250,7 +1250,7 @@ window.drops = {
             'Branded in Shackles': [ -3018, -1883, -2236, -219, -1081, -1322, -1577, -1741, -2481, -789 ],
             'Commotion at Makino\'s Tavern?!': [ -1816, -562, -2475, -257, -750, -1127, -1177, -528, -1658, -2154, -2240 ],
             'Coliseum Executioner': [ -2195, -1001, -2534, -308, -838, -1182, -1408, -1614, -1877, -2203, -2349 ],
-            'Holy Mother\'s Lover: Mother Caramel': [ -3334, -1910, -359, -878, -1175, -1551, -896, -1798, -2306, -2269, -2544 ],
+            'Holy Mother\'s Lover: Mother Caramel': [ -4987, -1910, -359, -878, -1175, -1551, -896, -1798, -2306, -2269, -2544 ],
             'Escapees, Join the Fight!': [ -2601, -2700, -2835, -2563, -2674, -2678, -2702, -2810, -2839 ],
         },
 
@@ -3942,14 +3942,14 @@ window.drops = {
 
         {
             name: 'Co-op!! Local Sea Monster',
-            thumb: 3382,
+            thumb: 4998,
             global: true,
             nakama: 6338200,
             gamewith: null,
             condition: 'Drops Manual, Tomes, Proof of Friendship, lobster and limit break bottles.',
             showManual: true,
-            'Chopperman Missions': [ 3382 ],
-            'All Difficulties': [ -3382 ],
+            'Chopperman Missions': [ 4998 ],
+            'All Difficulties': [ -4998 ],
         },
 
     ],
@@ -5382,13 +5382,13 @@ window.drops = {
 
         {
             name: 'Coliseum Extra Vs. Coby',
-            thumb: 3372,
+            thumb: 4995,
             showManual: true,
             global: true,
             nakama: 5337301,
             gamewith: null,
             slefty: 'coliseums',
-            'All Difficulties': [ 3371, 3373 ],
+            'All Difficulties': [ 4994, 4996 ],
         },
 
     ],
@@ -5902,6 +5902,15 @@ window.drops = {
             'Coast of Wano': [ 3297 ]
         },
 
+        {
+            name: 'Koala',
+            dropID: 'treasuremap45',
+            thumb: 3339,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3339 ]
+        },
+
     ],
 
 
@@ -6239,6 +6248,16 @@ window.drops = {
             gamewith: 148537,
             'All Difficulties': [ 3303 ],
             'Kizuna Exchange': [ 9043 ],
+        },
+
+        {
+            name: 'Kuja Pirates',
+            dropID: 'bond21',
+            thumb: 3351,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3351 ],
+            'Kizuna Exchange': [ 9044, 9045 ],
         },
 
     ],
@@ -7195,6 +7214,14 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Chopperman Missions': [ 3304, 3305 ],
+        },
+
+        {
+            name: 'Now to Onigashima!',
+            thumb: 3346,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3346 ],
         },
 
         {

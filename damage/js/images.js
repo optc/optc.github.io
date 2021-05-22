@@ -190,6 +190,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         baseY += 25;
     }
 
+    // rcv counter
+    if ($scope.tdata.rcvCounter.enabled) {
+        awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
+        var heals = $scope.tdata.rcvCounter.value;
+        type(context, { text: rcvs + (rcvs == 1 ? ' RCV orb' : ' RCV orbs') + ' consumed', x: baseX + 25, y: baseY + 20 });
+        baseY += 25;
+    }
+
     // semla counter
     if ($scope.tdata.semlaCounter.enabled) {
         awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
