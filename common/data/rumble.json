@@ -18856,7 +18856,7 @@
         "spd": 134
       },
       "target": {
-        "comparator": "near"
+        "criteria": "near"
       }
     },
     {
@@ -66507,7 +66507,7 @@
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[STR]" ] },
-              "duration": 6,
+              "duration": 6
             }
           ]
         },
@@ -66723,7 +66723,7 @@
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[DEX]" ] },
-              "duration": 11,
+              "duration": 11
             },
             {
               "amount": 1,
@@ -67149,7 +67149,7 @@
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "crew" ] },
-              "duration": 11,
+              "duration": 11
             }
           ]
         },
@@ -67338,7 +67338,7 @@
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[STR]", "[DEX]", "[QCK]" ] },
-              "duration": 6,
+              "duration": 6
             },
             {
               "amount": 0.9,
@@ -67540,7 +67540,7 @@
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "Driven", "Powerhouse" ] },
-              "duration": 11,
+              "duration": 11
             }
           ]
         },
@@ -68283,7 +68283,7 @@
               "level": 1,
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
-              "duration": 6,
+              "duration": 6
             },
             {
               "attributes": [ "DEF" ],
@@ -68291,7 +68291,7 @@
               "level": 1,
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
-              "duration": 6,
+              "duration": 6
             }
           ]
         },
@@ -68533,7 +68533,7 @@
               "level": 1,
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
-              "duration": 6,
+              "duration": 6
             },
             {
               "attributes": [ "DEF" ],
@@ -68541,7 +68541,7 @@
               "level": 1,
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
-              "duration": 6,
+              "duration": 6
             }
           ]
         },

@@ -368,9 +368,11 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.isLimitStaged = ($scope.details && $scope.details.limit && $scope.details.limit.constructor == Array);
     $scope.isPotentialStaged = ($scope.details && $scope.details.potential && $scope.details.potential.constructor == Array);
     $scope.isSupportStaged = ($scope.details && $scope.details.support && $scope.details.support.constructor == Array);
+    $scope.isLastTapStaged = ($scope.details && $scope.details.lastTap && $scope.details.lastTap.constructor == Array);
     $scope.isSwapHybrid = ($scope.details && $scope.details.swap && $scope.details.swap.base);
     $scope.isfestAbilityHybrid = ($scope.details && $scope.details.festAbility && ($scope.details.festAbility.character1));
     $scope.isfestSpecialHybrid = ($scope.details && $scope.details.festSpecial && ($scope.details.festSpecial.character1));
+    $scope.isfestSupportHybrid = ($scope.details && $scope.details.Support && ($scope.details.Support.character1));
     $scope.isfestAttackPatternHybrid = ($scope.details && $scope.details.festAttackPattern && ($scope.details.festAttackPattern.character1));
     $scope.isfestAttackTargetHybrid = ($scope.details && $scope.details.festAttackTarget && ($scope.details.festAttackTarget.character1));
     $scope.isfestResistanceHybrid = ($scope.details && $scope.details.festResistance && ($scope.details.festResistance.character1));
