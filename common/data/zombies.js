@@ -1245,4 +1245,10 @@ window.zombies = {
         type: 'healer',
         multiplier: 5
     },
+    5338: { // VSShanks
+        type: 'healer',
+    },
+    5340: { // VSShanks
+        type: 'healer',
+    },
 };

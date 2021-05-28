@@ -77,9 +77,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * Events * * * * */
 
     $rootScope.$on('specialToggled', function(e, slot, enabled) {
+
         var unit = $scope.data.team[slot].unit;
         if (!unit) return;
         var id = unit.number + 1;
+        var params = getParameters(slot); params["sourceSlot"] = slot;
         if (!specials.hasOwnProperty(id)) return;
         if (enabled && specials[id].hasOwnProperty('onActivation')) {
             if (!initDone) initializeDataStructs();
@@ -99,10 +101,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var params = ;
             params["isDelayed"] = isDelayed;*/
             
-            specials[id].onActivation(getParameters(slot));
+            specials[id].onActivation(params);
         } else if (!enabled && specials[id].hasOwnProperty('onDeactivation')) {
             if (!initDone) initializeDataStructs();
-            specials[id].onDeactivation(getParameters(slot));
+            specials[id].onDeactivation(params);
         }
     });
     
@@ -1180,7 +1182,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232 || id == 3037 || id == 3038))
                 $scope.tdata.healCounter.enabled = true;
-            if (id == 2364 || id == 2365 || id == 2981 || id == 2982)
+            if (id == 2364 || id == 2365 || id == 2981 || id == 2982 || id == 3224 || id == 3225)
                 $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && (id == 2233 || id == 2234 || id == 2500))
                 $scope.tdata.semlaCounter.enabled = true;
@@ -1202,7 +1204,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if(team[0].unit == null && team[1].unit == null)
             katakuri = false;
         
-        isDelayed = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('delay')) ? x.delay(getParameters(x.sourceSlot)) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); }) || katakuri;
+        isDelayed = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('delay')) ? x.delay(paramsDelay) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); }) || katakuri;
         
         enabledEffects = [ ];
         
@@ -1458,7 +1460,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += (id == 1000) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + ([.1, .3][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
-                        healAmount += (id == 1750 || id == 1751 || id == 1922  || id == 2775  || id == 2776 || id == 5083 || id == 5087 || id == 2959 || id == 2960 || id == 3220 || id == 3221 || id == 3117 || id == 3118 || id == 3275 || id == 3281 || id == 3282) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
+                        healAmount += (id == 1750 || id == 1751 || id == 1922  || id == 2775  || id == 2776 || id == 5083 || id == 5087 || id == 2959 || id == 2960 || id == 3220 || id == 3221 || id == 3117 || id == 3118 || id == 3275 || id == 3281 || id == 3282 || id == 5338 || id == 5340) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 5255 || id == 5257 || id == 5258) ? (.3 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 5084 || id == 5085 || id == 5088 || id == 5089) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += ((id == 2301 || id == 2302) && classCounter().Shooter == 6) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
