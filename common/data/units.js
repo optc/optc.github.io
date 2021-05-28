@@ -3335,7 +3335,7 @@ window.units = [
     [ "Monkey D. Luffy, Competing Captains", "QCK", [ "Free Spirit", "Fighter" ], 6, 55, 6, 5, 99, 5000000, 1624, 1002, 73, 3608, 1670, 242, 1 ],
     [ "Trafalgar Law, Pirate in the Storm", "DEX", [ "Cerebral", "Slasher" ], 5, 30, 5, 3, 70, 1066998, 690, 439, 48, 1533, 976, 107, 1 ],
     [ "Trafalgar Law, Competing Captains", "DEX", [ "Cerebral", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1521, 964, 95, 3380, 1607, 316, 1 ],
-    [ "Eustass Kid,Pirate in the Storm ", "STR", [ "Striker", "Driven" ], 5, 30, 4, 3, 70, 1066998, 783, 454, 33, 1739, 1008, 74, 1 ],
+    [ "Eustass Kid, Pirate in the Storm ", "STR", [ "Striker", "Driven" ], 5, 30, 4, 3, 70, 1066998, 783, 454, 33, 1739, 1008, 74, 1 ],
     [ "Eustass \"Captain\" Kid, Competing Captains", "STR", [ "Striker", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1727, 996, 62, 3838, 1660, 207, 1 ],
     [ "Koala, The 7th Anniversary Cruise", "DEX", [ "Free Spirit", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1074, 557, 109, 2630, 1415, 290, 1],
     [ "Reiju, The 7th Anniversary Cruise", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1253, 828, 83, 2784, 1380, 276, 1 ],
