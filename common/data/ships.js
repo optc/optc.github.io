@@ -742,5 +742,16 @@ window.ships = [
             return [ 0, 0, 0, 0, 0, 0, 0, 500, 750, 1000 ][p.boatLevel - 1];
         }
     },
+    
+    
+    
+    { //55
+        name: "Thousand Sunny - Treasure Cruise 7th Anniversary Model",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK of all characters by 1.5x. Boosts EXP and Beli gained by 3x. Boosted Ability 2: Boosts ATK of all characters by 1.5x. At the start of the adventure, all specials start at MAX charge.',
+        atk: function(p) {
+            return 1.5;
+        },
+    },
 
 ];

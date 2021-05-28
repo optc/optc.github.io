@@ -319,7 +319,7 @@
                 },
                 "defbypass": {
                     "type": "boolean"
-                },
+                }
             },
             "allOf": [
                 {
@@ -387,6 +387,9 @@
                         },
                         "condition": {
                             "$ref": "#/definitions/Condition"
+                        },
+                        "defbypass": {
+                            "type": "boolean"
                         }
                     }
                 }

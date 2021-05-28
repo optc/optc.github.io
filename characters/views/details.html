@@ -500,6 +500,28 @@
                                         <span class="notes" ng-if="details.potentialNotes" ng-bind-html="details.potentialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.lastTap">
+                                    <td>Last Tap</td>
+                                    <td>
+                                        <!-- same potential break (differences across versions) -->
+                                        <div ng-if="!isLastTapHybrid && !isLastTapStaged" ng-bind-html="details.lastTap | decorate"></div>
+                                        <!-- different potential abilities -->
+                                        <div ng-if="!isLastTapHybrid && isLastTapStaged">
+                                            <div ng-repeat="stage in details.lastTap track by $index">
+                                                <strong>Condition:</strong> <span ng-bind-html="stage.condition | decorate"></span>
+                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                            </div>
+                                        </div>
+                                        <span class="notes" ng-if="details.lastTapNotes" ng-bind-html="details.lastTapNotes | notes | decorate"></span>
+                                        <div ng-if="isLastTapHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.potential.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.potential.global | decorate"></div>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

@@ -45,401 +45,410 @@ window.altspecials = {
     3334: {
         chainAddition: function(p) { return 1; },
     },
-    5012: {
+};
+
+var calcGhostStartIDAltSpecials = { "start": 5000 };
+
+var ghostsAltSpecials = {
+    12: {
         chainAddition: function(p) { return 0.5; },
     },
-    5013: {
+    13: {
         chainAddition: function(p) { return 0.5; },
     },
-    5014: {
+    14: {
         chainAddition: function(p) { return 0.5; },
     },
-    5015: {
+    15: {
         chainAddition: function(p) { return 0.5; },
     },
-    5036: {
+    28: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5037: {
+    29: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5038: {
+    30: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5039: {
+    31: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5040: {
+    32: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5041: {
+    33: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5042: {
+    34: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5043: {
+    35: {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5052: {
+    36: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5053: {
+    37: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5054: {
+    38: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5055: {
+    39: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5056: {
+    40: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5057: {
+    41: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5082: {
+    66: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5083: {
+    67: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5084: {
+    68: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5085: {
+    69: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5086: {
+    70: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5087: {
+    71: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5088: {
+    72: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5089: {
+    73: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5090: {
+    74: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5091: {
+    75: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5092: {
+    76: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5093: {
+    77: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5094: {
+    78: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5095: {
+    79: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5096: {
+    80: {
         chainAddition: function(p) { return 0.3; },
     },
-    5097: {
+    81: {
         chainAddition: function(p) { return 0.3; },
     },
-    5098: {
+    82: {
         chainAddition: function(p) { return 0.3; },
     },
-    5099: {
+    83: {
         chainAddition: function(p) { return 0.3; },
     },
-    5100: {
+    84: {
         chainAddition: function(p) { return 0.3; },
     },
-    5101: {
+    85: {
         chainAddition: function(p) { return 0.3; },
     },
-    5102: {
+    86: {
         chainAddition: function(p) { return 0.3; },
     },
-    5103: {
+    87: {
         chainAddition: function(p) { return 0.3; },
     },
-    5028: {
+    120: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5029: {
+    121: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5030: {
+    122: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5031: {
+    123: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5032: {
+    124: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5033: {
+    125: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5034: {
+    126: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
         type: "type",
     },
-    5144:{
+    127: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 1.2 : 1; },
+        type: "type",
+    },
+    136:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5145:{
+    137:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5146:{
+    138:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5147:{
+    139:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5148:{
+    140:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5149:{
+    141:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5150:{
+    142:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5151:{
+    143:{
         affinity: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
     },
-    5160: {
+    152: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5161: {
+    153: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5162: {
+    154: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5163: {
+    155: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5164: {
+    156: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5165: {
+    157: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5166: {
+    158: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5167: {
+    159: {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
         }
     },
-    5176: {
+    168: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5177: {
+    169: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5178: {
+    170: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5179: {
+    171: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
     },
-    5214: {
+    207: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5214].multiplier/100)); },
         onActivation: function(p) { window.altspecials[5214].multiplier = p.percHP; },
     },
-    5215: {
+    208: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5215].multiplier/100)); },
         onActivation: function(p) { window.altspecials[5215].multiplier = p.percHP; },
     },
-    5216: {
+    209: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5216].multiplier/100)); },
         onActivation: function(p) { window.altspecials[5216].multiplier = p.percHP; },
     },
-    5217: {
+    210: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5217].multiplier/100)); },
         onActivation: function(p) { window.altspecials[5217].multiplier = p.percHP; },
     },
-    5218: {
+    211: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5218].multiplier/100)); },
         onActivation: function(p) { window.altspecials[5218].multiplier = p.percHP; },
     },
-    5219: {
+    212: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5219].multiplier/100)); },
         onActivation: function(p) { window.altspecials[5219].multiplier = p.percHP; },
     },
-    5220: {
+    213: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5221: {
+    214: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5222: {
+    215: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5223: {
+    216: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5224: {
+    217: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5225: {
+    218: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5226: {
+    219: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5227: {
+    220: {
         atk: function(p) { return 1.5; },
         type: "type",
     },
-    5244:{
+    237:{
         affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? 1.2 : 1; },
     },
-    5245:{
+    238:{
         affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? 1.2 : 1; },
     },
-    5246:{
+    239:{
         affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? 1.2 : 1; },
     },
-    5184: {
-        chainAddition: function(p) { return 0.3; },
-    },
-    5185: {
-        chainAddition: function(p) { return 0.3; },
-    },
-    5186: {
-        chainAddition: function(p) { return 0.3; },
-    },
-    5283: {
+    276: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5284: {
+    277: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5285: {
+    278: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5286: {
+    279: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5287: {
+    280: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5288: {
+    281: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5289: {
+    282: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5290: {
+    283: {
         chainMultiplication: function(p) { return 1.25; },
     },
-    5307: {
+    300: {
         atk: function(p) { return 2; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
     },
-    5308: {
+    301: {
         atk: function(p) { return 1.75; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
     },
-    5309: {
+    302: {
         atk: function(p) { return 2; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
     },
-    5310: {
+    303: {
         atk: function(p) { return 1.75; },
         type: "condition",
         warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
     },
-    5325: {
+    322: {
+        chainAddition: function(p) { return 0.3; },
+    },
+    323: {
+        chainAddition: function(p) { return 0.3; },
+    },
+    324: {
+        chainAddition: function(p) { return 0.3; },
+    },
+    325: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5326: {
+    326: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5327: {
+    327: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5328: {
+    328: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
     },
-    5329: {
+    329: {
         affinity: function(p) { return window.altspecials[5329].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -451,7 +460,7 @@ window.altspecials = {
             });
         },
     },
-    5330: {
+    330: {
         affinity: function(p) { return window.altspecials[5330].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -463,7 +472,7 @@ window.altspecials = {
             });
         },
     },
-    5331: {
+    331: {
         affinity: function(p) { return window.altspecials[5331].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -475,7 +484,7 @@ window.altspecials = {
             });
         },
     },
-    5332: {
+    332: {
         affinity: function(p) { return window.altspecials[5332].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -487,7 +496,7 @@ window.altspecials = {
             });
         },
     },
-    5333: {
+    333: {
         affinity: function(p) { return window.altspecials[5333].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -499,7 +508,7 @@ window.altspecials = {
             });
         },
     },
-    5334: {
+    334: {
         affinity: function(p) { return window.altspecials[5334].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -511,7 +520,7 @@ window.altspecials = {
             });
         },
     },
-    5335: {
+    335: {
         affinity: function(p) { return window.altspecials[5335].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -523,7 +532,7 @@ window.altspecials = {
             });
         },
     },
-    5336: {
+    336: {
         affinity: function(p) { return window.altspecials[5336].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
@@ -535,4 +544,18 @@ window.altspecials = {
             });
         },
     },
-};
+    338: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return 0; }
+    },
+    340: {
+        atk: function(p) { return p.defenseDown ? 1.75 : 1; },
+        type: "condition",
+        def: function(p) { return 0; }
+    },
+}
+
+Object.keys(ghostsAltSpecials).forEach(function (key) {
+    window.altspecials[calcGhostStartIDAltSpecials["start"] + parseInt(key)] = ghostsAltSpecials[key];
+});

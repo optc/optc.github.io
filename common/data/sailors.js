@@ -1762,6 +1762,25 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 30 : 0; },
     },
+    3356: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 75 : 0; },
+    },
+    3357: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 75 : 0; },
+    },
+    3358: {
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    3359: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    3360: {
+        atkStatic: function(p) { return p.unit.type == "PSY" ? 50 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
@@ -1784,759 +1803,935 @@ window.sailors = {
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-    5000: {
+};
+
+
+var calcGhostStartIDSailors = { "start": 5000 };
+
+var ghostsSailors = {
+    0: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5001: {
+    1: {
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 30 : 0; },
     },
-    5002: {
+    2: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5003: {
+    3: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5008: {
+    6: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
     },
-    5009: {
+    7: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
     },
-    5010: {
+    10: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
     },
-    5011: {
+    11: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
     },
-    5012: {
+    12: {
         atkStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
     },
-    5013: {
+    13: {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
     },
-    5014: {
+    14: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
     },
-    5015: {
+    15: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
     },
-    5016: {
+    16: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5017: {
+    17: {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5018: {
+    18: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
-    5019: {
+    19: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
-    5020: {
+    20: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5021: {
+    21: {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
     },
-    5022: {
+    22: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
-    5023: {
+    23: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
-    5028: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5029: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5030: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5031: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5032: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5033: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5034: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5035: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
-    },
-    5036: {
+    28: {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
-    5037: {
+    29: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
-    5038: {
+    30: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
-    5039: {
+    31: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
-    5040: {
+    32: {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
-    5041: {
+    33: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
-    5042: {
+    34: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
-    5043: {
+    35: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
-    5044: {
-        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
-    },
-    5045: {
-        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
-    },
-    5046: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
-    },
-    5047: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
-    },
-    5048: {
-        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
-    },
-    5049: {
-        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
-    },
-    5050: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
-    },
-    5051: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
-    },
-    5053: {
+    37: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
     },
-    5054: {
+    38: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
-    5056: {
+    40: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
     },
-    5057: {
+    41: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
-    5058: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    42: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
     },
-    5059: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    43: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 25 : 0; },
     },
-    5060: {
+    44: {
         atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5061: {
+    45: {
         atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5062: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    46: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
     },
-    5063: {
-        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 25 : 0; },
+    47: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 25 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 25 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 25 : 0; },
     },
-    5064: {
+    48: {
         atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5065: {
+    49: {
         atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5066: {
+    50: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
         hpStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
         rcvStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
     },
-    5067: {
+    51: {
         atkStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
     },
-    5068: {
+    52: {
         atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
     },
-    5069: {
+    53: {
         atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
     },
-    5070: {
+    54: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
         hpStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
         rcvStatic: function(p) { return p.unit.type == "INT" ? 25 : 0; },
     },
-    5071: {
+    55: {
         atkStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" ? 25 : 0; },
     },
-    5072: {
+    56: {
         atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
     },
-    5073: {
+    57: {
         atkStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 50 : 0; },
     },
-    5082: {
+    66: {
         atkStatic: function(p) { return 50; },
     },
-    5083: {
+    67: {
         hpStatic: function(p) { return 50; },
     },
-    5084: {
+    68: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5085: {
+    69: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5086: {
+    70: {
         atkStatic: function(p) { return 50; },
     },
-    5087: {
+    71: {
         hpStatic: function(p) { return 50; },
     },
-    5088: {
+    72: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5089: {
+    73: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5092: {
-        hpStatic: function(p) { return 150; },
-    },
-    5095: {
-        hpStatic: function(p) { return 150; },
-    },
-    5096: {
+    80: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? 30 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? 30 : 0; },
     },
-    5097: {
+    81: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 30 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 30 : 0; },
     },
-    5098: {
+    82: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
     },
-    5099: {
+    83: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
     },
-    5100: {
+    84: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? 30 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter")) ? 30 : 0; },
     },
-    5101: {
+    85: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 30 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 30 : 0; },
     },
-    5102: {
+    86: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
     },
-    5103: {
+    87: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 50 : 0; },
     },
-    5104: {
+    88: {
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 50 : 0; },
     },
-    5105: {
+    89: {
         atkStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 50 : 0; },
     },
-    5106: {
+    90: {
         atkStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5107: {
+    91: {
         atkStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5108: {
+    92: {
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 50 : 0; },
     },
-    5109: {
+    93: {
         atkStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 50 : 0; },
     },
-    5110: {
+    94: {
         atkStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5111: {
+    95: {
         atkStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5112: {
+    96: {
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 50 : 0; },
     },
-    5113: {
+    97: {
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 50 : 0; },
     },
-    5114: {
+    98: {
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5115: {
+    99: {
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5116: {
+    100: {
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 50 : 0; },
     },
-    5117: {
+    101: {
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 50 : 0; },
     },
-    5118: {
+    102: {
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5119: {
+    103: {
         hpStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5122: {
+    106: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
     },
-    5123: {
+    107: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
     },
-    5126: {
+    110: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
     },
-    5127: {
+    111: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral")) ? 50 : 0; },
     },
-    5128: {
+    112: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 30 : 0; },
     },
-    5129: {
+    113: {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 30 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 30 : 0; },
     },
-    5130: {
+    114: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
     },
-    5131: {
+    115: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
     },
-    5132: {
+    116: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 30 : 0; },
     },
-    5133: {
+    117: {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 30 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 30 : 0; },
     },
-    5134: {
+    118: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
     },
-    5135: {
+    119: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Driven")) ? 50 : 0; },
     },
-    5160: {
+    120: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    121: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    122: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    123: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    124: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    125: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    126: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    127: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Fighter") ? 40 : 0 : 0; },
+    },
+    152: {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5161: {
+    153: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5162: {
+    154: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5163: {
+    155: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5164: {
+    156: {
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5165: {
+    157: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5166: {
+    158: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5167: {
+    159: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5170: {
+    162: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5171: {
+    163: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5174: {
+    166: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5175: {
+    167: {
         atkStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker")) ? 75 : 0; },
     },
-    5176: {
+    168: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
     },
-    5176: {
+    169: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 25 : 0; },
     },
-    5176: {
+    170: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5176: {
+    171: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 50 : 0; },
     },
-    5180: {
-        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    172: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5181: {
-        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    173: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5182: {
-        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    174: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5183: {
-        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    175: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
     },
-    5228: {
+    176: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+    },
+    177: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+    },
+    178: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+    },
+    179: {
+        atkStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        hpStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+        rcvStatic: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 75 : 0; },
+    },
+    180: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    181: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    182: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    183: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    184: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
+    185: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    186: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    187: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? 50 : 0; },
+    },
+    221: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
     },
-    5229: {
+    222: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
     },
-    5230: {
+    223: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5231: {
+    224: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5232: {
+    225: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
     },
-    5233: {
+    226: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 25 : 0; },
     },
-    5234: {
+    227: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5235: {
+    228: {
         atkStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         hpStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
         rcvStatic: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? 50 : 0; },
     },
-    5244: {
+    237: {
         atkStatic: function(p) { return 25; },
         hpStatic: function(p) { return 25; },
         rcvStatic: function(p) { return 25; },
     },
-    5245: {
+    238: {
         atkStatic: function(p) { return 25; },
         hpStatic: function(p) { return 25; },
         rcvStatic: function(p) { return 25; },
     },
-    5246: {
+    239: {
         atkStatic: function(p) { return 25; },
         hpStatic: function(p) { return 25; },
         rcvStatic: function(p) { return 25; },
     },
-    5247: {
+    240: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5248: {
+    241: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5249: {
+    242: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         hpStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
     },
-    5250: {
+    243: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         hpStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
     },
-    5251: {
+    244: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
         hpStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5252: {
+    245: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 75 : 0; },
     },
-    5253: {
+    246: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         hpStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
     },
-    5254: {
+    247: {
         atkStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         hpStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
         rcvStatic: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 100 : 0; },
     },
-    5267: {
+    248: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    249: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    250: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    251: {
+        atkStatic: function(p) { return p.slot <= 1 ? 60 : 0; },
+    },
+    260: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-    5268: {
+    261: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-    5269: {
+    262: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5270: {
+    263: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5271: {
+    264: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-    5272: {
+    265: {
         atkStatic: function(p) { return 50; },
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
-    5273: {
+    266: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5274: {
+    267: {
         atkStatic: function(p) { return 100; },
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
-    5283: {
+    276: {
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5284: {
+    277: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5285: {
+    278: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5286: {
+    279: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5287: {
+    280: {
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5288: {
+    281: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5289: {
+    282: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5290: {
+    283: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5291: {
+    284: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5292: {
+    285: {
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5293: {
+    286: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5294: {
+    287: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5295: {
+    288: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5296: {
+    289: {
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
     },
-    5297: {
+    290: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5298: {
+    291: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
     },
-    5311: {
+    292: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    293: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    294: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+    },
+    295: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+    },
+    296: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    297: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    298: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+    },
+    299: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 100 : 0; },
+    },
+    304: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 75 : 0; },
     },
-    5312: {
+    305: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
-    5313: {
+    306: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 125 : 0; },
     },
-    5314: {
+    307: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 75 : 0; },
     },
-    5315: {
+    308: {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
-    5316: {
+    309: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 125 : 0; },
     },
-    5325: {
+    310: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    311: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    312: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    313: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    314: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    315: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    316: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    317: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    318: {
+        rcvStatic: function(p) { return 40; },
+    },
+    319: {
+        rcvStatic: function(p) { return 40; },
+    },
+    320: {
+        rcvStatic: function(p) { return 40; },
+    },
+    321: {
+        rcvStatic: function(p) { return 40; },
+    },
+    325: {
         atkStatic: function(p) { return 50; },
     },
-    5326: {
+    326: {
         atkStatic: function(p) { return 50; },
     },
-    5327: {
+    327: {
         atkStatic: function(p) { return 100; },
     },
-    5328: {
+    328: {
         atkStatic: function(p) { return 100; },
     },
-};
+    329: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    330: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    331: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+    332: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+    333: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    334: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    335: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+    336: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+}
+
+Object.keys(ghostsSailors).forEach(function (key) {
+    window.sailors[calcGhostStartIDSailors["start"] + parseInt(key)] = ghostsSailors[key];
+});

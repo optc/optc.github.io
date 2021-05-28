@@ -748,9 +748,27 @@ window.matchers = [
     },
 
     {
+        name: 'End-of-Turn Healers',
+        target: 'special',
+        matcher: /Recovers.+(HP at the end of the turn|HP at the end of each turn)/i
+    },
+
+    {
+        name: 'Fixed HP Healers',
+        target: 'special',
+        matcher: /Recovers (\d|,)+ HP/i
+    },
+
+    {
         name: 'RCV based Healers',
         target: 'special',
         matcher: /Recovers.+ character\'s RCV/i
+    },
+
+    {
+        name: 'MAX HP based Healers',
+        target: 'special',
+        matcher: /(Recovers.+ crew\'s MAX HP|Recovers all missing HP)/i
     },
 
     {
@@ -1055,6 +1073,12 @@ window.matchers = [
         name: 'Healers',
         target: 'swap',
         matcher: /Recovers/i
+    },
+
+    {
+        name: 'MAX HP based Healers',
+        target: 'swap',
+        matcher: /(Recovers.+ crew\'s MAX HP|Recovers all missing HP)/i
     },
 
     {
