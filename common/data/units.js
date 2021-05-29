@@ -3352,13 +3352,13 @@ window.units = [
     [ "Kuja Pirates", "QCK", [ "Shooter", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1279, 721, 83, 3180, 1481, 192, 1],
     [ "Kuja Pirates, Robust Woman Pirates", "QCK", [ "Shooter", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1389, 835, 99, 3290, 1579, 229, 1],
     [ "Blackbeard, Settlement on Banaro Island", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 2000000, 1555, 695, 88, null, null, null, null ],
-    [ "Whitebeard VS Shanks, Discussion Between the Yonko", ["INT", "PSY"], [[ "Striker", "Powerhouse" ], [ "Slasher", "Cerebral" ]], 5, 30, 0, 3, 70, 1066998, 905, 478, 39, 2012, 1062, 87, null ],
-    [ "Whitebeard VS Shanks, Failed Negotiations", ["INT", "PSY"], [[ "Striker", "Powerhouse" ], [ "Slasher", "Cerebral" ]], 6, 55, 0, 5, 99, 5000000, 2000, 1050, 75, null, null, null, null ],
-    [ "Marco, Passionate and Healing Flame", "INT", [ "Powerhouse", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 671, 444, 51, null, null, null, null ],
-    [ "Marco, Sky-Soaring Phoenix", "INT", [ "Powerhouse", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1480, 976, 101, null, null, null, null ],
-    [ "Ben Beckman, First Mate Taking a Short Break", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1326, 877, 67, null, null, null, null ],
-    [ "Vista, Embarking Flower Swords", "INT", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1345, 842, 70, null, null, null, null ],
-    [ "Rockstar, Red Hair Pirates (Rookie)", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1373, 832, 69, null, null, null, null ],
+    [ "Whitebeard VS Shanks, Discussion Between the Yonko", ["INT", "PSY"], [[ "Striker", "Powerhouse" ], [ "Slasher", "Cerebral" ]], 5, 30, 0, 3, 70, 1066998, 905, 478, 39, 2012, 1062, 87, 1],
+    [ "Whitebeard VS Shanks, Failed Negotiations", ["INT", "PSY"], [[ "Striker", "Powerhouse" ], [ "Slasher", "Cerebral" ]], 6, 55, 0, 5, 99, 5000000, 2000, 1050, 75, 4444, 1750, 251, 1],
+    [ "Marco, Passionate and Healing Flame", "INT", [ "Powerhouse", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 671, 444, 51, 1492, 988, 113, 1],
+    [ "Marco, Sky-Soaring Phoenix", "INT", [ "Powerhouse", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1480, 976, 101, 3288, 1626, 335, 1],
+    [ "Ben Beckman, First Mate Taking a Short Break", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1326, 877, 67, 2947, 1462, 222, 1],
+    [ "Vista, Embarking Flower Swords", "INT", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1345, 842, 70, 2988, 1404, 234, 1],
+    [ "Rockstar, Red Hair Pirates (Rookie)", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1373, 832, 69, 3052, 1387, 229, 1],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -3724,10 +3724,10 @@ var ghostsUnits = [
     [ "[Dual Unit] Sabo, Raging Flame-Dragon", "DEX", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1579, 937, 158, 3497, 1509, 332, 1 ],
     [ "[Dual Unit] Ace & Sabo, Raging Flame-Dragon", "QCK", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1579, 937, 158, 3899, 1682, 365, 1 ],
     [ "[Dual Unit] Ace & Sabo, Raging Flame-Dragon", "DEX", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1579, 937, 158, 3899, 1682, 365, 1 ],
-    [ "[VS Unit] Whitebeard, Discussion Between the Yonko", "INT", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 905, 478, 39, 1760, 1009, 72, null ],
-    [ "[VS Unit] Shanks, Discussion Between the Yonko", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 5, 3, 70, 1066998, 905, 478, 39, 1690, 1005, 85, null ],
-    [ "[VS Unit] Whitebeard, Failed Negotiations", "INT", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2000, 1050, 75, null, null, null, null ],
-    [ "[VS Unit] Shanks, Failed Negotiations", "PSY", [ "Slasher", "Cerebral" ], 6, 55, 5, 5, 99, 5000000, 2000, 1050, 75, null, null, null, null ],
+    [ "[VS Unit] Whitebeard, Discussion Between the Yonko", "INT", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 905, 478, 39, 1760, 1009, 72, 1 ],
+    [ "[VS Unit] Shanks, Discussion Between the Yonko", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 5, 3, 70, 1066998, 905, 478, 39, 1690, 1005, 85, 1 ],
+    [ "[VS Unit] Whitebeard, Failed Negotiations", "INT", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2000, 1050, 75, 4444, 1750, 251, 1 ],
+    [ "[VS Unit] Shanks, Failed Negotiations", "PSY", [ "Slasher", "Cerebral" ], 6, 55, 5, 5, 99, 5000000, 2000, 1050, 75, 4444, 1750, 251, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
