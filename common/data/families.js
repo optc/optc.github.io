@@ -3351,7 +3351,7 @@ window.families = [
     "Kozuki Hiyori",
     [ "Boa Hancock", "Boa Sandersonia", "Boa Marigold" ],
     [ "Boa Hancock", "Boa Sandersonia", "Boa Marigold" ],
-    null,
+    "Marshall D. Teach",
     [ "Edward Newgate", "Shanks" ],
     [ "Edward Newgate", "Shanks" ],
     "Marco",

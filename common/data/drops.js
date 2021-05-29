@@ -7193,7 +7193,7 @@ window.drops = {
         },
 
         {
-            name: 'Please Help The Swordsmen!!',
+            name: 'Dear Swordsmen, Please Help Us!',
             thumb: 3231,
             nakama: null,
             gamewith: 252958,
@@ -7222,6 +7222,14 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Chopperman Missions': [ 3346 ],
+        },
+
+        {
+            name: 'Duel at Banaro Island',
+            thumb: 3353,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3353 ],
         },
 
         {
