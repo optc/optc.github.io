@@ -7234,6 +7234,14 @@ window.drops = {
         },
 
         {
+            name: 'Duel at Banaro Island',
+            thumb: 3353,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3353 ],
+        },
+
+        {
             name: 'Escape Cacao Island',
             thumb: 2121,
             global: true,

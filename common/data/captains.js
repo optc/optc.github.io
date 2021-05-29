@@ -11755,6 +11755,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
     },
+    3353: {
+        atk: function(p) { return p.unit.type == "INT" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
     3356: {
         atk: function(p) { return p.percHP >= 99.0 ? p.unit.type == "INT" ? 5 : 4.5 : 4; },
         hp: function(p) { return p.unit.type == "INT" ? 1.3 : 1; },
