@@ -54605,7 +54605,7 @@
               "type": "fixed"
             },
             {
-              "amount": 5,
+              "amount": 1000,
               "condition": { "comparator": "remaining", "count": 40, "type": "time" },
               "effect": "damage",
               "targeting": { "targets": [ "enemies" ] },
@@ -57139,7 +57139,7 @@
             {
               "attributes": [ "DEF" ],
               "duration": 5,
-              "effect": "buff",
+              "effect": "debuff",
               "level": 3,
               "targeting": { "targets": [ "[STR]" ] }
             },
