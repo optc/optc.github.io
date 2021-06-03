@@ -585,9 +585,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         currentDefense = baseDefense;
         var defreduced = false;
         enabledSpecials.forEach(function(x) {
+            var params = getParameters(x.sourceSlot);
+            params["sourceSlot"] = x.sourceSlot;
             if (x === null || !x.hasOwnProperty('def')) return;
-            currentDefense = Math.min(currentDefense,baseDefense * x.def(getParameters(x.sourceSlot)));
-            if (x.def(getParameters(x.sourceSlot)) < 1) defreduced = true;
+            currentDefense = Math.min(currentDefense,baseDefense * x.def(params));
+            if (x.def(params) < 1) defreduced = true;
         });
         if($scope.data.effect == "80% DEF reduction"){
             currentDefense = Math.min(currentDefense,baseDefense * .20);

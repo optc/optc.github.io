@@ -3118,7 +3118,7 @@ window.aliases = {
     3117: [ 'シャンクス　ムーンナイト Happy Scary Halloween', '', 'Legend Shanks', 'V3 Shanks V3', 'Halloween Shanks' ],
     3118: [ 'シャンクス　ムーンナイトキング Happy Scary Halloween', '', 'Legend Shanks', 'V3 Shanks V3', 'Halloween Shanks' ],
     3119: [ '', '', '' ],
-    3120: [ 'ベックマン　夜の一服 Happy Scary Halloween', '', 'Halloween Beckamn', 'Secret Beckamn', 'Limited Beckamn', 'Kizuna Beckamn', 'Halloween Ben Beckamn', 'Secret Ben Beckamn', 'Limited Ben Beckamn', 'Kizuna Ben Beckamn' ],
+    3120: [ 'ベックマン　夜の一服 Happy Scary Halloween', '', 'Halloween Beckman', 'Secret Beckman', 'Limited Beckman', 'Kizuna Beckman', 'Halloween Ben Beckman', 'Secret Ben Beckman', 'Limited Ben Beckman', 'Kizuna Ben Beckman' ],
     3121: [ 'ヤソップ　闇夜の狙撃 Happy Scary Halloween', '', 'Halloween Yasopp', 'Secret Yasopp', 'Limited Yasopp', 'Kizuna Yasopp' ],
     3122: [ 'モンキー・D・ルフィ 兄の意志継ぐ船長', '', 'Ichiban Kuji Luffy' ],
     3123: [ 'ナミ 天候を駆使する航海士', '', 'Ichiban Kuji Nami' ],
