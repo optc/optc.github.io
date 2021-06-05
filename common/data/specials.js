@@ -11660,6 +11660,17 @@ window.specials = {
             });
         },
     },
+    3361: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    3362: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

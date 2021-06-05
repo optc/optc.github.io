@@ -3351,7 +3351,7 @@ window.units = [
     [ "Komurasaki, Orian's Final Moment", "INT", [ "Slasher", "Cerebral" ], "6+", 65, 5, 5, 99, 5000000, 1600, 772, 243, 3377, 1444, 456, 1],
     [ "Kuja Pirates", "QCK", [ "Shooter", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1279, 721, 83, 3180, 1481, 192, 1],
     [ "Kuja Pirates, Robust Woman Pirates", "QCK", [ "Shooter", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1389, 835, 99, 3290, 1579, 229, 1],
-    [ "Blackbeard, Settlement on Banaro Island", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 2000000, 1555, 695, 88, null, null, null, null ],
+    [ "Blackbeard, Settlement on Banaro Island", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 2000000, 1555, 695, 88, 3205, 1431, 188, 1 ],
     [ "Whitebeard VS Shanks, Discussion Between the Yonko", ["INT", "PSY"], [[ "Striker", "Powerhouse" ], [ "Slasher", "Cerebral" ]], 5, 30, 0, 3, 70, 1066998, 905, 478, 39, 2012, 1062, 87, 1],
     [ "Whitebeard VS Shanks, Failed Negotiations", ["INT", "PSY"], [[ "Striker", "Powerhouse" ], [ "Slasher", "Cerebral" ]], 6, 55, 0, 5, 99, 5000000, 2000, 1050, 75, 4444, 1750, 251, 1],
     [ "Marco, Passionate and Healing Flame", "INT", [ "Powerhouse", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 671, 444, 51, 1492, 988, 113, 1],
@@ -3359,6 +3359,8 @@ window.units = [
     [ "Ben Beckman, First Mate Taking a Short Break", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1326, 877, 67, 2947, 1462, 222, 1],
     [ "Vista, Embarking Flower Swords", "INT", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1345, 842, 70, 2988, 1404, 234, 1],
     [ "Rockstar, Red Hair Pirates (Rookie)", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1373, 832, 69, 3052, 1387, 229, 1],
+    [ "Dracule Mihawk, Intercepting a Marine Fleet", "INT", [ "Slasher", "Cerebral" ], 5, 40, 4, 3, 99, 4000000, 1108, 720, 148, null, null, null, null ],
+    [ "Sweet Commander Cracker, Strong Warrior's True Form", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1358, 752, 118, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

@@ -5417,7 +5417,7 @@ window.drops = {
         },
         
         {
-            name: 'X Drake',
+            name: 'Animal Kingdom Pirates, Tobi Roppo',
             thumb: 3210,
             showManual: true,
             nakama: 321000,
@@ -5426,7 +5426,7 @@ window.drops = {
         },
         
         {
-            name: 'Bonekichi',
+            name: 'The Ghostly Skeletal Apparition',
             thumb: 3235,
             showManual: true,
             nakama: null,
@@ -5459,6 +5459,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3329, -3329 ],
+        },
+        
+        {
+            name: 'Mihawk',
+            thumb: 3361,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3361, -3361 ],
         },
 
     ],

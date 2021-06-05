@@ -70344,6 +70344,278 @@
       }
     },
     {
+      "ability": [
+        {
+          "effects": [
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[STR]" ] }
+            },
+            {
+              "attributes": [ "SPD" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[STR]" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "debuff",
+              "level": 1,
+              "condition": { "comparator": "first", "count": 40, "type": "time" },
+              "targeting": { "targets": [ "[DEX]" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 2 }
+            },
+            {
+              "override": { "level": 2 }
+            },
+            {
+              "override": { "level": 2 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 3 }
+            },
+            {
+              "override": { "level": 3 }
+            },
+            {
+              "override": { "level": 3 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 4 }
+            },
+            {
+              "override": { "level": 4 }
+            },
+            {
+              "override": { "level": 4 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 5 }
+            },
+            {
+              "override": { "level": 5 }
+            },
+            {
+              "override": { "level": 5 }
+            }
+          ]
+        }
+      ],
+      "id": 3362,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "resilience": [
+        {
+          "attribute": "Action Bind",
+          "chance": 100,
+          "type": "debuff"
+        },
+        {
+          "attribute": "[DEX]",
+          "percentage": 30,
+          "type": "damage"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "amount": 0.1,
+              "effect": "damage",
+              "targeting": { "count": 1, "targets": [ "enemies" ] },
+              "type": "atk",
+              "defbypass": true
+            },
+            {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "self" ] },
+              "duration": 21
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[STR]" ] },
+              "duration": 6
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.2 }
+            },
+            {
+              "override": { "level": 1, "duration": 22 }
+            },
+            {
+              "override": { "level": 1, "duration": 7 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.3 }
+            },
+            {
+              "override": { "level": 1, "duration": 23 }
+            },
+            {
+              "override": { "level": 1, "duration": 8 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.4 }
+            },
+            {
+              "override": { "level": 2, "duration": 24 }
+            },
+            {
+              "override": { "level": 1, "duration": 9 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.5 }
+            },
+            {
+              "override": { "level": 2, "duration": 25 }
+            },
+            {
+              "override": { "level": 1, "duration": 10 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.6 }
+            },
+            {
+              "override": { "level": 3, "duration": 26 }
+            },
+            {
+              "override": { "level": 2, "duration": 11 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.7 }
+            },
+            {
+              "override": { "level": 3, "duration": 27 }
+            },
+            {
+              "override": { "level": 2, "duration": 12 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.8 }
+            },
+            {
+              "override": { "level": 3, "duration": 28 }
+            },
+            {
+              "override": { "level": 2, "duration": 13 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 0.9 }
+            },
+            {
+              "override": { "level": 4, "duration": 29 }
+            },
+            {
+              "override": { "level": 2, "duration": 14 }
+            }
+          ]
+        },
+        {
+          "cooldown": 18,
+          "effects": [
+            {
+              "override": { "amount": 4 }
+            },
+            {
+              "override": { "level": 5, "duration": 30 }
+            },
+            {
+              "override": { "level": 3, "duration": 15 }
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 174,
+        "rumbleType": "ATK",
+        "spd": 172
+      },
+      "target": {
+        "criteria": "near"
+      }
+    },
+    {
       "basedOn": 2999,
       "id": 5259
     },
