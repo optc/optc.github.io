@@ -7210,6 +7210,14 @@ window.drops = {
         },
 
         {
+            name: 'The End of an Era',
+            thumb: 3262,
+            nakama: null,
+            gamewith: 252958,
+            'Chopperman Missions': [ 3262 ],
+        },
+
+        {
             name: 'Pirate Paradise!!',
             thumb: 3280,
             nakama: null,
