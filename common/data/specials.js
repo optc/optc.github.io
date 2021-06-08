@@ -10820,6 +10820,7 @@ window.specials = {
         },
     },
     3210: {
+        affinity: function(p) { return 1.75; },
         chainAddition: function(p) { return window.specials[3210].multiplier1; },
         chain: function(p) { return window.specials[3210].multiplier2; },
         chainLimiter: function(p) {
@@ -10968,9 +10969,9 @@ window.specials = {
         }
     },
     3233: {
-        atk: function(p) { return window.specials[3233].multiplier == 0 ? 1.75 : 1; },
+        atk: function(p) { return window.specials[3233].multiplier == 1 ? 1.75 : 1; },
         type: "type",
-        orb: function(p) { return window.specials[3233].multiplier == 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return window.specials[3233].multiplier == 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             var levels = ['Orb Boost', 'ATK Boost'];
             var n = (window.specials[3233].multiplier == undefined ? 0 : (window.specials[3233].multiplier + 1) % 2);
