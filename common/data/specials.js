@@ -11016,7 +11016,7 @@ window.specials = {
             var n = (levels.indexOf(window.specials[3237].multiplier) + 1) % levels.length;
             window.specials[3237].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
+                text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Affinity boost, disable and re-enable this special',
                 name: '3237warning'
             });
         },
