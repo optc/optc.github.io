@@ -5418,7 +5418,7 @@ window.drops = {
         },
         
         {
-            name: 'X Drake',
+            name: 'Animal Kingdom Pirates, Tobi Roppo',
             thumb: 3210,
             showManual: true,
             global: true,
@@ -5428,7 +5428,7 @@ window.drops = {
         },
         
         {
-            name: 'Bonekichi',
+            name: 'The Ghostly Skeletal Apparition',
             thumb: 3235,
             showManual: true,
             global: true,
@@ -5873,6 +5873,7 @@ window.drops = {
             name: 'Komurasaki',
             dropID: 'treasuremap41',
             thumb: 3217,
+            global: true,
             nakama: 8321700,
             gamewith: 251248,
             'Coast of Wano': [ 3217 ]
@@ -5882,6 +5883,7 @@ window.drops = {
             name: 'Queen',
             dropID: 'treasuremap42',
             thumb: 3239,
+            global: true,
             nakama: 8323900,
             gamewith: 254943,
             'Coast of Wano': [ 3239 ]
@@ -6218,6 +6220,7 @@ window.drops = {
             name: 'Onami & Orobi',
             dropID: 'bond17',
             thumb: 3213,
+            global: true,
             nakama: 9321300,
             gamewith: 148537,
             'All Difficulties': [ 3213 ],
@@ -6228,6 +6231,7 @@ window.drops = {
             name: 'King',
             dropID: 'bond18',
             thumb: 3241,
+            global: true,
             nakama: 9324100,
             gamewith: 148537,
             'All Difficulties': [ 3241 ],
@@ -6350,7 +6354,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Nine',
+            name: 'Plan-Sabotaging Headliner',
             dropID: 'piratefestival9',
             thumb: 3208,
             global: true,
@@ -6360,7 +6364,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Ten',
+            name: 'Unexpected Champion',
             dropID: 'piratefestival10',
             thumb: 3233,
             global: true,
@@ -6383,7 +6387,7 @@ window.drops = {
             dropID: 'piratefestival12',
             thumb: 3332,
             nakama: null,
-            gamewith: null,
+            gamewith: 196547,
             'All Difficulties': [ 3332 ],
         },
 
@@ -7234,14 +7238,6 @@ window.drops = {
         },
 
         {
-            name: 'Duel at Banaro Island',
-            thumb: 3353,
-            nakama: null,
-            gamewith: null,
-            'Chopperman Missions': [ 3353 ],
-        },
-
-        {
             name: 'Escape Cacao Island',
             thumb: 2121,
             global: true,
@@ -7253,9 +7249,9 @@ window.drops = {
         {
             name: 'Duel on Banaro Island',
             thumb: 3353,
-            global: false,
             nakama: null,
             gamewith: 280282,
+            'Chopperman Missions': [ 3353 ],
         },
 
         {
