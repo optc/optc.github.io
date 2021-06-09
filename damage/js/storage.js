@@ -57,9 +57,10 @@ var StorageCtrl = function($scope, $storage) {
     for (var d in data)
         $scope.data[d] = data[d];
     
+    //Load saved orbs (not specials because it breaks stuff)
     var team = loadValue('team',{ });
     for (var d in team)
-        $scope.tdata.team[d] = team[d];
+        $scope.tdata.team[d].orb = team[d].orb;
 
     var options = loadValue('options',{ });
     for (var o in options) {

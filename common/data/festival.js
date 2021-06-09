@@ -3360,7 +3360,7 @@ window.festival = [
     [ "ATK", 96, 153 ],
     [ "ATK", 113, 147 ],
     [ "", null, null ],
-    [ "", null, null ],
+    [ "ATK", 174, 172 ],
     [ "", null, null ],
     [ "", null, null ],
     [ "", null, null ],

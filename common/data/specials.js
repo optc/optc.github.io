@@ -10820,6 +10820,7 @@ window.specials = {
         },
     },
     3210: {
+        affinity: function(p) { return 1.75; },
         chainAddition: function(p) { return window.specials[3210].multiplier1; },
         chain: function(p) { return window.specials[3210].multiplier2; },
         chainLimiter: function(p) {
@@ -10968,9 +10969,9 @@ window.specials = {
         }
     },
     3233: {
-        atk: function(p) { return window.specials[3233].multiplier == 0 ? 1.75 : 1; },
+        atk: function(p) { return window.specials[3233].multiplier == 1 ? 1.75 : 1; },
         type: "type",
-        orb: function(p) { return window.specials[3233].multiplier == 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
+        orb: function(p) { return window.specials[3233].multiplier == 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName); },
         onActivation: function(p) {
             var levels = ['Orb Boost', 'ATK Boost'];
             var n = (window.specials[3233].multiplier == undefined ? 0 : (window.specials[3233].multiplier + 1) % 2);
@@ -11016,7 +11017,7 @@ window.specials = {
             var n = (levels.indexOf(window.specials[3237].multiplier) + 1) % levels.length;
             window.specials[3237].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
+                text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Affinity boost, disable and re-enable this special',
                 name: '3237warning'
             });
         },
@@ -11659,6 +11660,17 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3361: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName); },
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    3362: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
     },
 };
 

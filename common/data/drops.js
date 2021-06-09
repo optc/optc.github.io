@@ -5463,6 +5463,15 @@ window.drops = {
             gamewith: 275012,
             'All Difficulties': [ 3329, -3329 ],
         },
+        
+        {
+            name: 'Mihawk',
+            thumb: 3361,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3361, -3361 ],
+        },
 
     ],
 
@@ -7211,6 +7220,14 @@ window.drops = {
             gamewith: 252958,
             'Chopperman Missions': [ 3222, 3223 ],
             'All Difficulties': [ -3222, -3223, -3225, -3227, -3229, -3231 ],
+        },
+
+        {
+            name: 'The End of an Era',
+            thumb: 3262,
+            nakama: null,
+            gamewith: 252958,
+            'Chopperman Missions': [ 3262 ],
         },
 
         {

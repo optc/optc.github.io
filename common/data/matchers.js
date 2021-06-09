@@ -463,9 +463,15 @@ window.matchers = [
     },
 
     {
-        name: 'Following-turn Buff Enabler',
+        name: 'Following-turn Buff/Debuff Enabler',
         target: 'special',
-        matcher: /(Following the activation|If during that turn)/i
+        matcher: /(Following the activation|If during that turn|After \d+ turn)/i
+    },
+
+    {
+        name: 'After-turn Buff/Debuff Enabler',
+        target: 'special',
+        matcher: /(After \d+ turn)/i
     },
 
     {

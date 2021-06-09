@@ -11778,6 +11778,14 @@ window.captains = {
     3360: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : p.unit.type == "PSY" ? 3 : 1; },
     },
+    3361: {
+        atk: function(p) { return p.unit.type == "INT" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    3362: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
