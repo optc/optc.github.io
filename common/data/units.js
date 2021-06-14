@@ -3359,8 +3359,20 @@ window.units = [
     [ "Ben Beckman, First Mate Taking a Short Break", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1326, 877, 67, 2947, 1462, 222, 1],
     [ "Vista, Embarking Flower Swords", "INT", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1345, 842, 70, 2988, 1404, 234, 1],
     [ "Rockstar, Red Hair Pirates (Rookie)", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1373, 832, 69, 3052, 1387, 229, 1],
-    [ "Dracule Mihawk, Intercepting a Marine Fleet", "INT", [ "Slasher", "Cerebral" ], 5, 40, 4, 3, 99, 4000000, 1108, 720, 148, null, null, null, null ],
-    [ "Sweet Commander Cracker, Strong Warrior's True Form", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1358, 752, 118, null, null, null, null ],
+    [ "Dracule Mihawk, Intercepting a Marine Fleet", "INT", [ "Slasher", "Cerebral" ], 5, 40, 4, 3, 99, 4000000, 1108, 720, 148, 2741, 1450, 260, 1],
+    [ "Sweet Commander Cracker, Strong Warrior's True Form", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1358, 752, 118, 3983, 1533, 225, 1],
+    [ "Sanji, MUGIWARA 56", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 962, 436, 68, null, null, null, null ],
+    [ "Sanji, Blue Suit Cook", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 5, 5, 99, 5000000, 1828, 828, 128, null, null, null, null ],
+    [ "Monkey D. Luffy, MUGIWARA 56", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1528, 678, 128, null, null, null, null ],
+    [ "Tony Tony Chopper, MUGIWARA 56", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1128, 578, 228, null, null, null, null ],
+    [ "Nami, MUGIWARA 56", "PSY", [ "Free Spirit", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1478, 528, 178, null, null, null, null ],
+    [ "Roronoa Zoro, MUGIWARA 56", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 1, 99, 5000000, 1578, 748, 88, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Dark King Rayleigh, Sail to a Fierce Fight", "INT", [ "Slasher", "Cerebral" ], 5, 50, 5, 5, 99, 5000000, 1007, 563, 174, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

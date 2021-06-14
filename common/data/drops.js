@@ -5899,7 +5899,7 @@ window.drops = {
             thumb: 3273,
             nakama: 8327300,
             gamewith: 260519,
-            'Coast of Wano': [ 3273 ]
+            'Ragin Swa': [ 3273 ]
         },
 
         {
@@ -5918,6 +5918,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Coast of Wano': [ 3339 ]
+        },
+
+        {
+            name: 'MUGIWARA Zoro',
+            dropID: 'treasuremap46',
+            thumb: 3368,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3368 ]
         },
 
     ],
@@ -6355,7 +6364,7 @@ window.drops = {
         },
 
         {
-            name: 'Round Nine',
+            name: 'Plan-Sabotaging Headliner',
             dropID: 'piratefestival9',
             thumb: 3208,
             nakama: null,
@@ -6364,12 +6373,13 @@ window.drops = {
         },
 
         {
-            name: 'Round Ten',
+            name: 'Unexpected Champion',
             dropID: 'piratefestival10',
             thumb: 3233,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3233 ],
+            'Global': [ 3208 ],
         },
 
         {
@@ -6386,8 +6396,17 @@ window.drops = {
             dropID: 'piratefestival12',
             thumb: 3332,
             nakama: null,
-            gamewith: null,
+            gamewith: 196547,
             'All Difficulties': [ 3332 ],
+        },
+
+        {
+            name: 'Round Thirteen',
+            dropID: 'piratefestival12',
+            thumb: 3374,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3374 ],
         },
 
     ],

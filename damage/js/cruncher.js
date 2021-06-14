@@ -619,7 +619,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
-    var getTypeMultiplierOfUnit = function(attackerType,attackedType, unit, teamSlot) {
+    var getTypeMultiplierOfUnit = function(attackerType, attackedType, unit, teamSlot) {
         var typeMult = 1, affinityMult = 1, captAffinityMult = 1;
         
         if (attackerType == 'STR' && attackedType == 'DEX') typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
@@ -679,12 +679,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getChainMultiplier = function(chainBase, hitModifiers, chainModifier, params, damage) {
         var chainSpecialMult = 1;
+        var chainUpgrade = 0;
         if ($scope.data.effect == '1.25x Chain Multiplier - Sanji Judge Change Action'){
             chainSpecialMult = 1.25;
         }
         //console.log(params);
         chainSpecMultiplication.forEach(function(special){
             var params = getParameters(special.sourceSlot);
+            params["sourceSlot"] = special.sourceSlot;
             if(chainSpecialMult<special.chainMultiplication(params)){
                 chainSpecialMult = special.chainMultiplication(params);
             }
@@ -797,7 +799,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         });
         
-        if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
+        /* if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
             addition = 0.5;
         }
         if ($scope.data.effect == '0.3x Chain Boost - Lucci Kaku Change Action'){
@@ -805,7 +807,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         if ($scope.data.effect == '2.5x Chain Lock - Vivi Rebecca Change Action'){
             addition = 2.5;
-        }
+        } */
         
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
@@ -832,14 +834,29 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     chainModifier = Math.min(mapEffect.chainModifier(params[n]), chainModifier);
                     }
                 //console.log(x,n);
-                var chainMultiplier = getChainMultiplier(special.chain(params[n]), modifiers.slice(0,n), chainModifier, params[n], damage);
+
+                //console.log(params[n].hitcombo);
+                var chainUpgrade = 0;
+                plusSpecials.forEach(function(plusSpecial){
+                    var params2 = getParameters(plusSpecial.sourceSlot);
+                    params2["sourceSlot"] = plusSpecial.sourceSlot; params2["chainPosition"] = params[n].chainPosition;
+                    if (plusSpecial.hasOwnProperty('chainPlus')){
+                        var chainTemp = plusSpecial.chainPlus(params2);
+                        if (chainTemp > chainUpgrade) chainUpgrade = chainTemp;
+                    }
+                });
+                if(special.chain(params[n]) == 1) chainUpgrade = 0;
+
+                var chainMultiplier = getChainMultiplier(special.chain(params[n]) + chainUpgrade, modifiers.slice(0,n), chainModifier, params[n], damage);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
                 if (mapEffect.hasOwnProperty('chainLimiter'))
-                    chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]), chainMultiplier);
-                else if (special.hasOwnProperty('chainLimiter'))
-                    chainMultiplier = Math.min(special.chainLimiter(params[n]), chainMultiplier);
+                    chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]) + chainUpgrade, chainMultiplier);
+                else if (special.hasOwnProperty('chainLimiter')){
+                    //console.log((special.chainLimiter(params[n])));
+                    chainMultiplier = Math.min(special.chainLimiter(params[n]) + chainUpgrade, chainMultiplier);
+                }
                 if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233 || x.unit.unit.number == 2499) && x.position < 2){
                     chainMultiplier = 1.0;
                 }
@@ -881,9 +898,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var temp = damage.map(function(x,n) {
                 var multipliers = jQuery.extend([ ], x.multipliers), base = x.base;
                 specials.forEach(function(data) {
+                    var atkPlusTemp = 0; //conditional goes here
+                    plusSpecials.forEach(function(plusSpecial) {
+                        if(plusSpecial.hasOwnProperty('atkPlus'))
+                            if(plusSpecial.atkPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > atkPlusTemp) atkPlusTemp = plusSpecial.atkPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                    });
                     if (!data.s) { // non-static
                         var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
-                        multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        if(data.type == "atk") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp, text ]);
+                        else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
                         base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
                     }
@@ -958,6 +981,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeSpecialsCombinations = function() {
         var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ]};
         chainSpecials = [ ];
+        plusSpecials = [ ];
         chainAddition = [ ];
         chainSpecMultiplication = [ ];
         affinityMultiplier = [ ];
@@ -968,17 +992,23 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data === null) return;
             // notice specials with both atk and atkStatic defined are not supported right now
             if (data.hasOwnProperty('atk') || data.hasOwnProperty('atkStatic'))
-                result[data.type].push({ sourceSlot: data.sourceSlot, f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
+                result[data.type].push({ sourceSlot: data.sourceSlot, type: data.type != 'condition' ? 'atk' : 'status', f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
             if (data.hasOwnProperty('status'))
-                result['condition'].push({ sourceSlot: data.sourceSlot, f: (data.status) });
+                result['condition'].push({ sourceSlot: data.sourceSlot, type: 'status', f: (data.status) });
             if (data.hasOwnProperty('orb'))
-                result.orb.push({ sourceSlot: data.sourceSlot, f: data.orb });
+                result.orb.push({ sourceSlot: data.sourceSlot, type: 'orb', f: data.orb });
             if (data.hasOwnProperty('affinity'))
-                result.affinity.push({ sourceSlot: data.sourceSlot, f: data.affinity });
+                result.affinity.push({ sourceSlot: data.sourceSlot, type: 'affinity', f: data.affinity });
             if (data.hasOwnProperty('atkbase'))
                 atkbase.push({ sourceSlot: data.sourceSlot, f: data.atkbase });
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
+            if (data.hasOwnProperty('chainPlus'))
+                plusSpecials.push({ sourceSlot: data.sourceSlot, chainPlus: data.chainPlus });
+            if (data.hasOwnProperty('atkPlus'))
+                plusSpecials.push({ sourceSlot: data.sourceSlot, atkPlus: data.atkPlus });
+            if (data.hasOwnProperty('orbPlus'))
+                plusSpecials.push({ sourceSlot: data.sourceSlot, orbPlus: data.orbPlus });
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('chainMultiplication'))
@@ -997,6 +1027,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             chain: function() { return 1.0; },
             chainLimiter: function() { return Infinity; }
         });
+        if (chainSpecials.length >= 2){
+            for(i = 0; i<chainSpecials.length; i++){
+                if(chainSpecials[i].chain(jQuery.extend({ sourceSlot: chainSpecials[i].sourceSlot },getParameters(chainSpecials[i].sourceSlot))) == 1){
+                    chainSpecials.splice(i, 1);
+                }
+            }
+        }
     };
     
     var computeFlatBonusDamage = function(hitModifier, unit, type, teamSlot) {
@@ -1108,7 +1145,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Utility functions * * * * */
 
     var initializeDataStructs = function() {
-        //console.log(enabledSpecials);
         initDone = true;
         // get enabled specials
         var conflictWarning = false;
@@ -1177,7 +1213,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 else
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },altspecials[id]));
             }
-            // activate turn counter if necessary
+            // activate counters if necessary
             if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441 || id == 5074 || id == 5534 || id == 5535 || id == 2669 || id == 2670 || id == 2683 || id == 2684 || id == 3047 || id == 3072 || id == 3073 || id == 3108))
                 $scope.tdata.turnCounter.enabled = true;
             if(shipBonus.bonus.name=="Shark Superb")
@@ -1252,6 +1288,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         computeSpecialsCombinations();
         $scope.conflictingSpecials = (specialsCombinations.length > 1 || chainSpecials.length > 1 || chainAddition.length > 1 || affinityMultiplier.length > 1 || atkbase.length > 1);
         $scope.conflictingMultipliers = ( staticMultiplier.length > 1 )
+        //console.log(enabledSpecials);
     };
     
     //Returns an Object with a counter of classes in the current Team

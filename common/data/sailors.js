@@ -1789,6 +1789,9 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
     },
+    3374: {
+        atkStatic: function(p) { return 30; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

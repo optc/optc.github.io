@@ -45,6 +45,17 @@ window.altspecials = {
     3334: {
         chainAddition: function(p) { return 1; },
     },
+    3364: {
+        atkPlus: function(p) { return 0.3; },
+        orbPlus: function(p) { return 0.3; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
