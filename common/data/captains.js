@@ -11388,7 +11388,7 @@ window.captains = {
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
     3242: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 3 : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5 : 3 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
     3243: {
