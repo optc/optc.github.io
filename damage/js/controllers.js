@@ -311,7 +311,7 @@ controllers.QuickPickCtrl = function($scope, $state) {
         $scope.resetSlot(slotNumber);
         if (unitNumber) {
             $scope.data.team[slotNumber].unit = units[unitNumber - 1];
-            $scope.data.team[slotNumber].level = 1;
+            $scope.data.team[slotNumber].level = $scope.data.team[slotNumber].unit.maxLevel;
             $scope.slotChanged(slotNumber);
         }
         if (slotNumber < 2 && captains[unitNumber] && captains[unitNumber].warning) {
