@@ -489,32 +489,32 @@ window.effects = {
 	
 	'Kizuna Clash [Global]': {
         description: 'Certain units boosted',
-        thumb: 3153,
+        thumb: 3241,
         id: 46, // don't change this
         atk: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3149, 3151, 3152 ].indexOf(id) != -1) boost = 2.5;
-            if([ 3150, 3145, 3143, 3142, 3141, 3139, 3137, 3124, 3135, 5281, 5282, 1268, 3154 ].indexOf(id) != -1) boost = 2;
-            //if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
+            //if([ 3149, 3151, 3152 ].indexOf(id) != -1) boost = 2.5;
+            if([ 3264, 3242, 3240, 3239, 3235, 3231, 3229, 3227, 3225, 3223, 3222, 3217, 3207 ].indexOf(id) != -1) boost = 2;
+            if([ 3234, 3212, 3205, 3204, 5296, 5297, 5298, 5299 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
         },
         hp: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3149, 3151, 3152 ].indexOf(id) != -1) boost = 2.5;
-            if([ 3150, 3145, 3143, 3142, 3141, 3139, 3137, 3124, 3135, 5281, 5282, 1268, 3154 ].indexOf(id) != -1) boost = 2;
-            //if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
+            //if([ 3149, 3151, 3152 ].indexOf(id) != -1) boost = 2.5;
+            if([ 3264, 3242, 3240, 3239, 3235, 3231, 3229, 3227, 3225, 3223, 3222, 3217, 3207 ].indexOf(id) != -1) boost = 2;
+            if([ 3234, 3212, 3205, 3204, 5296, 5297, 5298, 5299 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
         },
         rcv: function(p) {
             var boost = 1;
             var id = p.number + 1;
-            if([ 3149, 3151, 3152 ].indexOf(id) != -1) boost = 2.5;
-            if([ 3150, 3145, 3143, 3142, 3141, 3139, 3137, 3124, 3135, 5281, 5282, 1268, 3154 ].indexOf(id) != -1) boost = 2;
-            //if([ 2756, 2793, 2832, 2853, 2887, 2888, 2889, 2996, 2997, 2998 ].indexOf(id) != -1) boost = 1.5;
+            //if([ 3149, 3151, 3152 ].indexOf(id) != -1) boost = 2.5;
+            if([ 3264, 3242, 3240, 3239, 3235, 3231, 3229, 3227, 3225, 3223, 3222, 3217, 3207 ].indexOf(id) != -1) boost = 2;
+            if([ 3234, 3212, 3205, 3204, 5296, 5297, 5298, 5299 ].indexOf(id) != -1) boost = 1.5;
             //if([ 0 ].indexOf(id) != -1) boost = 1.25;
             return boost;
         },
