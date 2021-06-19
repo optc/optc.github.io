@@ -3942,14 +3942,14 @@ window.drops = {
 
         {
             name: 'Co-op!! Local Sea Monster',
-            thumb: 4998,
+            thumb: 3383,
             global: true,
             nakama: 6338200,
             gamewith: null,
             condition: 'Drops Manual, Tomes, Proof of Friendship, lobster and limit break bottles.',
             showManual: true,
-            'Chopperman Missions': [ 4998 ],
-            'All Difficulties': [ -4998 ],
+            'Chopperman Missions': [ 3383 ],
+            'All Difficulties': [ -3383 ],
         },
 
     ],

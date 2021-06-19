@@ -424,6 +424,9 @@ window.zombies = {
         type: 'healer',
         multiplier: 1.5
     },
+    1619: { // Rayleigh
+        type: 'healer',
+    },
     1661: { // Corazon
         type: 'healer',
         amount: 300

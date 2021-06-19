@@ -786,18 +786,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyChainAndBonusMultipliers = function(damage,modifiers,type) {
         
-        var currentMax = -1, currentResult = null, addition = 0.0;
+        var currentMax = -1, currentResult = null, addition = 0.0, additionPlus = 0.0;
         if(shipBonus.bonus.name=="Donquixote Pirates Ship - Special ACTIVATED"){
             addition = 0.2
         }
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
-            var params = getParameters(special.sourceSlot);
+            var params = getParameters(special.sourceSlot); params["sourceSlot"] = special.sourceSlot;
             if(addition<special.chainAddition(params)){
                 addition = special.chainAddition(params);
             }
         });
+        plusSpecials.forEach(function(special){
+            if(special.hasOwnProperty('chainAdditionPlus')){
+                var params = getParameters(special.sourceSlot); params["sourceSlot"] = special.sourceSlot;
+                if(additionPlus<special.chainAdditionPlus(params)){
+                    additionPlus = special.chainAdditionPlus(params);
+                }
+            }
+        });
+        addition += additionPlus;
         
         /* if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
             addition = 0.5;
@@ -1005,6 +1014,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainPlus'))
                 plusSpecials.push({ sourceSlot: data.sourceSlot, chainPlus: data.chainPlus });
+            if (data.hasOwnProperty('chainAdditionPlus'))
+                plusSpecials.push({ sourceSlot: data.sourceSlot, chainAdditionPlus: data.chainAdditionPlus });
             if (data.hasOwnProperty('atkPlus'))
                 plusSpecials.push({ sourceSlot: data.sourceSlot, atkPlus: data.atkPlus });
             if (data.hasOwnProperty('orbPlus'))
@@ -1517,7 +1528,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 2792 ? Math.floor([1, 1, 1.1, 1.2, 1.3, 1.4, 1.5][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp) : 0;
                         healAmount += id == 2443 ? capActions[i] ? 500 : 50 : 0;
                         healAmount += id == 2913 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0 : 0;
-                        healAmount += id == 3082 ? [0,2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
+                        healAmount += (id == 3082 || id == 1619) ? [0,2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += (id == 3251) ? ([0, 0.5][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         
                         healAmount += id == 1747 ? [1000,1200][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
