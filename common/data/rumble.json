@@ -71405,7 +71405,7 @@
               "attributes": [ "ATK" ],
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "ATK", "targets": [ "enemy" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "ATK", "targets": [ "enemies" ] },
               "duration": 11
             }
           ]
@@ -72194,7 +72194,7 @@
               "attributes": [ "DEF" ],
               "effect": "debuff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "enemy" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "enemies" ] },
               "duration": 11
             }
           ]
