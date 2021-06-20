@@ -161,7 +161,25 @@ window.CrunchUtils.gearSort = function(array, typeMultiplier) {
     return result;
 };
 
-window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName) {
+window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName, params) {
+    
+    var orbPlusBonus = 0;
+    Object.keys(window.specials).forEach(function(x) {
+        if (window.specials[x].hasOwnProperty('orbPlus')){
+            if(window.specials[x].turnedOn)
+                if (window.specials[x].orbPlus(params) > orbPlusBonus)
+                    orbPlusBonus = window.specials[x].orbPlus(params)
+        }
+    });
+    Object.keys(window.altspecials).forEach(function(x) {
+        if (window.altspecials[x].hasOwnProperty('orbPlus')){
+            if(window.altspecials[x].turnedOn)
+                if (window.altspecials[x].orbPlus(params) > orbPlusBonus)
+                    orbPlusBonus = window.altspecials[x].orbPlus(params)
+        }
+    });
+    boostedMultiplier += orbPlusBonus;
+
     if(effectName == 'STR Orbs Beneficial'){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;

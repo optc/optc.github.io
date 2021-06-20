@@ -3943,14 +3943,14 @@ window.drops = {
 
         {
             name: 'Co-op!! Local Sea Monster',
-            thumb: 4998,
+            thumb: 3383,
             global: true,
             nakama: 6338200,
             gamewith: null,
             condition: 'Drops Manual, Tomes, Proof of Friendship, lobster and limit break bottles.',
             showManual: true,
-            'Chopperman Missions': [ 4998 ],
-            'All Difficulties': [ -4998 ],
+            'Chopperman Missions': [ 3383 ],
+            'All Difficulties': [ -3383 ],
         },
 
     ],
@@ -5904,7 +5904,7 @@ window.drops = {
             thumb: 3273,
             nakama: 8327300,
             gamewith: 260519,
-            'Coast of Wano': [ 3273 ]
+            'Ragin Swa': [ 3273 ]
         },
 
         {
@@ -5923,6 +5923,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Coast of Wano': [ 3339 ]
+        },
+
+        {
+            name: 'MUGIWARA Zoro',
+            dropID: 'treasuremap46',
+            thumb: 3368,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3368 ]
         },
 
     ],
@@ -6380,6 +6389,7 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3233 ],
+            'Global': [ 3208 ],
         },
 
         {
@@ -6398,6 +6408,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3332 ],
+        },
+
+        {
+            name: 'Round Thirteen',
+            dropID: 'piratefestival12',
+            thumb: 3374,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3374 ],
         },
 
     ],

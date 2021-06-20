@@ -510,7 +510,7 @@
             case '4995': return '../res/character_11244_t.png'; break;
             case '4996': return '../res/character_11245_t.png'; break;
             case '4997': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/f5053.png'; break;
-            case '4998': return '../res/character_11615_t1.png'; break;
+            case '3383': return '../res/character_11615_t1.png'; break;
             case '4999': return '../res/character_11760_t.png'; break;
             case (ghostPoint+0).toString(): return '../res/character_10185_t1.png'; break;
             case (ghostPoint+1).toString(): return '../res/character_10186_t1.png'; break;
