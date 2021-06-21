@@ -6673,6 +6673,23 @@ window.drops = {
         },
 
         {
+            name: 'Battle Blitz! Girls of Summer Paradise',
+            thumb: 2626,
+            global: true,
+            nakama: 6262600,
+            gamewith: 158510,
+            'Chopperman Missions': [ 2627 ],
+        },
+
+        {
+            name: 'Blitz Battle: Four Emperors',
+            thumb: 2734,
+            global: true,
+            nakama: 6273400,
+            gamewith: 173429,
+        },
+
+        {
             name: 'Face Off! Akainu vs Aokiji',
             thumb: 2023,
             global: true,
@@ -6701,37 +6718,20 @@ window.drops = {
         },
 
         {
+            name: 'Face Off! Seven Warlords of the Sea',
+            thumb: 3246,
+            global: true,
+            nakama: 6324600,
+            gamewith: 256375,
+            'Chopperman Missions': [ 3247 ],
+        },
+
+        {
             name: 'The Tea Party From Hell',
             thumb: 3079,
             global: true,
             gamewith: null,
             'Chopperman Missions': [ 3086 ],
-        },
-
-        {
-            name: 'Battle Blitz! Girls of Summer Paradise',
-            thumb: 2626,
-            global: true,
-            nakama: 6262600,
-            gamewith: 158510,
-            'Chopperman Missions': [ 2627 ],
-        },
-
-        {
-            name: 'Blitz Battle: Four Emperors',
-            thumb: 2734,
-            global: true,
-            nakama: 6273400,
-            gamewith: 173429,
-        },
-
-        {
-            name: 'Blitz Battle: Seven Warlords',
-            thumb: 3246,
-            global: true,
-            nakama: null,
-            gamewith: null,
-            'Chopperman Missions': [ 3247 ],
         },
 
         {
