@@ -286,26 +286,26 @@ CharUtils.isClassBooster = function(target, id, clazz) {
 };
     
 CharUtils.hasFarmableSocket = function(id) {
-    var farmableSocket = false;
-    var ownFamily = window.families[id];
-    
     //return false if unit has no Sockets?
     var unit = window.units[id];
     if (unit.slots<1) return farmableSocket;
     
-    window.families.forEach(function(family,n){
-        if (Array.isArray(family)){
-            family.forEach(function(duo,n){
+    var farmableSocket = false;
+    var ownFamily = window.families[id];
+       
+    farmableSocket = window.families.some(function(family,n){
+        if (Array.isArray(family)){ // Units with multiple characters
+            return family.some(function(duo,n){
                 if (ownFamily == duo) {
                     var famId = n+1;
-                    if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+                    return (CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId)));
                 }
-            })
+            });
         }
         else{
             if (ownFamily == family) {
                 var famId = n+1;
-                if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+                return (CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId)));
             }
         }
     });
