@@ -1276,7 +1276,7 @@ window.matchers = [
     },
     
     {
-        name: 'Full-board Premptive Orb Controllers',
+        name: 'Full-board Preemptive Orb Controllers',
         target: 'sailor',
         matcher: /Changes all orbs into/i
     },
