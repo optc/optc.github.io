@@ -269,6 +269,12 @@ window.matchers = [
     },
     
     {
+        name: 'Health cutters',
+        target: 'captain',
+        matcher: /Cuts.+current HP.+enem/i
+    },
+
+    {
         name: 'Beli Boosters',
         target: 'captain',
         matcher: /boosts.+Beli/i
