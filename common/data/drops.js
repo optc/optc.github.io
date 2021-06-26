@@ -7269,6 +7269,15 @@ window.drops = {
         },
 
         {
+            name: 'Onigashima Assault Strategy',
+            thumb: 3382,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3382 ],
+            'Chopperman Missions': [ 3382 ],
+        },
+
+        {
             name: 'Escape Cacao Island',
             thumb: 2121,
             global: true,

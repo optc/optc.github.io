@@ -267,7 +267,7 @@
             //case '2919': return '../res/character_10891_t1.png'; break;
             //case '2929': return '../res/character_11221_t1.png'; break;
             //case '2930': return '../res/character_11199_t1.png'; break;
-            //case '3000': return 'https://onepiece-treasurecruise.com/wp-content/uploads/f3000_1.png'; break;
+            case '3000': return 'https://onepiece-treasurecruise.com/wp-content/uploads/f3000_1.png'; break;
             //case '3080': return '../res/sadBandai/character_11669_t1.png'; break;
             //case '3081': return '../res/sadBandai/character_11506_t1.png'; break;
             //case '3085': return '../res/sadBandai/character_11668_t1.png'; break;
