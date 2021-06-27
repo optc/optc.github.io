@@ -72,13 +72,23 @@ CharUtils.generateSearchParameters = function(query, filters) {
 CharUtils.searchEvolverEvolutions = function(id) {
     var result = { }, current = parseInt(id,10);
     for (var key in evolutions) {
+        var evolutionObj = Object.assign({}, evolutions[key]);
         var paddedId = ('000' + key).slice(-4);
-        if (!evolutions[key].evolution) continue;
-        if (evolutions[key].evolvers.indexOf(current) != -1)
-            result[paddedId] = (result[paddedId] || [ ]).concat([ evolutions[key].evolution ]);
-        for (var i=0;i<evolutions[key].evolution.length;++i) {
-            if (evolutions[key].evolvers[i].indexOf(current) != -1)
-                result[paddedId] = (result[paddedId] || [ ]).concat([ evolutions[key].evolution[i] ]);
+        if (!evolutionObj.evolution) continue;
+        if (evolutionObj.evolvers.indexOf(current) != -1) {
+            if (!result[paddedId])
+                result[paddedId] = [];
+            result[paddedId].push(evolutionObj);
+        }
+        for (var i=0;i<evolutionObj.evolution.length;++i) { // Multiple evos
+            if (evolutionObj.evolvers[i].indexOf(current) != -1) {
+                if (!result[paddedId])
+                    result[paddedId] = [];
+                result[paddedId].push({
+                    evolution: evolutionObj.evolution[i],
+                    evolvers: evolutionObj.evolvers[i]
+                });
+            }
         }
     }
     return result;
@@ -286,26 +296,26 @@ CharUtils.isClassBooster = function(target, id, clazz) {
 };
     
 CharUtils.hasFarmableSocket = function(id) {
-    var farmableSocket = false;
-    var ownFamily = window.families[id];
-    
     //return false if unit has no Sockets?
     var unit = window.units[id];
     if (unit.slots<1) return farmableSocket;
     
-    window.families.forEach(function(family,n){
-        if (Array.isArray(family)){
-            family.forEach(function(duo,n){
+    var farmableSocket = false;
+    var ownFamily = window.families[id];
+       
+    farmableSocket = window.families.some(function(family,n){
+        if (Array.isArray(family)){ // Units with multiple characters
+            return family.some(function(duo,n){
                 if (ownFamily == duo) {
                     var famId = n+1;
-                    if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+                    return (CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId)));
                 }
-            })
+            });
         }
         else{
             if (ownFamily == family) {
                 var famId = n+1;
-                if(CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId))) farmableSocket = true;
+                return (CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId)));
             }
         }
     });

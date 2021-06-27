@@ -7,6 +7,8 @@
 var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
 
 function denormalizeEffects(ability) {
+  if (!ability) return;
+
   let lastEffect = [];
   let mergedEffect = [];
   ability.forEach((ability, abilityIdx) => {
@@ -188,7 +190,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
               $scope.rumble2 = jsonData.units.filter(unit =>{
                   return Math.floor(unit.id) == key;
                 })[1];
-              if ($scope.rumble === undefined ) {
+              if ($scope.rumble2 === undefined ) {
                 console.log("Couldn't find unit with id " + id);
                 $scope.rumble2={};
               }

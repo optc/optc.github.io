@@ -2381,7 +2381,7 @@ window.drops = {
             thumb: 1812,
             global: true,
             nakama: 2181200,
-            condition: 'Powerhouse Characters recieves a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
+            condition: 'Powerhouse Characters receive a 99 turn paralysis and a 90% ATK down from stage 4 onwards on 15 and 30 stamina',
             gamewith: 71416,
             'All Difficulties': [ 1811, 1809, -1240, -1575, -1658, -1232, -1238, -1117, -522, -1119, -524, -1504, -1503, -2034 ],
         },
@@ -3354,7 +3354,7 @@ window.drops = {
             global: true,
             nakama: 4182600,
             gamewith: 73951,
-            condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Shooter/Striker/Slaher Only. Ultimate: Shooter Only, Striker Only, and Slasher Only',
+            condition: '1 Master version and 3 different Ultimate versions with different conditions. Master: Shooter/Striker/Slasher Only. Ultimate: Shooter Only, Striker Only, and Slasher Only',
             Ultimate: [ 1825 ],
             Master: [ 1825 ],
         },
@@ -7231,6 +7231,15 @@ window.drops = {
         },
 
         {
+            name: 'Escape Cacao Island',
+            thumb: 2121,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            condition: "Chopperman Mission: Complete with [PSY] units only. Complete with Sanji, Pudding and Bege. Complete with Jinbe, Carrot and Chopper.",
+        },
+
+        {
             name: 'Dear Swordsmen, Please Help Us!',
             thumb: 3017,
             showManual: true,
@@ -7242,8 +7251,9 @@ window.drops = {
         },
 
         {
-            name: 'The End of an Era',
+            name: 'End of an Era',
             thumb: 3262,
+            global: true,
             nakama: null,
             gamewith: 252958,
             'Chopperman Missions': [ 3262 ],
@@ -7274,20 +7284,20 @@ window.drops = {
         },
 
         {
-            name: 'Escape Cacao Island',
-            thumb: 2121,
-            global: true,
-            nakama: null,
-            gamewith: null,
-            condition: "Chopperman Mission: Complete with [PSY] units only. Complete with Sanji, Pudding and Bege. Complete with Jinbe, Carrot and Chopper.",
-        },
-
-        {
-            name: 'Duel on Banaro Island',
+            name: 'Duel at Banaro Island',
             thumb: 3353,
             nakama: null,
             gamewith: 280282,
             'Chopperman Missions': [ 3353 ],
+        },
+
+        {
+            name: 'Onigashima Assault Strategy',
+            thumb: 3382,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3382 ],
+            'Chopperman Missions': [ 3382 ],
         },
 
         {

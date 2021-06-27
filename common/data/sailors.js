@@ -1792,6 +1792,18 @@ window.sailors = {
     3374: {
         atkStatic: function(p) { return 30; },
     },
+    3380: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    3381: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    3382: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    3383: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -925,9 +925,9 @@
                             </tr>
                             <tr ng-repeat="(base,evolutions) in usedBy" ng-if="!collapsed.used || sizeOf(usedBy) < 4">
                                 <td>
-                                    <div ng-repeat="id in evolutions track by $index">
-                                        <evolution unit="unit" base="base" evolvers="getEvos(base,id,unit.number + 1)"
-                                            evolution="id" size="medium"></evolution>
+                                    <div ng-repeat="data in evolutions track by $index">
+                                        <evolution unit="unit" base="base" evolvers="data.evolvers"
+                                            evolution="data.evolution" size="medium"></evolution>
                                     </div>
                                 </td>
                             </tr>
