@@ -57,13 +57,14 @@ body, html {
 
 #tableContainer {
     overflow: hidden;
-    padding: 0 10px 10px 10px;
+    padding: 0 15px 10px 15px;
 }
 
 #mainTable_wrapper {
     display: grid;
     height: 100%;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
 }
 
 input#burgerMenuState {
