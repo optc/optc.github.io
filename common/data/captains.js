@@ -11872,6 +11872,14 @@ window.captains = {
     3383: {
         atk: function(p) { return p.unit.type == "QCK" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3384: {
+        atk: function(p) { return (p.unit.class.has("Cerebral")) ? 1.75 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Cerebral")) ? 1.75 : 1; },
+    },
+    3385: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -11923,10 +11931,6 @@ var globalEXCaptains = {
     10: {
         atk: function(p) { return (p.unit.class.has("Driven")) ? 1.5 : 1; },
         hp: function(p) { return (p.unit.class.has("Driven")) ? 1.5 : 1; },
-    },
-    11: {
-        atk: function(p) { return (p.unit.class.has("Cerebral")) ? 1.75 : 1; },
-        rcv: function(p) { return (p.unit.class.has("Cerebral")) ? 1.75 : 1; },
     },
     13: {
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },

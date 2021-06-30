@@ -5420,6 +5420,7 @@ window.drops = {
             name: 'Animal Kingdom Pirates, Tobi Roppo',
             thumb: 3210,
             showManual: true,
+            global: true,
             nakama: 321000,
             gamewith: 249370,
             'All Difficulties': [ 3210, -3210 ],
@@ -5429,6 +5430,7 @@ window.drops = {
             name: 'The Ghostly Skeletal Apparition',
             thumb: 3235,
             showManual: true,
+            global: true,
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3235, -3235 ],
@@ -5468,6 +5470,15 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'All Difficulties': [ 3361, -3361 ],
+        },
+        
+        {
+            name: 'Ashura Doji',
+            thumb: 3385,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3385, -3385 ],
         },
 
     ],

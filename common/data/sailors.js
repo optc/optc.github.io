@@ -1804,6 +1804,11 @@ window.sailors = {
     3383: {
         atkStatic: function(p) { return p.unit.type == "QCK" ? 50 : 0; },
     },
+    3385: {
+        atkStatic: function(p) { return 30; },
+        hpStatic: function(p) { return 30; },
+        rcvStatic: function(p) { return 30; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
