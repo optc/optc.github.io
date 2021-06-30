@@ -572,6 +572,7 @@ input#burgerMenuState {
 
 .dataTables_info, .dataTables_paginate {
     text-align: left !important;
+    white-space: normal !important;
 }
 
 #controllers {
