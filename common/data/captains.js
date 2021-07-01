@@ -11880,6 +11880,9 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
         hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
     },
+    3395: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

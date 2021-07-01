@@ -11966,6 +11966,10 @@ window.specials = {
             });
         },
     },
+    3395: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
