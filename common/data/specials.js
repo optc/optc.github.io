@@ -11949,6 +11949,27 @@ window.specials = {
             });
         }
     },
+    3384: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3385: {
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        def: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 500 ? 0 : 1; },
+        status: function(p) { return p.defenseDown > 0 ? 2 : 1; },
+        onActivation: function(p) {
+            var levels = [300, 500];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + ' base ATK boost and corresponding defense reduction. To switch to the ' + levels[(n + 1) % levels.length] + ' base ATK boost and corresponding defense reduction, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3395: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -11981,9 +12002,6 @@ var globalEXSpecials = {
     9: {
     },
     10: {
-    },
-    11: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     13: {
     },

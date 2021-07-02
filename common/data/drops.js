@@ -5472,6 +5472,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3361, -3361 ],
         },
+        
+        {
+            name: 'Ashura Doji',
+            thumb: 3385,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3385, -3385 ],
+        },
 
     ],
 
