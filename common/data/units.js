@@ -3382,7 +3382,7 @@ window.units = [
     [ "Orochi, Wealthy Shogun", "DEX", [ "Driven", "Shooter" ], 5, 30, 5, 4, 99, 4000000, 1211, 820, 89, 2690, 1367, 296, 1 ],
     [ "Denjiro, Samurai's Overestimation", "DEX", [ "Slasher", "Driven" ], 5, 30, 5, 4, 99, 2000000, 1318, 698, 147, 2637, 1396, 295, 1 ],
     [ "Local Sea Monster, Man-Eating Monster", "QCK", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1180, 648, 43, 2704, 1430, 104, 1 ],
-    [ "Sengoku, Fatherly Buddha", "PSY", [ "Cerebral", "Free Spirit" ], 5, 1, 5, 4, 99, 4000000, 620, 572, 102, 2840, 1153, 252, null ],
+    [ "Sengoku, Fatherly Buddha", "PSY", [ "Cerebral", "Free Spirit" ], 5, 1, 5, 4, 99, 4000000, 620, 572, 102, 2840, 1153, 252, 1 ],
     [ "Ashura Doji, Red Scabbards Samurai", "QCK", [ "Slasher", "Powerhouse" ], 5, 40, 5, 3, 99, 4000000, 1722, 749, 64, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],

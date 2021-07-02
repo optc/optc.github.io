@@ -5441,6 +5441,7 @@ window.drops = {
             name: 'Kawamatsu',
             thumb: 3269,
             showManual: true,
+            global: true,
             nakama: 10326900,
             gamewith: 259805,
             'All Difficulties': [ 3269, -3269 ],
@@ -5911,6 +5912,7 @@ window.drops = {
             name: 'Luffy & Ace',
             dropID: 'treasuremap43',
             thumb: 3273,
+            global: true,
             nakama: 8327300,
             gamewith: 260519,
             'Ragin Swa': [ 3273 ]
@@ -6402,8 +6404,18 @@ window.drops = {
         },
 
         {
-            name: 'Round Eleven',
+            name: 'Pride of the Under Warden',
             dropID: 'piratefestival11',
+            thumb: 3251,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3251 ],
+        },
+
+        {
+            name: 'Round Twelve',
+            dropID: 'piratefestival12',
             thumb: 3285,
             nakama: null,
             gamewith: 196547,
@@ -6411,8 +6423,8 @@ window.drops = {
         },
 
         {
-            name: 'Round Twelve',
-            dropID: 'piratefestival12',
+            name: 'Round Thirteen',
+            dropID: 'piratefestival13',
             thumb: 3332,
             nakama: null,
             gamewith: 196547,
@@ -6420,8 +6432,8 @@ window.drops = {
         },
 
         {
-            name: 'Round Thirteen',
-            dropID: 'piratefestival12',
+            name: 'Round Fourteen',
+            dropID: 'piratefestival14',
             thumb: 3374,
             nakama: null,
             gamewith: 196547,
@@ -7262,10 +7274,12 @@ window.drops = {
         {
             name: 'End of an Era',
             thumb: 3262,
+            showManual: true,
             global: true,
             nakama: null,
             gamewith: 252958,
             'Chopperman Missions': [ 3262 ],
+            'All Difficulties': [ -3242, -3245, -3253, -3255, -3257, -3259, -3261, -3262 ],
         },
 
         {
