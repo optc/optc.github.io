@@ -11945,13 +11945,9 @@ var globalEXCaptains = {
     },
 };
 
-console.log(Object.keys(globalEXCaptains).length);
-
 Object.keys(globalEXCaptains).forEach(function (key) {
     window.captains[calcGhostStartIDCaptains["start"]-(Object.keys(globalEXCaptains).length-key)] = globalEXCaptains[key];
 });
-console.log(window.captains[4986]);
-console.log(window.captains[4987]);
 
 var ghostsCaptains = {
     0: {
