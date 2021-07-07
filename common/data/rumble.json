@@ -58610,13 +58610,13 @@
               "attributes": [ "ATK" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "[PSY]" ] }
+              "targeting": { "targets": [ "[QCK]" ] }
             },
             {
               "attributes": [ "Critical Hit" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "[PSY]" ] }
+              "targeting": { "targets": [ "[QCK]" ] }
             }
           ]
         },

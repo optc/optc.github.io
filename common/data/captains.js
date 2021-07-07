@@ -11935,15 +11935,23 @@ var globalEXCaptains = {
         atk: function(p) { return (p.unit.class.has("Driven")) ? 1.5 : 1; },
         hp: function(p) { return (p.unit.class.has("Driven")) ? 1.5 : 1; },
     },
+    11: {
+    },
+    12: {
+    },
     13: {
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
         rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
     },
 };
 
+console.log(Object.keys(globalEXCaptains).length);
+
 Object.keys(globalEXCaptains).forEach(function (key) {
     window.captains[calcGhostStartIDCaptains["start"]-(Object.keys(globalEXCaptains).length-key)] = globalEXCaptains[key];
 });
+console.log(window.captains[4986]);
+console.log(window.captains[4987]);
 
 var ghostsCaptains = {
     0: {
