@@ -269,6 +269,12 @@ window.matchers = [
     },
     
     {
+        name: 'Health cutters',
+        target: 'captain',
+        matcher: /Cuts.+current HP.+enem/i
+    },
+
+    {
         name: 'Beli Boosters',
         target: 'captain',
         matcher: /boosts.+Beli/i
@@ -435,7 +441,7 @@ window.matchers = [
     {
         name: 'Poison Status ATK boosters',
         target: 'special',
-        matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
+        matcher: /Boosts ATK.+against.+?((strongly )?poisoned.+enemies|enemies.+inflicted with ((strong )?poison|Toxic))/i
     },
     
     {
@@ -1576,7 +1582,7 @@ window.matchers = [
     {
         name: 'Poison Status ATK boosters',
         target: 'support',
-        matcher: /(Boosts ATK.+against.+(poisoned|strongly poisoned).+enemies|Boosts ATK.+against.+enemies.+inflicted with Toxic)/i
+        matcher: /Boosts ATK.+against.+?((strongly )?poisoned.+enemies|enemies.+inflicted with ((strong )?poison|Toxic))/i
     },
 
     {
