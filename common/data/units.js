@@ -3384,16 +3384,17 @@ window.units = [
     [ "Local Sea Monster, Man-Eating Monster", "QCK", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1180, 648, 43, 2704, 1430, 104, 1 ],
     [ "Sengoku, Fatherly Buddha", "PSY", [ "Cerebral", "Free Spirit" ], 5, 1, 5, 4, 99, 4000000, 620, 572, 102, 2840, 1153, 252, 1 ],
     [ "Ashura Doji, Red Scabbards Samurai", "QCK", [ "Slasher", "Powerhouse" ], 5, 40, 5, 3, 99, 4000000, 1722, 749, 64, 3444, 1497, 272, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kikunojo", "QCK", [ "Slasher", "Driven" ], 5, 20, 4, 4, 99, 2000000, null, null, null, null, null, null, null ],
+    [ "Raizo", "DEX", [ "Shooter", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, null, null, null, null, null, null, null ],
+    [ "Kawamatsu", "QCK", [ "Slasher", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, null, null, null, null, null, null, null ],
+    [ "Kaido", "DEX", [ "Powerhouse", "Driven" ], 5, 60, 4, 1, 99, 5000000, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Gaban", "PSY", [ "Slasher", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1966, 716, 133, 3933, 1433, 266, 1 ],
+    [ "Ryuma", "QCK", [ "Slasher", "Driven" ], 5, 50, 5, 4, 99, 5000000, null, null, null, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
