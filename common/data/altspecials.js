@@ -56,6 +56,9 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3391: {
+        affinity: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

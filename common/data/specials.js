@@ -12000,9 +12000,29 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.colorCount.DEX >= 4 ? 1.75 : 1;
         },
     },
+    3390: {
+        //TODO
+    },
+    3391: {
+        //TODO
+    },
+    3392: {
+        chainAddition: function(p) { return 0.9; }
+    },
+    3393: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 2.25 : 1; },
+        type: "type",
+        chainAddition: function(p) { return 1; }
+    },
+    3394: {
+        affinity: function(p) { return p.unit.type == "STR" ? 2 : 1; },
+    },
     3395: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
         type: "type",
+    },
+    3396: {
+        affinity: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
 };
 

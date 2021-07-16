@@ -6297,6 +6297,26 @@ window.drops = {
             'Kizuna Exchange': [ 9044, 9045 ],
         },
 
+        {
+            name: 'MUGIWARA Brook',
+            dropID: 'bond22',
+            thumb: 3373,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3373 ],
+            'Kizuna Exchange': [ 9046 ],
+        },
+
+        {
+            name: 'Jack',
+            dropID: 'bond23',
+            thumb: 3397,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3396 ],
+            'Kizuna Exchange': [ 9047, 9048 ],
+        },
+
     ],
 
 
