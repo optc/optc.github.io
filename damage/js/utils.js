@@ -202,7 +202,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
             if (orb == 0.5 && type == 'QCK') return boostedMultiplier;
         }
     }
-    if(window.specials[1593].turnedOn){
+    if(window.specials[1593].turnedOn.has(true)){
         if(uclass.has("Fighter") || uclass.has("Free Spirit")){
             if (orb == 'str') return boostedMultiplier;
             if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
@@ -257,7 +257,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     if(window.specials[1515].turnedOn || window.specials[1516].turnedOn){
         if (orb == 'meat') return boostedMultiplier;
     }
-    if(window.specials[1593].turnedOn){
+    if(window.specials[1593].turnedOn.has(true)){
         if(uclass.has("Fighter")){
             if (orb == 'meat') return boostedMultiplier;
         }

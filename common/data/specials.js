@@ -2303,6 +2303,24 @@ window.specials = {
             });
         },
     },
+    1403: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[p.team[p.slot].unit.number+1].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.slot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    1404: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[p.team[p.slot].unit.number+1].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.slot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
     1405: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: "class",
@@ -2973,16 +2991,12 @@ window.specials = {
         type: "class"
     },
     1593: {
-        turnedOn: false,
+        turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
-            window.specials[1593].turnedOn = true;
-            p.scope.notify({
-                text: 'This does not activate G4 Captain boost, only the "beneficial" Orb Effect, to enable G4\' 4x boost, use the Captain Action checkboxes.',
-                name: '1593warning'
-            });
+            window.specials[p.team[p.slot].unit.number+1].turnedOn[p.slot] = true;
         },
         onDeactivation: function(p) {
-            window.specials[1593].turnedOn = false;
+            window.specials[p.team[p.slot].unit.number+1].turnedOn[p.slot] = false;
         }
     },
     1594: {
@@ -10610,6 +10624,7 @@ window.specials = {
         def: function(p) { return 0; },
         status: function(p) { return p.defenseDown > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
         onActivation: function(p) {
+            console.log(p);
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
@@ -12001,10 +12016,14 @@ window.specials = {
         },
     },
     3390: {
-        //TODO
+        atk: function(p) { return p.toki[p.slot] ? 3.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.toki[p.slot] ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     3391: {
-        //TODO
+        atk: function(p) { return p.toki[p.slot] ? 3.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.toki[p.slot] ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     3392: {
         chainAddition: function(p) { return 0.9; }

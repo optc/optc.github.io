@@ -1,4 +1,87 @@
 window.altspecials = {
+    1587: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
+    1588: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
+    1934: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
+    1935: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
+    2073: {
+        multiplier: [ 0, 0, 0, 0, 0, 0 ],
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot] = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+            p.scope.notify({
+                text: '' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][n] + ' boost. To ' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    2074: {
+        multiplier: [ 0, 0, 0, 0, 0, 0 ],
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot] = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+            p.scope.notify({
+                text: '' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][n] + ' boost. To ' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    2245: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            console.log(p);
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
+    2300: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
     2958: {
         atk: function(p) { return 2; },
         type: "type",

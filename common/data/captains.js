@@ -3912,10 +3912,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; },
     },
     1403: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 4 : 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? 4 : 2.5 : 1; },
     },
     1404: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 4 : 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? 4 : 2.5 : 1; },
     },
     1405: {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
@@ -4696,11 +4696,11 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.5 : 1; },
     },
     1587: {
-        atk: function(p) { return (p.slot == p.sourceSlot && p.actions[p.sourceSlot]) ? 6.25 : 2.5; },
+        atk: function(p) { return (p.slot == p.sourceSlot && window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot]) ? 6.25 : 2.5; },
         hp: function(p) { return 1.3 },
     },
     1588: {
-        atk: function(p) { return (p.slot == p.sourceSlot && p.actions[p.sourceSlot]) ? 6.25 : 2.5; },
+        atk: function(p) { return (p.slot == p.sourceSlot && window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot]) ? 6.25 : 2.5; },
         hp: function(p) { return 1.3 },
     },
     1589: {
@@ -4720,7 +4720,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.75 : 1; },
     },
     1593: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? p.actions[p.sourceSlot] ? 4 : 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? 4 : 2.5 : 1; },
     },
     1595: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
@@ -6279,11 +6279,11 @@ window.captains = {
         }
     },
     1934: {
-        atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3 : 1; },
+        atk: function(p) { return p.frankyCheck.Primary == 6 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : 3 : 1; },
         hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
     },
     1935: {
-        atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : [3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.frankyCheck.Primary == 6 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? (4 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : [3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
     },
     1936: {
@@ -6392,7 +6392,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     1951: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 3.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? [3.25, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     1952: {
@@ -6878,39 +6878,13 @@ window.captains = {
     },
     2073: {
         damageSorter: function(d) { return CrunchUtils.gearSort(d, 4.25); },
-        hitAtk: function(p) {
-            switch(p.gear[p.sourceSlot]) {
-                case "0":
-                    return 3; break;
-                case "1":
-                    return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1; break;
-                case "2":
-                    return 4; break;
-                case "3":
-                    return p.slot == p.sourceSlot ? 4.25 : 4; break;
-                default:
-                    return 3;
-            }
-        },
+        hitAtk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [3, p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1, 4, p.slot == p.sourceSlot ? 4.25 : 4][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]] : 3; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; }
     },
     2074: {
         damageSorter: function(d) { return CrunchUtils.gearSort(d, 4.25); },
-        hitAtk: function(p) {
-            switch(p.gear[p.sourceSlot]) {
-                case "0":
-                    return 3; break;
-                case "1":
-                    return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1; break;
-                case "2":
-                    return 4; break;
-                case "3":
-                    return p.slot == p.sourceSlot ? 4.25 : 4; break;
-                default:
-                    return 3;
-            }
-        },
+        hitAtk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [3, p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1, 4, p.slot == p.sourceSlot ? 4.25 : 4][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]] : 3; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; }
     },
@@ -7674,7 +7648,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     2245: {
-        atk: function(p) { return p.slot == p.sourceSlot ? p.actions[p.sourceSlot] ? 8.25 : 3 : 2.75; },
+        atk: function(p) { return p.slot == p.sourceSlot ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? 8.25 : 3 : 2.75; },
         hp: function(p) { return 1.3 },
     },
     2246: {
@@ -7917,10 +7891,10 @@ window.captains = {
         atk: function(p) {
             return p.unit.class.has("Shooter") ? Math.min([2.5, 2.5, 2.5, 2.75, 3, 3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]], [1.5, 1.75, 1.75, 2, 2, 2, 2.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] + ([1, .75, .75, .75, 1, 1, 1][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]/6) * p.turnCounter) : 1;
         },
-        rcv: function(p) { return p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 1.3 : 1.1 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? [1.1, 1.1, 1.2, 1.2, 1.2, 1.3, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     2300: {
-        atk: function(p) { return p.frankyCheck.Primary == 6 ? p.actions[p.sourceSlot] ? (4.25 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.frankyCheck.Primary == 6 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? (4.25 * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.frankyCheck.Primary == 6 ? 1.3 : 1; },
     },
     2301: {
@@ -9649,7 +9623,7 @@ window.captains = {
         hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.5 : 1; },
     },
     2741: {
-        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 4 : 1; },
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? [4, 4.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.5 : 1; },
     },
     2742: {
@@ -9971,7 +9945,7 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? 2 + 1.25 * (1 - (p.percHP) / 100) : 1; },
     },
     2830: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? 3.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? [3.75, 4.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.5 : 1; },
     },
     2832: {
