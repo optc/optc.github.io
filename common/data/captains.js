@@ -11462,8 +11462,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [2, 2, 2, 2, 2, 2, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2, 2, 2, 2, 2, 2, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3274: {
-        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3.5 : 3 : 1; },
-        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 1.2 : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 5 : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3.5 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 1.25 : 1.2 : 1; },
     },
     3275: {
         atk: function(p) { return p.colorCount.STR>=4 && p.unit.type == "STR" ? 4 : p.colorCount.DEX>=4 && p.unit.type == "DEX" ? 4 : p.colorCount.QCK>=4 && p.unit.type == "QCK" ? 4 : p.colorCount.PSY>=4 && p.unit.type == "PSY" ? 4 : p.colorCount.INT>=4 && p.unit.type == "INT" ? 4 : 3.5; },
