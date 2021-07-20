@@ -3916,6 +3916,7 @@ window.drops = {
             name: 'Clash!! Marco',
             dropID: 'clash68',
             thumb: 3263,
+            global: true,
             nakama: 4326300,
             gamewith: 263248,
             'All Difficulties': [ 3263 ],
@@ -3925,6 +3926,7 @@ window.drops = {
             name: 'Clash!? Shambles! Straw Hat Pirates',
             dropID: 'clash69',
             thumb: 3289,
+            global: true,
             nakama: 4328900,
             gamewith: 266441,
             'All Difficulties': [ 3288, 3289, 3290, 3291 ],
@@ -3942,7 +3944,8 @@ window.drops = {
         },
 
         {
-            name: 'Co-op!! Local Sea Monster',
+            name: 'Clash!! Local Sea Monster',
+            dropID: 'clash71',
             thumb: 3383,
             global: true,
             nakama: 6338200,
@@ -6271,6 +6274,7 @@ window.drops = {
             name: 'Doflamingo',
             dropID: 'bond19',
             thumb: 3276,
+            global: true,
             nakama: 9327600,
             gamewith: 148537,
             'All Difficulties': [ 3276 ],
@@ -7305,9 +7309,12 @@ window.drops = {
         {
             name: 'Pirate Paradise!!',
             thumb: 3280,
+            showManual: true,
+            global: true,
             nakama: null,
             gamewith: null,
             'Chopperman Missions': [ 3286, 3287 ],
+            'All Difficulties': [ -3274, -3278, -3280, -3282, -3283, -3284, -3286, -3287, 3287 ],
         },
 
         {

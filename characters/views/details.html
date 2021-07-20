@@ -70,10 +70,10 @@
                                     <td ng-if="!hybrid">{{unit.class}}</td>
                                     <td ng-if="hybrid && !dualunit">{{unit.class[0]}}</td>
                                     <td ng-if="hybrid && !dualunit">{{unit.class[1]}}</td>
-                                    <td ng-if="hybrid && dualunit">{{unit.class[2][0]}}</td>
-                                    <td ng-if="hybrid && dualunit">{{unit.class[2][1]}}</td>
-                                    <td ng-if="!dualunit">{{unit.type}}</td>
-                                    <td ng-if="dualunit">{{unit.type[0]}}/{{unit.type[1]}}</td>
+                                    <td ng-if="hybrid && dualunit">{{unit.class[2][0] | decorate}}</td>
+                                    <td ng-if="hybrid && dualunit">{{unit.class[2][1] | decorate}}</td>
+                                    <td ng-if="!dualunit" class="ng-binding" ng-bind-html="unit.type | decorate"></td>
+                                    <td ng-if="dualunit"><span class="ng-binding" ng-bind-html="unit.type[0] | decorate"></span>/<span class="ng-binding" ng-bind-html="unit.type[1] | decorate"></span></td>
                                     <td ng-if="!compare">{{unit.stars}}</td>
                                     <td ng-if="compare" comparison="positive">{{unit.stars - compare.stars}}</td>
                                     <td ng-if="!compare">{{unit.cost}}</td>
@@ -477,7 +477,7 @@
                                                 <strong>Potential Ability {{$index + 1}}:</strong>
                                                  {{stage.Name}}
                                                 <br>
-                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <div ng-repeat="item in stage.description track by $index" style="margin-left: 2em"><strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="item | decorate"></span><br></div>
                                                 <!--strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="stage.description[0] | decorate"></span><br>
