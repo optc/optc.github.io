@@ -12043,6 +12043,23 @@ window.specials = {
     3396: {
         affinity: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
+    3398: {
+        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1; },
+        type: "type",
+        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Affinity", "ATK and Affinity"][n] + ' boost. To ' + ["ATK", "Affinity", "ATK and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3399: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p); }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

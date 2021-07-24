@@ -3388,14 +3388,16 @@ window.units = [
     [ "Raizo, Red Scabbards Samurai", "DEX", [ "Shooter", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1425, 678, 137, 2850, 1356, 273, 1 ],
     [ "Kawamatsu, Red Scabbards Samurai", "QCK", [ "Slasher", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1432, 699, 129, 2864, 1397, 257, 1 ],
     [ "Kaido, Dragon Ambush", "DEX", [ "Powerhouse", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1866, 776, 56, 3731, 1551, 111, 1 ],
-    [ "Toki & Momonosuke & Hiyori", "STR", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 709, 431, 46, null, null, null, null ],
-    [ "Toki & Momonosuke & Hiyori, Leaving a Message for the Future", "STR", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1349, 941, 103, null, null, null, null ],
-    [ "Kinemon, Punishment of Betrayal", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1212, 761, 56, null, null, null, null ],
-    [ "Sabo, Inheriting the Will of Red Flame", "DEX", [ "Fighter", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1511, 950, 214, null, null, null, null ],
-    [ "Jack, Rageful Drought", "STR", [ "Driven", "Powerhouse" ], 5, 50, 4, 4, 99, 5000000, 1241, 732, 76, null, null, null, null ],
+    [ "Toki & Momonosuke & Hiyori", "STR", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 709, 431, 46, 1519, 959, 112, 1 ],
+    [ "Toki & Momonosuke & Hiyori, Leaving a Message for the Future", "STR", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1349, 941, 103, 3288, 1587, 329, 1 ],
+    [ "Kinemon, Punishment of Betrayal", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1212, 761, 56, 3011, 1403, 231, 1 ],
+    [ "Sabo, Inheriting the Will of Red Flame", "DEX", [ "Fighter", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1511, 950, 214, 3385, 1567, 467, 1 ],
+    [ "Jack, Rageful Drought", "STR", [ "Driven", "Powerhouse" ], 5, 50, 4, 4, 99, 5000000, 1241, 732, 76, 3126, 1531, 171, 1 ],
     [ "Gaban", "PSY", [ "Slasher", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1966, 716, 133, 3933, 1433, 266, 1 ],
     [ "Ryuma, Resurrected Samurai of Wano Country", "QCK", [ "Slasher", "Driven" ], 5, 50, 5, 5, 99, 5000000, 1294, 689, 132, 2587, 1377, 263, 1 ],
-    [ "Jack the Drought, Calamity Disaster Stomp", "STR", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1404, 851, 90, null, null, null, null ],
+    [ "Jack the Drought, Calamity Disaster Stomp", "STR", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1404, 851, 90, 3443, 1591, 201, 1 ],
+    [ "Strawhat Pirates, One Piece 1000 Logs", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1670, 985, 70, null, null, null, null ],
+    [ "Buggy Alliance", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1670, 985, 70, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

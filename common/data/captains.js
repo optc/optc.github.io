@@ -11897,6 +11897,14 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
     },
+    3398: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 5 : 4; },
+        hp: function(p) { return 1.2; }
+    },
+    3399: {
+        atk: function(p) { return p.unit.cost <= 30 || p.unit.cost == 50 ? 3 : 1; },
+        hp: function(p) { return p.unit.cost <= 30 || p.unit.cost == 50 ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

@@ -3956,6 +3956,16 @@ window.drops = {
             'All Difficulties': [ -3383 ],
         },
 
+        {
+            name: 'Clash!! Buggy Pirates',
+            dropID: 'clash72',
+            thumb: 3399,
+            nakama: null,
+            gamewith: null,
+            showManual: true,
+            'All Difficulties': [ -3399 ],
+        },
+
     ],
 
 

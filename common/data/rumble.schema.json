@@ -308,6 +308,9 @@
                 "amount": {
                     "type": "number"
                 },
+                "interval": {
+                    "type": "number"
+                },
                 "level": {
                     "type": "integer"
                 },
@@ -377,6 +380,9 @@
                             "$ref": "#/definitions/Targeting"
                         },
                         "amount": {
+                            "type": "number"
+                        },
+                        "interval": {
                             "type": "number"
                         },
                         "level": {
