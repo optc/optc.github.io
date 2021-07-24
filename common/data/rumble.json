@@ -60524,7 +60524,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "HP" ],
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "crew" ] }

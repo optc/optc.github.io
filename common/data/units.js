@@ -3397,7 +3397,7 @@ window.units = [
     [ "Ryuma, Resurrected Samurai of Wano Country", "QCK", [ "Slasher", "Driven" ], 5, 50, 5, 5, 99, 5000000, 1294, 689, 132, 2587, 1377, 263, 1 ],
     [ "Jack the Drought, Calamity Disaster Stomp", "STR", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1404, 851, 90, 3443, 1591, 201, 1 ],
     [ "Strawhat Pirates, One Piece 1000 Logs", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1670, 985, 70, null, null, null, null ],
-    [ "Buggy Alliance", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1670, 985, 70, null, null, null, null ],
+    [ "Buggy Alliance", "INT", [ "Driven", "Shooter" ], 5, 50, 4, 4, 99, 5000000, 1244, 596, 194, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
