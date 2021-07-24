@@ -1067,6 +1067,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var unitParams = params;
             //Check if conditional Boosts are activated since they raise 
             for (var x=0;x<enabledSpecials.length;++x) {
+                params.sourceSlot = enabledSpecials[x].sourceSlot;
                 if  (enabledSpecials[x].type=='condition'){
                     var thisMult = enabledSpecials[x].atk(params);
                     if(thisMult>conditionalMultiplier){
