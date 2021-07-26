@@ -11265,28 +11265,28 @@ window.specials = {
         },
     },
     3281:{
-        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[3281].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[3281].multiplier != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[3281].multiplier) + 1) % levels.length;
-            window.specials[3281].multiplier = levels[n];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3281warning'
+                text: '' + ["Orb", "Affinity", "Orb and Affinity"][n] + ' boost. To ' + ["Orb", "Affinity", "Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3282:{
-        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[3282].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[3282].multiplier != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[3282].multiplier) + 1) % levels.length;
-            window.specials[3282].multiplier = levels[n];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3282warning'
+                text: '' + ["Orb", "Affinity", "Orb and Affinity"][n] + ' boost. To ' + ["Orb", "Affinity", "Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
