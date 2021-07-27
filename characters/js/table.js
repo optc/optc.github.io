@@ -202,9 +202,6 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     // Support RR
                     if (filters.nonFarmable.slrr && !flags.slrr) return false;
                     if (filters.nonFarmable.slrr === false && flags.slrr) return false;
-                    // Inkable
-                    if (filters.nonFarmable.inkable && !flags.inkable) return false;
-                    if (filters.nonFarmable.inkable === false && flags.inkable) return false;
                 }
             }
         }
@@ -349,6 +346,13 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             var farmableSocket = CharUtils.hasFarmableSocket(unit.number);
             if ((filters.socket === 'No Farmable Sockets' && farmableSocket) || (filters.socket === 'Farmable Sockets' && !farmableSocket)) return false;
         }
+
+        // filter by inkable flag
+        if (filters.inkable) {            
+            if (filters.inkable == 'Inkable' && !flags.inkable) return false;
+            if (filters.inkable == 'Not Inkable' && flags.inkable) return false;
+        }
+
         // filter by active matchers
         if (filters.custom.length > 0 && !window.details.hasOwnProperty(id)) return false;
         for (var i=0;i<filters.custom.length;++i) {
