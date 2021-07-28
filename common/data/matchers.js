@@ -215,6 +215,12 @@ window.matchers = [
     },
 
     {
+        name: 'Normal Attacks Ignoring Defense and Barrier Buff allower',
+        target: 'captain',
+        matcher: /Attacks.+ignore.+damage reducing Barriers and Buffs/i
+    },
+
+    {
         name: 'Despair reducers',
         target: 'captain',
         matcher: /(reduces|removes).+despair.+duration/i
@@ -742,6 +748,12 @@ window.matchers = [
     },
     
     {
+        name: 'Normal Attacks Ignoring Defense and Barrier Buff allower',
+        target: 'special',
+        matcher: /Attacks.+ignore.+damage reducing Barriers and Buffs/i
+    },
+    
+    {
         name: 'Additional Damage dealer',
         target: 'special',
         matcher: /Additional.+Damage/i
@@ -1121,6 +1133,12 @@ window.matchers = [
         name: 'Damage reducers',
         target: 'swap',
         matcher: /Reduces (any )?damage received/i
+    },
+    
+    {
+        name: 'Normal Attacks Ignoring Defense and Barrier Buff allower',
+        target: 'swap',
+        matcher: /Attacks.+ignore.+damage reducing Barriers and Buffs/i
     },
     
     {
