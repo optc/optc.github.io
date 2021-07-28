@@ -1056,6 +1056,12 @@ window.matchers = [
     /* * * * * Swap * * * * */
 
     {
+        name: 'Has Super Swap',
+        target: 'swap',
+        matcher: /"super"\s*:/i
+    },
+
+    {
         name: 'ATK boosters',
         target: 'swap',
         matcher: /Boosts.+ATK/i
@@ -1079,6 +1085,24 @@ window.matchers = [
         name: 'Color Affinity boosters',
         target: 'swap',
         matcher: /Boosts.+Color Affinity/i
+    },
+
+    {
+        name: 'Chain boosters',
+        target: 'swap',
+        matcher: /Adds.+to Chain/i
+    },
+
+    {
+        name: 'Chain multipliers',
+        target: 'swap',
+        matcher: /Boosts.+chain multiplier/i
+    },
+
+    {
+        name: 'Chain Lockers',
+        target: 'swap',
+        matcher: /Locks the chain multiplier/i
     },
 
     {
@@ -1115,6 +1139,12 @@ window.matchers = [
         name: 'Orb randomizers',
         target: 'swap',
         matcher: /randomizes.+orb/i
+    },
+
+    {
+        name: 'Beneficial Orb enablers',
+        target: 'swap',
+        matcher: /beneficial/i
     },
 
     {
@@ -1169,6 +1199,12 @@ window.matchers = [
         name: 'Poison removers',
         target: 'swap',
         matcher: /(removes|reduces).+poison.+(duration completely|duration)/i 
+    },
+
+    {
+        name: 'Tap Timing supporters',
+        target: 'swap',
+        matcher: /makes PERFECTs easier to hit/i
     },
 
     /*{
