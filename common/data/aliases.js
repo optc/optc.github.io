@@ -3406,7 +3406,7 @@ window.aliases = {
     3405: [ '', '', 'Swimsuit Vivi', 'Summer Vivi' ],
     3406: [ '', '', 'Swimsuit Belo Betty', 'Summer Belo Betty' ],
     3407: [ '', '', 'Swimsuit Koala', 'Summer Koala' ],
-    3408: [ '', '', '' ],
+    3408: [ '', '', 'Arena Caesar' ],
     3409: [ '', '', '' ],
     3410: [ '', '', '' ],
     3411: [ '', '', '' ],

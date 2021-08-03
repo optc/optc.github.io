@@ -5495,6 +5495,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3385, -3385 ],
         },
+        
+        {
+            name: 'Caesar',
+            thumb: 3408,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3408, -3408 ],
+        },
 
     ],
 

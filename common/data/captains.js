@@ -11936,6 +11936,10 @@ window.captains = {
     3407: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 3 : 1; },
     },
+    3408: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
