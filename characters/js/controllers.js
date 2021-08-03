@@ -179,6 +179,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             if ($scope.rumble === undefined ) {
               console.log("Couldn't find unit with id " + id);
               $scope.rumble={};
+              return;
             }
             // normalize the data here:
             denormalizeEffects($scope.rumble.ability);
