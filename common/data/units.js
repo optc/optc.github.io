@@ -3396,8 +3396,16 @@ window.units = [
     [ "Gaban", "PSY", [ "Slasher", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1966, 716, 133, 3933, 1433, 266, 1 ],
     [ "Ryuma, Resurrected Samurai of Wano Country", "QCK", [ "Slasher", "Driven" ], 5, 50, 5, 5, 99, 5000000, 1294, 689, 132, 2587, 1377, 263, 1 ],
     [ "Jack the Drought, Calamity Disaster Stomp", "STR", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1404, 851, 90, 3443, 1591, 201, 1 ],
-    [ "Strawhat Pirates, One Piece 1000 Logs", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1670, 985, 70, null, null, null, null ],
-    [ "Buggy Alliance", "INT", [ "Driven", "Shooter" ], 5, 50, 4, 4, 99, 5000000, 1244, 596, 194, null, null, null, null ],
+    [ "Strawhat Pirates, One Piece 1000 Logs", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1670, 985, 70, 3712, 1642, 234, 1 ],
+    [ "Buggy's Delivery", "INT", [ "Driven", "Shooter" ], 5, 50, 4, 4, 99, 5000000, 1244, 596, 194, 2488, 1192, 388, 1 ],
+    [ "Monet, Summer Night Vacation", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1414, 591, 168, 2827, 1182, 335, 1 ],
+    [ "Baby 5, Summer Night Vacation", "INT", [ "Cerebral", "Shooter" ], 5, 30, 5, 4, 99, 2000000, 1407, 661, 156, 2813, 1321, 311, 1 ],
+    [ "Reiju, Summer Night Vacation", "INT", [ "Cerebral", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 687, 428, 48, 1527, 952, 107, 1 ],
+    [ "Reiju, Butterflies Dancing in the Pool at Night", "INT", [ "Cerebral", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1515, 940, 95, 3366, 1566, 316, 1 ],
+    [ "Vivi, Summer Night Vacation", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 701, 424, 47, 1558, 941, 105, 1 ],
+    [ "Vivi, Large Flowers Blooming in the Pool at Night", "STR", [ "Cerebral", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1546, 929, 93, 3436, 1549, 311, 1 ],
+    [ "Belo Betty, Summer Night Vacation", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1327, 822, 76, 2948, 1370, 252, 1 ],
+    [ "Koala, Summer Night Vacation", "STR", [ "Cerebral", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1250, 833, 82, 2778, 1389, 274, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

@@ -11905,6 +11905,37 @@ window.captains = {
         atk: function(p) { return p.unit.cost <= 30 || p.unit.cost == 50 ? 3 : 1; },
         hp: function(p) { return p.unit.cost <= 30 || p.unit.cost == 50 ? 1.2 : 1; },
     },
+    3400: {
+        atk: function(p) { return p.unit.type == "STR" ? 3 : 1; },
+        rcv: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    3401: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3402: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3403: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3404: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3405: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3406: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3407: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

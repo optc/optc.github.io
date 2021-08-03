@@ -1392,6 +1392,12 @@ window.matchers = [
     },
     
     {
+        name: 'Reduce Slot Barrier duration Potential Ability',
+        target: 'limit',
+        matcher: /Reduce Slot Barrier duration/i
+    },
+    
+    {
         name: 'Ship Bind Reduction Potential Ability',
         target: 'limit',
         matcher: /Reduce Ship Bind duration/i
