@@ -123,7 +123,9 @@
     <span ng-repeat="type in [ 'In RR pool', 'Not in RR pool' ]" class="filter width-6 drop" ng-model="filters.rr"
         ng-class="{ active: filters.rr == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>
     <span ng-repeat="type in [ 'Farmable Sockets', 'No Farmable Sockets' ]" class="filter width-6 drop" ng-model="filters.socket"
-        ng-class="{ active: filters.socket == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>
+        ng-class="{ active: filters.socket == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>     
+    <span ng-repeat="type in [ 'Inkable', 'Not Inkable' ]" class="filter width-6 drop" ng-model="filters.inkable"
+        ng-class="{ active: filters.inkable == type }" ng-click="onFilterClick($event,type)">{{::type}}</span>
 </div>
 
 <div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.dropEnabled" ng-class="{ expanded: filters.farmEnabled }">
@@ -206,10 +208,6 @@
         ng-model="filters.nonFarmable.tmshop" ng-click="onDropFilterClick($event,true)">Trade Port Unit</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.tmshop === false }"
         ng-model="filters.nonFarmable.tmshop" ng-click="onDropFilterClick($event,false)">Hide Trade Port Unit</span>
-    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.inkable }"
-    ng-model="filters.nonFarmable.inkable" ng-click="onDropFilterClick($event,true)">Inkable</span><!--
---><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.inkable === false }"
-    ng-model="filters.nonFarmable.inkable" ng-click="onDropFilterClick($event,false)">Hide Inkable</span>
 </div>
 
 <div class="filter-container expandable" id="exclusion-filter"
