@@ -67797,14 +67797,14 @@
               "amount": 1,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
-              "targeting": { "count": 1, "targets": [ "enemies" ] },
+              "targeting": { "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
               "amount": 1000,
               "condition": { "comparator": "first", "count": 30, "type": "time" },
               "effect": "damage",
-              "targeting": { "count": 1, "targets": [ "[STR]" ] },
+              "targeting": { "targets": [ "[STR]" ] },
               "type": "fixed"
             }
           ]
