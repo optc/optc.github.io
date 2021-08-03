@@ -964,6 +964,12 @@ window.matchers = [
     },
 
     {
+        name: 'Crew debuff immunity appliers',
+        target: 'special',
+        matcher: /applies.+immunity/i
+    },
+
+    {
         name: 'Captain Swapping special',
         target: 'special',
         matcher: /Swaps this unit with your captain/i 
