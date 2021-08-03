@@ -141,7 +141,6 @@ input#burgerMenuState {
             / 275px 1fr;
         ;
         height: 100vh;
-        height: -webkit-fill-available;
     }
     
     #leftContainer {
