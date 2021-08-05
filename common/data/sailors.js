@@ -1863,6 +1863,11 @@ window.sailors = {
     3407: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? 50 : 0; },
     },
+    3409: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

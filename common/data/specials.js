@@ -12135,6 +12135,46 @@ window.specials = {
         },
         warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
+    3409: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+        type: "type",
+    },
+    3410: {
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1.4 : 0.7; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][n] + ' boost. To ' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    3411: {
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1.4 : 0.7; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][n] + ' boost. To ' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

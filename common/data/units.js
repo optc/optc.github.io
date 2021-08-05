@@ -3406,7 +3406,10 @@ window.units = [
     [ "Vivi, Large Flowers Blooming in the Pool at Night", "STR", [ "Cerebral", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1546, 929, 93, 3436, 1549, 311, 1 ],
     [ "Belo Betty, Summer Night Vacation", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1327, 822, 76, 2948, 1370, 252, 1 ],
     [ "Koala, Summer Night Vacation", "STR", [ "Cerebral", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1250, 833, 82, 2778, 1389, 274, 1 ],
-    [ "Master Caesar, Outrageous Scientist", "INT", [ "Cerebral", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1366, 746, 124, null, null, null, null ],
+    [ "Master Caesar, Outrageous Scientist", "INT", [ "Cerebral", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1366, 746, 124, 2732, 1492, 247, 1 ],
+    [ "Gecko Moria, Man Controlling Shadows", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1966, 727, 130, null, null, null, null ],
+    [ "Kizaru, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 860, 417, 90, null, null, null, null ],
+    [ "Borsalino, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 1717, 789, 151, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

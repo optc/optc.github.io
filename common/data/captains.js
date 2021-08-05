@@ -11940,6 +11940,31 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
+    3409: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+    },
+    3410: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[3410].turnedOn[i]==true) { specialEnabled = true; }
+                if(window.specials[3411].turnedOn[i]==true) { specialEnabled = true; }
+            }
+            return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? specialEnabled ? 5 : 4.5: 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.3 : 1; }
+    },
+    3411: {
+        atk: function(p) {
+            var specialEnabled = false;
+            for(var i=0;i<6;i++)
+            {
+                if(window.specials[3410].turnedOn[i]==true) { specialEnabled = true; }
+                if(window.specials[3411].turnedOn[i]==true) { specialEnabled = true; }
+            }
+            return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? specialEnabled ? 5 : 4.5: 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.3 : 1; }
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
