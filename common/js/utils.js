@@ -16,6 +16,12 @@
 
     var parseUnit = function (element, n) {
         var piratefest = window.festival[n];
+
+        // If multi-dimensional array (i.e. VS units), split into two
+        if (piratefest && Array.isArray(piratefest[0])){
+            var piratefest2 = piratefest[1];
+            piratefest = piratefest[0]
+        }
         if (element.length === 0)
             return [];
         if (element[15] && element[15].constructor != Array)
@@ -94,7 +100,17 @@
             },
             pirateFest: {
                 class: piratefest ? piratefest[0] : "",
-                DEF: piratefest ? piratefest[1] : null, SPD: piratefest ? piratefest[2] : null, minCP: piratefest ? piratefest[3] : null, maxCP: piratefest ? piratefest[4] : null,
+                DEF: piratefest ? piratefest[1] : null,
+                SPD: piratefest ? piratefest[2] : null,
+                minCP: piratefest ? piratefest[3] : null,
+                maxCP: piratefest ? piratefest[4] : null,
+            },
+            pirateFest2: (!piratefest2) ? null : {
+                class: piratefest2 ? piratefest2[0] : "",
+                DEF: piratefest2 ? piratefest2[1] : null,
+                SPD: piratefest2 ? piratefest2[2] : null,
+                minCP: piratefest2 ? piratefest2[3] : null,
+                maxCP: piratefest2 ? piratefest2[4] : null,
             }
         };
         if (element.indexOf(null) != -1)

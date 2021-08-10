@@ -161,7 +161,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="panel panel-default panel-x-scroll">
+                        <div class="panel panel-default panel-x-scroll" ng-if="(rumbleBeta && rumble) || !!unit.pirateFest.DEF">
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
@@ -173,12 +173,20 @@
                                 </thead>
                                 <tbody>
                                     <tr ng-if="!rumbleBeta">
-                                        <td></td>
+                                        <td><span ng-if="unit.pirateFest2">Character 1</span></td>
                                         <td >{{unit.pirateFest.class | decorate}}</td>
                                         <td ng-if="!compare">{{unit.pirateFest.DEF | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.DEF - compare.pirateFest.DEF | number}}</td>
                                         <td ng-if="!compare">{{unit.pirateFest.SPD | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{unit.pirateFest.SPD - compare.pirateFest.SPD | number}}</td>
+                                    </tr>
+                                    <tr ng-if="!rumbleBeta && unit.pirateFest2">
+                                        <td>Character 2</td>
+                                        <td >{{unit.pirateFest2.class | decorate}}</td>
+                                        <td ng-if="!compare">{{unit.pirateFest2.DEF | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest2.DEF - compare.pirateFest2.DEF | number}}</td>
+                                        <td ng-if="!compare">{{unit.pirateFest2.SPD | number}}</td>
+                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest2.SPD - compare.pirateFest2.SPD | number}}</td>
                                     </tr>
                                     <tr ng-if="rumbleBeta">
                                         <td><span ng-if="rumble2">Character 1</span></td>
