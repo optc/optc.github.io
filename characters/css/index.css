@@ -140,7 +140,7 @@ input#burgerMenuState {
             "filters  grid" 1fr
             / 275px 1fr;
         ;
-        height: 100vh;
+        height: 100%;
     }
     
     #leftContainer {
