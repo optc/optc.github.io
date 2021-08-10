@@ -154,7 +154,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
       contentType: "application/json"
     };
 
-    $scope.rumble = {};
+    $scope.rumble = undefined;
 
     // data
     var id = parseInt($stateParams.id, 10);
@@ -178,7 +178,6 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             }
             if ($scope.rumble === undefined ) {
               console.log("Couldn't find unit with id " + id);
-              $scope.rumble={};
               return;
             }
             // normalize the data here:
@@ -193,7 +192,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
                 })[1];
               if ($scope.rumble2 === undefined ) {
                 console.log("Couldn't find unit with id " + id);
-                $scope.rumble2={};
+                return;
               }
               denormalizeEffects($scope.rumble2.ability);
               denormalizeEffects($scope.rumble2.special);
