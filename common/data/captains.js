@@ -12186,10 +12186,10 @@ var ghostsCaptains = {
         hp: function(p) { return (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.class.has("Powerhouse") ? 1.25 : 1 : 1; },
     },
     42: {
-        atk: function(p) { return p.unit.type == "PSY" ? 3 : (p.unit.type == "QCK" || p.unit.type == "INT") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" ? 2 : 1; },
     },
     43: {
-        atk: function(p) { return p.unit.type == "QCK" ? 3 : (p.unit.type == "PSY" || p.unit.type == "INT") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
     },
     44: {
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2.5 : 1; },

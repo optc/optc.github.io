@@ -2410,9 +2410,9 @@ window.units = [
     [ "Monkey D. Luffy, Outlaw on the Prairie", "QCK", [ "Fighter", "Free Spirit" ], 4, 15, 4, 3, 50, 392109, 703, 382, 80, 1401, 753, 175, 1 ],
     [ "Monkey D. Luffy, Loose Cannon on the Prairie", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1301, 721, 161, 2410, 1359, 302, 1 ],
     [ "Nami, Outlaw on the Prairie", "INT", [ "Shooter", "Striker" ], 4, 15, 4, 3, 50, 392109, 762, 520, 123, 1250, 810, 210, 1 ],
-    [ "Nami, Cat Burglar on the Prairie", "INT", [ "Shooter", "Striker" ], 5, 30, 4, 5, 99, 4000000, 1191, 711, 200, 2098, 1289, 373, 1 ],
+    [ "Nami, Cat Burglar on the Prairie", "INT", [ "Shooter", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1191, 711, 200, 2098, 1289, 373, 1 ],
     [ "Roronoa Zoro, Outlaw on the Prairie", "DEX", [ "Shooter", "Driven" ], 4, 15, 4, 3, 50, 392109, 1000, 481, 36, 1805, 854, 70, 1 ],
-    [ "Roronoa Zoro, Lone Wolf on the Prairie", "DEX", [ "Shooter", "Driven" ], 5, 30, 4, 5, 99, 4000000, 1702, 810, 66, 3120, 1399, 110, 1 ],
+    [ "Roronoa Zoro, Lone Wolf on the Prairie", "DEX", [ "Shooter", "Driven" ], 5, 30, 4, 4, 99, 4000000, 1702, 810, 66, 3120, 1399, 110, 1 ],
     [ "Pica, The Executive Eliminating Obstacles", "DEX", [ "Driven", "Powerhouse" ], 4, 25, 4, 3, 70, 1066998, 1324, 112, 10, 2512, 622, 18, 1 ],
     [ "Pica, The Giant Eliminating the Former King", "DEX", [ "Driven", "Powerhouse" ], 5, 40, 4, 4, 99, 4000000, 2345, 588, 16, 4120, 1232, 35, 1 ],
     [ "Bartolomeo & Cavendish, Bickering Rebels", [ "DEX", "QCK" ], [ [ "Driven", "Striker" ], [ "Driven", "Slasher" ], [ "Driven", "Slasher" ] ], 5, 30, 4, 3, 70, 1066998, 391, 287, 71, 1856, 825, 228, 1 ],
@@ -3410,6 +3410,11 @@ window.units = [
     [ "Gecko Moria, Man Controlling Shadows", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1966, 727, 130, null, null, null, null ],
     [ "Kizaru, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 860, 417, 90, null, null, null, null ],
     [ "Borsalino, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 1717, 789, 151, null, null, null, null ],
+    [ "", "STR", [ "Slasher", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1261, 685, 162, null, null, null, null ],
+    [ "", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1099, 666, 198, null, null, null, null ],
+    [ "", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1334, 679, 152, null, null, null, null ],
+    [ "", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1682, 717, 3, null, null, null, null ],
+    [ "", "STR", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1164, 552, 122, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
