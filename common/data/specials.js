@@ -11317,6 +11317,7 @@ window.specials = {
             var levels = [0.7, 0];
             var n = (levels.indexOf(window.specials[3289].multiplier) + 1) % levels.length;
             window.specials[3289].multiplier = levels[n];
+            window.specials[3289].turnedOn = true;
             p.scope.notify({
                 text: '' + levels[n] + ' Chain boost. To ' + levels[(n + 1) % levels.length] + ' Chain boost, disable and re-enable this special. Only affects captain damage if Nami is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
                 name: '3289warning'
