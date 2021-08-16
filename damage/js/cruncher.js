@@ -661,6 +661,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             affinityMult = effects[$scope.data.effect]['affinity'](unit.unit);
         }
         
+        var affinityPlusTemp = 0; //conditional goes here
+        plusSpecials.forEach(function(plusSpecial) {
+            if(plusSpecial.hasOwnProperty('affinityPlus'))
+                if(plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > affinityPlusTemp) affinityPlusTemp = plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+        });
+        affinityMult += affinityPlusTemp;
+        
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
                     //captAffinityMult *= captain.captAffinityMultiplier(unit);

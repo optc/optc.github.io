@@ -5937,7 +5937,7 @@ window.drops = {
             global: true,
             nakama: 8327300,
             gamewith: 260519,
-            'Ragin Swa': [ 3273 ]
+            'Raging Sea': [ 3273 ]
         },
 
         {
@@ -5946,7 +5946,7 @@ window.drops = {
             thumb: 3297,
             nakama: 8329700,
             gamewith: 269110,
-            'Coast of Wano': [ 3297 ]
+            'Primordial Sea': [ 3297 ]
         },
 
         {
@@ -5964,7 +5964,16 @@ window.drops = {
             thumb: 3368,
             nakama: null,
             gamewith: null,
-            'Coast of Wano': [ 3368 ]
+            'Raging Sea': [ 3368 ]
+        },
+
+        {
+            name: 'Stussy',
+            dropID: 'treasuremap47',
+            thumb: 3416,
+            nakama: null,
+            gamewith: null,
+            'Calm Sea': [ 3416 ]
         },
 
     ],
@@ -6481,6 +6490,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3374 ],
+        },
+
+        {
+            name: 'Round Fifteen',
+            dropID: 'piratefestival15',
+            thumb: 3415,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3415 ],
         },
 
     ],

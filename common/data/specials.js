@@ -11300,7 +11300,7 @@ window.specials = {
         def: function(p) { return 0; }
     },
     3286: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.captain.class.has("Driven")) ? 1 : window.specials[3286].multiplier; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[3286].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             window.specials[3286].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Driven")) ? 1.75 : 1;
@@ -11335,6 +11335,20 @@ window.specials = {
     },
     3291:{
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3293: {
+        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? p.unit.class.has("Powerhouse") || p.captain.class.has("Driven") ? 1.75 : 1 : 1; },
+        type: "type",
+        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? p.unit.class.has("Powerhouse") || p.captain.class.has("Driven") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Orb", "Affinity and Orb"][n] + ' boost. To ' + ["Affinity", "Orb", "Affinity and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     3294: {
         atk: function(p) { return p.defenseDown ? 1.75 : 1; },
@@ -12175,6 +12189,32 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
         }
+    },
+    3412: {
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 300 : 0; },
+    },
+    3413: {
+        rcv: function(p) { return 1.5; },
+    },
+    3414: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 0; },
+    },
+    3415: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2 : 0; },
+    },
+    3416: {
+        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 

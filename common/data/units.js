@@ -3407,14 +3407,14 @@ window.units = [
     [ "Belo Betty, Summer Night Vacation", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1327, 822, 76, 2948, 1370, 252, 1 ],
     [ "Koala, Summer Night Vacation", "STR", [ "Cerebral", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1250, 833, 82, 2778, 1389, 274, 1 ],
     [ "Master Caesar, Outrageous Scientist", "INT", [ "Cerebral", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1366, 746, 124, 2732, 1492, 247, 1 ],
-    [ "Gecko Moria, Man Controlling Shadows", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1966, 727, 130, null, null, null, null ],
-    [ "Kizaru, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 860, 417, 90, null, null, null, null ],
-    [ "Borsalino, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 1717, 789, 151, null, null, null, null ],
-    [ "", "STR", [ "Slasher", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1261, 685, 162, null, null, null, null ],
-    [ "", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1099, 666, 198, null, null, null, null ],
-    [ "", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1334, 679, 152, null, null, null, null ],
-    [ "", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1682, 717, 3, null, null, null, null ],
-    [ "", "STR", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1164, 552, 122, null, null, null, null ],
+    [ "Gecko Moria, Man Controlling Shadows", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1966, 727, 130, 3932, 1454, 260, 1 ],
+    [ "Kizaru, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 860, 417, 90, 1720, 835, 181, 1 ],
+    [ "Borsalino, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 1717, 789, 151, 3434, 1577, 302, 1 ],
+    [ "Tashigi, Captain Looking Around the Summer Festival", "STR", [ "Slasher", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1261, 685, 162, null, null, null, null ],
+    [ "Makino, Excited Female Shopkeeper at the Summer Festival", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1099, 666, 198, null, null, null, null ],
+    [ "Hina, Black Cage Looking Around the Summer Festival", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1334, 679, 152, null, null, null, null ],
+    [ "Hody Jones, Battle of Gyoncorde Plaza", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1682, 717, 3, null, null, null, null ],
+    [ "Stussy, CP Gracefully Spending Time at the Summer Festival", "STR", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1164, 552, 122, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

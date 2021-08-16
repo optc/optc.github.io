@@ -1868,6 +1868,18 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "DEX" ? 30 : 0; },
     },
+    3412: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3413: {
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3414: {
+        hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 50 : 0; },
+    },
+    3415: {
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
