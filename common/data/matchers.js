@@ -1556,6 +1556,12 @@ window.matchers = [
     },
     
     {
+        name: 'Damage Special Activated Support',
+        target: 'support',
+        matcher: /Damage Dealing/i
+    },
+    
+    {
         name: 'Buff Activated Support',
         target: 'support',
         matcher: /when (the|an) enemy (gains|applies)/i

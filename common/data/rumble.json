@@ -68108,7 +68108,7 @@
               "amount": 0.7,
               "effect": "damage",
               "range": { "direction": "forward", "size": "medium" },
-              "targeting": { "targets": [ "crew" ] },
+              "targeting": { "targets": [ "enemies" ] },
               "type": "atk"
             },
             {

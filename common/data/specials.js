@@ -11244,7 +11244,7 @@ window.specials = {
             var n = (levels.indexOf(window.specials[3277].multiplier) + 1) % levels.length;
             window.specials[3277].multiplier = levels[n];
             p.scope.notify({
-                text: '' + levels[n] + 'x ATK boost. To ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
+                text: '' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][n] + ' boost. To ' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3277warning'
             });
         },
@@ -11259,7 +11259,7 @@ window.specials = {
             var n = (levels.indexOf(window.specials[3278].multiplier) + 1) % levels.length;
             window.specials[3278].multiplier = levels[n];
             p.scope.notify({
-                text: '' + levels[n] + 'x ATK boost. To ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
+                text: '' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][n] + ' boost. To ' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3278warning'
             });
         },

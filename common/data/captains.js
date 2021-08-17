@@ -11531,10 +11531,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     3296: {
-        atk: function(p) { p.unit.type == "PSY" ? 1.5 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
     },
     3297: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? [2, 2, 2, 2, 2, 2, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3298: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 4.25 : 1; },
