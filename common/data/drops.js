@@ -5955,7 +5955,7 @@ window.drops = {
             thumb: 3339,
             nakama: null,
             gamewith: null,
-            'Coast of Wano': [ 3339 ]
+            'Celebration Sea': [ 3339 ]
         },
 
         {
@@ -5968,8 +5968,17 @@ window.drops = {
         },
 
         {
-            name: 'Stussy',
+            name: 'Kaido',
             dropID: 'treasuremap47',
+            thumb: 3389,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3389 ]
+        },
+
+        {
+            name: 'Stussy',
+            dropID: 'treasuremap48',
             thumb: 3416,
             nakama: null,
             gamewith: null,
@@ -6349,6 +6358,16 @@ window.drops = {
             'Kizuna Exchange': [ 9047, 9048 ],
         },
 
+        {
+            name: 'Ivankov',
+            dropID: 'bond24',
+            thumb: 3419,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3419 ],
+            'Kizuna Exchange': [ 9049 ],
+        },
+
     ],
 
 
@@ -6622,6 +6641,7 @@ window.drops = {
             'Round 5': [ 3111 ],
             'Round 6': [ 3234 ],
             'Round 7': [ 3264 ],
+            'Round 8': [ 3420 ],
         },
 
         {

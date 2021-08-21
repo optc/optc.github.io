@@ -3410,11 +3410,15 @@ window.units = [
     [ "Gecko Moria, Man Controlling Shadows", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1966, 727, 130, 3932, 1454, 260, 1 ],
     [ "Kizaru, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 860, 417, 90, 1720, 835, 181, 1 ],
     [ "Borsalino, Light Illuminating Absolute Justice", "DEX", [ "Shooter", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 1717, 789, 151, 3434, 1577, 302, 1 ],
-    [ "Tashigi, Captain Looking Around the Summer Festival", "STR", [ "Slasher", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1261, 685, 162, null, null, null, null ],
-    [ "Makino, Excited Female Shopkeeper at the Summer Festival", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1099, 666, 198, null, null, null, null ],
-    [ "Hina, Black Cage Looking Around the Summer Festival", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1334, 679, 152, null, null, null, null ],
-    [ "Hody Jones, Battle of Gyoncorde Plaza", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1682, 717, 3, null, null, null, null ],
-    [ "Stussy, CP Gracefully Spending Time at the Summer Festival", "STR", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1164, 552, 122, null, null, null, null ],
+    [ "Tashigi, Captain Looking Around the Summer Festival", "STR", [ "Slasher", "Cerebral" ], 5, 30, 5, 4, 99, 2000000, 1261, 685, 162, 2585, 1370, 323, 1 ],
+    [ "Makino, Excited Female Shopkeeper at the Summer Festival", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 2000000, 1099, 666, 198, 2570, 1331, 348, 1 ],
+    [ "Hina, Black Cage Looking Around the Summer Festival", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1334, 679, 152, 2700, 1357, 303, 1 ],
+    [ "Hody Jones, Battle of Gyoncorde Plaza", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1682, 717, 3, 3839, 1434, 18, 1 ],
+    [ "Stussy, CP Gracefully Spending Time at the Summer Festival", "STR", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1164, 552, 122, 2910, 1380, 305, 1 ],
+    [ "Carrot, Smiling Sulong in the Night", "QCK", [ "Fighter", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 1861, 973, 151, 3704, 1604, 349, null ],
+    [ "Mr. 2 Bon Clay, Hell Revolving Okama", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1128, 595, 203, null, null, null, null ],
+    [ "Emporio Ivankov, Shining Being Reborn in Hell", "INT", [ "Free Spirit", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1024, 685, 105, null, null, null, null ],
+    [ "Inmate Buggy the Clown, Jailbreak Alliance [Neo]", "DEX", [ "Driven", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1255, 397, 72, 2266, 1110, 209, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
