@@ -1230,7 +1230,7 @@ window.drops = {
             'Sentomaru, Guard of the New World!': [ -578, -1121, -1794, -2814, -217, -455, -906, -1412, -1908, -2150, -2285, -2485 ],
             'The Finest of Art': [ -2363, -2074, -943, -1212, -1387, -4, -1706, -1974, -2142, -1840, -2371, -216, -508, -560 ],
             'Perona\'s Peculiar Living Situation': [ -2739, -2113, -647, -999, -1238, -1475, -1682, -2013, -2369, -3 ],
-            'Last Wish for Sanji': [ -1663, -748, -2578, -1314, -673, -1033, -1274, -1621, -1957, -2101, -24 ],
+            'Last Wish for Sanji': [ -1663, -748, -2578, -1314, -673, -1033, -1274, -1621, -1957, -2101, -24 ],
             'Red-Hair Pirates at the Harbor!': [ -1927, -720, -259, -1083, -1318, -1665, -1757, -2238, -2420, -785 ],
             'Comeback! "King of the Day" Duke Dogstorm': [ -2500, -2234, -316, -760, -1131, -1368, -1660, -1743, -1987, -2267 ],
             'The Finest of Tea Parties! (Perorin!)': [ -1413, -261, -357, -844, -1115, -1538, -1824, -2287, -2271, -2463, -520 ],
@@ -1412,7 +1412,7 @@ window.drops = {
             nakama: 2026800,
             gamewith: 6725,
             challenge: 'Cumulative Damage dealt to enemies in a single run',
-            challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1y Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
+            challengeData: [['600,000 Damage','1x Green Elder'],['1,400,000 Damage','1x Rainbow Gem & 1x HP Cotton Candy'],['3,000,000 Damage','2x Rainbow Gems, 1x Forbidden Tome']],
             'All Difficulties': [ 67, 69, -73, -219, -204, -206, -52, -212, -50 ]
         },
 
@@ -2152,16 +2152,6 @@ window.drops = {
         },
 
         {
-            name: 'Kizuna Clash! - Preparation Battle',
-            dropID: 'eventneo70',
-            thumb: 2833,
-            global: true,
-            nakama: 6283300,
-            gamewith: 186699,
-            'All Difficulties': [ 2833 ]
-        },
-
-        {
             name: 'Intense Combat! Chin Jao Family!!',
             dropID: 'event71',
             thumb: 1426,
@@ -2846,7 +2836,7 @@ window.drops = {
             thumb: 3038,
             nakama: 2303800,
             gamewith: 218747,
-            'All Difficulties':  [ -3038, -3040, -3044, -3042, -3031, -3029, -2027, -2078 ],
+            'All Difficulties': [ -3038, -3040, -3044, -3042, -3031, -3029, -2027, -2078 ],
         },
 
         {
@@ -2856,7 +2846,7 @@ window.drops = {
             thumb: 3177,
             nakama: null,
             gamewith: null,
-            'All Difficulties':  [ -3038, -3040, -3175, -3177, -3179, -3181, -3183, -3185 ],
+            'All Difficulties': [ -3038, -3040, -3175, -3177, -3179, -3181, -3183, -3185 ],
         },
 
         {
@@ -2866,7 +2856,7 @@ window.drops = {
             thumb: 3100,
             nakama: null,
             gamewith: 230163,
-            'All Difficulties':  [ -3100, -3102, -3104, -3106 ],
+            'All Difficulties': [ -3100, -3102, -3104, -3106 ],
         },
 
         {
@@ -2876,7 +2866,7 @@ window.drops = {
             thumb: 3065,
             nakama: null,
             gamewith: 225163,
-            'All Difficulties':  [ -3057, -3059, -3065, -3067, -3069, -3071, -3073 ],
+            'All Difficulties': [ -3057, -3059, -3065, -3067, -3069, -3071, -3073 ],
         },
 
         {
@@ -2886,7 +2876,7 @@ window.drops = {
             thumb: 3135,
             nakama: null,
             gamewith: 234904,
-            'All Difficulties':  [ -2914, -3118, -3120, -3121, -3135, -3137, -3139, -3141 ],
+            'All Difficulties': [ -2914, -3118, -3120, -3121, -3135, -3137, -3139, -3141 ],
         },
     ],
 
@@ -3838,7 +3828,7 @@ window.drops = {
             nakama: 4288500,
             gamewith: 191379,
             'All Difficulties': [ 2885 ],
-            //'Ambush': [ 9036 ]
+            'Ambush': [ 9036 ]
         },
 
         {
@@ -3859,7 +3849,7 @@ window.drops = {
             nakama: 4292200,
             gamewith: 198796,
             'All Difficulties': [ 2922 ],
-            //'Ambush': [ 9037 ]
+            'Ambush': [ 9037 ]
         },
 
         {
@@ -5191,7 +5181,7 @@ window.drops = {
         },
 
         {
-            name: 'Those Who Pull the Strings Behind Dresssrosa',
+            name: 'Those Who Pull the Strings Behind Dressrosa',
             thumb: 2550,
             showManual: true,
             global: true,
@@ -5411,7 +5401,7 @@ window.drops = {
     'Arena': [
         
         {
-            name: 'Wanted Man of the Flower Capital',
+            name: 'Hitokiri Kamazo',
             thumb: 3145,
             showManual: true,
             global: true,
@@ -5421,7 +5411,7 @@ window.drops = {
         },
         
         {
-            name: 'Land of Wano\'s Carpenter',
+            name: 'Franosuke',
             thumb: 3189,
             showManual: true,
             global: true,
@@ -5431,7 +5421,7 @@ window.drops = {
         },
         
         {
-            name: 'Animal Kingdom Pirates, Tobi Roppo',
+            name: 'X Drake',
             thumb: 3210,
             showManual: true,
             global: true,
@@ -5441,7 +5431,7 @@ window.drops = {
         },
         
         {
-            name: 'The Ghostly Skeletal Apparition',
+            name: 'Bonekichi',
             thumb: 3235,
             showManual: true,
             global: true,
@@ -5464,6 +5454,7 @@ window.drops = {
             name: 'Sanjuan Wolf',
             thumb: 3293,
             showManual: true,
+            showManual: true,
             nakama: 10329300,
             gamewith: 267166,
             'All Difficulties': [ 3293, -3293 ],
@@ -5482,8 +5473,8 @@ window.drops = {
             name: 'Mihawk',
             thumb: 3361,
             showManual: true,
-            nakama: null,
-            gamewith: null,
+            nakama: 10336100,
+            gamewith: 281805,
             'All Difficulties': [ 3361, -3361 ],
         },
         
@@ -5491,8 +5482,8 @@ window.drops = {
             name: 'Ashura Doji',
             thumb: 3385,
             showManual: true,
-            nakama: null,
-            gamewith: null,
+            nakama: 10338500,
+            gamewith: 286274,
             'All Difficulties': [ 3385, -3385 ],
         },
         
@@ -5500,8 +5491,8 @@ window.drops = {
             name: 'Caesar',
             thumb: 3408,
             showManual: true,
-            nakama: null,
-            gamewith: null,
+            nakama: 10340800,
+            gamewith: 289736,
             'All Difficulties': [ 3408, -3408 ],
         },
 
@@ -5944,6 +5935,7 @@ window.drops = {
             name: 'Shiryu',
             dropID: 'treasuremap44',
             thumb: 3297,
+            global: true,
             nakama: 8329700,
             gamewith: 269110,
             'Primordial Sea': [ 3297 ]
@@ -5953,8 +5945,8 @@ window.drops = {
             name: 'Koala',
             dropID: 'treasuremap45',
             thumb: 3339,
-            nakama: null,
-            gamewith: null,
+            nakama: 8333900,
+            gamewith: 277257,
             'Celebration Sea': [ 3339 ]
         },
 
@@ -5962,17 +5954,17 @@ window.drops = {
             name: 'MUGIWARA Zoro',
             dropID: 'treasuremap46',
             thumb: 3368,
-            nakama: null,
-            gamewith: null,
+            nakama: 8336800,
+            gamewith: 283332,
             'Raging Sea': [ 3368 ]
         },
 
         {
-            name: 'Kaido',
+            name: 'Dragon Kaido',
             dropID: 'treasuremap47',
             thumb: 3389,
             nakama: null,
-            gamewith: null,
+            gamewith: 287046,
             'Coast of Wano': [ 3389 ]
         },
 
@@ -5981,7 +5973,7 @@ window.drops = {
             dropID: 'treasuremap48',
             thumb: 3416,
             nakama: null,
-            gamewith: null,
+            gamewith: 291120,
             'Calm Sea': [ 3416 ]
         },
 
@@ -6129,32 +6121,50 @@ window.drops = {
 
         {
             name: 'Zoro & Sanji',
-            dropID: 'bond1',
+            dropID: 'kizuna1',
             thumb: 2531,
             global: true,
             nakama: null,
-            gamewith: [ 150056, 155125, 156784, 159694, 164568, 172467 ],
+            gamewith: [ 150056, 155125, 156784, 159694, 172467 ],
             'All Difficulties': [ 2531 ],
             'Round 1': [ 2518 ],
             'Round 2': [ 2615 ],
             'Round 3': [ 2629 ],
-            'Round 5': [ 2682 ],
-            'Round 6': [ 2732 ],
+        },
+
+        {
+            name: 'Stampede Hancock',
+            dropID: 'kizuna2',
+            thumb: 2682,
+            global: true,
+            nakama: null,
+            gamewith: 164568,
+            'All Difficulties': [ 2682 ],
+        },
+
+        {
+            name: 'Magellan',
+            dropID: 'kizuna3',
+            thumb: 2733,
+            global: true,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 2732 ],
         },
 
         {
             name: 'Grim Reaper Sabo',
-            dropID: 'bond2',
+            dropID: 'kizuna4',
             thumb: 2758,
             global: true,
             nakama: 9275800,
-            gamewith: [ 174864 ],
+            gamewith: 174864,
             'All Difficulties': [ 2757 ],
         },
 
         {
             name: 'Christmas Party Shirahoshi',
-            dropID: 'bond3',
+            dropID: 'kizuna5',
             thumb: 2794,
             global: true,
             nakama: 9279400,
@@ -6164,7 +6174,7 @@ window.drops = {
 
         {
             name: 'Kikunojo',
-            dropID: 'bond5',
+            dropID: 'kizuna6',
             thumb: 2812,
             global: true,
             nakama: 9281200,
@@ -6174,18 +6184,27 @@ window.drops = {
 
         {
             name: 'Marco & Ace',
-            dropID: 'bond6',
+            dropID: 'kizuna7',
             thumb: 2831,
             global: true,
             nakama: 9285401,
             gamewith: 148537,
             'All Difficulties': [ 2831 ],
-            'Round 2': [ 2854 ],
+        },
+
+        {
+            name: 'Koala',
+            dropID: 'kizuna8',
+            thumb: 2854,
+            global: true,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 2854 ],
         },
 
         {
             name: 'Moria',
-            dropID: 'bond7',
+            dropID: 'kizuna9',
             thumb: 2890,
             global: true,
             nakama: 9289000,
@@ -6195,7 +6214,7 @@ window.drops = {
 
         {
             name: 'Big Mom',
-            dropID: 'bond8',
+            dropID: 'kizuna10',
             thumb: 2920,
             global: true,
             nakama: 9292000,
@@ -6205,7 +6224,7 @@ window.drops = {
 
         {
             name: 'Carrot',
-            dropID: 'bond9',
+            dropID: 'kizuna11',
             thumb: 2955,
             global: true,
             nakama: 9295500,
@@ -6215,7 +6234,7 @@ window.drops = {
 
         {
             name: 'Luffy & Hancock',
-            dropID: 'bond10',
+            dropID: 'kizuna12',
             thumb: 2999,
             global: true,
             nakama: 9299900,
@@ -6225,7 +6244,7 @@ window.drops = {
 
         {
             name: 'Kaido',
-            dropID: 'bond11',
+            dropID: 'kizuna13',
             thumb: 3036,
             global: true,
             nakama: 9303600,
@@ -6235,7 +6254,7 @@ window.drops = {
 
         {
             name: 'Buggy',
-            dropID: 'bond12',
+            dropID: 'kizuna14',
             thumb: 3052,
             global: true,
             nakama: 9305200,
@@ -6245,7 +6264,7 @@ window.drops = {
 
         {
             name: 'Sakazuki & Borsalino',
-            dropID: 'bond13',
+            dropID: 'kizuna15',
             thumb: 3098,
             global: true,
             nakama: 9309800,
@@ -6255,7 +6274,7 @@ window.drops = {
 
         {
             name: 'Halloween Kid',
-            dropID: 'bond14',
+            dropID: 'kizuna16',
             thumb: 3124,
             global: true,
             nakama: 9312400,
@@ -6265,7 +6284,7 @@ window.drops = {
 
         {
             name: 'Hawkins',
-            dropID: 'bond15',
+            dropID: 'kizuna17',
             thumb: 3153,
             global: true,
             nakama: 9315300,
@@ -6276,7 +6295,7 @@ window.drops = {
 
         {
             name: 'Christmas Capone',
-            dropID: 'bond16',
+            dropID: 'kizuna18',
             thumb: 3207,
             global: true,
             nakama: 9320700,
@@ -6287,7 +6306,7 @@ window.drops = {
 
         {
             name: 'Onami & Orobi',
-            dropID: 'bond17',
+            dropID: 'kizuna19',
             thumb: 3213,
             global: true,
             nakama: 9321300,
@@ -6298,7 +6317,7 @@ window.drops = {
 
         {
             name: 'King',
-            dropID: 'bond18',
+            dropID: 'kizuna20',
             thumb: 3241,
             global: true,
             nakama: 9324100,
@@ -6309,7 +6328,7 @@ window.drops = {
 
         {
             name: 'Doflamingo',
-            dropID: 'bond19',
+            dropID: 'kizuna21',
             thumb: 3276,
             global: true,
             nakama: 9327600,
@@ -6320,9 +6339,10 @@ window.drops = {
 
         {
             name: 'Katakuri',
-            dropID: 'bond20',
+            dropID: 'kizuna22',
             thumb: 3303,
-            nakama: null,
+            global: true,
+            nakama: 9330300,
             gamewith: 148537,
             'All Difficulties': [ 3303 ],
             'Kizuna Exchange': [ 9043 ],
@@ -6330,40 +6350,40 @@ window.drops = {
 
         {
             name: 'Kuja Pirates',
-            dropID: 'bond21',
+            dropID: 'kizuna23',
             thumb: 3351,
-            nakama: null,
-            gamewith: null,
+            nakama: 9335200,
+            gamewith: [ 148537, 279692 ],
             'All Difficulties': [ 3351 ],
             'Kizuna Exchange': [ 9044, 9045 ],
         },
 
         {
             name: 'MUGIWARA Brook',
-            dropID: 'bond22',
+            dropID: 'kizuna24',
             thumb: 3373,
-            nakama: null,
-            gamewith: null,
+            nakama: 9337300,
+            gamewith: 148537,
             'All Difficulties': [ 3373 ],
             'Kizuna Exchange': [ 9046 ],
         },
 
         {
             name: 'Jack',
-            dropID: 'bond23',
+            dropID: 'kizuna25',
             thumb: 3397,
-            nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 3396 ],
+            nakama: 9339700,
+            gamewith: [ 148537, 279692 ],
+            'All Difficulties': [ 3394 ],
             'Kizuna Exchange': [ 9047, 9048 ],
         },
 
         {
             name: 'Ivankov',
-            dropID: 'bond24',
+            dropID: 'kizuna26',
             thumb: 3419,
             nakama: null,
-            gamewith: null,
+            gamewith: 148537,
             'All Difficulties': [ 3419 ],
             'Kizuna Exchange': [ 9049 ],
         },
@@ -6374,8 +6394,8 @@ window.drops = {
     'Pirate Rumble': [
 
         {
-            name: 'Strength of Unyielding Flame',
-            dropID: 'piratefestival1',
+            name: 'Portgas D. Ace',
+            dropID: 'rumble1',
             thumb: 2934,
             global: true,
             nakama: null,
@@ -6384,8 +6404,8 @@ window.drops = {
         },
 
         {
-            name: 'Penetrating Dark Justice',
-            dropID: 'piratefestival2',
+            name: 'Rob Lucci',
+            dropID: 'rumble2',
             thumb: 2989,
             global: true,
             nakama: null,
@@ -6394,8 +6414,8 @@ window.drops = {
         },
 
         {
-            name: 'Darkness Writhing in Hell',
-            dropID: 'piratefestival3',
+            name: 'Blackbeard',
+            dropID: 'rumble3',
             thumb: 3016,
             global: true,
             nakama: null,
@@ -6404,8 +6424,8 @@ window.drops = {
         },
 
         {
-            name: 'Diety Seeking the World of Dreams',
-            dropID: 'piratefestival4',
+            name: 'Kami Eneru',
+            dropID: 'rumble4',
             thumb: 3047,
             global: true,
             nakama: null,
@@ -6414,8 +6434,8 @@ window.drops = {
         },
 
         {
-            name: 'The Sniper\'s Path',
-            dropID: 'piratefestival5',
+            name: 'Usoland',
+            dropID: 'rumble5',
             thumb: 3082,
             global: true,
             nakama: null,
@@ -6424,8 +6444,8 @@ window.drops = {
         },
 
         {
-            name: 'Beginning of the Nightmare',
-            dropID: 'piratefestival6',
+            name: 'Moria & Perona',
+            dropID: 'rumble6',
             thumb: 3107,
             global: true,
             nakama: null,
@@ -6434,8 +6454,8 @@ window.drops = {
         },
 
         {
-            name: 'An Ancient Threat',
-            dropID: 'piratefestival7',
+            name: 'Drake',
+            dropID: 'rumble7',
             thumb: 3142,
             global: true,
             nakama: null,
@@ -6444,8 +6464,8 @@ window.drops = {
         },
 
         {
-            name: 'Worth Risking One\'s Life For',
-            dropID: 'piratefestival7',
+            name: 'Bartolomeo',
+            dropID: 'rumble8',
             thumb: 3173,
             global: true,
             nakama: null,
@@ -6454,8 +6474,8 @@ window.drops = {
         },
 
         {
-            name: 'Plan-Sabotaging Headliner',
-            dropID: 'piratefestival9',
+            name: 'Hawkins',
+            dropID: 'rumble9',
             thumb: 3208,
             global: true,
             nakama: null,
@@ -6464,8 +6484,8 @@ window.drops = {
         },
 
         {
-            name: 'Unexpected Champion',
-            dropID: 'piratefestival10',
+            name: 'Lucy',
+            dropID: 'rumble10',
             thumb: 3233,
             global: true,
             nakama: null,
@@ -6475,8 +6495,8 @@ window.drops = {
         },
 
         {
-            name: 'Pride of the Under Warden',
-            dropID: 'piratefestival11',
+            name: 'Hannyabal',
+            dropID: 'rumble11',
             thumb: 3251,
             global: true,
             nakama: null,
@@ -6485,17 +6505,18 @@ window.drops = {
         },
 
         {
-            name: 'Round Twelve',
-            dropID: 'piratefestival12',
+            name: 'Vergo',
+            dropID: 'rumble12',
             thumb: 3285,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3285 ],
         },
 
         {
-            name: 'Round Thirteen',
-            dropID: 'piratefestival13',
+            name: 'Urouge',
+            dropID: 'rumble13',
             thumb: 3332,
             nakama: null,
             gamewith: 196547,
@@ -6503,8 +6524,8 @@ window.drops = {
         },
 
         {
-            name: 'Round Fourteen',
-            dropID: 'piratefestival14',
+            name: 'Rayleigh',
+            dropID: 'rumble14',
             thumb: 3374,
             nakama: null,
             gamewith: 196547,
@@ -6512,8 +6533,8 @@ window.drops = {
         },
 
         {
-            name: 'Round Fifteen',
-            dropID: 'piratefestival15',
+            name: 'Hody Jones',
+            dropID: 'rumble15',
             thumb: 3415,
             nakama: null,
             gamewith: 196547,
@@ -6992,7 +7013,7 @@ window.drops = {
             global: true,
             nakama: 6168600,
             gamewith: 62386,
-            condition: 'Gain gems by completeing the missions. Once you complete a mission, it will no longer be available and the next difficulty will be available. Total of 46 gems possible. Only Booster characters will drop posters.',
+            condition: 'Gain gems by completing the missions. Once you complete a mission, it will no longer be available and the next difficulty will be available. Total of 46 gems possible. Only Booster characters will drop posters.',
             'All Difficulties': [ 591, 592, 593, 594, 595, 189, 190, 191, 192, 193 ],
         },
 
@@ -7002,7 +7023,7 @@ window.drops = {
             global: true,
             nakama: 6175700,
             gamewith: 66091,
-            condition: 'Gain gems by completeing the missions. Once you complete a mission, it will no longer be available and the next difficulty will be available. Total of 46 gems possible. Only Booster characters will drop posters.',
+            condition: 'Gain gems by completing the missions. Once you complete a mission, it will no longer be available and the next difficulty will be available. Total of 46 gems possible. Only Booster characters will drop posters.',
             'All Difficulties': [ 591, 592, 593, 594, 595, 189, 190, 191, 192, 193 ],
         },
 
@@ -7013,7 +7034,7 @@ window.drops = {
             nakama: 6190000,
             gamewith: 85069,
             showManual: true,
-            condition: 'Zoro Drop is guranteed',
+            condition: 'Guaranteed Zoro drop',
             'All Difficulties': [ 1900, -1921, -1362, -1388, -8, -906, -1175, -554, -218, -219 ],
         },
 
@@ -7240,7 +7261,7 @@ window.drops = {
         },
 
         {
-            name: 'World Journey Mission',
+            name: 'World Journey Mission 1',
             thumb: 2825,
             global: true,
             nakama: 6282500,
@@ -7249,11 +7270,32 @@ window.drops = {
         },
 
         {
-            name: 'World Journey Mission 4',
+            name: 'World Journey Mission 2: Ready to Dance',
+            thumb: 3075,
+            global: true,
+            nakama: null,
+            gamewith: 223972,
+            condition: '60 Stamina: Legends can not be used'
+        },
+
+
+        {
+            name: 'World Journey Mission 3: Dual Flame Gentlemen',
+            thumb: 3129,
+            global: true,
+            nakama: null,
+            gamewith: 234252,
+            condition: '20 Stamina: Can be cleared 10 times. 40 Stamina: Can be be cleared 20 times. Crew-restricted chopperman mission requests need to be cleared before allotted tries'
+        },
+
+
+        {
+            name: 'World Journey Mission 4: Treasure-Hunting Bandits',
             thumb: 3221,
-            global: false,
+            global: true,
             nakama: 6282500,
             gamewith: 252583,
+            condition: '20 Stamina: Can be cleared 10 times. 40 Stamina: Can be be cleared 20 times. Crew-restricted chopperman mission requests need to be cleared before allotted tries'
         },
 
         {

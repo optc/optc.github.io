@@ -210,6 +210,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
         //console.log(window.details[id] ? "limit" in window.details[id] ? id : "no" : "no details");
         if (filters.noLB && window.details[id]) if("limit" in window.details[id]) return false;
+        if (filters.potential) if(window.details[id]) { if(!("potential" in window.details[id])) return false; } else { return false }
         //console.log(window.details[id].limit);
         if (filters.noLBex && window.details[id]) if("limit" in window.details[id]) {
             for (x in window.details[id].limit){
@@ -490,7 +491,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
 
     $timeout(function() {
         jQuery.fn.dataTable.ext.search.push(tableFilter);
-        var types = { story: 'Story Island', fortnight: 'Fortnight', raid: 'Raid', Coliseum: 'Coliseum', Arena: 'Arena', Treasure: 'Treasure Map', Ambush: 'Ambush', Bond: 'Kizuna Clash', PirateFest: 'Pirate Rumble' };
+        var types = { Story: 'Story Island', Fortnight: 'Fortnight', Raid: 'Raid', Coliseum: 'Coliseum', Arena: 'Arena', Treasuremap: 'Treasure Map', Ambush: 'Ambush', Kizuna: 'Kizuna Clash', Piraterumble: 'Pirate Rumble' };
         $rootScope.$watch('table',function(table) {
             tableData = table;
             if (table.parameters && table.parameters.filters && table.parameters.filters.farmable) {
