@@ -111,7 +111,8 @@
                 SPD: piratefest2 ? piratefest2[2] : null,
                 minCP: piratefest2 ? piratefest2[3] : null,
                 maxCP: piratefest2 ? piratefest2[4] : null,
-            }
+            },
+            aliases: window.aliases[n + 1] ? window.aliases[n + 1].join(' ') : ''
         };
         if (element.indexOf(null) != -1)
             result.incomplete = true;

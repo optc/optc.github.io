@@ -13377,12 +13377,12 @@ var ghostsCaptains = {
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
     },
     316: {
-        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : 1; },
-        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : p.actions[p.sourceSlot] ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : p.actions[p.sourceSlot] ? 1.3 : 1; },
     },
     317: {
-        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : 1; },
-        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 5 : p.actions[p.sourceSlot] ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.3 : p.actions[p.sourceSlot] ? 1.3 : 1; },
     },
     318: {
         atk: function(p) { return 2.5; },

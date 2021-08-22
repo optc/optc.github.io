@@ -638,10 +638,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
             if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
-            if ([ 3311, 3274 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
+            if ([ 5314, 5316, 3301 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
             if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeQCK ? 2.5 : 2;
-            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
-            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
+            if ([ 5315, 5317 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
+            if ([ 3302 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
             if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
@@ -1093,7 +1093,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ([3071].indexOf(unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) affinityMultiplier = affinityMultiplier;
             
             if ($scope.data.effect == 'Kizuna Clash [Global]'){
-                if ([ 3311, 3274 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+                if ([ 5314, 5316, 3301, 5315, 5317, 3302 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
             if ($scope.data.effect == 'Kizuna Clash [Japan]'){
                 if ([ 3234, 3212 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
