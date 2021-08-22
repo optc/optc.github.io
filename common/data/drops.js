@@ -5191,7 +5191,7 @@ window.drops = {
         },
 
         {
-            name: 'Those Who Pull the Strings Behind Dresssrosa',
+            name: 'Those Who Pull the Strings Behind Dressrosa',
             thumb: 2550,
             showManual: true,
             global: true,
