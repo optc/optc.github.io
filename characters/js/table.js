@@ -210,6 +210,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;
         //console.log(window.details[id] ? "limit" in window.details[id] ? id : "no" : "no details");
         if (filters.noLB && window.details[id]) if("limit" in window.details[id]) return false;
+        if (filters.potential) if(window.details[id]) { if(!("potential" in window.details[id])) return false; } else { return false }
         //console.log(window.details[id].limit);
         if (filters.noLBex && window.details[id]) if("limit" in window.details[id]) {
             for (x in window.details[id].limit){
