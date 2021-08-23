@@ -259,10 +259,11 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
         result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
-        // filter by query
-        if (parameters.query) {
+        // filter by queryTerms
+        if (parameters.queryTerms && parameters.queryTerms.length > 0) {
             result = result.filter(function(unit) {
-                return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
+                let name = Utils.getFullUnitName(unit.number + 1);
+                return parameters.queryTerms.every(term => term.test(name));
             });
         }
         $scope.units = result;

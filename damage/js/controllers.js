@@ -83,10 +83,11 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
                 return true;
             });
         }
-        // filter by query
-        if (parameters.query) {
+        // filter by queryTerms
+        if (parameters.queryTerms) {
+            var name = Utils.getFullUnitName(unit.number + 1);
             result = result.filter(function(unit) {
-                return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
+                return parameters.queryTerms.every(term => term.test(name));
             });
         }
         $scope.units = result;
