@@ -3415,8 +3415,8 @@ window.units = [
     [ "Hina, Black Cage Looking Around the Summer Festival", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1334, 679, 152, 2700, 1357, 303, 1 ],
     [ "Hody Jones, Battle of Gyoncorde Plaza", "INT", [ "Powerhouse", "Fighter" ], 5, 50, 4, 5, 99, 5000000, 1682, 717, 3, 3839, 1434, 18, 1 ],
     [ "Stussy, CP Gracefully Spending Time at the Summer Festival", "STR", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1164, 552, 122, 2910, 1380, 305, 1 ],
-    [ "Carrot, Smiling Sulong in the Night", "QCK", [ "Fighter", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 1861, 973, 151, 3704, 1604, 349, null ],
-    [ "Mr. 2 Bon Clay, Hell Revolving Okama", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1128, 595, 203, null, null, null, null ],
+    [ "Carrot, Smiling Sulong in the Night", "QCK", [ "Fighter", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 1861, 973, 151, 3704, 1604, 349, 1 ],
+    [ "Mr. 2 Bon Clay, Hell Revolving Okama", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1128, 595, 203, 2824, 1445, 281, 1 ],
     [ "Emporio Ivankov, Shining Being Reborn in Hell", "INT", [ "Free Spirit", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1024, 685, 105, null, null, null, null ],
     [ "Inmate Buggy the Clown, Jailbreak Alliance [Neo]", "DEX", [ "Driven", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1255, 397, 72, 2266, 1110, 209, null ],
 ];

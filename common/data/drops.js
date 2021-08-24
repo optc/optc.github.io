@@ -6394,7 +6394,7 @@ window.drops = {
     'Pirate Rumble': [
 
         {
-            name: 'Portgas D. Ace',
+            name: 'Strength of Unyielding Flame',
             dropID: 'rumble1',
             thumb: 2934,
             global: true,
@@ -6404,7 +6404,7 @@ window.drops = {
         },
 
         {
-            name: 'Rob Lucci',
+            name: 'Penetrating Dark Justice',
             dropID: 'rumble2',
             thumb: 2989,
             global: true,
@@ -6414,7 +6414,7 @@ window.drops = {
         },
 
         {
-            name: 'Blackbeard',
+            name: 'Darkness Writhing in Hell',
             dropID: 'rumble3',
             thumb: 3016,
             global: true,
@@ -6424,7 +6424,7 @@ window.drops = {
         },
 
         {
-            name: 'Kami Eneru',
+            name: 'Diety Seeking the World of Dreams',
             dropID: 'rumble4',
             thumb: 3047,
             global: true,
@@ -6434,7 +6434,7 @@ window.drops = {
         },
 
         {
-            name: 'Usoland',
+            name: 'The Sniper\'s Path',
             dropID: 'rumble5',
             thumb: 3082,
             global: true,
@@ -6444,7 +6444,7 @@ window.drops = {
         },
 
         {
-            name: 'Moria & Perona',
+            name: 'Beginning of the Nightmare',
             dropID: 'rumble6',
             thumb: 3107,
             global: true,
@@ -6454,7 +6454,7 @@ window.drops = {
         },
 
         {
-            name: 'Drake',
+            name: 'An Ancient Threat',
             dropID: 'rumble7',
             thumb: 3142,
             global: true,
@@ -6464,7 +6464,7 @@ window.drops = {
         },
 
         {
-            name: 'Bartolomeo',
+            name: 'Worth Risking One\'s Life For',
             dropID: 'rumble8',
             thumb: 3173,
             global: true,
@@ -6474,7 +6474,7 @@ window.drops = {
         },
 
         {
-            name: 'Hawkins',
+            name: 'Plan-Sabotaging Headliner',
             dropID: 'rumble9',
             thumb: 3208,
             global: true,
@@ -6484,7 +6484,7 @@ window.drops = {
         },
 
         {
-            name: 'Lucy',
+            name: 'Unexpected Champion',
             dropID: 'rumble10',
             thumb: 3233,
             global: true,
@@ -6495,7 +6495,7 @@ window.drops = {
         },
 
         {
-            name: 'Hannyabal',
+            name: 'Pride of the Under Warden',
             dropID: 'rumble11',
             thumb: 3251,
             global: true,
@@ -6505,7 +6505,7 @@ window.drops = {
         },
 
         {
-            name: 'Vergo',
+            name: 'Returning Fear',
             dropID: 'rumble12',
             thumb: 3285,
             global: true,
@@ -6662,7 +6662,8 @@ window.drops = {
             'Round 5': [ 3111 ],
             'Round 6': [ 3234 ],
             'Round 7': [ 3264 ],
-            'Round 8': [ 3420 ],
+            'Round 8': [ 3311 ],
+            'Round 9': [ 3420 ],
         },
 
         {
