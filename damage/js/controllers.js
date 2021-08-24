@@ -85,8 +85,8 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         }
         // filter by queryTerms
         if (parameters.queryTerms) {
-            var name = Utils.getFullUnitName(unit.number + 1);
             result = result.filter(function(unit) {
+                let name = Utils.getFullUnitName(unit.number + 1);
                 return parameters.queryTerms.every(term => term.test(name));
             });
         }
