@@ -92,13 +92,14 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     stat < tableData.parameters.ranges[range][0] || stat > tableData.parameters.ranges[range][1])
                 return false;
         }
-        // filter by query
-        if (tableData.parameters.query) {
+        // filter by queryTerms
+        if (tableData.parameters.queryTerms && tableData.parameters.queryTerms.length > 0) {
             var name = Utils.getFullUnitName(id);
-            if (!tableData.fuzzy && !tableData.parameters.query.test(name)) return false;
             if (tableData.fuzzy) {
-                if (fused === null) fused = fuse.search(tableData.parameters.query.source || 'xyz');
+                if (fused === null) fused = fuse.search(tableData.parameters.query);
                 if (fused.indexOf(id - 1) == -1) return false;
+            } else if (!tableData.parameters.queryTerms.every(term => term.test(name))){
+                return false;
             }
         }
         /* * * * * Sidebar filters * * * * */

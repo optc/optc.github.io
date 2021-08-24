@@ -1048,7 +1048,7 @@
         if (!query || query.trim().length < 2)
             return null;
         query = query.toLowerCase().trim();
-        var result = {matchers: {}, ranges: {}, query: []};
+        var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
         var regex = new RegExp('^((type|class|support):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
@@ -1057,9 +1057,10 @@
         tokens.forEach(function (x) {
             x = x.replace("_", ' ');
             var temp = x.match(regex);
-            if (!temp) // if it couldn't be parsed, treat it as string
+            if (!temp) { // if it couldn't be parsed, treat it as string
                 result.query.push(x);
-            else if (temp[4] !== undefined) { // numeric operator
+                result.queryTerms.push(utils.getRegex(x));
+            } else if (temp[4] !== undefined) { // numeric operator
                 var parameter = temp[4],
                         op = temp[5],
                         value = parseFloat(temp[6], 10);
@@ -1091,7 +1092,7 @@
                 //console.log(result.matchers); Here for stuff to try to do custom
         });
         if (result.query.length > 0)
-            result.query = utils.getRegex(result.query.join(' '));
+            result.query = result.query.join(' ');
         else
             result.query = null;
         return result;
