@@ -412,7 +412,7 @@ directives.addNames = function($stateParams, $rootScope) {
                     element.append($('<tr><td>French</td><td><div>'+ currentAliases[1] +'</div></td></tr>'));
                 }
                 if(currentAliases[2]){
-                    var otherAliases = currentAliases.toString().replace(/(.*?),(.*?),/,"");
+                    var otherAliases = currentAliases.slice(2).join(', ');
                     element.append($('<tr><td>Others</td><td><div>'+ otherAliases +'</div></td></tr>'));
                 }
                 }
