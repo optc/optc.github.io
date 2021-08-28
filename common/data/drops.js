@@ -7452,6 +7452,14 @@ window.drops = {
         },
 
         {
+            name: 'Uncover! World Economy News Paper',
+            thumb: 3425,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3425 ],
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,

@@ -3419,6 +3419,14 @@ window.units = [
     [ "Mr. 2 Bon Clay, Hell Revolving Okama", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1128, 595, 203, 2824, 1445, 281, 1 ],
     [ "Emporio Ivankov, Shining Being Reborn in Hell", "INT", [ "Free Spirit", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1024, 685, 105, null, null, null, null ],
     [ "Inmate Buggy the Clown, Jailbreak Alliance [Neo]", "DEX", [ "Driven", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1255, 397, 72, 2266, 1110, 209, null ],
+    [ "Rob Lucci, CP0 Escort", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 5, 3, 70, 1066998, 984, 411, 54, null, null, null, null ],
+    [ "Rob Lucci, Powerful Punch", "DEX", [ "Powerhouse", "Fighter" ], 6, 55, 6, 5, 99, 5000000, 1938, 813, 106, null, null, null, null ],
+    [ "Kaku, CP0 Escort", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1389, 701, 108, null, null, null, null ],
+    [ "Stussy, CP0 Escort", "DEX", [ "Shooter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1359, 698, 115, null, null, null, null ],
+    [ "Morgans", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1357, 664, 152, null, null, null, null ],
+    [ "Bartholomew Kuma, World-Slapping Bear", "STR", [ "Powerhouse", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 1058, 358, 35, null, null, null, null ],
+    [ "Bartholomew Kuma, Path of Atmospheric Compressed", "STR", [ "Powerhouse", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 2164, 769, 75, null, null, null, null ],
+    [ "Arlong, Menacing Fishman", "STR", [ "Powerhouse", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1956, 720, 132, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

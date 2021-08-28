@@ -1891,6 +1891,27 @@ window.sailors = {
     3420: {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
+    3422: {
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        staticMult: function(p) { return [0, 0, 10][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; }
+    },
+    3423: {
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    3424: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    3425: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    3428: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

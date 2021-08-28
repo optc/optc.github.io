@@ -12000,6 +12000,48 @@ window.captains = {
     3420: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
     },
+    3421: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    3422: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+    },
+    3423: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.4 : 1; },
+    },
+    3424: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? 1.4 : 1; },
+    },
+    3425: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3426: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 5, ["STR"]); },
+        hitAtk: function(p) {
+            if (!p.unit.type == "STR") return 1;
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 5 : 4.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+    },
+    3427: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 5, ["STR"]); },
+        hitAtk: function(p) {
+            if (!p.unit.type == "STR") return 1;
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 5 : 4.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
+    },
+    3425: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

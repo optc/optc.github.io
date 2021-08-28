@@ -1019,6 +1019,12 @@ window.zombies = {
     3391: { // Toki
         type: 'healer',
     },
+    3421: { // Lucci
+        type: 'healer',
+    },
+    3422: { // Lucci
+        type: 'healer',
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

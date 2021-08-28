@@ -12246,6 +12246,56 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 2 : 1; },
         type: "type",
     },
+    3421: {
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1000 : 0; },
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3422: {
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1000 : 0; },
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3423: {
+        atkPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3424: {
+        chainAdditionPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.2 ? 0.2 : 0; }, 
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [0.2, 1.0];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition Buff", "Chain Addition"][n] + '. To switch to ' + ["Chain Addition Buff", "Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3426: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.maxHP >= 60000 ? 2.5 : 2.25;
+        },
+    },
+    3427: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.maxHP >= 60000 ? 2.5 : 2.25;
+        },
+    },
+    3428: {
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

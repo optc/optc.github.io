@@ -149,6 +149,16 @@ window.altspecials = {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 2 : 1; },
         type: "type",
     },
+    3422: {
+        orbPlus: function(p) { return 0.3; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
