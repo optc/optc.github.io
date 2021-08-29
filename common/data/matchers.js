@@ -1524,6 +1524,12 @@ window.matchers = [
     },
     
     {
+        name: 'Last Tap Potential Ability',
+        target: 'limit',
+        matcher: /Last Tap/i
+    },
+    
+    {
         name: 'STR Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /\[STR\] Damage Reduction/i
