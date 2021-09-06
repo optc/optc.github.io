@@ -395,6 +395,32 @@ directives.comparison = function() {
     };
 };
 
+directives.addSuperSpecialQuery = function($state, $stateParams) {
+    return {
+        restrict: 'E',
+        scope: { criteria: "=", excludedFamilies: "=" },
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})">Search for these characters</a>',
+        link: function(scope, element, attrs) {
+            scope.query = Utils.generateSuperSpecialQuery(scope.criteria);
+            if (scope.query && scope.excludedFamilies)
+                scope.query += ' ' + Utils.generateFamilyExclusionQuery(scope.excludedFamilies);
+        }
+    };
+};
+
+directives.addSupportQuery = function($state, $stateParams) {
+    return {
+        restrict: 'E',
+        scope: { criteria: "=", excludedFamilies: "=" },
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})">Search for supported characters</a>',
+        link: function(scope, element, attrs) {
+            scope.query = Utils.generateSupportedCharactersQuery(scope.criteria);
+            if (scope.query && scope.excludedFamilies)
+                scope.query += ' ' + Utils.generateFamilyExclusionQuery(scope.excludedFamilies);
+        }
+    };
+};
+
 directives.addNames = function($stateParams, $rootScope) {
     var name = window.aliases;
     return {

@@ -151,6 +151,88 @@
     };
 
     /**
+     * Transforms a list of characters or types and classes from supported
+     * characters or super special criteria into a query using family, type,
+     * class, and cost operators.
+     */
+     utils.generateCriteriaQuery = function (criteria) {
+        let families = [];
+        let types = [];
+        let classes = [];
+        let matchers = [];
+        let whitespaceRegex = /\s+/g;
+        let aliasesRegex = /\s+\(.*?\)/g; // Denjiro (Kyoshiro)
+        let specialCharactersRegex = /[*+?^${}()|[\]\\]/g; //except dot, no need to escape
+        let costRegex = /characters with cost (\d+) or (less|higher)/i;
+        let classRegex = /^(?:Fighter|Slasher|Striker|Shooter|Free Spirit|Powerhouse|Cerebral|Driven)$/i;
+
+        // "[STR] Free Spirit", we can't just split all by spaces
+        let typeRegex = /\[(.*?)\](?:\s+([\w ]+))?/i;
+
+        // may be "and" or ", and" or ", " even with extra whitespace
+        // if using .split(), you should use non-capturing groups (?:)
+        let separatorRegex = /(?:\s*,\s*|\s+)(?:and|or)\s+|\s*,\s*/g;
+
+        let costMatch = criteria.match(costRegex);
+        if (costMatch){
+            return 'cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1];
+        } else {
+            criteria = criteria.replace(aliasesRegex, '');
+            let terms = criteria.split(separatorRegex);
+            for (let term of terms) {
+                let typeMatch = term.match(typeRegex);
+                if (typeMatch) {
+                    types.push(typeMatch[1]);
+                    if (typeMatch[2])
+                        classes.push(typeMatch[2]);
+                } else if (classRegex.test(term)) {
+                    classes.push(term);
+                } else {
+                    // escape special characters before pushing (except dot)
+                    families.push(term.replace(specialCharactersRegex, '\\$&'));
+                }
+            }
+        }
+
+        // Create matchers
+        if (families.length > 0) { // family should be exact match
+            matchers.push('family:^(' + families.join('|').replace(whitespaceRegex, '_') + ')$');
+        }
+        if (types.length > 0) {
+            matchers.push('type:' + types.join('|').replace(whitespaceRegex, '_'));
+        }
+        if (classes.length > 0) {
+            matchers.push('class:' + classes.join('|').replace(whitespaceRegex, '_'));
+        }
+        return matchers.join(' ');
+    }
+
+    utils.generateSupportedCharactersQuery = function (criteria) {
+        if (/All characters?/i.test(criteria))
+            return null;
+        return utils.generateCriteriaQuery(criteria.replace(/ characters?$/i, ''));
+    }
+
+    utils.generateSuperSpecialQuery = function (criteria) {
+        let charactersRegex = /must consist of(?: \d)? (.*), excluding Support members/i;
+        let match = criteria.match(charactersRegex);
+        if (!match)
+            return null;
+        match[1] = match[1].replace(/ characters?$/i, '');
+        return utils.generateCriteriaQuery(match[1]);
+    }
+
+    utils.generateFamilyExclusionQuery = function (families) {
+        if (!families)
+            return null;
+        let specialCharactersRegex = /[*+?^${}()[\]\\]/g // except dot and pipe "|"
+        let query = 'notFamily:^(' + families.join('|')
+                .replace(/\s+/g, '_')
+                .replace(specialCharactersRegex, '\\$&') + ')$';
+        return query;
+    }
+
+    /**
      * @param {string} family Family name used in window.families.
      * @returns {Array|null} Array of unit ids that has the given family, or null if the family is not found.
      */
