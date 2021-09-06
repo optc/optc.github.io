@@ -463,8 +463,14 @@ directives.addTags = function($stateParams, $rootScope) {
             if (!data) return;
             matchers.forEach(function(matcher) {
                 var name;
+                if (!data[matcher.target])
+                    return;
+                let target = (data[matcher.target].constructor == String)
+                    ? data[matcher.target]
+                    : JSON.stringify(data[matcher.target]);
+
                 // captain effects
-                if (matcher.target == 'captain' && matcher.matcher.test(data.captain)) {
+                if (matcher.target == 'captain' && matcher.matcher.test(target)) {
                     name = matcher.name;
                     if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
                     else name = name.replace(/s$/,'');
@@ -497,7 +503,7 @@ directives.addTags = function($stateParams, $rootScope) {
                     }
                 }
                 // specials
-                if (matcher.target.indexOf('special') === 0 && matcher.matcher.test(data[matcher.target])) {
+                if (matcher.target.indexOf('special') === 0 && matcher.matcher.test(target)) {
                     name = matcher.name;
                     if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
                     else name = name.replace(/s$/,'');
@@ -505,7 +511,7 @@ directives.addTags = function($stateParams, $rootScope) {
                     element.append($('<span class="tag special">' + name + '</div>'));
                 }
                 // limit
-                if (matcher.target.indexOf('limit') === 0 && matcher.matcher.test(data[matcher.target])) {
+                if (matcher.target.indexOf('limit') === 0 && matcher.matcher.test(target)) {
                     name = matcher.name;
                     if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
                     else name = name.replace(/s$/,'');
