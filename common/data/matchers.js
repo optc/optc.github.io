@@ -257,6 +257,12 @@ window.matchers = [
     },
 
     {
+        name: 'HP Overfill allowers',
+        target: 'captain',
+        matcher: /Allows HP Overfill/i
+    },
+
+    {
         name: 'Tankers',
         target: 'captain',
         matcher: /Reduces (any )?damage.+if HP.+99/i
@@ -802,6 +808,12 @@ window.matchers = [
     },
 
     {
+        name: 'HP Overfill Healers',
+        target: 'special',
+        matcher: /Recovers.+allowing HP Overfill/i
+    },
+
+    {
         name: 'Health reducers',
         target: 'special',
         matcher: /Reduces crew's (current )?HP/i
@@ -1139,6 +1151,12 @@ window.matchers = [
         name: 'RCV based Healers',
         target: 'swap',
         matcher: /Recovers.+ character\'s RCV/i
+    },
+    
+    {
+        name: 'HP Overfill allowers',
+        target: 'swap',
+        matcher: /Allows HP Overfill/i
     },
     
     {
@@ -1503,6 +1521,12 @@ window.matchers = [
         name: 'Damage Reduction Potential Ability',
         target: 'limit',
         matcher: /Damage Reduction/i
+    },
+    
+    {
+        name: 'Last Tap Potential Ability',
+        target: 'limit',
+        matcher: /Last Tap/i
     },
     
     {
