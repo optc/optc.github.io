@@ -139,7 +139,12 @@
             fullNames = units.map(function (x, n) {
                 if (!x.name)
                     return null;
-                return x.name + (window.aliases[n + 1] ? ' ' + window.aliases[n + 1].join(', ') : '');
+                let fullName = x.name;
+                if (window.aliases && window.aliases[n + 1])
+                    fullName += ', ' + window.aliases[n + 1].join(', ');
+                if (window.families && window.families[n + 1])
+                    fullName += ', ' + window.families[n + 1].join(', ');
+                return fullName;
             });
         }
         return fullNames[id - 1];
@@ -1059,12 +1064,12 @@
         query = query.toLowerCase().trim();
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class|support):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class|support|family|notfamily):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
             return x.length > 0;
         });
         tokens.forEach(function (x) {
-            x = x.replace("_", ' ');
+            x = x.replace(/_+/g, ' ');
             var temp = x.match(regex);
             if (!temp) { // if it couldn't be parsed, treat it as string
                 result.query.push(x);

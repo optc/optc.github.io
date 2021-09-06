@@ -75,8 +75,18 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         /* * * * * Query filters * * * * */
         // filter by matchers
         for (var matcher in tableData.parameters.matchers) {
-            if (!tableData.parameters.matchers[matcher].test(unit[matcher]))
+            let regex = tableData.parameters.matchers[matcher];
+            if (matcher === 'family'){
+                if (!(unit.families && unit.families.some(family => regex.test(family)))) {
+                    return false;
+                }
+            } else if (matcher === 'notfamily'){
+                if (unit.families && unit.families.some(family => regex.test(family))) {
+                    return false;
+                }
+            } else if (!regex.test(unit[matcher])) {
                 return false;
+            }
         }
         // filter by ranges
         for (var range in tableData.parameters.ranges) {
