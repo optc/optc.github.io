@@ -51,6 +51,12 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
         $scope.table.parameters = CharUtils.generateSearchParameters($scope.query, jQuery.extend({ }, $rootScope.filters));
     });
 
+    $scope.$on('$stateChangeSuccess',function(e) {
+        if ($state.current.name == 'main.search') {
+            $scope.query = $state.params.query;
+        }
+    });
+
     $controller('DismissalCtrl');
 
     $scope.getRandChar = function(){
