@@ -10,7 +10,7 @@
 
     var utils = {};
 
-    var fullNames = null, reverseEvoMap = null;
+    var fullNames = null, reverseEvoMap = null, reverseFamilyMap = null;
 
     /* * * * * Unit control * * * * */
 
@@ -112,7 +112,8 @@
                 minCP: piratefest2 ? piratefest2[3] : null,
                 maxCP: piratefest2 ? piratefest2[4] : null,
             },
-            aliases: window.aliases[n + 1] ? window.aliases[n + 1].join(' ') : ''
+            aliases: window.aliases[n + 1] ? window.aliases[n + 1].join(' ') : '',
+            families: (window.families && window.families[n + 1]) || null,
         };
         if (element.indexOf(null) != -1)
             result.incomplete = true;
@@ -143,6 +144,14 @@
         }
         return fullNames[id - 1];
     };
+
+    /**
+     * @param {string} family Family name used in window.families.
+     * @returns {Array|null} Array of unit ids that has the given family, or null if the family is not found.
+     */
+    utils.getUnitsInFamily = function (family) {
+        return utils.getReverseFamilyMap()[family] || null;
+    }
 
     /* * * * * Thumbnail control * * * * */
     
@@ -1120,6 +1129,31 @@
         if (!reverseEvoMap[to][from])
             reverseEvoMap[to][from] = [];
         reverseEvoMap[to][from].push(via);
+    };
+
+    /**
+     * @returns {Object} Reverse map (lazy-instantiated) of window.families where
+     * the keys are the family names and the values are arrays of the unit ids
+     * that have the given family name.
+     */
+    utils.getReverseFamilyMap = function () {
+        if (reverseFamilyMap)
+            return reverseFamilyMap;
+
+        reverseFamilyMap = {};
+        for (let id in window.families) {
+            id = Number(id);
+            let families = window.families[id];
+            if (!families)
+                continue;
+            for (const family of families) {
+                if (!(family in reverseFamilyMap)) {
+                    reverseFamilyMap[family] = [];
+                }
+                reverseFamilyMap[family].push(id);
+            };
+        };
+        return reverseFamilyMap;
     };
 
     var generateReverseEvoMap = function () {
