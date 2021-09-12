@@ -113,7 +113,11 @@
                 maxCP: piratefest2 ? piratefest2[4] : null,
             },
             aliases: window.aliases[n + 1] ? window.aliases[n + 1].join(' ') : '',
-            families: (window.families && window.families[n + 1]) || null,
+            families: (
+                window.families
+                && window.families[n + 1]
+                && window.families[n + 1].map(utils.normalizeText)
+            ) || null,
         };
         if (element.indexOf(null) != -1)
             result.incomplete = true;
@@ -147,7 +151,7 @@
                 return fullName;
             });
         }
-        return fullNames[id - 1];
+        return fullNames[id - 1] && utils.normalizeText(fullNames[id - 1]);
     };
 
     /**
@@ -230,6 +234,10 @@
                 .replace(/\s+/g, '_')
                 .replace(specialCharactersRegex, '\\$&') + ')$';
         return query;
+    }
+
+    utils.normalizeText = function (str) {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
 
     /**
@@ -1143,7 +1151,7 @@
     utils.generateSearchParameters = function (query) {
         if (!query || query.trim().length < 2)
             return null;
-        query = query.toLowerCase().trim();
+        query = utils.normalizeText(query.toLowerCase().trim());
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
         var regex = new RegExp('^((type|class|support|family|notfamily):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
