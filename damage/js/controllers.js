@@ -70,7 +70,12 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         // filter by matchers
         for (var matcher in parameters.matchers) {
             result = result.filter(function(unit) {
-                return parameters.matchers[matcher].test(unit[matcher]);
+                let regex = parameters.matchers[matcher];
+                if (matcher == 'family')
+                    return unit.families && unit.families.some(family => regex.test(family));
+                if (matcher == 'notfamily')
+                    return !(unit.families && unit.families.some(family => regex.test(family)));
+                return regex.test(unit[matcher]);
             });
         }
         // filter by ranges

@@ -374,6 +374,7 @@
                                                 <span ng-bind-html="details.superSpecialCriteria | decorate"></span></div>
                                         </div>
                                         <span class="notes" ng-if="details.superSpecialCriteriaNotes" ng-bind-html="details.superSpecialCriteriaNotes | notes | decorate"></span>
+                                        <add-super-special-query criteria="details.superSpecialCriteria" excluded-families="families"></add-super-special-query>
                                     </td>
                                 </tr>
                                 <tr ng-if="details.superSpecial">
@@ -552,6 +553,7 @@
                                                 <strong>Supported Characters:</strong> <span ng-bind-html="stage.Characters | decorate"></span>
                                                 <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="item | decorate"></span><br></div>
+                                                <add-support-query criteria="stage.Characters"  excluded-families="families"></add-support-query>
                                             </div>
                                         </div>
                                         <span class="notes" ng-if="details.supportNotes" ng-bind-html="details.supportNotes | notes | decorate"></span>
@@ -1047,20 +1049,20 @@
 
                     <!-- Family -->
 
-                    <h3 class="page-header" ng-if="families.length > 0">Family: {{displayfamily}}</h3>
+                    <h3 class="page-header" ng-if="displayFamily">Family: {{displayFamily}}</h3>
 
-                    <table ng-if="collapsed.families && families.length > 3" class="table table-striped table-centered table-bordered table-textless">
+                    <table ng-if="collapsed.families && farmableVersions.length > 3" class="table table-striped table-centered table-bordered table-textless">
                         <tbody>
-                            <tr ng-if="collapsed.families && families.length > 3">
+                            <tr ng-if="collapsed.families && farmableVersions.length > 3">
                                 <td><button class="btn btn-info collapse-button"
                                         ng-click="collapsed.families = false">Click to show farmable versions</button></td>
                             </tr>
                         </tbody>
                     </table>
 
-                    <div ng-if="families.length > 0" class="panel panel-default panel-x-scroll">
+                    <div ng-if="farmableVersions.length > 0" class="panel panel-default panel-x-scroll">
                         <table class="table table-striped drop-table">
-                            <thead ng-show="!collapsed.families || families.length < 4">
+                            <thead ng-show="!collapsed.families || farmableVersions.length < 4">
                                 <tr>
                                     <th>Variant</th>
                                     <th>Farm Location</th>
@@ -1068,7 +1070,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-if="!collapsed.families || families.length < 4" ng-repeat="data in families">
+                                <tr ng-if="!collapsed.families || farmableVersions.length < 4" ng-repeat="data in farmableVersions">
                                     <td>
                                         <div class="slot small" decorate-slot uid="data.uid"></div>
                                         <a ui-sref="main.search.view({ id: data.uid, previous: getPrevious() })">{{data.name}}</a>

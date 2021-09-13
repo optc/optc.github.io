@@ -10,7 +10,7 @@
 
     var utils = {};
 
-    var fullNames = null, reverseEvoMap = null;
+    var fullNames = null, reverseEvoMap = null, reverseFamilyMap = null;
 
     /* * * * * Unit control * * * * */
 
@@ -112,7 +112,12 @@
                 minCP: piratefest2 ? piratefest2[3] : null,
                 maxCP: piratefest2 ? piratefest2[4] : null,
             },
-            aliases: window.aliases[n + 1] ? window.aliases[n + 1].join(' ') : ''
+            aliases: window.aliases[n + 1] ? window.aliases[n + 1].join(' ') : '',
+            families: (
+                window.families
+                && window.families[n + 1]
+                && window.families[n + 1].map(utils.normalizeText)
+            ) || null,
         };
         if (element.indexOf(null) != -1)
             result.incomplete = true;
@@ -138,11 +143,110 @@
             fullNames = units.map(function (x, n) {
                 if (!x.name)
                     return null;
-                return x.name + (window.aliases[n + 1] ? ' ' + window.aliases[n + 1].join(', ') : '');
+                let fullName = x.name;
+                if (window.aliases && window.aliases[n + 1])
+                    fullName += ', ' + window.aliases[n + 1].join(', ');
+                if (window.families && window.families[n + 1])
+                    fullName += ', ' + window.families[n + 1].join(', ');
+                return fullName;
             });
         }
-        return fullNames[id - 1];
+        return fullNames[id - 1] && utils.normalizeText(fullNames[id - 1]);
     };
+
+    /**
+     * Transforms a list of characters or types and classes from supported
+     * characters or super special criteria into a query using family, type,
+     * class, and cost operators.
+     */
+     utils.generateCriteriaQuery = function (criteria) {
+        let families = [];
+        let types = [];
+        let classes = [];
+        let matchers = [];
+        let whitespaceRegex = /\s+/g;
+        let aliasesRegex = /\s+\(.*?\)/g; // Denjiro (Kyoshiro)
+        let specialCharactersRegex = /[*+?^${}()|[\]\\]/g; //except dot, no need to escape
+        let costRegex = /characters with cost (\d+) or (less|higher)/i;
+        let classRegex = /^(?:Fighter|Slasher|Striker|Shooter|Free Spirit|Powerhouse|Cerebral|Driven)$/i;
+
+        // "[STR] Free Spirit", we can't just split all by spaces
+        let typeRegex = /\[(.*?)\](?:\s+([\w ]+))?/i;
+
+        // may be "and" or ", and" or ", " even with extra whitespace
+        // if using .split(), you should use non-capturing groups (?:)
+        let separatorRegex = /(?:\s*,\s*|\s+)(?:and|or)\s+|\s*,\s*/g;
+
+        let costMatch = criteria.match(costRegex);
+        if (costMatch){
+            return 'cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1];
+        } else {
+            criteria = criteria.replace(aliasesRegex, '');
+            let terms = criteria.split(separatorRegex);
+            for (let term of terms) {
+                let typeMatch = term.match(typeRegex);
+                if (typeMatch) {
+                    types.push(typeMatch[1]);
+                    if (typeMatch[2])
+                        classes.push(typeMatch[2]);
+                } else if (classRegex.test(term)) {
+                    classes.push(term);
+                } else {
+                    // escape special characters before pushing (except dot)
+                    families.push(term.replace(specialCharactersRegex, '\\$&'));
+                }
+            }
+        }
+
+        // Create matchers
+        if (families.length > 0) { // family should be exact match
+            matchers.push('family:^(' + families.join('|').replace(whitespaceRegex, '_') + ')$');
+        }
+        if (types.length > 0) {
+            matchers.push('type:' + types.join('|').replace(whitespaceRegex, '_'));
+        }
+        if (classes.length > 0) {
+            matchers.push('class:' + classes.join('|').replace(whitespaceRegex, '_'));
+        }
+        return matchers.join(' ');
+    }
+
+    utils.generateSupportedCharactersQuery = function (criteria) {
+        if (/All characters?/i.test(criteria))
+            return null;
+        return utils.generateCriteriaQuery(criteria.replace(/ characters?$/i, ''));
+    }
+
+    utils.generateSuperSpecialQuery = function (criteria) {
+        let charactersRegex = /must consist of(?: \d)? (.*), excluding Support members/i;
+        let match = criteria.match(charactersRegex);
+        if (!match)
+            return null;
+        match[1] = match[1].replace(/ characters?$/i, '');
+        return utils.generateCriteriaQuery(match[1]);
+    }
+
+    utils.generateFamilyExclusionQuery = function (families) {
+        if (!families)
+            return null;
+        let specialCharactersRegex = /[*+?^${}()[\]\\]/g // except dot and pipe "|"
+        let query = 'notFamily:^(' + families.join('|')
+                .replace(/\s+/g, '_')
+                .replace(specialCharactersRegex, '\\$&') + ')$';
+        return query;
+    }
+
+    utils.normalizeText = function (str) {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    /**
+     * @param {string} family Family name used in window.families.
+     * @returns {Array|null} Array of unit ids that has the given family, or null if the family is not found.
+     */
+    utils.getUnitsInFamily = function (family) {
+        return utils.getReverseFamilyMap()[family] || null;
+    }
 
     /* * * * * Thumbnail control * * * * */
     
@@ -1047,15 +1151,15 @@
     utils.generateSearchParameters = function (query) {
         if (!query || query.trim().length < 2)
             return null;
-        query = query.toLowerCase().trim();
+        query = utils.normalizeText(query.toLowerCase().trim());
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class|support):(\\w+\\s{0,1}\\w+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class|support|family|notfamily):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
             return x.length > 0;
         });
         tokens.forEach(function (x) {
-            x = x.replace("_", ' ');
+            x = x.replace(/_+/g, ' ');
             var temp = x.match(regex);
             if (!temp) { // if it couldn't be parsed, treat it as string
                 result.query.push(x);
@@ -1120,6 +1224,31 @@
         if (!reverseEvoMap[to][from])
             reverseEvoMap[to][from] = [];
         reverseEvoMap[to][from].push(via);
+    };
+
+    /**
+     * @returns {Object} Reverse map (lazy-instantiated) of window.families where
+     * the keys are the family names and the values are arrays of the unit ids
+     * that have the given family name.
+     */
+    utils.getReverseFamilyMap = function () {
+        if (reverseFamilyMap)
+            return reverseFamilyMap;
+
+        reverseFamilyMap = {};
+        for (let id in window.families) {
+            id = Number(id);
+            let families = window.families[id];
+            if (!families)
+                continue;
+            for (const family of families) {
+                if (!(family in reverseFamilyMap)) {
+                    reverseFamilyMap[family] = [];
+                }
+                reverseFamilyMap[family].push(id);
+            };
+        };
+        return reverseFamilyMap;
     };
 
     var generateReverseEvoMap = function () {
