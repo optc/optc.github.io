@@ -3432,9 +3432,9 @@ window.units = [
     [ "Sasaki, Gathering of the Tobi Roppo", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1859, 709, 54, 3718, 1417, 108, 1 ],
     [ "Ulti & Page One", ["QCK", "DEX"], [[ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ]], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
     [ "Ulti & Page One, Preparations to Fight a Strong Enemy", ["QCK", "DEX"], [[ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ]], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
-    [ "Black Maria, Gathering of the Tobi Roppo", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
-    [ "Who's-Who, Gathering of the Tobi Roppo", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
-    [ "Drake, Gathering of the Tobi Roppo", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
+    [ "Black Maria, Gathering of the Tobi Roppo", "QCK", [ "Driven", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
+    [ "Who's-Who, Gathering of the Tobi Roppo", "INT", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
+    [ "Drake, Gathering of the Tobi Roppo", "INT", [ "Driven", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Charlotte Oven, Burning Fighting Spirit", "STR", [ "Powerhouse", "Fighter" ], 5, 50, 5, 5, 99, 5000000, 1513, 688, 108, null, null, null, null ],
     [ "Roronoa Zoro, Disguised Swordfighter", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 4, 99, 4000000, 1648, 706, 91, null, null, null, null ],
@@ -3812,6 +3812,14 @@ var ghostsUnits = [
     [ "[VS Unit] Shanks, Discussion Between the Yonko", "PSY", [ "Slasher", "Cerebral" ], 5, 30, 5, 3, 70, 1066998, 905, 478, 39, 1690, 1005, 85, 1 ],
     [ "[VS Unit] Whitebeard, Failed Negotiations", "INT", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2000, 1050, 75, 4444, 1750, 251, 1 ],
     [ "[VS Unit] Shanks, Failed Negotiations", "PSY", [ "Slasher", "Cerebral" ], 6, 55, 5, 5, 99, 5000000, 2000, 1050, 75, 4444, 1750, 251, 1 ],
+    [ "[Dual Unit] Ulti", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1109, 363, 59, null, null, null, 1 ],
+    [ "[Dual Unit] Page One", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1083, 384, 50, null, null, null, 1 ],
+    [ "[Dual Unit] Ulti & Page One", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
+    [ "[Dual Unit] Ulti & Page One", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
+    [ "[Dual Unit] Ulti, Preparations to Fight a Strong Enemy", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2137, 710, 112, null, null, null, 1 ],
+    [ "[Dual Unit] Page One, Preparations to Fight a Strong Enemy", "DEX", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2163, 752, 94, null, null, null, 1 ],
+    [ "[Dual Unit] Ulti & Page One, Preparations to Fight a Strong Enemy", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
+    [ "[Dual Unit] Ulti & Page One, Preparations to Fight a Strong Enemy", "DEX", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

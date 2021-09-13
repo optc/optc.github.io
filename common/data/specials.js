@@ -12296,6 +12296,47 @@ window.specials = {
     3428: {
         orb: function(p) { return p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
+    3429: {
+        chainAddition: function(p) { return 1.1; }
+    },
+    3431: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3434: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 1.75 : 0; },
+    },
+    3435: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "type",
+    },
+    3436: {
+        staticMult: function(p) { return 80; }
+    },
+    3438: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    3439: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3440: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+    },
+    3442: {
+        affinity: function(p) { return 1.75; },
+    },
+    3443: {
+        atk: function(p) { return 2; },
+        type: "type",
+    },
+    3444: {
+        status: function(p) { return p.defenseDown ? 1.75 : 1; },
+        def: function(p) { return 0.8; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -14424,6 +14465,38 @@ var ghostsSpecials = {
                 name: '3176warning'
             });
         },
+    },
+    341: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    342: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    343: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    344: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    345: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    346: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    347: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    348: {
+        status: function(p) { return 2.25; },
+        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
     },
 };
 

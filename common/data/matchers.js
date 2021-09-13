@@ -690,7 +690,7 @@ window.matchers = [
     {
         name: 'Single-target damage dealer',
         target: 'special',
-        matcher: /deals.+to one enemy/i
+        matcher: /Deals.+to one enemy/i
     },
 
     {

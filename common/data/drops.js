@@ -7460,6 +7460,14 @@ window.drops = {
         },
 
         {
+            name: 'Alliance Blitz! Assemble the Tobi Roppo',
+            thumb: 3436,
+            nakama: null,
+            gamewith: 293739,
+            'All Difficulties': [ 3436 ],
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,
