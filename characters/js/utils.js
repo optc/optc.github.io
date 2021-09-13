@@ -137,6 +137,46 @@ CharUtils.searchDropLocations = function(id) {
     return result;
 };
 
+/**
+ * @param {number|string} id Unit ID (1-based)
+ * @returns {Object[]|null} Array of objects of farmable versions of the unit
+ * with the structure {id: number, name: string, location: object}
+ */
+CharUtils.getFarmableVersions = function (id) {
+    id = Number(id);
+    let families = window.families[id];
+    if (!families)
+        return null;
+
+    let farmableVersions = [];
+    let farmableVersionsIds = new Set(); // prevent dupes
+
+    for (let family of families) {
+        let unitIds = Utils.getUnitsInFamily(family);
+        if (unitIds) {
+            unitIds.forEach(id => farmableVersionsIds.add(id));
+        }
+    };
+    farmableVersionsIds.delete(id); // don't include given unit
+
+    for (let id of farmableVersionsIds) {
+        if (!CharUtils.isFarmable(id) || Utils.searchBaseForms(id))
+            continue;
+        let name = units[id - 1].name;
+        if (name.length > 25)
+            name = name.slice(0,22) + '...';
+        CharUtils.searchDropLocations(id).forEach(function(location) {
+            farmableVersions.push({
+                uid: id,
+                name: name,
+                location: location
+            });
+        });
+    }
+
+    return farmableVersions;
+} 
+
 CharUtils.searchTandems = function(id) {
     var result = [ ];
     for (var i=0;i<tandems.length;++i) {
@@ -296,31 +336,19 @@ CharUtils.isClassBooster = function(target, id, clazz) {
 };
     
 CharUtils.hasFarmableSocket = function(id) {
-    //return false if unit has no Sockets?
+    //return false if unit has no Sockets
     var unit = window.units[id];
-    if (unit.slots<1) return farmableSocket;
+    if (unit.slots<1 || !unit.families)
+        return false;
     
-    var farmableSocket = false;
-    var ownFamily = window.families[id];
-       
-    farmableSocket = window.families.some(function(family,n){
-        if (Array.isArray(family)){ // Units with multiple characters
-            return family.some(function(duo,n){
-                if (ownFamily == duo) {
-                    var famId = n+1;
-                    return (CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId)));
-                }
-            });
+    for (let family of unit.families) {
+        let unitIds = Utils.getUnitsInFamily(family);
+        if (unitIds && unitIds.some(id => CharUtils.isFarmable(id))) {
+            return true;
         }
-        else{
-            if (ownFamily == family) {
-                var famId = n+1;
-                return (CharUtils.isFarmable(famId) || CharUtils.isFarmable(Utils.searchBaseForms(famId)));
-            }
-        }
-    });
-    
-    return farmableSocket;
+    };
+
+    return false;
 }
 
 /******************
