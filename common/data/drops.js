@@ -5977,9 +5977,19 @@ window.drops = {
             'Calm Sea': [ 3416 ]
         },
 
+        {
+            name: 'Onigashima Luffy',
+            dropID: 'treasuremap49',
+            thumb: 3443,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3443 ],
+            'Point Rewards': [ 3444 ]
+        },
+
     ],
 
-
+    
     'Ambush': [
 
         {
@@ -6539,6 +6549,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3415 ],
+        },
+
+        {
+            name: 'Charlotte Oven',
+            dropID: 'rumble16',
+            thumb: 3438,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3438 ],
         },
 
     ],

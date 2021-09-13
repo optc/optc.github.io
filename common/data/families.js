@@ -613,7 +613,7 @@ const TenguyamaHitetsu = [ "Tenguyama Hitetsu" ];
 const CharlotteCustard = [ "Charlotte Custard" ];
 const Unluckies = [ "Unluckies" ];
 const BuenaFesta = [ "Buena Festa" ];
-const PageOne = [ "Page One" ];
+const PageOne = [ "Page One", "Pay Pay" ];
 const Toko = [ "Toko" ];
 const King = [ "King" ];
 const Onimaru = [ "Onimaru" ];
@@ -638,6 +638,11 @@ const Condoriano = [ "Condoriano" ];
 const KozukiToki = [ "Kozuki Toki" ];
 const ScopperGaban = [ "Scopper Gaban" ];
 const Morgans = [ "Morgans" ];
+const Yamato = [ "Yamato" ];
+const Sasaki = [ "Sasaki" ];
+const Ulti = [ "Ulti" ];
+const BlackMaria = [ "Black Maria" ];
+const WhosWho = [ "Who's Who", "Whos Who" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -3976,6 +3981,20 @@ window.families = {
     3426: [ ...BartholomewKuma ],
     3427: [ ...BartholomewKuma ],
     3428: [ ...Arlong ],
+    3429: [ ...Yamato ],
+    3431: [ ...Sasaki ],
+    3432: [ ...Ulti, ...PageOne ],
+    3433: [ ...Ulti, ...PageOne ],
+    3434: [ ...BlackMaria ],
+    3435: [ ...WhosWho ],
+    3436: [ ...XDrake ],
+    3438: [ ...CharlotteOven ],
+    3439: [ ...RoronoaZoro ],
+    3440: [ ...VinsmokeSanji ],
+    3441: [ ...Nami ],
+    3442: [ ...Brook ],
+    3443: [ ...MonkeyDLuffy ],
+    3444: [ ...Jinbe ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

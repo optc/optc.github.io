@@ -3816,8 +3816,8 @@ var ghostsUnits = [
     [ "[Dual Unit] Page One", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1083, 384, 50, null, null, null, 1 ],
     [ "[Dual Unit] Ulti & Page One", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
     [ "[Dual Unit] Ulti & Page One", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
-    [ "[Dual Unit] Ulti, Preparations to Fight a Strong Enemy", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2137, 710, 112, null, null, null, 1 ],
-    [ "[Dual Unit] Page One, Preparations to Fight a Strong Enemy", "DEX", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2163, 752, 94, null, null, null, 1 ],
+    [ "[Dual Unit] Ulti, Preparations to Fight a Strong Enemy", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2137, 710, 112, 4273, 1450, 223, 1 ],
+    [ "[Dual Unit] Page One, Preparations to Fight a Strong Enemy", "DEX", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2163, 752, 94, 4271, 1533, 188, 1 ],
     [ "[Dual Unit] Ulti & Page One, Preparations to Fight a Strong Enemy", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
     [ "[Dual Unit] Ulti & Page One, Preparations to Fight a Strong Enemy", "DEX", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
 ];
