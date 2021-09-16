@@ -399,7 +399,7 @@ directives.addSuperSpecialQuery = function($state, $stateParams) {
     return {
         restrict: 'E',
         scope: { criteria: "=", excludedFamilies: "=" },
-        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})">Search for these characters</a>',
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for these characters</b></a>',
         link: function(scope, element, attrs) {
             scope.query = Utils.generateSuperSpecialQuery(scope.criteria);
             if (scope.query && scope.excludedFamilies)
@@ -412,7 +412,7 @@ directives.addSupportQuery = function($state, $stateParams) {
     return {
         restrict: 'E',
         scope: { criteria: "=", excludedFamilies: "=" },
-        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})">Search for supported characters</a>',
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for supported characters</b></a>',
         link: function(scope, element, attrs) {
             scope.query = Utils.generateSupportedCharactersQuery(scope.criteria);
             if (scope.query && scope.excludedFamilies)

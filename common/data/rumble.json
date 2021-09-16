@@ -78195,6 +78195,7 @@
               "attributes": [ "Damage Over Time" ],
               "duration": 21,
               "level": 1,
+              "chance": 100,
               "effect": "hinderance",
               "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "enemies" ] }

@@ -11550,12 +11550,12 @@ window.specials = {
         type: "type",
     },
     3333: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Fighter") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "class",
         atkbase: function(p) { return p.slot == p.sourceSlot ? Math.min(p.rcvCounter*100,1000) : 0; }
     },
     3334: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Fighter") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "class",
         atkbase: function(p) { return p.slot == p.sourceSlot ? Math.min(p.rcvCounter*100,1000) : 0; }
     },

@@ -906,13 +906,13 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'special',
-        matcher: /(reduces|removes).+bind.+duration/i
+        matcher: /(reduces|removes)( bind|.+, bind|.+and bind).+duration/i
     },
 
     {
         name: 'Despair reducers',
         target: 'special',
-        matcher: /(reduces|removes).+despair.+duration/i
+        matcher: /(reduces|removes)( despair|.+, despair|.+and despair).+duration/i
     },
     
     {
@@ -943,6 +943,12 @@ window.matchers = [
         name: 'Stun reducers',
         target: 'special',
         matcher: /(reduces|removes).+stun.+duration/i
+    },
+    
+    {
+        name: 'Slot Bind reducers',
+        target: 'special',
+        matcher: /(reduces|removes).+Slot Bind.+duration/i 
     },
 
     {
