@@ -357,6 +357,10 @@
             case 9048: return '../res/skullJack.png'; break;
             case 'skullCarrot':
             case 9049: return '../res/skullCarrot.png'; break;
+            case 'skullJack2':
+            case 9050: return '../res/skullJack2.png'; break;
+            case 'skullLinlin':
+            case 9051: return '../res/skullLinlin.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';

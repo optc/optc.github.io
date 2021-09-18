@@ -1023,7 +1023,7 @@ window.drops = {
         },
 
         {
-            name: 'Land of Wano: Kuri',
+            name: 'Land of Wano Country',
             dropID: 'story44',
             shortName: 'Wano 1',
             thumb: 2780,
@@ -3940,10 +3940,8 @@ window.drops = {
             global: true,
             nakama: 6338200,
             gamewith: null,
-            condition: 'Drops Manual, Tomes, Proof of Friendship, lobster and limit break bottles.',
-            showManual: true,
+            condition: 'Drops Manual, Tomes, Proof of Friendship, lobsters, manuals for Local Sea Monster and limit break bottles.',
             'Chopperman Missions': [ 3383 ],
-            'All Difficulties': [ -3383 ],
         },
 
         {
@@ -3952,8 +3950,7 @@ window.drops = {
             thumb: 3399,
             nakama: null,
             gamewith: null,
-            showManual: true,
-            'All Difficulties': [ -3399 ],
+            'All Difficulties': [ 3399 ],
         },
 
     ],
@@ -6396,6 +6393,16 @@ window.drops = {
             gamewith: 148537,
             'All Difficulties': [ 3419 ],
             'Kizuna Exchange': [ 9049 ],
+        },
+
+        {
+            name: 'Olin',
+            dropID: 'kizuna27',
+            thumb: 3449,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 3449 ],
+            'Kizuna Exchange': [ 9050, 9051 ],
         },
 
     ],
