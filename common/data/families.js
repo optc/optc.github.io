@@ -3982,6 +3982,7 @@ window.families = {
     3427: [ ...BartholomewKuma ],
     3428: [ ...Arlong ],
     3429: [ ...Yamato ],
+    3430: [ ...Yamato ],
     3431: [ ...Sasaki ],
     3432: [ ...Ulti, ...PageOne ],
     3433: [ ...Ulti, ...PageOne ],

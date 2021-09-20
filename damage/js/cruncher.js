@@ -633,8 +633,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = $scope.data.superTypeDEX ? 0.75 : 0.5;
         
         if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
-        if ([3070].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3070].turnedOn[teamSlot]) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
-        if ([3071].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
+        if ([3070, 3071, 3369].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
             if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
@@ -663,10 +662,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         var affinityPlusTemp = 0; //conditional goes here
         plusSpecials.forEach(function(plusSpecial) {
-            if(plusSpecial.hasOwnProperty('affinityPlus'))
-                if(plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > affinityPlusTemp) affinityPlusTemp = plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+            if(plusSpecial.hasOwnProperty('affinityPlus')){
+                if(plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(teamSlot))) > affinityPlusTemp) affinityPlusTemp = plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(teamSlot)));
+            }
         });
-        affinityMult += affinityPlusTemp;
+        affinityMult = affinityMult == 1 ? affinityMult : affinityMult + affinityPlusTemp;
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
@@ -794,7 +794,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyChainAndBonusMultipliers = function(damage,modifiers,type) {
         
-        var currentMax = -1, currentResult = null, addition = 0.0, additionPlus = 0.0;
+        var currentMax = -1, currentResult = null, addition = 0.0, additionPlus = 0.0, captainAddition = 0.0;
         if(shipBonus.bonus.name=="Donquixote Pirates Ship - Special ACTIVATED"){
             addition = 0.2
         }
@@ -809,12 +809,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         plusSpecials.forEach(function(special){
             if(special.hasOwnProperty('chainAdditionPlus')){
                 var params = getParameters(special.sourceSlot); params["sourceSlot"] = special.sourceSlot;
-                if(additionPlus<special.chainAdditionPlus(params)){
+                if(additionPlus<special.chainAdditionPlus(params) && addition != 0){
                     additionPlus = special.chainAdditionPlus(params);
                 }
             }
         });
-        addition += additionPlus;
+        captChain.forEach(function(chainCaptain){
+            var params = getParameters(chainCaptain.sourceSlot); params["sourceSlot"] = chainCaptain.sourceSlot;
+            if (chainCaptain.hasOwnProperty('chainAddition')){
+                captainAddition += chainCaptain.chainAddition(params);
+            }
+        });
+        addition += additionPlus + captainAddition;
         
         /* if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
             addition = 0.5;
@@ -863,7 +869,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 });
                 if(special.chain(params[n]) == 1) chainUpgrade = 0;
-
+                
                 var chainMultiplier = getChainMultiplier(special.chain(params[n]) + chainUpgrade, modifiers.slice(0,n), chainModifier, params[n], damage);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
@@ -1004,6 +1010,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         affinityMultiplier = [ ];
         atkbase = [ ];
         captAffinityMultiplier = [ ];
+        captChain = [ ];
         staticMultiplier = [ ];
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
@@ -1028,6 +1035,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 plusSpecials.push({ sourceSlot: data.sourceSlot, atkPlus: data.atkPlus });
             if (data.hasOwnProperty('orbPlus'))
                 plusSpecials.push({ sourceSlot: data.sourceSlot, orbPlus: data.orbPlus });
+            if (data.hasOwnProperty('affinityPlus'))
+                plusSpecials.push({ sourceSlot: data.sourceSlot, affinityPlus: data.affinityPlus });
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('chainMultiplication'))
@@ -1040,6 +1049,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))
                 captAffinityMultiplier.push({ sourceSlot: data.sourceSlot, captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
+            if (data.hasOwnProperty('chainAddition'))
+                captChain.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -1089,8 +1100,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
             }
             if ([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
-            if ([3070].indexOf(unit.number + 1) != -1 && teamSlot == 1 && window.specials[3070].turnedOn[teamSlot]) affinityMultiplier = affinityMultiplier;
-            if ([3071].indexOf(unit.number + 1) != -1 && teamSlot == 1 && window.specials[3071].turnedOn[teamSlot]) affinityMultiplier = affinityMultiplier;
+            if ([3070, 3071, 3369].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) affinityMultiplier = affinityMultiplier;
             
             if ($scope.data.effect == 'Kizuna Clash [Global]'){
                 if ([ 5314, 5316, 3301, 5315, 5317, 3302 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;

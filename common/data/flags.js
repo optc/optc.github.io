@@ -3396,6 +3396,7 @@ window.flags = {
     3427: { rr: 1, rro: 1, lrr: 1, pflrr: 1, inkable: 1 },
     3428: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     3429: { rr: 1, rro: 1, lrr: 1, superlrr: 1, inkable: 1 },
+    3430: { rr: 1, rro: 1, lrr: 1, superlrr: 1, inkable: 1 },
     3431: { rr: 1, rro: 1 },
     3432: { rr: 1, rro: 1 },
     3433: { rr: 1, rro: 1, inkable: 1 },

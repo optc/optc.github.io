@@ -3428,7 +3428,7 @@ window.aliases = {
     3427: [ 'バーソロミュー・くま 圧縮された大気の行く末', '', 'Legend Kuma', 'Good Boy', 'Rumble Kuma', 'PR Kuma' ],
     3428: [ 'アーロン 魚人族の脅威', '', 'Rumble Arlong', 'Limited Arlong', 'Secret Arlong' ],
     3429: [ 'ヤマト', '', 'Legend Yamato' ],
-    3430: [ '', '', '' ],
+    3430: [ '', '', 'Legend Yamato', 'Kaido\'s Daughter' ],
     3431: [ 'ササキ 集結する“飛び六胞”', '', '' ],
     3432: [ 'うるティ＆ページワン', '', 'Ulti&Page One', 'Ulti and Page One', 'Ulti Page One', 'UltiPage One', 'Page One&Ulti', 'Page OneUlti' ],
     3433: [ 'うるティ＆ページワン 強敵への臨戦態勢', '', 'Ulti&Page One', 'Ulti and Page One', 'Ulti Page One', 'UltiPage One', 'Page One&Ulti', 'Page OneUlti' ],

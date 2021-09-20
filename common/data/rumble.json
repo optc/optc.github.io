@@ -85864,6 +85864,261 @@
         {
           "effects": [
             {
+              "attributes": [ "ATK" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "ATK" ],
+              "condition": { "count": 5, "stat": "hit", "type": "trigger" },
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "[INT]" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 2 }
+            },
+            {
+              "override": { "level": 1 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 3 }
+            },
+            {
+              "override": { "level": 1 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 4 }
+            },
+            {
+              "override": { "level": 1 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 5 }
+            },
+            {
+              "override": { "level": 2 }
+            }
+          ]
+        }
+      ],
+      "id": 3430,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "resilience": [
+        {
+          "attribute": "Action Bind",
+          "chance": 100,
+          "type": "debuff"
+        },
+        {
+          "attribute": "[PSY]",
+          "percentage": 30,
+          "type": "damage"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "attributes": [ "Half Stats" ],
+              "chance": 50,
+              "duration": 11,
+              "effect": "hinderance",
+              "range": { "direction": "radial", "size": "medium" },
+              "targeting": { "targets": [ "enemies" ] }
+            },
+            {
+              "amount": 3,
+              "effect": "damage",
+              "targeting": { "count": 2, "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
+              "attributes": [ "ATK" ],
+              "duration": 10,
+              "effect": "buff",
+              "level": 5,
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 55, "duration": 12 }
+            },
+            {
+              "override": { "amount": 3.2 }
+            },
+            {
+              "override": { "level": 5 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 60, "duration": 13 }
+            },
+            {
+              "override": { "amount": 3.4 }
+            },
+            {
+              "override": { "level": 6 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 65, "duration": 14 }
+            },
+            {
+              "override": { "amount": 3.6 }
+            },
+            {
+              "override": { "level": 6 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 70, "duration": 15 }
+            },
+            {
+              "override": { "amount": 3.8 }
+            },
+            {
+              "override": { "level": 7 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 75, "duration": 16 }
+            },
+            {
+              "override": { "amount": 4 }
+            },
+            {
+              "override": { "level": 7 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 80, "duration": 17 }
+            },
+            {
+              "override": { "amount": 4.2 }
+            },
+            {
+              "override": { "level": 8 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 85, "duration": 18 }
+            },
+            {
+              "override": { "amount": 4.4 }
+            },
+            {
+              "override": { "level": 8 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 90, "duration": 19 }
+            },
+            {
+              "override": { "amount": 4.6 }
+            },
+            {
+              "override": { "level": 9 }
+            }
+          ]
+        },
+        {
+          "cooldown": 28,
+          "effects": [
+            {
+              "override": { "chance": 100, "duration": 20 }
+            },
+            {
+              "override": { "amount": 5 }
+            },
+            {
+              "override": { "level": 10 }
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 163,
+        "rumbleType": "ATK",
+        "spd": 186
+      },
+      "target": {
+        "criteria": "near"
+      }
+    },
+    {
+      "ability": [
+        {
+          "effects": [
+            {
               "attributes": [ "HP" ],
               "effect": "buff",
               "level": 1,

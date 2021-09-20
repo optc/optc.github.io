@@ -1767,32 +1767,6 @@ window.specials = {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.75 : 1; },
         type: "type"
     },
-    1231: {
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[1231].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Smoker is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '1231warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[1231].turnedOn = false;
-        }
-    },
-    1232: {
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[1232].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Smoker is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '1232warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[1232].turnedOn = false;
-        }
-    },
     1233: {//Tashigi
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.5 : 1; }
     },
@@ -5327,32 +5301,10 @@ window.specials = {
     2136: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2136].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Crocodile is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2136warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[2136].turnedOn = false;
-        }
     },
     2137: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
         type: "type",
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2137].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Crocodile is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2137warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[2137].turnedOn = false;
-        }
     },
     2138: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 2 : 1; },
@@ -6957,32 +6909,6 @@ window.specials = {
             });
         }
     },
-    2415: {
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2415].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Pica is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2415warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[2415].turnedOn = false;
-        }
-    },
-    2416: {
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2416].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Pica is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2416warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[2416].turnedOn = false;
-        }
-    },
     2419: {
         turnedOn: false,
         delay: function(p) { return 2; },
@@ -8015,19 +7941,6 @@ window.specials = {
     2630: {
         atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
         type: "type"
-    },
-    2632: {
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2632].turnedOn = true;
-            p.scope.notify({
-                text: 'Only affects captain damage if Garp is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2632warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[2632].turnedOn = false;
-        }
     },
     2633: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.75 : 1; },
@@ -11312,21 +11225,7 @@ window.specials = {
         type: "condition"
     },
     3289: {
-        turnedOn: false,
-        onActivation: function(p) {
-            var levels = [0.7, 0];
-            var n = (levels.indexOf(window.specials[3289].multiplier) + 1) % levels.length;
-            window.specials[3289].multiplier = levels[n];
-            window.specials[3289].turnedOn = true;
-            p.scope.notify({
-                text: '' + levels[n] + ' Chain boost. To ' + levels[(n + 1) % levels.length] + ' Chain boost, disable and re-enable this special. Only affects captain damage if Nami is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '3289warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[3289].turnedOn = false;
-        },
-        chainAddition: function(p) { return window.specials[3289].multiplier; }
+        chainAddition: function(p) { return 0.7; }
     },
     3290: {
         def: function(p) { return 0.5; },
@@ -11548,6 +11447,19 @@ window.specials = {
     3329: {
         atk: function(p) { return 1.75; },
         type: "type",
+    },
+    3332: {
+        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     3333: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
@@ -11826,7 +11738,7 @@ window.specials = {
     },
     3371: {
         chainAdditionPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.2 ? 0.2 : 0; }, 
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
         onActivation: function(p) {
             var levels = [0.2, 1.0];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -12203,8 +12115,8 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2 : 0; },
     },
     3416: {
-        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.25 : 0; }, 
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -12218,17 +12130,6 @@ window.specials = {
     },
     3417: {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
-            p.scope.notify({
-                text: 'Additionaly affects captain damage if Carrot is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
-        onDeactivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
-        }
     },
     3418: {
         affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
@@ -12270,7 +12171,7 @@ window.specials = {
     },
     3424: {
         chainAdditionPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.2 ? 0.2 : 0; }, 
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
         onActivation: function(p) {
             var levels = [0.2, 1.0];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -12298,6 +12199,9 @@ window.specials = {
     },
     3429: {
         chainAddition: function(p) { return 1.1; }
+    },
+    3430: {
+        chainAddition: function(p) { return 1.3; }
     },
     3431: {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },

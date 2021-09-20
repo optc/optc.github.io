@@ -1074,7 +1074,7 @@ window.matchers = [
     {
         name: 'Chain Multiplier Limit and Chain Lock reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Chain Multiplier Limit/i 
+        matcher: /(removes|reduces)[^.]+Chain Multiplier Limit/i 
     },
     
     {

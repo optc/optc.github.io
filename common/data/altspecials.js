@@ -139,6 +139,9 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3369: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
     3391: {
         affinity: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
@@ -160,6 +163,9 @@ window.altspecials = {
         },
     },
     3429: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
+    3430: {
         chainMultiplication: function(p) { return 1.25; },
     },
 };
