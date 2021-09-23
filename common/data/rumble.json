@@ -85867,14 +85867,14 @@
               "attributes": [ "ATK" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "[INT]" ] }
+              "targeting": { "targets": [ "[PSY]" ] }
             },
             {
               "attributes": [ "ATK" ],
               "condition": { "count": 5, "stat": "hit", "type": "trigger" },
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "[INT]" ] }
+              "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
         },

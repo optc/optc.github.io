@@ -3428,7 +3428,7 @@ window.units = [
     [ "Bartholomew Kuma, Path of Atmospheric Compressed", "STR", [ "Powerhouse", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 2164, 769, 75, 4328, 1539, 149, 1 ],
     [ "Arlong, Menacing Fishman", "STR", [ "Powerhouse", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1965, 720, 132, 3930, 1440, 265, 1 ],
     [ "Yamato", "INT", [ "Driven", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2132, 809, 92, 4263, 1617, 183, 1 ],
-    [ "Yamato, Kaido's Son", "PSY", [ "Free Spirit", "Striker" ], "6+", 65, 4, 5, 99, 5000000, 2181, 854, 132, 4362, 1708, 263, null ],
+    [ "Yamato, Kaido's Son", "PSY", [ "Free Spirit", "Striker" ], "6+", 65, 4, 5, 99, 5000000, 2181, 854, 132, 4362, 1708, 263, 1 ],
     [ "Sasaki, Gathering of the Tobi Roppo", "DEX", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1859, 709, 54, 3718, 1417, 108, 1 ],
     [ "Ulti & Page One", ["QCK", "DEX"], [[ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ]], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
     [ "Ulti & Page One, Preparations to Fight a Strong Enemy", ["QCK", "DEX"], [[ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ]], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
@@ -3443,12 +3443,12 @@ window.units = [
     [ "Brook, Disguised Musician", "INT", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1488, 700, 118, 2977, 1401, 237, 1 ],
     [ "Monkey D. Luffy, Disguised Strawhat", "INT", [ "Fighter", "Free Spirit" ], 5, 60, 4, 1, 99, 5000000, 1273, 569, 98, 3182, 1421, 246, 1 ],
     [ "Jinbe, Disguised Helmsman", "DEX", [ "Free Spirit", "Powerhouse" ], 5, 30, 4, 4, 99, 5000000, 1382, 558, 87, 3454, 1396, 209, 1 ],
-    [ "Nico Robin, Disguised Archaeologist", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 2000000, 1281, 599, 169, null, null, null, null ],
-    [ "Chopper & Usopp, Disguised Doctor and Sniper", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1388, 567, 185, null, null, null, null ],
-    [ "Franky, Disguised Shipwright", "DEX", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1601, 633, 118, null, null, null, null ],
-    [ "Jack, Boastful Mammoth", "STR", [ "Striker", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 1761, 611, 135, 3928, 1681, 288, null ],
-    [ "O-lin, Yonko's Preparation", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, 4, 99, 5000000, 1388, 733, 71, null, null, null, null ],
-    [ "Oiran O-lin", "INT", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1424, 845, 76, null, null, null, null ],
+    [ "Nico Robin, Disguised Archaeologist", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1281, 599, 169, 2886, 1432, 271, 1 ],
+    [ "Chopper & Usopp, Disguised Doctor and Sniper", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1388, 567, 185, 2575, 1412, 337, 1 ],
+    [ "Franky, Disguised Shipwright", "DEX", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1601, 633, 118, 3043, 1488, 235, 1 ],
+    [ "Jack, Boastful Mammoth", "STR", [ "Striker", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 1761, 611, 135, 3928, 1681, 288, 1 ],
+    [ "O-lin, Yonko's Preparation", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, 4, 99, 5000000, 1388, 733, 71, 3746, 1512, 101, 1 ],
+    [ "Oiran O-lin", "INT", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1424, 845, 76, 4095, 1597, 122, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

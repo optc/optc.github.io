@@ -11971,6 +11971,7 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 2 : 1; },
     },
     3398: {
+        delay: function(p) { return 1; },
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1; },
         type: "type",
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1; },
