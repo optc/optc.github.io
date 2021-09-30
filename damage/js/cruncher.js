@@ -60,6 +60,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var currentDefense = 0;
     var isDefenseDown = false;
     var isDelayed = false;
+    var isNegative = false;
+    var isPoisoned = false;
     var katakuri = false;
 
     var specialsCombinations = [ ], chainSpecials = [ ];
@@ -1273,6 +1275,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             katakuri = false;
         
         isDelayed = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('delay')) ? x.delay(paramsDelay) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); }) || katakuri;
+        isPoisoned = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('poison')) ? x.poison(paramsDelay) > 0 : false});
+        isNegative = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('negative')) ? x.negative(paramsDelay) > 0 : false});
         
         enabledEffects = [ ];
         
@@ -1451,6 +1455,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             percHP: $scope.data.percHP,
             defenseDown: isDefenseDown,
             delayed: isDelayed,
+            poisoned: isPoisoned,
+            negative: isNegative,
             data: team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,

@@ -12128,6 +12128,33 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 3.75 : 1; },
         hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
     },
+    3451: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
+    3452: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.25 : 1; },
+    },
+    3453: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 4 : 1)*(p.negative ? 1.3 : p.delayed || p.defenseDown || p.poisoned ? 1.25 : 1); },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.3 : 1; },
+    },
+    3454: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 4 : 1)*(p.negative ? 1.3 : p.delayed || p.defenseDown || p.poisoned ? 1.25 : 1); },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.3 : 1; },
+    },
+    3455: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    3456: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; },
+    },
+    3457: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

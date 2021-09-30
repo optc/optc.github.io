@@ -502,6 +502,30 @@ var ghostsAltSpecials = {
     239:{
         affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? 1.2 : 1; },
     },
+    240: {
+        negative: function(p) { return 1; },
+    },
+    241: {
+        negative: function(p) { return 1; },
+    },
+    242: {
+        negative: function(p) { return 1; },
+    },
+    243: {
+        negative: function(p) { return 1; },
+    },
+    244: {
+        negative: function(p) { return 1; },
+    },
+    245: {
+        negative: function(p) { return 1; },
+    },
+    246: {
+        negative: function(p) { return 1; },
+    },
+    247: {
+        negative: function(p) { return 1; },
+    },
     276: {
         chainMultiplication: function(p) { return 1.25; },
     },

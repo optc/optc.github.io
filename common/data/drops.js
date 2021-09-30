@@ -7494,6 +7494,14 @@ window.drops = {
         },
 
         {
+            name: 'Halloween Live Craze!!',
+            thumb: 3457,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3457 ],
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,

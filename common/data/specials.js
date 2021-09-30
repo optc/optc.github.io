@@ -20,6 +20,9 @@ window.specials = {
     34: {
         def: function(p) { return 0; }
     },
+    58: {
+        poison: function(p) { return 99; }
+    },
     127: {
         def: function(p) { return 0.5; }
     },
@@ -45,6 +48,9 @@ window.specials = {
     210: {
         atk: function(p) { return p.unit.type == "INT" ? 2 : 1; },
         type: "type"
+    },
+    215: {
+        poison: function(p) { return 99; }
     },
     222: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
@@ -114,6 +120,12 @@ window.specials = {
     382: {
         def: function(p) { return 0.5; }
     },
+    383: {
+        poison: function(p) { return 99; }
+    },
+    384: {
+        poison: function(p) { return 99; }
+    },
     385: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
         type: "class"
@@ -123,10 +135,12 @@ window.specials = {
         type: "class"
     },
     391: {
-        def: function(p) { return 0.2; }
+        def: function(p) { return 0.2; },
+        poison: function(p) { return 1; }
     },
     392: {
-        def: function(p) { return 0.2; }
+        def: function(p) { return 0.2; },
+        poison: function(p) { return 1; }
     },
     395: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain], p.effectName, p); }
@@ -196,6 +210,12 @@ window.specials = {
     },
     434: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain], p.effectName, p); }
+    },
+    437: {
+        poison: function(p) { return 1; }
+    },
+    438: {
+        poison: function(p) { return 1; }
     },
     450: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -268,6 +288,12 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
         type: "type"
     },
+    494: {
+        poison: function(p) { return 99; }
+    },
+    496: {
+        poison: function(p) { return 99; }
+    },
     499: {
         delay: function(p) { return 1; },
     },
@@ -284,11 +310,13 @@ window.specials = {
     },
     509: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
-        type: "class"
+        type: "class",
+        poison: function(p) { return 99; }
     },
     510: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
-        type: "class"
+        type: "class",
+        poison: function(p) { return 99; }
     },
     511: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
@@ -676,6 +704,9 @@ window.specials = {
     766: {
         delay: function(p) { return 1; },
     },
+    769: {
+        poison: function(p) { return 99; }
+    },
     770: {
         atk: function(p) { return p.delayed > 0 ? 1.3 : 1; },
         type: "condition",
@@ -802,9 +833,8 @@ window.specials = {
         type: "type"
     },
     827: {
-        atk: function(p) { return 1.05; },
+        atk: function(p) { return p.poisoned ? 1.05 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     828: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[828].multiplier : 1; },
@@ -846,11 +876,13 @@ window.specials = {
     },
     837: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
-        type: "class"
+        type: "class",
+        poison: function(p) { return 99; }
     },
     838: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
-        type: "class"
+        type: "class",
+        poison: function(p) { return 99; }
     },
     839: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
@@ -1198,14 +1230,12 @@ window.specials = {
         type: "class"
     },
     928: {
-        atk: function(p) { return 1.3; },
+        atk: function(p) { return p.poisoned ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     929: {
-        atk: function(p) { return 1.3; },
+        atk: function(p) { return p.poisoned ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     940: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
@@ -1418,14 +1448,14 @@ window.specials = {
         staticMult: function(p) { return 55; }
     },
     1055: {
+        poison: function(p) { return 99; },
         atk: function(p) { return 1.4; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been STRONGLY Poisoned."
     },
     1056: {
+        poison: function(p) { return 99; },
         atk: function(p) { return 1.4; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been STRONGLY Poisoned."
     },
     1059: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); }
@@ -1617,6 +1647,9 @@ window.specials = {
     1143: {
         delay: function(p) { return 1; },
     },
+    1149: {
+        poison: function(p) { return 99; }
+    },
     1153: {
         def: function(p) { return 0; },
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1},
@@ -1625,6 +1658,12 @@ window.specials = {
     1154: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 1.5 : 1},
         type: "class"
+    },
+    1158: {
+        poison: function(p) { return 99; }
+    },
+    1159: {
+        poison: function(p) { return 99; }
     },
     1164: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); },
@@ -2061,6 +2100,9 @@ window.specials = {
             window.specials[1330].turnedOn = false;
         }
     },
+    1334: {
+        poison: function(p) { return 99; }
+    },
     1335: {
         chainAddition: function(p) { return 0.5; }
     },
@@ -2170,9 +2212,11 @@ window.specials = {
     },
     1373: {
         delay: function(p) { return 1; },
+        poison: function(p) { return 99; }
     },
     1374: {
         delay: function(p) { return 1; },
+        poison: function(p) { return 99; }
     },
     1375: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
@@ -3043,6 +3087,9 @@ window.specials = {
     1623: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p); }
     },
+    1624: {
+        poison: function(p) { return 99; }
+    },
     1626: {
         atk: function(p) { return p.unit.type == "PSY" ? 1.5 : 1; },
         type: "type"
@@ -3081,14 +3128,12 @@ window.specials = {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.25, [p.friendCaptain, p.captain], p.effectName, p); }
     },
     1636: {
-        atk: function(p) { return 1.3; },
+        atk: function(p) { return p.poisoned ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     1637: {
-        atk: function(p) { return 1.3; },
+        atk: function(p) { return p.poisoned ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     1640: {
         turnedOn: false,
@@ -3100,9 +3145,11 @@ window.specials = {
         }
     },
     1641: {
-        atk: function(p) { return 1.2; },
+        atk: function(p) { return p.poisoned ? 1.2 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
+    },
+    1642: {
+        poison: function(p) { return 99; }
     },
     1643: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
@@ -3322,6 +3369,12 @@ window.specials = {
     },
     1696: {
         orb: function(p) { return (p.unit.class.has("Striker")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); }	
+    },
+    1697: {
+        poison: function(p) { return 99; }
+    },
+    1698: {
+        poison: function(p) { return 99; }
     },
     1699: {
         chainAddition: function(p) { return 0.3; }
@@ -3571,7 +3624,7 @@ window.specials = {
     1769: {
         delay: function(p) { return 1; },
         atk: function(p) { return (p.delayed > 0 && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
-        type: "condition",
+        type: "condition"
     },
     1770: {
         delay: function(p) { return 1; },
@@ -3770,10 +3823,12 @@ window.specials = {
         type: "type"
     },
     1829: {
-        orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); }	
+        orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },	
+        poison: function(p) { return 99; }
     },
     1830: {
-        orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); }	
+        orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        poison: function(p) { return 99; }
     },
     1831: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p); }
@@ -5311,15 +5366,19 @@ window.specials = {
         type: "class",
     },
     2139: {
-        atk: function(p) { return window.specials[2139].multiplier; },
+        atk: function(p) { return p.poisoned ? window.specials[2139].multiplier : 1; },
+        poison: function(p) { return window.specials[2139].multiplier2; },
         onActivation: function(p) {
             window.specials[2139].multiplier = 1;
             if (p.captain.class.has("Powerhouse")) {
                 window.specials[2139].multiplier = 1.75;
             }
+            window.specials[2139].multiplier2 = 0;
+            if (p.captain.type == "PSY" || p.captain.type == "INT") {
+                window.specials[2139].multiplier2 = 99;
+            }
         },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Toxic."
     },
     2140: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2140].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
@@ -5407,8 +5466,17 @@ window.specials = {
         }
     },
     2159: {
-        delay: function(p) { return 1; },
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
+        poison: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 99 : 0; },
+        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Poison", "Delay", "Both Debuffs"][levels[n]] + '. To switch to ' + ["Poison", "Delay", "Both Debuffs"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     2160: {
         turnedOn: [ false, false, false, false, false, false ],
@@ -6246,7 +6314,8 @@ window.specials = {
         type: "class"
     },
     2305: {
-        atk: function(p) { return window.specials[2305].multiplier ? 1.75 : 1; },
+        poison: function(p) { return 99; },
+        atk: function(p) { return window.specials[2305].multiplier ? p.poisoned ? 1.75 : 1 : 1; },
         type: "condition",
         onActivation: function(p) {
             window.specials[2305].multiplier = false;
@@ -6255,11 +6324,10 @@ window.specials = {
                     window.specials[2305].multiplier = true;
                 }
             }
-        },
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
+        }
     },
     2306: {
-        atk: function(p) { return window.specials[2306].multiplier ? 1.75 : 1; },
+        atk: function(p) { return window.specials[2306].multiplier && p.poisoned ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
             window.specials[2306].multiplier = false;
@@ -6269,7 +6337,6 @@ window.specials = {
                 }
             }
         },
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     2309: {
         turnedOn: false,
@@ -6511,8 +6578,9 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
     2353: {
+        poison: function(p) { return 99; },
         def: function(p) { return (window.specials[2353].multiplier == 1.75) ? 0 : 1; },
-        atk: function(p) { return window.specials[2353].multiplier; },
+        atk: function(p) { return p.poisoned ? window.specials[2353].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
             var n = (window.specials[2353].multiplier == 1.5 ? 1 : 0);
@@ -6524,8 +6592,9 @@ window.specials = {
         },
     },
     2354: {
+        poison: function(p) { return 99; },
         def: function(p) { return (window.specials[2354].multiplier == 1.75) ? 0 : 1; },
-        atk: function(p) { return window.specials[2354].multiplier; },
+        atk: function(p) { return p.poisoned ? window.specials[2354].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
             var n = (window.specials[2354].multiplier == 1.5 ? 1 : 0);
@@ -7157,6 +7226,24 @@ window.specials = {
         affinity: function(p) { return 2; },
         warning: "Selected special (%name%) assumes that the Captain or Friend Captain have a TND orb."
     },
+    2453: {
+        poison: function(p) { return (window.specials[2453].turnedOn) ? 99 : 1; },
+        onActivation: function(p) {
+            window.specials[2453].turnedOn = p.classCount.Powerhouse == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2453].turnedOn = false;
+        }
+    },
+    2454: {
+        poison: function(p) { return (window.specials[2454].turnedOn) ? 99 : 0; },
+        onActivation: function(p) {
+            window.specials[2454].turnedOn = p.classCount.Powerhouse == 6 ? true : false;
+        },
+        onDeactivation: function(p) {
+            window.specials[2454].turnedOn = false;
+        }
+    },
     2456: {
         chainAddition: function(p) { return 0.3; }
     },
@@ -7319,6 +7406,12 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[2479].turnedOn = false;
         }
+    },
+    2480: {
+        poison: function(p) { return 99; },
+    },
+    2481: {
+        poison: function(p) { return 99; },
     },
     2484: {
         atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2484].multiplier : 1; },
@@ -8413,14 +8506,14 @@ window.specials = {
         }
     },
     2732: {
-        atk: function(p) { return 1.3; },
+        poison: function(p) { return 99; },
+        atk: function(p) { return p.poisoned ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     },
     2733: {
-        atk: function(p) { return 1.3; },
+        poison: function(p) { return 99; },
+        atk: function(p) { return p.poisoned ? 1.3 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned."
     },
     2734: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2734].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
@@ -9840,7 +9933,8 @@ window.specials = {
         },
     },
     3022: {
-        status: function(p) { return window.specials[3022].turnedOn ? 1.75 : 1; },
+        poison: function(p) { return 99; },
+        status: function(p) { return window.specials[3022].turnedOn && p.poisoned ? 1.75 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[3022].turnedOn = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT");
@@ -10563,9 +10657,9 @@ window.specials = {
         },
     },
     3160: {
-        atk: function(p) { return 1.5; },
+        poison: function(p) { return 99; },
+        atk: function(p) { return p.poisoned ? 1.5 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     3161: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); },
@@ -11042,9 +11136,8 @@ window.specials = {
         },
     },
     3251: {
-        atk: function(p) { return 1.75; },
+        atk: function(p) { return p.poisoned ? 1.75 : 1; },
         type: "condition",
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned, STRONGLY Poisoned OR INFLICTED WITH tOXIC."
     },
     3256: {
         chainAddition: function(p) { return 0.8; }
@@ -11148,6 +11241,7 @@ window.specials = {
         },
     },
     3277: {
+        poison: function(p) { return 99; },
         atk: function(p) { return window.specials[3277].multiplier; },
         affinity: function(p) { return 2; },
         type: "type",
@@ -11163,6 +11257,7 @@ window.specials = {
         },
     },
     3278: {
+        poison: function(p) { return 99; },
         atk: function(p) { return window.specials[3278].multiplier; },
         affinity: function(p) { return 2; },
         type: "type",
@@ -12051,7 +12146,8 @@ window.specials = {
         },
     },
     3408: {
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        poison: function(p) { return 99; },
+        status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 1.75, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -12061,7 +12157,6 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
-        warning: "Selected special (%name%) assumes that the enemy has been poisoned or STRONGLY Poisoned."
     },
     3409: {
         atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
@@ -12264,6 +12359,104 @@ window.specials = {
     },
     3450: {
         orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3451: {
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1000 : 0; },
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    3452: {
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1000 : 0; },
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    3453: {
+        status: function(p) { return p.defenseDown || p.poisoned || p.delayed || p.negative ? 2 : 1; },
+        negative: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2; },
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.5) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0;
+            else return 0;
+        }, 
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0.5, 3.25];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var m = (p.percHP <= 80 ? 10 : 0);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = m;
+            p.scope.notify({
+                text: 'HP ' + (m == 0 ? 'above' : 'below') + ' 80%, using the ' + n + ' turn debuff.' + 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3454: {
+        status: function(p) { return p.defenseDown || p.poisoned || p.delayed || p.negative ? 2 : 1; },
+        negative: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2; },
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.5) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0;
+            else return 0;
+        }, 
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0.5, 3.25];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var m = (p.percHP <= 80 ? 10 : 0);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = m;
+            p.scope.notify({
+                text: 'HP ' + (m == 0 ? 'above' : 'below') + ' 80%, using the ' + n + ' turn debuff.' + 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3455: {
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3456: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1.75, 2.25];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3457: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: '5279warning'
+            });
+        },
     },
 };
 
@@ -12482,6 +12675,7 @@ var ghostsSpecials = {
         orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     50:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12489,6 +12683,7 @@ var ghostsSpecials = {
         },
     },
     51:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12496,6 +12691,7 @@ var ghostsSpecials = {
         },
     },
     52:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12503,6 +12699,7 @@ var ghostsSpecials = {
         },
     },
     53:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12510,6 +12707,7 @@ var ghostsSpecials = {
         },
     },
     54:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12517,6 +12715,7 @@ var ghostsSpecials = {
         },
     },
     55:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12524,6 +12723,7 @@ var ghostsSpecials = {
         },
     },
     56:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
@@ -12531,6 +12731,7 @@ var ghostsSpecials = {
         },
     },
     57:{
+        poison: function(p) { return 99; },
         affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn ? (p.unit.type == "QCK" || p.unit.type == "INT") ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {

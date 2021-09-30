@@ -3449,6 +3449,13 @@ window.units = [
     [ "Jack, Boastful Mammoth", "STR", [ "Striker", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 1761, 611, 135, 3928, 1681, 288, 1 ],
     [ "O-lin, Yonko's Preparation", "INT", [ "Driven", "Powerhouse" ], 5, 50, 4, 4, 99, 5000000, 1388, 733, 71, 3746, 1512, 101, 1 ],
     [ "Oiran O-lin", "INT", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1424, 845, 76, 4095, 1597, 122, 1 ],
+    [ "Hancock Halloween Coquettish, Night of Halloween", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 812, 344, 56, 1758, 779, 112, 1 ],
+    [ "Hancock Sweet Halloween Coquettish, Night of Halloween", "QCK", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1746, 765, 106, 3492, 1531, 373, 1 ],
+    [ "Perona Halloween Princess, Night of Halloween", "INT", [ "Free Spirit", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 821, 359, 52, 1743, 753, 114, 1 ],
+    [ "Perona Sweet Halloween Princess, Night of Halloween", "INT", [ "Free Spirit", "Shooter" ], 6, 55, 5, 5, 99, 5000000, 1715, 743, 106, 3431, 1487, 360, 1 ],
+    [ "Shirahoshi Halloween Marine Party, Night of Halloween", "INT", [ "Free Spirit", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1359, 698, 115, 2612, 1331, 344, 1 ],
+    [ "Bonney Halloween Dinner Buffet, Night of Halloween", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1359, 698, 115, 2731, 1374, 291, 1 ],
+    [ "Brook Halloween Artist, Night of Halloween", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1321, 671, 171, 2643, 1343, 343, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

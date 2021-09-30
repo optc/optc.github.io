@@ -1961,6 +1961,27 @@ window.sailors = {
         hpStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
         rcvStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
+    3452: {
+        atkStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3454: {
+        hp: function(p) { return p.captain != null ? p.captain.class.has("Free Spirit") ? p.unit.class.has("Free Spirit") ? 1.1 : 1 : 1 : 1; },
+    },
+    3455: {
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 50 : 0; },
+    },
+    3456: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 50 : 0; },
+    },
+    3457: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 43 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 43 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 43 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
