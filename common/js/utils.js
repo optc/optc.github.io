@@ -646,7 +646,7 @@
             case '4995': return '../res/character_11244_t.png'; break;
             case '4996': return '../res/character_11245_t.png'; break;
             case '3383': return '../res/character_11615_t1.png'; break;
-            case '4999': return '../res/character_11760_t.png'; break;
+            case '3478': return '../res/character_11760_t.png'; break;
             case (ghostPoint+0).toString(): return '../res/character_10185_t1.png'; break;
             case (ghostPoint+1).toString(): return '../res/character_10186_t1.png'; break;
             case (ghostPoint+2).toString(): return '../res/character_10187_t1_int.png'; break;

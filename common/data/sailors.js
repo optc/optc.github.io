@@ -1982,6 +1982,21 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 43 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 43 : 0; },
     },
+    3458: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
+    },
+    3459: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
+    },
+    3460: {
+        atkStatic: function(p) { return 30; },
+        hpStatic: function(p) { return 30; },
+        rcvStatic: function(p) { return 30; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -3421,6 +3421,9 @@ window.flags = {
     3454: { rr: 1, rro: 1 },
     3455: { rr: 1, rro: 1 },
     3456: { rr: 1, rro: 1 },
+    3457: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    3458: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    3478: { global: 1, special: 1, shop: 1 },
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },
     4988: { rr: 1, rro: 1, lrr: 1, global: 1 },
@@ -3433,5 +3436,4 @@ window.flags = {
     4995: { global: 1 },
     4996: { global: 1 },
     4997: { rr: 1, rro: 1, lrr: 1, global: 1 },
-    4999: { global: 1, special: 1 },
 };

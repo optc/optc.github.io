@@ -3456,6 +3456,27 @@ window.units = [
     [ "Shirahoshi Halloween Marine Party, Night of Halloween", "INT", [ "Free Spirit", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1359, 698, 115, 2612, 1331, 344, 1 ],
     [ "Bonney Halloween Dinner Buffet, Night of Halloween", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1359, 698, 115, 2731, 1374, 291, 1 ],
     [ "Brook Halloween Artist, Night of Halloween", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1321, 671, 171, 2643, 1343, 343, 1 ],
+    [ "Smoothie, Student Blocking the Way", "PSY", [ "Powerhouse", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 2217, 732, 92, null, null, null, null ],
+    [ "Streusen, Fluffy Cook", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 2313, 703, 96, null, null, null, null ],
+    [ "Sir Crocodile, Drying Sand", "INT", [ "Driven", "Striker" ], 5, 40, 4, 3, 99, 4000000, 1483, 748, 104, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -3474,7 +3495,7 @@ var globalExUnits = [
     [ "Sergeant Helmeppo [EXTRA]", "DEX", [ "Slasher", "Driven" ], 4, 1, 5, 3, 99, 4000000, 807, 555, 150, 1998, 1060, 260, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
 ];
 
 for(var i = 0; window.units.length < (calcGhostStartID["start"]-globalExUnits.length-1); i++){

@@ -12458,6 +12458,13 @@ window.specials = {
             });
         },
     },
+    3459: {
+        rcv: function(p) { return 1.5; }
+    },
+    3460: {
+        poison: function(p) { return 99; },
+        affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

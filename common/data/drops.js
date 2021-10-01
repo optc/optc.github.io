@@ -5492,6 +5492,15 @@ window.drops = {
             gamewith: 289736,
             'All Difficulties': [ 3408, -3408 ],
         },
+        
+        {
+            name: 'Crocodile',
+            thumb: 3460,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3460, -3460 ],
+        },
 
     ],
 

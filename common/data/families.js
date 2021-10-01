@@ -4009,6 +4009,10 @@ window.families = {
     3455: [ ...Shirahoshi ],
     3456: [ ...JewelryBonney ],
     3457: [ ...Brook ],
+    3458: [ ...CharlotteSmoothie ],
+    3459: [ ...Streusen ],
+    3460: [ ...Crocodile ],
+    3478: [ ...Makino ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],
@@ -4020,9 +4024,6 @@ window.families = {
     4994: [ ...Coby ],
     4995: [ ...Coby ],
     4996: [ ...Helmeppo ],
-    4997: [ ...Sengoku ],
-    4998: [ ...MasterOfTheNearSea ],
-    4999: [ ...Makino ],
 };
 
 const calcGhostStartIDStart = 5000;

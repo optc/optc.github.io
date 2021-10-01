@@ -12155,6 +12155,22 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
+    3458: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.type == "PSY" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    3459: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "PSY" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    3460: {
+        atk: function(p) { return p.unit.type == "INT" ? 3.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    3478: {
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -12212,8 +12228,6 @@ var globalEXCaptains = {
     12: {
     },
     13: {
-        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
-        rcv: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; },
     },
 };
 
