@@ -32,6 +32,27 @@
                 Enemy Defense: <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>
             </div>
         </li>
+        
+
+        <li>
+            <div>
+                <i class="fa fa-atom"></i> 
+                Enemy Super Type: 
+            </div>
+            <div id="supertypeContainer">
+                <input id="enemySupertypeSTR" type="checkbox" name="STR" ng-model="data.enemySuperTypeSTR"><label for="enemySupertypeSTR" 
+                    class="width-4 supertype STR">STR
+                </label><input id="enemySupertypeDEX" type="checkbox" name="DEX" ng-model="data.enemySuperTypeDEX"><label for="enemySupertypeDEX" 
+                    class="width-4 supertype DEX">DEX
+                </label><input id="enemySupertypeQCK" type="checkbox" name="QCK" ng-model="data.enemySuperTypeQCK"><label for="enemySupertypeQCK" 
+                    class="width-4 supertype QCK">QCK
+                </label><input id="enemySupertypePSY" type="checkbox" name="PSY" ng-model="data.enemySuperTypePSY"><label for="enemySupertypePSY" 
+                    class="width-6 supertype PSY">PSY
+                </label><input id="enemySupertypeINT" type="checkbox" name="INT" ng-model="data.enemySuperTypeINT"><label for="enemySupertypeINT" 
+                    class="width-6 supertype INT">INT
+                </label>
+            </div>
+        </li>
 
         <li>
             <div id="shieldContainer">
