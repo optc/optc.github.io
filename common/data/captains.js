@@ -12169,7 +12169,7 @@ window.captains = {
     },
     3462: {
         // atk: function(p) { return p.unit.class.has("Fighter") || return p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5; },
-        rcv: function(p) { return p.unit.class.has("Fighter") || return p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? 1.5 : 1; },
+        //rcv: function(p) { return p.unit.class.has("Fighter") || return p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? 1.5 : 1; },
     },
     3463: {
         atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 3 : 1; },
