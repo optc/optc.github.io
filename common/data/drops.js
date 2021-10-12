@@ -5993,6 +5993,15 @@ window.drops = {
             'Point Rewards': [ 3444 ]
         },
 
+        {
+            name: 'Halloween Robin',
+            dropID: 'treasuremap50',
+            thumb: 3467,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3467 ]
+        },
+
     ],
 
     
@@ -6574,6 +6583,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3438 ],
+        },
+
+        {
+            name: 'Helmeppo',
+            dropID: 'rumble17',
+            thumb: 3466,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3466 ],
         },
 
     ],

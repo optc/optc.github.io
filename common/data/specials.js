@@ -2798,10 +2798,10 @@ window.specials = {
         type: "type"
     },
     1539: {
-        def: function(p) { return 0.1; }
+        def: function(p) { return 0.2; }
     },
     1540: {
-        def: function(p) { return 0.1; }
+        def: function(p) { return 0.2; }
     },
     1541: {
         chainAddition: function(p) { return 0.5; },
@@ -7780,7 +7780,7 @@ window.specials = {
     2582: {
         orb: function(p) { return p.unit.class.has("Cerebral") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2582].multiplier, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2 : 1);
+            var n = (p.percHP > 99  ? 2 : 1);
             window.specials[2582].multiplier = n;
             if (n == 2) p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -7791,7 +7791,7 @@ window.specials = {
     2583: {
         orb: function(p) { return p.unit.class.has("Cerebral") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[2583].multiplier, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2 : 1);
+            var n = (p.percHP > 99  ? 2 : 1);
             window.specials[2583].multiplier = n;
             if (n == 2) p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -8800,7 +8800,7 @@ window.specials = {
     2785: {
         chainAddition: function(p) { return window.specials[2785].multiplier; },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 0.9 : 0.7);
+            var n = (p.percHP > 99  ? 0.9 : 0.7);
             window.specials[2785].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 0.9 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -8837,7 +8837,7 @@ window.specials = {
         atk: function(p) { return p.delayed > 0 ? window.specials[2793].multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 1.75 : 1);
+            var n = (p.percHP > 99  ? 1.75 : 1);
             window.specials[2793].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -10285,7 +10285,7 @@ window.specials = {
     3083: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[3083].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2 : 1.75);
+            var n = (p.percHP > 99  ? 2 : 1.75);
             window.specials[3083].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -10338,7 +10338,7 @@ window.specials = {
     3094: {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[3094].multiplier : 1; },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2 : 1.75);
+            var n = (p.percHP > 99  ? 2 : 1.75);
             window.specials[3094].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -10934,7 +10934,7 @@ window.specials = {
     3220: {
         affinity: function(p) { return window.specials[3220].multiplier; },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2 : 1.75);
+            var n = (p.percHP > 99  ? 2 : 1.75);
             window.specials[3220].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -10945,7 +10945,7 @@ window.specials = {
     3221: {
         affinity: function(p) { return window.specials[3221].multiplier; },
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2 : 1.75);
+            var n = (p.percHP > 99  ? 2 : 1.75);
             window.specials[3221].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -11082,7 +11082,7 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? window.specials[3242].multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.25 : 2);
+            var n = (p.percHP > 99  ? 2.25 : 2);
             window.specials[3242].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -12465,6 +12465,43 @@ window.specials = {
         poison: function(p) { return 99; },
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
+    3461: {
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1 : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP > 99  ? 2.5 : 2);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5274warning'
+            });
+        },
+    },
+    3462: {
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1 : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP > 99  ? 2.5 : 2);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: '5274warning'
+            });
+        },
+    },
+    3466: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1; }
+    },
+    3467: {
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -12749,7 +12786,7 @@ var ghostsSpecials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.75 : 2);
+            var n = (p.percHP > 99  ? 2.75 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -12761,7 +12798,7 @@ var ghostsSpecials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.75 : 2);
+            var n = (p.percHP > 99  ? 2.75 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -12773,7 +12810,7 @@ var ghostsSpecials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.75 : 2);
+            var n = (p.percHP > 99  ? 2.75 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -12785,7 +12822,7 @@ var ghostsSpecials = {
         atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.75 : 2);
+            var n = (p.percHP > 99  ? 2.75 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14074,7 +14111,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14086,7 +14123,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14098,7 +14135,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14110,7 +14147,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14122,7 +14159,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14134,7 +14171,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14146,7 +14183,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -14158,7 +14195,7 @@ var ghostsSpecials = {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (p.percHP >= 99 ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',

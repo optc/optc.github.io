@@ -12168,7 +12168,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 1.5 : 1; },
     },
     3462: {
-        atk: function(p) {return p.unit.class.has("Fighter") ||  p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5) : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5) : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.type == "DEX" ? 1.5 : 1; },
     },
     3463: {
@@ -12182,14 +12182,14 @@ window.captains = {
     3466: {
 		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Free Spirit", "Slasher" ]); },
         hitAtk: function(p) {
-            return !(p.unit.class.has('Free Spirit')) || p.unit.class.has("Slasher") ? 1.0 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4.2 : 3;
+            return ((p.unit.class.has('Free Spirit')) || p.unit.class.has("Slasher") ? 3 : 1) * (p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 1.2 : 1);
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
     3467: {
 		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Cerebral", "Fighter" ]); },
         hitAtk: function(p) {
-            return !(p.unit.class.has('Cerebral')) || p.unit.class.has("Fighter") ? 1.0 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : 3.75;
+            return (p.unit.class.has('Cerebral')) || p.unit.class.has("Fighter") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? [2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
