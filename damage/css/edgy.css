@@ -2,7 +2,7 @@ html, body {
     background-color: #2b303b;
 }
 
-#hp-rcv, .tip, #turnLabel, #healLabel, #semlaLabel, #damageLabel {
+#hp-rcv, .tip, #turnLabel, #healLabel, #semlaLabel, #damageLabel, #rcvLabel, #basehpLabel {
     color: white;
 }
 

@@ -179,6 +179,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             bonusrcv = applyAddRCVSpecialsToRCV(n,0);
             
         });
+        hpMax += $scope.tdata.basehpCounter.value;
         
         result.rcv = Math.max(0,rcvTotal);
         result.rcv += bonusrcv
@@ -1186,6 +1187,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // deactivate turn counter (will be reactivated if necessary)
         $scope.tdata.turnCounter.enabled = false;
         $scope.tdata.healCounter.enabled = false;
+        $scope.tdata.basehpCounter.enabled = false;
         $scope.tdata.rcvCounter.enabled = false;
         $scope.tdata.semlaCounter.enabled = false;
         $scope.tdata.damageCounter.enabled = false;
@@ -1260,6 +1262,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.semlaCounter.enabled = true;
             if ((id == 3333 || id == 3334))
                 $scope.tdata.rcvCounter.enabled = true;
+            if ((id == 3333 || id == 3462))
+                $scope.tdata.basehpCounter.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
@@ -1466,6 +1470,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             slot: slotNumber,
             turnCounter: $scope.tdata.turnCounter.value,
             healCounter: $scope.tdata.healCounter.value,
+            basehpCounter: $scope.tdata.basehpCounter.value,
             rcvCounter: $scope.tdata.rcvCounter.value,
             semlaCounter: $scope.tdata.semlaCounter.value,
             damageCounter: $scope.tdata.damageCounter.value,
@@ -1551,6 +1556,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 1889 ? [1.5, 1.6, 1.7, 1.8, 1.9, 2, 2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2109 ? [1, 1, 1, 1.5, 1.5, 1.5, 2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2211 ? [51, 151, 251, 351, 451, 510, 510][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
+                        healAmount += id == 3467 ? [0, 0, 0, 0, 0, 0, 1000][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
                         healAmount += id == 2261 ? [1.5, 1.5, 1.5, 1.5, 1.75, 1.75, 1.75][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2763 ? [1, 1, 1, 1, 1, 1, 1.5][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += id == 2792 ? Math.floor([1, 1, 1.1, 1.2, 1.3, 1.4, 1.5][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp) : 0;

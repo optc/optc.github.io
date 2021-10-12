@@ -190,6 +190,14 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
         baseY += 25;
     }
 
+    // basehp counter
+    if ($scope.tdata.basehpCounter.enabled) {
+        awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });
+        var basehps = $scope.tdata.basehpCounter.value;
+        type(context, { text: basehps + (basehps == 1 ? ' Health Point' : ' Health Points') + ' added', x: baseX + 25, y: baseY + 20 });
+        baseY += 25;
+    }
+
     // rcv counter
     if ($scope.tdata.rcvCounter.enabled) {
         awesome(context, { text: 'f162', x: baseX + 8, y: baseY + 20, align: 'center' });

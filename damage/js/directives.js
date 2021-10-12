@@ -529,6 +529,43 @@ directives.healCounter = function() {
     };
 };
     
+directives.basehpCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="basehps"><div id="basehpSlider"></div>' +
+            '<div id="basehpLabel">{{currentbasehps}} {{currentbasehps == 1 ? "Health Point" : "Health Points"}} added</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentbasehps = 0;
+
+            var slider = element.find('#basehpSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentbasehps ],
+                range: { min: [ 0 ], max: [ 100000 ] },
+                step: 10,
+                connect: 'lower'
+            };
+            
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentbasehps = parseInt(value, 10);
+                if (event == 'change') scope.tdata.basehpCounter.value = scope.currentbasehps;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+    
 directives.rcvCounter = function() {
     return {
         retrict: 'E',
