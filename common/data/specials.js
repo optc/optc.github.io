@@ -2798,10 +2798,10 @@ window.specials = {
         type: "type"
     },
     1539: {
-        def: function(p) { return 0.1; }
+        def: function(p) { return 0.2; }
     },
     1540: {
-        def: function(p) { return 0.1; }
+        def: function(p) { return 0.2; }
     },
     1541: {
         chainAddition: function(p) { return 0.5; },
