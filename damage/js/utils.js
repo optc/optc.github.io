@@ -178,7 +178,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     orbPlusBonus = window.altspecials[x].orbPlus(params)
         }
     });
-    boostedMultiplier += orbPlusBonus;
+    boostedMultiplier += boostedMultiplier != 1 ? orbPlusBonus : 0;
 
     if(effectName == 'STR Orbs Beneficial'){
         if (orb == 'str') return boostedMultiplier;

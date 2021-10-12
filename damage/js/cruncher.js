@@ -931,7 +931,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     });
                     if (!data.s) { // non-static
                         var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
-                        if(data.type == "atk") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp, text ]);
+                        if(data.type == "atk") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                         else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
                         base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
@@ -1260,7 +1260,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.semlaCounter.enabled = true;
             if ((id == 3333 || id == 3334))
                 $scope.tdata.rcvCounter.enabled = true;
-            if ((id == 3333 || id == 3462))
+            if ((id == 3461 || id == 3462))
                 $scope.tdata.basehpCounter.enabled = true;
         });
         if (conflictWarning) 
