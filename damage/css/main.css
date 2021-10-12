@@ -599,6 +599,10 @@ input:checked + .supertype {
     opacity: 1;
 }
 
+#enemySuperTypeContainer > input + span {
+    padding: 4px
+}
+
 li.disabled {
     visibility: hidden;
     height: 0px;
