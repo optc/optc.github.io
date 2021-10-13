@@ -1002,61 +1002,61 @@ window.matchers = [
     {
         name: 'Enemy End of Turn Heal buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+End of Turn Heal.+duration/i 
+        matcher: /(removes|reduces) enemies.+End of Turn Heal.+duration/i 
     },
 
     {
         name: 'Enemy End of Turn Damage/Percent Cut buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+End of Turn Damage\/Percent Cut.+duration/i 
+        matcher: /(removes|reduces) enemies.+End of Turn Damage\/Percent Cut.+duration/i 
     },
 
     {
         name: 'Enemy Enrage buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Enrage.+duration/i 
+        matcher: /(removes|reduces) enemies.+Enrage.+duration/i 
     },
 
     {
         name: 'Enemy ATK UP buff reducer',
         target: 'special',
-        matcher: /(removes|reduces).+ATK UP.+duration/i 
+        matcher: /(removes|reduces) enemies.+ATK UP.+duration/i 
     },
 
     {
         name: 'Enemy Increased Defense reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Increased Defense.+duration/i 
+        matcher: /(removes|reduces) enemies.+Increased Defense.+duration/i 
     },
 
     {
         name: 'Enemy Percent Damage Reduction reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Percent Damage Reduction.+duration/i 
+        matcher: /(removes|reduces) enemies.+Percent Damage Reduction.+duration/i 
     },
 
     {
         name: 'Enemy Damage Nullification reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Damage Nullification.+duration/i 
+        matcher: /(removes|reduces) enemies.+Damage Nullification.+duration/i 
     },
 
     {
         name: 'Enemy Threshold Damage Reduction reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Threshold Damage Reduction.+duration/i 
+        matcher: /(removes|reduces) enemies.+Threshold Damage Reduction.+duration/i 
     },
 
     {
         name: 'Enemy Barrier reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Barrier .*duration/i 
+        matcher: /(removes|reduces) enemies.+Barrier .*duration/i 
     },
 
     {
         name: 'Enemy Resilience reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Resilience.+duration/i 
+        matcher: /(removes|reduces) enemies.+Resilience.+duration/i 
     },
 
     {
