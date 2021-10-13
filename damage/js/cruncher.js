@@ -648,6 +648,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
             if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
         }
+
+        if ($scope.data.enemySuperType && typeMult > 1) typeMult *= 0.75
         
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
