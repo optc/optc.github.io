@@ -11668,7 +11668,7 @@ window.specials = {
         },
     },
     3356: {
-        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
         chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = (p.percHP <= 50 ? 2.5 : 2);
@@ -11676,13 +11676,13 @@ window.specials = {
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: '' + levels[n] + ' chain boost. To ' + levels[(n + 1) % levels.length] + ' chain boost, disable and re-enable this special',
+                text: '' + ["Affinity", "Affinity and Chain"][n] + ' boost. To switch to ' + ["Affinity", "Affinity and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3357: {
-        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
         chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = (p.percHP <= 50 ? 2.5 : 2);
@@ -12497,10 +12497,36 @@ window.specials = {
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3468: {
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : 0; },
+        onActivation: function(p) {
+            var levels = [2, 2.25];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost and corresponding Delay. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3470: {
+        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        def: function(p) { return 0; },
+        chainAddition: function(p) { return 1; },
+        onActivation: function(p) {
+            var n = (p.percHP > 99  ? 1.75 : 1);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
     },
 };
 

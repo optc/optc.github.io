@@ -623,33 +623,40 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
+    var getAffinity = function(strength, attackerType){
+        if(strength == 'strong') return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 2 : 2.5 : $scope.data.enemySuperType ? 1.5 : 2;
+        else return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 0.5 : 0.75 : $scope.data.enemySuperType ? 0.25 : 0.5; //Check this
+    };
+
     var getTypeMultiplierOfUnit = function(attackerType, attackedType, unit, teamSlot) {
         var typeMult = 1, affinityMult = 1, captAffinityMult = 1;
         
-        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
-        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = $scope.data.superTypeQCK ? 2.5 : 2;
-        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
-        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = $scope.data.superTypeINT ? 2.5 : 2;
-        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = $scope.data.superTypePSY ? 2.5 : 2;
-        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = $scope.data.superTypeSTR ? 0.75 : 0.5;
-        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = $scope.data.superTypeQCK ? 0.75 : 0.5;
-        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = $scope.data.superTypeDEX ? 0.75 : 0.5;
+        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = getAffinity('strong', attackerType);
+        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = getAffinity('strong', attackerType);
+        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = getAffinity('strong', attackerType);
+        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = getAffinity('strong', attackerType);
+        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = getAffinity('strong', attackerType);
+        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = getAffinity('weak', attackerType);
+        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = getAffinity('weak', attackerType);
+        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getAffinity('weak', attackerType);
         
-        if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
-        if ([3070, 3071, 3369].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
+        if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = getAffinity('strong', attackerType);
+        if ([3070, 3071, 3369].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
-            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeSTR ? 2.5 : 2;
-            if ([ 5334, 5336 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
-            if ([ 5333, 5335 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeQCK ? 2.5 : 2;
-            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypePSY ? 2.5 : 2;
-            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeINT ? 2.5 : 2;
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([ 5334, 5336 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([ 5333, 5335 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
-            if ([ 3234, 3212 ].indexOf(unit.unit.number + 1) != -1) typeMult = $scope.data.superTypeDEX ? 2.5 : 2;
+            if ([ 3468, 3479 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([  ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
-
-        if ($scope.data.enemySuperType && typeMult > 1) typeMult *= 0.75
         
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {

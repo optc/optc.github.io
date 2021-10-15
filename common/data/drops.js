@@ -6423,6 +6423,16 @@ window.drops = {
             'Kizuna Exchange': [ 9050, 9051 ],
         },
 
+        {
+            name: 'Halloween Rebecca',
+            dropID: 'kizuna28',
+            thumb: 3470,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 3470 ],
+            'Kizuna Exchange': [ 9053 ],
+        },
+
     ],
 
 
@@ -6717,6 +6727,7 @@ window.drops = {
             'Round 7': [ 3264 ],
             'Round 8': [ 3311 ],
             'Round 9': [ 3420 ],
+            'Round 10': [ 3479 ],
         },
 
         {
