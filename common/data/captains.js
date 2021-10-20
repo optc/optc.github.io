@@ -12194,8 +12194,9 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
     3468: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 3 : 1; },
-        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 1.25 : 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 1.25 : 1.2 : 1; },
     },
     3469: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 4.5 : 4) : 1; },

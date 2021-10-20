@@ -3466,9 +3466,9 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Helmeppo, Flashy Sword Handling", "QCK", [ "Free Spirit", "Slasher" ], 5, 50, 4, 5, 99, 5000000, 1659, 684, 84, 3317, 1367, 167, 1 ],
     [ "Robin Halloween Avatar The Night, Night of Halloween", "INT", [ "Cerebral", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1194, 524, 126, 2984, 1310, 316, 1 ],
-    [ "Viola Halloween Dance Party, Night of Halloweed", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1270, 598, 171, null, null, null, null ],
-    [ "Charlotte Pudding, Farewell's Aftermath", "INT", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1663, 837, 245, null, null, null, null ],
-    [ "Rebecca Halloween Sweet Party, Night of Halloween", "STR", [ "Free Spirit", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1438, 642, 102, null, null, null, null ],
+    [ "Viola Halloween Dance Party, Night of Halloweed", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1270, 598, 171, 2859, 1434, 276, 1 ],
+    [ "Charlotte Pudding, Farewell's Aftermath...", "INT", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1663, 837, 245, 3325, 1523, 456, 1 ],
+    [ "Rebecca Halloween Sweet Party, Night of Halloween", "STR", [ "Free Spirit", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1438, 642, 102, 2752, 1435, 292, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
@@ -3477,7 +3477,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
-    [ "Toy Soldier [Neo], Thunder Soldier", "STR", [ "Striker", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1290, 470, 32, 2190, 1185, 190, null ],
+    [ "Toy Soldier [Neo], Thunder Soldier", "STR", [ "Striker", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1290, 470, 32, 2190, 1185, 190, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
