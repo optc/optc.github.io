@@ -11797,16 +11797,16 @@ window.captains = {
         },
     },
     3370: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 3 : 1; },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        atk: function(p) { return p.actions[p.sourceSlot] ? 5 : p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.actions[p.sourceSlot] ? 1.3 : p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     3371: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 3 : 1; },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        atk: function(p) { return p.actions[p.sourceSlot] ? 5 : p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.actions[p.sourceSlot] ? 1.3 : p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     3372: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 3 : 1; },
-        hp: function(p) { return p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        atk: function(p) { return p.actions[p.sourceSlot] ? 5 : p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.actions[p.sourceSlot] ? 1.3 : p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     3373: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 3.5 : 1; },
