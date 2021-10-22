@@ -3431,6 +3431,7 @@ window.flags = {
     3462: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     3463: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     3464: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    3465: { rr: 1, rro: 1, lrr: 1 },
     3468: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
     3469: { rr: 1, rro: 1 },
     3478: { global: 1, special: 1, shop: 1 },

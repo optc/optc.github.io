@@ -12179,6 +12179,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 3 : 1; },
         hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 1.2 : 1; },
     },
+    3465: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
     3466: {
 		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Free Spirit", "Slasher" ]); },
         hitAtk: function(p) {

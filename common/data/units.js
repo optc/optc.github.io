@@ -3463,7 +3463,7 @@ window.units = [
     [ "Koala Halloween Party Battle, Night of Halloween", "DEX", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1747, 754, 154, 3494, 1527, 308, 1 ],
     [ "Karasu Halloween Crow, Night of Halloween", "INT", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1572, 716, 114, 2859, 1432, 236, 1 ],
     [ "Morley Halloween Zombie, Night of Halloween", "DEX", [ "Free Spirit", "Striker" ], 5, 30, 5, 4, 99, 2000000, 1724, 693, 76, 3549, 1379, 152, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Dracule Mihawk, The Strongest", "INT", [ "Slasher", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1369, 669, 99, 2739, 1339, 198, null ],
     [ "Helmeppo, Flashy Sword Handling", "QCK", [ "Free Spirit", "Slasher" ], 5, 50, 4, 5, 99, 5000000, 1659, 684, 84, 3317, 1367, 167, 1 ],
     [ "Robin Halloween Avatar The Night, Night of Halloween", "INT", [ "Cerebral", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1194, 524, 126, 2984, 1310, 316, 1 ],
     [ "Viola Halloween Dance Party, Night of Halloweed", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1270, 598, 171, 2859, 1434, 276, 1 ],

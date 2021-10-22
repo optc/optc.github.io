@@ -3463,7 +3463,7 @@ window.aliases = {
     3462: [ 'コアラ　ハロウィン・バトルパーティー Night of Halloween', '', 'Legend Secret Limited TM HW Koala' ],
     3463: [ 'カラス　ハロウィン・クロウ Night of Halloween', '', 'Legend Secret Limited TM HW Karasu' ],
     3464: [ 'モーリー　ハロウィン・ゾンビナイト Night of Halloween', '', 'Legend Secret Limited TM HW Morley' ],
-    3465: [ '', '', '' ],
+    3465: [ '', '', 'Support Mihawk' ],
     3466: [ 'ヘルメッポ 鮮やかな刀捌き', '', 'Rumble Helmeppo' ],
     3467: [ 'ロビン ハロウィン・アバター・ザ・ナイト Night of Halloween', '', 'TM Robin' ],
     3468: [ '', '', 'Secret Limited Kizuna Viola Violet' ],
