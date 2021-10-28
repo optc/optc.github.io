@@ -7510,7 +7510,7 @@ window.drops = {
             name: 'Onigashima Assault Strategy',
             thumb: 3382,
             nakama: null,
-            gamewith: null,
+            gamewith: 285666,
             'All Difficulties': [ 3382 ],
             'Chopperman Missions': [ 3382 ],
         },

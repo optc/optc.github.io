@@ -470,6 +470,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var params = getParameters(slot);
         var atkbaseDamage = 0;
         var LBaddition = 0;
+        var superClassBoost = 1;
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
@@ -491,7 +492,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 atkbaseDamage = data.atkbase(params);
             }
         });
-        return Math.floor(result) + candyBonus + atkbaseDamage + LBaddition;
+
+        if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
+        else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? 1.2 : 1;
+
+        return (Math.floor(result) + candyBonus + LBaddition)*superClassBoost + atkbaseDamage;
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -1164,7 +1169,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     });
                     enabledSpecials.forEach(function(x) {
                         if (x.hasOwnProperty('atkbase'))
-                            baseDamage += x.atkbase(getParameters(slot));
+                            baseDamage2 += x.atkbase(getParameters(slot));
                     });
                     var staticDamage = Math.ceil((baseDamage2)*mult*conditionalMultiplier*affinityMultiplier);
                     if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
@@ -1255,7 +1260,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && (id == 1609 || id == 1610 || id == 2232 || id == 3037 || id == 3038))
                 $scope.tdata.healCounter.enabled = true;
-            if (id == 2364 || id == 2365 || id == 2981 || id == 2982 || id == 3224 || id == 3225)
+            if (id == 2364 || id == 2365 || id == 2981 || id == 2982 || id == 3224 || id == 3225 || id == 3473 || id == 3474)
                 $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && (id == 2233 || id == 2234 || id == 2500))
                 $scope.tdata.semlaCounter.enabled = true;
@@ -1524,10 +1529,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     healAmount += zombie.amount;
                 else{
                     enabledEffects.forEach(function(x) {
+                        var params = getParameters(i); params["sourceSlot"] = x.sourceSlot;
                         if (x.hasOwnProperty('rcvStatic'))
-                            rcvtemp += x.rcvStatic(getParameters(i));
+                            rcvtemp += x.rcvStatic(params);
                         if (x.hasOwnProperty('rcv') && x.sourceSlot > 1)
-                            rcvmulttemp *= x.rcv(getParameters(i));
+                            rcvmulttemp *= x.rcv(params);
                     });
                     //if ([ 1000, 1001, 1250, 1251, 1319, 1320, 1750, 1751, 1889, 1922, 2195, 2211, 2301, 2302, 2443, 2775, 2776, 2792, 5083, 5084, 5085, 5087, 5088, 5089, 353, 1747, 2109, 2763 ].has(id)){
                     if (!zombie.multiplier){

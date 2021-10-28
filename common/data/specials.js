@@ -12528,6 +12528,91 @@ window.specials = {
             });
         }
     },
+    3471: {
+        chainAddition: function(p) { return 1.4; },
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1000 : 0 : 0; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3472: {
+        chainAddition: function(p) { return 1.4; },
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1000 : 0 : 0; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3473: {
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3474: {
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3475:{
+        poison: function(p) { return 99; },
+        multiplier: 1,
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Driven")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2.0;
+        },
+    },
+    3476: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "type",
+    },
+    3477: {
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

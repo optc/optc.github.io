@@ -2016,6 +2016,27 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
+    3472: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 125, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3474: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? [0, 125, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hp: function(p) { return p.captain != null ? p.captain.class.has("Powerhouse") ? p.unit.class.has("Powerhouse") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1 : 1 : 1; },
+    },
+    3475: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3476: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [50, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [50, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3477: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 40 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 40 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 40 : 0; },
+    },
     3479: {
         atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
     },
