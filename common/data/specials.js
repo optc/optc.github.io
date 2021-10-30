@@ -12530,9 +12530,9 @@ window.specials = {
     },
     3471: {
         chainAddition: function(p) { return 1.4; },
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
-        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -12546,9 +12546,9 @@ window.specials = {
     },
     3472: {
         chainAddition: function(p) { return 1.4; },
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
-        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
