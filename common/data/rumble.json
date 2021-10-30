@@ -93624,7 +93624,7 @@
               "amount": 1,
               "effect": "damage",
               "condition": { "comparator": "above", "count": 50, "stat": "HP", "type": "stat" },
-              "targeting": { "count": 1, "priority": "highest", "stat": "ATK", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "HP", "targets": [ "enemies" ] },
               "type": "atk",
               "defbypass": true
             }
