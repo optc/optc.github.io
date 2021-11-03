@@ -617,7 +617,16 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
 .supertype.DEX       { background: lightgreen; }
 .supertype.PSY       { background: gold; }
 .supertype.INT       { background: orchid; }
-.superclass       { background: Peru; }
+.superclass.Fighter       { background: #FF0C2A; }
+.superclass.Slasher       { background: #31E7FF; }
+.superclass.Striker       { background: #2356F6; }
+.superclass.Shooter       { background: #C318FF; }
+.superclass.FreeSpirit       { background: #FFB841; }
+.superclass.Driven       { background: #FF11CA; }
+.superclass.Cerebral       { background: #5AFF38; }
+.superclass.Powerhouse       { background: #FA5B12; }
+.superclass.Evolver       { background: Peru; }
+.superclass.Booster       { background: Peru; }
 
 .supertype:hover {
     opacity: 1;

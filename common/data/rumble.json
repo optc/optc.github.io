@@ -85945,7 +85945,7 @@
           "type": "debuff"
         },
         {
-          "attribute": "[PSY]",
+          "attribute": "[INT]",
           "percentage": 30,
           "type": "damage"
         }
