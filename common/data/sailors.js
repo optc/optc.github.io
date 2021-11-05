@@ -2040,6 +2040,11 @@ window.sailors = {
     3479: {
         atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
     },
+    3480: {
+        atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -4031,6 +4031,8 @@ window.families = {
     3477: [ ...CharlotteCracker ],
     3478: [ ...Makino ],
     3479: [ ...Kyros ],
+    3480: [ ...Coby ],
+    3481: [ ...Chinjao ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

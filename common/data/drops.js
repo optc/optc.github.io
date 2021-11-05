@@ -7540,6 +7540,22 @@ window.drops = {
         },
 
         {
+            name: 'Turmoil in the Land of Candy!!',
+            thumb: 2033,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3477 ],
+        },
+
+        {
+            name: 'Alliance! Heavenly Demon VS Luffy!!',
+            thumb: 3472,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3481 ],
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,

@@ -12613,6 +12613,18 @@ window.specials = {
     3477: {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
+    3481: {
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [0.7, 0.9];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

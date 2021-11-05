@@ -12246,6 +12246,13 @@ window.captains = {
     3479: {
         atk: function(p) { return p.unit.type == "STR" ? 1.5 : 1; },
     },
+    3480: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    3481: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

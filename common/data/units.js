@@ -3433,8 +3433,8 @@ window.units = [
     [ "Ulti & Page One", ["QCK", "DEX"], [[ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ]], 5, 30, 4, 3, 70, 1066998, 1230, 420, 60, 2460, 840, 120, 1 ],
     [ "Ulti & Page One, Preparations to Fight a Strong Enemy", ["QCK", "DEX"], [[ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ], [ "Driven", "Powerhouse" ]], 6, 55, 4, 5, 99, 5000000, 2338, 812, 112, 4675, 1683, 223, 1 ],
     [ "Black Maria, Gathering of the Tobi Roppo", "QCK", [ "Driven", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
-    [ "Who's-Who, Gathering of the Tobi Roppo", "INT", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
-    [ "Drake, Gathering of the Tobi Roppo", "INT", [ "Driven", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1265, 691, 165, 2529, 1382, 329, 1 ],
+    [ "Who's-Who, Gathering of the Tobi Roppo", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1569, 701, 105, 3138, 1401, 210, 1 ],
+    [ "Drake, Gathering of the Tobi Roppo", "INT", [ "Driven", "Striker" ], 5, 30, 4, 5, 99, 2000000, 1888, 716, 46, 3776, 1433, 93, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Charlotte Oven, Burning Fighting Spirit", "STR", [ "Powerhouse", "Fighter" ], 5, 50, 5, 5, 99, 5000000, 1513, 688, 108, 3025, 1375, 215, 1 ],
     [ "Roronoa Zoro, Disguised Swordfighter", "DEX", [ "Slasher", "Driven" ], 5, 30, 4, 4, 99, 2000000, 1648, 706, 91, 3296, 1412, 181, 1 ],
@@ -3478,6 +3478,8 @@ window.units = [
     [ "Charlotte Cracker, Sudden Blow", "STR", [ "Powerhouse", "Driven" ], 5, 30, 4, 4, 99, 2000000, 1484, 649, 119, 2968, 1399, 238, 1 ],
     [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
     [ "Toy Soldier [Neo], Thunder Soldier", "STR", [ "Striker", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1290, 470, 32, 2190, 1185, 190, 1 ],
+    [ "Coby, Growing Youngster", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1742, 757, 158, null, null, null, null ],
+    [ "Don Chinjao, Multi-Generational Grudge", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 5, 99, null, 1649, 694, 94, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
