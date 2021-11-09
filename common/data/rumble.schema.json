@@ -484,6 +484,8 @@
                 "Half Stats",
                 "Haste",
                 "Counter",
+                "hit",
+                "heal",
                 "near"
             ],
             "title": "Attribute"

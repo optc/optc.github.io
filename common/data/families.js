@@ -642,7 +642,7 @@ const Yamato = [ "Yamato" ];
 const Sasaki = [ "Sasaki" ];
 const Ulti = [ "Ulti" ];
 const BlackMaria = [ "Black Maria" ];
-const WhosWho = [ "Who's Who", "Whos Who" ];
+const WhosWho = [ "Who's Who", "Whos Who", "WhosWho" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],

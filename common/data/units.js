@@ -3147,7 +3147,7 @@ window.units = [
     [ "Luffytaro, Prisoner's Hope", "STR", [ "Fighter", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1199, 564, 92, 3236, 1391, 197, 1 ],
     [ "Grandpa Hyo", "INT", [ "Cerebral", "Fighter" ], 5, 20, 4, 4, 99, 2000000, 1147, 553, 104, 2868, 1383, 261, 1 ],
     [ "Dobon, Vice Warden of the Prisoner Mine", "STR", [ "Slasher", "Powerhouse" ], 5, 20, 4, 4, 99, 2000000, 1184, 564, 95, 2960, 1409, 237, 1 ],
-    [ "Bebo & Sachi & Penguin", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1173, 666, 99, 2834, 1476, 311, 1 ],
+    [ "Bepo & Sachi & Penguin", "QCK", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1173, 666, 99, 2834, 1476, 311, 1 ],
     [ "Eustass Kid, Unyielding Prisoner", "STR", [ "Fighter", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1186, 562, 95, 2964, 1404, 238, 1 ],
     [ "Trafalgar Law, Falling Onto Troublesome Matters", "QCK", [ "Free Spirit", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1151, 679, 98, 2801, 1489, 310, 1 ],
     [ "Zorojuro, Three Sword Style Ronin", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1162, 671, 92, 2846, 1482, 308, 1 ],
@@ -3479,7 +3479,7 @@ window.units = [
     [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
     [ "Toy Soldier [Neo], Thunder Soldier", "STR", [ "Striker", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1290, 470, 32, 2190, 1185, 190, 1 ],
     [ "Coby, Growing Youngster", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1742, 757, 158, null, null, null, null ],
-    [ "Don Chinjao, Multi-Generational Grudge", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 5, 99, null, 1649, 694, 94, null, null, null, null ],
+    [ "Don Chinjao, Multi-Generational Grudge", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 5, 99, 2000000, 1649, 694, 94, 3298, 1388, 188, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

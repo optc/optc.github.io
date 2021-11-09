@@ -1925,6 +1925,7 @@ window.sailors = {
     },
     3435: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 50 : 0; },
     },
     3436: {
         atkStatic: function(p) { return 50; },
