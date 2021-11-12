@@ -64364,7 +64364,7 @@
             {
               "amount": 100,
               "effect": "recharge",
-              "targeting": { "targets": [ "self" ] },
+              "targeting": { "targets": [ "[STR]" ] },
               "type": "fixed"
             }
           ]
