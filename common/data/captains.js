@@ -12253,6 +12253,27 @@ window.captains = {
     3481: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.5 : 1; },
     },
+    3482: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 5 : 3.75; },
+        hp: function(p) { return 1.3; },
+    },
+    3483: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 5 : 3.75; },
+        hp: function(p) { return 1.3; },
+    },
+    3484: {
+        atk: function(p) { return !(p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3 : 2.5); },
+    },
+    3485: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+    },
+    3486: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5+(1-(p.percHP/100)) : 1; },
+    },
+    3491: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 2.5, 2.75, 3, 3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1.1, 1.1, 1.1, 1.1, 1.1, 1.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

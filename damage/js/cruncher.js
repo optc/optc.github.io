@@ -179,15 +179,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             bonusrcv = applyAddRCVSpecialsToRCV(n,0);
             
         });
+        var params = getParameters(0);
         hpMax += $scope.tdata.basehpCounter.value;
-        
         result.rcv = Math.max(0,rcvTotal);
         result.rcv += bonusrcv
         var cost = team.slice(1,6).reduce(function(prev,next) { return prev + (!next.unit ? 0 : next.unit.cost); },0);
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         $scope.numbers = jQuery.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
-        checkHealAndZombie(result, $scope.numbers, [$scope.data.actionleft, $scope.data.actionright], [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ]);
+        checkHealAndZombie(result, $scope.numbers, [$scope.data.actionleft, $scope.data.actionright], [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ], params);
         $timeout(function() { crunchSelfInhibit = false; });
     }
 
@@ -1513,7 +1513,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
     };
 
-    var checkHealAndZombie = function(data, numbers, capActions, limits) {
+    var checkHealAndZombie = function(data, numbers, capActions, limits, params) {
         delete numbers.zombie;
         delete numbers.healPerTurn;
         // compute data
@@ -1569,6 +1569,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += id == 2913 ? capActions[i] ? 2 * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0 : 0;
                         healAmount += (id == 3082 || id == 1619) ? [0,2][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp : 0;
                         healAmount += (id == 3251) ? ([0, 0.5][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
+                        healAmount += (id == 3482 || id == 3483) ? params.percHP >= 50 ? 2000 : 0 : 0;
                         
                         healAmount += id == 1747 ? [1000,1200][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
                         healAmount += id == 353 ? [0,300][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;

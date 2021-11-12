@@ -3478,8 +3478,18 @@ window.units = [
     [ "Charlotte Cracker, Sudden Blow", "STR", [ "Powerhouse", "Driven" ], 5, 30, 4, 4, 99, 2000000, 1484, 649, 119, 2968, 1399, 238, 1 ],
     [ "Makino, Proprietor of a Relaxed Tavern", "PSY", [ "Cerebral", "Fighter" ], 5, 1, 5, 4, 99, 4000000, 563, 644, 160, 1645, 1011, 468, 1 ],
     [ "Toy Soldier [Neo], Thunder Soldier", "STR", [ "Striker", "Free Spirit" ], 4, 20, 4, 4, 99, 2000000, 1290, 470, 32, 2190, 1185, 190, 1 ],
-    [ "Coby, Growing Youngster", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1742, 757, 158, null, null, null, null ],
+    [ "Coby, Growing Youngster", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1742, 757, 158, 3484, 1513, 315, 1 ],
     [ "Don Chinjao, Multi-Generational Grudge", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 5, 99, 2000000, 1649, 694, 94, 3298, 1388, 188, 1 ],
+    [ "Sir Crocodile, Willing to Forgive", "DEX", [ "Cerebral", "Driven" ], 5, 30, 4, 3, 70, 1066998, 881, 435, 70, null, null, null, null ],
+    [ "Sir Crocodile, Ruler of the Sand Kingdom", "DEX", [ "Cerebral", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1702, 844, 135, null, null, null, null ],
+    [ "Rob Lucci, Limit of the Six Powers", "QCK", [ "Powerhouse", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1632, 726, 86, null, null, null, null ],
+    [ "Kami Eneru, God of Thunder - Mamaragan", "DEX", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 2000000, 1610, 731, 88, null, null, null, null ],
+    [ "Wyper, Ambitious Companion", "DEX", [ "Free Spirit", "Cerebral" ], 5, 50, 4, 5, 99, 5000000, 1712, 662, 82, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Gecko Moria, Fierce Battle Before Dawn", "QCK", [ "Driven", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1204, 572, 109, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

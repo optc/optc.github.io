@@ -6002,6 +6002,15 @@ window.drops = {
             'Raging Sea': [ 3467 ]
         },
 
+        {
+            name: 'Gecko Moria',
+            dropID: 'treasuremap51',
+            thumb: 3491,
+            nakama: null,
+            gamewith: null,
+            'Raging Sea': [ 3491 ]
+        },
+
     ],
 
     
@@ -6602,6 +6611,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3466 ],
+        },
+
+        {
+            name: 'Wyper',
+            dropID: 'rumble18',
+            thumb: 3486,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3486 ],
         },
 
     ],

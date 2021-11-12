@@ -12625,6 +12625,63 @@ window.specials = {
             });
         },
     },
+    3482: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
+        type: "type",
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+        },
+        onActivation: function(p) {
+            var levels = [2.5, 3];
+            var levels2 = [35, 40];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x Base Chain boost. To ' + levels[(n + 1) % levels.length] + 'x Base Chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3483: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
+        type: "type",
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+        },
+        onActivation: function(p) {
+            var levels = [2.5, 3];
+            var levels2 = [35, 40];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x Base Chain boost. To ' + levels[(n + 1) % levels.length] + 'x Base Chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3484: {
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3485: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Srtiker") ? 2 : 1; },
+    },
+    3486: {
+        status: function(p) { return p.defenseDown ? 2 : 1; },
+        def: function(p) { return 0; },
+    },
+    3491: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
