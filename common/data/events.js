@@ -603,6 +603,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
         }
     },
+    3389: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
     3429: {
         onInsertion: function($scope) {
             if (++$scope.options.wanoOrbsEnabled == 1)
