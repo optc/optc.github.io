@@ -29849,6 +29849,18 @@
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 1,
+              "targeting": { "targets": [ "[PSY]" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 1,
+              "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
         },
@@ -29859,6 +29871,18 @@
               "effect": "buff",
               "level": 2,
               "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "[PSY]" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 2,
+              "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
         },
@@ -29869,6 +29893,18 @@
               "effect": "buff",
               "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 3,
+              "targeting": { "targets": [ "[PSY]" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 3,
+              "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
         },
@@ -29879,6 +29915,18 @@
               "effect": "buff",
               "level": 4,
               "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 4,
+              "targeting": { "targets": [ "[PSY]" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 4,
+              "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
         },
@@ -29889,6 +29937,18 @@
               "effect": "buff",
               "level": 5,
               "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "effect": "debuff",
+              "level": 4,
+              "targeting": { "targets": [ "[PSY]" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "effect": "debuff",
+              "level": 5,
+              "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
         }
@@ -29922,202 +29982,182 @@
       ],
       "special": [
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1200,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 11,
               "effect": "debuff",
               "level": 2,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 11,
-              "effect": "debuff",
-              "level": 1,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1300,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 12,
               "effect": "debuff",
               "level": 2,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 12,
-              "effect": "debuff",
-              "level": 1,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1400,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 13,
               "effect": "debuff",
               "level": 2,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 13,
-              "effect": "debuff",
-              "level": 1,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1500,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 14,
               "effect": "debuff",
               "level": 2,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 14,
-              "effect": "debuff",
-              "level": 1,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1600,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 15,
               "effect": "debuff",
               "level": 3,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 15,
-              "effect": "debuff",
-              "level": 2,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1700,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 16,
               "effect": "debuff",
               "level": 3,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 16,
-              "effect": "debuff",
-              "level": 2,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1800,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 17,
               "effect": "debuff",
               "level": 3,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 17,
-              "effect": "debuff",
-              "level": 2,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 1900,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 18,
               "effect": "debuff",
               "level": 4,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 18,
-              "effect": "debuff",
-              "level": 3,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 2000,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 19,
               "effect": "debuff",
               "level": 4,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 19,
-              "effect": "debuff",
-              "level": 3,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         },
         {
-          "cooldown": 31,
+          "cooldown": 28,
           "effects": [
             {
-              "attributes": [ "SPD" ],
+              "amount": 2200,
+              "effect": "damage",
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "attributes": [ "SPD", "Special CT" ],
               "duration": 20,
               "effect": "debuff",
               "level": 5,
-              "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
-            },
-            {
-              "attributes": [ "Special CT" ],
-              "duration": 20,
-              "effect": "debuff",
-              "level": 4,
-              "targeting": { "targets": [ "Free Spirit" ] }
+              "targeting": { "targets": [ "Free Spirit", "Cerebral", "Powerhouse" ] }
             }
           ]
         }
@@ -30159,7 +30199,7 @@
             {
               "attributes": [ "HP" ],
               "effect": "buff",
-              "level": 1,
+              "level": 2,
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
@@ -30176,7 +30216,7 @@
             {
               "attributes": [ "HP" ],
               "effect": "buff",
-              "level": 1,
+              "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
@@ -30193,7 +30233,7 @@
             {
               "attributes": [ "HP" ],
               "effect": "buff",
-              "level": 1,
+              "level": 4,
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
@@ -30210,7 +30250,7 @@
             {
               "attributes": [ "HP" ],
               "effect": "buff",
-              "level": 1,
+              "level": 5,
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
@@ -30272,6 +30312,13 @@
               "effect": "buff",
               "level": 4,
               "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 16,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -30290,6 +30337,13 @@
               "duration": 17,
               "effect": "buff",
               "level": 4,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 17,
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -30310,6 +30364,13 @@
               "effect": "buff",
               "level": 5,
               "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 18,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -30328,6 +30389,13 @@
               "duration": 19,
               "effect": "buff",
               "level": 5,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 19,
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -30348,6 +30416,13 @@
               "effect": "buff",
               "level": 6,
               "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 20,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -30366,6 +30441,13 @@
               "duration": 21,
               "effect": "buff",
               "level": 7,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 21,
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -30386,6 +30468,13 @@
               "effect": "buff",
               "level": 7,
               "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 22,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -30404,6 +30493,13 @@
               "duration": 23,
               "effect": "buff",
               "level": 8,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 23,
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -30424,6 +30520,13 @@
               "effect": "buff",
               "level": 8,
               "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 24,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -30442,6 +30545,13 @@
               "duration": 25,
               "effect": "buff",
               "level": 10,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Special CT" ],
+              "duration": 25,
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "self" ] }
             }
           ]
@@ -31023,29 +31133,21 @@
           "effects": [
             {
               "attributes": [ "HP" ],
-              "condition": { "comparator": "less", "count": 5, "type": "crew" },
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
-            }
-          ]
-        },
-        {
-          "effects": [
+            },
             {
-              "attributes": [ "HP" ],
-              "condition": { "comparator": "less", "count": 5, "type": "crew" },
+              "attributes": [ "SPD" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
               "effect": "buff",
-              "level": 2,
+              "level": 1,
               "targeting": { "targets": [ "[INT]" ] }
-            }
-          ]
-        },
-        {
-          "effects": [
+            },
             {
-              "attributes": [ "HP" ],
-              "condition": { "comparator": "less", "count": 5, "type": "crew" },
+              "attributes": [ "DEF" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
               "effect": "buff",
               "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
@@ -31056,9 +31158,23 @@
           "effects": [
             {
               "attributes": [ "HP" ],
-              "condition": { "comparator": "less", "count": 5, "type": "crew" },
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
               "effect": "buff",
-              "level": 4,
+              "level": 2,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "SPD" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -31067,9 +31183,73 @@
           "effects": [
             {
               "attributes": [ "HP" ],
-              "condition": { "comparator": "less", "count": 5, "type": "crew" },
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "SPD" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "[INT]" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "SPD" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 4,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "[INT]" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
               "effect": "buff",
               "level": 5,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "SPD" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 5,
+              "targeting": { "targets": [ "[INT]" ] }
+            },
+            {
+              "attributes": [ "DEF" ],
+              "condition": { "comparator": "less", "count": 6, "type": "crew" },
+              "effect": "buff",
+              "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -31096,93 +31276,24 @@
           "cooldown": 25,
           "effects": [
             {
-              "attributes": [ "DEF" ],
-              "duration": 6,
-              "effect": "buff",
-              "level": 1,
-              "targeting": { "targets": [ "self" ] }
+              "amount": 0.7,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
             },
             {
-              "attributes": [ "Guard" ],
-              "duration": 6,
-              "effect": "buff",
-              "level": 1,
-              "targeting": { "targets": [ "crew" ] }
-            }
-          ]
-        },
-        {
-          "cooldown": 25,
-          "effects": [
-            {
               "attributes": [ "DEF" ],
-              "duration": 6,
+              "duration": 10,
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "self" ] }
-            },
-            {
-              "attributes": [ "Guard" ],
-              "duration": 7,
-              "effect": "buff",
-              "level": 1,
-              "targeting": { "targets": [ "crew" ] }
-            }
-          ]
-        },
-        {
-          "cooldown": 25,
-          "effects": [
-            {
-              "attributes": [ "DEF" ],
-              "duration": 7,
-              "effect": "buff",
-              "level": 1,
-              "targeting": { "targets": [ "self" ] }
-            },
-            {
-              "attributes": [ "Guard" ],
-              "duration": 8,
-              "effect": "buff",
-              "level": 1,
-              "targeting": { "targets": [ "crew" ] }
-            }
-          ]
-        },
-        {
-          "cooldown": 25,
-          "effects": [
-            {
-              "attributes": [ "DEF" ],
-              "duration": 7,
-              "effect": "buff",
-              "level": 2,
-              "targeting": { "targets": [ "self" ] }
-            },
-            {
-              "attributes": [ "Guard" ],
-              "duration": 9,
-              "effect": "buff",
-              "level": 2,
-              "targeting": { "targets": [ "crew" ] }
-            }
-          ]
-        },
-        {
-          "cooldown": 25,
-          "effects": [
-            {
-              "attributes": [ "DEF" ],
-              "duration": 8,
-              "effect": "buff",
-              "level": 2,
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Guard" ],
               "duration": 10,
               "effect": "buff",
-              "level": 2,
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             }
           ]
@@ -31191,17 +31302,24 @@
           "cooldown": 25,
           "effects": [
             {
+              "amount": 0.8,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
               "attributes": [ "DEF" ],
-              "duration": 8,
+              "duration": 10,
               "effect": "buff",
-              "level": 3,
+              "level": 1,
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Guard" ],
               "duration": 11,
               "effect": "buff",
-              "level": 3,
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             }
           ]
@@ -31210,17 +31328,24 @@
           "cooldown": 25,
           "effects": [
             {
+              "amount": 0.9,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
               "attributes": [ "DEF" ],
-              "duration": 9,
+              "duration": 11,
               "effect": "buff",
-              "level": 3,
+              "level": 1,
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Guard" ],
               "duration": 12,
               "effect": "buff",
-              "level": 3,
+              "level": 1,
               "targeting": { "targets": [ "crew" ] }
             }
           ]
@@ -31229,16 +31354,75 @@
           "cooldown": 25,
           "effects": [
             {
+              "amount": 1,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
               "attributes": [ "DEF" ],
-              "duration": 9,
+              "duration": 11,
               "effect": "buff",
-              "level": 3,
+              "level": 2,
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Guard" ],
               "duration": 13,
               "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 25,
+          "effects": [
+            {
+              "amount": 1.1,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
+              "attributes": [ "DEF" ],
+              "duration": 12,
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "duration": 14,
+              "effect": "buff",
+              "level": 2,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 25,
+          "effects": [
+            {
+              "amount": 1.2,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
+              "attributes": [ "DEF" ],
+              "duration": 12,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "duration": 15,
+              "effect": "buff",
               "level": 3,
               "targeting": { "targets": [ "crew" ] }
             }
@@ -31248,15 +31432,74 @@
           "cooldown": 25,
           "effects": [
             {
+              "amount": 1.3,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
               "attributes": [ "DEF" ],
-              "duration": 10,
+              "duration": 13,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "duration": 16,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 25,
+          "effects": [
+            {
+              "amount": 1.4,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
+              "attributes": [ "DEF" ],
+              "duration": 13,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "self" ] }
+            },
+            {
+              "attributes": [ "Guard" ],
+              "duration": 17,
+              "effect": "buff",
+              "level": 3,
+              "targeting": { "targets": [ "crew" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 25,
+          "effects": [
+            {
+              "amount": 1.5,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
+              "attributes": [ "DEF" ],
+              "duration": 14,
               "effect": "buff",
               "level": 4,
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Guard" ],
-              "duration": 14,
+              "duration": 18,
               "effect": "buff",
               "level": 4,
               "targeting": { "targets": [ "crew" ] }
@@ -31267,15 +31510,22 @@
           "cooldown": 25,
           "effects": [
             {
+              "amount": 1.8,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "large" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "atk"
+            },
+            {
               "attributes": [ "DEF" ],
-              "duration": 10,
+              "duration": 14,
               "effect": "buff",
               "level": 5,
               "targeting": { "targets": [ "self" ] }
             },
             {
               "attributes": [ "Guard" ],
-              "duration": 15,
+              "duration": 19,
               "effect": "buff",
               "level": 5,
               "targeting": { "targets": [ "crew" ] }
@@ -52784,7 +53034,7 @@
               "targeting": { "targets": [ "[INT]" ] }
             },
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "SPD" ],
               "condition": { "comparator": "remaining", "count": 60, "type": "time" },
               "effect": "buff",
               "level": 3,
@@ -69649,10 +69899,10 @@
           "cooldown": 27,
           "effects": [
             {
-              "override": { "duration": 15, "level": 4 }
+              "override": { "duration": 15, "level": 5 }
             },
             {
-              "override": { "duration": 15, "level": 4 }
+              "override": { "duration": 15, "level": 5 }
             },
             {
               "override": { "amount": 25 }
@@ -73823,7 +74073,7 @@
               "attributes": [ "DEF" ],
               "effect": "buff",
               "level": 3,
-              "condition": { "comparator": "below", "count": 30, "stat": "HP", "type": "stat" },
+              "condition": { "comparator": "below", "count": 50, "stat": "HP", "type": "stat" },
               "targeting": { "targets": [ "self" ] }
             }
           ]
