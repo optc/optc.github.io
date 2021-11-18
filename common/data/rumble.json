@@ -90515,12 +90515,12 @@
           "cooldown": 27,
           "effects": [
             {
+              "attributes": [ "Special CT" ],
               "amount": 15,
-              "effect": "recharge",
+              "effect": "hinderance",
               "condition": { "comparator": "first", "count": 40, "type": "time" },
               "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "crew" ] },
-              "type": "Special CT"
+              "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "DEF" ],
