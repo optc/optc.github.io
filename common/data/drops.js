@@ -5951,6 +5951,7 @@ window.drops = {
             name: 'Koala',
             dropID: 'treasuremap45',
             thumb: 3339,
+            global: true,
             nakama: 8333900,
             gamewith: 277257,
             'Celebration Sea': [ 3339 ]
@@ -5960,6 +5961,7 @@ window.drops = {
             name: 'MUGIWARA Zoro',
             dropID: 'treasuremap46',
             thumb: 3368,
+            global: true,
             nakama: 8336800,
             gamewith: 283332,
             'Raging Sea': [ 3368 ]
@@ -5971,7 +5973,7 @@ window.drops = {
             thumb: 3389,
             nakama: null,
             gamewith: 287046,
-            'Coast of Wano': [ 3389 ]
+            'Spooky Sea': [ 3389 ]
         },
 
         {
@@ -6008,7 +6010,7 @@ window.drops = {
             thumb: 3491,
             nakama: null,
             gamewith: null,
-            'Raging Sea': [ 3491 ]
+            '7.5 Anniversary Sea': [ 3491 ]
         },
 
     ],
@@ -6386,6 +6388,7 @@ window.drops = {
             name: 'Kuja Pirates',
             dropID: 'kizuna23',
             thumb: 3351,
+            global: true,
             nakama: 9335200,
             gamewith: [ 148537, 279692 ],
             'All Difficulties': [ 3351 ],
@@ -6396,6 +6399,7 @@ window.drops = {
             name: 'MUGIWARA Brook',
             dropID: 'kizuna24',
             thumb: 3373,
+            global: true,
             nakama: 9337300,
             gamewith: 148537,
             'All Difficulties': [ 3373 ],
@@ -6406,6 +6410,7 @@ window.drops = {
             name: 'Jack',
             dropID: 'kizuna25',
             thumb: 3397,
+            global: true,
             nakama: 9339700,
             gamewith: [ 148537, 279692 ],
             'All Difficulties': [ 3394 ],
@@ -6440,6 +6445,16 @@ window.drops = {
             gamewith: 148537,
             'All Difficulties': [ 3470 ],
             'Kizuna Exchange': [ 9053 ],
+        },
+
+        {
+            name: 'Don Krieg',
+            dropID: 'kizuna29',
+            thumb: 3490,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 3489 ],
+            'Kizuna Exchange': [ 9054 ],
         },
 
     ],
@@ -7178,6 +7193,7 @@ window.drops = {
             gamewith: 143826,
             showManual: true,
             'All Difficulties': [ 9027, 9028, 9029, 9030, -2446, -2447, -2448, -2449, -2450, -2451, -2452, -2453, -2454 ],
+            'Global': [ 2455 ],
         },
 
         {

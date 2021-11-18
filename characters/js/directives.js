@@ -760,7 +760,7 @@ filters.abilityToString = function() {
               e = "UNKNOWN EFFECT " + JSON.stringify(effect)
               break;
           }
-          retVal += e + `${targetToString(effect.targeting)}${rangeToString(effect.range)}${effect.duration ? " for " + effect.duration + " seconds" : ""}.</li>`;
+          retVal += e + `${targetToString(effect.targeting)}${rangeToString(effect.range)}${effect.duration ? " for " + effect.duration + " seconds" : ""}` + (effect.repeat ? ` ${new Intl.NumberFormat().format(effect.repeat)} times` : ``) + `.</li>`;
         }
         return retVal+"</ul>";
     };

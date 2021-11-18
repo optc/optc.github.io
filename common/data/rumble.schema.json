@@ -314,6 +314,9 @@
                 "level": {
                     "type": "integer"
                 },
+                "repeat": {
+                    "type": "integer"
+                },
                 "range": {
                     "$ref": "#/definitions/Range"
                 },
@@ -386,6 +389,9 @@
                             "type": "number"
                         },
                         "level": {
+                            "type": "integer"
+                        },
+                        "repeat": {
                             "type": "integer"
                         },
                         "range": {

@@ -12268,7 +12268,27 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
     },
     3486: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? 2.5+(1-(p.percHP/100)) : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2, 2.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]+(1-(p.percHP/100)) : 1; },
+    },
+    3487: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 5.25 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 1.25 : 1.2 : 1; },
+    },
+    3488: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 5.25 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 1.25 : 1.2 : 1; },
+    },
+    3489: {
+        atk: function(p) {
+            return p.unit.class.has("Driven") ? (p.unit.type == "STR" ? ((p.orb == 2) ? 3.5 : 3.25) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.5 : 3.25) : (p.orb == 'str' ? 3.5 : 3.25))) : 1;
+            $scope.notify({ text: p.orb });
+        },
+    },
+    3490: {
+        atk: function(p) {
+            return p.unit.class.has("Driven") ? (p.unit.type == "STR" ? ((p.orb == 2) ? 3.75 : 3.5) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 3.75 : 3.5) : (p.orb == 'str' ? 3.75 : 3.5))) : 1;
+            $scope.notify({ text: p.orb });
+        },
     },
     3491: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 2.5, 2.75, 3, 3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
