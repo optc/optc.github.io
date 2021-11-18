@@ -11232,12 +11232,13 @@ window.specials = {
         }
     },
     3275: {
-        affinity: function(p) { return window.specials[3275].multiplier; },
+        affinity: function(p) { return p.unit.type == window.specials[3275].boostedType ? window.specials[3275].multiplier : 1; },
         def: function(p) { return 0; },
         atk: function(p) { return p.defenseDown ? 2 : 1; },
         type: "condition",
         onActivation: function(p) {
             window.specials[3275].multiplier = (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) ? 1.75 : 1;
+            window.specials[3275].boostedType = p.colorCount.STR >= 4 ? "STR" : p.colorCount.DEX >= 4 ? "DEX" :  p.colorCount.QCK >= 4 ? "QCK" : p.colorCount.PSY >= 4 ? "PSY" : p.colorCount.INT >= 4 ? "INT" : "null";
         },
     },
     3277: {
@@ -11717,7 +11718,6 @@ window.specials = {
         },
     },
     3361: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p); },
         chain: function(p) { return 3; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -11965,6 +11965,7 @@ window.specials = {
     3382: {
         orb: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -12037,6 +12038,11 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.colorCount.DEX >= 4 ? 1.75 : 1;
         },
     },
+    3389: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3 : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p)}
+    },
     3390: {
         atk: function(p) { return p.toki[p.slot] ? 3.5 : 1; },
         type: "type",
@@ -12063,7 +12069,7 @@ window.specials = {
         type: "type",
     },
     3396: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 2 : 1; },
+        affinity: function(p) { return 1.75; },
     },
     3398: {
         delay: function(p) { return 1; },
