@@ -486,7 +486,7 @@ window.effects = {
 	
 	'Kizuna Clash [Global]': {
         description: 'Certain units boosted',
-        thumb: 3373,
+        thumb: 3397,
         id: 46, // don't change this
         atk: function(p) {
             var boost = 1;
