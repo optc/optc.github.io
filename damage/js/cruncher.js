@@ -649,7 +649,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ([3070, 3071, 3369].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);
         
         if ($scope.data.effect == 'Kizuna Clash [Global]'){
-            if ([ 3370, 3371, 3372 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([ 3392, 3391 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
             if ([ 3468, 3479 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
@@ -1112,7 +1112,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ([3070, 3071, 3369].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) affinityMultiplier = affinityMultiplier;
             
             if ($scope.data.effect == 'Kizuna Clash [Global]'){
-                if ([ 3370, 3371, 3372 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+                if ([ 3392, 3391 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
             if ($scope.data.effect == 'Kizuna Clash [Japan]'){
                 if ([ 3234, 3212 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
