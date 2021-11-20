@@ -96595,7 +96595,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Paralyisi",
+          "attribute": "Paralysis",
           "chance": 80,
           "type": "debuff"
         }
