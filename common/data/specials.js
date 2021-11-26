@@ -12713,6 +12713,26 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
+    3496: {
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3497: {
+        atk: function(p) { return 2; },
+        type: "type",
+        chainAddition: function(p) { return 0.5; },
+    },
+    3498: {
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -14881,6 +14901,134 @@ var ghostsSpecials = {
     348: {
         status: function(p) { return 2.25; },
         warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+    },
+    349: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    350: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    351: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    352: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    353: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    354: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    355: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    356: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    357: {
+        atkbase: function(p) { return 1000; },
+    },
+    358: {
+        atkbase: function(p) { return 1000; },
+    },
+    359: {
+        atkbase: function(p) { return 1000; },
+    },
+    360: {
+        atkbase: function(p) { return 1000; },
+    },
+    361: {
+        atkbase: function(p) { return 1000; },
+    },
+    362: {
+        atkbase: function(p) { return 1000; },
+    },
+    363: {
+        atkbase: function(p) { return 1000; },
+    },
+    364: {
+        atkbase: function(p) { return 1000; },
     },
 };
 

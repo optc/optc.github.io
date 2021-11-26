@@ -5131,6 +5131,14 @@ window.evolutions = {
         evolution: 3490,
         evolvers: [ "skullKrieg", "skullKrieg", "skullKrieg", "skullKrieg", "skullKrieg" ]
     },
+    3492: {
+        evolution: 3493,
+        evolvers: [  ]
+    },
+    3494: {
+        evolution: 3495,
+        evolvers: [  ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]

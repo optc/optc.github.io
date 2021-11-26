@@ -12152,6 +12152,7 @@
               "attributes": [ "Damage Over Time" ],
               "duration": 30,
               "level": 1,
+              "chance": 100,
               "effect": "hinderance",
               "range": { "direction": "radial", "size": "medium" },
               "targeting": { "targets": [ "enemies" ] }
@@ -77751,6 +77752,7 @@
               "attributes": [ "Damage Over Time" ],
               "duration": 12,
               "level": 1,
+              "chance": 100,
               "effect": "hinderance",
               "targeting": { "count": 2, "targets": [ "enemies" ] }
             },
@@ -82261,6 +82263,7 @@
               "attributes": [ "Damage Over Time" ],
               "duration": 16,
               "level": 1,
+              "chance": 100,
               "effect": "hinderance",
               "targeting": { "targets": [ "enemies" ] }
             },
@@ -82278,7 +82281,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 1, "amount": 12 }
+              "override": { "level": 1, "duration": 12 }
             },
             {
               "override": { "level": 1, "duration": 17 }
@@ -82292,7 +82295,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 1, "amount": 13 }
+              "override": { "level": 1, "duration": 13 }
             },
             {
               "override": { "level": 1, "duration": 18 }
@@ -82306,7 +82309,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 2, "amount": 14 }
+              "override": { "level": 2, "duration": 14 }
             },
             {
               "override": { "level": 1, "duration": 19 }
@@ -82320,7 +82323,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 2, "amount": 15 }
+              "override": { "level": 2, "duration": 15 }
             },
             {
               "override": { "level": 1, "duration": 20 }
@@ -82334,7 +82337,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 3, "amount": 16 }
+              "override": { "level": 3, "duration": 16 }
             },
             {
               "override": { "level": 2, "duration": 21 }
@@ -82348,7 +82351,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 3, "amount": 17 }
+              "override": { "level": 3, "duration": 17 }
             },
             {
               "override": { "level": 2, "duration": 22 }
@@ -82362,7 +82365,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 3, "amount": 18 }
+              "override": { "level": 3, "duration": 18 }
             },
             {
               "override": { "level": 2, "duration": 23 }
@@ -82376,7 +82379,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 4, "amount": 19 }
+              "override": { "level": 4, "duration": 19 }
             },
             {
               "override": { "level": 2, "duration": 24 }
@@ -82390,7 +82393,7 @@
           "cooldown": 26,
           "effects": [
             {
-              "override": { "level": 5, "amount": 20 }
+              "override": { "level": 5, "duration": 20 }
             },
             {
               "override": { "level": 3, "duration": 25 }
@@ -82544,7 +82547,7 @@
               "override": { "chance": 23 }
             },
             {
-              "override": { "level": 1, "amount": 12 }
+              "override": { "level": 1, "duration": 12 }
             }
           ]
         },
@@ -82558,7 +82561,7 @@
               "override": { "chance": 26 }
             },
             {
-              "override": { "level": 2, "amount": 13 }
+              "override": { "level": 2, "duration": 13 }
             }
           ]
         },
@@ -82572,7 +82575,7 @@
               "override": { "chance": 29 }
             },
             {
-              "override": { "level": 2, "amount": 14 }
+              "override": { "level": 2, "duration": 14 }
             }
           ]
         },
@@ -82586,7 +82589,7 @@
               "override": { "chance": 32 }
             },
             {
-              "override": { "level": 3, "amount": 15 }
+              "override": { "level": 3, "duration": 15 }
             }
           ]
         },
@@ -82600,7 +82603,7 @@
               "override": { "chance": 35 }
             },
             {
-              "override": { "level": 4, "amount": 16 }
+              "override": { "level": 4, "duration": 16 }
             }
           ]
         },
@@ -82614,7 +82617,7 @@
               "override": { "chance": 38 }
             },
             {
-              "override": { "level": 4, "amount": 17 }
+              "override": { "level": 4, "duration": 17 }
             }
           ]
         },
@@ -82628,7 +82631,7 @@
               "override": { "chance": 41 }
             },
             {
-              "override": { "level": 5, "amount": 18 }
+              "override": { "level": 5, "duration": 18 }
             }
           ]
         },
@@ -82642,7 +82645,7 @@
               "override": { "chance": 44 }
             },
             {
-              "override": { "level": 5, "amount": 19 }
+              "override": { "level": 5, "duration": 19 }
             }
           ]
         },
@@ -82656,7 +82659,7 @@
               "override": { "chance": 50 }
             },
             {
-              "override": { "level": 7, "amount": 20 }
+              "override": { "level": 7, "duration": 20 }
             }
           ]
         }
@@ -83520,10 +83523,10 @@
               "override": { "amount": 550 }
             },
             {
-              "override": { "level": 1, "amount": 9 }
+              "override": { "level": 1, "duration": 9 }
             },
             {
-              "override": { "level": 1, "amount": 9 }
+              "override": { "level": 1, "duration": 9 }
             }
           ]
         },
@@ -83534,10 +83537,10 @@
               "override": { "amount": 600 }
             },
             {
-              "override": { "level": 1, "amount": 10 }
+              "override": { "level": 1, "duration": 10 }
             },
             {
-              "override": { "level": 1, "amount": 10 }
+              "override": { "level": 1, "duration": 10 }
             }
           ]
         },
@@ -83548,10 +83551,10 @@
               "override": { "amount": 650 }
             },
             {
-              "override": { "level": 1, "amount": 11 }
+              "override": { "level": 1, "duration": 11 }
             },
             {
-              "override": { "level": 2, "amount": 11 }
+              "override": { "level": 2, "duration": 11 }
             }
           ]
         },
@@ -83562,10 +83565,10 @@
               "override": { "amount": 700 }
             },
             {
-              "override": { "level": 1, "amount": 12 }
+              "override": { "level": 1, "duration": 12 }
             },
             {
-              "override": { "level": 2, "amount": 12 }
+              "override": { "level": 2, "duration": 12 }
             }
           ]
         },
@@ -83576,10 +83579,10 @@
               "override": { "amount": 750 }
             },
             {
-              "override": { "level": 2, "amount": 13 }
+              "override": { "level": 2, "duration": 13 }
             },
             {
-              "override": { "level": 3, "amount": 13 }
+              "override": { "level": 3, "duration": 13 }
             }
           ]
         },
@@ -83590,10 +83593,10 @@
               "override": { "amount": 800 }
             },
             {
-              "override": { "level": 2, "amount": 14 }
+              "override": { "level": 2, "duration": 14 }
             },
             {
-              "override": { "level": 3, "amount": 14 }
+              "override": { "level": 3, "duration": 14 }
             }
           ]
         },
@@ -83604,10 +83607,10 @@
               "override": { "amount": 850 }
             },
             {
-              "override": { "level": 2, "amount": 15 }
+              "override": { "level": 2, "duration": 15 }
             },
             {
-              "override": { "level": 3, "amount": 15 }
+              "override": { "level": 3, "duration": 15 }
             }
           ]
         },
@@ -83618,10 +83621,10 @@
               "override": { "amount": 900 }
             },
             {
-              "override": { "level": 2, "amount": 16 }
+              "override": { "level": 2, "duration": 16 }
             },
             {
-              "override": { "level": 4, "amount": 16 }
+              "override": { "level": 4, "duration": 16 }
             }
           ]
         },
@@ -83632,10 +83635,10 @@
               "override": { "amount": 1000 }
             },
             {
-              "override": { "level": 3, "amount": 17 }
+              "override": { "level": 3, "duration": 17 }
             },
             {
-              "override": { "level": 5, "amount": 17 }
+              "override": { "level": 5, "duration": 17 }
             }
           ]
         }
@@ -86731,10 +86734,10 @@
             {
               "attributes": [ "Critical Hit" ],
               "duration": 11,
-              "effect": "debuff",
+              "effect": "buff",
               "level": 1,
               "range": { "direction": "radial", "size": "large" },
-              "targeting": { "targets": [ "enemies" ] }
+              "targeting": { "targets": [ "Driven" ] }
             },
             {
               "amount": 1.5,

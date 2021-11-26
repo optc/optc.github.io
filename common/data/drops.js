@@ -7590,6 +7590,14 @@ window.drops = {
         },
 
         {
+            name: 'O-lin! Battle of Onigashima!!',
+            thumb: 3498,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3498 ],
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,

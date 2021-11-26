@@ -930,14 +930,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var temp = damage.map(function(x,n) {
                 var multipliers = jQuery.extend([ ], x.multipliers), base = x.base;
                 specials.forEach(function(data) {
-                    var atkPlusTemp = 0; //conditional goes here
+                    var atkPlusTemp = 0;
+                    var statusPlusTemp = 0;
                     plusSpecials.forEach(function(plusSpecial) {
                         if(plusSpecial.hasOwnProperty('atkPlus'))
                             if(plusSpecial.atkPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > atkPlusTemp) atkPlusTemp = plusSpecial.atkPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                        if(plusSpecial.hasOwnProperty('statusPlus'))
+                            if(plusSpecial.statusPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > statusPlusTemp) statusPlusTemp = plusSpecial.statusPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
                     });
                     if (!data.s) { // non-static
                         var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
                         if(data.type == "atk") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        if(data.type == "condition") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + statusPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                         else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
                         base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
@@ -1046,6 +1050,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 plusSpecials.push({ sourceSlot: data.sourceSlot, orbPlus: data.orbPlus });
             if (data.hasOwnProperty('affinityPlus'))
                 plusSpecials.push({ sourceSlot: data.sourceSlot, affinityPlus: data.affinityPlus });
+            if (data.hasOwnProperty('statusPlus'))
+                plusSpecials.push({ sourceSlot: data.sourceSlot, statusPlus: data.statusPlus });
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('chainMultiplication'))
