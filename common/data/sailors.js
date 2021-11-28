@@ -1843,9 +1843,9 @@ window.sailors = {
         rcvStatic: function(p) { return 60; },
     },
     3401: {
-        atkStatic: function(p) { return 60; },
-        hpStatic: function(p) { return 60; },
-        rcvStatic: function(p) { return 60; },
+        atkStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
     },
     3403: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
