@@ -941,7 +941,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     if (!data.s) { // non-static
                         var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
                         if(data.type == "atk") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
-                        if(data.type == "condition") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + statusPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        else if(data.type == "condition") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + statusPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                         else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
                         base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
