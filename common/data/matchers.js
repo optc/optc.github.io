@@ -1488,7 +1488,7 @@ window.matchers = [
     },
     
     {
-        name: 'Sailor Despair Reduction Potential Ability',
+        name: 'Fear/Sailor Despair Reduction Potential Ability',
         target: 'limit',
         matcher: /Reduce Sailor Despair duration/i
     },
