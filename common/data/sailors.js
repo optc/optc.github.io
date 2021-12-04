@@ -2084,6 +2084,16 @@ window.sailors = {
         rcvStatic: function(p) { return 40; },
         hpStatic: function(p) { return 40; },
     },
+    3499: {
+        atkStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
+    },
+    3501: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

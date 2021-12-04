@@ -5501,6 +5501,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3460, -3460 ],
         },
+        
+        {
+            name: 'Monkey D. Luffy',
+            thumb: 3499,
+            showManual: true,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3499, -3499 ],
+        },
 
     ],
 

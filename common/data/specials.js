@@ -12733,6 +12733,23 @@ window.specials = {
     3498: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p); },
     },
+    3499:{
+        chain: function(p) { return [2.75, 3, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.75, 3, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+        },
+        def: function(p) { return [0.5, 0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + [2.75, 3, 3.5][n] + 'x chain boost. To ' + [2.75, 3, 3.5][(n + 1) % levels.length] + 'x chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

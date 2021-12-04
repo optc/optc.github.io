@@ -4050,6 +4050,8 @@ window.families = {
     3496: [ ...Shinobu, ...KozukiMomonosuke ],
     3497: [ ...VinsmokeSanji ],
     3498: [ ...CharlotteLinlin ],
+    3499: [ ...MonkeyDLuffy ],
+    3501: [ ...Ohm ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

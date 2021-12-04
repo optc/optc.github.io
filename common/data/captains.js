@@ -12306,6 +12306,17 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 4 : 3; },
         hp: function(p) { return 1.2; },
     },
+    3499: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.5 : 3;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return 1.25; },
+    },
+    3501: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
