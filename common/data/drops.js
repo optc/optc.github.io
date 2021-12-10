@@ -6022,6 +6022,15 @@ window.drops = {
             '7.5 Anniversary Sea': [ 3491 ]
         },
 
+        {
+            name: 'Hyogoro',
+            dropID: 'treasuremap52',
+            thumb: 3506,
+            nakama: null,
+            gamewith: null,
+            'Coast of Wano': [ 3506 ]
+        },
+
     ],
 
     
@@ -6644,6 +6653,15 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3486 ],
+        },
+
+        {
+            name: 'Foxy & Porche',
+            dropID: 'rumble19',
+            thumb: 3505,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3505 ],
         },
 
     ],

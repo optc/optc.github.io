@@ -606,7 +606,7 @@ const CharlottePoire = [ "Charlotte Poire" ];
 const KozukiHiyori = [ "Kozuki Hiyori", "Komurasaki" ];
 const Kikunojo = [ "Kikunojo" ];
 const Tama = [ "Tama" ];
-const MissTsuru = [ "Miss Tsuru" ];
+const MissTsuru = [ "Miss Tsuru", "Otsuru", "Tsurunojo" ];
 const Denjiro = [ "Denjiro", "Kyoshiro" ];
 const AshuraDoji = [ "Ashura Doji", "Shutenmaru" ];
 const TenguyamaHitetsu = [ "Tenguyama Hitetsu" ];
@@ -4052,6 +4052,11 @@ window.families = {
     3498: [ ...CharlotteLinlin ],
     3499: [ ...MonkeyDLuffy ],
     3501: [ ...Ohm ],
+    3502: [ ...Kinemon ],
+    3503: [ ...Denjiro ],
+    3504: [ ...MissTsuru ],
+    3505: [ ...Foxy, ...Porche ],
+    3506: [ ...Hyogoro ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

@@ -6385,7 +6385,7 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[2324].turnedOn = false;
         },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."        
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
     },
     2325: {
         chainAddition: function(p) { return 0.75; },
@@ -6396,7 +6396,7 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[2325].turnedOn = false;
         },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."        
+        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
     },
     2328: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
@@ -12748,6 +12748,32 @@ window.specials = {
                 text: '' + [2.75, 3, 3.5][n] + 'x chain boost. To ' + [2.75, 3, 3.5][(n + 1) % levels.length] + 'x chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
+        },
+    },
+    3502: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+        type: "type",
+    },
+    3503: {
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 ? 0.7 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 ? 0.5 : 0; },
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 ? 1.75 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.colorCount.STR >= 4;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.colorCount.DEX + p.colorCount.QCK >= 4;
+        },
+    },
+    3505: {
+        atk: function(p) { return 2; },
+        type: "type",
+        warning: "Selected special (%name%) assumes that the enemy has been Delayed."
+    },
+    3506: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 ? 2 : 1 : 1; },
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 ? 800 : 0 : 0; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "PSY");
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "INT");
         },
     },
 };

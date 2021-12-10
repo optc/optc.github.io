@@ -3497,9 +3497,14 @@ window.units = [
     [ "Shinobu & Momonosuke, Life-Saving Rescue", "DEX", [ "Cerebral", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1590, 673, 110, 3180, 1347, 221, 1 ],
     [ "Sobamask, Disappearing Warrior", "STR", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1666, 716, 83, 3333, 1433, 167, 1 ],
     [ "Oiran O-lin, Standing Threat", "INT", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1844, 772, 75, 3688, 1543, 150, 1 ],
-    [ "Monkey D. Luffy, Ones To Defeat The Dragon", "DEX", [ "Fighter", "Free Spirit" ], 5, 40, 4, 3, 99, 4000000, 1456, 729, 114, null, null, null, null ],
+    [ "Monkey D. Luffy, Ones To Defeat The Dragon", "DEX", [ "Fighter", "Free Spirit" ], 5, 40, 4, 3, 99, 4000000, 1456, 729, 114, 2912, 1458, 229, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Ohm, Fierce Fight in the Sky", "INT", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1866, 753, 138, null, null, null, null ],
+    [ "Ohm, Fierce Fight in the Sky", "INT", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1866, 753, 138, 3732, 1506, 276, 1 ],
+    [ "Kinemon, At The Lord's Side", "STR", [ "Slasher", "Cerebral" ], 5, 20, 4, 4, 99, 2000000, 1564, 779, 84, null, null, null, null ],
+    [ "Denjiro, At The Lord's Side", "STR", [ "Slasher", "Cerebral" ], 5, 20, 4, 4, 99, 2000000, 1653, 735, 81, null, null, null, null ],
+    [ "Otsuru, Poster Girl", "DEX", [ "Cerebral", "Free Spirit" ], 5, 20, 5, 4, 99, 2000000, 1485, 688, 149, null, null, null, null ],
+    [ "Foxy & Proche", "STR", [ "Fighter", "Shooter" ], 5, 50, 4, 5, 99, 5000000, 1558, 654, 119, null, null, null, null ],
+    [ "Hyogoro of the Flower", "QCK", [ "Slasher", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1206, 575, 107, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
