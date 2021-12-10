@@ -1189,6 +1189,7 @@
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
         var regex = new RegExp('^((type|class|support|family|notfamily):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        const typeRegex = /^(?:str|dex|qck|psy|int)$/;
         var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
             return x.length > 0;
         });
@@ -1196,8 +1197,12 @@
             x = x.replace(/_+/g, ' ');
             var temp = x.match(regex);
             if (!temp) { // if it couldn't be parsed, treat it as string
-                result.query.push(x);
-                result.queryTerms.push(utils.getRegex(x));
+                if (typeRegex.test(x)) { // if string is a unit type, treat it as `type:X`
+                    result.matchers['type'] = new RegExp(x, 'i');
+                } else {
+                    result.query.push(x);
+                    result.queryTerms.push(utils.getRegex(x));
+                }
             } else if (temp[4] !== undefined) { // numeric operator
                 var parameter = temp[4],
                         op = temp[5],
