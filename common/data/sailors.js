@@ -1822,6 +1822,14 @@ window.sailors = {
     3388: {
         hpStatic: function(p) { return 50; },
     },
+    3389: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3391: {
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
     3392: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? 75 : 0; },
     },

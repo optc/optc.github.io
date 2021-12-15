@@ -11700,7 +11700,7 @@ window.captains = {
         hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.3 : 1; },
     },
     3339: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3340: {
         atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
@@ -11789,7 +11789,7 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
     },
     3368: {
-        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2.5, 2.5, 2.5, 2.5, 2.5, 2.5, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.class.has("Free Spirit") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3369: {
         atk: function(p) {
@@ -11865,7 +11865,7 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
     },
     3389: {
-        atk: function(p) { return p.unit.type == "DEX" ? [1, 1, 1, 1, 1, 1, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.type == "DEX" ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3390: {
         atk: function(p) { return 4.75; },
@@ -12097,8 +12097,8 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
     },
     3443: {
-        atk: function(p) { return [2, 2.25, 2.5, 2.75, 3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
-        hp: function(p) { return [1.1, 1.1, 1.1, 1.1, 1.1, 1.2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        atk: function(p) { return [2, 2.25, 2.5, 2.75, 3, 3.25, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return [1.1, 1.1, 1.15, 1.15, 1.2, 1.2, 1.2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     3444: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? 3.25 : 1; },
@@ -12193,7 +12193,7 @@ window.captains = {
     3467: {
 		damageSorter: function(d) { return CrunchUtils.classSort(d, 3, [ "Cerebral", "Fighter" ]); },
         hitAtk: function(p) {
-            return (p.unit.class.has('Cerebral')) || p.unit.class.has("Fighter") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? [2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1;
+            return (p.unit.class.has('Cerebral')) || p.unit.class.has("Fighter") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? [2.75, 3, 3.25, 3.5, 3.75, 4, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.75, 3, 3.25, 3.5, 3.75, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },

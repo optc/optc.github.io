@@ -11858,8 +11858,8 @@ window.specials = {
         },
     },
     3373: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn != 1 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, [1, 1.5, 1.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier], [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
