@@ -6475,6 +6475,16 @@ window.drops = {
             'Kizuna Exchange': [ 9054 ],
         },
 
+        {
+            name: 'Zorojuro & Sangoro',
+            dropID: 'kizuna30',
+            thumb: 3511,
+            nakama: null,
+            gamewith: 148537,
+            'All Difficulties': [ 3511 ],
+            'Kizuna Exchange': [ 9055 ],
+        },
+
     ],
 
 

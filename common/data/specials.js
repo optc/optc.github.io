@@ -12779,6 +12779,28 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "INT");
         },
     },
+    3509: {
+        orb: function(p) { return (p.unit.class.has('Shooter') || p.unit.class.has('Powerhouse')) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        onActivation: function(p) {
+            var levels = [2, 2.5];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3510: {
+        chainAddition: function(p) { return 0.8; }
+    },
+    3511: {
+        chain: function(p) { return 2.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -15075,6 +15097,54 @@ var ghostsSpecials = {
     },
     364: {
         atkbase: function(p) { return 1000; },
+    },
+    365: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    366: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    367: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    368: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    369: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    370: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    371: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
+    },
+    372: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+        }
     },
 };
 

@@ -2115,6 +2115,14 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 30 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 30 : 0; },
     },
+    3509: {
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3511: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
@@ -3149,6 +3157,46 @@ var ghostsSailors = {
     364: {
         atkStatic: function(p) { return 75; },
         hpStatic: function(p) { return 75; },
+    },
+    365: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    366: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    367: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
+    368: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
+    369: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    370: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    371: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+    },
+    372: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
     },
 }
 
