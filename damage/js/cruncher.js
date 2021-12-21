@@ -1146,15 +1146,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         multSpecial = enabledSpecials[y].staticMult(params);
                         baseDamage = getStatOfUnit(team[slot],'atk', slot);
                         enabledEffects.forEach(function(x) {
-                            if (x.hasOwnProperty('atkStatic'))
-                                baseDamage += x.atkStatic(getParameters(slot));
+                            if (x.hasOwnProperty('atkStatic')){
+                                var params2 = getParameters(slot);
+                                params2["sourceSlot"] = x.sourceSlot;
+                                baseDamage += x.atkStatic(params);
+                            }
                         });
-                        /*enabledSpecials.forEach(function(x) {
-                            if (x.hasOwnProperty('atkbase'))
-                                var params = getParameters(slot);
-                                params["sourceSlot"] = x.sourceSlot;
+                        enabledSpecials.forEach(function(x) {
+                            if (x.hasOwnProperty('atkbase')){
+                                var params2 = getParameters(slot);
+                                params2["sourceSlot"] = x.sourceSlot;
                                 baseDamage += x.atkbase(params);
-                        });*/
+                            }
+                        });
                     }
                 }
             }

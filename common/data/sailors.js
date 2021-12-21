@@ -2002,9 +2002,9 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 30 : 0; },
     },
     3460: {
-        atkStatic: function(p) { return 30; },
-        hpStatic: function(p) { return 30; },
-        rcvStatic: function(p) { return 30; },
+        atkStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
     },
     3462: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
