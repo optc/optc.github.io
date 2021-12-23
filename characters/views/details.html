@@ -449,6 +449,40 @@
                         </table>
                     </div>
 
+                    <h3 class="page-header" ng-hide="hidden.abilities" ng-if="details.support">Support</h3>
+
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
+                        <table class="table table-striped-column abilities">
+                            <!--------------    Support Abilities    -------------->
+                            <!--------------    isSupportHybrid is not used since JPN and Global all match so far, leaving in for future cases    -------------->
+                            <tbody>
+                                <tr ng-if="details.support">
+                                    <td>Support Abilities</td>
+                                    <td>
+                                        <!-- same potential break (differences across versions) -->
+                                        <div ng-if="!isSupportHybrid && !isSupportStaged" ng-bind-html="details.support | decorate"></div>
+                                        <!-- different potential abilities -->
+                                        <div ng-if="!isSupportHybrid && isSupportStaged">
+                                            <div ng-repeat="stage in details.support track by $index">
+                                                <strong>Supported Characters:</strong> <span ng-bind-html="stage.Characters | decorate"></span>
+                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                                <add-support-query criteria="stage.Characters"  excluded-families="families"></add-support-query>
+                                            </div>
+                                        </div>
+                                        <span class="notes" ng-if="details.supportNotes" ng-bind-html="details.supportNotes | notes | decorate"></span>
+                                        <div ng-if="isSupportHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="details.potential.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="details.potential.global | decorate"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <h3 class="page-header" ng-hide="hidden.abilities"  ng-if="details.limit || details.potential">Limit Break</h3>
                     
                     <div class="panel panel-default" ng-hide="hidden.abilities"  ng-if="details.limit || details.potential">
@@ -524,40 +558,6 @@
                                         </div>
                                         <span class="notes" ng-if="details.lastTapNotes" ng-bind-html="details.lastTapNotes | notes | decorate"></span>
                                         <div ng-if="isLastTapHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="details.potential.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="details.potential.global | decorate"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h3 class="page-header" ng-hide="hidden.abilities" ng-if="details.support">Support</h3>
-
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
-                        <table class="table table-striped-column abilities">
-                            <!--------------    Support Abilities    -------------->
-                            <!--------------    isSupportHybrid is not used since JPN and Global all match so far, leaving in for future cases    -------------->
-                            <tbody>
-                                <tr ng-if="details.support">
-                                    <td>Support Abilities</td>
-                                    <td>
-                                        <!-- same potential break (differences across versions) -->
-                                        <div ng-if="!isSupportHybrid && !isSupportStaged" ng-bind-html="details.support | decorate"></div>
-                                        <!-- different potential abilities -->
-                                        <div ng-if="!isSupportHybrid && isSupportStaged">
-                                            <div ng-repeat="stage in details.support track by $index">
-                                                <strong>Supported Characters:</strong> <span ng-bind-html="stage.Characters | decorate"></span>
-                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{$index + 1}}:</strong>
-                                                <span ng-bind-html="item | decorate"></span><br></div>
-                                                <add-support-query criteria="stage.Characters"  excluded-families="families"></add-support-query>
-                                            </div>
-                                        </div>
-                                        <span class="notes" ng-if="details.supportNotes" ng-bind-html="details.supportNotes | notes | decorate"></span>
-                                        <div ng-if="isSupportHybrid">
                                             <span class="badge badge-japan">Japan</span>
                                             <div ng-bind-html="details.potential.japan | decorate"></div>
                                             <span class="badge badge-global">Global</span>
