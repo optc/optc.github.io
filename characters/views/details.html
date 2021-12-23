@@ -449,6 +449,78 @@
                         </table>
                     </div>
 
+                    <!-- Abilities (compared unit) -->
+
+                    <h3 class="page-header" ng-if="compare" ng-hide="hidden.abilities">Abilities (compared unit)</h3>
+
+                    <div class="panel panel-default" ng-if="compare" ng-hide="hidden.abilities">
+                        <table class="table table-striped-column abilities">
+                            <tbody>
+                                <tr>
+                                    <td>Captain Ability</td>
+                                    <td>
+                                        <!-- same captain ability -->
+                                        <div ng-if="!isCompareCaptainHybrid" ng-bind-html="compareDetails.captain | decorate"></div>
+                                        <!-- different captain abilities -->
+                                        <div ng-if="isCompareCaptainHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="compareDetails.captain.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="compareDetails.captain.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sailor Ability</td>
+                                    <td>
+                                        <!-- same sailor ability -->
+                                        <div ng-if="!isCompareSailorHybrid" ng-bind-html="compareDetails.sailor | decorate"></div>
+                                        <!-- different sailor abilities -->
+                                        <div ng-if="isCompareSailorHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="compareDetails.sailor.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="compareDetails.sailor.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="compareDetails.sailorNotes" ng-bind-html="compareDetails.sailorNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Special</td>
+                                    <td>
+                                        <strong class="specialName" ng-if="compareDetails.specialName">{{compareDetails.specialName}}</strong>
+                                        <!-- same special, no stages -->
+                                        <div ng-if="!isCompareSpecialHybrid && !isCompareSpecialStaged" ng-bind-html="compareDetails.special | decorate"></div>
+                                        <!-- same special, with stages -->
+                                        <div ng-if="!isCompareSpecialHybrid && isCompareSpecialStaged">
+                                            <div ng-repeat="stage in compareDetails.special track by $index">
+                                                <strong>Stage {{$index + 1}}</strong>
+                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns):
+                                                <span ng-bind-html="stage.description | decorate"></span>
+                                            </div>
+                                        </div>
+                                        <!-- different specials -->
+                                        <div ng-if="isCompareSpecialHybrid">
+                                            <span class="badge badge-japan">Japan</span>
+                                            <div ng-bind-html="compareDetails.special.japan | decorate"></div>
+                                            <span class="badge badge-global">Global</span>
+                                            <div ng-bind-html="compareDetails.special.global | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="compareCooldown && !isCompareSpecialStaged">
+                                    <td>Cooldown</td>
+                                    <td>
+                                        {{compareCooldown.length ? compareCooldown[0] : compareCooldown}} turns
+                                        {{compareCooldown.length ? ' \u2192 ' + compareCooldown[1] + ' turns' : ''}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <h3 class="page-header" ng-hide="hidden.abilities" ng-if="details.support">Support</h3>
 
                     <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
@@ -804,78 +876,6 @@
                                                 <span ng-bind-html="item.description | decorate"></span><br></div>
                                         </div>
                                         <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- Abilities (compared unit) -->
-
-                    <h3 class="page-header" ng-if="compare" ng-hide="hidden.abilities">Abilities (compared unit)</h3>
-
-                    <div class="panel panel-default" ng-if="compare" ng-hide="hidden.abilities">
-                        <table class="table table-striped-column abilities">
-                            <tbody>
-                                <tr>
-                                    <td>Captain Ability</td>
-                                    <td>
-                                        <!-- same captain ability -->
-                                        <div ng-if="!isCompareCaptainHybrid" ng-bind-html="compareDetails.captain | decorate"></div>
-                                        <!-- different captain abilities -->
-                                        <div ng-if="isCompareCaptainHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="compareDetails.captain.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="compareDetails.captain.global | decorate"></div>
-                                        </div>
-                                        <span class="notes" ng-if="compareDetails.captainNotes" ng-bind-html="compareDetails.captainNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Sailor Ability</td>
-                                    <td>
-                                        <!-- same sailor ability -->
-                                        <div ng-if="!isCompareSailorHybrid" ng-bind-html="compareDetails.sailor | decorate"></div>
-                                        <!-- different sailor abilities -->
-                                        <div ng-if="isCompareSailorHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="compareDetails.sailor.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="compareDetails.sailor.global | decorate"></div>
-                                        </div>
-                                        <span class="notes" ng-if="compareDetails.sailorNotes" ng-bind-html="compareDetails.sailorNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Special</td>
-                                    <td>
-                                        <strong class="specialName" ng-if="compareDetails.specialName">{{compareDetails.specialName}}</strong>
-                                        <!-- same special, no stages -->
-                                        <div ng-if="!isCompareSpecialHybrid && !isCompareSpecialStaged" ng-bind-html="compareDetails.special | decorate"></div>
-                                        <!-- same special, with stages -->
-                                        <div ng-if="!isCompareSpecialHybrid && isCompareSpecialStaged">
-                                            <div ng-repeat="stage in compareDetails.special track by $index">
-                                                <strong>Stage {{$index + 1}}</strong>
-                                                ({{stage.cooldown.length ? stage.cooldown[0] : stage.cooldown}}{{stage.cooldown.length ? ' \u2192 ' + stage.cooldown[1] : ''}} turns):
-                                                <span ng-bind-html="stage.description | decorate"></span>
-                                            </div>
-                                        </div>
-                                        <!-- different specials -->
-                                        <div ng-if="isCompareSpecialHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="compareDetails.special.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="compareDetails.special.global | decorate"></div>
-                                        </div>
-                                        <span class="notes" ng-if="compareDetails.specialNotes" ng-bind-html="compareDetails.specialNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="compareCooldown && !isCompareSpecialStaged">
-                                    <td>Cooldown</td>
-                                    <td>
-                                        {{compareCooldown.length ? compareCooldown[0] : compareCooldown}} turns
-                                        {{compareCooldown.length ? ' \u2192 ' + compareCooldown[1] + ' turns' : ''}}
                                     </td>
                                 </tr>
                             </tbody>
