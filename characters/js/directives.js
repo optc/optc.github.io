@@ -421,6 +421,18 @@ directives.addSupportQuery = function($state, $stateParams) {
     };
 };
 
+
+directives.scrollToSection = function($state, $stateParams) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.click(function(e) {
+                document.getElementById(attrs.scrollToSection).scrollIntoView({ behavior: 'smooth' })
+            });
+        }
+    };
+};
+
 directives.addNames = function($stateParams, $rootScope) {
     var name = window.aliases;
     return {
