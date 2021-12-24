@@ -1157,3 +1157,6 @@ unit > a:hover, .clickable:hover {
 /**********
  * MOBILE *
  **********/
+.fa-rumble:before {
+    content: "⚔";
+}
