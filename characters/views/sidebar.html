@@ -388,6 +388,17 @@
         ng-click="filters.custom[n] = !filters.custom[n]">{{::filter.name}}</span>
 </div>
 
+<div class="filter-container expandable" id="super-container"
+        ng-class="{ expanded: filters.superEnabled }">
+    <span class="filter-header" ng-click="filters.superEnabled = !filters.superEnabled">
+        Super Special ability filters
+        <i class="pull-right fa fa-{{filters.superEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
+    </span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in ::filterData" ng-if="::filter.target == 'superSpecial'"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" 
+        ng-click="filters.custom[n] = !filters.custom[n]">{{::filter.name}}</span>
+</div>
+
 <div class="filter-container expandable" id="swap-container"
         ng-class="{ expanded: filters.swapEnabled }">
     <span class="filter-header" ng-click="filters.swapEnabled = !filters.swapEnabled">

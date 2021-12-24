@@ -4,7 +4,33 @@
  * Common data *
  ***************/
 
-var filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
+var filters = {
+    custom: [ ],
+    classes: [ ],
+    types: [ ],
+    stars: [ ],
+    cost: [ 1, 99 ],
+    toggle: true,
+    typeEnabled: false,
+    characterEnabled: false,
+    classEnabled: false,
+    dropEnabled: false,
+    supportEnabled: false,
+    limitEnabled: false,
+    sailorEnabled: false,
+    swapEnabled: false,
+    superEnabled: false,
+    specialEnabled: false,
+    captainEnabled: false,
+    temporaryEnabled: false,
+    specCaptEnabled: false,
+    tmkcEnabled: false,
+    exclusionEnabled: false,
+    costEnabled: false,
+    rarityEnabled: false,
+    farmEnabled: false,
+    nonfarmEnabled: false
+};
 
 function denormalizeEffects(ability) {
   if (!ability) return;
@@ -84,8 +110,60 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     });
 
     $scope.clearFilters = function() {
-        filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
-        $rootScope.filters = { custom: [ ], classes: [ ], types: [ ], stars: [ ], cost: [ 1, 99 ], toggle: true, typeEnabled: false, characterEnabled: false, classEnabled: false, dropEnabled: false, supportEnabled: false, limitEnabled: false, sailorEnabled: false, swapEnabled: false, specialEnabled: false, captainEnabled: false, temporaryEnabled: false, specCaptEnabled: false, tmkcEnabled: false, exclusionEnabled: false, costEnabled: false, rarityEnabled: false, farmEnabled: false, nonfarmEnabled: false };
+        filters = {
+            custom: [ ],
+            classes: [ ],
+            types: [ ],
+            stars: [ ],
+            cost: [ 1, 99 ],
+            toggle: true,
+            typeEnabled: false,
+            characterEnabled: false,
+            classEnabled: false,
+            dropEnabled: false,
+            supportEnabled: false,
+            limitEnabled: false,
+            sailorEnabled: false,
+            swapEnabled: false,
+            superEnabled: false,
+            specialEnabled: false,
+            captainEnabled: false,
+            temporaryEnabled: false,
+            specCaptEnabled: false,
+            tmkcEnabled: false,
+            exclusionEnabled: false,
+            costEnabled: false,
+            rarityEnabled: false,
+            farmEnabled: false,
+            nonfarmEnabled: false
+        };
+        $rootScope.filters = {
+            custom: [ ],
+            classes: [ ],
+            types: [ ],
+            stars: [ ],
+            cost: [ 1, 99 ],
+            toggle: true,
+            typeEnabled: false,
+            characterEnabled: false,
+            classEnabled: false,
+            dropEnabled: false,
+            supportEnabled: false,
+            limitEnabled: false,
+            sailorEnabled: false,
+            swapEnabled: false,
+            superEnabled: false,
+            specialEnabled: false,
+            captainEnabled: false,
+            temporaryEnabled: false,
+            specCaptEnabled: false,
+            tmkcEnabled: false,
+            exclusionEnabled: false,
+            costEnabled: false,
+            rarityEnabled: false,
+            farmEnabled: false,
+            nonfarmEnabled: false
+        };
     };
 
     $scope.toggleFilters = function() {
