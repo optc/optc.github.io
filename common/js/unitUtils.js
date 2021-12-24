@@ -15,7 +15,7 @@ UnitUtils.extendDouble = function(state, baseid, type) {
         }
     }
     //if (type == "vs") console.log(baseid, types, window.units[baseid - 1][1], Array.isArray(window.units[baseid - 1][1]));
-    for(i in types) {
+    for(var i in types) {
         window.details[state["start"]+state["increment"]] = Object.assign({},window.details[baseid]);
         if (type == "dual"){
             window.details[state["start"]+state["increment"]]["captain"] = window.details[baseid]["captain"][types[i]];
