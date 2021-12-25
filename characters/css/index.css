@@ -952,6 +952,17 @@ tr.preview td:nth-child(2) > a:after {
 .modal-footer {
     display: flex;
     justify-content: center;
+    padding: 10px;
+}
+
+.modal-footer .btn-group {
+    display: flex;
+    flex: 1;
+}
+
+.modal-footer .btn {
+    width: auto;
+    flex: 1;
 }
 
 @media (min-width: 768px) {
