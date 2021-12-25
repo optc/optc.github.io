@@ -19,23 +19,23 @@ if (Array.isArray(window.units[0])) {
   window.Utils.parseUnits(false)
 }
 
-Array.prototype.subcontains = function(data) {
+Array.prototype.subcontains = function (data) {
   return this.join('!').indexOf(data.join('!')) != -1;
 };
 
-Array.prototype.has = function(what) {
+Array.prototype.has = function (what) {
   return this.indexOf(what) != -1;
 };
 
-Array.prototype.count = function(data) {
+Array.prototype.count = function (data) {
   var total = 0;
-  for (var i=0;i<this.length;++i) {
-      if (this[i] == data) ++total;
+  for (var i = 0; i < this.length; ++i) {
+    if (this[i] == data) ++total;
   }
   return total;
 };
 
-String.prototype.has = function(what) {
+String.prototype.has = function (what) {
   return this == what;
 };
 
