@@ -461,7 +461,13 @@ window.matchers = [
         target: 'special',
         matcher: /Adds.+to Chain/i 
     },
-    
+
+    {
+        name: 'Chain multipliers',
+        target: 'special',
+        matcher: /Boosts.+chain multiplier/i
+    },
+
     {
         name: 'Chain Lockers',
         target: 'special',
@@ -496,6 +502,12 @@ window.matchers = [
         name: 'Buff Duration Extender',
         target: 'special',
         matcher: /increases duration of any/i
+    },
+
+    {
+        name: 'Buff Enhancers',
+        target: 'special',
+        matcher: /increases boost effects/i
     },
 
     {
