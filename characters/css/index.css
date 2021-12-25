@@ -1170,4 +1170,5 @@ unit > a:hover, .clickable:hover {
  **********/
 .fa-rumble:before {
     content: "⚔";
+    font-size: 17px;
 }
