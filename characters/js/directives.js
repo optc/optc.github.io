@@ -742,6 +742,9 @@ filters.abilityToString = function() {
                 case "Counter":
                   e += `${effect.chance ? "g" : "G"}rant ${effect.amount}x Counter`
                 break;
+                case "Revive":
+                  e += `${effect.chance ? "r" : "R"}evive to ${effect.amount}% HP after death`
+                break;
                 default:
                   e += `${"reduce " + attrStr}`;
                 break;
@@ -755,6 +758,9 @@ filters.abilityToString = function() {
                 e += `Inflicts Lv.${new Intl.NumberFormat().format(effect.level)} ${arrayToString(effect.attributes)} down penalty`;
               else
                 e += `${effect.chance}% chance to ${arrayToString(effect.attributes)}`;
+              break;
+            case "cleanse":
+              e += `${effect.chance}% chance to cleanse ${arrayToString(effect.attributes)} debuffs`;
               break;
             default:
               e = "UNKNOWN EFFECT " + JSON.stringify(effect)

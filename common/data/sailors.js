@@ -3198,6 +3198,78 @@ var ghostsSailors = {
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 100 : 0; },
     },
+    373: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    374: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    375: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    376: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    377: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    378: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    379: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    380: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    381: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+    },
+    382: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+    },
+    383: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+    384: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+    385: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+    },
+    386: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+    },
+    387: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
+    388: {
+        atkStatic: function(p) { return 100; },
+        hpStatic: function(p) { return 100; },
+        rcvStatic: function(p) { return 100; },
+    },
 }
 
 Object.keys(ghostsSailors).forEach(function (key) {

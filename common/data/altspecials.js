@@ -941,6 +941,118 @@ var ghostsAltSpecials = {
             });
         },
     },
+    373: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    374: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    375: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    376: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    377: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    378: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    379: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    380: {
+        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName); },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {

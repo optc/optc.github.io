@@ -12801,6 +12801,22 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
         },
     },
+    3516: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 2  : 1; },
+        type: "type",
+    },
+    3517: {
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
+    3518: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 0.3 : 0;
+        }, 
+    },
+    3519: {
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -15145,6 +15161,94 @@ var ghostsSpecials = {
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
+    },
+    373: {
+        affinityPlus: function(p) { return 0.5; },
+        atkCeil: function(p) { return 3; },
+    },
+    374: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        orbCeil: function(p) { return 3; },
+    },
+    375: {
+        affinityPlus: function(p) { return 0.5; },
+        atkCeil: function(p) { return 3; },
+    },
+    376: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        orbCeil: function(p) { return 3; },
+    },
+    377: {
+        affinityPlus: function(p) { return 0.5; },
+        atkCeil: function(p) { return 3; },
+    },
+    378: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        orbCeil: function(p) { return 3; },
+    },
+    379: {
+        affinityPlus: function(p) { return 0.5; },
+        atkCeil: function(p) { return 3; },
+    },
+    380: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        orbCeil: function(p) { return 3; },
+    },
+    381: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    382: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    383: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    384: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    385: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    386: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    387: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
+    },
+    388: {
+        atk: function(p) { return 2; },
+        type: "type",
+        affinity: function(p) { return 2; },
+        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p)},
+        chainAddition: function(p) { return 0.8; }
     },
 };
 

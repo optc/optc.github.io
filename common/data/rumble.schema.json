@@ -490,6 +490,7 @@
                 "Half Stats",
                 "Haste",
                 "Counter",
+                "Revive",
                 "hit",
                 "heal",
                 "near"
@@ -558,7 +559,8 @@
                 "damage",
                 "recharge",
                 "boon",
-                "penalty"
+                "penalty",
+                "cleanse"
             ],
             "title": "EffectEnum"
         },

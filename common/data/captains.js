@@ -12330,9 +12330,35 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Fighter") ? 2.5*(p.delayed ? [1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1) : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Fighter") ? 1.3 : 1; },
     },
-    3491: {
+    3506: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [2.25, 2.5, 2.75, 3, 3.25, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [1.1, 1.1, 1.1, 1.1, 1.1, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3509: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? 4 : 1; },
+    },
+    3510: {
+        atk: function(p) { return p.percHP >= 99.0 ? [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
+    },
+    3511: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.3 : 1; },
+    },
+    3516: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.3 : 1; },
+    },
+    3517: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.3 : 1; },
+    },
+    3518: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3.5 : p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.3 : 1; },
+    },
+    3519: {
+        atk: function(p) { return (p.orb == 'wano') ? 5 : 4.5; },
+        hp: function(p) { return 1.5; }
     },
 };
 
@@ -13930,6 +13956,70 @@ var ghostsCaptains = {
     372: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? 5 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? 1.3 : 1; },
+    },
+    373: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    374: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 5.25 : p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    375: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    376: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    377: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    378: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 5.25 : p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    379: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    380: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    381: {
+        atk: function(p) { return 4.75; },
+        hp: function(p) { return 1.5; },
+    },
+    382: {
+        atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5; },
+        hp: function(p) { return 1.5; },
+    },
+    383: {
+        atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5; },
+        hp: function(p) { return 1.5; },
+    },
+    384: {
+        atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5; },
+        hp: function(p) { return 1.5; },
+    },
+    385: {
+        atk: function(p) { return 4.75; },
+        hp: function(p) { return 1.5; },
+    },
+    386: {
+        atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5; },
+        hp: function(p) { return 1.5; },
+    },
+    387: {
+        atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5; },
+        hp: function(p) { return 1.5; },
+    },
+    388: {
+        atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5; },
+        hp: function(p) { return 1.5; },
     },
 };
 

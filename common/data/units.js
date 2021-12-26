@@ -3510,6 +3510,14 @@ window.units = [
     [ "Orochi, Angry Army", "QCK", [ "Shooter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1080, 588, 115, 2387, 1529, 283, 1 ],
     [ "Brook, Soul King's Thundercloud Slash", "DEX", [ "Free Spirit", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 1740, 791, 221, 3390, 1583, 443, 1 ],
     [ "Zorojuro & Sangoro", "QCK", [ "Slasher", "Powerhouse" ], 5, 50, 4, 4, 99, 5000000, 1106, 732, 110, null, null, null, null ],
+    [ "Roger & Newgate, Confrontation of the Mighty", ["INT", "PSY"], [[ "Slasher", "Striker" ], [ "Slasher", "Striker" ], [ "Slasher", "Striker" ]], 5, 30, 4, 3, 70, 1066998, 1299, 455, 77, null, null, null, null ],
+    [ "Roger & Newgate, Clash of the Mighty", ["INT", "PSY"], [[ "Slasher", "Striker" ], [ "Slasher", "Striker" ], [ "Slasher", "Striker" ]], 6, 55, 4, 5, 99, 5000000, 2573, 899, 149, null, null, null, null ],
+    [ "Luffy & Straw Hat Pirates, Advancing Pirates", ["STR", "DEX"], [[ "Free Spirit", "Fighter" ], [ "Free Spirit", "Fighter" ], [ "Free Spirit", "Fighter" ]], 5, 30, 4, 3, 70, 1066998, 1199, 449, 93, null, null, null, null ],
+    [ "Luffy & Straw Hat Pirates, Start of a Full-Scale War", ["STR", "DEX"], [[ "Free Spirit", "Fighter" ], [ "Free Spirit", "Fighter" ], [ "Free Spirit", "Fighter" ]], 6, 55, 4, 5, 99, 5000000, 2378, 878, 178, null, null, null, null ],
+    [ "Shanks & Buggy", "INT", [ "Slasher", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1669, 644, 106, null, null, null, null ],
+    [ "Rayleigh & Gaban", "PSY", [ "Slasher", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1756, 711, 94, null, null, null, null ],
+    [ "Monkey D. Garp, Fist-Tightened Vice Admiral", "STR", [ "Fighter", "Striker" ], 5, 30, 4, 5, 99, null, 1688, 726, 89, null, null, null, null ],
+    [ "Kozuki Oden, Samurai Challenging the Dragon", "STR", [ "Slasher", "Free Spirit" ], "6+", 65, 4, 5, 99, 5000000, 2219, 994, 119, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
