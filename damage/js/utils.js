@@ -164,6 +164,7 @@ window.CrunchUtils.gearSort = function(array, typeMultiplier) {
 window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName, params) {
     
     var orbPlusBonus = 0;
+    var orbCeilBonus = 1;
     Object.keys(window.specials).forEach(function(x) {
         if (window.specials[x].hasOwnProperty('orbPlus')){
             if(window.specials[x].turnedOn)
@@ -178,7 +179,16 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     orbPlusBonus = window.altspecials[x].orbPlus(params)
         }
     });
-    boostedMultiplier += boostedMultiplier != 1 ? orbPlusBonus : 0;
+
+    Object.keys(window.specials).forEach(function(x) {
+        if (window.specials[x].hasOwnProperty('orbCeil')){
+            if(window.specials[x].turnedOn)
+                if (window.specials[x].orbCeil(params) > orbCeilBonus)
+                    orbCeilBonus = window.specials[x].orbCeil(params)
+        }
+    });
+
+    boostedMultiplier = boostedMultiplier != 1 ? boostedMultiplier + orbPlusBonus < orbCeilBonus ? orbCeilBonus : boostedMultiplier + orbPlusBonus : boostedMultiplier;
 
     if(effectName == 'STR Orbs Beneficial'){
         if (orb == 'str') return boostedMultiplier;
