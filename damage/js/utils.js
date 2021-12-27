@@ -190,6 +190,8 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
 
     boostedMultiplier = boostedMultiplier != 1 ? boostedMultiplier + orbPlusBonus < orbCeilBonus ? orbCeilBonus : boostedMultiplier + orbPlusBonus : boostedMultiplier;
 
+    boostedMultiplier = parseFloat(params.customBuffs.orb) != 1 ? parseFloat(params.customBuffs.orb) : boostedMultiplier;
+
     if(effectName == 'STR Orbs Beneficial'){
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;

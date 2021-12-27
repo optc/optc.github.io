@@ -19,9 +19,20 @@
         </li>
         
         <li>
+            <div id="buffs">
+                <i class="fa fa-fist-raised"></i> Custom Universal (for now) Buffs:<br>
+                 ATK: <input type="number" size="4" min="1" max="10" step="0.1" id="customATK" to-int ng-model="data.customATK"></input><br>
+                 Orb: <input type="number" size="4" min="1" max="10" step="0.1" id="customOrb" to-int ng-model="data.customOrb"></input><br>
+                 Affinity: <input type="number" size="4" min="1" max="10" step="0.1" id="customAffinity" to-int ng-model="data.customAffinity"></input><br>
+                 ATK Base: <input type="number" size="5" min="0" max="1000" step="1" id="customATKBase" to-int ng-model="data.customATKBase"></input><br>
+                 Chain Addition: <input type="number" size="4" min="0" max="5" step="0.1" id="customChainAddition" to-int ng-model="data.customChainAddition"></input>
+            </div>
+        </li>
+        
+        <li>
             <div id="heal">
                 <i class="fa fa-heart"></i>
-                Heal Socket Level: <input type="number" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
+                Heal Socket Level: <input type="number" size="2" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
             </div>
         </li>
 
@@ -81,9 +92,9 @@
         <li>
             <div id="limit">
                 <i class="fa fa-angle-double-up"></i>
-                Limit Break Level: <br><input type="number" class="wheelable" name="crew0" min = 0 max = 50 ng-model="data.limit0"><input type="number" class="wheelable" name="crew1" min = 0 max = 50 ng-model="data.limit1">
-                <br><input type="number" class="wheelable" name="crew2" min = 0 max = 50 ng-model="data.limit2"><input type="number" class="wheelable" name="crew3" min = 0 max = 50 ng-model="data.limit3">
-                <br><input type="number" class="wheelable" name="crew4" min = 0 max = 50 ng-model="data.limit4"><input type="number" class="wheelable" name="crew5" min = 0 max = 50 ng-model="data.limit5">
+                Limit Break Level: <br><input type="number" size="4" class="wheelable" name="crew0" min = 0 max = 50 ng-model="data.limit0"><input type="number" size="4" class="wheelable" name="crew1" min = 0 max = 50 ng-model="data.limit1">
+                <br><input type="number" size="4" class="wheelable" name="crew2" min = 0 max = 50 ng-model="data.limit2"><input type="number" size="4" class="wheelable" name="crew3" min = 0 max = 50 ng-model="data.limit3">
+                <br><input type="number" size="4" class="wheelable" name="crew4" min = 0 max = 50 ng-model="data.limit4"><input type="number" size="4" class="wheelable" name="crew5" min = 0 max = 50 ng-model="data.limit5">
             </div>
         </li>
 

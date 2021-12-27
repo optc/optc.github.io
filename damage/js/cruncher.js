@@ -64,6 +64,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var isPoisoned = false;
     var katakuri = false;
 
+    $scope.data.customATK = 1;
+    $scope.data.customOrb = 1;
+    $scope.data.customAffinity = 1;
+    $scope.data.customATKBase = 0;
+    $scope.data.customChainAddition = 0;
+
     var specialsCombinations = [ ], chainSpecials = [ ];
     var hitModifiers = [ ];
     var shipBonus = { };
@@ -493,6 +499,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         });
 
+        atkbaseDamage = parseFloat($scope.data.customATKBase) != 0 && stat == "atk" ? parseFloat($scope.data.customATKBase) : atkbaseDamage;
+
         if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
         else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? 1.2 : 1;
 
@@ -677,6 +685,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
         });
         affinityMult = affinityMult == 1 ? affinityMult : affinityMult + affinityPlusTemp;
+
+        affinityMult = parseFloat($scope.data.customAffinity) != 1 ? parseFloat($scope.data.customAffinity) : affinityMult;
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
@@ -832,6 +842,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         addition += additionPlus + captainAddition;
         
+        addition = parseFloat($scope.data.customChainAddition) != 0 ? parseFloat($scope.data.customChainAddition) + captainAddition : addition;
+
         /* if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
             addition = 0.5;
         }
@@ -943,8 +955,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             if(plusSpecial.statusPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > statusPlusTemp) statusPlusTemp = plusSpecial.statusPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
                     });
                     if (!data.s) { // non-static
-                        var text = (team[data.sourceSlot] ?  'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special');
-                        if(data.type == "atk") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp > atkCeilTemp ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : atkCeilTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        var text = data.sourceSlot > -1 ? (team[data.sourceSlot].unit ? 'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special') : 'special override';
+                        if(data.type == "atk") multipliers.push([ parseFloat($scope.data.customATK) != 1 ? parseFloat($scope.data.customATK) : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp > atkCeilTemp ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : atkCeilTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                         else if(data.type == "condition") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + statusPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                         else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
@@ -1029,6 +1041,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         captAffinityMultiplier = [ ];
         captChain = [ ];
         staticMultiplier = [ ];
+        
+        result.orb.push({ sourceSlot: -1, type: 'orb', f: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); }})
+        result.type.push({ sourceSlot: -1, type: 'atk', f: function(p) { return 1; }})
+        
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
             // notice specials with both atk and atkStatic defined are not supported right now
@@ -1129,7 +1145,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ($scope.data.effect == 'Kizuna Clash [Global]'){
                 if ([ 3418, 3420 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
-            if ($scope.data.effect == 'Kizuna Clash [Japan]'){
+            else if ($scope.data.effect == 'Kizuna Clash [Japan]'){
                 if ([ 3234, 3212 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
             else if(unit.type != type){
@@ -1139,6 +1155,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 else affinityMultiplier = 1;
             }
             else affinityMultiplier = 1;
+
+            affinityMultiplier = parseFloat($scope.data.customAffinity) != 1 && affinityMultiplier != 1 ? parseFloat($scope.data.customAffinity) : affinityMultiplier;
+
             //Add the static extra Damage to each attacking member
             var multSpecial = 0;
             var baseDamage = 0;
@@ -1514,6 +1533,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,
+            customBuffs: {
+                atk: $scope.data.customATK,
+                orb: $scope.data.customOrb,
+                affinity: $scope.data.customAffinity,
+                atkBase: $scope.data.customATKBase,
+                chainAddition: $scope.data.customChainAddition,
+            }
         };
     };
 
