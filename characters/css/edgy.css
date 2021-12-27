@@ -81,7 +81,8 @@ a:hover { color: #53dccd; }
     border-color: #333;
 }
 
-.modal-header {
+.modal-header,
+.modal-footer {
     background-color: #65737e;
 }
 
