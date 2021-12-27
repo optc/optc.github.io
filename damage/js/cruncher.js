@@ -1042,8 +1042,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         captChain = [ ];
         staticMultiplier = [ ];
         
-        result.orb.push({ sourceSlot: -1, type: 'orb', f: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); }})
-        result.type.push({ sourceSlot: -1, type: 'atk', f: function(p) { return 1; }})
+        var dummy = 0;
+        for (let i = 5; i >= 0; i--) {
+            if (team[i].unit) dummy = i;
+        }
+        
+        result.orb.push({ sourceSlot: dummy, type: 'orb', f: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); }})
+        result.type.push({ sourceSlot: dummy, type: 'atk', f: function(p) { return 1; }})
         
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
