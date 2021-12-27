@@ -1073,6 +1073,8 @@ tr.preview td:nth-child(2) > a:after {
 .tag.flag { background: rgba(133,193,245,0.5); }
 .tag.captain { background: rgba(127,202,159,0.5); }
 .tag.special { background: rgba(244,186,112,0.5); }
+.tag.superSpecial { background: rgba(233,109,99,0.5); }
+.tag.support { background: rgba(133,193,245,0.5); }
 
 .link-container {
     text-align: left;

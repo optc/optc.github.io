@@ -1932,4 +1932,657 @@ window.matchers = [
         target: 'support',
         matcher: /(removes|reduces).+Resilience.+duration/i 
     },
+
+    /* * * * * Super Specials * * * * */
+    
+    {
+        name: 'Type-boosting specials',
+        target: 'superSpecial',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^(,.)]+(STR|DEX|QCK|PSY|INT|Type)\b/i
+    },
+
+    {
+        name: 'Class-boosting specials',
+        target: 'superSpecial',
+        matcher: /Boosts (ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) of[^(,.)]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+    
+    {
+        name: 'Universal ATK boosting specials',
+        target: 'superSpecial',
+        matcher: /Boosts ATK[^(,.)]+(all characters)/i
+    },
+    
+    {
+        name: 'ATK boosters',
+        target: 'superSpecial',
+        matcher: /boosts( own ATK| ATK of)/i
+    },
+
+    {
+        name: 'Base ATK boosters',
+        target: 'superSpecial',
+        matcher: /boosts( own base ATK| base ATK of)/i
+    },
+    
+    {
+        name: 'Universal Orb boosting specials',
+        target: 'superSpecial',
+        matcher: /amplifies\D+orb[^(,.)]+(all characters)/i
+    },
+
+    {
+        name: 'Type-boosting Orb boosting specials',
+        target: 'superSpecial',
+        matcher: /amplifies\D+orb([^,.]+)(STR|DEX|QCK|PSY|INT|Type)\b/i
+    },
+
+    {
+        name: 'Class-boosting Orb boosting specials',
+        target: 'superSpecial',
+        matcher: /amplifies\D+orb[^(,.)]+(Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)/i
+    },
+
+    {
+        name: 'Orb boosters',
+        target: 'superSpecial',
+        matcher: /amplifies.+orb/i
+    },
+    
+    {
+        name: 'Color Affinity boosters',
+        target: 'superSpecial',
+        matcher: /Boosts the Color Affinity/i
+    },
+
+    // {
+    //     name: 'Status ATK boosters',
+    //     target: 'superSpecial',
+    //     matcher: /Boosts ATK.+against.+enemies/i
+    // },
+
+    // {
+    //     name: 'Delay Status ATK boosters',
+    //     target: 'superSpecial',
+    //     matcher: /Boosts ATK.+against.+delayed.+enemies/i
+    // },
+
+    // {
+    //     name: 'Defense Reduction Status ATK boosters',
+    //     target: 'superSpecial',
+    //     matcher: /Boosts ATK.+against.+enemies.+reduced defense/i
+    // },
+
+    // {
+    //     name: 'Increase Defense Status ATK boosters',
+    //     target: 'superSpecial',
+    //     matcher: /Boosts ATK.+against.+enemies.+increased defense/i
+    // },
+
+    // {
+    //     name: 'Poison Status ATK boosters',
+    //     target: 'superSpecial',
+    //     matcher: /Boosts ATK.+against.+?((strongly )?poisoned.+enemies|enemies.+inflicted with ((strong )?poison|Toxic))/i
+    // },
+    
+    {
+        name: 'Chain Boosters',
+        target: 'superSpecial',
+        matcher: /Adds.+to Chain/i 
+    },
+    
+    {
+        name: 'Chain Lockers',
+        target: 'superSpecial',
+        matcher: /Locks the chain multiplier/i 
+    },
+    
+    {
+        name: 'Boundary Chain Limiters',
+        target: 'superSpecial',
+        matcher: /Sets chain boundaries/i
+    },
+
+    // {
+    //     name: 'Following-turn ATK boosters',
+    //     target: 'superSpecial',
+    //     matcher: /(Following the activation.+boosts.+ATK|If during that turn.+boosts.+ATK)/i
+    // },
+
+    // {
+    //     name: 'Following-turn Buff/Debuff Enabler',
+    //     target: 'superSpecial',
+    //     matcher: /(Following the activation|If during that turn|After \d+ turn)/i
+    // },
+
+    // {
+    //     name: 'After-turn Buff/Debuff Enabler',
+    //     target: 'superSpecial',
+    //     matcher: /(After \d+ turn)/i
+    // },
+
+    {
+        name: 'Buff Duration Extender',
+        target: 'superSpecial',
+        matcher: /increases duration of any/i
+    },
+
+    {
+        name: 'Multiple-Turn boosting specials',
+        target: 'superSpecial',
+        matcher: /x for \d{1,} turns/i
+    },
+
+    {
+        name: 'Multiple-Turn Buff/Debuff specials',
+        target: 'superSpecial',
+        matcher: /for \d{1,} turns/i
+    },
+    
+    {
+        name: '1.75x Boost specials',
+        target: 'superSpecial',
+        matcher: /[Boosts |Amplifies ]\D*by 1.75x/i
+    },
+
+    {
+        name: '2x Boost specials',
+        target: 'superSpecial',
+        matcher: /[Boosts |Amplifies ]\D*by 2x/i
+    },
+    
+    {
+        name: '2.25x Boost specials',
+        target: 'superSpecial',
+        matcher: /[Boosts |Amplifies ]\D*by 2.25x/i
+    },
+    
+    {
+        name: '2.5x Boost specials',
+        target: 'superSpecial',
+        matcher: /[Boosts |Amplifies ]\D*by 2.5x/i
+    },
+    
+    {
+        name: '2.75x Boost specials',
+        target: 'superSpecial',
+        matcher: /[Boosts |Amplifies ]\D*by 2.75x/i
+    },
+    
+    // {
+    //     name: 'RCV boosters',
+    //     target: 'superSpecial',
+    //     matcher: /Boosts RCV/i
+    // },
+    
+    {
+        name: 'Orb chance boosters',
+        target: 'superSpecial',
+        matcher: /boosts chances of getting.+orbs/i
+    },
+
+    {
+        name: 'Negative to Positive Orb controllers',
+        target: 'superSpecial',
+        matcher: /(Badly Matching orbs into.+Matching orbs)/i,
+        //include: [ 900, 901, 996, 997, 933, 938, 939 ],
+    },
+
+    {
+        name: 'Orb controllers',
+        target: 'superSpecial',
+        matcher: /(Changes.+(orb|orbs))/i
+    },
+    
+    {
+        name: 'Full-board orb controllers',
+        target: 'superSpecial',
+        matcher: /(Changes[^,]+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i
+    },
+
+    {
+        name: 'Self-orb controllers',
+        target: 'superSpecial',
+        matcher: /Changes.+own orb.+into/i
+    },
+
+    {
+        name: 'Orb randomizers',
+        target: 'superSpecial',
+        matcher: /randomizes.+orb/i
+    },
+
+    {
+        name: 'Orb switchers',
+        target: 'superSpecial',
+        matcher: /switches orbs/i
+    },
+
+    {
+        name: 'Orb lockers',
+        target: 'superSpecial',
+        matcher: /locks (orbs|all orbs|orb|own orb|your captain's orb)/i
+    },
+
+    {
+        name: 'Orb barrierers',
+        target: 'superSpecial',
+        matcher: /Barriers (orbs|all orbs|orb|own orb|your captain's orb|^\D+$)/i
+    },
+    
+    {
+        name: 'Orb matchers',
+        target: 'superSpecial',
+        matcher: /(Changes.+(orb|orbs|orbs,))[^,]+Matching/i,
+        include: [ 1036, 1037 ]
+    },
+
+    {
+        name: 'Slot emptiers',
+        target: 'superSpecial',
+        matcher: /(Empties|Changes.+into.+\[EMPTY\])/i
+    },
+
+    {
+        name: 'Block orb removers',
+        target: 'superSpecial',
+        matcher: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
+        include: [ 1383, 1384 ]
+    },
+    
+    {
+        name: 'Beneficial Orb Enablers',
+        target: 'superSpecial',
+        matcher: /beneficial/i
+    },
+    
+    {
+        name: 'Negative Orb Negators',
+        target: 'superSpecial',
+        matcher: /Makes Badly Matching and \[BLOCK\] orbs not reduce damage/i
+    },
+
+    /*{
+        name: 'Slot fillers',
+        target: 'superSpecial',
+        matcher: /(Fills\b|\[EMPTY\] orbs into|Changes.+\[EMPTY\].+into)/i
+    },*/
+
+    {
+        name: 'Delayers',
+        target: 'superSpecial',
+        matcher: /delays/i
+    },
+
+    {
+        name: 'Delay Immunity Ignorers',
+        target: 'superSpecial',
+        matcher: /ignores Delay Debuff Protection/i
+    },
+    
+    {
+        name: 'Damage dealer',
+        target: 'superSpecial',
+        matcher: /deals.+to/i
+    },
+    
+    {
+        name: 'Single-target damage dealer',
+        target: 'superSpecial',
+        matcher: /Deals.+to one enemy/i
+    },
+
+    {
+        name: 'Multi-target damage dealers',
+        target: 'superSpecial',
+        matcher: /Deals.+to (all|random) enemies/i
+    },
+
+    {
+        name: 'Area of Effect damage dealers',
+        target: 'superSpecial',
+        matcher: /Deals.+to all enemies/i
+    },
+
+    {
+        name: 'Multi-hit damage dealers',
+        target: 'superSpecial',
+        matcher: /Deals \d+ hits/i
+    },
+
+    {
+        name: 'Fixed damage dealers',
+        target: 'superSpecial',
+        matcher: /Deals.+fixed damage/i
+    },
+
+    {
+        name: 'Typeless damage dealers',
+        target: 'superSpecial',
+        matcher: /Deals.+typeless damage/i
+    },
+
+    {
+        name: 'Typed damage dealers',
+        target: 'superSpecial',
+        matcher: /Deals.+(\[STR\]|\[DEX\]|\[QCK\]|\[PSY\]|\[INT\]|character\'s Type) damage/i
+    },
+    
+    {
+        name: 'End of Turn Damage Dealer',
+        target: 'superSpecial',
+        matcher: /(deals|cuts).+end of the turn/i
+    },
+
+    {
+        name: 'Health cutters',
+        target: 'superSpecial',
+        matcher: /Cuts.+current HP.+enem/i
+    },
+
+    {
+        name: 'Defense and Barrier Buff Ignoring damage dealer',
+        target: 'superSpecial',
+        matcher: /(Deals|Cuts).+ignore damage negating abilities/i
+    },
+    
+    // {
+    //     name: 'Normal Attacks Ignoring Defense and Barrier Buff allower',
+    //     target: 'superSpecial',
+    //     matcher: /Attacks.+ignore.+damage reducing Barriers and Buffs/i
+    // },
+    
+    {
+        name: 'Additional Damage dealer',
+        target: 'superSpecial',
+        matcher: /Additional.+Damage/i
+    },
+    
+    {
+        name: 'Healers',
+        target: 'superSpecial',
+        matcher: /Recovers/i
+    },
+
+    {
+        name: 'End-of-Turn Healers',
+        target: 'superSpecial',
+        matcher: /Recovers.+(HP at the end of the turn|HP at the end of each turn)/i
+    },
+
+    {
+        name: 'Fixed HP Healers',
+        target: 'superSpecial',
+        matcher: /Recovers (\d|,)+ HP/i
+    },
+
+    {
+        name: 'RCV based Healers',
+        target: 'superSpecial',
+        matcher: /Recovers.+ character\'s RCV/i
+    },
+
+    {
+        name: 'MAX HP based Healers',
+        target: 'superSpecial',
+        matcher: /(Recovers.+ crew\'s MAX HP|Recovers all missing HP)/i
+    },
+
+    {
+        name: 'Remaining Health Healers',
+        target: 'superSpecial',
+        matcher: /Recovers.+missing HP/i
+    },
+
+    {
+        name: 'HP Overfill Healers',
+        target: 'superSpecial',
+        matcher: /Recovers.+allowing HP Overfill/i
+    },
+
+    // {
+    //     name: 'Health reducers',
+    //     target: 'superSpecial',
+    //     matcher: /Reduces crew's (current )?HP/i
+    // },
+
+    {
+        name: 'Poisoners',
+        target: 'superSpecial',
+        matcher: /(poisons|Inflicts Toxic)/i
+    },
+
+    {
+        name: 'Poison removers',
+        target: 'superSpecial',
+        matcher: /removes.+poison.+duration completely/i 
+    },
+
+    {
+        name: 'Multiple-Turn Buff/Debuff Reducing specials',
+        target: 'superSpecial',
+        matcher: /by \d{1,} turns/i
+    },
+
+    {
+        name: '2-3 Turn Buff/Debuff Reducing specials',
+        target: 'superSpecial',
+        matcher: /by (2|3){1,} turns/i
+    },
+
+    {
+        name: '4-5 Turn Buff/Debuff Reducing specials',
+        target: 'superSpecial',
+        matcher: /by (4|5){1,} turns/i
+    },
+
+    {
+        name: '7+ Turn Buff/Debuff Reducing specials',
+        target: 'superSpecial',
+        matcher: /by (7|8|9|10|11|12|13|14|15|16|17|18|19|20){1,} turns/i
+    },
+
+    {
+        name: 'Buff/Debuff Removing specials',
+        target: 'superSpecial',
+        matcher: /duration completely/i
+    },
+
+    {
+        name: 'Defense reducers',
+        target: 'superSpecial',
+        matcher: /Reduces the defense/i
+    },
+
+    {
+        name: 'Damage reducers',
+        target: 'superSpecial',
+        matcher: /Reduces (any )?damage received/i
+    },
+
+    {
+        name: 'Threshold Damage reducers',
+        target: 'superSpecial',
+        matcher: /Reduces (any )?damage received above/i
+    },
+
+    {
+        name: 'Damage nullifiers',
+        target: 'superSpecial',
+        matcher: /Reduces (any )?damage received.+100%/i
+    },
+    
+    {
+        name: 'Bind reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes)( bind|.+, bind|.+and bind).+duration/i
+    },
+
+    {
+        name: 'Despair reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes)( despair|.+, despair|.+and despair).+duration/i
+    },
+    
+    {
+        name: 'Silence/Special Bind reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes).+silence.+duration/i
+    },
+    
+    {
+        name: 'Paralysis reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes).+Paralysis.+duration/i 
+    },
+    
+    {
+        name: 'Burn reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes).+Burn.+duration/i 
+    },
+
+    {
+        name: 'Blindness reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes).+blindness.+duration/i
+    },
+
+    {
+        name: 'Stun reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes).+stun.+duration/i
+    },
+    
+    {
+        name: 'Slot Bind reducers',
+        target: 'superSpecial',
+        matcher: /(reduces|removes).+Slot Bind.+duration/i 
+    },
+
+    {
+        name: 'Crew ATK DOWN reducer',
+        target: 'superSpecial',
+        matcher: /(removes|reduces).+ATK DOWN.+duration/i 
+    },
+
+    {
+        name: 'Crew RCV DOWN reducer',
+        target: 'superSpecial',
+        matcher: /(removes|reduces).+RCV DOWN.+duration/i 
+    },
+
+    // {
+    //     name: 'Crew No Healing reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces).+No Healing.+duration/i 
+    // },
+
+    // {
+    //     name: 'Crew Increase Damage Taken reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces).+Increase Damage Taken.+duration/i 
+    // },
+
+    // {
+    //     name: 'Crew positive buff reducer',
+    //     target: 'superSpecial',
+    //     matcher: /removes.+positive buffs/i 
+    // },
+
+    // {
+    //     name: 'Crew debuff immunity appliers',
+    //     target: 'superSpecial',
+    //     matcher: /applies.+immunity/i
+    // },
+
+    // {
+    //     name: 'Orb rate Increase and Decrease reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(reduces|removes).+Orb Rate Up and Orb Rate Down.+Buffs/i
+    // },
+
+    // {
+    //     name: 'Enemy End of Turn Heal buff reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+End of Turn Heal.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy End of Turn Damage/Percent Cut buff reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+End of Turn Damage\/Percent Cut.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Enrage buff reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Enrage.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy ATK UP buff reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+ATK UP.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Increased Defense reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Increased Defense.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Percent Damage Reduction reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Percent Damage Reduction.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Damage Nullification reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Damage Nullification.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Threshold Damage Reduction reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Threshold Damage Reduction.+duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Barrier reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Barrier .*duration/i 
+    // },
+
+    // {
+    //     name: 'Enemy Resilience reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces) enemies.+Resilience.+duration/i 
+    // },
+    
+    {
+        name: 'Special cooldown reducers',
+        target: 'superSpecial',
+        matcher: /reduces special cooldown/i
+    },
+    
+    // {
+    //     name: 'Chain Multiplier Limit and Chain Lock reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces)[^.]+Chain Multiplier Limit/i 
+    // },
+    
+    // {
+    //     name: 'Chain Coefficient Reduction reducer',
+    //     target: 'superSpecial',
+    //     matcher: /(removes|reduces).+Chain Coefficient Reduction/i 
+    // },
+    
+    // {
+    //     name: 'Tap Timing supporters',
+    //     target: 'superSpecial',
+    //     matcher: /makes PERFECTs easier to hit/i
+    // },
 ];

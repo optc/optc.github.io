@@ -546,6 +546,22 @@ directives.addTags = function($stateParams, $rootScope) {
                         element.append($('<span class="tag limit">' + name + '</div>'));
                     }
                 }
+                // super specials
+                if (matcher.target === 'superSpecial' && matcher.matcher.test(target)) {
+                    name = matcher.name;
+                    if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
+                    else name = name.replace(/s$/,'').replace(/special/i, 'super special');
+                    name = name.replace(/iing/,'ying');
+                    element.append($('<span class="tag superSpecial">' + name + '</div>'));
+                }
+                // support
+                if (matcher.target === 'support' && matcher.matcher.test(target)) {
+                    name = matcher.name;
+                    if (!/support$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' support';
+                    else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');
+                    element.append($('<span class="tag support">' + name + '</div>'));
+                }
             });
         }
     };
