@@ -219,17 +219,17 @@ CharUtils.searchSameSpecials = function(id) {
                 result.push(parseInt(key, 10));
         if (details[id].special){
             if (details[id].special.character1 && details[key].special.character1)
-                    if (details[key].specialName == details[id].specialName && details[id].special.character1 == details[key].special.character1)
+                if (details[key].specialName == details[id].specialName && details[id].special.character1 == details[key].special.character1)
                     result.push(parseInt(key, 10));
             if ((details[id].special.character1 && !details[key].special.character1) || (!details[id].special.character1 && details[key].special.character1)){
                     if(details[id].special.character1) if (details[key].specialName == details[id].specialName && (details[id].special.character1 == details[key].special || details[id].special.character2 == details[key].special))
-                    result.push(parseInt(key, 10));
+                        result.push(parseInt(key, 10));
                     if(details[key].special.character1) if (details[key].specialName == details[id].specialName && (details[key].special.character1 == details[id].special || details[key].special.character2 == details[id].special))
-                    result.push(parseInt(key, 10));
+                        result.push(parseInt(key, 10));
             }
         }
     }
-    return result;
+    return [...new Set(result)];
 };
 
 CharUtils.getDayOfWeek = function(japan, ignore) {

@@ -906,7 +906,7 @@ window.matchers = [
     {
         name: 'Damage nullifiers',
         target: 'special',
-        matcher: /Reduces (any )?damage received.+100%/i
+        matcher: /Reduces (any )?damage received[^%]+100%/i
     },
     
     /*{
@@ -2409,7 +2409,7 @@ window.matchers = [
     {
         name: 'Damage nullifiers',
         target: 'superSpecial',
-        matcher: /Reduces (any )?damage received.+100%/i
+        matcher: /Reduces (any )?damage received[^%]+100%/i
     },
     
     {

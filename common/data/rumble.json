@@ -89864,7 +89864,7 @@
               "amount": 20,
               "effect": "damage",
               "range": { "direction": "radial", "size": "large" },
-              "condition": { "comparator": "remaining", "count": 50, "type": "time" },
+              "condition": { "comparator": "remaining", "count": 40, "type": "time" },
               "targeting": { "targets": [ "enemies" ] },
               "type": "cut"
             }
@@ -99392,7 +99392,7 @@
             },
             {
               "attributes": [ "DEF" ],
-              "effect": "debuff",
+              "effect": "buff",
               "duration": 30,
               "level": 1,
               "targeting": { "targets": [ "crew" ] }
