@@ -161,7 +161,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="panel panel-default panel-x-scroll" ng-if="(rumbleBeta && rumble) || !!unit.pirateFest.DEF">
+                        <div class="panel panel-default panel-x-scroll" ng-if="rumble">
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
@@ -172,23 +172,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-if="!rumbleBeta">
-                                        <td><span ng-if="unit.pirateFest2">Character 1</span></td>
-                                        <td >{{unit.pirateFest.class | decorate}}</td>
-                                        <td ng-if="!compare">{{unit.pirateFest.DEF | number}}</td>
-                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest.DEF - compare.pirateFest.DEF | number}}</td>
-                                        <td ng-if="!compare">{{unit.pirateFest.SPD | number}}</td>
-                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest.SPD - compare.pirateFest.SPD | number}}</td>
-                                    </tr>
-                                    <tr ng-if="!rumbleBeta && unit.pirateFest2">
-                                        <td>Character 2</td>
-                                        <td >{{unit.pirateFest2.class | decorate}}</td>
-                                        <td ng-if="!compare">{{unit.pirateFest2.DEF | number}}</td>
-                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest2.DEF - compare.pirateFest2.DEF | number}}</td>
-                                        <td ng-if="!compare">{{unit.pirateFest2.SPD | number}}</td>
-                                        <td ng-if="compare" comparison="positive">{{unit.pirateFest2.SPD - compare.pirateFest2.SPD | number}}</td>
-                                    </tr>
-                                    <tr ng-if="rumbleBeta">
+                                    <tr>
                                         <td><span ng-if="rumble2">Character 1</span></td>
                                         <td >{{rumble.stats.rumbleType | decorate}}</td>
                                         <td ng-if="!compare">{{rumble.stats.def | number}}</td>
@@ -196,7 +180,7 @@
                                         <td ng-if="!compare">{{rumble.stats.spd | number}}</td>
                                         <td ng-if="compare" comparison="positive">{{rumble.stats.spd - compare.rumble.stats.spd | number}}</td>
                                     </tr>
-                                    <tr ng-if="rumbleBeta && rumble2">
+                                    <tr ng-if="rumble2">
                                         <td>Character 2</td>
                                         <td >{{rumble2.stats.rumbleType | decorate}}</td>
                                         <td ng-if="!compare">{{rumble2.stats.def | number}}</td>
@@ -641,16 +625,9 @@
                         </table>
                     </div>
                     
-                    <h3 id="rumbleSection" class="page-header" ng-hide="hidden.abilities" ng-if="rumble.ability">
-                        Pirate Rumble
-                        
-                        <label>
-                            <input type="checkbox" ng-model="rumbleBeta" ng-change="toggleRumbleBeta()"></input>
-                            New Rumble Stats (Beta)
-                        </label>
-                    </h3>
+                    <h3 id="rumbleSection" class="page-header" ng-hide="hidden.abilities" ng-if="rumble.ability">Pirate Rumble</h3>
 
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability && rumbleBeta">
+                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="rumble.ability">
                         <table class="table table-striped-column abilities">
                             <tbody>
                                 <tr ng-if="rumble2">
@@ -729,153 +706,6 @@
                                         <div>
                                             <div ng-repeat="item in rumble2.special track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} second cooldown] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
                                         </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                            <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && !isfestAbilityHybrid && !rumbleBeta">
-                              <table class="table table-striped-column abilities">
-                                <tbody>
-                                  <tr ng-if="details.festAttackPattern">
-                                    <td>Pirate Rumble Attack Pattern</td>
-                                    <td>
-                                        <span ng-repeat="item in details.festAttackPattern track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.length - 1 ? ' \u2192 ' : ''}}</span>
-                                        <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAttackTarget">
-                                    <td>Pirate Rumble Attack Target</td>
-                                    <td>
-                                        <div>
-                                                <span ng-bind-html="details.festAttackTarget | decorate"></span></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festResistance">
-                                    <td>Pirate Rumble Resistance</td>
-                                    <td>
-                                        <div>
-                                                <span ng-bind-html="details.festResistance | decorate"></span></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAbility">
-                                    <td>Pirate Rumble Ability</td>
-                                    <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festAbility track by $index"><strong>Level {{$index + 1}}:</strong>
-                                                <span ng-bind-html="item.description | decorate"></span><br></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festSpecial">
-                                    <td>Pirate Rumble Special</td>
-                                    <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festSpecial track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
-                                                <span ng-bind-html="item.description | decorate"></span><br></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.festAbility && isfestAbilityHybrid && !rumbleBeta">
-                        <table class="table table-striped-column abilities">
-                            <tbody>
-                                <tr ng-if="details.festAttackPattern && isfestAttackPatternHybrid">
-                                    <td>Character 1 Pirate Rumble Attack Pattern</td>
-                                    <td>
-                                        <span ng-repeat="item in details.festAttackPattern.character1 track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.character1.length - 1 ? ' \u2192 ' : ''}}</span>
-                                        <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAttackTarget && isfestAttackTargetHybrid">
-                                    <td>Character 1 Pirate Rumble Attack Target</td>
-                                    <td>
-                                        <div>
-                                                <span ng-bind-html="details.festAttackTarget.character1 | decorate"></span></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festResistance && isfestResistanceHybrid">
-                                    <td>Character 1 Pirate Rumble Resistance</td>
-                                    <td>
-                                        <div>
-                                                <span ng-bind-html="details.festResistance.character1 | decorate"></span></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAbility && isfestAbilityHybrid">
-                                    <td>Character 1 Pirate Rumble Ability</td>
-                                    <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festAbility.character1 track by $index"><strong>Level {{$index + 1}}:</strong>
-                                                <span ng-bind-html="item.description | decorate"></span><br></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festSpecial && isfestSpecialHybrid">
-                                    <td>Character 1 Pirate Rumble Special</td>
-                                    <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festSpecial.character1 track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
-                                                <span ng-bind-html="item.description | decorate"></span><br></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAttackPattern && isfestAttackPatternHybrid">
-                                    <td>Character 2 Pirate Rumble Attack Pattern</td>
-                                    <td>
-                                        <span ng-repeat="item in details.festAttackPattern.character2 track by $index"><span ng-bind-html="item.description | decorate"></span>{{$index != details.festAttackPattern.character2.length - 1 ? ' \u2192 ' : ''}}</span>
-                                        <span class="notes" ng-if="details.festAttackPatternNotes" ng-bind-html="details.festAttackPatternNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAttackTarget && isfestAttackTargetHybrid">
-                                    <td>Character 2 Pirate Rumble Attack Target</td>
-                                    <td>
-                                        <div>
-                                                <span ng-bind-html="details.festAttackTarget.character2 | decorate"></span></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festResistance && isfestResistanceHybrid">
-                                    <td>Character 2 Pirate Rumble Resistance</td>
-                                    <td>
-                                        <div>
-                                                <span ng-bind-html="details.festResistance.character2 | decorate"></span></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festAbility && isfestAbilityHybrid">
-                                    <td>Character 2 Pirate Rumble Ability</td>
-                                    <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festAbility.character2 track by $index"><strong>Level {{$index + 1}}:</strong>
-                                                <span ng-bind-html="item.description | decorate"></span><br></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
-                                    </td>
-                                </tr>
-                                <tr ng-if="details.festSpecial && isfestSpecialHybrid">
-                                    <td>Character 2 Pirate Rumble Special</td>
-                                    <td>
-                                        <div>
-                                                <div ng-repeat="item in details.festSpecial.character2 track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
-                                                <span ng-bind-html="item.description | decorate"></span><br></div>
-                                        </div>
-                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                             </tbody>
