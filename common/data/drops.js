@@ -7635,6 +7635,24 @@ window.drops = {
         },
 
         {
+            name: 'Drill Crushing Fist!',
+            thumb: 3518,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3518 ],
+            'Chopper Man Missions': [ 9056 ],
+        },
+
+        {
+            name: 'Alliance Blitz! Vs. Navy',
+            thumb: 3520,
+            nakama: null,
+            gamewith: null,
+            'All Difficulties': [ 3520 ],
+            'Chopper Man Missions': [ 9056 ],
+        },
+
+        {
             name: '3 Stamina Ranking! Vs Blackbeard',
             thumb: 447,
             global: true,

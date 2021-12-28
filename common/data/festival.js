@@ -3518,7 +3518,7 @@ window.festival = [
     [ "SPT", 217, 119 ],
     [ "ATK", 151, 175 ],
     [ "ATK", 150, 226 ],
-    [ "", null, null ],
+    [ "DEF", 272, 119 ],
     [ "", null, null ],
     [ "", null, null ],
     [ "", null, null ],

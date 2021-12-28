@@ -1275,4 +1275,36 @@ window.zombies = {
     5340: { // VSShanks
         type: 'healer',
     },
+    5381: { // SHP
+        type: 'healer',
+        amount: 1000
+    },
+    5382: { // SHP
+        type: 'healer',
+        amount: 1000
+    },
+    5383: { // SHP
+        type: 'healer',
+        amount: 2000
+    },
+    5384: { // SHP
+        type: 'healer',
+        amount: 2000
+    },
+    5385: { // SHP
+        type: 'healer',
+        amount: 1000
+    },
+    5386: { // SHP
+        type: 'healer',
+        amount: 1000
+    },
+    5387: { // SHP
+        type: 'healer',
+        amount: 2000
+    },
+    5388: { // SHP
+        type: 'healer',
+        amount: 2000
+    },
 };

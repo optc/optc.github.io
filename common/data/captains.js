@@ -12313,6 +12313,10 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; },
     },
+    3500: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
     3501: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
@@ -12359,6 +12363,10 @@ window.captains = {
     3519: {
         atk: function(p) { return (p.orb == 'wano') ? 5 : 4.5; },
         hp: function(p) { return 1.5; }
+    },
+    3520: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.2 : 1; },
     },
 };
 

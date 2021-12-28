@@ -5149,15 +5149,15 @@ window.evolutions = {
     },
     3512: {
         evolution: 3513,
-        evolvers: [  ]
+        evolvers: [ 118, 1180, 104, 103, 267 ]
     },
     3514: {
         evolution: 3515,
-        evolvers: [  ]
+        evolvers: [ 118, 1180, 100, 102, 267 ]
     },
     3175: {
         evolution: 3519,
-        evolvers: [  ]
+        evolvers: [ "skullOden", "skullOden", "skullOden", "skullOden", "skullOden" ]
     },
     4986: {
         evolution: 4987,

@@ -840,7 +840,8 @@ window.matchers = [
     {
         name: 'Poison removers',
         target: 'special',
-        matcher: /removes.+poison.+duration completely/i 
+        matcher: /removes.+poison.+duration completely/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
@@ -850,15 +851,15 @@ window.matchers = [
     },
 
     {
-        name: '2-3 Turn Buff/Debuff Reducing specials',
+        name: '1-3 Turn Buff/Debuff Reducing specials',
         target: 'special',
-        matcher: /by (2|3){1,} turns/i
+        matcher: /by (1|2|3){1,} turns/i
     },
 
     {
-        name: '4-5 Turn Buff/Debuff Reducing specials',
+        name: '4-6 Turn Buff/Debuff Reducing specials',
         target: 'special',
-        matcher: /by (4|5){1,} turns/i
+        matcher: /by (4|5|6){1,} turns/i
     },
 
     {
@@ -942,13 +943,15 @@ window.matchers = [
     {
         name: 'Burn reducers',
         target: 'special',
-        matcher: /(reduces|removes).+Burn.+duration/i 
+        matcher: /(reduces|removes).+Burn.+duration/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
         name: 'Blindness reducers',
         target: 'special',
-        matcher: /(reduces|removes).+blindness.+duration/i
+        matcher: /(reduces|removes).+blindness.+duration/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
@@ -966,25 +969,29 @@ window.matchers = [
     {
         name: 'Crew ATK DOWN reducer',
         target: 'special',
-        matcher: /(removes|reduces).+ATK DOWN.+duration/i 
+        matcher: /(removes|reduces).+ATK DOWN.+duration/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
         name: 'Crew RCV DOWN reducer',
         target: 'special',
-        matcher: /(removes|reduces).+RCV DOWN.+duration/i 
+        matcher: /(removes|reduces).+RCV DOWN.+duration/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
         name: 'Crew No Healing reducer',
         target: 'special',
-        matcher: /(removes|reduces).+No Healing.+duration/i 
+        matcher: /(removes|reduces).+No Healing.+duration/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
         name: 'Crew Increase Damage Taken reducer',
         target: 'special',
-        matcher: /(removes|reduces).+Increase Damage Taken.+duration/i 
+        matcher: /(removes|reduces).+Increase Damage Taken.+duration/i,
+        include: [ 2602, 2603, 3398 ],
     },
 
     {
@@ -2365,15 +2372,15 @@ window.matchers = [
     },
 
     {
-        name: '2-3 Turn Buff/Debuff Reducing specials',
+        name: '1-3 Turn Buff/Debuff Reducing specials',
         target: 'superSpecial',
-        matcher: /by (2|3){1,} turns/i
+        matcher: /by (1|2|3){1,} turns/i
     },
 
     {
-        name: '4-5 Turn Buff/Debuff Reducing specials',
+        name: '4-6 Turn Buff/Debuff Reducing specials',
         target: 'superSpecial',
-        matcher: /by (4|5){1,} turns/i
+        matcher: /by (4|5|6){1,} turns/i
     },
 
     {
