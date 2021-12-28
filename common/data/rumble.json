@@ -101015,7 +101015,7 @@
           "type": "debuff"
         },
         {
-          "attribute": "[QCK]",
+          "attribute": "[DEX]",
           "percentage": 30,
           "type": "damage"
         }
