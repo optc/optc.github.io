@@ -12120,6 +12120,9 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
     },
     3405: {
         orbPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
@@ -15176,6 +15179,13 @@ var ghostsSpecials = {
     374: {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
         orbCeil: function(p) { return 3; },
+        turnedOn: false,
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
     },
     375: {
         affinityPlus: function(p) { return 0.5; },
@@ -15184,6 +15194,13 @@ var ghostsSpecials = {
     376: {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
         orbCeil: function(p) { return 3; },
+        turnedOn: false,
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
     },
     377: {
         affinityPlus: function(p) { return 0.5; },
@@ -15192,6 +15209,13 @@ var ghostsSpecials = {
     378: {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
         orbCeil: function(p) { return 3; },
+        turnedOn: false,
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
     },
     379: {
         affinityPlus: function(p) { return 0.5; },
@@ -15200,6 +15224,13 @@ var ghostsSpecials = {
     380: {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
         orbCeil: function(p) { return 3; },
+        turnedOn: false,
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
     },
     381: {
         atk: function(p) { return 2; },

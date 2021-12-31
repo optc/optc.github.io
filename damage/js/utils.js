@@ -187,8 +187,8 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     orbCeilBonus = window.specials[x].orbCeil(params)
         }
     });
-
-    boostedMultiplier = boostedMultiplier != 1 ? boostedMultiplier + orbPlusBonus < orbCeilBonus ? orbCeilBonus : boostedMultiplier + orbPlusBonus : boostedMultiplier;
+    console.log(orbCeilBonus);
+    boostedMultiplier = boostedMultiplier != 1 ? orbCeilBonus != 1 ? orbCeilBonus : boostedMultiplier + orbPlusBonus : boostedMultiplier;
 
     boostedMultiplier = parseFloat(params.customBuffs.orb) != 1 ? parseFloat(params.customBuffs.orb) : boostedMultiplier;
 
