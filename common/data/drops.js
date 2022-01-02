@@ -1138,6 +1138,7 @@ window.drops = {
         },
     ],
 
+
     'Rookie Mission': [
 
         {
@@ -3939,7 +3940,7 @@ window.drops = {
             thumb: 3383,
             global: true,
             nakama: 6338200,
-            gamewith: null,
+            gamewith: 284443,
             condition: 'Drops Manual, Tomes, Proof of Friendship, lobsters, manuals for Local Sea Monster and limit break bottles.',
             'Chopperman Missions': [ 3383 ],
         },
@@ -3948,8 +3949,9 @@ window.drops = {
             name: 'Clash!! Buggy Pirates',
             dropID: 'clash72',
             thumb: 3399,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 4339900,
+            gamewith: 288246,
             'All Difficulties': [ 3399 ],
         },
 
@@ -5334,7 +5336,7 @@ window.drops = {
         },
 
         {
-            name: 'Gyukimaru',
+            name: 'Gyukimaru on Bandit\'s Bridge',
             thumb: 3017,
             showManual: true,
             global: true,
@@ -5358,7 +5360,7 @@ window.drops = {
         },
 
         {
-            name: 'Kikunojo',
+            name: 'The Masked Swordswoman',
             thumb: 3083,
             showManual: true,
             global: true,
@@ -5370,7 +5372,7 @@ window.drops = {
         },
 
         {
-            name: 'Page One',
+            name: 'Rampaging Spinosaurus',
             thumb: 3110,
             showManual: true,
             global: true,
@@ -5451,7 +5453,7 @@ window.drops = {
             name: 'Sanjuan Wolf',
             thumb: 3293,
             showManual: true,
-            showManual: true,
+            global: true,
             nakama: 10329300,
             gamewith: 267166,
             'All Difficulties': [ 3293, -3293 ],
@@ -5460,55 +5462,55 @@ window.drops = {
         {
             name: 'Shinobu',
             thumb: 3329,
-            showManual: true,
+            global: true,
             nakama: 10332900,
             gamewith: 275012,
-            'All Difficulties': [ 3329, -3329 ],
+            'All Difficulties': [ 3329 ],
         },
         
         {
             name: 'Mihawk',
             thumb: 3361,
-            showManual: true,
+            global: true,
             nakama: 10336100,
             gamewith: 281805,
-            'All Difficulties': [ 3361, -3361 ],
+            'All Difficulties': [ 3361 ],
         },
         
         {
             name: 'Ashura Doji',
             thumb: 3385,
-            showManual: true,
+            global: true,
             nakama: 10338500,
             gamewith: 286274,
-            'All Difficulties': [ 3385, -3385 ],
+            'All Difficulties': [ 3385 ],
         },
         
         {
             name: 'Caesar',
             thumb: 3408,
-            showManual: true,
+            global: true,
             nakama: 10340800,
             gamewith: 289736,
-            'All Difficulties': [ 3408, -3408 ],
+            'All Difficulties': [ 3408 ],
         },
         
         {
             name: 'Crocodile',
             thumb: 3460,
-            showManual: true,
-            nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 3460, -3460 ],
+            global: true,
+            nakama: 10346000,
+            gamewith: 296664,
+            'All Difficulties': [ 3460 ],
         },
         
         {
             name: 'Monkey D. Luffy',
             thumb: 3499,
-            showManual: true,
-            nakama: null,
-            gamewith: null,
-            'All Difficulties': [ 3499, -3499 ],
+            global: true,
+            nakama: 10349900,
+            gamewith: 310358,
+            'All Difficulties': [ 3499 ],
         },
 
     ],
@@ -5980,7 +5982,8 @@ window.drops = {
             name: 'Dragon Kaido',
             dropID: 'treasuremap47',
             thumb: 3389,
-            nakama: null,
+            global: true,
+            nakama: 8338900,
             gamewith: 287046,
             'Spooky Sea': [ 3389 ]
         },
@@ -5989,7 +5992,8 @@ window.drops = {
             name: 'Stussy',
             dropID: 'treasuremap48',
             thumb: 3416,
-            nakama: null,
+            global: true,
+            nakama: 8341600,
             gamewith: 291120,
             'Calm Sea': [ 3416 ]
         },
@@ -5998,8 +6002,9 @@ window.drops = {
             name: 'Onigashima Luffy',
             dropID: 'treasuremap49',
             thumb: 3443,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 8344300,
+            gamewith: 293712,
             'Coast of Wano': [ 3443 ],
             'Point Rewards': [ 3444 ]
         },
@@ -6008,8 +6013,9 @@ window.drops = {
             name: 'Halloween Robin',
             dropID: 'treasuremap50',
             thumb: 3467,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 8346700,
+            gamewith: 297566,
             'Raging Sea': [ 3467 ]
         },
 
@@ -6017,8 +6023,9 @@ window.drops = {
             name: 'Gecko Moria',
             dropID: 'treasuremap51',
             thumb: 3491,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 8349100,
+            gamewith: 305477,
             '7.5 Anniversary Sea': [ 3491 ]
         },
 
@@ -6026,8 +6033,9 @@ window.drops = {
             name: 'Hyogoro',
             dropID: 'treasuremap52',
             thumb: 3506,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 8350600,
+            gamewith: 311617,
             'Coast of Wano': [ 3506 ]
         },
 
@@ -6439,7 +6447,8 @@ window.drops = {
             name: 'Ivankov',
             dropID: 'kizuna26',
             thumb: 3419,
-            nakama: null,
+            global: true,
+            nakama: 9341900,
             gamewith: 148537,
             'All Difficulties': [ 3419 ],
             'Kizuna Exchange': [ 9049 ],
@@ -6449,7 +6458,8 @@ window.drops = {
             name: 'Olin',
             dropID: 'kizuna27',
             thumb: 3449,
-            nakama: null,
+            global: true,
+            nakama: 9345000,
             gamewith: 148537,
             'All Difficulties': [ 3449 ],
             'Kizuna Exchange': [ 9050, 9051 ],
@@ -6459,7 +6469,8 @@ window.drops = {
             name: 'Halloween Rebecca',
             dropID: 'kizuna28',
             thumb: 3470,
-            nakama: null,
+            global: true,
+            nakama: 9347000,
             gamewith: 148537,
             'All Difficulties': [ 3470 ],
             'Kizuna Exchange': [ 9053 ],
@@ -6469,7 +6480,8 @@ window.drops = {
             name: 'Don Krieg',
             dropID: 'kizuna29',
             thumb: 3490,
-            nakama: null,
+            global: true,
+            nakama: 9349000,
             gamewith: 148537,
             'All Difficulties': [ 3489 ],
             'Kizuna Exchange': [ 9054 ],
@@ -6479,7 +6491,8 @@ window.drops = {
             name: 'Zorojuro & Sangoro',
             dropID: 'kizuna30',
             thumb: 3511,
-            nakama: null,
+            global: true,
+            nakama: 9351100,
             gamewith: 148537,
             'All Difficulties': [ 3511 ],
             'Kizuna Exchange': [ 9055 ],
@@ -6612,54 +6625,60 @@ window.drops = {
         },
 
         {
-            name: 'Urouge',
+            name: 'Battles with the Stweet Generals',
             dropID: 'rumble13',
             thumb: 3332,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3332 ],
         },
 
         {
-            name: 'Rayleigh',
+            name: 'Evenly Matched Battle',
             dropID: 'rumble14',
             thumb: 3374,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3374 ],
         },
 
         {
-            name: 'Hody Jones',
+            name: 'Battle at Conchorde Plaza',
             dropID: 'rumble15',
             thumb: 3415,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3415 ],
         },
 
         {
-            name: 'Charlotte Oven',
+            name: 'Burning Will',
             dropID: 'rumble16',
             thumb: 3438,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3438 ],
         },
 
         {
-            name: 'Helmeppo',
+            name: 'Stunning Swords Play',
             dropID: 'rumble17',
             thumb: 3466,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3466 ],
         },
 
         {
-            name: 'Wyper',
+            name: 'Willing to Die for a Cause',
             dropID: 'rumble18',
             thumb: 3486,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3486 ],
@@ -6669,12 +6688,14 @@ window.drops = {
             name: 'Foxy & Porche',
             dropID: 'rumble19',
             thumb: 3505,
+            global: true,
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3505 ],
         },
 
     ],
+
 
     'Special': [
 
@@ -7437,7 +7458,7 @@ window.drops = {
         {
             name: 'Sweet Party!',
             thumb: 2857,
-            global: false,
+            global: true,
             nakama: 6285700,
             gamewith: 187864,
             'Chopperman Missions': [ 2855 ],
@@ -7556,7 +7577,8 @@ window.drops = {
         {
             name: 'Adventurers\' Quarrel',
             thumb: 3304,
-            nakama: null,
+            global: true,
+            nakama: 6330400,
             gamewith: null,
             'Chopperman Missions': [ 3304, 3305 ],
         },
@@ -7564,7 +7586,8 @@ window.drops = {
         {
             name: 'Now to Onigashima!',
             thumb: 3346,
-            nakama: null,
+            global: true,
+            nakama: 6334600,
             gamewith: 276764,
             'Chopperman Missions': [ 3346 ],
         },
@@ -7572,7 +7595,8 @@ window.drops = {
         {
             name: 'Duel at Banaro Island',
             thumb: 3353,
-            nakama: null,
+            global: true,
+            nakama: 6335300,
             gamewith: 280282,
             'Chopperman Missions': [ 3353 ],
         },
@@ -7580,32 +7604,36 @@ window.drops = {
         {
             name: 'Onigashima Assault Strategy',
             thumb: 3382,
-            nakama: null,
+            global: true,
+            nakama: 6338200,
             gamewith: 285666,
             'All Difficulties': [ 3382 ],
             'Chopperman Missions': [ 3382 ],
         },
 
         {
-            name: 'Uncover! World Economy News Paper',
+            name: 'Big News! World Economic Journal',
             thumb: 3425,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 6342500,
+            gamewith: 292753,
             'All Difficulties': [ 3425 ],
         },
 
         {
             name: 'Alliance Blitz! Assemble the Tobi Roppo',
             thumb: 3436,
-            nakama: null,
+            global: true,
+            nakama: 6343600,
             gamewith: 293739,
             'All Difficulties': [ 3436 ],
         },
 
         {
-            name: 'Halloween Live Craze!!',
+            name: 'Feverish Halloween Live Show!!',
             thumb: 3457,
-            nakama: null,
+            global: true,
+            nakama: 6345700,
             gamewith: null,
             'All Difficulties': [ 3457 ],
         },
@@ -7613,7 +7641,8 @@ window.drops = {
         {
             name: 'Turmoil in the Land of Candy!!',
             thumb: 2033,
-            nakama: null,
+            global: true,
+            nakama: 6203300,
             gamewith: null,
             'All Difficulties': [ 3477 ],
         },
@@ -7621,24 +7650,27 @@ window.drops = {
         {
             name: 'Alliance! Heavenly Demon VS Luffy!!',
             thumb: 3472,
-            nakama: null,
+            global: true,
+            nakama: 6347200,
             gamewith: null,
             'All Difficulties': [ 3481 ],
         },
 
         {
-            name: 'O-lin! Battle of Onigashima!!',
+            name: 'Olin! Battle of Onigashima!!',
             thumb: 3498,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 6349800,
+            gamewith: 309692,
             'All Difficulties': [ 3498 ],
         },
 
         {
             name: 'Drill Crushing Fist!',
             thumb: 3518,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 6351800,
+            gamewith: 313812,
             'All Difficulties': [ 3518 ],
             'Chopper Man Missions': [ 9056 ],
         },
@@ -7646,8 +7678,9 @@ window.drops = {
         {
             name: 'Alliance Blitz! Vs. Navy',
             thumb: 3520,
-            nakama: null,
-            gamewith: null,
+            global: true,
+            nakama: 314546,
+            gamewith: 6352000,
             'All Difficulties': [ 3520 ],
             'Chopper Man Missions': [ 9056 ],
         },
@@ -7706,6 +7739,7 @@ window.drops = {
             condition: "Challenge: Crew's Special gauge is maxed",
         },
    ],
+
 
     'Training Forest': [
 
