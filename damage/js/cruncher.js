@@ -1500,9 +1500,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.data.limit3 = $scope.data.limit3 == undefined ? 0 : $scope.data.limit3;
         $scope.data.limit4 = $scope.data.limit4 == undefined ? 0 : $scope.data.limit4;
         $scope.data.limit5 = $scope.data.limit5 == undefined ? 0 : $scope.data.limit5;
-        var sugarToyTemp =  [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ];
+
         var unitTemp = Object.assign({},team[slotNumber].unit);
-        if (team[slotNumber].unit) unitTemp.cost = sugarToyTemp[slotNumber] ? 40 : window.units[team[slotNumber].unit.number].cost;
+        let sugarToyTemp = Array(6).fill(0);
+        if ($scope.tdata.sugarToysEnabled){
+            sugarToyTemp =  [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ];
+            if (team[slotNumber].unit) unitTemp.cost = sugarToyTemp[slotNumber] ? 40 : window.units[team[slotNumber].unit.number].cost;
+        }
         return {
             unit: unitTemp,
             orb: $scope.tdata.team[slotNumber].orb,
@@ -1533,7 +1537,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ],
-            sugarToy: [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ],
+            sugarToy: sugarToyTemp,
             toki: [ $scope.data.toki0, $scope.data.toki1, $scope.data.toki2, $scope.data.toki3, $scope.data.toki4, $scope.data.toki5 ],
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,

@@ -9859,6 +9859,22 @@ window.specials = {
             });
         },
     },
+    3008: {
+        onActivation: function(p) {
+            ++p.scope.tdata.sugarToysEnabled;
+        },
+        onDeactivation: function(p) {
+            --p.scope.tdata.sugarToysEnabled;
+        },
+    },
+    3009: {
+        onActivation: function(p) {
+            ++p.scope.tdata.sugarToysEnabled;
+        },
+        onDeactivation: function(p) {
+            --p.scope.tdata.sugarToysEnabled;
+        },
+    },
     3010: {
         chainAddition: function(p) { return 0.7; }
     },
