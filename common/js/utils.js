@@ -1213,6 +1213,10 @@
     utils.generateSearchParameters = function (query) {
         if (!query || query.trim().length < 2)
             return null;
+        if (/^\d+$/.test(query)) {
+            var n = parseInt(query,10);
+            if (n > 0 && n <= units.length) query = 'id=' + query;
+        }
         query = utils.normalizeText(query.toLowerCase().trim());
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
