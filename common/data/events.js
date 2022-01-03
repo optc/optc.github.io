@@ -633,6 +633,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    3390: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tokiStateEnabled == 1)
+                $scope.notify({ text: 'Enabling Toki-Toki Effect support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tokiStateEnabled === 0)
+                $scope.notify({ text: 'Disabling Toki-Toki Effect support.' });
+        }
+    },
+    3391: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tokiStateEnabled == 1)
+                $scope.notify({ text: 'Enabling Toki-Toki Effect support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tokiStateEnabled === 0)
+                $scope.notify({ text: 'Disabling Toki-Toki Effect support.' });
+        }
+    },
     3429: {
         onInsertion: function($scope) {
             if (++$scope.options.wanoOrbsEnabled == 1)

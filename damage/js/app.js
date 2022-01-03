@@ -99,6 +99,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         emptyOrbsEnabled: 0,
         superBombOrbsEnabled: 0,
         sugarToysEnabled: 0,
+        tokiStateEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
