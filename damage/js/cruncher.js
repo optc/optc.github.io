@@ -487,7 +487,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
             if(!LBaddition) LBaddition = 0;
         }
-        if (stat == "atk" && params.sugarToy[slot]){
+        if (stat == "atk" && params.sugarToy){
             result = 2500;
             candyBonus = 0;
             LBaddition = 0;
@@ -721,8 +721,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         var result = chainBase;
         for (var i=0;i<hitModifiers.length;++i) {
-            if (hitModifiers[i] == 'Perfect' && params.sugarToy[damage[i].position]) result += chainModifier * 0.7;
-            else if (hitModifiers[i] == 'Perfect' && !params.sugarToy[damage[i].position]) result += chainModifier * 0.3;
+            // only params.sugarToy (specified unit) becomes false when sugarToysSpecialEnabled is false
+            // sugarToy in team does not get affected
+            if (params.scope.tdata.sugarToysSpecialEnabled && hitModifiers[i] == 'Perfect' && params.team[damage[i].position].sugarToy) result += chainModifier * 0.7;
+            else if (hitModifiers[i] == 'Perfect') result += chainModifier * 0.3;
             else if (hitModifiers[i] == 'Great') result += chainModifier * 0.1;
             else if (hitModifiers[i] == 'Good') result += 0;
             else result = chainBase;
@@ -1502,10 +1504,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.data.limit5 = $scope.data.limit5 == undefined ? 0 : $scope.data.limit5;
 
         var unitTemp = Object.assign({},team[slotNumber].unit);
-        let sugarToyTemp = Array(6).fill(0);
-        if ($scope.tdata.sugarToysEnabled){
-            sugarToyTemp =  [ $scope.data.sugarToy0, $scope.data.sugarToy1, $scope.data.sugarToy2, $scope.data.sugarToy3, $scope.data.sugarToy4, $scope.data.sugarToy5 ];
-            if (team[slotNumber].unit) unitTemp.cost = sugarToyTemp[slotNumber] ? 40 : window.units[team[slotNumber].unit.number].cost;
+        if ($scope.tdata.sugarToysSpecialEnabled){
+            if (team[slotNumber].unit) unitTemp.cost = $scope.data.team[slotNumber].sugarToy ? 40 : window.units[team[slotNumber].unit.number].cost;
         }
         return {
             unit: unitTemp,
@@ -1537,8 +1537,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ],
-            sugarToy: sugarToyTemp,
-            toki: [ $scope.data.toki0, $scope.data.toki1, $scope.data.toki2, $scope.data.toki3, $scope.data.toki4, $scope.data.toki5 ],
+            // sugarToy will be false when sugar special is off, but sugarToy in team and scope.data.team will stay
+            sugarToy: $scope.tdata.sugarToysSpecialEnabled && $scope.data.team[slotNumber].sugarToy,
+            tokiState: $scope.data.team[slotNumber].tokiState,
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,

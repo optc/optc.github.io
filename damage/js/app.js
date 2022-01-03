@@ -11,12 +11,12 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     $rootScope.data = {
         //setting default values
         team: [
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
+            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false }
         ],
 
         percHP: 100.0,
@@ -40,7 +40,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             { orb: 1, special: false, lock: 0, silence: 0, removed: 0 }
         ],
 
-        sugarToysEnabled: 0, // increment for each sugar special activated
+        sugarToysSpecialEnabled: 0, // increment for each sugar special activated
 
         customHitModifiers: null,
         
