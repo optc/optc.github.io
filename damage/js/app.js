@@ -100,6 +100,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         superBombOrbsEnabled: 0,
         sugarToysEnabled: 0,
         tokiStateEnabled: 0,
+        superTypeAndClassEnabled: 0, // show/hide ST/SC (enemy supertype should always be visible)
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
