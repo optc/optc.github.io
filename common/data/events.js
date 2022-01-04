@@ -563,6 +563,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling [SUPERBOMB] orbs support.' });
         }
     },
+    3008: {
+        onInsertion: function($scope) {
+            if (++$scope.options.sugarToysEnabled == 1)
+                $scope.notify({ text: 'Enabling Hobby-Hobby Transformation support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.sugarToysEnabled === 0)
+                $scope.notify({ text: 'Disabling Hobby-Hobby Transformation support.' });
+        }
+    },
+    3009: {
+        onInsertion: function($scope) {
+            if (++$scope.options.sugarToysEnabled == 1)
+                $scope.notify({ text: 'Enabling Hobby-Hobby Transformation support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.sugarToysEnabled === 0)
+                $scope.notify({ text: 'Disabling Hobby-Hobby Transformation support.' });
+        }
+    },
     3174: {
         onInsertion: function($scope) {
             if (++$scope.options.wanoOrbsEnabled == 1)
@@ -611,6 +631,26 @@ window.events = {
         onRemoval: function($scope) {
             if (--$scope.options.wanoOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
+    3390: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tokiStateEnabled == 1)
+                $scope.notify({ text: 'Enabling Toki-Toki Effect support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tokiStateEnabled === 0)
+                $scope.notify({ text: 'Disabling Toki-Toki Effect support.' });
+        }
+    },
+    3391: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tokiStateEnabled == 1)
+                $scope.notify({ text: 'Enabling Toki-Toki Effect support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tokiStateEnabled === 0)
+                $scope.notify({ text: 'Disabling Toki-Toki Effect support.' });
         }
     },
     3429: {

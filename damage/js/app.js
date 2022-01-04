@@ -40,6 +40,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             { orb: 1, special: false, lock: 0, silence: 0, removed: 0 }
         ],
 
+        sugarToysEnabled: 0, // increment for each sugar special activated
+
         customHitModifiers: null,
         
         orderOverride: { },
@@ -96,6 +98,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         wanoOrbsEnabled: 0,
         emptyOrbsEnabled: 0,
         superBombOrbsEnabled: 0,
+        sugarToysEnabled: 0,
+        tokiStateEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
