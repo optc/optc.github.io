@@ -23,7 +23,15 @@ var loadValue = function(key,def) {
                     });
                 }
             }
-            return x;
+            let defaultTeamUnit = {
+                unit: null,
+                level: -1,
+                candies: { hp: 0, atk: 0, rcv: 0 },
+                limit: 0,
+                sugarToy: false,
+                tokiState: false,
+            };
+            return {...defaultTeamUnit, ...x}; // override defaults instead of returning only x, so no properties go missing in case of updates to the structure of `team`
         }).slice(0,6);
         if (isNaN(value.defense)) value.defense = 0;
     }
@@ -36,7 +44,7 @@ var save = function(key,object) {
         object = JSON.parse(JSON.stringify(object));
         object.team = object.team.map(function(x) {
             if (x && x.unit && x.unit.constructor == Object)
-                x.unit = x.unit.number;
+                x.unit = x.unit.number; // whole unit object is too large, so save only the unit number
             return x;
         }).slice(0,6);
     }

@@ -11,6 +11,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     $rootScope.data = {
         //setting default values
         team: Array.from({length: 6}, () => ({
+            // you may add properties, but may NOT change the order,
+            // due to the way the export link is implemented
             unit: null,
             level: -1,
             candies: { hp: 0, atk: 0, rcv: 0 },
