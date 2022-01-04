@@ -193,7 +193,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         result.cost = { cost: cost, level: Math.max(1,Math.floor(cost / 2) * 2 - 18) };
         $scope.numbers = jQuery.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
-        checkHealAndZombie(result, $scope.numbers, [$scope.data.actionleft, $scope.data.actionright], [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ], params);
+        checkHealAndZombie(result, $scope.numbers, [$scope.data.actionleft, $scope.data.actionright], $scope.data.team.map(unit => unit.limit), params);
         $timeout(function() { crunchSelfInhibit = false; });
     }
 
@@ -483,8 +483,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
         
-        if(params.limit[slot] != null && params.limit[slot] != 0){
-            LBaddition = data.unit.limitStats[stat][Math.min(params.limit[slot]-1,data.unit.limitStats[stat].length-1)];
+        if(params.limit != null && params.limit != 0){
+            LBaddition = data.unit.limitStats[stat][Math.min(params.limit-1,data.unit.limitStats[stat].length-1)];
             if(!LBaddition) LBaddition = 0;
         }
         if (stat == "atk" && params.sugarToy){
@@ -1265,7 +1265,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // team
         team = $scope.data.team.map(function(x,n) {
             if (!$scope.tdata.team[n] || $scope.tdata.team[n].removed)
-                return { unit: null, level: -1, candies: { atk: 0, hp: 0, rcv: 0 } };
+                return {
+                    unit: null,
+                    level: -1,
+                    candies: { hp: 0, atk: 0, rcv: 0 },
+                    limit: 0,
+                    sugarToy: false,
+                    tokiState: false,
+                };
             else
                 return x;
         }).slice(0,6);
@@ -1496,12 +1503,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
     
     var getParameters = function(slotNumber, chainPosition) {
-        $scope.data.limit0 = $scope.data.limit0 == undefined ? 0 : $scope.data.limit0;
-        $scope.data.limit1 = $scope.data.limit1 == undefined ? 0 : $scope.data.limit1;
-        $scope.data.limit2 = $scope.data.limit2 == undefined ? 0 : $scope.data.limit2;
-        $scope.data.limit3 = $scope.data.limit3 == undefined ? 0 : $scope.data.limit3;
-        $scope.data.limit4 = $scope.data.limit4 == undefined ? 0 : $scope.data.limit4;
-        $scope.data.limit5 = $scope.data.limit5 == undefined ? 0 : $scope.data.limit5;
+        if ($scope.data.team[slotNumber].limit === undefined)
+            $scope.data.team[slotNumber].limit = 0;
 
         var unitTemp = Object.assign({},team[slotNumber].unit);
         if ($scope.tdata.sugarToysSpecialEnabled){
@@ -1536,7 +1539,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             captain: team[1].unit,
             friendCaptain: team[0].unit,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
-            limit: [ $scope.data.limit0, $scope.data.limit1, $scope.data.limit2, $scope.data.limit3, $scope.data.limit4, $scope.data.limit5 ],
+            limit: $scope.data.team[slotNumber].limit,
             // sugarToy will be false when sugar special is off, but sugarToy in team and scope.data.team will stay
             sugarToy: $scope.tdata.sugarToysSpecialEnabled && $scope.data.team[slotNumber].sugarToy,
             tokiState: $scope.data.team[slotNumber].tokiState,

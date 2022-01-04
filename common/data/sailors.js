@@ -1823,12 +1823,12 @@ window.sailors = {
         hpStatic: function(p) { return 50; },
     },
     3389: {
-        atkStatic: function(p) { return p.unit.type == "DEX" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.type == "DEX" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3391: {
-        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3392: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? 75 : 0; },
@@ -1856,14 +1856,14 @@ window.sailors = {
         rcvStatic: function(p) { return 40; },
     },
     3403: {
-        atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3405: {
-        atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3406: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 50 : 0; },
@@ -1900,10 +1900,10 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
     },
     3422: {
-        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        staticMult: function(p) { return [0, 0, 10][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; }
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        staticMult: function(p) { return [0, 0, 10][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; }
     },
     3423: {
         hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 75 : 0; },
@@ -1921,10 +1921,10 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 30 : 0; },
     },
     3429: {
-        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3430: {
-        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3431: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 50 : 0; },
@@ -1950,9 +1950,9 @@ window.sailors = {
         hpStatic: function(p) { return 100; },
     },
     3443: {
-        atkStatic: function(p) { return [0, 0, 56][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 0, 56][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 0, 56][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 0, 56][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 0, 56][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 0, 56][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3444: {
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 60 : 0; },
@@ -1966,14 +1966,14 @@ window.sailors = {
         atkStatic: function(p) { return 75; },
     },
     3448: {
-        atkStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3452: {
-        atkStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3454: {
         hp: function(p) { return p.captain != null ? p.captain.class.has("Free Spirit") ? p.unit.class.has("Free Spirit") ? 1.1 : 1 : 1 : 1; },
@@ -2007,8 +2007,8 @@ window.sailors = {
         rcvStatic: function(p) { return 40; },
     },
     3462: {
-        atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3463: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 60 : 0; },
@@ -2022,24 +2022,24 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") ? 50 : 0; },
     },
     3467: {
-        hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3472: {
-        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 125, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 125, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3474: {
-        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? [0, 125, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hp: function(p) { return p.captain != null ? p.captain.class.has("Powerhouse") ? p.unit.class.has("Powerhouse") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1 : 1 : 1; },
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? [0, 125, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hp: function(p) { return p.captain != null ? p.captain.class.has("Powerhouse") ? p.unit.class.has("Powerhouse") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1 : 1 : 1; },
     },
     3475: {
-        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3476: {
-        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [50, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [50, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [50, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [50, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3477: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 40 : 0; },
@@ -2064,9 +2064,9 @@ window.sailors = {
         atkStatic: function(p) { return p.percHP <= 30.0 && p.slot == p.sourceSlot ? 200 : 0; },
     },
     3488: {
-        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3489: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 50 : 0; },
@@ -2079,8 +2079,8 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 50 : 0; },
     },
     3491: {
-        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3496: {
         atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 50 : 0; },
@@ -2116,7 +2116,7 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 30 : 0; },
     },
     3509: {
-        atkStatic: function(p) { return p.slot <= 1 ? [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     3511: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 50 : 0; },
@@ -2129,9 +2129,9 @@ window.sailors = {
         hpStatic: function(p) { return 50; },
     },
     3517: {
-        atkStatic: function(p) { return [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     3520: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 60 : 0; },
@@ -3086,26 +3086,26 @@ var ghostsSailors = {
         rcvStatic: function(p) { return 100; },
     },
     339: {
-        atkStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     340: {
-        atkStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        hpStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
-        rcvStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        atkStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
     345: {
-        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     346: {
-        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     347: {
-        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     348: {
-        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit[p.sourceSlot],p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
     349: {
         atkStatic: function(p) { return 50; },

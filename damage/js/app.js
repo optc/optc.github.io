@@ -10,14 +10,14 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.data = {
         //setting default values
-        team: [
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 }, sugarToy: false, tokiState: false }
-        ],
+        team: Array.from({length: 6}, () => ({
+            unit: null,
+            level: -1,
+            candies: { hp: 0, atk: 0, rcv: 0 },
+            limit: 0, // LB level, max 50
+            sugarToy: false,
+            tokiState: false,
+        })),
 
         percHP: 100.0,
         
@@ -120,7 +120,14 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         // reset slot
         if (!onlyTransitional)
-            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
+            $scope.data.team[n] = {
+                unit: null,
+                level: -1,
+                candies: { hp: 0, atk: 0, rcv: 0 },
+                limit: 0,
+                sugarToy: false,
+                tokiState: false,
+            };
         $scope.tdata.team[n] = { orb: 1, g: false, str: false, dex: false, qck: false, psy: false, int: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
