@@ -500,7 +500,6 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
     $rootScope.table = tableData;
 
     $rootScope.characterLog = characterLog;
-    $rootScope.rumbleBeta = true;
     $rootScope.showLogFilters = log.length > 0;
 
     $timeout(function() {
@@ -548,10 +547,6 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         $storage.set('characterLog', temp);
         $rootScope.showLogFilters = temp.length > 0;
     };
-
-    $rootScope.toggleRumbleBeta = function() {
-        $rootScope.rumbleBeta = !$rootScope.rumbleBeta;
-    }
 
 });
 
