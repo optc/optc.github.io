@@ -1064,3 +1064,21 @@ window.events = {
         }
     },
 };
+
+// Show/Hide Super Type/Class
+if (window.details){
+    for (const i in window.details){
+        if (window.details[i].superSpecial){ // details.js does not distinguish ST from SC
+            window.events[i] = {
+                onInsertion: function($scope) {
+                    if (++$scope.options.superTypeAndClassEnabled == 1)
+                        $scope.notify({ text: 'Enabling Super Type/Class support.' });
+                },
+                onRemoval: function($scope) {
+                    if (--$scope.options.superTypeAndClassEnabled === 0)
+                        $scope.notify({ text: 'Disabling Super Type/Class support.' });
+                }
+            }
+        }
+    }
+}
