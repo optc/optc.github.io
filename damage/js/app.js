@@ -10,14 +10,16 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
     $rootScope.data = {
         //setting default values
-        team: [
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } },
-            { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } }
-        ],
+        team: Array.from({length: 6}, () => ({
+            // you may add properties, but may NOT change the order,
+            // due to the way the export link is implemented
+            unit: null,
+            level: -1,
+            candies: { hp: 0, atk: 0, rcv: 0 },
+            limit: 0, // LB level, max 50
+            sugarToy: false,
+            tokiState: false,
+        })),
 
         percHP: 100.0,
         
@@ -40,7 +42,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             { orb: 1, special: false, lock: 0, silence: 0, removed: 0 }
         ],
 
-        sugarToysEnabled: 0, // increment for each sugar special activated
+        sugarToysSpecialEnabled: 0, // increment for each sugar special activated
 
         customHitModifiers: null,
         
@@ -120,7 +122,14 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         // reset slot
         if (!onlyTransitional)
-            $scope.data.team[n] = { unit: null, level: -1, candies: { hp: 0, atk: 0, rcv: 0 } };
+            $scope.data.team[n] = {
+                unit: null,
+                level: -1,
+                candies: { hp: 0, atk: 0, rcv: 0 },
+                limit: 0,
+                sugarToy: false,
+                tokiState: false,
+            };
         $scope.tdata.team[n] = { orb: 1, g: false, str: false, dex: false, qck: false, psy: false, int: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 

@@ -9993,18 +9993,18 @@ window.specials = {
     },
     3008: {
         onActivation: function(p) {
-            ++p.scope.tdata.sugarToysEnabled;
+            ++p.scope.tdata.sugarToysSpecialEnabled;
         },
         onDeactivation: function(p) {
-            --p.scope.tdata.sugarToysEnabled;
+            --p.scope.tdata.sugarToysSpecialEnabled;
         },
     },
     3009: {
         onActivation: function(p) {
-            ++p.scope.tdata.sugarToysEnabled;
+            ++p.scope.tdata.sugarToysSpecialEnabled;
         },
         onDeactivation: function(p) {
-            --p.scope.tdata.sugarToysEnabled;
+            --p.scope.tdata.sugarToysSpecialEnabled;
         },
     },
     3010: {
@@ -12192,14 +12192,14 @@ window.specials = {
         orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p)}
     },
     3390: {
-        atk: function(p) { return p.toki[p.slot] ? 3.5 : 1; },
+        atk: function(p) { return p.tokiState ? 3.5 : 1; },
         type: "type",
-        orb: function(p) { return p.toki[p.slot] ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.tokiState ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     3391: {
-        atk: function(p) { return p.toki[p.slot] ? 3.5 : 1; },
+        atk: function(p) { return p.tokiState ? 3.5 : 1; },
         type: "type",
-        orb: function(p) { return p.toki[p.slot] ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.tokiState ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 3.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     3392: {
         chainAddition: function(p) { return 0.9; }

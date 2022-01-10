@@ -154,7 +154,11 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
             slot.team.forEach(function(x,n) {
                 if (n > 5) return;
                 $scope.resetSlot(n);
-                if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies };
+                if (x !== null) {
+                    // override default properties so old teams will always have complete properties
+                    // override unit property with the whole unit data (was stored as number)
+                    Object.assign($scope.data.team[n], x, {unit: units[x.unit]});
+                };
                 $scope.slotChanged(n);
             });
             if (slot.hasOwnProperty('defense')) $scope.data.defense = parseInt(slot.defense, 10) || 0;
@@ -172,7 +176,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
     $scope.saveTeam = function() {
         $scope.$broadcast('$validate');
         var team = $scope.data.team.map(function(x) {
-            return !x.unit ? null : { unit : x.unit.number, level: x.level, candies: x.candies };
+            return !x.unit ? null : {...x, ...{unit: x.unit.number}}; // save only the unit number to save space
         });
         var result = { name: $scope.lastSlot, team: team };
         if ($scope.saveShip) result.ship = $scope.data.ship;

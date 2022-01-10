@@ -92,9 +92,8 @@
         <li>
             <div id="limit">
                 <i class="fa fa-angle-double-up"></i>
-                Limit Break Level: <br><input type="number" size="4" class="wheelable" name="crew0" min = 0 max = 50 ng-model="data.limit0"><input type="number" size="4" class="wheelable" name="crew1" min = 0 max = 50 ng-model="data.limit1">
-                <br><input type="number" size="4" class="wheelable" name="crew2" min = 0 max = 50 ng-model="data.limit2"><input type="number" size="4" class="wheelable" name="crew3" min = 0 max = 50 ng-model="data.limit3">
-                <br><input type="number" size="4" class="wheelable" name="crew4" min = 0 max = 50 ng-model="data.limit4"><input type="number" size="4" class="wheelable" name="crew5" min = 0 max = 50 ng-model="data.limit5">
+                Limit Break Level: <br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" class="wheelable" name="limit{{$index}}" min=0 max=50 ng-model="data.team[$index].limit"><br ng-if="$index % 2 == 1"></span>
             </div>
         </li>
 
@@ -151,18 +150,16 @@
         <li ng-show="options.sugarToysEnabled">
             <div id="sugarToy">
                 <i class="fa fa-paw"></i>
-                Hobby-Hobby Transformation: <br>Crew 1: <input type="checkbox" class="wheelable" name="crew0" ng-model="data.sugarToy0"> Crew 2: <input type="checkbox" class="wheelable" name="crew1" ng-model="data.sugarToy1">
-                <br>Crew 3: <input type="checkbox" class="wheelable" name="crew2" ng-model="data.sugarToy2"> Crew 4: <input type="checkbox" class="wheelable" name="crew3" ng-model="data.sugarToy3">
-                <br>Crew 5: <input type="checkbox" class="wheelable" name="crew4" ng-model="data.sugarToy4"> Crew 6: <input type="checkbox" class="wheelable" name="crew5" ng-model="data.sugarToy5">
+                Hobby-Hobby Transformation:<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="sugarToy{{$index}}" ng-model="data.team[$index].sugarToy"></label><br ng-if="$index % 2 == 1"> </span>
             </div>
         </li>
 
         <li ng-show="options.tokiStateEnabled">
             <div id="toki">
                 <i class="fa fa-hourglass"></i>
-                Toki-Toki Effect: <br>Crew 1: <input type="checkbox" class="wheelable" name="crew0" ng-model="data.toki0"> Crew 2: <input type="checkbox" class="wheelable" name="crew1" ng-model="data.toki1">
-                <br>Crew 3: <input type="checkbox" class="wheelable" name="crew2" ng-model="data.toki2"> Crew 4: <input type="checkbox" class="wheelable" name="crew3" ng-model="data.toki3">
-                <br>Crew 5: <input type="checkbox" class="wheelable" name="crew4" ng-model="data.toki4"> Crew 6: <input type="checkbox" class="wheelable" name="crew5" ng-model="data.toki5">
+                Toki-Toki Effect:<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="tokiState{$index}}" ng-model="data.team[$index].tokiState"></label><br ng-if="$index % 2 == 1"> </span>
             </div>
         </li>
 
