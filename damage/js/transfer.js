@@ -150,8 +150,10 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
         let units = tokenString.split(',');
 
         for (const unitValues of units) {
-            if (unitValues == '!')
+            if (unitValues == '!') {
                 team.push(null);
+                continue;
+            }
 
             // the values are in order, according to how they are stored in $scope.data.team (damage/js/app.js)
             let values = unitValues.split(':');
