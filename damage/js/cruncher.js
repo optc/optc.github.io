@@ -500,10 +500,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
 
         atkbaseDamage = parseFloat($scope.data.customATKBase) != 0 && stat == "atk" ? parseFloat($scope.data.customATKBase) : atkbaseDamage;
-        if (params.scope.options.superTypeAndClassEnabled) {
-            if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
-            else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? 1.2 : 1;
-        }
+
+        if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
+        else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? 1.2 : 1;
 
         return (Math.floor(result) + candyBonus + LBaddition)*superClassBoost + atkbaseDamage;
     };
@@ -638,13 +637,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     };
 
     var getAffinity = function(strength, attackerType){
-        let isStrong = (strength == 'strong');
-        let affinity = (isStrong) ? 2 : 0.5;
-        if ($scope.options.superTypeAndClassEnabled && $scope.data["superType" + attackerType])
-            affinity += (isStrong) ? 0.5 : 0.25;
-        if ($scope.data.enemySuperType)
-            affinity -= (isStrong) ? 0.5 : 0.25;
-        return affinity
+        if(strength == 'strong') return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 2 : 2.5 : $scope.data.enemySuperType ? 1.5 : 2;
+        else return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 0.5 : 0.75 : $scope.data.enemySuperType ? 0.25 : 0.5; //Check this
     };
 
     var getTypeMultiplierOfUnit = function(attackerType, attackedType, unit, teamSlot) {
