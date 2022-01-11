@@ -12368,6 +12368,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 3.25 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") ? 1.2 : 1; },
     },
+    3521: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

@@ -3498,7 +3498,7 @@ window.units = [
     [ "Sobamask, Disappearing Warrior", "STR", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1666, 716, 83, 3333, 1433, 167, 1 ],
     [ "Oiran O-lin, Standing Threat", "INT", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1844, 772, 75, 3688, 1543, 150, 1 ],
     [ "Monkey D. Luffy, Ones To Defeat The Dragon", "DEX", [ "Fighter", "Free Spirit" ], 5, 40, 4, 3, 99, 4000000, 1456, 729, 114, 2912, 1458, 229, 1 ],
-    [ "Portgas D. Ace, Waiting on the High Seas", "STR", [ "Shooter", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1427, 660, 92, 2855, 1320, 185, null ],
+    [ "Portgas D. Ace, Waiting on the High Seas", "STR", [ "Shooter", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1427, 660, 92, 2855, 1320, 185, 1 ],
     [ "Ohm, Fierce Fight in the Sky", "INT", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1866, 753, 138, 3732, 1506, 276, 1 ],
     [ "Kinemon, At The Lord's Side", "STR", [ "Slasher", "Cerebral" ], 5, 20, 4, 4, 99, 2000000, 1564, 779, 84, 3129, 1558, 168, 1 ],
     [ "Denjiro, At The Lord's Side", "STR", [ "Slasher", "Cerebral" ], 5, 20, 4, 4, 99, 2000000, 1653, 735, 81, 3306, 1470, 162, 1 ],
@@ -3518,7 +3518,8 @@ window.units = [
     [ "Rayleigh & Gaban", "PSY", [ "Slasher", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1756, 711, 94, 3513, 1423, 188, 1 ],
     [ "Monkey D. Garp, Fist-Tightened Vice Admiral", "STR", [ "Fighter", "Striker" ], 5, 30, 4, 5, 99, 2000000, 1688, 726, 89, 3376, 1452, 178, 1 ],
     [ "Kozuki Oden, Samurai Challenging the Dragon", "STR", [ "Slasher", "Free Spirit" ], "6+", 65, 4, 5, 99, 5000000, 2219, 994, 119, 4438, 1744, 239, 1 ],
-    [ "Admiral Sengoku, Cunning Officer Upholding Justice in the Great Era of Piracy", "INT", [ "Fighter", "Striker" ], 5, 30, 5, 5, 99, 2000000, 1639, 779, 67, null, null, null, null ],
+    [ "Admiral Sengoku, Cunning Officer Upholding Justice in the Great Era of Piracy", "INT", [ "Fighter", "Striker" ], 5, 30, 5, 5, 99, 2000000, 1639, 779, 67, 3278, 1559, 134, 1 ],
+    [ "Groggy Monsters", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1763, 763, 155, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
