@@ -5057,7 +5057,7 @@ window.specials = {
         type: "class"
     },
     2058: {
-        orbs: function(p) { return p.unit.cost <= 15 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.unit.cost <= 15 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
     },
     2059: {
         orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p); },
@@ -12554,7 +12554,7 @@ window.specials = {
             var levels = [0.5, 3.25];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            var m = (p.percHP <= 80 ? 10 : 0);
+            var m = (p.percHP <= 80 ? 1 : 0);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = m;
             p.scope.notify({
                 text: 'HP ' + (m == 0 ? 'above' : 'below') + ' 80%, using the ' + n + ' turn debuff.' + 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
@@ -12580,7 +12580,7 @@ window.specials = {
             var levels = [0.5, 3.25];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            var m = (p.percHP <= 80 ? 10 : 0);
+            var m = (p.percHP <= 80 ? 1 : 0);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = m;
             p.scope.notify({
                 text: 'HP ' + (m == 0 ? 'above' : 'below') + ' 80%, using the ' + n + ' turn debuff.' + 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',

@@ -168,6 +168,9 @@ window.altspecials = {
     3430: {
         chainMultiplication: function(p) { return 1.25; },
     },
+    3454: {
+        negative: function(p) { return 10; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

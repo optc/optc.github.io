@@ -3466,7 +3466,7 @@ window.units = [
     [ "Dracule Mihawk, The Strongest", "INT", [ "Slasher", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1369, 669, 99, 2739, 1339, 198, 1 ],
     [ "Helmeppo, Flashy Sword Handling", "QCK", [ "Free Spirit", "Slasher" ], 5, 50, 4, 5, 99, 5000000, 1659, 684, 84, 3317, 1367, 167, 1 ],
     [ "Robin Halloween Avatar The Night, Night of Halloween", "INT", [ "Cerebral", "Fighter" ], 5, 60, 4, 1, 99, 5000000, 1194, 524, 126, 2984, 1310, 316, 1 ],
-    [ "Viola Halloween Dance Party, Night of Halloweed", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1270, 598, 171, 2859, 1434, 276, 1 ],
+    [ "Viola Halloween Dance Party, Night of Halloween", "STR", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1270, 598, 171, 2859, 1434, 276, 1 ],
     [ "Charlotte Pudding, Farewell's Aftermath...", "INT", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1663, 837, 245, 3325, 1523, 456, 1 ],
     [ "Rebecca Halloween Sweet Party, Night of Halloween", "STR", [ "Free Spirit", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1438, 642, 102, 2752, 1435, 292, 1 ],
     [ "Donquixote Doflamingo, Conqueror's Haki Clash", "STR", [ "Driven", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 944, 409, 58, 1999, 829, 121, 1 ],
