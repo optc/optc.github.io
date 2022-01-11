@@ -28,6 +28,13 @@
                  Chain Addition: <input type="number" size="4" min="0" max="5" step="0.1" id="customChainAddition" to-int ng-model="data.customChainAddition"></input>
             </div>
         </li>
+
+        <li>
+            <div id="customRainbow">
+                <i class="fa fa-fist-raised"></i> Custom Rainbow Damage:<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="rainbowDamage{{$index}}" ng-model="data.rainbowDamage[$index]"></label><br ng-if="$index % 2 == 1"> </span>
+            </div>
+        </li>
         
         <li>
             <div id="heal">
