@@ -133,6 +133,23 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         $scope.tdata.team[n] = { orb: 1, g: false, str: false, dex: false, qck: false, psy: false, int: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
 
+    /**
+     * If all sugarToys are true, then sets all to false.
+     * Sets all to true when at least one is false.
+     */
+    $scope.toggleSugarToys = function() {
+        let newValue = !$scope.data.team.every(x => x.sugarToy);
+        $scope.data.team.forEach(x => x.sugarToy = newValue);
+    };
+
+    /**
+     * Sets all tokiStates to false. Unlike sugarToys, tokiState should only be
+     * applied to 2 units max, so it does not make sense to enable it for all units.
+     */
+    $scope.resetTokiStates = function() {
+        $scope.data.team.forEach(x => x.tokiState = false);
+    };
+
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
     $scope.slotChanged = function(n) {
         if (!$scope.data.team[n].unit) return;

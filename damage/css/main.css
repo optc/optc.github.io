@@ -547,6 +547,10 @@ ul { padding-left: 0; }
     margin-right: 5px;
 }
 
+#menu li button {
+    color: black;
+}
+
 input {
     color: black;
 }

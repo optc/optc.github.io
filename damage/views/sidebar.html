@@ -152,6 +152,7 @@
                 <i class="fa fa-paw"></i>
                 Hobby-Hobby Transformation:<br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="sugarToy{{$index}}" ng-model="data.team[$index].sugarToy"></label><br ng-if="$index % 2 == 1"> </span>
+                <button type="button" ng-click="toggleSugarToys()">Toggle All</button>
             </div>
         </li>
 
@@ -160,6 +161,7 @@
                 <i class="fa fa-hourglass"></i>
                 Toki-Toki Effect:<br>
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="tokiState{$index}}" ng-model="data.team[$index].tokiState"></label><br ng-if="$index % 2 == 1"> </span>
+                <button type="button" ng-click="resetTokiStates()">Reset</button>
             </div>
         </li>
 
