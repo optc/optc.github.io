@@ -945,6 +945,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var temp = damage.map(function(x,n) {
                 var multipliers = jQuery.extend([ ], x.multipliers), base = x.base;
                 specials.forEach(function(data) {
+                    let params = jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position));
                     var atkPlusTemp = 0;
                     var atkCeilTemp = 1;
                     var statusPlusTemp = 0;
@@ -960,6 +961,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         var text = data.sourceSlot > -1 ? (team[data.sourceSlot].unit ? 'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special') : 'special override';
                         if(data.type == "atk") multipliers.push([ parseFloat($scope.data.customATK) != 1 ? parseFloat($scope.data.customATK) : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? atkCeilTemp == 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : atkCeilTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                         else if(data.type == "condition") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + statusPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        else if (data.type == "orb")
+                            multipliers.push([CrunchUtils.getOrbMultiplier(params.orb, params.unit.type, params.unit.class, 1, data.f(params), [params.friendCaptain, params.captain], params.effectName, params), text]);
                         else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
                     } else { // static
                         base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
