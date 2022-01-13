@@ -171,6 +171,13 @@ window.altspecials = {
     3454: {
         negative: function(p) { return 10; },
     },
+    3523: {
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
+        }
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

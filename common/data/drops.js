@@ -6039,6 +6039,16 @@ window.drops = {
             'Coast of Wano': [ 3506 ]
         },
 
+        {
+            name: 'Tashigi',
+            dropID: 'treasuremap53',
+            thumb: 3527,
+            global: true,
+            nakama: 8352700,
+            gamewith: null,
+            'Coast of Wano': [ 3527 ]
+        },
+
     ],
 
     
@@ -6692,6 +6702,16 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'All Difficulties': [ 3505 ],
+        },
+
+        {
+            name: 'Wapol',
+            dropID: 'rumble20',
+            thumb: 3526,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'All Difficulties': [ 3526 ],
         },
 
     ],

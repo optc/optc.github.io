@@ -1034,6 +1034,10 @@ window.zombies = {
     3483: { // Croc
         type: 'healer',
     },
+    3525: { // Ivankov
+        type: 'healer',
+        amount: 800
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300
