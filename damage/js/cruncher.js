@@ -1546,6 +1546,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             gear: [ $scope.data.gearLevelLeft, $scope.data.gearLevelRight ],
             hitcombo: hitModifiers,
             effectName: $scope.data.effect,
+            enabledAbilities: {
+                specials: enabledSpecials,
+                effects: enabledEffects
+            },
             customBuffs: {
                 atk: $scope.data.customATK,
                 orb: $scope.data.customOrb,
