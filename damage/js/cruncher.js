@@ -663,7 +663,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ($scope.data.effect == 'Kizuna Clash [Japan]'){
             if ([ 3468, 3479 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
-        
+
+        if ($scope.data.rainbowDamage[teamSlot])
+            typeMult = getAffinity('strong', attackerType);
+
         //Get the strongest Color affinity Mult if it exists and apply it
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
             affinityMultiplier.forEach(function(special){
