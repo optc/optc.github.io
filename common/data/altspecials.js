@@ -97,7 +97,7 @@ window.altspecials = {
         atkbase: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
     },
     3009: {
-        orb: function(p) { return p.unit.cost <= 40  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2.25, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.unit.cost <= 40  ? 2.25 : 1; },
     },
     3037: {
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
@@ -117,7 +117,7 @@ window.altspecials = {
         def: function(p) { return 0; },
     },
     3122: {
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return 1.75; },
     },
     3175: {
         atkbase: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
@@ -146,7 +146,7 @@ window.altspecials = {
         affinity: function(p) { return p.unit.type == "STR" ? 2 : 1; },
     },
     3403: {
-        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     3405: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 2 : 1; },
@@ -196,28 +196,28 @@ var ghostsAltSpecials = {
         chainAddition: function(p) { return 0.5; },
     },
     28: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     29: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     30: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     31: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     32: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     33: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     34: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     35: {
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     36: {
         chainMultiplication: function(p) { return 1.25; },
@@ -272,32 +272,32 @@ var ghostsAltSpecials = {
     74: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     75: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     76: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     77: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     78: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     79: {
         atk: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
         type: "type",
-        orb: function(p) { return p.slot == p.sourceSlot ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1; },
     },
     80: {
         chainAddition: function(p) { return 0.3; },
@@ -436,16 +436,16 @@ var ghostsAltSpecials = {
         }
     },
     168: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? 1.5 : 1; },
     },
     169: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? 1.5 : 1; },
     },
     170: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? 1.5 : 1; },
     },
     171: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.5, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? 1.5 : 1; },
     },
     207: {
         atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5214].multiplier/100)); },
@@ -954,7 +954,7 @@ var ghostsAltSpecials = {
     373: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -968,7 +968,7 @@ var ghostsAltSpecials = {
     374: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -982,7 +982,7 @@ var ghostsAltSpecials = {
     375: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -996,7 +996,7 @@ var ghostsAltSpecials = {
     376: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -1010,7 +1010,7 @@ var ghostsAltSpecials = {
     377: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -1024,7 +1024,7 @@ var ghostsAltSpecials = {
     378: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -1038,7 +1038,7 @@ var ghostsAltSpecials = {
     379: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -1052,7 +1052,7 @@ var ghostsAltSpecials = {
     380: {
         atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "type",
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
             var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
