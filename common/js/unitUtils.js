@@ -19,6 +19,11 @@ UnitUtils.extendDouble = function(state, baseid, type) {
         window.details[state["start"]+state["increment"]] = Object.assign({},window.details[baseid]);
         if (type == "dual"){
             window.details[state["start"]+state["increment"]]["captain"] = window.details[baseid]["captain"][types[i]];
+            // dual characters with two specials
+            if (window.details[state["start"]+state["increment"]].special.character1) {
+                // either "character1" or "character2" only
+                window.details[state["start"]+state["increment"]].special = window.details[baseid].special[types[i % 2]];
+            }
             if (window.details[baseid].sailor) window.details[state["start"]+state["increment"]]["sailor"] = { "base": window.details[baseid]["sailor"][types[i]], "level1": window.details[baseid]["sailor"]["level1"], };
         }
         if (type == "vs"){
