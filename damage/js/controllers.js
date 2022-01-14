@@ -66,35 +66,18 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number') && !(Array.isArray(x.type)); });
-        // filter by matchers
-        for (var matcher in parameters.matchers) {
-            result = result.filter(function(unit) {
-                let regex = parameters.matchers[matcher];
-                if (matcher == 'family')
-                    return unit.families && unit.families.some(family => regex.test(family));
-                if (matcher == 'notfamily')
-                    return !(unit.families && unit.families.some(family => regex.test(family)));
-                return regex.test(unit[matcher]);
-            });
-        }
-        // filter by ranges
-        for (var range in parameters.ranges) {
-            result = result.filter(function(unit) {
-                var stat;
-                if (range == 'id') stat = unit.number + 1;
-                else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
-                if (stat < parameters.ranges[range][0] || stat > parameters.ranges[range][1]) return false;
-                return true;
-            });
-        }
-        // filter by queryTerms
-        if (parameters.queryTerms) {
-            result = result.filter(function(unit) {
-                let name = Utils.getFullUnitName(unit.number + 1);
-                return parameters.queryTerms.every(term => term.test(name));
-            });
-        }
+
+        result = window.units.filter(function(x) {
+            if (x === null && x === undefined && !x.hasOwnProperty('number'))
+                return false;
+            // do not allow dual/vs units. Their "ghost" forms (which only have one type) can be added though
+            if (Array.isArray(x.type))
+                return false;
+            if (!Utils.checkUnitMatchSearchParameters(x, parameters))
+                return false;
+            return true
+        });
+
         $scope.units = result;
     };
 
