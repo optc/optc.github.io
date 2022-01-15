@@ -158,8 +158,26 @@
      * Transforms a list of characters or types and classes from supported
      * characters or super special criteria into a query using family, type,
      * class, and cost operators.
+     * @example
+     * // returns 'type:STR class:Free_Spirit'
+     * Utils.generateCriteriaQuery('[STR] Free Spirit')
+     * @example
+     * // returns 'family:^(Daz_Bones|Nico_Robin|Bentham)$ notFamily:^(Crocodile|Mr._0)$'
+     * Utils.generateCriteriaQuery('Daz Bones (Mr. 1), Nico Robin and Bentham (Mr. 2 Bon Clay)', window.families[1616])
+     * @example
+     * // returns 'cost<=29 notFamily:^(Sengoku)$'
+     * Utils.generateCriteriaQuery('Characters with cost 29 or less', window.families[459])
+     * @param {string} criteria - string that could be a list of families supported,
+     * types and/or classes supported, or character cost supported. Should NOT
+     * include "All characters", "characters" at the end, or "must consist of", etc.
+     * @param {string[]} [supportingFamilies] - array of family names of the
+     * supporting unit. If provided, a `notFamily:` query will be included in
+     * the result
+     * @returns {string} search query that filters for the units supported.
+     * This can be of the forms `family:^(Monkey_D._Luffy|Nami)$`, `type:STR|QCK`,
+     * `class:Free_Spirit|Powerhouse`, `cost<=29`, or combinations of them.
      */
-     utils.generateCriteriaQuery = function (criteria) {
+     utils.generateCriteriaQuery = function (criteria, supportingFamilies = []) {
         let families = [];
         let types = [];
         let classes = [];
@@ -171,6 +189,7 @@
         let classRegex = /^(?:Fighter|Slasher|Striker|Shooter|Free Spirit|Powerhouse|Cerebral|Driven)$/i;
 
         // "[STR] Free Spirit", we can't just split all by spaces
+        // first group is type, second group is optional class
         let typeRegex = /\[(.*?)\](?:\s+([\w ]+))?/i;
 
         // may be "and" or ", and" or ", " even with extra whitespace
@@ -179,7 +198,7 @@
 
         let costMatch = criteria.match(costRegex);
         if (costMatch){
-            return 'cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1];
+            matchers.push('cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1]);
         } else {
             criteria = criteria.replace(aliasesRegex, '');
             let terms = criteria.split(separatorRegex);
@@ -208,24 +227,67 @@
         if (classes.length > 0) {
             matchers.push('class:' + classes.join('|').replace(whitespaceRegex, '_'));
         }
+        if (supportingFamilies.length > 0) {
+            matchers.push(utils.generateFamilyExclusionQuery(supportingFamilies));
+        }
         return matchers.join(' ');
     }
 
-    utils.generateSupportedCharactersQuery = function (criteria) {
-        if (/All characters?/i.test(criteria))
+    /**
+     * Wrapper function for `Utils.generateCriteriaQuery` that will convert the
+     * given `criteria` to a compatible format. If "All characters" is passed
+     * as a criteria, no query (null) will be returned as you should not need
+     * any query for that. This will also strip the trailing " characters", for
+     * supports like "[PSY] characters".
+     * @param {string} criteria - the support criteria given by
+     * window.details[i].support[0].Characters
+     * @param {string[]} [supportingFamilies] - the families of the supporting
+     * unit, which should not be included in the search results, so a
+     * `notFamily:` query will be generated for it.
+     * @returns {string|null} a usable query that can be used to search for all
+     * supported characters
+     */
+    utils.generateSupportedCharactersQuery = function (criteria, supportingFamilies = []) {
+        if (/^All characters?/i.test(criteria))
             return null;
-        return utils.generateCriteriaQuery(criteria.replace(/ characters?$/i, ''));
+        return utils.generateCriteriaQuery(criteria.replace(/ characters?$/i, ''), supportingFamilies);
     }
 
-    utils.generateSuperSpecialQuery = function (criteria) {
+    /**
+     * Wrapper function for `Utils.generateCriteriaQuery` for `superSpecialCriteria`
+     * that will convert the given `criteria` to a compatible format. If
+     * "All characters" is passed as a criteria, no query (null) will be returned
+     * as you should not need any query for that. This will also strip the
+     * trailing " characters", for descriptions like "[PSY] characters". This will
+     * also take only superSpecialCriteria that match "must consist of <family names>,
+     * excluding support members", or "must consist of <number> <class or type>
+     * characters, excluding support members".
+     * @param {string} criteria - the support criteria given by
+     * window.details[i].support[0].Characters
+     * @param {string[]} [supportingFamilies] - the families of the unit with
+     * a super special, which should not be included in the search results, so a
+     * `notFamily:` query will be generated for it.
+     * @returns {string|null} a usable query that can be used to search for
+     * characters fulfilling the `superSpecialCriteria`
+     */
+    utils.generateSuperSpecialQuery = function (criteria, supportingFamilies = []) {
         let charactersRegex = /must consist of(?: \d)? (.*), excluding Support members/i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
         match[1] = match[1].replace(/ characters?$/i, '');
-        return utils.generateCriteriaQuery(match[1]);
+        return utils.generateCriteriaQuery(match[1], supportingFamilies);
     }
 
+    /**
+     * Will generate a `notFamily:` query so that the supporting unit's families
+     * will not be included in the filtered search results.
+     * @example
+     * // returns 'notFamily:^(Monkey_D._Luffy|Roronoa_Zoro|Nami|Usopp|Vinsmoke_Sanji)$'
+     * Utils.generateFamilyExclusionQuery(window.families[2875]); // can also use array literals
+     * @param {string[]} families - Array of family names of the supporting unit.
+     * @returns {string|null} A `notFamily:` query to be used in the search.
+     */
     utils.generateFamilyExclusionQuery = function (families) {
         if (!families)
             return null;
@@ -236,6 +298,15 @@
         return query;
     }
 
+    /**
+     * Replaces letters with diacritics into the more common letters. Used for parsing
+     * and matching search terms, so that users won't have to type exact diacritics.
+     * @example
+     * // returns 'Brulee'
+     * Utils.normalizeText('Brûlée');
+     * @param {string} str String to normalize
+     * @returns {string} String without diacritics
+     */
     utils.normalizeText = function (str) {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
@@ -1276,14 +1347,14 @@
      * Fuzzy search is not supported on this function. To implement fuzzy search, filter
      * with fuzzy search first, then remove `queryTerms` from `searchParameters` before
      * passing it into this function.
-     * @param {object} unit - Unit object to check. Get it from `window.units` after
-     * `Utils.parseUnits` is called.
+     * @param {object|number} unit - Unit object to check. Get it from `window.units` after
+     * `Utils.parseUnits` is called. If a number is given, it should be the 1-based ID of the unit.
      * @param {object} searchParameters - Object returned by `Utils.generateSearchParameters`
      * @returns {boolean} True if given unit matches all parameters
      */
     utils.checkUnitMatchSearchParameters = function (unit, searchParameters) {
         if (typeof unit === 'number' && isFinite(unit))
-            unit = window.units[unit];
+            unit = window.units[unit - 1];
 
         // filter by matchers (string operators)
         for (let matcher in searchParameters.matchers) {
@@ -1327,7 +1398,7 @@
 
         // filter by queryTerms
         if (searchParameters.queryTerms && searchParameters.queryTerms.length > 0) {
-            let name = Utils.getFullUnitName(id);
+            let name = Utils.getFullUnitName(unit.number + 1);
             // make sure all terms match
             if (!searchParameters.queryTerms.every(term => term.test(name))){
                 return false;
