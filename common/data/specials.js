@@ -12612,7 +12612,7 @@ window.specials = {
     3461: {
         affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
-            var n = (p.percHP > 99  ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2.25);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
@@ -12623,7 +12623,7 @@ window.specials = {
     3462: {
         affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
-            var n = (p.percHP > 99  ? 2.5 : 2);
+            var n = (p.percHP > 99  ? 2.5 : 2.25);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',

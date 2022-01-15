@@ -94384,7 +94384,7 @@
               "attributes": [ "ATK" ],
               "effect": "buff",
               "level": 6,
-              "condition": { "comparator": "less", "count": 5, "type": "crew" },
+              "condition": { "comparator": "more", "count": 5, "type": "crew" },
               "targeting": { "targets": [ "self" ] }
             }
           ]
