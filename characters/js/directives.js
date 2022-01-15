@@ -417,6 +417,16 @@ directives.addSupportQuery = function($state, $stateParams) {
     };
 };
 
+directives.addSupportersQuery = function() {
+    return {
+        restrict: 'E',
+        scope: { uid: "=" },
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for attachable supports</b></a>',
+        link: function(scope, element, attrs) {
+            scope.query = Utils.generateAttachableSupportsQuery(scope.uid);
+        }
+    }
+}
 
 directives.scrollToSection = function($state, $stateParams) {
     return {
