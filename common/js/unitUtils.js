@@ -6,7 +6,7 @@ var UnitUtils = { };
 
 UnitUtils.extendDouble = function(state, baseid, type) {
     var types = [ "character1", "character2" ];
-    let newId = state["start"]+state["increment"];
+    var newId = state["start"]+state["increment"];
     if(type == "dual"){
         if (Array.isArray(window.units[baseid - 1][1])){
             if(window.units[baseid - 1][1][0] == window.units[baseid - 1][1][1]){
