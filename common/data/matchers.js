@@ -221,11 +221,17 @@ window.matchers = [
     },
 
     {
+        name: 'Bind reducers',
+        target: 'captain',
+        matcher: /(reduces|removes).+?(?<!Slot |Ship )Bind.+duration/i
+    },
+
+    {
         name: 'Despair reducers',
         target: 'captain',
         matcher: /(reduces|removes).+despair.+duration/i
     },
-    
+
     {
         name: 'Silence/Special Bind reducers',
         target: 'captain',
@@ -919,7 +925,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'special',
-        matcher: /(reduces|removes)( bind|.+, bind|.+and bind).+duration/i
+        matcher: /(reduces|removes).+?(?<!Slot |Ship )Bind.+duration/i
     },
 
     {
@@ -1229,7 +1235,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'swap',
-        matcher: /(reduces|removes)(.+and bind|.+, bind| bind).+duration/i
+        matcher: /(reduces|removes).+?(?<!Slot |Ship )Bind.+duration/i
     },
 
     {
@@ -1811,7 +1817,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'support',
-        matcher: /(reduces|removes).+bind.+duration/i
+        matcher: /(reduces|removes).+?(?<!Slot |Ship )Bind.+duration/i
     },
 
     {
@@ -2422,7 +2428,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'superSpecial',
-        matcher: /(reduces|removes)( bind|.+, bind|.+and bind).+duration/i
+        matcher: /(reduces|removes).+?(?<!Slot |Ship )Bind.+duration/i
     },
 
     {
