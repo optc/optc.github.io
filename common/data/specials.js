@@ -12960,9 +12960,21 @@ window.specials = {
         }
     },
     3522: {
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
         atkbase: function(p) { return 1500; },
     },
     3523: {
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
         atkbase: function(p) { return 1500; },
     },
     3524: {
