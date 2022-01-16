@@ -1222,9 +1222,7 @@
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
         var regex = new RegExp('^((type|class|support|family|notfamily):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         const typeRegex = /^(?:str|dex|qck|psy|int)$/;
-        var tokens = query.replace(/\s+/g, ' ').split(' ').filter(function (x) {
-            return x.length > 0;
-        });
+        var tokens = query.replace(/&|\//g, ' ').split(/\s+/);
         tokens.forEach(function (x) {
             x = x.replace(/_+/g, ' ');
             var temp = x.match(regex);
