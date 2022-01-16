@@ -647,7 +647,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getAffinity = function(strength, attackerType){
         if(strength == 'strong') return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 2 : 2.5 : $scope.data.enemySuperType ? 1.5 : 2;
-        else return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 0.5 : 0.75 : $scope.data.enemySuperType ? 0.25 : 0.5; //Check this
+        else return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 0.5 : 0.75 : $scope.data.enemySuperType ? 0.25 : 0.5;
     };
 
     var getTypeMultiplierOfUnit = function(attackerType, attackedType, unit, teamSlot) {
@@ -693,12 +693,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var affinityPlusTemp = 0; //conditional goes here
         plusSpecials.forEach(function(plusSpecial) {
             if(plusSpecial.hasOwnProperty('affinityPlus')){
-                if(plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(teamSlot))) > affinityPlusTemp) affinityPlusTemp = plusSpecial.affinityPlus(jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(teamSlot)));
+                let params = jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(teamSlot));
+                affinityPlusTemp = Math.max(affinityPlusTemp, plusSpecial.affinityPlus(params));
             }
         });
-        affinityMult = affinityMult == 1 ? affinityMult : affinityMult + affinityPlusTemp;
+        if (affinityMult != 1)
+            affinityMult += affinityPlusTemp;
 
-        affinityMult = parseFloat($scope.data.customAffinity) != 1 ? parseFloat($scope.data.customAffinity) : affinityMult;
+        if (parseFloat($scope.data.customAffinity) != 1)
+            affinityMult = parseFloat($scope.data.customAffinity);
         
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
@@ -720,10 +723,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var getChainMultiplier = function(chainBase, hitModifiers, chainModifier, params, damage) {
         var chainSpecialMult = 1;
         var chainUpgrade = 0;
-        if ($scope.data.effect == '1.25x Chain Multiplier - Sanji Judge Change Action'){
-            chainSpecialMult = 1.25;
-        }
-        //console.log(params);
+
         chainSpecMultiplication.forEach(function(special){
             var params = getParameters(special.sourceSlot);
             params["sourceSlot"] = special.sourceSlot;
@@ -858,16 +858,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         addition = parseFloat($scope.data.customChainAddition) != 0 ? parseFloat($scope.data.customChainAddition) + captainAddition : addition;
 
-        /* if ($scope.data.effect == '0.5x Chain Boost - Sanji Zoro Change Action'){
-            addition = 0.5;
-        }
-        if ($scope.data.effect == '0.3x Chain Boost - Lucci Kaku Change Action'){
-            addition = 0.3;
-        }
-        if ($scope.data.effect == '2.5x Chain Lock - Vivi Rebecca Change Action'){
-            addition = 2.5;
-        } */
-        
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
@@ -961,23 +951,43 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     var atkPlusTemp = 0;
                     var atkCeilTemp = 1;
                     var statusPlusTemp = 0;
+
+                    // get highest buff increase
                     plusSpecials.forEach(function(plusSpecial) {
                         if(plusSpecial.hasOwnProperty('atkPlus'))
-                            if(plusSpecial.atkPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > atkPlusTemp) atkPlusTemp = plusSpecial.atkPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                            if(plusSpecial.atkPlus(params) > atkPlusTemp)
+                                atkPlusTemp = plusSpecial.atkPlus(params);
                         if(plusSpecial.hasOwnProperty('atkCeil'))
-                            if(plusSpecial.atkCeil(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > atkCeilTemp) atkCeilTemp = plusSpecial.atkCeil(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                            if(plusSpecial.atkCeil(params) > atkCeilTemp)
+                                atkCeilTemp = plusSpecial.atkCeil(params);
                         if(plusSpecial.hasOwnProperty('statusPlus'))
-                            if(plusSpecial.statusPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) > statusPlusTemp) statusPlusTemp = plusSpecial.statusPlus(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                            if(plusSpecial.statusPlus(params) > statusPlusTemp)
+                                statusPlusTemp = plusSpecial.statusPlus(params);
                     });
                     if (!data.s) { // non-static
                         var text = data.sourceSlot > -1 ? (team[data.sourceSlot].unit ? 'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special') : 'special override';
-                        if(data.type == "atk") multipliers.push([ parseFloat($scope.data.customATK) != 1 ? parseFloat($scope.data.customATK) : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? atkCeilTemp == 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + atkPlusTemp : atkCeilTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
-                        else if(data.type == "condition") multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) != 1 ? data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))) + statusPlusTemp : data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
-                        else if (data.type == "orb")
-                            multipliers.push([CrunchUtils.getOrbMultiplier(params.orb, params.unit.type, params.unit.class, 1, data.f(params), [params.friendCaptain, params.captain], params.effectName, params), text]);
-                        else multipliers.push([ data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position))), text ]);
+                        let multiplier = data.f(params);
+                        if (data.type == "atk") {
+                            if (parseFloat($scope.data.customATK) != 1) {
+                                multiplier = parseFloat($scope.data.customATK);
+                                text = 'special override';
+                            } else if (multiplier != 1) { // only apply atkPlus or atkCeil when there's an atk boost
+                                if (atkCeilTemp != 1)
+                                    multiplier = atkCeilTemp;
+                                else
+                                    multiplier += atkPlusTemp;
+                            }
+                        } else if (data.type == "condition") {
+                            if (multiplier != 1)
+                                multiplier += statusPlusTemp;
+                        } else if (data.type == "orb") {
+                            if (parseFloat($scope.data.customOrb) != 1)
+                                text = 'special override';
+                            multiplier = CrunchUtils.getOrbMultiplier(params.orb, params.unit.type, params.unit.class, 1, multiplier, [params.friendCaptain, params.captain], params.effectName, params);
+                        }
+                        multipliers.push([ multiplier, text ]);
                     } else { // static
-                        base += data.f(jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position)));
+                        base += data.f(params);
                     }
                 });
                 return { unit: x.unit, orb: x.orb, base: base, multipliers: multipliers, position: x.position };
