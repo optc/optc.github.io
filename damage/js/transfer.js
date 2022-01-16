@@ -48,7 +48,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             if (!checkInt(temp[0], 0, window.ships.length) || !checkInt(temp[1], 1, 11)) break;
         } else if (type == 'D' && isNaN(parseInt(data,10))) break;
         else if ((type == 'O' || type == 'L' || type == 'G') && !checkInt(data, 0, 729)) break;
-        else if (type == 'S' && !checkInt(data, 0, 64)) break;
+        else if ((type == 'S' || type == 'A') && !checkInt(data, 0, 64)) break;
         else if (type == 'H') {
             temp = parseFloat(data, 10);
             if (isNaN(temp) || temp < 0 || temp > 100) break;
@@ -119,7 +119,16 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                 if (x == 1) $scope.options.sidebarVisible = true;
                 $scope.tdata.team[n].special = (x == 1);
                 if ($rootScope.cruncherReady) $rootScope.$emit('specialToggled', n, x == 1);
-                else emitQueue.push([ n, x == 1 ]);
+                else emitQueue.push([ 'specialToggled', n, x == 1 ]);
+            });
+        } else if (type == 'A') {
+            temp = ('000000' + parseInt(data, 10).toString(2))
+                .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
+            temp.forEach(function(x,n) {
+                if (x == 1) $scope.options.sidebarVisible = true;
+                $scope.tdata.team[n].altspecial = (x == 1);
+                if ($rootScope.cruncherReady) $rootScope.$emit('altspecialToggled', n, x == 1);
+                else emitQueue.push([ 'altspecialToggled', n, x == 1 ]);
             });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
@@ -134,7 +143,7 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
     if (!$rootScope.cruncherReady) {
         $rootScope.$watch('cruncherReady',function(ready) {
             if (!ready) return;
-            emitQueue.forEach(function(x) { $rootScope.$emit('specialToggled', x[0], x[1]); });
+            emitQueue.forEach(function(x) { $rootScope.$emit(x[0], x[1], x[2]); });
         });
     }
 
@@ -230,6 +239,7 @@ var ExportCtrl = function($scope) {
         result += parseInt(team.map(function(x) { return x.silence; }).join(''),3) + 'G';
         result += parseInt(team.map(function(x) { return x.removed; }).join(''),3) + 'R';
         result += parseInt(team.map(function(x) { return x.special ? 1 : 0; }).join(''),2) + 'S';
+        result += parseInt(team.map(function(x) { return x.altspecial ? 1 : 0; }).join(''),2) + 'A';
         result += (Math.floor(data.percHP * 100) / 100) + 'H';
 
         $scope.tdata.url = window.location.href.match(/^(.+?)#/)[1] + result;

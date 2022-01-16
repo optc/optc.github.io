@@ -36,14 +36,14 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     
     $rootScope.tdata = { // transitional data
 
-        team: [
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 },
-            { orb: 1, special: false, lock: 0, silence: 0, removed: 0 }
-        ],
+        team: Array.from({length: 6}, () => ({
+            orb: 1,
+            special: false,
+            altspecial: false,
+            lock: 0,
+            silence: 0,
+            removed: 0,
+        })),
 
         sugarToysSpecialEnabled: 0, // increment for each sugar special activated
 
