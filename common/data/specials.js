@@ -12991,7 +12991,7 @@ window.specials = {
         },
     },
     3525:{
-        orb: function(p) { return CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -13003,11 +13003,11 @@ window.specials = {
         },
     },
     3526: {
-        orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Shooter")) ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1.75, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
     },
     3527: {
         orbPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
-        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p) : CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 1, [p.friendCaptain, p.captain], p.effectName, p); },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
