@@ -12844,6 +12844,12 @@ window.specials = {
             });
         },
     },
+    3489: {
+        status: function(p) { return p.poisoned ? 1.75 : 1; },
+    },
+    3490: {
+        status: function(p) { return p.poisoned ? 1.75 : 1; },
+    },
     3491: {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
         status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
