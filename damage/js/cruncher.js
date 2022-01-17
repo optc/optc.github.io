@@ -74,12 +74,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var hitModifiers = [ ];
     var shipBonus = { };
     var enabledSpecials = [ ];
-    var enabledEffects = [ ];
 
     var crunchSelfInhibit = false;
     var mapEffect = { };
     var team = [ ];
-    $rootScope.cruncherReady = false;
+    var initDone = false;
     
     var gearLevel = [ 0, 0 ];
 
@@ -93,6 +92,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var params = getParameters(slot); params["sourceSlot"] = slot;
         if (!specials.hasOwnProperty(id)) return;
         if (enabled && specials[id].hasOwnProperty('onActivation')) {
+            if (!initDone) initializeDataStructs();
+            
             /*var kataActivate = false;
             for(var kata = 0; kata < 2; kata++){
             if(team[kata].unit !== null){
@@ -110,6 +111,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             
             specials[id].onActivation(params);
         } else if (!enabled && specials[id].hasOwnProperty('onDeactivation')) {
+            if (!initDone) initializeDataStructs();
             specials[id].onDeactivation(params);
         }
     });
@@ -121,6 +123,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var params = getParameters(slot); params["sourceSlot"] = slot;
         if (!altspecials.hasOwnProperty(id)) return;
         if (enabled && altspecials[id].hasOwnProperty('onActivation')) {
+            if (!initDone) initializeDataStructs();
             
             /*var kataActivate = false;
             for(var kata = 0; kata < 2; kata++){
@@ -139,12 +142,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             
             altspecials[id].onActivation(params);
         } else if (!enabled && altspecials[id].hasOwnProperty('onDeactivation')) {
+            if (!initDone) initializeDataStructs();
             altspecials[id].onDeactivation(params);
         }
     });
 
     $scope.$watch('data',crunch,true);
     $scope.$watch('tdata',crunch,true);
+
+    $rootScope.cruncherReady = true;
 
     /* * * * * Crunching * * * * */
 
@@ -1241,7 +1247,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Utility functions * * * * */
 
     var initializeDataStructs = function() {
-        $rootScope.cruncherReady = true;
+        initDone = true;
         // get enabled specials
         var conflictWarning = false;
         enabledSpecials = [ ];
