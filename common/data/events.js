@@ -683,6 +683,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    3522: {
+        onInsertion: function($scope) {
+            if (++$scope.options.cloneEnabled == 1)
+                $scope.notify({ text: 'Enabling Clone-Clone support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.cloneEnabled === 0)
+                $scope.notify({ text: 'Disabling Clone-Clone support.' });
+        }
+    },
+    3523: {
+        onInsertion: function($scope) {
+            if (++$scope.options.cloneEnabled == 1)
+                $scope.notify({ text: 'Enabling Clone-Clone support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.cloneEnabled === 0)
+                $scope.notify({ text: 'Disabling Clone-Clone support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

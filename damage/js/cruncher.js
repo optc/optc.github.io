@@ -261,8 +261,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         team.forEach(function(x,n) {
             if (n > 5 || x.unit === null || $scope.tdata.team[n].lock > 0) return;
             var shipParam = getParameters(n);
-            var friendCaptain = $scope.tdata.team[0];
-            var captain = $scope.tdata.team[1];
+            var friendCaptain = team[0].unit;
+            var captain = team[1].unit;
+            var unitTemp = Object.assign({},x.unit);
+            if(n == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
+            if(n != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, n);
+            if(friendCaptain && $scope.data.cloneCheck1 && [3522, 3523].includes(friendCaptain.number)) cloneReplace(friendCaptain, 0);
+            if(captain && $scope.data.cloneCheck2 && [3522, 3523].includes(captain.number)) cloneReplace(captain, 1);
+            
+            x.unit = unitTemp; //Override for custom unit Type/Classes
+
             var orb = $scope.tdata.team[n].orb;
             var atk = getStatOfUnit(x,'atk',n); // basic attack (scales with level);
             var ship = getShipBonus('atk',false,x.unit,n,team[1].unit,n,shipParam), againstType = type;//Same problem as above, so yeah
@@ -390,6 +398,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
+            
             multipliers.push([ getTypeMultiplierOfUnit(x.unit.type,type, x, n), 'type' ]); // type multiplier
             multipliers.push([ getEffectBonus('atk',x.unit), 'map effect' ]); // effect bonus (fixed)
             multipliers.push([ ship, 'ship' ]); // ship bonus (fixed)
@@ -1288,6 +1297,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     limit: 0,
                     sugarToy: false,
                     tokiState: false,
+                    clone: false,
                 };
             else
                 return x;
@@ -1414,27 +1424,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
-                if(team[z].unit.class.length==2){
-                    if(team[z].unit.class[0] == 'Free Spirit'){
-                        classes['FreeSpirit']++;
-                    }
-                    else{
-                        classes[team[z].unit.class[0]]++;
-                    }
-                    if(team[z].unit.class[1] == 'Free Spirit'){
-                        classes['FreeSpirit']++;
-                    }
-                    else{
-                        classes[team[z].unit.class[1]]++;
-                    }
-                }else{
-                    if(team[z].unit.class == 'Free Spirit'){
-                        classes['FreeSpirit']++;
-                    }
-                    else{
-                        classes[team[z].unit.class]++;
-                    }
+                var unitTemp = Object.assign({},team[z].unit);
+                if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
+                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                if(unitTemp.class.length==2){
+                    classes[unitTemp.class[0].split(" ").join("")]++;
+                    classes[unitTemp.class[1].split(" ").join("")]++;
                 }
+                else
+                    classes[unitTemp.class.split(" ").join("")]++;
             }
         }
         return classes;
@@ -1458,19 +1456,22 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
-                if(team[z].unit.class.length == 2){
-                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[0]) || ['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[1])){
+                var unitTemp = Object.assign({},team[z].unit);
+                if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
+                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                if(unitTemp.class.length == 2){
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[0]) || ['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[1])){
                         classes['Primary']++;
                     }
-                    if(['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(team[z].unit.class[0]) || ['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(team[z].unit.class[1])){
+                    if(['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(unitTemp.class[0]) || ['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(unitTemp.class[1])){
                         classes['Secondary']++;
                     }
                 }
                 else{
-                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class)){
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class)){
                         classes['Primary']++;
                     }
-                    if(['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(team[z].unit.class)){
+                    if(['Free Spirit', 'Powerhouse', 'Cerebral', 'Driven'].includes(unitTemp.class)){
                         classes['Secondary']++;
                     }
                 }
@@ -1481,22 +1482,22 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     
     var frankyClass = function() {
         var classes = {};
-        for (var i = 0, j = team.length; i < j; i++) {
-            //classes[i] = '';
-        }
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
-                if(team[z].unit.class.length==2){
-                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[0])){
-                        classes[z] = team[z].unit.class[0];
+                var unitTemp = Object.assign({},team[z].unit);
+                if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
+                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                if(unitTemp.class.length==2){
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[0])){
+                        classes[z] = unitTemp.class[0];
                     }
-                    else if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class[1])){
-                        classes[z] = team[z].unit.class[1];
+                    else if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[1])){
+                        classes[z] = unitTemp.class[1];
                     }
                 }
                 else{
-                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(team[z].unit.class)){
-                        classes[z] = team[z].unit.class;
+                    if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class)){
+                        classes[z] = unitTemp.class;
                     }
                 }
             }
@@ -1510,22 +1511,68 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         for (var i = 0, j = colorArray.length; i < j; i++) {
             colors[colorArray[i]] = 0;
         }
+        
         for(var z=0;z<team.length;z++){
             if(team[z].unit){
-                colors[team[z].unit.type]++;
+                var unitTemp = Object.assign({},team[z].unit);
+                if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
+                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)){
+                    colors[unitTemp.type]++;
                 }
+                else if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)){
+                    colors[unitTemp.type]++;
+                }
+                else colors[unitTemp.type]++;
             }
+        }
         return colors;
+    };
+
+    var cloneReplace = function(cloneUnit, slotNumber){
+        if(slotNumber == 0){
+            cloneUnit.type = $scope.data.cloneFCType;
+            if($scope.data.cloneFCClass1 == $scope.data.cloneFCClass2)
+                cloneUnit.class = $scope.data.cloneFCClass1;
+            else
+                cloneUnit.class = [ $scope.data.cloneFCClass1, $scope.data.cloneFCClass2 ];
+        }
+        else{
+            cloneUnit.type = $scope.data.cloneCrewType;
+            if($scope.data.cloneCrewClass1 == $scope.data.cloneCrewClass2)
+                cloneUnit.class = $scope.data.cloneCrewClass1;
+            else
+            cloneUnit.class = [ $scope.data.cloneCrewClass1, $scope.data.cloneCrewClass2 ];
+        }
     };
     
     var getParameters = function(slotNumber, chainPosition) {
         if ($scope.data.team[slotNumber].limit === undefined)
             $scope.data.team[slotNumber].limit = 0;
-
+        
         var unitTemp = Object.assign({},team[slotNumber].unit);
+        if(team[0].unit) var friendCaptainTemp = Object.assign({},team[0].unit);
+        if(team[1].unit) var captainTemp = Object.assign({},team[1].unit);
         if ($scope.tdata.sugarToysSpecialEnabled){
             if (team[slotNumber].unit) unitTemp.cost = $scope.data.team[slotNumber].sugarToy ? 40 : window.units[team[slotNumber].unit.number].cost;
         }
+        if($scope.data.cloneCheck1 && team[0].unit){
+            if(slotNumber == 0 && [3522, 3523].includes(team[slotNumber].unit.number)){
+                cloneReplace(unitTemp, slotNumber)
+            }
+            if(team[0].unit && [3522, 3523].includes(team[0].unit.number)){
+                cloneReplace(friendCaptainTemp, 0)
+            }
+        }
+        if($scope.data.cloneCheck2){
+            if(team[slotNumber].unit && [3522, 3523].includes(team[slotNumber].unit.number)){
+                cloneReplace(unitTemp, slotNumber)
+            }
+            if(team[1].unit && [3522, 3523].includes(team[1].unit.number)){
+                cloneReplace(captainTemp, 1)
+            }
+        }
+        //console.log(unitTemp, captainTemp, friendCaptainTemp);
         return {
             unit: unitTemp,
             orb: $scope.tdata.team[slotNumber].orb,
@@ -1552,8 +1599,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             teamCount: teamCounter(),
             frankyCheck: frankyCheck(),
             frankyClass: frankyClass(),
-            captain: team[1].unit,
-            friendCaptain: team[0].unit,
+            captain: captainTemp,
+            friendCaptain: friendCaptainTemp,
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: $scope.data.team[slotNumber].limit,
             // sugarToy will be false when sugar special is off, but sugarToy in team and scope.data.team will stay

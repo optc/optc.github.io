@@ -19,6 +19,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             limit: 0, // LB level, max 50
             sugarToy: false,
             tokiState: false,
+            clone: false,
         })),
 
         percHP: 100.0,
@@ -104,6 +105,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         superBombOrbsEnabled: 0,
         sugarToysEnabled: 0,
         tokiStateEnabled: 0,
+        cloneEnabled: 0,
         slidersEnabled: true,
         sidebarVisible: false,
         transientMode: false,
@@ -131,6 +133,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
                 limit: 0,
                 sugarToy: false,
                 tokiState: false,
+                clone: false,
             };
         $scope.tdata.team[n] = { orb: 1, g: false, str: false, dex: false, qck: false, psy: false, int: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
     };
