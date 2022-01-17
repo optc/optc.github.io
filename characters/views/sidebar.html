@@ -436,6 +436,17 @@
         ng-click="filters.custom[n] = !filters.custom[n]">{{::filter.name}}</span>
 </div>
 
+<div class="filter-container expandable" id="potential-container"
+        ng-class="{ expanded: filters.potentialEnabled }">
+    <span class="filter-header" ng-click="filters.potentialEnabled = !filters.potentialEnabled">
+        Potential Ability filters
+        <i class="pull-right fa fa-{{filters.potentialEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
+    </span>
+    <span class="filter width-12 custom" ng-repeat="(n,filter) in ::filterData" ng-if="::filter.target == 'potential'"
+        ng-model="filters.custom[n]" ng-class="{ active: filters.custom[n] }" 
+        ng-click="filters.custom[n] = !filters.custom[n]">{{::filter.name}}</span>
+</div>
+
 <div class="filter-container expandable" id="support-container"
         ng-class="{ expanded: filters.supportEnabled }">
     <span class="filter-header" ng-click="filters.supportEnabled = !filters.supportEnabled">

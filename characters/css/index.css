@@ -1096,6 +1096,9 @@ tr.preview td:nth-child(2) > a:after {
 .tag.captain { background: rgba(127,202,159,0.5); }
 .tag.special { background: rgba(244,186,112,0.5); }
 .tag.superSpecial { background: rgba(233,109,99,0.5); }
+.tag.sailor { background: rgba(181, 160, 75, 0.5); }
+.tag.limit { background: rgba(6, 151, 154, 0.5); }
+.tag.potential { background: rgba(189, 109, 10, 0.5); }
 .tag.support { background: rgba(133,193,245,0.5); }
 
 .link-container {

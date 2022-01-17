@@ -558,6 +558,14 @@ directives.addTags = function($stateParams, $rootScope) {
                         element.append($('<span class="tag limit">' + name + '</div>'));
                     }
                 }
+                // potentials
+                if (matcher.target.indexOf('potential') === 0 && matcher.matcher.test(target)) {
+                    name = matcher.name;
+                    if (!/potential$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'');
+                    else name = name.replace(/s$/,'');
+                    name = name.replace(/iing/,'ying');
+                    element.append($('<span class="tag potential">' + name + '</div>'));
+                }
                 // super specials
                 if (matcher.target === 'superSpecial' && matcher.matcher.test(target)) {
                     name = matcher.name;
