@@ -259,7 +259,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var captain = team[1].unit;
             var unitTemp = Object.assign({},x.unit);
             if(n == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
-            if(n != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, n);
+            else if(n != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, n);
             if(friendCaptain && $scope.data.cloneCheck1 && [3522, 3523].includes(friendCaptain.number)) cloneReplace(friendCaptain, 0);
             if(captain && $scope.data.cloneCheck2 && [3522, 3523].includes(captain.number)) cloneReplace(captain, 1);
             
@@ -1420,7 +1420,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(team[z].unit){
                 var unitTemp = Object.assign({},team[z].unit);
                 if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
-                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                else if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
                 if(unitTemp.class.length==2){
                     classes[unitTemp.class[0].split(" ").join("")]++;
                     classes[unitTemp.class[1].split(" ").join("")]++;
@@ -1452,7 +1452,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(team[z].unit){
                 var unitTemp = Object.assign({},team[z].unit);
                 if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
-                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                else if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
                 if(unitTemp.class.length == 2){
                     if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[0]) || ['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[1])){
                         classes['Primary']++;
@@ -1480,7 +1480,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(team[z].unit){
                 var unitTemp = Object.assign({},team[z].unit);
                 if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
-                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                else if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
                 if(unitTemp.class.length==2){
                     if(['Fighter', 'Slasher', 'Shooter', 'Striker'].includes(unitTemp.class[0])){
                         classes[z] = unitTemp.class[0];
@@ -1510,7 +1510,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(team[z].unit){
                 var unitTemp = Object.assign({},team[z].unit);
                 if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
-                if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
+                else if(z != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, z);
                 if(z == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)){
                     colors[unitTemp.type]++;
                 }
@@ -1525,18 +1525,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var cloneReplace = function(cloneUnit, slotNumber){
         if(slotNumber == 0){
-            cloneUnit.type = $scope.data.cloneFCType;
+            cloneUnit.type = $scope.data.cloneFCType ? $scope.data.cloneFCType : cloneUnit.type;
             if($scope.data.cloneFCClass1 == $scope.data.cloneFCClass2)
-                cloneUnit.class = $scope.data.cloneFCClass1;
+                cloneUnit.class = $scope.data.cloneFCClass1 ? $scope.data.cloneFCClass1 : cloneUnit.class;
             else
-                cloneUnit.class = [ $scope.data.cloneFCClass1, $scope.data.cloneFCClass2 ];
+                cloneUnit.class = $scope.data.cloneFCClass1 ? [ $scope.data.cloneFCClass1, $scope.data.cloneFCClass2 ] : cloneUnit.class;
         }
         else{
-            cloneUnit.type = $scope.data.cloneCrewType;
+            cloneUnit.type = $scope.data.cloneCrewType ? $scope.data.cloneCrewType : cloneUnit.type;
             if($scope.data.cloneCrewClass1 == $scope.data.cloneCrewClass2)
-                cloneUnit.class = $scope.data.cloneCrewClass1;
+                cloneUnit.class = $scope.data.cloneCrewClass1 ? $scope.data.cloneCrewClass1 : cloneUnit.class;
             else
-            cloneUnit.class = [ $scope.data.cloneCrewClass1, $scope.data.cloneCrewClass2 ];
+            cloneUnit.class = $scope.data.cloneCrewClass1 ? [ $scope.data.cloneCrewClass1, $scope.data.cloneCrewClass2 ] : cloneUnit.class;
         }
     };
     
@@ -1558,7 +1558,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 cloneReplace(friendCaptainTemp, 0)
             }
         }
-        if($scope.data.cloneCheck2){
+        else if($scope.data.cloneCheck2 && slotNumber != 0){
             if(team[slotNumber].unit && [3522, 3523].includes(team[slotNumber].unit.number)){
                 cloneReplace(unitTemp, slotNumber)
             }
