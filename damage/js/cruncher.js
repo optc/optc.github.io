@@ -1526,14 +1526,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var cloneReplace = function(cloneUnit, slotNumber){
         if(slotNumber == 0){
             cloneUnit.type = $scope.data.cloneFCType ? $scope.data.cloneFCType : cloneUnit.type;
-            if($scope.data.cloneFCClass1 == $scope.data.cloneFCClass2)
+            if($scope.data.cloneFCClass1 == $scope.data.cloneFCClass2 || !$scope.data.cloneFCClass2 && $scope.data.cloneFCClass1)
                 cloneUnit.class = $scope.data.cloneFCClass1 ? $scope.data.cloneFCClass1 : cloneUnit.class;
             else
                 cloneUnit.class = $scope.data.cloneFCClass1 ? [ $scope.data.cloneFCClass1, $scope.data.cloneFCClass2 ] : cloneUnit.class;
         }
         else{
             cloneUnit.type = $scope.data.cloneCrewType ? $scope.data.cloneCrewType : cloneUnit.type;
-            if($scope.data.cloneCrewClass1 == $scope.data.cloneCrewClass2)
+            if($scope.data.cloneCrewClass1 == $scope.data.cloneCrewClass2 || !$scope.data.cloneCrewClass2 && $scope.data.cloneCrewClass1)
                 cloneUnit.class = $scope.data.cloneCrewClass1 ? $scope.data.cloneCrewClass1 : cloneUnit.class;
             else
             cloneUnit.class = $scope.data.cloneCrewClass1 ? [ $scope.data.cloneCrewClass1, $scope.data.cloneCrewClass2 ] : cloneUnit.class;
