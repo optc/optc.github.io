@@ -3520,11 +3520,11 @@ window.units = [
     [ "Kozuki Oden, Samurai Challenging the Dragon", "STR", [ "Slasher", "Free Spirit" ], "6+", 65, 4, 5, 99, 5000000, 2219, 994, 119, 4438, 1744, 239, 1 ],
     [ "Admiral Sengoku, Cunning Officer Upholding Justice in the Great Era of Piracy", "INT", [ "Fighter", "Striker" ], 5, 30, 5, 5, 99, 2000000, 1639, 779, 67, 3278, 1559, 134, 1 ],
     [ "Groggy Monsters", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1763, 763, 155, 3525, 1525, 309, 1 ],
-    [ "Mr. 2 Bon Clay, Oh Come My Way in Bloom", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 900, 395, 74, null, null, null, null ],
-    [ "Mr. 2 Bon Clay, Friend of the Straw Hats", "PSY", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1797, 776, 142, null, null, null, null ],
-    [ "Caesar Clown, Ruler of the Land of the Dead", "INT", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1720, 704, 81, null, null, null, null ],
-    [ "Emporio Ivankov, Surprising Entrance", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1334, 676, 155, null, null, null, null ],
-    [ "Wapol, True Power of the Munch-Munch Fruit", "DEX", [ "Driven", "Shooter" ], 5, 50, 4, 5, 99, 5000000, 1495, 695, 107, null, null, null, null ],
+    [ "Mr. 2 Bon Clay, Oh Come My Way in Bloom", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 900, 395, 74, 1800, 790, 148, 1 ],
+    [ "Mr. 2 Bon Clay, Friend of the Straw Hats", "PSY", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1797, 776, 142, 3594, 1551, 283, 1 ],
+    [ "Caesar Clown, Ruler of the Land of the Dead", "INT", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1720, 704, 81, 3440, 1409, 163, 1 ],
+    [ "Emporio Ivankov, Surprising Entrance", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1334, 676, 155, 2669, 1353, 310, 1 ],
+    [ "Wapol, True Power of the Munch-Munch Fruit", "DEX", [ "Driven", "Shooter" ], 5, 50, 4, 5, 99, 5000000, 1495, 695, 107, 2989, 1389, 214, 1 ],
     [ "Tashigi, Furious Captain", "DEX", [ "Slasher", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1604, 693, 126, null, null, null, null ],
 ];
 
