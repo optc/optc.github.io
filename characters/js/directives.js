@@ -401,9 +401,7 @@ directives.addSuperSpecialQuery = function($state, $stateParams) {
         scope: { criteria: "=", excludedFamilies: "=" },
         template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for these characters</b></a>',
         link: function(scope, element, attrs) {
-            scope.query = Utils.generateSuperSpecialQuery(scope.criteria);
-            if (scope.query && scope.excludedFamilies)
-                scope.query += ' ' + Utils.generateFamilyExclusionQuery(scope.excludedFamilies);
+            scope.query = Utils.generateSuperSpecialQuery(scope.criteria, scope.excludedFamilies);
         }
     };
 };
@@ -414,13 +412,21 @@ directives.addSupportQuery = function($state, $stateParams) {
         scope: { criteria: "=", excludedFamilies: "=" },
         template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for supported characters</b></a>',
         link: function(scope, element, attrs) {
-            scope.query = Utils.generateSupportedCharactersQuery(scope.criteria);
-            if (scope.query && scope.excludedFamilies)
-                scope.query += ' ' + Utils.generateFamilyExclusionQuery(scope.excludedFamilies);
+            scope.query = Utils.generateSupportedCharactersQuery(scope.criteria, scope.excludedFamilies);
         }
     };
 };
 
+directives.addSupportersQuery = function() {
+    return {
+        restrict: 'E',
+        scope: { uid: "=" },
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for attachable supports</b></a>',
+        link: function(scope, element, attrs) {
+            scope.query = Utils.generateAttachableSupportsQuery(scope.uid);
+        }
+    }
+}
 
 directives.scrollToSection = function($state, $stateParams) {
     return {

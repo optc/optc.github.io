@@ -258,14 +258,15 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
-        // filter by queryTerms
-        if (parameters.queryTerms && parameters.queryTerms.length > 0) {
-            result = result.filter(function(unit) {
-                let name = Utils.getFullUnitName(unit.number + 1);
-                return parameters.queryTerms.every(term => term.test(name));
-            });
-        }
+
+        result = window.units.filter(function(x) {
+            if (x === null && x === undefined && !x.hasOwnProperty('number'))
+                return false;
+            if (!Utils.checkUnitMatchSearchParameters(x, parameters))
+                return false;
+            return true;
+        });
+
         $scope.units = result;
         if (!$scope.isMats)
             $scope.units = $scope.units.filter(function(x) { return Utils.searchBaseForms(x.number + 1); });

@@ -505,9 +505,9 @@
                         </table>
                     </div>
 
-                    <h3 id="supportSection" class="page-header" ng-hide="hidden.abilities" ng-if="details.support">Support</h3>
+                    <h3 id="supportSection" class="page-header" ng-hide="hidden.abilities">Support</h3>
 
-                    <div class="panel panel-default" ng-hide="hidden.abilities" ng-if="details.support">
+                    <div class="panel panel-default" ng-hide="hidden.abilities">
                         <table class="table table-striped-column abilities">
                             <!--------------    Support Abilities    -------------->
                             <!--------------    isSupportHybrid is not used since JPN and Global all match so far, leaving in for future cases    -------------->
@@ -533,6 +533,12 @@
                                             <span class="badge badge-global">Global</span>
                                             <div ng-bind-html="details.potential.global | decorate"></div>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Attachable Supports</td>
+                                    <td>
+                                        <add-supporters-query uid="unit.number + 1"></add-supporters-query>
                                     </td>
                                 </tr>
                             </tbody>
@@ -941,7 +947,7 @@
                     <div class="btn-group">
                         <button class="btn btn-default" title="Details" scroll-to-section="detailsSection"><i class="fas fa-book"></i></button>
                         <button class="btn btn-default" title="Abilities" scroll-to-section="abilitiesSection" ng-hide="hidden.abilities"><i class="fas fa-bolt"></i></button>
-                        <button class="btn btn-default" title="Support" scroll-to-section="supportSection" ng-hide="hidden.abilities" ng-if="details.support"><i class="fas fa-handshake"></i></button>
+                        <button class="btn btn-default" title="Support" scroll-to-section="supportSection" ng-hide="hidden.abilities"><i class="fas fa-handshake"></i></button>
                         <button class="btn btn-default" title="Limit Break" scroll-to-section="limitBreakSection" ng-hide="hidden.abilities" ng-if="details.limit || details.potential"><i class="fas fa-atom"></i></button>
                         <button class="btn btn-default" title="Rumble" scroll-to-section="rumbleSection" ng-hide="hidden.abilities" ng-if="rumble.ability"><i class="fas fa-rumble"></i></button>
                         <button class="btn btn-default" title="Evolution" scroll-to-section="evolutionSection" ng-if="evolution.evolution" ng-hide="hidden.evolution"><i class="fas fa-seedling"></i></button>

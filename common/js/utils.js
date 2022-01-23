@@ -118,6 +118,11 @@
                 && window.families[n + 1]
                 && window.families[n + 1].map(utils.normalizeText)
             ) || null,
+            support: (
+                window.details
+                && window.details[n + 1]
+                && window.details[n + 1].support
+            ) || null,
         };
         if (element.indexOf(null) != -1)
             result.incomplete = true;
@@ -158,12 +163,35 @@
      * Transforms a list of characters or types and classes from supported
      * characters or super special criteria into a query using family, type,
      * class, and cost operators.
+     * @example
+     * // returns 'type:STR class:Free_Spirit'
+     * Utils.generateCriteriaQuery('[STR] Free Spirit')
+     * @example
+     * // returns 'family:^(Daz_Bones|Nico_Robin|Bentham)$ notFamily:^(Crocodile|Mr._0)$'
+     * Utils.generateCriteriaQuery('Daz Bones (Mr. 1), Nico Robin and Bentham (Mr. 2 Bon Clay)', window.families[1616])
+     * @example
+     * // returns 'cost<=29 notFamily:^(Sengoku)$'
+     * Utils.generateCriteriaQuery('Characters with cost 29 or less', window.families[459])
+     * @param {string} criteria - string that could be a list of families supported,
+     * types and/or classes supported, or character cost supported. Should NOT
+     * include "All characters", "characters" at the end, or "must consist of", etc.
+     * @param {string[]} [supportingFamilies] - array of family names of the
+     * supporting unit. If provided, a `notFamily:` query will be included in
+     * the result
+     * @param {boolean} [returnParamsObject=false] - if true, this will return an object
+     * similar to what `Utils.generateSearchParameters` returns, so that it will
+     * not be necessary to parse the query.
+     * @returns {string|object} search query that filters for the units supported.
+     * This can be of the forms `family:^(Monkey_D._Luffy|Nami)$`, `type:STR|QCK`,
+     * `class:Free_Spirit|Powerhouse`, `cost<=29`, or combinations of them. This
+     * can also be an object of search parameters if `returnParamsObject` is true.
      */
-     utils.generateCriteriaQuery = function (criteria) {
+     utils.generateCriteriaQuery = function (criteria, supportingFamilies = [], returnParamsObject = false) {
         let families = [];
         let types = [];
         let classes = [];
         let matchers = [];
+        let params = { matchers: {} };
         let whitespaceRegex = /\s+/g;
         let aliasesRegex = /\s+\(.*?\)/g; // Denjiro (Kyoshiro)
         let specialCharactersRegex = /[*+?^${}()|[\]\\]/g; //except dot, no need to escape
@@ -171,6 +199,7 @@
         let classRegex = /^(?:Fighter|Slasher|Striker|Shooter|Free Spirit|Powerhouse|Cerebral|Driven)$/i;
 
         // "[STR] Free Spirit", we can't just split all by spaces
+        // first group is type, second group is optional class
         let typeRegex = /\[(.*?)\](?:\s+([\w ]+))?/i;
 
         // may be "and" or ", and" or ", " even with extra whitespace
@@ -179,7 +208,7 @@
 
         let costMatch = criteria.match(costRegex);
         if (costMatch){
-            return 'cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1];
+            matchers.push('cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1]);
         } else {
             criteria = criteria.replace(aliasesRegex, '');
             let terms = criteria.split(separatorRegex);
@@ -200,32 +229,99 @@
 
         // Create matchers
         if (families.length > 0) { // family should be exact match
-            matchers.push('family:^(' + families.join('|').replace(whitespaceRegex, '_') + ')$');
+            params.matchers.family = '^(' + families.join('|').replace(whitespaceRegex, '_') + ')$';
+            matchers.push('family:' + params.matchers.family);
         }
         if (types.length > 0) {
-            matchers.push('type:' + types.join('|').replace(whitespaceRegex, '_'));
+            params.matchers.type = types.join('|').replace(whitespaceRegex, '_');
+            matchers.push('type:' + params.matchers.type);
         }
         if (classes.length > 0) {
-            matchers.push('class:' + classes.join('|').replace(whitespaceRegex, '_'));
+            params.matchers.class = classes.join('|').replace(whitespaceRegex, '_');
+            matchers.push('class:' + params.matchers.class);
         }
-        return matchers.join(' ');
+        if (supportingFamilies.length > 0) {
+            params.matchers.notfamily = utils.generateFamilyExclusionQuery(supportingFamilies);
+            matchers.push(params.matchers.notfamily);
+        }
+
+        if (returnParamsObject) {
+            if (params.matchers.notfamily)
+                params.matchers.notfamily = params.matchers.notfamily.replace(/^notFamily:/, '')
+            for (let key in params.matchers)
+                params.matchers[key] = new RegExp(params.matchers[key].replace(/_/g, ' '), 'i');
+            return params;
+        } else {
+            return matchers.join(' ');
+        }
     }
 
-    utils.generateSupportedCharactersQuery = function (criteria) {
-        if (/All characters?/i.test(criteria))
+    /**
+     * Wrapper function for `Utils.generateCriteriaQuery` that will convert the
+     * given `criteria` to a compatible format. If "All characters" is passed
+     * as a criteria, no query (null) will be returned as you should not need
+     * any query for that. This will also strip the trailing " characters", for
+     * supports like "[PSY] characters".
+     * @param {string} criteria - the support criteria given by
+     * window.details[i].support[0].Characters
+     * @param {string[]} [supportingFamilies] - the families of the supporting
+     * unit, which should not be included in the search results, so a
+     * `notFamily:` query will be generated for it.
+     * @param {boolean} [returnParamsObject=false] - if true, this will return an object
+     * similar to what `Utils.generateSearchParameters` returns, so that it will
+     * not be necessary to parse the query.
+     * @returns {string|null|object} a usable query that can be used to search for all
+     * supported characters, or the search parameters   if `returnParamsObject` is true.
+     */
+    utils.generateSupportedCharactersQuery = function (criteria, supportingFamilies = [], returnParamsObject = false) {
+        if (/^All characters?/i.test(criteria))
             return null;
-        return utils.generateCriteriaQuery(criteria.replace(/ characters?$/i, ''));
+        return utils.generateCriteriaQuery(criteria.replace(/ characters?$/i, ''), supportingFamilies, returnParamsObject);
     }
 
-    utils.generateSuperSpecialQuery = function (criteria) {
+    /**
+     * Wrapper function for `Utils.generateCriteriaQuery` for `superSpecialCriteria`
+     * that will convert the given `criteria` to a compatible format. If
+     * "All characters" is passed as a criteria, no query (null) will be returned
+     * as you should not need any query for that. This will also strip the
+     * trailing " characters", for descriptions like "[PSY] characters". This will
+     * also take only superSpecialCriteria that match "must consist of <family names>,
+     * excluding support members", or "must consist of <number> <class or type>
+     * characters, excluding support members".
+     * @param {string} criteria - the support criteria given by
+     * window.details[i].support[0].Characters
+     * @param {string[]} [supportingFamilies] - the families of the unit with
+     * a super special, which should not be included in the search results, so a
+     * `notFamily:` query will be generated for it.
+     * @param {boolean} [returnParamsObject=false] - if true, this will return an object
+     * similar to what `Utils.generateSearchParameters` returns, so that it will
+     * not be necessary to parse the query.
+     * @returns {string|null|object} a usable query that can be used to search for
+     * characters fulfilling the `superSpecialCriteria`, or the search parameters
+     * if `returnParamsObject` is true.
+     */
+    utils.generateSuperSpecialQuery = function (criteria, supportingFamilies = [], returnParamsObject = false) {
         let charactersRegex = /must consist of(?: \d)? (.*), excluding Support members/i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
         match[1] = match[1].replace(/ characters?$/i, '');
-        return utils.generateCriteriaQuery(match[1]);
+        return utils.generateCriteriaQuery(match[1], supportingFamilies);
     }
 
+    utils.generateAttachableSupportsQuery = function (unitIdToSupport, supportingFamilies = []) {
+        return 'supports:' + unitIdToSupport;
+    }
+
+    /**
+     * Will generate a `notFamily:` query so that the supporting unit's families
+     * will not be included in the filtered search results.
+     * @example
+     * // returns 'notFamily:^(Monkey_D._Luffy|Roronoa_Zoro|Nami|Usopp|Vinsmoke_Sanji)$'
+     * Utils.generateFamilyExclusionQuery(window.families[2875]); // can also use array literals
+     * @param {string[]} families - Array of family names of the supporting unit.
+     * @returns {string|null} A `notFamily:` query to be used in the search.
+     */
     utils.generateFamilyExclusionQuery = function (families) {
         if (!families)
             return null;
@@ -236,6 +332,15 @@
         return query;
     }
 
+    /**
+     * Replaces letters with diacritics into the more common letters. Used for parsing
+     * and matching search terms, so that users won't have to type exact diacritics.
+     * @example
+     * // returns 'Brulee'
+     * Utils.normalizeText('Brûlée');
+     * @param {string} str String to normalize
+     * @returns {string} String without diacritics
+     */
     utils.normalizeText = function (str) {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
@@ -1222,7 +1327,7 @@
         query = utils.normalizeText(query.toLowerCase().trim());
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class|support|family|notfamily):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class|family|notfamily|supports):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         const typeRegex = /^(?:str|dex|qck|psy|int)$/;
         var tokens = query.replace(/&|\//g, ' ').split(/\s+/);
         tokens.forEach(function (x) {
@@ -1239,8 +1344,6 @@
                 var parameter = temp[4],
                         op = temp[5],
                         value = parseFloat(temp[6], 10);
-                if (parameter === 'exp')
-                    parameter = 'maxEXP';
                 if (!result.ranges.hasOwnProperty(parameter)) {
                     if (op === '>' || op === '>=') {
                         result.ranges[parameter] = [0, Number.POSITIVE_INFINITY];
@@ -1262,9 +1365,21 @@
                 } else if (op === '>=') {
                     result.ranges[parameter][0] =  value;
                 }
-            } else // matcher
-                result.matchers[temp[2]] = new RegExp(temp[3], 'i');
+            } else { // matcher (string operators)
+                if (temp[2] === 'supports' && /^[\d|]+$/.test(temp[3])) { // allow only IDs and `|` for a separator
+                    // split by `|` and make sure no empty elements are pushed
+                    let ids = temp[3].split(/\|+/).filter(x => x.length > 0).map(Number);
+                    if (ids.length == 0)
+                        return;
+                    if (!result.matchers[temp[2]])
+                        result.matchers[temp[2]] = [];
+
+                    result.matchers[temp[2]].push(...ids);
+                } else {
+                    result.matchers[temp[2]] = new RegExp(temp[3], 'i');
+                }
                 //console.log(result.matchers); Here for stuff to try to do custom
+            }
         });
         if (result.query.length > 0)
             result.query = result.query.join(' ');
@@ -1272,6 +1387,109 @@
             result.query = null;
         return result;
     };
+
+    /**
+     * Checks a unit against a set of parameters generated by `Utils.generateSearchParameters`.
+     * Fuzzy search is not supported on this function. To implement fuzzy search, filter
+     * with fuzzy search first, then remove `queryTerms` from `searchParameters` before
+     * passing it into this function.
+     * @param {object|number} unit - Unit object to check. Get it from `window.units` after
+     * `Utils.parseUnits` is called. If a number is given, it should be the 1-based ID of the unit.
+     * @param {object} searchParameters - Object returned by `Utils.generateSearchParameters`
+     * @returns {boolean} True if given unit matches all parameters
+     */
+    utils.checkUnitMatchSearchParameters = function (unit, searchParameters) {
+        if (typeof unit === 'number' && isFinite(unit))
+            unit = window.units[unit - 1];
+
+        // filter by matchers (string operators)
+        for (let matcher in searchParameters.matchers) {
+            let regex = searchParameters.matchers[matcher];
+            if (matcher === 'family'){
+                if (!(unit.families && unit.families.some(family => regex.test(family)))) {
+                    return false;
+                }
+            } else if (matcher === 'notfamily'){
+                if (unit.families && unit.families.some(family => regex.test(family))) {
+                    return false;
+                }
+            } else if (matcher === 'supports') {
+                let ids = regex; // `regex` is an array of IDs here
+                if (!ids.some(id => utils.canSupportUnit(id, unit)))
+                    return false;
+            } else if (!regex.test(unit[matcher])) {
+                return false;
+            }
+        }
+
+        // filter by ranges (numeric operators)
+        for (let range in searchParameters.ranges) {
+            let stat;
+            range = range.toLowerCase();
+
+            if (range == 'id') {
+                stat = unit.number + 1;
+            } else if (range == 'mincd' || range == 'maxcd') {
+                stat = window.cooldowns[unit.number];
+                if (stat)
+                    stat = stat[range == 'mincd' ? 0 : 1];
+            } else {
+                stat = unit[range] || unit[range] || unit['max' + range.toUpperCase()];
+            }
+
+            if (stat === null
+                || stat === undefined
+                || stat < searchParameters.ranges[range][0]
+                || stat > searchParameters.ranges[range][1]
+            ) {
+                return false;
+            }
+        }
+
+        // filter by queryTerms
+        if (searchParameters.queryTerms && searchParameters.queryTerms.length > 0) {
+            let name = Utils.getFullUnitName(unit.number + 1);
+            // make sure all terms match
+            if (!searchParameters.queryTerms.every(term => term.test(name))){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Returns true if the supporting unit can support the given unit by
+     * recreating the query generated by "Search for supported characters" for
+     * `supportingUnit`. Requires `Utils.parseUnits` to be executed first.
+     * @param {number|object} unitToSupport - 1-based ID of the unit to support
+     * or the object from window.units[id - 1]
+     * @param {number|object} supportingUnit - 1-based ID of the supporting unit
+     * or the object from window.units[id - 1]
+     * @returns {boolean} true if the supporting unit can support the given unit.
+     */
+     utils.canSupportUnit = function (unitToSupport, supportingUnit) {
+        if (typeof unitToSupport === 'number')
+            unitToSupport = window.units[unitToSupport - 1];
+        if (typeof supportingUnit === 'number')
+            supportingUnit = window.units[supportingUnit - 1];
+
+        if (!unitToSupport || !supportingUnit || !unitToSupport.families)
+            return false;
+
+        if (!supportingUnit.support || !supportingUnit.support[0]) // no support
+            return false;
+
+        if (/^All characters?/i.test(supportingUnit.support[0].Characters) && unitToSupport.families.every(fam => !supportingUnit.families.includes(fam)))
+            return true;
+
+        // recreate the query generated for support units
+        // make it returns search params instead of the query, so we save up on
+        // parsing the query (no `utils.generateSearchParameters` call)
+        let params = utils.generateSupportedCharactersQuery(supportingUnit.support[0].Characters, supportingUnit.families, true);
+        if (!params)
+            return false;
+        return utils.checkUnitMatchSearchParameters(unitToSupport, params);
+    }
 
     utils.isFodder = function (unit) {
         return (unit.stars < 2 && !utils.isEvolverBooster(unit)) || FODDER_REGEX.test(unit.name);

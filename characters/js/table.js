@@ -73,45 +73,21 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         var flags = window.flags[unit.number + 1] || { };
 
         /* * * * * Query filters * * * * */
-        // filter by matchers
-        for (var matcher in tableData.parameters.matchers) {
-            let regex = tableData.parameters.matchers[matcher];
-            if (matcher === 'family'){
-                if (!(unit.families && unit.families.some(family => regex.test(family)))) {
-                    return false;
-                }
-            } else if (matcher === 'notfamily'){
-                if (unit.families && unit.families.some(family => regex.test(family))) {
-                    return false;
-                }
-            } else if (!regex.test(unit[matcher])) {
-                return false;
-            }
-        }
-        // filter by ranges
-        for (var range in tableData.parameters.ranges) {
-            var stat, range_ = range.toLowerCase();
-            if (range == 'id')
-                stat = unit.number + 1;
-            else if (range_ == 'mincd' || range_ == 'maxcd') {
-                stat = window.cooldowns[unit.number];
-                if (stat) stat = stat[range_ == 'mincd' ? 0 : 1];
-            } else
-                stat = unit[range] || unit[range.toLowerCase()] || unit['max' + range.toUpperCase()];
-            if (stat === null || stat === undefined ||
-                    stat < tableData.parameters.ranges[range][0] || stat > tableData.parameters.ranges[range][1])
-                return false;
-        }
-        // filter by queryTerms
-        if (tableData.parameters.queryTerms && tableData.parameters.queryTerms.length > 0) {
-            var name = Utils.getFullUnitName(id);
-            if (tableData.fuzzy) {
+
+        // override `queryTerms` checking if fuzzy mode is enabled
+        let tempParams = {...tableData.parameters};
+        if (tableData.fuzzy) {
+            tempParams.queryTerms = null;
+
+            if (tableData.parameters.query) {
                 if (fused === null) fused = fuse.search(tableData.parameters.query);
                 if (fused.indexOf(id - 1) == -1) return false;
-            } else if (!tableData.parameters.queryTerms.every(term => term.test(name))){
-                return false;
             }
         }
+
+        if (!Utils.checkUnitMatchSearchParameters(unit, tempParams))
+            return false;
+
         /* * * * * Sidebar filters * * * * */
         if (!tableData.parameters.filters) return true;
         var filters = tableData.parameters.filters;
