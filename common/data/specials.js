@@ -13029,6 +13029,59 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3528: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.maxHP > 50000  ? 2.25 : 2);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'MAX HP ' + (n == 2.25 ? 'above' : 'below') + ' 50,000, using the ' + n + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3529: {
+        chain: function(p) { return 3; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+        }
+    },
+    3530: {
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Free Spirit")) ? 1.5 : 1; },
+        type: "class",
+    },
+    3531: {
+        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 0; },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var levels2 = [0, 250];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + 'base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + 'base ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3532: {
+        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 0; },
+        onActivation: function(p) {
+            var levels = [2, 2.25, 2.25];
+            var levels2 = [0, 250, 500];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + 'base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + 'base ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

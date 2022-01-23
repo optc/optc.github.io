@@ -6046,7 +6046,7 @@ window.drops = {
             global: true,
             nakama: 8352700,
             gamewith: null,
-            'Coast of Wano': [ 3527 ]
+            'Spooky Sea': [ 3527 ]
         },
 
     ],
@@ -6506,6 +6506,17 @@ window.drops = {
             gamewith: 148537,
             'All Difficulties': [ 3511 ],
             'Kizuna Exchange': [ 9055 ],
+        },
+
+        {
+            name: 'Blackbeard',
+            dropID: 'kizuna31',
+            thumb: 3531,
+            global: true,
+            nakama: 9353100,
+            gamewith: null,
+            'All Difficulties': [ 3531 ],
+            'Kizuna Exchange': [ 9056, 9057 ],
         },
 
     ],

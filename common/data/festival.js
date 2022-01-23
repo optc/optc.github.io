@@ -3526,6 +3526,12 @@ window.festival = [
     [ "", null, null ],
     [ "ATK", 163, 159 ],
     [ "ATK", 100, 178 ],
+    [ "ATK", 127, 201 ],
+    [ "RCV", 130, 176 ],
+    [ "", null, null ],
+    [ "DBF", 193, 153 ],
+    [ "DBF", 193, 153 ],
+    [ "", null, null ],
     [ "", null, null ],
     [ "", null, null ],
 ];

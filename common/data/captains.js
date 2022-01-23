@@ -12399,6 +12399,28 @@ window.captains = {
     3527: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3528: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 5.25 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+    },
+    3529: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 5.25 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+    },
+    3530: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3531: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
+    3532: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
