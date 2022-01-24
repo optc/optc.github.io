@@ -3526,9 +3526,9 @@ window.units = [
     [ "Emporio Ivankov, Surprising Entrance", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1334, 676, 155, 2669, 1353, 310, 1 ],
     [ "Wapol, True Power of the Munch-Munch Fruit", "DEX", [ "Driven", "Shooter" ], 5, 50, 4, 5, 99, 5000000, 1495, 695, 107, 2989, 1389, 214, 1 ],
     [ "Tashigi, Furious Captain", "DEX", [ "Slasher", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1604, 693, 126, 3208, 1387, 253, 1 ],
-    [ "Portgas D. Ace, Memories of the Land of Wano", "STR", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, null, 1259, 538, 161, null, null, null, null ],
-    [ "Marco, Azure Bird Arriving in Wano", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, null, 1280, 640, 170, null, null, null, null ],
-    [ "Sabo, Cups of the Three Brothers", "DEX", [ "Striker", "Free Spirit" ], 5, 1, 4, 4, 99, null, 1479, 631, 93, null, null, null, null ],
+    [ "Portgas D. Ace, Memories of the Land of Wano", "STR", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1259, 538, 161, 2644, 1488, 264, 1 ],
+    [ "Marco, Azure Bird Arriving in Wano", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1280, 640, 170, 2878, 1455, 278, 1 ],
+    [ "Sabo, Cups of the Three Brothers", "DEX", [ "Striker", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1479, 631, 93, 2959, 1262, 187, 1 ],
     [ "Marshall D. Teach, Rising to the Seat of Emperor", "DEX", [ "Driven", "Fighter" ], 5, 50, 5, 4, 99, 5000000, 1329, 699, 79, null, null, null, null ],
     [ "Blackbeard, Threat of Darkness and Tremors", "DEX", [ "Driven", "Fighter" ], "5+", 50, 5, 4, 99, 5000000, 1489, 828, 81, null, null, null, null ],
 ];
