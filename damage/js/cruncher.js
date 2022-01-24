@@ -660,11 +660,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ([3070, 3071, 3369].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);
         if ([3398].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) typeMult = getAffinity('strong', attackerType);
         
-        if ($scope.data.effect == 'Kizuna Clash [Global]'){
-            if ([ 3418, 3420 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
-        }
-        if ($scope.data.effect == 'Kizuna Clash [Japan]'){
-            if ([ 3468, 3479 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+        if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
+            if ([ 3529, 3528 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
 
         if ($scope.data.rainbowDamage[teamSlot])
@@ -1168,11 +1165,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ([3070, 3071, 3369].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) affinityMultiplier = affinityMultiplier;
             if ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) affinityMultiplier = affinityMultiplier;
             
-            if ($scope.data.effect == 'Kizuna Clash [Global]'){
-                if ([ 3418, 3420 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
-            }
-            else if ($scope.data.effect == 'Kizuna Clash [Japan]'){
-                if ([ 3234, 3212 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+            if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
+                if ([ 3529, 3528 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
             else if(unit.type != type){
                 if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);
