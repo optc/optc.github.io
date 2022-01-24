@@ -171,6 +171,9 @@ window.altspecials = {
     3454: {
         negative: function(p) { return 10; },
     },
+    3519: {
+        atkbase: function(p) { return p.slot < 2 ? 1000 : 0; },
+    },
     3523: {
         chain: function(p) { return 3.25; },
         chainLimiter: function(p) {
