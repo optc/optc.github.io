@@ -223,7 +223,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'captain',
-        matcher: /(reduces|removes)(and |, | )Bind.+duration/i
+        matcher: /(reduces|removes)( |.*? and |.*?, )bind/i
     },
 
     {
@@ -925,7 +925,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'special',
-        matcher: /(reduces|removes)(and |, | )Bind.+duration/i
+        matcher: /(reduces|removes)( |.*? and |.*?, )bind/i
     },
 
     {
@@ -1235,7 +1235,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'swap',
-        matcher: /(reduces|removes)(and |, | )Bind.+duration/i
+        matcher: /(reduces|removes)( |.*? and |.*?, )bind/i
     },
 
     {
@@ -1819,7 +1819,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'support',
-        matcher: /(reduces|removes)(and |, | )Bind.+duration/i
+        matcher: /(reduces|removes)( |.*? and |.*?, )bind/i
     },
 
     {
@@ -2430,7 +2430,7 @@ window.matchers = [
     {
         name: 'Bind reducers',
         target: 'superSpecial',
-        matcher: /(reduces|removes)(and |, | )Bind.+duration/i
+        matcher: /(reduces|removes)( |.*? and |.*?, )bind/i
     },
 
     {
