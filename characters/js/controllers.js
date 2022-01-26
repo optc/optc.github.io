@@ -4,34 +4,6 @@
  * Common data *
  ***************/
 
-var filters = {
-    custom: [ ],
-    classes: [ ],
-    types: [ ],
-    stars: [ ],
-    cost: [ 1, 99 ],
-    toggle: true,
-    typeEnabled: false,
-    characterEnabled: false,
-    classEnabled: false,
-    dropEnabled: false,
-    supportEnabled: false,
-    limitEnabled: false,
-    sailorEnabled: false,
-    swapEnabled: false,
-    superEnabled: false,
-    specialEnabled: false,
-    captainEnabled: false,
-    temporaryEnabled: false,
-    specCaptEnabled: false,
-    tmkcEnabled: false,
-    exclusionEnabled: false,
-    costEnabled: false,
-    rarityEnabled: false,
-    farmEnabled: false,
-    nonfarmEnabled: false
-};
-
 function denormalizeEffects(ability) {
   if (!ability) return;
 
@@ -96,13 +68,11 @@ app.controller('MainCtrl',function($scope, $rootScope, $state, $stateParams, $ti
 
 });
 
-app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout, MATCHER_IDS) {
-
-    if (!$rootScope.filters) $rootScope.filters = filters;
+app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout) {
 
     $timeout(function() {
         $scope.$watch('filters',function(filters) {
-            if (!filters || Object.keys(filters).length === 0) return;
+            if (!$rootScope.filters || Object.keys($rootScope.filters).length === 0) return;
             var data = jQuery.extend({ }, $rootScope.filters);
             $scope.table.parameters = CharUtils.generateSearchParameters($stateParams.query, data);
             if (!$scope.$$phase) $scope.$apply();
@@ -110,35 +80,8 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
     });
 
     $scope.clearFilters = function() {
-        filters = {
-            custom: [ ],
-            classes: [ ],
-            types: [ ],
-            stars: [ ],
-            cost: [ 1, 99 ],
-            toggle: true,
-            typeEnabled: false,
-            characterEnabled: false,
-            classEnabled: false,
-            dropEnabled: false,
-            supportEnabled: false,
-            limitEnabled: false,
-            sailorEnabled: false,
-            swapEnabled: false,
-            superEnabled: false,
-            specialEnabled: false,
-            captainEnabled: false,
-            temporaryEnabled: false,
-            specCaptEnabled: false,
-            tmkcEnabled: false,
-            exclusionEnabled: false,
-            costEnabled: false,
-            rarityEnabled: false,
-            farmEnabled: false,
-            nonfarmEnabled: false
-        };
         $rootScope.filters = {
-            custom: [ ],
+            custom: { },
             classes: [ ],
             types: [ ],
             stars: [ ],
@@ -148,13 +91,6 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
             characterEnabled: false,
             classEnabled: false,
             dropEnabled: false,
-            supportEnabled: false,
-            limitEnabled: false,
-            sailorEnabled: false,
-            swapEnabled: false,
-            superEnabled: false,
-            specialEnabled: false,
-            captainEnabled: false,
             temporaryEnabled: false,
             specCaptEnabled: false,
             tmkcEnabled: false,
@@ -164,16 +100,41 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
             farmEnabled: false,
             nonfarmEnabled: false
         };
-    };
 
-    $scope.toggleFilters = function() {
-        for (x in filters){
-            if (x.includes("Enabled")){
-                if (x == "typeEnabled" || x == "characterEnabled" || x == "classEnabled") { filters[x] = !filters["toggle"]; $rootScope.filters[x] = !filters["toggle"]; }
-                else { filters[x] = filters["toggle"]; $rootScope.filters[x] = filters["toggle"]; }
+        // no idea why both local `filters` and `$rootScope.filters` exist
+        for (const target in window.matchers) {
+            $rootScope.filters.custom[target] = {};
+            for (const group in window.matchers[target]) {
+                // `expanded` - when a filter group is "opened"
+                $rootScope.filters.custom[target][group] = {expanded: false, matchers: {}};
+
+                for (const name in window.matchers[target][group]) {
+                    $rootScope.filters.custom[target][group].matchers[name] = {enabled: false};
+
+                    if (window.matchers[target][group][name].submatchers) {
+                        $rootScope.filters.custom[target][group].matchers[name].submatchers = [];
+
+                        for (const j in window.matchers[target][group][name].submatchers) {
+                            $rootScope.filters.custom[target][group].matchers[name].submatchers[j] = {};
+                        }
+                    }
+                }
             }
         }
-        filters["toggle"] = !filters["toggle"];
+        $('#leftContainer .collapse').collapse('hide');
+    };
+
+    $scope.clearFilters();
+
+    $scope.toggleFilters = function() {
+        for (x in $rootScope.filters){
+            if (x.includes("Enabled")){
+                // type, character, and class filters are expanded by default
+                if (x == "typeEnabled" || x == "characterEnabled" || x == "classEnabled") { $rootScope.filters[x] = !$rootScope.filters["toggle"]; }
+                else { $rootScope.filters[x] = $rootScope.filters["toggle"]; }
+            }
+        }
+        $rootScope.filters["toggle"] = !$rootScope.filters["toggle"];
     };
 
     $scope.onFilterClick = function(e, value) {

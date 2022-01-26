@@ -84,7 +84,7 @@ input#burgerMenuState {
         height: 100%;
     }
 
-    #leftContainer {        
+    #leftContainer {
         position: absolute;
         top: 56px;
         bottom: 0;
@@ -135,18 +135,18 @@ input#burgerMenuState {
 @media (min-width: 768px) {
     #mainContainer {
         display: grid;
-        grid-template: 
+        grid-template:
             "filters  query" auto
             "filters  grid" 1fr
             / 275px 1fr;
         ;
         height: 100%;
     }
-    
+
     #leftContainer {
         grid-area: filters;
     }
-    
+
     #queryContainer {
         grid-area: query;
     }
@@ -154,7 +154,7 @@ input#burgerMenuState {
     #burgerMenu {
         display: none;
     }
-    
+
     #tableContainer {
         grid-area: grid;
     }
@@ -239,11 +239,79 @@ input#burgerMenuState {
 
 .filter {
     display: inline-block;
-    padding: 3px 0;
+    padding: 3px 8px;
     text-align: center;
     cursor: pointer;
     border-top: 1px solid #aaa;
     border-left: 1px solid #aaa;
+}
+
+.filter.custom {
+    padding: 0px;
+    cursor: default;
+}
+
+/* first child (filter text) must be full sized for the click event, but the
+    the click event should not be in the submatchers, so the padding goes here
+    instead of just .filter */
+.filter > div:first-child{
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+#leftContainer .filter-group-header {
+    background: rgb(80,80,80) !important;
+    color: white !important;
+}
+
+#leftContainer .custom.filter .submatchers {
+    padding: 6px 8px 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ff7575;
+    color: rgb(50 50 50);
+}
+
+#leftContainer .submatchers .submatcher {
+    margin: 0px 0px 3px;
+    flex: 1;
+}
+
+#leftContainer .submatcher label {
+    margin-bottom: 0px;
+}
+
+#leftContainer .submatcher label input {
+    color: #333333;
+}
+
+#leftContainer .submatcher .submatcher-separator {
+    text-align: center;
+}
+
+#leftContainer .submatcher .submatcher-option {
+    border-radius: 8px;
+    padding: 3px 8px;
+    background-color: #fff;
+    color: #333333;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+#leftContainer .submatcher .submatcher-option:hover {
+    background-color: rgb(230,230,230);
+}
+
+#leftContainer .submatcher .submatcher-option.active {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+#leftContainer .custom.filter .custom.filter.submatchers-toggler,
+#leftContainer .custom.filter > .collapse {
+    background-color: red;
 }
 
 .filter-container:last-child > .filter:last-child {
@@ -465,7 +533,7 @@ input#burgerMenuState {
     content: "\e903";
 }
 
-.class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active {
+.class.filter.active, .custom.filter.active, .drop.filter.active, .exc.filter.active, .submatcher-option.active {
     background: red;
     color: white;
     font-weight: bold;
@@ -481,11 +549,11 @@ input#burgerMenuState {
     box-shadow: inset 0 0 0 1px #7777ff;
 }
 
-.custom.filter:not(#controllers):hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover {
+.custom.filter:not(#controllers) > div:first-child:hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover, .submatcher-option:hover {
     background-color: rgb(230,230,230);
 }
 
-.custom.filter.active:hover, .class.filter.active:hover, .drop.filter.active:hover, .exc.filter.active:hover {
+.custom.filter.active > div:first-child:hover, .class.filter.active:hover, .drop.filter.active:hover, .exc.filter.active:hover, .filter .submatchers .submatcher-option.active:hover {
     background-color: darkred !important;
 }
 
@@ -495,6 +563,13 @@ input#burgerMenuState {
 .width-5 { width: 41.66%; }
 .width-4 { width: 33.33%; }
 .width-3 { width: 25%; }
+
+.min-width-12 { min-width: 100%; }
+.min-width-7 { min-width: 58.33%; }
+.min-width-6 { min-width: 50%; }
+.min-width-5 { min-width: 41.66%; }
+.min-width-4 { min-width: 33.33%; }
+.min-width-3 { min-width: 25%; }
 
 .help-link {
     float: right;
@@ -538,13 +613,16 @@ input#burgerMenuState {
     margin-bottom: 25px;
 }
 
-.filter-container.expandable > .filter-header {
+.filter-container.expandable > .filter-header,
+.filter-group > .filter-header {
     cursor: pointer;
 }
 
 .filter-container.expandable:not(.expanded) > :not(.filter-header) {
     display: none;
 }
+
+
 
 .filter-container.expanded > .irs {
     margin: 5px 5% 5px 5%;

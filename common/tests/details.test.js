@@ -74,3 +74,45 @@ describe('Used family names should be valid', () => {
         }
     });
 });
+
+describe('Typos', () => {
+    for (let id in DBdetail) {
+        let data = DBdetail[id];
+        if (Number(id) >= 5000) // ignore ghost units because they use same descriptions, so no need to check them
+            break;
+        for (let property in data){
+            // some typos are important, as they could cause regexes to not match properly
+            describe(`${id}: ${property}`, () => { // not only does this show the unit ID, but this also allows tests to continue even when it fails on one unit
+                let target = data[property];
+                if (typeof target !== 'string')
+                    target = JSON.stringify(target);
+                it('checks for consecutive spaces', () => { // important
+                    let corrected = target.replace(/ {2,}/g, ' ');
+                    expect(target).toBe(corrected);
+                });
+                it('checks for invalid variable multipliers', () => { // important
+                    let corrected = target.replace(/([?.\d]+)(?:-([?.\d]+)(%|x))/g, '$1$3-$2$3');
+                    expect(target).toBe(corrected);
+                    // expect(target).toEqual(expect.not.stringMatching(/([?.\d]+)(?:-([?.\d]+)(%|x))/));
+                });
+                it('checks for "1 turns"', () => {
+                    let corrected = target.replace(/\b1 turns/g, '1 turn');
+                    expect(target).toBe(corrected);
+                });
+                it('checks for "n turn"', () => {
+                    let corrected = target.replace(/\b(\d{2,}|[02-9]) turn(?!s)/g, '$1 turns');
+                    expect(target).toBe(corrected);
+                });
+                it('checks for "ie" typos', () => { // important
+                    // let corrected = target.replace(/thier/g, 'their').replace(/recieve/g, 'receive');
+                    // expect(target).toBe(corrected);
+                    expect(target).toEqual(expect.not.stringMatching(/thier|recieve/));
+                });
+                it('checks for "a 8..."', () => {
+                    // should be "an 8..."
+                    expect(target).toEqual(expect.not.stringMatching(/\ba 8/)); // a 8% or a 80%
+                });
+            });
+        }
+    }
+});

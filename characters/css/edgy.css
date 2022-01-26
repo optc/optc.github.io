@@ -3,22 +3,46 @@ html, body,
     background: #404040 !important;
 }
 
-.filter:not(.type):not(.orb) {
-    color: #f6f3e8;
-    background: #404040;
+.filter:not(.type):not(.orb):not(.custom),
+.filter.custom > div:first-child,
+.filter .submatchers .submatcher .submatcher-option {
+    color: #f6f3e8 !important;
+    background: #404040 !important;
     border-color: #333;
 }
 
-.filter:hover:not(.type):not(.stars):not(.orb) {
-    color: #f6f3e8;
+.filter:hover:not(.type):not(.stars):not(.orb):not(.custom),
+.filter.custom > div:first-child:hover,
+.filter .submatchers .submatcher .submatcher-option:hover {
+    color: #f6f3e8 !important;
     background: #bb4040 !important;
 }
 
-.filter.type.active {
+#leftContainer .custom.filter .submatchers {
+    padding: 6px 8px 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #943838;
+    color: white;
+    font-weight: normal;
+}
+
+#leftContainer .custom.filter .submatchers input {
     color: black;
 }
 
-.filter.active:not(.type):not(.stars):not(.orb) {
+#leftContainer .submatcher label {
+    font-weight: normal;
+}
+
+.filter.type.active {
+    color: black !important;
+}
+
+.filter.active:not(.type):not(.stars):not(.orb),
+.filter.custom.active > div:first-child,
+.filter .submatchers .submatcher .submatcher-option.active {
     background: #dd6060 !important;
     color: #222 !important;
 }
@@ -27,11 +51,16 @@ html, body,
     box-shadow: inset 0 0 0 1px #aaaaff;
 }
 
-.class.filter.active:hover, .custom.filter.active:hover, .drop.filter.active:hover, .exc.filter.active:hover {
+.class.filter.active:not(.type):not(.stars):not(.orb):hover,
+.custom.filter.active:not(.type):not(.stars):not(.orb) > div:first-child:hover,
+.drop.filter.active:hover:not(.type):not(.stars):not(.orb),
+.exc.filter.active:hover:not(.type):not(.stars):not(.orb),
+.filter .submatchers .submatcher .submatcher-option.active:hover {
     background: #ff9090 !important;
+    color: #222 !important;
 }
 
-.filter-header:not(#clear-button, #toggle-button, #filter-subheader) {
+.filter-header:not(#clear-button, #toggle-button, #filter-subheader, .filter-group-header) {
     background: #202020 !important;
     border-color: #333;
 }

@@ -425,6 +425,14 @@ window.specials = {
     500: {
         delay: function(p) { return 1; },
     },
+    503: {
+        atk: function(p) { return 1.05; },
+        def: function(p) { return 0.5; }
+    },
+    504: {
+        atk: function(p) { return 1.05; },
+        def: function(p) { return 0.5; }
+    },
     505: {
         atk: function(p) { return p.unit.type == "QCK" ? 1.25 : 1; },
         type: "type"
@@ -1061,12 +1069,12 @@ window.specials = {
     },
     847: {
         atk: function(p) { return 1.05; },
-        orb: function(p) { return 1.15; },
+        orb: function(p) { return 1.1; },
         type: "class"
     },
     848: {
         atk: function(p) { return 1.05; },
-        orb: function(p) { return 1.15; },
+        orb: function(p) { return 1.1; },
         type: "class"
     },
     849: {

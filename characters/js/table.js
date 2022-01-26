@@ -1,6 +1,6 @@
 (function() {
 
-angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS) {
+angular.module('optc') .run(function($rootScope, $timeout, $storage) {
 
     /**************
      * Table data *
@@ -417,7 +417,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         if (filters.noLog && characterLog.hasOwnProperty(id)) return false;
         if (filters.noMissing && !characterLog.hasOwnProperty(id)) return false;
         // filter by orb controllers
-        if ($rootScope.filters.custom[MATCHER_IDS['special.OrbControllers']] &&
+        if ($rootScope.filters.custom['special']['Slot Change'].matchers['Orb controllers'].enabled &&
                 (tableData.parameters.filters.ctrlFrom || tableData.parameters.filters.ctrlTo)) {
             var orbData = CharUtils.getOrbControllerData(id);
             if (!orbData) return false;
@@ -434,15 +434,6 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
             }
             if (mismatch) return false;
         }
-        // filter by class-filters
-        if ($rootScope.filters.custom[MATCHER_IDS['captain.ClassBoostingCaptains']] && filters.classCaptain &&
-                !CharUtils.isClassBooster('captain', id, filters.classCaptain)) return false;
-        if ($rootScope.filters.custom[MATCHER_IDS['special.ClassBoostingSpecials']] && filters.classSpecial &&
-                !CharUtils.isClassBooster('special', id, filters.classSpecial)) return false;
-        if ($rootScope.filters.custom[MATCHER_IDS['sailor.ClassBoostingSailors']] && filters.classSailor &&
-                !CharUtils.isClassBooster('sailor', id, filters.classSailor)) return false;
-        if ($rootScope.filters.custom[MATCHER_IDS['sailor.ClassBoostingSupports']] && filters.classSupport &&
-                !CharUtils.isClassBooster('support', id, filters.classSupport)) return false;
         return true;
     };
 
