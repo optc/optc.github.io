@@ -13012,8 +13012,8 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
     },
     3527: {
-        orbPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
-        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2 : 1 : 1; },
+        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -13021,7 +13021,7 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
-                text: 'Using the ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
