@@ -3529,8 +3529,8 @@ window.units = [
     [ "Portgas D. Ace, Memories of the Land of Wano", "STR", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1259, 538, 161, 2644, 1488, 264, 1 ],
     [ "Marco, Azure Bird Arriving in Wano", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1280, 640, 170, 2878, 1455, 278, 1 ],
     [ "Sabo, Cups of the Three Brothers", "DEX", [ "Striker", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1479, 631, 93, 2959, 1262, 187, 1 ],
-    [ "Marshall D. Teach, Rising to the Seat of Emperor", "DEX", [ "Driven", "Fighter" ], 5, 50, 5, 4, 99, 5000000, 1329, 699, 79, null, null, null, null ],
-    [ "Blackbeard, Threat of Darkness and Tremors", "DEX", [ "Driven", "Fighter" ], "5+", 50, 5, 4, 99, 5000000, 1489, 828, 81, null, null, null, null ],
+    [ "Marshall D. Teach, Rising to the Seat of Emperor", "DEX", [ "Driven", "Fighter" ], 5, 50, 5, 4, 99, 5000000, 1329, 699, 79, 3307, 1438, 183, 1 ],
+    [ "Blackbeard, Threat of Darkness and Tremors", "DEX", [ "Driven", "Fighter" ], "5+", 50, 5, 4, 99, 5000000, 1489, 828, 81, 3556, 1566, 189, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
