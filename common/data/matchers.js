@@ -2051,6 +2051,12 @@ window.matchers = [
         target: 'superSpecial',
         matcher: /Adds.+to Chain/i 
     },
+
+    {
+        name: 'Chain multipliers',
+        target: 'superSpecial',
+        matcher: /Boosts.+chain multiplier/i
+    },
     
     {
         name: 'Chain Lockers',
