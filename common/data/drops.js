@@ -2781,8 +2781,19 @@ window.drops = {
         },
 
         {
-            name: 'Ladies\' Day off',
+            name: 'Today is the Bestest Day Ever!!',
             dropID: 'event130',
+            thumb: 2815,
+            global: true,
+            nakama: 6281600,
+            gamewith: 182347,
+            showManual: true,
+            'All Difficulties': [ 2815, -2815 ],
+        },
+
+        {
+            name: 'Ladies\' Day off',
+            dropID: 'event131',
             global: true,
             thumb: 2835,
             nakama: 2283500,
@@ -2791,8 +2802,19 @@ window.drops = {
         },
 
         {
+            name: 'Anniversary Party',
+            dropID: 'event132',
+            thumb: 2843,
+            global: true,
+            nakama: 6284300,
+            gamewith: 184761,
+            condition: "Complete Missions to get Bingo",
+            'All Difficulties': [ 2842 ],
+        },
+
+        {
             name: 'Fierce Pirates of the East Blue',
-            dropID: 'event131',
+            dropID: 'event133',
             global: true,
             thumb: 2860,
             nakama: 2286000,
@@ -2801,8 +2823,8 @@ window.drops = {
         },
 
         {
-            name: 'Training until the reunion',
-            dropID: 'event132',
+            name: 'Training Until the Reunion',
+            dropID: 'event134',
             global: true,
             thumb: 2897,
             nakama: 2289700,
@@ -2812,7 +2834,7 @@ window.drops = {
 
         {
             name: 'Battle Party',
-            dropID: 'event134',
+            dropID: 'event135',
             global: true,
             thumb: 2964,
             nakama: 2296400,
@@ -2821,8 +2843,19 @@ window.drops = {
         },
 
         {
+            name: 'Treasure Hunt!',
+            dropID: 'event136',
+            thumb: 2957,
+            global: true,
+            nakama: 6295700,
+            gamewith: 202523,
+            condition: 'Drops portions of a Log Pose map and a Treasure Key map to fullfil community rewards.',
+            'Chopperman Missions': [ 2975, 2976 ],
+        },
+
+        {
             name: 'Ambitions lurking in Wano',
-            dropID: 'event135',
+            dropID: 'event137',
             global: true,
             thumb: 2982,
             nakama: 2298200,
@@ -2831,8 +2864,18 @@ window.drops = {
         },
 
         {
+            name: 'Filed With Smiles: Special Soba',
+            dropID: 'event138',
+            thumb: 2988,
+            global: true,
+            nakama: 6298800,
+            gamewith: 205053,
+            'All Difficulties': [ 2988, -2988 ],
+        },
+
+        {
             name: 'Maidens on the Beach',
-            dropID: 'event136',
+            dropID: 'event139',
             global: true,
             thumb: 3038,
             nakama: 2303800,
@@ -2842,7 +2885,7 @@ window.drops = {
 
         {
             name: 'Like Cats and Dogs',
-            dropID: 'event137',
+            dropID: 'event140',
             global: true,
             thumb: 3177,
             nakama: null,
@@ -2852,7 +2895,7 @@ window.drops = {
 
         {
             name: 'Costume Party With Warlords of the Sea',
-            dropID: 'event138',
+            dropID: 'event141',
             global: true,
             thumb: 3100,
             nakama: null,
@@ -2862,7 +2905,7 @@ window.drops = {
 
         {
             name: 'Commotion on Whole Cake Island!?',
-            dropID: 'event139',
+            dropID: 'event142',
             global: true,
             thumb: 3065,
             nakama: null,
@@ -2871,13 +2914,170 @@ window.drops = {
         },
 
         {
+            name: 'The Tea Party From Hell',
+            dropID: 'event143',
+            thumb: 3079,
+            global: true,
+            gamewith: null,
+            'Chopperman Missions': [ 3086 ],
+        },
+
+        {
             name: 'Conflict of the Emperors!',
-            dropID: 'event140',
+            dropID: 'event144',
             global: true,
             thumb: 3135,
             nakama: null,
             gamewith: 234904,
             'All Difficulties': [ -2914, -3118, -3120, -3121, -3135, -3137, -3139, -3141 ],
+        },
+
+        {
+            name: 'Navy Christmas Night',
+            dropID: 'event145',
+            thumb: 3171,
+            global: true,
+            nakama: 6317100,
+            gamewith: 241547,
+            'Chopperman Missions': [ 3171, 3172 ],
+        },
+
+        {
+            name: 'Dear Swordsmen, Please Help Us!',
+            dropID: 'event144',
+            thumb: 3017,
+            showManual: true,
+            global: true,
+            nakama: 6323100,
+            gamewith: 252958,
+            'Chopperman Missions': [ 3222, 3223 ],
+            'All Difficulties': [ -3222, -3223, -3225, -3227, -3229, -3231 ],
+        },
+
+        {
+            name: 'End of an Era',
+            dropID: 'event145',
+            thumb: 3262,
+            showManual: true,
+            global: true,
+            nakama: null,
+            gamewith: 252958,
+            'Chopperman Missions': [ 3262 ],
+            'All Difficulties': [ -3242, -3245, -3253, -3255, -3257, -3259, -3261, -3262 ],
+        },
+
+        {
+            name: 'Pirate Paradise!!',
+            dropID: 'event146',
+            thumb: 3280,
+            showManual: true,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3286, 3287 ],
+            'All Difficulties': [ -3274, -3278, -3280, -3282, -3283, -3284, -3286, -3287, 3287 ],
+        },
+
+        {
+            name: 'Adventurers\' Quarrel',
+            dropID: 'event147',
+            thumb: 3304,
+            global: true,
+            nakama: 6330400,
+            gamewith: null,
+            'Chopperman Missions': [ 3304, 3305 ],
+        },
+
+        {
+            name: 'Now to Onigashima!',
+            dropID: 'event148',
+            thumb: 3346,
+            global: true,
+            nakama: 6334600,
+            gamewith: 276764,
+            'Chopperman Missions': [ 3346 ],
+        },
+
+        {
+            name: 'Duel at Banaro Island',
+            dropID: 'event149',
+            thumb: 3353,
+            global: true,
+            nakama: 6335300,
+            gamewith: 280282,
+            'Chopperman Missions': [ 3353 ],
+        },
+
+        {
+            name: 'Onigashima Assault Strategy',
+            dropID: 'event150',
+            thumb: 3382,
+            global: true,
+            nakama: 6338200,
+            gamewith: 285666,
+            'All Difficulties': [ 3382 ],
+            'Chopperman Missions': [ 3382 ],
+        },
+
+        {
+            name: 'Big News! World Economic Journal',
+            dropID: 'event151',
+            thumb: 3425,
+            global: true,
+            nakama: 6342500,
+            gamewith: 292753,
+            'All Difficulties': [ 3425 ],
+        },
+
+        {
+            name: 'Feverish Halloween Live Show!!',
+            dropID: 'event152',
+            thumb: 3457,
+            global: true,
+            nakama: 6345700,
+            gamewith: null,
+            'All Difficulties': [ 3457 ],
+        },
+
+        {
+            name: 'Turmoil in the Land of Candy!!',
+            dropID: 'event153',
+            thumb: 2033,
+            global: true,
+            nakama: 6203300,
+            gamewith: null,
+            'All Difficulties': [ 3477 ],
+        },
+
+        {
+            name: 'Olin! Battle of Onigashima!!',
+            dropID: 'event154',
+            thumb: 3498,
+            global: true,
+            nakama: 6349800,
+            gamewith: 309692,
+            'All Difficulties': [ 3498 ],
+        },
+
+        {
+            name: 'Drill Crushing Fist!',
+            dropID: 'event155',
+            thumb: 3518,
+            global: true,
+            nakama: 6351800,
+            gamewith: 313812,
+            'All Difficulties': [ 3518 ],
+            'Chopper Man Missions': [ 9056 ],
+        },
+
+        {
+            name: 'Dragon-Defending Drought!',
+            dropID: 'event156',
+            thumb: 3539,
+            global: true,
+            nakama: 6353900,
+            gamewith: null,
+            'All Difficulties': [ 3539 ],
         },
     ],
 
@@ -6531,7 +6731,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 2934 ],
+            'Rumble Missions': [ 2934 ],
         },
 
         {
@@ -6541,7 +6741,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 2989 ],
+            'Rumble Missions': [ 2989 ],
         },
 
         {
@@ -6551,7 +6751,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3016 ],
+            'Rumble Missions': [ 3016 ],
         },
 
         {
@@ -6561,7 +6761,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3047 ],
+            'Rumble Missions': [ 3047 ],
         },
 
         {
@@ -6571,7 +6771,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3082 ],
+            'Rumble Missions': [ 3082 ],
         },
 
         {
@@ -6581,7 +6781,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3107 ],
+            'Rumble Missions': [ 3107 ],
         },
 
         {
@@ -6591,7 +6791,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3142 ],
+            'Rumble Missions': [ 3142 ],
         },
 
         {
@@ -6601,7 +6801,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3173 ],
+            'Rumble Missions': [ 3173 ],
         },
 
         {
@@ -6611,7 +6811,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3208 ],
+            'Rumble Missions': [ 3208 ],
         },
 
         {
@@ -6621,8 +6821,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3233 ],
-            'Global': [ 3208 ],
+            'Rumble Missions': [ 3233 ],
         },
 
         {
@@ -6632,7 +6831,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3251 ],
+            'Rumble Missions': [ 3251 ],
         },
 
         {
@@ -6642,7 +6841,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3285 ],
+            'Rumble Missions': [ 3285 ],
         },
 
         {
@@ -6652,7 +6851,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3332 ],
+            'Rumble Missions': [ 3332 ],
         },
 
         {
@@ -6662,67 +6861,77 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3374 ],
+            'Rumble Missions': [ 3374 ],
+        },
+
+        {
+            name: 'Resurrected Samurai',
+            dropID: 'rumble15',
+            thumb: 3396,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'Rumble Missions': [ 3396 ],
         },
 
         {
             name: 'Battle at Conchorde Plaza',
-            dropID: 'rumble15',
+            dropID: 'rumble16',
             thumb: 3415,
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3415 ],
+            'Rumble Missions': [ 3415 ],
         },
 
         {
             name: 'Burning Will',
-            dropID: 'rumble16',
+            dropID: 'rumble17',
             thumb: 3438,
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3438 ],
+            'Rumble Missions': [ 3438 ],
         },
 
         {
             name: 'Stunning Swords Play',
-            dropID: 'rumble17',
+            dropID: 'rumble18',
             thumb: 3466,
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3466 ],
+            'Rumble Missions': [ 3466 ],
         },
 
         {
             name: 'Willing to Die for a Cause',
-            dropID: 'rumble18',
+            dropID: 'rumble19',
             thumb: 3486,
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3486 ],
+            'Rumble Missions': [ 3486 ],
         },
 
         {
             name: 'Foxy & Porche',
-            dropID: 'rumble19',
+            dropID: 'rumble20',
             thumb: 3505,
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3505 ],
+            'Rumble Missions': [ 3505 ],
         },
 
         {
             name: 'Wapol',
-            dropID: 'rumble20',
+            dropID: 'rumble21',
             thumb: 3526,
             global: true,
             nakama: null,
             gamewith: 196547,
-            'All Difficulties': [ 3526 ],
+            'Rumble Missions': [ 3526 ],
         },
 
     ],
@@ -7038,14 +7247,6 @@ window.drops = {
         },
 
         {
-            name: 'The Tea Party From Hell',
-            thumb: 3079,
-            global: true,
-            gamewith: null,
-            'Chopperman Missions': [ 3086 ],
-        },
-
-        {
             name: 'World Clash!',
             thumb: 2407,
             global: true,
@@ -7062,6 +7263,15 @@ window.drops = {
             nakama: 6273800,
             gamewith: 173400,
             'All Difficulties': [ 2737 ],
+        },
+
+        {
+            name: 'Wapol\'s Assault',
+            thumb: 2799,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 2799 ],
         },
 
         {
@@ -7409,16 +7619,6 @@ window.drops = {
         },
 
         {
-            name: 'Today is the Bestest Day Ever!!',
-            thumb: 2815,
-            global: true,
-            nakama: 6281600,
-            gamewith: 182347,
-            showManual: true,
-            'All Difficulties': [ 2815, -2815 ],
-        },
-
-        {
             name: 'OTama\'s Stuffed Belly Initiative',
             thumb: 2815,
             global: true,
@@ -7427,25 +7627,6 @@ window.drops = {
             condition: "Chance to drop Limit Break Material for O-Tama (ID: 2815)",
             challenge: 'Cumulative Damage dealt to enemies in a single run',
             //challengeData: [['150,000','1x Blue Elder'],['450,000','1x ATK Cotton Candy'],['750,000','3x Rainbow Gems']]
-        },
-
-        {
-            name: 'Filed With Smiles: Special Soba',
-            thumb: 2988,
-            global: true,
-            nakama: 6298800,
-            gamewith: 205053,
-            'All Difficulties': [ 2988, -2988 ],
-        },
-
-        {
-            name: 'Anniversary Party',
-            thumb: 2843,
-            global: true,
-            nakama: 6284300,
-            gamewith: 184761,
-            condition: "Complete Missions to get Bingo",
-            'All Difficulties': [ 2842 ],
         },
 
         {
@@ -7509,16 +7690,6 @@ window.drops = {
         },
 
         {
-            name: 'Treasure Hunt!',
-            thumb: 2957,
-            global: true,
-            nakama: 6295700,
-            gamewith: 202523,
-            condition: 'Drops portions of a Log Pose map and a Treasure Key map to fullfil community rewards.',
-            'Chopperman Missions': [ 2975, 2976 ],
-        },
-
-        {
             name: 'Warlords at Thriller Bark!',
             thumb: 3004,
             global: true,
@@ -7547,15 +7718,6 @@ window.drops = {
         },
 
         {
-            name: 'Navy Christmas Night',
-            thumb: 3171,
-            global: true,
-            nakama: 6317100,
-            gamewith: 241547,
-            'Chopperman Missions': [ 3171, 3172 ],
-        },
-
-        {
             name: 'World Cruise!',
             thumb: 3177,
             global: true,
@@ -7573,85 +7735,6 @@ window.drops = {
         },
 
         {
-            name: 'Dear Swordsmen, Please Help Us!',
-            thumb: 3017,
-            showManual: true,
-            global: true,
-            nakama: 6323100,
-            gamewith: 252958,
-            'Chopperman Missions': [ 3222, 3223 ],
-            'All Difficulties': [ -3222, -3223, -3225, -3227, -3229, -3231 ],
-        },
-
-        {
-            name: 'End of an Era',
-            thumb: 3262,
-            showManual: true,
-            global: true,
-            nakama: null,
-            gamewith: 252958,
-            'Chopperman Missions': [ 3262 ],
-            'All Difficulties': [ -3242, -3245, -3253, -3255, -3257, -3259, -3261, -3262 ],
-        },
-
-        {
-            name: 'Pirate Paradise!!',
-            thumb: 3280,
-            showManual: true,
-            global: true,
-            nakama: null,
-            gamewith: null,
-            'Chopperman Missions': [ 3286, 3287 ],
-            'All Difficulties': [ -3274, -3278, -3280, -3282, -3283, -3284, -3286, -3287, 3287 ],
-        },
-
-        {
-            name: 'Adventurers\' Quarrel',
-            thumb: 3304,
-            global: true,
-            nakama: 6330400,
-            gamewith: null,
-            'Chopperman Missions': [ 3304, 3305 ],
-        },
-
-        {
-            name: 'Now to Onigashima!',
-            thumb: 3346,
-            global: true,
-            nakama: 6334600,
-            gamewith: 276764,
-            'Chopperman Missions': [ 3346 ],
-        },
-
-        {
-            name: 'Duel at Banaro Island',
-            thumb: 3353,
-            global: true,
-            nakama: 6335300,
-            gamewith: 280282,
-            'Chopperman Missions': [ 3353 ],
-        },
-
-        {
-            name: 'Onigashima Assault Strategy',
-            thumb: 3382,
-            global: true,
-            nakama: 6338200,
-            gamewith: 285666,
-            'All Difficulties': [ 3382 ],
-            'Chopperman Missions': [ 3382 ],
-        },
-
-        {
-            name: 'Big News! World Economic Journal',
-            thumb: 3425,
-            global: true,
-            nakama: 6342500,
-            gamewith: 292753,
-            'All Difficulties': [ 3425 ],
-        },
-
-        {
             name: 'Alliance Blitz! Assemble the Tobi Roppo',
             thumb: 3436,
             global: true,
@@ -7661,49 +7744,12 @@ window.drops = {
         },
 
         {
-            name: 'Feverish Halloween Live Show!!',
-            thumb: 3457,
-            global: true,
-            nakama: 6345700,
-            gamewith: null,
-            'All Difficulties': [ 3457 ],
-        },
-
-        {
-            name: 'Turmoil in the Land of Candy!!',
-            thumb: 2033,
-            global: true,
-            nakama: 6203300,
-            gamewith: null,
-            'All Difficulties': [ 3477 ],
-        },
-
-        {
             name: 'Alliance! Heavenly Demon VS Luffy!!',
             thumb: 3472,
             global: true,
             nakama: 6347200,
             gamewith: null,
             'All Difficulties': [ 3481 ],
-        },
-
-        {
-            name: 'Olin! Battle of Onigashima!!',
-            thumb: 3498,
-            global: true,
-            nakama: 6349800,
-            gamewith: 309692,
-            'All Difficulties': [ 3498 ],
-        },
-
-        {
-            name: 'Drill Crushing Fist!',
-            thumb: 3518,
-            global: true,
-            nakama: 6351800,
-            gamewith: 313812,
-            'All Difficulties': [ 3518 ],
-            'Chopper Man Missions': [ 9056 ],
         },
 
         {

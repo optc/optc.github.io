@@ -815,7 +815,12 @@ filters.abilityToString = function() {
 };
 
 function arrayToString(array) {
-  let tmpStr = new Intl.ListFormat().format(array);
+  let tmpStr = new Intl.ListFormat('en').format(array);
+  return tmpStr;
+}
+
+function arrayToStringOr(array) {
+  let tmpStr = new Intl.ListFormat('en', { type: 'disjunction' }).format(array);
   return tmpStr;
 }
 
@@ -843,6 +848,8 @@ function conditionToString(condition, suffix) {
       return `The first ${condition.count} times this character lands a ${condition.stat}, `
     case "defeat":
       return `When ${condition.count} characters ${condition.team == "enemies" ? "on the enemy team " : condition.team == "crew" ? "on your crew " : ""}are defeated, `
+    case "character":
+      return `When ${arrayToStringOr(condition.families)} ${condition.families.length > 1 ? "are" : "is"} ${condition.team == "enemies" ? "on the enemy team" : condition.team == "crew" ? "on your crew" : ""}, `
     default:
       return `UNKNOWN CONDITION ${JSON.stringify(condition)}`;
   }

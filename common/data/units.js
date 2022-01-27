@@ -3531,6 +3531,13 @@ window.units = [
     [ "Sabo, Cups of the Three Brothers", "DEX", [ "Striker", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1479, 631, 93, 2959, 1262, 187, 1 ],
     [ "Marshall D. Teach, Rising to the Seat of Emperor", "DEX", [ "Driven", "Fighter" ], 5, 50, 5, 4, 99, 5000000, 1329, 699, 79, 3307, 1438, 183, 1 ],
     [ "Blackbeard, Threat of Darkness and Tremors", "DEX", [ "Driven", "Fighter" ], "5+", 50, 5, 4, 99, 5000000, 1489, 828, 81, 3556, 1566, 189, 1 ],
+    [ "Dogstorm, Sulong Challenging the Dragon", "DEX", [ "Fighter", "Slasher" ], 5, 30, 5, 3, 70, 1066998, 1066, 409, 59, null, null, null, null ],
+    [ "Dogstorm, Flash in the Moonlit Night", "DEX", [ "Fighter", "Slasher" ], 6, 55, 5, 5, 99, 5000000, 2011, 817, 117, null, null, null, null ],
+    [ "Cat Viper, Sulong Challenging the Dragon", "DEX", [ "Fighter", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 928, 434, 64, null, null, null, null ],
+    [ "Cat Viper, Vicious Sulong in the Moonlight", "DEX", [ "Fighter", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1855, 867, 127, null, null, null, null ],
+    [ "Roddy & BB, Guardian Sulongs", "DEX", [ "Fighter", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1742, 729, 92, null, null, null, null ],
+    [ "Dogstorm Three Musketeers, Guardian Sulongs", "DEX", [ "Slasher", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1587, 788, 98, null, null, null, null ],
+    [ "Jack, Dragon-Defending Drought", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1634, 731, 85, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

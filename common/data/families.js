@@ -71,7 +71,7 @@ const Gem = [ "Gem", "Mr. 5" ];
 const Mikita = [ "Mikita", "Miss Valentine" ];
 const Galdino = [ "Galdino", "Mr. 3" ];
 const Marianne = [ "Marianne", "Miss Goldenweek" ];
-const Bentham = [ "Bentham", "Mr. 2 Bon Clay" ];
+const Bentham = [ "Bentham", "Mr. 2 Bon Clay", "Bonclay" ];
 const NicoRobin = [ "Nico Robin" ];
 const Mr9 = [ "Mr. 9" ];
 const Laboon = [ "Laboon" ];
@@ -643,6 +643,8 @@ const Sasaki = [ "Sasaki" ];
 const Ulti = [ "Ulti" ];
 const BlackMaria = [ "Black Maria" ];
 const WhosWho = [ "Who's Who", "Whos Who", "WhosWho" ];
+const Concelot = [ "Concelot" ];
+const Giovanni = [ "Giovanni" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4084,6 +4086,13 @@ window.families = {
     3530: [ ...Sabo ],
     3531: [ ...MarshallDTeach ],
     3532: [ ...MarshallDTeach ],
+    3533: [ ...Inuarashi ],
+    3534: [ ...Inuarashi ],
+    3535: [ ...Nekomamushi ],
+    3536: [ ...Nekomamushi ],
+    3537: [ ...Roddy, ...Blackback ],
+    3538: [ ...Sicilian, ...Concelot, ...Giovanni ],
+    3539: [ ...MarshallDTeach ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

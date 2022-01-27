@@ -2163,6 +2163,26 @@ window.sailors = {
     3532: {
         staticMult: function(p) { return [0, 3][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; }
     },
+    3534: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3536: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3537: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3538: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -12421,6 +12421,29 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1.5 : 1; },
     },
+    3533: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 4 : 1)*(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.25 : 1); },
+    },
+    3534: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 4 : 1)*(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.25 : 1); },
+    },
+    3535: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.25 : 1)*(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 4 : 1); },
+    },
+    3536: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.25 : 1)*(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 4 : 1); },
+    },
+    3537: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; },
+    },
+    3538: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? 2.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? 1.2 : 1; },
+    },
+    3539: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

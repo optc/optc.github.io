@@ -130,6 +130,9 @@
                 "stat": {
                     "$ref": "#/definitions/Attribute"
                 },
+                "families": {
+                    "type": "array"
+                },
                 "type": {
                     "$ref": "#/definitions/ConditionType"
                 },
@@ -538,7 +541,8 @@
                 "crew",
                 "enemies",
                 "trigger",
-                "defeat"
+                "defeat",
+                "character"
             ],
             "title": "ConditionType"
         },
