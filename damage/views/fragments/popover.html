@@ -146,7 +146,7 @@
                     <div ng-bind-html="details.special | decorate"></div>
                     <div class="cooldown" ng-if="details.special && cooldown">
                         {{cooldown.length ? cooldown[0] : cooldown}} turns
-                        {{(cooldown.length ? ' (Max: ' + cooldown[1] + ' turns' : '')+(data.team[slot].unit.limitCD != 0 ? ', LB: ' + (cooldown[1]-data.team[slot].unit.limitCD) + ' turns' : '')+(data.team[slot].unit.limitexCD != 0 ? ', LB+: ' + (cooldown[1]-data.team[slot].unit.limitexCD) + ' turns)' : ')')}}
+                        {{(cooldown.length ? ' (Max: ' + cooldown[1] + ' turns' : '')+(data.team[slot].unit.limitCD != 0 ? ', LB: ' + (cooldown[1]-data.team[slot].unit.limitCD) + ' turns' : '')+(data.team[slot].unit.limitexCD != 0 && data.team[slot].unit.limitexCD != data.team[slot].unit.limitCD ? ', LB+: ' + (cooldown[1]-data.team[slot].unit.limitexCD) + ' turns)' : ')')}}
                         <!--Show LB and Staged Special-->
                     </div>
 <!--                    <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>-->
