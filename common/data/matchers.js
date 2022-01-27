@@ -838,6 +838,12 @@ window.matchers = [
     },
 
     {
+        name: 'Increase Damage Taken specials',
+        target: 'special',
+        matcher: /Inflicts\D+Increase Damage Taken/i
+    },
+
+    {
         name: 'Poisoners',
         target: 'special',
         matcher: /(poisons|Inflicts Toxic)/i
