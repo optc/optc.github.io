@@ -143,7 +143,7 @@
     transform: translateX(-3em);
 }
 
-#links-button.active .rotater:nth-child(4) > a {
+#links-button.active .rotater:nth-child(2) > a {
     -webkit-transform: translateX(-6em);
     -ms-transform: translateX(-6em);
     transform: translateX(-6em);
@@ -155,19 +155,19 @@
     transform: translateX(-9em);
 }
 
-#links-button.active .rotater:nth-child(6) > a {
+#links-button.active .rotater:nth-child(4) > a {
     -webkit-transform: translateX(-12em);
     -ms-transform: translateX(-12em);
     transform: translateX(-12em);
 }
 
-#links-button.active .rotater:nth-child(2) > a {
+#links-button.active .rotater:nth-child(5) > a {
     -webkit-transform: translateX(-15em);
     -ms-transform: translateX(-15em);
     transform: translateX(-15em);
 }
 
-#links-button.active .rotater:nth-child(5) > a {
+#links-button.active .rotater:nth-child(6) > a {
     -webkit-transform: translateX(-18em);
     -ms-transform: translateX(-18em);
     transform: translateX(-18em);
@@ -204,39 +204,39 @@
 }
 
 #links-button.active .rotater:nth-child(12) > a {
-    -webkit-transform: translateX(-36em);
-    -ms-transform: translateX(-36em);
-    transform: translateX(-36em);
-}
-
-#links-button.active .rotater:nth-child(13) > a {
-    -webkit-transform: translateY(0em);
-    -ms-transform: translateY(0em);
-    transform: translateY(0em);
-}
-
-#links-button.active .rotater:nth-child(14) > a {
     -webkit-transform: translateY(-3em);
     -ms-transform: translateY(-3em);
     transform: translateY(-3em);
 }
 
-#links-button.active .rotater:nth-child(15) > a {
+#links-button.active .rotater:nth-child(13) > a {
     -webkit-transform: translateY(-6em);
     -ms-transform: translateY(-6em);
     transform: translateY(-6em);
 }
 
-#links-button.active .rotater:nth-child(16) > a {
+#links-button.active .rotater:nth-child(14) > a {
     -webkit-transform: translateY(-9em);
     -ms-transform: translateY(-9em);
     transform: translateY(-9em);
 }
 
-#links-button.active .rotater:nth-child(17) > a {
+#links-button.active .rotater:nth-child(15) > a {
     -webkit-transform: translateY(-12em);
     -ms-transform: translateY(-12em);
     transform: translateY(-12em);
+}
+
+#links-button.active .rotater:nth-child(16) > a {
+    -webkit-transform: translateY(-15em);
+    -ms-transform: translateY(-15em);
+    transform: translateY(-15em);
+}
+
+#links-button.active .rotater:nth-child(17) > a {
+    -webkit-transform: translateY(-18em);
+    -ms-transform: translateY(-18em);
+    transform: translateY(-18em);
 }
 
 #link-damage > .btn { background: #85C1F5; }
@@ -257,6 +257,8 @@
 #link-de > .btn { background: url("https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg"); background-size: 200%; background-position: center; }
 #link-ko > .btn { background: url("https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg"); background-size: 120%; background-position: center; }
 #link-reddit > .btn { background: url("https://www.redditinc.com/assets/images/site/reddit-logo.png"); background-size: 100%; }
+#link-github > .btn { background: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"); background-size: 100%; }
+#link-discord > .btn { background: url("https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png"); background-size: 120%; background-position: center; }
 
 .tip { color: black; }
 
