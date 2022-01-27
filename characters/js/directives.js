@@ -72,7 +72,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 				$timeout(function() { element.fnDraw(); });
 			};
             // report link
-            var link = $('<span class="help-link">Want to report or request something? <a> Join our discord</a>.</span>');
+            var link = $('<span class="help-link"><i class="fab fa-discord"></i> Want to report or request something? <a>Join our Discord server</a>.</span>');
             link.find('a').attr('href', 'https://discord.gg/MRhRrbF');
             link.insertAfter($('.dataTables_length'));
             // pick column link
