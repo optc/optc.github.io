@@ -328,7 +328,7 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base || $scope.details.captain.combined || $scope.details.captain.character1));
-    $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.base || $scope.details.sailor.combined || $scope.details.sailor.character1));
+    $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.level1 || $scope.details.sailor.combined || $scope.details.sailor.character1));
     $scope.isSpecialHybrid = ($scope.details && $scope.details.special && ($scope.details.special.global || $scope.details.special.character1));
     $scope.isCooldownHybrid = ($scope.cooldown && (Array.isArray($scope.cooldown[0])));
     $scope.isSpecialStaged = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
