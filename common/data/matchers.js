@@ -1485,115 +1485,115 @@ window.matchers = [
     /* * * * * Potential Abilities * * * * */
     
     {
-        name: 'Enrage/Reduce Increase Damage Taken Potential Ability',
+        name: 'Enrage/Reduce Increase Damage Taken',
         target: 'potential',
         matcher: /Enrage/i
     },
     
     {
-        name: 'Reduce No Healing Potential Ability',
+        name: 'Reduce No Healing',
         target: 'potential',
         matcher: /Reduce No Healing/i
     },
     
     {
-        name: 'Critical Hit Potential Ability',
+        name: 'Critical Hit',
         target: 'potential',
         matcher: /Critical Hit/i
     },
     
     {
-        name: 'Reduce Slot Bind duration Potential Ability',
+        name: 'Reduce Slot Bind duration',
         target: 'potential',
         matcher: /Reduce Slot Bind duration/i
     },
     
     {
-        name: 'Reduce Slot Barrier duration Potential Ability',
+        name: 'Reduce Slot Barrier duration',
         target: 'potential',
         matcher: /Reduce Slot Barrier duration/i
     },
     
     {
-        name: 'Ship Bind Reduction Potential Ability',
+        name: 'Ship Bind Reduction',
         target: 'potential',
         matcher: /Reduce Ship Bind duration/i
     },
     
     {
-        name: 'Fear/Sailor Despair Reduction Potential Ability',
+        name: 'Fear/Sailor Despair Reduction',
         target: 'potential',
         matcher: /Reduce Sailor Despair duration/i
     },
     
     {
-        name: 'Barrier Penetration Potential Ability',
+        name: 'Barrier Penetration',
         target: 'potential',
         matcher: /Barrier Penetration/i
     },
     
     {
-        name: 'Pinch Healing Potential Ability',
+        name: 'Pinch Healing',
         target: 'potential',
         matcher: /Pinch Healing/i
     },
     
     {
-        name: 'Nutrition/Reduce Hunger Duration Potential Ability',
+        name: 'Nutrition/Reduce Hunger Duration',
         target: 'potential',
         matcher: /Nutrition/i
     },
     
     {
-        name: 'Cooldown Reduction Potential Ability',
+        name: 'Cooldown Reduction',
         target: 'potential',
         matcher: /Cooldown Reduction/i
     },
     
     {
-        name: 'Double Special Activation Potential Ability',
+        name: 'Double Special Activation',
         target: 'potential',
         matcher: /Double Special Activation/i
     },
     
     {
-        name: 'Damage Reduction Potential Ability',
+        name: 'Damage Reduction',
         target: 'potential',
         matcher: /Damage Reduction/i
     },
     
     {
-        name: 'Last Tap Potential Ability',
+        name: 'Last Tap',
         target: 'potential',
         matcher: /Last Tap/i
     },
     
     {
-        name: 'STR Damage Reduction Potential Ability',
+        name: 'STR Damage Reduction',
         target: 'potential',
         matcher: /\[STR\] Damage Reduction/i
     },
     
     {
-        name: 'DEX Damage Reduction Potential Ability',
+        name: 'DEX Damage Reduction',
         target: 'potential',
         matcher: /\[DEX\] Damage Reduction/i
     },
     
     {
-        name: 'QCK Damage Reduction Potential Ability',
+        name: 'QCK Damage Reduction',
         target: 'potential',
         matcher: /\[QCK\] Damage Reduction/i
     },
     
     {
-        name: 'PSY Damage Reduction Potential Ability',
+        name: 'PSY Damage Reduction',
         target: 'potential',
         matcher: /\[PSY\] Damage Reduction/i
     },
     
     {
-        name: 'INT Damage Reduction Potential Ability',
+        name: 'INT Damage Reduction',
         target: 'potential',
         matcher: /\[INT\] Damage Reduction/i
     },
