@@ -4093,6 +4093,8 @@ window.families = {
     3537: [ ...Roddy, ...Blackback ],
     3538: [ ...Sicilian, ...Concelot, ...Giovanni ],
     3539: [ ...MarshallDTeach ],
+    3540: [ ...Queen ],
+    3541: [ ...Dalton ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

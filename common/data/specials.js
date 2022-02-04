@@ -13153,21 +13153,38 @@ window.specials = {
     3538: {
         affinity: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 2 : 1; },
     },
-    3214: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+    3539: {
+        def: function(p) { return [0.2, 0.2, 0, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chain: function(p) { return [2.75, 3.25, 2.75, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.75, 3.25, 2.75, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
         },
         onActivation: function(p) {
-            var levels = [2.75, 3.25];
+            var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + levels[n] + 'x chain lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x chain lock, disable and re-enable this special',
+                text: 'Using the ' + [2.75, 3.25, 2.75, 3.25][n] + 'x chain lock and the ' + (1-[0.2, 0.2, 0, 0][n])*100 + '% Defense Reduction. To switch to the ' + [2.75, 3.25, 2.75, 3.25][(n + 1) % levels.length] + 'x chain lock and the ' + (1-[0.2, 0.2, 0, 0][(n + 1) % levels.length])*100 + '% Defense Reduction, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3540: {
+        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var n = (p.percHP > 50  ? 2.25 : 1);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3541: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
+        type: "type",
+        def: function(p) { return 0; },
     },
 };
 
