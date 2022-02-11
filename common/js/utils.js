@@ -240,7 +240,7 @@
             params.matchers.class = classes.join('|').replace(whitespaceRegex, '_');
             matchers.push('class:' + params.matchers.class);
         }
-        if (supportingFamilies.length > 0) {
+        if (supportingFamilies && supportingFamilies.length > 0) {
             params.matchers.notfamily = utils.generateFamilyExclusionQuery(supportingFamilies);
             matchers.push(params.matchers.notfamily);
         }
@@ -1473,19 +1473,25 @@
         if (typeof supportingUnit === 'number')
             supportingUnit = window.units[supportingUnit - 1];
 
-        if (!unitToSupport || !supportingUnit || !unitToSupport.families)
+        if (!unitToSupport || !supportingUnit)
             return false;
 
         if (!supportingUnit.support || !supportingUnit.support[0]) // no support
             return false;
 
-        if (/^All characters?/i.test(supportingUnit.support[0].Characters) && unitToSupport.families.every(fam => !supportingUnit.families.includes(fam)))
+        // They should not have the same family. The supporting unit may have no
+        // families if data is incomplete, in which case it won't be excluded
+        // from the supporting units even though it may have the same family name
+        if (supportingUnit.families && unitToSupport.families.some(fam => supportingUnit.families.includes(fam)))
+            return false;
+
+        if (/^All characters?/i.test(supportingUnit.support[0].Characters))
             return true;
 
         // recreate the query generated for support units
         // make it returns search params instead of the query, so we save up on
         // parsing the query (no `utils.generateSearchParameters` call)
-        let params = utils.generateSupportedCharactersQuery(supportingUnit.support[0].Characters, supportingUnit.families, true);
+        let params = utils.generateSupportedCharactersQuery(supportingUnit.support[0].Characters, undefined, true);
         if (!params)
             return false;
         return utils.checkUnitMatchSearchParameters(unitToSupport, params);
