@@ -3540,6 +3540,13 @@ window.units = [
     [ "Jack - Dragon-Defending Drought", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1634, 731, 85, 3268, 1462, 169, 1 ],
     [ "Queen - Terrifying Ice Oni", "STR", [ "Shooter", "Powerhouse" ], 5, 40, 5, 3, 99, 4000000, 1502, 735, 106, null, null, null, null ],
     [ "Dalton - Raging Bison", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2053, 749, 109, null, null, null, null ],
+    [ "Carrot & Wanda - Beautiful Sulongs", ["QCK", "DEX"], [[ "Slasher", "Cerebral" ], [ "Slasher", "Cerebral" ], [ "Slasher", "Cerebral" ]], 5, 30, 4, 3, 70, 1066998, 972, 416, 91, null, null, null, null ],
+    [ "Carrot & Wanda - Sulongs Seeking Revenge", ["QCK", "DEX"], [[ "Slasher", "Cerebral" ], [ "Slasher", "Cerebral" ], [ "Slasher", "Cerebral" ]], 6, 55, 4, 5, 99, 5000000, 1942, 821, 178, null, null, null, null ],
+    [ "Pedro - For the Dawn", "QCK", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1616, 785, 69, null, null, null, null ],
+    [ "Pekoms - Rampaging Sulong", "STR", [ "Slasher", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1576, 711, 101, null, null, null, null ],
+    [ "Boa Marigold - Burning Snake", "STR", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 5, 99, 5000000, 1514, 716, 106, null, null, null, null ],
+    [ "Charlotte Perospero - Eldest Brother out to Finish the Job", "QCK", [ "Striker", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1665, 739, 101, null, null, null, null ],
+    
 ];
 
 var calcGhostStartID = { "start": 5000 };
