@@ -505,14 +505,14 @@
                         </table>
                     </div>
 
-                    <h3 ng-if="details.support" id="supportSection" class="page-header" ng-hide="hidden.abilities">Support</h3>
+                    <h3 id="supportSection" class="page-header" ng-hide="hidden.abilities">Support</h3>
 
-                    <div ng-if="details.support" class="panel panel-default" ng-hide="hidden.abilities">
+                    <div class="panel panel-default" ng-hide="hidden.abilities">
                         <table class="table table-striped-column abilities">
                             <!--------------    Support Abilities    -------------->
                             <!--------------    isSupportHybrid is not used since JPN and Global all match so far, leaving in for future cases    -------------->
                             <tbody>
-                                <tr>
+                                <tr ng-if="details.support">
                                     <td>Support Abilities</td>
                                     <td>
                                         <!-- same potential break (differences across versions) -->
