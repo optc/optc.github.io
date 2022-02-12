@@ -3964,6 +3964,14 @@ var ghostsUnits = [
     [ "[Dual Unit] Straw Hat Pirates - Start of a Full-Scale War", "DEX", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2309, 812, 162, 4618, 1625, 325, 1 ],
     [ "[Dual Unit] Luffy & Straw Hat Pirates - Start of a Full-Scale War", "STR", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2378, 878, 178, 4756, 1756, 356, 1 ],
     [ "[Dual Unit] Luffy & Straw Hat Pirates - Start of a Full-Scale War", "DEX", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2378, 878, 178, 4756, 1756, 356, 1 ],
+    [ "[Dual Unit] Carrot - Beautiful Sulongs", "QCK", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 882, 383, 79, null, null, null, null ],
+    [ "[Dual Unit] Wanda - Beautiful Sulongs", "DEX", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 922, 373, 76, null, null, null, null ],
+    [ "[Dual Unit] Carrot & Wanda - Beautiful Sulongs", "QCK", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 972, 416, 91, null, null, null, null ],
+    [ "[Dual Unit] Carrot & Wanda - Beautiful Sulongs", "DEX", [ "Slasher", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 972, 416, 91, null, null, null, null ],
+    [ "[Dual Unit] Carrot - Sulongs Seeking Revenge", "QCK", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1760, 762, 153, null, null, null, null ],
+    [ "[Dual Unit] Wanda - Sulongs Seeking Revenge", "DEX", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1842, 740, 149, null, null, null, null ],
+    [ "[Dual Unit] Carrot & Wanda - Sulongs Seeking Revenge", "QCK", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1942, 821, 178, null, null, null, null ],
+    [ "[Dual Unit] Carrot & Wanda - Sulongs Seeking Revenge", "DEX", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1942, 821, 178, null, null, null, null ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
