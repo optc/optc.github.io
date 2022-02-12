@@ -6258,6 +6258,16 @@ window.drops = {
             'Spooky Sea': [ 3527 ]
         },
 
+        {
+            name: 'Perospero',
+            dropID: 'treasuremap54',
+            thumb: 3547,
+            global: true,
+            nakama: 8354700,
+            gamewith: null,
+            'Spooky Sea': [ 3547 ]
+        },
+
     ],
 
     
@@ -6934,13 +6944,23 @@ window.drops = {
         },
 
         {
-            name: 'Wapol',
+            name: 'True Power of the Munch-Munch Fruit',
             dropID: 'rumble21',
             thumb: 3526,
             global: true,
             nakama: null,
             gamewith: 196547,
             'Rumble Missions': [ 3526 ],
+        },
+
+        {
+            name: 'Burning Snake',
+            dropID: 'rumble22',
+            thumb: 3546,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'Rumble Missions': [ 3546 ],
         },
 
     ],

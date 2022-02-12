@@ -1066,6 +1066,110 @@ var ghostsAltSpecials = {
             });
         },
     },
+    389: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    390: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    391: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    392: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    393: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    394: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    395: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    396: {
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {

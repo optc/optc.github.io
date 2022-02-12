@@ -12455,6 +12455,20 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
+    3544: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3545: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+    },
+    3546: {
+        atk: function(p) { return !(p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2, 2.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]); },
+    },
+    3547: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? [2.5, 2.75, 3, 2.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [1.5, 1.75, 2, 2.25, 2.5, 2.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -14115,6 +14129,102 @@ var ghostsCaptains = {
     388: {
         atk: function(p) { return ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5; },
         hp: function(p) { return 1.5; },
+    },
+    389: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.2, Katacount);
+        },
+    },
+    390: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.2, Katacount);
+        },
+    },
+    391: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.25, Katacount);
+        },
+    },
+    392: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.25, Katacount);
+        },
+    },
+    393: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.2, Katacount);
+        },
+    },
+    394: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.2, Katacount);
+        },
+    },
+    395: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.25, Katacount);
+        },
+    },
+    396: {
+        atk: function(p) {
+            var Katacount = 0;
+            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
+            for(var i = 0; i < Kataclass.length; i++) {
+                if(p.unit.class.has(Kataclass[i])) {
+                    Katacount++;
+                }
+            }
+            return Math.pow(2.25, Katacount);
+        },
     },
 };
 
