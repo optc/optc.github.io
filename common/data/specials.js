@@ -13053,6 +13053,7 @@ window.specials = {
         type: "class",
     },
     3531: {
+        def: function(p) { return 0; },
         status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 0; },
         onActivation: function(p) {
@@ -13068,6 +13069,7 @@ window.specials = {
         },
     },
     3532: {
+        def: function(p) { return 0; },
         status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 0; },
         onActivation: function(p) {
