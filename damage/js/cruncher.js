@@ -661,7 +661,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ([3398].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) typeMult = getAffinity('strong', attackerType);
         
         if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
-            if ([ 3529, 3528 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([ 3548, 3549 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
 
         if ($scope.data.rainbowDamage[teamSlot])
@@ -1166,7 +1166,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) affinityMultiplier = affinityMultiplier;
             
             if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
-                if ([ 3529, 3528 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+                if ([ 3548, 3549 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
             }
             else if(unit.type != type){
                 if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);

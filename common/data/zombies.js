@@ -1042,6 +1042,14 @@ window.zombies = {
         type: 'healer',
         amount: 800
     },
+    3548: { // Miyagi&Tristan
+        type: 'healer',
+        multiplier: 3
+    },
+    3551: { // Chopper
+        type: 'healer',
+        amount: 3000
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

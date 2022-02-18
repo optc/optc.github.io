@@ -13224,6 +13224,34 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         }
     },
+    3549: {
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            var n = (p.percHP > 99  ? 2.25 : 2);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3550: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+        type: "type",
+    },
+    3551: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 1.75];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

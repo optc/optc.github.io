@@ -3546,7 +3546,10 @@ window.units = [
     [ "Pekoms - Rampaging Sulong", "STR", [ "Slasher", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1576, 711, 101, 3152, 1422, 202, 1 ],
     [ "Boa Marigold - Burning Snake", "STR", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 5, 99, 5000000, 1514, 716, 106, 3028, 1432, 212, 1 ],
     [ "Charlotte Perospero - Eldest Brother out to Finish the Job", "QCK", [ "Striker", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1665, 739, 101, null, null, null, null ],
-    
+    [ "Miyagi & Tristan", "QCK", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 2000000, 1024, 473, 146, null, null, null, null ],
+    [ "Milky", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 5, 4, 99, 2000000, 1240, 620, 182, null, null, null, null ],
+    [ "Donquixote Doflamingo - Rage-Fueled Massacre", "DEX", [ "Driven", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 1924, 920, 163, null, null, null, null ],
+    [ "Tony Tony Chopper - Charmed Reindeer Doctor", "DEX", [ "Fighter", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1248, 753, 104, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

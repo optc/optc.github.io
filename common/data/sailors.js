@@ -2196,6 +2196,15 @@ window.sailors = {
     3546: {
         staticMult: function(p) { return 5; }
     },
+    3548: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3549: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

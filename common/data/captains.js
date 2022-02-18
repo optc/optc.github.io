@@ -12469,6 +12469,20 @@ window.captains = {
     3547: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? [2.5, 2.75, 3, 2.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [1.5, 1.75, 2, 2.25, 2.5, 2.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3548: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Striker") ? 3 : 1; },
+    },
+    3549: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 5.25 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+    },
+    3550: {
+        atk: function(p) { return !(p.unit.class.has("Driven")) ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [4.5, 4.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]); },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.4 : 1; },
+    },
+    3551: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? 3.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

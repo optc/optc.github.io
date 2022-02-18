@@ -645,6 +645,7 @@ const BlackMaria = [ "Black Maria" ];
 const WhosWho = [ "Who's Who", "Whos Who", "WhosWho" ];
 const Concelot = [ "Concelot" ];
 const Giovanni = [ "Giovanni" ];
+const Milky = [ "Milky" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4101,6 +4102,10 @@ window.families = {
     3545: [ ...Pekoms ],
     3546: [ ...BoaMarigold ],
     3547: [ ...CharlottePerospero ],
+    3548: [ ...Miyagi, ...Tristan ],
+    3549: [ ...Milky ],
+    3550: [ ...DonquixoteDoflamingo ],
+    3551: [ ...TonyTonyChopper ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

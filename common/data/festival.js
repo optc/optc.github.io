@@ -3546,6 +3546,11 @@ window.festival = [
     [ "", null, null ],
     [ "RCV", 177, 146 ],
     [ "DBF", 139, 164 ],
+    [ "RCV", 131, 175 ],
+    [ "SPT", 170, 171 ],
+    [ "ATK", 193, 184 ],
+    [ "RCV", 132, 151 ],
+    [ "", null, null ],
     [ "", null, null ],
 ];
 // [ "Class", DEF, SPD ],

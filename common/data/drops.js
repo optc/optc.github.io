@@ -6738,6 +6738,17 @@ window.drops = {
             'Kizuna Exchange': [ 9056, 9057 ],
         },
 
+        {
+            name: 'Tony Tony Chopper',
+            dropID: 'kizuna32',
+            thumb: 3551,
+            global: true,
+            nakama: 9355100,
+            gamewith: null,
+            'All Difficulties': [ 3551 ],
+            'Kizuna Exchange': [ 9058 ],
+        },
+
     ],
 
 
