@@ -13218,10 +13218,10 @@ window.specials = {
         }
     },
     3545: {
-        chain: function(p) { return 2.75; },
+        chain: function(p) { return 3; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
         }
     },
     3549: {
