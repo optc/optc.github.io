@@ -13252,6 +13252,55 @@ window.specials = {
             });
         },
     },
+    3552: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return [1, 2.25, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.percHP >= 80 ? 2.5 : 2.25;
+            p.scope.notify({
+                text: '' + ["Affinity", "ATK", "Affinity and ATK"][n] + ' boost. To ' + ["Affinity", "ATK", "Affinity and ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3553: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return [1, 2.25, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.percHP >= 80 ? 2.5 : 2.25;
+            p.scope.notify({
+                text: '' + ["Affinity", "ATK", "Affinity and ATK"][n] + ' boost. To ' + ["Affinity", "ATK", "Affinity and ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3556: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.FreeSpirit >= 6 ? 2.25 : 2;
+        }
+    },
+    3557: {
+        chainAddition: function(p) { return 0.9; }
+    },
+    3558: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+    },
+    3560: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -15813,6 +15862,38 @@ var ghostsSpecials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    397: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    398: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    399: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    400: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    401: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    402: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    403: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
+    },
+    404: {
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2.75 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 500 : 0; },
     },
 };
 

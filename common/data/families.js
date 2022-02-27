@@ -646,6 +646,17 @@ const WhosWho = [ "Who's Who", "Whos Who", "WhosWho" ];
 const Concelot = [ "Concelot" ];
 const Giovanni = [ "Giovanni" ];
 const Milky = [ "Milky" ];
+const Fukurokuju = [ "Fukurokuju" ];
+const Daikoku = [ "Daikoku" ];
+const Fujin = [ "Fujin" ];
+const Raijin = [ "Raijin" ];
+const Hanzo = [ "Hanzo" ];
+const Chome = [ "Chome" ];
+const JigokuBenten = [ "Jigoku Benten" ];
+const Bishamon = [ "Bishamon" ];
+const Yazaemon = [ "Yazaemon" ];
+const Kazekage = [ "Kazekage" ];
+const Sarutobi = [ "Sarutobi" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4106,6 +4117,15 @@ window.families = {
     3549: [ ...Milky ],
     3550: [ ...DonquixoteDoflamingo ],
     3551: [ ...TonyTonyChopper ],
+    3552: [ ...KozukiOden ],
+    3553: [ ...KozukiOden ],
+    3554: [ ...Kinemon, ...Denjiro ],
+    3555: [ ...Kinemon, ...Denjiro ],
+    3556: [ ...AshuraDoji ],
+    3557: [ ...Kawamatsu ],
+    3558: [ ...Raizo ],
+    3559: [ ...Fukurokuju, ...Daikoku, ...Fujin, ...Raijin, ...Hanzo, ...Chome, ...JigokuBenten, ...Bishamon, ...Yazaemon, ...Kazekage, ...Sarutobi ],
+    3560: [ ...Kaido ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

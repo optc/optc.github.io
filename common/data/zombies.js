@@ -1050,6 +1050,10 @@ window.zombies = {
         type: 'healer',
         amount: 3000
     },
+    3559: { // Oniwabanshu
+        type: 'healer',
+        multiplier: 2
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

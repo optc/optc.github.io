@@ -181,6 +181,9 @@ window.altspecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
         }
     },
+    3553: {
+        chainMultiplication: function(p) { return 1.25; }
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

@@ -3545,11 +3545,20 @@ window.units = [
     [ "Pedro - For the Dawn", "QCK", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1616, 785, 69, 3233, 1570, 138, 1 ],
     [ "Pekoms - Rampaging Sulong", "STR", [ "Slasher", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1576, 711, 101, 3152, 1422, 202, 1 ],
     [ "Boa Marigold - Burning Snake", "STR", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 5, 99, 5000000, 1514, 716, 106, 3028, 1432, 212, 1 ],
-    [ "Charlotte Perospero - Eldest Brother out to Finish the Job", "QCK", [ "Striker", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1665, 739, 101, null, null, null, null ],
-    [ "Miyagi & Tristan", "QCK", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 2000000, 1024, 473, 146, null, null, null, null ],
-    [ "Milky", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 5, 4, 99, 2000000, 1240, 620, 182, null, null, null, null ],
-    [ "Donquixote Doflamingo - Rage-Fueled Massacre", "DEX", [ "Driven", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 1924, 920, 163, null, null, null, null ],
-    [ "Tony Tony Chopper - Charmed Reindeer Doctor", "DEX", [ "Fighter", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1248, 753, 104, null, null, null, null ],
+    [ "Charlotte Perospero - Eldest Brother out to Finish the Job", "QCK", [ "Striker", "Cerebral" ], 5, 60, 5, 1, 99, 5000000, 1665, 739, 101, 3330, 1479, 202, 1 ],
+    [ "Miyagi & Tristan", "QCK", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1024, 473, 146, 2512, 1385, 380, 1 ],
+    [ "Milky", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1240, 620, 182, 2835, 1420, 284, 1 ],
+    [ "Donquixote Doflamingo - Rage-Fueled Massacre", "DEX", [ "Driven", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 1924, 920, 163, 3848, 1841, 305, 1 ],
+    [ "Tony Tony Chopper - Charmed Reindeer Doctor", "DEX", [ "Fighter", "Cerebral" ], 5, 50, 4, 4, 99, 5000000, 1248, 753, 104, 2520, 1411, 342, 1 ],
+    [ "Kozuki Oden - Samurai Passing On His Will", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 956, 435, 59, null, null, null, null ],
+    [ "Kozuki Oden - Spectacular End", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1911, 869, 117, null, null, null, null ],
+    [ "Kin'emon & Denjiro - Samurai Challenging the Dragon", ["PSY", "QCK"], [[ "Slasher", "Free Spirit" ], [ "Slasher", "Free Spirit" ], [ "Slasher", "Free Spirit" ]], 5, 30, 4, 3, 70, 1066998, 1131, 402, 75, null, null, null, null ],
+    [ "Kin'emon & Denjiro - Shouldering His Master's Spirit", ["PSY", "QCK"], [[ "Slasher", "Free Spirit" ], [ "Slasher", "Free Spirit" ], [ "Slasher", "Free Spirit" ]], 6, 55, 4, 5, 99, 5000000, 2161, 803, 149, null, null, null, null ],
+    [ "Ashura Doji - Samurai Challenging the Dragon", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1743, 726, 92, null, null, null, null ],
+    [ "Kawamatsu - Samurai Challenging the Dragon", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1606, 781, 97, null, null, null, null ],
+    [ "Raizo - Repelling the Blast Breath", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1661, 742, 101, null, null, null, null ],
+    [ "Orochi's Oniwabanshu", "STR", [ "Driven", "Free Spirit" ], 5, 30, 4, 5, 99, null, 1459, 660, 150, null, null, null, null ],
+    [ "Kaido - Confromting a Lingering Memory From the Past", "STR", [ "Driven", "Powerhouse" ], 5, 30, 4, 5, 99, null, 2305, 750, 22, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -3975,6 +3984,14 @@ var ghostsUnits = [
     [ "[Dual Unit] Wanda - Sulongs Seeking Revenge", "DEX", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1842, 740, 149, 3684, 1481, 298, 1 ],
     [ "[Dual Unit] Carrot & Wanda - Sulongs Seeking Revenge", "QCK", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1942, 821, 178, 3884, 1642, 356, 1 ],
     [ "[Dual Unit] Carrot & Wanda - Sulongs Seeking Revenge", "DEX", [ "Slasher", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1942, 821, 178, 3884, 1642, 356, 1 ],
+    [ "[Dual Unit] ", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 5, 3, 70, 1066998, 962, 390, 74, null, null, null, null ],
+    [ "[Dual Unit] ", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1034, 383, 64, null, null, null, null ],
+    [ "[Dual Unit] ", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1131, 402, 75, null, null, null, null ],
+    [ "[Dual Unit] ", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1131, 402, 75, null, null, null, null ],
+    [ "[Dual Unit] ", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 5, 5, 99, 5000000, 1924, 779, 147, null, null, null, null ],
+    [ "[Dual Unit] ", "QCK", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2068, 765, 127, null, null, null, null ],
+    [ "[Dual Unit] ", "PSY", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2161, 803, 149, null, null, null, null ],
+    [ "[Dual Unit] ", "QCK", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2161, 803, 149, null, null, null, null ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

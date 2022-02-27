@@ -3079,6 +3079,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3539 ],
         },
+
+        {
+            name: 'Disloyal Retainers',
+            dropID: 'event157',
+            thumb: 3559,
+            global: true,
+            nakama: 6355900,
+            gamewith: null,
+            'All Difficulties': [ 3559 ],
+        },
     ],
 
 
@@ -7800,6 +7810,15 @@ window.drops = {
             gamewith: 6352000,
             'All Difficulties': [ 3520 ],
             'Chopper Man Missions': [ 9056 ],
+        },
+
+        {
+            name: 'Alliance Challenge! Samurai Vs. Dragon',
+            thumb: 3560,
+            global: true,
+            nakama: null,
+            gamewith: 6356000,
+            'All Difficulties': [ 3560 ],
         },
 
         {

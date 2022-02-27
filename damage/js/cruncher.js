@@ -1560,7 +1560,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 cloneReplace(captainTemp, 1)
             }
         }
-        //console.log(unitTemp, captainTemp, friendCaptainTemp);
+        unitTemp.class1 = Array.isArray(unitTemp.class) ? unitTemp.class[0] : unitTemp.class;
+        unitTemp.class2 = Array.isArray(unitTemp.class) ? unitTemp.class[1] : null;
         return {
             unit: unitTemp,
             orb: $scope.tdata.team[slotNumber].orb,

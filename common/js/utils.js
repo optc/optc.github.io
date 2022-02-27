@@ -1161,6 +1161,14 @@
             case (ghostPoint+394).toString(): return '../res/character_12464_t1.png'; break;
             case (ghostPoint+395).toString(): return '../res/character_12466_t1_qck.png'; break;
             case (ghostPoint+396).toString(): return '../res/character_12466_t1_dex.png'; break;
+            case (ghostPoint+397).toString(): return '../res/character_12503_t1.png'; break;
+            case (ghostPoint+398).toString(): return '../res/character_12504_t1.png'; break;
+            case (ghostPoint+399).toString(): return '../res/character_12507_t1_psy.png'; break;
+            case (ghostPoint+400).toString(): return '../res/character_12507_t1_qck.png'; break;
+            case (ghostPoint+401).toString(): return '../res/character_12505_t1.png'; break;
+            case (ghostPoint+402).toString(): return '../res/character_12506_t1.png'; break;
+            case (ghostPoint+403).toString(): return '../res/character_12508_t1_psy.png'; break;
+            case (ghostPoint+404).toString(): return '../res/character_12508_t1_qck.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
