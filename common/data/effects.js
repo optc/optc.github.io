@@ -1229,6 +1229,6 @@ window.effects = {
     '80% DEF reduction': {
         description: 'Reduces enemy DEF by 80%',
         thumb: 2853,
-        id: 85, // don't change this
+        id: 86, // don't change this
     },
 };
