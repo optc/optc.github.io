@@ -12508,6 +12508,10 @@ window.captains = {
     3560: {
         atk: function(p) { return p.unit.class1.has("Driven") ? 3 * (p.unit.type == "STR" ? ((p.orb == 2) ? 1.5 : 1) : (p.unit.type == "DEX" ? (p.orb == 0.5 ? 1.5 : 1) : (p.orb == 'str' ? 1.5 : 1))) : 1; },
     },
+    3561: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

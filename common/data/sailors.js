@@ -2223,6 +2223,11 @@ window.sailors = {
     3560: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 70][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
+    3561: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

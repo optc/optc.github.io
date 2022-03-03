@@ -3559,6 +3559,7 @@ window.units = [
     [ "Raizo - Repelling the Blast Breath", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1661, 742, 101, 3322, 1484, 202, 1 ],
     [ "Orochi's Oniwabanshu", "STR", [ "Driven", "Free Spirit" ], 5, 30, 4, 5, 99, 2000000, 1459, 660, 150, 2918, 1320, 300, 1 ],
     [ "Kaido - Confromting a Lingering Memory From the Past", "STR", [ "Driven", "Powerhouse" ], 5, 30, 4, 5, 99, null, 2305, 750, 22, null, null, null, null ],
+    [ "Boa Sandersonia - Eight-Headed Snake", "STR", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1930, 780, 119, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

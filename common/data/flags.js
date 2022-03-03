@@ -3540,6 +3540,7 @@ window.flags = {
     3557: { rr: 1, rro: 1 },
     3558: { rr: 1, rro: 1 },
     3560: { special: 1 },
+    3561: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },
     4988: { rr: 1, rro: 1, lrr: 1, global: 1 },

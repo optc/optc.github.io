@@ -13301,6 +13301,10 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
         type: "type",
     },
+    3561: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.75 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
