@@ -8175,7 +8175,7 @@ window.specials = {
         delay: function(p) { return 2; },
     },
     2641: {
-        def: function(p) { return .05; },
+        def: function(p) { return .2; },
         chainAddition: function(p) { return 0.4; }
     },
     2642: {
