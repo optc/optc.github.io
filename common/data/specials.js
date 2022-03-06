@@ -12845,10 +12845,12 @@ window.specials = {
         },
     },
     3489: {
+        poison: function(p) { return 99; },
         status: function(p) { return p.poisoned ? 1.75 : 1; },
     },
     3490: {
-        status: function(p) { return p.poisoned ? 1.75 : 1; },
+        poison: function(p) { return 99; },
+        status: function(p) { return p.poisoned ? 2 : 1; },
     },
     3491: {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
@@ -14918,6 +14920,7 @@ var ghostsSpecials = {
     260: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -14930,6 +14933,7 @@ var ghostsSpecials = {
     261: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -14942,6 +14946,7 @@ var ghostsSpecials = {
     262: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -14954,6 +14959,7 @@ var ghostsSpecials = {
     263: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -14966,6 +14972,7 @@ var ghostsSpecials = {
     264: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -14978,6 +14985,7 @@ var ghostsSpecials = {
     265: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -14990,6 +14998,7 @@ var ghostsSpecials = {
     266: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -15002,6 +15011,7 @@ var ghostsSpecials = {
     267: {
         atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
         type: "class",
+        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
@@ -15013,24 +15023,28 @@ var ghostsSpecials = {
     },
     268: {
         orb: function(p) { return (p.captain.class.has("Slasher") || p.captain.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     269: {
         orb: function(p) { return (p.captain.class.has("Slasher") || p.captain.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     270: {
         orb: function(p) { return (p.captain.class.has("Slasher") || p.captain.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     271: {
         orb: function(p) { return (p.captain.class.has("Slasher") || p.captain.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }

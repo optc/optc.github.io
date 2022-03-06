@@ -703,6 +703,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling Clone-Clone support.' });
         }
     },
+    3560: {
+        onInsertion: function($scope) {
+            if (++$scope.options.strOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [STR] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.strOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [STR] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
