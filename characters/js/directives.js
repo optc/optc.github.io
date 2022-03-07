@@ -766,7 +766,7 @@ filters.abilityToString = function() {
                 default:
                   e += "TODO:  " + JSON.stringify(effect);
               }
-              if(effect.interval) e += ` every ${effect.interval} ${effect.interval == 1 ? "second" : "seconds"} for ${effect.duration} ${effect.duration == 1 ? "second" : "seconds"}`;
+              if(effect.interval) e += ` every ${effect.interval} ${effect.interval == 1 ? "second" : "seconds"}`;
               break;
             case "hinderance":
               e += effect.amount ? `Removes ${new Intl.NumberFormat().format(effect.amount)}% of ${arrayToString(effect.attributes)}` : `${effect.chance}% chance to inflict ${effect.level ? "Lv."+effect.level+" " : ""}${arrayToString(effect.attributes)}`;
