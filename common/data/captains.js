@@ -12512,6 +12512,26 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
+    3562: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 5 : 4.75 : 1; },
+        hp: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.5 : 1; },
+    },
+    3563: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? p.actions[p.sourceSlot] ? 5 : 4.75 : 1; },
+        hp: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? 1.5 : 1; },
+    },
+    3564: {
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Slasher")) ? 2.5 : 1; },
+        hp: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Slasher")) ? 1.3 : 1; },
+    },
+    3565: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 2.75 : (p.unit.type == "QCK" || p.unit.class.has("Slasher")) ? 2.25 : 1; },
+        hp: function(p) { return (p.unit.type == "QCK" || p.unit.class.has("Slasher")) ? 1.3 : 1; },
+    },
+    3567: {
+        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

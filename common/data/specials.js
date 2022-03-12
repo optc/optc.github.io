@@ -13307,6 +13307,42 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.75 : 1; },
         type: "type",
     },
+    3562: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    3563: {
+        chain: function(p) { return 3.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.5 : 1;
+        }
+    },
+    3564: {
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "QCK" ? 2 : 1; },
+    },
+    3565: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "QCK" ? 2 : 1; },
+        type: "type",
+    },
+    3567: {
+        def: function(p) { return 0; },
+        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.unit.type == "STR" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1; },
+        onActivation: function(p) {
+            var levels = [1, 1.75];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain.class.has("Driven")) ? 2 : 1;
+            p.scope.notify({
+                text: '' + levels[n] + 'x Status boost. To ' + levels[(n + 1) % levels.length] + 'x Status boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

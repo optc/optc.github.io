@@ -3559,7 +3559,13 @@ window.units = [
     [ "Raizo - Repelling the Blast Breath", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1661, 742, 101, 3322, 1484, 202, 1 ],
     [ "Orochi's Oniwabanshu", "STR", [ "Driven", "Free Spirit" ], 5, 30, 4, 5, 99, 2000000, 1459, 660, 150, 2918, 1320, 300, 1 ],
     [ "Kaido - Confronting a Lingering Memory From the Past", "STR", [ "Driven", "Powerhouse" ], 5, 30, 4, 5, 99, 2000000, 2305, 750, 22, 4611, 1501, 43, 1 ],
-    [ "Boa Sandersonia - Eight-Headed Snake", "STR", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1930, 780, 119, null, null, null, null ],
+    [ "Boa Sandersonia - Eight-Headed Snake", "STR", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1930, 780, 119, 3860, 1560, 238, 1 ],
+    [ "Izo & Kikunojo - Siblings Avenging Their Liege", "QCK", [ "Slasher", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 902, 398, 72, null, null, null, null ],
+    [ "Izo & Kikunojo - Siblings Shouldering Their Liege's Will", "QCK", [ "Slasher", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1779, 782, 143, null, null, null, null ],
+    [ "Dogstorm - Sulong Challenging the Dragon", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1720, 704, 82, null, null, null, null ],
+    [ "Cat Viper - Sulong Challenging the Dragon", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1748, 697, 83, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kurozumi Kanjuro - Headless Samurai Warriors", "STR", [ "Driven", "Striker" ], 5, 60, 4, 1, 99, 5000000, 1555, 753, 115, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

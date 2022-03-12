@@ -2228,6 +2228,22 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 30 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 30 : 0; },
     },
+    3563: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") ? [0, 0, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") ? [0, 0, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Slasher") ? [0, 0, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3564: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 70][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3565: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 70][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3567: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

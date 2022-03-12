@@ -184,6 +184,12 @@ window.altspecials = {
     3553: {
         chainMultiplication: function(p) { return 1.25; }
     },
+    3563: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 0.3 : 0;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

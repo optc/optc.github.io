@@ -6278,6 +6278,16 @@ window.drops = {
             'Spooky Sea': [ 3547 ]
         },
 
+        {
+            name: 'Kurozumi Kanjuro',
+            dropID: 'treasuremap55',
+            thumb: 3567,
+            global: true,
+            nakama: 8356700,
+            gamewith: null,
+            'Spooky Sea': [ 3567 ]
+        },
+
     ],
 
     
