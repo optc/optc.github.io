@@ -12635,13 +12635,14 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1; }
     },
     3467: {
-        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
