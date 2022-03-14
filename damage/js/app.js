@@ -155,6 +155,13 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         $scope.data.team.forEach(x => x.tokiState = false);
     };
 
+    /**
+     * Sets all Limit Break Levels to 0 if they have values, to character MAX if they are all 0.
+     */
+    $scope.toggleLimitBreakLevels = function() {
+        $scope.data.team.some(x => x.limit > 0) ? $scope.data.team.forEach(x => x.limit = 0) : $scope.data.team.forEach(x => x.limit = x.unit.limitStats.atk.length);
+    };
+
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
     $scope.slotChanged = function(n) {
         if (!$scope.data.team[n].unit) return;
