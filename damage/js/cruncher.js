@@ -480,6 +480,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var atkbaseDamage = 0;
         var LBaddition = 0;
         var superClassBoost = 1;
+        var birdBoost = 1;
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
@@ -506,8 +507,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
         else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? 1.2 : 1;
+        
+        birdBoost = $scope.data.birdBuff ? 1.5 : 1;
 
-        return (Math.floor(result) + candyBonus + LBaddition)*superClassBoost + atkbaseDamage;
+        return (Math.floor(result) + candyBonus + LBaddition)*superClassBoost*birdBoost + atkbaseDamage;
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
