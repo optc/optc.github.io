@@ -13220,11 +13220,11 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Free Spirit") || p.captain.class.has("Powerhouse")) ? 1.75 : 1;
         }
     },
-    3545: {
-        chain: function(p) { return 3; },
+    3547: {
+        chain: function(p) { return 2.75; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
         }
     },
     3549: {
