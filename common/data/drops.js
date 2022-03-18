@@ -6769,6 +6769,17 @@ window.drops = {
             'Kizuna Exchange': [ 9058 ],
         },
 
+        {
+            name: 'Orochi',
+            dropID: 'kizuna33',
+            thumb: 3572,
+            global: true,
+            nakama: 9357200,
+            gamewith: null,
+            'All Difficulties': [ 3571 ],
+            'Kizuna Exchange': [ 9059 ],
+        },
+
     ],
 
 

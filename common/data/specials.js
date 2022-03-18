@@ -13344,6 +13344,52 @@ window.specials = {
             });
         }
     },
+    3568: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral")) ? 2.25 : 2;
+        },
+    },
+    3570: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "type",
+    },
+    3571: {
+        orb: function(p) { return p.unit.class.has("Driven") ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        chain: function(p) { return [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if ([1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Orb", "Chain", "Orb and Chain"][n] + ' boost. To ' + ["Orb", "Chain", "Orb and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3572: {
+        orb: function(p) { return p.unit.class.has("Driven") ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        chain: function(p) { return [1, 3.25, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if ([1, 3.25, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [1, 3.25, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Orb", "Chain", "Orb and Chain"][n] + ' boost. To ' + ["Orb", "Chain", "Orb and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

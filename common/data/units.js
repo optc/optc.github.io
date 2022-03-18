@@ -3566,6 +3566,11 @@ window.units = [
     [ "Cat Viper - Sulong Challenging the Dragon", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1748, 697, 83, 3496, 1393, 166, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Kurozumi Kanjuro - Headless Samurai Warriors", "STR", [ "Driven", "Striker" ], 5, 60, 4, 1, 99, 5000000, 1555, 753, 115, null, null, null, null ],
+    [ "Komurasaki - Oiran's Way of Life", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1319, 498, 170, null, null, null, null ],
+    [ "Shinobu - Mature Charm", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1288, 621, 150, null, null, null, null ],
+    [ "Otoko - Unstoppable Laughter", "PSY", [ "Free Spirit", "Striker" ], 5, 1, 4, 4, 99, 4000000, 1262, 576, 142, null, null, null, null ],
+    [ "Orochi - Unrelenting Rage", "STR", [ "Driven", "Powerhouse" ], 5, 50, 5, 4, 99, 5000000, 1209, 814, 81, null, null, null, null ],
+    [ "Orochi - Eight-Headed Snake's Fury", "STR", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1314, 901, 86, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
