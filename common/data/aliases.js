@@ -3567,7 +3567,7 @@ window.aliases = {
     3564: [ 'イヌアラシ 龍に立ち向かう“月の獅子”', '', 'TM Secret Limited' ],
     3565: [ 'ネコマムシ 龍に立ち向かう“月の獅子”', '', 'TM Secret Limited' ],
     3566: [ '', '', '' ],
-    3567: [ '', '', 'TM' ],
+    3567: [ '黒炭カン十郎 描く首無し武者', '', 'TM' ],
     3568: [ '', '', 'Kizuna Secret Limited' ],
     3569: [ '', '', 'Kizuna Secret Limited' ],
     3570: [ '', '', 'Support Secret Limited' ],
