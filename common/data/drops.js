@@ -3089,6 +3089,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3559 ],
         },
+
+        {
+            name: 'Triceratops\'s Armored Division',
+            dropID: 'event158',
+            thumb: 3579,
+            global: true,
+            nakama: 6357900,
+            gamewith: null,
+            'All Difficulties': [ 3579 ],
+        },
     ],
 
 

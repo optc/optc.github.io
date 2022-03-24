@@ -1057,6 +1057,14 @@ window.zombies = {
     3568: { // Komurasaki
         type: 'healer',
     },
+    3577: { // Robin
+        type: 'healer',
+        multiplier: 2
+    },
+    3578: { // Sanji
+        type: 'healer',
+        amount: 300
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

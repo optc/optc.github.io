@@ -190,6 +190,9 @@ window.altspecials = {
             return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 0.3 : 0;
         },
     },
+    3576: {
+        chainAdditionPlus: function(p) { return 0.5; }, 
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
@@ -1175,6 +1178,102 @@ var ghostsAltSpecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    405: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    406: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    407: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    408: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    409: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    410: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    411: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    412: {
+        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [1.5, 2];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
