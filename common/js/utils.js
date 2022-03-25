@@ -480,6 +480,8 @@
             case 9057: return '../res/skullBlackbeard2.png'; break;
             case 'skullDoflamingo2':
             case 9058: return '../res/skullDoflamingo2.png'; break;
+            case 'skullOrochi':
+            case 9059: return '../res/skullOrochi.png'; break;
         }
         if (n === null || n === undefined)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
@@ -1169,6 +1171,14 @@
             case (ghostPoint+402).toString(): return '../res/character_12506_t1.png'; break;
             case (ghostPoint+403).toString(): return '../res/character_12508_t1_psy.png'; break;
             case (ghostPoint+404).toString(): return '../res/character_12508_t1_qck.png'; break;
+            case (ghostPoint+405).toString(): return '../res/character_12551_t1.png'; break;
+            case (ghostPoint+406).toString(): return '../res/character_12552_t1.png'; break;
+            case (ghostPoint+407).toString(): return '../res/character_12555_t1_psy.png'; break;
+            case (ghostPoint+408).toString(): return '../res/character_12555_t1_dex.png'; break;
+            case (ghostPoint+409).toString(): return '../res/character_12553_t1.png'; break;
+            case (ghostPoint+410).toString(): return '../res/character_12554_t1.png'; break;
+            case (ghostPoint+411).toString(): return '../res/character_12556_t1_psy.png'; break;
+            case (ghostPoint+412).toString(): return '../res/character_12556_t1_dex.png'; break;
             default: break;
         }
         return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
