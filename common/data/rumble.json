@@ -110279,7 +110279,7 @@
               "effect": "debuff",
               "condition": { "comparator": "first", "count": 30, "type": "time" },
               "level": 2,
-              "targeting": { "targets": [ "[STR]" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "[STR]" ] }
             }
           ]
         },
