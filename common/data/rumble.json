@@ -111251,7 +111251,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Slience",
+          "attribute": "Silence",
           "chance": 80,
           "type": "debuff"
         }
@@ -111466,7 +111466,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Slience",
+          "attribute": "Silence",
           "chance": 80,
           "type": "debuff"
         }
@@ -111718,7 +111718,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Slience",
+          "attribute": "Silence",
           "chance": 100,
           "type": "debuff"
         },
