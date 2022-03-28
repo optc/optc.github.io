@@ -1414,6 +1414,9 @@ window.sailors = {
     3111: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 50 : 0; },
     },
+    3102: {
+        rcvStatic: function(p) { return p.percHP <= 10.0 && p.unit.type == "INT" ? [0, 150, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     3103: {
         rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
