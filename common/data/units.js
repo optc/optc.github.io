@@ -3571,13 +3571,13 @@ window.units = [
     [ "Otoko - Unstoppable Laughter", "PSY", [ "Free Spirit", "Striker" ], 5, 1, 4, 4, 99, 4000000, 1262, 576, 142, 2525, 1153, 285, 1 ],
     [ "Orochi - Unrelenting Rage", "STR", [ "Driven", "Powerhouse" ], 5, 50, 5, 4, 99, 5000000, 1209, 814, 81, 3181, 1455, 187, 1 ],
     [ "Orochi - Eight-Headed Snake's Fury", "STR", [ "Driven", "Powerhouse" ], "5+", 50, 4, 4, 99, 5000000, 1314, 901, 86, 3523, 1563, 198, 1 ],
-    [ "Black Rhino FR-U4 & Brachio-Tank 5 - Rendezvous Point", ["PSY", "DEX"], [[ "Free Spirit", "Fighter" ], [ "Free Spirit", "Shooter" ], [ "Free Spirit", "Slasher" ]], 5, 30, 4, 3, 70, 1066998, 1081, 396, 79, null, null, null, null ],
-    [ "General Franky - Dream Docking", ["PSY", "DEX"], [[ "Free Spirit", "Fighter" ], [ "Free Spirit", "Shooter" ], [ "Free Spirit", "Slasher" ]], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, null, null, null, null ],
-    [ "Brook - Gallant Skeletal Gentleman", "QCK", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 860, 396, 70, null, null, null, null ],
-    [ "Brook - Spectacular End", "QCK", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1711, 836, 132, null, null, null, null ],
-    [ "Robin - Emperor-Felling Flower", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1614, 712, 119, null, null, null, null ],
-    [ "Sanji - Burning Black-Leg", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1614, 712, 119, null, null, null, null ],
-    [ "Sasaki - Superb Armored Division", "QCK", [ "Free Spirit", "Powerhouse" ], 5, 30, 5, 4, 99, 2000000, 1630, 740, 82, null, null, null, null ],
+    [ "Black Rhino FR-U4 & Brachio-Tank 5 - Rendezvous Point", ["PSY", "DEX"], [[ "Free Spirit", "Fighter" ], [ "Free Spirit", "Shooter" ], [ "Free Spirit", "Slasher" ]], 5, 30, 4, 3, 70, 1066998, 1081, 396, 79, 2162, 792, 158, 1 ],
+    [ "General Franky - Dream Docking", ["PSY", "DEX"], [[ "Free Spirit", "Fighter" ], [ "Free Spirit", "Shooter" ], [ "Free Spirit", "Slasher" ]], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, 4316, 1578, 306, 1 ],
+    [ "Brook - Gallant Skeletal Gentleman", "QCK", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 860, 396, 70, 1720, 840, 135, 1 ],
+    [ "Brook - Spectacular End", "QCK", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1711, 836, 132, 3680, 1685, 277, 1 ],
+    [ "Robin - Emperor-Felling Flower", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1614, 712, 119, 3228, 1424, 238, 1 ],
+    [ "Sanji - Burning Black-Leg", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1616, 781, 96, 3233, 1563, 192, 1 ],
+    [ "Sasaki - Superb Armored Division", "QCK", [ "Free Spirit", "Powerhouse" ], 5, 30, 5, 4, 99, 2000000, 1630, 740, 82, 3260, 1480, 164, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4013,12 +4013,12 @@ var ghostsUnits = [
     [ "[Dual Unit] Kin'emon & Denjiro - Shouldering His Master's Spirit", "QCK", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2161, 803, 149, 4322, 1607, 298, 1 ],
     [ "[Dual Unit] Black Rhino FR-U4 - Rendezvous Point", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 950, 383, 67, null, null, null, null ],
     [ "[Dual Unit] Brachio-Tank 5 - Rendezvous Point", "DEX", [ "Free Spirit", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 910, 380, 68, null, null, null, null ],
-    [ "[Dual Unit] Black Rhino FR-U4 & Brachio-Tank 5 - Rendezvous Point", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 1081, 396, 79, null, null, null, null ],
-    [ "[Dual Unit] Black Rhino FR-U4 & Brachio-Tank 5 - Rendezvous Point", "DEX", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 1081, 396, 79, null, null, null, null ],
-    [ "[Dual Unit] Black Rhino FR-U4 - Dream Docking", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1880, 770, 132, null, null, null, null ],
-    [ "[Dual Unit] Brachio-Tank 5 - Dream Docking", "DEX", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1800, 758, 134, null, null, null, null ],
-    [ "[Dual Unit] General Franky - Dream Docking", "PSY", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, null, null, null, null ],
-    [ "[Dual Unit] General Franky - Dream Docking", "DEX", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, null, null, null, null ],
+    [ "[Dual Unit] Black Rhino FR-U4 & Brachio-Tank 5 - Rendezvous Point", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 1081, 396, 79, 2162, 792, 158, 1 ],
+    [ "[Dual Unit] Black Rhino FR-U4 & Brachio-Tank 5 - Rendezvous Point", "DEX", [ "Free Spirit", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 1081, 396, 79, 2162, 792, 158, 1 ],
+    [ "[Dual Unit] Black Rhino FR-U4 - Dream Docking", "PSY", [ "Free Spirit", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1880, 770, 132, 3760, 1540, 264, 1 ],
+    [ "[Dual Unit] Brachio-Tank 5 - Dream Docking", "DEX", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1800, 758, 134, 3600, 1516, 296, 1 ],
+    [ "[Dual Unit] General Franky - Dream Docking", "PSY", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, 4316, 1578, 306, 1 ],
+    [ "[Dual Unit] General Franky - Dream Docking", "DEX", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, 4316, 1578, 306, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
