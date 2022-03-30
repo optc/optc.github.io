@@ -1181,7 +1181,8 @@
             case (ghostPoint+412).toString(): return '../res/character_12556_t1_dex.png'; break;
             default: break;
         }
-        return 'https://onepiece-treasurecruise.com/wp-content/uploads/f' + id + '.png';
+
+        return '/api/images/thumbnail/jap/' +  Math.trunc(n / 1000) + '/' + Math.trunc((n % 1000) / 100) + '00/' + id + '.png';
     };
 
     utils.getBigThumbnailUrl = function (n) {
