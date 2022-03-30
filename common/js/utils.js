@@ -383,15 +383,15 @@
             case 'skullBrook':
             case 9009: return 'https://onepiece-treasurecruise.com/wp-content/uploads/skull_brook_f.png'; break;
             case 'skullSTR':
-            case 9010: return 'https://onepiece-treasurecruise.com/wp-content/uploads/red_skull_f.png'; break;
+            case 9010: return '/api/images/common/skull-STR.png';
             case 'skullQCK':
-            case 9011: return 'https://onepiece-treasurecruise.com/wp-content/uploads/blue_skull_f.png'; break;
+            case 9011: return '/api/images/common/skull-QCK.png';
             case 'skullPSY':
-            case 9012: return 'https://onepiece-treasurecruise.com/wp-content/uploads/yellow_skull2_f.png'; break;
+            case 9012: return '/api/images/common/skull-PSY.png';
             case 'skullDEX':
-            case 9013: return 'https://onepiece-treasurecruise.com/wp-content/uploads/green_skull2_f.png'; break;
+            case 9013: return '/api/images/common/skull-DEX.png';
             case 'skullINT':
-            case 9014: return 'https://onepiece-treasurecruise.com/wp-content/uploads/black_skull_f.png'; break;
+            case 9014: return '/api/images/common/skull-INT.png';
             case 'skullJudge':
             case 9015: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f1.png'; break;
             case 'skullReiju':
@@ -429,59 +429,59 @@
             case 'skullNami2':
             case 9032: return 'https://onepiece-treasurecruise.com/wp-content/uploads/nami_skull_f.png'; break;
             case 'skullBullet':
-            case 9033: return '../res/skullBullet.png'; break;
+            case 9033: return '/api/images/thumbnail/jap/2/600/2681-skull.png'; break;
             case 'skullKatakuri':
-            case 9034: return '../res/skullKatakuri.png'; break;
+            case 9034: return '/api/images/thumbnail/jap/2/700/2739-skull.png'; break;
             case 'skullWhitebeard':
-            case 9035: return '../res/skullWhitebeard.png'; break;
+            case 9035: return '/api/images/thumbnail/jap/2/900/2909-skull.png'; break;
             case 'skullCP9':
-            case 9036: return '../res/skullCP9.png'; break;
+            case 9036: return '/api/images/thumbnail/jap/2/800/2886-skull.png'; break;
             case 'skullRaidKaido':
-            case 9037: return '../res/skullKaidoRaid.png'; break;
+            case 9037: return '/api/images/thumbnail/jap/2/900/2923-skull.png'; break;
             case 'skullBlackbeard':
-            case 9038: return '../res/skullBlackbeard.png'; break;
+            case 9038: return '/api/images/thumbnail/jap/3/100/3154-skull.png'; break;
             case 'skullZoro2':
-            case 9039: return '../res/skullZoro2.png'; break;
+            case 9039: return '/api/images/thumbnail/jap/3/200/3202-skull.png'; break;
             case 'skullSanji3':
-            case 9040: return '../res/skullSanji2.png'; break;
+            case 9040: return '/api/images/thumbnail/jap/3/200/3211-skull.png'; break;
             case 'skullMihawk':
-            case 9041: return '../res/skullMihawk.png'; break;
+            case 9041: return '/api/images/thumbnail/jap/3/200/3240-skull.png'; break;
             case 'skullNami3':
-            case 9042: return '../res/skullNamiv2.png'; break;
+            case 9042: return '/api/images/thumbnail/jap/3/200/3275-skull.png'; break;
             case 'skullCracker':
-            case 9043: return '../res/skullCracker.png'; break;
+            case 9043: return '/api/images/thumbnail/jap/3/200/3298-skull.png'; break;
             case 'skullKomurasaki':
-            case 9044: return '../res/skullKomurasaki.png'; break;
+            case 9044: return '/api/images/thumbnail/jap/3/300/3350-skull.png'; break;
             case 'skullKuja':
-            case 9045: return '../res/skullKuja.png'; break;
+            case 9045: return '/api/images/thumbnail/jap/3/300/3352-skull.png'; break;
             case 'skullGerma':
-            case 9046: return '../res/skullGerma.png'; break;
+            case 9046: return '/api/images/thumbnail/jap/3/300/3369-skull.png'; break;
             case 'skullSabo':
-            case 9047: return '../res/skullSabo.png'; break;
+            case 9047: return '/api/images/thumbnail/jap/3/300/3393-skull.png'; break;
             case 'skullJack':
-            case 9048: return '../res/skullJack.png'; break;
+            case 9048: return '/api/images/thumbnail/jap/3/300/3397-skull.png'; break;
             case 'skullCarrot':
-            case 9049: return '../res/skullCarrot.png'; break;
+            case 9049: return '/api/images/thumbnail/jap/3/400/3417-skull.png'; break;
             case 'skullJack2':
-            case 9050: return '../res/skullJack2.png'; break;
+            case 9050: return '/api/images/thumbnail/jap/3/400/3448-skull.png'; break;
             case 'skullLinlin':
-            case 9051: return '../res/skullLinlin.png'; break;
+            case 9051: return '/api/images/thumbnail/jap/3/400/3450-skull.png'; break;
             case 'skullYamato':
-            case 9052: return '../res/skullYamato.png'; break;
+            case 9052: return '/api/images/thumbnail/jap/3/400/3430-skull.png'; break;
             case 'skullPudding':
-            case 9053: return '../res/skullPudding.png'; break;
+            case 9053: return '/api/images/thumbnail/jap/3/400/3469-skull.png'; break;
             case 'skullKrieg':
-            case 9054: return '../res/skullKrieg.png'; break;
+            case 9054: return '/api/images/thumbnail/jap/3/400/3490-skull.png'; break;
             case 'skullBrook2':
-            case 9055: return '../res/skullBrook2.png'; break;
+            case 9055: return '/api/images/thumbnail/jap/3/500/3510-skull.png'; break;
             case 'skullOden':
-            case 9056: return '../res/skullOden.png'; break;
+            case 9056: return '/api/images/thumbnail/jap/3/500/3519-skull.png'; break;
             case 'skullBlackbeard2':
-            case 9057: return '../res/skullBlackbeard2.png'; break;
+            case 9057: return '/api/images/thumbnail/jap/3/500/3532-skull.png'; break;
             case 'skullDoflamingo2':
-            case 9058: return '../res/skullDoflamingo2.png'; break;
+            case 9058: return '/api/images/thumbnail/jap/3/500/3550-skull.png'; break;
             case 'skullOrochi':
-            case 9059: return '../res/skullOrochi.png'; break;
+            case 9059: return '/api/images/thumbnail/jap/3/500/3572-skull.png'; break;
         }
         if (n === null || n === undefined)
             return '/api/images/common/noimage.png';
@@ -997,13 +997,6 @@
             case 'skullNami2':
             case 9032: return 'https://onepiece-treasurecruise.com/wp-content/uploads/nami_skull_c.png'; break;
             case 'skullBullet':
-            case 9033: return '../res/skullBullet.png'; break;
-            case 'skullKatakuri':
-            case 9034: return '../res/skullKatakuri.png'; break;
-            case 'skullWhitebeard':
-            case 9035: return '../res/skullWhitebeard.png'; break;
-            case 'skullCP9':
-            case 9036: return '../res/skullCP9.png'; break;
         }
         if (window.units[n - 1].incomplete)
             return 'https://onepiece-treasurecruise.com/wp-content/themes/onepiece-treasurecruise/images/noimage.png';
