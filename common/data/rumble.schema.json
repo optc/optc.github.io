@@ -658,7 +658,8 @@
                 "highest",
                 "lowest",
                 "above",
-                "below"
+                "below",
+                "exactly"
             ],
             "title": "TargetingPriority"
         },

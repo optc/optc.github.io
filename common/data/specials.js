@@ -13329,6 +13329,9 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "QCK" ? 2 : 1; },
         type: "type",
     },
+    3566:{
+        affinity: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+    },
     3567: {
         def: function(p) { return 0; },
         status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
@@ -13416,6 +13419,36 @@ window.specials = {
     },
     3579: {
         orb: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    3581: {
+        multiplier: 1,
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Powerhouse")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.75;
+        },
+    },
+    3582: {
+        multiplier: 1,
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Powerhouse")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.75;
+        },
+    },
+    3583:{
+        atk: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
+        type: "type",
     },
 };
 

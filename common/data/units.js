@@ -3564,7 +3564,7 @@ window.units = [
     [ "Izo & Kikunojo - Siblings Shouldering Their Liege's Will", "QCK", [ "Slasher", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1779, 782, 143, 3558, 1564, 287, 1 ],
     [ "Dogstorm - Sulong Challenging the Dragon", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1720, 704, 82, 3440, 1409, 164, 1 ],
     [ "Cat Viper - Sulong Challenging the Dragon", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1748, 697, 83, 3496, 1393, 166, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Broggy - For the Pride of the Elbaph", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 2131, 790, 85, null, null, null, null ],
     [ "Kurozumi Kanjuro - Headless Samurai Warriors", "STR", [ "Driven", "Striker" ], 5, 60, 4, 1, 99, 5000000, 1555, 753, 115, 3110, 1506, 230, 1 ],
     [ "Komurasaki - Oiran's Way of Life", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1319, 498, 170, 2771, 1378, 279, 1 ],
     [ "Shinobu - Mature Charm", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1288, 621, 150, 2896, 1414, 246, 1 ],
@@ -3578,6 +3578,10 @@ window.units = [
     [ "Robin - Emperor-Felling Flower", "QCK", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1614, 712, 119, 3228, 1424, 238, 1 ],
     [ "Sanji - Burning Black-Leg", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1616, 781, 96, 3233, 1563, 192, 1 ],
     [ "Sasaki - Superb Armored Division", "QCK", [ "Free Spirit", "Powerhouse" ], 5, 30, 5, 4, 99, 2000000, 1630, 740, 82, 3260, 1480, 164, 1 ],
+    [ "Hawkins - Headliner Punishing the Traitor", "PSY", [ "Cerebral", "Striker" ], 5, 40, 5, 3, 99, 4000000, 1577, 750, 88, null, null, null, null ],
+    [ "Urouge - Fallen Monk Calamity", "INT", [ "Powerhouse", "Striker" ], 5, 30, 5, 3, 70, 1066998, 1660, 402, 54, null, null, null, null ],
+    [ "\"Mad Monk\" Urouge - Fallen Monk Calamity", "INT", [ "Powerhouse", "Striker" ], 6, 55, 5, 5, 99, 5000000, 2237, 778, 93, null, null, null, null ],
+    [ "Dorry - For the Pride of the Elbaph", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 2065, 802, 92, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
