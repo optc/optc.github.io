@@ -500,17 +500,17 @@
         var ghostPoint = 5000;
         var globalExUnitPoint = 4986;
         switch(id){
-            case (globalExUnitPoint+0).toString(): return '/api/images/thumbnail/glo/5/000/5013.png';
-            case (globalExUnitPoint+1).toString(): return '/api/images/thumbnail/glo/5/000/5014.png';
-            case (globalExUnitPoint+2).toString(): return '/api/images/thumbnail/glo/5/000/5029.png';
-            case (globalExUnitPoint+3).toString(): return '/api/images/thumbnail/glo/5/000/5030.png';
-            case (globalExUnitPoint+4).toString(): return '/api/images/thumbnail/glo/5/000/5031.png';
-            case (globalExUnitPoint+5).toString(): return '/api/images/thumbnail/glo/5/000/5032.png';
-            // case (globalExUnitPoint+6).toString(): return '/api/images/thumbnail/glo/5/000/5046.png'; break;
-            case (globalExUnitPoint+7).toString(): return '/api/images/thumbnail/glo/5/000/5047.png';
-            case (globalExUnitPoint+8).toString(): return '/api/images/thumbnail/glo/5/000/5054.png';
-            case (globalExUnitPoint+9).toString(): return '/api/images/thumbnail/glo/5/000/5055.png';
-            case (globalExUnitPoint+10).toString(): return '/api/images/thumbnail/glo/5/000/5056.png';
+            case (globalExUnitPoint+0).toString(): return '/api/images/thumbnail/glo/5/000/5013.png'; break;
+            case (globalExUnitPoint+1).toString(): return '/api/images/thumbnail/glo/5/000/5014.png'; break;
+            case (globalExUnitPoint+2).toString(): return '/api/images/thumbnail/glo/5/000/5029.png'; break;
+            case (globalExUnitPoint+3).toString(): return '/api/images/thumbnail/glo/5/000/5030.png'; break;
+            case (globalExUnitPoint+4).toString(): return '/api/images/thumbnail/glo/5/000/5031.png'; break;
+            case (globalExUnitPoint+5).toString(): return '/api/images/thumbnail/glo/5/000/5032.png'; break;
+            case (globalExUnitPoint+6).toString(): return '/api/images/thumbnail/glo/5/000/5046.png'; break;
+            case (globalExUnitPoint+7).toString(): return '/api/images/thumbnail/glo/5/000/5047.png'; break;
+            case (globalExUnitPoint+8).toString(): return '/api/images/thumbnail/glo/5/000/5054.png'; break;
+            case (globalExUnitPoint+9).toString(): return '/api/images/thumbnail/glo/5/000/5055.png'; break;
+            case (globalExUnitPoint+10).toString(): return '/api/images/thumbnail/glo/5/000/5056.png'; break;
             case (ghostPoint+0).toString(): return '/api/images/thumbnail/jap/1/900/1983-1.png'; break;
             case (ghostPoint+1).toString(): return '/api/images/thumbnail/jap/1/900/1983-2.png'; break;
             case (ghostPoint+2).toString(): return '/api/images/thumbnail/jap/1/900/1983-INT.png'; break;
