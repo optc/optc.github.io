@@ -3582,6 +3582,11 @@ window.units = [
     [ "Urouge - Fallen Monk Calamity", "INT", [ "Powerhouse", "Striker" ], 5, 30, 5, 3, 70, 1066998, 1660, 402, 54, null, null, null, null ],
     [ "\"Mad Monk\" Urouge - Fallen Monk Calamity", "INT", [ "Powerhouse", "Striker" ], 6, 55, 5, 5, 99, 5000000, 2237, 778, 93, null, null, null, null ],
     [ "Dorry - For the Pride of the Elbaph", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 2065, 802, 92, null, null, null, null ],
+    [ "Nami - Tearful Plea", "DEX", [ "Free Spirit", "Striker" ], 5, 30, 5, 4, 99, 2000000, 1497, 717, 113, null, null, null, null ],
+    [ "Otama - Into the Battle With Komachiyo", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1525, 687, 118, null, null, null, null ],
+    [ "Usopp - Tearful Struggle", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, 2000000, 1573, 742, 92, null, null, null, null ],
+    [ "Donquixote Doflamingo - Tragedy at Minion Island", "DEX", [ "Driven", "Slasher" ], 5, 50, 4, 5, 99, 5000000, 1502, 785, 92, null, null, null, null ],
+    [ "Ulti - Splitting Headbutt", "STR", [ "Powerhouse", "Striker" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 98, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

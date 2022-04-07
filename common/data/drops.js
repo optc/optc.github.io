@@ -6307,6 +6307,16 @@ window.drops = {
             'Spooky Sea': [ 3567 ]
         },
 
+        {
+            name: 'Ulti',
+            dropID: 'treasuremap56',
+            thumb: 3588,
+            global: true,
+            nakama: 8358800,
+            gamewith: null,
+            'Spooky Sea': [ 3588 ]
+        },
+
     ],
 
     
@@ -7022,6 +7032,16 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'Rumble Missions': [ 3546 ],
+        },
+
+        {
+            name: 'Tragedy at Minion Island',
+            dropID: 'rumble23',
+            thumb: 3587,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'Rumble Missions': [ 3587 ],
         },
 
     ],
