@@ -852,7 +852,7 @@ window.matchers = [
     {
         name: 'Poison removers',
         target: 'special',
-        matcher: /removes.+poison.+duration completely/i,
+        matcher: /(removes|reduces).+poison.+duration completely/i,
         include: [ 2602, 2603, 3398 ],
     },
 
@@ -2382,7 +2382,7 @@ window.matchers = [
     {
         name: 'Poison removers',
         target: 'superSpecial',
-        matcher: /removes.+poison.+duration completely/i 
+        matcher: /(removes|reduces).+poison.+duration completely/i 
     },
 
     {
