@@ -423,13 +423,13 @@ window.matchers = [
     {
         name: 'Orb boosters',
         target: 'special',
-        matcher: /amplifies.+orb/i
+        matcher: /(amplifies.+orb|boost.+Orb Effects)/i
     },
     
     {
         name: 'Color Affinity boosters',
         target: 'special',
-        matcher: /Boosts the Color Affinity/i
+        matcher: /(Boosts the Color Affinity|Boosts Color Affinity)/i
     },
 
     {
@@ -1144,7 +1144,7 @@ window.matchers = [
     {
         name: 'Orb boosters',
         target: 'swap',
-        matcher: /amplifies.+orb/i
+        matcher: /(amplifies.+orb|boost.+Orb Effects)/i
     },
 
     
@@ -1687,13 +1687,13 @@ window.matchers = [
     {
         name: 'Orb boosters',
         target: 'support',
-        matcher: /amplifies.+orb/i
+        matcher: /(amplifies.+orb|boost.+Orb Effects)/i
     },
     
     {
         name: 'Color Affinity boosters',
         target: 'support',
-        matcher: /Boosts the Color Affinity/i
+        matcher: /(Boosts the Color Affinity|Boosts Color Affinity)/i
     },
 
     {
@@ -2007,13 +2007,13 @@ window.matchers = [
     {
         name: 'Orb boosters',
         target: 'superSpecial',
-        matcher: /amplifies.+orb/i
+        matcher: /(amplifies.+orb|boost.+Orb Effects)/i
     },
     
     {
         name: 'Color Affinity boosters',
         target: 'superSpecial',
-        matcher: /Boosts the Color Affinity/i
+        matcher: /(Boosts the Color Affinity|Boosts Color Affinity)/i
     },
 
     // {
