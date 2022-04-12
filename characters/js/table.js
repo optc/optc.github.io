@@ -148,7 +148,56 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
         // filter by cost
         if ((unit.cost < filters.cost[0] || unit.cost > filters.cost[1])) return false;
         // filter by drop
+        if(id == 2) console.log(filters);
+        if (filters.nonFarmable && Object.keys(filters.nonFarmable).length > 0){
+            // RR
+            if (filters.nonFarmable.rro && !flags.rro) return false;
+            if (filters.nonFarmable.rro === false && flags.rro) return false;
+            // limited RR
+            if (filters.nonFarmable.lrr && !flags.lrr) return false;
+            if (filters.nonFarmable.lrr === false && flags.lrr) return false;
+            // promo
+            if (filters.nonFarmable.promo && !flags.promo) return false;
+            if (filters.nonFarmable.promo === false && flags.promo) return false;
+            // special
+            if (filters.nonFarmable.special && !flags.special) return false;
+            if (filters.nonFarmable.special === false && flags.special) return false;
+            // rayleigh shop
+            if (filters.nonFarmable.shop && !flags.shop) return false;
+            if (filters.nonFarmable.shop === false && flags.shop) return false;
+            // trade port
+            if (filters.nonFarmable.tmshop && !flags.tmshop) return false;
+            if (filters.nonFarmable.tmshop === false && flags.tmshop) return false;
+            // TM RR
+            if (filters.nonFarmable.tmlrr && !flags.tmlrr) return false;
+            if (filters.nonFarmable.tmlrr === false && flags.tmlrr) return false;
+            // KC RR
+            if (filters.nonFarmable.kclrr && !flags.kclrr) return false;
+            if (filters.nonFarmable.kclrr === false && flags.kclrr) return false;
+            // PF RR
+            if (filters.nonFarmable.pflrr && !flags.pflrr) return false;
+            if (filters.nonFarmable.pflrr === false && flags.pflrr) return false;
+            // Support RR
+            if (filters.nonFarmable.slrr && !flags.slrr) return false;
+            if (filters.nonFarmable.slrr === false && flags.slrr) return false;
+        }
+        if (filters.farmable && Object.keys(filters.farmable).length > 0){
+            if (farmableLocations !== null) {
+                var farmable = CharUtils.checkFarmable(id, farmableLocations);
+                if (!farmable) return false;
+            }
+        }
         if (filters.drop) {
+            var isFarmable = CharUtils.isFarmable(id);
+            if (filters.drop == 'Farmable') {
+                if (id == 1 || !isFarmable) return false;
+            }
+            if (filters.drop != 'Farmable') {
+                if (id != 1 && isFarmable) return false;
+            }
+        }
+        /* if (filters.drop && false) {
+            if (id ==2) console.log(filters);
             var isFarmable = CharUtils.isFarmable(id);
             if (filters.drop == 'Farmable') {
                 if (id == 1 || !isFarmable) return false;
@@ -156,7 +205,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     var farmable = CharUtils.checkFarmable(id, farmableLocations);
                     if (!farmable) return false;
                 }
-            } else if (filters.drop != 'Farmable') {
+            }
+            if (filters.drop != 'Farmable') {
                 if (id != 1 && isFarmable) return false;
                 if (filters.nonFarmable) {
                     // RR
@@ -191,7 +241,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage, MATCHER_IDS
                     if (filters.nonFarmable.slrr === false && flags.slrr) return false;
                 }
             }
-        }
+        } */
         // exclusion filters
         if (filters.noBase && (evolutions[id] && evolutions[id].evolution)) return false;
         if (filters.noEvos && Utils.isEvolverBooster(unit)) return false;

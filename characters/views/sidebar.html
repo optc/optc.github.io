@@ -131,8 +131,8 @@
 </div>
 
 <div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.dropEnabled" ng-class="{ expanded: filters.farmEnabled }">
-    <span class="filter-header" ng-click="filters.farmEnabled = !filters.farmEnabled">
-        Farmable filters (Click Farmable Filter Above)
+    <span id="filter-subheader" class="filter-header" ng-click="filters.farmEnabled = !filters.farmEnabled">
+        Farmable filters
         <i class="pull-right fa fa-{{filters.farmEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
     </span>
     <span class="filter width-6 drop" ng-class="{ active: filters.farmable.Story }"
@@ -174,8 +174,8 @@
 </div>
 
 <div class="filter-container expandable conditional" id="farmable-filter" ng-show="filters.dropEnabled" ng-class="{ expanded: filters.nonfarmEnabled }">
-    <span class="filter-header" ng-click="filters.nonfarmEnabled = !filters.nonfarmEnabled">
-        Non-farmable filters (Click Non-Farmable Filter Above)
+    <span id="filter-subheader" class="filter-header" ng-click="filters.nonfarmEnabled = !filters.nonfarmEnabled">
+        Non-farmable filters
         <i class="pull-right fa fa-{{filters.nonfarmEnabled ? 'chevron-up' : 'chevron-down'}}"></i>
     </span>
     <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.lrr }"
