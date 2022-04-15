@@ -13496,6 +13496,64 @@ window.specials = {
     3588: {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
+    3589:{
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+        },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        type: "type",
+        multiplier: 2.5,
+        multiplier2: 35,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 3 : 2.5;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 40 : 35;
+            p.scope.notify({
+                text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3590:{
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+        },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        type: "type",
+        multiplier: 2.5,
+        multiplier2: 35,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 3 : 2.5;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 40 : 35;
+            p.scope.notify({
+                text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3591: {
+        atkPlus: function(p) { return [0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orbPlus: function(p) { return [0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        def: function(p) { return [1, 0.2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        status: function(p) { return p.defenseDown ? [1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Buff", "Defense Reduction & Status"][levels[n]] + ' boost. To switch to the ' + ["Buff", "Defense Reduction & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: '3209warning'
+            });
+        },
+    },
+    3592: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.5 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

@@ -482,6 +482,8 @@
             case 9058: return '/api/images/thumbnail/jap/3/500/3550-skull.png'; break;
             case 'skullOrochi':
             case 9059: return '/api/images/thumbnail/jap/3/500/3572-skull.png'; break;
+            case 'skullKuzan':
+            case 9060: return '/api/images/thumbnail/jap/3/500/3592-skull.png'; break;
         }
         if (n === null || n === undefined)
             return '/api/images/common/noimage.png';

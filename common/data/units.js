@@ -3587,6 +3587,10 @@ window.units = [
     [ "Usopp - Tearful Struggle", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, 2000000, 1573, 742, 92, 3146, 1484, 134, 1 ],
     [ "Donquixote Doflamingo - Tragedy at Minion Island", "DEX", [ "Driven", "Slasher" ], 5, 50, 4, 5, 99, 5000000, 1502, 785, 92, null, null, null, null ],
     [ "Ulti - Splitting Headbutt", "STR", [ "Powerhouse", "Striker" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 98, null, null, null, null ],
+    [ "Drake - Betting on Hope", "STR", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 699, 452, 45, null, null, null, null ],
+    [ "X Drake - Steadfast Army of One", "STR", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1542, 978, 97, null, null, null, null ],
+    [ "Roronoa Zoro - Advancing to the Top", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1273, 658, 148, null, null, null, null ],
+    [ "Kuzan - Surprising Former Navy Admiral", "PSY", [ "Striker", "Shooter" ], "6+", 65, 5, 5, 99, 5000000, 1860, 874, 173, 3720, 1749, 347, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

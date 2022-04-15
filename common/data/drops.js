@@ -6809,6 +6809,16 @@ window.drops = {
             'Kizuna Exchange': [ 9059 ],
         },
 
+        {
+            name: 'Kuzan',
+            dropID: 'kizuna34',
+            thumb: 3592,
+            global: true,
+            nakama: 9359200,
+            gamewith: null,
+            'Kizuna Exchange': [ 9060 ],
+        },
+
     ],
 
 
@@ -7035,8 +7045,18 @@ window.drops = {
         },
 
         {
-            name: 'Tragedy at Minion Island',
+            name: 'Fateful Struggle to the Death',
             dropID: 'rumble23',
+            thumb: 2025,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'Rumble Missions': [ 2024 ],
+        },
+
+        {
+            name: 'Tragedy at Minion Island',
+            dropID: 'rumble24',
             thumb: 3587,
             global: true,
             nakama: null,
