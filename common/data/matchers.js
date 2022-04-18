@@ -3067,9 +3067,20 @@ let matchers = {
         },
 
         {
+            name: 'Old Orb controllers',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /(Changes.+(orb|orbs))/i,
+        },
+
+        {
             name: 'Orb controllers',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(Changes.+(orb|orbs))/i,
+            submatchers: [
+                {
+                    type: 'orbs',
+                }
+            ],
         },
 
         {

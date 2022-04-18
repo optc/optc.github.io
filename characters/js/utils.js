@@ -301,14 +301,18 @@ CharUtils.saveToRegexCache = function(cacheKey, unitId, value) {
     regexCache[cacheKey][unitId] = value;
 }
 
-CharUtils.getOrbControllerData = function(id) {
-    if (orbControllerCache.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
-        return (orbControllerCache[id] || null);
-    var special = window.details[id].special;
-    var data = (special.constructor != String ? JSON.stringify(special) : special);
+CharUtils.getOrbControllerData = function(id, target) {
+    if ((orbControllerCache[id] && orbControllerCache[id][target] !== undefined) || !window.details[id] || !window.details[id][target])
+        return (orbControllerCache[id][target] || null);
+
+    if (!orbControllerCache[id]) {
+        orbControllerCache[id] = {};
+    }
+    var targetString = window.details[id][target];
+    var data = (targetString.constructor != String ? JSON.stringify(targetString) : targetString);
     var match = data.match(/(changes.+?orbs into.+?orbs)/gi);
     if (!match) {
-        orbControllerCache[id] = null;
+        orbControllerCache[id][target] = null;
         return null;
     }
     var result = { from: { }, to: { }, map: { } };
@@ -331,7 +335,8 @@ CharUtils.getOrbControllerData = function(id) {
             });
         }
     });
-    orbControllerCache[id] = result;
+
+    orbControllerCache[id][target] = result;
     return result;
 };
 
@@ -414,6 +419,7 @@ CharUtils.checkMatcher = function(matcher, id) {
  *
  * Submatcher operations will not be executed if the user has not yet entered
  * any value in a number-type submatcher, or if an option-type submatcher is turned off.
+ * @param {string} target The property in window.details that will be checked against, e.g. "captain", "special"
  * @param {object} submatcher One of `window.matchers[n].submatchers`
  * @param {object} matchObj The match object returned by matching the main matcher's regex
  * @param {string} cacheKey A prefix for the key to be used for storing/reading from the
@@ -423,10 +429,12 @@ CharUtils.checkMatcher = function(matcher, id) {
  * @param {number} id 1-based unit ID number
  * @returns {boolean}
  */
-CharUtils.checkSubmatcher = function(submatcher, matchObj, cacheKey, id) {
+CharUtils.checkSubmatcher = function(target, submatcher, matchObj, cacheKey, id) {
     var param = submatcher.param;
     if (typeof param === 'string')
         param = param.trim();
+    else if (param) // non-null non-string
+        param = JSON.stringify(param);
     if (!param) { // "separator"-type submatchers also won't have `param`.
         return true;
     }
@@ -506,6 +514,32 @@ CharUtils.checkSubmatcher = function(submatcher, matchObj, cacheKey, id) {
                 result = true;
                 break;
             }
+        }
+    } else if (submatcher.type == 'orbs') {
+        // use the raw `submatcher.param`, not the JSONified
+        var from = submatcher.param.ctrlFrom || [ ];
+        var to = submatcher.param.ctrlTo || [ ];
+        var orbData = CharUtils.getOrbControllerData(id, target);
+
+        // if `from` and `to` are both empty, return true, to ensure that
+        // deselecting all orbs will show all orb controllers
+        // CharUtils.getOrbControllerData uses a different regex that what is
+        // used by the main filter
+        if (!from.length && !to.length) {
+            result = true;
+        } else if (orbData) {
+            var mismatch = true;
+            if (from.length && !to.length)
+                mismatch = from.some(function(x) { return !orbData.from.hasOwnProperty(x); });
+            else if (!from.length && to.length)
+                mismatch = to.some(function(x) { return !orbData.to.hasOwnProperty(x); });
+            else {
+                mismatch = from.some(function(f) {
+                    return to.some(function(t) { return !orbData.map[f] || !orbData.map[f].hasOwnProperty(t); });
+                });
+            }
+            if (!mismatch)
+                result = true;
         }
     }
     CharUtils.saveToRegexCache(cacheKey, id, result);

@@ -221,32 +221,33 @@ directives.addCustomFilters = function($timeout, $compile) {
 
 directives.addOrbOptions = function($timeout, $compile) {
     return {
-        restrict: 'A',
-        link: function(scope,element,attrs) {
-            if (scope.target != 'special' || scope.group != 'Slot Change' || scope.name != 'Orb controllers')
-                return;
-            var orbs = { ctrlFrom: [ ], ctrlTo: [ ] };
-            var filter = $('<div id="controllers" ng-class="{ enabled: filters.custom[target][group].matchers[name].enabled }">' +
-                    '<span class="separator">&darr;</span></div>');
-            var separator = filter.find('.separator');
-            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G' ].forEach(function(type) {
-                var template = '<span class="filter orb %s" ng-class="{ active: filters.%f.indexOf(\'%s\') > -1 }" ' +
-                    'ng-model="filters.%f" ng-click="onOrbClick($event,\'%s\')">%S</span>';
-                separator.before($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlFrom')));
-                filter.append($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlTo')));
+        restrict: 'E',
+        replace: true,
+        template: '<div class="orb-controllers" ng-class="{ enabled: filters.custom[target][group].matchers[name].enabled }"></div>',
+        compile: function(element, attrs, transclude) {
+            var separator = '<span class="separator">&darr;</span>';
+            var htmlBeforeSeparator = "";
+            var htmlAfterSeparator = "";
+            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G', 'WANO', 'RAINBOW' ].forEach(function(type) {
+                var orbTemplate = `<span class="filter orb %s" ng-class="{ active: filters.custom[target][group].matchers[name].submatchers[j].param.%f.indexOf(\'%s\') > -1 }" ng-click="onOrbClick($event, filters.custom[target][group].matchers[name].submatchers[j], \'%f\', \'%s\')">%S</span>`;
+                orbTemplate = orbTemplate.replace(/%s/g,type).replace(/%S/g,type[0]);
+                htmlBeforeSeparator += orbTemplate.replace(/%f/g,'ctrlFrom');
+                htmlAfterSeparator += orbTemplate.replace(/%f/g,'ctrlTo');
             });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onOrbClick = function(e,type) {
-                var target = e.target.getAttribute('ng-model');
-                if (!target) return;
-                target = target.match(/filters\.(.+)$/)[1];
-                if (orbs[target].indexOf(type) == -1) orbs[target].push(type);
-                else orbs[target].splice(orbs[target].indexOf(type), 1);
-                orbs[target] = orbs[target].slice(-2);
-                scope.filters[target] = orbs[target];
+            element.html(htmlBeforeSeparator + separator + htmlAfterSeparator);
+            return function postLink(scope, element, attrs) {
+                scope.onOrbClick = function(e, submatcherObj, fromOrTo, type) {
+                    if (!submatcherObj.param)
+                        submatcherObj.param = { ctrlFrom: [], ctrlTo: [] };
+
+                    var orbClickedIndex = submatcherObj.param[fromOrTo].indexOf(type);
+                    if (orbClickedIndex == -1)
+                        submatcherObj.param[fromOrTo].push(type);
+                    else
+                        submatcherObj.param[fromOrTo].splice(orbClickedIndex, 1);
+                };
             };
-        }
+        },
     };
 };
 

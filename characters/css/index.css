@@ -318,20 +318,20 @@ input#burgerMenuState {
     border-bottom: 1px solid #aaa;
 }
 
-.type.filter, #controllers > span:not(.separator) {
+.type.filter, .orb-controllers > span:not(.separator) {
     border: none;
 }
 
-.type.filter:not(.active):not(:hover), #controllers > span:not(.separator):not(.active):not(:hover) {
+.type.filter:not(.active):not(:hover), .orb-controllers > span:not(.separator):not(.active):not(:hover) {
     opacity: 0.3;
 }
 
-.type.filter.active, #controllers > .active {
+.type.filter.active, .orb-controllers > .active {
     font-weight: bold;
     text-decoration: underline;
 }
 
-#class-filters, #controllers {
+#class-filters {
     height: 0;
     overflow: hidden;
     transition: 0.2s linear;
@@ -340,10 +340,6 @@ input#burgerMenuState {
 #class-filters.enabled{
     height: 109px;
     border-bottom: 1px solid #aaa;
-}
-
-#controllers.enabled {
-    height: 73px;
 }
 
 .STR       { background: salmon; }
@@ -549,7 +545,7 @@ input#burgerMenuState {
     box-shadow: inset 0 0 0 1px #7777ff;
 }
 
-.custom.filter:not(#controllers) > div:first-child:hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover, .submatcher-option:hover {
+.custom.filter:not(.orb-controllers) > div:first-child:hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover, .submatcher-option:hover {
     background-color: rgb(230,230,230);
 }
 
@@ -653,27 +649,27 @@ input#burgerMenuState {
     white-space: normal !important;
 }
 
-#controllers {
+.orb-controllers {
     padding: 0;
     cursor: default;
     display: block;
 }
 
-#controllers > span:not(.separator) {
-    width: 9.09090909%;
+.orb-controllers > span:not(.separator) {
+    width: 7.6923%;
     display: inline-block;
     padding: 2px 0;
     cursor: pointer;
 }
 
-#controllers > span.separator {
+.orb-controllers > span.separator {
     display: block;
     padding: 0 0 5px 0;
     background: rgb(240,240,240);
     text-align: center;
 }
 
-#controllers > span.separator ~ .filter {
+.orb-controllers > span.separator ~ .filter {
     margin-bottom: 0;
 }
 
