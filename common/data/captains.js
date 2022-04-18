@@ -365,8 +365,12 @@ window.captains = {
     308: {
         atk: function(p) { return p.unit.type == "DEX" ? 2.5 : 1; }
     },
+    309: {
+        rcv: function(p) { return 0.1; }
+    },
     310: {
-        atk: function(p) { return [1, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
+        atk: function(p) { return [1, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        rcv: function(p) { return [0.1, 1][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
     },
     311: {
         hitAtk: function(p) {
@@ -3809,9 +3813,11 @@ window.captains = {
     },
     1375: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return 0.5; },
     },
     1376: {
         atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.75 : 1; },
+        hp: function(p) { return 0.8; },
     },
     1377: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.3 : 1; },
@@ -5194,9 +5200,8 @@ window.captains = {
         atk: function(p) { return !p.unit.class.has("Striker") ? 1 : (((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 2.5 : 2); },
     },
     1716: {
-        atk: function(p) {
-            return p.unit.class.has("Driven") ? Math.min(3, 1.2 + 0.1 * p.turnCounter) : 1;
-        }
+        atk: function(p) { return p.unit.class.has("Driven") ? Math.min(3, 1.2 + 0.1 * p.turnCounter) : 1; },
+        hp: function(p) { return 0.5; },
     },
     1718: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 2.5, [ "Driven" ]); },
@@ -5379,7 +5384,7 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
-        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 0.5 : 1; },
+        rcv: function(p) { return 0.5; },
     },
     1763: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4.026275, [ "Powerhouse" ]); },
@@ -5395,7 +5400,7 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
-        rcv: function(p) { return p.unit.class.has("Powerhouse") ? 0.5 : 1; },
+        rcv: function(p) { return 0.5; },
     },
     1764: {
         atk: function(p) {
@@ -6609,11 +6614,11 @@ window.captains = {
     },
     2012: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? (p.orb == 'meat') ? 3.25 : 2 : 1; },
-        rcv: function(p) { return .2; }
+        rcv: function(p) { return 0.2; }
     },
     2013: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? (p.orb == 'meat') ? 3.25 : 2.25 : 1; },
-        rcv: function(p) { return .2; }
+        rcv: function(p) { return 0.2; }
     },
     2014: {
         atk: function(p) { return p.unit.class.has("Fighter") ? Math.max(2.25, 2.25 + .5 * Math.min(p.turnCounter,1)) : Math.max(1, 1 + .2 * Math.min(p.turnCounter,1)); },
@@ -8696,11 +8701,11 @@ window.captains = {
     },
     2472: {
         atk: function(p) { return p.percHP <= 50.0 ? 2.5 : 2; },
-        hp: function(p) { return .8; }
+        hp: function(p) { return 0.8; }
     },
     2473: {
         atk: function(p) { return p.percHP <= 50.0 ? 3 : 2.5; },
-        hp: function(p) { return .8; }
+        hp: function(p) { return 0.8; }
     },
     2474: {
         atk: function(p) { return p.classCount.Slasher == p.teamCount ? 1.75 : 1; },
@@ -12325,6 +12330,7 @@ window.captains = {
     },
     3509: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? 4 : 1; },
+        hp: function(p) { return 0.8; },
     },
     3510: {
         atk: function(p) { return p.percHP >= 99.0 ? [3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 2.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
