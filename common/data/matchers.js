@@ -156,13 +156,13 @@ function createTypesSubmatchers(groups, includeUniversal = true, universalRegex 
     return result;
 }
 
-function createClassesSubmatchers(groups, includeUniversal = true) {
+function createClassesSubmatchers(groups, includeUniversal = true, universalRegex = 'all') {
     var result = [];
     for (var [i, class_] of classes.entries()) {
         result.push({
             type: 'option',
             description: class_,
-            regex: new RegExp(class_ + (includeUniversal ? '|all' : ''), 'i'),
+            regex: new RegExp(class_ + (includeUniversal ? '|' + universalRegex : ''), 'i'),
             cssClasses: ['min-width-6'],
             groups: groups,
         });
@@ -170,58 +170,107 @@ function createClassesSubmatchers(groups, includeUniversal = true) {
     return result;
 }
 
-function createOrbsSubmatchers(orbs, groups, includeUniversal = true) {
+function createOrbsSubmatchers(orbs, groups, includeUniversal = true, universalRegex = 'all') {
     var result = [];
+
     for (var [i, orb] of orbs.entries()) {
+        var minWidth = 6;
+        if (orb.length <= 3)
+            minWidth = '2';
+        else if (orb.length <= 5)
+            minWidth = '3'
         result.push({
             type: 'option',
             description: orb,
-            regex: new RegExp('\\[' + orb + '\\]' + (includeUniversal ? '|all' : ''), 'i'),
-            cssClasses: ['min-width-' + (i < 5 ? '2' : '3')],
+            regex: new RegExp('\\[' + orb + '\\]' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+            cssClasses: ['min-width-' + minWidth],
             groups: groups,
         });
     }
-    result.push({
-        type: 'option',
-            description: 'Badly Matching',
-            regex: new RegExp('badly matching' + (includeUniversal ? '|all' : ''), 'i'),
-            cssClasses: ['min-width-6'],
-            groups: groups,
-    })
     return result;
 }
 
-function createPositionsSubmatchers(groups, includeUniversal = true, excludedSubmatchers = []) {
+function createPositionsSubmatchers(groups, includeUniversal = true, universalRegex = 'all', excludedSubmatchers = [], useRowsAndColumns = true) {
     const rows = ['Top', 'Middle', 'Bottom'];
     const columns = ['Left', 'Right'];
     var result = [];
-    for (var [i, row] of rows.entries()) {
-        if (!excludedSubmatchers.includes(row)) {
-            result.push({
-                type: 'option',
-                description: row + (i == 0 ? ' Row': ''),
-                regex: new RegExp(row + (includeUniversal ? '|all' : ''), 'i'),
-                cssClasses: ['min-width-4'],
-                groups: groups,
-            });
+    if (useRowsAndColumns) {
+        for (var [i, row] of rows.entries()) {
+            if (!excludedSubmatchers.includes(row)) {
+                result.push({
+                    type: 'option',
+                    description: row + (i == 0 ? ' Row': ''),
+                    regex: new RegExp(row + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+                    cssClasses: ['min-width-4'],
+                    groups: groups,
+                });
+            }
         }
-    }
-    for (var [i, col] of columns.entries()) {
-        if (!excludedSubmatchers.includes(col)) {
-            result.push({
-                type: 'option',
-                description: col + ' Column',
-                regex: new RegExp(col + (includeUniversal ? '|all' : ''), 'i'),
-                cssClasses: ['min-width-6'],
-                groups: groups,
-            });
+        for (var [i, col] of columns.entries()) {
+            if (!excludedSubmatchers.includes(col)) {
+                result.push({
+                    type: 'option',
+                    description: col + ' Column',
+                    regex: new RegExp(col + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+                    cssClasses: ['min-width-6'],
+                    groups: groups,
+                });
+            }
         }
+    } else {
+        // for the rows, this should catch "top and bottom rows" and the like
+        // by simply excluding "top right" from Friend Captain (top left),
+        // we can match "top row", "top left", "top and bottom rows", and "top" (like "top characters", in case the "row" is forgotten)
+        // of course, there is no "left and right columns", since that's just "all characters"
+        result.push({
+            type: 'option',
+            description: 'Friend Captain',
+            regex: new RegExp('left column|top(?! right)|Friend Captain' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+            cssClasses: ['min-width-6'],
+            groups: groups,
+        });
+        result.push({
+            type: 'option',
+            description: 'Captain',
+            regex: new RegExp('right column|top(?! left)|(?:^|(?!end ).{4})Captain' + (includeUniversal ? '|' + universalRegex : ''), 'i'), // should catch "the Captain", but not "Friend Captain"
+            cssClasses: ['min-width-6'],
+            groups: groups,
+        });
+        result.push({
+            type: 'option',
+            description: 'Middle Left',
+            regex: new RegExp('left column|middle(?! right)' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+            cssClasses: ['min-width-6'],
+            groups: groups,
+        });
+        result.push({
+            type: 'option',
+            description: 'Middle Right',
+            regex: new RegExp('right column|middle(?! left)' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+            cssClasses: ['min-width-6'],
+            groups: groups,
+        });
+        result.push({
+            type: 'option',
+            description: 'Bottom Left',
+            regex: new RegExp('left column|bottom(?! right)' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+            cssClasses: ['min-width-6'],
+            groups: groups,
+        });
+        result.push({
+            type: 'option',
+            description: 'Bottom Right',
+            regex: new RegExp('right column|bottom(?! left)' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
+            cssClasses: ['min-width-6'],
+            groups: groups,
+        });
     }
+
     if (!excludedSubmatchers.includes('Adjacent')) {
         result.push({
             type: 'option',
             description: 'Adjacent',
-            regex: new RegExp('adjacent' + (includeUniversal ? '|all' : ''), 'i'),
+            regex: new RegExp('adjacent' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
             cssClasses: ['min-width-4'],
             groups: groups,
         });
@@ -230,7 +279,7 @@ function createPositionsSubmatchers(groups, includeUniversal = true, excludedSub
         result.push({
             type: 'option',
             description: 'Selected',
-            regex: new RegExp('selected' + (includeUniversal ? '|all' : ''), 'i'),
+            regex: new RegExp('selected' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
             cssClasses: ['min-width-4'],
             groups: groups,
         });
@@ -239,7 +288,7 @@ function createPositionsSubmatchers(groups, includeUniversal = true, excludedSub
         result.push({
             type: 'option',
             description: 'Self',
-            regex: new RegExp('this|own|supported' + (includeUniversal ? '|all' : ''), 'i'),
+            regex: new RegExp('this|own|supported' + (includeUniversal ? '|' + universalRegex : ''), 'i'),
             cssClasses: ['min-width-4'],
             groups: groups,
         });
@@ -955,7 +1004,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([2, 3], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([2, 3], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -992,7 +1041,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([1], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([1], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -1053,7 +1102,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([2, 3], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([2, 3], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -1090,7 +1139,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([1], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([1], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -1146,7 +1195,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([2, 3], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([2, 3], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -1183,7 +1232,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([1], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([1], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -3001,6 +3050,13 @@ let matchers = {
                 },
                 ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB'], [1]),
                 {
+                    type: 'option',
+                    description: 'Badly Matching',
+                    regex: /Badly Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+                {
                     type: 'separator',
                     description: 'Affected types:',
                 },
@@ -3029,6 +3085,13 @@ let matchers = {
                     description: 'Beneficial orbs:',
                 },
                 ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB'], [1]),
+                {
+                    type: 'option',
+                    description: 'Badly Matching',
+                    regex: /Badly Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
                 {
                     type: 'separator',
                     description: 'Affected types:',
@@ -3187,17 +3250,111 @@ let matchers = {
         {
             name: 'Old Orb controllers',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(Changes.+(orb|orbs))/i,
+            regex: /(Changes.+?orbs?)/i,
         },
 
         {
             name: 'Orb Controller',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(Changes.+(orb|orbs))/i,
+            // the From orbs is optional in the ability description. If it is not mentioned,
+            // it is considered to be "Any" orb, just like "changes all orbs" (these are Any orbs)
+            // "changes the orb of this character into a Matching orb" (no From orb, so this is Any orb)
+
+            // the "of ____ characters" is optional. If it is not mentioned, it is considered "of all characters"
+            // "changes [BLOCK] orbs into [INT] orbs"
+
+            // ", including [BLOCK] orbs," is optional
+
+            // the From orbs part of the regex should not include "changes" (hence the tempered dot),
+            // which would mean that the regex would interlap with a different special.
+            // ex. "Changes own Type and both Classes to any selected combination, reduces Special Cooldown of all characters by 1 turn, changes all orbs, including [BLOCK] orbs, into [RCV] orbs" (3523)
+            // in this case, it's not really a problem since he changes all orbs anyway,
+            // but in case he changes only [STR] orbs, it would be a false positive when searching with "From Any orb", because there is "Type" (from "own Type and both Classes") in the first part.
+
+            // "changes all orbs of top and bottom row characters into Matching orbs"
+            // "Changes orbs of right column characters into [DEX], [STR] and [QCK], from top to bottom"
+            // "changes [STR], [QCK], [DEX], [PSY] and [INT] orbs of right column Shooter and Striker characters into Matching orbs"
+            regex: /changes (?:the )?((?:(?!changes)[^."])*?)orbs?(, including \[BLOCK\] orbs?,)? (?:of (?=((?:[^c."]+|c(?!har))*))\3characters? )?into([^."]+?)orbs?/i,
             submatchers: [
                 {
-                    type: 'orbs',
-                }
+                    type: 'separator',
+                    description: 'From orbs:'
+                },
+                {
+                    type: 'option',
+                    description: 'Any',
+                    regex: /^$|all/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+                {
+                    type: 'option',
+                    description: 'BLOCK',
+                    regex: /\[BLOCK\]/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1, 2], // the only one that includes group 2, so don't add [BLOCK] to `createOrbsSubmatchers`
+                },
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB', 'RAINBOW'], [1], false),
+                {
+                    type: 'option',
+                    description: 'Matching',
+                    regex: /(?:^|(?!Badly ).{6}|^.{0,5})\bMatching/i, // alternative for negative lookbehind for "Badly " and "Non-"
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+                {
+                    type: 'option',
+                    description: 'Badly Matching',
+                    regex: /Badly Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+                {
+                    type: 'separator',
+                    description: 'To orbs:' // To orbs won't have "Any", since simply not selecting any "To" orb does the same thing
+                },
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB', 'RAINBOW', 'WANO'], [4], false),
+                {
+                    type: 'option',
+                    description: 'Character\'s Orb',
+                    regex: /'s|s'/i, // match "this character's orb", "Luffy's orb"
+                    cssClasses: ['min-width-6'],
+                    groups: [4],
+                },
+                {
+                    type: 'option',
+                    description: 'Matching',
+                    regex: /(?:^|(?!Badly ).{6}|^.{0,5})\bMatching/i, // alternative for negative lookbehind for "Badly " and "Non-"
+                    cssClasses: ['min-width-6'],
+                    groups: [4],
+                },
+                {
+                    type: 'option',
+                    description: 'Badly Matching',
+                    regex: /Badly Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [4],
+                },
+                {
+                    type: 'separator',
+                    description: 'Affected characters:',
+                },
+                ...createUniversalSubmatcher([3], 'all|type|^$'),
+                {
+                    type: 'separator',
+                    description: 'Types:',
+                },
+                ...createTypesSubmatchers([3], true, 'all|type|^$'),
+                {
+                    type: 'separator',
+                    description: 'Classes:',
+                },
+                ...createClassesSubmatchers([3], true, 'all|^$'),
+                {
+                    type: 'separator',
+                    description: 'Positions:',
+                },
+                ...createPositionsSubmatchers([3], true, 'all|^$', ['Selected'], false),
             ],
         },
 
@@ -3376,7 +3533,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([2, 3], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([2, 3], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -3415,7 +3572,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([2, 3], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([2, 3], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 
@@ -3446,7 +3603,7 @@ let matchers = {
                     type: 'separator',
                     description: 'Affected positions:',
                 },
-                ...createPositionsSubmatchers([2, 3], true, ['Adjacent', 'Selected']),
+                ...createPositionsSubmatchers([2, 3], true, undefined, ['Adjacent', 'Selected']),
             ],
         },
 

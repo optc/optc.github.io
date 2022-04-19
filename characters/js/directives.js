@@ -225,38 +225,6 @@ directives.addCustomFilters = function($timeout, $compile) {
     };
 };
 
-directives.addOrbOptions = function($timeout, $compile) {
-    return {
-        restrict: 'E',
-        replace: true,
-        template: '<div class="orb-controllers" ng-class="{ enabled: filters.custom[target][group].matchers[name].enabled }"></div>',
-        compile: function(element, attrs, transclude) {
-            var separator = '<span class="separator">&darr;</span>';
-            var htmlBeforeSeparator = "";
-            var htmlAfterSeparator = "";
-            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G', 'WANO', 'RAINBOW' ].forEach(function(type) {
-                var orbTemplate = `<span class="filter orb %s" ng-class="{ active: filters.custom[target][group].matchers[name].submatchers[j].param.%f.indexOf(\'%s\') > -1 }" ng-click="onOrbClick($event, filters.custom[target][group].matchers[name].submatchers[j], \'%f\', \'%s\')">%S</span>`;
-                orbTemplate = orbTemplate.replace(/%s/g,type).replace(/%S/g,type[0]);
-                htmlBeforeSeparator += orbTemplate.replace(/%f/g,'ctrlFrom');
-                htmlAfterSeparator += orbTemplate.replace(/%f/g,'ctrlTo');
-            });
-            element.html(htmlBeforeSeparator + separator + htmlAfterSeparator);
-            return function postLink(scope, element, attrs) {
-                scope.onOrbClick = function(e, submatcherObj, fromOrTo, type) {
-                    if (!submatcherObj.param)
-                        submatcherObj.param = { ctrlFrom: [], ctrlTo: [] };
-
-                    var orbClickedIndex = submatcherObj.param[fromOrTo].indexOf(type);
-                    if (orbClickedIndex == -1)
-                        submatcherObj.param[fromOrTo].push(type);
-                    else
-                        submatcherObj.param[fromOrTo].splice(orbClickedIndex, 1);
-                };
-            };
-        },
-    };
-};
-
 directives.goBack = function($state) {
 	return {
 		restrict: 'A',
