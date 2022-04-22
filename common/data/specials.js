@@ -13551,7 +13551,7 @@ window.specials = {
         },
     },
     3592: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.5 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
         type: "type",
     },
 };
