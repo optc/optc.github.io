@@ -238,7 +238,7 @@ function createPositionsSubmatchers(groups, includeUniversal = true, excludedSub
         result.push({
             type: 'option',
             description: 'Self',
-            regex: new RegExp('this|own' + (includeUniversal ? '|all' : ''), 'i'),
+            regex: new RegExp('this|own|supported' + (includeUniversal ? '|all' : ''), 'i'),
             cssClasses: ['min-width-4'],
             groups: groups,
         });
@@ -246,13 +246,13 @@ function createPositionsSubmatchers(groups, includeUniversal = true, excludedSub
     return result;
 }
 
-function createUniversalSubmatcher(groups) {
+function createUniversalSubmatcher(groups, universalRegex = 'all|type') {
     var result = [];
     result.push({
         type: 'option',
         description: 'Universal',
         // interpret "Captain's Type", "Dominant Type", "each Type" as universal
-        regex: new RegExp('all|type', 'i'),
+        regex: new RegExp(universalRegex || 'all|type', 'i'),
         groups: groups,
     });
     return result;
@@ -1479,9 +1479,74 @@ let matchers = {
         },
 
         {
-            name: 'Additional Damage dealer',
+            name: 'Old Additional Damage dealer',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
             regex: /Additional.+Damage/i,
+        },
+
+        {
+            name: 'Additional Damage dealer',
+            targets: [ 'captain', 'sailor' ],
+            regex: /Adds ([?.\d]+)x(?:-([?.\d]+)x)? character's ATK as Additional (Typeless )?Damage/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Multiplier:',
+                    groups: [1, 2],
+                },
+            ],
+        },
+
+        {
+            name: 'Additional Damage dealer',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /Adds ([?.\d]+)x(?:-([?.\d]+)x)? (?:the )?((?:supported )?character's ATK|damage taken from enemies (?:in the previous turn|before the special is activated)) as Additional (Typeless )?Damage (?:to ([^."]+?)attacks )?for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Multiplier:',
+                    groups: [1, 2],
+                },
+                {
+                    type: 'separator',
+                    description: 'Multiplier basis:',
+                },
+                {
+                    type: 'option',
+                    description: 'Character\'s ATK',
+                    regex: /character's ATK/i,
+                    radioGroup: 'basis',
+                    groups: [3],
+                },
+                {
+                    type: 'option',
+                    description: 'Health Loss',
+                    regex: /^damage taken from enemies/i,
+                    radioGroup: 'basis',
+                    groups: [3],
+                },
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [6, 7],
+                },
+                ...createUniversalSubmatcher([5], 'all|type|^$'),
+                {
+                    type: 'separator',
+                    description: 'Affected types:',
+                },
+                ...createTypesSubmatchers([5]),
+                {
+                    type: 'separator',
+                    description: 'Affected classes:',
+                },
+                ...createClassesSubmatchers([5]),
+                {
+                    type: 'separator',
+                    description: 'Affected positions:',
+                },
+                ...createPositionsSubmatchers([5]),
+            ],
         },
 
         {
@@ -3462,7 +3527,7 @@ let matchers = {
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor' ],
             // must not match "ship bind" or "special bind"
             // there is no swap that will remove bind on themselves, because bind stops all abilities
-            regex: /(?:reduces|removes)(?: |[^."]+?, |[^."]+? and )bind[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:(?:for|on) (the supported )character)?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            regex: /(?:reduces|removes)(?: |[^."]+?, |[^."]+? and )bind[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))( (?:for|on) \w+ characters?)?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
@@ -3471,8 +3536,8 @@ let matchers = {
                 },
                 {
                     type: 'option',
-                    description: 'Supported',
-                    regex: /^this|^the supported/,
+                    description: 'Selected',
+                    regex: /./,
                     radioGroup: '1',
                     groups: [4],
                     cssClasses: ['min-width-6'],
