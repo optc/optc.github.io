@@ -907,7 +907,7 @@ let matchers = {
         },
 
         {
-            name: 'HP-based damage dealers',
+            name: 'Old HP-based damage dealers',
             targets: [ 'special' ],
             regex: /specialProportional/i,
         },
