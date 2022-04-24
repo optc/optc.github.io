@@ -311,7 +311,12 @@ input#burgerMenuState {
 
 #leftContainer .custom.filter .custom.filter.submatchers-toggler,
 #leftContainer .custom.filter > .collapse {
-    background-color: red;
+    background-color: #dd6060;
+}
+
+#leftContainer .custom.filter .custom.filter.submatchers-toggler:hover,
+#leftContainer .custom.filter > .collapse {
+    background-color: #FF9090;
 }
 
 .filter-container:last-child > .filter:last-child {
