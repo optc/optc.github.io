@@ -15,7 +15,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 		replace: true,
 		template: '<table id="mainTable" class="table table-striped-column panel panel-default"></table>',
 		link: function(scope, element, attrs) {
-			var table = element.dataTable({
+			window.charTable = element.dataTable({
 				iDisplayLength: $storage.get('unitsPerPage', 10),
 				stateSave: true,
 				data: scope.table.data,
@@ -127,147 +127,127 @@ directives.autoFocus = function($timeout) {
 	};
 };
 
-directives.addCaptainOptions = function($timeout, $compile, MATCHER_IDS) {
-    var TARGET = MATCHER_IDS['captain.ClassBoostingCaptains'];
+directives.animateCollapse = function($timeout) {
     return {
-        restrict: 'A',
+        restrict: 'E',
+        replace: true,
+        transclude: true,
+        template: `<span>
+        <ng-transclude></ng-transclude>
+        <i class="{{ faClasses ? faClasses : 'fa fa-chevron-down pull-right' }}"></i>
+    </span>`,
+        scope: {}, // empty isolate scope for `scope.faClasses`
         link: function(scope, element, attrs) {
-            if (scope.n !== TARGET) return;
-            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
-            classes.forEach(function(x,n) {
-                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classCaptain == \'%s\' }" ' +
-                    'ng-click="onCaptainClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
+            if (attrs.faClasses) { // option to override font awesome classes
+                scope.faClasses = attrs.faClasses;
+            }
+            element.click(()=>{
+                var collapsibleElement = element.next();
+                if (collapsibleElement.hasClass('collapse')) {
+                    element.next().collapse('toggle');
+                }
             });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onCaptainClick = function(e,type) {
-                scope.filters.classCaptain = (scope.filters.classCaptain == type ? null : type);
-            };
-        }
+
+            /* add the event handlers after the DOM is fully loaded/compiled.
+            otherwise, the event handlers won't work, likely because the collapsible
+            element is replaced when using directives that use "replace: true"
+            */
+            $timeout(()=>{
+                // this will automatically flip/revert the arrow when the
+                // collapse animation will start. I tried putting this in an
+                // ngClass directive but all my attempts failed (might be due to
+                // an old Angular version? dunno. - @CodeYan)
+                var collapsibleElement = element.next()
+                if (collapsibleElement.hasClass('collapse')) {
+                    collapsibleElement.on('hide.bs.collapse', (e) => {
+                        element.find('i').first().removeClass('fa-flip-vertical');
+                        e.stopPropagation();
+                    })
+                    collapsibleElement.on('show.bs.collapse', (e) => {
+                        element.find('i').first().addClass('fa-flip-vertical');
+                        e.stopPropagation();
+                    })
+                }
+            })
+
+        },
+    }
+}
+
+directives.addCustomFilters = function($timeout, $compile) {
+    return {
+        restrict: 'E',
+        replace: true,
+        templateUrl: 'views/custom-filters.html',
+        scope: { target: '@', filterData: '=', filters: '=' },
+        link: function(scope, element, attrs) {
+            // turns off all other options in a radio group
+            scope.toggleRadioGroup = function (matcher, submatcherIndex, radioGroup = null) {
+                var submatchers = scope.filters.custom[matcher.target][matcher.group].matchers[matcher.name].submatchers;
+                if (radioGroup) {
+                    for (const [j, submatcher] of submatchers.entries()) {
+                        if (submatcherIndex != j && matcher.submatchers[j].type == 'option' && matcher.submatchers[j].radioGroup == radioGroup)
+                            submatcher.param = false;
+                    }
+                }
+                submatchers[submatcherIndex].param = !submatchers[submatcherIndex].param;
+            }
+            // called when a matcher is toggled, should debounce during the collapse animation
+            // of submatchers div
+            scope.toggleMatcher = function ($event, matcher) {
+                // debounce click during collapse animation, so the filter won't show
+                // the submatchers when it is turned off with a double click
+                var targetElement = $event.target.nextElementSibling;
+                if (targetElement){
+                    if (targetElement.classList.contains('collapsing')){
+                        return;
+                    }
+                    $(targetElement).collapse('toggle');
+                }
+
+                var matcherObj = scope.filters.custom[matcher.target][matcher.group].matchers[matcher.name];
+                matcherObj.enabled = !matcherObj.enabled;
+
+            }
+            scope.getCssClasses = function (submatcher) {
+                var classes = ['min-width-12']; //default, may be overridden
+                if (submatcher.cssClasses)
+                    classes = submatcher.cssClasses;
+                return classes;
+            }
+        },
     };
 };
 
-directives.addSailorOptions = function($timeout, $compile, MATCHER_IDS) {
-    //TO DO ONCE WE FIND OUT WHAT SAILOR ABILITIES DO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    var TARGET = MATCHER_IDS['sailor.ClassBoostingSailors'];
+directives.addOrbOptions = function($timeout, $compile) {
     return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            if (scope.n !== TARGET) return;
-            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
-            classes.forEach(function(x,n) {
-                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSailor == \'%s\' }" ' +
-                    'ng-click="onSailorClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
+        restrict: 'E',
+        replace: true,
+        template: '<div class="orb-controllers" ng-class="{ enabled: filters.custom[target][group].matchers[name].enabled }"></div>',
+        compile: function(element, attrs, transclude) {
+            var separator = '<span class="separator">&darr;</span>';
+            var htmlBeforeSeparator = "";
+            var htmlAfterSeparator = "";
+            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G', 'WANO', 'RAINBOW' ].forEach(function(type) {
+                var orbTemplate = `<span class="filter orb %s" ng-class="{ active: filters.custom[target][group].matchers[name].submatchers[j].param.%f.indexOf(\'%s\') > -1 }" ng-click="onOrbClick($event, filters.custom[target][group].matchers[name].submatchers[j], \'%f\', \'%s\')">%S</span>`;
+                orbTemplate = orbTemplate.replace(/%s/g,type).replace(/%S/g,type[0]);
+                htmlBeforeSeparator += orbTemplate.replace(/%f/g,'ctrlFrom');
+                htmlAfterSeparator += orbTemplate.replace(/%f/g,'ctrlTo');
             });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onSailorClick = function(e,type) {
-                scope.filters.classSailor = (scope.filters.classSailor == type ? null : type);
-            };
-        }
-    };
-};
+            element.html(htmlBeforeSeparator + separator + htmlAfterSeparator);
+            return function postLink(scope, element, attrs) {
+                scope.onOrbClick = function(e, submatcherObj, fromOrTo, type) {
+                    if (!submatcherObj.param)
+                        submatcherObj.param = { ctrlFrom: [], ctrlTo: [] };
 
-directives.addSpecialOptions = function($timeout, $compile, MATCHER_IDS) {
-    var TARGET = MATCHER_IDS['special.ClassBoostingSpecials'];
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            if (scope.n !== TARGET) return;
-            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
-            classes.forEach(function(x,n) {
-                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSpecial == \'%s\' }" ' +
-                    'ng-click="onSpecialClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
-            });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onSpecialClick = function(e,type) {
-                scope.filters.classSpecial = (scope.filters.classSpecial == type ? null : type);
+                    var orbClickedIndex = submatcherObj.param[fromOrTo].indexOf(type);
+                    if (orbClickedIndex == -1)
+                        submatcherObj.param[fromOrTo].push(type);
+                    else
+                        submatcherObj.param[fromOrTo].splice(orbClickedIndex, 1);
+                };
             };
-        }
-    };
-};
-
-directives.addSupportOptions = function($timeout, $compile, MATCHER_IDS) {
-    var TARGET = MATCHER_IDS['support.ClassBoostingSupports'];
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            if (scope.n !== TARGET) return;
-            var filter = $('<div id="class-filters" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var classes = [ 'Fighter', 'Shooter', 'Slasher', 'Striker', 'Free Spirit', 'Cerebral', 'Powerhouse', 'Driven' ];
-            classes.forEach(function(x,n) {
-                var template = '<span class="filter subclass %c" ng-class="{ active: filters.classSupport == \'%s\' }" ' +
-                    'ng-click="onSupportClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
-            });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onSupportClick = function(e,type) {
-                scope.filters.classSupport = (scope.filters.classSupport == type ? null : type);
-            };
-        }
-    };
-};
-
-directives.addOrbOptions = function($timeout, $compile, MATCHER_IDS) {
-    var TARGET = MATCHER_IDS['special.OrbControllers'];
-    return {
-        restrict: 'A',
-        link: function(scope,element,attrs) {
-            if (scope.n !== TARGET) return;
-            var orbs = { ctrlFrom: [ ], ctrlTo: [ ] };
-            var filter = $('<div id="controllers" ng-class="{ enabled: filters.custom[' + TARGET + '] }">' +
-                    '<span class="separator">&darr;</span></div>');
-            var separator = filter.find('.separator');
-            [ 'STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BLOCK', 'EMPTY', 'BOMB', 'G' ].forEach(function(type) {
-                var template = '<span class="filter orb %s" ng-class="{ active: filters.%f.indexOf(\'%s\') > -1 }" ' +
-                    'ng-model="filters.%f" ng-click="onOrbClick($event,\'%s\')">%S</span>';
-                separator.before($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlFrom')));
-                filter.append($(template.replace(/%s/g,type).replace(/%S/g,type[0]).replace(/%f/g,'ctrlTo')));
-            });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onOrbClick = function(e,type) {
-                var target = e.target.getAttribute('ng-model');
-                if (!target) return;
-                target = target.match(/filters\.(.+)$/)[1];
-                if (orbs[target].indexOf(type) == -1) orbs[target].push(type);
-                else orbs[target].splice(orbs[target].indexOf(type), 1);
-                orbs[target] = orbs[target].slice(-2);
-                scope.filters[target] = orbs[target];
-            };
-        }
-    };
-};
-
-directives.addDebuffOptions = function($timeout, $compile, MATCHER_IDS) {
-    var TARGET = MATCHER_IDS['special.DebuffReducingSpecials'];
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            if (scope.n !== TARGET) return;
-            var filter = $('<div id="debuff" ng-class="{ enabled: filters.custom[' + TARGET + '] }"></div>');
-            var debuffs = [ 'Bind', 'Despair', 'Silence', 'Paralysis', 'Blindness', 'Poison', 'Anti-Healing', 'Chain Limit' ];
-            debuffs.forEach(function(x,n) {
-                var template = '<span class="filter debuff %c" ng-class="{ active: filters.debuffs == \'%s\' }" ' +
-                    'ng-click="onDebuffClick($event,\'%s\')">%s</span>';
-                filter.append($(template.replace(/%s/g,x).replace(/%c/,'width-6')));
-            });
-            element.after(filter);
-            $compile(filter)(scope);
-            scope.onDebuffClick = function(e,type) {
-                //console.log(scope.filters.debuffs);
-                scope.filters.debuffs = (scope.filters.debuffs == type ? null : type);
-            };
-        }
+        },
     };
 };
 
@@ -505,90 +485,94 @@ directives.addTags = function($stateParams, $rootScope) {
                 element.append($('<span class="tag flag">Raid & fortnight only</div>'));
             // matchers
             if (!data) return;
-            matchers.forEach(function(matcher) {
-                var name;
-                if (!data[matcher.target])
-                    return;
-                let target = (data[matcher.target].constructor == String)
-                    ? data[matcher.target]
-                    : JSON.stringify(data[matcher.target]);
+            for (const target in window.matchers) {
+                for (const group in window.matchers[target]) {
+                    for (var name in window.matchers[target][group]) {
+                        var matcher = window.matchers[target][group][name];
+                        if (!data[matcher.target])
+                            break;
+                        let targetString = (data[matcher.target].constructor == String)
+                            ? data[matcher.target]
+                            : JSON.stringify(data[matcher.target]);
 
-                // captain effects
-                if (matcher.target == 'captain' && matcher.matcher.test(target)) {
-                    name = matcher.name;
-                    if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
-                    else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag captain">' + name + '</div>'));
-                }
-                // sailor effects
-                if (matcher.target.indexOf('sailor') === 0 && !(data[matcher.target] === undefined)) {
-                    if (data[matcher.target].base){
-                        for (var sailor in data[matcher.target]){
-                            if (matcher.matcher.test(data[matcher.target][sailor])){
-                                name = matcher.name;
-                                if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
-                                else name = name.replace(/s$/,'');
-                                name = name.replace(/iing/,'ying');
-                                if (name != "Has Sailor Ability sailor"){
+                        // captain effects
+                        if (matcher.target == 'captain' && matcher.regex.test(targetString)) {
+                            name = matcher.name;
+                            if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
+                            else name = name.replace(/s$/,'');
+                            name = name.replace(/iing/,'ying');
+                            element.append($('<span class="tag captain">' + name + '</div>'));
+                        }
+                        // sailor effects
+                        if (matcher.target.indexOf('sailor') === 0 && !(data[matcher.target] === undefined)) {
+                            if (data[matcher.target].base){
+                                for (var sailor in data[matcher.target]){
+                                    if (matcher.regex.test(data[matcher.target][sailor])){
+                                        name = matcher.name;
+                                        if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                                        else name = name.replace(/s$/,'');
+                                        name = name.replace(/iing/,'ying');
+                                        if (name != "Has Sailor Ability sailor"){
+                                            element.append($('<span class="tag sailor">' + name + '</div>'));
+                                        }
+                                    }
+                                }
+                            }
+                            else{
+                                if (matcher.regex.test(data[matcher.target])){
+                                    name = matcher.name;
+                                    if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                                    else name = name.replace(/s$/,'');
+                                    name = name.replace(/iing/,'ying');
                                     element.append($('<span class="tag sailor">' + name + '</div>'));
                                 }
                             }
                         }
-                    }
-                    else{
-                        if (matcher.matcher.test(data[matcher.target])){
+                        // specials
+                        if (matcher.target.indexOf('special') === 0 && matcher.regex.test(targetString)) {
                             name = matcher.name;
-                            if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                            if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
                             else name = name.replace(/s$/,'');
                             name = name.replace(/iing/,'ying');
-                            element.append($('<span class="tag sailor">' + name + '</div>'));
+                            element.append($('<span class="tag special">' + name + '</div>'));
+                        }
+                        // limit
+                        if (matcher.target.indexOf('limit') === 0 && matcher.regex.test(targetString)) {
+                            name = matcher.name;
+                            if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
+                            else name = name.replace(/s$/,'');
+                            name = name.replace(/iing/,'ying');
+                            if (name != "Has Limit Break limit"){
+                                element.append($('<span class="tag limit">' + name + '</div>'));
+                            }
+                        }
+                        // potentials
+                        if (matcher.target.indexOf('potential') === 0 && matcher.regex.test(targetString)) {
+                            name = matcher.name;
+                            if (!/potential$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'');
+                            else name = name.replace(/s$/,'');
+                            name = name.replace(/iing/,'ying');
+                            element.append($('<span class="tag potential">' + name + '</div>'));
+                        }
+                        // super specials
+                        if (matcher.target === 'superSpecial' && matcher.regex.test(targetString)) {
+                            name = matcher.name;
+                            if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
+                            else name = name.replace(/s$/,'').replace(/special/i, 'super special');
+                            name = name.replace(/iing/,'ying');
+                            element.append($('<span class="tag superSpecial">' + name + '</div>'));
+                        }
+                        // support
+                        if (matcher.target === 'support' && matcher.regex.test(targetString)) {
+                            name = matcher.name;
+                            if (!/support$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' support';
+                            else name = name.replace(/s$/,'');
+                            name = name.replace(/iing/,'ying');
+                            element.append($('<span class="tag support">' + name + '</div>'));
                         }
                     }
                 }
-                // specials
-                if (matcher.target.indexOf('special') === 0 && matcher.matcher.test(target)) {
-                    name = matcher.name;
-                    if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
-                    else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag special">' + name + '</div>'));
-                }
-                // limit
-                if (matcher.target.indexOf('limit') === 0 && matcher.matcher.test(target)) {
-                    name = matcher.name;
-                    if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
-                    else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
-                    if (name != "Has Limit Break limit"){
-                        element.append($('<span class="tag limit">' + name + '</div>'));
-                    }
-                }
-                // potentials
-                if (matcher.target.indexOf('potential') === 0 && matcher.matcher.test(target)) {
-                    name = matcher.name;
-                    if (!/potential$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'');
-                    else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag potential">' + name + '</div>'));
-                }
-                // super specials
-                if (matcher.target === 'superSpecial' && matcher.matcher.test(target)) {
-                    name = matcher.name;
-                    if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
-                    else name = name.replace(/s$/,'').replace(/special/i, 'super special');
-                    name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag superSpecial">' + name + '</div>'));
-                }
-                // support
-                if (matcher.target === 'support' && matcher.matcher.test(target)) {
-                    name = matcher.name;
-                    if (!/support$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' support';
-                    else name = name.replace(/s$/,'');
-                    name = name.replace(/iing/,'ying');
-                    element.append($('<span class="tag support">' + name + '</div>'));
-                }
-            });
+            };
         }
     };
 };

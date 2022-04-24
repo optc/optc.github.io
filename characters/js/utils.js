@@ -8,6 +8,14 @@ var reverseDropMap = null;
 var alternateDropMap = null;
 var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Rookie Mission': 4, 'Fortnight': 8, 'Raid': 16, 'Coliseum': 32, 'Treasure Map': 64, 'Ambush': 128, 'Kizuna Clash': 256, 'Arena': 512, 'Pirate Rumble': 1024, 'Special': 2048 };
 
+var comparators = {
+    "<": (a, b) => a < b,
+    "<=": (a, b) => a <= b,
+    ">": (a, b) => a > b,
+    ">=": (a, b) => a >= b,
+    "=": (a, b) => a == b,
+}
+
 var generateReverseDropMap = function() {
     reverseDropMap = { };
     for (var type in drops) {
@@ -53,10 +61,20 @@ CharUtils.generateSearchParameters = function(query, filters) {
     if (filters.class && filters.class.constructor != RegExp) filters.class = new RegExp(filters.class,'i');
     var temp = jQuery.extend({ },filters);
     temp.custom = [ ];
-    if (filters.custom) {
-        for (var i=0;i<filters.custom.length;++i) {
-            if (filters.custom[i])
-                temp.custom.push(window.matchers[i]);
+    for (const target in filters.custom) {
+        for (const group in filters.custom[target]) {
+            for (const name in filters.custom[target][group].matchers) {
+                if (filters.custom[target][group].matchers[name].enabled) {
+                    var matcherTemp = {...window.matchers[target][group][name]}; // clone to avoid affecting window.matchers
+                    if (matcherTemp.submatchers) {
+                        for (const [j, submatcher] of matcherTemp.submatchers.entries()) {
+                            // avoid affecting submatchers in window.matchers
+                            matcherTemp.submatchers[j] = {...submatcher, ...{param: filters.custom[target][group].matchers[name].submatchers[j].param}};
+                        }
+                    }
+                    temp.custom.push(matcherTemp);
+                }
+            }
         }
     }
     if (Object.keys(temp).length > 0 || temp.custom.length > 0) {
@@ -172,7 +190,7 @@ CharUtils.getFarmableVersions = function (id) {
     }
 
     return farmableVersions;
-} 
+}
 
 CharUtils.searchTandems = function(id) {
     var result = [ ];
@@ -240,8 +258,8 @@ CharUtils.getDayOfWeek = function(japan, ignore) {
 CharUtils.getIslandBonuses = function(y, day) {
     var result = [ ];
     if (day !== undefined) {
-        if (day == CharUtils.getDayOfWeek(false)) result.push('GL:today'); 
-        if (day == CharUtils.getDayOfWeek(true, true)) result.push('JP:today'); 
+        if (day == CharUtils.getDayOfWeek(false)) result.push('GL:today');
+        if (day == CharUtils.getDayOfWeek(true, true)) result.push('JP:today');
     } else {
         var getBonus = function(x) {
             if (x < 0) return null;
@@ -269,16 +287,32 @@ CharUtils.getStatOfUnit = function(unit, stat, level) {
  * Caching *
  ***********/
 
-var orbControllerCache = { }, regexCache = { }, classCache = { captain: { }, special: { }, sailor: { } };
+var orbControllerCache = { }, regexCache = { }, jsonCache = { }, classCache = { captain: { }, special: { }, sailor: { } };
 
-CharUtils.getOrbControllerData = function(id) {
-    if (orbControllerCache.hasOwnProperty(id) || !window.details[id] || !window.details[id].special)
-        return (orbControllerCache[id] || null);
-    var special = window.details[id].special;
-    var data = (special.constructor != String ? JSON.stringify(special) : special);
+CharUtils.getFromRegexCache = function(cacheKey, unitId) {
+    if (regexCache[cacheKey] && regexCache[cacheKey].hasOwnProperty(unitId))
+        return regexCache[cacheKey][unitId];
+    return undefined;
+}
+
+CharUtils.saveToRegexCache = function(cacheKey, unitId, value) {
+    if (!regexCache.hasOwnProperty(cacheKey))
+        regexCache[cacheKey] = { };
+    regexCache[cacheKey][unitId] = value;
+}
+
+CharUtils.getOrbControllerData = function(id, target) {
+    if ((orbControllerCache[id] && orbControllerCache[id][target] !== undefined) || !window.details[id] || !window.details[id][target])
+        return (orbControllerCache[id][target] || null);
+
+    if (!orbControllerCache[id]) {
+        orbControllerCache[id] = {};
+    }
+    var targetString = window.details[id][target];
+    var data = (targetString.constructor != String ? JSON.stringify(targetString) : targetString);
     var match = data.match(/(changes.+?orbs into.+?orbs)/gi);
     if (!match) {
-        orbControllerCache[id] = null;
+        orbControllerCache[id][target] = null;
         return null;
     }
     var result = { from: { }, to: { }, map: { } };
@@ -301,43 +335,223 @@ CharUtils.getOrbControllerData = function(id) {
             });
         }
     });
-    orbControllerCache[id] = result;
+
+    orbControllerCache[id][target] = result;
     return result;
 };
 
 CharUtils.checkMatcher = function(matcher, id) {
-    var target = window.details[id][matcher.target], name = matcher.target + '.' + matcher.name, result;
-    if (regexCache[name] && regexCache[name].hasOwnProperty(id)) return regexCache[name][id];
-    else if (!target) result = false;
-    else if (matcher.include && matcher.include.indexOf(id) != -1) result = true;
-    else {
-        if (target.constructor != String) target = JSON.stringify(target);
-        result = matcher.matcher.test(target);
+    var target = matcher.target;
+    var targetString = window.details[id][matcher.target];
+    // It is unlikely for VS units to get a super special, so combine them when matching
+    if (matcher.target == "superSpecial" && window.details[id].VSSpecial) {
+        target = "VSSpecial";
+        targetString = window.details[id]["VSSpecial"];
     }
-    if (!regexCache.hasOwnProperty(name)) regexCache[name] = { };
-    regexCache[name][id] = result;
+
+    var name = target + '.' + matcher.group + '.' + matcher.name;
+    var result = false;
+
+    if (!targetString)
+        return false;
+    else if (matcher.include && matcher.include.indexOf(id) != -1) // specified units
+        result = true;
+
+    if (targetString.constructor != String)
+        targetString = JSON.stringify(targetString);
+    if (matcher.submatchers) {
+        // only exit if false, because even if it's true, the submatcher params
+        // can be different (may become false when submatchers are evaluated)
+        if (CharUtils.getFromRegexCache(name, id) === false) {
+            return false;
+        }
+        // RegExp.exec() because some ability descriptions have more than 1 value, like captain abilities.
+        // in such cases, if at least one matches, return true ("OR" behavior)
+        // regex objects should have the 'global' flag to match multiple times
+        // DON'T use the global flag in `window.matchers` as that will break
+        // `CharUtils.addTags` and potentially in other areas due to `RegExp:lastIndex`.
+        // so we recompile here instead.
+
+        // If you need the extra performance improvement from not recompiling,
+        // make sure that all code that use the regex with the global flag
+        // set the `lastIndex` of the regex object to 0 after all operations.
+        var regex = new RegExp(matcher.regex, 'ig');
+        var matchIndex = -1;
+        while ((match = regex.exec(targetString)) !== null) {
+            matchIndex += 1;
+
+            // for matchers with multiple submatchers, execute an "AND" operation.
+            // this makes it possible to search for a specific multiplier and turns.
+            var allSubmatchersSuccess = true;
+            for (var [i, submatcher] of matcher.submatchers.entries()){
+                // must include matchIndex as there can be many matches for a unit,
+                // and the first ones may be false for the submatchers, but the
+                // last one returns true
+                var cacheKey = name + '.match' + matchIndex + '.sub' + i;
+                if (!CharUtils.checkSubmatcher(target, submatcher, match, cacheKey, id)) {
+                    allSubmatchersSuccess = false;
+                    break;
+                }
+            }
+
+            if (allSubmatchersSuccess) {
+                result = true;
+                break;
+            }
+        }
+        CharUtils.saveToRegexCache(name, id, matchIndex > -1);
+    } else {
+        if ((result = CharUtils.getFromRegexCache(name, id)) !== undefined) {
+            return result;
+        }
+
+        result = matcher.regex.test(targetString);
+        CharUtils.saveToRegexCache(name, id);
+    }
     return result;
 };
 
-CharUtils.isClassBooster = function(target, id, clazz) {
-    var data = window.details[id][target], result;
-    if (!classCache[target].hasOwnProperty(clazz)) classCache[target][clazz] = { };
-    if (classCache[target][clazz].hasOwnProperty(id)) return classCache[target][clazz][id];
-    if (!data) result = false;
-    else {
-        if (data.constructor != String) data = JSON.stringify(data);
-        result = (new RegExp('of.+' + clazz + '.+characters')).test(data);
+/**
+ * Evaluates a submatcher against the match object returned by evaluating the main
+ * regex. This performs an "OR" operation among the `groups` specified in the
+ * submatcher, as the different groups will likely yield different values, and some
+ * are optional groups.
+ *
+ * Submatcher operations will not be executed if the user has not yet entered
+ * any value in a number-type submatcher, or if an option-type submatcher is turned off.
+ * @param {string} target The property in window.details that will be checked against, e.g. "captain", "special"
+ * @param {object} submatcher One of `window.matchers[n].submatchers`
+ * @param {object} matchObj The match object returned by matching the main matcher's regex
+ * @param {string} cacheKey A prefix for the key to be used for storing/reading from the
+ * `regexCache` for submatchers. Only the value of `param` will be appended inside
+ * the function, so the prefix must already have the matchIndex and submatcherIndex
+ * appended to it
+ * @param {number} id 1-based unit ID number
+ * @returns {boolean}
+ */
+CharUtils.checkSubmatcher = function(target, submatcher, matchObj, cacheKey, id) {
+    var param = submatcher.param;
+    if (typeof param === 'string')
+        param = param.trim();
+    else if (param) // non-null non-string
+        param = JSON.stringify(param);
+    if (!param) { // "separator"-type submatchers also won't have `param`.
+        return true;
     }
-    classCache[target][clazz][id] = result;
+
+    // Use result for cache if the submatcher with the same `param` was already evaluated for the unit
+    cacheKey += '.param=' + param;
+    if (regexCache[cacheKey] && regexCache[cacheKey].hasOwnProperty(id))
+        return regexCache[cacheKey][id];
+
+    var result = false;
+
+    if (submatcher.type == 'number') {
+        // operators are optional
+        var rangeRegex = /^((?:<|>)?=?)?(.*)$/; // for input values
+
+        var rangeMatch = param.match(rangeRegex);
+        if (!rangeMatch) {
+            CharUtils.saveToRegexCache(cacheKey, id, false);
+            return false;
+        }
+
+        var op = rangeMatch[1] || '>=';
+        // parseFloat instead of coercion to Number, in case user inputs symbols
+        // at the end, like "99+" will be 99, "50%" will be 50, "3.5x" will be "3.5"
+        // remove commas from "1,000,000"
+        var inputValue = parseFloat(rangeMatch[2].replace(/,/g, '')); // value entered by user
+        if (isNaN(inputValue)){
+            CharUtils.saveToRegexCache(cacheKey, id, false);
+            return false;
+        }
+
+        // matchers like "bind reducers" have two groups, one for
+        // fixed turns, the other for "completely", which will be
+        // interpreted as Infinity. For those, only one of those groups
+        // will be present, so we execute an "OR" operation for
+        // these (at least one match in all the captured groups)
+        // variable multipliers also use more than 1 group
+        for (var groupIndex of submatcher.groups) {
+            var capturedValue = matchObj[groupIndex]; // value in the ability being checked
+            if (!capturedValue) // skip empty groups (they can be optional groups)
+                continue;
+            capturedValue = capturedValue.replace(/\?/g, "0"); // "?x", "0.?x"
+            capturedValue = capturedValue.replace(/,/g, ""); // for "1,500"
+            if (capturedValue == "completely" || capturedValue == "99+" || capturedValue == "MAX")
+                capturedValue = Infinity;
+
+            capturedValue = Number(capturedValue);
+            if (isNaN(capturedValue)) { // if the regex group catches a non-numerical string
+                console.error(`${matchObj[groupIndex]} is not a number. \nMatcher Name: ${cacheKey}\nGroup Index: ${groupIndex}`)
+                continue;
+            }
+
+            if (comparators[op](capturedValue, inputValue)){
+                result = true;
+                break;
+            }
+        }
+    } else if (submatcher.type == 'text') {
+        // "OR" operation
+        for (var groupIndex of submatcher.groups) {
+            // optional groups that did not match (will evaluate to undefined)
+            // should be changed to empty strings, so /^$/ can match the empty string
+            var capturedValue = matchObj[groupIndex] || '';
+            var regex = new RegExp(submatcher.param, 'i');
+            if (regex.test(capturedValue)){
+                result = true;
+                break;
+            }
+        }
+    } else if (submatcher.type == 'option') {
+        // "OR" operation
+        for (var groupIndex of submatcher.groups) {
+            // optional groups that did not match (will evaluate to undefined)
+            // should be changed to empty strings, so /^$/ can match the empty string
+            var capturedValue = matchObj[groupIndex] || '';
+            if (submatcher.regex.test(capturedValue)){
+                result = true;
+                break;
+            }
+        }
+    } else if (submatcher.type == 'orbs') {
+        // use the raw `submatcher.param`, not the JSONified
+        var from = submatcher.param.ctrlFrom || [ ];
+        var to = submatcher.param.ctrlTo || [ ];
+        var orbData = CharUtils.getOrbControllerData(id, target);
+
+        // if `from` and `to` are both empty, return true, to ensure that
+        // deselecting all orbs will show all orb controllers
+        // CharUtils.getOrbControllerData uses a different regex that what is
+        // used by the main filter
+        if (!from.length && !to.length) {
+            result = true;
+        } else if (orbData) {
+            var mismatch = true;
+            if (from.length && !to.length)
+                mismatch = from.some(function(x) { return !orbData.from.hasOwnProperty(x); });
+            else if (!from.length && to.length)
+                mismatch = to.some(function(x) { return !orbData.to.hasOwnProperty(x); });
+            else {
+                mismatch = from.some(function(f) {
+                    return to.some(function(t) { return !orbData.map[f] || !orbData.map[f].hasOwnProperty(t); });
+                });
+            }
+            if (!mismatch)
+                result = true;
+        }
+    }
+    CharUtils.saveToRegexCache(cacheKey, id, result);
     return result;
-};
-    
+}
+
 CharUtils.hasFarmableSocket = function(id) {
     //return false if unit has no Sockets
     var unit = window.units[id];
     if (unit.slots<1 || !unit.families)
         return false;
-    
+
     for (let family of unit.families) {
         let unitIds = Utils.getUnitsInFamily(family);
         if (unitIds && unitIds.some(id => CharUtils.isFarmable(id))) {
@@ -346,6 +560,13 @@ CharUtils.hasFarmableSocket = function(id) {
     };
 
     return false;
+}
+
+CharUtils.getFilteredUnitIds = function () {
+    // don't rely on internal row index, as some units are not in the table,
+    // messing up the id numbers of later units
+    var result = window.charTable.DataTable().rows({"filter":"applied"}).data().map(x => Number(x[0]));
+    return result;
 }
 
 /******************
