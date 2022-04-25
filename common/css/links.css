@@ -52,12 +52,14 @@
     padding-top: 7px;
 }
 
-#links-button .btn:hover .fa, .rotater i {
-    color: rgba(0, 0, 0, 0.7);
-}
+@media (hover) {
+    #links-button .btn:hover .fa, .rotater i {
+        color: rgba(0, 0, 0, 0.7);
+    }
 
-.rotater:hover i, .rotater:hover i {
-    color: white !important;
+    .rotater:hover i, .rotater:hover i {
+        color: white !important;
+    }
 }
 
 #links-button .btn.trigger {
@@ -66,18 +68,20 @@
     cursor: pointer;
 }
 
-#links-button .btn.trigger:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-}
+@media (hover) {
+    #links-button .btn.trigger:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
 
-#links-button .btn.trigger:hover .line {
-    background-color: rgba(0, 0, 0, 0.7);
-}
+    #links-button .btn.trigger:hover .line {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 
-#links-button .btn.trigger:hover .line:before, #links-button .btn.trigger:hover .line:after {
-    background-color: rgba(0, 0, 0, 0.7);
+    #links-button .btn.trigger:hover .line:before, #links-button .btn.trigger:hover .line:after {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 }
 
 #links-button .btn.trigger .line {
@@ -262,9 +266,14 @@
 
 .tip { color: black; }
 
-#links-button:not(.active) .tip,
-.rotater:not(:hover) .tip {
+#links-button:not(.active) .tip{
     display: none;
+}
+
+@media (hover) {
+    .rotater:not(:hover) .tip {
+        display: none;
+    }
 }
 
 .tip {

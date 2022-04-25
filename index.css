@@ -86,10 +86,14 @@ body {
 .button:last-child {
     border-radius: 0 0 5px 5px;
 }
-.button:hover {
-	transform: scale(1.1);
-	font-weight:bold;
+
+@media (hover) {
+    .button:hover {
+        transform: scale(1.1);
+        font-weight:bold;
+    }
 }
+
 .green  { background-color: #7FCA9F; }
 .blue   { background-color: #85C1F5; }
 .red    { background-color: #E96D63; }
@@ -103,18 +107,20 @@ body {
 .limegreen   { background-color: #32CD32; }
 .darkorange   { background-color: #CF5300; }
 
-.green:hover  { background-color: #6EB98E; }
-.blue:hover   { background-color: #74B0E4; }
-.red:hover    { background-color: #D85C52; }
-.purple:hover { background-color: #C96995; }
-.yellow:hover { background-color: #E3A969; }
-.pink:hover   { background-color: #A57777; }
-.brown:hover   { background-color: #662200; }
-.darkpurple:hover   { background-color: #5B2C6F; }
-.gold:hover   { background-color: #947713; }
-.darkblue:hover   { background-color: #092056; }
-.limegreen:hover   { background-color: #228B22; }
-.darkorange:hover   { background-color: #B54C05; }
+@media (hover) {
+    .green:hover  { background-color: #6EB98E; }
+    .blue:hover   { background-color: #74B0E4; }
+    .red:hover    { background-color: #D85C52; }
+    .purple:hover { background-color: #C96995; }
+    .yellow:hover { background-color: #E3A969; }
+    .pink:hover   { background-color: #A57777; }
+    .brown:hover   { background-color: #662200; }
+    .darkpurple:hover   { background-color: #5B2C6F; }
+    .gold:hover   { background-color: #947713; }
+    .darkblue:hover   { background-color: #092056; }
+    .limegreen:hover   { background-color: #228B22; }
+    .darkorange:hover   { background-color: #B54C05; }
+}
 
 .overlay {
     position: absolute;
@@ -143,8 +149,10 @@ body {
     display: inline-block;
 }
 
-.slot:hover {
-    outline: 1px solid red;
+@media (hover) {
+    .slot:hover {
+        outline: 1px solid red;
+    }
 }
 
 .slot.small {

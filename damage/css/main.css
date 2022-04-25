@@ -82,9 +82,11 @@ body, html {
     cursor: pointer;
 }
 
-#transient:hover {
-    background-color: #FF9E9E;
-    border-color: #EC92A0;
+@media (hover) {
+    #transient:hover {
+        background-color: #FF9E9E;
+        border-color: #EC92A0;
+    }
 }
 
 #transient > span {
@@ -132,9 +134,11 @@ body, html {
     opacity: 0.5;
 }
 
-.empty:hover {
-    border-color: black;
-    opacity: 1 !important;
+@media (hover) {
+    .empty:hover {
+        border-color: black;
+        opacity: 1 !important;
+    }
 }
 
 .unit:not(.slide) > :not([class]) {
@@ -180,8 +184,10 @@ body, html {
     z-index: 4;
 }
 
-.unitLevel:hover {
-    background: lightcoral;
+@media (hover) {
+    .unitLevel:hover {
+        background: lightcoral;
+    }
 }
 
 .unitLevel > input {
@@ -409,9 +415,11 @@ body, html {
     color: white;
 }
 
-.btn-settings:hover {
-    background: #444;
-    color: white;
+@media (hover) {
+    .btn-settings:hover {
+        background: #444;
+        color: white;
+    }
 }
 
 .btn-orchid {
@@ -419,9 +427,11 @@ body, html {
     background: orchid;
 }
 
-.btn-orchid:hover {
-    color: white;
-    background: mediumorchid;
+@media (hover) {
+    .btn-orchid:hover {
+        color: white;
+        background: mediumorchid;
+    }
 }
 
 #other > :not(:last-child) {
@@ -456,8 +466,10 @@ body, html {
     cursor: pointer;
 }
 
-.slot:not(.nohover):hover {
-    outline: 1px solid red;
+@media (hover) {
+    .slot:not(.nohover):hover {
+        outline: 1px solid red;
+    }
 }
 
 .slot.big {
@@ -529,10 +541,12 @@ nav.panel {
             transition: background 0.1s linear;
 }
 
-#menu li > div:not(.menuIcon):not(#specialDivider):not(#supertypeContainer):not(#superclassContainer):hover {
-    background: #688aac;
-    color: white !important;
-    cursor: pointer;
+@media (hover) {
+    #menu li > div:not(.menuIcon):not(#specialDivider):not(#supertypeContainer):not(#superclassContainer):hover {
+        background: #688aac;
+        color: white !important;
+        cursor: pointer;
+    }
 }
 
 ul { padding-left: 0; }
@@ -632,12 +646,14 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
 .superclass.Evolver       { background: Peru; }
 .superclass.Booster       { background: Peru; }
 
-.supertype:hover {
-    opacity: 1;
-}
+@media (hover) {
+    .supertype:hover {
+        opacity: 1;
+    }
 
-.superclass:hover {
-    opacity: 1;
+    .superclass:hover {
+        opacity: 1;
+    }
 }
 
 input:checked + .supertype {    
@@ -709,8 +725,10 @@ nav > li > div {
     margin-left: -1px;
 }
 
-.comodity:hover {
-    color: red;
+@media (hover) {
+    .comodity:hover {
+        color: red;
+    }
 }
 
 /***********
@@ -893,16 +911,18 @@ nav > li > div {
     margin-top: 5px;
 }
 
-#defense-table tbody > tr:hover,
-#defense-table tbody > td:hover,
-#ship-table tbody > tr:hover,
-#ship-table tbody > td:hover,
-#profile-table tbody > tr:hover,
-#profile-table tbody > td:hover,
-#slot-table tbody > tr:hover,
-#slot-table tbody > td:hover {
-    background-color: rgba(200,200,200,0.3);
-    cursor: pointer;
+@media (hover) {
+    #defense-table tbody > tr:hover,
+    #defense-table tbody > td:hover,
+    #ship-table tbody > tr:hover,
+    #ship-table tbody > td:hover,
+    #profile-table tbody > tr:hover,
+    #profile-table tbody > td:hover,
+    #slot-table tbody > tr:hover,
+    #slot-table tbody > td:hover {
+        background-color: rgba(200,200,200,0.3);
+        cursor: pointer;
+    }
 }
 
 .help {
@@ -1094,8 +1114,10 @@ nav > li > div {
     box-shadow: 0 0 0 1pt black;
 }
 
-.unitAbilities:hover {
-    background: lightcoral;
+@media (hover) {
+    .unitAbilities:hover {
+        background: lightcoral;
+    }
 }
 
 .candySlider {
