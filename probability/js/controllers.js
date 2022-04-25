@@ -222,7 +222,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         if (parameters === null) return;
 
         result = window.units.filter(function(x) {
-            if (x === null && x === undefined && !x.hasOwnProperty('number'))
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
                 return false;
             if (!Utils.checkUnitMatchSearchParameters(x, parameters))
                 return false;

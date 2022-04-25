@@ -260,7 +260,8 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         if (parameters === null) return;
 
         result = window.units.filter(function(x) {
-            if (x === null && x === undefined && !x.hasOwnProperty('number'))
+            // some units don't exist or have no functions for their abilities, like turtles.
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
                 return false;
             if (!Utils.checkUnitMatchSearchParameters(x, parameters))
                 return false;
