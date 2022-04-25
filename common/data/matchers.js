@@ -1,3 +1,4 @@
+(function () {
 /**
  * These are the `filters.custom` in "characters\js\table.js", used to "match"
  * ability descriptions in "common\data\details.js"
@@ -4763,3 +4764,5 @@ if (alphabeticalOrder){
         }
     }
 }
+
+})();
