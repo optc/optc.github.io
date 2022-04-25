@@ -20,7 +20,7 @@ directives.slotWheel = function() {
                 var isActive = element.hasClass('active');
                 if (isActive) scope.team[scope.unitNumber].slots[scope.slotNumber] = null;
                 element.find('.ability-button').toggleClass('active');
-                element.toggleClass('active'); 
+                element.toggleClass('active');
                 if (!scope.$$phase) scope.$apply();
             });
 
@@ -35,7 +35,7 @@ directives.slotWheel = function() {
                 if (!slots[scope.slotNumber] || slots[scope.slotNumber].id != id)
                     slots[scope.slotNumber] = { id: id, level: 5 };
                 element.find('.ability-button').toggleClass('active');
-                element.toggleClass('active'); 
+                element.toggleClass('active');
                 if (!scope.$$phase) scope.$apply();
             };
 
@@ -63,7 +63,7 @@ directives.decorateSlot = function() {
             var update = function(uid) {
                 if (!uid) element[0].style.backgroundImage = null;
                 else {
-                    var url = Utils.getThumbnailUrl(scope.uid);
+                    var url = Utils.getThumbnailUrl(scope.uid, '..');
                     element[0].style.backgroundImage = 'url(' + url + ')';
                     //var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
                     //element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';

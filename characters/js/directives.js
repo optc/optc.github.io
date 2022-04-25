@@ -112,8 +112,8 @@ directives.decorateSlot = function() {
             if (scope.big)
                 element[0].style.backgroundImage = 'url(' + Utils.getBigThumbnailUrl(scope.uid) + ')';
             else
-                element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
-                //element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
+                //element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
         }
     };
 };
@@ -312,8 +312,8 @@ directives.compare = function() {
                         suggestion: function(id) {
                             if (Number.isInteger(id)){
 
-                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1);
-                                //var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
+                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1, '..');
+                                //var name = units[id].name, url = Utils.getThumbnailUrl(id+1, '..'), url2 = Utils.getGlobalThumbnailUrl(id+1);
                                 if (name.length > 63) name = name.slice(0,60) + '...';
                                 var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
                                 //var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
@@ -321,7 +321,7 @@ directives.compare = function() {
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
                             else{
-                                var name = 'material', url = Utils.getThumbnailUrl(id);
+                                var name = 'material', url = Utils.getThumbnailUrl(id, '..');
                                 var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
