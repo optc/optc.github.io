@@ -208,7 +208,25 @@
 
         let costMatch = criteria.match(costRegex);
         if (costMatch){
-            matchers.push('cost' + (costMatch[2] == 'less' ? '<=' : '>=') + costMatch[1]);
+            let op = costMatch[2] == 'less' ? '<=' : '>=';
+            let value = costMatch[1];
+            matchers.push('cost' + op + value);
+            if (returnParamsObject) {
+                params.ranges = {cost: [Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY]};
+
+                if (op === '=') {
+                    params.ranges['cost'][0] = value;
+                    params.ranges['cost'][1] = value;
+                } else if (op === '<') {
+                    params.ranges['cost'][1] =  value - 1;
+                } else if (op === '<=') {
+                    params.ranges['cost'][1] = value;
+                } else if (op === '>') {
+                    params.ranges['cost'][0] =  value + 1;
+                } else if (op === '>=') {
+                    params.ranges['cost'][0] =  value;
+                }
+            }
         } else {
             criteria = criteria.replace(aliasesRegex, '');
             let terms = criteria.split(separatorRegex);
