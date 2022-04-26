@@ -3591,6 +3591,19 @@ window.units = [
     [ "X Drake - Steadfast Army of One", "STR", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1542, 978, 97, null, null, null, null ],
     [ "Roronoa Zoro - Advancing to the Top", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1273, 658, 148, null, null, null, null ],
     [ "Kuzan - Surprising Former Navy Admiral", "PSY", [ "Striker", "Shooter" ], "6+", 65, 5, 5, 99, 5000000, 1860, 874, 173, 3720, 1749, 347, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Marco - ", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 927, 379, 103, null, null, null, null ],
+    [ "Marco - Evolved", "PSY", [ "Fighter", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1824, 742, 196, null, null, null, null ],
+    [ "Big Mom - ", "INT", [ "Powerhouse", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1027, 405, 56, null, null, null, null ],
+    [ "Big Mom - Evolved", "INT", [ "Powerhouse", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2144, 794, 108, null, null, null, null ],
+    [ "Charlotte Perospero - ", "INT", [ "Striker", "Driven" ], 5, 30, 5, 4, 99, 4000000, 1716, 743, 91, null, null, null, null ],
+    [ "Charlotte Pudding - ", "INT", [ "Driven", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1590, 695, 128, null, null, null, null ],
+    [ "Charlotte Cracker - ", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1730, 785, 75, null, null, null, null ],
+    [ "Charlotte Katakuri - ", "INT", [ "Powerhouse", "Fighter" ], 5, 30, 6, 4, 99, 2000000, 1641, 738, 82, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Corazon - ", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1930, 780, 119, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

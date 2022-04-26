@@ -1065,6 +1065,15 @@ window.zombies = {
         type: 'healer',
         amount: 300
     },
+    3598: { // Perospero
+        type: 'healer',
+        amount: 1000
+    },
+    3599: { // Pudding
+        type: 'reducer',
+        multiplier: 0.7,
+        threshold: 1.0
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

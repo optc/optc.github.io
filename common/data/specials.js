@@ -13547,20 +13547,82 @@ window.specials = {
         orbPlus: function(p) { return [0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
         def: function(p) { return [1, 0.2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
         status: function(p) { return p.defenseDown ? [1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Buff", "Defense Reduction & Status"][levels[n]] + ' boost. To switch to the ' + ["Buff", "Defense Reduction & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3592: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "QCK" ? 2.25 : 1; },
         type: "type",
+    },
+    3594: {
+        chainAddition: function(p) { return [0, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[n]] + ' boost. To switch to the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3595: {
+        chainAddition: function(p) { return [0, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[n]] + ' boost. To switch to the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3585: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    3586: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+    },
+    3598: {
+        chainAddition: function(p) { return [1, 0, 1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        affiinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boost", "Affinity", "Affinity & Chain Boost"][levels[n]] + ' boost. To switch to the ' + ["Chain Boost", "Affinity", "Affinity & Chain Boost"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3599: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3600: {
+        staticMult: function(p) { return 80; }
     },
 };
 

@@ -531,7 +531,7 @@ const Headcracker = [ "Headcracker" ];
 const Kyuin = [ "Kyuin" ];
 const CharlotteLinlin = [ "Charlotte Linlin", "Big Mom" ];
 const CharlotteKatakuri = [ "Charlotte Katakuri" ];
-const CharlotteBrulee = [ "Charlotte Brûlée" ];
+const CharlotteBrulee = [ "Charlotte Brûlée", "Charlotte Brulee" ];
 const CharlotteAmande = [ "Charlotte Amande" ];
 const Bobbin = [ "Bobbin" ];
 const CharlotteOven = [ "Charlotte Oven" ];
@@ -4158,6 +4158,15 @@ window.families = {
     3590: [ ...XDrake ],
     3591: [ ...RoronoaZoro ],
     3592: [ ...Kuzan ],
+    3594: [ ...Marco ],
+    3595: [ ...Marco ],
+    3596: [ ...CharlotteLinlin ],
+    3597: [ ...CharlotteLinlin ],
+    3598: [ ...CharlottePerospero ],
+    3599: [ ...CharlottePudding ],
+    3600: [ ...CharlotteCracker ],
+    3601: [ ...CharlotteKatakuri ],
+    3605: [ ...DonquixoteRosinante ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

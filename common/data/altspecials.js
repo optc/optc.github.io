@@ -193,6 +193,10 @@ window.altspecials = {
     3576: {
         chainAdditionPlus: function(p) { return 0.5; }, 
     },
+    3597: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
