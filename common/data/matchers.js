@@ -4610,6 +4610,12 @@ let matchers = {
             regex: /Double Special Activation/i,
         },
 
+        {
+            name: 'Barrier Penetration',
+            targets: [ 'potential' ],
+            regex: /Barrier Penetration/i,
+        },
+
     ],
     'Uncategorized': [
 
