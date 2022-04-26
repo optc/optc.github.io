@@ -12364,7 +12364,7 @@ window.specials = {
     },
     3416: {
         affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.25 : 0; }, 
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
