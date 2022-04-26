@@ -1020,7 +1020,10 @@
             case '4987': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1720.png'; break;
             default: break;
         }
-        return 'https://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
+        
+        return '/api/images/full/transparent/' +  Math.trunc(n / 1000) + '/' + Math.trunc((n % 1000) / 100) + '00/' + id + '.png';
+        //return 'https://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
+
     };
 
     utils.getThumbnailTitle = function (arg) {
