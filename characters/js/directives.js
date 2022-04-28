@@ -160,11 +160,17 @@ directives.animateCollapse = function($timeout) {
                 var collapsibleElement = element.next()
                 if (collapsibleElement.hasClass('collapse')) {
                     collapsibleElement.on('hide.bs.collapse', (e) => {
-                        element.find('i').first().removeClass('fa-flip-vertical');
+                        // show/hide events of deeper collapsibles might not have event handlers,
+                        // so they will be propagated up. check if the element to make sure.
+                        if (e.target.previousElementSibling == element[0]) {
+                            element.find('i').first().removeClass('fa-flip-vertical');
+                        }
                         e.stopPropagation();
                     })
                     collapsibleElement.on('show.bs.collapse', (e) => {
-                        element.find('i').first().addClass('fa-flip-vertical');
+                        if (e.target.previousElementSibling == element[0]) {
+                            element.find('i').first().addClass('fa-flip-vertical');
+                        }
                         e.stopPropagation();
                     })
                 }
