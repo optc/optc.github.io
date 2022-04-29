@@ -23,15 +23,15 @@ directives.decorateSlot = function($rootScope) {
         restrict: 'A',
         scope: { uid: '=', udata: '=', flag: '@' },
         link: function(scope, element, attrs) {
-            var update = function() { 
+            var update = function() {
                 var target = element[0];
                 if (scope.uid == null && scope.udata == null) {
-                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(null) + ')';
+                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(null, '..') + ')';
                     target.removeAttribute('title');
                 } else {
                     if (scope.uid != 1 || scope.flag || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
-                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
-                        //target.style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
+                        //target.style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
                     else
                         target.style.backgroundImage = null;
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
@@ -244,7 +244,7 @@ directives.floatingHeader = function($timeout) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            $timeout(function() { 
+            $timeout(function() {
                 element.floatThead({
                     scrollContainer: function($table) {
                         return $table.closest('#picker + .modal-div');
@@ -282,7 +282,7 @@ directives.quickPick = function() {
                     callback(result.slice(0,7).filter(function(x) { return x > 0; }));
                 },
                 template: function (value) {
-                    var thumb = Utils.getThumbnailUrl(value + 1);
+                    var thumb = Utils.getThumbnailUrl(value + 1, '..');
                     return '<span><img class="quickpick-icon" src="' + thumb + '"> ' + window.units[value].name + '</span>';
                     //var thumb2 = Utils.getGlobalThumbnailUrl(value + 1);
                     //return '<span><img class="quickpick-icon" src="' + thumb2 + '" onerror="this.onerror=null;this.src=\'' + thumb + '\';"> ' + window.units[value].name + '</span>';
@@ -351,7 +351,7 @@ directives.slot = function() {
             scope.slot = element.index();
             if(scope.data.team[scope.slot].unit != null){
                 var id = scope.data.team[scope.slot].unit.number + 1;
-                scope.sailors = window.sailors[id] ? JSON.parse(JSON.stringify(window.sailors[id])) : null;  
+                scope.sailors = window.sailors[id] ? JSON.parse(JSON.stringify(window.sailors[id])) : null;
             }
             scope.onDrop = function(i, j) {
                 var temp = scope.data.team[i];
@@ -386,7 +386,7 @@ directives.hpBar = function() {
     return {
         retrict: 'E',
         replace: true,
-        template: '<div id="hp"><div id="hpSlider"></div>' + 
+        template: '<div id="hp"><div id="hpSlider"></div>' +
             '<div id="hp-rcv"><table><tbody>' +
                 '<tr><td id="hp-cell" ng-click="setHP()">{{ hp.current | number }}</td><td>HP ({{ hp.perc | number:2 }}%)</td></tr>' +
                 '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
@@ -445,7 +445,7 @@ directives.hpBar = function() {
                 hp = parseFloat(hp, 10);
                 if (!perc) hp = Math.floor(hp);
                 if (isNaN(hp)) return;
-                if (!perc) 
+                if (!perc)
                     update('manual', Math.min(scope.numbers.hp, Math.max(1, hp)));
                 else
                     update('manual', Math.min(scope.numbers.hp, Math.max(1, Math.round(scope.numbers.hp * hp / 100))));
@@ -472,7 +472,7 @@ directives.turnCounter = function() {
                 step: 1,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -491,7 +491,7 @@ directives.turnCounter = function() {
         }
     };
 };
-    
+
 directives.healCounter = function() {
     return {
         retrict: 'E',
@@ -509,7 +509,7 @@ directives.healCounter = function() {
                 step: 10,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -528,7 +528,7 @@ directives.healCounter = function() {
         }
     };
 };
-    
+
 directives.basehpCounter = function() {
     return {
         retrict: 'E',
@@ -546,7 +546,7 @@ directives.basehpCounter = function() {
                 step: 10,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -565,7 +565,7 @@ directives.basehpCounter = function() {
         }
     };
 };
-    
+
 directives.rcvCounter = function() {
     return {
         retrict: 'E',
@@ -583,7 +583,7 @@ directives.rcvCounter = function() {
                 step: 1,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -602,7 +602,7 @@ directives.rcvCounter = function() {
         }
     };
 };
-    
+
 directives.semlaCounter = function() {
     return {
         retrict: 'E',
@@ -620,7 +620,7 @@ directives.semlaCounter = function() {
                 step: 1,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -639,7 +639,7 @@ directives.semlaCounter = function() {
         }
     };
 };
-    
+
 directives.damageCounter = function() {
     return {
         retrict: 'E',
@@ -657,7 +657,7 @@ directives.damageCounter = function() {
                 step: 100,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -676,13 +676,13 @@ directives.damageCounter = function() {
         }
     };
 };
-    
+
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<div class="unitLevel">' + 
+        template: '<div class="unitLevel">' +
             '<span ng-show="data.team[slot].level != data.team[slot].unit.maxLevel">Lv. {{data.team[slot].level}}</span>' +
             '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel" src="../res/max.png">' +
             '<input type="number" ng-show="editorVisible" ng-model="level"></input></div>',
@@ -705,7 +705,7 @@ directives.levelLabel = function($timeout) {
             });
             var update = function(e) {
                 if (e.type == 'keyup' && e.which != 13) return;
-                var level = parseInt(scope.level,10); 
+                var level = parseInt(scope.level,10);
                 scope.editorVisible = false;
                 if (isNaN(level)) return;
                 scope.data.team[scope.slot].level = Math.min(Math.max(1,level),scope.data.team[scope.slot].unit.maxLevel);
@@ -753,7 +753,7 @@ directives.levelSlider = function($timeout) {
             scope.$watch('data.team[slot].unit.maxLevel',updateMax);
             scope.$watch('data.team[slot].level',update);
             element.parent().on('click touchend',function(e) {
-                $('.unit').eq(scope.slot).removeClass('slide'); 
+                $('.unit').eq(scope.slot).removeClass('slide');
                 if (e.type == 'touchend') onRelease(Math.round(immediateValue));
                 e.preventDefault();
                 e.stopPropagation();
@@ -877,7 +877,7 @@ directives.unitOrb = function($rootScope) {
                     ORBS = [ 0.5, 1, 2 ];
                     return false;
                 }
-            
+
             };
             var onLongPress = function(e) {
                 if($rootScope.areGOrbsEnabled()){
@@ -967,7 +967,7 @@ directives.unitOrb = function($rootScope) {
             element.parent().longpress(onLongPress,onShortPress);
         },
         controller: function($scope, $timeout) {
-            $timeout(function() { 
+            $timeout(function() {
                 if ($scope.tdata.team[$scope.slot].orb != 1)
                     $scope.$apply();
             });

@@ -6,7 +6,7 @@ var findEvolvers = function(id) {
     var result = [ ];
     for (var key in evolutions) {
         if (!evolutions[key] || !evolutions[key].evolvers) continue;
-        if (evolutions[key].evolution == id) 
+        if (evolutions[key].evolution == id)
             result.push({ from: parseInt(key,10), to: id, evolvers: evolutions[key].evolvers });
         if (evolutions[key].evolution.constructor == Array) {
             for (var i=0;i<evolutions[key].evolution.length;++i) {
@@ -156,7 +156,7 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce,
         }
         if (!$rootScope.$$phase) $rootScope.$apply();
     };
-    
+
     var getEvolverClass = function(id) {
         if (typeof id == 'string'){
             return 'Skull'
@@ -260,7 +260,8 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         if (parameters === null) return;
 
         result = window.units.filter(function(x) {
-            if (x === null && x === undefined && !x.hasOwnProperty('number'))
+            // some units don't exist or have no functions for their abilities, like turtles.
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
                 return false;
             if (!Utils.checkUnitMatchSearchParameters(x, parameters))
                 return false;
@@ -328,7 +329,7 @@ app.directive('decorateSlot',function() {
         link: function(scope, element, attrs) {
             if (scope.uid && attrs.hasOwnProperty('addHref'))
                 element.attr('href','../characters/#/view/' + parseInt(scope.uid, 10));
-            var url = Utils.getThumbnailUrl(scope.uid);
+            var url = Utils.getThumbnailUrl(scope.uid, '..');
             //var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
             var div = $('<div class="amount"></div>');
             element[0].style.backgroundImage = 'url(' + url + ')';

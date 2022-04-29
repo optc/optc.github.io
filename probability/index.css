@@ -91,8 +91,10 @@ p {
 	margin: 0 auto;
 }
 
-.unit:hover {
-    border-color: red;
+@media (hover) {
+    .unit:hover {
+        border-color: red;
+    }
 }
 
 .unit.empty {
@@ -106,8 +108,10 @@ p {
     position: relative;
 }
 
-.slot:not(#add):hover {
-    outline: 1px solid red;
+@media (hover) {
+    .slot:not(#add):hover {
+        outline: 1px solid red;
+    }
 }
 
 .slot.medium {
@@ -201,9 +205,11 @@ slot-wheel > .ghoster {
     cursor: pointer;
 }
 
-#transient:hover {
-    background-color: #FF9E9E;
-    border-color: #EC92A0;
+@media (hover) {
+    #transient:hover {
+        background-color: #FF9E9E;
+        border-color: #EC92A0;
+    }
 }
 
 #transient > span {
@@ -229,8 +235,10 @@ slot-wheel > .ghoster {
     visibility: visible;
 }
 
-.quick-fill:hover {
-    background: #ddd;
+@media (hover) {
+    .quick-fill:hover {
+        background: #ddd;
+    }
 }
 
 .quick-fill-slots {
@@ -362,10 +370,12 @@ canvas {
     -moz-box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt white;
 }
 
-.ability:hover {
-    box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt red;
-    -webkit-box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt red;
-    -moz-box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt red;
+@media (hover) {
+    .ability:hover {
+        box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt red;
+        -webkit-box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt red;
+        -moz-box-shadow: inset 0 0 1pt 1pt black, 0 0 1pt 1pt red;
+    }
 }
 
 #ability-table td {
@@ -683,9 +693,11 @@ canvas {
     padding-top: 10px;
 }
 
-#loadSlot tr:hover {
-    background: #ddd;
-    cursor: pointer;
+@media (hover) {
+    #loadSlot tr:hover {
+        background: #ddd;
+        cursor: pointer;
+    }
 }
 
 #loadSlot td > div {

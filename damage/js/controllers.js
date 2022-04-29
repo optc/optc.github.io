@@ -68,7 +68,8 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         if (parameters === null) return;
 
         result = window.units.filter(function(x) {
-            if (x === null && x === undefined && !x.hasOwnProperty('number'))
+            // some units don't exist or have no functions for their abilities, like turtles.
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
                 return false;
             // do not allow dual/vs units. Their "ghost" forms (which only have one type) can be added though
             if (Array.isArray(x.type))
@@ -191,7 +192,7 @@ controllers.ShipCtrl = function($scope, $state) {
     });
 
     $scope.getThumbnail = function(ship) {
-        if (!ship.thumb) return 'background-image: url(' + Utils.getThumbnailUrl(null) + ')';
+        if (!ship.thumb) return 'background-image: url(' + Utils.getThumbnailUrl(null, '..') + ')';
         return 'background-image: url(https://onepiece-treasurecruise.com/wp-content/uploads/' + ship.thumb + ')';
     };
 

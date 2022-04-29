@@ -36,9 +36,11 @@ td:first-child {
     display: none;
 }
 
-h2:hover > span, h3:hover > span {
-    text-decoration: underline;
-    cursor: pointer;
+@media (hover) {
+    h2:hover > span, h3:hover > span {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 
 h1 > label {
@@ -83,23 +85,27 @@ h1 > label > input {
 #bonus-table td.beli    { background: rgba(127,202,159,0.2); }
 #bonus-table td.exp     { background: rgba(244,186,112,0.2); }
 
-#bonus-table tr:hover td.stamina      { background: rgba(133,193,245,1.0); }
-#bonus-table tr:hover td.drop         { background: rgba(233,109,99,1.0);  }
-#bonus-table tr:hover td.beli         { background: rgba(127,202,159,1.0); }
-#bonus-table tr:hover td.exp          { background: rgba(244,186,112,1.0); }
+@media (hover) {
+    #bonus-table tr:hover td.stamina      { background: rgba(133,193,245,1.0); }
+    #bonus-table tr:hover td.drop         { background: rgba(233,109,99,1.0);  }
+    #bonus-table tr:hover td.beli         { background: rgba(127,202,159,1.0); }
+    #bonus-table tr:hover td.exp          { background: rgba(244,186,112,1.0); }
+}
 
 #bonus-table .active {
     border-left: 1px solid darkred;
     border-right: 1px solid darkred;
 }
 
-#bonus-table tr:hover td {
-    border-top: 1px solid darkred;
-    border-bottom: 1px solid darkred;
-}
+@media (hover) {
+    #bonus-table tr:hover td {
+        border-top: 1px solid darkred;
+        border-bottom: 1px solid darkred;
+    }
 
-#bonus-table tr:hover td:first-child {
-    background: rgb(220,220,220) !important;
+    #bonus-table tr:hover td:first-child {
+        background: rgb(220,220,220) !important;
+    }
 }
 
 .tooltip-inner {
@@ -114,8 +120,10 @@ h1 > label > input {
     display: inline-block;
 }
 
-.slot:hover {
-    outline: 1px solid red;
+@media (hover) {
+    .slot:hover {
+        outline: 1px solid red;
+    }
 }
 
 .slot.small {

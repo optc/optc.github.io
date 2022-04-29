@@ -94,9 +94,10 @@
 }
 
 /* Hover state */
-
-.wrap-dd-select .dropdown li:hover a {
-  background: #f3f8f8;
+@media (hover) {
+  .wrap-dd-select .dropdown li:hover a {
+    background: #f3f8f8;
+  }
 }
 
 .wrap-dd-select .dropdown:after {
@@ -194,9 +195,10 @@
 }
 
 /* Hover state */
-
-.wrap-dd-menu .dropdown li:hover a {
-  background: #f3f8f8;
+@media (hover) {
+  .wrap-dd-menu .dropdown li:hover a {
+    background: #f3f8f8;
+  }
 }
 
 .wrap-dd-menu .dropdown:after {
