@@ -3497,7 +3497,7 @@ window.aliases = {
     3494: [ 'ロビン＆ジンベエ 考古学者と操舵手', '', 'Robin&Jinbe', 'RobinJinbe', 'Jinbe&Robin', 'JinbeRobin', 'Legend Robin and Jinbe' ],
     3495: [ 'ロビン＆ジンベエ 臆さぬ二人', '', 'Robin&Jinbe', 'RobinJinbe', 'Jinbe&Robin', 'JinbeRobin', 'Legend Robin and Jinbe' ],
     3496: [ 'しのぶ＆モモの助 命がけの救出', '', 'Shinobu and Momonosuke', 'Shinobu Momonosuke', 'ShinobuMomonosuke', 'Momonosuke&Shinobu', 'MomonosukeShinobu' ],
-    3497: [ 'おそばマスク 消える戦士', '', '' ],
+    3497: [ 'おそばマスク 消える戦士', '', 'Sobamask' ],
     3498: [ '花魁おリン 立ちはだかる脅威', '', '' ],
     3499: [ 'モンキー・D・ルフィ 龍を打ち破る者', '', 'Arena Luffy' ],
     3500: [ '', '', '' ],
