@@ -8,18 +8,18 @@ var controllers = { };
  * MainCtrl *
  ************/
 
-controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$controller', '$timeout', '$window', 'SpecialProbability', 'SocketProbability', function($scope, $rootScope, $state, $stateParams, $controller, $timeout, $window, SpecialProbability, SocketProbability) { 
+controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$controller', '$timeout', '$window', 'SpecialProbability', 'SocketProbability', function($scope, $rootScope, $state, $stateParams, $controller, $timeout, $window, SpecialProbability, SocketProbability) {
 
     $rootScope.character = null;
     $rootScope.options = { transient: false };
-	
+
     $scope.skillups = null;
     $scope.copies = null;
 	$scope.slots = null;
     $scope.specialEvent = 1;
     $scope.limitBreakBox = false;
     $scope.serverType = "global";
-	
+
 	$scope.specialProbabilityProgress = 0;
 	$scope.specialProbabilityProgressBar = null;
 	$scope.specialProbabilityResult = 0;
@@ -46,21 +46,21 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 					$scope.specialProbabilityResult = Math.min((data.result * 100),99.9).toFixed(1);
 					$scope.specialProbabilityProgressBar = "Complete";
 					$scope.isSpecialReady = true;
-				} 
-			}, 
-			null, 
+				}
+			},
+			null,
 			function(data) {
 				$scope.specialProbabilityProgress = data.progress;
 				$scope.specialProbabilityProgressBar = data.progress + "%";
 			}
 		);
 	};
-    
+
     $scope.limitBreak = function() {
         $scope.limitBreakBox = !$scope.limitBreakBox
         if($scope.character) $rootScope.changeUnit($stateParams.unit, $scope.character.uid);
     }
-	
+
 	$scope.socketProbabilityProgress = 0;
 	$scope.socketProbabilityProgressBar = null;
 	$scope.socketProbabilityResult = 0;
@@ -97,16 +97,16 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 					$scope.socketProbabilityResult = Math.min((data.result * 100),99.9).toFixed(1);
 					$scope.socketProbabilityProgressBar = "Complete";
 					$scope.isSocketReady = true;
-				} 
-			}, 
-			null, 
+				}
+			},
+			null,
 			function(data) {
 				$scope.socketProbabilityProgress = data.progress;
 				$scope.socketProbabilityProgressBar = data.progress + "%";
 			}
 		);
 	};
-	
+
     $rootScope.changeUnit = function(unit, uid) {
         $scope.character = { uid: uid, slots: [ ], name: $scope.returnName(uid) };
 		$scope.slots = $scope.slotCount(uid);
@@ -123,18 +123,18 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
         if ($scope.limitBreakBox) return units[uid - 1].limitSlot;
         else return units[uid - 1].slots;
     };
-    
+
     $scope.returnName = function(uid) {
     	if (!uid) return;
     	return units[uid - 1].name;
     };
-    
+
     $scope.quickFillSlots = function() {
         $scope.character.slots = [ ];
         for (var i=0;i<$scope.slots;++i)
         	$scope.character.slots.push({ id: [ 2, 3, 1, 6, 4][i], level: 0 });
     };
-    
+
     $scope.quickFillSkillups = function(uid) {
     	if (!uid) return;
     	var cooldown = window.cooldowns[uid - 1];
@@ -163,7 +163,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 				.join('');
 			tokens.push(unit.uid + ':' + temp);
 		}
-        
+
 
         result = '#/transfer/S' + tokens.join(',') + 'P';
         $scope.url = window.location.href.match(/^(.+?)#/)[1] + result;
@@ -178,13 +178,13 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
 
     $rootScope.notify = function(data) {
         data = jQuery.extend({ type: 'information' },data);
-        if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
+        if (data.name && notifications[data[name]]) notifications[data[name]].close();
         var notification = noty(jQuery.extend({ timeout: 2500, layout: 'topRight', theme: 'relax' }, data));
         if (data.name) notifications[data[name]] = notification;
         return notification;
 
     };
-    
+
 	$controller('StorageCtrl', { $scope: $scope });
     $controller('DismissalCtrl');
 
@@ -194,7 +194,7 @@ controllers.MainCtrl = ['$scope', '$rootScope', '$state', '$stateParams', '$cont
  * PickerCtrl *
  **************/
 
-controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) { 
+controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
 
     /* * * * * Scope variables * * * * */
 
@@ -222,6 +222,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         if (parameters === null) return;
 
         result = window.units.filter(function(x) {
+            // some units don't exist or have no functions for their abilities, like turtles.
             if (x === null || x === undefined || !x.hasOwnProperty('number'))
                 return false;
             if (!Utils.checkUnitMatchSearchParameters(x, parameters))
@@ -267,7 +268,7 @@ controllers.ResetCtrl = function($scope, $rootScope, $state) {
         $state.go('^');
     };
 };
-    
+
 /*******************
  * InstructionCtrl *
  ******************/

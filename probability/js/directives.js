@@ -22,7 +22,7 @@ directives.slotWheel = function() {
 					scope.character.slots[scope.slotNumber] = null;
 				}
                 element.find('.ability-button').toggleClass('active');
-                element.toggleClass('active'); 
+                element.toggleClass('active');
                 if (!scope.$$phase) {
 					scope.$apply();
 				}
@@ -40,7 +40,7 @@ directives.slotWheel = function() {
                     slots[scope.slotNumber] = { id: id, level: 1 };
 				}
                 element.find('.ability-button').toggleClass('active');
-                element.toggleClass('active'); 
+                element.toggleClass('active');
                 if (!scope.$$phase) scope.$apply();
             };
 
@@ -50,7 +50,7 @@ directives.slotWheel = function() {
 					n = 5;
 				} else {
 					n = parseInt(prompt('Ability level:'), 10);
-				} 
+				}
                 if (isNaN(n) || n < 0 || n > 5) {
 					return;
 				}
@@ -73,7 +73,7 @@ directives.decorateSlot = function() {
             var update = function(uid) {
                 if (!uid) element[0].style.backgroundImage = null;
                 else {
-                    var url = Utils.getThumbnailUrl(scope.uid);
+                    var url = Utils.getThumbnailUrl(scope.uid, '..');
                     element[0].style.backgroundImage = 'url(' + url + ')';
                     //var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
                     //element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';

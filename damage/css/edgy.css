@@ -42,9 +42,16 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     border-bottom: 2px solid #343d46;
 }
 
-.unit, .unit:hover {
+.unit {
     border-color: white;
     color: white;
+}
+
+@media (hover) {
+    .unit:hover {
+        border-color: white;
+        color: white;
+    }
 }
 
 .modal-header {
@@ -67,12 +74,14 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     color: white;
 }
 
-.btn.trigger > i:hover {
-    color: black;
-}
+@media (hover) {
+    .btn.trigger > i:hover {
+        color: black;
+    }
 
-.rotater:hover .fa {
-    color: white !important;
+    .rotater:hover .fa {
+        color: white !important;
+    }
 }
 
 .fa-star {

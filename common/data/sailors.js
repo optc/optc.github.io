@@ -2322,6 +2322,36 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
+    3595: {
+        atkStatic: function(p) { return [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3597: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
+    },
+    3599: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
+    3600: {
+        atkStatic: function(p) { return 60; },
+        hpStatic: function(p) { return 60; },
+        rcvStatic: function(p) { return 60; },
+    },
+    3601: {
+        atkStatic: function(p) { return [0, 30][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 30][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 30][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3605: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

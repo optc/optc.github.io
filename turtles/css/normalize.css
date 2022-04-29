@@ -94,9 +94,14 @@ a {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
-a:active,
-a:hover {
+a:active{
   outline: 0;
+}
+
+@media (hover) {
+  a:hover {
+    outline: 0;
+  }
 }
 
 /* Text-level semantics

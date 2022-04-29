@@ -1,3 +1,4 @@
+(function () {
 /**
  * These are the `filters.custom` in "characters\js\table.js", used to "match"
  * ability descriptions in "common\data\details.js"
@@ -1342,7 +1343,7 @@ let matchers = {
         },
 
         {
-            name: 'Combo Boost %target%',
+            name: 'Combo ATK Boost',
             targets: [ 'special', 'superSpecial' ],
             regex: /Boost.+hit in the chain/i,
         },
@@ -1650,7 +1651,8 @@ let matchers = {
 
         {
             name: 'Status ATK Boost: Increase Defense',
-            targets: [ 'captain' ],
+            //targets: [ 'captain' ],
+            targets: [  ],
             regex: /Boosts (?:ATK|([^."]*?)characters? ATK) against[^."]+?enemies with increased defense[^."]+?by ([?.\d]+)x(?:-([?.\d]+)x)?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?)?/i,
             submatchers: [
                 {
@@ -1663,7 +1665,7 @@ let matchers = {
 
         {
             name: 'Status ATK Boost: Increase Defense',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special' ],
             regex: /Boosts ATK against[^."]+?enemies with increased defense[^."]+?by ([?.\d]+)x(?:-([?.\d]+)x)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
             submatchers: [
                 {
@@ -2348,8 +2350,8 @@ let matchers = {
         },
 
         {
-            name: 'Multiple Stage %target%',
-            targets: [ 'special', 'superSpecial' ],
+            name: 'Multiple Stage',
+            targets: [ 'special' ],
             regex: /description/i,
         },
 
@@ -2360,7 +2362,13 @@ let matchers = {
         },
 
         {
-            name: 'Team Orb Composition Requirement %target%',
+            name: 'Requirement: Beneficial Orb',
+            targets: [ 'captain' ],
+            regex: /if they have a beneficial orb/i,
+        },
+
+        {
+            name: 'Requirement: Team Orb Composition',
             targets: [ 'special' ],
             regex: /your( crew.+characters with|.+Captain's orb is)/i,
         },
@@ -2433,6 +2441,43 @@ let matchers = {
             // make it stop when it finds "char" (characters)
             // should match "boosts Orb Effects of [PSY] and Slasher characters"
             regex: /Boosts Orb Effects of ((?:(?!char)[^."])*?(?:Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)[^."]+?)character/i,
+            submatchers: [
+                ...createClassesSubmatchers([1]),
+            ],
+        },
+
+        {
+            name: 'Color Affinity Requirement: Universal',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            // `(?:(?!char)[^."])*?` is a "tempered dot"
+            // ensure that there is one type (there could be abilities that boost type and classes)
+            // make it stop when it finds "char" (characters)
+            // interpret "Captain's Type", "Dominant Type", "each Type" as universal
+            regex: /Boosts (?:the )?Color Affinity of ((?:(?!char)[^."])*?(?:all|type)[^."]+?)character/i,
+        },
+
+        {
+            name: 'Color Affinity Requirement: Type',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            // `(?:(?!char)[^."])*?` is a "tempered dot"
+            // ensure that there is one type (there could be abilities that boost type and classes)
+            // make it stop when it finds "char" (characters)
+            // include "Dominant Type" boosters
+            // should match "boosts Color Affinity of [PSY] and Slasher characters"
+            regex: /Boosts (?:the )?Color Affinity of ((?:(?!char)[^."])*?(?:\[(?:STR|DEX|QCK|PSY|INT)\]|Type)[^."]+?)character/i,
+            submatchers: [
+                ...createTypesSubmatchers([1]),
+            ],
+        },
+
+        {
+            name: 'Color Affinity Requirement: Class',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            // `(?:(?!char)[^."])*?` is a "tempered dot"
+            // ensure that there is one class (there could be abilities that boost type and classes)
+            // make it stop when it finds "char" (characters)
+            // should match "boosts Color Affinity of [PSY] and Slasher characters"
+            regex: /Boosts (?:the )?Color Affinity of ((?:(?!char)[^."])*?(?:Slasher|Striker|Fighter|Shooter|Free Spirit|Cerebral|Powerhouse|Driven)[^."]+?)character/i,
             submatchers: [
                 ...createClassesSubmatchers([1]),
             ],
@@ -2608,7 +2653,7 @@ let matchers = {
 
         {
             name: 'Healer: Percentage MAX HP',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:Recovers all missing HP|Recovers ([?\d]+)%(?:-([?\d]+)%)? of crew's MAX HP)/i,
             submatchers: [
                 {
@@ -2621,13 +2666,13 @@ let matchers = {
 
         {
             name: 'Healer: Missing HP',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'swap', 'support' ],
             regex: /Recovers[^."]+?missing HP/i,
         },
 
         {
             name: 'Healer: Overheal',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /Recovers[^."]+?allowing HP Overfill/i,
         },
 
@@ -2825,7 +2870,8 @@ let matchers = {
 
         {
             name: 'Damage Reduction - Passive: Threshold',
-            targets: [ 'captain' ],
+            //targets: [ 'captain' ],
+            targets: [  ],
             // reduces any damage received above 5,000 HP by 95% for 2 turns
             // put the second "Percentage" group in an atomic group, so it doesn't backtrack just to fulfill the negative lookahead, or else the negative lookahead could be true and create false positives
             regex: /Reduces (?:any )?damage (?:received|taken) above ([?,\d]+)(?:-([?,\d]+))? HP by ([?.\d]+)%(?=((?:-([?.\d]+)%)?))\4(?! for [?\d]+\+?(?:-[?\d]+)? turn)(?:, by ([?.\d]+)%(?:-([?.\d]+)%)?)?/i,
@@ -2932,8 +2978,8 @@ let matchers = {
     ],
     'Slot': [
         {
-            name: 'Orb chance boosters',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            name: 'Orb Chance Boosters',
+            targets: [ 'captain', 'special', 'swap', 'sailor', 'support' ],
             regex: /boosts chances of getting.+orbs/i,
         },
 
@@ -3073,7 +3119,7 @@ let matchers = {
 
         {
             name: 'Orb barrierers',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'swap', 'support' ],
             regex: /Barriers (?=((?:[^o."]+|o(?!rb))*))\1orbs? for ([?\d]+\+?) ((?:GOOD|GREAT|PERFECT|, | and | or )+) hit/i,
             submatchers: [
                 {
@@ -3133,7 +3179,7 @@ let matchers = {
 
         {
             name: 'Orb Control: Negative > Positive',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(Badly Matching orbs into.+Matching orbs)/i,
             //include: [ 900, 901, 996, 997, 933, 938, 939 ],
         },
@@ -3157,7 +3203,7 @@ let matchers = {
 
         {
             name: 'Orb Control: Full',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(Changes[^,]+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i,
         },
 
@@ -3169,7 +3215,7 @@ let matchers = {
 
         {
             name: 'Orb Control: Self',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap' ],
+            targets: [ 'special', 'superSpecial', 'swap' ],
             regex: /Changes.+own orb.+into/i,
         },
 
@@ -3181,32 +3227,32 @@ let matchers = {
 
         {
             name: 'Orb Control: Randomize',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /randomizes.+orb/i,
         },
 
         {
             name: 'Orb Control: Switch',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /switches orbs/i,
         },
 
         {
-            name: 'Orb Control: Matchings',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            name: 'Orb Control: Matching',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(Changes.+(orb|orbs|orbs,))[^,]+Matching/i,
             include: [ 1036, 1037 ]
         },
 
         {
-            name: 'Orb Control: Slot',
+            name: 'Orb Control: Empty',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(Empties|Changes.+into.+\[EMPTY\])/i,
         },
 
         {
             name: 'Orb Control: Block',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
             include: [ 1383, 1384 ]
         },
@@ -3221,7 +3267,7 @@ let matchers = {
 
         {
             name: 'Debuff Immunity Buff',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /applies.+immunity/i,
         },
 
@@ -3285,7 +3331,7 @@ let matchers = {
 
         {
             name: 'Enemy Status Displayer',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'swap', 'support' ],
             regex: /Displays the status of all enemies/i,
         },
 
@@ -3517,7 +3563,7 @@ let matchers = {
             submatchers: [
                 {
                     type: 'separator',
-                    description: 'This filter matches units that reduce the crew\'s HP and deals damage based on the HP subtracted',
+                    description: 'This filter matches units that reduce the crew\'s HP and deals damage based on the HP subtracted. This counts as enemy inflicted damage.',
                 },
             ],
         },
@@ -4131,7 +4177,7 @@ let matchers = {
         },
 
         { // Split from "Enrage/Reduce Increase Damage Taken" PA
-            name: 'Reduce Increase Damage Taken',
+            name: 'Debuff Reduction: Increase Damage Taken',
             targets: [ 'potential' ],
             regex: /reduces Increase Damage Taken duration (?:by ([?\d]+) turns?|(completely))/i,
             submatchers: [
@@ -4151,7 +4197,7 @@ let matchers = {
 
         {
             name: 'Positive Buff Remover',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
             regex: /removes[^."]+?positive buffs/i,
         },
 
@@ -4159,6 +4205,12 @@ let matchers = {
             name: 'Debuff Reduction: Orb Rate Increase and Decrease',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
             regex: /(reduces|removes).+Orb Rate Up and Orb Rate Down.+Buffs/i,
+        },
+
+        {
+            name: 'Debuff Reduction: Beneficial Orb Buff and Non-beneficial Orb Debuff',
+            targets: [ 'special' ],
+            regex: /(reduces|removes).+beneficial orb Buff and non-beneficial orb Debuff/i,
         },
 
         {
@@ -4283,6 +4335,12 @@ let matchers = {
         },
 
         {
+            name: 'Paralyzers',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /Paralyzes/i,
+        },
+
+        {
             name: 'Old Defense reducers',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
             regex: /Reduces the defense/i,
@@ -4290,7 +4348,7 @@ let matchers = {
 
         {
             name: 'Defense Reduction',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /Reduces the defense of all enemies by ([?\d]+)%(?:-([?\d]+)%)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?\d]+)%(?:-([?\d]+)%)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
             submatchers: [
                 {
@@ -4351,6 +4409,12 @@ let matchers = {
         },
 
         {
+            name: 'Melo-Melo',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /inflicts Melo-Melo/i,
+        },
+
+        {
             name: 'Old Increase Damage Taken %target%',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
             regex: /Inflicts\D+Increase Damage Taken/i,
@@ -4358,7 +4422,7 @@ let matchers = {
 
         {
             name: 'Increase Damage Taken',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(ignores (?:Increase Damage Taken )?Debuff Protection and )?Inflicts (?:all enemies) with Increase Damage Taken by ([?.\d]+)x(?:-([?.\d]+)x)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
             submatchers: [
                 {
@@ -4610,6 +4674,12 @@ let matchers = {
             regex: /Double Special Activation/i,
         },
 
+        {
+            name: 'Barrier Penetration',
+            targets: [ 'potential' ],
+            regex: /Barrier Penetration/i,
+        },
+
     ],
     'Uncategorized': [
 
@@ -4763,3 +4833,5 @@ if (alphabeticalOrder){
         }
     }
 }
+
+})();

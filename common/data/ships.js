@@ -753,5 +753,16 @@ window.ships = [
             return 1.5;
         },
     },
+    
+    
+    
+    { //56
+        name: "Thousand Sunny - Treasure Cruise 8th Anniversary Model",
+        thumb: null,
+        description: 'Boosted Ability 1: Boosts ATK by 1.55x, boosts HP by 1.2x, makes [TND] orbs beneficial for all characters and boosts EXP and Beli gained by 3x. Base Ability: Boosts ATK by 1.5x and makes [TND] orbs beneficial for all characters.',
+        //description: 'Boosts ATK by 1.2x.',
+        atk: function(p) { return 1.55; },
+        hp: function(p) { return 1.2; },
+    },
 
 ];

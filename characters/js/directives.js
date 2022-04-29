@@ -112,8 +112,8 @@ directives.decorateSlot = function() {
             if (scope.big)
                 element[0].style.backgroundImage = 'url(' + Utils.getBigThumbnailUrl(scope.uid) + ')';
             else
-                element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
-                //element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
+                //element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
         }
     };
 };
@@ -160,11 +160,17 @@ directives.animateCollapse = function($timeout) {
                 var collapsibleElement = element.next()
                 if (collapsibleElement.hasClass('collapse')) {
                     collapsibleElement.on('hide.bs.collapse', (e) => {
-                        element.find('i').first().removeClass('fa-flip-vertical');
+                        // show/hide events of deeper collapsibles might not have event handlers,
+                        // so they will be propagated up. check if the element to make sure.
+                        if (e.target.previousElementSibling == element[0]) {
+                            element.find('i').first().removeClass('fa-flip-vertical');
+                        }
                         e.stopPropagation();
                     })
                     collapsibleElement.on('show.bs.collapse', (e) => {
-                        element.find('i').first().addClass('fa-flip-vertical');
+                        if (e.target.previousElementSibling == element[0]) {
+                            element.find('i').first().addClass('fa-flip-vertical');
+                        }
                         e.stopPropagation();
                     })
                 }
@@ -312,8 +318,8 @@ directives.compare = function() {
                         suggestion: function(id) {
                             if (Number.isInteger(id)){
 
-                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1);
-                                //var name = units[id].name, url = Utils.getThumbnailUrl(id+1), url2 = Utils.getGlobalThumbnailUrl(id+1);
+                                var name = units[id].name, url = Utils.getThumbnailUrl(id+1, '..');
+                                //var name = units[id].name, url = Utils.getThumbnailUrl(id+1, '..'), url2 = Utils.getGlobalThumbnailUrl(id+1);
                                 if (name.length > 63) name = name.slice(0,60) + '...';
                                 var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
                                 //var thumb = '<div class="slot small" style="background-image: url(' + url2 + '), url(' + url + ')"></div>';
@@ -321,7 +327,7 @@ directives.compare = function() {
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }
                             else{
-                                var name = 'material', url = Utils.getThumbnailUrl(id);
+                                var name = 'material', url = Utils.getThumbnailUrl(id, '..');
                                 var thumb = '<div class="slot small" style="background-image: url(' + url + ')"></div>';
                                 return '<div><div class="suggestion-container">' + thumb + '<span>' + name + '</span></div></div>';
                             }

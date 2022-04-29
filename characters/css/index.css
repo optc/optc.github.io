@@ -45,8 +45,10 @@ body, html {
     border: none;
 }
 
-#queryContainer > button:hover {
-    text-decoration: underline;
+@media (hover) {
+    #queryContainer > button:hover {
+        text-decoration: underline;
+    }
 }
 
 #leftContainer {
@@ -299,8 +301,10 @@ input#burgerMenuState {
     font-weight: normal;
 }
 
-#leftContainer .submatcher .submatcher-option:hover {
-    background-color: rgb(230,230,230);
+@media (hover) {
+    #leftContainer .submatcher .submatcher-option:hover {
+        background-color: rgb(230,230,230);
+    }
 }
 
 #leftContainer .submatcher .submatcher-option.active {
@@ -314,9 +318,11 @@ input#burgerMenuState {
     background-color: #dd6060;
 }
 
-#leftContainer .custom.filter .custom.filter.submatchers-toggler:hover,
-#leftContainer .custom.filter > .collapse {
-    background-color: #FF9090;
+@media (hover) {
+    #leftContainer .custom.filter .custom.filter.submatchers-toggler:hover,
+    #leftContainer .custom.filter > .collapse {
+        background-color: #FF9090;
+    }
 }
 
 .filter-container:last-child > .filter:last-child {
@@ -327,8 +333,14 @@ input#burgerMenuState {
     border: none;
 }
 
-.type.filter:not(.active):not(:hover), .orb-controllers > span:not(.separator):not(.active):not(:hover) {
+.type.filter:not(.active), .orb-controllers > span:not(.separator):not(.active) {
     opacity: 0.3;
+}
+
+@media (hover) {
+    .type.filter:not(.active):not(:hover), .orb-controllers > span:not(.separator):not(.active):not(:hover) {
+        opacity: 0.3;
+    }
 }
 
 .type.filter.active, .orb-controllers > .active {
@@ -489,8 +501,14 @@ input#burgerMenuState {
     font-size: 13px;
 }
 
-.filter.stars:not(.active):not(:hover):before {
+.filter.stars:not(.active):before {
     color: #cccccc !important;
+}
+
+@media (hover) {
+    .filter.stars:not(.active):not(:hover):before {
+        color: #cccccc !important;
+    }
 }
 
 .stars-1:before { color: #40a3da; content: '\2605'; }
@@ -550,12 +568,14 @@ input#burgerMenuState {
     box-shadow: inset 0 0 0 1px #7777ff;
 }
 
-.custom.filter:not(.orb-controllers) > div:first-child:hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover, .submatcher-option:hover {
-    background-color: rgb(230,230,230);
-}
+@media (hover) {
+    .custom.filter:not(.orb-controllers) > div:first-child:hover, .class.filter:hover, .drop.filter:hover, .exc.filter:hover, .submatcher-option:hover {
+        background-color: rgb(230,230,230);
+    }
 
-.custom.filter.active > div:first-child:hover, .class.filter.active:hover, .drop.filter.active:hover, .exc.filter.active:hover, .filter .submatchers .submatcher-option.active:hover {
-    background-color: darkred !important;
+    .custom.filter.active > div:first-child:hover, .class.filter.active:hover, .drop.filter.active:hover, .exc.filter.active:hover, .filter .submatchers .submatcher-option.active:hover {
+        background-color: darkred !important;
+    }
 }
 
 .width-12 { width: 100%; }
@@ -641,12 +661,14 @@ input#burgerMenuState {
     color: white;
 }
 
-#clear-button:hover {
-    background: orangered;
-}
+@media (hover) {
+    #clear-button:hover {
+        background: orangered;
+    }
 
-#toggle-button:hover {
-    background: darkviolet;
+    #toggle-button:hover {
+        background: darkviolet;
+    }
 }
 
 .dataTables_info, .dataTables_paginate {
@@ -722,8 +744,10 @@ input#burgerMenuState {
     margin: 0 5px;
 }
 
-.comparer .compare-clear:hover {
-    color: red;
+@media (hover) {
+    .comparer .compare-clear:hover {
+        color: red;
+    }
 }
 
 #compare {
@@ -763,8 +787,10 @@ input#burgerMenuState {
     background-color: rgb(230,230,230);
 }
 
-.tt-suggestion:hover {
-    background-color: lightgray;
+@media (hover) {
+    .tt-suggestion:hover {
+        background-color: lightgray;
+    }
 }
 
 .tt-suggestion .slot {
@@ -855,8 +881,10 @@ input#burgerMenuState {
     vertical-align: middle;
 }
 
-#mainTable th:hover {
-    text-decoration: underline;
+@media (hover) {
+    #mainTable th:hover {
+        text-decoration: underline;
+    }
 }
 
 .table-striped-column > * > tr > :nth-of-type(odd) {
@@ -1188,8 +1216,10 @@ unit > a {
     cursor: pointer;
 }
 
-unit > a:hover, .clickable:hover {
-    outline: 1px solid red !important;
+@media (hover) {
+    unit > a:hover, .clickable:hover {
+        outline: 1px solid red !important;
+    }
 }
 
 .tab-pane + .tab-pane {

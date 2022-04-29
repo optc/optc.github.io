@@ -15,7 +15,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
 
     var canvas = $('#canvas')[0];
     var context = canvas.getContext('2d');
-    
+
     context.fillStyle = 'white';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -139,16 +139,16 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
                     type(context, { text: '+' + total, style: 'bold 14px "Open Sans"',
                         x: baseX + 40, y: baseY + 18, color: 'gold', stroke: 'black', strokeWidth: 3 });
                 }
-                
+
                 if (n >= 2 && window.sailors.hasOwnProperty(unit.number +1)) {
-                    awesome(context, { text: 'f13d', 
+                    awesome(context, { text: 'f13d',
                         x: baseX + 3, y: baseY + 105, color: 'gold', stroke: 'black', strokeWidth: 3 });
                 }
             };
-            image.src = Utils.getThumbnailUrl(unit.number + 1);
+            image.src = Utils.getThumbnailUrl(unit.number + 1, '..');
             //image.src = Utils.getGlobalThumbnailUrl(unit.number + 1);
             //image.onerror = function(){
-            //    image.src = Utils.getThumbnailUrl(unit.number + 1);
+            //    image.src = Utils.getThumbnailUrl(unit.number + 1, '..');
             //}
         });
     },true);
@@ -156,7 +156,7 @@ app.controller('ImageGeneratorCtrl', function($scope, $filter, $timeout) {
     baseX = 10; baseY = 85;
 
 	if($scope.numbers.healPerTurn) baseY +=25;
-	
+
     if ($scope.data.effect) {
         awesome(context, { text: 'f02d', x: baseX + 8, y: baseY + 20, align: 'center', color: 'darkorchid' });
         type(context, { text: $scope.data.effect, x: baseX + 25, y: baseY + 20, maxWidth: 155, truncate: true, color: 'darkorchid' });
