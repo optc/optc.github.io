@@ -10239,8 +10239,8 @@ window.captains = {
     },
     2936: {
         //p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]
-        atk: function(p) { return p.unit.type == "PSY" ? [3, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
-        hp: function(p) { return [1.1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        atk: function(p) { return p.unit.type == "PSY" ? [3, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2.5, 3, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return [1.1, 1.3, 1.4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     2937: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 2.25 : 1; },
