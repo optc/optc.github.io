@@ -395,7 +395,7 @@ input#burgerMenuState {
     float: left;
     position: relative;
     top: 2px;
-    width: 125px;
+    width: 130px;
     text-align: center;
     margin-right: 5px;
 }
@@ -440,7 +440,6 @@ input#burgerMenuState {
     float: left;
     position: relative;
     top: 2px;
-    width: 200px;
     text-align: center;
     margin-right: 5px;
 }
@@ -449,7 +448,6 @@ input#burgerMenuState {
     float: left;
     position: relative;
     top: 2px;
-    width: 150px;
     text-align: center;
     margin-right: 5px;
 }
@@ -945,7 +943,7 @@ tr.preview td:nth-child(2) > a:after {
 }
 
 .abilities td:nth-child(2) {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .specialName {

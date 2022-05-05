@@ -225,12 +225,14 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
               $scope.rumble = jsonData.units.filter(unit => unit.id == key)[0];
             }
             if ($scope.rumble === undefined ) {
-              console.log("Couldn't find unit with id " + id);
+              //console.log("Couldn't find unit with id " + id);
               return;
             }
             // normalize the data here:
             denormalizeEffects($scope.rumble.ability);
             denormalizeEffects($scope.rumble.special);
+            if ($scope.rumble.llbability) denormalizeEffects($scope.rumble.llbability);
+            if ($scope.rumble.llbspecial) denormalizeEffects($scope.rumble.llbspecial);
 
             // Check for VS unit
             if ( $scope.rumble.id != Math.floor($scope.rumble.id) ) {
@@ -290,9 +292,15 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base || $scope.details.captain.combined || $scope.details.captain.character1));
     $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.level1 || $scope.details.sailor.combined || $scope.details.sailor.character1));
-    $scope.isSpecialHybrid = ($scope.details && $scope.details.special && ($scope.details.special.global || $scope.details.special.character1));
+    $scope.isSpecialHybrid = ($scope.details && $scope.details.special && ($scope.details.special.global || $scope.details.special.base || $scope.details.special.character1));
     $scope.isCooldownHybrid = ($scope.cooldown && (Array.isArray($scope.cooldown[0])));
-    $scope.isSpecialStaged = ($scope.details && $scope.details.special && $scope.details.special.constructor == Array);
+    $scope.isSpecialStaged = ($scope.details && $scope.details.special && (($scope.details.special.base && $scope.details.special.base.constructor == Array) || $scope.details.special.constructor == Array));
+    $scope.isLLBSpecialStaged = [false,false,false,false,false];
+    if($scope.details && $scope.details.lLimit){
+        for([key, value] of Object.entries($scope.details.lLimit)){
+            $scope.isLLBSpecialStaged[key] = ($scope.details.lLimit[key] && $scope.details.lLimit[key].special && $scope.details.lLimit[key].special.constructor == Array) ? true : false;
+        }
+    }
     $scope.isLimitStaged = ($scope.details && $scope.details.limit && $scope.details.limit.constructor == Array);
     $scope.isPotentialStaged = ($scope.details && $scope.details.potential && $scope.details.potential.constructor == Array);
     $scope.isSupportStaged = ($scope.details && $scope.details.support && $scope.details.support.constructor == Array);
@@ -312,6 +320,11 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             hp: CharUtils.getStatOfUnit($scope.unit, 'hp', level),
             rcv: CharUtils.getStatOfUnit($scope.unit, 'rcv', level),
         });
+    });
+    $scope.statPreference = 0;
+    $scope.$watch('statPreference',function(value) {
+        $scope.statPreference = value;
+        return;
     });
 
     // radar

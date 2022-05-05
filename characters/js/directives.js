@@ -710,9 +710,11 @@ filters.specialToString = function() {
 filters.abilityToString = function() {
     return function(input) {
         if (!input) return 'N/A';
-        let retVal = `<ul style="margin-bottom:3px;">`;
+        //let retVal = `<ul style="margin-bottom:3px;">`;
+        let retVal = ``;
         for (var effect of input){
-          let e = `<li>${conditionToString(effect.condition)}`;
+          //let e = `<li>${conditionToString(effect.condition)}`;
+          let e = `<br>${conditionToString(effect.condition)}`;
           switch (effect.effect) {
             case "buff":
               e += `Applies Lv.${effect.level} ${arrayToString(effect.attributes)} up buff`;
