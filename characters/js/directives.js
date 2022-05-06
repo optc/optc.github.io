@@ -18,6 +18,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 			window.charTable = element.dataTable({
 				iDisplayLength: $storage.get('unitsPerPage', 10),
 				stateSave: true,
+                deferRender: true,
 				data: scope.table.data,
 				columns: scope.table.columns,
 				rowCallback: function(row, data, index) {
