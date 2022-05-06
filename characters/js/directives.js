@@ -127,10 +127,10 @@ directives.autoFocus = function($timeout) {
 	};
 };
 
-directives.animateCollapse = function($timeout) {
+// Uses Bootstrap's Collapse Component
+directives.animateCollapse = function($timeout, $document) {
     return {
         restrict: 'E',
-        replace: true,
         transclude: true,
         template: `<span>
         <ng-transclude></ng-transclude>
@@ -148,34 +148,22 @@ directives.animateCollapse = function($timeout) {
                 }
             });
 
-            /* add the event handlers after the DOM is fully loaded/compiled.
-            otherwise, the event handlers won't work, likely because the collapsible
-            element is replaced when using directives that use "replace: true"
-            */
-            $timeout(()=>{
-                // this will automatically flip/revert the arrow when the
-                // collapse animation will start. I tried putting this in an
-                // ngClass directive but all my attempts failed (might be due to
-                // an old Angular version? dunno. - @CodeYan)
-                var collapsibleElement = element.next()
-                if (collapsibleElement.hasClass('collapse')) {
-                    collapsibleElement.on('hide.bs.collapse', (e) => {
-                        // show/hide events of deeper collapsibles might not have event handlers,
-                        // so they will be propagated up. check if the element to make sure.
-                        if (e.target.previousElementSibling == element[0]) {
-                            element.find('i').first().removeClass('fa-flip-vertical');
-                        }
-                        e.stopPropagation();
-                    })
-                    collapsibleElement.on('show.bs.collapse', (e) => {
-                        if (e.target.previousElementSibling == element[0]) {
-                            element.find('i').first().addClass('fa-flip-vertical');
-                        }
-                        e.stopPropagation();
-                    })
-                }
-            })
-
+            if (!$document.isAnimateCollapseHandlerAdded) {
+                // delegate event to top level node, so we only add two event listeners
+                $document.on('hide.bs.collapse', (e) => {
+                    var collapserElement = e.target.previousElementSibling;
+                    if (collapserElement.tagName == 'ANIMATE-COLLAPSE') {
+                        collapserElement.children[0].lastElementChild.classList.remove('fa-flip-vertical');
+                    }
+                });
+                $document.on('show.bs.collapse', (e) => {
+                    var collapserElement = e.target.previousElementSibling;
+                    if (collapserElement.tagName == 'ANIMATE-COLLAPSE') {
+                        collapserElement.children[0].lastElementChild.classList.add('fa-flip-vertical');
+                    }
+                });
+                $document.isAnimateCollapseHandlerAdded = true;
+            }
         },
     }
 }
