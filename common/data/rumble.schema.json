@@ -59,6 +59,32 @@
                 "japan": {
                   "$ref": "#/definitions/Unit"
                 },
+                "llbability": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ability"
+                    },
+                    "minItems": 5,
+                    "maxItems": 5
+                },
+                "llbresilience": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                        { "$ref": "#/definitions/DebuffResilience" },
+                        { "$ref": "#/definitions/DamageResilience" },
+                        { "$ref": "#/definitions/HealingResilience" }
+                    ]
+                  }
+                },
+                "llbspecial": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Special"
+                    },
+                    "minItems": 10,
+                    "maxItems": 10
+                },
                 "pattern": {
                     "type": "array",
                     "items": {
