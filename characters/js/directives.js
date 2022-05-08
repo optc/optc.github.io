@@ -18,6 +18,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
 			window.charTable = element.dataTable({
 				iDisplayLength: $storage.get('unitsPerPage', 10),
 				stateSave: true,
+                deferRender: true,
 				data: scope.table.data,
 				columns: scope.table.columns,
 				rowCallback: function(row, data, index) {
@@ -127,10 +128,10 @@ directives.autoFocus = function($timeout) {
 	};
 };
 
-directives.animateCollapse = function($timeout) {
+// Uses Bootstrap's Collapse Component
+directives.animateCollapse = function($timeout, $document) {
     return {
         restrict: 'E',
-        replace: true,
         transclude: true,
         template: `<span>
         <ng-transclude></ng-transclude>
@@ -148,34 +149,22 @@ directives.animateCollapse = function($timeout) {
                 }
             });
 
-            /* add the event handlers after the DOM is fully loaded/compiled.
-            otherwise, the event handlers won't work, likely because the collapsible
-            element is replaced when using directives that use "replace: true"
-            */
-            $timeout(()=>{
-                // this will automatically flip/revert the arrow when the
-                // collapse animation will start. I tried putting this in an
-                // ngClass directive but all my attempts failed (might be due to
-                // an old Angular version? dunno. - @CodeYan)
-                var collapsibleElement = element.next()
-                if (collapsibleElement.hasClass('collapse')) {
-                    collapsibleElement.on('hide.bs.collapse', (e) => {
-                        // show/hide events of deeper collapsibles might not have event handlers,
-                        // so they will be propagated up. check if the element to make sure.
-                        if (e.target.previousElementSibling == element[0]) {
-                            element.find('i').first().removeClass('fa-flip-vertical');
-                        }
-                        e.stopPropagation();
-                    })
-                    collapsibleElement.on('show.bs.collapse', (e) => {
-                        if (e.target.previousElementSibling == element[0]) {
-                            element.find('i').first().addClass('fa-flip-vertical');
-                        }
-                        e.stopPropagation();
-                    })
-                }
-            })
-
+            if (!$document.isAnimateCollapseHandlerAdded) {
+                // delegate event to top level node, so we only add two event listeners
+                $document.on('hide.bs.collapse', (e) => {
+                    var collapserElement = e.target.previousElementSibling;
+                    if (collapserElement.tagName == 'ANIMATE-COLLAPSE') {
+                        collapserElement.children[0].lastElementChild.classList.remove('fa-flip-vertical');
+                    }
+                });
+                $document.on('show.bs.collapse', (e) => {
+                    var collapserElement = e.target.previousElementSibling;
+                    if (collapserElement.tagName == 'ANIMATE-COLLAPSE') {
+                        collapserElement.children[0].lastElementChild.classList.add('fa-flip-vertical');
+                    }
+                });
+                $document.isAnimateCollapseHandlerAdded = true;
+            }
         },
     }
 }
@@ -433,19 +422,20 @@ directives.addNames = function($stateParams, $rootScope) {
         template: '<table class="table table-striped-column abilities"><tbody></tbody></table>',
         link: function(scope, element, attrs) {
             var id = $stateParams.id, data = details[id];
-
-                var currentAliases = name[id];
-                if(currentAliases[0]!=''){
-                element.append($('<tr><td>Japanese</td><td><div>'+ currentAliases[0] +'</div></td></tr>'));
-                }
-                if(currentAliases[1]!=''){
-                    element.append($('<tr><td>French</td><td><div>'+ currentAliases[1] +'</div></td></tr>'));
-                }
-                if(currentAliases[2]){
-                    var otherAliases = currentAliases.slice(2).join(', ');
-                    element.append($('<tr><td>Others</td><td><div>'+ otherAliases +'</div></td></tr>'));
-                }
-                }
+            var htmlToAppend = "";
+            var currentAliases = name[id];
+            if(currentAliases[0]!=''){
+                htmlToAppend += '<tr><td>Japanese</td><td><div>'+ currentAliases[0] +'</div></td></tr>';
+            }
+            if(currentAliases[1]!=''){
+                htmlToAppend += '<tr><td>French</td><td><div>'+ currentAliases[1] +'</div></td></tr>';
+            }
+            if(currentAliases[2]){
+                var otherAliases = currentAliases.slice(2).join(', ');
+                htmlToAppend += '<tr><td>Others</td><td><div>'+ otherAliases +'</div></td></tr>';
+            }
+            element.append(htmlToAppend);
+        }
     }
 };
 
@@ -459,126 +449,129 @@ directives.addTags = function($stateParams, $rootScope) {
             var id = $stateParams.id, data = details[id];
             // flags
             var flags = window.flags[id] || { };
-            element.append($('<span class="tag flag">' + (flags.global ? 'Global unit' : 'Japan unit') + '</div>'));
-            element.append($('<span class="tag flag">' +
-                        (CharUtils.isFarmable(id) ? 'Farmable' : 'Non-farmable') + '</div>'));
-            if (flags.rr) element.append($('<span class="tag flag">Rare Recruit only</div>'));
-            if (flags.lrr) element.append($('<span class="tag flag">Limited Rare Recruit only</div>'));
-            if (flags.tmlrr) element.append($('<span class="tag flag">Treasure Map Sugo-fest Limited Rare Recruit only</div>'));
-            if (flags.kclrr) element.append($('<span class="tag flag">Kizuna Clash Sugo-fest Limited Rare Recruit only</div>'));
-            if (flags.pflrr) element.append($('<span class="tag flag">Pirate Rumble Sugo-fest Limited Rare Recruit only</div>'));
-            if (flags.slrr) element.append($('<span class="tag flag">Support Sugo-fest Limited Rare Recruit only</div>'));
-            if (flags.promo) element.append($('<span class="tag flag">Promo-code only</div>'));
-            if (flags.shop) element.append($('<span class="tag flag">Rayleigh Shop Unit</div>'));
-            if (flags.tmshop) element.append($('<span class="tag flag">Trade Port Unit</div>'));
-            if (flags.special) element.append($('<span class="tag flag">One time only characters</div>'));
-            if (flags.inkable) element.append($('<span class="tag flag">Inkable</div>'));
+            var htmlToAppend = "";
+            htmlToAppend += '<span class="tag flag">' + (flags.global ? 'Global unit' : 'Japan unit') + '</span>';
+            htmlToAppend += '<span class="tag flag">' +
+                        (CharUtils.isFarmable(id) ? 'Farmable' : 'Non-farmable') + '</span>';
+            if (flags.rr) htmlToAppend += '<span class="tag flag">Rare Recruit only</span>';
+            if (flags.lrr) htmlToAppend += '<span class="tag flag">Limited Rare Recruit only</span>';
+            if (flags.tmlrr) htmlToAppend += '<span class="tag flag">Treasure Map Sugo-fest Limited Rare Recruit only</span>';
+            if (flags.kclrr) htmlToAppend += '<span class="tag flag">Kizuna Clash Sugo-fest Limited Rare Recruit only</span>';
+            if (flags.pflrr) htmlToAppend += '<span class="tag flag">Pirate Rumble Sugo-fest Limited Rare Recruit only</span>';
+            if (flags.slrr) htmlToAppend += '<span class="tag flag">Support Sugo-fest Limited Rare Recruit only</span>';
+            if (flags.promo) htmlToAppend += '<span class="tag flag">Promo-code only</span>';
+            if (flags.shop) htmlToAppend += '<span class="tag flag">Rayleigh Shop Unit</span>';
+            if (flags.tmshop) htmlToAppend += '<span class="tag flag">Trade Port Unit</span>';
+            if (flags.special) htmlToAppend += '<span class="tag flag">One time only characters</span>';
+            if (flags.inkable) htmlToAppend += '<span class="tag flag">Inkable</span>';
             if (CharUtils.checkFarmable(id, { 'Story Island': true }))
-                element.append($('<span class="tag flag">Story mode only</div>'));
+                htmlToAppend += '<span class="tag flag">Story mode only</span>';
             if (CharUtils.checkFarmable(id, { Fortnight: true }))
-                element.append($('<span class="tag flag">Fortnight only</div>'));
+                htmlToAppend += '<span class="tag flag">Fortnight only</span>';
             if (CharUtils.checkFarmable(id, { Raid: true }))
-                element.append($('<span class="tag flag">Raid only</div>'));
+                htmlToAppend += '<span class="tag flag">Raid only</span>';
             if (CharUtils.checkFarmable(id, { Arena: true }))
-                element.append($('<span class="tag flag">Arena only</div>'));
+                htmlToAppend += '<span class="tag flag">Arena only</span>';
             if (CharUtils.checkFarmable(id, { Treasure: true }))
-                element.append($('<span class="tag flag">Treasure Map only</div>'));
+                htmlToAppend += '<span class="tag flag">Treasure Map only</span>';
             if (CharUtils.checkFarmable(id, { 'Story Island': true, Fortnight: true }))
-                element.append($('<span class="tag flag">Story mode & fortnight only</div>'));
+                htmlToAppend += '<span class="tag flag">Story mode & fortnight only</span>';
             if (CharUtils.checkFarmable(id, { 'Story Island': true, Raid: true }))
-                element.append($('<span class="tag flag">Story mode & raid only</div>'));
+                htmlToAppend += '<span class="tag flag">Story mode & raid only</span>';
             if (CharUtils.checkFarmable(id, { Raid: true, Fortnight: true }))
-                element.append($('<span class="tag flag">Raid & fortnight only</div>'));
+                htmlToAppend += '<span class="tag flag">Raid & fortnight only</span>';
             // matchers
-            if (!data) return;
-            for (const target in window.matchers) {
-                for (const group in window.matchers[target]) {
-                    for (var name in window.matchers[target][group]) {
-                        var matcher = window.matchers[target][group][name];
-                        if (!data[matcher.target])
-                            break;
-                        let targetString = (data[matcher.target].constructor == String)
-                            ? data[matcher.target]
-                            : JSON.stringify(data[matcher.target]);
+            if (data) {
+                for (const target in window.matchers) {
+                    for (const group in window.matchers[target]) {
+                        for (var name in window.matchers[target][group]) {
+                            var matcher = window.matchers[target][group][name];
+                            if (!data[matcher.target])
+                                break;
+                            let targetString = (data[matcher.target].constructor == String)
+                                ? data[matcher.target]
+                                : JSON.stringify(data[matcher.target]);
 
-                        // captain effects
-                        if (matcher.target == 'captain' && matcher.regex.test(targetString)) {
-                            name = matcher.name;
-                            if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
-                            else name = name.replace(/s$/,'');
-                            name = name.replace(/iing/,'ying');
-                            element.append($('<span class="tag captain">' + name + '</div>'));
-                        }
-                        // sailor effects
-                        if (matcher.target.indexOf('sailor') === 0 && !(data[matcher.target] === undefined)) {
-                            if (data[matcher.target].base){
-                                for (var sailor in data[matcher.target]){
-                                    if (matcher.regex.test(data[matcher.target][sailor])){
+                            // captain effects
+                            if (matcher.target == 'captain' && matcher.regex.test(targetString)) {
+                                name = matcher.name;
+                                if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
+                                else name = name.replace(/s$/,'');
+                                name = name.replace(/iing/,'ying');
+                                htmlToAppend += '<span class="tag captain">' + name + '</span>';
+                            }
+                            // sailor effects
+                            if (matcher.target.indexOf('sailor') === 0 && !(data[matcher.target] === undefined)) {
+                                if (data[matcher.target].base){
+                                    for (var sailor in data[matcher.target]){
+                                        if (matcher.regex.test(data[matcher.target][sailor])){
+                                            name = matcher.name;
+                                            if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                                            else name = name.replace(/s$/,'');
+                                            name = name.replace(/iing/,'ying');
+                                            if (name != "Has Sailor Ability sailor"){
+                                                htmlToAppend += '<span class="tag sailor">' + name + '</span>';
+                                            }
+                                        }
+                                    }
+                                }
+                                else{
+                                    if (matcher.regex.test(data[matcher.target])){
                                         name = matcher.name;
                                         if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
                                         else name = name.replace(/s$/,'');
                                         name = name.replace(/iing/,'ying');
-                                        if (name != "Has Sailor Ability sailor"){
-                                            element.append($('<span class="tag sailor">' + name + '</div>'));
-                                        }
+                                        htmlToAppend += '<span class="tag sailor">' + name + '</span>';
                                     }
                                 }
                             }
-                            else{
-                                if (matcher.regex.test(data[matcher.target])){
-                                    name = matcher.name;
-                                    if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
-                                    else name = name.replace(/s$/,'');
-                                    name = name.replace(/iing/,'ying');
-                                    element.append($('<span class="tag sailor">' + name + '</div>'));
+                            // specials
+                            if (matcher.target.indexOf('special') === 0 && matcher.regex.test(targetString)) {
+                                name = matcher.name;
+                                if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
+                                else name = name.replace(/s$/,'');
+                                name = name.replace(/iing/,'ying');
+                                htmlToAppend += '<span class="tag special">' + name + '</span>';
+                            }
+                            // limit
+                            if (matcher.target.indexOf('limit') === 0 && matcher.regex.test(targetString)) {
+                                name = matcher.name;
+                                if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
+                                else name = name.replace(/s$/,'');
+                                name = name.replace(/iing/,'ying');
+                                if (name != "Has Limit Break limit"){
+                                    htmlToAppend += '<span class="tag limit">' + name + '</span>';
                                 }
                             }
-                        }
-                        // specials
-                        if (matcher.target.indexOf('special') === 0 && matcher.regex.test(targetString)) {
-                            name = matcher.name;
-                            if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
-                            else name = name.replace(/s$/,'');
-                            name = name.replace(/iing/,'ying');
-                            element.append($('<span class="tag special">' + name + '</div>'));
-                        }
-                        // limit
-                        if (matcher.target.indexOf('limit') === 0 && matcher.regex.test(targetString)) {
-                            name = matcher.name;
-                            if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
-                            else name = name.replace(/s$/,'');
-                            name = name.replace(/iing/,'ying');
-                            if (name != "Has Limit Break limit"){
-                                element.append($('<span class="tag limit">' + name + '</div>'));
+                            // potentials
+                            if (matcher.target.indexOf('potential') === 0 && matcher.regex.test(targetString)) {
+                                name = matcher.name;
+                                if (!/potential$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'');
+                                else name = name.replace(/s$/,'');
+                                name = name.replace(/iing/,'ying');
+                                htmlToAppend += '<span class="tag potential">' + name + '</span>';
+                            }
+                            // super specials
+                            if (matcher.target === 'superSpecial' && matcher.regex.test(targetString)) {
+                                name = matcher.name;
+                                if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
+                                else name = name.replace(/s$/,'').replace(/special/i, 'super special');
+                                name = name.replace(/iing/,'ying');
+                                htmlToAppend += '<span class="tag superSpecial">' + name + '</span>';
+                            }
+                            // support
+                            if (matcher.target === 'support' && matcher.regex.test(targetString)) {
+                                name = matcher.name;
+                                if (!/support$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' support';
+                                else name = name.replace(/s$/,'');
+                                name = name.replace(/iing/,'ying');
+                                htmlToAppend += '<span class="tag support">' + name + '</span>';
                             }
                         }
-                        // potentials
-                        if (matcher.target.indexOf('potential') === 0 && matcher.regex.test(targetString)) {
-                            name = matcher.name;
-                            if (!/potential$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'');
-                            else name = name.replace(/s$/,'');
-                            name = name.replace(/iing/,'ying');
-                            element.append($('<span class="tag potential">' + name + '</div>'));
-                        }
-                        // super specials
-                        if (matcher.target === 'superSpecial' && matcher.regex.test(targetString)) {
-                            name = matcher.name;
-                            if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
-                            else name = name.replace(/s$/,'').replace(/special/i, 'super special');
-                            name = name.replace(/iing/,'ying');
-                            element.append($('<span class="tag superSpecial">' + name + '</div>'));
-                        }
-                        // support
-                        if (matcher.target === 'support' && matcher.regex.test(targetString)) {
-                            name = matcher.name;
-                            if (!/support$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' support';
-                            else name = name.replace(/s$/,'');
-                            name = name.replace(/iing/,'ying');
-                            element.append($('<span class="tag support">' + name + '</div>'));
-                        }
                     }
-                }
-            };
+                };
+            }
+            element.append(htmlToAppend);
         }
     };
 };
