@@ -301,45 +301,6 @@ CharUtils.saveToRegexCache = function(cacheKey, unitId, value) {
     regexCache[cacheKey][unitId] = value;
 }
 
-CharUtils.getOrbControllerData = function(id, target) {
-    if ((orbControllerCache[id] && orbControllerCache[id][target] !== undefined) || !window.details[id] || !window.details[id][target])
-        return (orbControllerCache[id][target] || null);
-
-    if (!orbControllerCache[id]) {
-        orbControllerCache[id] = {};
-    }
-    var targetString = window.details[id][target];
-    var data = (targetString.constructor != String ? JSON.stringify(targetString) : targetString);
-    var match = data.match(/(changes.+?orbs into.+?orbs)/gi);
-    if (!match) {
-        orbControllerCache[id][target] = null;
-        return null;
-    }
-    var result = { from: { }, to: { }, map: { } };
-    match.forEach(function(match) {
-        var n = match.indexOf(' into ');
-        var from = match.slice(0,n).match(/\[(.+?)\]/gi);
-        var to = match.slice(n + 6).match(/\[(.+?)\]/gi);
-        if (from) {
-            from = from.map(function(x) { return x.slice(1,-1); });
-            from.forEach(function(x) { result.from[x] = true; });
-        }
-        if (to) {
-            to = to.map(function(x) { return x.slice(1,-1); });
-            to.forEach(function(x) { result.to[x] = true; });
-        }
-        if (from && to) {
-            from.forEach(function(f) {
-                if (!result.map[f]) result.map[f] = { };
-                to.forEach(function(x) { result.map[f][x] = true; });
-            });
-        }
-    });
-
-    orbControllerCache[id][target] = result;
-    return result;
-};
-
 CharUtils.checkMatcher = function(matcher, id) {
     var target = matcher.target;
     var targetString = window.details[id][matcher.target];
@@ -514,32 +475,6 @@ CharUtils.checkSubmatcher = function(target, submatcher, matchObj, cacheKey, id)
                 result = true;
                 break;
             }
-        }
-    } else if (submatcher.type == 'orbs') {
-        // use the raw `submatcher.param`, not the JSONified
-        var from = submatcher.param.ctrlFrom || [ ];
-        var to = submatcher.param.ctrlTo || [ ];
-        var orbData = CharUtils.getOrbControllerData(id, target);
-
-        // if `from` and `to` are both empty, return true, to ensure that
-        // deselecting all orbs will show all orb controllers
-        // CharUtils.getOrbControllerData uses a different regex that what is
-        // used by the main filter
-        if (!from.length && !to.length) {
-            result = true;
-        } else if (orbData) {
-            var mismatch = true;
-            if (from.length && !to.length)
-                mismatch = from.some(function(x) { return !orbData.from.hasOwnProperty(x); });
-            else if (!from.length && to.length)
-                mismatch = to.some(function(x) { return !orbData.to.hasOwnProperty(x); });
-            else {
-                mismatch = from.some(function(f) {
-                    return to.some(function(t) { return !orbData.map[f] || !orbData.map[f].hasOwnProperty(t); });
-                });
-            }
-            if (!mismatch)
-                result = true;
         }
     }
     CharUtils.saveToRegexCache(cacheKey, id, result);

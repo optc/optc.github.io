@@ -108,9 +108,10 @@ describe('Typos', () => {
                     // expect(target).toBe(corrected);
                     expect(target).toEqual(expect.not.stringMatching(/thier|recieve/));
                 });
-                it('checks for "a 8..."', () => {
-                    // should be "an 8..."
-                    expect(target).toEqual(expect.not.stringMatching(/\ba 8/)); // a 8% or a 80%
+                it('checks for "a" that should be "an"', () => {
+                    // "an 8%" or "an 80%"
+                    // "an [INT] orb" or "an [INT] character"
+                    expect(target).toEqual(expect.not.stringMatching(/\ba (8|\[INT\])/)); 
                 });
             });
         }

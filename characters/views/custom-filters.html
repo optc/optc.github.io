@@ -55,8 +55,6 @@
                                         {{::submatcher.description}} <input type="text" ng-model="filters.custom[target][group].matchers[name].submatchers[j].param" size="11" placeholder="ex: 'luffy', 'usopp|chopper'">
                                     </label>
                                 </div>
-                                <add-orb-options ng-if="::submatcher.type == 'orbs'" class="width-12">
-                                </add-orb-options>
                                 <div ng-if="::submatcher.type == 'option'" class="filter subclass width-12 submatcher-option" ng-class="{ active: filters.custom[target][group].matchers[name].submatchers[j].param }" ng-click="toggleRadioGroup(filter, j, submatcher.radioGroup)">
                                     {{::submatcher.description}}
                                 </div>

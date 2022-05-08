@@ -290,6 +290,7 @@ input#burgerMenuState {
 
 #leftContainer .submatcher .submatcher-separator {
     text-align: center;
+    min-height: 10px; /* When we want to have an empty separator*/
 }
 
 #leftContainer .submatcher .submatcher-option {
