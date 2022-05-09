@@ -796,7 +796,7 @@ function conditionToString(condition, suffix) {
       }
     case "crew":
     case "enemies":
-      return `When there are ${condition.count} or ${condition.comparator} ${condition.type} remaining, `
+      return `When there are ${condition.count} or ${condition.comparator} ${condition.type} ${condition.relative ? condition.type == "crew" ? "than the enemy team" : "than your crew" : ""} remaining, `
     case "trigger":
       return `The first ${condition.count} times this character lands a ${condition.stat}, `
     case "defeat":

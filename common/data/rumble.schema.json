@@ -167,6 +167,9 @@
                 },
                 "count": {
                     "type": "integer"
+                },
+                "relative": {
+                    "type": "boolean"
                 }
             },
             "required": [
