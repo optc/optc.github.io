@@ -63,15 +63,48 @@
                 }
                 if (window.details[n + 1].limit[x].description.includes("Acquire Sailor Ability")){
                     LBsailors++;
+                    if (!window.details[n + 1].sailor) window.details[n + 1].sailor = {};
+                    if (window.details[n + 1].sailor.constructor == String) window.details[n + 1].sailor = { base: window.details[n + 1].sailor };
+                    window.details[n + 1].sailor["level"+LBsailors.toString()] = window.details[n + 1].sailor["level"+LBsailors.toString()] ? window.details[n + 1].sailor["level"+LBsailors.toString()] : window.details[n + 1].limit[x].description.substring(26);
                 }
                 if (window.details[n + 1].limit[x].description.includes("Acquire new Captain Ability")){
                     LBcaptains++;
+                    if (window.details[n + 1].captain.constructor == String) window.details[n + 1].captain = { base: window.details[n + 1].captain };
+                    window.details[n + 1].captain["level"+LBcaptains.toString()] = window.details[n + 1].captain["level"+LBcaptains.toString()] ? window.details[n + 1].captain["level"+LBcaptains.toString()] : window.details[n + 1].limit[x].description.substring(29);
                 }
                 LBhp.push(LBhptotal);
                 LBatk.push(LBatktotal);
                 LBrcv.push(LBrcvtotal);
                 LBsailor.push(LBsailors);
                 LBcaptain.push(LBcaptains);
+            }
+        }
+        if (window.details) if(window.details[n + 1]) if(window.details[n + 1].lLimit){
+            for(var x in window.details[n + 1].lLimit){
+                if(window.details[n + 1].lLimit[x]){
+                    if (window.details[n + 1].lLimit[x].captain) if (window.details[n + 1].lLimit[x].captain.base){
+                        if (window.details[n + 1].captain.constructor == String) window.details[n + 1].captain = { base: window.details[n + 1].captain };
+                        window.details[n + 1].captain.llbbase = window.details[n + 1].lLimit[x].captain.base;
+                    }
+                    if (window.details[n + 1].lLimit[x].captain) if (window.details[n + 1].lLimit[x].captain.level1){
+                        if (window.details[n + 1].captain.constructor == String) window.details[n + 1].captain = { base: window.details[n + 1].captain };
+                        window.details[n + 1].captain.llblevel1 = window.details[n + 1].lLimit[x].captain.level1;
+                    }
+                     if (window.details[n + 1].lLimit[x].sailor) if (window.details[n + 1].lLimit[x].sailor.level1){
+                        if (!window.details[n + 1].sailor) window.details[n + 1].sailor = {};
+                        if (window.details[n + 1].sailor.constructor == String) window.details[n + 1].sailor = { base: window.details[n + 1].sailor };
+                        window.details[n + 1].sailor.llblevel1 = window.details[n + 1].lLimit[x].sailor.level1;
+                    }
+                     if (window.details[n + 1].lLimit[x].sailor) if (window.details[n + 1].lLimit[x].sailor.level2){
+                        if (!window.details[n + 1].sailor) window.details[n + 1].sailor = {};
+                        if (window.details[n + 1].sailor.constructor == String) window.details[n + 1].sailor = { base: window.details[n + 1].sailor };
+                        window.details[n + 1].sailor.llblevel2 = window.details[n + 1].lLimit[x].sailor.level2;
+                    }
+                    if (window.details[n + 1].lLimit[x].special){
+                        if (window.details[n + 1].special.constructor == String) window.details[n + 1].special = { base: window.details[n + 1].special };
+                        window.details[n + 1].special.llbbase = window.details[n + 1].lLimit[x].special;
+                    }
+                }
             }
         }
         var result = {

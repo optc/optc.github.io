@@ -260,8 +260,12 @@ controllers.PopoverCtrl = function($scope) {
     $scope.details = window.details[id] ? JSON.parse(JSON.stringify(window.details[id])) : null;
     $scope.cooldown = window.cooldowns[id - 1];
     if (!$scope.details || !$scope.details.special) return;
-    if ($scope.details.special.japan)
-        $scope.details.special = $scope.details.special.japan;
+    if ($scope.details.special){
+        if ($scope.details.special.japan)
+            $scope.details.special = $scope.details.special.japan;
+        if ($scope.details.special.llbbase)
+            $scope.details.special = $scope.details.special.llbbase;
+    }
     if ($scope.details.captain){
         if ($scope.details.captain.combined){
             $scope.details.captain = $scope.details.captain.combined;
@@ -281,8 +285,14 @@ controllers.PopoverCtrl = function($scope) {
         else if ($scope.details.captain.level2){
             $scope.details.captain = $scope.details.captain.level2;
         }
+        else if ($scope.details.captain.llblevel1){
+            $scope.details.captain = $scope.details.captain.llblevel1;
+        }
         else if ($scope.details.captain.level1){
             $scope.details.captain = $scope.details.captain.level1;
+        }
+        else if ($scope.details.captain.llbbase){
+            $scope.details.captain = $scope.details.captain.llbbase;
         }
         else if ($scope.details.captain.base){
             $scope.details.captain = $scope.details.captain.base;
