@@ -12683,32 +12683,32 @@ window.specials = {
     },
     3471: {
         chainAddition: function(p) { return 1.4; },
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Chain, ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3472: {
         chainAddition: function(p) { return 1.4; },
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        atkbase: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Chain, ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
