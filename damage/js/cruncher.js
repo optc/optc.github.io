@@ -948,6 +948,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
                     // get highest buff increase
                     plusSpecials.forEach(function(plusSpecial) {
+                        //console.log(plusSpecial);
                         if(plusSpecial.hasOwnProperty('atkPlus'))
                             if(plusSpecial.atkPlus(params) > atkPlusTemp)
                                 atkPlusTemp = plusSpecial.atkPlus(params);
@@ -971,7 +972,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                 else
                                     multiplier += atkPlusTemp;
                             }
-                        } else if (data.type == "condition") {
+                        } else if (data.type == "status") {
                             if (multiplier != 1)
                                 multiplier += statusPlusTemp;
                         } else if (data.type == "orb") {
@@ -1315,9 +1316,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (altspecials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent){
                     conflictWarning = true;
                     var disabledSpecial = {}
-                    for (var i in specials[id]){
+                    for (var i in altspecials[id]){
                         if(i != 'orb')
-                            disabledSpecial[i] = specials[id][i];
+                            disabledSpecial[i] = altspecials[id][i];
                     }
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },disabledSpecial));
                 }

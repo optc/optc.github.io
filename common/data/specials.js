@@ -15811,6 +15811,7 @@ var ghostsSpecials = {
         warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
     },
     349: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15824,6 +15825,7 @@ var ghostsSpecials = {
         },
     },
     350: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15837,6 +15839,7 @@ var ghostsSpecials = {
         },
     },
     351: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15850,6 +15853,7 @@ var ghostsSpecials = {
         },
     },
     352: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15863,6 +15867,7 @@ var ghostsSpecials = {
         },
     },
     353: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15876,6 +15881,7 @@ var ghostsSpecials = {
         },
     },
     354: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15889,6 +15895,7 @@ var ghostsSpecials = {
         },
     },
     355: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
@@ -15902,6 +15909,7 @@ var ghostsSpecials = {
         },
     },
     356: {
+        delay: function(p) { return 2; },
         affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
         statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
