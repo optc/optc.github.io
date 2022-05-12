@@ -13624,6 +13624,94 @@ window.specials = {
     3600: {
         staticMult: function(p) { return 80; }
     },
+    3606: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.slot < 2 ? 3.25 : 3);
+        }
+    },
+    3607: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.slot < 2 ? 3.25 : 3);
+        }
+    },
+    3608: {
+        status: function(p) { return [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        warning: "Selected special (%name%) assumes that the enemy has Increased Damage Taken.",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Status", "Orb", "Orb & Status"][levels[n]] + ' boost. To switch to the ' + ["Status", "Orb", "Orb & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3609: {
+        status: function(p) { return [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        warning: "Selected special (%name%) assumes that the enemy has Increased Damage Taken.",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Status", "Orb", "Orb & Status"][levels[n]] + ' boost. To switch to the ' + ["Status", "Orb", "Orb & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3612: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            var n = (p.percHP > 99  ? 2.75 : 2.5);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3613: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            var n = (p.percHP > 99  ? 2.75 : 2.5);
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.scope.notify({
+                text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3614:{
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2 : 1;
+        },
+    },
+    3615: {
+        chainAddition: function(p) { return 1.1; }
+    },
+    3616: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        type: "type",
+    },
+    3617:{
+        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        multiplier: 0,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 900 : 0;
+        },
+    },
+    3618: {
+        chainAddition: function(p) { return 1.1; }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -16277,6 +16365,38 @@ var ghostsSpecials = {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2.5 : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
+    413: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    414: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    415: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    416: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    417: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    418: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    419: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
+    },
+    420: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        type: "type",
     },
 };
 

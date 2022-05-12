@@ -478,6 +478,12 @@
                     "items": {
                         "$ref": "#/definitions/TargetElement"
                     }
+                },
+                "excludes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TargetElement"
+                    }
                 }
             },
             "required": [
@@ -523,6 +529,8 @@
                 "Haste",
                 "Counter",
                 "Revive",
+                "Shield",
+                "Confusion",
                 "hit",
                 "heal",
                 "near"

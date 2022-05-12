@@ -3604,6 +3604,21 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Corazon - The Kindhearted Man's Final Fight", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1930, 780, 119, null, null, null, null ],
+    [ "Monkey D. Luffy - With His Loyal Companions", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1129, 461, 60, null, null, null, null ],
+    [ "Monkey D. Luffy - With His Trusted Companions", "DEX", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2227, 907, 114, null, null, null, null ],
+    [ "Kaido - Dragon Enjoying the Battle", "STR", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1380, 450, 21, null, null, null, null ],
+    [ "Kaido - Hell Made Manifest", "STR", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2729, 885, 37, null, null, null, null ],
+    [ "Yamato & Ace - Full-Force Clashes", ["STR", "DEX"], [[ "Free Spirit", "Striker" ],[ "Free Spirit", "Shooter" ],[ "Free Spirit", "Striker" ]], 5, 30, 4, 3, 70, 1066998, 1177, 428, 69, null, null, null, null ],
+    [ "Yamato & Ace - Two Who Get Along So Well", ["STR", "DEX"], [[ "Free Spirit", "Striker" ],[ "Free Spirit", "Shooter" ],[ "Free Spirit", "Striker" ]], 6, 55, 4, 5, 99, 5000000, 2324, 840, 133, null, null, null, null ],
+    [ "Hancock & Nami & Robin - Trio of Beauties", "STR", [ "Free Spirit", "Striker" ], 5, 30, 4, 3, 70, 1066998, 843, 375, 106, null, null, null, null ],
+    [ "Hancock & Nami & Robin - Mesmerizing Beauties", "STR", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1656, 734, 206, null, null, null, null ],
+    [ "Roronoa Zoro - Flame-Rending Swordsman", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1669, 884, 90, null, null, null, null ],
+    [ "Sanji - Black-Leg Racing to His Side", "DEX", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1766, 764, 101, null, null, null, null ],
+    [ "King - Soaring Wildfire", "STR", [ "Striker", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1691, 816, 96, null, null, null, null ],
+    [ "Queen - Retaliating Plague", "STR", [ "Striker", "Powerhouse" ], 5, 30, 6, 4, 99, 4000000, 1906, 765, 77, null, null, null, null ],
+    [ "Jack - Trampling Drought", "STR", [ "Striker", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1703, 814, 95, null, null, null, null ],
+    [ "Kozuki Oden - Aspiring to the Grand Voyage", "DEX", [ "Slasher", "Free Spirit" ], 5, 50, 4, 4, 99, null, 1691, 720, 111, null, null, null, null ],
+    [ "Kozuki Oden - Traveling to the Final Island", "DEX", [ "Slasher", "Free Spirit" ], "5+", 50, 4, 4, 99, null, 1800, 994, 119, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4045,6 +4060,14 @@ var ghostsUnits = [
     [ "[Dual Unit] Brachio-Tank 5 - Dream Docking", "DEX", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 1800, 758, 134, 3600, 1516, 296, 1 ],
     [ "[Dual Unit] General Franky - Dream Docking", "PSY", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, 4316, 1578, 306, 1 ],
     [ "[Dual Unit] General Franky - Dream Docking", "DEX", [ "Free Spirit", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2158, 789, 153, 4316, 1578, 306, 1 ],
+    [ "[Dual Unit] Yamato - Full-Force Clashes", "STR", [ "Free Spirit", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1096, 397, 36, null, null, null, null ],
+    [ "[Dual Unit] Ace - Full-Force Clashes", "DEX", [ "Free Spirit", "Shooter" ], 5, 30, 4, 3, 70, 1066998, 1085, 408, 67, null, null, null, null ],
+    [ "[Dual Unit] Yamato & Ace - Full-Force Clashes", "STR", [ "Free Spirit", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1177, 428, 69, null, null, null, null ],
+    [ "[Dual Unit] Yamato & Ace - Full-Force Clashes", "DEX", [ "Free Spirit", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1177, 428, 69, null, null, null, null ],
+    [ "[Dual Unit] Yamato - Two Who Get Along So Well", "STR", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2161, 779, 130, null, null, null, null ],
+    [ "[Dual Unit] Ace - Two Who Get Along So Well", "DEX", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 2140, 801, 126, null, null, null, null ],
+    [ "[Dual Unit] Yamato & Ace - Two Who Get Along So Well", "STR", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2324, 840, 133, null, null, null, null ],
+    [ "[Dual Unit] Yamato & Ace - Two Who Get Along So Well", "DEX", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2324, 840, 133, null, null, null, null ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
