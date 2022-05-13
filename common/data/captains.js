@@ -10173,7 +10173,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
     },
     2913: {
-        atk: function(p) { return p.slot == p.sourceSlot ? p.actions[p.sourceSlot] ? 2 : 1.5 : p.actions[p.sourceSlot] ? 3 : 2; },
+        atk: function(p) { return p.slot == p.sourceSlot ? [1.5, 2, 2, 2, 2, 2, 2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [2, 2.25, 2.5, 2.5, 2.5, 2.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     2914: {
         hitAtk: function(p) {
@@ -10401,8 +10401,7 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.75 : 1; }
     },
     2977: {
-        //p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]
-        atk: function(p) { return [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        atk: function(p) { return [1.5, 1.75, 2, 2.25, 2.5, 2.75, 3.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
     },
     2978: {
         atk: function(p) { return p.slot == p.sourceSlot ? 2.5 : (p.unit.type == "STR" || p.unit.type == "INT") ? 2.25 : 1; }
@@ -10472,8 +10471,8 @@ window.captains = {
         atk: function(p) {
             var specialEnabled = false;
             var mult = 1;
-            if(window.specials[2995].turnedOn==true) { mult = [1, 1, 1, 1, 1, 1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
-            return p.unit.type == "STR" ? [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]*mult : 1;
+            if(window.specials[2995].turnedOn==true) { mult = [1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; }
+            return p.unit.type == "STR" ? [1.5, 1.5, 2, 2.25, 2.5, 2.75, 3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]*mult : 1;
         },
         hp: function(p) { return p.unit.type == "STR" ? [1, 1, 1, 1, 1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; }
     },
@@ -12281,8 +12280,8 @@ window.captains = {
         },
     },
     3491: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 2.5, 2.75, 3, 3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
-        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1.1, 1.1, 1.1, 1.1, 1.1, 1.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1.1, 1.1, 1.2, 1.2, 1.3, 1.5, 1.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3496: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
@@ -12326,7 +12325,7 @@ window.captains = {
     },
     3506: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
-        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [1.1, 1.1, 1.1, 1.15, 1.15, 1.15, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
     3509: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? 4 : 1; },

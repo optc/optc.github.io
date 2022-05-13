@@ -115,8 +115,8 @@
             maxEXP: element[8], minHP: element[9],
             minATK: element[10], minRCV: element[11],
             maxHP: element[12], maxATK: element[13],
-            maxRCV: element[14], llbmaxHP: Math.round(element[12]*1.5),
-            llbmaxATK: Math.round(element[13]*1.5), llbmaxRCV: Math.round(element[14]*1.5),
+            maxRCV: element[14], llbmaxHP: Math.max(element[12], Math.round(element[12]*1.5)),
+            llbmaxATK: Math.max(element[13], Math.round(element[13]*1.5)), llbmaxRCV: Math.max(element[14], Math.round(element[14]*1.5)),
             limitHP: limitHealth, limitATK: limitAttack, limitRCV: limitRecovery,
             limitSlot: limitSlots, limitCD: limitCooldown,
             limitexHP: limitexHealth, 
@@ -987,6 +987,14 @@
             case (ghostPoint+410).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/500/3574-2.png'; break;
             case (ghostPoint+411).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/500/3574-PSY.png'; break;
             case (ghostPoint+412).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/500/3574-DEX.png'; break;
+            case (ghostPoint+413).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3610-1.png'; break;
+            case (ghostPoint+414).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3610-2.png'; break;
+            case (ghostPoint+415).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3610-STR.png'; break;
+            case (ghostPoint+416).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3610-DEX.png'; break;
+            case (ghostPoint+417).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-1.png'; break;
+            case (ghostPoint+418).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-2.png'; break;
+            case (ghostPoint+419).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-STR.png'; break;
+            case (ghostPoint+420).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-DEX.png'; break;
             default: break;
         }
 

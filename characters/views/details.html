@@ -111,9 +111,9 @@
                                             <label><input type="radio" id="lb" name="statPreference" ng-model="statPreference" value=1>Limit Break</label><br>
                                             <label><input type="radio" id="lbex" name="statPreference" ng-model="statPreference" value=2>Limit Break Expansion</label>
                                           </form></th>
-                                        <th>HP</th>
-                                        <th>ATK</th>
-                                        <th>RCV</th>
+                                        <th style="width:15%">HP</th>
+                                        <th style="width:15%">ATK</th>
+                                        <th style="width:15%">RCV</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -128,20 +128,20 @@
                                     </tr>
                                     <tr>
                                         <td>{{::unit.maxLevel}}</td>
-                                        <td ng-if="!compare">{{::unit.maxHP+[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{::[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference]}})</span></td>
+                                        <td ng-if="!compare">{{unit.maxHP+[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference]}})</span></td>
                                         <td ng-if="compare" comparison="positive">{{unit.maxHP - compare.maxHP | number}}</td>
-                                        <td ng-if="!compare">{{::unit.maxATK+[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{::[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference]}})</span></td>
+                                        <td ng-if="!compare">{{unit.maxATK+[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference]}})</span></td>
                                         <td ng-if="compare" comparison="positive">{{unit.maxATK - compare.maxATK | number}}</td>
-                                        <td ng-if="!compare">{{::unit.maxRCV+[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{::[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference]}})</span></td>
+                                        <td ng-if="!compare">{{unit.maxRCV+[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference]}})</span></td>
                                         <td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td>
                                     </tr>
                                     <tr ng-if="unit.maxLevel == 99">
                                         <td>150</td>
-                                        <td ng-if="!compare"><span>{{::unit.llbmaxHP+[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{::[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference]}})</span></span></td>
+                                        <td ng-if="!compare"><span>{{unit.llbmaxHP+[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{[0, unit.limitHP-unit.maxHP, unit.limitexHP-unit.maxHP][statPreference]}})</span></span></td>
                                         <!--td ng-if="compare" comparison="positive">{{unit.maxHP - compare.maxHP | number}}</td-->
-                                        <td ng-if="!compare"><span>{{::unit.llbmaxATK+[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{::[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference]}})</span></span></td>
+                                        <td ng-if="!compare"><span>{{unit.llbmaxATK+[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{[0, unit.limitATK-unit.maxATK, unit.limitexATK-unit.maxATK][statPreference]}})</span></span></td>
                                         <!--td ng-if="compare" comparison="positive">{{unit.maxATK - compare.maxATK | number}}</td-->
-                                        <td ng-if="!compare"><span>{{::unit.llbmaxRCV+[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{::[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference]}})</span></span></td>
+                                        <td ng-if="!compare"><span>{{unit.llbmaxRCV+[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference] | number}}<span ng-if="statPreference != 0"> (+{{[0, unit.limitRCV-unit.maxRCV, unit.limitexRCV-unit.maxRCV][statPreference]}})</span></span></td>
                                         <!--td ng-if="compare" comparison="positive">{{unit.maxRCV - compare.maxRCV | number}}</td-->
                                     </tr>
                                     <!--tr ng-if="!((unit.limitHP-unit.maxHP == 0) && (unit.limitATK-unit.maxATK == 0) && (unit.limitRCV-unit.maxRCV == 0))">
