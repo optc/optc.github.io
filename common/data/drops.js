@@ -6314,7 +6314,17 @@ window.drops = {
             global: true,
             nakama: 8358800,
             gamewith: null,
-            'Spooky Sea': [ 3588 ]
+            'Ragin Sea': [ 3588 ]
+        },
+
+        {
+            name: 'Sabo',
+            dropID: 'treasuremap57',
+            thumb: 3621,
+            global: true,
+            nakama: 8362100,
+            gamewith: null,
+            'Ragin Sea': [ 3621 ]
         },
 
     ],

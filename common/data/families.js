@@ -4182,6 +4182,7 @@ window.families = {
     3618: [ ...Jack ],
     3619: [ ...KozukiOden ],
     3620: [ ...KozukiOden ],
+    3621: [ ...Sabo ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

@@ -560,9 +560,6 @@
                                 <tr ng-if="details.support">
                                     <td>Support</td>
                                     <td>
-                                        <!-- same potential break (differences across versions) -->
-                                        <div ng-if="!isSupportHybrid && !isSupportStaged" ng-bind-html="details.support | decorate"></div>
-                                        <!-- different potential abilities -->
                                         <div ng-if="!isSupportHybrid && isSupportStaged">
                                             <div ng-repeat="stage in details.support track by $index">
                                                 <strong>Supported Characters:</strong> <span ng-bind-html="stage.Characters | decorate"></span>
@@ -572,12 +569,6 @@
                                             </div>
                                         </div>
                                         <span class="notes" ng-if="details.supportNotes" ng-bind-html="details.supportNotes | notes | decorate"></span>
-                                        <div ng-if="isSupportHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="details.potential.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="details.potential.global | decorate"></div>
-                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -653,23 +644,19 @@
                                 <tr ng-if="details.lastTap">
                                     <td>Last Tap</td>
                                     <td>
-                                        <!-- same potential break (differences across versions) -->
-                                        <div ng-if="!isLastTapHybrid && !isLastTapStaged" ng-bind-html="details.lastTap | decorate"></div>
-                                        <!-- different potential abilities -->
-                                        <div ng-if="!isLastTapHybrid && isLastTapStaged">
-                                            <div ng-repeat="stage in details.lastTap track by $index">
-                                                <strong>Condition:</strong> <span ng-bind-html="stage.condition | decorate"></span>
-                                                <div ng-repeat="item in stage.description track by $index"><strong>Level {{::$index + 1}}:</strong>
-                                                <span ng-bind-html="item | decorate"></span><br></div>
-                                            </div>
-                                        </div>
+                                        <strong>Condition:</strong> <span ng-bind-html="details.lastTap.condition | decorate"></span>
+                                        <div ng-repeat="item in details.lastTap.description track by $index"><strong>Level {{::$index + 1}}:</strong>
+                                        <span ng-bind-html="item | decorate"></span><br></div>
                                         <span class="notes" ng-if="details.lastTapNotes" ng-bind-html="details.lastTapNotes | notes | decorate"></span>
-                                        <div ng-if="isLastTapHybrid">
-                                            <span class="badge badge-japan">Japan</span>
-                                            <div ng-bind-html="details.potential.japan | decorate"></div>
-                                            <span class="badge badge-global">Global</span>
-                                            <div ng-bind-html="details.potential.global | decorate"></div>
-                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.superTandem">
+                                    <td>Super Tandem</td>
+                                    <td>
+                                        <span ng-if="details.superTandem.condition"><strong>Condition:</strong> <span ng-bind-html="details.superTandem.condition | decorate"></span></span>
+                                        <div ng-repeat="item in details.superTandem.description track by $index"><strong>Level {{::$index + 1}} (<span ng-bind-html="details.superTandem.characterCondition[$index] | decorate"></span>):</strong>
+                                        <span ng-bind-html="item | decorate"></span><br></div>
+                                        <span class="notes" ng-if="details.superTandemNotes" ng-bind-html="details.superTandemNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                             </tbody>
