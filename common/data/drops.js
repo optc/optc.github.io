@@ -7355,7 +7355,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: null,
-            'Chopperman Missions': [ 3619 ],
+            'Chopperman Missions': [ 3619, 9061 ],
         },
 
         {

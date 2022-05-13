@@ -545,6 +545,8 @@
             case 9059: return relPathToRoot + '/api/images/thumbnail/jap/3/500/3572-skull.png'; break;
             case 'skullKuzan':
             case 9060: return relPathToRoot + '/api/images/thumbnail/jap/3/500/3592-skull.png'; break;
+            case 'skullOden2':
+            case 9061: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3620-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';
