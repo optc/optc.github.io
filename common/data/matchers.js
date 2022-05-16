@@ -3041,7 +3041,7 @@ let matchers = {
         {
             name: 'Beneficial Orb Enablers',
             targets: [ 'captain', 'sailor' ],
-            regex: /makes ([^".]+?)orbs beneficial for ([^".]+?)characters/i,
+            regex: /makes ([^".]+?)orbs beneficial for ([^".]+?)characters?/i,
             submatchers: [
                 ...createUniversalSubmatcher([2]),
                 {
@@ -3072,7 +3072,7 @@ let matchers = {
         {
             name: 'Beneficial Orb Enablers',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /makes ([^".]+?)orbs beneficial for ([^".]+?)characters for ([?\d]+\+?)(?:-([?\d]+))? turn/i,
+            regex: /makes ([^".]+?)orbs beneficial for ([^".]+?)characters? for ([?\d]+\+?)(?:-([?\d]+))? turn/i,
             submatchers: [
                 {
                     type: 'number',
