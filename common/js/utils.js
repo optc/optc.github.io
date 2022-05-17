@@ -426,6 +426,7 @@
     utils.getThumbnailUrl = function (n, relPathToRoot = '') {
         switch (n){
             case 'skullLuffy':
+            //case 9001: return relPathToRoot + '/api/images/thumbnail/jap/1/300/1387-skull.png'; break;
             case 9001: return 'https://onepiece-treasurecruise.com/wp-content/uploads/skull_luffy.png'; break;
             case 'skullZoro':
             case 9002: return 'https://onepiece-treasurecruise.com/wp-content/uploads/skull_zoro.png'; break;
@@ -444,15 +445,15 @@
             case 'skullBrook':
             case 9009: return 'https://onepiece-treasurecruise.com/wp-content/uploads/skull_brook_f.png'; break;
             case 'skullSTR':
-            case 9010: return relPathToRoot + '/api/images/common/skull-STR.png';
+            case 9010: return relPathToRoot + '/api/images/common/skull-STR.png'; break;
             case 'skullQCK':
-            case 9011: return relPathToRoot + '/api/images/common/skull-QCK.png';
+            case 9011: return relPathToRoot + '/api/images/common/skull-QCK.png'; break;
             case 'skullPSY':
-            case 9012: return relPathToRoot + '/api/images/common/skull-PSY.png';
+            case 9012: return relPathToRoot + '/api/images/common/skull-PSY.png'; break;
             case 'skullDEX':
-            case 9013: return relPathToRoot + '/api/images/common/skull-DEX.png';
+            case 9013: return relPathToRoot + '/api/images/common/skull-DEX.png'; break;
             case 'skullINT':
-            case 9014: return relPathToRoot + '/api/images/common/skull-INT.png';
+            case 9014: return relPathToRoot + '/api/images/common/skull-INT.png'; break;
             case 'skullJudge':
             case 9015: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f1.png'; break;
             case 'skullReiju':
@@ -1087,8 +1088,8 @@
             //case '3370': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_11102-1.png'; break;
             //case '3374': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_11138.png'; break;
             //case '3384': return 'http://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_11138.png'; break;
-            case '4986': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1719.png'; break;
-            case '4987': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1720.png'; break;
+            //case '4986': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1719.png'; break;
+            //case '4987': return 'https://onepiece-treasurecruise.com/en/wp-content/uploads/sites/2/character_1720.png'; break;
             default: break;
         }
         
