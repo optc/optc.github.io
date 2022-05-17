@@ -734,7 +734,7 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.ability">
-                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>Ability</td>
+                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>Rumble Ability</td>
                                     <td style="width: 47.5%">
                                         <div>
                                             <div ng-repeat="item in rumble.ability track by $index"><strong>Level {{::$index + 1}}:</strong> <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
@@ -747,7 +747,7 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.special">
-                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>Special</td>
+                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>Rumble Special</td>
                                     <td style="width: 47.5%">
                                         <div>
                                             <div ng-repeat="item in rumble.special track by $index"><strong>Level {{::$index + 1}}: [{{::item.cooldown}} second cooldown] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
