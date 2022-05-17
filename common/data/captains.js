@@ -12683,10 +12683,10 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.5 : 1; },
     },
     3612: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? Math.min(4.5, 4.5 + 0.000075 * p.healCounter) : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 4.5 + (0.75 * p.percHP / 100) : 1; },
     },
     3613: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? Math.min(4.5, 4.5 + 0.000075 * p.healCounter) : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 4.5 + (0.75 * p.percHP / 100) : 1; },
     },
     3614: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3 : 1; },

@@ -1326,19 +1326,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n },altspecials[id]));
             }
             // activate counters if necessary
-            if (n < 2 && (id == 794 || id == 795 || id == 1124 || id == 1125 || id == 1191 || id == 1192 || id == 1219 || id == 1220 || id == 1288 || id == 1289 || id == 1361 || id == 1362 || id == 1525 || id == 1557 || id == 1558 || id == 1559 || id == 1560 || id == 1561 || id == 1562 || id == 1712 || id == 1713 || id == 1716 || id == 1764 || id == 1907 || id == 1908 || id == 2015 || id == 2049 || id == 2050 || id == 2198 || id ==2199 || id == 2214 || id == 2215 || id == 2299 || id == 2337 || id == 2338 || id == 2421 || id == 2422 || id == 2423 || id == 2424 || id == 2440 || id == 2441 || id == 5074 || id == 5534 || id == 5535 || id == 2669 || id == 2670 || id == 2683 || id == 2684 || id == 3047 || id == 3072 || id == 3073 || id == 3108 || id == 3393))
+            if (n < 2 && [794, 795, 1124, 1125, 1191, 1192, 1219, 1220, 1288, 1289, 1361, 1362, 1525, 1557, 1558, 1559, 1560, 1561, 1562, 1712, 1713, 1716, 1764, 1907, 1908, 2015, 2049, 2050, 2198,2199, 2214, 2215, 2299, 2337, 2338, 2421, 2422, 2423, 2424, 2440, 2441, 5074, 5534, 5535, 2669, 2670, 2683, 2684, 3047, 3072, 3073, 3108, 3393].has(id))
                 $scope.tdata.turnCounter.enabled = true;
             if(shipBonus.bonus.name=="Shark Superb")
                 $scope.tdata.turnCounter.enabled = true;
-            if (n < 2 && (id == 1609 || id == 1610 || id == 2232 || id == 3037 || id == 3038))
+            if (n < 2 && [1609, 1610, 2232, 3037, 3038].has(id))
                 $scope.tdata.healCounter.enabled = true;
-            if (id == 2364 || id == 2365 || id == 2981 || id == 2982 || id == 3224 || id == 3225 || id == 3473 || id == 3474)
+            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474].has(id))
                 $scope.tdata.damageCounter.enabled = true;
-            if (n < 2 && (id == 2233 || id == 2234 || id == 2500))
+            if (n < 2 && [2233, 2234, 2500].has(id))
                 $scope.tdata.semlaCounter.enabled = true;
-            if ((id == 3333 || id == 3334))
+            if ([3333, 3334].has(id))
                 $scope.tdata.rcvCounter.enabled = true;
-            if ((id == 3461 || id == 3462))
+            if ([3461, 3462].has(id))
                 $scope.tdata.basehpCounter.enabled = true;
         });
         if (conflictWarning) 
