@@ -1326,7 +1326,11 @@
         // They should not have the same family. The supporting unit may have no
         // families if data is incomplete, in which case it won't be excluded
         // from the supporting units even though it may have the same family name
-        if (supportingUnit.families && unitToSupport.families.some(fam => supportingUnit.families.includes(fam)))
+        //
+        // The unitToSupport may also have no families (incomplete or fodder),
+        // in which case supports that match a type, class, cost, or all chars
+        // will work, but supports that match a family won't work.
+        if (supportingUnit.families && unitToSupport.families && unitToSupport.families.some(fam => supportingUnit.families.includes(fam)))
             return false;
 
         if (/^All characters?/i.test(supportingUnit.support[0].Characters))
