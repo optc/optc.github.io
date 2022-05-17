@@ -816,6 +816,7 @@ function rangeToString(range) {
 function targetToString(target) {
   if (!target) return '';
   let targetStr = arrayToString(target.targets);
+  let excludeStr = arrayToString(target.excludes);
   if (targetStr == "crew") targetStr = "crew member(s)";
   if (targetStr == "enemies") {
     if (!target.count)
@@ -824,6 +825,7 @@ function targetToString(target) {
       targetStr = "enemy";
   }
   let retVal = ` to ${target.count ? target.count + " " : ""}${targetStr}${target.targets.includes("self") || target.targets.includes("crew") || target.targets.includes("enemies") ? "" : target.count == 1 ? " character" : " characters"}`;
+  retVal = retVal + `${target.excludes ? ", excluding " : ""}${target.excludes ? excludeStr : ""}${target.excludes ? target.excludes.includes("self") || target.excludes.includes("crew") || target.excludes.includes("enemies") ? "" : target.count == 1 ? " character" : " characters" : ""}`;
   retVal = retVal + `${target.stat ? (" with " + (target.percentage ? "a " + target.percentage + "% or " :"the ") + target.priority + " " + target.stat) : ""}`;
   return retVal;
 }
