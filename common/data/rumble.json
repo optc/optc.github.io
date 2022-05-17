@@ -27089,8 +27089,8 @@
       }
     },
     {
-      "basedOn": 1917,
-      "id": 1918
+      "basedOn": 1918,
+      "id": 1917
     },
     {
       "ability": [
@@ -134458,6 +134458,7 @@
             {
               "amount": 50,
               "effect": "recharge",
+              "condition": { "comparator": "below", "count": 50, "stat": "HP", "type": "stat" },
               "targeting": { "count": 1, "percentage": 100, "priority": "below", "stat": "Special CT", "targets": [ "[DEX]" ], "excludes": [ "self" ] },
               "type": "Special CT"
             }
