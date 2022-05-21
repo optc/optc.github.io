@@ -687,7 +687,7 @@
                                             </span>
                                             <div ng-if="stage.rResilience" class="badge badge-slevel1">Rumble Resilience</div><br ng-if="stage.rResilience"><span ng-if="stage.rResilience" ng-repeat="item in rumble.llbresilience track by $index"><span ng-bind-html="item | resilienceToString | decorate"></span><br /></span>
                                             <div ng-if="stage.rAbility" class="badge badge-slevel1">Rumble Ability</div><div ng-if="stage.rAbility" ng-bind-html="rumble.llbability[rumble.llbability.length-1].effects | abilityToString | decorate"></div>
-                                            <div ng-if="stage.rSpecial" class="badge badge-slevel1">Rumble Special</div><div ng-if="stage.rSpecial" ng-bind-html="rumble.llbspecial[rumble.llbability.length-1].effects | abilityToString | decorate"></div>
+                                            <div ng-if="stage.rSpecial" class="badge badge-slevel1">Rumble Special</div><div ng-if="stage.rSpecial" ng-bind-html="rumble.llbspecial[rumble.llbspecial.length-1].effects | abilityToString | decorate"></div>
                                             <br ng-if="$index != 4">
                                         </div>
                                         <div ng-repeat="x in [].constructor(5) track by $index" ng-if="!details.lLimit">

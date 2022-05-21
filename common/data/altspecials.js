@@ -208,6 +208,14 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3626: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+    },
+    3627: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

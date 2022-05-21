@@ -12720,6 +12720,30 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [1.5, 2, 2.5, 3, 3.5, 4, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
+    3622: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    3623: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 5.25 : 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 1.4 : 1.2 : 1; },
+    },
+    3624: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3625: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? [4.5, 4.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? [1, 1.3][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3626: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 4 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3627: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 4.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

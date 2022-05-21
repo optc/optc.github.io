@@ -6829,6 +6829,16 @@ window.drops = {
             'Kizuna Exchange': [ 9060 ],
         },
 
+        {
+            name: 'Gol D. Roger',
+            dropID: 'kizuna35',
+            thumb: 3526,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3525, 9062, 9063 ],
+        },
+
     ],
 
 

@@ -3620,6 +3620,12 @@ window.units = [
     [ "Kozuki Oden - Aspiring to the Grand Voyage", "DEX", [ "Slasher", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1691, 720, 111, 3382, 1439, 222, 1 ],
     [ "Kozuki Oden - Traveling to the Final Island", "DEX", [ "Slasher", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1800, 994, 119, 3600, 1479, 232, 1 ],
     [ "Sabo - Flaming Heart of a Revolutionary", "DEX", [ "Free Spirit", "Fighter" ], 5, 60, 5, 1, 99, 5000000, 1600, 796, 94, null, null, null, null ],
+    [ "Whitey Bay - Evenly Matched Young Pirate", "DEX", [ "Slasher", "Striker" ], 5, 1, 4, 4, 99, 4000000, 1275, 567, 144, null, null, null, null ],
+    [ "Whitebeard - Meeting in Uncharted Lands", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1293, 684, 132, null, null, null, null ],
+    [ "Vista - Clashing Young Pirate", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1284, 643, 154, null, null, null, null ],
+    [ "Fleet Admiral Sakazuki - Admiral Eradicating Evil", "INT", [ "Fighter", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 2080, 895, 130, 4160, 1790, 260, 1 ],
+    [ "Gol D. Roger - Great Pirate With Grand Dreams", "DEX", [ "Free Spirit", "Slasher" ], 5, 50, 4, 4, 99, 5000000, 1183, 813, 81, null, null, null, null ],
+    [ "Gol D. Roger - Reaching the Final Island", "DEX", [ "Free Spirit", "Slasher" ], "5+", 50, 4, 4, 99, 5000000, 1312, 989, 86, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
