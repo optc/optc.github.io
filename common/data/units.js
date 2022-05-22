@@ -3587,7 +3587,7 @@ window.units = [
     [ "Usopp - Tearful Struggle", "QCK", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, 2000000, 1573, 742, 92, 3146, 1484, 134, 1 ],
     [ "Donquixote Doflamingo - Tragedy at Minion Island", "DEX", [ "Driven", "Slasher" ], 5, 50, 4, 5, 99, 5000000, 1502, 785, 92, 3004, 1570, 184, 1 ],
     [ "Ulti - Splitting Headbutt", "STR", [ "Powerhouse", "Striker" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 98, 3364, 1480, 196, 1 ],
-    [ "Drake - Betting on Hope", "STR", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 699, 452, 45, null, null, null, null ],
+    [ "Drake - Betting on Hope", "STR", [ "Striker", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 699, 452, 45, 1593, 993, 101, 1 ],
     [ "X Drake - Steadfast Army of One", "STR", [ "Striker", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1542, 978, 97, 3511, 1630, 283, 1 ],
     [ "Roronoa Zoro - Advancing to the Top", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1273, 658, 148, 2903, 1483, 241, 1 ],
     [ "Kuzan - Surprising Former Navy Admiral", "PSY", [ "Striker", "Shooter" ], "6+", 65, 5, 5, 99, 5000000, 1860, 874, 173, 3720, 1749, 347, 1 ],
