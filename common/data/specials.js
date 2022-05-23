@@ -12822,7 +12822,7 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
     },
     3485: {
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Srtiker") ? 2 : 1; },
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Striker") ? 2 : 1; },
     },
     3486: {
         status: function(p) { return p.defenseDown ? 2 : 1; },

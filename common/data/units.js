@@ -3594,7 +3594,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Marco - Phoenix in the Battlefield", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 927, 379, 103, 1854, 757, 206, 1 ],
     [ "Marco - Phoenix Gauging the Emperor", "PSY", [ "Fighter", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1824, 742, 196, 3648, 1484, 392, 1 ],
-    [ "Olin the Oiran - In Search of the One Piece", "INT", [ "Powerhouse", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1027, 405, 56, null, null, null, null ],
+    [ "Olin the Oiran - In Search of the One Piece", "INT", [ "Powerhouse", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1027, 405, 56, 2154, 809, 112, 1 ],
     [ "Olin the Oiran - Carnage to Become King of the Pirates", "INT", [ "Powerhouse", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2144, 794, 108, 4228, 1588, 216, 1 ],
     [ "Charlotte Perospero - Reaching Onigashima", "INT", [ "Striker", "Driven" ], 5, 30, 5, 4, 99, 4000000, 1716, 743, 91, 3433, 1486, 183, 1 ],
     [ "Charlotte Pudding - The Real Reason", "INT", [ "Driven", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1590, 695, 128, 3180, 1389, 257, 1 ],
