@@ -355,7 +355,7 @@ const Viola = [ "Viola", "Violet" ];
 const Dellinger = [ "Dellinger" ];
 const Diamante = [ "Diamante" ];
 const DonquixoteRosinante = [ "Donquixote Rosinante", "Corazon" ];
-const Sachi = [ "Sachi" ];
+const Sachi = [ "Sachi", "Shachi" ];
 const Penguin = [ "Penguin" ];
 const JeanBart = [ "Jean Bart" ];
 const CountButler = [ "Count Butler" ];
@@ -4189,6 +4189,13 @@ window.families = {
     3625: [ ...Sakazuki ],
     3626: [ ...GolDRoger ],
     3627: [ ...GolDRoger ],
+    3628: [ ...TrafalgarDWaterLaw ],
+    3629: [ ...TrafalgarDWaterLaw ],
+    3630: [ ...EustassKid ],
+    3631: [ ...EustassKid ],
+    3632: [ ...Heat, ...Wire ],
+    3633: [ ...Bepo ],
+    3634: [ ...Killer ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

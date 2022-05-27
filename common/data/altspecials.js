@@ -216,6 +216,10 @@ window.altspecials = {
         atk: function(p) { return 1.75; },
         type: "type",
     },
+    3629: {
+        status: function(p) { return p.defenseDown ? 2.25 : 1; },
+        def: function(p) { return 0; },//Temp until we deal with on-hit effects
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

@@ -5255,6 +5255,14 @@ window.evolutions = {
         evolution: 3627,
         evolvers: [ "skullOden", "skullOden", "skullOden", "skullOden", "skullOden" ]
     },
+    3628: {
+        evolution: 3629,
+        evolvers: [  ]
+    },
+    3630: {
+        evolution: 3631,
+        evolvers: [  ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]

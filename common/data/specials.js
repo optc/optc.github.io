@@ -13761,6 +13761,90 @@ window.specials = {
     3627: {
         atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 800 : 0; },
     },
+    3628: {
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3629: {
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3630: {
+        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3631: {
+        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3632: {
+        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Striker") || p.captain.class.has("Driven") ? levels[n] : 1 : 1;
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3633: {
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Cerebral") || p.captain.class.has("Free Spirit") ? 1 : 0 : 0;
+        },
+    },
+    3634: {
+        affinity: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Driven >= 6 ? 2.25 : 1;
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

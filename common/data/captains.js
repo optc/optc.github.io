@@ -12744,6 +12744,35 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 4.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
+    3628: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3629: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3630: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.65 : 1; },
+    },
+    3631: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.65 : 1; },
+    },
+    3632: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    3633: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3634: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
+        rcv: function(p) { return 0; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

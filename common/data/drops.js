@@ -3099,6 +3099,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3579 ],
         },
+
+        {
+            name: 'Partner Supporting the Captain!! Killer',
+            dropID: 'event159',
+            thumb: 3634,
+            global: true,
+            nakama: 6363400,
+            gamewith: null,
+            'All Difficulties': [ 3634 ],
+        },
     ],
 
 
