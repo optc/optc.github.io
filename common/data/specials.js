@@ -13735,8 +13735,9 @@ window.specials = {
         },
     },
     3624: {
-        atkPlus: function(p) { return [0.25, 0, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
+        atkPlus: function(p) { return [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
