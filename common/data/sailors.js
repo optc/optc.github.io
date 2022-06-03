@@ -2406,6 +2406,19 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Driven") ? 40 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 40 : 0; },
     },
+    3625: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    3626: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 30 : 0; },
+    },
+    3627: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

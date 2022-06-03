@@ -3633,6 +3633,11 @@ window.units = [
     [ "Heat & Wire", "INT", [ "Driven", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1706, 759, 88, 2000, 2000, 2000, null ],
     [ "Bepo - Right-Hand Man Crossing the Roaring Sea", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1556, 710, 129, null, null, null, null ],
     [ "Killer - Grand Opening Attack", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 2000000, 1656, 731, 81, null, null, null, null ],
+    [ "Catarina Devon - Enemy-Deceiving Mythical Fox", "INT", [ "Powerhouse", "Driven" ], 5, 40, 5, 3, 99, 4000000, 1630, 745, 80, null, null, null, null ],
+    [ "Charlotte Smoothie - Sweet General in Pursuit", "QCK", [ "Powerhouse", "Slasher" ], 5, 30, 4, 3, 70, 1066998, 1025, 425, 57, null, null, null, null ],
+    [ "Charlotte Smoothie - Juice-Wringing General", "QCK", [ "Powerhouse", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 2017, 832, 112, null, null, null, null ],
+    [ "Franky - A Man's Combat", "QCK", [ "Free Spirit", "Powerhouse" ], 5, 30, 6, 4, 99, 4000000, 1960, 793, 113, null, null, null, null ],
+    [ "Senor Pink - Falling Memories", "QCK", [ "Free Spirit", "Driven" ], 5, 30, 5, 4, 99, 4000000, 1860, 806, 122, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

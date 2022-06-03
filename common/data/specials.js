@@ -13846,6 +13846,52 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Driven >= 6 ? 2.25 : 1;
         }
     },
+    3635: {
+        atkPlus: function(p) { return [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        status: function(p) { return p.delayed > 0 ? [ 1, 2, 2 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        delay: function(p) { return 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Buff", "Status boost", "Status boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "Status boost", "Status boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    3636: {
+        multiplier: 1,
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Powerhouse") ? 2.5 : 1 : 1;
+        },
+    },
+    3637: {
+        multiplier: 1,
+        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Powerhouse") ? 2.5 : 1 : 1;
+        },
+    },
+    3638: {
+        affinity: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

@@ -532,6 +532,7 @@
                 "Shield",
                 "Confusion",
                 "hit",
+                "takes damage",
                 "heal",
                 "near"
             ],

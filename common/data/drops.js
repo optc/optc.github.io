@@ -5760,6 +5760,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3580 ],
         },
+        
+        {
+            name: 'Catarina Devol',
+            thumb: 3635,
+            global: true,
+            nakama: 10363500,
+            gamewith: null,
+            'All Difficulties': [ 3635 ],
+        },
 
     ],
 
