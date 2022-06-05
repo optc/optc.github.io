@@ -14222,7 +14222,8 @@
     {
       "basedOn": 1001,
       "id": 1000
-    },{
+    },
+    {
       "ability": [
         {
           "effects": [
@@ -14643,6 +14644,250 @@
       "target": {
         "comparator": "lowest",
         "criteria": "HP"
+      }
+    },
+    {
+      "basedOn": 1045,
+      "id": 1044
+    },
+    {
+      "ability": [
+        {
+          "effects": [
+            {
+              "attributes": [ "HP" ],
+              "effect": "buff",
+              "level": 1,
+              "targeting": { "targets": [ "Slasher", "Free Spirit" ] }
+            },
+            {
+              "attributes": [ "RCV" ],
+              "effect": "buff",
+              "level": 1,
+              "condition": { "comparator": "remaining", "count": 70, "type": "time" },
+              "targeting": { "targets": [ "Slasher", "Free Spirit" ] }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 2 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 3 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 4 }
+            }
+          ]
+        },
+        {
+          "effects": [
+            {
+              "override": { "level": 5 }
+            }
+          ]
+        }
+      ],
+      "id": 1045,
+      "pattern": [
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Normal"
+        },
+        {
+          "action": "attack",
+          "type": "Power"
+        },
+        {
+          "action": "attack",
+          "type": "Full"
+        }
+      ],
+      "resilience": [
+        {
+          "attribute": "Silence",
+          "chance": 50,
+          "type": "debuff"
+        }
+      ],
+      "special": [
+        {
+          "cooldown": 32,
+          "effects": [
+            {
+              "amount": 750,
+              "effect": "damage",
+              "range": { "direction": "radial", "size": "small" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "fixed"
+            },
+            {
+              "duration": 30,
+              "effect": "damage",
+              "level": 1,
+              "range": { "direction": "radial", "size": "small" },
+              "targeting": { "targets": [ "enemies" ] },
+              "type": "time"
+            },
+            {
+              "attributes": [ "DEF" ],
+              "duration": 10,
+              "effect": "debuff",
+              "level": 1,
+              "range": { "direction": "radial", "size": "small" },
+              "targeting": { "targets": [ "enemies" ] }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 775 }
+            },
+            {
+              "override": { "level": 1, "duration": 31 }
+            },
+            {
+              "override": { "level": 1, "duration": 11 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 800 }
+            },
+            {
+              "override": { "level": 1, "duration": 32 }
+            },
+            {
+              "override": { "level": 1, "duration": 12 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 825 }
+            },
+            {
+              "override": { "level": 1, "duration": 33 }
+            },
+            {
+              "override": { "level": 1, "duration": 13 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 850 }
+            },
+            {
+              "override": { "level": 1, "duration": 34 }
+            },
+            {
+              "override": { "level": 1, "duration": 14 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 875 }
+            },
+            {
+              "override": { "level": 1, "duration": 35 }
+            },
+            {
+              "override": { "level": 1, "duration": 15 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 900 }
+            },
+            {
+              "override": { "level": 1, "duration": 36 }
+            },
+            {
+              "override": { "level": 2, "duration": 16 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 925 }
+            },
+            {
+              "override": { "level": 1, "duration": 37 }
+            },
+            {
+              "override": { "level": 2, "duration": 17 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 950 }
+            },
+            {
+              "override": { "level": 1, "duration": 38 }
+            },
+            {
+              "override": { "level": 2, "duration": 18 }
+            }
+          ]
+        },
+        {
+          "cooldown": 30,
+          "effects": [
+            {
+              "override": { "amount": 1100 }
+            },
+            {
+              "override": { "level": 2, "duration": 40 }
+            },
+            {
+              "override": { "level": 3, "duration": 20 }
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "def": 134,
+        "rumbleType": "ATK",
+        "spd": 189
+      },
+      "target": {
+        "comparator": "highest",
+        "criteria": "DEF"
       }
     },
     {
