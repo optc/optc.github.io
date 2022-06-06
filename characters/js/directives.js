@@ -741,7 +741,7 @@ filters.abilityToString = function() {
                   e += `${effect.chance ? "r" : "R"}evive to ${effect.amount}% HP after death`
                 break;
                 default:
-                  e += `${"reduce " + attrStr}`;
+                  e += `${"Reduce " + attrStr}`;
                 break;
               }
               break;
