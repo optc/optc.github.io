@@ -56241,7 +56241,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "ATK", "SPD" ],
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "[STR]" ] }
@@ -56258,7 +56258,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "ATK", "SPD" ],
               "effect": "buff",
               "level": 2,
               "targeting": { "targets": [ "[STR]" ] }
@@ -56275,7 +56275,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "ATK", "SPD" ],
               "effect": "buff",
               "level": 3,
               "targeting": { "targets": [ "[STR]" ] }
@@ -56292,7 +56292,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "ATK", "SPD" ],
               "effect": "buff",
               "level": 4,
               "targeting": { "targets": [ "[STR]" ] }
@@ -56309,7 +56309,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK" ],
+              "attributes": [ "ATK", "SPD" ],
               "effect": "buff",
               "level": 5,
               "targeting": { "targets": [ "[STR]" ] }

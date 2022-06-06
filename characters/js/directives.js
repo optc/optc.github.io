@@ -752,7 +752,7 @@ filters.abilityToString = function() {
               else if(effect.level)
                 e += `Inflicts Lv.${new Intl.NumberFormat().format(effect.level)} ${arrayToString(effect.attributes)} down penalty`;
               else
-                e += `${effect.chance}% chance to ${arrayToString(effect.attributes)}`;
+                e += `${effect.chance || 100}% chance to ${arrayToString(effect.attributes)}`;
               break;
             case "cleanse":
               e += `${effect.chance}% chance to cleanse ${arrayToString(effect.attributes)} debuffs`;
