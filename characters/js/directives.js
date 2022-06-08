@@ -640,6 +640,7 @@ filters.patternToString = function() {
           }
         }
         else if  (input.action == "heal") {
+          input.area = input.area[0].toUpperCase() + input.area.slice(1);
           return `<i>Level ${input.level} ${input.area == "Self" ? input.area : input.area + " Range"} Heal</i>`;
         }
         else {

@@ -457,7 +457,6 @@ input#burgerMenuState {
     float: left;
     position: relative;
     top: 2px;
-    width: 150px;
     text-align: center;
     margin-right: 5px;
 }
@@ -466,7 +465,6 @@ input#burgerMenuState {
     float: left;
     position: relative;
     top: 2px;
-    width: 175px;
     text-align: center;
     margin-right: 5px;
 }
