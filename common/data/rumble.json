@@ -34363,7 +34363,7 @@
         {
           "effects": [
             {
-              "attributes": [ "DEF" ],
+              "attributes": [ "HP" ],
               "effect": "buff",
               "level": 2,
               "targeting": { "targets": [ "Fighter", "Slasher", "Striker", "Shooter" ] }
@@ -45296,7 +45296,7 @@
         {
           "effects": [
             {
-              "attributes": [ "DEF" ],
+              "attributes": [ "HP" ],
               "effect": "buff",
               "level": 3,
               "targeting": { "targets": [ "Fighter", "Slasher", "Striker", "Shooter" ] }

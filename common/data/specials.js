@@ -11843,9 +11843,9 @@ window.specials = {
         }
     },
     3359: {
-        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1; },
+        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1; },
         type: "type",
-        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1; },
+        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
@@ -12996,13 +12996,14 @@ window.specials = {
     },
     3524: {
         status: function(p) { return p.poisoned ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return 1.75; },
         poison: function(p) { return [99, 0, 99][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the' + ["Poison", "Status ATK", "Poison and Status ATK"][n] + ' special. To ' + ["Poison", "Status ATK", "Poison and Status ATK"][(n + 1) % levels.length] + ' special, disable and re-enable this special',
+                text: 'Using the' + ["Poison and Orb", "Status ATK and Orb", "Poison, Orb and Status ATK"][n] + ' special. To ' + ["Poison and Orb", "Status ATK and Orb", "Poison, Orb and Status ATK"][(n + 1) % levels.length] + ' special, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
@@ -13086,7 +13087,7 @@ window.specials = {
         onActivation: function(p) {
             var levels = [2, 2.25, 2.25];
             var levels2 = [0, 250, 500];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            var n = (levels2.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels2.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
             p.scope.notify({
