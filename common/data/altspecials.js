@@ -220,6 +220,10 @@ window.altspecials = {
         status: function(p) { return p.defenseDown ? 2.25 : 1; },
         def: function(p) { return 0; },//Temp until we deal with on-hit effects
     },
+    3641: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

@@ -2396,28 +2396,32 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
-    3632: {
-        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
-    },
-    3624: {
+    3634: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 40 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Driven") ? 40 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 40 : 0; },
     },
-    3625: {
+    3635: {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
     3626: {
-        atkStatic: function(p) { return p.unit.type == "INT" ? 30 : 0; },
-        hpStatic: function(p) { return p.unit.type == "INT" ? 30 : 0; },
-        rcvStatic: function(p) { return p.unit.type == "INT" ? 30 : 0; },
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
     },
     3627: {
         atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 30 : 0; },
+    },
+    3641: {
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 200, 200][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3643: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 60 : 0; },
+    },
+    3644: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 40 : 0; },
     },
     4986: {
         staticMult: function(p) { return 3; }

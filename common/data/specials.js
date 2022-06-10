@@ -13892,6 +13892,47 @@ window.specials = {
     3638: {
         affinity: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; },
     },
+    3640: {
+        chain: function(p) { return [3, 2.5, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [40, 35, 35][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = window.specials[p.team[p.sourceSlot].unit.number+1].multiplier ? p.captain && (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? 0 : 1 : 2;
+            p.scope.notify({
+                text: 'Using the ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 'x Chain Boundary boost. To switch to the boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3641: {
+        chain: function(p) { return [3, 2.5, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [40, 35, 35][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+        },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = window.specials[p.team[p.sourceSlot].unit.number+1].multiplier ? p.captain && (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? 0 : 1 : 2;
+            p.scope.notify({
+                text: 'Using the ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 'x Chain Boundary boost. To switch to the boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3642: {
+        affinity: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    3643: {
+        orb: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 2 : 1; },
+    },
+    3644: {
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 750 : 0; },
+    },
+    3645: {
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 750 : 0; },
+        chainAddition: function(p) { return 1.1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

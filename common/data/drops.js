@@ -5762,7 +5762,7 @@ window.drops = {
         },
         
         {
-            name: 'Catarina Devol',
+            name: 'Catarina Devon',
             thumb: 3635,
             global: true,
             nakama: 10363500,
@@ -6333,7 +6333,7 @@ window.drops = {
             global: true,
             nakama: 8358800,
             gamewith: null,
-            'Ragin Sea': [ 3588 ]
+            'Raging Sea': [ 3588 ]
         },
 
         {
@@ -6343,7 +6343,17 @@ window.drops = {
             global: true,
             nakama: 8362100,
             gamewith: null,
-            'Ragin Sea': [ 3621 ]
+            'Raging Sea': [ 3621 ]
+        },
+
+        {
+            name: 'Moria',
+            dropID: 'treasuremap58',
+            thumb: 3645,
+            global: true,
+            nakama: 8364500,
+            gamewith: null,
+            'Raging Sea': [ 3645 ]
         },
 
     ],
@@ -7101,6 +7111,16 @@ window.drops = {
             nakama: null,
             gamewith: 196547,
             'Rumble Missions': [ 3587 ],
+        },
+
+        {
+            name: 'Loyalty Even Unto Death',
+            dropID: 'rumble25',
+            thumb: 3644,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+            'Rumble Missions': [ 3644 ],
         },
 
     ],
