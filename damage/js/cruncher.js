@@ -258,10 +258,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var friendCaptain = team[0].unit;
             var captain = team[1].unit;
             var unitTemp = Object.assign({},x.unit);
-            if(n == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, 0);
-            else if(n != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number)) cloneReplace(unitTemp, n);
-            if(friendCaptain && $scope.data.cloneCheck1 && [3522, 3523].includes(friendCaptain.number)) cloneReplace(friendCaptain, 0);
-            if(captain && $scope.data.cloneCheck2 && [3522, 3523].includes(captain.number)) cloneReplace(captain, 1);
+            if(n == 0 && $scope.data.cloneCheck1 && [3522, 3523].includes(unitTemp.number+1)) cloneReplace(unitTemp, 0);
+            else if(n != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number+1)) cloneReplace(unitTemp, n);
+            if(friendCaptain && $scope.data.cloneCheck1 && [3522, 3523].includes(friendCaptain.number+1)) cloneReplace(friendCaptain, 0);
+            if(captain && $scope.data.cloneCheck2 && [3522, 3523].includes(captain.number+1)) cloneReplace(captain, 1);
             
             x.unit = unitTemp; //Override for custom unit Type/Classes
 

@@ -13075,7 +13075,7 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
             p.scope.notify({
-                text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + 'base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + 'base ATK boost, disable and re-enable this special',
+                text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + ' base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
@@ -13087,11 +13087,11 @@ window.specials = {
         onActivation: function(p) {
             var levels = [2, 2.25, 2.25];
             var levels2 = [0, 250, 500];
-            var n = (levels2.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels2.length;
+            var n = (levels2.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2) + 1) % levels2.length;
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
             p.scope.notify({
-                text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + 'base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + 'base ATK boost, disable and re-enable this special',
+                text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + ' base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
