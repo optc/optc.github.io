@@ -13598,7 +13598,7 @@ window.specials = {
     },
     3598: {
         chainAddition: function(p) { return [1, 0, 1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        affiinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
