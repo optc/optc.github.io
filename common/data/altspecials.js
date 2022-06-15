@@ -194,7 +194,7 @@ window.altspecials = {
         chainAdditionPlus: function(p) { return 0.5; }, 
     },
     3597: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
         type: "type",
     },
     3607: {
@@ -221,7 +221,7 @@ window.altspecials = {
         def: function(p) { return 0; },//Temp until we deal with on-hit effects
     },
     3641: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         type: "type",
     },
 };

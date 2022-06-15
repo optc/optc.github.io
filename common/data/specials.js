@@ -12404,7 +12404,7 @@ window.specials = {
         orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     3423: {
-        atkPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
+        atkPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; },
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
@@ -13516,8 +13516,8 @@ window.specials = {
         multiplier: 2.5,
         multiplier2: 35,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 3 : 2.5;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 40 : 35;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 3 : 2.5;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 40 : 35;
             p.scope.notify({
                 text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13535,8 +13535,8 @@ window.specials = {
         multiplier: 2.5,
         multiplier2: 35,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 3 : 2.5;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 40 : 35;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 3 : 2.5;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 40 : 35;
             p.scope.notify({
                 text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13590,10 +13590,10 @@ window.specials = {
             });
         },
     },
-    3585: {
+    3596: {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
-    3586: {
+    3597: {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     3598: {
@@ -13693,7 +13693,7 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2 : 1;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit")) ? 2 : 1;
         },
     },
     3615: {
@@ -13707,7 +13707,7 @@ window.specials = {
         atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
         multiplier: 0,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 900 : 0;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse")) ? 900 : 0;
         },
     },
     3618: {
@@ -13732,7 +13732,7 @@ window.specials = {
         },
         multiplier: 0,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.unit.class.has("Striker") || p.unit.class.has("Free Spirit")) ? 2.5 : 2.25;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Free Spirit")) ? 2.5 : 2.25;
         },
     },
     3624: {

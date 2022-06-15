@@ -948,16 +948,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
                     // get highest buff increase
                     plusSpecials.forEach(function(plusSpecial) {
+                        plusParams = jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(plusSpecial.sourceSlot));
                         //console.log(plusSpecial);
-                        if(plusSpecial.hasOwnProperty('atkPlus'))
-                            if(plusSpecial.atkPlus(params) > atkPlusTemp)
-                                atkPlusTemp = plusSpecial.atkPlus(params);
-                        if(plusSpecial.hasOwnProperty('atkCeil'))
-                            if(plusSpecial.atkCeil(params) > atkCeilTemp)
-                                atkCeilTemp = plusSpecial.atkCeil(params);
-                        if(plusSpecial.hasOwnProperty('statusPlus'))
-                            if(plusSpecial.statusPlus(params) > statusPlusTemp)
-                                statusPlusTemp = plusSpecial.statusPlus(params);
+                        if(plusSpecial.hasOwnProperty('atkPlus')){
+                            if(plusSpecial.atkPlus(plusParams) > atkPlusTemp)
+                                atkPlusTemp = plusSpecial.atkPlus(plusParams);
+                        }
+                        if(plusSpecial.hasOwnProperty('atkCeil')){
+                            if(plusSpecial.atkCeil(plusParams) > atkCeilTemp)
+                                atkCeilTemp = plusSpecial.atkCeil(plusParams);
+                        }
+                        if(plusSpecial.hasOwnProperty('statusPlus')){
+                            if(plusSpecial.statusPlus(plusParams) > statusPlusTemp)
+                                statusPlusTemp = plusSpecial.statusPlus(plusParams);
+                        }
                     });
                     if (!data.s) { // non-static
                         var text = data.sourceSlot > -1 ? (team[data.sourceSlot].unit ? 'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special') : 'special override';
