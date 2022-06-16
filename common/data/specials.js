@@ -13535,8 +13535,8 @@ window.specials = {
         multiplier: 2.5,
         multiplier2: 35,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 3 : 2.5;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.unit.class.has("Powerhouse"))) ? 40 : 35;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 3 : 2.5;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 40 : 35;
             p.scope.notify({
                 text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
