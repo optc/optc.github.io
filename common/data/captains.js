@@ -12813,6 +12813,18 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 1.35 : 1; },
     },
+    3646: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5.25 : 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+    },
+    3647: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3648: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

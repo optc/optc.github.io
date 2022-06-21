@@ -6868,6 +6868,16 @@ window.drops = {
             'Kizuna Exchange': [ 3525, 9062, 9063 ],
         },
 
+        {
+            name: 'Magellan & Hannyabal',
+            dropID: 'kizuna36',
+            thumb: 3648,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3648 ],
+        },
+
     ],
 
 

@@ -3644,6 +3644,9 @@ window.units = [
     [ "Shiryu of the Rain - User of the Clear-Clear Fruit", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 2000000, 1630, 775, 72, 3260, 1550, 144, 1 ],
     [ "Chaka - Loyalty Even Unto Death", "QCK", [ "Slasher", "Free Spirit" ], 5, 50, 4, 5, 99, 5000000, 1597, 790, 70, null, null, null, null ],
     [ "Gecko Moria - Invading Lord of Shadows", "INT", [ "Powerhouse", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 54, null, null, null, null ],
+    [ "Buggy & Galdino - Forming the Prison Break Alliance", "QCK", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1273, 701, 128, null, null, null, null ],
+    [ "Inazuma - Snipping Through the Ground", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1241, 638, 173, null, null, null, null ],
+    [ "Magellan & Hannyabal - Warden and Under Warden of Impel Down", "INT", [ "Driven", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1145, 811, 101, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

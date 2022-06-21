@@ -90,7 +90,7 @@ const Jozu = [ "Jozu" ];
 const Vista = [ "Vista" ];
 const Izo = [ "Izo" ];
 const Blamenco = [ "Blamenco" ];
-const EdwardNewgate = [ "Edward Newgate", "Whitebeard" ];
+const EdwardNewgate = [ "Edward Newgate", "Whitebeard", "WB" ];
 const Mr13 = [ "Mr. 13" ];
 const Dorry = [ "Dorry" ];
 const Broggy = [ "Broggy" ];
@@ -173,7 +173,7 @@ const Stomp = [ "Stomp" ];
 const IvanX = [ "Ivan X" ];
 const Centaur = [ "Centaur" ];
 const Hikoichi = [ "Hikoichi" ];
-const MarshallDTeach = [ "Marshall D. Teach", "Blackbeard" ];
+const MarshallDTeach = [ "Marshall D. Teach", "Blackbeard", "BB" ];
 const Thatch = [ "Thatch" ];
 const Namule = [ "Namule" ];
 const Rakuyo = [ "Rakuyo" ];
@@ -529,7 +529,7 @@ const Brannew = [ "Brannew" ];
 const Yasopp = [ "Yasopp" ];
 const Headcracker = [ "Headcracker" ];
 const Kyuin = [ "Kyuin" ];
-const CharlotteLinlin = [ "Charlotte Linlin", "Big Mom" ];
+const CharlotteLinlin = [ "Charlotte Linlin", "Big Mom", "BM" ];
 const CharlotteKatakuri = [ "Charlotte Katakuri" ];
 const CharlotteBrulee = [ "Charlotte Brûlée", "Charlotte Brulee" ];
 const CharlotteAmande = [ "Charlotte Amande" ];
@@ -4207,6 +4207,9 @@ window.families = {
     3643: [ ...Shiryu ],
     3644: [ ...Chaka ],
     3645: [ ...GeckoMoria ],
+    3645: [ ...Buggy, ...Galdino ],
+    3645: [ ...Inazuma ],
+    3645: [ ...Magellan, ...Hannyabal ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],
