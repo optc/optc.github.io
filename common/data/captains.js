@@ -12825,6 +12825,44 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 3.75 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 1.2 : 1; },
     },
+    3649: {
+        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? 5.25 : 1 : 1; },
+        hp: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? 1.2 : 1 : 1; },
+        rcv: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? 1.2 : 1 : 1; },
+    },
+    3650: {
+        atk: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? 5.25 : 1 : 1; },
+        hp: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? 1.2 : 1 : 1; },
+        rcv: function(p) { return (p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? 1.2 : 1 : 1; },
+    },
+    3651: {
+        atk: function(p) { mult1 = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) ? 4.5 : 1; mult2 = (p.colorCount.PSY == 0 && p.colorCount.INT == 0) ? 1.2 : 1; return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? mult1*mult2 : 1; },
+        hp: function(p) { return 1.3; },
+    },
+    3652: {
+        atk: function(p) { mult1 = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) ? 4.5 : 1; mult2 = (p.colorCount.PSY == 0 && p.colorCount.INT == 0) ? 1.2 : 1; return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? mult1*mult2 : 1; },
+        hp: function(p) { return 1.3; },
+    },
+    3653: {
+        atk: function(p) { mult1 = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) ? 4.5 : 1; mult2 = (p.colorCount.PSY == 0 && p.colorCount.INT == 0) ? 1.2 : 1; return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? mult1*mult2 : 1; },
+        hp: function(p) { return 1.5; },
+    },
+    3654: {
+        atk: function(p) { mult1 = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1) ? 4.5 : 1; mult2 = (p.colorCount.PSY == 0 && p.colorCount.INT == 0) ? 1.2 : 1; return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK"  ? mult1*mult2 : 1; },
+        hp: function(p) { return 1.5; },
+    },
+    3655: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? (p.actions[p.sourceSlot] && p.sourceSlot == 1 ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.2 : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3 : 2.5) : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.5 : 1 }
+    },
+    3656: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.5 : 1 }
+    },
+    3657: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

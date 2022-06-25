@@ -224,6 +224,19 @@ window.altspecials = {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         type: "type",
     },
+    3650: {
+        orbCeil: function(p) { return 3; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    3652: {
+        chainMultiplication: function(p) { return 1.25; }
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

@@ -3647,6 +3647,15 @@ window.units = [
     [ "Buggy & Galdino - Forming the Prison Break Alliance", "QCK", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1273, 701, 128, null, null, null, null ],
     [ "Inazuma - Snipping Through the Ground", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1241, 638, 173, null, null, null, null ],
     [ "Magellan & Hannyabal - Warden and Under Warden of Impel Down", "INT", [ "Driven", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1145, 811, 101, null, null, null, null ],
+    [ "Black Maria - Seductive Tobi Roppo", "QCK", [ "Powerhouse", "Cerebral" ], 5, 30, 6, 3, 70, 1066998, 822, 418, 90, null, null, null, null ],
+    [ "Black Maria - Inescapable Spider Silk", "QCK", [ "Powerhouse", "Cerebral" ], 6, 55, 6, 5, 99, 5000000, 1645, 831, 174, null, null, null, null ],
+    [ "Who's-Who - Obstructing Tobi Roppo", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 928, 449, 64, null, null, null, null ],
+    [ "Who's-Who - Assaulting Ancient Fangs", "STR", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1827, 893, 123, null, null, null, null ],
+    [ "Sasaki - Crashing Tobi Roppo", "DEX", [ "Powerhouse", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1030, 426, 54, null, null, null, null ],
+    [ "Sasaki - Gleaming Robust Horns", "DEX", [ "Powerhouse", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2031, 848, 104, null, null, null, null ],
+    [ "Ulti - Vicious Tobi Roppo", "QCK", [ "Powerhouse", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1675, 772, 89, null, null, null, null ],
+    [ "Page One - Tobi Roppo on Reconnaissance", "STR", [ "Powerhouse", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1655, 795, 85, null, null, null, null ],
+    [ "X Drake - One Man Army Holding the Line", "DEX", [ "Powerhouse", "Striker" ], 5, 30, 5, 4, 99, 2000000, 1617, 737, 86, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

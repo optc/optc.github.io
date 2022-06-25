@@ -13947,11 +13947,76 @@ window.specials = {
     },
     3648:{
         poison: function(p) { return 99; },
-        atk: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         multiplier: 1,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Driven")) ? 2.25 : 1;
         },
+    },
+    3649:{
+        delay: function(p) { return 3; },
+        status: function(p) { return p.delayed ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 2.25 : 2;
+        },
+    },
+    3650:{
+        delay: function(p) { return 3; },
+        status: function(p) { return p.delayed ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 2.25 : 2;
+        },
+    },
+    3651:{
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1.6 : 1.4;
+        },
+    },
+    3652:{
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1.6 : 1.4;
+        },
+    },
+    3653:{
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
+        type: "type",
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 1250 : 1000;
+        },
+    },
+    3654:{
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
+        type: "type",
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 1250 : 1000;
+        },
+    },
+    3655:{
+        def: function(p) { return 0; },
+    },
+    3654:{
+        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        multiplier: 1,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK") ? 2.25 : 1;
+        },
+    },
+    3657:{
+        orb: function(p) { return 1.75; },
     },
 };
 

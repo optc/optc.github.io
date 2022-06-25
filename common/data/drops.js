@@ -3109,6 +3109,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3634 ],
         },
+
+        {
+            name: 'Red Flag, The Army of One',
+            dropID: 'event160',
+            thumb: 3657,
+            global: true,
+            nakama: 6365700,
+            gamewith: null,
+            'All Difficulties': [ 3657 ],
+        },
     ],
 
 
