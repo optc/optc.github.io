@@ -13564,7 +13564,7 @@ window.specials = {
     },
     3594: {
         chainAddition: function(p) { return [0, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -13578,7 +13578,7 @@ window.specials = {
     },
     3595: {
         chainAddition: function(p) { return [0, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
