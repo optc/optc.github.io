@@ -3656,6 +3656,7 @@ window.units = [
     [ "Ulti - Vicious Tobi Roppo", "QCK", [ "Powerhouse", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1675, 772, 89, null, null, null, null ],
     [ "Page One - Tobi Roppo on Reconnaissance", "STR", [ "Powerhouse", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1655, 795, 85, null, null, null, null ],
     [ "X Drake - One Man Army Holding the Line", "DEX", [ "Powerhouse", "Striker" ], 5, 30, 5, 4, 99, 2000000, 1617, 737, 86, null, null, null, null ],
+    [ "Pell - Kingdom Protecting Falcon", "DEX", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 2068, 784, 95, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
