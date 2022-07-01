@@ -12863,6 +12863,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 3.25 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
     },
+    3658: {
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.class.has("Powerhouse")) ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

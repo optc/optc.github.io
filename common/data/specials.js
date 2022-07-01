@@ -14018,6 +14018,9 @@ window.specials = {
     3657:{
         orb: function(p) { return 1.75; },
     },
+    3575: {
+        chainAddition: function(p) { return 1.0; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

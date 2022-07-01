@@ -3614,6 +3614,7 @@ window.flags = {
     3654: { rr: 1, rro: 1 },
     3655: { rr: 1, rro: 1 },
     3656: { rr: 1, rro: 1 },
+    3658: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },
     4988: { rr: 1, rro: 1, lrr: 1, global: 1 },
