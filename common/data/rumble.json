@@ -65138,7 +65138,7 @@
             },
             {
               "attributes": [ "Special CT" ],
-              "effect": "buff",
+              "effect": "penalty",
               "level": 6,
               "targeting": { "targets": [ "self" ] }
             }
@@ -78003,7 +78003,7 @@
             {
               "amount": 1,
               "effect": "recharge",
-              "range": { "direction": "radial", "size": "medium" },
+              "range": { "direction": "radial", "size": "large" },
               "targeting": { "targets": [ "crew" ] },
               "type": "RCV"
             },
@@ -78366,7 +78366,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 1,
+              "level": 2,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -78385,7 +78385,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 1,
+              "level": 2,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -78404,7 +78404,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 1,
+              "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -78423,7 +78423,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 1,
+              "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -78442,7 +78442,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 2,
+              "level": 3,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -78461,7 +78461,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 2,
+              "level": 4,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -78480,7 +78480,7 @@
               "attributes": [ "Critical Hit", "DEF" ],
               "duration": 15,
               "effect": "buff",
-              "level": 3,
+              "level": 5,
               "targeting": { "targets": [ "[INT]" ] }
             }
           ]
@@ -85223,7 +85223,7 @@
               "attributes": [ "ATK" ],
               "duration": 25,
               "effect": "buff",
-              "level": 4,
+              "level": 5,
               "targeting": { "targets": [ "[STR]" ] }
             }
           ]
@@ -110267,7 +110267,7 @@
             {
               "amount": 1,
               "effect": "damage",
-              "range": { "direction": "sideways", "size": "medium" },
+              "range": { "direction": "sideways", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
               "type": "atk",
               "condition": { "comparator": "remaining", "count": 40, "type": "time" }
@@ -114379,7 +114379,7 @@
               "duration": 11,
               "effect": "buff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2,
@@ -114397,7 +114397,7 @@
               "duration": 12,
               "effect": "buff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.1,
@@ -114415,7 +114415,7 @@
               "duration": 13,
               "effect": "buff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.2,
@@ -114433,7 +114433,7 @@
               "duration": 14,
               "effect": "buff",
               "level": 1,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.3,
@@ -114451,7 +114451,7 @@
               "duration": 15,
               "effect": "buff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.4,
@@ -114469,7 +114469,7 @@
               "duration": 16,
               "effect": "buff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.5,
@@ -114487,7 +114487,7 @@
               "duration": 17,
               "effect": "buff",
               "level": 2,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.6,
@@ -114505,7 +114505,7 @@
               "duration": 18,
               "effect": "buff",
               "level": 3,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.7,
@@ -114523,7 +114523,7 @@
               "duration": 19,
               "effect": "buff",
               "level": 3,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 2.8,
@@ -114541,7 +114541,7 @@
               "duration": 20,
               "effect": "buff",
               "level": 4,
-              "targeting": { "count": 1, "priority": "lowest", "stat": "DEF", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "crew" ] }
             },
             {
               "amount": 3,
@@ -150045,7 +150045,7 @@
             {
               "amount": 50,
               "effect": "recharge",
-              "condition": { "comparator": "remaining", "count": 5, "type": "crew" },
+              "condition": { "comparator": "less", "count": 5, "type": "crew" },
               "targeting": { "count": 1, "priority": "highest", "stat": "ATK", "targets": [ "crew" ] },
               "type": "Special CT"
             }
@@ -153269,7 +153269,7 @@
             {
               "amount": 2100,
               "effect": "damage",
-              "range": { "direction": "sideways", "size": "large" },
+              "range": { "direction": "sideways", "size": "medium" },
               "targeting": { "targets": [ "enemies" ] },
               "type": "fixed"
             },
@@ -159298,7 +159298,7 @@
               "attributes": [ "Critical Hit" ],
               "effect": "buff",
               "level": 3,
-              "targeting": { "targets": [ "[DEX]" ] }
+              "targeting": { "targets": [ "crew" ] }
             }
           ]
         },
