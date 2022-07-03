@@ -230,9 +230,14 @@
                     <div class="panel panel-default" ng-hide="hidden.abilities">
                         <table class="table table-striped-column abilities">
                             <tbody>
+                                <tr ng-if="details.lLimit">
+                                    <td width="5%"></td>
+                                    <td style="width: 47.5%"><strong>Base</strong></td>
+                                    <td style="width: 50%"><strong>Level Limit Break</strong></td>
+                                </tr>
                                 <tr>
-                                    <td>Captain</td>
-                                    <td>
+                                    <td width="5%">Captain</td>
+                                    <td width="45%">
                                         <!-- same captain ability -->
                                         <div ng-if="!isCaptainHybrid" ng-bind-html="details.captain | decorate"></div>
                                         <!-- different captain abilities -->
@@ -243,12 +248,8 @@
                                             <div  ng-show="details.captain.global" ng-bind-html="details.captain.global | decorate"></div>
                                             <span class="badge badge-base" ng-show="details.captain.base">Base Captain Ability</span>
                                             <div ng-show="details.captain.base" ng-bind-html="details.captain.base | decorate"></div>
-                                            <span class="badge badge-level1" ng-show="details.captain.llbbase">LLB Base Captain Ability</span>
-                                            <div ng-show="details.captain.llbbase" ng-bind-html="details.captain.llbbase | decorate"></div>
                                             <span class="badge badge-level1" ng-show="details.captain.level1">Limit Break Level 1 Captain Ability</span>
                                             <div ng-show="details.captain.level1" ng-bind-html="details.captain.level1 | decorate"></div>
-                                            <span class="badge badge-level2" ng-show="details.captain.llblevel1">LLB Level 1 Captain Ability</span>
-                                            <div ng-show="details.captain.llblevel1" ng-bind-html="details.captain.llblevel1 | decorate"></div>
                                             <span class="badge badge-level2" ng-show="details.captain.level2">Limit Break Level 2 Captain Ability</span>
                                             <div ng-show="details.captain.level2" ng-bind-html="details.captain.level2 | decorate"></div>
                                             <span class="badge badge-level3" ng-show="details.captain.level3">Limit Break Level 3 Captain Ability</span>
@@ -268,10 +269,19 @@
                                         </div>
                                         <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
                                     </td>
+                                    <td width="50%" ng-if="isCaptainHybrid && details.captain.llbbase">
+                                        <div ng-if="isCaptainHybrid">
+                                            <span class="badge badge-level1" ng-show="details.captain.llbbase">LLB Base Captain Ability</span>
+                                            <div ng-show="details.captain.llbbase" ng-bind-html="details.captain.llbbase | decorate"></div>
+                                            <span class="badge badge-level2" ng-show="details.captain.llblevel1">LLB Level 1 Captain Ability</span>
+                                            <div ng-show="details.captain.llblevel1" ng-bind-html="details.captain.llblevel1 | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.captainNotes" ng-bind-html="details.captainNotes | notes | decorate"></span>
+                                    </td>
                                 </tr>
                                 <tr ng-if="details.sailor">
-                                    <td>Sailor</td>
-                                    <td>
+                                    <td width="5%">Sailor</td>
+                                    <td width="45%" colspan="{{details.sailor.llbbase ? 1 : 2}}">
                                         <!-- same sailor ability -->
                                         <div ng-if="!isSailorHybrid" ng-bind-html="details.sailor | decorate"></div>
                                         <!-- different sailor abilities -->
@@ -303,10 +313,21 @@
                                         </div>
                                         <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
                                     </td>
+                                    <td width="50%" ng-if="details.sailor.llbbase || details.sailor.llblevel1 || details.sailor.llblevel2">
+                                        <div ng-if="isSailorHybrid">
+                                            <span class="badge badge-slevel1" ng-show="details.sailor.llbbase">LLB Sailor Ability</span>
+                                            <div ng-show="details.sailor.llbbase" ng-bind-html="details.sailor.llbbase | decorate"></div>
+                                            <span class="badge badge-slevel1" ng-show="details.sailor.llblevel1">LLB Sailor Ability 1</span>
+                                            <div ng-show="details.sailor.llblevel1" ng-bind-html="details.sailor.llblevel1 | decorate"></div>
+                                            <span class="badge badge-slevel2" ng-show="details.sailor.llblevel2">LLB Sailor Ability 2</span>
+                                            <div ng-show="details.sailor.llblevel2" ng-bind-html="details.sailor.llblevel2 | decorate"></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.sailorNotes" ng-bind-html="details.sailorNotes | notes | decorate"></span>
+                                    </td>
                                 </tr>
                                 <tr ng-if="details.swap">
                                     <td>Swap</td>
-                                    <td>
+                                    <td colspan="2">
                                         <!-- same sailor ability -->
                                         <div ng-if="!isSwapHybrid" ng-bind-html="details.swap | decorate"></div>
                                         <!-- different sailor abilities -->
@@ -320,8 +341,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Special</td>
-                                    <td>
+                                    <td width="5%">Special</td>
+                                    <td width="45%" colspan="{{details.special.llbbase ? 1 : 2}}">
                                         <strong class="specialName" ng-if="details.specialName">{{::details.specialName}}</strong>
                                         <!-- same special, no stages -->
                                         <div ng-if="!isSpecialHybrid && !isSpecialStaged" ng-bind-html="details.special | decorate"></div>
@@ -347,8 +368,6 @@
                                             <div ng-show="details.special.character1" ng-bind-html="details.special.character1 | decorate"></div>
                                             <span class="badge badge-character2" ng-show="details.special.character2">Character 2 Special Ability</span>
                                             <div ng-show="details.special.character2" ng-bind-html="details.special.character2 | decorate"></div>
-                                            <span class="badge badge-slevel1" ng-show="details.special.llbbase">Level Limit Break Special Ability</span>
-                                            <div ng-show="details.special.llbbase" ng-bind-html="details.special.llbbase | decorate"></div>
                                         </div>
                                         <div ng-if="isSpecialHybrid && isSpecialStaged">
                                             <span class="badge badge-base" ng-show="details.special.base">Base Special</span><br>
@@ -359,6 +378,17 @@
                                                 ({{::stage.cooldown.length ? stage.cooldown[0] - unit.limitexCD : stage.cooldown}}{{::stage.cooldown.length ? ' \u2192 ' + (stage.cooldown[1] - unit.limitexCD) : ''}} turns)</span>:
                                                 <span ng-bind-html="stage.description | decorate"></span>
                                             </div>
+                                        </div>
+                                        <span class="notes" ng-if="details.specialNotes" ng-bind-html="details.specialNotes | notes | decorate"></span>
+                                    </td>
+                                    <td width="50%" ng-if="details.special.llbbase">
+                                        <strong class="specialName" ng-if="details.specialName">{{::details.specialName}}</strong>
+                                        <!-- different specials -->
+                                        <div ng-if="isSpecialHybrid && !isSpecialStaged">
+                                            <span class="badge badge-slevel1" ng-show="details.special.llbbase">Level Limit Break Special Ability</span>
+                                            <div ng-show="details.special.llbbase" ng-bind-html="details.special.llbbase | decorate"></div>
+                                        </div>
+                                        <div ng-if="isSpecialHybrid && isSpecialStaged">
                                             <span class="badge badge-level1" ng-show="details.special.llbbase">Level Limit Break Special</span><br>
                                             <div ng-repeat="stage in details.special.llbbase track by $index">
                                                 <strong>Stage {{::$index + 1}}</strong>
@@ -372,8 +402,8 @@
                                     </td>
                                 </tr>
                                 <tr ng-if="cooldown && !isSpecialStaged && !isCooldownHybrid">
-                                    <td>Cooldown<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span><span ng-if="unit.limitexCD != 0 && unit.limitCD != unit.limitexCD"><br>Cooldown w/ LB expansion</span></td>
-                                    <td>
+                                    <td>Cooldown<span ng-if="unit.limitCD != 0"><br>CD + LB</span><span ng-if="unit.limitexCD != 0 && unit.limitCD != unit.limitexCD"><br>CD + LB+</span></td>
+                                    <td colspan="{{details.special.llbbase ? 2 : 1}}">
                                         {{::cooldown.length ? cooldown[0] : cooldown}} turns
                                         {{::cooldown.length ? ' \u2192 ' + cooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
                                         {{::cooldown.length ? (cooldown[0] - unit.limitCD) : (cooldown - unit.limitCD)}} turns
