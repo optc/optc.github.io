@@ -14018,8 +14018,64 @@ window.specials = {
     3657:{
         orb: function(p) { return 1.75; },
     },
-    3575: {
+    3658: {
         chainAddition: function(p) { return 1.0; },
+    },
+    3659: {
+        orbPlus: function(p) { return [0.2, 0, 0.2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [1, 2.25, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    3660: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 2.25 : 1; },
+        type: "type",
+    },
+    3661: {
+        atkbase: function(p) { return [0, 900, 900][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Base ATK", "Base ATK and Affinity"][n] + ' boost. To switch to ' + ["Affinity", "Base ATK", "Base ATK and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3663: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0;
+        }, 
+        chain: function(p) { return [1, 3.5, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 3.5, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Lock Buff", "Chain Lock", "Chain Lock and Chain Lock Buff"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock", "Chain Lock and Chain Lock Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 

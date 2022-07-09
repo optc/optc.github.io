@@ -12867,6 +12867,26 @@ window.captains = {
         atk: function(p) { return (p.unit.class.has("Powerhouse")) ? 3 : 1; },
         hp: function(p) { return (p.unit.class.has("Powerhouse")) ? 1.2 : 1; },
     },
+    3659: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? p.percHP >= 50 ? 3.75 : 3 : 1; },
+    },
+    3660: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 3 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.3 : 1; },
+    },
+    3661: {
+        damageSorter: function(d) { return CrunchUtils.typeSort(d, 3.125, ["DEX", "PSY"]); },
+        hitAtk: function(p) {
+            if (!(p.unit.type == "DEX" || p.unit.type == "PSY")) return 1;
+            return p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect"]) ? 3.125 : 2.5;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.25 : 1; },
+    },
+    3663: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.35 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
