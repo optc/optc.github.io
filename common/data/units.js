@@ -3657,9 +3657,9 @@ window.units = [
     [ "Page One - Tobi Roppo on Reconnaissance", "STR", [ "Powerhouse", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1655, 795, 85, 3509, 1690, 219, 1 ],
     [ "X Drake - One Man Army Holding the Line", "DEX", [ "Powerhouse", "Striker" ], 5, 30, 5, 4, 99, 2000000, 1617, 737, 86, 3233, 1473, 172, 1 ],
     [ "Pell - Kingdom Protecting Falcon", "DEX", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 2068, 784, 95, null, null, null, null ],
-    [ "Nami - Navigator Relaxing at Sea", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 5, 4, 99, null, 1543, 709, 110, null, null, null, null ],
-    [ "Robin - Archaeologist Gazing at the Sea", "PSY", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, null, 1625, 701, 97, null, null, null, null ],
-    [ "Tony Tony Chopper - Ship Doctor Floating in the Sea", "PSY", [ "Fighter", "Cerebral" ], 5, 30, 6, 4, 99, null, 1542, 703, 111, null, null, null, null ],
+    [ "Nami - Navigator Relaxing at Sea", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1543, 709, 110, null, null, null, null ],
+    [ "Robin - Archaeologist Gazing at the Sea", "PSY", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1625, 701, 97, 3350, 1552, 243, 1 ],
+    [ "Tony Tony Chopper - Ship Doctor Floating in the Sea", "PSY", [ "Fighter", "Cerebral" ], 5, 30, 6, 4, 99, 4000000, 1542, 703, 111, 3084, 1406, 222, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Franky - Shipwright Grooving at Sea", "PSY", [ "Fighter", "Shooter" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 70, null, null, null, null ],
 ];
