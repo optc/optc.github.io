@@ -220,6 +220,10 @@ window.altspecials = {
         status: function(p) { return p.defenseDown ? 2.25 : 1; },
         def: function(p) { return 0; },//Temp until we deal with on-hit effects
     },
+    3631: {
+        atkPlus: function(p) { return 0.25; },
+        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT most, if not all, of the time. Use at your own risk."
+    },
     3641: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
         type: "type",
