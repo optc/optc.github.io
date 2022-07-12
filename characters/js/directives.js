@@ -111,7 +111,7 @@ directives.decorateSlot = function() {
         scope: { uid: '=', big: '@' },
         link: function(scope, element, attrs) {
             if (scope.big)
-                element[0].style.backgroundImage = 'url(' + Utils.getBigThumbnailUrl(scope.uid) + ')';
+                element[0].style.backgroundImage = 'url(' + Utils.getBigThumbnailUrl(scope.uid, '..') + ')';
             else
                 element[0].style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
                 //element[0].style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
