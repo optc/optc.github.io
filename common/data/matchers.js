@@ -3027,9 +3027,51 @@ let matchers = {
     ],
     'Slot': [
         {
-            name: 'Orb Chance Boosters',
+            name: 'Old Orb Chance Boosters',
             targets: [ 'captain', 'special', 'swap', 'sailor', 'support' ],
-            regex: /boosts chances of getting.+orbs/i,
+            regex: /boosts chances of getting.+?orbs/i,
+        },
+
+        {
+            name: 'Orb Chance Boosters',
+            targets: [ 'captain', 'sailor' ],
+            // "Boosts chances of getting [QCK], [INT] and [RCV] orbs"
+            regex: /boosts chances of getting ([^."]+?)orbs/i,
+            submatchers: [
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'SEMLA', 'WANO'], [1]), // add 'BOMB' AND 'SUPERBOMB' if they exist
+                {
+                    type: 'option',
+                    description: 'Matching',
+                    regex: /Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+            ],
+        },
+
+        {
+            name: 'Orb Chance Boosters',
+            targets: [ 'special', 'swap', 'support' ],
+            // "Boosts chances of getting [QCK], [INT] and [RCV] orbs for 1 turn"
+
+            // tempered dot to prevent spilling for cases like "Boosts chances of getting [PSY] orbs and reduces chances of getting [INT] orbs for 3 turns"
+            // should be fixed to have the "for 3 turns" in the first part, however.
+            regex: /boosts chances of getting ((?:(?!orb)[^."])+?)orbs for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [2, 3, 4, 5],
+                },
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'SEMLA', 'WANO'], [1]), // add 'BOMB' AND 'SUPERBOMB' if they exist
+                {
+                    type: 'option',
+                    description: 'Matching',
+                    regex: /Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+            ],
         },
 
         {
@@ -3235,16 +3277,47 @@ let matchers = {
     ],
     'Slot Change': [
         {
-            name: 'Orb Retainer',
+            name: 'Old Orb Retainer',
             targets: [ 'sailor' ],
             regex: /If this character has.+(STR|DEX|QCK|PSY|INT|RCV).+(GOOD|GREAT|PERFECT)/i,
         },
 
         {
-            name: 'Orb Control: Negative > Positive',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(Badly Matching orbs into.+Matching orbs)/i,
-            //include: [ 900, 901, 996, 997, 933, 938, 939 ],
+            name: 'Orb Retainer',
+            targets: [ 'sailor' ],
+            regex: /you hit a ([\w ]+?) with (?:him|her|them|this character), keep (?:his|her|their)([^."]+?)orb/i,
+            submatchers: [
+                {
+                    type: 'separator',
+                    description: 'Tap Timing:',
+                },
+                {
+                    type: 'option',
+                    description: 'GOOD',
+                    regex: /GOOD/i,
+                    cssClasses: ['min-width-4'],
+                    groups: [1],
+                },
+                {
+                    type: 'option',
+                    description: 'GREAT',
+                    regex: /GREAT/i,
+                    cssClasses: ['min-width-4'],
+                    groups: [1],
+                },
+                {
+                    type: 'option',
+                    description: 'PERFECT',
+                    regex: /PERFECT/i,
+                    cssClasses: ['min-width-4'],
+                    groups: [1],
+                },
+                {
+                    type: 'separator',
+                    description: 'Retained Orb:',
+                },
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND'], [2]), // add others  if they exist
+            ],
         },
 
         {
@@ -3294,7 +3367,7 @@ let matchers = {
                     cssClasses: ['min-width-6'],
                     groups: [1, 2], // the only one that includes group 2, so don't add [BLOCK] to `createOrbsSubmatchers`
                 },
-                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB', 'RAINBOW'], [1], false),
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'G', 'RCV', 'TND', 'BOMB', 'EMPTY'], [1], false),
                 {
                     type: 'option',
                     description: 'Matching',
@@ -3313,7 +3386,7 @@ let matchers = {
                     type: 'separator',
                     description: 'To orbs:' // To orbs won't have "Any", since simply not selecting any "To" orb does the same thing
                 },
-                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB', 'RAINBOW', 'WANO'], [4], false),
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'G', 'RCV', 'TND', 'BOMB', 'EMPTY', 'SUPERBOMB', 'RAINBOW', 'SEMLA', 'WANO'], [4], false),
                 {
                     type: 'option',
                     description: 'Character\'s Orb',
@@ -3359,27 +3432,19 @@ let matchers = {
         },
 
         {
-            name: 'Orb Control: Full',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(Changes[^,]+all orbs|Changes the orbs in|Changes[^,]*every other orb)/i,
-        },
-
-        {
             name: 'Orb Control: Stage 1 Full',
             targets: [ 'sailor' ],
-            regex: /Changes all orbs into/i,
-        },
-
-        {
-            name: 'Orb Control: Self',
-            targets: [ 'special', 'superSpecial', 'swap' ],
-            regex: /Changes.+own orb.+into/i,
-        },
-
-        {
-            name: 'Supported-orb controllers',
-            targets: [ 'support' ],
-            regex: /Changes.+(?:orb on the supported|supported character's orb).+into/i,
+            regex: /Changes all orbs into([^."]+?)orbs?/i,
+            submatchers: [
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'G', 'RCV', 'TND', 'BOMB', 'SEMLA', 'SUPERBOMB', 'RAINBOW', 'WANO'], [1], false),
+                {
+                    type: 'option',
+                    description: 'Matching',
+                    regex: /(?:^|(?!Badly ).{6}|^.{0,5})\bMatching/i, // alternative for negative lookbehind for "Badly " and "Non-"
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
+            ],
         },
 
         {
@@ -3389,31 +3454,25 @@ let matchers = {
         },
 
         {
-            name: 'Orb Control: Switch',
+            name: 'Old Orb Control: Switch',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /switches orbs/i,
         },
 
         {
-            name: 'Orb Control: Matching',
+            name: 'Orb Control: Switch',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(Changes.+(orb|orbs|orbs,))[^,]+Matching/i,
-            include: [ 1036, 1037 ]
+            // "Switches orbs between slots 2 times"
+            // "Switches orbs between slots 1 time"
+            regex: /switches orbs between slots ([?\d]+)(?:-([?\d]+))? times?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2],
+                },
+            ],
         },
-
-        {
-            name: 'Orb Control: Empty',
-            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(Empties|Changes.+into.+\[EMPTY\])/i,
-        },
-
-        {
-            name: 'Orb Control: Block',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(empties.+with \[BLOCK\]|changes.+\[BLOCK\].+into|including.+\[BLOCK\])/i,
-            include: [ 1383, 1384 ]
-        },
-
     ],
     'Beneficial Team Effects': [
         {
