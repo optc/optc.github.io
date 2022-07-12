@@ -13764,7 +13764,7 @@ window.specials = {
         atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 800 : 0; },
     },
     3628: {
-        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
@@ -13779,7 +13779,7 @@ window.specials = {
         },
     },
     3629: {
-        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
@@ -13794,7 +13794,7 @@ window.specials = {
         },
     },
     3630: {
-        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
@@ -13809,7 +13809,7 @@ window.specials = {
         },
     },
     3631: {
-        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { good: 0.2, great: 0.4, perfect: 0.6 } : { good: 0, great: 0.1, perfect: 0.3 }; },
+        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },

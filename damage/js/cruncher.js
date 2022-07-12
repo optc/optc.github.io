@@ -719,20 +719,43 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var chainUpgrade = 0;
 
         chainSpecMultiplication.forEach(function(special){
-            var params = getParameters(special.sourceSlot);
-            params["sourceSlot"] = special.sourceSlot;
-            if(chainSpecialMult<special.chainMultiplication(params)){
-                chainSpecialMult = special.chainMultiplication(params);
+            var params2 = getParameters(special.sourceSlot);
+            params2["sourceSlot"] = special.sourceSlot;
+            if(chainSpecialMult<special.chainMultiplication(params2)){
+                chainSpecialMult = special.chainMultiplication(params2);
             }
         });
         var result = chainBase;
+        
+        //console.log(tapTiming);
+        var tapTimingTemp = 0;
+        var tapTimingSpecial = null;
+        tapTiming.forEach(function(special){
+            var tapTimingCheck = 0;
+            for (var i=0;i<params.team.length;++i){
+                var params2 = getParameters(i);
+                params2["sourceSlot"] = special.sourceSlot;
+                tapTimingCheck += params.team[i].unit ? special.tapTiming(params2)["Perfect"] : 0;
+            }
+            if (tapTimingCheck > tapTimingTemp){
+                tapTimingTemp = tapTimingCheck.toFixed(2);
+                tapTimingSpecial = special
+            }
+        });
+
         for (var i=0;i<hitModifiers.length;++i) {
             // only params.sugarToy (specified unit) becomes false when sugarToysSpecialEnabled is false
             // sugarToy in team does not get affected
-            if (params.scope.tdata.sugarToysSpecialEnabled && hitModifiers[i] == 'Perfect' && params.team[damage[i].position].sugarToy) result += chainModifier * 0.7;
-            else if (hitModifiers[i] == 'Perfect') result += chainModifier * 0.3;
-            else if (hitModifiers[i] == 'Great') result += chainModifier * 0.1;
-            else if (hitModifiers[i] == 'Good') result += 0;
+            //console.log(params.team[damage[i].position].unit);
+            var params2 = getParameters(damage[i].position);
+            params2["sourceSlot"] = tapTimingSpecial ? tapTimingSpecial.sourceSlot : damage[i].position;
+
+            var hobbyBuff = (params.scope.tdata.sugarToysSpecialEnabled && hitModifiers[i] == 'Perfect' && params.team[damage[i].position].sugarToy) ? 0.4 : 0; //0.7 For each HOBBY-HOBBY Hit, but trying to consolidate it with tapTiming buffs, so subtract the 0.3x already inherited from Perfects
+            var tapTimingBuff = tapTimingSpecial && !(params.scope.tdata.sugarToysSpecialEnabled && params.team[damage[i].position].sugarToy) ? tapTimingSpecial.tapTiming(params2)[hitModifiers[i]] : 0;
+
+            if (hitModifiers[i] == 'Perfect') result += chainModifier * (0.3 + hobbyBuff + tapTimingBuff);
+            else if (hitModifiers[i] == 'Great') result += chainModifier * (0.1 + tapTimingBuff);
+            else if (hitModifiers[i] == 'Good') result += chainModifier * (0 + tapTimingBuff);
             else result = chainBase;
         }
         result = result != 1 ? result * chainSpecialMult : result;
@@ -1061,6 +1084,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         chainSpecials = [ ];
         plusSpecials = [ ];
         chainAddition = [ ];
+        tapTiming = [ ];
         chainSpecMultiplication = [ ];
         affinityMultiplier = [ ];
         atkbase = [ ];
@@ -1109,6 +1133,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 plusSpecials.push({ sourceSlot: data.sourceSlot, statusPlus: data.statusPlus });
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
+            if (data.hasOwnProperty('tapTiming'))
+                tapTiming.push({ sourceSlot: data.sourceSlot, tapTiming: data.tapTiming });
             if (data.hasOwnProperty('chainMultiplication'))
                 chainSpecMultiplication.push({ sourceSlot: data.sourceSlot, chainMultiplication: data.chainMultiplication || function(){ return 1.0; } });
             if (data.hasOwnProperty('staticMult'))
