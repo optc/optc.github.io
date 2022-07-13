@@ -72,6 +72,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     $scope.data.customChainAddition = 0;
 
     var specialsCombinations = [ ], chainSpecials = [ ];
+    var increaseDamageTakenMultipliers = [ ];
     var hitModifiers = [ ];
     var shipBonus = { };
     var enabledSpecials = [ ];
@@ -948,6 +949,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 currentResult = { result: result, chainMultipliers: multipliersUsed };
             }
         });
+
+        // Increase Damage Taken (IDT) is applied after calculating the damage with enemy defense factored in.
+        // Hence, 1 damage (with high def enemies) with 2x Increase Damage Taken becomes 2 damage.
+        // This is rounded down in-game, so 1.5x will still give 1 damage.
+        // Get the highest IDT multiplier
+        var highestIncreaseDamageTakenMultiplier = 1;
+        increaseDamageTakenMultipliers.forEach(function(special) {
+            var params = getParameters(special.sourceSlot);
+            params["sourceSlot"] = special.sourceSlot;
+            highestIncreaseDamageTakenMultiplier = Math.max(highestIncreaseDamageTakenMultiplier, special.increaseDamageTaken(params));
+        });
+        if (highestIncreaseDamageTakenMultiplier != 1) {
+            // apply the IDT multiplier to each unit's damage
+            for (const subDamage of currentResult.result) {
+                subDamage.damage = Math.floor(subDamage.damage * highestIncreaseDamageTakenMultiplier);
+
+                // update Increase Damage Taken multiplier in multiplier list
+                subDamage.multipliers.push([highestIncreaseDamageTakenMultiplier, 'increased damage taken'])
+            }
+        }
+
         return currentResult;
     };
 
@@ -1092,6 +1114,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         captAffinityMultiplier = [ ];
         captChain = [ ];
         staticMultiplier = [ ];
+        increaseDamageTakenMultipliers = [ ];
         
         var dummy = 0;
         for (let i = 5; i >= 0; i--) {
@@ -1142,6 +1165,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 staticMultiplier.push({staticMultiplier: data.staticMult, sourceSlot: data.sourceSlot});
             if (data.hasOwnProperty('affinity'))
                 affinityMultiplier.push({sourceSlot: data.sourceSlot, affinityMultiplier: data.affinity || function(){ return 1.0; }});
+            if (data.hasOwnProperty('increaseDamageTaken'))
+                increaseDamageTakenMultipliers.push({ sourceSlot: data.sourceSlot, increaseDamageTaken: data.increaseDamageTaken })
         });
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))

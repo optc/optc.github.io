@@ -11106,6 +11106,7 @@ window.specials = {
         onActivation: function(p) { window.specials[3225].multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
     },
     3226: {
+        increaseDamageTaken: function(p) { return 2; },
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[3226].turnedOn[p.slot] = true;
@@ -11119,6 +11120,7 @@ window.specials = {
         }
     },
     3227: {
+        increaseDamageTaken: function(p) { return 2; },
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[3227].turnedOn[p.slot] = true;
@@ -11707,10 +11709,12 @@ window.specials = {
     3335: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
         type: "class",
+        increaseDamageTaken: function(p) { return 1.5; },
     },
     3336: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
         type: "class",
+        increaseDamageTaken: function(p) { return 1.5; },
     },
     3338: {
         affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[3337].multiplier[0] == "1" ? 2 : 1 : 1; },
@@ -12444,10 +12448,12 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
     3429: {
-        chainAddition: function(p) { return 1.1; }
+        chainAddition: function(p) { return 1.1; },
+        increaseDamageTaken: function(p) { return 1.75; },
     },
     3430: {
-        chainAddition: function(p) { return 1.3; }
+        chainAddition: function(p) { return 1.3; },
+        increaseDamageTaken: function(p) { return 1.75; },
     },
     3431: {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
@@ -12945,6 +12951,7 @@ window.specials = {
         chainAddition: function(p) { return 0.8; }
     },
     3511: {
+        increaseDamageTaken: function(p) { return 1.3; },
         chain: function(p) { return 2.25; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -13426,6 +13433,9 @@ window.specials = {
     },
     3579: {
         orb: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+    },
+    3580: {
+        increaseDamageTaken: function(p) { return 1.5; },
     },
     3581: {
         multiplier: 1,
