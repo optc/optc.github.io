@@ -12682,7 +12682,7 @@ window.specials = {
         }
     },
     3471: {
-        chainAddition: function(p) { return 1.4; },
+        chainAddition: function(p) { return [1.4, 1, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
         atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
         atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0; },
@@ -14008,7 +14008,7 @@ window.specials = {
     3655:{
         def: function(p) { return 0; },
     },
-    3654:{
+    3656:{
         status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         multiplier: 1,
         onActivation: function(p) {

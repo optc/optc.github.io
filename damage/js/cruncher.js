@@ -1195,17 +1195,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
-            if ([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) affinityMultiplier = affinityMultiplier;
-            if ([3070, 3071, 3369].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) affinityMultiplier = affinityMultiplier;
-            if ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) affinityMultiplier = affinityMultiplier;
-            
-            if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
-                if ([ 3623, 3634 ].indexOf(unit.number + 1) != -1) affinityMultiplier = affinityMultiplier;
+            if (([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) || 
+                ([3070, 3071, 3369].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) ||
+                ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) ||
+                ([ 3623, 3634 ].indexOf(unit.number + 1) != -1 && $scope.data.effect == 'Kizuna Clash [Worldwide]')){
+                    //pass so that the affinityMultiplier is whatever it should be instead of 1
             }
             else if(unit.type != type){
-                if (unit.type == "STR" && type == "QCK") affinityMultiplier = Math.pow(affinityMultiplier, -1);
-                else if (unit.type == "DEX" && type == "STR") affinityMultiplier = Math.pow(affinityMultiplier, -1);
-                else if (unit.type == "QCK" && type == "DEX") affinityMultiplier = Math.pow(affinityMultiplier, -1);
+                if ((unit.type == "STR" && type == "QCK") ||
+                    (unit.type == "DEX" && type == "STR") ||
+                    (unit.type == "QCK" && type == "DEX")) affinityMultiplier = Math.pow(affinityMultiplier, -1);
+                else if ((unit.type == "QCK" && type == "STR") ||
+                         (unit.type == "STR" && type == "DEX") ||
+                         (unit.type == "DEX" && type == "QCK")){
+                        //pass so that the affinityMultiplier is whatever it should be instead of 1
+                }
                 else affinityMultiplier = 1;
             }
             else affinityMultiplier = 1;
@@ -1229,14 +1233,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             if (x.hasOwnProperty('atkStatic')){
                                 var params2 = getParameters(slot);
                                 params2["sourceSlot"] = x.sourceSlot;
-                                baseDamage += x.atkStatic(params);
+                                baseDamage += x.atkStatic(params2);
                             }
                         });
                         enabledSpecials.forEach(function(x) {
                             if (x.hasOwnProperty('atkbase')){
                                 var params2 = getParameters(slot);
                                 params2["sourceSlot"] = x.sourceSlot;
-                                baseDamage += x.atkbase(params);
+                                baseDamage += x.atkbase(params2);
                             }
                         });
                     }
@@ -1295,7 +1299,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         mapEffect = { };
         if ($scope.data.effect) {
             var data = effects[$scope.data.effect];
-            if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.orb) enabledSpecials.push({ orb: data.orb, permanent: true, sourceSlot: -1 });
             if (data.chainModifier) mapEffect.chainModifier = data.chainModifier;
             if (data.chainLimiter) mapEffect.chainLimiter = data.chainLimiter;
