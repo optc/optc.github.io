@@ -16594,6 +16594,7 @@ var ghostsSpecials = {
         chainAddition: function(p) { return 0.8; }
     },
     389: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16606,6 +16607,7 @@ var ghostsSpecials = {
         },
     },
     390: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16618,6 +16620,7 @@ var ghostsSpecials = {
         },
     },
     391: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16630,6 +16633,7 @@ var ghostsSpecials = {
         },
     },
     392: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16642,6 +16646,7 @@ var ghostsSpecials = {
         },
     },
     393: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16654,6 +16659,7 @@ var ghostsSpecials = {
         },
     },
     394: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16666,6 +16672,7 @@ var ghostsSpecials = {
         },
     },
     395: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
@@ -16678,6 +16685,7 @@ var ghostsSpecials = {
         },
     },
     396: {
+        def: function(p) { return 0; },
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
