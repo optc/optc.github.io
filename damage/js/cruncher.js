@@ -1246,7 +1246,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
-            if (specialid == 2364 || specialid == 2365 || specialid == 2981 || specialid == 2982) var staticDamage = Math.ceil(multSpecial*conditionalMultiplier);
+            if (specialid == 2364 || specialid == 2365 || specialid == 2981 || specialid == 2982 || specialid == 3666) var staticDamage = Math.ceil(multSpecial*conditionalMultiplier);
             else var staticDamage = Math.ceil((baseDamage)*multSpecial*conditionalMultiplier);
             if((hitModifier == 'Great')||(hitModifier == 'Good')||(hitModifier == 'Perfect')){
                 resultDamage += staticDamage;

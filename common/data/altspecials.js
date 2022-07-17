@@ -208,6 +208,9 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3620: {
+        orb: function(p) { return 1.75; },
+    },
     3626: {
         atk: function(p) { return 1.75; },
         type: "type",

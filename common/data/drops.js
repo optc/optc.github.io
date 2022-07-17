@@ -6898,6 +6898,16 @@ window.drops = {
             'Kizuna Exchange': [ 3648 ],
         },
 
+        {
+            name: 'Summer Luffy',
+            dropID: 'kizuna37',
+            thumb: 3669,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3668 ],
+        },
+
     ],
 
 

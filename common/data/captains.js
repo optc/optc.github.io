@@ -12887,6 +12887,30 @@ window.captains = {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.35 : 1; },
     },
+    3664: {
+        atk: function(p) { return (p.actions[p.sourceSlot] ? 4.5 : 3)*(p.delayed ? 1.25 : 1); },
+        hp: function(p) { return 1.3; },
+    },
+    3665: {
+        atk: function(p) { return 3*(p.defenseDown ? 1.25 : 1); },
+        hp: function(p) { return 1.3; },
+    },
+    3666: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 4 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? [1, 1.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
+    3667: {
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1.2 : 1; },
+    },
+    3668: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? (p.actions[p.sourceSlot] && p.sourceSlot == 1) ? 4.5 : 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1 }
+    },
+    3669: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? (p.actions[p.sourceSlot] && p.sourceSlot == 1) ? 5 : 3.75 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1 }
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

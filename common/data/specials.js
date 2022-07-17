@@ -6772,10 +6772,10 @@ window.specials = {
         }
     },
     2364: {
-        staticMult: function(p) { return Math.min(p.damageCounter,2000000) * 15; }
+        staticMult: function(p) { return Math.min(p.damageCounter,200000) * 15; }
     },
     2365: {
-        staticMult: function(p) { return Math.min(p.damageCounter,2000000) * 15; }
+        staticMult: function(p) { return Math.min(p.damageCounter,200000) * 15; }
     },
     2366: {
         atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
@@ -14076,6 +14076,36 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3664: {
+        status: function(p) { return p.delayed ? 1.5: 1; },
+        delay: function(p) { return 1; },
+        warning: "Selected special (%name%) assumes that the enemy has 3 enemies."
+    },
+    3665: {
+        chain: function(p) { return 3.0; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 25.0 : 1;
+        }
+    },
+    3666: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        staticMult: function(p) { return [Math.min(p.damageCounter,120000) * 25, 0, Math.min(p.damageCounter,120000) * 25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Additional Damage", "ATK", "Additional Damage and ATK"][n] + ' boost. To switch to ' + ["Additional Damage", "ATK", "Additional Damage and ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3667: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
+        type: "type",
     },
 };
 

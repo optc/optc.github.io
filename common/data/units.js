@@ -3662,6 +3662,12 @@ window.units = [
     [ "Tony Tony Chopper - Ship Doctor Floating in the Sea", "PSY", [ "Fighter", "Cerebral" ], 5, 30, 6, 4, 99, 4000000, 1542, 703, 111, 3084, 1406, 222, 1 ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Franky - Shipwright Grooving at Sea", "PSY", [ "Fighter", "Shooter" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 70, null, null, null, null ],
+    [ "Usopp - Sniper Enjoying the Sea", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1324, 704, 124, null, null, null, null ],
+    [ "Brook - Musician Playing at Sea", "DEX", [ "Free Spirit", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1314, 684, 164, null, null, null, null ],
+    [ "Charlotte Katakuri - Full-Might Strike", "PSY", [ "Fighter", "Powerhouse" ], "6+", 65, 4, 5, 5000000, 2050, 1071, 136, null, null, null, null, null ],
+    [ "Nefeltari Vivi - Port of Separation", "PSY", [ "Free Spirit", "Cerebral" ], 5, 1, 6, 4, 99, 4000000, 1281, 553, 141, null, null, null, null ],
+    [ "Monkey D. Luffy - Captain Excited at the Sea", "PSY", [ "Fighter", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1189, 818, 78, null, null, null, null ],
+    [ "Monkey D. Luffy - Captain Shining at Sea", "PSY", [ "Fighter", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1304, 997, 81, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
