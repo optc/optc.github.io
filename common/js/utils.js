@@ -1008,7 +1008,16 @@
         return relPathToRoot + '/api/images/thumbnail/jap/' +  Math.trunc(n / 1000) + '/' + Math.trunc((n % 1000) / 100) + '00/' + id + '.png';
     };
 
-    utils.getBigThumbnailUrl = function (n) {
+    /**
+     * Function to get the url for the big thumbnail (the one shown upon checking the details of a unit)
+     * @param {number} n 1-based ID number of the unit, or skull ID.
+     * @param {string} relPathToRoot Relative path to the root folder (folder
+     *      containing 'characters', 'common', 'damage', etc), which allows the urls to work even
+     *      in setups where the root folder is not necessarily the root in terms of the url.
+     *      Will only be used for resources that are stored in the repo.
+     * @returns The URL of the big thumbnail
+     */
+    utils.getBigThumbnailUrl = function (n, relPathToRoot = '') {
         switch (n){
             case 'skullLuffy':
             case 9001: return 'https://onepiece-treasurecruise.com/wp-content/uploads/skull_luffy_c.png'; break;
@@ -1096,7 +1105,7 @@
             default: break;
         }
         
-        return '/api/images/full/transparent/' +  Math.trunc(n / 1000) + '/' + Math.trunc((n % 1000) / 100) + '00/' + id + '.png';
+        return relPathToRoot + '/api/images/full/transparent/' +  Math.trunc(n / 1000) + '/' + Math.trunc((n % 1000) / 100) + '00/' + id + '.png';
         //return 'https://onepiece-treasurecruise.com/wp-content/uploads/c' + id + '.png';
 
     };
