@@ -14895,7 +14895,7 @@
         "rumbleType": "DEF",
         "spd": 127
       },
-      "target": { "comparator": "lowest ","criteria": "HP" }
+      "target": { "comparator": "lowest", "criteria": "HP" }
     },
     {
       "basedOn": 1045,
@@ -21486,7 +21486,9 @@
             "count": 50,
             "stat": "HP",
             "type": "stat"
-          }
+          },
+          "interval": 5,
+          "type": "healing"
         }
       ],
       "llbspecial": [
@@ -21650,7 +21652,9 @@
             "count": 50,
             "stat": "HP",
             "type": "stat"
-          }
+          },
+          "interval": 5,
+          "type": "healing"
         }
       ],
       "special": [
@@ -24052,7 +24056,7 @@
             {
               "amount": 800,
               "effect": "damage",
-              "range": { "direction": "horizontal", "size": "large" },
+              "range": { "direction": "sideways", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
               "type": "fixed"
             },
@@ -27649,7 +27653,7 @@
               "duration": 15,
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "Strikers" ] }
+              "targeting": { "targets": [ "Striker" ] }
             }
           ]
         },
@@ -27849,7 +27853,9 @@
             "count": 50,
             "stat": "HP",
             "type": "stat"
-          }
+          },
+          "interval": 5,
+          "type": "healing"
         }
       ],
       "special": [
@@ -49561,7 +49567,7 @@
               "attributes": [ "RCV" ],
               "effect": "buff",
               "level": 1,
-              "targeting": { "targets": [ "STR" ] }
+              "targeting": { "targets": [ "[STR]" ] }
             }
           ]
         },
@@ -54854,7 +54860,7 @@
               "targeting": { "targets": [ "crew" ] }
             },
             {
-              "attribute": [ "ATK" ],
+              "attributes": [ "ATK" ],
               "level": 3,
               "effect": "buff",
               "condition": { "comparator": "above", "count": 60, "stat": "HP", "type": "stat" },
@@ -55566,7 +55572,7 @@
             {
               "amount": 9,
               "effect": "damage",
-              "targeting": { "count": 1, "prority": "highest", "stat": "DEF", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -57008,7 +57014,7 @@
         },
         {
           "action": "heal",
-          "area": "self",
+          "area": "Self",
           "level": 2
         },
         {
@@ -59679,7 +59685,7 @@
               "attributes": [ "Blow Away" ],
               "effect": "buff",
               "level": 2,
-              "targeting": { "targets": [ "Self" ] }
+              "targeting": { "targets": [ "self" ] }
             }
           ]
         },
@@ -59732,7 +59738,7 @@
         },
         {
           "action": "heal",
-          "area": "self",
+          "area": "Self",
           "level": 2
         },
         {
@@ -60390,7 +60396,7 @@
               "effect": "damage",
               "type": "atk",
               "targeting": { "targets": [ "enemies" ] },
-              "range": { "direction": "frontal", "size": "small" }
+              "range": { "direction": "forward", "size": "small" }
             },
             {
               "attributes": [ "ATK" ],
@@ -60863,7 +60869,7 @@
         },
         {
           "action": "heal",
-          "area": "self",
+          "area": "Self",
           "level": 2
         },
         {
@@ -61514,7 +61520,7 @@
         },
         {
           "action": "heal",
-          "area": "self",
+          "area": "Self",
           "level": 2
         }
       ],
@@ -64674,15 +64680,15 @@
             {
               "amount": 1150,
               "effect": "damage",
-              "targeting": { "count": 1, "comparator": "highest", "criteria": "DEF", "targets": [ "enemies" ] },
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "enemies" ] },
               "type": "fixed"
             },
             {
               "attributes": [ "DEF" ],
               "duration": 10,
 		          "level": 1,
-              "effect": "buff",
-              "targeting": { "count": 1, "comparator": "highest", "criteria": "DEF", "targets": [ "enemies" ] }
+              "effect": "debuff",
+              "targeting": { "count": 1, "priority": "highest", "stat": "DEF", "targets": [ "enemies" ] }
             }
           ]
         },
@@ -64867,13 +64873,13 @@
               "amount": 10,
               "effect": "recharge",
               "type": "Special CT",
-              "targeting": { "count": 1, "comparator": "highest", "criteria": "ATK", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "ATK", "targets": [ "crew" ] }
             },
             {
               "amount": 15,
               "effect": "recharge",
               "type": "percentage",
-              "targeting": { "count": 1, "comparator": "highest", "criteria": "ATK", "targets": [ "crew" ] }
+              "targeting": { "count": 1, "priority": "highest", "stat": "ATK", "targets": [ "crew" ] }
             }
           ]
         },
@@ -65086,15 +65092,15 @@
               "amount": 0.25,
               "effect": "damage",
               "range": { "direction": "forward", "size": "small" },
-              "targeting": { "count": 1, "comparator": "highest", "criteria": "DEF", "targets": [ "enemies" ] },
+              "targeting": { "priority": "highest", "stat": "DEF", "targets": [ "enemies" ] },
               "type": "atk"
             },
             {
               "attributes": [ "DEF" ],
 		          "level": 1,
-              "effect": "buff",
+              "effect": "debuff",
               "range": { "direction": "forward", "size": "small" },
-              "targeting": { "targets": [ "self" ] }
+              "targeting": { "targets": [ "enemies" ] }
             },
             {
               "attributes": [ "Provoke" ],
@@ -65316,7 +65322,7 @@
               "attributes": [ "Action Bind" ],
               "effect": "hinderance",
               "condition": { "comparator": "more", "count": 2, "type": "enemies", "relative": true },
-              "chance": 25,
+              "chance": 15,
               "duration": 10,
               "range": { "direction": "forward", "size": "large" },
               "targeting": { "targets": [ "enemies" ] }
@@ -67468,7 +67474,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.47 }
+              "override": { "amount": 0.47 }
             },
             {
               "override": { "duration": 11 }
@@ -67482,7 +67488,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.48 }
+              "override": { "amount": 0.48 }
             },
             {
               "override": { "duration": 12 }
@@ -67496,7 +67502,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.5 }
+              "override": { "amount": 0.5 }
             },
             {
               "override": { "duration": 13 }
@@ -67510,7 +67516,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.52 }
+              "override": { "amount": 0.52 }
             },
             {
               "override": { "duration": 14 }
@@ -67524,7 +67530,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.54 }
+              "override": { "amount": 0.54 }
             },
             {
               "override": { "duration": 15 }
@@ -67538,7 +67544,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.55 }
+              "override": { "amount": 0.55 }
             },
             {
               "override": { "level": 3, "duration": 16 }
@@ -67552,7 +67558,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.57 }
+              "override": { "amount": 0.57 }
             },
             {
               "override": { "level": 3, "duration": 17 }
@@ -67566,7 +67572,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.59 }
+              "override": { "amount": 0.59 }
             },
             {
               "override": { "level": 3, "duration": 18 }
@@ -67580,7 +67586,7 @@
           "cooldown": 30,
           "effects": [
             {
-              "override": { "ammount": 0.7 }
+              "override": { "amount": 0.7 }
             },
             {
               "override": { "level": 4, "duration": 20 }
@@ -68121,6 +68127,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "duration": 16 }
@@ -68131,6 +68138,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "duration": 17 }
@@ -68141,6 +68149,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "duration": 18 }
@@ -68151,6 +68160,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "level": 2, "duration": 19 }
@@ -68161,6 +68171,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "level": 2, "duration": 20 }
@@ -68171,6 +68182,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "level": 2, "duration": 21 }
@@ -68181,6 +68193,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "level": 2, "duration": 22 }
@@ -68191,6 +68204,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "level": 3, "duration": 23 }
@@ -68201,6 +68215,7 @@
           ]
         },
         {
+          "cooldown": 30,
           "effects": [
             {
               "override": { "level": 4, "duration": 25 }
@@ -68928,7 +68943,7 @@
               "amount": 15,
               "effect": "recharge",
               "type": "percentage",
-              "range": { "direction": "radiual", "size": "medium" },
+              "range": { "direction": "radial", "size": "medium" },
               "targeting": { "targets": [ "crew" ] }
             },
             {
@@ -73872,7 +73887,7 @@
         {
           "effects": [
             {
-              "attributes": [ "ATK "],
+              "attributes": [ "ATK" ],
               "effect": "buff",
               "level": 1,
               "targeting": { "targets": [ "crew" ] }
@@ -76927,7 +76942,7 @@
               "effect": "debuff",
               "level": 1,
               "duration": 15,
-              "range ": { "direction": "radial", "size": "medium" },
+              "range": { "direction": "radial", "size": "medium" },
               "targeting": { "targets": [ "enemies" ] }
             },
             {
@@ -77891,7 +77906,7 @@
               "amount": 21,
               "effect": "damage",
               "range": { "direction": "radial", "size": "small" },
-              "target": { "targets": [ "enemies" ] },
+              "targeting": { "targets": [ "enemies" ] },
               "type": "cut"
             },
             {
@@ -167043,7 +167058,7 @@
       ],
       "resilience": [
         {
-          "attribute": "Parlysis",
+          "attribute": "Paralysis",
           "chance": 100,
           "type": "debuff"
         },
@@ -167331,7 +167346,7 @@
               "duration": 10,
               "effect": "hinderance",
               "condition": { "families": [ "Broggy" ], "team": "crew", "type": "character" },
-              "targeting": { "count": 2, "priority": "higher", "percentage": 100, "stat": "Special CT", "targets": [ "enemies" ] }
+              "targeting": { "count": 2, "priority": "highest", "percentage": 100, "stat": "Special CT", "targets": [ "enemies" ] }
             }
           ]
         },
@@ -169350,7 +169365,7 @@
               "amount": 5,
               "attributes": [ "Special CT" ],
               "effect": "hinderance",
-              "targeting": { "count": 1, "priority": "lower", "percentage": 100, "stat": "Special CT", "targets": [ "enemies" ] }
+              "targeting": { "count": 1, "priority": "lowest", "percentage": 100, "stat": "Special CT", "targets": [ "enemies" ] }
             }
           ]
         },
@@ -174182,7 +174197,7 @@
             {
               "amount": 2.2,
               "effect": "damage",
-              "range": { "direction": "horizontal", "size": "large" },
+              "range": { "direction": "sideways", "size": "large" },
               "targeting": { "targets": [ "enemies" ] },
               "type": "atk"
             },
@@ -174191,7 +174206,7 @@
               "chance": 70,
               "duration": 10,
               "effect": "hinderance",
-              "range": { "direction": "horizontal", "size": "large" },
+              "range": { "direction": "sideways", "size": "large" },
               "targeting": { "targets": [ "[PSY]" ] }
             },
             {
@@ -174199,7 +174214,7 @@
               "duration": 11,
               "effect": "debuff",
               "level": 3,
-              "range": { "direction": "horizontal", "size": "large" },
+              "range": { "direction": "sideways", "size": "large" },
               "targeting": { "targets": [ "[PSY]" ] }
             }
           ]
@@ -174444,7 +174459,7 @@
               "duration": 16,
               "effect": "debuff",
               "level": 3,
-              "range": { "direction": "horizontal", "size": "medium" },
+              "range": { "direction": "sideways", "size": "medium" },
               "targeting": { "targets": [ "enemies" ] }
             }
           ]
