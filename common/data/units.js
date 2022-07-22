@@ -3668,6 +3668,9 @@ window.units = [
     [ "Nefeltari Vivi - Port of Separation", "PSY", [ "Free Spirit", "Cerebral" ], 5, 1, 6, 4, 99, 4000000, 1281, 553, 141, null, null, null, null ],
     [ "Monkey D. Luffy - Captain Excited at the Sea", "PSY", [ "Fighter", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1189, 818, 78, null, null, null, null ],
     [ "Monkey D. Luffy - Captain Shining at Sea", "PSY", [ "Fighter", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1304, 997, 81, null, null, null, null ],
+    [ "Zoro & Sanji - Peerless Duo Enjoying the Sea", "DEX", [ "Fighter", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1846, 905, 116, null, null, null, null ],
+    [ "Jinbe - Helmsman Riding the Ocean", "DEX", [ "Fighter", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1510, 709, 104, null, null, null, null ],
+    [ "Monkey D. Luffy - Straw Hat Pirates Enjoying the FES", "INT", [ "Free Spirit", "Fighter" ], 5, 30, 6, 4, 99, null, 1666, 784, 122, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

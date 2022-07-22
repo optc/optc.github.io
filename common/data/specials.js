@@ -14107,6 +14107,40 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
         type: "type",
     },
+    3670: {
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.colorCount.DEX + p.colorCount.PSY >= 5 ? 2.5 : 2.25;
+        },
+    },
+    3671: {
+        status: function(p) { return p.defenseDown > 0 ? [ 1, 2, 2 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        def: function(p) { return [ 0, 1, 0 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        turnedOn: false,
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][n] + '. To switch to ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3672: {
+        orb: function(p) { return 1.5; },
+        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

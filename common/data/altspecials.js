@@ -244,6 +244,19 @@ window.altspecials = {
     3652: {
         chainMultiplication: function(p) { return 1.25; }
     },
+    3670: {
+        chainAddition: function(p) { return 1.5; }, 
+    },
+    3672: {
+        orbCeil: function(p) { return 2.5; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

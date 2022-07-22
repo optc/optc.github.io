@@ -4230,6 +4230,8 @@ window.families = {
     3667: [ ...NefertariVivi ],
     3668: [ ...MonkeyDLuffy ],
     3669: [ ...MonkeyDLuffy ],
+    3670: [ ...RoronoaZoro, ...VinsmokeSanji ],
+    3671: [ ...MonkeyDLuffy ],
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
     4988: [ ...NefertariVivi ],

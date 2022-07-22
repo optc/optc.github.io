@@ -4195,6 +4195,16 @@ window.drops = {
             'All Difficulties': [ 3399 ],
         },
 
+        {
+            name: 'Clash!! Helmsman Jinbe',
+            dropID: 'clash74',
+            thumb: 3671,
+            global: true,
+            nakama: 4367100,
+            gamewith: null,
+            'All Difficulties': [ 3671 ],
+        },
+
     ],
 
 

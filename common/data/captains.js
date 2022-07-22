@@ -12905,11 +12905,23 @@ window.captains = {
     },
     3668: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? (p.actions[p.sourceSlot] && p.sourceSlot == 1) ? 4.5 : 3 : 1; },
-        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1 }
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1; }
     },
     3669: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? (p.actions[p.sourceSlot] && p.sourceSlot == 1) ? 5 : 3.75 : 1; },
-        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1 }
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    3670: {
+        atk: function(p) { return p.unit.type == "DEX" ? 5.25 : p.unit.type == "PSY" ? 5.4 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.25 : 1; }
+    },
+    3671: {
+        atk: function(p) { return p.percHP <= 30 ? 3.75 : 2.5; },
+        hp: function(p) { return 1.2; }
+    },
+    3672: {
+        atk: function(p) { return 3.75; },
+        hp: function(p) { return 1.3; }
     },
 };
 
