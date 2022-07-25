@@ -353,12 +353,26 @@
      * if `returnParamsObject` is true.
      */
     utils.generateSuperSpecialQuery = function (criteria, supportingFamilies = [], returnParamsObject = false) {
-        let charactersRegex = /must consist of(?: \d)? (.*), excluding Support members/i;
+        // for cases like "must consist of 6 Powerhouse or Driven characters, excluding Support members.",
+        // this will create `class:Powerhouse|Driven`
+
+        // for cases like "must consist of Monkey D. Luffy, Dracule Mihawk, Ben Beckman, Yasopp or Lucky Roux, excluding Support members.",
+        // this will create `family:^(Monkey_D._Luffy|Dracule_Mihawk|Ben_Beckman|Yasopp|Lucky_Roux)$`
+
+        // 3609: `must consist of 6 Striker characters or King, Queen, Jack, Sasaki, X Drake, Black Maria, Who's-Who, Page One, Ulti, or Charlotte Linlin (Big Mom), excluding Support members.`
+        // for now, just ignore the `6 Striker characters` condition IF it there are family names succeeding it,
+        // since you can have non-Striker Jack teams
+        // idea: return an array of queries, so that there will be multiple "Search for these characters" links,
+        // depending on the conditions (so that one will handle the `6 Striker characters`,
+        // the other will handle the family names.)
+        let charactersRegex = /must consist of (?:\d (.*?)characters(?: or )?)?(.*)?, excluding Support members/i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
-        match[1] = match[1].replace(/ characters?$/i, '');
-        return utils.generateCriteriaQuery(match[1], supportingFamilies);
+        // prioritize family names. if there are no family names (match[2] is null|undefined), use the classes/types condition.
+        var criteriaTrimmed = (match[2] || match[1]).trim();
+
+        return utils.generateCriteriaQuery(criteriaTrimmed, supportingFamilies);
     }
 
     utils.generateAttachableSupportsQuery = function (unitIdToSupport, supportingFamilies = []) {
