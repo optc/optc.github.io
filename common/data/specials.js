@@ -3113,12 +3113,10 @@ window.specials = {
     },
     1585: {
         atk: function(p) { return (p.percHP*p.maxHP/100 < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
-        rcv: function(p) { return (p.percHP*p.maxHP/100 < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.5 : 1; },
         type: "class"
     },
     1586: {
         atk: function(p) { return (p.percHP*p.maxHP/100 < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
-        rcv: function(p) { return (p.percHP*p.maxHP/100 < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.5 : 1; },
         type: "class"
     },
     1587: {
@@ -13993,7 +13991,7 @@ window.specials = {
         type: "type",
         multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 1250 : 1000;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1250 : 1000;
         },
     },
     3654:{
@@ -14002,7 +14000,7 @@ window.specials = {
         type: "type",
         multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 1250 : 1000;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1250 : 1000;
         },
     },
     3655:{
@@ -14110,7 +14108,7 @@ window.specials = {
     3670: {
         affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.colorCount.DEX + p.colorCount.PSY >= 5 ? 2.5 : 2.25;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.colorCount.DEX + p.colorCount.PSY == 6 ? 2.5 : 2.25;
         },
     },
     3671: {

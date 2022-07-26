@@ -3554,7 +3554,7 @@ let matchers = {
         {
             name: 'PERFECT Assist',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /makes PERFECTs easier to hit/i,
+            regex: /makes PERFECTs (slightly |signifactly )?easier to hit/i,
         },
     ],
     'Bad Team Effects': [

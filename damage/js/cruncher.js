@@ -807,7 +807,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // static rcv
         for (var h=0;h<enabledSpecials.length;++h) {
             if (enabledSpecials[h].hasOwnProperty('rcvStatic')){
-                params["sourceSlot"] = enabledEffects[h].sourceSlot;
+                params["sourceSlot"] = enabledSpecials[h].sourceSlot;
                 rcv += enabledSpecials[h].rcvStatic(params);
             }
         }
