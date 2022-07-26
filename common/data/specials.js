@@ -11,7 +11,12 @@
  *   an additional property called `sourceSlot`, which is inserted somewhere else.
  *   `sourceSlot` is the slot number of the unit that activated the special, while
  *   `slot` is the slot number of the unit that the function is currently being
- *   applied to.
+ *   applied to. Specials and altspecials also get `p.cached`, which is the same
+ *   params object, but cached upon the special activation. This can be used
+ *   instead of evaluating conditions using `onActivation`. Simply use it like
+ *   how you would normally use the params object, but append `.cached`. So
+ *   `p.captain` becomes `p.cached.captain`. See details about cached parameters
+ *   in cruncher.js, `cacheParameters()`.
  *
  * # Sample conditions:
  * - `p.slot == p.sourceSlot` - the special will only apply to the unit
@@ -26,6 +31,16 @@
  * - `p.percHP > 99` - applies if the team has an HP (set in slider) greater than
  *   99%. Note that when the game says "HP is full", it actually checks if the HP
  *   is greater than 99%.
+ * - `p.currentHP >= 25000` - applies if the team's current HP is greater than
+ *   25000. You can use `p.cached.currentHP` if you want to get the current HP
+ *   at the time the special was activated.
+ * - `p.cached.colorCount.DEX > 3` - gets the number of DEX units on the team
+ *   at the time that the special was activated. Since you can launch a special
+ *   and then swap the unit to a different type, using the cached params (or
+ *   the onActivation pattern) is needed to get the correct multiplier.
+ *   `p.colorCount.DEX` would give the current number of DEX units.
+ * - `p.cached.captain.type == 'STR'` - if the captain's type is `STR` at the
+ *   time of activation
  *
  *
  * # Sample functions/expressions:
@@ -66,12 +81,19 @@
  *   atk boosts but not in-game, so a warning must be supplied.
  * - `staticMult` - returns the multiplier to this character's ATK to add to
  *   tap-timing bonuses.
+ * - `ignoresImmunities` returns an array of strings that represent the enemy
+ *   immunities that should be ignored, as defined in damage/js/app.js in
+ *   $scope.data.enemyImmunities. These are basically the same names as the
+ *   status effect functions used by the ability functions ("delay", "def", "poison", etc).
+ *   Return an empty array if it won't ignore any immunity.
  *
  * ## Enemy status effect functions
  * - `delay` - returns the number of turns the enemy will be delayed for,
  *   0 if it won't be delayed. Specific number does not matter (but encouraged).
  * - `def` - returns the percentage that will be *multiplied* to the enemy's
  *   defense. Return 0 for 100% defense reduction, 1 if none.
+ * - `increaseDamageTaken` - returns the multiplier of the Increase Damage Taken,
+ *   1 if none.
  * - `poison` - returns the number of turns the enemy will be poisoned for.
  *   Specific number does not matter (but encouraged).
  * - `negative` - returns the number of turns the enemy will be affected by Negative.
@@ -94,7 +116,9 @@
  * - `onActivation` - will be called whenever the special is turned on. Used for
  *   staged specials and specials that rely on current crew composition (such
  *   3080 carrot checking for captain type; can be activated then swap the
- *   captain and the boost will remain)
+ *   captain and the boost will remain). Note that you can modify the `p.cached`
+ *   properties here, but make sure that you don't touch properties that are
+ *   declared in `getParameters`. Common use for this is `p.cached.multiplier`.
  * - `onDeactivation` - will be called whenever the special is turned off or the
  *   unit gets removed from the team.
  *
@@ -673,11 +697,11 @@ window.specials = {
         type: "condition"
     },
     668: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[668].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[668].multiplier == 1.5 ? 1 : 0);
-            window.specials[668].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '668warning'
@@ -685,11 +709,11 @@ window.specials = {
         }
     },
     669: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[669].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[669].multiplier == 1.5 ? 1 : 0);
-            window.specials[669].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '669warning'
@@ -756,28 +780,12 @@ window.specials = {
         type: "class"
     },
     719: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[719].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? (p.cached.percHP <= 30 ? 2 : 1.5) : 1; },
         type: "class",
-        onActivation: function(p) {
-            var n = (p.percHP <= 30 ? 2 : 1.5);
-            window.specials[719].multiplier = n;
-            p.scope.notify({
-                text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '719warning'
-            });
-        }
     },
     720: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[720].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? (p.cached.percHP <= 30 ? 2 : 1.5) : 1; },
         type: "class",
-        onActivation: function(p) {
-            var n = (p.percHP <= 30 ? 2 : 1.5);
-            window.specials[720].multiplier = n;
-            p.scope.notify({
-                text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '720warning'
-            });
-        }
     },
     727: {
         def: function(p) { return 0.5; }
@@ -849,11 +857,11 @@ window.specials = {
         type: "type"
     },
     780: {
-        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[780].multiplier : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
-            window.specials[780].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Self Attack boost.',
                 name: '780warning'
@@ -861,11 +869,11 @@ window.specials = {
         }
     },
     781: {
-        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[781].multiplier : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 20 ? 2 : (p.percHP <= 50 ? 1.75 : 1.5));
-            window.specials[781].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Self Attack boost.',
                 name: '781warning'
@@ -970,11 +978,11 @@ window.specials = {
         type: "condition",
     },
     828: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[828].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP < 20 ? 1.75 : 1);
-            window.specials[828].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 20%, using the ' + n + 'x multiplier.',
                 name: '828warning'
@@ -982,11 +990,11 @@ window.specials = {
         }  
     },
     829: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[829].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP < 20 ? 1.75 : 1);
-            window.specials[829].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 20%, using the ' + n + 'x multiplier.',
                 name: '829warning'
@@ -1133,10 +1141,10 @@ window.specials = {
         orb: function(p) { return 2.0; }
     },
     873: {
-        orb: function(p) { return window.specials[873].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[873].multiplier == 1.5 ? 1 : 0);
-            window.specials[873].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '873warning'
@@ -1144,10 +1152,10 @@ window.specials = {
         }
     },
     874: {
-        orb: function(p) { return window.specials[874].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[874].multiplier == 1.5 ? 1 : 0);
-            window.specials[874].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '874warning'
@@ -1169,11 +1177,11 @@ window.specials = {
         type: "class"
     },
     883: {
-        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[883].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[883].multiplier == 1.5 ? 1 : 0);
-            window.specials[883].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '883warning'
@@ -1181,11 +1189,11 @@ window.specials = {
         }
     },
     884: {
-        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[884].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[884].multiplier == 1.5 ? 1 : 0);
-            window.specials[884].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '884warning'
@@ -1193,11 +1201,11 @@ window.specials = {
         }
     },
     885: {
-        atk: function(p) { return p.unit.class.has('Fighter') ? window.specials[885].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has('Fighter') ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 1.5 : 1);
-            window.specials[885].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '885warning'
@@ -1205,11 +1213,11 @@ window.specials = {
         }
     },
     886: {
-        atk: function(p) { return p.unit.class.has('Slasher') ? window.specials[886].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has('Slasher') ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 1.5 : 1);
-            window.specials[886].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '886warning'
@@ -1224,11 +1232,11 @@ window.specials = {
         type: "class"
     },
     902: {
-        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[902].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[902].multiplier == 1.5 ? 1 : 0);
-            window.specials[902].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '902warning'
@@ -1236,11 +1244,11 @@ window.specials = {
         }
     },
     903: {
-        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : window.specials[903].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Powerhouse') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[903].multiplier == 1.5 ? 1 : 0);
-            window.specials[903].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '902warning'
@@ -1410,11 +1418,11 @@ window.specials = {
         def: function(p) { return 0; }
     },
     964: {
-        atk: function(p) { return window.specials[964].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[964].multiplier == 1.1 ? 1 : 0);
-            window.specials[964].multiplier = [1.1, 1.5][n];
+            var n = (p.cached.multiplier == 1.1 ? 1 : 0);
+            p.cached.multiplier = [1.1, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
                 name: '965warning'
@@ -1422,11 +1430,11 @@ window.specials = {
         }
     },
     965: {
-        atk: function(p) { return window.specials[965].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[965].multiplier == 1.1 ? 1 : 0);
-            window.specials[965].multiplier = [1.1, 1.5][n];
+            var n = (p.cached.multiplier == 1.1 ? 1 : 0);
+            p.cached.multiplier = [1.1, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
                 name: '965warning'
@@ -1501,10 +1509,10 @@ window.specials = {
         type: "class"
     },
     1024: {
-        orb: function(p) { return window.specials[1024].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP >= 70 ? 1.25 : p.percHP >= 30 ? 1.5 : 1.75);
-            window.specials[1024].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Orb boost.',
                 name: '1024warning'
@@ -1512,10 +1520,10 @@ window.specials = {
         }
     },
     1025: {
-        orb: function(p) { return window.specials[1025].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP >= 70 ? 1.25 : p.percHP >= 30 ? 1.5 : 1.75);
-            window.specials[1025].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Orb boost.',
                 name: '1025warning'
@@ -1551,11 +1559,11 @@ window.specials = {
         type: "type"
     },
     1040: {
-        atk: function(p) { return window.specials[1040].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 1.5 : 1);
-            window.specials[1040].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '1040warning'
@@ -1563,11 +1571,11 @@ window.specials = {
         }
     },
     1041: {
-        atk: function(p) { return window.specials[1041].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 1.5 : 1);
-            window.specials[1041].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '1041warning'
@@ -1640,11 +1648,11 @@ window.specials = {
         type: "type"
     },
     1082: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? window.specials[1082].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 70 ? 1.2 : p.percHP >= 30 ? 1.5 : 1.75);
-            window.specials[1082].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Attack boost.',
                 name: '1082warning'
@@ -1652,11 +1660,11 @@ window.specials = {
         }
     },
     1083: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? window.specials[1083].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 70 ? 1.2 : p.percHP >= 30 ? 1.5 : 1.75);
-            window.specials[1083].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Attack boost.',
                 name: '1083warning'
@@ -1744,11 +1752,11 @@ window.specials = {
         orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1}
     },
     1132: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter")  ? window.specials[1132].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter")  ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1132].multiplier == 1.5 ? 1 : 0);
-            window.specials[1132].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1132warning'
@@ -1756,11 +1764,11 @@ window.specials = {
         }
     },
     1133: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? window.specials[1133].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1133].multiplier == 1.5 ? 1 : 0);
-            window.specials[1133].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1133warning'
@@ -1807,11 +1815,11 @@ window.specials = {
         rcv: function(p) { return 1.5; }
     },
     1168: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[1168].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 1.75 : p.percHP <= 30 ? 1.5 : p.percHP <= 50 ? 1.25 : 1.1);
-            window.specials[1168].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' ' + (n == 1.75 ? '10%' : n == 1.5 ? '10%' : n == 1.25 ? '30%' : '50%') + ', using the ' + n + 'x multiplier.',
                 name: '1168warning'
@@ -1819,11 +1827,11 @@ window.specials = {
         }
     },
     1169: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[1169].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 1.75 : p.percHP <= 30 ? 1.5 : p.percHP <= 50 ? 1.25 : 1.1);
-            window.specials[1169].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' ' + (n == 1.75 ? '10%' : n == 1.5 ? '10%' : n == 1.25 ? '30%' : '50%') + ', using the ' + n + 'x multiplier.',
                 name: '1168warning'
@@ -2004,11 +2012,11 @@ window.specials = {
         staticMult: function(p) { return 15; }
     },
     1245: {
-        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1245].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1245].multiplier == 1.3 ? 1 : 0);
-            window.specials[1245].multiplier = [1.3, 2][n];
+            var n = (p.cached.multiplier == 1.3 ? 1 : 0);
+            p.cached.multiplier = [1.3, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
                 name: '1245warning'
@@ -2016,11 +2024,11 @@ window.specials = {
         }
     },
     1246: {
-        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1246].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1246].multiplier == 1.3 ? 1 : 0);
-            window.specials[1246].multiplier = [1.3, 2][n];
+            var n = (p.cached.multiplier == 1.3 ? 1 : 0);
+            p.cached.multiplier = [1.3, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
                 name: '1246warning'
@@ -2028,11 +2036,11 @@ window.specials = {
         }
     },
     1247: {
-        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1247].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1247].multiplier == 1.3 ? 1 : 0);
-            window.specials[1247].multiplier = [1.3, 2][n];
+            var n = (p.cached.multiplier == 1.3 ? 1 : 0);
+            p.cached.multiplier = [1.3, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
                 name: '1247warning'
@@ -2322,10 +2330,10 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     1367:{
-        orb: function(p) { return window.specials[1367].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[1367].multiplier == 1.5 ? 1 : 0);
-            window.specials[1367].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1367warning'
@@ -2333,10 +2341,10 @@ window.specials = {
         },
     },
     1368:{
-        orb: function(p) { return window.specials[1368].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[1368].multiplier == 1.5 ? 1 : 0);
-            window.specials[1368].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1368warning'
@@ -2421,10 +2429,10 @@ window.specials = {
         def: function(p) { return 0.2; }
     },
     1400: {
-        affinity: function(p) { return p.unit.class.has("Shooter") ? window.specials[1400].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1400].multiplier == 1.5 ? 1 : 0);
-            window.specials[1400].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x Affinity boost, disable and re-enable this special',
                 name: '1400warning'
@@ -2432,10 +2440,10 @@ window.specials = {
         },
     },
     1401: {
-        affinity: function(p) { return p.unit.class.has("Shooter") ? window.specials[1401].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1401].multiplier == 1.5 ? 1 : 0);
-            window.specials[1401].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x Affinity boost, disable and re-enable this special',
                 name: '1401warning'
@@ -2443,11 +2451,11 @@ window.specials = {
         },
     },
     1402: {
-        atk: function(p) { return p.unit.type == "PSY" ? window.specials[1402].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "PSY" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[1402].multiplier == 1.3 ? 1 : 0);
-            window.specials[1402].multiplier = [1.3, 1.5][n];
+            var n = (p.cached.multiplier == 1.3 ? 1 : 0);
+            p.cached.multiplier = [1.3, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 1.5][n] + 'x Type boost. To switch to the ' + [1.5, 1.3][n] + 'x Type boost, disable and re-enable this special',
                 name: '1402warning'
@@ -2473,16 +2481,14 @@ window.specials = {
         }
     },
     1405: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        atk: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+        orb: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Shooter") ? 1.75 : 1; },
     },
     1406: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
+        atk: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Shooter") ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return p.unit.class.has("Shooter") ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+        orb: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Shooter") ? 1.75 : 1; },
     },
     1407: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 2 : 1; },
@@ -2523,11 +2529,11 @@ window.specials = {
         type: "condition"
     },
     1421: {
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1421].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 2 : 1.5);
-            window.specials[1421].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
                 name: '1421warning'
@@ -2535,11 +2541,11 @@ window.specials = {
         }
     },
     1422: {
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1422].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 2 : 1.5);
-            window.specials[1422].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
                 name: '1422warning'
@@ -2625,11 +2631,11 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     1447: {
-        atk: function(p) { return p.slot == p.sourceSlot ? window.specials[1447].multiplier : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1447].multiplier == 1.2 ? 1 : 0);
-            window.specials[1447].multiplier = [1.2, 1.5][n];
+            var n = (p.cached.multiplier == 1.2 ? 1 : 0);
+            p.cached.multiplier = [1.2, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.2, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.2][n] + 'x multiplier, disable and re-enable this special',
                 name: '1447warning'
@@ -2707,11 +2713,11 @@ window.specials = {
         type: "type"
     },
     1482: {
-        atk: function(p) { return window.specials[1482].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1482].multiplier == 1.25 ? 1 : 0);
-            window.specials[1482].multiplier = [1.25, 1.75][n];
+            var n = (p.cached.multiplier == 1.25 ? 1 : 0);
+            p.cached.multiplier = [1.25, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '1482warning'
@@ -2719,11 +2725,11 @@ window.specials = {
         },
     },
     1483: {
-        atk: function(p) { return window.specials[1483].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1483].multiplier == 1.25 ? 1 : 0);
-            window.specials[1483].multiplier = [1.25, 1.75][n];
+            var n = (p.cached.multiplier == 1.25 ? 1 : 0);
+            p.cached.multiplier = [1.25, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '1483warning'
@@ -2757,11 +2763,11 @@ window.specials = {
         def: function(p) { return 0.5; }
     },
     1492: {
-        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : window.specials[1492].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Free Spirit') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1492].multiplier == 1.5 ? 1 : window.specials[1492].multiplier == 1.75 ? 2 : 0);
-            window.specials[1492].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1492warning'
@@ -2797,11 +2803,11 @@ window.specials = {
         type: "type"
     },
     1512: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[1512].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 1.5 : 1);
-            window.specials[1512].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '1512warning'
@@ -2842,11 +2848,11 @@ window.specials = {
         type: "condition",
     },
     1526: {
-        atk: function(p) { return p.slot < 2 ? window.specials[1526].multiplier : 1; },
+        atk: function(p) { return p.slot < 2 ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1526].multiplier == 1.5 ? 1 : 0);
-            window.specials[1526].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1526warning'
@@ -2854,11 +2860,11 @@ window.specials = {
         },
     },
     1527: {
-        atk: function(p) { return p.slot < 2 ? window.specials[1527].multiplier : 1; },
+        atk: function(p) { return p.slot < 2 ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1527].multiplier == 1.5 ? 1 : 0);
-            window.specials[1527].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1527warning'
@@ -2877,10 +2883,10 @@ window.specials = {
         }
     },
     1529: {
-        orb: function(p) { return (p.unit.class.has("Slasher")) ? window.specials[1529].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2.25 : 2);
-            window.specials[1529].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '1529warning'
@@ -2888,10 +2894,10 @@ window.specials = {
         }
     },
     1530: {
-        orb: function(p) { return (p.unit.class.has("Slasher")) ? window.specials[1530].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Slasher")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2.25 : 2);
-            window.specials[1530].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '1530warning'
@@ -2900,10 +2906,10 @@ window.specials = {
     },
     1531: {
         delay: function(p) { return 1; },
-        chainAddition: function(p) {return window.specials[1531].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = (window.specials[1531].multiplier == 0.2 ? 1 : 0);
-            window.specials[1531].multiplier = [0.2, 0.3][n];
+            var n = (p.cached.multiplier == 0.2 ? 1 : 0);
+            p.cached.multiplier = [0.2, 0.3][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3][n] + 'x chain addition. To switch to the ' + [0.3, 0.2][n] + 'x chain addition, disable and re-enable this special',
                 name: '1531warning'
@@ -2912,10 +2918,10 @@ window.specials = {
     },
     1532: {
         delay: function(p) { return 1; },
-        chainAddition: function(p) {return window.specials[1532].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = (window.specials[1532].multiplier == 0.2 ? 1 : 0);
-            window.specials[1532].multiplier = [0.2, 0.3][n];
+            var n = (p.cached.multiplier == 0.2 ? 1 : 0);
+            p.cached.multiplier = [0.2, 0.3][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3][n] + 'x chain addition. To switch to the ' + [0.3, 0.2][n] + 'x chain addition, disable and re-enable this special',
                 name: '1532warning'
@@ -2945,7 +2951,8 @@ window.specials = {
         def: function(p) { return 0; }
     },
     1543: {
-        delay: function(p) { return 1; },
+        delay: function(p) { return p.cached.enemyImmunities.delay ? 1 : 3; },
+        ignoresImmunities: function(p) { return ['delay']; },
     },
     1544: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -3057,10 +3064,10 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     1578: {
-        chainAddition: function(p) {return window.specials[1578].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = (window.specials[1578].multiplier == 0.2 ? 1 : window.specials[1578].multiplier == 0.3 ? 2 : 0);
-            window.specials[1578].multiplier = [0.2, 0.3, 0.5][n];
+            var n = (p.cached.multiplier == 0.2 ? 1 : p.cached.multiplier == 0.3 ? 2 : 0);
+            p.cached.multiplier = [0.2, 0.3, 0.5][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3, 0.5][n] + 'x chain addition. To switch to the ' + [0.3, 0.5, 0.2][n] + 'x chain addition, disable and re-enable this special',
                 name: '1578warning'
@@ -3068,10 +3075,10 @@ window.specials = {
         }
     },
     1579: {
-        chainAddition: function(p) {return window.specials[1579].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = (window.specials[1579].multiplier == 0.2 ? 1 : window.specials[1579].multiplier == 0.3 ? 2 : 0);
-            window.specials[1579].multiplier = [0.2, 0.3, 0.5][n];
+            var n = (p.cached.multiplier == 0.2 ? 1 : p.cached.multiplier == 0.3 ? 2 : 0);
+            p.cached.multiplier = [0.2, 0.3, 0.5][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3, 0.5][n] + 'x chain addition. To switch to the ' + [0.3, 0.5, 0.2][n] + 'x chain addition, disable and re-enable this special',
                 name: '1579warning'
@@ -3090,10 +3097,10 @@ window.specials = {
         type: "class"
     },
     1583:{
-        orb: function(p) { return (p.unit.class.has("Striker")) ? window.specials[1583].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1583].multiplier == 1.5 ? 1 : 0);
-            window.specials[1583].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1583warning'
@@ -3101,10 +3108,10 @@ window.specials = {
         },
     },
     1584:{
-        orb: function(p) { return (p.unit.class.has("Striker")) ? window.specials[1584].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1584].multiplier == 1.5 ? 1 : 0);
-            window.specials[1584].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1584warning'
@@ -3112,11 +3119,11 @@ window.specials = {
         },
     },
     1585: {
-        atk: function(p) { return (p.percHP*p.maxHP/100 < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.currentHP < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
         type: "class"
     },
     1586: {
-        atk: function(p) { return (p.percHP*p.maxHP/100 < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.currentHP < 5000 && (p.unit.class.has("Slasher") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
         type: "class"
     },
     1587: {
@@ -3226,10 +3233,10 @@ window.specials = {
         type: "type"
     },
     1627: {
-        affinity: function(p) { return p.unit.class.has("Striker") ? window.specials[1627].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1627].multiplier == 1.25 ? 1 : window.specials[1627].multiplier == 1.5 ? 2 : 0);
-            window.specials[1627].multiplier = [1.25, 1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.25 ? 1 : p.cached.multiplier == 1.5 ? 2 : 0);
+            p.cached.multiplier = [1.25, 1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.5, 1.75, 1.25][n] + 'x affinity boost, disable and re-enable this special',
                 name: '1627warning'
@@ -3237,10 +3244,10 @@ window.specials = {
         }
     },
     1628: {
-        affinity: function(p) { return p.unit.class.has("Striker") ? window.specials[1628].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1628].multiplier == 1.25 ? 1 : window.specials[1628].multiplier == 1.5 ? 2 : 0);
-            window.specials[1628].multiplier = [1.25, 1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.25 ? 1 : p.cached.multiplier == 1.5 ? 2 : 0);
+            p.cached.multiplier = [1.25, 1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.5, 1.75, 1.25][n] + 'x affinity boost, disable and re-enable this special',
                 name: '1628warning'
@@ -3322,30 +3329,30 @@ window.specials = {
         type: "type"
     },
     1657: {
-        chain: function(p) { return window.specials[1657].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[1657].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1657].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[1657].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain.class.has("Striker")) {
-                window.specials[1657].multiplier = 2.75;
+                p.cached.multiplier = 2.75;
             }
         },
     },
     1658: {
-        chain: function(p) { return window.specials[1658].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[1658].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[1658].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[1658].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain.class.has("Striker")) {
-                window.specials[1658].multiplier = 2.75;
+                p.cached.multiplier = 2.75;
             }
         },
     },
@@ -3364,18 +3371,18 @@ window.specials = {
         }
     },
     1664: {
-        atk: function(p) { return p.captain.class.has("Shooter") ? p.unit.class.has("Shooter") ? 2 : 1 : 1; },
+        atk: function(p) { return p.cached.captain.class.has("Shooter") ? p.unit.class.has("Shooter") ? 2 : 1 : 1; },
         type: "class",
     },
     1665: {
-        atk: function(p) { return p.captain.class.has("Shooter") ? p.unit.class.has("Shooter") ? 2 : 1 : 1; },
+        atk: function(p) { return p.cached.captain.class.has("Shooter") ? p.unit.class.has("Shooter") ? 2 : 1 : 1; },
         type: "class",
     },
     1666: {
-        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? window.specials[1666].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP <= 70 ? 1 : 1.5);
-            window.specials[1666].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'above' : 'below') + ' 70%, using the ' + n + 'x orb boost.',
                 name: '1666warning'
@@ -3383,10 +3390,10 @@ window.specials = {
         }
     },
     1667: {
-        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? window.specials[1667].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP <= 70 ? 1 : 1.5);
-            window.specials[1667].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'above' : 'below') + ' 70%, using the ' + n + 'x orb boost.',
                 name: '1667warning'
@@ -3428,10 +3435,10 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
     1681: {
-        chainAddition: function(p) { return window.specials[1681].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.slot > 1 ? 0.5 : 0);
-            window.specials[1681].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Luffy is ' + (n == 0.5 ? 'not captain' : 'captain') + ', using the ' + n + ' Chain Addition.',
                 name: '1681warning'
@@ -3439,10 +3446,10 @@ window.specials = {
         }
     },
     1682: {
-        chainAddition: function(p) { return window.specials[1682].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.slot > 1 ? 0.5 : 0);
-            window.specials[1682].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Luffy is ' + (n == 0.5 ? 'not captain' : 'captain') + ', using the ' + n + ' Chain Addition.',
                 name: '1682warning'
@@ -3540,11 +3547,11 @@ window.specials = {
     },
     1716: {
         delay: function(p) { return 1; },
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[1716].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 1.75 : 1);
-            window.specials[1716].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '1716warning'
@@ -3556,25 +3563,25 @@ window.specials = {
         type: "class"
     },
     1720: {
-        chain: function(p) { return p.captain.class.has("Fighter") ? 2.5 : 1; },
+        chain: function(p) { return p.cached.captain.class.has("Fighter") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Fighter") ? 2.5 : Infinity) : 1;
         }
     },
     1721: {
-        chain: function(p) { return p.captain.class.has("Fighter") ? 2.5 : 1; },
+        chain: function(p) { return p.cached.captain.class.has("Fighter") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
-        }
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Fighter") ? 2.5 : Infinity) : 1;
+        },
     },
     1722: {
-        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1722].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.5 : 1);
-            window.specials[1722].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x multiplier.',
                 name: '1722warning'
@@ -3582,11 +3589,11 @@ window.specials = {
         }
     },
     1723: {
-        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1723].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.5 : 1);
-            window.specials[1723].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x multiplier.',
                 name: '1723warning'
@@ -3606,13 +3613,11 @@ window.specials = {
         staticMult: function(p) { return 55; }
     },
     1732: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
+        atk: function(p) { return p.cached.enemyImmunities.delay && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         type: "class"
     },
     1733: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
+        atk: function(p) { return p.cached.enemyImmunities.delay && (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         type: "class"
     },
     1736: {
@@ -3672,10 +3677,10 @@ window.specials = {
         }
     },
     1750:{
-        orb: function(p) { return (p.unit.class.has("Striker")) ? window.specials[1750].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1750].multiplier == 1.75 ? 1 : 0);
-            window.specials[1750].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1750warning'
@@ -3683,10 +3688,10 @@ window.specials = {
         },
     },
     1751:{
-        orb: function(p) { return (p.unit.class.has("Striker")) ? window.specials[1751].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1751].multiplier == 1.75 ? 1 : 0);
-            window.specials[1751].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1751warning'
@@ -3694,11 +3699,11 @@ window.specials = {
         },
     },
     1752: {
-        atk: function(p) { return !(p.unit.cost <= 30) ? 1 : window.specials[1752].multiplier; },
+        atk: function(p) { return !(p.unit.cost <= 30) ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1752].multiplier == 1.75 ? 1 : 0);
-            window.specials[1752].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1752warning'
@@ -3706,11 +3711,11 @@ window.specials = {
         }
     },
     1753: {
-        atk: function(p) { return !(p.unit.cost <= 30) ? 1 : window.specials[1753].multiplier; },
+        atk: function(p) { return !(p.unit.cost <= 30) ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1753].multiplier == 1.75 ? 1 : 0);
-            window.specials[1753].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1753warning'
@@ -3754,12 +3759,12 @@ window.specials = {
     },
     1769: {
         delay: function(p) { return 1; },
-        atk: function(p) { return (p.delayed > 0 && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition"
     },
     1770: {
         delay: function(p) { return 1; },
-        atk: function(p) { return (p.delayed > 0 && p.captain.class.has("Cerebral")) ? 1.5 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.captain.class.has("Cerebral")) ? 1.5 : 1; },
         type: "condition",
     },
     1771: {
@@ -3810,11 +3815,11 @@ window.specials = {
         orb: function(p) { return 1.75; }
     },
     1793: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : window.specials[1793].multiplier; },
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1793].multiplier == 1.75 ? 1 : 0);
-            window.specials[1793].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1793warning'
@@ -3822,11 +3827,11 @@ window.specials = {
         }
     },
     1794: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : window.specials[1794].multiplier; },
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1794].multiplier == 1.75 ? 1 : 0);
-            window.specials[1794].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1794warning'
@@ -3873,35 +3878,31 @@ window.specials = {
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1807].turnedOn[p.slot] = true;
-            if (p.captain) window.specials[1807].multiplier = p.captain.class.has("Slasher");
-            else window.specials[1807].multiplier = false;
         },
         onDeactivation: function(p) {
             window.specials[1807].turnedOn[p.slot] = false;
         },
-        chain: function(p) { return window.specials[1807].multiplier ? 2.75 : 1; },
+        chain: function(p) { return p.cached.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Slasher") ? 2.75 : Infinity) : 1;
         },
-        orb: function(p) { return window.specials[1807].multiplier ? p.unit.class.has("Slasher") ? 2 : 1 : 1; },
+        orb: function(p) { return p.cached.captain.class.has("Slasher") && p.unit.class.has("Slasher") ? 2 : 1; },
     },
     1808: {
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = true;
-            if (p.captain) window.specials[1808].multiplier = p.captain.class.has("Slasher");
-            else window.specials[1808].multiplier = false;
         },
         onDeactivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = false;
         },
-        chain: function(p) { return window.specials[1808].multiplier ? 2.75 : 1; },
+        chain: function(p) { return p.cached.captain.class.has("Slasher") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Slasher") ? 2.75 : Infinity) : 1;
         },
-        orb: function(p) { return window.specials[1808].multiplier ? p.unit.class.has("Slasher") ? 2 : 1 : 1; },
+        orb: function(p) { return p.cached.captain.class.has("Slasher") && p.unit.class.has("Slasher") ? 2 : 1; },
     },
     1811: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -3968,38 +3969,38 @@ window.specials = {
         orb: function(p) { return 2; }
     },
     1835: {
-        chain: function(p) { return (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.5 : 1; },
+        chain: function(p) { return (p.cached.captain.type == "STR" || p.cached.captain.type == "PSY") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Powerhouse") ? 2.5 : Infinity) : 1;
         },
-        delay: function(p) { return p.captain.class.has("Powerhouse") ? 1 : 0; },
+        delay: function(p) { return p.cached.captain.class.has("Powerhouse") ? 1 : 0; },
     },
     1836: {
-        chain: function(p) { return (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.5 : 1; },
+        chain: function(p) { return (p.cached.captain.type == "STR" || p.cached.captain.type == "PSY") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Powerhouse") ? 2.5 : Infinity) : 1;
         },
-        delay: function(p) { return p.captain.class.has("Powerhouse") ? 1 : 0; },
+        delay: function(p) { return p.cached.captain.class.has("Powerhouse") ? 1 : 0; },
     },
     1837: {
-        atk: function(p) { return (p.captain.type == "QCK" || p.captain.type == "PSY") ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.captain.type == "QCK" || p.cached.captain.type == "PSY") ? 1.75 : 1; },
         type: "class",
     },
     1838: {
-        atk: function(p) { return (p.captain.type == "QCK" || p.captain.type == "PSY") ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.captain.type == "QCK" || p.cached.captain.type == "PSY") ? 1.75 : 1; },
         type: "class",
     },
     1839: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.type == "DEX" || p.captain.type == "PSY")) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && (p.cached.captain.type == "DEX" || p.cached.captain.type == "PSY")) ? 1.75 : 1; },
         type: "condition",
-        staticMult: function(p) { return p.captain.class.has("Powerhouse") ? 40 : 0; }
+        staticMult: function(p) { return p.cached.captain.class.has("Powerhouse") ? 40 : 0; }
     },
     1840: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.type == "DEX" || p.captain.type == "PSY")) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && (p.cached.captain.type == "DEX" || p.cached.captain.type == "PSY")) ? 1.75 : 1; },
         type: "condition",
-        staticMult: function(p) { return p.captain.class.has("Powerhouse") ? 40 : 0; }
+        staticMult: function(p) { return p.cached.captain.class.has("Powerhouse") ? 40 : 0; }
     },
     1841: {
         atk: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
@@ -4026,16 +4027,14 @@ window.specials = {
         chainAddition: function(p) { return 0.5; }
     },
     1852: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot && p.cached.enemyEffects.barrier ? 2.25 : 1; },
         type: "type",
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection AND a Barrier active.",
-        orb: function(p) { return 2; }
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; }
     },
     1853: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2.25 : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot && p.cached.enemyEffects.barrier ? 2.25 : 1; },
         type: "type",
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection AND a Barrier active.",
-        orb: function(p) { return 2; }
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; }
     },
     1854: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
@@ -4060,19 +4059,19 @@ window.specials = {
         staticMult: function(p) { return 65; }
     },
     1860: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && (p.cached.captain.class.has("Shooter"))) ? 1.75 : 1; },
         type: "condition",
     },
     1861: {
-        atk: function(p) { return (p.delayed > 0 && (p.captain.class.has("Shooter"))) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && (p.cached.captain.class.has("Shooter"))) ? 1.75 : 1; },
         type: "condition",
     },
     1864: {
-        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1864].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1864].multiplier === 1.5 ? 1 : 0);
-            window.specials[1864].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier === 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1864warning'
@@ -4080,11 +4079,11 @@ window.specials = {
         }
     },
     1865: {
-        atk: function(p) { return p.unit.class.has("Striker") ? window.specials[1865].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1865].multiplier === 1.5 ? 1 : 0);
-            window.specials[1865].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier === 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '1865warning'
@@ -4196,31 +4195,31 @@ window.specials = {
         },
     },
     1892: {
-        atk: function(p) { return (p.delayed > 0) ? window.specials[1892].multiplier : 1; },
+        atk: function(p) { return (p.delayed > 0) ? p.cached.multiplier : 1; },
         type: "condition",
         delay: function(p) { return 1; },
         onActivation: function(p) {
-            window.specials[1892].multiplier = false;
-            if (p.captain) if (p.captain.type == "PSY") window.specials[1892].multiplier = 1.5;
-            else window.specials[1892].multiplier = 1;
+            p.cached.multiplier = false;
+            if (p.captain) if (p.captain.type == "PSY") p.cached.multiplier = 1.5;
+            else p.cached.multiplier = 1;
         },
     },
     1893: {
-        atk: function(p) { return (p.delayed > 0) ? window.specials[1893].multiplier : 1; },
+        atk: function(p) { return (p.delayed > 0) ? p.cached.multiplier : 1; },
         type: "condition",
         delay: function(p) { return 1; },
         onActivation: function(p) {
-            window.specials[1893].multiplier = false;
-            if (p.captain) if (p.captain.type == "PSY") window.specials[1893].multiplier = 1.5;
-            else window.specials[1893].multiplier = 1;
+            p.cached.multiplier = false;
+            if (p.captain) if (p.captain.type == "PSY") p.cached.multiplier = 1.5;
+            else p.cached.multiplier = 1;
         },
     },
     1894: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1894].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 2 : 1);
-            window.specials[1894].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '1894warning'
@@ -4228,11 +4227,11 @@ window.specials = {
         }
     },
     1895: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[1895].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 2 : 1);
-            window.specials[1895].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '1895warning'
@@ -4240,10 +4239,10 @@ window.specials = {
         }
     },
     1896: {
-        chainAddition: function(p) { return p.captain.class.has("Driven") ? window.specials[1896].multiplier : 0; },
+        chainAddition: function(p) { return p.cached.captain.class.has("Driven") ? p.cached.multiplier : 0; },
         onActivation: function(p) {
-            var n = (window.specials[1896].multiplier == .3 ? 1 : 0);
-            window.specials[1896].multiplier = [.3, .7][n];
+            var n = (p.cached.multiplier == .3 ? 1 : 0);
+            p.cached.multiplier = [.3, .7][n];
             p.scope.notify({
                 text: 'Using the ' + [.3, .7][n] + 'x chain boost multiplier. To switch to the ' + [.7, .3][n] + 'x multiplier, disable and re-enable this special',
                 name: '1896warning'
@@ -4251,10 +4250,10 @@ window.specials = {
         },
     },
     1897: {
-        chainAddition: function(p) { return p.captain.class.has("Driven") ? window.specials[1897].multiplier : 0; },
+        chainAddition: function(p) { return p.cached.captain.class.has("Driven") ? p.cached.multiplier : 0; },
         onActivation: function(p) {
-            var n = (window.specials[1897].multiplier == .3 ? 1 : 0);
-            window.specials[1897].multiplier = [.3, .7][n];
+            var n = (p.cached.multiplier == .3 ? 1 : 0);
+            p.cached.multiplier = [.3, .7][n];
             p.scope.notify({
                 text: 'Using the ' + [.3, .7][n] + 'x chain boost multiplier. To switch to the ' + [.7, .3][n] + 'x multiplier, disable and re-enable this special',
                 name: '1897warning'
@@ -4302,16 +4301,16 @@ window.specials = {
     1921: {
         atk: function(p) { return !p.unit.class.has('Slasher') ? 1 : p.sourceSlot < 2 ? 2 : 1.75 ; },
         type: "class",
-        chain: function(p) { return (window.specials[1921].multiplier == 2.5) ? 2.5 : 1; },
+        chain: function(p) { return (p.cached.multiplier == 2.5) ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
-            if (window.specials[1921].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[1921].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.slot > 1) {
-                window.specials[1921].multiplier = 2.5;
+                p.cached.multiplier = 2.5;
             }
         },
     },
@@ -4353,13 +4352,13 @@ window.specials = {
     },
     1931: {
         chainAddition: function(p) { return 0.25; },
-        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1931].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : p.cached.multiplier; },
         type: "class",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1931].turnedOn = true;
             var n = (window.specials[1933].turnedOn ? 1 : 0);
-            window.specials[1931].multiplier = [1.5, 1.75][n];
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
                 name: '1931warning'
@@ -4371,13 +4370,13 @@ window.specials = {
     },
     1932: {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? 1.25 : 1; },
-        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1932].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : p.cached.multiplier; },
         type: "class",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1932].turnedOn = true;
             var n = (window.specials[1931].turnedOn ? 1 : 0);
-            window.specials[1932].multiplier = [1.5, 1.75][n];
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
                 name: '1932warning'
@@ -4388,13 +4387,13 @@ window.specials = {
         },
     },
     1933: {
-        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : window.specials[1933].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Fighter') ? 1 : p.cached.multiplier; },
         type: "class",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[1933].turnedOn = true;
             var n = (window.specials[1932].turnedOn ? 1 : 0);
-            window.specials[1933].multiplier = [1.5, 1.75][n];
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
                 name: '1933warning'
@@ -4463,22 +4462,12 @@ window.specials = {
         type: "type"
     },
     1942: {
-        atk: function(p) { return (p.delayed > 0) ? window.specials[1942].multiplier : 1; },
+        atk: function(p) { return (p.delayed > 0) && p.cached.captain.class.has("Free Spirit") ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[1942].multiplier = false;
-            if (p.captain) if (p.captain.class.has("Free Spirit")) window.specials[1942].multiplier = 1.75;
-            else window.specials[1942].multiplier = 1;
-        },
     },
     1943: {
-        atk: function(p) { return (p.delayed > 0) ? window.specials[1943].multiplier : 1; },
+        atk: function(p) { return (p.delayed > 0) && p.cached.captain.class.has("Free Spirit") ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[1943].multiplier = false;
-            if (p.captain) if (p.captain.class.has("Free Spirit")) window.specials[1943].multiplier = 1.75;
-            else window.specials[1943].multiplier = 1;
-        },
     },
     1944: {
         affinity: function(p) { return p.unit.class.has("Cerebral") ? 1.75 : 1; }
@@ -4493,17 +4482,17 @@ window.specials = {
         orb: function(p) { return 1.5; },
     },
     1952: {
-        chainAddition: function(p) { return p.captain.class.has("Cerebral") ? .7 : 0; }
+        chainAddition: function(p) { return p.cached.captain.class.has("Cerebral") ? .7 : 0; }
     },
     1953: {
-        chainAddition: function(p) { return p.captain.class.has("Cerebral") ? .7 : 0; }
+        chainAddition: function(p) { return p.cached.captain.class.has("Cerebral") ? .7 : 0; }
     },
     1954: {
-        atk: function(p) { return !p.unit.class.has('Cerebral') ? 1 : window.specials[1954].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Cerebral') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1954].multiplier == 1.75 ? 1 : 0);
-            window.specials[1954].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1954warning'
@@ -4511,11 +4500,11 @@ window.specials = {
         }
     },
     1955: {
-        atk: function(p) { return !p.unit.class.has('Cerebral') ? 1 : window.specials[1955].multiplier; },
+        atk: function(p) { return !p.unit.class.has('Cerebral') ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1955].multiplier == 1.75 ? 1 : 0);
-            window.specials[1955].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '1955warning'
@@ -4611,10 +4600,10 @@ window.specials = {
         type: "condition",
     },
     1967:{
-        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[1967].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1967].multiplier == 1.75 ? 1 : window.specials[1967].multiplier == 2 ? 2 : 0);
-            window.specials[1967].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1967warning'
@@ -4622,10 +4611,10 @@ window.specials = {
         },
     },
     1968:{
-        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[1968].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[1968].multiplier == 1.75 ? 1 : window.specials[1968].multiplier == 2 ? 2 : 0);
-            window.specials[1968].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '1968warning'
@@ -4633,22 +4622,14 @@ window.specials = {
         },
     },
     1971: {
-        atk: function(p) { return (window.specials[1971].multiplier && p.defenseDown) ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
         type: "condition",
-        def: function(p) { return window.specials[1971].multiplier ? .2 : 1; },
-        onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Cerebral")) window.specials[1971].multiplier = true;
-            else window.specials[1971].multiplier = false;
-        },
+        def: function(p) { return p.cached.captain.class.has("Cerebral") ? .2 : 1; },
     },
     1972: {
-        atk: function(p) { return (window.specials[1972].multiplier && p.defenseDown) ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
         type: "condition",
-        def: function(p) { return window.specials[1972].multiplier ? .2 : 1; },
-        onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Cerebral")) window.specials[1972].multiplier = true;
-            else window.specials[1972].multiplier = false;
-        },
+        def: function(p) { return p.cached.captain.class.has("Cerebral") ? .2 : 1; },
     },
     1977: {
         turnedOn: false,
@@ -4679,14 +4660,14 @@ window.specials = {
         orb: function(p) { return 2; },
     },
     1986: {
-        chainAddition: function(p) { return window.specials[1986].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[1986].multiplier == .5 ? 1 : 0);
+            var n = (p.cached.multiplier == .5 ? 1 : 0);
             if (p.colorCount.STR >= 3) {
-                window.specials[1986].multiplier = [.5, .75][n];
+                p.cached.multiplier = [.5, .75][n];
             }
             else {
-                window.specials[1986].multiplier = 0;
+                p.cached.multiplier = 0;
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .75][n] + 'x chain boost multiplier. To switch to the ' + [.75, .5][n] + 'x multiplier, disable and re-enable this special',
@@ -4695,14 +4676,14 @@ window.specials = {
         },
     },
     1987: {
-        chainAddition: function(p) { return window.specials[1987].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[1987].multiplier == .5 ? 1 : 0);
+            var n = (p.cached.multiplier == .5 ? 1 : 0);
             if (p.colorCount.STR >= 3) {
-                window.specials[1987].multiplier = [.5, .75][n];
+                p.cached.multiplier = [.5, .75][n];
             }
             else {
-                window.specials[1987].multiplier = 0;
+                p.cached.multiplier = 0;
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .75][n] + 'x chain boost multiplier. To switch to the ' + [.75, .5][n] + 'x multiplier, disable and re-enable this special',
@@ -4711,51 +4692,31 @@ window.specials = {
         },
     },
     1988: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[1988].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.captain.class.has("Slasher")) ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[1988].multiplier = false;
-            if (p.captain) if (p.captain.class.has("Slasher")) window.specials[1988].multiplier = true;
-            else window.specials[1988].multiplier = false;
-        },
     },
     1989: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[1989].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.captain.class.has("Slasher")) ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[1989].multiplier = false;
-            if (p.captain) if (p.captain.class.has("Slasher")) window.specials[1989].multiplier = true;
-            else window.specials[1989].multiplier = false;
-        },
     },
     1990: {
         delay: function(p) { return 1; },
-        staticMult: function(p) { return window.specials[1990].multiplier ? 55 : 0; },
-        onActivation: function(p) {
-            window.specials[1990].multiplier = false;
-            if (p.captain) if (p.captain.type == "STR" || p.captain.type == "QCK") window.specials[1990].multiplier = true;
-            else window.specials[1990].multiplier = false;
-        },
+        staticMult: function(p) { return p.cached.captain.type == "STR" || p.cached.captain.type == "QCK" ? 55 : 0; },
     },
     1991: {
         delay: function(p) { return 1; },
-        staticMult: function(p) { return window.specials[1991].multiplier ? 55 : 0; },
-        onActivation: function(p) {
-            window.specials[1991].multiplier = false;
-            if (p.captain) if (p.captain.type == "STR" || p.captain.type == "QCK") window.specials[1991].multiplier = true;
-            else window.specials[1991].multiplier = false;
-        },
+        staticMult: function(p) { return p.cached.captain.type == "STR" || p.cached.captain.type == "QCK" ? 55 : 0; },
     },
     1992: {
-        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1992].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1992].multiplier == 1.75 ? 1 : 0);
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
-                window.specials[1992].multiplier = [1.75, 2][n];
+                p.cached.multiplier = [1.75, 2][n];
             }
             else{
-                window.specials[1992].multiplier = 1;
+                p.cached.multiplier = 1;
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
@@ -4764,15 +4725,15 @@ window.specials = {
         }
     },
     1993: {
-        atk: function(p) { return p.unit.class.has('Free Spirit') ? window.specials[1993].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has('Free Spirit') ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[1993].multiplier == 1.75 ? 1 : 0);
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
             if (p.colorCount.QCK >= 3) {
-                window.specials[1993].multiplier = [1.75, 2][n];
+                p.cached.multiplier = [1.75, 2][n];
             }
             else{
-                window.specials[1993].multiplier = 1;
+                p.cached.multiplier = 1;
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
@@ -4798,26 +4759,26 @@ window.specials = {
         type: "type"
     },
     2006: {
-        atk: function(p) { return p.unit.type == window.specials[2006].multiplier ? 2.25 : 1; },
+        atk: function(p) { return p.unit.type == p.cached.multiplier ? 2.25 : 1; },
         type: "type",
         chainAddition: function(p) { return .9; },
         onActivation: function(p) {
-            window.specials[2006].multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
+            p.cached.multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
         }
     },
     2007: {
-        atk: function(p) { return p.unit.type == window.specials[2007].multiplier ? 2.25 : 1; },
+        atk: function(p) { return p.unit.type == p.cached.multiplier ? 2.25 : 1; },
         type: "type",
         chainAddition: function(p) { return .9; },
         onActivation: function(p) {
-            window.specials[2007].multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
+            p.cached.multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
         }
     },
     2008: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? window.specials[2008].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2008].multiplier == 1.5 ? 1 : window.specials[2008].multiplier == 1.75 ? 2 : 0);
-            window.specials[2008].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2008warning'
@@ -4825,10 +4786,10 @@ window.specials = {
         }
     },
     2009: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? window.specials[2009].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2009].multiplier == 1.5 ? 1 : window.specials[2009].multiplier == 1.75 ? 2 : 0);
-            window.specials[2009].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2009warning'
@@ -4846,11 +4807,11 @@ window.specials = {
         type: "condition",
     },
     2016: {
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[2016].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2 : 1.5);
-            window.specials[2016].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2016warning'
@@ -4858,11 +4819,11 @@ window.specials = {
         }
     },
     2017: {
-        atk: function(p) { return p.unit.class.has("Driven") ? window.specials[2017].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2 : 1.5);
-            window.specials[2017].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2017warning'
@@ -4891,61 +4852,43 @@ window.specials = {
     },
     2026: {
         delay: function(p) { return 1; },
-        affinity: function(p) { return !(p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2026].multiplier; },
-        onActivation: function(p) {
-            window.specials[2026].multiplier = 1;
-            if (p.captain.type == "QCK" || p.captain.type == "PSY") {
-                window.specials[2026].multiplier = 2;
-            }
-        }
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && (p.cached.captain.type == "QCK" || p.cached.captain.type == "PSY") ? 2 : 1; },
     },
     2027: {
         delay: function(p) { return 1; },
-        affinity: function(p) { return !(p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2027].multiplier; },
-        onActivation: function(p) {
-            window.specials[2027].multiplier = 1;
-            if (p.captain.type == "QCK" || p.captain.type == "PSY") {
-                window.specials[2027].multiplier = 2;
-            }
-        }
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") && (p.cached.captain.type == "QCK" || p.cached.captain.type == "PSY") ? 2 : 1; },
     },
     2028: {
-        orb: function(p) { return window.specials[2028].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2028].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
-                window.specials[2028].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         }
     },
     2029: {
-        orb: function(p) { return window.specials[2029].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2029].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.QCK + p.colorCount.PSY >= 4) {
-                window.specials[2029].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         }
     },
     2032: {
         atk: function(p) { return 1.5; },
         type: "type",
-        orb: function(p) { return window.specials[2032].multiplier ? 1.5 : 1; },
-        chainAddition: function(p) { return window.specials[2032].multiplier ? .3 : 0; },
-        staticMult: function(p) { return window.specials[2032].multiplier ? 20 : 0; },
-        onActivation: function(p) {
-            window.specials[2032].multiplier = (p.captain.type == "PSY");
-        }
+        orb: function(p) { return p.cached.captain.type == "PSY" ? 1.5 : 1; },
+        chainAddition: function(p) { return p.cached.captain.type == "PSY" ? .3 : 0; },
+        staticMult: function(p) { return p.cached.captain.type == "PSY" ? 20 : 0; },
     },
     2033: {
         atk: function(p) { return 1.5; },
         type: "type",
-        orb: function(p) { return window.specials[2033].multiplier ? 1.5 : 1; },
-        chainAddition: function(p) { return window.specials[2033].multiplier ? .3 : 0; },
-        staticMult: function(p) { return window.specials[2033].multiplier ? 20 : 0; },
-        onActivation: function(p) {
-            window.specials[2033].multiplier = (p.captain.type == "PSY");
-        }
+        orb: function(p) { return p.cached.captain.type == "PSY" ? 1.5 : 1; },
+        chainAddition: function(p) { return p.cached.captain.type == "PSY" ? .3 : 0; },
+        staticMult: function(p) { return p.cached.captain.type == "PSY" ? 20 : 0; },
     },
     2034: {
         turnedOn: [ false, false, false, false, false, false ],
@@ -4985,10 +4928,10 @@ window.specials = {
         type: "class",
     },
     2046: {
-        orb: function(p) { return p.unit.type == window.specials[2046].multiType ? window.specials[2046].multiplier : 1; },
+        orb: function(p) { return p.unit.type == window.specials[2046].multiType ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             if (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) {
-                window.specials[2046].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
                 if (p.colorCount.STR >= 4) {
                     window.specials[2046].multiType = "STR";
                 }
@@ -5006,18 +4949,16 @@ window.specials = {
                 }
             }
             else{
-                window.specials[2046].multiplier = 1;
+                p.cached.multiplier = 1;
                 window.specials[2046].multiType = "null";
             }
         }
     },
     2047: {
-        orb: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+        orb: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Fighter") ? 2 : 1; },
     },
     2048: {
-        orb: function(p) { return p.unit.class.has("Fighter") ? 2 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+        orb: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Fighter") ? 2 : 1; },
     },
     2049: {
         chain: function(p) { return 3; },
@@ -5050,14 +4991,14 @@ window.specials = {
     },
     2059: {
         orb: function(p) { return 1.5; },
-        chain: function(p) { return window.specials[2059].multiplier != Infinity ? window.specials[2059].multiplier : 1; },
+        chain: function(p) { return p.cached.multiplier != Infinity ? p.cached.multiplier : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2059].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2059].multiplier == Infinity ? 1 : window.specials[2059].multiplier == 2.5 ? 2 : window.specials[2059].multiplier == 2.75 ? 3 : 0);
-            window.specials[2059].multiplier = [Infinity, 2.5, 2.75, 3][n];
+            var n = (p.cached.multiplier == Infinity ? 1 : p.cached.multiplier == 2.5 ? 2 : p.cached.multiplier == 2.75 ? 3 : 0);
+            p.cached.multiplier = [Infinity, 2.5, 2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + ['Regular ', 2.5, 2.75, 3][n] + 'x chain lock. To switch to the ' + [2.5, 2.75, 3, 'Regular '][n] + 'x chain lock, disable and re-enable this special',
                 name: '2059warning'
@@ -5066,14 +5007,14 @@ window.specials = {
     },
     2060: {
         orb: function(p) { return 1.5; },
-        chain: function(p) { return window.specials[2060].multiplier != Infinity ? window.specials[2060].multiplier : 1; },
+        chain: function(p) { return p.cached.multiplier != Infinity ? p.cached.multiplier : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2060].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2060].multiplier == Infinity ? 1 : window.specials[2060].multiplier == 2.5 ? 2 : window.specials[2060].multiplier == 2.75 ? 3 : 0);
-            window.specials[2060].multiplier = [Infinity, 2.5, 2.75, 3][n];
+            var n = (p.cached.multiplier == Infinity ? 1 : p.cached.multiplier == 2.5 ? 2 : p.cached.multiplier == 2.75 ? 3 : 0);
+            p.cached.multiplier = [Infinity, 2.5, 2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + ['Regular', '2.5x', '2.75x', '3x'][n] + ' chain lock. To switch to the ' + ['2.5x', '2.75x', '3x', 'Regular'][n] + ' chain lock, disable and re-enable this special',
                 name: '2060warning'
@@ -5081,18 +5022,12 @@ window.specials = {
         },
     },
     2063: {
-        atk: function(p) { return p.unit.type == window.specials[2063].captType ? 1.75 : 1; },
+        atk: function(p) { return p.unit.type == p.cached.captain.type ? 1.75 : 1; },
         type: "type",
-        onActivation: function(p) {
-            window.specials[2063].captType = p.captain.type;
-        }
     },
     2064: {
-        atk: function(p) { return p.unit.type == window.specials[2064].captType ? 1.75 : 1; },
+        atk: function(p) { return p.unit.type == p.cached.captain.type ? 1.75 : 1; },
         type: "type",
-        onActivation: function(p) {
-            window.specials[2064].captType = p.captain.type;
-        }
     },
     2067: {
         chain: function(p) { return 2.75; },
@@ -5141,23 +5076,23 @@ window.specials = {
         type: "class"
     },
     2075: {
-        affinity: function(p) { return (window.specials[2075].multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
-        orb: function(p) { return (window.specials[2075].multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 2 : 1; },
+        affinity: function(p) { return (p.cached.multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        orb: function(p) { return (p.cached.multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 2 : 1; },
         onActivation: function(p) {
-            if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[2075].multiplier = true;
+            if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.multiplier = true;
         },
         onDeactivation: function(p) {
-            window.specials[2075].multiplier = false;
+            p.cached.multiplier = false;
         },
     },
     2076: {
-        affinity: function(p) { return (window.specials[2076].multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
-        orb: function(p) { return (window.specials[2076].multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 2 : 1; },
+        affinity: function(p) { return (p.cached.multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        orb: function(p) { return (p.cached.multiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 2 : 1; },
         onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[2076].multiplier = true;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.multiplier = true;
         },
         onDeactivation: function(p) {
-            window.specials[2076].multiplier = false;
+            p.cached.multiplier = false;
         },
     },
     2077: {
@@ -5171,24 +5106,20 @@ window.specials = {
         type: "condition"
     },
     2079: {
-        affinity: function(p) { return 1.75; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
+        affinity: function(p) { return p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2080: {
-        affinity: function(p) { return 1.75; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
+        affinity: function(p) { return p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2081: {
-        atk: function(p) { return 1.75; },
+        atk: function(p) { return p.cached.enemyImmunities.delay ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return 1.75; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2082: {
-        atk: function(p) { return 1.75; },
+        atk: function(p) { return p.cached.enemyImmunities.delay ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return 1.75; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection.",
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2083: {
         orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "PSY") ? 1.75 : 1; },
@@ -5222,11 +5153,11 @@ window.specials = {
         orb: function(p) { return 1.5; }
     },
     2089: {
-        atk: function(p) { return window.specials[2089].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 1.5 : 1);
-            window.specials[2089].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
                 name: '2089warning'
@@ -5257,10 +5188,10 @@ window.specials = {
         type: "condition",
     },
     2096: {
-        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[2096].multiplier : 1; },
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 2 : 1.75);
-            window.specials[2096].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
                 name: '2096warning'
@@ -5268,10 +5199,10 @@ window.specials = {
         }
     },
     2097: {
-        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[2097].multiplier : 1; },
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP == 100 ? 2 : 1.75);
-            window.specials[2097].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
                 name: '2097warning'
@@ -5293,60 +5224,24 @@ window.specials = {
         }
     },
     2100: {
-        atk: function(p) { return window.specials[2100].multiplier; },
+        atk: function(p) { return (p.cached.captain.type == "STR" || p.cached.captain.type == "QCK") ? 1.75 : 1; },
         type: "class",
-        onActivation: function(p) {
-            window.specials[2100].multiplier = 1;
-            if (p.captain.type == "STR" || p.captain.type == "QCK") {
-                window.specials[2100].multiplier = 1.75;
-            }
-        }
     },
     2101: {
-        atk: function(p) { return window.specials[2101].multiplier; },
+        atk: function(p) { return (p.cached.captain.type == "STR" || p.cached.captain.type == "QCK") ? 1.75 : 1; },
         type: "class",
-        onActivation: function(p) {
-            window.specials[2101].multiplier = 1;
-            if (p.captain.type == "STR" || p.captain.type == "QCK") {
-                window.specials[2101].multiplier = 1.75;
-            }
-        }
     },
     2102: {
-        orb: function(p) { return window.specials[2102].multiplier; },
-        onActivation: function(p) {
-            window.specials[2102].multiplier = 1;
-            if (p.captain.type == "INT" || p.captain.type == "QCK") {
-                window.specials[2102].multiplier = 1.75;
-            }
-        }
+        orb: function(p) { return (p.cached.captain.type == "INT" || p.cached.captain.type == "QCK") ? 1.75 : 1; },
     },
     2103: {
-        orb: function(p) { return window.specials[2103].multiplier; },
-        onActivation: function(p) {
-            window.specials[2103].multiplier = 1;
-            if (p.captain.type == "INT" || p.captain.type == "QCK") {
-                window.specials[2103].multiplier = 1.75;
-            }
-        }
+        orb: function(p) { return (p.cached.captain.type == "INT" || p.cached.captain.type == "QCK") ? 1.75 : 1; },
     },
     2104: {
-        staticMult: function(p) { return window.specials[2104].multiplier ? 40 : 0; },
-        onActivation: function(p) {
-            window.specials[2104].multiplier = false;
-            if (p.captain.type == "DEX" || p.captain.type == "QCK") {
-                window.specials[2104].multiplier = true;
-            }
-        }
+        staticMult: function(p) { return (p.cached.captain.type == "DEX" || p.cached.captain.type == "QCK") ? 40 : 0; },
     },
     2105: {
-        staticMult: function(p) { return window.specials[2105].multiplier ? 40 : 0; },
-        onActivation: function(p) {
-            window.specials[2105].multiplier = false;
-            if (p.captain.type == "DEX" || p.captain.type == "QCK") {
-                window.specials[2105].multiplier = true;
-            }
-        }
+        staticMult: function(p) { return (p.cached.captain.type == "DEX" || p.cached.captain.type == "QCK") ? 40 : 0; },
     },
     2108: {
         orb: function(p) { return 3; },
@@ -5381,12 +5276,12 @@ window.specials = {
         def: function(p) { return 0; }
     },
     2120: {
-        atk: function(p) { return window.specials[2120].multiplier == 2 ? ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? window.specials[2120].multiplier : 1 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? window.specials[2120].multiplier : 1; },
+        atk: function(p) { return p.cached.multiplier == 2 ? ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? p.cached.multiplier : 1 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "class",
         warning: "For the 2x boost special (%name%) assumes that the enemy is Delayed.",
         onActivation: function(p) {
-            var n = window.specials[2120].multiplier == 1.75 ? 1 : 0;
-            window.specials[2120].multiplier = [1.75, 2][n];
+            var n = p.cached.multiplier == 1.75 ? 1 : 0;
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using ' + [1.75, 2][n] + 'x ATK boost. To switch to the ' + [2, 1.75][n] + 'x ATK boost, disable and re-enable this special.',
                 name: '2120warning'
@@ -5394,12 +5289,12 @@ window.specials = {
         }
     },
     2121: {
-        atk: function(p) { return window.specials[2121].multiplier == 2 ? ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? window.specials[2121].multiplier : 1 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? window.specials[2121].multiplier : 1; },
+        atk: function(p) { return p.cached.multiplier == 2 ? ((p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) && (p.delayed > 0)) ? p.cached.multiplier : 1 : (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "class",
         warning: "For the 2x boost special (%name%) assumes that the enemy is Delayed.",
         onActivation: function(p) {
-            var n = window.specials[2121].multiplier == 1.75 ? 1 : 0;
-            window.specials[2121].multiplier = [1.75, 2][n];
+            var n = p.cached.multiplier == 1.75 ? 1 : 0;
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using ' + [1.75, 2][n] + 'x ATK boost. To switch to the ' + [2, 1.75][n] + 'x ATK boost, disable and re-enable this special.',
                 name: '2121warning'
@@ -5418,11 +5313,11 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Striker")) ? 1.5 : 1; }
     },
     2126: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[2126].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[2126].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2126warning'
@@ -5448,11 +5343,11 @@ window.specials = {
         type: "class"
     },
     2131:{
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[2131].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2131].multiplier == 1.75 ? 1 : window.specials[2131].multiplier == 2 ? 2 : 0);
-            window.specials[2131].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2131warning'
@@ -5460,11 +5355,11 @@ window.specials = {
         },
     },
     2132:{
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[2132].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2132].multiplier == 1.75 ? 1 : window.specials[2132].multiplier == 2 ? 2 : 0);
-            window.specials[2132].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2132warning'
@@ -5487,50 +5382,22 @@ window.specials = {
         type: "class",
     },
     2139: {
-        atk: function(p) { return p.poisoned ? window.specials[2139].multiplier : 1; },
-        poison: function(p) { return window.specials[2139].multiplier2; },
-        onActivation: function(p) {
-            window.specials[2139].multiplier = 1;
-            if (p.captain.class.has("Powerhouse")) {
-                window.specials[2139].multiplier = 1.75;
-            }
-            window.specials[2139].multiplier2 = 0;
-            if (p.captain.type == "PSY" || p.captain.type == "INT") {
-                window.specials[2139].multiplier2 = 99;
-            }
-        },
+        atk: function(p) { return p.poisoned && p.cached.captain.class.has("Powerhouse") ? 1.75 : 1; },
+        poison: function(p) { return (p.cached.captain.type == "PSY" || p.cached.captain.type == "INT") ? 99 : 0; },
         type: "condition",
     },
     2140: {
-        orb: function(p) { return window.specials[2140].multiplier; },
-        onActivation: function(p) {
-            window.specials[2140].multiplier = 1;
-            if (p.captain.type == "INT" || p.captain.type == "QCK") {
-                window.specials[2140].multiplier = 2;
-            }
-        }
+        orb: function(p) { return (p.cached.captain.type == "INT" || p.cached.captain.type == "QCK") ? 2 : 1; },
     },
     2141: {
-        chain: function(p) { return window.specials[2141].multiplier; },
+        chain: function(p) { return (p.cached.captain.type == "INT" || p.cached.captain.type == "DEX") ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2141].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.type == "INT" || p.cached.captain.type == "DEX" ? 2.75 : Infinity) : 1;
         },
-        onActivation: function(p) {
-            window.specials[2141].multiplier = 1;
-            if (p.captain.type == "INT" || p.captain.type == "DEX") {
-                window.specials[2141].multiplier = 2.75;
-            }
-        }
     },
     2142: {
-        staticMult: function(p) { return window.specials[2142].multiplier; },
-        onActivation: function(p) {
-            window.specials[2142].multiplier = 0;
-            if (p.captain.type == "INT" || p.captain.type == "STR") {
-                window.specials[2142].multiplier = 55;
-            }
-        }
+        staticMult: function(p) { return (p.cached.captain.type == "INT" || p.cached.captain.type == "STR") ? 55 : 1; },
     },
     2143: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; },
@@ -5541,11 +5408,11 @@ window.specials = {
         type: "class",
     },
     2147: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[2147].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2.25 : 1);
-            window.specials[2147].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2147warning'
@@ -5553,11 +5420,11 @@ window.specials = {
         }
     },
     2148: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? window.specials[2148].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2.25 : 1);
-            window.specials[2148].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2148warning'
@@ -5565,34 +5432,18 @@ window.specials = {
         }
     },
     2149: {
-        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2149].multiplier; },
-        onActivation: function(p) {
-            if (p.captain.class.has("Fighter")) {
-                window.specials[2149].multiplier = 1.75;
-            }
-            else{
-                window.specials[2149].multiplier = 1;
-            }
-        }
+        affinity: function(p) { return (p.unit.class.has("Fighter") && p.cached.captain.class.has("Fighter")) ? 1.75 : 1; },
     },
     2150: {
-        affinity: function(p) { return !(p.unit.class.has("Fighter")) ? 1 : window.specials[2150].multiplier; },
-        onActivation: function(p) {
-            if (p.captain.class.has("Fighter")) {
-                window.specials[2150].multiplier = 1.75;
-            }
-            else{
-                window.specials[2150].multiplier = 1;
-            }
-        }
+        affinity: function(p) { return (p.unit.class.has("Fighter") && p.cached.captain.class.has("Fighter")) ? 1.75 : 1; },
     },
     2159: {
-        poison: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 99 : 0; },
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1 : 0; },
+        poison: function(p) { return p.cached.multiplier != 1 ? 99 : 0; },
+        delay: function(p) { return p.cached.multiplier != 0 ? 1 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Poison", "Delay", "Both Debuffs"][levels[n]] + '. To switch to ' + ["Poison", "Delay", "Both Debuffs"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -5652,12 +5503,12 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Fighter")) ? 1.75 : 1; }
     },
     2168: {
-        orb: function(p) { return window.specials[2168].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2168].turnedOn[p.slot] = true;
-            var n = (window.specials[2168].multiplier == 1.75 ? 1 : window.specials[2168].multiplier == 2 ? 2 : 0);
-            window.specials[2168].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2168warning'
@@ -5668,12 +5519,12 @@ window.specials = {
         },
     },
     2169: {
-        orb: function(p) { return window.specials[2169].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[2169].turnedOn[p.slot] = true;
-            var n = (window.specials[2169].multiplier == 1.75 ? 1 : window.specials[2169].multiplier == 2 ? 2 : 0);
-            window.specials[2169].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2169warning'
@@ -5685,11 +5536,11 @@ window.specials = {
     },
     2170: {
         delay: function(p) { return 1; },
-        atk: function(p) { return window.specials[2170].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2170].multiplier == 1.5 ? 1 : 0);
-            window.specials[2170].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2170warning'
@@ -5698,11 +5549,11 @@ window.specials = {
     },
     2171: {
         delay: function(p) { return 1; },
-        atk: function(p) { return window.specials[2171].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2171].multiplier == 1.5 ? 1 : 0);
-            window.specials[2171].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2171warning'
@@ -5716,22 +5567,10 @@ window.specials = {
         chainAddition: function(p) { return 0.65; }
     },
     2176: {
-        chainAddition: function(p) { return window.specials[2176].multiplier; },
-        onActivation: function(p) {
-            window.specials[2176].multiplier = 0;
-            if (p.captain.class.has("Striker")) {
-                window.specials[2176].multiplier = .5;
-            }
-        },
+        chainAddition: function(p) { return p.cached.captain.class.has("Striker") ? .5 : 0; },
     },
     2177: {
-        chainAddition: function(p) { return window.specials[2177].multiplier; },
-        onActivation: function(p) {
-            window.specials[2177].multiplier = 0;
-            if (p.captain.class.has("Striker")) {
-                window.specials[2177].multiplier = .5;
-            }
-        },
+        chainAddition: function(p) { return p.cached.captain.class.has("Striker") ? .5 : 0; },
     },
     2178: {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
@@ -5741,83 +5580,55 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "STR" ? 1.25 : 1; }
     },
     2182: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[2182].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            window.specials[2182].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.INT >= 3) {
-                window.specials[2182].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         }
     },
     2183: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[2183].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            window.specials[2183].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.INT >= 3) {
-                window.specials[2183].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         }
     },
     2184: {
-        orb: function(p) { return window.specials[2184].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2184].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.PSY >= 3) {
-                window.specials[2184].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         }
     },
     2185: {
-        orb: function(p) { return window.specials[2185].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2185].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.PSY >= 3) {
-                window.specials[2185].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         }
     },
     2186: {
-        chain: function(p) { return window.specials[2186].multiplier; },
+        chain: function(p) { return (p.cached.captain.type == "PSY" || p.cached.captain.type == "INT") ? 3 : 1; },
         chainLimiter: function(p) {
-            if (window.specials[2186].multiplier != 1) {
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2186].multiplier : 1;
-            }
-            else{
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
-            }
-        },
-        onActivation: function(p) {
-            window.specials[2186].multiplier = 1;
-            if(p.captain) {
-                if (p.captain.type == "PSY" || p.captain.type == "INT") {
-                    window.specials[2186].multiplier = 3;
-                }
-            }
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.type == "PSY" || p.cached.captain.type == "INT" ? 3 : Infinity) : 1;
         },
     },
     2187: {
-        chain: function(p) { return window.specials[2187].multiplier; },
+        chain: function(p) { return (p.cached.captain.type == "PSY" || p.cached.captain.type == "INT") ? 3 : 1; },
         chainLimiter: function(p) {
-            if (window.specials[2187].multiplier != 1) {
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2187].multiplier : 1;
-            }
-            else{
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
-            }
-        },
-        onActivation: function(p) {
-            window.specials[2187].multiplier = 1;
-            if(p.captain) {
-                if (p.captain.type == "PSY" || p.captain.type == "INT") {
-                    window.specials[2187].multiplier = 3;
-                }
-            }
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.type == "PSY" || p.cached.captain.type == "INT" ? 3 : Infinity) : 1;
         },
     },
     2190: {
@@ -5829,11 +5640,11 @@ window.specials = {
         type: "class",
     },
     2196: {
-        atk: function(p) { return window.specials[2196].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 2 : 1);
-            window.specials[2196].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '2196warning'
@@ -5841,11 +5652,11 @@ window.specials = {
         }
     },
     2197: {
-        atk: function(p) { return window.specials[2197].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 2 : 1);
-            window.specials[2197].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
                 name: '2197warning'
@@ -5853,10 +5664,10 @@ window.specials = {
         }
     },
     2198: {
-        affinity: function(p) { return window.specials[2198].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2198].multiplier == 1.5 ? 1 : 0);
-            window.specials[2198].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2198warning'
@@ -5864,10 +5675,10 @@ window.specials = {
         }
     },
     2199: {
-        affinity: function(p) { return window.specials[2199].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2199].multiplier == 1.5 ? 1 : 0);
-            window.specials[2199].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2199warning'
@@ -5875,10 +5686,10 @@ window.specials = {
         }
     },
     2204: {
-        orb: function(p) { return window.specials[2204].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 2 : 1);
-            window.specials[2204].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Orb boost.',
                 name: '2204warning'
@@ -5886,10 +5697,10 @@ window.specials = {
         }
     },
     2205: {
-        orb: function(p) { return window.specials[2205].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP <= 10 ? 2 : 1);
-            window.specials[2205].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Orb boost.',
                 name: '2205warning'
@@ -5897,12 +5708,12 @@ window.specials = {
         }
     },
     2206:{
-        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2206].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "class",
         def: function(p) { return 0; },
         onActivation: function(p) {
-            var n = (window.specials[2206].multiplier == 1 ? 1 : window.specials[2206].multiplier == 1.75 ? 2 : window.specials[2206].multiplier == 2 ? 3 : 0);
-            window.specials[2206].multiplier = [1, 1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1 ? 1 : p.cached.multiplier == 1.75 ? 2 : p.cached.multiplier == 2 ? 3 : 0);
+            p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2207warning'
@@ -5910,12 +5721,12 @@ window.specials = {
         },
     },
     2207:{
-        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2207].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "class",
         def: function(p) { return 0; },
         onActivation: function(p) {
-            var n = (window.specials[2207].multiplier == 1 ? 1 : window.specials[2207].multiplier == 1.75 ? 2 : window.specials[2207].multiplier == 2 ? 3 : 0);
-            window.specials[2207].multiplier = [1, 1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1 ? 1 : p.cached.multiplier == 1.75 ? 2 : p.cached.multiplier == 2 ? 3 : 0);
+            p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2207warning'
@@ -5935,31 +5746,17 @@ window.specials = {
         rcv: function(p) { return 1.5; },
     },
     2218: {
-        chain: function(p) { return window.specials[2218].multiplier; },
+        chain: function(p) { return p.cached.captain.class.has("Cerebral") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2218].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2218].multiplier : 1;
-            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
-        },
-        onActivation: function(p) {
-            window.specials[2218].multiplier = 1;
-            if (p.captain.class.has("Cerebral")) {
-                window.specials[2218].multiplier = 2.5;
-            }
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Cerebral") ? 2.5 : Infinity) : 1;
         },
     },
     2219: {
-        chain: function(p) { return window.specials[2219].multiplier; },
+        chain: function(p) { return p.cached.captain.class.has("Cerebral") ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2219].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2219].multiplier : 1;
-            else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
-        },
-        onActivation: function(p) {
-            window.specials[2219].multiplier = 1;
-            if (p.captain.class.has("Cerebral")) {
-                window.specials[2219].multiplier = 2.5;
-            }
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Cerebral") ? 2.5 : Infinity) : 1;
         },
     },
     2222: {
@@ -5988,10 +5785,10 @@ window.specials = {
         },
     },
     2229: {
-        affinity: function(p) { return p.unit.class.has("Shooter") ? window.specials[2229].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 1.5 : 1);//change this
-            window.specials[2229].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',//change this
                 name: '2229warning'
@@ -6004,19 +5801,19 @@ window.specials = {
         chainAddition: function(p) { return 0.4; }
     },
     2233: {
-        atk: function(p) { return window.specials[2233].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        atk: function(p) { return p.cached.multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",
-        orb: function(p) { return window.specials[2233].multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        orb: function(p) { return p.cached.multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         onActivation: function(p) {
-            window.specials[2233].multiplier = (p.slot < 2 ? true : false);
+            p.cached.multiplier = (p.slot < 2 ? true : false);
         }
     },
     2234: {
-        atk: function(p) { return window.specials[2234].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        atk: function(p) { return p.cached.multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",
-        orb: function(p) { return window.specials[2234].multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        orb: function(p) { return p.cached.multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         onActivation: function(p) {
-            window.specials[2234].multiplier = (p.slot < 2 ? true : false);
+            p.cached.multiplier = (p.slot < 2 ? true : false);
         }
     },
     2235: {
@@ -6072,12 +5869,12 @@ window.specials = {
     },
     2248: {
         turnedOn: false,
-        affinity: function(p) { return window.specials[2248].multiplier == 2 ? 1.5 : window.specials[2248].multiplier == 3 ? 1.75 : 1; },
-        chainAddition: function(p) { return window.specials[2248].multiplier == 0 ? .5 : window.specials[2248].multiplier == 1 ? .8 : 0; },
-        delay: function(p) { return window.specials[2248].multiplier == 0 ? 1 : window.specials[2248].multiplier == 1 ? 2 : 0; },
+        affinity: function(p) { return p.cached.multiplier == 2 ? 1.5 : p.cached.multiplier == 3 ? 1.75 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier == 0 ? .5 : p.cached.multiplier == 1 ? .8 : 0; },
+        delay: function(p) { return p.cached.multiplier == 0 ? 1 : p.cached.multiplier == 1 ? 2 : 0; },
         onActivation: function(p) {
-            var n = window.specials[2248].multiplier != null ? (window.specials[2248].multiplier + 1) % 4 : 0;
-            window.specials[2248].multiplier = n;
+            var n = p.cached.multiplier != null ? (p.cached.multiplier + 1) % 4 : 0;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['4 STR and DEX orbs Stage 1', '4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2'][n] + ' special. To switch to the ' + ['4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2', '4 STR and DEX orbs Stage 1'][n] + ' special, disable and re-enable this special',
                 name: '2249warning'
@@ -6090,12 +5887,12 @@ window.specials = {
     },
     2249: {
         turnedOn: false,
-        affinity: function(p) { return window.specials[2249].multiplier == 2 ? 1.5 : window.specials[2249].multiplier == 3 ? 1.75 : 1; },
-        chainAddition: function(p) { return window.specials[2249].multiplier == 0 ? .5 : window.specials[2249].multiplier == 1 ? .8 : 0; },
-        delay: function(p) { return window.specials[2249].multiplier == 0 ? 1 : window.specials[2249].multiplier == 1 ? 2 : 0; },
+        affinity: function(p) { return p.cached.multiplier == 2 ? 1.5 : p.cached.multiplier == 3 ? 1.75 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier == 0 ? .5 : p.cached.multiplier == 1 ? .8 : 0; },
+        delay: function(p) { return p.cached.multiplier == 0 ? 1 : p.cached.multiplier == 1 ? 2 : 0; },
         onActivation: function(p) {
-            var n = window.specials[2249].multiplier != null ? (window.specials[2249].multiplier + 1) % 4 : 0;
-            window.specials[2249].multiplier = n;
+            var n = p.cached.multiplier != null ? (p.cached.multiplier + 1) % 4 : 0;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['4 STR and DEX orbs Stage 1', '4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2'][n] + ' special. To switch to the ' + ['4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2', '4 STR and DEX orbs Stage 1'][n] + ' special, disable and re-enable this special',
                 name: '2249warning'
@@ -6149,11 +5946,11 @@ window.specials = {
         orb: function(p) { return (p.slot >= 2) ? 1.5 : 1; },
     },
     2256:{
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? window.specials[2256].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2256].multiplier == 1.75 ? 1 : window.specials[2256].multiplier == 2 ? 2 : 0);
-            window.specials[2256].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2256warning'
@@ -6169,18 +5966,18 @@ window.specials = {
     2264: {
         turnedOn: false,
         onActivation: function(p) {
-            if(window.specials[2264].multiplier == 2.25) {
+            if(p.cached.multiplier == 2.25) {
                 window.specials[2264].turnedOn = true;
             }
         },
         onDeactivation: function(p) {
             window.specials[2264].turnedOn = false;
         },
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2264].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2264].multiplier == 1.75 ? 1 : 0);
-            window.specials[2264].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2264warning'
@@ -6190,18 +5987,18 @@ window.specials = {
     2265: {
         turnedOn: false,
         onActivation: function(p) {
-            if(window.specials[2265].multiplier == 2.25) {
+            if(p.cached.multiplier == 2.25) {
                 window.specials[2265].turnedOn = true;
             }
         },
         onDeactivation: function(p) {
             window.specials[2265].turnedOn = false;
         },
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2265].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2265].multiplier == 1.75 ? 1 : 0);
-            window.specials[2265].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2265warning'
@@ -6221,46 +6018,40 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     2272: {
-        atk: function(p) { return p.defenseDown ? window.specials[2272].multiplier : 1; },
+        atk: function(p) { return p.defenseDown && p.cached.captain.class.has("Powerhouse") ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2272].multiplier = p.captain.class.has("Powerhouse") ? 1.75 : 1;
-        },
-        def: function(p) { return 0; }
+        def: function(p) { return 0; },
     },
     2273: {
-        atk: function(p) { return p.defenseDown ? window.specials[2273].multiplier : 1; },
+        atk: function(p) { return p.defenseDown && p.cached.captain.class.has("Powerhouse") ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2273].multiplier = p.captain.class.has("Powerhouse") ? 1.75 : 1;
-        },
-        def: function(p) { return 0; }
+        def: function(p) { return 0; },
     },
     2274: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2274].multiplier != 0) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2274].multiplier == 1 ? 2 : (window.specials[2274].multiplier == 2 | window.specials[2274].multiplier == undefined) ? 0 : 1);
-            window.specials[2274].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '2274warning'
             });
         },
-        delay: function(p) { return window.specials[2274].multiplier != 1 ? 1 : 0; },
+        delay: function(p) { return p.cached.multiplier != 1 ? 1 : 0; },
     },
     2275: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2275].multiplier != 0) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2275].multiplier == 1 ? 2 : (window.specials[2275].multiplier == 2 | window.specials[2275].multiplier == undefined) ? 0 : 1);
-            window.specials[2275].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '2275warning'
             });
         },
-        delay: function(p) { return window.specials[2275].multiplier != 1 ? 1 : 0; },
+        delay: function(p) { return p.cached.multiplier != 1 ? 1 : 0; },
     },
     2276: {
         atk: function(p) { return p.unit.stars <= 4 ? 1.75 : 1; },
@@ -6273,17 +6064,17 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     2280: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2280].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            if (p.colorCount.DEX >= 3) window.specials[2280].multiplier = 2;
-            else window.specials[2280].multiplier = 1;
+            if (p.colorCount.DEX >= 3) p.cached.multiplier = 2;
+            else p.cached.multiplier = 1;
         },
     },
     2281: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2281].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            if (p.colorCount.DEX >= 3) window.specials[2281].multiplier = 2;
-            else window.specials[2281].multiplier = 1;
+            if (p.colorCount.DEX >= 3) p.cached.multiplier = 2;
+            else p.cached.multiplier = 1;
         },
     },
     2282: {
@@ -6299,11 +6090,11 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Powerhouse") ? 2.25 : 1; },
     },
     2286: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[2286].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2286].multiplier == 1.75 ? 1 : 0);
-            window.specials[2286].multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2286warning'
@@ -6311,11 +6102,11 @@ window.specials = {
         },
     },
     2287: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[2287].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2287].multiplier == 1.75 ? 1 : 0);
-            window.specials[2287].multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2287warning'
@@ -6323,11 +6114,11 @@ window.specials = {
         },
     },
     2288: {
-        rcv: function(p) { return window.specials[2288].multiplier != 0 ? 1.5 : 1; },
-        staticMult: function(p) { return window.specials[2288].multiplier != 1 ? 45 : 0; },
+        rcv: function(p) { return p.cached.multiplier != 0 ? 1.5 : 1; },
+        staticMult: function(p) { return p.cached.multiplier != 1 ? 45 : 0; },
         onActivation: function(p) {
-            var n = (window.specials[2288].multiplier == 1 ? 2 : (window.specials[2288].multiplier == 2 | window.specials[2288].multiplier == undefined) ? 0 : 1);
-            window.specials[2288].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2288warning'
@@ -6335,11 +6126,11 @@ window.specials = {
         },
     },
     2289: {
-        rcv: function(p) { return window.specials[2289].multiplier != 0 ? 1.5 : 1; },
-        staticMult: function(p) { return window.specials[2289].multiplier != 1 ? 45 : 0; },
+        rcv: function(p) { return p.cached.multiplier != 0 ? 1.5 : 1; },
+        staticMult: function(p) { return p.cached.multiplier != 1 ? 45 : 0; },
         onActivation: function(p) {
-            var n = (window.specials[2289].multiplier == 1 ? 2 : (window.specials[2289].multiplier == 2 | window.specials[2289].multiplier == undefined) ? 0 : 1);
-            window.specials[2289].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2289warning'
@@ -6347,11 +6138,11 @@ window.specials = {
         },
     },
     2290: {
-        rcv: function(p) { return window.specials[2290].multiplier != 0 ? 1.5 : 1; },
-        staticMult: function(p) { return window.specials[2290].multiplier != 1 ? 45 : 0; },
+        rcv: function(p) { return p.cached.multiplier != 0 ? 1.5 : 1; },
+        staticMult: function(p) { return p.cached.multiplier != 1 ? 45 : 0; },
         onActivation: function(p) {
-            var n = (window.specials[2290].multiplier == 1 ? 2 : (window.specials[2290].multiplier == 2 | window.specials[2290].multiplier == undefined) ? 0 : 1);
-            window.specials[2290].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
                 name: '2290warning'
@@ -6359,27 +6150,19 @@ window.specials = {
         },
     },
     2293: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2293].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") && p.cached.captain.class.has("Cerebral") ? 1.5 : 1; },
         type: "class",
-        onActivation: function(p) {
-            if (p.captain.class.has("Cerebral")) window.specials[2293].multiplier = 1.5;
-            else window.specials[2293].multiplier = 1;
-        }
     },
     2294: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2294].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") && p.cached.captain.class.has("Cerebral") ? 1.5 : 1; },
         type: "class",
-        onActivation: function(p) {
-            if (p.captain.class.has("Cerebral")) window.specials[2294].multiplier = 1.5;
-            else window.specials[2294].multiplier = 1;
-        }
     },
     2296: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2296].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         chainAddition: function(p) { return 0.5; },
         onActivation: function(p) {
-            var n = (window.specials[2296].multiplier == 1 ? 1 : window.specials[2296].multiplier == 1.75 ? 2 : window.specials[2296].multiplier == 2 ? 3 : 0);
-            window.specials[2296].multiplier = [1, 1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1 ? 1 : p.cached.multiplier == 1.75 ? 2 : p.cached.multiplier == 2 ? 3 : 0);
+            p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x orb boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x orb boost, disable and re-enable this special',
                 name: '2296warning'
@@ -6388,38 +6171,38 @@ window.specials = {
     },
     2298: {
         def: function(p) { return 0.2 },
-        atk: function(p) { return (p.defenseDown > 0 && window.specials[2298].multiplier != 1) ? 1.75 : 1; },
+        atk: function(p) { return (p.defenseDown > 0 && p.cached.multiplier != 1) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2298].multiplier == 1 ? 2 : (window.specials[2298].multiplier == 2 | window.specials[2298].multiplier == undefined) ? 0 : 1);
-            window.specials[2298].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Conditional boost', 'Orb boost', 'Conditional boost and Orb boost'][n] + '. To switch to the ' + ['Orb boost', 'Conditional boost and Orb boost', 'Conditional boost'][n] + ', disable and re-enable this special',
                 name: '2298warning'
             });
         },
-        orb: function(p) { return (window.specials[2298].multiplier != 0 && p.unit.class.has("Shooter")) ? 2 : 1; },
+        orb: function(p) { return (p.cached.multiplier != 0 && p.unit.class.has("Shooter")) ? 2 : 1; },
     },
     2299: {
         def: function(p) { return 0.2 },
-        atk: function(p) { return (p.defenseDown > 0 && window.specials[2299].multiplier != 1) ? 1.75 : 1; },
+        atk: function(p) { return (p.defenseDown > 0 && p.cached.multiplier != 1) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2299].multiplier == 1 ? 2 : (window.specials[2299].multiplier == 2 | window.specials[2299].multiplier == undefined) ? 0 : 1);
-            window.specials[2299].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Conditional boost', 'Orb boost', 'Conditional boost and Orb boost'][n] + '. To switch to the ' + ['Orb boost', 'Conditional boost and Orb boost', 'Conditional boost'][n] + ', disable and re-enable this special',
                 name: '2299warning'
             });
         },
-        orb: function(p) { return (window.specials[2299].multiplier != 0 && p.unit.class.has("Shooter")) ? 2 : 1; },
+        orb: function(p) { return (p.cached.multiplier != 0 && p.unit.class.has("Shooter")) ? 2 : 1; },
     },
     2300: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? window.specials[2300].multiplier : 1},
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? p.cached.multiplier : 1},
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2300].multiplier == 2 ? 1 : 0);
-            window.specials[2300].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 2][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2296warning'
@@ -6436,28 +6219,13 @@ window.specials = {
     },
     2305: {
         poison: function(p) { return 99; },
-        atk: function(p) { return window.specials[2305].multiplier ? p.poisoned ? 1.75 : 1 : 1; },
+        atk: function(p) { return (p.cached.captain.class.has("Cerebral") || p.cached.captain.class.has("Slasher")) && p.poisoned ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2305].multiplier = false;
-            if(p.captain) {
-                if (p.captain.class.has("Cerebral") || p.captain.class.has("Slasher")) {
-                    window.specials[2305].multiplier = true;
-                }
-            }
-        }
     },
     2306: {
-        atk: function(p) { return window.specials[2306].multiplier && p.poisoned ? 1.75 : 1; },
+        poison: function(p) { return 99; },
+        atk: function(p) { return (p.cached.captain.class.has("Cerebral") || p.cached.captain.class.has("Slasher")) && p.poisoned ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2306].multiplier = false;
-            if(p.captain) {
-                if (p.captain.class.has("Cerebral") || p.captain.class.has("Slasher")) {
-                    window.specials[2306].multiplier = true;
-                }
-            }
-        },
     },
     2309: {
         turnedOn: false,
@@ -6498,7 +6266,7 @@ window.specials = {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1.75 : 1; },
     },
     2324: {
-        chainAddition: function(p) { return 0.75; },
+        chainAddition: function(p) { return p.cached.enemyImmunities.delay ? 0.75 : 0; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2324].turnedOn = true;
@@ -6506,10 +6274,9 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[2324].turnedOn = false;
         },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
     },
     2325: {
-        chainAddition: function(p) { return 0.75; },
+        chainAddition: function(p) { return p.cached.enemyImmunities.delay ? 0.75 : 0; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2325].turnedOn = true;
@@ -6531,32 +6298,32 @@ window.specials = {
     },
     2333: {
         delay: function(p) { return 1; },
-        orb: function(p) { return (p.unit.class.has("Shooter") && window.specials[2333].multiplier) ? 1.75 : 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") && p.cached.multiplier) ? 1.75 : 1; },
         onActivation: function(p) {
-            if (window.specials[2333].multiplier == null) {
-                window.specials[2333].multiplier = true;
+            if (p.cached.multiplier == null) {
+                p.cached.multiplier = true;
             }
             else{
-                window.specials[2333].multiplier = !window.specials[2333].multiplier;
+                p.cached.multiplier = !p.cached.multiplier;
             }
             p.scope.notify({
-                text: (window.specials[2333].multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (window.specials[2334].multiplier ? 'Under or equal to ' : 'Over ') + '80% HP',
+                text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (p.cached.multiplier ? 'Under or equal to ' : 'Over ') + '80% HP',
                 name: '2333warning'
             });
         }
     },
     2334: {
         delay: function(p) { return 1; },
-        orb: function(p) { return (p.unit.class.has("Shooter") && window.specials[2334].multiplier) ? 1.75 : 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") && p.cached.multiplier) ? 1.75 : 1; },
         onActivation: function(p) {
-            if (window.specials[2334].multiplier == null) {
-                window.specials[2334].multiplier = true;
+            if (p.cached.multiplier == null) {
+                p.cached.multiplier = true;
             }
             else{
-                window.specials[2334].multiplier = !window.specials[2334].multiplier;
+                p.cached.multiplier = !p.cached.multiplier;
             }
             p.scope.notify({
-                text: (window.specials[2334].multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (window.specials[2334].multiplier ? 'under or equal to ' : 'over ') + '80% HP',
+                text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (p.cached.multiplier ? 'under or equal to ' : 'over ') + '80% HP',
                 name: '2334warning'
             });
         }
@@ -6574,11 +6341,11 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 2 : 1; },
     },
     2339: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[2339].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2339].multiplier == 1.5 ? 1 : 0);
-            window.specials[2339].multiplier = [1.5, 2.25][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2239warning'
@@ -6586,11 +6353,11 @@ window.specials = {
         },
     },
     2340: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[2340].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2340].multiplier == 1.5 ? 1 : 0);
-            window.specials[2340].multiplier = [1.5, 2.25][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2340warning'
@@ -6598,11 +6365,11 @@ window.specials = {
         },
     },
     2341: {
-        affinity: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && window.specials[2341].multiplier != 0) ? 1.75 : 1; },
-        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && window.specials[2341].multiplier != 1) ? 1.75 : 1; },
+        affinity: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && p.cached.multiplier != 0) ? 1.75 : 1; },
+        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && p.cached.multiplier != 1) ? 1.75 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2341].multiplier == 1 ? 2 : (window.specials[2341].multiplier == 2 | window.specials[2341].multiplier == undefined) ? 0 : 1);
-            window.specials[2341].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Orb boost', 'Affinity boost', 'Affinity boost and Orb boost'][n] + '. To switch to the ' + ['Affinity boost', 'Affinity boost and Orb boost', 'Orb boost'][n] + ', disable and re-enable this special',
                 name: '2341warning'
@@ -6610,11 +6377,11 @@ window.specials = {
         },
     },
     2342: {
-        affinity: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && window.specials[2342].multiplier != 0) ? 1.75 : 1; },
-        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && window.specials[2342].multiplier != 1) ? 1.75 : 1; },
+        affinity: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && p.cached.multiplier != 0) ? 1.75 : 1; },
+        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) && p.cached.multiplier != 1) ? 1.75 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2342].multiplier == 1 ? 2 : (window.specials[2342].multiplier == 2 | window.specials[2342].multiplier == undefined) ? 0 : 1);
-            window.specials[2342].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Orb boost', 'Affinity boost', 'Affinity boost and Orb boost'][n] + '. To switch to the ' + ['Affinity boost', 'Affinity boost and Orb boost', 'Orb boost'][n] + ', disable and re-enable this special',
                 name: '2342warning'
@@ -6631,46 +6398,18 @@ window.specials = {
     },
     2345: {
         delay: function(p) { return 1; },
-        chain: function(p) { return window.specials[2345].multiplier; },
+        chain: function(p) { return p.cached.captain.type == "QCK" || p.cached.captain.type == "INT" ? 3 : 1; },
         chainLimiter: function(p) {
-            if (window.specials[2345].multiplier != 1) {
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2345].multiplier : 1;
-            }
-            else{
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
-            }
-        },
-        onActivation: function(p) {
-            window.specials[2345].multiplier = 1;
-            if(p.captain) {
-                if (p.captain.type == "QCK" || p.captain.type == "INT") {
-                    window.specials[2345].multiplier = 3;
-                }
-            }
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.type == "QCK" || p.cached.captain.type == "INT" ? 3 : Infinity) : 1;
         },
     },
     2346: {
         delay: function(p) { return 1; },
-        chain: function(p) { return window.specials[2346].multiplier; },
+        chain: function(p) { return p.cached.captain.type == "QCK" || p.cached.captain.type == "INT" ? 3 : 1; },
         chainLimiter: function(p) {
-            if (window.specials[2346].multiplier != 1) {
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2346].multiplier : 1;
-            }
-            else{
-                var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-                return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
-            }
-        },
-        onActivation: function(p) {
-            window.specials[2346].multiplier = 1;
-            if(p.captain) {
-                if (p.captain.type == "QCK" || p.captain.type == "INT") {
-                    window.specials[2346].multiplier = 3;
-                }
-            }
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.type == "QCK" || p.cached.captain.type == "INT" ? 3 : Infinity) : 1;
         },
     },
     2347: {
@@ -6700,12 +6439,12 @@ window.specials = {
     },
     2353: {
         poison: function(p) { return 99; },
-        def: function(p) { return (window.specials[2353].multiplier == 1.75) ? 0 : 1; },
-        atk: function(p) { return p.poisoned ? window.specials[2353].multiplier : 1; },
+        def: function(p) { return (p.cached.multiplier == 1.75) ? 0 : 1; },
+        atk: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2353].multiplier == 1.5 ? 1 : 0);
-            window.specials[2353].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
                 name: '2353warning'
@@ -6714,12 +6453,12 @@ window.specials = {
     },
     2354: {
         poison: function(p) { return 99; },
-        def: function(p) { return (window.specials[2354].multiplier == 1.75) ? 0 : 1; },
-        atk: function(p) { return p.poisoned ? window.specials[2354].multiplier : 1; },
+        def: function(p) { return (p.cached.multiplier == 1.75) ? 0 : 1; },
+        atk: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2354].multiplier == 1.5 ? 1 : 0);
-            window.specials[2354].multiplier = [1.5, 1.75][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
                 name: '2354warning'
@@ -6738,11 +6477,11 @@ window.specials = {
         orb: function(p) { return p.slot == p.sourceSlot ? 2 : 1}
     },
     2358:{
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? window.specials[2358].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2358].multiplier == 1.75 ? 1 : window.specials[2358].multiplier == 2 ? 2 : 0);
-            window.specials[2358].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2131warning'
@@ -6753,13 +6492,13 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.75 : 1; }
     },
     2363: {
-        orb: function(p) { return [1.5, 1.75, 2][window.specials[2363].multiplier]; },
-        chainAddition: function(p) { return [.3, .7, .7][window.specials[2363].multiplier]; },
+        orb: function(p) { return [1.5, 1.75, 2][p.cached.multiplier]; },
+        chainAddition: function(p) { return [.3, .7, .7][p.cached.multiplier]; },
         turnedOn: false,
         onActivation: function(p) {
             if (p.sourceSlot < 2) window.specials[2363].turnedOn = true;
-            var n = (window.specials[2363].multiplier == 1 ? 2 : (window.specials[2363].multiplier == 2 | window.specials[2363].multiplier == undefined) ? 0 : 1);
-            window.specials[2363].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['0.3 Chain boost and 1.5x orb boost', '0.7 Chain boost and 1.75x orb boost', '0.7 Chain boost and 2x orb boost'][n] + ' special. To switch to the ' + ['0.7 Chain boost and 1.75x orb boost', '0.7 Chain boost and 2x orb boost', '0.3 Chain boost and 1.5x orb boost'][n] + ', disable and re-enable this special',
                 name: '2363warning'
@@ -6784,22 +6523,10 @@ window.specials = {
         type: "class",
     },
     2368: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2368].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[2368].multiplier = 1;
-            if (p.captain.type == "STR" || p.captain.type == "PSY") {
-                window.specials[2368].multiplier = 1.75;
-            }
-        }
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") && (p.cached.captain.type == "STR" || p.cached.captain.type == "PSY") ? 1.75 : 1; },
     },
     2369: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2369].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[2369].multiplier = 1;
-            if (p.captain.type == "STR" || p.captain.type == "PSY") {
-                window.specials[2369].multiplier = 1.75;
-            }
-        }
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") && (p.cached.captain.type == "STR" || p.cached.captain.type == "PSY") ? 1.75 : 1; },
     },
     2370: {
         onActivation: function(p) {
@@ -6830,35 +6557,23 @@ window.specials = {
     },
     2374: {
         turnedOn: false,
-        affinity: function(p) { return window.specials[2374].multiplier && (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        affinity: function(p) { return (p.cached.captain.class.has("Slasher") || p.cached.captain.class.has("Powerhouse")) && (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         onActivation: function(p) {
             window.specials[2374].turnedOn = true;
-            window.specials[2374].multiplier = false;
-            if(p.captain) {
-                if (p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) {
-                    window.specials[2374].multiplier = true;
-                }
-            }
         },
         onDeactivation: function(p) {
             window.specials[2374].turnedOn = false;
-        }
+        },
     },
     2375: {
         turnedOn: false,
-        affinity: function(p) { return window.specials[2375].multiplier && (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
+        affinity: function(p) { return (p.cached.captain.class.has("Slasher") || p.cached.captain.class.has("Powerhouse")) && (p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.75 : 1; },
         onActivation: function(p) {
-            window.specials[2375].turnedOn = true;
-            window.specials[2375].multiplier = false;
-            if(p.captain) {
-                if (p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) {
-                    window.specials[2375].multiplier = true;
-                }
-            }
+            window.specials[2374].turnedOn = true;
         },
         onDeactivation: function(p) {
-            window.specials[2375].turnedOn = false;
-        }
+            window.specials[2374].turnedOn = false;
+        },
     },
     2376: {
         atk: function(p) { return p.slot < 2 ? 1.75 : 1; },
@@ -6896,11 +6611,11 @@ window.specials = {
         }
     },
     2383:{
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2383].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2383].multiplier == 1.75 ? 1 : window.specials[2383].multiplier == 2 ? 2 : 0);
-            window.specials[2383].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2383warning'
@@ -6909,13 +6624,7 @@ window.specials = {
     },
     2384: {
         orb: function(p) { return 1.5; },
-        affinity: function(p) { return window.specials[2384].multiplier ? 1.5 : 1; },
-        onActivation: function(p) {
-            window.specials[2384].multiplier = false;
-            if (p.captain.type == "STR" || p.captain.type == "PSY") {
-                window.specials[2384].multiplier = true;
-            }
-        }
+        affinity: function(p) { return (p.cached.captain.type == "STR" || p.cached.captain.type == "PSY") ? 1.5 : 1; },
     },
     2386: {
         atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : 1; },
@@ -6936,17 +6645,17 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 1.75 : 1; }
     },
     2393: {
-        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[2393].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 2.25 : 2);
-            window.specials[2393].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     2394: {
-        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[2394].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 2.25 : 2);
-            window.specials[2394].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     2398: {
@@ -6954,111 +6663,111 @@ window.specials = {
         turnedOn: [ false, false, false, false, false, false ],
         multiplier: true,
         onActivation: function(p) {
-            window.specials[2398].turnedOn[p.slot] = window.specials[2398].multiplier ? true : false;
-            if (window.specials[2398].multiplier){
+            window.specials[2398].turnedOn[p.slot] = p.cached.multiplier ? true : false;
+            if (p.cached.multiplier){
                 p.scope.notify({
                     text: 'Only affects damage if Big Emperor is your captain, to use turn 2 Orb boost only, disable and re-enable the special',
                     name: '2398warning'
                 });
             }
-            window.specials[2398].multiplier = !window.specials[2398].multiplier;
+            p.cached.multiplier = !p.cached.multiplier;
         },
         onDeactivation: function(p) {
             window.specials[2398].turnedOn[p.slot] = false;
         }
     },
     2400: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[2400].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.DEX + p.colorCount.QCK >= 2) {
-                window.specials[2400].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else{
-                window.specials[2400].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
             p.scope.notify({
-                text: 'Using the ' + window.specials[2400].multiplier + 'x ATK multiplier.',
+                text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
                 name: '2400warning'
             });
         }
     },
     2401: {
-        atk: function(p) { return p.unit.type == "STR" ? window.specials[2401].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.DEX + p.colorCount.QCK >= 2) {
-                window.specials[2401].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else{
-                window.specials[2401].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
             p.scope.notify({
-                text: 'Using the ' + window.specials[2401].multiplier + 'x ATK multiplier.',
+                text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
                 name: '2401warning'
             });
         }
     },
     2402: {
-        atk: function(p) { return p.unit.type == "DEX" ? window.specials[2402].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.QCK >= 2) {
-                window.specials[2402].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else{
-                window.specials[2402].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
             p.scope.notify({
-                text: 'Using the ' + window.specials[2402].multiplier + 'x ATK multiplier.',
+                text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
                 name: '2402warning'
             });
         }
     },
     2403: {
-        atk: function(p) { return p.unit.type == "DEX" ? window.specials[2403].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.QCK >= 2) {
-                window.specials[2403].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else{
-                window.specials[2403].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
             p.scope.notify({
-                text: 'Using the ' + window.specials[2403].multiplier + 'x ATK multiplier.',
+                text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
                 name: '2403warning'
             });
         }
     },
     2404: {
-        atk: function(p) { return p.unit.type == "QCK" ? window.specials[2404].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.DEX >= 2) {
-                window.specials[2404].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else{
-                window.specials[2404].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
             p.scope.notify({
-                text: 'Using the ' + window.specials[2404].multiplier + 'x ATK multiplier.',
+                text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
                 name: '2404warning'
             });
         }
     },
     2405: {
-        atk: function(p) { return p.unit.type == "QCK" ? window.specials[2405].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.DEX >= 2) {
-                window.specials[2405].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else{
-                window.specials[2405].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
             p.scope.notify({
-                text: 'Using the ' + window.specials[2405].multiplier + 'x ATK multiplier.',
+                text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
                 name: '2405warning'
             });
         }
@@ -7067,16 +6776,16 @@ window.specials = {
         atk: function(p) { return 1.75; },
         type: "class",
         orb: function(p) { return 1.75; },
-        chainAddition: function(p) { return window.specials[2406].multiplier ? 0.7 : 0; },
+        chainAddition: function(p) { return p.cached.multiplier ? 0.7 : 0; },
         onActivation: function(p) {
-            if (window.specials[2406].multiplier == null) {
-                window.specials[2406].multiplier = true;
+            if (p.cached.multiplier == null) {
+                p.cached.multiplier = true;
             }
             else{
-                window.specials[2406].multiplier = !window.specials[2406].multiplier;
+                p.cached.multiplier = !p.cached.multiplier;
             }
             p.scope.notify({
-                text: (window.specials[2406].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
+                text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
                 name: '2406warning'
             });
         }
@@ -7085,16 +6794,16 @@ window.specials = {
         atk: function(p) { return 1.75; },
         type: "class",
         orb: function(p) { return 1.75; },
-        chainAddition: function(p) { return window.specials[2407].multiplier ? 0.7 : 0; },
+        chainAddition: function(p) { return p.cached.multiplier ? 0.7 : 0; },
         onActivation: function(p) {
-            if (window.specials[2407].multiplier == null) {
-                window.specials[2407].multiplier = true;
+            if (p.cached.multiplier == null) {
+                p.cached.multiplier = true;
             }
             else{
-                window.specials[2407].multiplier = !window.specials[2407].multiplier;
+                p.cached.multiplier = !p.cached.multiplier;
             }
             p.scope.notify({
-                text: (window.specials[2407].multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
+                text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
                 name: '2407warning'
             });
         }
@@ -7102,15 +6811,15 @@ window.specials = {
     2419: {
         turnedOn: false,
         delay: function(p) { return 2; },
-        chain: function(p) { return window.specials[2419].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2419].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2419].multiplier : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var n = window.specials[2419].turnedOn; var m = n ? 1 : 0;
-            window.specials[2419].multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
+            p.cached.multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][m] + ' the chain lock. To switch to the chain buff ' + ['off', 'on'][m] + ', disable and re-enable this special',
                 name: '2419warning'
@@ -7123,15 +6832,15 @@ window.specials = {
     2420: {
         turnedOn: false,
         delay: function(p) { return 2; },
-        chain: function(p) { return window.specials[2420].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2420].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2420].multiplier : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var n = window.specials[2420].turnedOn; var m = n ? 1 : 0;
-            window.specials[2420].multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
+            p.cached.multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][m] + ' the chain lock. To switch to the chain buff ' + ['off', 'on'][m] + ', disable and re-enable this special',
                 name: '2420warning'
@@ -7142,28 +6851,18 @@ window.specials = {
         }
     },
     2421: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2421].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && (p.cached.captain.class.has("Driven") || p.cached.captain.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2421].multiplier = false;
-            if (p.captain) if (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) window.specials[2421].multiplier = true;
-            else window.specials[2421].multiplier = false;
-        },
     },
     2422: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[2422].multiplier) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && (p.cached.captain.class.has("Driven") || p.cached.captain.class.has("Powerhouse"))) ? 1.75 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2422].multiplier = false;
-            if (p.captain) if (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) window.specials[2422].multiplier = true;
-            else window.specials[2422].multiplier = false;
-        },
     },
     2423: {
-        orb: function(p) { return window.specials[2423].multiplier == 2 ? window.specials[2423].multiplier : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? window.specials[2423].multiplier : 1; },
+        orb: function(p) { return p.cached.multiplier == 2 ? p.cached.multiplier : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2423].multiplier == 1.75 ? 1 : 0);
-            window.specials[2423].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2423warning'
@@ -7171,10 +6870,10 @@ window.specials = {
         },
     },
     2424: {
-        orb: function(p) { return window.specials[2424].multiplier == 2 ? window.specials[2424].multiplier : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? window.specials[2424].multiplier : 1; },
+        orb: function(p) { return p.cached.multiplier == 2 ? p.cached.multiplier : (p.unit.class.has("Driven") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2424].multiplier == 1.75 ? 1 : 0);
-            window.specials[2424].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2424warning'
@@ -7212,11 +6911,8 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Slasher") ? 1.5 : 1; }
     },
     2429: {
-        def: function(p) { return window.specials[2429].turnedOn ? 0.5 : 1; },
+        def: function(p) { return p.cached.captain.class.has("Slasher") ? 0.5 : 1; },
         turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2429].turnedOn = p.captain.class.has("Slasher") ? true : false;
-        },
     },
     2434: {
         delay: function(p) { return 1; },
@@ -7232,11 +6928,11 @@ window.specials = {
     },
     2438:{
         affinity: function(p) { return 1.5; },
-        atk: function(p) { return p.defenseDown ? window.specials[2438].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2438].multiplier == 1 ? 1 : window.specials[2438].multiplier == 1.75 ? 2 : window.specials[2438].multiplier == 2 ? 3 : 0);
-            window.specials[2438].multiplier = [1, 1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1 ? 1 : p.cached.multiplier == 1.75 ? 2 : p.cached.multiplier == 2 ? 3 : 0);
+            p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x Conditional boost, disable and re-enable this special',
                 name: '2438warning'
@@ -7247,15 +6943,15 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     2440: {
-        chain: function(p) { return window.specials[2440].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2440].multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            if (p.cached.multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2440].multiplier == 3 ? 1 : 0);
-            window.specials[2440].multiplier = [3, 1][n];
+            var n = (p.cached.multiplier == 3 ? 1 : 0);
+            p.cached.multiplier = [3, 1][n];
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
                 name: '2440warning'
@@ -7264,15 +6960,15 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 2.25 : 1; },
     },
     2441: {
-        chain: function(p) { return window.specials[2441].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2441].multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
+            if (p.cached.multiplier == 3) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2441].multiplier == 3 ? 1 : 0);
-            window.specials[2441].multiplier = [3, 1][n];
+            var n = (p.cached.multiplier == 3 ? 1 : 0);
+            p.cached.multiplier = [3, 1][n];
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
                 name: '2441warning'
@@ -7388,11 +7084,11 @@ window.specials = {
         chainAddition: function(p) { return 0.5; }
     },
     2462:{
-        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2462].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2462].multiplier == 1.75 ? 1 : 0);
-            window.specials[2462].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2462warning'
@@ -7400,11 +7096,11 @@ window.specials = {
         },
     },
     2463:{
-        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2463].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2463].multiplier == 1.75 ? 1 : 0);
-            window.specials[2463].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2463warning'
@@ -7412,34 +7108,34 @@ window.specials = {
         },
     },
     2464: {
-        affinity: function(p) { return (window.specials[2464].affmultiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
-        chainAddition: function(p) { return window.specials[2464].chainmultiplier ? 1.1 : 0; },
+        affinity: function(p) { return (p.cached.affmultiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        chainAddition: function(p) { return p.cached.chainmultiplier ? 1.1 : 0; },
         onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[2464].affmultiplier = true;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[2464].chainmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.affmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) p.cached.chainmultiplier = true;
         },
         onDeactivation: function(p) {
-            window.specials[2464].affmultiplier = false;
-            window.specials[2464].chainmultiplier = false;
+            p.cached.affmultiplier = false;
+            p.cached.chainmultiplier = false;
         },
     },
     2465: {
-        affinity: function(p) { return (window.specials[2465].affmultiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
-        chainAddition: function(p) { return window.specials[2465].chainmultiplier ? 1.1 : 0; },
+        affinity: function(p) { return (p.cached.affmultiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 1.75 : 1; },
+        chainAddition: function(p) { return p.cached.chainmultiplier ? 1.1 : 0; },
         onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[2465].affmultiplier = true;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[2465].chainmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.affmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) p.cached.chainmultiplier = true;
         },
         onDeactivation: function(p) {
-            window.specials[2465].affmultiplier = false;
-            window.specials[2465].chainmultiplier = false;
+            p.cached.affmultiplier = false;
+            p.cached.chainmultiplier = false;
         },
     },
     2466:{
-        orb: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2466].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2466].multiplier == 1.75 ? 1 : window.specials[2466].multiplier == 2 ? 2 : 0);
-            window.specials[2466].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2466warning'
@@ -7448,6 +7144,8 @@ window.specials = {
     },
     2470: {
         delay: function(p) { return 2; },
+        ignoresImmunities: function(p) { return ['delay']; },
+        warning: "Selected special (%name%) assumes that there are 4 or more enemies.",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2470].turnedOn = true;
@@ -7458,6 +7156,8 @@ window.specials = {
     },
     2471: {
         delay: function(p) { return 2; },
+        ignoresImmunities: function(p) { return ['delay']; },
+        warning: "Selected special (%name%) assumes that there are 4 or more enemies.",
         turnedOn: false,
         onActivation: function(p) {
             window.specials[2471].turnedOn = true;
@@ -7467,10 +7167,10 @@ window.specials = {
         }
     },
     2474: {
-        orb: function(p) { return p.unit.class.has("Slasher") ? window.specials[2474].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2474].multiplier == 2 ? 1 : 0);
-            window.specials[2474].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '2474warning'
@@ -7478,10 +7178,10 @@ window.specials = {
         }
     },
     2475: {
-        orb: function(p) { return p.unit.class.has("Slasher") ? window.specials[2475].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2475].multiplier == 2 ? 1 : 0);
-            window.specials[2475].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '2475warning'
@@ -7489,11 +7189,11 @@ window.specials = {
         }
     },
     2476: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2476].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2476].multiplier == 2 ? 1 : 0);
-            window.specials[2476].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '2476warning'
@@ -7501,11 +7201,11 @@ window.specials = {
         }
     },
     2477: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2477].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2477].multiplier == 2 ? 1 : 0);
-            window.specials[2477].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '2477warning'
@@ -7535,41 +7235,20 @@ window.specials = {
         poison: function(p) { return 99; },
     },
     2484: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2484].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") && p.cached.captain.class.has("Slasher") ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return p.unit.class.has("Slasher") ? window.specials[2484].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[2484].multiplier = 1;
-            if (p.captain.class.has("Slasher")) {
-                window.specials[2484].multiplier = 1.75;
-            }
-        },
+        orb: function(p) { return p.unit.class.has("Slasher") && p.cached.captain.class.has("Slasher") ? 1.75 : 1; },
     },
     2485: {
-        atk: function(p) { return p.unit.class.has("Slasher") ? window.specials[2485].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") && p.cached.captain.class.has("Slasher") ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return p.unit.class.has("Slasher") ? window.specials[2485].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[2485].multiplier = p.captain.class.has("Slasher") ? 1.75 : 1;
-        },
+        orb: function(p) { return p.unit.class.has("Slasher") && p.cached.captain.class.has("Slasher") ? 1.75 : 1; },
     },
     2486: {
-        affinity: function(p) { return p.unit.class.has("Slasher") ? window.specials[2486].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[2486].multiplier = 1;
-            if (p.captain.class.has("Slasher")) {
-                window.specials[2486].multiplier = 2;
-            }
-        },
+        affinity: function(p) { return p.unit.class.has("Slasher") && p.cached.captain.class.has("Slasher") ? 2 : 1; },
     },
     2487: {
-        affinity: function(p) { return p.unit.class.has("Slasher") ? window.specials[2487].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[2487].multiplier = 1;
-            if (p.captain.class.has("Slasher")) {
-                window.specials[2487].multiplier = 2;
-            }
-        },
+        affinity: function(p) { return p.unit.class.has("Slasher") && p.cached.captain.class.has("Slasher") ? 2 : 1; },
     },
     2488: {
         affinity: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven")) ? 1.75 : 1; },
@@ -7590,11 +7269,11 @@ window.specials = {
         type: "class"
     },
     2500: {
-        atk: function(p) { return window.specials[2500].multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        atk: function(p) { return p.cached.multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         type: "class",
-        orb: function(p) { return window.specials[2500].multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        orb: function(p) { return p.cached.multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
         onActivation: function(p) {
-            window.specials[2500].multiplier = (p.slot < 2 ? true : false);
+            p.cached.multiplier = (p.slot < 2 ? true : false);
         }
     },
     2503: {
@@ -7613,24 +7292,24 @@ window.specials = {
     },
     2505: {
         delay: function(p) { return 1; },
-        chain: function(p) { return window.specials[2505].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2505].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2505].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[2505].multiplier = (p.slot < 2) ? 2.75 : 1;
+            p.cached.multiplier = (p.slot < 2) ? 2.75 : 1;
         },
     },
     2506: {
         chainAddition: function(p) { return 0.5; }
     },
     2507:{
-        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2507].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2507].multiplier == 1.5 ? 1 : window.specials[2507].multiplier == 1.75 ? 2 : 0);
-            window.specials[2507].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2507warning'
@@ -7638,11 +7317,11 @@ window.specials = {
         },
     },
     2508:{
-        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2508].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2508].multiplier == 1.75 ? 1 : window.specials[2508].multiplier == 2 ? 2 : 0);
-            window.specials[2508].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2508warning'
@@ -7650,34 +7329,14 @@ window.specials = {
         },
     },
     2509:{
-        atk: function(p) { return window.specials[2509].turnedOn ? 2 : 1; },
+        atk: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
         type: "class",
         staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2509].turnedOn = !window.specials[2509].turnedOn;
-            if (window.specials[2509].turnedOn){
-                p.scope.notify({
-                    text: 'Using the 2x ATK boost. To switch to the ATK boost off, disable and re-enable this special',
-                    name: '2509warning'
-                });
-            }
-        },
     },
     2510:{
-        atk: function(p) { return window.specials[2510].turnedOn ? 2 : 1; },
+        atk: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
         type: "class",
         staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2510].turnedOn = !window.specials[2510].turnedOn;
-            if (window.specials[2510].turnedOn){
-                p.scope.notify({
-                    text: 'Using the 2x ATK boost. To switch to the ATK boost off, disable and re-enable this special',
-                    name: '2510warning'
-                });
-            }
-        },
     },
     2514: {
         orb: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; }
@@ -7694,11 +7353,7 @@ window.specials = {
         type: "condition",
     },
     2521:{
-        affinity: function(p) { return window.specials[2521].turnedOn ? 1.5 : 1; },
-        turnedOn: false,
-        onActivation: function(p) {
-            window.specials[2521].turnedOn = p.captain != null && p.captain.type == "DEX";
-        },
+        affinity: function(p) { return p.cached.captain.type == "DEX" ? 1.5 : 1; },
     },
     2522: {
         delay: function(p) { return 1; },
@@ -7758,11 +7413,11 @@ window.specials = {
         }
     },
     2554:{
-        atk: function(p) { return p.delayed > 0 ? window.specials[2554].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2554].multiplier == 1.5 ? 1 : window.specials[2554].multiplier == 1.75 ? 2 : 0);
-            window.specials[2554].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Conditional boost, disable and re-enable this special',
                 name: '2554warning'
@@ -7770,11 +7425,11 @@ window.specials = {
         },
     },
     2555:{
-        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? window.specials[2555].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") || p.unit.class.has("Slasher")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2555].multiplier == 1.75 ? 1 : window.specials[2555].multiplier == 2 ? 2 : 0);
-            window.specials[2555].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2555warning'
@@ -7788,11 +7443,11 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Free Spirit")) ? 2 : 1; },
     },
     2564:{
-        chainAddition: function(p) { return window.specials[2564].multiplier ? 0.3 : 0.7; },
-        rcv: function(p) { return !window.specials[2564].multiplier ? 1.5 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier ? 0.3 : 0.7; },
+        rcv: function(p) { return !p.cached.multiplier ? 1.5 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2564].multiplier == true ? 1 : 0);
-            window.specials[2564].multiplier = [true, false][n];
+            var n = (p.cached.multiplier == true ? 1 : 0);
+            p.cached.multiplier = [true, false][n];
             p.scope.notify({
                 text: 'Using the ' + ['0.3x Chain Boost', '0.7x Chain Boost and 1.5x RCV boost'][n] + '. To switch to the ' + ['0.7x Chain Boost and 1.5x RCV boost', '0.3x Chain Boost'][n] + ', disable and re-enable this special',
                 name: '2564warning'
@@ -7800,11 +7455,11 @@ window.specials = {
         },
     },
     2565:{
-        chainAddition: function(p) { return window.specials[2565].multiplier ? 0.3 : 0.7; },
-        rcv: function(p) { return !window.specials[2565].multiplier ? 1.5 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier ? 0.3 : 0.7; },
+        rcv: function(p) { return !p.cached.multiplier ? 1.5 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2565].multiplier == true ? 1 : 0);
-            window.specials[2565].multiplier = [true, false][n];
+            var n = (p.cached.multiplier == true ? 1 : 0);
+            p.cached.multiplier = [true, false][n];
             p.scope.notify({
                 text: 'Using the ' + ['0.3x Chain Boost', '0.7x Chain Boost and 1.5x RCV boost'][n] + '. To switch to the ' + ['0.7x Chain Boost and 1.5x RCV boost', '0.3x Chain Boost'][n] + ', disable and re-enable this special',
                 name: '2565warning'
@@ -7814,13 +7469,13 @@ window.specials = {
     2568: {
         atk: function(p) { return (p.defenseDown && window.specials[2568].turnedOn) ? 1.75 : 1; },
         type: "condition",
-        def: function(p) { return window.specials[2568].turnedOn ? window.specials[2568].multiplier : 1 },
+        def: function(p) { return window.specials[2568].turnedOn ? p.cached.multiplier : 1 },
         turnedOn: false,
         onActivation: function(p) {
             if (p.captain.class.has("Free Spirit")) {
                 window.specials[2568].turnedOn = true;
-                var n = (window.specials[2568].multiplier == 0.5 ? 1 : 0);
-                window.specials[2568].multiplier = [0.5, 0][n];
+                var n = (p.cached.multiplier == 0.5 ? 1 : 0);
+                p.cached.multiplier = [0.5, 0][n];
                 p.scope.notify({
                     text: 'Using the ' + ['50%', '100%'][n] + ' Defense down. To switch to the ' + ['100%', '50%'][n] + ' Defense down, disable and re-enable this special',
                     name: '2568warning'
@@ -7834,13 +7489,13 @@ window.specials = {
     2569: {
         atk: function(p) { return (p.defenseDown && window.specials[2569].turnedOn) ? 1.75 : 1; },
         type: "condition",
-        def: function(p) { return window.specials[2569].turnedOn ? window.specials[2569].multiplier : 1 },
+        def: function(p) { return window.specials[2569].turnedOn ? p.cached.multiplier : 1 },
         turnedOn: false,
         onActivation: function(p) {
             if (p.captain.class.has("Free Spirit")) {
                 window.specials[2569].turnedOn = true;
-                var n = (window.specials[2569].multiplier == 0.5 ? 1 : 0);
-                window.specials[2569].multiplier = [0.5, 0][n];
+                var n = (p.cached.multiplier == 0.5 ? 1 : 0);
+                p.cached.multiplier = [0.5, 0][n];
                 p.scope.notify({
                     text: 'Using the ' + ['50%', '100%'][n] + ' Defense down. To switch to the ' + ['100%', '50%'][n] + ' Defense down, disable and re-enable this special',
                     name: '2569warning'
@@ -7862,29 +7517,23 @@ window.specials = {
         orb: function(p) { return p.slot == p.sourceSlot ? 1.5 : 1}
     },
     2574: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[2574].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 && p.cached.captain.class.has("Free Spirit") ? 2 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2574].multiplier = p.captain.class.has("Free Spirit") ? 2 : 1;
-        }
     },
     2575: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[2574].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 && p.cached.captain.class.has("Free Spirit") ? 2 : 1; },
         type: "condition",
-        onActivation: function(p) {
-            window.specials[2574].multiplier = p.captain.class.has("Free Spirit") ? 2 : 1;
-        }
     },
     2578: {
         atk: function(p) { return p.unit.type == "STR" ? 2 : 1; },
         type: "class"
     },
     2579:{
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2579].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2579].multiplier == 1.75 ? 1 : window.specials[2579].multiplier == 2 ? 2 : 0);
-            window.specials[2579].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2579warning'
@@ -7899,10 +7548,10 @@ window.specials = {
         }
     },
     2582: {
-        orb: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2582].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2 : 1);
-            window.specials[2582].multiplier = n;
+            p.cached.multiplier = n;
             if (n == 2) p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '2582warning'
@@ -7910,10 +7559,10 @@ window.specials = {
         }
     },
     2583: {
-        orb: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2583].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2 : 1);
-            window.specials[2583].multiplier = n;
+            p.cached.multiplier = n;
             if (n == 2) p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '2583warning'
@@ -7921,10 +7570,10 @@ window.specials = {
         }
     },
     2584: {
-        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) && window.specials[2584].multiplier == 1.75) ? window.specials[2584].multiplier : window.specials[2584].multiplier; },
+        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) && p.cached.multiplier == 1.75) ? p.cached.multiplier : p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 2 : 1.75);
-            window.specials[2584].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '2584warning'
@@ -7932,10 +7581,10 @@ window.specials = {
         }
     },
     2585: {
-        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) && window.specials[2585].multiplier == 1.75) ? window.specials[2585].multiplier : window.specials[2585].multiplier; },
+        orb: function(p) { return ((p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) && p.cached.multiplier == 1.75) ? p.cached.multiplier : p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP <= 30 ? 2 : 1.75);
-            window.specials[2585].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '2585warning'
@@ -7943,11 +7592,11 @@ window.specials = {
         }
     },
     2586: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") && window.specials[2586].multiplier == 1.75) ? window.specials[2586].multiplier : window.specials[2586].multiplier; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") && p.cached.multiplier == 1.75) ? p.cached.multiplier : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2586].multiplier == 1.75 ? 1 : 0);
-            window.specials[2586].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2586warning'
@@ -7955,11 +7604,11 @@ window.specials = {
         }
     },
     2587: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") && window.specials[2587].multiplier == 1.75) ? window.specials[2587].multiplier : window.specials[2587].multiplier; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") && p.cached.multiplier == 1.75) ? p.cached.multiplier : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2587].multiplier == 1.75 ? 1 : 0);
-            window.specials[2587].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2587warning'
@@ -7996,11 +7645,11 @@ window.specials = {
         delay: function(p) { return 1; }
     },
     2606: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2606].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2 : 1.75);
-            window.specials[2606].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2606warning'
@@ -8008,11 +7657,11 @@ window.specials = {
         }
     },
     2607: {
-        atk: function(p) { return p.unit.class.has("Cerebral") ? window.specials[2607].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2 : 1.75);
-            window.specials[2607].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2607warning'
@@ -8032,11 +7681,11 @@ window.specials = {
         chainAddition: function(p) { return 0.5; }
     },
     2612:{
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? window.specials[2612].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2612].multiplier == 1.5 ? 1 : window.specials[2612].multiplier == 1.75 ? 2 : 0);
-            window.specials[2612].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x ATK boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2612warning'
@@ -8044,10 +7693,10 @@ window.specials = {
         },
     },
     2613:{
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? window.specials[2613].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2613].multiplier == 1.75 ? 1 : window.specials[2613].multiplier == 2 ? 2 : 0);
-            window.specials[2613].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2613warning'
@@ -8203,11 +7852,11 @@ window.specials = {
         type: "type"
     },
     2648: {
-        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? window.specials[2648].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2 : 1);
-            window.specials[2648].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2648warning'
@@ -8215,11 +7864,11 @@ window.specials = {
         }
     },
     2649: {
-        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? window.specials[2649].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.class.has("Slasher")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 50 ? 2 : 1);
-            window.specials[2649].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
                 name: '2649warning'
@@ -8233,11 +7882,11 @@ window.specials = {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
     },
     2656: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : window.specials[2656].multiplier; },
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2656].multiplier == 1.5 ? 1 : 0);
-            window.specials[2656].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2656warning'
@@ -8245,11 +7894,11 @@ window.specials = {
         }
     },
     2657: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : window.specials[2657].multiplier; },
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2657].multiplier == 1.5 ? 1 : 0);
-            window.specials[2657].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2657warning'
@@ -8258,56 +7907,34 @@ window.specials = {
     },
     2658: {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven")) ? 2 : 1; },
-        chainAddition: function(p) { return window.specials[2658].multiplier; },
-        onActivation: function(p) {
-            window.specials[2658].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Driven")) ? 0.7 : 0;
-        }
+        chainAddition: function(p) { return (p.cached.captain.class.has("Fighter") || p.cached.captain.class.has("Driven")) ? 0.7 : 0; },
     },
     2659: {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Driven")) ? 2 : 1; },
-        chainAddition: function(p) { return window.specials[2659].multiplier; },
-        onActivation: function(p) {
-            window.specials[2659].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Driven")) ? 0.7 : 0;
-        }
+        chainAddition: function(p) { return (p.cached.captain.class.has("Fighter") || p.cached.captain.class.has("Driven")) ? 0.7 : 0; },
     },
     2660: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2660].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "class",
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2660].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2660].multiplier = (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "INT") ? 1.75 : 1;
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "INT") ? 1.75 : 1;
         },
     },
     2661: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2661].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "class",
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2661].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2661].multiplier = (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "INT") ? 1.75 : 1;
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "INT") ? 1.75 : 1;
         },
     },
     2663: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "QCK") ? 1 : window.specials[2663].multiplier; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK") ? (p.cached.enemyImmunities.delay ? 2 : 1.75) : 1; },
         type: "type",
-        onActivation: function(p) {
-            var n = (window.specials[2663].multiplier == 1.75 ? 1 : 0);
-            window.specials[2663].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2663warning'
-            });
-        }
     },
     2664: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK") ? window.specials[2664].multiplier : 1; },
-        onActivation: function(p) {
-            var n = (window.specials[2664].multiplier == 1.75 ? 1 : 0);
-            window.specials[2664].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x orb boost. To switch to the ' + [2, 1.75][n] + 'x boost, disable and re-enable this special',
-                name: '2664warning'
-            });
-        }
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK") ? (p.cached.enemyImmunities.delay ? 2 : 1.75) : 1; },
     },
     2666: {
         atk: function(p) { return 1.5; },
@@ -8328,15 +7955,15 @@ window.specials = {
         }
     },
     2669: {
-        affinity: function(p) { return window.specials[2669].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
+            p.cached.multiplier = p.colorCount.STR >= 4 ? 2 : 1;
         },
     },
     2670: {
-        affinity: function(p) { return window.specials[2669].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2669].multiplier = p.colorCount.STR >= 4 ? 2 : 1;
+            p.cached.multiplier = p.colorCount.STR >= 4 ? 2 : 1;
         },
     },
     2671: {
@@ -8358,15 +7985,15 @@ window.specials = {
         },
     },
     2673: {
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2673].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2673].multiplier = (p.colorCount.DEX + p.colorCount.PSY >= 5) ? 2 : 1;
+            p.cached.multiplier = (p.colorCount.DEX + p.colorCount.PSY >= 5) ? 2 : 1;
         },
     },
     2674: {
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[2674].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2674].multiplier = (p.colorCount.DEX + p.colorCount.PSY >= 5) ? 2 : 1;
+            p.cached.multiplier = (p.colorCount.DEX + p.colorCount.PSY >= 5) ? 2 : 1;
         },
     },
     2677: {
@@ -8407,10 +8034,10 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     2687: {
-        affinity: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : window.specials[2687].multiplier; },
+        affinity: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "PSY") ? 1 : p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2687].multiplier == 1.5 ? 1 : window.specials[2687].multiplier == 1.75 ? 2 : 0);
-            window.specials[2687].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '2687warning'
@@ -8442,56 +8069,38 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     2697: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[2698].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2698].multiplier == 2) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[2698].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain.class.has("Striker") || p.captain.class.has("Cerebral")) {
-                window.specials[2698].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         },
     },
     2698: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[2698].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2698].multiplier == 2) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[2698].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain.class.has("Striker") || p.captain.class.has("Cerebral")) {
-                window.specials[2698].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         },
     },
     2701:{
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? window.specials[2701].multiplier : 1; },
-        onActivation: function(p) {
-            var n = (window.specials[2701].multiplier == 1.75 ? 1 : 0);
-            window.specials[2701].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2701warning'
-            });
-        },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? (p.cached.enemyImmunities.delay ? 2 : 1.75) : 1; },
     },
     2702:{
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? window.specials[2702].multiplier : 1; },
-        onActivation: function(p) {
-            var n = (window.specials[2702].multiplier == 1.75 ? 1 : 0);
-            window.specials[2702].multiplier = [1.75, 2][n];
-            p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2702warning'
-            });
-        },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Powerhouse")) ? (p.cached.enemyImmunities.delay ? 2 : 1.75) : 1; },
     },
     2703: {
         chain: function(p) { return 2.5; },
@@ -8508,10 +8117,10 @@ window.specials = {
         }
     },
     2705:{
-        def: function(p) { return window.specials[2705].multiplier; },
+        def: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2705].multiplier == .5 ? 1 : 0);
-            window.specials[2705].multiplier = [.5, 0][n];
+            var n = (p.cached.multiplier == .5 ? 1 : 0);
+            p.cached.multiplier = [.5, 0][n];
             p.scope.notify({
                 text: 'Using the ' + [50, 100][n] + '% Defense Reduction. To switch to the ' + [100, 50][n] + '% Defense Reduction, disable and re-enable this special',
                 name: '2705warning'
@@ -8519,10 +8128,10 @@ window.specials = {
         },
     },
     2706:{
-        def: function(p) { return window.specials[2706].multiplier; },
+        def: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2706].multiplier == .5 ? 1 : 0);
-            window.specials[2706].multiplier = [.5, 0][n];
+            var n = (p.cached.multiplier == .5 ? 1 : 0);
+            p.cached.multiplier = [.5, 0][n];
             p.scope.notify({
                 text: 'Using the ' + [50, 100][n] + '% Defense Reduction. To switch to the ' + [100, 50][n] + '% Defense Reduction, disable and re-enable this special',
                 name: '2706warning'
@@ -8533,15 +8142,15 @@ window.specials = {
         def: function(p) { return 0; },
     },
     2708: {
-        chainAddition: function(p) { return window.specials[2708].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2708].multiplier = (p.captain.type == "DEX" || p.captain.type == "PSY") ? 0.8 : 0;
+            p.cached.multiplier = (p.captain.type == "DEX" || p.captain.type == "PSY") ? 0.8 : 0;
         },
     },
     2709: {
-        chainAddition: function(p) { return window.specials[2709].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2709].multiplier = (p.captain.type == "DEX" || p.captain.type == "PSY") ? 0.8 : 0;
+            p.cached.multiplier = (p.captain.type == "DEX" || p.captain.type == "PSY") ? 0.8 : 0;
         },
     },
     2710: {
@@ -8576,10 +8185,10 @@ window.specials = {
         chainAddition: function(p) { return 0.5; },
     },
     2725:{
-        affinity: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2725].multiplier : 1; },
+        affinity: function(p) { return (p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2725].multiplier == 1.75 ? 1 : window.specials[2725].multiplier == 2 ? 2 : 0);
-            window.specials[2725].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
                 name: '2725warning'
@@ -8587,11 +8196,11 @@ window.specials = {
         },
     },
     2727:{
-        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? window.specials[2727].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2727].multiplier == 1.75 ? 1 : window.specials[2727].multiplier == 2 ? 2 : 0);
-            window.specials[2727].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2727warning'
@@ -8605,10 +8214,10 @@ window.specials = {
         delay: function(p) { return 1; },
     },
     2730: {
-        chainAddition: function(p) {return window.specials[2730].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = (window.specials[2730].multiplier == 0.5 ? 1 : 0);
-            window.specials[2730].multiplier = [0.5, 1.1][n];
+            var n = (p.cached.multiplier == 0.5 ? 1 : 0);
+            p.cached.multiplier = [0.5, 1.1][n];
             p.scope.notify({
                 text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
                 name: '2730warning'
@@ -8616,10 +8225,10 @@ window.specials = {
         }
     },
     2731: {
-        chainAddition: function(p) {return window.specials[2731].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = (window.specials[2731].multiplier == 0.5 ? 1 : 0);
-            window.specials[2731].multiplier = [0.5, 1.1][n];
+            var n = (p.cached.multiplier == 0.5 ? 1 : 0);
+            p.cached.multiplier = [0.5, 1.1][n];
             p.scope.notify({
                 text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
                 name: '2731warning'
@@ -8637,10 +8246,10 @@ window.specials = {
         type: "condition",
     },
     2734: {
-        orb: function(p) { return window.specials[2734].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            if (p.colorCount.STR >= 3 || p.colorCount.DEX >= 3 || p.colorCount.QCK >= 3 || p.colorCount.PSY >= 3 || p.colorCount.INT >= 3) window.specials[2734].multiplier = 2;
-            else window.specials[2734].multiplier = 1;
+            if (p.colorCount.STR >= 3 || p.colorCount.DEX >= 3 || p.colorCount.QCK >= 3 || p.colorCount.PSY >= 3 || p.colorCount.INT >= 3) p.cached.multiplier = 2;
+            else p.cached.multiplier = 1;
         },
     },
     2735: {
@@ -8666,12 +8275,12 @@ window.specials = {
         }
     },
     2739: {
-        staticMult: function(p) { return [ 100, 0 ][window.specials[2739].multiplier]; },
-        atk: function(p) { return p.delayed > 0 ? [ 1, 2 ][window.specials[2739].multiplier] : 1; },
+        staticMult: function(p) { return [ 100, 0 ][p.cached.multiplier]; },
+        atk: function(p) { return p.delayed > 0 ? [ 1, 2 ][p.cached.multiplier] : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2739].multiplier == 0 ? 1 : 0);
-            window.specials[2739].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Tap Timing Bonus', 'Conditional Boost'][n] + ' boost. To switch to the ' + ['Conditional Boost', 'Tap Timing Bonus'][n] + ', disable and re-enable this special',
                 name: '2739warning'
@@ -8687,26 +8296,24 @@ window.specials = {
         type: "class"
     },
     2746: {
-        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) && p.cached.enemyImmunities.delay ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) && p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2747: {
-        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) && p.cached.enemyImmunities.delay ? 1.75 : 1; },
         type: "class",
-        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter")) && p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2748: {
-        chain: function(p) { return window.specials[2748].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2748].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2748].multiplier == 2.75 ? 1 : 0);
-            window.specials[2748].multiplier = [2.75, 3][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
                 name: '2748warning'
@@ -8714,14 +8321,14 @@ window.specials = {
         },
     },
     2749: {
-        chain: function(p) { return window.specials[2749].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2749].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[2749].multiplier == 2.75 ? 1 : 0);
-            window.specials[2749].multiplier = [2.75, 3][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
                 name: '2749warning'
@@ -8740,10 +8347,10 @@ window.specials = {
         chainAddition: function(p) { return 0.3; },
     },
     2757: {
-        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? window.specials[2757].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2757].multiplier == 1.75 ? 1 : 0);
-            window.specials[2757].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
                 name: '2757warning'
@@ -8751,10 +8358,10 @@ window.specials = {
         },
     },
     2758: {
-        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? window.specials[2758].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Striker") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2758].multiplier == 1.75 ? 1 : 0);
-            window.specials[2758].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
                 name: '2758warning'
@@ -8762,10 +8369,10 @@ window.specials = {
         },
     },
     2759:{
-        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2759].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2759].multiplier == 1.75 ? 1 : window.specials[2759].multiplier == 2 ? 2 : 0);
-            window.specials[2759].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
                 name: '2759warning'
@@ -8773,24 +8380,24 @@ window.specials = {
         },
     },
     2760: {
-        chain: function(p) { return window.specials[2760].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2760].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2760].multiplier : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[2760].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) {
-                window.specials[2760].multiplier = 2.5;
+                p.cached.multiplier = 2.5;
             }
         },
     },
     2761: {
-        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2761].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2761].multiplier == 1.5 ? 1 : window.specials[2761].multiplier == 1.75 ? 2 : 0);
-            window.specials[2761].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
                 name: '2761warning'
@@ -8798,31 +8405,31 @@ window.specials = {
         }
     },
     2762:{
-        affinity: function(p) { return window.specials[2762].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Shooter")) {
-                var n = (window.specials[2762].multiplier == 1.75 ? 1 : 0);
-                window.specials[2762].multiplier = [1.75, 2][n];
+                var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+                p.cached.multiplier = [1.75, 2][n];
                 p.scope.notify({
                     text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
                     name: '2762warning'
                 });
             }
-            else window.specials[2762].multiplier = 1;
+            else p.cached.multiplier = 1;
         },
     },
     2763:{
-        affinity: function(p) { return window.specials[2763].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             if (p.captain.class.has("Shooter")) {
-                var n = (window.specials[2763].multiplier == 1.75 ? 1 : 0);
-                window.specials[2763].multiplier = [1.75, 2][n];
+                var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+                p.cached.multiplier = [1.75, 2][n];
                 p.scope.notify({
                     text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
                     name: '2763warning'
                 });
             }
-            else window.specials[2763].multiplier = 1;
+            else p.cached.multiplier = 1;
         },
     },
     2765: {
@@ -8850,39 +8457,41 @@ window.specials = {
     },
     2768: {
         def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[2768].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            window.specials[2768].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
+            p.cached.multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
         },
     },
     2769: {
         def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[2769].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            window.specials[2769].multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
+            p.cached.multiplier = (p.colorCount.PSY + p.colorCount.QCK) >= 4 ? 1.75 : 1;
         },
     },
     2770: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[2770].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2770].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
+            p.cached.multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
         },
     },
     2771: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? window.specials[2771].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2771].multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
+            p.cached.multiplier = (p.colorCount.STR + p.colorCount.INT) >= 4 ? 1.75 : 1;
         },
     },
     2773: {
         def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return p.cached.percHP > 99 ? ['def'] : []; },
         atk: function(p) { return p.defenseDown ? 2 : 1; },
         type: "condition",
     },
     2774: {
         def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return p.cached.percHP > 99 ? ['def'] : []; },
         atk: function(p) { return p.defenseDown ? 2 : 1; },
         type: "condition",
     },
@@ -8903,11 +8512,11 @@ window.specials = {
         affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
     },
     2781: {
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2781].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2781].multiplier == 1.75 ? 1 : 0);
-            window.specials[2781].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2781warning'
@@ -8919,10 +8528,10 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
     },
     2785: {
-        chainAddition: function(p) { return window.specials[2785].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 0.9 : 0.7);
-            window.specials[2785].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 0.9 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '2785warning'
@@ -8942,10 +8551,10 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     2790: {
-        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? window.specials[2790].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2790].multiplier == 1.75 ? 1 : window.specials[2790].multiplier == 2 ? 2 : 0);
-            window.specials[2790].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2790warning'
@@ -8955,11 +8564,11 @@ window.specials = {
     2793: {
         delay: function(p) { return 1; },
         chainAddition: function(p) { return 0.7; },
-        atk: function(p) { return p.delayed > 0 ? window.specials[2793].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 1.75 : 1);
-            window.specials[2793].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '2793warning'
@@ -8967,10 +8576,10 @@ window.specials = {
         }
     },
     2794: {
-        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[2794].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2794].multiplier == 1.75 ? 1 : 0);
-            window.specials[2794].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2794warning'
@@ -8983,29 +8592,29 @@ window.specials = {
         affinity: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? 1.75 : 1; },
     },
     2799: {
-        atk: function(p) { return (p.defenseDown && window.specials[2799].multiplier != 0) ? 1.75 : 1; },
+        atk: function(p) { return (p.defenseDown && p.cached.multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2799].multiplier == 1 ? 2 : (window.specials[2799].multiplier == 2 | window.specials[2799].multiplier == undefined) ? 0 : 1);
-            window.specials[2799].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Chain Lock', 'Conditional boost', 'Conditional boost and Chain Lock'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Chain Lock', 'Chain Lock'][n] + ', disable and re-enable this special',
                 name: '2799warning'
             });
         },
-        chain: function(p) { return window.specials[2799].multiplier != 1 ? 2.75 : 1; },
+        chain: function(p) { return p.cached.multiplier != 1 ? 2.75 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2799].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
     },
     2803: {
-        atk: function(p) { return window.specials[2803].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2803].multiplier == 1.75 ? 1 : 0);
-            window.specials[2803].multiplier = [1.75, 2.5][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2803warning'
@@ -9013,11 +8622,11 @@ window.specials = {
         },
     },
     2804: {
-        atk: function(p) { return window.specials[2804].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2804].multiplier == 1.75 ? 1 : 0);
-            window.specials[2804].multiplier = [1.75, 2.5][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2804warning'
@@ -9041,11 +8650,11 @@ window.specials = {
         type: "class"
     },
     2814: {
-        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : window.specials[2814].multiplier; },
+        atk: function(p) { return !(p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2814].multiplier == 1.75 ? 1 : 0);
-            window.specials[2814].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2814warning'
@@ -9071,10 +8680,10 @@ window.specials = {
         }
     },
     2820: {
-        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK") ? window.specials[2820].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2820].multiplier == 1.5 ? 1 : window.specials[2820].multiplier == 1.75 ? 2 : 0);
-            window.specials[2820].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2820warning'
@@ -9091,24 +8700,24 @@ window.specials = {
     2832: {
         atk: function(p) { return 1.75; },
         type: "type",
-        chain: function(p) { return window.specials[2832].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2832].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            window.specials[2832].multiplier = p.captain != null ? p.captain.type == "DEX" ? 3 : 2.5 : 2.5;
+            p.cached.multiplier = p.captain != null ? p.captain.type == "DEX" ? 3 : 2.5 : 2.5;
         },
     },
     2838: {
-        chainAddition: function(p) { return window.specials[2838].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2838].multiplier == .5 ? 1 : 0);
+            var n = (p.cached.multiplier == .5 ? 1 : 0);
             if (p.colorCount.DEX + p.colorCount.INT >= 3) {
-                window.specials[2838].multiplier = [.5, .8][n];
+                p.cached.multiplier = [.5, .8][n];
             }
             else {
-                window.specials[2838].multiplier = 0;
+                p.cached.multiplier = 0;
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .8][n] + 'x chain boost multiplier. To switch to the ' + [.8, .5][n] + 'x multiplier, disable and re-enable this special',
@@ -9117,14 +8726,14 @@ window.specials = {
         },
     },
     2839: {
-        chainAddition: function(p) { return window.specials[2839].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2839].multiplier == .5 ? 1 : 0);
+            var n = (p.cached.multiplier == .5 ? 1 : 0);
             if (p.colorCount.DEX + p.colorCount.INT >= 3) {
-                window.specials[2839].multiplier = [.5, .8][n];
+                p.cached.multiplier = [.5, .8][n];
             }
             else {
-                window.specials[2839].multiplier = 0;
+                p.cached.multiplier = 0;
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .8][n] + 'x chain boost multiplier. To switch to the ' + [.8, .5][n] + 'x multiplier, disable and re-enable this special',
@@ -9133,11 +8742,11 @@ window.specials = {
         },
     },
     2840: {
-        atk: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : window.specials[2840].multiplier; },
+        atk: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2840].multiplier == 2 ? 1 : 0);
-            window.specials[2840].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '2840warning'
@@ -9145,11 +8754,11 @@ window.specials = {
         }
     },
     2841: {
-        atk: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : window.specials[2841].multiplier; },
+        atk: function(p) { return !(p.unit.type == "DEX" || p.unit.type == "INT") ? 1 : p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2841].multiplier == 2 ? 1 : 0);
-            window.specials[2841].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '2841warning'
@@ -9157,10 +8766,10 @@ window.specials = {
         }
     },
     2844: {
-        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2844].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2844].multiplier == 1.75 ? 1 : 0);
-            window.specials[2844].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2844warning'
@@ -9168,11 +8777,11 @@ window.specials = {
         }
     },
     2845: {
-        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2845].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2845].multiplier = 1.75;
+            p.cached.multiplier = 1.75;
             if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse")) {
-                window.specials[2845].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         },
     },
@@ -9180,11 +8789,11 @@ window.specials = {
         rcv: function(p) { return 1.5; },
     },
     2848: {
-        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2848].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2848].multiplier == 1.75 ? 1 : window.specials[2848].multiplier == 2 ? 2 : 0);
-            window.specials[2848].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x attack boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x attack boost, disable and re-enable this special',
                 name: '2848warning'
@@ -9192,10 +8801,10 @@ window.specials = {
         }
     },
     2849: {
-        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? window.specials[2849].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2849].multiplier == 1.5 ? 1 : window.specials[2849].multiplier == 1.75 ? 2 : 0);
-            window.specials[2849].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2849warning'
@@ -9207,21 +8816,21 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 2 : 1; }
     },
     2854: {
-        atk: function(p) { return p.defenseDown ? window.specials[2854].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            window.specials[2854].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) {
-                window.specials[2854].multiplier = 2;
+                p.cached.multiplier = 2;
             }
         },
     },
     2856: {
-        atk: function(p) { return window.specials[2856].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2856].multiplier == 1.75 ? 1 : 0);
-            window.specials[2856].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2856warning'
@@ -9229,10 +8838,10 @@ window.specials = {
         }
     },
     2857: {
-        affinity: function(p) { return window.specials[2857].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2857].multiplier == 1.75 ? 1 : 0);
-            window.specials[2857].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2857warning'
@@ -9240,15 +8849,21 @@ window.specials = {
         }
     },
     2858: {
-        orb: function(p) { return window.specials[2858].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2858].multiplier == 1.75 ? 1 : 0);
-            window.specials[2858].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2858warning'
             });
         }
+    },
+    2863: {
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
+    },
+    2864: {
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
     },
     2868: {
         orb: function(p) { return 2; }
@@ -9260,23 +8875,23 @@ window.specials = {
     },
     2871: {
         def: function(p) { return 0.2; },
-        chain: function(p) { return window.specials[2871].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2871].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2871].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2871].multiplier = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "STR") ? 2.75 : 1;
+            p.cached.multiplier = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "STR") ? 2.75 : 1;
         },
     },
     2872: {
         delay: function(p) { return 1; },
-        chainAddition: function(p) { return window.specials[2872].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[2872].multiplier = p.captain != null && (p.captain.type == "INT" || p.captain.type == "STR") ? 0.5 : 0;
+            p.cached.multiplier = p.captain != null && (p.captain.type == "INT" || p.captain.type == "STR") ? 0.5 : 0;
         },
     },
     2873: {
@@ -9289,11 +8904,11 @@ window.specials = {
     },
     2876:{
         def: function(p) { return 0.2; },
-        atk: function(p) { return p.defenseDown ? window.specials[2876].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[2876].multiplier == 1.5 ? 1 : window.specials[2876].multiplier == 1.75 ? 2 : 0);
-            window.specials[2876].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Conditional boost, disable and re-enable this special',
                 name: '2876warning'
@@ -9301,10 +8916,10 @@ window.specials = {
         },
     },
     2878:{
-        orb: function(p) { return window.specials[2878].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[2878].multiplier == 1.75 ? 1 : window.specials[2878].multiplier == 2 ? 2 : 0);
-            window.specials[2878].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2878warning'
@@ -9313,12 +8928,12 @@ window.specials = {
     },
     2879: {
         turnedOn: false,
-        atk: function(p) { return window.specials[2879].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             window.specials[2879].turnedOn = true;
-            var n = (window.specials[2879].multiplier == 1.75 ? 1 : 0);
-            window.specials[2879].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '2804warning'
@@ -9334,24 +8949,24 @@ window.specials = {
         warning: "Selected special (%name%) assumes that the enemy has ATK UP."
     },
     2881: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2881].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.QCK + p.colorCount.PSY >= 3) {
-                window.specials[2881].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[2881].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     2883: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2883].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.QCK + p.colorCount.PSY >= 6) {
-                window.specials[2883].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[2883].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
         },
     },
@@ -9407,14 +9022,14 @@ window.specials = {
         affinity: function(p) { return ((p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK")) ? 1.75 : 1; },
     },
     2889: {
-        chainAddition: function(p) { return window.specials[2889].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.DEX + p.colorCount.QCK >= 3) {
-                window.specials[2889].multiplier = 0.8;
+                p.cached.multiplier = 0.8;
             }
             else {
-                window.specials[2889].multiplier = 0;
+                p.cached.multiplier = 0;
             }
         },
     },
@@ -9422,10 +9037,10 @@ window.specials = {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.75 : 1; },
     },
     2892: {
-        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[2892].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2892].multiplier == 1.75 ? 1 : 0);
-            window.specials[2892].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
                 name: '2892warning'
@@ -9433,13 +9048,13 @@ window.specials = {
         },
     },
     2893: {
-        affinity: function(p) { return p.unit.type == "STR" ? window.specials[2893].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             if (p.captain.type == "STR") {
-                window.specials[2893].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[2893].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
@@ -9476,24 +9091,24 @@ window.specials = {
         }
     },
     2900: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2900].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.PSY >= 5) {
-                window.specials[2900].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[2900].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     2901: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2901].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.PSY >= 5) {
-                window.specials[2901].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[2901].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
@@ -9521,10 +9136,10 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     2910: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2910].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2910].multiplier == 1.5 ? 1 : window.specials[2910].multiplier == 1.75 ? 2 : 0);
-            window.specials[2910].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2910warning'
@@ -9532,25 +9147,25 @@ window.specials = {
         }
     },
     2911: {
-        chain: function(p) { return window.specials[2911].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[2911].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2911].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[2911].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.captain != null && (p.captain.type == "STR" || p.captain.type == "PSY")) {
-                window.specials[2911].multiplier = 2.75;
+                p.cached.multiplier = 2.75;
             }
         },
     },
     2912:{
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2912].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[2912].multiplier == 1.75 ? 1 : window.specials[2912].multiplier == 2 ? 2 : 0);
-            window.specials[2912].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '2912warning'
@@ -9558,22 +9173,22 @@ window.specials = {
         },
     },
     2914: {
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2914].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.STR + p.colorCount.PSY >= 4) {
-                window.specials[2914].multiplier = 2.25;
+                p.cached.multiplier = 2.25;
             }
             else {
-                window.specials[2914].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     2915: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[2915].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2915].multiplier == 1.5 ? 1 : window.specials[2915].multiplier == 1.75 ? 2 : 0);
-            window.specials[2915].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '2915warning'
@@ -9592,10 +9207,9 @@ window.specials = {
         type: "type",
     },
     2920: {
-        atk: function(p) { return 2; },
+        atk: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
         type: "type",
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") ? 1.75 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has All Debuff Protection."
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "INT") && p.cached.enemyImmunities.delay ? 1.75 : 1; },
     },
     2922: {
         //TODO
@@ -9715,13 +9329,13 @@ window.specials = {
         orb: function(p) { return 2.5; }
     },
     2959:{
-        affinity: function(p) { return (window.specials[2959].multiplier != 1 && p.unit.type == "STR") ? 2 : 1; },
+        affinity: function(p) { return (p.cached.multiplier != 1 && p.unit.type == "STR") ? 2 : 1; },
         type: "type",
-        chainAddition: function(p) { return window.specials[2959].multiplier != 0 ? 1.0 : 0; },
+        chainAddition: function(p) { return p.cached.multiplier != 0 ? 1.0 : 0; },
         turnedOn: false,
         onActivation: function(p) {
-            var n = (window.specials[2959].multiplier == 0 ? 1 : window.specials[2959].multiplier == 1 ? 2 : 0);
-            window.specials[2959].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : p.cached.multiplier == 1 ? 2 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Affinity', 'Chain Boost', 'Affinity and Chain'][n] + ' boost. To switch to the ' + ['Chain Boost', 'Affinity and Chain', 'Affinity'][n] + ' boost, disable and re-enable this special',
                 name: '2959warning'
@@ -9729,13 +9343,13 @@ window.specials = {
         },
     },
     2960:{
-        affinity: function(p) { return (window.specials[2959].multiplier != 1 && p.unit.type == "STR") ? 2 : 1; },
+        affinity: function(p) { return (p.cached.multiplier != 1 && p.unit.type == "STR") ? 2 : 1; },
         type: "type",
-        chainAddition: function(p) { return window.specials[2959].multiplier != 0 ? 1.0 : 0; },
+        chainAddition: function(p) { return p.cached.multiplier != 0 ? 1.0 : 0; },
         turnedOn: false,
         onActivation: function(p) {
-            var n = (window.specials[2959].multiplier == 0 ? 1 : window.specials[2959].multiplier == 1 ? 2 : 0);
-            window.specials[2959].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : p.cached.multiplier == 1 ? 2 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Affinity', 'Chain Boost', 'Affinity and Chain'][n] + ' boost. To switch to the ' + ['Chain Boost', 'Affinity and Chain', 'Affinity'][n] + ' boost, disable and re-enable this special',
                 name: '2959warning'
@@ -9753,12 +9367,12 @@ window.specials = {
         status: function(p) { return p.delayed > 0 ? 2 : 1; },
     },
     2963:{
-        orb: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2963].multiplier : 1; },
-        atk: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2963].multiplier : 1; },
+        orb: function(p) { return (p.slot == p.sourceSlot) ? p.cached.multiplier : 1; },
+        atk: function(p) { return (p.slot == p.sourceSlot) ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2963].multiplier == 2 ? 1 : window.specials[2963].multiplier == 3 ? 2 : 0);
-            window.specials[2963].multiplier = [2, 3, 4][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 3 ? 2 : 0);
+            p.cached.multiplier = [2, 3, 4][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 3, 4][n] + 'x Orb boost. To switch to the ' + [3, 4, 2][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2963warning'
@@ -9766,12 +9380,12 @@ window.specials = {
         },
     },
     2964:{
-        orb: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2964].multiplier : 1; },
-        atk: function(p) { return (p.slot == p.sourceSlot) ? window.specials[2964].multiplier : 1; },
+        orb: function(p) { return (p.slot == p.sourceSlot) ? p.cached.multiplier : 1; },
+        atk: function(p) { return (p.slot == p.sourceSlot) ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[2964].multiplier == 2 ? 1 : window.specials[2964].multiplier == 3 ? 2 : 0);
-            window.specials[2964].multiplier = [2, 3, 4][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 3 ? 2 : 0);
+            p.cached.multiplier = [2, 3, 4][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 3, 4][n] + 'x Orb boost. To switch to the ' + [3, 4, 2][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2964warning'
@@ -9793,17 +9407,17 @@ window.specials = {
         },
     },
     2973: {
-        chain: function(p) { return window.specials[2973].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[2973].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
             if (p.colorCount.INT >= 5) {
-                window.specials[2973].multiplier = 3;
+                p.cached.multiplier = 3;
             }
             else {
-                window.specials[2973].multiplier = 2.5;
+                p.cached.multiplier = 2.5;
             }
         },
     },
@@ -9838,22 +9452,22 @@ window.specials = {
         staticMult: function(p) { return Math.min(p.damageCounter,50000) * 20; }
     },
     2985: {
-        orb: function(p) { return p.unit.type == "DEX" ? window.specials[2985].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2985].multiplier = (p.captain != null && p.captain.type == "DEX") ? 2.25 : 1;
+            p.cached.multiplier = (p.captain != null && p.captain.type == "DEX") ? 2.25 : 1;
         },
     },
     2986: {
-        orb: function(p) { return p.unit.type == "DEX" ? window.specials[2986].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[2986].multiplier = (p.captain != null && p.captain.type == "DEX") ? 2.25 : 1;
+            p.cached.multiplier = (p.captain != null && p.captain.type == "DEX") ? 2.25 : 1;
         },
     },
     2987: {
-        chainAddition: function(p) {return window.specials[2987].multiplier;},
+        chainAddition: function(p) {return p.cached.multiplier;},
         onActivation: function(p) {
-            var n = ((window.specials[2987].multiplier == 0.5 && p.colorCount.DEX >= 3) ? 1 : 0);
-            window.specials[2987].multiplier = [0.5, 1.1][n];
+            var n = ((p.cached.multiplier == 0.5 && p.colorCount.DEX >= 3) ? 1 : 0);
+            p.cached.multiplier = [0.5, 1.1][n];
             p.scope.notify({
                 text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
                 name: '2731warning'
@@ -9864,11 +9478,11 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
     },
     2990: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[2990].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[2990].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
-            window.specials[2990].multiplier = (p.captain != null && p.captain.type == "DEX") ? 1.75 : 1;
+            p.cached.multiplier = (p.captain != null && p.captain.type == "DEX") ? 1.75 : 1;
         },
     },
     2991: {
@@ -9879,10 +9493,10 @@ window.specials = {
         }
     },
     2992:{
-        affinity: function(p) { return p.unit.type == "DEX" ? window.specials[2992].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2992].multiplier == 1.75 ? 1 : window.specials[2992].multiplier == 2 ? 2 : 0);
-            window.specials[2992].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
                 name: '2992warning'
@@ -9890,10 +9504,10 @@ window.specials = {
         },
     },
     2993:{
-        orb: function(p) { return p.unit.type == "DEX" ? window.specials[2993].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[2993].multiplier == 1.75 ? 1 : window.specials[2993].multiplier == 2 ? 2 : 0);
-            window.specials[2993].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '2993warning'
@@ -9932,9 +9546,9 @@ window.specials = {
         },
     },
     2997: {
-        orb: function(p) { return window.specials[2997].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2997].multiplier = (p.colorCount.STR + p.colorCount.DEX + p.colorCount.INT >= 3) ? 2 : 1;
+            p.cached.multiplier = (p.colorCount.STR + p.colorCount.DEX + p.colorCount.INT >= 3) ? 2 : 1;
         },
     },
     2998: {
@@ -9955,12 +9569,12 @@ window.specials = {
         affinity: function(p) { return p.unit.cost <= 40 ? 2 : 1; },
     },
     3006: {
-        atk: function(p) { return (p.unit.type == "QCK" && window.specials[3006].multiplier != 1) ? 2.5 : 1; },
+        atk: function(p) { return (p.unit.type == "QCK" && p.cached.multiplier != 1) ? 2.5 : 1; },
         type: "class",
-        orb: function(p) { return (p.unit.type == "QCK" && window.specials[3006].multiplier != 0) ? 2.5 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" && p.cached.multiplier != 0) ? 2.5 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3006].multiplier == 0 ? 1 : window.specials[3006].multiplier == 1 ? 2 : 0);
-            window.specials[3006].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : p.cached.multiplier == 1 ? 2 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
                 name: '3006warning'
@@ -9968,12 +9582,12 @@ window.specials = {
         },
     },
     3007: {
-        atk: function(p) { return (p.unit.type == "QCK" && window.specials[3007].multiplier != 1) ? 2.5 : 1; },
+        atk: function(p) { return (p.unit.type == "QCK" && p.cached.multiplier != 1) ? 2.5 : 1; },
         type: "class",
-        orb: function(p) { return (p.unit.type == "QCK" && window.specials[3007].multiplier != 0) ? 2.5 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" && p.cached.multiplier != 0) ? 2.5 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3007].multiplier == 0 ? 1 : window.specials[3007].multiplier == 1 ? 2 : 0);
-            window.specials[3007].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : p.cached.multiplier == 1 ? 2 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
                 name: '3007warning'
@@ -10003,11 +9617,11 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     3012: {
-        atk: function(p) { return p.unit.type == "QCK" ? window.specials[3012].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[3012].multiplier == 1.75 ? 1 : 0);
-            window.specials[3012].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3012warning'
@@ -10015,11 +9629,11 @@ window.specials = {
         }
     },
     3013: {
-        atk: function(p) { return p.unit.type == "QCK" ? window.specials[3013].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            var n = (window.specials[3013].multiplier == 1.75 ? 1 : 0);
-            window.specials[3013].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3013warning'
@@ -10048,10 +9662,10 @@ window.specials = {
         }
     },
     3019: {
-        affinity: function(p) { return (p.unit.type == "QCK") ? window.specials[3019].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "QCK") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3019].multiplier == 1.5 ? 1 : window.specials[3019].multiplier == 1.75 ? 2 : 0);
-            window.specials[3019].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
                 name: '3019warning'
@@ -10059,10 +9673,10 @@ window.specials = {
         }
     },
     3020:{
-        orb: function(p) { return (p.unit.type == "QCK") ? window.specials[3020].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "QCK") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3020].multiplier == 1.75 ? 1 : window.specials[3020].multiplier == 2 ? 2 : 0);
-            window.specials[3020].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '3020warning'
@@ -10078,85 +9692,81 @@ window.specials = {
         },
     },
     3026: {
-        multiplier: 1,
-        orbmultiplier: false,
-        orb: function(p) { return (window.specials[3026].orbmultiplier) ? 2.25 : 1; },
-        chain: function(p) { return window.specials[3026].multiplier; },
+        orb: function(p) { return (p.cached.orbmultiplier) ? 2.25 : 1; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[3026].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[3026].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[3026].orbmultiplier = true;
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[3026].multiplier = 2.5;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) p.cached.orbmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.multiplier = 2.5;
         },
         onDeactivation: function(p) {
-            window.specials[3026].orbmultiplier = false;
-            window.specials[3026].multiplier = 1;
+            p.cached.orbmultiplier = false;
+            p.cached.multiplier = 1;
         },
     },
     3027: {
-        multiplier: 1,
-        orbmultiplier: false,
-        orb: function(p) { return (window.specials[3027].orbmultiplier) ? 2.25 : 1; },
-        chain: function(p) { return window.specials[3027].multiplier; },
+        orb: function(p) { return (p.cached.orbmultiplier) ? 2.25 : 1; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[3027].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[3027].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[3027].orbmultiplier = true;
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[3027].multiplier = 2.5;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) p.cached.orbmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.multiplier = 2.5;
         },
         onDeactivation: function(p) {
-            window.specials[3027].orbmultiplier = false;
-            window.specials[3027].multiplier = 1;
+            p.cached.orbmultiplier = false;
+            p.cached.multiplier = 1;
         },
     },
     3028: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? window.specials[3028].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            window.specials[3028].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) window.specials[3028].multiplier = 2;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) p.cached.multiplier = 2;
         },
         onDeactivation: function(p) {
-            window.specials[3028].multiplier = 1;
+            p.cached.multiplier = 1;
         },
     },
     3029: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? window.specials[3029].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
-            window.specials[3029].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) window.specials[3029].multiplier = 2;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Free Spirit")) p.cached.multiplier = 2;
         },
         onDeactivation: function(p) {
-            window.specials[3029].multiplier = 1;
+            p.cached.multiplier = 1;
         },
     },
     3030: {
-        chainAddition: function(p) { return window.specials[3030].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[3030].multiplier = 0;
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Striker")) window.specials[3030].multiplier = 1;
+            p.cached.multiplier = 0;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Striker")) p.cached.multiplier = 1;
         },
         onDeactivation: function(p) {
-            window.specials[3030].multiplier = 0;
+            p.cached.multiplier = 0;
         },
     },
     3031: {
-        chainAddition: function(p) { return window.specials[3031].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[3031].multiplier = 0;
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Striker")) window.specials[3031].multiplier = 1;
+            p.cached.multiplier = 0;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Striker")) p.cached.multiplier = 1;
         },
         onDeactivation: function(p) {
-            window.specials[3031].multiplier = 0;
+            p.cached.multiplier = 0;
         },
     },
     3033: {
@@ -10173,10 +9783,10 @@ window.specials = {
         affinity: function(p) { return 1.75; },
     },
     3043:{
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[3043].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3043].multiplier == 1.75 ? 1 : 0);
-            window.specials[3043].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '3043warning'
@@ -10184,10 +9794,10 @@ window.specials = {
         },
     },
     3044:{
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[3044].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3044].multiplier == 1.75 ? 1 : 0);
-            window.specials[3044].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: '3044warning'
@@ -10195,16 +9805,16 @@ window.specials = {
         },
     },
     3045: {
-        chain: function(p) { return window.specials[3045].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[3045].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3045].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[3045].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.colorCount.PSY >= 3) {
-                window.specials[3045].multiplier = 2.75;
+                p.cached.multiplier = 2.75;
             }
         },
     },
@@ -10214,18 +9824,18 @@ window.specials = {
     3048: {
         turnedOn: false,
         onActivation: function(p) {
-            if(window.specials[3048].multiplier == 2.25) {
+            if(p.cached.multiplier == 2.25) {
                 window.specials[3048].turnedOn = true;
             }
         },
         onDeactivation: function(p) {
             window.specials[3048].turnedOn = false;
         },
-        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[3048].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3048].multiplier == 2 ? 1 : 0);
-            window.specials[3048].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '3048warning'
@@ -10240,13 +9850,13 @@ window.specials = {
         type: "class"
     },
     3051: {
-        affinity: function(p) { return p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        affinity: function(p) { return p.cached.enemyImmunities.delay && p.unit.class.has("Free Spirit") ? 2.25 : 1; },
     },
     3056: {
-        affinity: function(p) { return !(p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1 : window.specials[3056].multiplier; },
+        affinity: function(p) { return !(p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1 : p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[3056].multiplier == 1.75 ? 1 : 0);
-            window.specials[3056].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3056warning'
@@ -10254,10 +9864,10 @@ window.specials = {
         }
     },
     3057: {
-        affinity: function(p) { return !(p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1 : window.specials[3057].multiplier; },
+        affinity: function(p) { return !(p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? 1 : p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[3057].multiplier == 1.75 ? 1 : 0);
-            window.specials[3057].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3057warning'
@@ -10266,18 +9876,18 @@ window.specials = {
     },
     3058: {
         def: function(p) { return 0.2; },
-        atk: function(p) { return p.defenseDown ? window.specials[3058].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            window.specials[3058].multiplier = p.classCount.FreeSpirit >= 5 ? 1.75 : 1;
+            p.cached.multiplier = p.classCount.FreeSpirit >= 5 ? 1.75 : 1;
         }
     },
     3059: {
         def: function(p) { return 0.2; },
-        atk: function(p) { return p.defenseDown ? window.specials[3059].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            window.specials[3059].multiplier = p.classCount.FreeSpirit >= 5 ? 1.75 : 1;
+            p.cached.multiplier = p.classCount.FreeSpirit >= 5 ? 1.75 : 1;
         }
     },
     3061: {
@@ -10294,12 +9904,12 @@ window.specials = {
         affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? 1.75 : 1; },
     },
     3070: {
-        orb: function(p) { return p.unit.type == "PSY" ? window.specials[3070].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "PSY" ? p.cached.multiplier : 1; },
         turnedOn: [false,false,false,false,false,false],
         onActivation: function(p) {
             window.specials[3070].turnedOn[p.slot] = true;
-            var n = (window.specials[3070].multiplier == 2 ? 1 : 0);
-            window.specials[3070].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb Boost. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '3070warning'
@@ -10310,12 +9920,12 @@ window.specials = {
         }
     },
     3071: {
-        orb: function(p) { return p.unit.type == "PSY" ? window.specials[3071].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "PSY" ? p.cached.multiplier : 1; },
         turnedOn: [false,false,false,false,false,false],
         onActivation: function(p) {
             window.specials[3071].turnedOn[p.slot] = true;
-            var n = (window.specials[3071].multiplier == 2 ? 1 : 0);
-            window.specials[3071].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb Boost. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '3071warning'
@@ -10338,10 +9948,10 @@ window.specials = {
         chainAddition: function(p) { return 1.1; }
     },
     3074: {
-        affinity: function(p) { return window.specials[3074].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[3074].multiplier == 1.75 ? 1 : 0);
-            window.specials[3074].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3074warning'
@@ -10349,10 +9959,10 @@ window.specials = {
         }
     },
     3075: {
-        affinity: function(p) { return window.specials[3075].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[3075].multiplier == 1.75 ? 1 : 0);
-            window.specials[3075].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3075warning'
@@ -10360,11 +9970,11 @@ window.specials = {
         }
     },
     3076: {
-        atk: function(p) { return window.specials[3076].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3076].multiplier == 1.75 ? 1 : 0);
-            window.specials[3076].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3076warning'
@@ -10372,11 +9982,11 @@ window.specials = {
         }
     },
     3077: {
-        atk: function(p) { return window.specials[3077].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3077].multiplier == 1.75 ? 1 : 0);
-            window.specials[3077].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3077warning'
@@ -10384,17 +9994,17 @@ window.specials = {
         }
     },
     3078: {
-        atk: function(p) { return (p.delayed > 0 && window.specials[3078].multiplier != 0) ? 1.75 : 1; },
+        atk: function(p) { return (p.delayed > 0 && p.cached.multiplier != 0) ? 1.75 : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[3078].multiplier == 1 ? 2 : (window.specials[3078].multiplier == 2 | window.specials[3078].multiplier == undefined) ? 0 : 1);
-            window.specials[3078].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
                 name: '3078warning'
             });
         },
-        delay: function(p) { return window.specials[3078].multiplier != 1 ? 1 : 0; },
+        delay: function(p) { return p.cached.multiplier != 1 ? 1 : 0; },
     },
     3079: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2 : 1; },
@@ -10420,10 +10030,10 @@ window.specials = {
         type: "condition",
     },
     3083: {
-        orb: function(p) { return window.specials[3083].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2 : 1.75);
-            window.specials[3083].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '3083warning'
@@ -10438,10 +10048,10 @@ window.specials = {
         },
     },
     3088: {
-        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? window.specials[3088].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3088].multiplier == 1.5 ? 1 : window.specials[3088].multiplier == 1.75 ? 2 : 0);
-            window.specials[3088].multiplier = [1.5, 1.75, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : p.cached.multiplier == 1.75 ? 2 : 0);
+            p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
                 name: '3088warning'
@@ -10450,11 +10060,11 @@ window.specials = {
     },
     3089:{
         def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[3089].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[3089].multiplier == 1.75 ? 1 : window.specials[3089].multiplier == 2 ? 2 : 0);
-            window.specials[3089].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Conditional boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Conditional boost, disable and re-enable this special',
                 name: '2132warning'
@@ -10473,10 +10083,10 @@ window.specials = {
         def: function(p) { return 0; },
     },
     3094: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[3094].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2 : 1.75);
-            window.specials[3094].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '3094warning'
@@ -10487,17 +10097,17 @@ window.specials = {
         orb: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
     },
     3097: {
-        orb: function(p) { return (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) ? window.specials[3097].multiplier : 1; },
+        orb: function(p) { return (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[3097].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) ? 2.25 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Cerebral")) ? 2.25 : 1;
         }
     },
     3099: {
-        atk: function(p) { return p.unit.type == "INT" ? window.specials[3099].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "INT" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3099].multiplier == 2.25 ? 1 : 0);
-            window.specials[3099].multiplier = [2.25, 2.5][n];
+            var n = (p.cached.multiplier == 2.25 ? 1 : 0);
+            p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '3099warning'
@@ -10505,11 +10115,11 @@ window.specials = {
         },
     },
     3100: {
-        atk: function(p) { return p.unit.type == "INT" ? window.specials[3100].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "INT" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3100].multiplier == 2.25 ? 1 : 0);
-            window.specials[3100].multiplier = [2.25, 2.5][n];
+            var n = (p.cached.multiplier == 2.25 ? 1 : 0);
+            p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '3100warning'
@@ -10517,10 +10127,10 @@ window.specials = {
         },
     },
     3101: {
-        orb: function(p) { return p.unit.type == "INT" ? window.specials[3101].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "INT" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3101].multiplier == 2.25 ? 1 : 0);
-            window.specials[3101].multiplier = [2.25, 2.5][n];
+            var n = (p.cached.multiplier == 2.25 ? 1 : 0);
+            p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '3101warning'
@@ -10528,10 +10138,10 @@ window.specials = {
         },
     },
     3102: {
-        orb: function(p) { return p.unit.type == "INT" ? window.specials[3102].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "INT" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3102].multiplier == 2.25 ? 1 : 0);
-            window.specials[3102].multiplier = [2.25, 2.5][n];
+            var n = (p.cached.multiplier == 2.25 ? 1 : 0);
+            p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
                 name: '3102warning'
@@ -10547,14 +10157,14 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; },
     },
     3110: {
-        chain: function(p) { return window.specials[3110].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3110].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[3110].multiplier == 3 ? 1 : window.specials[3110].multiplier == 3.25 ? 2 : 0);
-            window.specials[3110].multiplier = [3, 3.25, 3.5][n];
+            var n = (p.cached.multiplier == 3 ? 1 : p.cached.multiplier == 3.25 ? 2 : 0);
+            p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '3110warning'
@@ -10562,10 +10172,10 @@ window.specials = {
         },
     },
     3112:{
-        affinity: function(p) { return p.unit.type == "INT" ? window.specials[3112].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "INT" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3112].multiplier == 1.75 ? 1 : window.specials[3112].multiplier == 2 ? 2 : 0);
-            window.specials[3112].multiplier = [1.75, 2, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : p.cached.multiplier == 2 ? 2 : 0);
+            p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
                 name: '3112warning'
@@ -10573,14 +10183,14 @@ window.specials = {
         },
     },
     3114: {
-        chain: function(p) { return window.specials[3114].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3114].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[3114].multiplier == 2.5 ? 1 : window.specials[3114].multiplier == 2.75 ? 2 : 0);
-            window.specials[3114].multiplier = [2.5, 2.75, 3][n];
+            var n = (p.cached.multiplier == 2.5 ? 1 : p.cached.multiplier == 2.75 ? 2 : 0);
+            p.cached.multiplier = [2.5, 2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + ['2.5x', '2.75x', '3x'][n] + ' chain lock. To switch to the ' + ['2.5x', '2.75x', '3x'][n] + ' chain lock, disable and re-enable this special',
                 name: '3114warning'
@@ -10589,21 +10199,21 @@ window.specials = {
     },
     3117: {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
-        chainAddition: function(p) { return window.specials[3117].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[3117].multiplier = 0;
+            p.cached.multiplier = 0;
             if (p.colorCount.INT >= 4) {
-                window.specials[3117].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     3118: {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
-        chainAddition: function(p) { return window.specials[3118].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[3118].multiplier = 0;
+            p.cached.multiplier = 0;
             if (p.colorCount.INT >= 4) {
-                window.specials[3118].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
@@ -10618,11 +10228,11 @@ window.specials = {
         affinity: function(p) { return 1.75; }
     },
     3126: {
-        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[3126].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3126].multiplier == 1.75 ? 1 : 0);
-            window.specials[3126].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3126warning'
@@ -10630,11 +10240,11 @@ window.specials = {
         }
     },
     3127: {
-        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[3127].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            var n = (window.specials[3127].multiplier == 1.75 ? 1 : 0);
-            window.specials[3127].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3127warning'
@@ -10642,10 +10252,10 @@ window.specials = {
         }
     },
     3128: {
-        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[3128].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3128].multiplier == 1.75 ? 1 : 0);
-            window.specials[3128].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3128warning'
@@ -10653,10 +10263,10 @@ window.specials = {
         }
     },
     3129: {
-        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? window.specials[3129].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3129].multiplier == 1.75 ? 1 : 0);
-            window.specials[3129].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3129warning'
@@ -10696,10 +10306,10 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 1.75 : 1; }
     },
     3145: {
-        orb: function(p) { return window.specials[3145].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[3145].multiplier == 2 ? 1 : 0);
-            window.specials[3145].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x Orb boost, disable and re-enable this special',
                 name: '3145warning'
@@ -10707,10 +10317,10 @@ window.specials = {
         },
     },
     3146: {
-        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? window.specials[3146].multiplier : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3146].multiplier == 1.75 ? 1 : 0);
-            window.specials[3146].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3146warning'
@@ -10718,10 +10328,10 @@ window.specials = {
         }
     },
     3147: {
-        orb: function(p) { return window.specials[3147].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var n = (window.specials[3147].multiplier == 1.75 ? 1 : 0);
-            window.specials[3147].multiplier = [1.75, 2.25][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x Orb multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '3147warning'
@@ -10736,13 +10346,13 @@ window.specials = {
         },
     },
     3150: {
-        atk: function(p) { return [ 2, 1, 1, 2, 1, 2, 2 ][window.specials[3150].multiplier]; },
+        atk: function(p) { return [ 2, 1, 1, 2, 1, 2, 2 ][p.cached.multiplier]; },
         type: "class",
-        affinity: function(p) { return [ 1, 1.75, 1, 1.75, 1.75, 1, 1.75 ][window.specials[3150].multiplier]; },
-        orb: function(p) { return [ 1, 1, 1.75, 1, 1.75, 1.75, 1.75 ][window.specials[3150].multiplier]; },
+        affinity: function(p) { return [ 1, 1.75, 1, 1.75, 1.75, 1, 1.75 ][p.cached.multiplier]; },
+        orb: function(p) { return [ 1, 1, 1.75, 1, 1.75, 1.75, 1.75 ][p.cached.multiplier]; },
         onActivation: function(p) {
-            var n = (window.specials[3150].multiplier == undefined ? 0 : (window.specials[3150].multiplier + 1) % 7);
-            window.specials[3150].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 7);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + [ 2, 1, 1, 2, 1, 2, 2 ][n] + 'x ATK boost, the ' + [ 1, 1.75, 1, 1.75, 1.75, 1, 1.75 ][n] + 'x Affinity boost and the ' + [ 1, 1, 1.75, 1, 1.75, 1.75, 1.75 ][n] + 'x Orb boost. To switch disable and re-enable this special',
                 name: '3150warning'
@@ -10750,28 +10360,27 @@ window.specials = {
         },
     },
     3151: {
-        chainAddition: function(p) { return window.specials[2854].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[2854].multiplier = 0;
+            p.cached.multiplier = 0;
             if (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit")) {
-                window.specials[2854].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     3152: {
-        orb: function(p) { return (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 2.25 : 1; },
-        warning: "Selected special (%name%) assumes that the enemy has All Debuff Protection."
+        orb: function(p) { return p.cached.enemyImmunities.delay && (p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher")) ? 2.25 : 1; },
     },
     3156: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
         type: "type",
         def: function(p) { return 0; },
-        status: function(p) { return p.defenseDown > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        status: function(p) { return p.defenseDown > 0 ? p.cached.multiplier != 0 ? 1.75 : 1 : 1; },
         onActivation: function(p) {
             console.log(p);
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Status", "ATK and Status"][n] + ' boost. To ' + ["ATK", "Status", "ATK and Status"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -10779,14 +10388,14 @@ window.specials = {
         },
     },
     3157: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
         type: "type",
         def: function(p) { return 0; },
-        status: function(p) { return p.defenseDown > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        status: function(p) { return p.defenseDown > 0 ? p.cached.multiplier != 0 ? 1.75 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Status", "ATK and Status"][n] + ' boost. To ' + ["ATK", "Status", "ATK and Status"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -10832,12 +10441,12 @@ window.specials = {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher")) ? 2.5 : 1; },
     },
     3176: {
-        atk: function(p) { return window.specials[3176].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var levels = [2, 2.5, 3];
-            var n = (levels.indexOf(window.specials[3176].multiplier) + 1) % levels.length;
-            window.specials[3176].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
                 name: '3176warning'
@@ -10845,12 +10454,12 @@ window.specials = {
         },
     },
     3177: {
-        atk: function(p) { return window.specials[3177].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var levels = [2, 2.5, 3];
-            var n = (levels.indexOf(window.specials[3177].multiplier) + 1) % levels.length;
-            window.specials[3177].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
                 name: '3177warning'
@@ -10890,21 +10499,21 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     3188: {
-        atk: function(p) { return window.specials[3188].multiplier1; },
+        atk: function(p) { return p.cached.multiplier1; },
         type: "type",
-        orb: function(p) { return window.specials[3188].multiplier2; },
+        orb: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
-            window.specials[3188].multiplier1 = p.colorCount.STR >= 4 ? 1.75 : 1;
-            window.specials[3188].multiplier2 = p.colorCount.PSY >= 4 ? 1.75 : 1;
+            p.cached.multiplier1 = p.colorCount.STR >= 4 ? 1.75 : 1;
+            p.cached.multiplier2 = p.colorCount.PSY >= 4 ? 1.75 : 1;
         },
     },
     3189: {
-        atk: function(p) { return (p.defenseDown && window.specials[3189].multiplier != 0) ? 2 : 1; },
+        atk: function(p) { return (p.defenseDown && p.cached.multiplier != 0) ? 2 : 1; },
         type: "condition",
-        def: function(p) { return window.specials[3189].multiplier != 1 ? 0 : 1; },
+        def: function(p) { return p.cached.multiplier != 1 ? 0 : 1; },
         onActivation: function(p) {
-            var n = (window.specials[3189].multiplier == 1 ? 2 : (window.specials[3189].multiplier == 2 | window.specials[3189].multiplier == undefined) ? 0 : 1);
-            window.specials[3189].multiplier = n;
+            var n = (p.cached.multiplier == 1 ? 2 : (p.cached.multiplier == 2 | p.cached.multiplier == undefined) ? 0 : 1);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Defense Reduction', 'Conditional boost', 'Conditional boost and Defense Reduction'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Defense Reduction', 'Defense Reduction'][n] + ', disable and re-enable this special',
                 name: '3189warning'
@@ -10917,11 +10526,11 @@ window.specials = {
     },
     3191: {
         def: function(p) { return 0; },
-        atk: function(p) { return p.defenseDown ? window.specials[3191].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         onActivation: function(p) {
-            var n = (window.specials[3191].multiplier == 1.5 ? 1 : 0);
-            window.specials[3191].multiplier = [1.5, 2][n];
+            var n = (p.cached.multiplier == 1.5 ? 1 : 0);
+            p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x Conditional multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
                 name: '3191warning'
@@ -10943,14 +10552,14 @@ window.specials = {
         type: "type"
     },
     3197: {
-        atk: function(p) { return window.specials[3197].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[3197].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[3197].multiplier = 1.75;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) p.cached.multiplier = 1.75;
         },
         onDeactivation: function(p) {
-            window.specials[3197].multiplier = 1;
+            p.cached.multiplier = 1;
         },
     },
     3198:{
@@ -10983,13 +10592,13 @@ window.specials = {
         type: "type",
     },
     3209: {
-        atk: function(p) { return window.specials[3209].multiplier == 0 ? 1.75 : 1; },
-        orb: function(p) { return window.specials[3209].multiplier == 1 ? 2 : 1; },
+        atk: function(p) { return p.cached.multiplier == 0 ? 1.75 : 1; },
+        orb: function(p) { return p.cached.multiplier == 1 ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.specials[3209].multiplier) + 1) % levels.length;
-            window.specials[3209].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK", "ORB"][levels[n]] + ' boost. To switch to the ' + ["ATK", "ORB"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
                 name: '3209warning'
@@ -10998,16 +10607,16 @@ window.specials = {
     },
     3210: {
         affinity: function(p) { return 1.75; },
-        chainAddition: function(p) { return window.specials[3210].multiplier1; },
-        chain: function(p) { return window.specials[3210].multiplier2; },
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier2; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[3210].multiplier2 != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3210].multiplier2 : 1;
+            if (p.cached.multiplier2 != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier2 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[3210].multiplier1 = p.colorCount.PSY >= 3 ? 0.75 : 0;
-            window.specials[3210].multiplier2 = (p.colorCount.QCK + p.colorCount.DEX + p.colorCount.INT) >= 3 ? 3 : 1;
+            p.cached.multiplier1 = p.colorCount.PSY >= 3 ? 0.75 : 0;
+            p.cached.multiplier2 = (p.colorCount.QCK + p.colorCount.DEX + p.colorCount.INT) >= 3 ? 3 : 1;
         },
     },
     3211: {
@@ -11015,23 +10624,22 @@ window.specials = {
         type: "class",
     },
     3212: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        atk: function(p) { return p.cached.enemyImmunities.delay && (p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? 2.25 : 1; },
         type: "class",
-        warning: "Selected special (%name%) assumes that the enemy has Delay Protection."
     },
     3213: {
         orb: function(p) { return 2; },
     },
     3214: {
-        chain: function(p) { return window.specials[3214].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3214].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
             var levels = [2.75, 3];
-            var n = (levels.indexOf(window.specials[3214].multiplier) + 1) % levels.length;
-            window.specials[3214].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + ' chain lock. To switch to the ' + levels[(n + 1) % levels.length] + ' chain lock, disable and re-enable this special',
                 name: '3214warning'
@@ -11039,11 +10647,11 @@ window.specials = {
         },
     },
     3215: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? window.specials[3215].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[3215].multiplier) + 1) % levels.length;
-            window.specials[3215].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + ' chain lock. To switch to the ' + levels[(n + 1) % levels.length] + ' chain lock, disable and re-enable this special',
                 name: '3215warning'
@@ -11051,28 +10659,28 @@ window.specials = {
         },
     },
     3218: {
-        chainAddition: function(p) { return window.specials[3218].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[3218].multiplier = 0;
+            p.cached.multiplier = 0;
             if (p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) {
-                window.specials[3218].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     3219: {
-        chainAddition: function(p) { return window.specials[3219].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[3219].multiplier = 0;
+            p.cached.multiplier = 0;
             if (p.captain.class.has("Slasher") || p.captain.class.has("Cerebral")) {
-                window.specials[3219].multiplier = 1;
+                p.cached.multiplier = 1;
             }
         },
     },
     3220: {
-        affinity: function(p) { return window.specials[3220].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2 : 1.75);
-            window.specials[3220].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '3220warning'
@@ -11080,10 +10688,10 @@ window.specials = {
         }
     },
     3221: {
-        affinity: function(p) { return window.specials[3221].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2 : 1.75);
-            window.specials[3221].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '3221warning'
@@ -11098,12 +10706,12 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? 1.75 : 1; },
     },
     3224: {
-        orb: function(p) { return p.unit.type == "DEX" ? window.specials[3224].multiplier : 1; },
-        onActivation: function(p) { window.specials[3224].multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
+        orb: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
+        onActivation: function(p) { p.cached.multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
     },
     3225: {
-        orb: function(p) { return p.unit.type == "DEX" ? window.specials[3225].multiplier : 1; },
-        onActivation: function(p) { window.specials[3225].multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
+        orb: function(p) { return p.unit.type == "DEX" ? p.cached.multiplier : 1; },
+        onActivation: function(p) { p.cached.multiplier = p.damageCounter >= 20000 ? 2.75 : 2.5; }
     },
     3226: {
         increaseDamageTaken: function(p) { return 2; },
@@ -11148,13 +10756,13 @@ window.specials = {
         }
     },
     3233: {
-        atk: function(p) { return window.specials[3233].multiplier == 1 ? 1.75 : 1; },
+        atk: function(p) { return p.cached.multiplier == 1 ? 1.75 : 1; },
         type: "type",
-        orb: function(p) { return window.specials[3233].multiplier == 0 ? 1.75 : 1; },
+        orb: function(p) { return p.cached.multiplier == 0 ? 1.75 : 1; },
         onActivation: function(p) {
             var levels = ['Orb Boost', 'ATK Boost'];
-            var n = (window.specials[3233].multiplier == undefined ? 0 : (window.specials[3233].multiplier + 1) % 2);
-            window.specials[3233].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 2);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + levels[n] + '. To switch to the ' + levels[(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: '3176warning'
@@ -11164,12 +10772,12 @@ window.specials = {
     3235: {
         delay: function(p) { return 2; },
         def: function(p) { return 0; },
-        atk: function(p) { return [p.defenseDown ? 2 : 1, p.delayed > 0 ? 2 : 1][window.specials[3235].multiplier]; },
+        atk: function(p) { return [p.defenseDown ? 2 : 1, p.delayed > 0 ? 2 : 1][p.cached.multiplier]; },
         type: "condition",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.specials[3235].multiplier) + 1) % levels.length;
-            window.specials[3235].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["DEF Down", "Delay"][levels[n]] + ' boost. To switch to the ' + ["DEF Down", "Delay"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
                 name: '3235warning'
@@ -11177,12 +10785,12 @@ window.specials = {
         },
     },
     3236: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[3236].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[3236].multiplier) + 1) % levels.length;
-            window.specials[3236].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
                 name: '3236warning'
@@ -11190,11 +10798,11 @@ window.specials = {
         },
     },
     3237: {
-        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[3237].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[3237].multiplier) + 1) % levels.length;
-            window.specials[3237].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Affinity boost, disable and re-enable this special',
                 name: '3237warning'
@@ -11218,11 +10826,11 @@ window.specials = {
         }
     },
     3242: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? window.specials[3242].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.25 : 2);
-            window.specials[3242].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5074warning'
@@ -11236,24 +10844,24 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "PSY" ? 2.25 : 1; },
     },
     3246:{
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[3246].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
-            window.specials[3246].multiplier = p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? 2 : 1.75;
+            p.cached.multiplier = p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? 2 : 1.75;
         },
     },
     3247: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK") ? 2 : 1; },
     },
     3248: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[3248].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
         delay: function(p) { return 1; },
         onActivation: function(p) {
             var levels = [1.75, 1];
-            var n = (levels.indexOf(window.specials[3248].multiplier) + 1) % levels.length;
-            window.specials[3248].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3248warning'
@@ -11261,13 +10869,13 @@ window.specials = {
         },
     },
     3249: {
-        atk: function(p) { return p.defenseDown ? window.specials[3249].multiplier : 1; },
+        atk: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         type: "condition",
         def: function(p) { return 0; },
         onActivation: function(p) {
             var levels = [1.75, 1];
-            var n = (levels.indexOf(window.specials[3249].multiplier) + 1) % levels.length;
-            window.specials[3249].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3249warning'
@@ -11285,17 +10893,17 @@ window.specials = {
         chainAddition: function(p) { return 0.8; }
     },
     3258: {
-        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : window.specials[3258].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[3258].multiplier = (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 2 : 1;
         }
     },
     3259: {
-        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : window.specials[3259].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[3259].multiplier = (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 2 : 1;
         }
     },
     3260: {
@@ -11321,13 +10929,13 @@ window.specials = {
         type: "type",
     },
     3269: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[3269].multiplier != 1 ? 1.75 : 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 1 ? 1.75 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[3269].multiplier != 0 ? 2 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 2 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[3269].multiplier) + 1) % levels.length;
-            window.specials[3269].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3269warning'
@@ -11335,12 +10943,12 @@ window.specials = {
         },
     },
     3270: {
-        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? window.specials[3270].multiplier : 1 },
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1 },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[3270].multiplier) + 1) % levels.length;
-            window.specials[3270].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3270warning'
@@ -11348,11 +10956,11 @@ window.specials = {
         },
     },
     3271: {
-        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? window.specials[3271].multiplier : 1 },
+        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1 },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[3271].multiplier) + 1) % levels.length;
-            window.specials[3271].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3271warning'
@@ -11365,31 +10973,32 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? 1.75 : 1 },
     },
     3274: {
-        affinity: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? window.specials[3274].multiplier : 1; },
+        affinity: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[3274].multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Cerebral")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Cerebral")) ? 2 : 1;
         }
     },
     3275: {
-        affinity: function(p) { return p.unit.type == window.specials[3275].boostedType ? window.specials[3275].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == window.specials[3275].boostedType ? p.cached.multiplier : 1; },
         def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return p.cached.percHP > 99 ? ['def'] : []; },
         atk: function(p) { return p.defenseDown ? 2 : 1; },
         type: "condition",
         onActivation: function(p) {
-            window.specials[3275].multiplier = (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) ? 1.75 : 1;
+            p.cached.multiplier = (p.colorCount.STR >= 4 || p.colorCount.DEX >= 4 || p.colorCount.QCK >= 4 || p.colorCount.PSY >= 4 || p.colorCount.INT >= 4) ? 1.75 : 1;
             window.specials[3275].boostedType = p.colorCount.STR >= 4 ? "STR" : p.colorCount.DEX >= 4 ? "DEX" :  p.colorCount.QCK >= 4 ? "QCK" : p.colorCount.PSY >= 4 ? "PSY" : p.colorCount.INT >= 4 ? "INT" : "null";
         },
     },
     3277: {
         poison: function(p) { return 99; },
-        atk: function(p) { return window.specials[3277].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         affinity: function(p) { return 2; },
         type: "type",
         def: function(p) { return 0; },
         onActivation: function(p) {
             var levels = [2.5, 1];
-            var n = (levels.indexOf(window.specials[3277].multiplier) + 1) % levels.length;
-            window.specials[3277].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][n] + ' boost. To ' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3277warning'
@@ -11398,14 +11007,14 @@ window.specials = {
     },
     3278: {
         poison: function(p) { return 99; },
-        atk: function(p) { return window.specials[3278].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         affinity: function(p) { return 2; },
         type: "type",
         def: function(p) { return 0; },
         onActivation: function(p) {
             var levels = [2.5, 1];
-            var n = (levels.indexOf(window.specials[3278].multiplier) + 1) % levels.length;
-            window.specials[3278].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][n] + ' boost. To ' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3278warning'
@@ -11413,12 +11022,12 @@ window.specials = {
         },
     },
     3281:{
-        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Orb", "Affinity", "Orb and Affinity"][n] + ' boost. To ' + ["Orb", "Affinity", "Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11426,12 +11035,12 @@ window.specials = {
         },
     },
     3282:{
-        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? 2.25 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Orb", "Affinity", "Orb and Affinity"][n] + ' boost. To ' + ["Orb", "Affinity", "Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11448,10 +11057,10 @@ window.specials = {
         def: function(p) { return 0; }
     },
     3286: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[3286].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            window.specials[3286].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Driven")) ? 1.75 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Driven")) ? 1.75 : 1;
         }
     },
     3288: {
@@ -11471,13 +11080,13 @@ window.specials = {
         orb: function(p) { return 1.5; },
     },
     3293: {
-        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? p.unit.class.has("Powerhouse") || p.captain.class.has("Driven") ? 1.75 : 1 : 1; },
+        affinity: function(p) { return p.cached.multiplier != 1 ? p.unit.class.has("Powerhouse") || p.captain.class.has("Driven") ? 1.75 : 1 : 1; },
         type: "type",
-        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? p.unit.class.has("Powerhouse") || p.captain.class.has("Driven") ? 2 : 1 : 1; },
+        orb: function(p) { return p.cached.multiplier != 0 ? p.unit.class.has("Powerhouse") || p.captain.class.has("Driven") ? 2 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Orb", "Affinity and Orb"][n] + ' boost. To ' + ["Affinity", "Orb", "Affinity and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11497,11 +11106,11 @@ window.specials = {
         type: "type",
     },
     3296: {
-        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? window.specials[3296].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[3296].multiplier) + 1) % levels.length;
-            window.specials[3296].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3296warning'
@@ -11512,24 +11121,24 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 2 : 1; },
     },
     3298: {
-        affinity: function(p) { return (window.specials[3298].affmultiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 2 : 1; },
-        chainAddition: function(p) { return window.specials[3298].chainmultiplier ? 1.1 : 0; },
+        affinity: function(p) { return (p.cached.affmultiplier && (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven"))) ? 2 : 1; },
+        chainAddition: function(p) { return p.cached.chainmultiplier ? 1.1 : 0; },
         onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) window.specials[3298].affmultiplier = true;
-            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) window.specials[3298].chainmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral") || p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) p.cached.affmultiplier = true;
+            if (p.captain) if (p.captain.class.has("Fighter") || p.captain.class.has("Striker") || p.captain.class.has("Slasher") || p.captain.class.has("Shooter")) p.cached.chainmultiplier = true;
         },
         onDeactivation: function(p) {
-            window.specials[3298].affmultiplier = false;
-            window.specials[3298].chainmultiplier = false;
+            p.cached.affmultiplier = false;
+            p.cached.chainmultiplier = false;
         },
     },
     3301: {
-        orb: function(p) { return (window.specials[3301].multiplier) ? 2 : 1; },
+        orb: function(p) { return (p.cached.multiplier) ? 2 : 1; },
         onActivation: function(p) {
-            if (p.captain) if (p.captain.class.has("Striker") || p.captain.class.has("Driven")) window.specials[3301].multiplier = true;
+            if (p.captain) if (p.captain.class.has("Striker") || p.captain.class.has("Driven")) p.cached.multiplier = true;
         },
         onDeactivation: function(p) {
-            window.specials[3301].multiplier = false;
+            p.cached.multiplier = false;
         },
     },
     3302: {
@@ -11547,12 +11156,12 @@ window.specials = {
         }
     },
     3304: {
-        atk: function(p) { return window.specials[3304].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[3304].multiplier) + 1) % levels.length;
-            window.specials[3304].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3304warning'
@@ -11560,11 +11169,11 @@ window.specials = {
         },
     },
     3305: {
-        chainAddition: function(p) { return window.specials[3305].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [0.8, 1.0];
-            var n = (levels.indexOf(window.specials[3305].multiplier) + 1) % levels.length;
-            window.specials[3305].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3305warning'
@@ -11575,15 +11184,15 @@ window.specials = {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
         type: "type",
         def: function(p) { return 0; },
-        chain: function(p) { return window.specials[3306].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3306].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
             var levels = [3, 3.25, 3.5];
-            var n = (levels.indexOf(window.specials[3306].multiplier) + 1) % levels.length;
-            window.specials[3306].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '3306warning'
@@ -11594,15 +11203,15 @@ window.specials = {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
         type: "type",
         def: function(p) { return 0; },
-        chain: function(p) { return window.specials[3307].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[3307].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
             var levels = [3, 3.25, 3.5];
-            var n = (levels.indexOf(window.specials[3307].multiplier) + 1) % levels.length;
-            window.specials[3307].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '3307warning'
@@ -11610,11 +11219,11 @@ window.specials = {
         },
     },
     3309: {
-        orb: function(p) { return window.specials[3309].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[3309].multiplier) + 1) % levels.length;
-            window.specials[3309].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3309warning'
@@ -11684,12 +11293,12 @@ window.specials = {
         type: "type",
     },
     3332: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11710,38 +11319,40 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
         type: "class",
         increaseDamageTaken: function(p) { return 1.5; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
     },
     3336: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
         type: "class",
         increaseDamageTaken: function(p) { return 1.5; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
     },
-    3338: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[3337].multiplier[0] == "1" ? 2 : 1 : 1; },
-        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[3337].multiplier[2] == "1" ? 2.5 : 1 : 1; },
+    3337: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier[0] == "1" ? 2 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier[2] == "1" ? 2.5 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[3337].multiplier[1] == "1" ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier[1] == "1" ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [1, 2, 3, 4, 5, 6, 7];
-            var n = (levels.indexOf(parseInt(window.specials[3337].multiplier,2)) + 1) % levels.length;
-            window.specials[3337].multiplier = levels[n];
-            window.specials[3337].multiplier = "0".repeat(3-window.specials[3337].multiplier.toString(2).length) + window.specials[3337].multiplier.toString(2);
+            var n = (levels.indexOf(parseInt(p.cached.multiplier,2)) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier = "0".repeat(3-p.cached.multiplier.toString(2).length) + p.cached.multiplier.toString(2);
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3338warning'
+                name: '3337warning'
             });
         },
     },
     3338: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[0] == "1" ? 2 : 1 : 1; },
-        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[2] == "1" ? 2.5 : 1 : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier[0] == "1" ? 2 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier[2] == "1" ? 2.5 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[1] == "1" ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier[1] == "1" ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [1, 2, 3, 4, 5, 6, 7];
-            var n = (levels.indexOf(parseInt(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier,2)) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = "0".repeat(3-window.specials[p.team[p.sourceSlot].unit.number+1].multiplier.toString(2).length) + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier.toString(2);
+            var n = (levels.indexOf(parseInt(p.cached.multiplier,2)) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier = "0".repeat(3-p.cached.multiplier.toString(2).length) + p.cached.multiplier.toString(2);
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3338warning'
@@ -11749,12 +11360,12 @@ window.specials = {
         },
     },
     3339: {
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '3339warning'
@@ -11765,10 +11376,10 @@ window.specials = {
         orb: function(p) { return 2; },
     },
     3345: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP <= 51 ? 2 : 1.75);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     3347: {
@@ -11783,40 +11394,23 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
         type: "type",
         status: function(p) { return p.delayed > 0 ? 1.5 : 1; },
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
-        onActivation: function(p) {
-            var levels = [0, 1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            p.scope.notify({
-                text: 'Using the ' + ["not Delay", "Delay"][levels[n]] + '. To switch to the ' + ["not Delay", "Delay"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
+        delay: function(p) { return p.cached.currentHP >= 25000 ? 1 : 0; },
     },
     3352: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
         type: "type",
         status: function(p) { return p.delayed > 0 ? 1.5 : 1; },
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
-        onActivation: function(p) {
-            var levels = [0, 1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            p.scope.notify({
-                text: 'Using the ' + ["not Delay", "Delay"][levels[n]] + '. To switch to the ' + ["not Delay", "Delay"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
+        delay: function(p) { return p.cached.currentHP >= 25000 ? 1 : 0; },
+        ignoresImmunities: function(p) { return p.cached.currentHP >= 50000 ? ['delay'] : []; },
     },
     3356: {
-        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = (p.percHP <= 50 ? 2.5 : 2);
+            p.cached.multiplier1 = (p.percHP <= 50 ? 2.5 : 2);
             var levels = [0, 1.2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Affinity and Chain"][n] + ' boost. To switch to ' + ["Affinity", "Affinity and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11824,13 +11418,13 @@ window.specials = {
         },
     },
     3357: {
-        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = (p.percHP <= 50 ? 2.5 : 2);
+            p.cached.multiplier1 = (p.percHP <= 50 ? 2.5 : 2);
             var levels = [0, 1.2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' chain boost. To ' + levels[(n + 1) % levels.length] + ' chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11845,13 +11439,13 @@ window.specials = {
         }
     },
     3359: {
-        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1; },
+        affinity: function(p) { return p.cached.multiplier != 1 ? 1.75 : 1; },
         type: "type",
-        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1; },
+        orb: function(p) { return p.cached.multiplier != 0 ? 1.75 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Orb", "Affinity and Orb"][n] + ' boost. To ' + ["Affinity", "Orb", "Affinity and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11869,13 +11463,13 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Slasher") ? 1.75 : 1; },
     },
     3363: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2 : 1 : 1; },
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 1 ? 2 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 2 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11883,13 +11477,13 @@ window.specials = {
         },
     },
     3364: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2 : 1 : 1; },
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 1 ? 2 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 2 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11899,19 +11493,19 @@ window.specials = {
     3365: {
         chainPlus: function(p) { 
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.2) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0;
+            if (p.cached.multiplier == 0.2) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 0;
             else return 0;
         }, 
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chain: function(p) { return p.cached.multiplier == 2.75 ? p.cached.multiplier : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0.2, 2.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11930,13 +11524,13 @@ window.specials = {
         }
     },
     3368: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.5 : 1 : 1; },
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 1 ? 1.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 2.25 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11944,12 +11538,12 @@ window.specials = {
         },
     },
     3369: {
-        orb: function(p) { return p.unit.type == "PSY" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.type == "PSY" ? p.cached.multiplier : 1; },
         turnedOn: [false,false,false,false,false,false],
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.25][n];
+            var n = (p.cached.multiplier == 2 ? 1 : 0);
+            p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb Boost. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11960,12 +11554,12 @@ window.specials = {
         }
     },
     3370: {
-        def: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.2 : 1; },
-        status: function(p) { return p.defenseDown > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        def: function(p) { return p.cached.multiplier != 0 ? 0.2 : 1; },
+        status: function(p) { return p.defenseDown > 0 ? p.cached.multiplier != 1 ? 1.75 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Conditional Boost", "DEF Reduction", "Both Effects"][levels[n]] + '. To switch to ' + ["Conditional Boost", "DEF Reduction", "Both Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11973,12 +11567,12 @@ window.specials = {
         },
     },
     3371: {
-        chainAdditionPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.2 ? 0.2 : 0; }, 
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        chainAdditionPlus: function(p) { return p.cached.multiplier == 0.2 ? 0.2 : 0; },
+        chainAddition: function(p) { return p.cached.multiplier == 1.0 ? p.cached.multiplier : 0; },
         onActivation: function(p) {
             var levels = [0.2, 1.0];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain Addition Buff", "Chain Addition"][n] + '. To switch to ' + ["Chain Addition Buff", "Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11986,12 +11580,12 @@ window.specials = {
         },
     },
     3372: {
-        def: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        def: function(p) { return p.cached.multiplier; },
         chainAddition: function(p) { return 1.0; },
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["DEF Reduction and Chain Boost", "Chain Boost Only"][levels[n]] + '. To switch to ' + ["DEF Reduction and Chain Boost", "Chain Boost Only"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -11999,13 +11593,13 @@ window.specials = {
         },
     },
     3373: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? [1, 1.5, 1.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? [1, 1.5, 1.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "ORB boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12016,12 +11610,12 @@ window.specials = {
         chainAddition: function(p) { return 1.0; }
     },
     3375: {
-        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1 : 1; },
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.1 : 0; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? 2.5 : 1 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier != 1 ? 1.1 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Orb", "Chain", "Orb and Chain"][n] + ' boost. To ' + ["Orb", "Chain", "Orb and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12029,12 +11623,12 @@ window.specials = {
         },
     },
     3376: {
-        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.1 : 0; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier != 0 ? 1.1 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Orb", "Chain", "Orb and Chain"][n] + ' boost. To ' + ["Orb", "Chain", "Orb and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12042,18 +11636,18 @@ window.specials = {
         },
     },
     3377: {
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
         type: "type",
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1; },
+        chain: function(p) { return p.cached.multiplier != 0 ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Chain Boundary", "ATK and Chain Boundary"][n] + ' boost. To ' + ["ATK", "Chain Boundary", "ATK and Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12061,18 +11655,18 @@ window.specials = {
         },
     },
     3378: {
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
         type: "type",
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1; },
+        chain: function(p) { return p.cached.multiplier != 0 ? 2.5 : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Chain Boundary", "ATK and Chain Boundary"][n] + ' boost. To ' + ["ATK", "Chain Boundary", "ATK and Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12080,11 +11674,11 @@ window.specials = {
         },
     },
     3380: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [0.8, 1.1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12092,11 +11686,11 @@ window.specials = {
         },
     },
     3381: {
-        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12104,13 +11698,13 @@ window.specials = {
         },
     },
     3382: {
-        orb: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier != 0 ? 1.75 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier != 1 ? 1.75 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12118,10 +11712,10 @@ window.specials = {
         },
     },
     3383: {
-        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [1.75, 2][n];
+            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
+            p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12132,13 +11726,13 @@ window.specials = {
         orb: function(p) { return 1.5; },
     },
     3385: {
-        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
-        def: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 500 ? 0 : 1; },
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
+        def: function(p) { return p.cached.multiplier == 500 ? 0 : 1; },
         status: function(p) { return p.defenseDown > 0 ? 2 : 1; },
         onActivation: function(p) {
             var levels = [300, 500];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + ' base ATK boost and corresponding defense reduction. To switch to the ' + levels[(n + 1) % levels.length] + ' base ATK boost and corresponding defense reduction, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12146,12 +11740,12 @@ window.specials = {
         },
     },
     3386: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12159,11 +11753,11 @@ window.specials = {
         },
     },
     3387: {
-        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12171,12 +11765,12 @@ window.specials = {
         },
     },
     3388: {
-        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 : 1; },
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier1 : 1; },
         type: "type",
-        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1; },
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "DEX" ? p.cached.multiplier2 : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.colorCount.QCK >= 4 ? 1.75 : 1;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.colorCount.DEX >= 4 ? 1.75 : 1;
+            p.cached.multiplier1 = p.colorCount.QCK >= 4 ? 1.75 : 1;
+            p.cached.multiplier2 = p.colorCount.DEX >= 4 ? 1.75 : 1;
         },
     },
     3389: {
@@ -12217,13 +11811,13 @@ window.specials = {
     },
     3398: {
         delay: function(p) { return 1; },
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1; },
+        atk: function(p) { return p.cached.multiplier != 1 ? 2.25 : 1; },
         type: "type",
-        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1; },
+        affinity: function(p) { return p.cached.multiplier != 0 ? 1.75 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Affinity", "ATK and Affinity"][n] + ' boost. To ' + ["ATK", "Affinity", "ATK and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12249,13 +11843,13 @@ window.specials = {
         type: "type",
     },
     3404: {
-        orbPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
-        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        orbPlus: function(p) { return p.cached.multiplier != 1 ? 0.25 : 0; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 2.25 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12266,14 +11860,14 @@ window.specials = {
         },
     },
     3405: {
-        orbPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.25 : 1 : 1; },
+        orbPlus: function(p) { return p.cached.multiplier != 1 ? 0.25 : 0; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 2.25 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12287,12 +11881,12 @@ window.specials = {
         chainAddition: function(p) { return 0.8; }
     },
     3407: {
-        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12301,11 +11895,11 @@ window.specials = {
     },
     3408: {
         poison: function(p) { return 99; },
-        status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12317,14 +11911,14 @@ window.specials = {
         type: "type",
     },
     3410: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1.4 : 0.7; },
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chainAddition: function(p) { return p.cached.multiplier == 2 ? 1.4 : 0.7; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][n] + ' boost. To ' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12335,14 +11929,14 @@ window.specials = {
         }
     },
     3411: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1.4 : 0.7; },
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chainAddition: function(p) { return p.cached.multiplier == 2 ? 1.4 : 0.7; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][n] + ' boost. To ' + ["1.75x Affinity and 0.7x Chain", "2x Affinity and 1.4x Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12365,13 +11959,13 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2 : 0; },
     },
     3416: {
-        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.25 : 0; }, 
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        affinityPlus: function(p) { return p.cached.multiplier != 0 ? 0.25 : 0; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? p.cached.multiplier != 1 ? 1.75 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12382,16 +11976,7 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 2.25 : 1; },
     },
     3418: {
-        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        onActivation: function(p) {
-            var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            p.scope.notify({
-                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
+        affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? (p.cached.enemyImmunities.delay ? 2 : 1.75) : 1; },
     },
     3419: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 2 : 1; },
@@ -12406,13 +11991,13 @@ window.specials = {
         orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
     3423: {
-        atkPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; },
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        atkPlus: function(p) { return p.cached.multiplier != 1 ? 0.25 : 0; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? 1.75 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12420,12 +12005,12 @@ window.specials = {
         },
     },
     3424: {
-        chainAdditionPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.2 ? 0.2 : 0; }, 
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        chainAdditionPlus: function(p) { return p.cached.multiplier == 0.2 ? 0.2 : 0; },
+        chainAddition: function(p) { return p.cached.multiplier == 1.0 ? p.cached.multiplier : 0; },
         onActivation: function(p) {
             var levels = [0.2, 1.0];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain Addition Buff", "Chain Addition"][n] + '. To switch to ' + ["Chain Addition Buff", "Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12433,15 +12018,15 @@ window.specials = {
         },
     },
     3426: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.maxHP >= 60000 ? 2.5 : 2.25;
+            p.cached.multiplier = p.maxHP >= 60000 ? 2.5 : 2.25;
         },
     },
     3427: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.maxHP >= 60000 ? 2.5 : 2.25;
+            p.cached.multiplier = p.maxHP >= 60000 ? 2.5 : 2.25;
         },
     },
     3428: {
@@ -12534,52 +12119,50 @@ window.specials = {
     },
     3453: {
         status: function(p) { return p.defenseDown || p.poisoned || p.delayed || p.negative ? 2 : 1; },
-        negative: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2; },
+        negative: function(p) { return p.cached.percHP <= 80 ? 1 : 0; },
+        ignoresImmunities: function(p) { return ['negative']; },
         chainPlus: function(p) { 
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.5) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0;
+            if (p.cached.multiplier == 0.5) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 0;
             else return 0;
         }, 
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chain: function(p) { return p.cached.multiplier == 3.25 ? p.cached.multiplier : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0.5, 3.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            var m = (p.percHP <= 80 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = m;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'HP ' + (m == 0 ? 'above' : 'below') + ' 80%, using the ' + n + ' turn debuff.' + 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3454: {
         status: function(p) { return p.defenseDown || p.poisoned || p.delayed || p.negative ? 2 : 1; },
-        negative: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2; },
+        negative: function(p) { return p.cached.percHP <= 80 ? 1 : 0; },
+        ignoresImmunities: function(p) { return ['negative']; },
         chainPlus: function(p) { 
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.5) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0;
+            if (p.cached.multiplier == 0.5) return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 0;
             else return 0;
         }, 
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        chain: function(p) { return p.cached.multiplier == 3.25 ? p.cached.multiplier : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0.5, 3.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            var m = (p.percHP <= 80 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = m;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'HP ' + (m == 0 ? 'above' : 'below') + ' 80%, using the ' + n + ' turn debuff.' + 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Chain Lock Buff", "Chain Lock"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
@@ -12588,12 +12171,12 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     3456: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12601,13 +12184,13 @@ window.specials = {
         },
     },
     3457: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 1.75 : 1 : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 1 ? 1.75 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1.75 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier != 0 ? 1.75 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5279warning'
@@ -12622,10 +12205,10 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "INT" ? 2 : 1; }
     },
     3461: {
-        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2.25);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5274warning'
@@ -12633,10 +12216,10 @@ window.specials = {
         },
     },
     3462: {
-        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2.25);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5274warning'
@@ -12647,12 +12230,12 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.75 : 1; }
     },
     3467: {
-        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12660,25 +12243,16 @@ window.specials = {
         },
     },
     3468: {
-        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : 0; },
-        onActivation: function(p) {
-            var levels = [2, 2.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            p.scope.notify({
-                text: '' + levels[n] + ' boost and corresponding Delay. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? (p.cached.enemyImmunities.delay ? 2.25 : 2) : 1; },
+        delay: function(p) { return 1; },
     },
     3470: {
-        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         def: function(p) { return 0; },
         chainAddition: function(p) { return 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12686,15 +12260,15 @@ window.specials = {
         }
     },
     3471: {
-        chainAddition: function(p) { return [1.4, 1, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0; },
+        chainAddition: function(p) { return [1.4, 1, 1.4][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][p.cached.multiplier] : 0; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain, ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12703,14 +12277,14 @@ window.specials = {
     },
     3472: {
         chainAddition: function(p) { return 1.4; },
-        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0; },
+        atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][p.cached.multiplier] : 0; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain, ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12718,15 +12292,15 @@ window.specials = {
         },
     },
     3473: {
-        orb: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1 : 1; },
-        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? p.cached.multiplier2 : 1 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
             p.scope.notify({
                 text: 'Using the ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12734,15 +12308,15 @@ window.specials = {
         },
     },
     3474: {
-        orb: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1 : 1; },
-        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 1000 : 0 : 0; },
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? p.cached.multiplier2 : 1 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier != 0 ? 1000 : 0 : 0; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier != 1 ? 2.5 : 1 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "Base ATK and Orb boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Base ATK and Orb boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12751,16 +12325,15 @@ window.specials = {
     },
     3475:{
         poison: function(p) { return 99; },
-        multiplier: 1,
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.0) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Driven")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2.0;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Driven")) p.cached.multiplier = 2.0;
         },
     },
     3476: {
@@ -12771,11 +12344,11 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
     3481: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [0.7, 0.9];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12785,17 +12358,17 @@ window.specials = {
     3482: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
         type: "type",
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier2 : 1;
         },
         onActivation: function(p) {
             var levels = [2.5, 3];
             var levels2 = [35, 40];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = levels2[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x Base Chain boost. To ' + levels[(n + 1) % levels.length] + 'x Base Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12805,17 +12378,17 @@ window.specials = {
     3483: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
         type: "type",
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier2 : 1;
         },
         onActivation: function(p) {
             var levels = [2.5, 3];
             var levels2 = [35, 40];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = levels2[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x Base Chain boost. To ' + levels[(n + 1) % levels.length] + 'x Base Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12833,11 +12406,11 @@ window.specials = {
         def: function(p) { return 0; },
     },
     3487: {
-        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12845,12 +12418,12 @@ window.specials = {
         },
     },
     3488: {
-        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0.25 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; }, 
-        affinity: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinityPlus: function(p) { return p.cached.multiplier == 0.25 ? p.cached.multiplier : 0; },
+        affinity: function(p) { return p.cached.multiplier == 2 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [0.25, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Affinity Buff", "Affinity"][n] + '. To switch to ' + ["Affinity Buff", "Affinity"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12867,17 +12440,17 @@ window.specials = {
     },
     3491: {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
-        status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     3496: {
-        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12893,16 +12466,16 @@ window.specials = {
         orb: function(p) { return 1.75; },
     },
     3499:{
-        chain: function(p) { return [2.75, 3, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chain: function(p) { return [2.75, 3, 3.5][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.75, 3, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.75, 3, 3.5][p.cached.multiplier] : 1;
         },
-        def: function(p) { return [0.5, 0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        def: function(p) { return [0.5, 0.2, 0][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + [2.75, 3, 3.5][n] + 'x chain boost. To ' + [2.75, 3, 3.5][(n + 1) % levels.length] + 'x chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -12914,12 +12487,12 @@ window.specials = {
         type: "type",
     },
     3503: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 ? 0.7 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 ? 0.5 : 0; },
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 ? 1.75 : 1 : 1; },
-        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 ? 2 : 1 : 1; },
+        chainAddition: function(p) { return p.cached.multiplier1 ? 0.7 : p.cached.multiplier2 ? 0.5 : 0; },
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? p.cached.multiplier2 ? 1.75 : 1 : 1; },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? p.cached.multiplier1 ? 2 : 1 : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.colorCount.STR >= 4;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.colorCount.DEX + p.colorCount.QCK >= 4;
+            p.cached.multiplier1 = p.colorCount.STR >= 4;
+            p.cached.multiplier2 = p.colorCount.DEX + p.colorCount.QCK >= 4;
         },
     },
     3505: {
@@ -12928,19 +12501,19 @@ window.specials = {
         warning: "Selected special (%name%) assumes that the enemy has been Delayed."
     },
     3506: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 ? 2 : 1 : 1; },
-        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 ? 800 : 0 : 0; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? p.cached.multiplier1 ? 2 : 1 : 1; },
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier2 ? 800 : 0 : 0; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "PSY");
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "INT");
+            p.cached.multiplier1 = p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK" || p.captain.type == "PSY");
+            p.cached.multiplier2 = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "INT");
         },
     },
     3509: {
-        orb: function(p) { return (p.unit.class.has('Shooter') || p.unit.class.has('Powerhouse')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Shooter') || p.unit.class.has('Powerhouse')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13000,13 +12573,13 @@ window.specials = {
         atkbase: function(p) { return 1500; },
     },
     3524: {
-        status: function(p) { return p.poisoned ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        status: function(p) { return p.poisoned ? [1, 2, 2][p.cached.multiplier] : 1; },
         orb: function(p) { return 1.75; },
-        poison: function(p) { return [99, 0, 99][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        poison: function(p) { return [99, 0, 99][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the' + ["Poison and Orb", "Status ATK and Orb", "Poison, Orb and Status ATK"][n] + ' special. To ' + ["Poison and Orb", "Status ATK and Orb", "Poison, Orb and Status ATK"][(n + 1) % levels.length] + ' special, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13014,11 +12587,11 @@ window.specials = {
         },
     },
     3525:{
-        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.75, 2.25];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13029,13 +12602,13 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
     },
     3527: {
-        affinityPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 0.25 : 0; }, 
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2 : 1 : 1; },
+        affinityPlus: function(p) { return p.cached.multiplier != 1 ? 0.25 : 0; },
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? p.cached.multiplier != 0 ? 2 : 1 : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
                 text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
@@ -13047,11 +12620,11 @@ window.specials = {
         },
     },
     3528: {
-        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.maxHP > 50000  ? 2.25 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'MAX HP ' + (n == 2.25 ? 'above' : 'below') + ' 50,000, using the ' + n + 'x multiplier.',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13071,14 +12644,14 @@ window.specials = {
     },
     3531: {
         def: function(p) { return 0; },
-        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 0; },
+        status: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? p.cached.multiplier2 : 0; },
         onActivation: function(p) {
             var levels = [1.75, 2];
             var levels2 = [0, 250];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = levels2[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + ' base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13087,14 +12660,14 @@ window.specials = {
     },
     3532: {
         def: function(p) { return 0; },
-        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 0; },
+        status: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? p.cached.multiplier2 : 0; },
         onActivation: function(p) {
             var levels = [2, 2.25, 2.25];
             var levels2 = [0, 250, 500];
-            var n = (levels2.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2) + 1) % levels2.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = levels2[n];
+            var n = (levels2.indexOf(p.cached.multiplier2) + 1) % levels2.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = levels2[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost and ' + levels2[n] + ' base ATK boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost and ' + levels2[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13102,13 +12675,13 @@ window.specials = {
         },
     },
     3533: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13116,13 +12689,13 @@ window.specials = {
         },
     },
     3534: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13130,13 +12703,13 @@ window.specials = {
         },
     },
     3535: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Orb boost", "ATK boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13144,13 +12717,13 @@ window.specials = {
         },
     },
     3536: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Orb boost", "ATK boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13158,11 +12731,11 @@ window.specials = {
         },
     },
     3537:{
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [0.6, 1.0];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13173,16 +12746,16 @@ window.specials = {
         affinity: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher")) ? 2 : 1; },
     },
     3539: {
-        def: function(p) { return [0.2, 0.2, 0, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        chain: function(p) { return [2.75, 3.25, 2.75, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        def: function(p) { return [0.2, 0.2, 0, 0][p.cached.multiplier]; },
+        chain: function(p) { return [2.75, 3.25, 2.75, 3.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.75, 3.25, 2.75, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.75, 3.25, 2.75, 3.25][p.cached.multiplier] : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25, 2.75, 3.25][n] + 'x chain lock and the ' + (1-[0.2, 0.2, 0, 0][n])*100 + '% Defense Reduction. To switch to the ' + [2.75, 3.25, 2.75, 3.25][(n + 1) % levels.length] + 'x chain lock and the ' + (1-[0.2, 0.2, 0, 0][(n + 1) % levels.length])*100 + '% Defense Reduction, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13190,10 +12763,10 @@ window.specials = {
         },
     },
     3540: {
-        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 50  ? 2.25 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13206,14 +12779,14 @@ window.specials = {
         def: function(p) { return 0; },
     },
     3544: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        atk: function(p) { return [1, 1.75, 1.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        atk: function(p) { return [1, 1.75, 1.75][p.cached.multiplier]; },
         type: "type",
-        orb: function(p) { return [1, 1.75, 1.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return [1, 1.75, 1.75][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "ATK and Orb", "Affinity, ATK and Orb"][n] + ' boost. To ' + ["Affinity", "ATK and Orb", "Affinity, ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13229,9 +12802,9 @@ window.specials = {
     },
     3546: {
         delay: function(p) { return 1; },
-        status: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Free Spirit") || p.captain.class.has("Powerhouse")) ? 1.75 : 1;
+            p.cached.multiplier = (p.captain.class.has("Free Spirit") || p.captain.class.has("Powerhouse")) ? 1.75 : 1;
         }
     },
     3547: {
@@ -13242,11 +12815,11 @@ window.specials = {
         }
     },
     3549: {
-        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.25 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13258,11 +12831,11 @@ window.specials = {
         type: "type",
     },
     3551: {
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13270,14 +12843,14 @@ window.specials = {
         },
     },
     3552: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        atk: function(p) { return [1, 2.25, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [p.cached.multiplier1, 1, p.cached.multiplier1][p.cached.multiplier] : 1; },
+        atk: function(p) { return [1, 2.25, 2.25][p.cached.multiplier]; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.percHP >= 80 ? 2.5 : 2.25;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP >= 80 ? 2.5 : 2.25;
             p.scope.notify({
                 text: '' + ["Affinity", "ATK", "Affinity and ATK"][n] + ' boost. To ' + ["Affinity", "ATK", "Affinity and ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13285,14 +12858,14 @@ window.specials = {
         },
     },
     3553: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1, 1, window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        atk: function(p) { return [1, 2.25, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [p.cached.multiplier1, 1, p.cached.multiplier1][p.cached.multiplier] : 1; },
+        atk: function(p) { return [1, 2.25, 2.25][p.cached.multiplier]; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier1 = p.percHP >= 80 ? 2.5 : 2.25;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP >= 80 ? 2.5 : 2.25;
             p.scope.notify({
                 text: '' + ["Affinity", "ATK", "Affinity and ATK"][n] + ' boost. To ' + ["Affinity", "ATK", "Affinity and ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13300,10 +12873,10 @@ window.specials = {
         },
     },
     3556: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.FreeSpirit >= 6 ? 2.25 : 2;
+            p.cached.multiplier = p.classCount.FreeSpirit >= 6 ? 2.25 : 2;
         }
     },
     3557: {
@@ -13348,13 +12921,13 @@ window.specials = {
     },
     3567: {
         def: function(p) { return 0; },
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
-        affinity: function(p) { return p.unit.type == "STR" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1; },
+        status: function(p) { return p.cached.multiplier; },
+        affinity: function(p) { return p.unit.type == "STR" ? p.cached.multiplier2 : 1; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain.class.has("Driven")) ? 2 : 1;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = (p.captain.class.has("Driven")) ? 2 : 1;
             p.scope.notify({
                 text: '' + levels[n] + 'x Status boost. To ' + levels[(n + 1) % levels.length] + 'x Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13362,9 +12935,9 @@ window.specials = {
         }
     },
     3568: {
-        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral")) ? 2.25 : 2;
+            p.cached.multiplier = (p.captain.class.has("Free Spirit") || p.captain.class.has("Cerebral")) ? 2.25 : 2;
         },
     },
     3570: {
@@ -13372,17 +12945,17 @@ window.specials = {
         type: "type",
     },
     3571: {
-        orb: function(p) { return p.unit.class.has("Driven") ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        chain: function(p) { return [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return p.unit.class.has("Driven") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        chain: function(p) { return [1, 2.75, 2.75][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if ([1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            if ([1, 2.75, 2.75][p.cached.multiplier] == 2.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [1, 2.75, 2.75][p.cached.multiplier] : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Orb", "Chain", "Orb and Chain"][n] + ' boost. To ' + ["Orb", "Chain", "Orb and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13390,17 +12963,17 @@ window.specials = {
         },
     },
     3572: {
-        orb: function(p) { return p.unit.class.has("Driven") ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        chain: function(p) { return [1, 3.25, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return p.unit.class.has("Driven") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        chain: function(p) { return [1, 3.25, 3.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if ([1, 3.25, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [1, 3.25, 3.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            if ([1, 3.25, 3.25][p.cached.multiplier] == 3.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [1, 3.25, 3.25][p.cached.multiplier] : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Orb", "Chain", "Orb and Chain"][n] + ' boost. To ' + ["Orb", "Chain", "Orb and Chain"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13419,16 +12992,15 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     3578: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.25) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Free Spirit")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2.25;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Free Spirit")) p.cached.multiplier = 2.25;
         },
     },
     3579: {
@@ -13438,29 +13010,27 @@ window.specials = {
         increaseDamageTaken: function(p) { return 1.5; },
     },
     3581: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+            if (p.cached.multiplier == 3.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Powerhouse")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.75;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Powerhouse")) p.cached.multiplier = 3.75;
         },
     },
     3582: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+            if (p.cached.multiplier == 3.75) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
-            if (p.captain) if (p.captain.class.has("Powerhouse")) window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.75;
+            p.cached.multiplier = 1;
+            if (p.captain) if (p.captain.class.has("Powerhouse")) p.cached.multiplier = 3.75;
         },
     },
     3583:{
@@ -13468,13 +13038,13 @@ window.specials = {
         type: "type",
     },
     3584: {
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [ 1.75, 2, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [ 1.75, 2, 1 ][p.cached.multiplier] : 1; },
         type: "type",
-        atkPlus: function(p) { return [ 0, 0, .25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atkPlus: function(p) { return [ 0, 0, .25 ][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["1.75x ATK", "2x ATK", "0.25x ATK Buff"][n] + ' boost. To ' + ["1.75x ATK", "2x ATK", "0.25x ATK Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13485,12 +13055,12 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") ? 2 : 1; },
     },
     3586: {
-        status: function(p) { return p.delayed > 0 ? [ 1, 2, 2 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        delay: function(p) { return [ 1, 0, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        status: function(p) { return p.delayed > 0 ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
+        delay: function(p) { return [ 1, 0, 1 ][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Delay", "Status Boost", "Delay and Status Boost"][n] + '. To ' + ["Delay", "Status Boost", "Delay and Status Boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13498,12 +13068,12 @@ window.specials = {
         },
     },
     3587: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To use the ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13514,52 +13084,48 @@ window.specials = {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
     },
     3589:{
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier2 : 1;
         },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
         type: "type",
-        multiplier: 2.5,
-        multiplier2: 35,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 3 : 2.5;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 40 : 35;
+            p.cached.multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 3 : 2.5;
+            p.cached.multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 40 : 35;
             p.scope.notify({
-                text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
+                text: '' + p.cached.multiplier[n] + 'x Boundary Chain boost. To ' + p.cached.multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3590:{
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier2 : 1;
         },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
         type: "type",
-        multiplier: 2.5,
-        multiplier2: 35,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 3 : 2.5;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 40 : 35;
+            p.cached.multiplier = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 3 : 2.5;
+            p.cached.multiplier2 = (p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse"))) ? 40 : 35;
             p.scope.notify({
-                text: '' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[n] + 'x Boundary Chain boost. To ' + window.specials[p.team[p.sourceSlot].unit.number+1].multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
+                text: '' + p.cached.multiplier[n] + 'x Boundary Chain boost. To ' + p.cached.multiplier[(n + 1) % levels.length] + 'x Boundary Chain boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3591: {
-        atkPlus: function(p) { return [0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        orbPlus: function(p) { return [0.2, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        def: function(p) { return [1, 0.2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        status: function(p) { return p.defenseDown ? [1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkPlus: function(p) { return [0.2, 0][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0.2, 0][p.cached.multiplier]; },
+        def: function(p) { return [1, 0.2][p.cached.multiplier]; },
+        status: function(p) { return p.defenseDown ? [1, 2][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Buff", "Defense Reduction & Status"][levels[n]] + ' boost. To switch to the ' + ["Buff", "Defense Reduction & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13571,13 +13137,13 @@ window.specials = {
         type: "type",
     },
     3594: {
-        chainAddition: function(p) { return [0, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        chainAddition: function(p) { return [0, 1.4, 1.4][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[n]] + ' boost. To switch to the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13585,13 +13151,13 @@ window.specials = {
         },
     },
     3595: {
-        chainAddition: function(p) { return [0, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        chainAddition: function(p) { return [0, 1.4, 1.4][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[n]] + ' boost. To switch to the ' + ["ATK", "Chain Boost", "ATK & Chain Boost"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13605,12 +13171,12 @@ window.specials = {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
     },
     3598: {
-        chainAddition: function(p) { return [1, 0, 1][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        chainAddition: function(p) { return [1, 0, 1][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2, 2][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain Boost", "Affinity", "Affinity & Chain Boost"][levels[n]] + ' boost. To switch to the ' + ["Chain Boost", "Affinity", "Affinity & Chain Boost"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13618,12 +13184,12 @@ window.specials = {
         },
     },
     3599: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13634,51 +13200,30 @@ window.specials = {
         staticMult: function(p) { return 80; }
     },
     3606: {
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.slot < 2 ? 3.25 : 3);
+            p.cached.multiplier = (p.slot < 2 ? 3.25 : 3);
         }
     },
     3607: {
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.slot < 2 ? 3.25 : 3);
+            p.cached.multiplier = (p.slot < 2 ? 3.25 : 3);
         }
     },
     3608: {
-        status: function(p) { return [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        warning: "Selected special (%name%) assumes that the enemy has Increased Damage Taken.",
-        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        onActivation: function(p) {
-            var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            p.scope.notify({
-                text: 'Using the ' + ["Status", "Orb", "Orb & Status"][levels[n]] + ' boost. To switch to the ' + ["Status", "Orb", "Orb & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? 2 : 1; },
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.75 : 1; },
     },
     3609: {
-        status: function(p) { return [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        warning: "Selected special (%name%) assumes that the enemy has Increased Damage Taken.",
-        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.75, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        onActivation: function(p) {
-            var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
-            p.scope.notify({
-                text: 'Using the ' + ["Status", "Orb", "Orb & Status"][levels[n]] + ' boost. To switch to the ' + ["Status", "Orb", "Orb & Status"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
-            });
-        },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? 2 : 1; },
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2.75 : 1; },
     },
     3612: {
-        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.75 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13686,11 +13231,10 @@ window.specials = {
         }
     },
     3613: {
-        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.75 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13698,10 +13242,9 @@ window.specials = {
         }
     },
     3614:{
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit")) ? 2 : 1;
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit")) ? 2 : 1;
         },
     },
     3615: {
@@ -13712,10 +13255,9 @@ window.specials = {
         type: "type",
     },
     3617:{
-        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 0; },
-        multiplier: 0,
+        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse")) ? 900 : 0;
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Powerhouse")) ? 900 : 0;
         },
     },
     3618: {
@@ -13733,25 +13275,24 @@ window.specials = {
         type: "type",
     },
     3623:{
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
         },
-        multiplier: 0,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Free Spirit")) ? 2.5 : 2.25;
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Free Spirit")) ? 2.5 : 2.25;
         },
     },
     3624: {
-        atkPlus: function(p) { return [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkPlus: function(p) { return [0.25, 0, 0.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [1, 2, 2][p.cached.multiplier] : 1; },
         type: "type",
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
                 text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
@@ -13773,13 +13314,13 @@ window.specials = {
     },
     3628: {
         tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
-        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13788,13 +13329,13 @@ window.specials = {
     },
     3629: {
         tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
-        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13803,13 +13344,13 @@ window.specials = {
     },
     3630: {
         tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13818,13 +13359,13 @@ window.specials = {
     },
     3631: {
         tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -13832,38 +13373,38 @@ window.specials = {
         },
     },
     3632: {
-        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Striker") || p.captain.class.has("Driven") ? levels[n] : 1 : 1;
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) p.scope.notify({
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = p.captain ? p.captain.class.has("Striker") || p.captain.class.has("Driven") ? levels[n] : 1 : 1;
+            if (p.cached.multiplier != 1) p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3633: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Cerebral") || p.captain.class.has("Free Spirit") ? 1 : 0 : 0;
+            p.cached.multiplier = p.captain ? p.captain.class.has("Cerebral") || p.captain.class.has("Free Spirit") ? 1 : 0 : 0;
         },
     },
     3634: {
-        affinity: function(p) { return p.unit.class.has("Driven") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Driven >= 6 ? 2.25 : 1;
+            p.cached.multiplier = p.classCount.Driven >= 6 ? 2.25 : 1;
         }
     },
     3635: {
-        atkPlus: function(p) { return [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        status: function(p) { return p.delayed > 0 ? [ 1, 2, 2 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkPlus: function(p) { return [0.25, 0, 0.25][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
         delay: function(p) { return 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
                 text: 'Using the ' + ["ATK Buff", "Status boost", "Status boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "Status boost", "Status boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
@@ -13875,56 +13416,54 @@ window.specials = {
         },
     },
     3636: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Powerhouse") ? 2.5 : 1 : 1;
+            p.cached.multiplier = p.captain ? p.captain.class.has("Powerhouse") ? 2.5 : 1 : 1;
         },
     },
     3637: {
-        multiplier: 1,
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain ? p.captain.class.has("Powerhouse") ? 2.5 : 1 : 1;
+            p.cached.multiplier = p.captain ? p.captain.class.has("Powerhouse") ? 2.5 : 1 : 1;
         },
     },
     3638: {
         affinity: function(p) { return p.unit.type == "QCK" ? 1.75 : 1; },
     },
     3640: {
-        chain: function(p) { return [3, 2.5, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chain: function(p) { return [3, 2.5, 2.75][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [40, 35, 35][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [40, 35, 35][p.cached.multiplier] : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == null || window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? p.captain && (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? 0 : 1 : 2;
+            p.cached.multiplier = p.cached.multiplier == null || p.cached.multiplier == 2 ? p.captain && (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? 0 : 1 : 2;
             p.scope.notify({
-                text: 'Using the ' + [3, 2.5, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] + 'x Chain Boundary boost. To switch the boost, disable and re-enable this special',
+                text: 'Using the ' + [3, 2.5, 2.75][p.cached.multiplier] + 'x Chain Boundary boost. To switch the boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3641: {
-        chain: function(p) { return [3, 2.5, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chain: function(p) { return [3, 2.5, 2.75][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [40, 35, 35][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [40, 35, 35][p.cached.multiplier] : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == null || window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? p.captain && (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? 0 : 1 : 2;
+            p.cached.multiplier = p.cached.multiplier == null || p.cached.multiplier == 2 ? p.captain && (p.captain.class.has("Powerhouse") || p.captain.class.has("Driven")) ? 0 : 1 : 2;
             p.scope.notify({
-                text: 'Using the ' + [3, 2.5, 2.75][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] + 'x Chain Boundary boost. To switch the boost, disable and re-enable this special',
+                text: 'Using the ' + [3, 2.5, 2.75][p.cached.multiplier] + 'x Chain Boundary boost. To switch the boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
@@ -13955,72 +13494,58 @@ window.specials = {
     },
     3648:{
         poison: function(p) { return 99; },
-        status: function(p) { return p.poisoned ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        status: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Driven")) ? 2.25 : 1;
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Driven")) ? 2.25 : 1;
         },
     },
     3649:{
         delay: function(p) { return 3; },
-        status: function(p) { return p.delayed ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed ? p.cached.multiplier : 1; },
         orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
-        multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 2.25 : 2;
+            p.cached.multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 2.25 : 2;
         },
     },
     3650:{
         delay: function(p) { return 3; },
-        status: function(p) { return p.delayed ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed ? p.cached.multiplier : 1; },
         orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
-        multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 2.25 : 2;
+            p.cached.multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "DEX")) || p.sourceSlot < 2 ? 2.25 : 2;
         },
     },
     3651:{
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
-        multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1.6 : 1.4;
+            p.cached.multiplier = (p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1.6 : 1.4;
         },
     },
     3652:{
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
-        multiplier: 1,
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1.6 : 1.4;
+            p.cached.multiplier = (p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1.6 : 1.4;
         },
     },
     3653:{
-        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? (p.cached.sourceSlot < 2 || (p.cached.captain.type == "STR" || p.cached.captain.type == "QCK")) ? 1250 : 1000 : 1; },
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
         type: "type",
-        multiplier: 1,
-        onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1250 : 1000;
-        },
     },
     3654:{
-        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? (p.cached.sourceSlot < 2 || (p.cached.captain.type == "STR" || p.cached.captain.type == "QCK")) ? 1250 : 1000 : 1; },
         atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5 : 1; },
         type: "type",
-        multiplier: 1,
-        onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain != null && (p.captain.type == "STR" || p.captain.type == "QCK")) || p.sourceSlot < 2 ? 1250 : 1000;
-        },
     },
     3655:{
         def: function(p) { return 0; },
     },
     3656:{
-        status: function(p) { return p.defenseDown ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        status: function(p) { return p.defenseDown ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK") ? 2.25 : 1;
+            p.cached.multiplier = p.captain != null && (p.captain.type == "DEX" || p.captain.type == "QCK") ? 2.25 : 1;
         },
     },
     3657:{
@@ -14030,14 +13555,14 @@ window.specials = {
         chainAddition: function(p) { return 1.0; },
     },
     3659: {
-        orbPlus: function(p) { return [0.2, 0, 0.2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [1, 2.25, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orbPlus: function(p) { return [0.2, 0, 0.2][p.cached.multiplier]; },
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         turnedOn: false,
         onActivation: function(p) {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb Buff", "Orb boost", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14052,13 +13577,13 @@ window.specials = {
         type: "type",
     },
     3661: {
-        atkbase: function(p) { return [0, 900, 900][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkbase: function(p) { return [0, 900, 900][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Affinity", "Base ATK", "Base ATK and Affinity"][n] + ' boost. To switch to ' + ["Affinity", "Base ATK", "Base ATK and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14068,17 +13593,17 @@ window.specials = {
     3663: {
         chainPlus: function(p) { 
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
-            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 0;
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0.25, 0, 0.25][p.cached.multiplier] : 0;
         }, 
-        chain: function(p) { return [1, 3.5, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        chain: function(p) { return [1, 3.5, 3.5][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 3.5, 3.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 3.5, 3.5][p.cached.multiplier] : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Chain Lock Buff", "Chain Lock", "Chain Lock and Chain Lock Buff"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock", "Chain Lock and Chain Lock Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14088,6 +13613,7 @@ window.specials = {
     3664: {
         status: function(p) { return p.delayed ? 1.5: 1; },
         delay: function(p) { return 1; },
+        ignoresImmunities: function(p) { return ['delay']; },
         warning: "Selected special (%name%) assumes that the enemy has 3 enemies."
     },
     3665: {
@@ -14098,13 +13624,13 @@ window.specials = {
         }
     },
     3666: {
-        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 1, 2.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         type: "type",
-        staticMult: function(p) { return [Math.min(p.damageCounter,120000) * 25, 0, Math.min(p.damageCounter,120000) * 25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        staticMult: function(p) { return [Math.min(p.damageCounter,120000) * 25, 0, Math.min(p.damageCounter,120000) * 25][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Additional Damage", "ATK", "Additional Damage and ATK"][n] + ' boost. To switch to ' + ["Additional Damage", "ATK", "Additional Damage and ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14116,19 +13642,17 @@ window.specials = {
         type: "type",
     },
     3670: {
-        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.colorCount.DEX + p.colorCount.PSY == 6 ? 2.5 : 2.25;
-        },
+        affinity: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? (p.cached.colorCount.DEX + p.cached.colorCount.PSY == 6 ? 2.5 : 2.25) : 1; },
+        increaseDamageTaken: function(p) { return 1.75; },
     },
     3671: {
-        status: function(p) { return p.defenseDown > 0 ? [ 1, 2, 2 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        def: function(p) { return [ 0, 1, 0 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        status: function(p) { return p.defenseDown > 0 ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
+        def: function(p) { return [ 0, 1, 0 ][p.cached.multiplier]; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][n] + '. To switch to ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14137,12 +13661,12 @@ window.specials = {
     },
     3672: {
         orb: function(p) { return 1.5; },
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14159,19 +13683,19 @@ window.specials = {
     },
     3677: {
         chainAddition: function(p) { return 1.1; },
-        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.percHP >= 90 ? 2 : 1.75;
+            p.cached.multiplier = p.percHP >= 90 ? 2 : 1.75;
         },
     },
     3678: {
         affinity: function(p) { return 1.75; },
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
             var levels = [1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14183,14 +13707,14 @@ window.specials = {
         status: function(p) { return p.delayed > 0 ? 1.25 : 1; },
     },
     3680: {
-        chainAddition: function(p) { return [0, 0, 0, 0, 1.4, 1.4, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        chainAddition: function(p) { return [0, 0, 0, 0, 1.4, 1.4, 1.4, 1.4][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier] : 1; },
         type: "type",
-        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2, 2.25, 2.5, 2.5, 2, 2.25, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2, 2.25, 2.5, 2.5, 2, 2.25, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3, 4, 5, 6, 7];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Addition", "Stage 2 with Chain Addition", "Stage 3 with Chain Addition", "Buff Clear with Chain Addition"][n] + ' boost. To ' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Addition", "Stage 2 with Chain Addition", "Stage 3 with Chain Addition", "Buff Clear with Chain Addition"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14198,11 +13722,11 @@ window.specials = {
         },
     },
     3681: {
-        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2.25, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14210,11 +13734,11 @@ window.specials = {
         },
     },
     3682: {
-        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2.25, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14222,11 +13746,11 @@ window.specials = {
         },
     },
     3684: {
-        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [0.9, 1.1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "INT") ? levels[n] : 0;
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = p.captain != null && (p.captain.type == "INT") ? levels[n] : 0;
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14234,20 +13758,20 @@ window.specials = {
         },
     },
     3685: {
-        def: function(p) { return [1, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
-        status: function(p) { return p.defenseDown > 0 ? [1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        def: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.defenseDown > 0 ? [1, 2][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "INT") ? 1 : 0;
+            p.cached.multiplier = p.captain != null && (p.captain.type == "INT") ? 1 : 0;
         },
     },
     3686: {
-        atkPlus: function(p) { return [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
-        atk: function(p) { return p.unit.type == "INT" ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atkPlus: function(p) { return [0.25, 0, 0.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "INT" ? [1, 2, 2][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14255,13 +13779,13 @@ window.specials = {
         },
     },
     3687: {
-        orbPlus: function(p) { return [0, 0.25, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
-        orb: function(p) { return p.unit.type == "INT" ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        orb: function(p) { return p.unit.type == "INT" ? [2, 1, 2][p.cached.multiplier] : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Orb boost", "Orb Buff", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb boost", "Orb Buff", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -14564,11 +14088,11 @@ var ghostsSpecials = {
         },
     },
     58: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.75 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5074warning'
@@ -14576,11 +14100,11 @@ var ghostsSpecials = {
         }
     },
     59: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.75 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5075warning'
@@ -14588,11 +14112,11 @@ var ghostsSpecials = {
         }
     },
     60: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.75 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5076warning'
@@ -14600,11 +14124,11 @@ var ghostsSpecials = {
         }
     },
     61: {
-        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Fighter")) ? p.cached.multiplier : 1; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.75 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5077warning'
@@ -14653,154 +14177,154 @@ var ghostsSpecials = {
     },
     74: {
         atkbase: function(p) { return Math.min(1000,window.specials[p.team[p.sourceSlot].unit.number+1].momBoost); },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.percHP >= 50) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.5;
+                p.cached.multiplier = 3.5;
             }
             window.specials[p.team[p.sourceSlot].unit.number+1].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     75: {
         atkbase: function(p) { return Math.min(1000,window.specials[p.team[p.sourceSlot].unit.number+1].momBoost); },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.percHP >= 50) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.5;
+                p.cached.multiplier = 3.5;
             }
             window.specials[p.team[p.sourceSlot].unit.number+1].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     76: {
         atkbase: function(p) { return Math.min(1000,window.specials[p.team[p.sourceSlot].unit.number+1].momBoost); },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.percHP >= 50) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.5;
+                p.cached.multiplier = 3.5;
             }
             window.specials[p.team[p.sourceSlot].unit.number+1].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     77: {
         atkbase: function(p) { return Math.min(1000,window.specials[p.team[p.sourceSlot].unit.number+1].momBoost); },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.percHP >= 50) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.5;
+                p.cached.multiplier = 3.5;
             }
             window.specials[p.team[p.sourceSlot].unit.number+1].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     78: {
         atkbase: function(p) { return Math.min(1000,window.specials[p.team[p.sourceSlot].unit.number+1].momBoost); },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.percHP >= 50) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.5;
+                p.cached.multiplier = 3.5;
             }
             window.specials[p.team[p.sourceSlot].unit.number+1].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     79: {
         atkbase: function(p) { return Math.min(1000,window.specials[p.team[p.sourceSlot].unit.number+1].momBoost); },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            if (p.cached.multiplier == 3.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1;
+            p.cached.multiplier = 1;
             if (p.percHP >= 50) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 3.5;
+                p.cached.multiplier = 3.5;
             }
             window.specials[p.team[p.sourceSlot].unit.number+1].momBoost = Math.floor(p.percHP*p.maxHP/10000);
         },
     },
     80: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     81: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     82: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     83: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     84: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     85: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     86: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     87: {
-        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return !(p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1 : p.cached.multiplier; },
         type: "type",
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
+            p.cached.multiplier = (p.captain.class.has("Fighter") || p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse")) ? 2 : 1;
         }
     },
     88: {
@@ -14860,14 +14384,14 @@ var ghostsSpecials = {
         affinity: function(p) { return 1.75; }
     },
     112: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5128warning'
@@ -14875,14 +14399,14 @@ var ghostsSpecials = {
         },
     },
     113: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5129warning'
@@ -14890,14 +14414,14 @@ var ghostsSpecials = {
         },
     },
     114: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5130warning'
@@ -14905,14 +14429,14 @@ var ghostsSpecials = {
         },
     },
     115: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5131warning'
@@ -14920,14 +14444,14 @@ var ghostsSpecials = {
         },
     },
     116: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5132warning'
@@ -14935,14 +14459,14 @@ var ghostsSpecials = {
         },
     },
     117: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5133warning'
@@ -14950,14 +14474,14 @@ var ghostsSpecials = {
         },
     },
     118: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5134warning'
@@ -14965,14 +14489,14 @@ var ghostsSpecials = {
         },
     },
     119: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.75 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2.75,3.25][n];
+            var n = (p.cached.multiplier == 2.75 ? 1 : 0);
+            p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
                 name: '5135warning'
@@ -15116,13 +14640,13 @@ var ghostsSpecials = {
         type: "class"
     },
     144: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5152warning'
@@ -15130,13 +14654,13 @@ var ghostsSpecials = {
         },
     },
     145: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5153warning'
@@ -15144,13 +14668,13 @@ var ghostsSpecials = {
         },
     },
     146: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5154warning'
@@ -15158,13 +14682,13 @@ var ghostsSpecials = {
         },
     },
     147: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5155warning'
@@ -15172,13 +14696,13 @@ var ghostsSpecials = {
         },
     },
     148: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5156warning'
@@ -15186,13 +14710,13 @@ var ghostsSpecials = {
         },
     },
     149: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5157warning'
@@ -15200,13 +14724,13 @@ var ghostsSpecials = {
         },
     },
     150: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5158warning'
@@ -15214,13 +14738,13 @@ var ghostsSpecials = {
         },
     },
     151: {
-        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        atk: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1.75, 1, 1 ][p.cached.multiplier] : 1; },
         type: "class",
-        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
-        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        affinity: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1.75, 1.75, 1, 1.75, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? [ 1, 2.25, 2.25, 2.25, 2.25 ][p.cached.multiplier] : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == undefined ? 0 : (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier + 1) % 5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: '5159warning'
@@ -15276,58 +14800,58 @@ var ghostsSpecials = {
     171: {
     },
     172: {
-        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.PSY + p.colorCount.INT >= 5) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
         },
     },
     173: {
-        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.PSY + p.colorCount.INT >= 5) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
         },
     },
     174: {
-        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.PSY + p.colorCount.INT >= 5) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
         },
     },
     175: {
-        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
         type: "type",
         onActivation: function(p) {
             if (p.colorCount.PSY + p.colorCount.INT >= 5) {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 2;
+                p.cached.multiplier = 2;
             }
             else {
-                window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = 1.75;
+                p.cached.multiplier = 1.75;
             }
         },
     },
     176: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5191warning'
@@ -15340,10 +14864,10 @@ var ghostsSpecials = {
         },
     },
     177: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5192warning'
@@ -15356,10 +14880,10 @@ var ghostsSpecials = {
         },
     },
     178: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5193warning'
@@ -15372,10 +14896,10 @@ var ghostsSpecials = {
         },
     },
     179: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5194warning'
@@ -15388,10 +14912,10 @@ var ghostsSpecials = {
         },
     },
     180: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5195warning'
@@ -15404,10 +14928,10 @@ var ghostsSpecials = {
         },
     },
     181: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5196warning'
@@ -15420,10 +14944,10 @@ var ghostsSpecials = {
         },
     },
     182: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5197warning'
@@ -15436,10 +14960,10 @@ var ghostsSpecials = {
         },
     },
     183: {
-        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [2, 2.5, 2.75][n];
+            var n = (p.cached.multiplier == 2 ? 1 : p.cached.multiplier == 2.5 ? 2 : 0);
+            p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
                 name: '5198warning'
@@ -15452,75 +14976,75 @@ var ghostsSpecials = {
         },
     },
     184: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     185: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     186: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     187: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     188: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     189: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     190: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     191: {
-        atk: function(p) { return p.delayed > 0 ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        atk: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         type: "condition",
-        delay: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 1.75 ? 2 : 0; },
+        delay: function(p) { return p.cached.multiplier == 1.75 ? 2 : 0; },
         onActivation: function(p) {
             var n = (p.percHP <= 50 ? 1.75 : 1);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
         }
     },
     192: {
@@ -15560,14 +15084,14 @@ var ghostsSpecials = {
         orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT") ? 2.5 : 1; },
     },
     203: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [3, 3.25, 3.5][n];
+            var n = (p.cached.multiplier == 3 ? 1 : p.cached.multiplier == 3.25 ? 2 : 0);
+            p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '5210warning'
@@ -15575,14 +15099,14 @@ var ghostsSpecials = {
         },
     },
     204: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [3, 3.25, 3.5][n];
+            var n = (p.cached.multiplier == 3 ? 1 : p.cached.multiplier == 3.25 ? 2 : 0);
+            p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '5211warning'
@@ -15590,14 +15114,14 @@ var ghostsSpecials = {
         },
     },
     205: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [3, 3.25, 3.5][n];
+            var n = (p.cached.multiplier == 3 ? 1 : p.cached.multiplier == 3.25 ? 2 : 0);
+            p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '5212warning'
@@ -15605,14 +15129,14 @@ var ghostsSpecials = {
         },
     },
     206: {
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3 ? 1 : window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 3.25 ? 2 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = [3, 3.25, 3.5][n];
+            var n = (p.cached.multiplier == 3 ? 1 : p.cached.multiplier == 3.25 ? 2 : 0);
+            p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
                 name: '5213warning'
@@ -15620,11 +15144,11 @@ var ghostsSpecials = {
         },
     },
     207: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 30 ? 2 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '5214warning'
@@ -15632,11 +15156,11 @@ var ghostsSpecials = {
         }
     },
     208: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 30 ? 2 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '5215warning'
@@ -15644,11 +15168,11 @@ var ghostsSpecials = {
         }
     },
     209: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 30 ? 2 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '5216warning'
@@ -15656,11 +15180,11 @@ var ghostsSpecials = {
         }
     },
     210: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 30 ? 2 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '5217warning'
@@ -15668,11 +15192,11 @@ var ghostsSpecials = {
         }
     },
     211: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 30 ? 2 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '5218warning'
@@ -15680,11 +15204,11 @@ var ghostsSpecials = {
         }
     },
     212: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
         onActivation: function(p) {
             var n = (p.percHP >= 30 ? 2 : 2.5);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
                 name: '5219warning'
@@ -15889,12 +15413,11 @@ var ghostsSpecials = {
         orb: function(p) { return (p.unit.class.has('Fighter') || p.unit.class.has('Free Spirit')) ? 2 : 1; }
     },
     260: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5267warning'
@@ -15902,12 +15425,11 @@ var ghostsSpecials = {
         }
     },
     261: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5268warning'
@@ -15915,12 +15437,11 @@ var ghostsSpecials = {
         }
     },
     262: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5269warning'
@@ -15928,12 +15449,11 @@ var ghostsSpecials = {
         }
     },
     263: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5270warning'
@@ -15941,12 +15461,11 @@ var ghostsSpecials = {
         }
     },
     264: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5271warning'
@@ -15954,12 +15473,11 @@ var ghostsSpecials = {
         }
     },
     265: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5272warning'
@@ -15967,12 +15485,11 @@ var ghostsSpecials = {
         }
     },
     266: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5273warning'
@@ -15980,12 +15497,11 @@ var ghostsSpecials = {
         }
     },
     267: {
-        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "class",
-        multiplier: 1,
         onActivation: function(p) {
             var n = (p.percHP > 99  ? 2.5 : 2);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
                 name: '5274warning'
@@ -15993,41 +15509,37 @@ var ghostsSpecials = {
         }
     },
     268: {
-        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     269: {
-        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     270: {
-        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     271: {
-        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
-        multiplier: 1,
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Driven")) ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "PSY") ? 2.75 : 2;
         }
     },
     272: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier != 0 ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5279warning'
@@ -16035,13 +15547,13 @@ var ghostsSpecials = {
         },
     },
     273: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier != 0 ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5280warning'
@@ -16049,13 +15561,13 @@ var ghostsSpecials = {
         },
     },
     274: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier != 0 ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5281warning'
@@ -16063,13 +15575,13 @@ var ghostsSpecials = {
         },
     },
     275: {
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 2.5 : 1 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier != 0 ? 2.5 : 1 : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5282warning'
@@ -16165,18 +15677,17 @@ var ghostsSpecials = {
         affinity: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },
     300: {
-        multiplier: 1,
         orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [2.5, 1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Chain Boundary", "Not Activating Chain Boundary"][n] + ' boost. To ' + ["Enable the Chain Boundary", "Disable the Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5307warning'
@@ -16184,17 +15695,16 @@ var ghostsSpecials = {
         },
     },
     301: {
-        multiplier: 1,
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
             var levels = [3, 3.25, 3.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain Lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
                 name: '3110warning'
@@ -16202,18 +15712,17 @@ var ghostsSpecials = {
         },
     },
     302: {
-        multiplier: 1,
         orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier == 2.5) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [2.5, 1];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Chain Boundary", "Not Activating Chain Boundary"][n] + ' boost. To ' + ["Enable the Chain Boundary", "Disable the Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5309warning'
@@ -16221,17 +15730,16 @@ var ghostsSpecials = {
         },
     },
     303: {
-        multiplier: 1,
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
-        chain: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
         },
         onActivation: function(p) {
             var levels = [3, 3.25, 3.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain Lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
                 name: '5310warning'
@@ -16297,13 +15805,13 @@ var ghostsSpecials = {
     321: {
     },
     322: {
-        atk: function(p) { return [ 1.5, 1.75 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atk: function(p) { return [ 1.5, 1.75 ][p.cached.multiplier]; },
         type: "type",
-        orb: function(p) { return [ 1.5, 1.75 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return [ 1.5, 1.75 ][p.cached.multiplier]; },
         delay: function(p) { return 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
                 name: '5184warning'
@@ -16311,13 +15819,13 @@ var ghostsSpecials = {
         },
     },
     323: {
-        atk: function(p) { return [ 1.5, 1.75 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atk: function(p) { return [ 1.5, 1.75 ][p.cached.multiplier]; },
         type: "type",
-        orb: function(p) { return [ 1.5, 1.75 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return [ 1.5, 1.75 ][p.cached.multiplier]; },
         delay: function(p) { return 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
                 name: '5185warning'
@@ -16325,13 +15833,13 @@ var ghostsSpecials = {
         },
     },
     324: {
-        atk: function(p) { return [ 1.5, 1.75 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atk: function(p) { return [ 1.5, 1.75 ][p.cached.multiplier]; },
         type: "type",
-        orb: function(p) { return [ 1.5, 1.75 ][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        orb: function(p) { return [ 1.5, 1.75 ][p.cached.multiplier]; },
         delay: function(p) { return 1; },
         onActivation: function(p) {
-            var n = (window.specials[p.team[p.sourceSlot].unit.number+1].multiplier == 0 ? 1 : 0);
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = n;
+            var n = (p.cached.multiplier == 0 ? 1 : 0);
+            p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
                 name: '5186warning'
@@ -16377,12 +15885,12 @@ var ghostsSpecials = {
     337: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? 2.5 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1},
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? p.cached.multiplier : 1},
         atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? 1000 : 0; },
         onActivation: function(p) {
             var levels = [1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x orb boost, disable and re-enable this special',
                 name: '3176warning'
@@ -16392,11 +15900,11 @@ var ghostsSpecials = {
     338: {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") ? 2.5 : 1},
         atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") ? 1000 : 0; },
-        def: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        def: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 0];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [0, 100][n] + '% Defense Reduction. To switch to the ' + [0, 100][(n + 1) % levels.length] + '% Defense Reduction, disable and re-enable this special',
                 name: '3176warning'
@@ -16406,12 +15914,12 @@ var ghostsSpecials = {
     339: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? 2.5 : 1; },
         type: "type",
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1},
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? p.cached.multiplier : 1},
         atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Striker") ? 1000 : 0; },
         onActivation: function(p) {
             var levels = [1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x orb boost, disable and re-enable this special',
                 name: '3176warning'
@@ -16421,11 +15929,11 @@ var ghostsSpecials = {
     340: {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") ? 2.5 : 1},
         atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") ? 1000 : 0; },
-        def: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        def: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 0];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [0, 100][n] + '% Defense Reduction. To switch to the ' + [0, 100][(n + 1) % levels.length] + '% Defense Reduction, disable and re-enable this special',
                 name: '3176warning'
@@ -16466,12 +15974,12 @@ var ghostsSpecials = {
     },
     349: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16480,12 +15988,12 @@ var ghostsSpecials = {
     },
     350: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16494,12 +16002,12 @@ var ghostsSpecials = {
     },
     351: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16508,12 +16016,12 @@ var ghostsSpecials = {
     },
     352: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16522,12 +16030,12 @@ var ghostsSpecials = {
     },
     353: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16536,12 +16044,12 @@ var ghostsSpecials = {
     },
     354: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16550,12 +16058,12 @@ var ghostsSpecials = {
     },
     355: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16564,12 +16072,12 @@ var ghostsSpecials = {
     },
     356: {
         delay: function(p) { return 2; },
-        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 1 ? 2.25 : 1 : 1; },
-        statusPlus: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier != 0 ? 0.3 : 0; },
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.cached.multiplier != 1 ? 2.25 : 1 : 1; },
+        statusPlus: function(p) { return p.cached.multiplier != 0 ? 0.3 : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][n] + ' boost. To ' + ["Affinity", "Conditional Buff", "Affinity and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16601,51 +16109,51 @@ var ghostsSpecials = {
         atkbase: function(p) { return 1000; },
     },
     365: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     366: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     367: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     368: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     369: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     370: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     371: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     372: {
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
+            p.cached.multiplier = p.classCount.Powerhouse >= 5 ? 2.5 : 2.25;
         }
     },
     373: {
@@ -16766,11 +16274,11 @@ var ghostsSpecials = {
     },
     389: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16779,11 +16287,11 @@ var ghostsSpecials = {
     },
     390: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16792,11 +16300,11 @@ var ghostsSpecials = {
     },
     391: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16805,11 +16313,11 @@ var ghostsSpecials = {
     },
     392: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16818,11 +16326,11 @@ var ghostsSpecials = {
     },
     393: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16831,11 +16339,11 @@ var ghostsSpecials = {
     },
     394: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16844,11 +16352,11 @@ var ghostsSpecials = {
     },
     395: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16857,11 +16365,11 @@ var ghostsSpecials = {
     },
     396: {
         def: function(p) { return 0; },
-        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [2, 2.5];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ORB boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ORB boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16943,11 +16451,11 @@ var ghostsSpecials = {
     413: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16957,11 +16465,11 @@ var ghostsSpecials = {
     414: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16971,11 +16479,11 @@ var ghostsSpecials = {
     415: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16985,11 +16493,11 @@ var ghostsSpecials = {
     416: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -16999,11 +16507,11 @@ var ghostsSpecials = {
     417: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -17013,11 +16521,11 @@ var ghostsSpecials = {
     418: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -17027,11 +16535,11 @@ var ghostsSpecials = {
     419: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -17041,11 +16549,11 @@ var ghostsSpecials = {
     420: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         type: "type",
-        status: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        status: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.75];
-            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
