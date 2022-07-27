@@ -82,7 +82,7 @@ directives.characterTable = function($rootScope, $timeout, $compile, $storage) {
             $compile(pick)(scope);
             pick.insertAfter($('.dataTables_length'));
             // night toggle
-            var nightToggle = $('<label class="night-toggle"><input type="checkbox">Night mode</input></label>');
+            var nightToggle = $('<label class="night-toggle"><input type="checkbox">Light mode</input></label>');
             nightToggle.find('input').change(function(e) {
                 $rootScope.nightMode = e.target.checked;
                 if (!$rootScope.$$phase) $rootScope.$apply();

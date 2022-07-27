@@ -107,7 +107,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         tokiStateEnabled: 0,
         cloneEnabled: 0,
         slidersEnabled: true,
-        sidebarVisible: false,
+        sidebarVisible: true,
         transientMode: false,
         crunchInhibitor: Infinity
     };

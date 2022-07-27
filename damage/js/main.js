@@ -13,7 +13,7 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
 
     /* * * * * Theme * * * * */
 
-    var edgyMode = $storage.get('edgy', false);
+    var edgyMode = $storage.get('edgy', true);
     $('#edgy')[0].disabled = !edgyMode;
 
     $(document.body).dblclick(function(e) {
