@@ -14139,6 +14139,35 @@ window.specials = {
             });
         },
     },
+    3673: {
+        tapTiming: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1250 : 1; },
+    },
+    3674: {
+        tapTiming: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1250 : 1; },
+    },
+    3677: {
+        chainAddition: function(p) { return 1.1; },
+        orb: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.percHP >= 90 ? 2 : 1.75;
+        },
+    },
+    3678: {
+        affinity: function(p) { return 1.75; },
+        atk: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -16294,36 +16323,36 @@ var ghostsSpecials = {
         },
     },
     341: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     342: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     343: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     344: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     345: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     346: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     347: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     348: {
-        status: function(p) { return 2.25; },
-        warning: "Selected special (%name%) assumes that the enemy is a Powerful Enemy."
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 2.25 : 1; },
     },
     349: {
         delay: function(p) { return 2; },

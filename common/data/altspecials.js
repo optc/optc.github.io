@@ -257,6 +257,10 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3674: {
+        mark: function(p) { return 1; },
+        status: function(p) { return p.marked ? 1.75 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

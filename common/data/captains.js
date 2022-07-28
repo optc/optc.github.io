@@ -12923,6 +12923,30 @@ window.captains = {
         atk: function(p) { return 3.75; },
         hp: function(p) { return 1.3; }
     },
+    3673: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? p.marked ? 5.25 : 5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
+    },
+    3674: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? p.marked ? 5.25 : 5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
+    },
+    3675: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "STR" ? (p.orb == 'wano') ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "STR" ? 1.25 : 1; }
+    },
+    3676: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "STR" ? (p.orb == 'wano') ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "STR" ? 1.25 : 1; }
+    },
+    3677: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
+    3678: {
+        atk: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.2 : 1; }
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

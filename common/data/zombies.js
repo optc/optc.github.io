@@ -1078,6 +1078,12 @@ window.zombies = {
         type: 'healer',
         amount: 800
     },
+    3675: { // Hiyori
+        type: 'healer',
+    },
+    3676: { // Hiyori
+        type: 'healer',
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

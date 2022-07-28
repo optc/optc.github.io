@@ -3119,6 +3119,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3657 ],
         },
+
+        {
+            name: 'Land of Wano Summer Fair',
+            dropID: 'event161',
+            thumb: 3678,
+            global: true,
+            nakama: 6367800,
+            gamewith: null,
+            'All Difficulties': [ 3678 ],
+        },
     ],
 
 

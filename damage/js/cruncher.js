@@ -60,6 +60,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var currentDefense = 0;
     var isDefenseDown = false;
     var isDelayed = false;
+    var isMarked = false;
     var isNegative = false;
     var isPoisoned = false;
     var katakuri = false;
@@ -1390,6 +1391,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             katakuri = false;
         
         isDelayed = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('delay')) ? x.delay(paramsDelay) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); }) || katakuri;
+        isMarked = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('mark')) ? x.mark(paramsDelay) > 0 : false});
         isPoisoned = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('poison')) ? x.poison(paramsDelay) > 0 : false});
         isNegative = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('negative')) ? x.negative(paramsDelay) > 0 : false});
         
@@ -1606,6 +1608,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             percHP: $scope.data.percHP,
             defenseDown: isDefenseDown,
             delayed: isDelayed,
+            marked: isMarked,
             poisoned: isPoisoned,
             negative: isNegative,
             data: team[slotNumber],
@@ -1701,7 +1704,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         healAmount += (id == 1000) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Great']) : 0;
                         healAmount += (id == 1319) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + (.1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 1320) ? (1.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Good']) + ([.1, .3][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
-                        healAmount += (id == 1750 || id == 1751 || id == 1922  || id == 2775  || id == 2776 || id == 5083 || id == 5087 || id == 2959 || id == 2960 || id == 3220 || id == 3221 || id == 3117 || id == 3118 || id == 3275 || id == 3281 || id == 3282 || id == 3421 || id == 3422 || id == 5338 || id == 5340) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
+                        healAmount += (id == 1750 || id == 1751 || id == 1922  || id == 2775  || id == 2776 || id == 5083 || id == 5087 || id == 2959 || id == 2960 || id == 3220 || id == 3221 || id == 3117 || id == 3118 || id == 3275 || id == 3281 || id == 3282 || id == 3421 || id == 3422 || id == 5338 || id == 5340 || id == 3675 || id == 3676) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 5255 || id == 5257 || id == 5258) ? (.3 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += (id == 5084 || id == 5085 || id == 5088 || id == 5089 || id == 3390 || id == 3391) ? (1 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
                         healAmount += ((id == 2301 || id == 2302) && classCounter().Shooter == 6) ? (.5 * (data.team[i].rcv + rcvtemp) * rcvmulttemp * hitsCount['Perfect']) : 0;
