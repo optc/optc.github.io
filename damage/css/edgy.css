@@ -45,9 +45,6 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     background-color: #3c3c3c !important;
     color: #eeeeee;
 }
-.popover-data .information > tr > td > i {
-    color: #eeeeee;
-}
 
 .noUi-target {
     border: none;
