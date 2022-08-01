@@ -2,7 +2,7 @@
 
     <table class="table table-striped">
         <tbody>
-            <tr></tr>
+            <tr class="information"></tr>
             <tr class="header">
                 <td ng-if="data.team[slot].unit.class.length > 2">Class</td>
                 <td ng-if="data.team[slot].unit.class.length < 3">Class 1</td>
@@ -11,7 +11,7 @@
                 <td>Rarity</td>
                 <td colspan="{{data.team[slot].unit.class.length < 3 ? 1 : 2}}">Cost</td>
             </tr>
-            <tr>
+            <tr class="information">
                 <td ng-if="data.team[slot].unit.class.length > 2">{{data.team[slot].unit.class}}</td>
                 <td ng-if="data.team[slot].unit.class.length < 3">{{data.team[slot].unit.class[0]}}</td>
                 <td ng-if="data.team[slot].unit.class.length < 3">{{data.team[slot].unit.class[1]}}</td>
@@ -28,7 +28,7 @@
                 <td>CMB</td>
                 <td>Slots</td>
             </tr>
-            <tr>
+            <tr class="information">
                 <td>
                     {{numbers.team[slot].hp | number}}
                     {{data.team[slot].candies.hp > 0 ? ' (+' + (data.team[slot].candies.hp * 5) + ')' : ''}}
@@ -51,7 +51,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr ng-if="false && (data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 || data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 || data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
+            <tr class="information" ng-if="false && (data.team[slot].unit.limitHP - data.team[slot].unit.maxHP != 0 || data.team[slot].unit.limitATK - data.team[slot].unit.maxATK != 0 || data.team[slot].unit.limitRCV - data.team[slot].unit.maxRCV != 0)">
                 <td>
                     {{data.team[slot].unit.limitHP | number}} (+{{data.team[slot].unit.limitHP - data.team[slot].unit.maxHP | number}})
                 </td>
@@ -71,7 +71,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr ng-if="false && (data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 || data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 || data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
+            <tr class="information" ng-if="false && (data.team[slot].unit.limitexHP - data.team[slot].unit.limitHP != 0 || data.team[slot].unit.limitexATK - data.team[slot].unit.limitATK != 0 || data.team[slot].unit.limitexRCV - data.team[slot].unit.limitRCV != 0)">
                 <td>
                     {{data.team[slot].unit.limitexHP | number}} (+{{data.team[slot].unit.limitexHP - data.team[slot].unit.maxHP | number}})
                 </td>
@@ -87,7 +87,7 @@
             <tr class="header" ng-if="slot < 2">
                 <td colspan="5">Captain Ability</td>
             </tr>
-            <tr ng-if="slot < 2">
+            <tr class="information" ng-if="slot < 2">
                 <td colspan="5"> <!--
                     <span class="badge badge-base" ng-show="details.captain.base">Base Captain Ability</span>
                     <div ng-show="details.captain.base" ng-bind-html="details.captain.base | decorate"></div>
@@ -116,7 +116,7 @@
             <tr class="header" ng-if="slot > 1">
                 <td colspan="5">Sailor Ability</td>
             </tr>
-            <tr ng-if="slot > 1">
+            <tr class="information" ng-if="slot > 1">
                 <td colspan="5">
                     <ul>
                         <li ng-if="!details.sailor.base && !details.sailor.combined && !details.sailor.level1" ng-show="details.sailor" ng-bind-html="details.sailor | decorate"></li>
@@ -141,7 +141,7 @@
             <tr class="header">
                 <td colspan="5">Special: <strong class="specialName" ng-if="details.specialName">{{details.specialName}}</strong></td>
             </tr>
-            <tr>
+            <tr class="information">
                 <td colspan="5">
                     <div ng-bind-html="details.special | decorate"></div>
                     <div class="cooldown" ng-if="details.special && cooldown">
@@ -156,7 +156,7 @@
                 <td colspan="2">Super Special</td>
                 <td colspan="3">Super Special Criteria</td>
             </tr>
-            <tr ng-if="slot < 2 && details.superSpecial">
+            <tr class="information" ng-if="slot < 2 && details.superSpecial">
                 <td colspan="2">
                     <div ng-bind-html="details.superSpecial | decorate"></div>
                 </td>
@@ -168,7 +168,7 @@
                 <td colspan="2">Swap</td>
                 <td colspan="3">Super Swap: {{details.swap.superTurns}} Swaps</td>
             </tr>
-            <tr ng-if="details.swap.base">
+            <tr class="information" ng-if="details.swap.base">
                 <td colspan="2">
                     <div ng-if="!details.swap.base" ng-bind-html="details.swap | decorate"></div>
                     <div ng-if="details.swap.base" ng-bind-html="details.swap.base | decorate"></div>
@@ -180,7 +180,7 @@
             <tr class="header" ng-if="!details.swap.base && details.swap">
                 <td colspan="5">Swap</td>
             </tr>
-            <tr ng-if="!details.swap.base && details.swap">
+            <tr class="information" ng-if="!details.swap.base && details.swap">
                 <td colspan="5">
                     <div ng-bind-html="details.swap | decorate"></div>
                 </td>

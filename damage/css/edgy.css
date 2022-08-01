@@ -27,7 +27,26 @@ html, body {
 }
 
 li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
-    color: white !important;
+    color: #2d2d2d !important;
+}
+
+.popover {
+    background-color: #4d4d4d;
+}
+.popover-title {
+    background-color: #4d4d4d !important;
+    color: #eeeeee;
+}
+.popover-data .information {
+    background-color: #4d4d4d !important;
+    color: #eeeeee;
+}
+.popover-data .header {
+    background-color: #3c3c3c !important;
+    color: #eeeeee;
+}
+.popover-data .information > tr > td > i {
+    color: #eeeeee;
 }
 
 .noUi-target {
@@ -84,6 +103,6 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     }
 }
 
-.fa-star {
+.fa-spin {
     color: black !important;
 }
