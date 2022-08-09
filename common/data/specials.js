@@ -14168,6 +14168,68 @@ window.specials = {
             });
         },
     },
+    3679: {
+        delay: function(p) { return 1; },
+        status: function(p) { return p.delayed > 0 ? 1.25 : 1; },
+    },
+    3680: {
+        chainAddition: function(p) { return [0, 0, 0, 0, 1.4, 1.4, 1.4, 1.4][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2, 2.25, 2.5, 2.5, 2, 2.25, 2.5, 2.5][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6, 7];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Addition", "Stage 2 with Chain Addition", "Stage 3 with Chain Addition", "Buff Clear with Chain Addition"][n] + ' boost. To ' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Addition", "Stage 2 with Chain Addition", "Stage 3 with Chain Addition", "Buff Clear with Chain Addition"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3681: {
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2.25, 2.5];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3682: {
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? window.specials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2.25, 2.5];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3684: {
+        chainAddition: function(p) { return window.specials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        onActivation: function(p) {
+            var levels = [0.9, 1.1];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "INT") ? levels[n] : 0;
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3685: {
+        def: function(p) { return [1, 0][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; },
+        status: function(p) { return p.defenseDown > 0 ? [1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "INT") ? 1 : 0;
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

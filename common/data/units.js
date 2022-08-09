@@ -3677,6 +3677,13 @@ window.units = [
     [ "Hiyori - Princess Enjoying Fireworks at Night", "DEX", [ "Cerebral", "Slasher" ], 6, 55, 5, 5, 99, 5000000, 1605, 736, 213, null, null, null, null ],
     [ "Shinobu - Moment of Respite", "DEX", [ "Cerebral", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1580, 710, 125, null, null, null, null ],
     [ "Toki - Summer Festival With Her Loved Ones", "DEX", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, null, 1470, 694, 126, null, null, null, null ],
+    [ "Usopp - Straw Hat Pirates Enjoying the FES", "INT", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 2114, 735, 103, null, null, null, null ],
+    [ "Uta - The Song of Peace", "INT", [ "Cerebral", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1780, 862, 200, null, null, null, null ],
+    [ "Tony Tony Chopper - Admirable Live Performance", "INT", [ "Cerebral", "Fighter" ], 5, 30, 5, 3, 70, 1066998, 860, 358, 105, null, null, null, null ],
+    [ "Tony Tony Chopper - Inspirational Live Performance", "INT", [ "Cerebral", "Fighter" ], 6, 55, 5, 5, 99, 5000000, 1690, 712, 206, null, null, null, null ],
+    [ "Brook - Straw Hat Pirates Enjoying the FES", "INT", [ "Free Spirit", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1720, 791, 76, null, null, null, null ],
+    [ "Nami - Straw Hat Pirates Enjoying the FES", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1430, 714, 149, null, null, null, null ],
+    [ "Nico Robin - Straw Hat Pirates Enjoying the FES", "INT", [ "Cerebral", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1444, 762, 131, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
