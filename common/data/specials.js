@@ -12738,7 +12738,7 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier2 = p.damageCounter >= 50000 ? 2.75 : p.damageCounter >= 25000 ? 2.5 : 2.25;
             p.scope.notify({
-                text: 'Using the ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["Base ATK and Orb boost", "ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                text: 'Using the ' + ["ATK boost", "Base ATK and Orb boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Base ATK and Orb boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
