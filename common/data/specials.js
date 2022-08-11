@@ -14230,6 +14230,44 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = p.captain != null && (p.captain.type == "INT") ? 1 : 0;
         },
     },
+    3686: {
+        atkPlus: function(p) { return [0.25, 0, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
+        atk: function(p) { return p.unit.type == "INT" ? [1, 2, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3687: {
+        orbPlus: function(p) { return [0, 0.25, 0.25][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier]; }, 
+        orb: function(p) { return p.unit.type == "INT" ? [2, 1, 2][window.specials[p.team[p.sourceSlot].unit.number+1].multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(window.specials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "Orb Buff", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb boost", "Orb Buff", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3688: {
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
+        }
+    },
+    3689: {
+        atkbase: function(p) { return p.unit.type == "INT" ? 1000 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

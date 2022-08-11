@@ -2480,6 +2480,21 @@ window.sailors = {
         rcvStatic: function(p) { return p.colorCount.INT == 6 ? 75 : 0; },
         hpStatic: function(p) { return 100; },
     },
+    3686: {
+        hpStatic: function(p) { return 150; },
+    },
+    3687: {
+        atkStatic: function(p) { return 75; },
+        hpStatic: function(p) { return 75; },
+    },
+    3688: {
+        atkStatic: function(p) { return [0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3689: {
+        atkStatic: function(p) { return [0, 50, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 50, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 50, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

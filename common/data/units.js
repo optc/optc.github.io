@@ -3684,6 +3684,10 @@ window.units = [
     [ "Brook - Straw Hat Pirates Enjoying the FES", "INT", [ "Free Spirit", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1720, 791, 76, 3440, 1582, 152, 1 ],
     [ "Nami - Straw Hat Pirates Enjoying the FES", "INT", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1430, 714, 149, 2860, 1428, 298, 1 ],
     [ "Nico Robin - Straw Hat Pirates Enjoying the FES", "INT", [ "Cerebral", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1444, 762, 131, 2888, 1523, 261, 1 ],
+    [ "Jinbe - Straw Hat Pirates Enjoying the FES", "INT", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1593, 734, 90, null, null, null, null ],
+    [ "Franky - Straw Hat Pirates Enjoying the FES", "INT", [ "Powerhouse", "Shooter" ], 5, 30, 5, 4, 99, 4000000, 1625, 736, 84, null, null, null, null ],
+    [ "Roronoa Zoro - Straw Hat Pirates Enjoying the FES", "INT", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1542, 748, 101, null, null, null, null ],
+    [ "Sanji - Straw Hat Pirates Enjoying the FES", "INT", [ "Fighter", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1643, 718, 112, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

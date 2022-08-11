@@ -12974,6 +12974,19 @@ window.captains = {
     3685: {
         atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "INT" ? 3 : 1; },
     },
+    3686: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.type == "INT" ? 3 : 1; },
+    },
+    3687: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.type == "INT" ? 3 : 1; },
+    },
+    3688: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "INT" ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    3689: {
+        atk: function(p) { return p.unit.type == "INT" ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
