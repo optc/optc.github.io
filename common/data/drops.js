@@ -6911,11 +6911,11 @@ window.drops = {
         {
             name: 'Gol D. Roger',
             dropID: 'kizuna35',
-            thumb: 3526,
+            thumb: 3627,
             global: true,
             nakama: null,
             gamewith: null,
-            'Kizuna Exchange': [ 3525, 9062, 9063 ],
+            'Kizuna Exchange': [ 3626, 9062, 9063 ],
         },
 
         {
