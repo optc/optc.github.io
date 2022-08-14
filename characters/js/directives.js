@@ -463,7 +463,8 @@ directives.addTags = function($stateParams, $rootScope) {
                             // captain effects
                             if (matcher.target == 'captain' && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
+                                if (/Class$/.test(name)) name += ' captain';
+                                else if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
                                 htmlToAppend += '<span class="tag captain">' + name + '</span>';
