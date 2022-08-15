@@ -3670,7 +3670,7 @@ window.units = [
     [ "Monkey D. Luffy - Captain Shining at Sea", "PSY", [ "Fighter", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1304, 997, 81, null, null, null, null ],
     [ "Zoro & Sanji - Peerless Duo Enjoying the Sea", "DEX", [ "Fighter", "Slasher" ], 6, 55, 4, 5, 99, 5000000, 1846, 905, 116, null, null, null, null ],
     [ "Jinbe - Helmsman Riding the Ocean", "DEX", [ "Fighter", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1510, 709, 104, 3020, 1417, 208, 1 ],
-    [ "Monkey D. Luffy - Straw Hat Pirates Enjoying the FES", "INT", [ "Free Spirit", "Fighter" ], 5, 30, 6, 4, 99, null, 1666, 784, 122, null, null, null, null ],
+    [ "Monkey D. Luffy - Straw Hat Pirates Enjoying the FES", "INT", [ "Free Spirit", "Fighter" ], 5, 30, 6, 4, 99, null, 1666, 784, 122, 3016, 1391, 234, 1 ],
     [ "Ulti - Having Fun at the Summer Festival", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 1020, 420, 59, null, null, null, null ],
     [ "Ulti - Rowdy Girl Fascinated by Fireworks", "STR", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2010, 835, 113, null, null, null, null ],
     [ "Hiyori - Incognito at the Summer Festival", "DEX", [ "Cerebral", "Slasher" ], 5, 30, 5, 3, 70, 1066998, 817, 370, 109, null, null, null, null ],
