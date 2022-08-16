@@ -77,7 +77,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     // the enemy effects from specials will be incremented/decremented here
     // this will be separate from the actual `enemyEffects` object
     // because enemy effects from captain and map effects can't be deducted (no event handlers for disabling)
-    var enemyEffectsFromSpecials = { ...enemyEffects };
+    var enemyEffectsFromSpecials = {
+        ...enemyEffects,
+        def: [], // replace the booleans with arrays for these effects with multiplier
+        increaseDamageTaken: [],
+    };
 
     var katakuri = false;
 
@@ -88,7 +92,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     $scope.data.customChainAddition = 0;
 
     var specialsCombinations = [ ], chainSpecials = [ ];
-    var increaseDamageTakenMultipliers = [ ];
     var hitModifiers = [ ];
     var shipBonus = { };
     var enabledSpecials = [ ];
@@ -544,8 +547,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * - BONUS_DAMAGE_GOOD    = max(0,floor(STARTING_DAMAGE * (0.9 * 0.33 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
+     * The Increase Damage Taken is applied after defense reduction per hit, then rounded down.
+     * - if unit's hit deals 1, stays 1 with 1.5x increased damage taken, becomes 2 if 2x.
      */
-    var computeDamageOfUnit = function(position, unit, unitAtk, hitModifier, currentHitCount, type) {
+    var computeDamageOfUnit = function(position, unit, unitAtk, hitModifier, currentHitCount, type, increaseDamageTakenMultiplier) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
         var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastAtk = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
@@ -577,6 +582,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
+            lastHit = Math.floor(lastHit * increaseDamageTakenMultiplier);
             // apply combo shield if active
             if (mapEffect.shieldLeft > 0) {
                 if (!mapEffect.comboType) {
@@ -592,20 +598,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         // apply hit bonus
         if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
-            if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
-            else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense - 1);
+            if (lastHit > 1) result.result += Math.floor(Math.ceil(lastAtk * 0.9 * bonusDamageBase) * increaseDamageTakenMultiplier);
+            else result.result += Math.floor(Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense - 1) * increaseDamageTakenMultiplier);
         }
         
         //Apply Static Bonus Damage From Specials
         var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit, type, position);
         if ((staticBonusDamage > 0) && ((staticBonusDamage - currentDefense)>0) && (result.result > 0)) {
-            result.result += (staticBonusDamage - currentDefense);
+            result.result += Math.floor((staticBonusDamage - currentDefense) * increaseDamageTakenMultiplier);
         }
         
         // apply fixed threshold barrier if active
         if (mapEffect.barrierThreshold && result.result > mapEffect.barrierThreshold) {
-            result.result = mapEffect.barrierThreshold +
-                Math.floor((result.result - mapEffect.barrierThreshold) * (1 - mapEffect.barrierReduction));
+            result.result = Math.floor(mapEffect.barrierThreshold +
+                Math.floor((result.result - mapEffect.barrierThreshold) * (1 - mapEffect.barrierReduction)) * increaseDamageTakenMultiplier);
         }
         return result;
     };
@@ -616,26 +622,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeActualDefense = function(shipName) {
         var baseDefense = parseInt($scope.data.defense, 10) || 0;
         currentDefense = baseDefense;
-        var defreduced = false;
-        enabledSpecials.forEach(function(x) {
-            var params = getParameters(x.sourceSlot, undefined, x.sourceSlot, x.specialType);
-            if (x === null || !x.hasOwnProperty('def')) return;
-            if (!params.enemyImmunities.def || (x.ignoresImmunities && x.ignoresImmunities(params).includes('def'))) {
-                var defMultiplier = x.def(params);
-                currentDefense = Math.min(currentDefense,baseDefense * defMultiplier);
-                if (defMultiplier < 1)
-                    defreduced = true;
-            }
-        });
+        if (enemyEffectsFromSpecials.def.length > 0) {
+            var defDownMultiplier = Math.min(...enemyEffectsFromSpecials.def);
+            currentDefense = baseDefense * defDownMultiplier;
+        }
         if($scope.data.effect == "80% DEF reduction"){
             currentDefense = Math.min(currentDefense,baseDefense * .20);
-            defreduced = true;
+            enemyEffects.def = true;
         }
         if(shipName=="Flying Dutchman - Special ACTIVATED"){
             currentDefense = Math.min(currentDefense,baseDefense * .75);
-            defreduced = true;
+            enemyEffects.def = true;
         }
-        return defreduced;
     };
 
     var getShipBonus = function(type,static,unit,slot,captain,chainPosition,parameters) {
@@ -882,6 +880,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         addition = parseFloat($scope.data.customChainAddition) != 0 ? parseFloat($scope.data.customChainAddition) + captainAddition : addition;
 
+        // Increase Damage Taken (IDT) is applied after calculating the damage with enemy defense factored in for every hit
+        // Hence, 1 damage (with high def enemies) with 2x Increase Damage Taken becomes 2 damage.
+        // This is rounded down in-game, so 1.5x will still give 1 damage.
+        // Get the highest IDT multiplier before chain calculation loop for performance
+        var increaseDamageTakenMultiplier = 1;
+        if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
+            increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken);
+        }
+
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
@@ -938,9 +945,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     break;
                 }
                 if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
+                // add increaseDamageTakenMultiplier to multiplier list if not in the list
+                for (i=0;i<x.multipliers.length;++i) {
+                    if (x.multipliers[i][1] == 'increased damage taken')
+                        break;
+                }
+                if (i == x.multipliers.length)
+                    x.multipliers.push([increaseDamageTakenMultiplier, 'increased damage taken'])
                 // compute damage
                 var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
-                var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type);
+                var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type, increaseDamageTakenMultiplier);
                 currentHits = temp.hits;
                 overall += temp.result;
                 multipliersUsed.push(chainMultiplier);
@@ -952,28 +966,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 currentResult = { result: result, chainMultipliers: multipliersUsed };
             }
         });
-
-        // Increase Damage Taken (IDT) is applied after calculating the damage with enemy defense factored in.
-        // Hence, 1 damage (with high def enemies) with 2x Increase Damage Taken becomes 2 damage.
-        // This is rounded down in-game, so 1.5x will still give 1 damage.
-        // Get the highest IDT multiplier
-        var highestIncreaseDamageTakenMultiplier = 1;
-        increaseDamageTakenMultipliers.forEach(function(special) {
-            var params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
-
-            if (!params.enemyImmunities.increaseDamageTaken || (special.ignoresImmunities && special.ignoresImmunities(params).includes('increaseDamageTaken'))) {
-                highestIncreaseDamageTakenMultiplier = Math.max(highestIncreaseDamageTakenMultiplier, special.increaseDamageTaken(params));
-            }
-        });
-        if (highestIncreaseDamageTakenMultiplier != 1) {
-            // apply the IDT multiplier to each unit's damage
-            for (const subDamage of currentResult.result) {
-                subDamage.damage = Math.floor(subDamage.damage * highestIncreaseDamageTakenMultiplier);
-
-                // update Increase Damage Taken multiplier in multiplier list
-                subDamage.multipliers.push([highestIncreaseDamageTakenMultiplier, 'increased damage taken'])
-            }
-        }
 
         return currentResult;
     };
@@ -1119,7 +1111,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         captAffinityMultiplier = [ ];
         captChain = [ ];
         staticMultiplier = [ ];
-        increaseDamageTakenMultipliers = [ ];
         
         var dummy = 0;
         for (let i = 5; i >= 0; i--) {
@@ -1174,8 +1165,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 staticMultiplier.push({...data, staticMultiplier: data.staticMult});
             if (data.hasOwnProperty('affinity'))
                 affinityMultiplier.push({...data, affinityMultiplier: data.affinity || function(){ return 1.0; }});
-            if (data.hasOwnProperty('increaseDamageTaken'))
-                increaseDamageTakenMultipliers.push(data);
         });
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))
@@ -1410,7 +1399,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
 
-        applyEnemyEffectsFromEffects();
+        updateEnemyEffects();
+        computeActualDefense(shipBonus.bonus.name);
 
         enabledEffects = [ ];
         
@@ -1475,15 +1465,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
         }
 
-        // if the special is being enabled, keep it positive to increase the counter on the enemy effect.
-        var multiplier = 1;
-
         // if the special is being disabled, use the params that were used on `specialToggled`,
         // making it seem like we reactivated the special, just to get the same return value we got (which we'll deduct later)
         if (!isEnablingSpecial) {
             params = params.cached;
-            multiplier = -1;
-
             // in case the enemy effect function happens to access `p.cached`
             params.cached = params;
         }
@@ -1501,10 +1486,23 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     var returnValue = special[enemyEffect](params);
                     // for these effects, the function returns the multiplier, so 1 means no effect
                     if ([ 'def', 'increaseDamageTaken' ].includes(enemyEffect)){
-                        enemyEffectsFromSpecials[enemyEffect] += (returnValue != 1 ? 1 : 0) * multiplier;
+                        if (returnValue == 1){
+                            continue;
+                        }
+                        if (isEnablingSpecial) {
+                            enemyEffectsFromSpecials[enemyEffect].push(returnValue);
+                        } else {
+                            var index = enemyEffectsFromSpecials[enemyEffect].indexOf(returnValue);
+                            if (index > -1)
+                                enemyEffectsFromSpecials[enemyEffect].splice(index, 1);
+                        }
                     } else {
                         // the others (burn, delay, poison, etc) return the number of turns, so 0 means no effect
-                        enemyEffectsFromSpecials[enemyEffect] += returnValue * multiplier;
+                        if (isEnablingSpecial) {
+                            enemyEffectsFromSpecials[enemyEffect] += returnValue;
+                        } else {
+                            enemyEffectsFromSpecials[enemyEffect] -= returnValue;
+                        }
                     }
                 }
             }
@@ -1518,17 +1516,23 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     /**
      * Modifies the `enemyEffects` variable according to the current status
-     * effects of the enemy by calling all functions of ship/captain effects
+     * effects of the enemy by merging with `enemyEffectsFromSpecials` and calling all functions of ship/captain effects
      * Note that due to this, the enemy effects will be the same for all units,
      * so those that apply an enemy effect upon hitting is not accounted for.
      * `enemyEffectsFromSpecials` isn't modified because there is no way of
      * deducting the correct number when the captain is changed, unlike specials
      * where we have an event handler for it being disabled.
      */
-    var applyEnemyEffectsFromEffects = function() {
+    var updateEnemyEffects = function() {
 
         // shallow copy so `enemyEffectsFromSpecials` is not modified
-        enemyEffects = {...enemyEffectsFromSpecials};
+        for (const enemyEffect in enemyEffectsFromSpecials) {
+            if (Array.isArray(enemyEffectsFromSpecials[enemyEffect])) {
+                enemyEffects[enemyEffect] = enemyEffectsFromSpecials[enemyEffect].length > 0;
+            } else {
+                enemyEffects[enemyEffect] = enemyEffectsFromSpecials[enemyEffect];
+            }
+        }
         enemyEffects.delay ||= shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED" && !$scope.data.enemyImmunities.delay;
         enemyEffects.barrier = $scope.data.enemyBuffs.barrier;
 
