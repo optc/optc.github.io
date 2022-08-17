@@ -13929,7 +13929,7 @@ window.specials = {
         atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 750 : 0; },
     },
     3645: {
-        atkbase: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 750 : 0; },
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 900 : 0; },
         chainAddition: function(p) { return 1.1; },
     },
     3646: {

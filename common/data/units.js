@@ -3647,7 +3647,7 @@ window.units = [
     [ "Buggy & Galdino - Forming the Prison Break Alliance", "QCK", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1273, 701, 128, 2971, 1496, 227, 1 ],
     [ "Inazuma - Snipping Through the Ground", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1241, 638, 173, 2783, 1471, 266, 1 ],
     [ "Magellan & Hannyabal - Warden and Under Warden of Impel Down", "INT", [ "Driven", "Striker" ], 5, 50, 4, 4, 99, 5000000, 1145, 811, 101, 2996, 1461, 234, 1 ],
-    [ "Black Maria - Seductive Tobi Roppo", "QCK", [ "Powerhouse", "Cerebral" ], 5, 30, 6, 3, 70, 1066998, 822, 418, 90, null, null, null, null ],
+    [ "Black Maria - Seductive Tobi Roppo", "QCK", [ "Powerhouse", "Cerebral" ], 5, 30, 6, 3, 70, 1066998, 822, 418, 90, 1675, 836, 179, 1 ],
     [ "Black Maria - Inescapable Spider Silk", "QCK", [ "Powerhouse", "Cerebral" ], 6, 55, 6, 5, 99, 5000000, 1645, 831, 174, 3290, 1662, 348, 1 ],
     [ "Who's-Who - Obstructing Tobi Roppo", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 928, 449, 64, 1857, 898, 128, 1 ],
     [ "Who's-Who - Assaulting Ancient Fangs", "STR", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 1827, 893, 123, 3654, 1785, 246, 1 ],
