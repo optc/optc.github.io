@@ -134,6 +134,7 @@ app.controller('SidebarCtrl',function($scope, $rootScope, $stateParams, $timeout
                 else { $rootScope.filters[x] = $rootScope.filters["toggle"]; }
             }
         }
+        $('#leftContainer animate-collapse + div.collapse').collapse($rootScope.filters["toggle"] ? 'show' : 'hide');
         $rootScope.filters["toggle"] = !$rootScope.filters["toggle"];
     };
 
