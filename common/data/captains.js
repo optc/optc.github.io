@@ -6882,13 +6882,13 @@ window.captains = {
     },
     2073: {
         damageSorter: function(d) { return CrunchUtils.gearSort(d, 4.25); },
-        hitAtk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [3, p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1, 4, p.slot == p.sourceSlot ? 4.25 : 4][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]] : 3; },
+        hitAtk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [3, p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1, 4, p.slot == p.sourceSlot ? 4.25 : 4][window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]] : 3; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; }
     },
     2074: {
         damageSorter: function(d) { return CrunchUtils.gearSort(d, 4.25); },
-        hitAtk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [3, p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1, 4, p.slot == p.sourceSlot ? 4.25 : 4][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]] : 3; },
+        hitAtk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [3, p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect"]) ? 3.5 : 1, 4, p.slot == p.sourceSlot ? 4.25 : 4][window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]] : 3; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return 1.25; }
     },

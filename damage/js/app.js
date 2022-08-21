@@ -32,8 +32,22 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
 
         rainbowDamage: Array(6).fill(false),
 
+        // if the keys are renamed, make sure to replace those in `ignoreImmunities` in cruncher.js, specials.js, captain.js, etc
+        enemyImmunities: {
+            all: false,
+            burn: false,
+            def: false,
+            delay: false,
+            increaseDamageTaken: false,
+            negative: false,
+            poison: false,
+        },
+
+        enemyBuffs: {
+            barrier: false, // add a toggle for the barrier rather than use the comboShield, because orb barriers aren't implemented yet
+        }
     };
-    
+
     $rootScope.tdata = { // transitional data
 
         team: Array.from({length: 6}, () => ({
@@ -63,28 +77,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             enabled: false,
             value: 0
         },
-        
+
         basehpCounter: {
             enabled: false,
             value: 0
         },
-        
+
         rcvCounter: {
             enabled: false,
             value: 0
         },
-        
+
         semlaCounter: {
             enabled: false,
             value: 0
         },
-        
+
         damageCounter: {
             enabled: false,
             value: 0
         },
 
     };
+
+    // should be switched around when units are switched, just like `tdata` and `data`
+    // this separated from `tdata` to prevent circular references when caching.
+    $rootScope.cachedParams = Array.from({length: 6}, () => ({
+        special: null,
+        altspecial: null,
+    })),
 
     $rootScope.numbers = {
         hp: 1,
@@ -135,8 +156,41 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
                 tokiState: false,
                 clone: false,
             };
-        $scope.tdata.team[n] = { orb: 1, g: false, str: false, dex: false, qck: false, psy: false, int: false, rainbow: false, special: false, lock: 0, silence: 0, removed: 0 };
+        $scope.tdata.team[n] = {
+            orb: 1,
+            g: false,
+            str: false,
+            dex: false,
+            qck: false,
+            psy: false,
+            int: false,
+            rainbow: false,
+            special: false,
+            lock: 0,
+            silence: 0,
+            removed: 0,
+        };
+        for (const key in $scope.cachedParams[n]) {
+            $scope.cachedParams[n][key] = null;
+        }
     };
+
+    $scope.toggleEnemyImmunity = function(isAllImmunityToggled) {
+        if (isAllImmunityToggled) {
+            for (const key in $scope.data.enemyImmunities) {
+                $scope.data.enemyImmunities[key] = $scope.data.enemyImmunities.all;
+            }
+        } else {
+            var isAllEnabled = true;
+            for (const key in enemyImmunities) {
+                if (!$scope.data.enemyImmunities[key]) {
+                    isAllEnabled = false;
+                    break;
+                }
+            }
+            $scope.data.enemyImmunities.all = isAllEnabled;
+        }
+    }
 
     /**
      * If all sugarToys are true, then sets all to false.
@@ -227,7 +281,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [DEX] orb control * * * * */
 
     var resetDEXOrbs = function() {
@@ -256,7 +310,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [QCK] orb control * * * * */
 
     var resetQCKOrbs = function() {
@@ -285,7 +339,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [PSY] orb control * * * * */
 
     var resetPSYOrbs = function() {
@@ -314,7 +368,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [INT] orb control * * * * */
 
     var resetINTOrbs = function() {
@@ -343,7 +397,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [RAINBOW] orb control * * * * */
 
     var resetRainbowOrbs = function() {
@@ -372,7 +426,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [MEAT] orb control * * * * */
 
     var resetMeatOrbs = function() {
@@ -401,7 +455,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         }
         return false;
     };
-    
+
     /* * * * * [WANO] orb control * * * * */
 
     var resetWanoOrbs = function() {

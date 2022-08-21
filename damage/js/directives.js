@@ -360,6 +360,9 @@ directives.slot = function() {
                 temp = scope.tdata.team[i];
                 scope.tdata.team[i] = scope.tdata.team[j];
                 scope.tdata.team[j] = temp;
+                temp = scope.cachedParams[i];
+                scope.cachedParams[i] = scope.cachedParams[j];
+                scope.cachedParams[j] = temp;
             };
             scope.isDraggable = function(e) {
                 return !Utils.isClickOnOrb(e, e.target.parentNode);

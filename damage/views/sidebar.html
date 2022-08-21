@@ -59,6 +59,26 @@
         </li>
 
         <li>
+            <div id="enemyImmunities">
+                <i class="fa fa-shield"></i>Enemy Immunities:<br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.all" ng-model="data.enemyImmunities.all" ng-change="toggleEnemyImmunity(true)"> All</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.burn" ng-model="data.enemyImmunities.burn" ng-change="toggleEnemyImmunity(false)"> Burn</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.def" ng-model="data.enemyImmunities.def" ng-change="toggleEnemyImmunity(false)"> Defense Reduction</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.delay" ng-model="data.enemyImmunities.delay" ng-change="toggleEnemyImmunity(false)"> Delay</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.increaseDamageTaken" ng-model="data.enemyImmunities.increaseDamageTaken" ng-change="toggleEnemyImmunity(false)"> Increase Damage Taken</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.negative" ng-model="data.enemyImmunities.negative" ng-change="toggleEnemyImmunity(false)"> Negative</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.poison" ng-model="data.enemyImmunities.poison" ng-change="toggleEnemyImmunity(false)"> Poison</label><br>
+            </div>
+        </li>
+
+        <li>
+            <div id="enemyBuffs">
+                <i class="fa fa-fist-raised"></i>Other Enemy Buffs<br>
+                <label><input type="checkbox" class="wheelable" name="enemyBuffs.barrier" ng-model="data.enemyBuffs.barrier"> Barrier</label><br>
+            </div>
+        </li>
+
+        <li>
             <div id="shieldContainer">
                 <i class="fa fa-shield"></i>
                 Barrier: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">

@@ -116,19 +116,19 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
             temp = ('000000' + parseInt(data, 10).toString(2))
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
-                if (x == 1) $scope.options.sidebarVisible = true;
-                $scope.tdata.team[n].special = (x == 1);
-                if ($rootScope.cruncherReady) $rootScope.$emit('specialToggled', n, x == 1);
-                else emitQueue.push([ 'specialToggled', n, x == 1 ]);
+                if (x == 1) {
+                    $scope.options.sidebarVisible = true;
+                    emitQueue.push([ 'specialToggled', n, true]);
+                }
             });
         } else if (type == 'A') {
             temp = ('000000' + parseInt(data, 10).toString(2))
                 .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
             temp.forEach(function(x,n) {
-                if (x == 1) $scope.options.sidebarVisible = true;
-                $scope.tdata.team[n].altspecial = (x == 1);
-                if ($rootScope.cruncherReady) $rootScope.$emit('altspecialToggled', n, x == 1);
-                else emitQueue.push([ 'altspecialToggled', n, x == 1 ]);
+                if (x == 1) {
+                    $scope.options.sidebarVisible = true;
+                    emitQueue.push([ 'altspecialToggled', n, true]);
+                }
             });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
@@ -138,13 +138,21 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
 
     }
 
-    // Wait for rcruncher if necessary
+    function processEmitQueue() {
+        emitQueue.forEach(function(x) {
+            $scope.tdata.team[x[1]][x[0].replace('Toggled', '')] = x[2];
+            $rootScope.$emit(x[0], x[1], x[2]);
+        });
+    }
     
+    // Wait for rcruncher if necessary
     if (!$rootScope.cruncherReady) {
         $rootScope.$watch('cruncherReady',function(ready) {
             if (!ready) return;
-            emitQueue.forEach(function(x) { $rootScope.$emit(x[0], x[1], x[2]); });
+            processEmitQueue();
         });
+    } else {
+        processEmitQueue();
     }
 
     $scope.options.crunchInhibitor = 0;

@@ -45,7 +45,11 @@
 // TODO Check if the effect bonuses are applied before or after the static bonuses from the ships and other stuff
 
 var MODIFIERS = [ 'Below Good', 'Good', 'Great', 'Perfect', 'Miss' ];
-var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ]; 
+var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfect' ];
+
+// specialType for getParameters and cacheParameters
+const SPECIAL = 'special';
+const ALTSPECIAL = 'altspecial';
 
 /****************
  * CruncherCtrl *
@@ -58,11 +62,27 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var cptsWith = { };
     var specialsWith = { };
     var currentDefense = 0;
-    var isDefenseDown = false;
-    var isDelayed = false;
-    var isMarked = false;
-    var isNegative = false;
-    var isPoisoned = false;
+
+    var enemyEffects = {
+        barrier: false, // this will use the enemyBuffs.barrier for now, because orb barriers aren't implemented yet
+        burn: false,
+        def: false,
+        delay: false,
+        increaseDamageTaken: false,
+        mark: false,
+        negative: false,
+        poison: false,
+    };
+
+    // the enemy effects from specials will be incremented/decremented here
+    // this will be separate from the actual `enemyEffects` object
+    // because enemy effects from captain and map effects can't be deducted (no event handlers for disabling)
+    var enemyEffectsFromSpecials = {
+        ...enemyEffects,
+        def: [], // replace the booleans with arrays for these effects with multiplier
+        increaseDamageTaken: [],
+    };
+
     var katakuri = false;
 
     $scope.data.customATK = 1;
@@ -91,27 +111,22 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var unit = $scope.data.team[slot].unit;
         if (!unit) return;
         var id = unit.number + 1;
-        var params = getParameters(slot); params["sourceSlot"] = slot;
+
+        // provide specialType to get the cached parameters on deactivation
+        var params = getParameters(slot, undefined, slot, SPECIAL);
+
         if (!specials.hasOwnProperty(id)) return;
-        if (enabled && specials[id].hasOwnProperty('onActivation')) {
-            /*var kataActivate = false;
-            for(var kata = 0; kata < 2; kata++){
-            if(team[kata].unit !== null){
-                if(team[kata].unit.number == 2112 || team[kata].unit.number == 2113)
-                    kataActivate = true;
-                else
-                    kataActivate = false;
-                }
+        if (enabled) {
+            cacheParameters(params, slot, SPECIAL);
+            if (specials[id].hasOwnProperty('onActivation')) {
+                specials[id].onActivation(params);
             }
-            if(team[0].unit == null && team[1].unit == null)
-                kataActivate = false;
-            isDelayed = kataActivate;
-            var params = ;
-            params["isDelayed"] = isDelayed;*/
-            
-            specials[id].onActivation(params);
-        } else if (!enabled && specials[id].hasOwnProperty('onDeactivation')) {
-            specials[id].onDeactivation(params);
+            applyEnemyEffectsFromSpecial(specials[id], params, true);
+        } else {
+            applyEnemyEffectsFromSpecial(specials[id], params, false);
+            if (specials[id].hasOwnProperty('onDeactivation')) {
+                specials[id].onDeactivation(params);
+            }
         }
     });
     
@@ -119,28 +134,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var unit = $scope.data.team[slot].unit;
         if (!unit) return;
         var id = unit.number + 1;
-        var params = getParameters(slot); params["sourceSlot"] = slot;
+
+        // provide specialType to get the cached parameters on deactivation
+        var params = getParameters(slot, undefined, slot, ALTSPECIAL);
         if (!altspecials.hasOwnProperty(id)) return;
-        if (enabled && altspecials[id].hasOwnProperty('onActivation')) {
-            
-            /*var kataActivate = false;
-            for(var kata = 0; kata < 2; kata++){
-            if(team[kata].unit !== null){
-                if(team[kata].unit.number == 2112 || team[kata].unit.number == 2113)
-                    kataActivate = true;
-                else
-                    kataActivate = false;
-                }
+        if (enabled) {
+            cacheParameters(params, slot, ALTSPECIAL);
+            if (altspecials[id].hasOwnProperty('onActivation')) {
+                altspecials[id].onActivation(params);
             }
-            if(team[0].unit == null && team[1].unit == null)
-                kataActivate = false;
-            isDelayed = kataActivate;
-            var params = ;
-            params["isDelayed"] = isDelayed;*/
-            
-            altspecials[id].onActivation(params);
-        } else if (!enabled && altspecials[id].hasOwnProperty('onDeactivation')) {
-            altspecials[id].onDeactivation(params);
+            applyEnemyEffectsFromSpecial(specials[id], params, true);
+        } else {
+            applyEnemyEffectsFromSpecial(specials[id], params, false);
+            if (altspecials[id].hasOwnProperty('onDeactivation')) {
+                altspecials[id].onDeactivation(params);
+            }
         }
     });
 
@@ -189,7 +197,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.numbers = jQuery.extend($scope.numbers, result);
         $scope.numbers.hp = Math.max(1,hpMax);
         checkHealAndZombie(result, $scope.numbers, [$scope.data.actionleft, $scope.data.actionright], $scope.data.team.map(unit => unit.limit), params);
-        $timeout(function() { crunchSelfInhibit = false; });
+        $timeout(function() {
+            crunchSelfInhibit = false;
+            $rootScope.cruncherReady = true; // let it turn off `crunchSelfInhibit` before allowing `transfer.js` to turn on specials
+        });
     }
 
     var crunchForType = function(type) {
@@ -499,6 +510,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         enabledSpecials.forEach(function(data) {
             if (data.hasOwnProperty('atkbase') && stat == "atk"){
+                params.cached = getCachedParameters(data.sourceSlot, data.specialType);
                 params["sourceSlot"] = data.sourceSlot;
                 atkbaseDamage = data.atkbase(params);
             }
@@ -535,8 +547,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * - BONUS_DAMAGE_GOOD    = max(0,floor(STARTING_DAMAGE * (0.9 * 0.33 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_GREAT   = max(0,floor(STARTING_DAMAGE * (0.9 * 0.66 + 1/CMB)) - DEFENSE)
      * - BONUS_DAMAGE_PERFECT = max(0,floor(STARTING_DAMAGE * (0.9 + 1/CMB)) - DEFENSE)
+     * The Increase Damage Taken is applied after defense reduction per hit, then rounded down.
+     * - if unit's hit deals 1, stays 1 with 1.5x increased damage taken, becomes 2 if 2x.
      */
-    var computeDamageOfUnit = function(position, unit, unitAtk, hitModifier, currentHitCount, type) {
+    var computeDamageOfUnit = function(position, unit, unitAtk, hitModifier, currentHitCount, type, increaseDamageTakenMultiplier) {
         var baseDamage = Math.floor(Math.max(1,unitAtk / unit.combo - currentDefense));
         var result = { hits: currentHitCount, result: 0 }, bonusDamageBase = 0, combo = 0, lastAtk = 0, lastHit = 0;
         if (hitModifier == 'Below Good') {
@@ -564,10 +578,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             lastAtk = unitAtk;
             // apply hit-based captain effects if any
             cptsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position)); });
-            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position)); });
+            specialsWith.hitMultipliers.forEach(function(x) { lastAtk *= x.hit(result.hits, getParameters(position, undefined, x.sourceSlot, x.specialType)); });
             // apply defense
             lastHit = lastAtk / unit.combo;
             lastHit = Math.ceil(Math.max(1, lastHit - currentDefense));
+            lastHit = Math.floor(lastHit * increaseDamageTakenMultiplier);
             // apply combo shield if active
             if (mapEffect.shieldLeft > 0) {
                 if (!mapEffect.comboType) {
@@ -583,20 +598,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         // apply hit bonus
         if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
-            if (lastHit > 1) result.result += Math.ceil(lastAtk * 0.9 * bonusDamageBase);
-            else result.result += Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense - 1);
+            if (lastHit > 1) result.result += Math.floor(Math.ceil(lastAtk * 0.9 * bonusDamageBase) * increaseDamageTakenMultiplier);
+            else result.result += Math.floor(Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense - 1) * increaseDamageTakenMultiplier);
         }
         
         //Apply Static Bonus Damage From Specials
         var staticBonusDamage = computeFlatBonusDamage(hitModifier, unit, type, position);
         if ((staticBonusDamage > 0) && ((staticBonusDamage - currentDefense)>0) && (result.result > 0)) {
-            result.result += (staticBonusDamage - currentDefense);
+            result.result += Math.floor((staticBonusDamage - currentDefense) * increaseDamageTakenMultiplier);
         }
         
         // apply fixed threshold barrier if active
         if (mapEffect.barrierThreshold && result.result > mapEffect.barrierThreshold) {
-            result.result = mapEffect.barrierThreshold +
-                Math.floor((result.result - mapEffect.barrierThreshold) * (1 - mapEffect.barrierReduction));
+            result.result = Math.floor(mapEffect.barrierThreshold +
+                Math.floor((result.result - mapEffect.barrierThreshold) * (1 - mapEffect.barrierReduction)) * increaseDamageTakenMultiplier);
         }
         return result;
     };
@@ -607,23 +622,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeActualDefense = function(shipName) {
         var baseDefense = parseInt($scope.data.defense, 10) || 0;
         currentDefense = baseDefense;
-        var defreduced = false;
-        enabledSpecials.forEach(function(x) {
-            var params = getParameters(x.sourceSlot);
-            params["sourceSlot"] = x.sourceSlot;
-            if (x === null || !x.hasOwnProperty('def')) return;
-            currentDefense = Math.min(currentDefense,baseDefense * x.def(params));
-            if (x.def(params) < 1) defreduced = true;
-        });
+        if (enemyEffectsFromSpecials.def.length > 0) {
+            var defDownMultiplier = Math.min(...enemyEffectsFromSpecials.def);
+            currentDefense = baseDefense * defDownMultiplier;
+        }
         if($scope.data.effect == "80% DEF reduction"){
             currentDefense = Math.min(currentDefense,baseDefense * .20);
-            defreduced = true;
+            enemyEffects.def = true;
         }
         if(shipName=="Flying Dutchman - Special ACTIVATED"){
             currentDefense = Math.min(currentDefense,baseDefense * .75);
-            defreduced = true;
+            enemyEffects.def = true;
         }
-        return defreduced;
     };
 
     var getShipBonus = function(type,static,unit,slot,captain,chainPosition,parameters) {
@@ -675,8 +685,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
             affinityMultiplier.forEach(function(special){
                 team.forEach(function(space){
-                    var params = getParameters(teamSlot)
-                    params["sourceSlot"] = special.sourceSlot;
+                    var params = getParameters(teamSlot, undefined, special.sourceSlot, special.specialType);
                     if (space.unit != null) if(affinityMult<special.affinityMultiplier(params)) affinityMult = special.affinityMultiplier(params);
                 })
                 });
@@ -688,7 +697,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var affinityPlusTemp = 0; //conditional goes here
         plusSpecials.forEach(function(plusSpecial) {
             if(plusSpecial.hasOwnProperty('affinityPlus')){
-                let params = jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(teamSlot));
+                let params = getParameters(teamSlot, undefined, plusSpecial.sourceSlot, plusSpecial.specialType);
                 affinityPlusTemp = Math.max(affinityPlusTemp, plusSpecial.affinityPlus(params));
             }
         });
@@ -701,8 +710,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         //Get the strongest Color affinity Mult captains
         captAffinityMultiplier.forEach(function(captain){
                     //captAffinityMult *= captain.captAffinityMultiplier(unit);
-                    var params = getParameters(teamSlot)
-                    params["sourceSlot"] = captain.sourceSlot;
+                    var params = getParameters(teamSlot, undefined, captain.sourceSlot);
                     captAffinityMult *= captain.captAffinityMultiplier(params);
                 });
         
@@ -720,11 +728,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var chainUpgrade = 0;
 
         chainSpecMultiplication.forEach(function(special){
-            var params2 = getParameters(special.sourceSlot);
-            params2["sourceSlot"] = special.sourceSlot;
-            if(chainSpecialMult<special.chainMultiplication(params2)){
-                chainSpecialMult = special.chainMultiplication(params2);
-            }
+            var params2 = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
+            chainSpecialMult = Math.max(chainSpecialMult, special.chainMultiplication(params2));
         });
         var result = chainBase;
         
@@ -734,8 +739,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         tapTiming.forEach(function(special){
             var tapTimingCheck = 0;
             for (var i=0;i<params.team.length;++i){
-                var params2 = getParameters(i);
-                params2["sourceSlot"] = special.sourceSlot;
+                var params2 = getParameters(i, undefined, special.sourceSlot, special.specialType);
                 tapTimingCheck += params.team[i].unit ? special.tapTiming(params2)["Perfect"] : 0;
             }
             if (tapTimingCheck > tapTimingTemp){
@@ -748,8 +752,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // only params.sugarToy (specified unit) becomes false when sugarToysSpecialEnabled is false
             // sugarToy in team does not get affected
             //console.log(params.team[damage[i].position].unit);
-            var params2 = getParameters(damage[i].position);
-            params2["sourceSlot"] = tapTimingSpecial ? tapTimingSpecial.sourceSlot : damage[i].position;
+            var params2 = getParameters(damage[i].position, undefined, tapTimingSpecial && tapTimingSpecial.sourceSlot, tapTimingSpecial && tapTimingSpecial.specialType);
 
             var hobbyBuff = (params.scope.tdata.sugarToysSpecialEnabled && hitModifiers[i] == 'Perfect' && params.team[damage[i].position].sugarToy) ? 0.4 : 0; //0.7 For each HOBBY-HOBBY Hit, but trying to consolidate it with tapTiming buffs, so subtract the 0.3x already inherited from Perfects
             var tapTimingBuff = tapTimingSpecial && !(params.scope.tdata.sugarToysSpecialEnabled && params.team[damage[i].position].sugarToy) ? tapTimingSpecial.tapTiming(params2)[hitModifiers[i]] : 0;
@@ -809,6 +812,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         for (var h=0;h<enabledSpecials.length;++h) {
             if (enabledSpecials[h].hasOwnProperty('rcvStatic')){
                 params["sourceSlot"] = enabledSpecials[h].sourceSlot;
+                params.cached = getCachedParameters(enabledSpecials[h].sourceSlot, enabledSpecials[h].specialType);
                 rcv += enabledSpecials[h].rcvStatic(params);
             }
         }
@@ -853,21 +857,21 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         //get the highest Chain Addition if it exists
         chainAddition.forEach(function(special){
-            var params = getParameters(special.sourceSlot); params["sourceSlot"] = special.sourceSlot;
+            var params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
             if(addition<special.chainAddition(params)){
                 addition = special.chainAddition(params);
             }
         });
         plusSpecials.forEach(function(special){
             if(special.hasOwnProperty('chainAdditionPlus')){
-                var params = getParameters(special.sourceSlot); params["sourceSlot"] = special.sourceSlot;
+                var params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
                 if(additionPlus<special.chainAdditionPlus(params) && addition != 0){
                     additionPlus = special.chainAdditionPlus(params);
                 }
             }
         });
         captChain.forEach(function(chainCaptain){
-            var params = getParameters(chainCaptain.sourceSlot); params["sourceSlot"] = chainCaptain.sourceSlot;
+            var params = getParameters(chainCaptain.sourceSlot, undefined, chainCaptain.sourceSlot);
             if (chainCaptain.hasOwnProperty('chainAddition')){
                 captainAddition += chainCaptain.chainAddition(params);
             }
@@ -876,12 +880,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         addition = parseFloat($scope.data.customChainAddition) != 0 ? parseFloat($scope.data.customChainAddition) + captainAddition : addition;
 
+        // Increase Damage Taken (IDT) is applied after calculating the damage with enemy defense factored in for every hit
+        // Hence, 1 damage (with high def enemies) with 2x Increase Damage Taken becomes 2 damage.
+        // This is rounded down in-game, so 1.5x will still give 1 damage.
+        // Get the highest IDT multiplier before chain calculation loop for performance
+        var increaseDamageTakenMultiplier = 1;
+        if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
+            increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken);
+        }
+
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
             var i, params = [ ];
             for (var j=0;j<damage.length;++j){ 
-                params.push(getParameters(damage[j].position, j));
-                params[j].sourceSlot = special.sourceSlot;
+                params.push(getParameters(damage[j].position, j, special.sourceSlot, special.specialType));
             }
             var result = damage.map(function(x,n) {
                 // calculate chain multiplier
@@ -905,8 +917,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 //console.log(params[n].hitcombo);
                 var chainUpgrade = 0;
                 plusSpecials.forEach(function(plusSpecial){
-                    var params2 = getParameters(plusSpecial.sourceSlot);
-                    params2["sourceSlot"] = plusSpecial.sourceSlot; params2["chainPosition"] = params[n].chainPosition;
+                    var params2 = getParameters(plusSpecial.sourceSlot, params[n].chainPosition, plusSpecial.sourceSlot, plusSpecial.specialType);
                     if (plusSpecial.hasOwnProperty('chainPlus')){
                         var chainTemp = plusSpecial.chainPlus(params2);
                         if (chainTemp > chainUpgrade) chainUpgrade = chainTemp;
@@ -934,9 +945,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     break;
                 }
                 if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
+                // add increaseDamageTakenMultiplier to multiplier list if not in the list
+                for (i=0;i<x.multipliers.length;++i) {
+                    if (x.multipliers[i][1] == 'increased damage taken')
+                        break;
+                }
+                if (i == x.multipliers.length)
+                    x.multipliers.push([increaseDamageTakenMultiplier, 'increased damage taken'])
                 // compute damage
                 var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
-                var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type);
+                var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type, increaseDamageTakenMultiplier);
                 currentHits = temp.hits;
                 overall += temp.result;
                 multipliersUsed.push(chainMultiplier);
@@ -948,6 +966,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 currentResult = { result: result, chainMultipliers: multipliersUsed };
             }
         });
+
         return currentResult;
     };
 
@@ -965,14 +984,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var temp = damage.map(function(x,n) {
                 var multipliers = jQuery.extend([ ], x.multipliers), base = x.base;
                 specials.forEach(function(data) {
-                    let params = jQuery.extend({ sourceSlot: data.sourceSlot },getParameters(x.position));
+                    let params = getParameters(x.position, undefined, data.sourceSlot, data.specialType);
                     var atkPlusTemp = 0;
                     var atkCeilTemp = 1;
                     var statusPlusTemp = 0;
 
                     // get highest buff increase
                     plusSpecials.forEach(function(plusSpecial) {
-                        plusParams = jQuery.extend({ sourceSlot: plusSpecial.sourceSlot },getParameters(plusSpecial.sourceSlot));
+                        plusParams = getParameters(plusSpecial.sourceSlot, undefined, plusSpecial.sourceSlot, plusSpecial.specialType);
                         //console.log(plusSpecial);
                         if(plusSpecial.hasOwnProperty('atkPlus')){
                             if(plusSpecial.atkPlus(plusParams) > atkPlusTemp)
@@ -1103,45 +1122,49 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         enabledSpecials.forEach(function(data) {
             if (data === null) return;
+
+            // pass the special `data` itself, or extend it if necessary, because some properties are needed
+            // by the specials, like `ignoresImmunities` and `specialType` (which is only inserted in `initializeDataStructs`)
+
             // notice specials with both atk and atkStatic defined are not supported right now
             if (data.hasOwnProperty('atk') || data.hasOwnProperty('atkStatic'))
-                result[data.type].push({ sourceSlot: data.sourceSlot, type: data.type != 'condition' ? 'atk' : 'status', f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
+                result[data.type].push({ ...data, type: data.type != 'condition' ? 'atk' : 'status', f: (data.atk || data.atkStatic), s: data.hasOwnProperty('atkStatic') });
             if (data.hasOwnProperty('status'))
-                result['condition'].push({ sourceSlot: data.sourceSlot, type: 'status', f: (data.status) });
+                result['condition'].push({ ...data, type: 'status', f: (data.status) });
             if (data.hasOwnProperty('orb'))
-                result.orb.push({ sourceSlot: data.sourceSlot, type: 'orb', f: data.orb });
+                result.orb.push({ ...data, type: 'orb', f: data.orb });
             if (data.hasOwnProperty('affinity'))
-                result.affinity.push({ sourceSlot: data.sourceSlot, type: 'affinity', f: data.affinity });
+                result.affinity.push({ ...data, type: 'affinity', f: data.affinity });
             if (data.hasOwnProperty('atkbase'))
-                atkbase.push({ sourceSlot: data.sourceSlot, f: data.atkbase });
+                atkbase.push({ ...data, f: data.atkbase });
             if (data.hasOwnProperty('chain'))
-                chainSpecials.push({ sourceSlot: data.sourceSlot, chain: data.chain, chainLimiter: data.chainLimiter || function() { return Infinity; } });
+                chainSpecials.push({ ...data, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainPlus'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, chainPlus: data.chainPlus });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('chainAdditionPlus'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, chainAdditionPlus: data.chainAdditionPlus });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('atkPlus'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, atkPlus: data.atkPlus });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('atkCeil'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, atkCeil: data.atkCeil });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('orbPlus'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, orbPlus: data.orbPlus });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('orbCeil'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, orbCeil: data.orbCeil });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('affinityPlus'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, affinityPlus: data.affinityPlus });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('statusPlus'))
-                plusSpecials.push({ sourceSlot: data.sourceSlot, statusPlus: data.statusPlus });
+                plusSpecials.push(data);
             if (data.hasOwnProperty('chainAddition'))
-                chainAddition.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0.0; } });
+                chainAddition.push({ ...data, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('tapTiming'))
-                tapTiming.push({ sourceSlot: data.sourceSlot, tapTiming: data.tapTiming });
+                tapTiming.push(data);
             if (data.hasOwnProperty('chainMultiplication'))
-                chainSpecMultiplication.push({ sourceSlot: data.sourceSlot, chainMultiplication: data.chainMultiplication || function(){ return 1.0; } });
+                chainSpecMultiplication.push({ ...data, chainMultiplication: data.chainMultiplication || function(){ return 1.0; } });
             if (data.hasOwnProperty('staticMult'))
-                staticMultiplier.push({staticMultiplier: data.staticMult, sourceSlot: data.sourceSlot});
+                staticMultiplier.push({...data, staticMultiplier: data.staticMult});
             if (data.hasOwnProperty('affinity'))
-                affinityMultiplier.push({sourceSlot: data.sourceSlot, affinityMultiplier: data.affinity || function(){ return 1.0; }});
+                affinityMultiplier.push({...data, affinityMultiplier: data.affinity || function(){ return 1.0; }});
         });
         enabledEffects.forEach(function(data) {
             if (data.hasOwnProperty('affinity'))
@@ -1156,7 +1179,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         if (chainSpecials.length >= 2){
             for(i = 0; i<chainSpecials.length; i++){
-                if(chainSpecials[i].chain(jQuery.extend({ sourceSlot: chainSpecials[i].sourceSlot },getParameters(chainSpecials[i].sourceSlot))) == 1){
+                if(chainSpecials[i].chain(getParameters(chainSpecials[i].sourceSlot, undefined, chainSpecials[i].sourceSlot, chainSpecials[i].specialType)) == 1){
                     chainSpecials.splice(i, 1);
                 }
             }
@@ -1183,6 +1206,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             //Check if conditional Boosts are activated since they raise 
             for (var x=0;x<enabledSpecials.length;++x) {
                 params.sourceSlot = enabledSpecials[x].sourceSlot;
+                params.cached = getCachedParameters(enabledSpecials[x].sourceSlot, enabledSpecials[x].specialType);
                 if  (enabledSpecials[x].type=='condition'){
                     var thisMult = enabledSpecials[x].atk(params);
                     if(thisMult>conditionalMultiplier){
@@ -1225,6 +1249,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (enabledSpecials[y].hasOwnProperty('staticMult')){
                     var slot = enabledSpecials[y].sourceSlot;
                     params.sourceSlot = slot;
+                    params.cached = getCachedParameters(slot, enabledSpecials[y].specialType);
                     //console.log(params);
                     if (enabledSpecials[y].staticMult(params) >= multSpecial){
                         specialid = team[slot].unit.number + 1;
@@ -1232,15 +1257,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         baseDamage = getStatOfUnit(team[slot],'atk', slot);
                         enabledEffects.forEach(function(x) {
                             if (x.hasOwnProperty('atkStatic')){
-                                var params2 = getParameters(slot);
-                                params2["sourceSlot"] = x.sourceSlot;
+                                var params2 = getParameters(slot, undefined, x.sourceSlot);
                                 baseDamage += x.atkStatic(params2);
                             }
                         });
                         enabledSpecials.forEach(function(x) {
                             if (x.hasOwnProperty('atkbase')){
-                                var params2 = getParameters(slot);
-                                params2["sourceSlot"] = x.sourceSlot;
+                                var params2 = getParameters(slot, undefined, x.sourceSlot, x.specialType);
                                 baseDamage += x.atkbase(params2);
                             }
                         });
@@ -1254,19 +1277,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
             for (var y=0;y<enabledEffects.length;++y) {
                 if (enabledEffects[y].hasOwnProperty('staticMult')){
-                    var params = getParameters(enabledEffects[y].sourceSlot);
-                    params['sourceSlot'] = enabledEffects[y].sourceSlot;
+                    var params = getParameters(enabledEffects[y].sourceSlot, undefined, enabledEffects[y].sourceSlot);
                     unitParams['sourceSlot'] = enabledEffects[y].sourceSlot;
                     var slot = enabledEffects[y].sourceSlot;
                     var baseDamage2 = getStatOfUnit(team[slot],'atk',slot);
                     var mult = enabledEffects[y].staticMult(unitParams);
                     enabledEffects.forEach(function(x) {
-                        var params2 = getParameters(x.sourceSlot); params2["sourceSlot"] = x.sourceSlot;
+                        var params2 = getParameters(x.sourceSlot, undefined, x.sourceSlot);
                         if (x.hasOwnProperty('atkStatic'))
                             baseDamage2 += x.atkStatic(params2);
                     });
                     enabledSpecials.forEach(function(x) {
-                        var params2 = getParameters(x.sourceSlot); params2["sourceSlot"] = x.sourceSlot;
+                        var params2 = getParameters(x.sourceSlot, undefined, x.sourceSlot, x.specialType);
                         if (x.hasOwnProperty('atkbase'))
                             baseDamage2 += x.atkbase(params2);
                     });
@@ -1283,7 +1305,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Utility functions * * * * */
 
     var initializeDataStructs = function() {
-        $rootScope.cruncherReady = true;
         // get enabled specials
         var conflictWarning = false;
         enabledSpecials = [ ];
@@ -1341,10 +1362,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if(i != 'orb')
                             disabledSpecial[i] = specials[id][i];
                     }
-                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },disabledSpecial));
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: SPECIAL },disabledSpecial));
                 }
                 else
-                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },specials[id]));
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: SPECIAL },specials[id]));
             }
             if (x.altspecial && altspecials.hasOwnProperty(id)) {
                 if (altspecials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent){
@@ -1354,10 +1375,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if(i != 'orb')
                             disabledSpecial[i] = altspecials[id][i];
                     }
-                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },disabledSpecial));
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: ALTSPECIAL },disabledSpecial));
                 }
                 else
-                    enabledSpecials.push(jQuery.extend({ sourceSlot: n },altspecials[id]));
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: ALTSPECIAL },altspecials[id]));
             }
             // activate counters if necessary
             if (n < 2 && [794, 795, 1124, 1125, 1191, 1192, 1219, 1220, 1288, 1289, 1361, 1362, 1525, 1557, 1558, 1559, 1560, 1561, 1562, 1712, 1713, 1716, 1764, 1907, 1908, 2015, 2049, 2050, 2198,2199, 2214, 2215, 2299, 2337, 2338, 2421, 2422, 2423, 2424, 2440, 2441, 5074, 5534, 5535, 2669, 2670, 2683, 2684, 3047, 3072, 3073, 3108, 3393].has(id))
@@ -1377,24 +1398,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
-        // check if defense is down (required by some captain effects)
-        isDefenseDown = computeActualDefense(shipBonus.bonus.name);
-        //isDefenseDown = enabledSpecials.some(function(x) { return (x !== null && x.hasOwnProperty('def')) || (shipBonus.bonus.name == "Flying Dutchman - Special ACTIVATED"); });
-        for(var kata = 0; kata < 2; kata++){
-            if(team[kata].unit !== null){
-                var temp = team[kata].unit.number + 1;
-                if(temp == 2112 || temp == 2113 || temp == 2739)
-                    katakuri = true;
-            }
-        }
-        if(team[0].unit == null && team[1].unit == null)
-            katakuri = false;
-        
-        isDelayed = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('delay')) ? x.delay(paramsDelay) > 0 : false || (shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED"); }) || katakuri;
-        isMarked = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('mark')) ? x.mark(paramsDelay) > 0 : false});
-        isPoisoned = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('poison')) ? x.poison(paramsDelay) > 0 : false});
-        isNegative = enabledSpecials.some(function(x) { var paramsDelay = getParameters(x.sourceSlot); paramsDelay["sourceSlot"] = x.sourceSlot; return (x !== null && x.hasOwnProperty('negative')) ? x.negative(paramsDelay) > 0 : false});
-        
+
+        updateEnemyEffects();
+        computeActualDefense(shipBonus.bonus.name);
+
         enabledEffects = [ ];
         
         for (var i=2;i<6;i++) {
@@ -1441,6 +1448,105 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.conflictingMultipliers = ( staticMultiplier.length > 1 )
         //console.log(enabledSpecials);
     };
+
+    /**
+     * Increments or decrements the enemy effects counter depending on if the special is being enabled or not.
+     * To decrement with the correct value, the cached params object is used for the special.
+     * @param {object} special The special being activated, taken from window.specials
+     * @param {object} params The object created by `getParameters()` that will be used by the special
+     * @param {boolean} isEnablingSpecial If true, the enemy effect will be incremented. Otherwise, it will be decremented
+     */
+    var applyEnemyEffectsFromSpecial = function(special, params, isEnablingSpecial) {
+        if (!special) {
+            return;
+        }
+
+        if (!params) {
+            params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
+        }
+
+        // if the special is being disabled, use the params that were used on `specialToggled`,
+        // making it seem like we reactivated the special, just to get the same return value we got (which we'll deduct later)
+        if (!isEnablingSpecial) {
+            params = params.cached;
+            // in case the enemy effect function happens to access `p.cached`
+            params.cached = params;
+        }
+
+        for (const enemyEffect in enemyEffects) {
+            // no special gives the enemy a barrier
+            if (enemyEffect == 'barrier') {
+                continue;
+            }
+            if (special.hasOwnProperty(enemyEffect)) {
+                // if no immunity, evaluate special
+                // else if ignores corresponding immunity, evaluate special
+                // else no effect
+                if (!params.enemyImmunities[enemyEffect] || (special.ignoresImmunities && special.ignoresImmunities(params).includes(enemyEffect))) {
+                    var returnValue = special[enemyEffect](params);
+                    // for these effects, the function returns the multiplier, so 1 means no effect
+                    if ([ 'def', 'increaseDamageTaken' ].includes(enemyEffect)){
+                        if (returnValue == 1){
+                            continue;
+                        }
+                        if (isEnablingSpecial) {
+                            enemyEffectsFromSpecials[enemyEffect].push(returnValue);
+                        } else {
+                            var index = enemyEffectsFromSpecials[enemyEffect].indexOf(returnValue);
+                            if (index > -1)
+                                enemyEffectsFromSpecials[enemyEffect].splice(index, 1);
+                        }
+                    } else {
+                        // the others (burn, delay, poison, etc) return the number of turns, so 0 means no effect
+                        if (isEnablingSpecial) {
+                            enemyEffectsFromSpecials[enemyEffect] += returnValue;
+                        } else {
+                            enemyEffectsFromSpecials[enemyEffect] -= returnValue;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!isEnablingSpecial) {
+            // clean up to prevent circular reference
+            delete params.cached;
+        }
+    }
+
+    /**
+     * Modifies the `enemyEffects` variable according to the current status
+     * effects of the enemy by merging with `enemyEffectsFromSpecials` and calling all functions of ship/captain effects
+     * Note that due to this, the enemy effects will be the same for all units,
+     * so those that apply an enemy effect upon hitting is not accounted for.
+     * `enemyEffectsFromSpecials` isn't modified because there is no way of
+     * deducting the correct number when the captain is changed, unlike specials
+     * where we have an event handler for it being disabled.
+     */
+    var updateEnemyEffects = function() {
+
+        // shallow copy so `enemyEffectsFromSpecials` is not modified
+        for (const enemyEffect in enemyEffectsFromSpecials) {
+            if (Array.isArray(enemyEffectsFromSpecials[enemyEffect])) {
+                enemyEffects[enemyEffect] = enemyEffectsFromSpecials[enemyEffect].length > 0;
+            } else {
+                enemyEffects[enemyEffect] = enemyEffectsFromSpecials[enemyEffect];
+            }
+        }
+        enemyEffects.delay ||= shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED" && !$scope.data.enemyImmunities.delay;
+        enemyEffects.barrier = $scope.data.enemyBuffs.barrier;
+
+        // Check if the captain/friend captain applies delay
+        // (will be replaced with cptSpecials, which would allow toggling)
+        // Make it bypass immunity for now
+        for(var i = 0; i < 2; i++){
+            if(team[i].unit !== null){
+                var id = team[i].unit.number + 1;
+                if (id == 2112 || id == 2113 || id == 2739 || id == 3492)
+                    enemyEffects.delay += 1;
+            }
+        }
+    }
     
     //Returns an Object with a counter of classes in the current Team
     var classCounter = function() {
@@ -1572,8 +1678,111 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             cloneUnit.class = $scope.data.cloneCrewClass1 ? [ $scope.data.cloneCrewClass1, $scope.data.cloneCrewClass2 ] : cloneUnit.class;
         }
     };
+
+    /**
+     * Caches the parameters. This is should be called whenever a special or altspecial is toggled.
+     * The cached parameters can be used for specials that check for something (like the Captain's type or crew HP) at the time of activation.
+     * This is due to the fact that you could have full hp as you activate one special,
+     * but have half hp when you activate the second one (similar conditions exist, especially captain being swapped out).
+     * The same applies for specials and altspecials, so there must be separate params
+     * for the special and altspecial.
+     *
+     * This will also change the `cached` property in the passed `params` object,
+     * so there is NO need to manually update it after calling this function.
+     *
+     * Stores the cached params in $scope.cachedParams[i].special (or .altspecial)
+     * and NOT in tdata or data because it could cause circular references or
+     * duplicate cached params, which would exponentially slow down the caching.
+     *
+     * Note that the parameters are cached per special, so `p.cached.slot` will
+     * be the same as `p.cached.sourceSlot` (although there is no use for
+     * `p.cached.slot` at the time of writing).
+     *
+     * Because the $scope object has circular references ($parent and $$ChildScope
+     * having a reference back to the $scope object) and being large, the cached
+     * parameters will not have it. It is however possible in the future to include
+     * the scope object if necessary, but it should have its special properties
+     * (angularJS properties of the scope) removed, and as much as possible, only
+     * necessary properties of the scope object should be copied.
+     *
+     * @param {object} params The parameters generated by `getParameters` to be cached.
+     * @param {number} sourceSlotNumber The 0-based index of the unit in the team.
+     * (left column units are 0, 2, 4, and right column units are 1, 3, 5).
+     * @param {string} specialType A string denoting the type of special that was launched:
+     * Could be "special" or "altspecial".
+     */
+    var cacheParameters = function(params, sourceSlotNumber, specialType) {
+        // temporarily remove the scope object, because the scope object can not be deep-copied due to circular references
+        var scopeCopy = params.scope;
+        delete params.scope;
+
+        /* uncomment if you need some properties from the scope object, and pick only ones you need
+        // create a shallow copy of scope, without its special properties, so that the params object
+        // will be deep-copied, except the scope properties we won't need (otherwise, it can't be deep-copied)
+        var scopeShallowCopy = {};
+        for (const key in scopeCopy) {
+            if (key.startsWith('$') || ['notify', 'go', 'constructor']) {
+                continue; // skip special scope properties, such as $parent, $$ChildScope, $$nextSibling, etc.
+            }
+            scopeShallowCopy[key] = scopeCopy[key];
+        }
+        // temporarily use the shallow copy. should be replaced with the original later.
+        // params.scope = scopeShallowCopy;
+        */
+
+        // remove the old cached params so that there is no circular reference.
+        var oldCachedParams = params.cached;
+        delete params.cached;
+
+        // deep copy params to be sure that the params won't be updated until the special is re-activated
+        var paramsCopy = angular.copy(params);
+        if (oldCachedParams) {
+            // if there already were cached params before,
+            // merge it by letting the new cached params overwrite the properties from the old one
+            // this lets us preserve properties that `onActivation` functions insert,
+            // since the new cached params would not have those properties (like `multiplier`)
+            params.cached = {...oldCachedParams, ...paramsCopy};
+        } else {
+            params.cached = paramsCopy;
+        }
+        $scope.cachedParams[sourceSlotNumber][specialType] = params.cached;
+
+        params.scope = scopeCopy;
+    }
+
+    /**
+     * Gets the cached parameters for the specified unit given by the `sourceSlotNumber`.
+     * This is just a convenience function, so that there would be no need to remember where they are placed.
+     * This can be used to change the `cached` property to the correct one on an
+     * already generated params object, without having to generate another object.
+     *
+     * @param {number} sourceSlotNumber The 0-based index of the unit in the team.
+     * (left column units are 0, 2, 4, and right column units are 1, 3, 5).
+     * @param {string} specialType A string denoting the type of special that was launched:
+     * Could be "special" or "altspecial".
+     * @returns cached parameters object or `undefined`
+     */
+    var getCachedParameters = function(sourceSlotNumber, specialType) {
+        if (sourceSlotNumber === undefined || sourceSlotNumber === null)
+            return undefined;
+        return $scope.cachedParams[sourceSlotNumber][specialType];
+    }
     
-    var getParameters = function(slotNumber, chainPosition) {
+    /**
+     * Generates a parameters object. These parameters are used in ability functions
+     * (specials.js, captains.js, etc.) as `p`. This lets the functions know the class/type
+     * of team members, current crew HP, orb type, etc.
+     * @param {number} slotNumber The 0-based index of the unit in the team being evaluated.
+     * (left column units are 0, 2, 4, and right column units are 1, 3, 5).
+     * @param {number?} chainPosition The 0-based index of the unit in the chain. This is only passed in
+     * for specials that have to do with chain bonuses, so this could be left `undefined` for other cases
+     * @param {number} sourceSlotNumber The 0-based index of the unit (in the team) who launched the special/altspecial, or captain/sailor ability.
+     * @param {string?} specialType A string denoting the type of special that was launched:
+     * Could be "special" or "altspecial". This is just used to get the cached params object (`sourceSlotNumber` is also required to get the cached object.)
+     * so this can be skipped for cases where there is no cached params, such as map effects, captain and sailor abilities
+     * @returns object containing the parameters
+     */
+    var getParameters = function(slotNumber, chainPosition, sourceSlotNumber, specialType) {
         if ($scope.data.team[slotNumber].limit === undefined)
             $scope.data.team[slotNumber].limit = 0;
         
@@ -1602,20 +1811,23 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         unitTemp.class1 = Array.isArray(unitTemp.class) ? unitTemp.class[0] : unitTemp.class;
         unitTemp.class2 = Array.isArray(unitTemp.class) ? unitTemp.class[1] : null;
         return {
+            cached: getCachedParameters(sourceSlotNumber, specialType),
             unit: unitTemp,
             orb: $scope.tdata.team[slotNumber].orb,
             maxHP: $scope.numbers.hp,
+            currentHP: $scope.hp.current,
             percHP: $scope.data.percHP,
-            defenseDown: isDefenseDown,
-            delayed: isDelayed,
-            marked: isMarked,
-            poisoned: isPoisoned,
-            negative: isNegative,
+            defenseDown: enemyEffects.def,
+            delayed: enemyEffects.delay,
+            poisoned: enemyEffects.poison,
+            marked: enemyEffects.mark,
+            negative: enemyEffects.negative,
             data: team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,
             team: team,
             slot: slotNumber,
+            sourceSlot: sourceSlotNumber,
             turnCounter: $scope.tdata.turnCounter.value,
             healCounter: $scope.tdata.healCounter.value,
             basehpCounter: $scope.tdata.basehpCounter.value,
@@ -1628,8 +1840,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             teamCount: teamCounter(),
             frankyCheck: frankyCheck(),
             frankyClass: frankyClass(),
-            captain: captainTemp,
-            friendCaptain: friendCaptainTemp,
+            captain: captainTemp || { // use a dummy captain unit, to eliminate the need to do `p.captain && p.captain.type...`
+                class: [],
+                type: '' ,
+            },
+            friendCaptain: friendCaptainTemp || { // use a dummy captain
+                class: [],
+                type: '' ,
+            },
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: $scope.data.team[slotNumber].limit,
             // sugarToy will be false when sugar special is off, but sugarToy in team and scope.data.team will stay
@@ -1648,7 +1866,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 affinity: $scope.data.customAffinity,
                 atkBase: $scope.data.customATKBase,
                 chainAddition: $scope.data.customChainAddition,
-            }
+            },
+            enemyImmunities: $scope.data.enemyImmunities,
+            enemyEffects: enemyEffects,
         };
     };
 
@@ -1685,7 +1905,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     healAmount += zombie.amount;
                 else{
                     enabledEffects.forEach(function(x) {
-                        var params = getParameters(i); params["sourceSlot"] = x.sourceSlot;
+                        var params = getParameters(i, undefined, x.sourceSlot);
                         if (x.hasOwnProperty('rcvStatic'))
                             rcvtemp += x.rcvStatic(params);
                         if (x.hasOwnProperty('rcv') && x.sourceSlot > 1)

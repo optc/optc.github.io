@@ -36,12 +36,12 @@ window.altspecials = {
         },
     },
     2073: {
-        multiplier: [ 0, 0, 0, 0, 0, 0 ],
+        luffyGear: [ 0, 0, 0, 0, 0, 0 ],
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot] = levels[n];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
             p.scope.notify({
                 text: '' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][n] + ' boost. To ' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
@@ -50,12 +50,12 @@ window.altspecials = {
         },
     },
     2074: {
-        multiplier: [ 0, 0, 0, 0, 0, 0 ],
+        luffyGear: [ 0, 0, 0, 0, 0, 0 ],
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot]) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier[p.sourceSlot] = levels[n];
+            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
             p.scope.notify({
                 text: '' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][n] + ' boost. To ' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
@@ -92,6 +92,7 @@ window.altspecials = {
     },
     2962: {
         delay: function(p) { return 1; },
+        ignoresImmunities: function(p) { return ['delay']; },
     },
     2964: {
         atkbase: function(p) { return p.slot == p.sourceSlot ? 1000 : 0; },
@@ -543,28 +544,28 @@ var ghostsAltSpecials = {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT")  ? 1.5 : 1; },
     },
     207: {
-        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5214].multiplier/100)); },
-        onActivation: function(p) { window.altspecials[5214].multiplier = p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
     208: {
-        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5215].multiplier/100)); },
-        onActivation: function(p) { window.altspecials[5215].multiplier = p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
     209: {
-        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5216].multiplier/100)); },
-        onActivation: function(p) { window.altspecials[5216].multiplier = p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
     210: {
-        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5217].multiplier/100)); },
-        onActivation: function(p) { window.altspecials[5217].multiplier = p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
     211: {
-        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5218].multiplier/100)); },
-        onActivation: function(p) { window.altspecials[5218].multiplier = p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
     212: {
-        atkbase: function(p) { return Math.ceil(10 + 240*(1 - window.altspecials[5219].multiplier/100)); },
-        onActivation: function(p) { window.altspecials[5219].multiplier = p.percHP; },
+        atkbase: function(p) { return Math.ceil(10 + 240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
     213: {
         atk: function(p) { return 1.5; },
@@ -701,11 +702,11 @@ var ghostsAltSpecials = {
         type: "type",
     },
     329: {
-        affinity: function(p) { return window.altspecials[5329].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5329].multiplier) + 1) % levels.length;
-            window.altspecials[5329].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5329warning'
@@ -713,11 +714,11 @@ var ghostsAltSpecials = {
         },
     },
     330: {
-        affinity: function(p) { return window.altspecials[5330].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5330].multiplier) + 1) % levels.length;
-            window.altspecials[5330].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5330warning'
@@ -725,11 +726,11 @@ var ghostsAltSpecials = {
         },
     },
     331: {
-        affinity: function(p) { return window.altspecials[5331].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5331].multiplier) + 1) % levels.length;
-            window.altspecials[5331].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5331warning'
@@ -737,11 +738,11 @@ var ghostsAltSpecials = {
         },
     },
     332: {
-        affinity: function(p) { return window.altspecials[5332].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5332].multiplier) + 1) % levels.length;
-            window.altspecials[5332].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5332warning'
@@ -749,11 +750,11 @@ var ghostsAltSpecials = {
         },
     },
     333: {
-        affinity: function(p) { return window.altspecials[5333].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5333].multiplier) + 1) % levels.length;
-            window.altspecials[5333].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5333warning'
@@ -761,11 +762,11 @@ var ghostsAltSpecials = {
         },
     },
     334: {
-        affinity: function(p) { return window.altspecials[5334].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5334].multiplier) + 1) % levels.length;
-            window.altspecials[5334].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5334warning'
@@ -773,11 +774,11 @@ var ghostsAltSpecials = {
         },
     },
     335: {
-        affinity: function(p) { return window.altspecials[5335].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5335].multiplier) + 1) % levels.length;
-            window.altspecials[5335].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5335warning'
@@ -785,11 +786,11 @@ var ghostsAltSpecials = {
         },
     },
     336: {
-        affinity: function(p) { return window.altspecials[5336].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2.25];
-            var n = (levels.indexOf(window.altspecials[5336].multiplier) + 1) % levels.length;
-            window.altspecials[5336].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: '5336warning'
@@ -807,17 +808,16 @@ var ghostsAltSpecials = {
         def: function(p) { return 0; }
     },
     341: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -825,17 +825,16 @@ var ghostsAltSpecials = {
         },
     },
     342: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -843,17 +842,16 @@ var ghostsAltSpecials = {
         },
     },
     343: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -861,17 +859,16 @@ var ghostsAltSpecials = {
         },
     },
     344: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -879,17 +876,16 @@ var ghostsAltSpecials = {
         },
     },
     345: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -897,17 +893,16 @@ var ghostsAltSpecials = {
         },
     },
     346: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -915,17 +910,16 @@ var ghostsAltSpecials = {
         },
     },
     347: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -933,17 +927,16 @@ var ghostsAltSpecials = {
         },
     },
     348: {
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -951,11 +944,11 @@ var ghostsAltSpecials = {
         },
     },
     349: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -963,11 +956,11 @@ var ghostsAltSpecials = {
         },
     },
     350: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -975,11 +968,11 @@ var ghostsAltSpecials = {
         },
     },
     351: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -987,11 +980,11 @@ var ghostsAltSpecials = {
         },
     },
     352: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -999,11 +992,11 @@ var ghostsAltSpecials = {
         },
     },
     353: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1011,11 +1004,11 @@ var ghostsAltSpecials = {
         },
     },
     354: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1023,11 +1016,11 @@ var ghostsAltSpecials = {
         },
     },
     355: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1035,11 +1028,11 @@ var ghostsAltSpecials = {
         },
     },
     356: {
-        status: function(p) { return p.delayed > 0 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier : 1; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1047,13 +1040,13 @@ var ghostsAltSpecials = {
         },
     },
     373: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1061,13 +1054,13 @@ var ghostsAltSpecials = {
         },
     },
     374: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1075,13 +1068,13 @@ var ghostsAltSpecials = {
         },
     },
     375: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1089,13 +1082,13 @@ var ghostsAltSpecials = {
         },
     },
     376: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1103,13 +1096,13 @@ var ghostsAltSpecials = {
         },
     },
     377: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1117,13 +1110,13 @@ var ghostsAltSpecials = {
         },
     },
     378: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1131,13 +1124,13 @@ var ghostsAltSpecials = {
         },
     },
     379: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1145,13 +1138,13 @@ var ghostsAltSpecials = {
         },
     },
     380: {
-        atk: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        atk: function(p) { return p.cached.multiplier; },
         type: "type",
-        orb: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1159,12 +1152,12 @@ var ghostsAltSpecials = {
         },
     },
     389: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1172,12 +1165,12 @@ var ghostsAltSpecials = {
         },
     },
     390: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1185,12 +1178,12 @@ var ghostsAltSpecials = {
         },
     },
     391: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1198,12 +1191,12 @@ var ghostsAltSpecials = {
         },
     },
     392: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1211,12 +1204,12 @@ var ghostsAltSpecials = {
         },
     },
     393: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1224,12 +1217,12 @@ var ghostsAltSpecials = {
         },
     },
     394: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1237,12 +1230,12 @@ var ghostsAltSpecials = {
         },
     },
     395: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1250,12 +1243,12 @@ var ghostsAltSpecials = {
         },
     },
     396: {
-        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier] ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
         type: "type",
         onActivation: function(p) {
             var levels = [0, 1];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own ATK', 'Class ATK'][n] + ' boost. To ' + ['Own ATK', 'Class ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1263,11 +1256,11 @@ var ghostsAltSpecials = {
         },
     },
     405: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1275,11 +1268,11 @@ var ghostsAltSpecials = {
         },
     },
     406: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1287,11 +1280,11 @@ var ghostsAltSpecials = {
         },
     },
     407: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1299,11 +1292,11 @@ var ghostsAltSpecials = {
         },
     },
     408: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1311,11 +1304,11 @@ var ghostsAltSpecials = {
         },
     },
     409: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1323,11 +1316,11 @@ var ghostsAltSpecials = {
         },
     },
     410: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1335,11 +1328,11 @@ var ghostsAltSpecials = {
         },
     },
     411: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1347,11 +1340,11 @@ var ghostsAltSpecials = {
         },
     },
     412: {
-        affinity: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        affinity: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1.5, 2];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1360,17 +1353,16 @@ var ghostsAltSpecials = {
     },
     413: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1379,17 +1371,16 @@ var ghostsAltSpecials = {
     },
     414: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1398,17 +1389,16 @@ var ghostsAltSpecials = {
     },
     415: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1417,17 +1407,16 @@ var ghostsAltSpecials = {
     },
     416: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1436,17 +1425,16 @@ var ghostsAltSpecials = {
     },
     417: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1455,17 +1443,16 @@ var ghostsAltSpecials = {
     },
     418: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1474,17 +1461,16 @@ var ghostsAltSpecials = {
     },
     419: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -1493,17 +1479,16 @@ var ghostsAltSpecials = {
     },
     420: {
         burn: function(p) { return 1; },
-        multiplier: 1,
-        chain: function(p) { return window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier; },
+        chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            if (window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            if (p.cached.multiplier != 1) return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
             else return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? Infinity : 1;
         },
         onActivation: function(p) {
             var levels = [ 1.6, 2.5 ];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].multiplier = levels[n];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain boundary. To switch to the ' + levels[(n + 1) % levels.length] + ' Chain boundary, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
