@@ -12987,6 +12987,34 @@ window.captains = {
     3689: {
         atk: function(p) { return p.unit.type == "INT" ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3690: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.3 : 1; }
+    },
+    3691: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? 3 : 1; },
+    },
+    3692: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") || p.unit.type == "QCK" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") || p.unit.type == "QCK" ? 1.3 : 1; }
+    },
+    3693: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['DEX', 'INT', 'QCK']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'DEX',
+                minModifier: 'Good'
+            }, {
+                type: 'INT',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? [4.75, 5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : [4, 4.25][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? [1.35, 1.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

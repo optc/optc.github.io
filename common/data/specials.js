@@ -13578,7 +13578,7 @@ window.specials = {
     },
     3661: {
         atkbase: function(p) { return [0, 900, 900][p.cached.multiplier]; },
-        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [1.75, 1, 1.75][p.cached.multiplier] : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -13801,6 +13801,43 @@ window.specials = {
     },
     3689: {
         atkbase: function(p) { return p.unit.type == "INT" ? 1000 : 1; },
+    },
+    3690: {
+        affinityPlus: function(p) { return [0.25, 0, 0.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2, 2][p.cached.multiplier] : 1; },
+        turnedOn: false,
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    3691: {
+        chainAddition: function(p) { return 1.1; },
+    },
+    3692: {
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3693: {
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.type == "QCK" ? 2.25 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.type == "QCK" ? 1.5 : 1; },
     },
 };
 

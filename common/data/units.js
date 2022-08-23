@@ -3672,9 +3672,9 @@ window.units = [
     [ "Jinbe - Helmsman Riding the Ocean", "DEX", [ "Fighter", "Powerhouse" ], 5, 50, 4, 3, 99, 5000000, 1510, 709, 104, 3020, 1417, 208, 1 ],
     [ "Monkey D. Luffy - Straw Hat Pirates Enjoying the FES", "INT", [ "Free Spirit", "Fighter" ], 5, 30, 6, 4, 99, null, 1666, 784, 122, 3016, 1391, 234, 1 ],
     [ "Ulti - Having Fun at the Summer Festival", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 1020, 420, 59, null, null, null, null ],
-    [ "Ulti - Rowdy Girl Fascinated by Fireworks", "STR", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2010, 835, 113, null, null, null, null ],
+    [ "Ulti - Rowdy Girl Fascinated by Fireworks", "STR", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2010, 835, 113, 4020, 1670, 225, 1 ],
     [ "Hiyori - Incognito at the Summer Festival", "DEX", [ "Cerebral", "Slasher" ], 5, 30, 5, 3, 70, 1066998, 817, 370, 109, null, null, null, null ],
-    [ "Hiyori - Princess Enjoying Fireworks at Night", "DEX", [ "Cerebral", "Slasher" ], 6, 55, 5, 5, 99, 5000000, 1605, 736, 213, null, null, null, null ],
+    [ "Hiyori - Princess Enjoying Fireworks at Night", "DEX", [ "Cerebral", "Slasher" ], 6, 55, 5, 5, 99, 5000000, 1605, 736, 213, 3210, 1472, 425, 1 ],
     [ "Shinobu - Moment of Respite", "DEX", [ "Cerebral", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1580, 710, 125, null, null, null, null ],
     [ "Toki - Summer Festival With Her Loved Ones", "DEX", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 4, 99, null, 1470, 694, 126, null, null, null, null ],
     [ "Usopp - Straw Hat Pirates Enjoying the FES", "INT", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 2114, 735, 103, null, null, null, null ],
@@ -3688,6 +3688,10 @@ window.units = [
     [ "Franky - Straw Hat Pirates Enjoying the FES", "INT", [ "Powerhouse", "Shooter" ], 5, 30, 5, 4, 99, 4000000, 1625, 736, 84, null, null, null, null ],
     [ "Roronoa Zoro - Straw Hat Pirates Enjoying the FES", "INT", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1542, 748, 101, null, null, null, null ],
     [ "Sanji - Straw Hat Pirates Enjoying the FES", "INT", [ "Fighter", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1643, 718, 112, null, null, null, null ],
+    [ "Charlotte Oven - Burning Fists at the FES", "QCK", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1448, 703, 156, null, null, null, null ],
+    [ "Charlotte Brulee - Mirrors at the FES", "QCK", [ "Cerebral", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1443, 688, 171, null, null, null, null ],
+    [ "Charlotte Katakuri - Brother Saving His Sister", "QCK", [ "Powerhouse", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1453, 711, 153, null, null, null, null ],
+    [ "Shiki the Golden Lion - Sea Ruling Legend from the Sky", "QCK", [ "Driven", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2013, 1022, 156, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

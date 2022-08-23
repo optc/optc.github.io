@@ -564,8 +564,14 @@
             case 9061: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3620-skull.png'; break;
             case 'skullAkainu':
             case 9062: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3625-skull.png'; break;
-            case 'skullRoger':
-            case 9063: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3627-skull.png'; break;
+            //case 'skullRoger':
+            //case 9063: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3627-skull.png'; break;
+            //case 'skullKatakuri2':
+            //case 9064: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3666-skull.png'; break;
+            //case 'skullSummerLuffy':
+            //case 9065: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3669-skull.png'; break;
+            //case 'skullShiki':
+            //case 9066: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3693-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';

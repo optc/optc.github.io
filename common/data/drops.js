@@ -6935,7 +6935,17 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: null,
-            'Kizuna Exchange': [ 3668 ],
+            'Kizuna Exchange': [ 3668, 9064, 9065 ],
+        },
+
+        {
+            name: 'Shiki',
+            dropID: 'kizuna38',
+            thumb: 3693,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 9066 ],
         },
 
     ],

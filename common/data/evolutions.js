@@ -5253,7 +5253,7 @@ window.evolutions = {
     },
     3626: {
         evolution: 3627,
-        evolvers: [ "skullOden", "skullOden", "skullOden", "skullOden", "skullOden" ]
+        evolvers: [ "skullRoger", "skullRoger", "skullRoger", "skullRoger", "skullRoger" ]
     },
     3628: {
         evolution: 3629,
@@ -5285,11 +5285,11 @@ window.evolutions = {
     },
     2365: {
         evolution: 3666,
-        evolvers: [  ]
+        evolvers: [ "skullKatakuri2", "skullKatakuri2", "skullKatakuri2", "skullKatakuri2", "skullKatakuri2" ]
     },
     3668: {
         evolution: 3669,
-        evolvers: [  ]
+        evolvers: [ "skullSummerLuffy", "skullSummerLuffy", "skullSummerLuffy", "skullSummerLuffy", "skullSummerLuffy" ]
     },
     3673: {
         evolution: 3674,
@@ -5302,6 +5302,10 @@ window.evolutions = {
     3681: {
         evolution: 3682,
         evolvers: [  ]
+    },
+    2201: {
+        evolution: 3693,
+        evolvers: [ "skullShiki", "skullShiki", "skullShiki", "skullShiki", "skullShiki" ]
     },
     4986: {
         evolution: 4987,
