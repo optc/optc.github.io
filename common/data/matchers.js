@@ -3859,7 +3859,20 @@ let matchers = {
         },
 
         {
-            name: 'Ship Bind Reduction',
+            name: 'Debuff Reduction: Ship Bind',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            regex: /(?:reduces|removes)[^."]+?Ship Bind[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2, 3, 4, 5],
+                },
+            ],
+        },
+
+        {
+            name: 'Debuff Reduction: Ship Bind',
             targets: [ 'potential' ],
             regex: /Reduces Ship Bind duration (?:by ([?\d]+) turns?|(completely))/i,
             submatchers: [

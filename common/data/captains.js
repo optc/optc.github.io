@@ -13015,6 +13015,38 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT") ? [1.35, 1.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
     },
+    3694: {
+        atk: function(p) { return p.unit.type == "QCK" ? 5 : 4; },
+        affinity: function(p) { return p.unit.type == "QCK" ? 1.1 : 1; },
+        hp: function(p) { return 1.5; }
+    },
+    3695: {
+        atk: function(p) { return p.unit.type == "QCK" ? 5 : 4; },
+        affinity: function(p) { return p.unit.type == "QCK" ? 1.1 : 1; },
+        hp: function(p) { return 1.5; }
+    },
+    3696: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") ? 1.2 : 1; },
+    },
+    3697: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") ? 1.2 : 1; },
+    },
+    3698: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3.5 : 2.75 : 1; },
+    },
+    3699: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
+    3700: {
+        atk: function(p) { return 3; },
+    },
+    3701: {
+        atk: function(p) { return 3.5*(p.unit.type == "QCK" && p.actions[p.sourceSlot] ? 1.2 : 1); },
+        hp: function(p) { return 1.25; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

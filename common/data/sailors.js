@@ -2503,6 +2503,28 @@ window.sailors = {
     3692: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
+    3695: {
+        atkStatic: function(p) { return [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3697: {
+        atkStatic: function(p) { return p.captain.class.has("Shooter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.captain.class.has("Shooter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.captain.class.has("Shooter") ? [0, 100, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3698: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? [0, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3699: {
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 125][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 100 : 0; },
+    },
+    3701: {
+        atkStatic: function(p) { return 70; },
+        hpStatic: function(p) { return 70; },
+        rcvStatic: function(p) { return 70; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

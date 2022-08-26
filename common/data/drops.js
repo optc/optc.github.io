@@ -3129,6 +3129,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3678 ],
         },
+
+        {
+            name: 'Diva of the World',
+            dropID: 'event162',
+            thumb: 3701,
+            global: true,
+            nakama: 6370100,
+            gamewith: null,
+            'All Difficulties': [ 3701 ],
+        },
     ],
 
 

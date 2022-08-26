@@ -13781,7 +13781,6 @@ window.specials = {
     3687: {
         orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
         orb: function(p) { return p.unit.type == "INT" ? [2, 1, 2][p.cached.multiplier] : 1; },
-        type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -13838,6 +13837,104 @@ window.specials = {
     3693: {
         orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.type == "QCK" ? 2.25 : 1; },
         rcv: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    3694: {
+        chainAddition: function(p) { return [1.4, 0, 1.4][p.cached.multiplier]; },
+        chainAdditionPlus: function(p) { return [0, 0.5, 0.5][p.cached.multiplier]; },
+        affinity: function(p) { return [p.unit.type == "QCK" ? 2.75 : 1, 2.25][p.cached.multiplier2]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.colorCount.QCK >= 5 ? 0 : 1;
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boost", "Chain Buff", "Chain Boost & Chain Buff"][levels[n]] + '. To switch to the ' + ["Chain Boost", "Chain Buff", "Chain Boost & Chain Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3695: {
+        chainAddition: function(p) { return [1.4, 0, 1.4][p.cached.multiplier]; },
+        chainAdditionPlus: function(p) { return [0, 0.5, 0.5][p.cached.multiplier]; },
+        affinity: function(p) { return [p.unit.type == "QCK" ? 2.75 : 1, 2.25][p.cached.multiplier2]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.colorCount.QCK >= 5 ? 0 : 1;
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boost", "Chain Buff", "Chain Boost & Chain Buff"][levels[n]] + '. To switch to the ' + ["Chain Boost", "Chain Buff", "Chain Boost & Chain Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3696: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0, 0.25, 0.25][p.cached.multiplier] : 0;
+        }, 
+        chain: function(p) { return [2.75, 1, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [35, Infinity, 35][p.cached.multiplier] : 1;
+        },
+        orbPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        orb: function(p) { return p.unit.type == "INT" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boundary & Orb Boost", "Chain & Orb Buff", "Chain Boundary & Orb Boost & Buff"][levels[n]] + '. To switch to the ' + ["Chain Boundary & Orb Boost", "Chain & Orb Buff", "Chain Boundary & Orb Boost & Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3697: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0, 0.25, 0.25][p.cached.multiplier] : 0;
+        }, 
+        chain: function(p) { return [2.75, 1, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [35, Infinity, 35][p.cached.multiplier] : 1;
+        },
+        orbPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        orb: function(p) { return p.unit.type == "INT" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boundary & Orb Boost", "Chain & Orb Buff", "Chain Boundary & Orb Boost & Buff"][levels[n]] + '. To switch to the ' + ["Chain Boundary & Orb Boost", "Chain & Orb Buff", "Chain Boundary & Orb Boost & Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3698: {
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.type == "QCK" || p.captain.type == "INT") ? 800 : 0;
+        },
+    },
+    3699: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
+    },
+    3701: {
+        chainAddition: function(p) { return 0.7; },
+        status: function(p) { return p.defenseDown > 0 ? [ 1, 1.75, 1.75 ][p.cached.multiplier] : 1; },
+        def: function(p) { return [ 0, 1, 0 ][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][n] + '. To switch to ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 

@@ -3692,6 +3692,14 @@ window.units = [
     [ "Charlotte Brulee - Mirrors at the FES", "QCK", [ "Cerebral", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1443, 688, 171, 2884, 1478, 247, 1 ],
     [ "Charlotte Katakuri - Brother Saving His Sister", "QCK", [ "Powerhouse", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1453, 711, 153, 2982, 1507, 221, 1 ],
     [ "Shiki the Golden Lion - Sea Ruling Legend from the Sky", "QCK", [ "Driven", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2013, 1022, 156, 4025, 1704, 312, 1 ],
+    [ "Shanks - Impending Savior", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 988, 455, 83, null, null, null, null ],
+    [ "Red-Haired Shanks - Red-Hair Stopping the Menace", "QCK", [ "Cerebral", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1945, 904, 160, null, null, null, null ],
+    [ "Ben Beckman & Lucky Roux - Leading Officers", "QCK", [ "Shooter", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 943, 415, 73, null, null, null, null ],
+    [ "Ben Beckman & Lucky Roux - Fatherly Pirates", "QCK", [ "Shooter", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 1856, 825, 141, null, null, null, null ],
+    [ "Gordon", "QCK", [ "Fighter", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1724, 712, 101, null, null, null, null ],
+    [ "Blueno & Coby - Appearing From Mid-Air", "QCK", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1447, 757, 132, null, null, null, null ],
+    [ "Sunny-kun", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1466, 728, 138, null, null, null, null ],
+    [ "Uta - Dream Chasing Uta World", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, null, 1502, 698, 123, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

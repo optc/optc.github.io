@@ -5307,6 +5307,14 @@ window.evolutions = {
         evolution: 3693,
         evolvers: [ "skullShiki", "skullShiki", "skullShiki", "skullShiki", "skullShiki" ]
     },
+    3694: {
+        evolution: 3695,
+        evolvers: [  ]
+    },
+    3696: {
+        evolution: 3697,
+        evolvers: [  ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]
