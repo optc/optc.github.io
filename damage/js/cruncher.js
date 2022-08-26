@@ -1533,7 +1533,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 enemyEffects[enemyEffect] = enemyEffectsFromSpecials[enemyEffect];
             }
         }
-        enemyEffects.delay ||= shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED" && !$scope.data.enemyImmunities.delay;
+        enemyEffects.delay += shipBonus.bonus.name == "Karasumaru Ship - Special ACTIVATED" && !$scope.data.enemyImmunities.delay;
         enemyEffects.barrier = $scope.data.enemyBuffs.barrier;
 
         // Check if the captain/friend captain applies delay
