@@ -151,7 +151,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
         // filter by cost
         if ((unit.cost < filters.cost[0] || unit.cost > filters.cost[1])) return false;
         // filter by drop
-        if(id == 2) console.log(filters);
+        //if(id == 2) console.log(filters);
         if (filters.nonFarmable && Object.keys(filters.nonFarmable).length > 0){
             // RR
             if (filters.nonFarmable.rro && !flags.rro) return false;
