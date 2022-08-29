@@ -375,6 +375,28 @@
         return utils.generateCriteriaQuery(criteriaTrimmed, supportingFamilies);
     }
 
+    utils.generateSuperTandemQuery = function (criteria, supportingFamilies = [], returnParamsObject = false) {
+        // for cases like "must consist of 6 Powerhouse or Driven characters, excluding Support members.",
+        // this will create `class:Powerhouse|Driven`
+
+        // for cases like "Any X of the following: King, Queen, Jack, Sasaki, X Drake, Black Maria, Who's-Who, Page One, Ulti or Striker characters. One of King, Queen, Jack, Sasaki, X Drake, Black Maria, Who's-Who, Page One or Ulti is required.",
+        // this will create `family:^(King|Queen|Jack|Sasaki|X_Drake|Black_Maria|Who's-Who|Page_One|Ulti|Striker_characters)$`
+
+        // 3609: `Any X of the following: King, Queen, Jack, Sasaki, X Drake, Black Maria, Who's-Who, Page One, Ulti or Striker characters.`
+        // The trailing "Striker characters" is not handled properly as of now
+        // idea: return an array of queries, so that there will be multiple "Search for these characters" links,
+        // depending on the conditions (so that one will handle the `Striker characters`,
+        // the other will handle the family names.)
+        let charactersRegex = /of the following: (?:\d (.*?)characters(?: or )?)?(.*)?\./i;
+        let match = criteria.match(charactersRegex);
+        if (!match)
+            return null;
+        // prioritize family names. if there are no family names (match[2] is null|undefined), use the classes/types condition.
+        var criteriaTrimmed = (match[2] || match[1]).trim();
+
+        return utils.generateCriteriaQuery(criteriaTrimmed, supportingFamilies);
+    }
+
     utils.generateAttachableSupportsQuery = function (unitIdToSupport, supportingFamilies = []) {
         return 'supports:' + unitIdToSupport;
     }

@@ -681,6 +681,7 @@
                                         <div ng-repeat="item in details.superTandem.description track by $index"><strong>Level {{::$index + 1}} (<span ng-bind-html="details.superTandem.characterCondition[$index] | decorate"></span>):</strong>
                                         <span ng-bind-html="item | decorate"></span><br></div>
                                         <span class="notes" ng-if="details.superTandemNotes" ng-bind-html="details.superTandemNotes | notes | decorate"></span>
+                                        <add-super-tandem-query criteria="details.superTandem.characterCondition[4]" excluded-families="families"></add-super-tandem-query>
                                     </td>
                                 </tr>
                             </tbody>

@@ -368,8 +368,19 @@ directives.addSupportersQuery = function() {
         link: function(scope, element, attrs) {
             scope.query = Utils.generateAttachableSupportsQuery(scope.uid);
         }
-    }
-}
+    };
+};
+
+directives.addSuperTandemQuery = function() {
+    return {
+        restrict: 'E',
+        scope: { criteria: "=", excludedFamilies: "=" },
+        template: '<a role="button" ng-if="query" ui-sref="main.search({query:query})"><b>Search for these characters</b></a>',
+        link: function(scope, element, attrs) {
+            scope.query = Utils.generateSuperTandemQuery(scope.criteria, scope.excludedFamilies);
+        }
+    };
+};
 
 directives.scrollToSection = function($state, $stateParams) {
     return {

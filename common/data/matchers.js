@@ -4997,6 +4997,12 @@ let matchers = {
             targets: [ 'potential' ],
             regex: /Last Tap/i,
         },
+
+        {
+            name: 'Super Tandem',
+            targets: [ 'potential' ],
+            regex: /Super Tandem/i,
+        },
     ],
 };
 
