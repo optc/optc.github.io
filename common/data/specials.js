@@ -13936,6 +13936,9 @@ window.specials = {
             });
         },
     },
+    3703: {
+        def: function(p) { return 0.5; }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

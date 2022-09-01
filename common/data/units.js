@@ -3700,6 +3700,9 @@ window.units = [
     [ "Blueno & Coby - Appearing From Mid-Air", "QCK", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1447, 757, 132, 2894, 1513, 264, 1 ],
     [ "Sunny-kun", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1466, 728, 138, 2932, 1456, 276, 1 ],
     [ "Uta - Dream Chasing Uta World", "QCK", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1502, 698, 123, 3004, 1396, 246, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Fugitora - Invading Navy Admiral", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2143, 762, 92, 4286, 1524, 184, null ],
+    [ "Kizaru - Invading Navy Admiral", "QCK", [ "Shooter", "Fighter" ], 5, 30, 6, 4, 99, 4000000, 1944, 840, 97, 3888, 1680, 194, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

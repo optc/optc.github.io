@@ -4265,6 +4265,8 @@ window.families = {
     3699: [ ...Blueno, ...Coby ],
     3700: [ ...Sunny ],
     3701: [ ...Uta ],
+    3703: [ ...Issho ],
+    3704: [ ...Borsalino ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

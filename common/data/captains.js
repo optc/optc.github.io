@@ -13047,6 +13047,13 @@ window.captains = {
         atk: function(p) { return 3.5*(p.unit.type == "QCK" && p.actions[p.sourceSlot] ? 1.2 : 1); },
         hp: function(p) { return 1.25; },
     },
+    3703: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3704: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

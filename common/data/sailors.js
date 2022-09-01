@@ -2525,6 +2525,16 @@ window.sailors = {
         hpStatic: function(p) { return 70; },
         rcvStatic: function(p) { return 70; },
     },
+    3703: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    3704: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
