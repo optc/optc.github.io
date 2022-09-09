@@ -365,7 +365,7 @@
         // idea: return an array of queries, so that there will be multiple "Search for these characters" links,
         // depending on the conditions (so that one will handle the `6 Striker characters`,
         // the other will handle the family names.)
-        let charactersRegex = /must consist of (?:\d (.*?)characters(?: or )?)?(.*)?, excluding Support members/i;
+        let charactersRegex = /must consist of\: (?:\d (.*?)characters(?: or )?)?(.*)?, excluding Support members/i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
@@ -594,6 +594,8 @@
             //case 9065: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3669-skull.png'; break;
             //case 'skullShiki':
             //case 9066: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3693-skull.png'; break;
+            //case 'skullUta':
+            //case 9067: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3713-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';
@@ -1044,6 +1046,14 @@
             case (ghostPoint+418).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-2.png'; break;
             case (ghostPoint+419).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-STR.png'; break;
             case (ghostPoint+420).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/600/3611-DEX.png'; break;
+            case (ghostPoint+421).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3707-1.png'; break;
+            case (ghostPoint+422).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3707-2.png'; break;
+            case (ghostPoint+423).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3707-PSY.png'; break;
+            case (ghostPoint+424).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3707-QCK.png'; break;
+            case (ghostPoint+425).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3708-1.png'; break;
+            case (ghostPoint+426).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3708-2.png'; break;
+            case (ghostPoint+427).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3708-PSY.png'; break;
+            case (ghostPoint+428).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/700/3708-QCK.png'; break;
             default: break;
         }
 

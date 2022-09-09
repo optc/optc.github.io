@@ -13939,6 +13939,76 @@ window.specials = {
     3703: {
         def: function(p) { return 0.5; }
     },
+    3705: {
+        atkPlus: function(p) { return [0, 0, 0, 0.25, 0.25, 0.25, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0, 0.25, 0.25, 0.25, 0.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [3.25, 1, 3.25, 1, 3.25, 1, 3.25][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75, 1, 1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb", "Boost Buffs", "ATK and Boost Buffs", "Orb and Boost Buffs", "ATK, Orb and Boost Buffs"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb", "Boost Buffs", "ATK and Boost Buffs", "Orb and Boost Buffs", "ATK, Orb and Boost Buffs"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3706: {
+        atkPlus: function(p) { return [0, 0, 0, 0.25, 0.25, 0.25, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0, 0.25, 0.25, 0.25, 0.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [3.25, 1, 3.25, 1, 3.25, 1, 3.25][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75, 1, 1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb", "Boost Buffs", "ATK and Boost Buffs", "Orb and Boost Buffs", "ATK, Orb and Boost Buffs"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb", "Boost Buffs", "ATK and Boost Buffs", "Orb and Boost Buffs", "ATK, Orb and Boost Buffs"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3709: {
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3710: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.75, 1.1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3713: {
+        chainAddition: function(p) { return 1.1; },
+        status: function(p) { return p.defenseDown > 0 ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
+        def: function(p) { return [ 0, 1, 0 ][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][n] + '. To switch to ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -16695,6 +16765,70 @@ var ghostsSpecials = {
                 text: 'Using the ' + levels[n] + 'x Status boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Status boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
+        },
+    },
+    421: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    422: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    423: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    424: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    425: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    426: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    427: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
+        },
+    },
+    428: {
+        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
         },
     },
 };

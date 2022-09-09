@@ -13054,6 +13054,32 @@ window.captains = {
     3704: {
         atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
     },
+    3705: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? p.actions[p.sourceSlot] ? 5.5 : 5 : 1; },
+    },
+    3706: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit")) ? p.actions[p.sourceSlot] ? 5.5 : 5 : 1; },
+    },
+    3709: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Slasher")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Slasher")) ? 1.2 : 1; },
+    },
+    3710: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 1.2 : 1; },
+    },
+    3711: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter")) ? 1.5 : 1; },
+    },
+    3712: {
+        atk: function(p) { return [2, 2.25, 2.5, 2.75, 3, 3.25, 3.5][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+        hp: function(p) { return [1.1, 1.1, 1.1, 1.1, 1.1, 1.1, 1.2][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+    },
+    3713: {
+        atk: function(p) { return 3.75*(p.unit.type == "QCK" && p.actions[p.sourceSlot] ? 1.2 : 1); },
+        hp: function(p) { return 1.4; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -14960,6 +14986,38 @@ var ghostsCaptains = {
             return p.chainPosition === 0 ? 4.75 : (prev == 'Good' ? 5 : (prev == 'Great' ? 5.25 : (prev == 'Perfect' ? 5.5 : 4.75)));
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    421: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    422: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    423: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    424: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    425: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    426: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    427: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    428: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
     },
 };
 

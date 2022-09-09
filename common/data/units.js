@@ -3703,6 +3703,15 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Fugitora - Invading Navy Admiral", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2143, 762, 92, 4286, 1524, 184, null ],
     [ "Kizaru - Invading Navy Admiral", "QCK", [ "Shooter", "Fighter" ], 5, 30, 6, 4, 99, 4000000, 1944, 840, 97, 3888, 1680, 194, null ],
+    [ "Monkey D. Luffy - A Friend's Promise", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 1104, 451, 63, null, null, null, null ],
+    [ "Monkey D. Luffy - Ending the World", "PSY", [ "Fighter", "Free Spirit" ], 6, 55, 6, 5, 99, 5000000, 2178, 898, 122, null, null, null, null ],
+    [ "Usopp & Yasopp - Connected Sight", ["PSY", "QCK"], [[ "Shooter", "Free Spirit" ],[ "Shooter", "Free Spirit" ],[ "Shooter", "Free Spirit" ]], 5, 30, 4, 3, 70, 1066998, 966, 398, 71, null, null, null, null ],
+    [ "Usopp & Yasopp - Synchronized Sniping", ["PSY", "QCK"], [[ "Shooter", "Free Spirit" ],[ "Shooter", "Free Spirit" ],[ "Shooter", "Free Spirit" ]], 6, 55, 4, 5, 99, 5000000, 2117, 847, 141, null, null, null, null ],
+    [ "Roronoa Zoro - Swordsman Entering Battle", "PSY", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1648, 807, 82, null, null, null, null ],
+    [ "Sanji - Cook Entering Battle", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1593, 777, 101, null, null, null, null ],
+    [ "Jinbe - Helmsman Entering Battle", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1700, 728, 138, null, null, null, null ],
+    [ "Tony Tony Chopper - Ship Doctor Entering Battle", "PSY", [ "Fighter", "Free Spirit" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 127, null, null, null, null ],
+    [ "Uta - Dream Fulfilling Uta World", "QCK", [ "Free Spirit", "Cerebral" ], "5+", 40, 4, 4, 99, 2000000, 1634, 891, 137, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4152,6 +4161,14 @@ var ghostsUnits = [
     [ "[Dual Unit] Ace - Two Who Get Along So Well", "DEX", [ "Free Spirit", "Shooter" ], 6, 55, 4, 5, 99, 5000000, 2140, 801, 126, 4280, 1602, 253, 1 ],
     [ "[Dual Unit] Yamato & Ace - Two Who Get Along So Well", "STR", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2324, 840, 133, 4648, 1680, 266, 1 ],
     [ "[Dual Unit] Yamato & Ace - Two Who Get Along So Well", "DEX", [ "Free Spirit", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2324, 840, 133, 4648, 1680, 266, 1 ],
+    [ "[Dual Unit] Usopp - Connected Sight", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1005, 397, 68, null, null, null, null ],
+    [ "[Dual Unit] Yasopp - Connected Sight", "QCK", [ "Shooter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 956, 402, 69, null, null, null, null ],
+    [ "[Dual Unit] Usopp & Yasopp - Connected Sight", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 966, 398, 71, null, null, null, null ],
+    [ "[Dual Unit] Usopp & Yasopp - Connected Sight", "QCK", [ "Shooter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 966, 398, 71, null, null, null, null ],
+    [ "[Dual Unit] Usopp - Synchronized Sniping", "PSY", [ "Shooter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1960, 792, 133, null, null, null, null ],
+    [ "[Dual Unit] Yasopp - Synchronized Sniping", "QCK", [ "Shooter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2117, 801, 135, null, null, null, null ],
+    [ "[Dual Unit] Usopp & Yasopp - Synchronized Sniping", "PSY", [ "Shooter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2117, 847, 141, null, null, null, null ],
+    [ "[Dual Unit] Usopp & Yasopp - Synchronized Sniping", "QCK", [ "Shooter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2117, 847, 141, null, null, null, null ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

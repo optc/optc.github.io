@@ -2535,6 +2535,28 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Shooter") ? 30 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Shooter") ? 30 : 0; },
     },
+    3709: {
+        atkStatic: function(p) { return 75; },
+        hpStatic: function(p) { return 75; },
+        rcvStatic: function(p) { return 75; },
+    },
+    3710: {
+        atkStatic: function(p) { return 75; },
+        hpStatic: function(p) { return 75; },
+        rcvStatic: function(p) { return 75; },
+    },
+    3711: {
+        hpStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3712: {
+        hpStatic: function(p) { return [0, 0, 80][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 0, 80][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    3713: {
+        atkStatic: function(p) { return 70; },
+        hpStatic: function(p) { return 70; },
+        rcvStatic: function(p) { return 70; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
@@ -3785,6 +3807,26 @@ var ghostsSailors = {
     },
     420: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 125 : 0; },
+    },
+    425: {
+        atkStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    426: {
+        atkStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    427: {
+        atkStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+    },
+    428: {
+        atkStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        hpStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
+        rcvStatic: function(p) { return [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
 }
 

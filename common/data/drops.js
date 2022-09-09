@@ -6413,7 +6413,17 @@ window.drops = {
             global: true,
             nakama: 8368900,
             gamewith: null,
-            'Raging Sea': [ 3689 ]
+            'Coast of Elegia': [ 3689 ]
+        },
+
+        {
+            name: 'Chopper',
+            dropID: 'treasuremap61',
+            thumb: 3712,
+            global: true,
+            nakama: 8371200,
+            gamewith: null,
+            'Coast of Elegia': [ 3712, 9067 ]
         },
 
     ],
