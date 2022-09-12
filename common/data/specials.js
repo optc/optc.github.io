@@ -16768,68 +16768,52 @@ var ghostsSpecials = {
         },
     },
     421: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     422: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     423: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     424: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     425: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     426: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     427: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
     428: {
-        delay: function(p) { return [1, 0][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
-        onActivation: function(p) {
-            p.cached.multiplier = p.captain != null && (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? 1 : 0;
-        },
+        ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
     },
 };
 
