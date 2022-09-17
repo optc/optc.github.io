@@ -6968,6 +6968,16 @@ window.drops = {
             'Kizuna Exchange': [ 9066 ],
         },
 
+        {
+            name: 'Uta',
+            dropID: 'kizuna38',
+            thumb: 3721,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3719, 9068, 9069 ],
+        },
+
     ],
 
 
@@ -7200,7 +7210,6 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: 196547,
-            'Rumble Missions': [ 2024 ],
         },
 
         {
@@ -7214,13 +7223,40 @@ window.drops = {
         },
 
         {
-            name: 'Loyalty Even Unto Death',
+            name: 'Fateful Struggle to the Death',
             dropID: 'rumble25',
+            thumb: 3625,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+        },
+
+        {
+            name: 'Loyalty Even Unto Death',
+            dropID: 'rumble26',
             thumb: 3644,
             global: true,
             nakama: null,
             gamewith: 196547,
             'Rumble Missions': [ 3644 ],
+        },
+
+        {
+            name: 'A Man\'s Battle',
+            dropID: 'rumble27',
+            thumb: 2365,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
+        },
+
+        {
+            name: 'Firey Bond',
+            dropID: 'rumble29',
+            thumb: 2960,
+            global: true,
+            nakama: null,
+            gamewith: 196547,
         },
 
     ],

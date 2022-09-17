@@ -13271,7 +13271,7 @@ window.specials = {
         }
     },
     3622: {
-        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 1.5 : 1; },
         type: "type",
     },
     3623:{
@@ -14005,6 +14005,60 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][n] + '. To switch to ' + ["Defense Reduction", "Status boost", "Status boost and Defense Reduction"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3714: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    3715: {
+        status: function(p) { return p.defenseDown > 0 ? 2 : 1; },
+        def: function(p) { return 0; },
+    },
+    3717: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "type",
+    },
+    3718:{
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        chainAddition: function(p) { return [0, 1.1, 1.1][p.cached.multiplier]; },
+        turnedOn: false,
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ['Affinity', 'Chain Boost', 'Affinity and Chain'][n] + ' boost. To switch to the ' + ['Chain Boost', 'Affinity and Chain', 'Affinity'][n] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3719: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 6 : 1;
+        }
+    },
+    3720: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 8 : 1;
+        }
+    },
+    3721: {
+        chainAddition: function(p) { return [0, 0, 0, 0, 1.4, 1.4, 1.4, 1.4][p.cached.multiplier]; },
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.5, 2.75, 3, 2.75, 2.5, 2.75, 3, 2.75][p.cached.multiplier] : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 2.5, 2.75, 2.5, 2.25, 2.5, 2.75, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6, 7];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Addition", "Stage 2 with Chain Addition", "Stage 3 with Chain Addition", "Buff Clear with Chain Addition"][n] + ' boost. To ' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Addition", "Stage 2 with Chain Addition", "Stage 3 with Chain Addition", "Buff Clear with Chain Addition"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

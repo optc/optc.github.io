@@ -13080,6 +13080,38 @@ window.captains = {
         atk: function(p) { return 3.75*(p.unit.type == "QCK" && p.actions[p.sourceSlot] ? 1.2 : 1); },
         hp: function(p) { return 1.4; },
     },
+    3714: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 5.25 : 3.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+    },
+    3715: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 5.25 : 3.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral")) ? p.actions[p.sourceSlot] ? 1.3 : 1.2 : 1; },
+    },
+    3716: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? p.actions[p.sourceSlot] ? 5.25 : 3.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? p.actions[p.sourceSlot] ? 1.4 : 1.3 : 1; },
+    },
+    3717: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 2 : 1; },
+        rcv: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.2 : 1; },
+    },
+    3718: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? 4 : 1; },
+        hp: function(p) { return 1.25; },
+        chainModifier: function(p) { return 1.5; }
+    },
+    3719: {
+        atk: function(p) { return p.unit.type == "PSY" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 4 : 3.75 : 1; },
+    },
+    3720: {
+        atk: function(p) { return p.unit.type == "PSY" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 4.25 : 4 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" ? 1.3 : 1; },
+    },
+    3721: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? p.actions[p.sourceSlot] ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

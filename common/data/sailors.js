@@ -1207,6 +1207,11 @@ window.sailors = {
     2956: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 40 : 0; },
     },
+    2960: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     2985: {
         atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
     },
@@ -2556,6 +2561,20 @@ window.sailors = {
         atkStatic: function(p) { return 70; },
         hpStatic: function(p) { return 70; },
         rcvStatic: function(p) { return 70; },
+    },
+    3718: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3719: {
+        atkStatic: function(p) { return 70; },
+    },
+    3720: {
+        atkStatic: function(p) { return 70; },
+    },
+    3721: {
+        hp: function(p) { return p.unit.class.has("Driven") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
     },
     4986: {
         staticMult: function(p) { return 3; }

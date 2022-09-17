@@ -281,6 +281,16 @@ window.altspecials = {
         atk: function(p) { return p.unit.class.has("Shooter") ? 2 : 1; },
         type: "type",
     },
+    3718: {
+        burn: function(p) { return 1; },
+        chainMultiplication: function(p) { return 1.25; },
+        staticMult: function(p) { return 150; }
+    },
+    3721: {
+        affinityPlus: function(p) { return 0.25; },
+        orbPlus: function(p) { return 0.25; },
+        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT most, if not all, of the time. Use at your own risk."
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

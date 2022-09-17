@@ -3712,6 +3712,14 @@ window.units = [
     [ "Jinbe - Helmsman Entering Battle", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1700, 728, 138, 3400, 1456, 276, 1 ],
     [ "Tony Tony Chopper - Ship Doctor Entering Battle", "PSY", [ "Fighter", "Free Spirit" ], 5, 60, 4, 1, 99, 5000000, 1665, 739, 127, null, null, null, null ],
     [ "Uta - Dream Fulfilling Uta World", "QCK", [ "Free Spirit", "Cerebral" ], "5+", 40, 4, 4, 99, 2000000, 1634, 891, 137, 3268, 1485, 274, 1 ],
+    [ "Robin - Archaeologist Entering Battle", "PSY", [ "Cerebral", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1447, 702, 158, 2942, 1445, 258, null ],
+    [ "Nami - Navigator Entering Battle", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1452, 701, 161, 2926, 1447, 260, null ],
+    [ "Franky - Shipwright Entering Battle", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1471, 709, 153, 3004, 1498, 230, null ],
+    [ "Brook - Musician Entering Battle", "PSY", [ "Slasher", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1281, 551, 142, 2565, 1139, 295, 1 ],
+    [ "Sabo - Declaring Battle Against the Gods", "PSY", [ "Free Spirit", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 1962, 965, 190, 3924, 1608, 360, 1 ],
+    [ "Shanks - Impeding Emperor", "PSY", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1314, 826, 78, null, null, null, null ],
+    [ "Red-Haired Shanks - Father Caring for His Daughter", "PSY", [ "Cerebral", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1405, 994, 79, null, null, null, null ],
+    [ "Uta - Demon King of the Uta World", "INT", [ "Driven", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 2002, 1067, 175, 4004, 1778, 350, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
