@@ -596,10 +596,12 @@
             //case 9066: return relPathToRoot + '/api/images/thumbnail/jap/3/600/3693-skull.png'; break;
             case 'skullUta':
             case 9067: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3713-skull.png'; break;
-            //case 'skullSabo':
-            //case 9068: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3718-skull.png'; break;
-            //case 'skullUta2':
-            //case 9069: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3721-skull.png'; break;
+            case 'skullSabo2':
+            case 9068: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3718-skull.png'; break;
+            case 'skullShanks':
+            case 9069: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3720-skull.png'; break;
+            case 'skullUta2':
+            case 9070: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3721-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';

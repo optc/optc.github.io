@@ -6976,6 +6976,7 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Kizuna Exchange': [ 3719, 9068, 9069 ],
+            'Chopper Man Missions': [ 9070 ],
         },
 
     ],
