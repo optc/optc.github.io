@@ -988,6 +988,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     var atkPlusTemp = 0;
                     var atkCeilTemp = 1;
                     var statusPlusTemp = 0;
+                    var orbPlusTemp = 0;
+                    var orbCeilTemp = 1;
 
                     // get highest buff increase
                     plusSpecials.forEach(function(plusSpecial) {
@@ -1004,6 +1006,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         if(plusSpecial.hasOwnProperty('statusPlus')){
                             if(plusSpecial.statusPlus(plusParams) > statusPlusTemp)
                                 statusPlusTemp = plusSpecial.statusPlus(plusParams);
+                        }
+                        if (plusSpecial.hasOwnProperty('orbPlus')) {
+                            orbPlusTemp = Math.max(plusSpecial.orbPlus(plusParams), orbPlusTemp);
+                        }
+                        if (plusSpecial.hasOwnProperty('orbCeil')) {
+                            orbCeilTemp = Math.max(plusSpecial.orbCeil(plusParams), orbCeilTemp);
                         }
                     });
                     if (!data.s) { // non-static
@@ -1025,6 +1033,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         } else if (data.type == "orb") {
                             if (parseFloat($scope.data.customOrb) != 1)
                                 text = 'special override';
+                            if (multiplier != 1) { // only apply if there's an orb boost
+                                if (orbCeilTemp != 1)
+                                    multiplier = orbCeilTemp;
+                                else
+                                    multiplier += orbPlusTemp;
+                            }
                             multiplier = CrunchUtils.getOrbMultiplier(params.orb, params.unit.type, params.unit.class, 1, multiplier, [params.friendCaptain, params.captain], params.effectName, params);
                         }
                         multipliers.push([ multiplier, text ]);

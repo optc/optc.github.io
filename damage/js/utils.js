@@ -162,15 +162,6 @@ window.CrunchUtils.gearSort = function(array, typeMultiplier) {
 };
 
 window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName, params) {
-    var orbPlusBonus = 0;
-    var orbCeilBonus = 1;
-    if(params.enabledAbilities.specials[0]) Object.keys(params.enabledAbilities.specials).forEach(function(x) {
-        if (params.enabledAbilities.specials[x].hasOwnProperty('orbPlus')){
-            iparams = params; iparams["sourceSlot"] = params.enabledAbilities.specials[x].sourceSlot;
-            if (params.enabledAbilities.specials[x].orbPlus(iparams) > orbPlusBonus)
-                orbPlusBonus = params.enabledAbilities.specials[x].orbPlus(iparams)
-        }
-    });
     /* Object.keys(window.altspecials).forEach(function(x) {
         if (window.altspecials[x].hasOwnProperty('orbPlus')){
             if(window.altspecials[x].turnedOn)
@@ -178,14 +169,6 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     orbPlusBonus = window.altspecials[x].orbPlus(params)
         }
     }); */
-    if(params.enabledAbilities.specials[0]) Object.keys(params.enabledAbilities.specials).forEach(function(x) {
-        if (params.enabledAbilities.specials[x].hasOwnProperty('orbCeil')){
-            iparams = params; iparams["sourceSlot"] = params.enabledAbilities.specials[x].sourceSlot;
-            if (params.enabledAbilities.specials[x].orbCeil(iparams) > orbCeilBonus)
-                orbCeilBonus = params.enabledAbilities.specials[x].orbCeil(iparams)
-        }
-    });
-    boostedMultiplier = boostedMultiplier != 1 ? orbCeilBonus != 1 ? orbCeilBonus : boostedMultiplier + orbPlusBonus : boostedMultiplier;
 
     boostedMultiplier = parseFloat(params.customBuffs.orb) != 1 ? parseFloat(params.customBuffs.orb) : boostedMultiplier;
 
