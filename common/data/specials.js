@@ -13879,7 +13879,7 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [35, Infinity, 35][p.cached.multiplier] : 1;
         },
         orbPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
-        orb: function(p) { return p.unit.type == "INT" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -13901,7 +13901,7 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [35, Infinity, 35][p.cached.multiplier] : 1;
         },
         orbPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
-        orb: function(p) { return p.unit.type == "INT" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
