@@ -598,7 +598,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         // apply hit bonus
         if (bonusDamageBase > 0 && mapEffect.shieldLeft == 0) {
-            if (lastHit > 1) result.result += Math.floor(Math.ceil(lastAtk * 0.9 * bonusDamageBase) * increaseDamageTakenMultiplier);
+            if (lastHit > Math.floor(1 * increaseDamageTakenMultiplier)) result.result += Math.floor(Math.ceil(lastAtk * 0.9 * bonusDamageBase) * increaseDamageTakenMultiplier);
             else result.result += Math.floor(Math.max(0,Math.ceil(lastAtk * (0.9 * bonusDamageBase + 1 / unit.combo)) - currentDefense - 1) * increaseDamageTakenMultiplier);
         }
         
@@ -945,13 +945,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     break;
                 }
                 if (i == x.multipliers.length) x.multipliers.push([ chainMultiplier, 'chain' ]);
-                // add increaseDamageTakenMultiplier to multiplier list if not in the list
-                for (i=0;i<x.multipliers.length;++i) {
-                    if (x.multipliers[i][1] == 'increased damage taken')
-                        break;
-                }
-                if (i == x.multipliers.length)
-                    x.multipliers.push([increaseDamageTakenMultiplier, 'increased damage taken'])
                 // compute damage
                 var unitAtk = Math.floor(x.base * totalMultiplier(x.multipliers));
                 var temp = computeDamageOfUnit(x.position, x.unit.unit, unitAtk, modifiers[n], currentHits, type, increaseDamageTakenMultiplier);
@@ -966,6 +959,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 currentResult = { result: result, chainMultipliers: multipliersUsed };
             }
         });
+
+        // Add increaseDamageTakenMultiplier to multiplier list ONLY after computing damage
+        // Otherwise, it would be multiplied to the unitAtk and would lead to being applied twice.
+        for (var result of currentResult.result)
+            result.multipliers.push([increaseDamageTakenMultiplier, 'increased damage taken'])
 
         return currentResult;
     };
