@@ -14022,7 +14022,6 @@ window.specials = {
     },
     3718:{
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "PSY" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
-        type: "type",
         chainAddition: function(p) { return [0, 1.1, 1.1][p.cached.multiplier]; },
         turnedOn: false,
         onActivation: function(p) {
@@ -14062,6 +14061,73 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3722: {
+        atk: function(p) { return p.tokiState ? p.cached.multiplier : 1; },
+        type: "type",
+        orb: function(p) { return p.tokiState ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 4 : (p.colorCount.PSY >= 4) ? 3.5 : 1;
+        },
+    },
+    3723: {
+        atk: function(p) { return p.tokiState ? p.cached.multiplier : 1; },
+        type: "type",
+        orb: function(p) { return p.tokiState ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 4 : (p.colorCount.PSY >= 4) ? 3.5 : 1;
+        },
+    },
+    3724: {
+        chain: function(p) { return p.cached.multiplier[0]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier[1] : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? [ 2.5, 10 ] : [ 3.25, 3.25 ];
+        },
+    },
+    3725: {
+        status: function(p) { return 1.75; },
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
+    3726: {
+        atkPlus: function(p) { return p.cached.multiplier; },
+        orbPlus: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 0.25 : 0;
+        },
+    },
+    3727: {
+        chainAdditionPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        chainAddition: function(p) { return [1, 0, 1][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition Boost", "Chain Addition Buff", "Chain Addition Boost and Buff"][n] + '. To switch to ' + ["Chain Addition Boost", "Chain Addition Buff", "Chain Addition Boost and Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3728: {
+        atk: function(p) { return p.cached.multiplier; },
+        orb: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 2.25 : 1.5;
+        },
+    },
+    3729: {
+        chainAddition: function(p) { return 1.5; },
+    },
+    3730: {
+        chainAddition: function(p) { return 1.5; },
+    },
+    3731: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+        type: "type",
     },
 };
 

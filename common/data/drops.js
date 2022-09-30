@@ -3139,6 +3139,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3701 ],
         },
+
+        {
+            name: 'Pops and The Little Brother',
+            dropID: 'event163',
+            thumb: 3729,
+            global: true,
+            nakama: 6372900,
+            gamewith: null,
+            'All Difficulties': [ 3729 ],
+        },
     ],
 
 

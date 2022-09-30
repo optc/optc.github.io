@@ -291,6 +291,21 @@ window.altspecials = {
         orbPlus: function(p) { return 0.25; },
         warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT most, if not all, of the time. Use at your own risk."
     },
+    3723: {
+        atkbase: function(p) { return 1250; },
+    },
+    3724: {
+        affinity: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
+    },
+    3725: {
+        affinity: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
+    },
+    3726: {
+        affinity: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
+    },
+    3727: {
+        affinity: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

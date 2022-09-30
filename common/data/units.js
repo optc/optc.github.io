@@ -3720,6 +3720,16 @@ window.units = [
     [ "Shanks - Impeding Emperor", "PSY", [ "Cerebral", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1314, 826, 78, null, null, null, null ],
     [ "Red-Haired Shanks - Father Caring for His Daughter", "PSY", [ "Cerebral", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1405, 994, 79, null, null, null, null ],
     [ "Uta - Demon King of the Uta World", "INT", [ "Driven", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 2002, 1067, 175, 4004, 1778, 350, 1 ],
+    [ "Sengoku - Fleet Admiral Protecting Marineford", "PSY", [ "Cerebral", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 1018, 428, 56, null, null, null, null ],
+    [ "Buddha Sengoku - Cunning Officer Leading the Navy Powerhouses", "PSY", [ "Cerebral", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2005, 852, 107, null, null, null, null ],
+    [ "Kizaru - Three Admirals Defending Marineford", "DEX", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1662, 714, 110, null, null, null, null ],
+    [ "Akainu - Three Admirals Defending Marineford", "STR", [ "Driven", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1636, 733, 108, null, null, null, null ],
+    [ "Aokiji - Three Admirals Defending Marineford", "QCK", [ "Striker", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 1590, 708, 124, null, null, null, null ],
+    [ "Fujitora - Intercepted Navy Admiral", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1710, 727, 98, null, null, null, null ],
+    [ "Luffy & Whitebeard - Sharing the Same Goal", "STR", [ "Striker", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1710, 727, 98, null, null, null, null ],
+    [ "Monkey D. Garp - Proud Fist", "DEX", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1093, 410, 50, null, null, null, null ],
+    [ "Monkey D. Garp - Drill Crushing Fist", "DEX", [ "Fighter", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2156, 815, 95, null, null, null, null ],
+    [ "Chin Jao the Drill - Proud Drill Head", "DEX", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2125, 774, 90, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

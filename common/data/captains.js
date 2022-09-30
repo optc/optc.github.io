@@ -13112,6 +13112,44 @@ window.captains = {
         atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? p.actions[p.sourceSlot] ? 5.5 : 5.25 : 1; },
         hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.3 : 1; },
     },
+    3722: {
+        atk: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 5.5 : 4.5; },
+        hp: function(p) { return 1.5; },
+    },
+    3723: {
+        atk: function(p) { return (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 5.5 : 4.5; },
+        hp: function(p) { return 1.5; },
+    },
+    3724: {
+        atk: function(p) { return ((p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 4 : 1) * (p.actions[p.sourceSlot] ? 1.35 : 1); },
+        hp: function(p) { return 1.5; },
+    },
+    3725: {
+        atk: function(p) { return ((p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 4 : 1) * (p.actions[p.sourceSlot] ? 1.35 : 1); },
+        hp: function(p) { return 1.5; },
+    },
+    3726: {
+        atk: function(p) { return ((p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 4 : 1) * (p.actions[p.sourceSlot] ? 1.35 : 1); },
+        hp: function(p) { return 1.5; },
+    },
+    3727: {
+        atk: function(p) { return ((p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 4 : 1) * (p.actions[p.sourceSlot] ? 1.35 : 1); },
+        hp: function(p) { return 1.5; },
+    },
+    3728: {
+        atk: function(p) { return 3; },
+    },
+    3729: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? p.actions[p.sourceSlot] ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
+    },
+    3730: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? p.actions[p.sourceSlot] ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 1.5 : 1; },
+    },
+    3731: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse")) ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

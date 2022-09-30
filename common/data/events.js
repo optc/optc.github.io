@@ -793,6 +793,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    3722: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tokiStateEnabled == 1)
+                $scope.notify({ text: 'Enabling Selected Character Effect support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tokiStateEnabled === 0)
+                $scope.notify({ text: 'Disabling Selected Character Effect support.' });
+        }
+    },
+    3723: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tokiStateEnabled == 1)
+                $scope.notify({ text: 'Enabling Toki-Toki Effect support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tokiStateEnabled === 0)
+                $scope.notify({ text: 'Disabling Selected Character Effect support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

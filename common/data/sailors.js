@@ -2576,6 +2576,16 @@ window.sailors = {
     3721: {
         hp: function(p) { return p.unit.class.has("Driven") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
     },
+    3728: {
+        atkStatic: function(p) { return 40; },
+        hpStatic: function(p) { return 40; },
+        rcvStatic: function(p) { return 40; },
+    },
+    37373104: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
