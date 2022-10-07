@@ -14129,6 +14129,49 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
         type: "type",
     },
+    3732: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+    },
+    3733: {
+        chain: function(p) { return p.cached.multiplier2[0]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier2[1] : 1;
+        },
+        chainAddition: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.captain != null && (p.captain.class.has("Striker") || p.captain.class.has("Driven")) ? [2, 15] : [0, Infinity];
+            p.cached.multiplier2 = p.captain != null && p.captain.type == "QCK" ? 0.8 : 0;
+        },
+    },
+    3734: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        atkbase: function(p) { return p.unit.type == "QCK" ? [0, 1000, 1000][p.cached.multiplier] : 0; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "ATK and Base ATK buffs", "Orb, ATK and Base ATK buffs"][n] + '. To switch to ' + ["Orb Boost", "ATK and Base ATK buffs", "Orb, ATK and Base ATK buffs"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3735: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        atkbase: function(p) { return p.unit.type == "QCK" ? [0, 1000, 1000][p.cached.multiplier] : 0; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "ATK and Base ATK buffs", "Orb, ATK and Base ATK buffs"][n] + '. To switch to ' + ["Orb Boost", "ATK and Base ATK buffs", "Orb, ATK and Base ATK buffs"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

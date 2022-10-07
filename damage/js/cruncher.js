@@ -1554,7 +1554,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         for(var i = 0; i < 2; i++){
             if(team[i].unit !== null){
                 var id = team[i].unit.number + 1;
-                if (id == 2112 || id == 2113 || id == 2739 || id == 3492)
+                if (id == 2112 || id == 2113 || id == 2739 || id == 3492 || id == 3734 || id == 3735)
                     enemyEffects.delay += 1;
             }
         }

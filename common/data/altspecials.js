@@ -306,6 +306,9 @@ window.altspecials = {
     3727: {
         affinity: function(p) { return p.slot == p.sourceSlot ? 2.5 : 1; },
     },
+    3735: {
+        status: function(p) { return p.delayed > 0 ? 2 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

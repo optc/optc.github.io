@@ -3143,11 +3143,11 @@ window.drops = {
         {
             name: 'Pops and The Little Brother',
             dropID: 'event163',
-            thumb: 3729,
+            thumb: 3728,
             global: true,
-            nakama: 6372900,
+            nakama: 6372800,
             gamewith: null,
-            'All Difficulties': [ 3729 ],
+            'All Difficulties': [ 3728 ],
         },
     ],
 
@@ -6434,6 +6434,16 @@ window.drops = {
             nakama: 8371200,
             gamewith: null,
             'Coast of Elegia': [ 3712, 9067 ]
+        },
+
+        {
+            name: 'Law',
+            dropID: 'treasuremap62',
+            thumb: 3736,
+            global: true,
+            nakama: 8373600,
+            gamewith: null,
+            'Coast of Elegia': [ 3736 ]
         },
 
     ],
