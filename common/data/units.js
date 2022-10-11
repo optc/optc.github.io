@@ -3730,10 +3730,10 @@ window.units = [
     [ "Monkey D. Garp - Proud Fist", "DEX", [ "Fighter", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1093, 410, 50, 2186, 820, 100, 1 ],
     [ "Monkey D. Garp - Drill Crushing Fist", "DEX", [ "Fighter", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2156, 815, 95, 4312, 1630, 190, 1 ],
     [ "Chin Jao the Drill - Proud Drill Head", "DEX", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2125, 774, 90, 4250, 1548, 180, 1 ],
-    [ "Smoker- Swapped Navy Officer", "QCK", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1623, 689, 100, null, null, null, null ],
-    [ "Tashigi - Swapped Navy Officer", "QCK", [ "Striker", "Driven" ], 5, 30, 6, 4, 99, 4000000, 1349, 685, 147, null, null, null, null ],
-    [ "Hina - Observing Rear Admiral", "QCK", [ "Cerebral", "Striker" ], 5, 30, 4, 3, 70, 1066998, 847, 382, 82, null, null, null, null ],
-    [ "Hina - Unescapable Black Cage", "QCK", [ "Cerebral", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1724, 773, 155, null, null, null, null ],
+    [ "Smoker - Swapped Navy Officer", "QCK", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1623, 689, 100, 3246, 1378, 200, 1 ],
+    [ "Tashigi - Swapped Navy Officer", "QCK", [ "Striker", "Driven" ], 5, 30, 6, 4, 99, 4000000, 1349, 685, 147, 2698, 1370, 294, 1 ],
+    [ "Hina - Observing Rear Admiral", "QCK", [ "Cerebral", "Striker" ], 5, 30, 4, 3, 70, 1066998, 847, 382, 82, 1735, 786, 164, 1 ],
+    [ "Hina - Unescapable Black Cage", "QCK", [ "Cerebral", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1724, 773, 155, 3348, 1546, 310, 1 ],
     [ "Trafalgar Law - Wave of the New Era", "DEX", [ "Cerebral", "Slasher" ], 5, 60, 4, 1, 99, 5000000, 1573, 717, 124, null, null, null, null ],
 ];
 
