@@ -13972,7 +13972,7 @@ window.specials = {
         },
     },
     3709: {
-        affinity: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") ? p.cached.multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             var levels = [1.75, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
