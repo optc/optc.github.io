@@ -6989,7 +6989,7 @@ window.drops = {
         },
 
         {
-            name: 'Uta',
+            name: 'Shanks',
             dropID: 'kizuna38',
             thumb: 3721,
             global: true,
@@ -6997,6 +6997,16 @@ window.drops = {
             gamewith: null,
             'Kizuna Exchange': [ 3719, 9068, 9069 ],
             'Chopper Man Missions': [ 9070 ],
+        },
+
+        {
+            name: 'Blackbeard',
+            dropID: 'kizuna39',
+            thumb: 3739,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3739, 9071 ],
         },
 
     ],

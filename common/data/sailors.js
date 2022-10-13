@@ -2594,6 +2594,14 @@ window.sailors = {
     3736: {
         rcvStatic: function(p) { return [0, 60, 60][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; },
     },
+    3737: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 60 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 60 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 60 : 0; },
+    },
+    3738: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Fighter") ? [0, 70][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

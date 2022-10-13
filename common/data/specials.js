@@ -14174,6 +14174,44 @@ window.specials = {
             });
         },
     },
+    3737: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        type: "type",
+    },
+    3738: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0, 0.25, 0.25][p.cached.multiplier] : 0;
+        }, 
+        chain: function(p) { return [3, 1, 3][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [3, Infinity, 3][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Lock", "Chain Buff", "Chain Lock & Buff"][levels[n]] + '. To switch to the ' + ["Chain Lock", "Chain Buff", "Chain Lock & Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3739:{
+        orb: function(p) { return (p.slot == p.sourceSlot) ? p.cached.multiplier : 1; },
+        atk: function(p) { return (p.slot == p.sourceSlot) ? p.cached.multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [3, 3.5, 4];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

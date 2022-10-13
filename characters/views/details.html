@@ -421,7 +421,7 @@
                                 </tr>
                                 <tr ng-if="details.superSpecialCriteria">
                                     <td>Super Special Criteria</td>
-                                    <td>
+                                    <td colspan="2">
                                         <div>
                                                 <span ng-bind-html="details.superSpecialCriteria | decorate"></span></div>
                                         </div>
@@ -431,7 +431,7 @@
                                 </tr>
                                 <tr ng-if="details.superSpecial">
                                     <td>Super Special</td>
-                                    <td>
+                                    <td colspan="2">
                                         <strong class="specialName" ng-if="details.superSpecialName">{{::details.superSpecialName}}</strong>
                                         <!-- same special, no stages -->
                                         <div ng-if="!isSuperSpecialHybrid && !isSuperSpecialStaged" ng-bind-html="details.superSpecial | decorate"></div>

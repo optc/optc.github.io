@@ -309,6 +309,9 @@ window.altspecials = {
     3735: {
         status: function(p) { return p.delayed > 0 ? 2 : 1; },
     },
+    3739: {
+        atkbase: function(p) { return p.slot == p.sourceSlot ? 1250 : 0; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
