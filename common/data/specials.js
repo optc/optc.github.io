@@ -14114,6 +14114,7 @@ window.specials = {
     },
     3728: {
         atk: function(p) { return p.cached.multiplier; },
+        type: "type",
         orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 2.25 : 1.5;
