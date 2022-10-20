@@ -317,6 +317,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'int') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn || window.specials[2527].turnedOn
                                      || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 'int';
+            if (orb == 'empty') orb = (window.specials[3740].turnedOn || window.specials[3741].turnedOn)  ? 2.25 : 'empty';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn) ? 1 : .5;
             
@@ -916,24 +917,29 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
                 //console.log(params[n].hitcombo);
                 var chainUpgrade = 0;
+                var chainOverride = 0;
                 plusSpecials.forEach(function(plusSpecial){
                     var params2 = getParameters(plusSpecial.sourceSlot, params[n].chainPosition, plusSpecial.sourceSlot, plusSpecial.specialType);
                     if (plusSpecial.hasOwnProperty('chainPlus')){
                         var chainTemp = plusSpecial.chainPlus(params2);
                         if (chainTemp > chainUpgrade) chainUpgrade = chainTemp;
                     }
+                    if (plusSpecial.hasOwnProperty('chainCeil')){
+                        var chainTemp = plusSpecial.chainCeil(params2);
+                        if (chainTemp > chainOverride) chainOverride = chainTemp;
+                    }
                 });
-                if(special.chain(params[n]) == 1) chainUpgrade = 0;
                 
-                var chainMultiplier = getChainMultiplier(special.chain(params[n]) + chainUpgrade, modifiers.slice(0,n), chainModifier, params[n], damage);
+                if(special.chain(params[n]) == 1) chainUpgrade = 0;
+                var chainMultiplier = getChainMultiplier(chainOverride == 0 ? special.chain(params[n]) + chainUpgrade : chainOverride, modifiers.slice(0,n), chainModifier, params[n], damage);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
                 if (mapEffect.hasOwnProperty('chainLimiter'))
-                    chainMultiplier = Math.min(mapEffect.chainLimiter(params[n]) + chainUpgrade, chainMultiplier);
+                    chainMultiplier = Math.min(chainOverride == 0 ? mapEffect.chainLimiter(params[n]) + chainUpgrade : chainOverride, chainMultiplier);
                 else if (special.hasOwnProperty('chainLimiter')){
                     //console.log((special.chainLimiter(params[n])));
-                    chainMultiplier = Math.min(special.chainLimiter(params[n]) + chainUpgrade, chainMultiplier);
+                    chainMultiplier = Math.min(chainOverride == 0 ? special.chainLimiter(params[n]) + chainUpgrade : chainOverride, chainMultiplier);
                 }
                 if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233 || x.unit.unit.number == 2499) && x.position < 2){
                     chainMultiplier = 1.0;
@@ -1152,6 +1158,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ ...data, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainPlus'))
+                plusSpecials.push(data);
+            if (data.hasOwnProperty('chainCeil'))
                 plusSpecials.push(data);
             if (data.hasOwnProperty('chainAdditionPlus'))
                 plusSpecials.push(data);

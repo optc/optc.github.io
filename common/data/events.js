@@ -813,6 +813,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling Selected Character Effect support.' });
         }
     },
+    3740: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    3741: {
+        onInsertion: function($scope) {
+            if (++$scope.options.emptyOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [EMPTY] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.emptyOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

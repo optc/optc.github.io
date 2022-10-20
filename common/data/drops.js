@@ -7575,6 +7575,15 @@ window.drops = {
         },
 
         {
+            name: 'Pirate Alliance Challenge: Heart VS Heavenly Demon',
+            thumb: 3743,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Chopperman Missions': [ 3743, 9072 ],
+        },
+
+        {
             name: 'Face Off! Akainu vs Aokiji',
             thumb: 2023,
             global: true,

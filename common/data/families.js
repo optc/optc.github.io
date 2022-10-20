@@ -354,7 +354,7 @@ const Gladius = [ "Gladius" ];
 const Viola = [ "Viola", "Violet" ];
 const Dellinger = [ "Dellinger" ];
 const Diamante = [ "Diamante" ];
-const DonquixoteRosinante = [ "Donquixote Rosinante", "Corazon" ];
+const DonquixoteRosinante = [ "Donquixote Rosinante", "Donquixote Rocinante", "Corazon" ];
 const Sachi = [ "Sachi", "Shachi" ];
 const Penguin = [ "Penguin" ];
 const JeanBart = [ "Jean Bart" ];
@@ -4302,6 +4302,10 @@ window.families = {
     3737: [ ...XDrake ],
     3738: [ ...Coby ],
     3739: [ ...MarshallDTeach ],
+    3740: [ ...DonquixoteRosinante, ...TrafalgarDWaterLaw ],
+    3741: [ ...DonquixoteRosinante, ...TrafalgarDWaterLaw ],
+    3742: [ ...PortgasDAce ],
+    3743: [ ...DonquixoteDoflamingo ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

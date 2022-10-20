@@ -14213,6 +14213,49 @@ window.specials = {
             });
         },
     },
+    3740: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        }
+    },
+    3741: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        }
+    },
+    3742: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [1, 2.25, 2.25, 1, 1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        chainCeil: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0, 0, 0, 3.75, 3.75, 3.75, 3.75][p.cached.multiplier] : 0;
+        }, 
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6 ];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Affinity", "ATK and Affinity", "Chain Override", "ATK and Chain Override", "Affinity and Chain Override", "ATK, Affinity and Chain Override"][n] + ' boost. To ' + ["ATK", "Affinity", "ATK and Affinity", "Chain Override", "ATK and Chain Override", "Affinity and Chain Override", "ATK, Affinity and Chain Override"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3743: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

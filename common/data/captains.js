@@ -13188,6 +13188,22 @@ window.captains = {
         atk: function(p) { return p.slot == p.sourceSlot ? 5 : p.unit.type == "STR" || p.unit.type == "INT" ? 4.5 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.75 : 1; },
     },
+    3740: {
+        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.type == "INT") ? (p.orb == 'empty') ? 5.25 : 5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Cerebral") || p.unit.type == "INT") ? 1.3 : 1; },
+    },
+    3741: {
+        atk: function(p) { return (p.unit.class.has("Cerebral") || p.unit.type == "INT") ? (p.orb == 'empty') ? 5.25 : 5 : 1; },
+        hp: function(p) { return (p.unit.class.has("Cerebral") || p.unit.type == "INT") ? 1.3 : 1; },
+    },
+    3742: {
+        atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter") || p.unit.type == "INT") ? [4.5, 4.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        hp: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Fighter") || p.unit.type == "INT") ? 1.5 : 1; },
+    },
+    3743: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3.5 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

@@ -3738,6 +3738,10 @@ window.units = [
     [ "X Drake - Navy HQ Top Secret Special Force Captain of \"Sword\"", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1452, 734, 143, 3008, 1491, 222, 1 ],
     [ "Coby - Navy HQ Captain and Member of \"SWORD\"", "STR", [ "Cerebral", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1468, 711, 151, 2864, 1487, 247, 1 ],
     [ "Blackbeard - Ruling Emperor", "INT", [ "Driven", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 2176, 1094, 127, 4352, 1712, 254, 1 ],
+    [ "Corazon & Law: Secret Day-Off - Creepy Night Halloween", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 1, 3, 70, 1066998, 974, 415, 67, null, null, null, null ],
+    [ "Corazon & Law: Moonlight Day-Off - Creepy Night Halloween", "INT", [ "Cerebral", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1918, 826, 130, null, null, null, null ],
+    [ "Ace: Riot Flame Wolf - Happy Halloween!", "INT", [ "Shooter", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2256, 1037, 111, 4512, 1728, 222, 1 ],
+    [ "Doflamingo: Horror Night Parade - Creepy Night Halloween", "INT", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, null, 1582, 738, 118, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
