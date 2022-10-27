@@ -13646,7 +13646,7 @@ window.specials = {
         increaseDamageTaken: function(p) { return 1.75; },
     },
     3671: {
-        status: function(p) { return p.defenseDown > 0 ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
+        status: function(p) { return p.defenseDown ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
         def: function(p) { return [ 0, 1, 0 ][p.cached.multiplier]; },
         turnedOn: false,
         onActivation: function(p) {
@@ -13759,7 +13759,7 @@ window.specials = {
     },
     3685: {
         def: function(p) { return [1, 0][p.cached.multiplier]; },
-        status: function(p) { return p.defenseDown > 0 ? [1, 2][p.cached.multiplier] : 1; },
+        status: function(p) { return p.defenseDown ? [1, 2][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             p.cached.multiplier = p.captain != null && (p.captain.type == "INT") ? 1 : 0;
         },
@@ -13924,7 +13924,7 @@ window.specials = {
     },
     3701: {
         chainAddition: function(p) { return 0.7; },
-        status: function(p) { return p.defenseDown > 0 ? [ 1, 1.75, 1.75 ][p.cached.multiplier] : 1; },
+        status: function(p) { return p.defenseDown ? [ 1, 1.75, 1.75 ][p.cached.multiplier] : 1; },
         def: function(p) { return [ 0, 1, 0 ][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -13997,7 +13997,7 @@ window.specials = {
     },
     3713: {
         chainAddition: function(p) { return 1.1; },
-        status: function(p) { return p.defenseDown > 0 ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
+        status: function(p) { return p.defenseDown ? [ 1, 2, 2 ][p.cached.multiplier] : 1; },
         def: function(p) { return [ 0, 1, 0 ][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -14013,7 +14013,7 @@ window.specials = {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
     },
     3715: {
-        status: function(p) { return p.defenseDown > 0 ? 2 : 1; },
+        status: function(p) { return p.defenseDown ? 2 : 1; },
         def: function(p) { return 0; },
     },
     3717: {
@@ -14255,6 +14255,80 @@ window.specials = {
     },
     3743: {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    3744: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
+        type: "type",
+        atkPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "ATK/Orb buffs", "ATK and Base ATK/Orb buffs"][n] + '. To switch to ' + ["ATK Boost", "ATK/Orb buffs", "ATK and Base ATK/Orb buffs"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3745: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
+        type: "type",
+        atkPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "ATK/Orb buffs", "ATK and Base ATK/Orb buffs"][n] + '. To switch to ' + ["ATK Boost", "ATK/Orb buffs", "ATK and Base ATK/Orb buffs"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3746: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") ? p.cached.multiplier1 : 1; },
+        atkbase: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.classCount.Slasher > 5 ? 2.25 : 1;
+            var levels = [0, 800];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier2 = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'base ATK boost. To use the ' + levels[(n + 1) % levels.length] + 'base ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3747: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") ? p.cached.multiplier1 : 1; },
+        type: "type",
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") ? p.cached.multiplier2 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.classCount.Slasher > 5 ? 2.25 : 1;
+            var levels = [1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier2 = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x Affinity boost. To use the ' + levels[(n + 1) % levels.length] + 'x Affinity boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3748: {
+        def: function(p) { return 0; },
+        status: function(p) { return p.defenseDown ? p.cached.multiplier[0] : 1; },
+        chainAddition: function(p) { return p.cached.multiplier[1]; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Slasher > 5 ? [1.75, 1.0] : [1, 0];
+        },
+    },
+    3749: {
+        delay: function(p) { return 1; },
+    },
+    3750: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+        type: "type",
     },
 };
 

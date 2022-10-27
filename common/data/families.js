@@ -4306,6 +4306,13 @@ window.families = {
     3741: [ ...DonquixoteRosinante, ...TrafalgarDWaterLaw ],
     3742: [ ...PortgasDAce ],
     3743: [ ...DonquixoteDoflamingo ],
+    3744: [ ...Kinemon, ...Denjiro, ...Inuarashi, ...AshuraDoji ],
+    3745: [ ...Kinemon, ...Denjiro, ...Inuarashi, ...AshuraDoji ],
+    3746: [ ...Nekomamushi ],
+    3747: [ ...Kawamatsu ],
+    3748: [ ...Kikunojo ],
+    3749: [ ...Raizo ],
+    3750: [ ...Kaido ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

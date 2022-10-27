@@ -59,6 +59,22 @@
                 "japan": {
                   "$ref": "#/definitions/Unit"
                 },
+                "gpability": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Ability"
+                    },
+                    "minItems": 5,
+                    "maxItems": 5
+                },
+                "gpspecial": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/GPSpecial"
+                    },
+                    "minItems": 5,
+                    "maxItems": 5
+                },
                 "llbability": {
                     "type": "array",
                     "items": {
@@ -309,6 +325,29 @@
                 "effects"
             ],
             "title": "Special"
+        },
+        "GPSpecial": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "uses": {
+                    "type": "integer"
+                },
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/Effect" },
+                            { "$ref": "#/definitions/EffectOverride" }
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "uses",
+                "effects"
+            ],
+            "title": "GPSpecial"
         },
         "Effect": {
             "type": "object",

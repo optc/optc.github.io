@@ -3149,6 +3149,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3728 ],
         },
+
+        {
+            name: 'Roof of Onigashima',
+            dropID: 'event164',
+            thumb: 3750,
+            global: true,
+            nakama: 6375000,
+            gamewith: null,
+            'All Difficulties': [ 3750 ],
+        },
     ],
 
 

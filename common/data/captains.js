@@ -13204,6 +13204,34 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 3.5 : 3 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
+    3744: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
+    3745: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
+    3746: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse")) ? 1.2 : 1; },
+    },
+    3747: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.2 : 1; },
+    },
+    3748: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")) ? 1.2 : 1; },
+    },
+    3749: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 3 : 1; },
+        hp: function(p) { return (p.unit.type == "STR" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.2 : 1; },
+    },
+    3750: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

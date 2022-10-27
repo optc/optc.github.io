@@ -2612,6 +2612,25 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 75, 75][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
+    3745: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3746: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 70 : 0; },
+    },
+    3747: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? 60 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 60 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? 60 : 0; },
+    },
+    3748: {
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? 70 : 0; },
+    },
+    3749: {
+        rcvstatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 75 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -3742,6 +3742,13 @@ window.units = [
     [ "Corazon & Law: Moonlight Day-Off - Creepy Night Halloween", "INT", [ "Cerebral", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1918, 826, 130, null, null, null, null ],
     [ "Ace: Riot Flame Wolf - Happy Halloween!", "INT", [ "Shooter", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2256, 1037, 111, 4512, 1728, 222, 1 ],
     [ "Doflamingo: Horror Night Parade - Creepy Night Halloween", "INT", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, null, 1582, 738, 118, null, null, null, null ],
+    [ "Kin'emon & Denjiro & Ashura Doji & Dogstorm", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1023, 432, 66, null, null, null, null ],
+    [ "Kin'emon & Denjiro & Ashura Doji & Dogstorm - Inherited Oden Two-Sword Style", "STR", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2017, 860, 127, null, null, null, null ],
+    [ "Cat Viper - Dragon Felling Sulong", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1686, 762, 90, null, null, null, null ],
+    [ "Kawamatsu - Dragon Felling Kappa Style", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1635, 779, 93, null, null, null, null ],
+    [ "Kikunojo - Dragon Felling Fallen Snow", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1437, 713, 148, null, null, null, null ],
+    [ "Raizo - Dragon Felling Ninja", "STR", [ "Shooter", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1684, 727, 102, null, null, null, null ],
+    [ "Kaido - Dragon Confronting the Moonlight", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 2000000, 1762, 751, 56, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
