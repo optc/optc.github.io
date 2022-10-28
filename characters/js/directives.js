@@ -681,6 +681,35 @@ filters.specialToString = function() {
     }
 };
 
+filters.gpconditionToString = function() {
+    return function(input) {
+        switch (input.type){
+          case "damage":
+            return `After dealing damage ${input.count} times`
+          case "hit":
+            return `After dealing ${input.count} normal attacks`
+          case "guard":
+            return `After guarding ${input.count} times`
+          case "heal":
+            return `After healing ${input.count} times`
+          case "debuff":
+            return `After landing ${input.attribute} ${input.count} times`
+          case "attack":
+            return `After ${input.count} ${input.attack} attacks`
+          case "defeat":
+            return `After ${input.count} enemies are defeated`
+          case "special":
+            return `After ${input.team} uses ${input.count} Rumble Specials`
+          case "dbfreceived":
+            return `After ${input.count} debuffs recieved`
+          case "dmgreceived":
+            return `After ${new Intl.NumberFormat().format(input.count)} damage recieved`
+          default:
+            return `UNKNOWN CONDITION ${JSON.stringify(input)}`;
+        }
+      }
+};
+
 filters.abilityToString = function() {
     return function(input) {
         if (!input) return 'N/A';
@@ -702,7 +731,10 @@ filters.abilityToString = function() {
                   e += `Deals Lv.${effect.level} Damage Over Time`;
                   break;
                 case "atk":
-                  e += `Deals ${new Intl.NumberFormat().format(effect.amount)}x ATK in damage`;
+                  e += `Deals ${new Intl.NumberFormat().format(effect.amount)}x ${effect.leader ? "Leader's " : ""}ATK in damage`;
+                  break;
+                case "atkbase":
+                  e += `Deals ${new Intl.NumberFormat().format(effect.amount)}x ${effect.leader ? "Leader's " : ""}base ATK in damage`;
                   break;
                 case "fixed":
                   e += `Deals ${new Intl.NumberFormat().format(effect.amount)} fixed damage`;

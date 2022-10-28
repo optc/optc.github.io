@@ -234,6 +234,8 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
             denormalizeEffects($scope.rumble.special);
             if ($scope.rumble.llbability) denormalizeEffects($scope.rumble.llbability);
             if ($scope.rumble.llbspecial) denormalizeEffects($scope.rumble.llbspecial);
+            if ($scope.rumble.gpspecial) denormalizeEffects($scope.rumble.gpspecial);
+            if ($scope.rumble.gpability) denormalizeEffects($scope.rumble.gpability);
 
             // Check for VS unit
             if ( $scope.rumble.id != Math.floor($scope.rumble.id) ) {

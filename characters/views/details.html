@@ -783,6 +783,30 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <tr ng-if="rumble.gpability">
+                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>GP Leader Skill</td>
+                                    <td colspan="2">
+                                        <div>
+                                            <div ng-repeat="item in rumble.gpability track by $index"><strong>Level {{::$index + 1}}:</strong> <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.gpcondition">
+                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>GP Burst Condition</td>
+                                    <td colspan="2">
+                                        <div>
+                                            <div ng-repeat="item in rumble.gpcondition track by $index"><span ng-bind-html="item | gpconditionToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr ng-if="rumble.gpspecial">
+                                    <td width="5%"><span ng-if="rumble2">Character 1 </span>GP Burst</td>
+                                    <td colspan="2">
+                                        <div>
+                                            <div ng-repeat="item in rumble.gpspecial track by $index"><strong>Level {{::$index + 1}}: [{{::item.uses}} use(s)] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                         <table class="table table-striped-column abilities" ng-if="rumble2">
