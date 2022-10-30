@@ -2636,6 +2636,11 @@ window.sailors = {
     3749: {
         rcvstatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 75 : 0; },
     },
+    3743: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? [0, 50][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
