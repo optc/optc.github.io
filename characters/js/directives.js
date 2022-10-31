@@ -686,24 +686,22 @@ filters.gpconditionToString = function() {
         switch (input.type){
           case "damage":
             return `After dealing damage ${input.count} times`
-          case "hit":
-            return `After dealing ${input.count} normal attacks`
-          case "guard":
-            return `After guarding ${input.count} times`
-          case "heal":
-            return `After healing ${input.count} times`
+          case "action":
+            return `After ${input.action}ing ${input.count} times`
           case "debuff":
             return `After landing ${input.attribute} ${input.count} times`
           case "attack":
-            return `After ${input.count} ${input.attack} attacks`
+            return `After landing ${input.count} ${input.attack} attacks`
           case "defeat":
-            return `After ${input.count} enemies are defeated`
+            return `After ${input.count} ${input.team} are defeated`
           case "special":
             return `After ${input.team} uses ${input.count} Rumble Specials`
           case "dbfreceived":
             return `After ${input.count} debuffs recieved`
           case "dmgreceived":
             return `After ${new Intl.NumberFormat().format(input.count)} damage recieved`
+          case "hitreceived":
+            return `After ${input.count} hits recieved`
           default:
             return `UNKNOWN CONDITION ${JSON.stringify(input)}`;
         }
