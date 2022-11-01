@@ -69,6 +69,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         def: false,
         delay: false,
         increaseDamageTaken: false,
+        increaseDamageTakenPlus: false,
         mark: false,
         negative: false,
         poison: false,
@@ -81,6 +82,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         ...enemyEffects,
         def: [], // replace the booleans with arrays for these effects with multiplier
         increaseDamageTaken: [],
+        increaseDamageTakenPlus: [],
     };
 
     var katakuri = false;
@@ -889,6 +891,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
             increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken);
         }
+        if (enemyEffectsFromSpecials.increaseDamageTakenPlus.length > 0){
+            increaseDamageTakenMultiplier += increaseDamageTakenMultiplier > 1 ? Math.max(...enemyEffectsFromSpecials.increaseDamageTakenPlus) : 0;
+        }
 
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
@@ -1407,7 +1412,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && [1609, 1610, 2232, 3037, 3038].has(id))
                 $scope.tdata.healCounter.enabled = true;
-            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474].has(id))
+            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474, 3751, 3752].has(id))
                 $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && [2233, 2234, 2500].has(id))
                 $scope.tdata.semlaCounter.enabled = true;
@@ -1505,7 +1510,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (!params.enemyImmunities[enemyEffect] || (special.ignoresImmunities && special.ignoresImmunities(params).includes(enemyEffect))) {
                     var returnValue = special[enemyEffect](params);
                     // for these effects, the function returns the multiplier, so 1 means no effect
-                    if ([ 'def', 'increaseDamageTaken' ].includes(enemyEffect)){
+                    if ([ 'def', 'increaseDamageTaken', 'increaseDamageTakenPlus' ].includes(enemyEffect)){
                         if (returnValue == 1){
                             continue;
                         }
@@ -1970,6 +1975,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         
                         healAmount += id == 1747 ? [1000,1200][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
                         healAmount += id == 353 ? [0,300][$scope.data.team[i].unit.limitStats.captains[Math.min($scope.data.team[i].unit.limitStats.captains.length-1,limits[i])]] : 0;
+                        healAmount += (id == 3751 || id == 3752) ? $scope.tdata.damageCounter.value >= 50000 ? 2000 : 0 : 0;
                         
                         healAmount = Math.floor(healAmount);
                     }

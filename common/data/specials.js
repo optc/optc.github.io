@@ -14330,6 +14330,27 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
         type: "type",
     },
+    3751: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        increaseDamageTakenPlus: function(p) { return multiplier2; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.damageCounter >= 50000 ? 2.5 : 2.25;
+            p.cached.multiplier2 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 0.3 : 0;
+        }
+    },
+    3752: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        increaseDamageTakenPlus: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.damageCounter >= 50000 ? 2.5 : 2.25;
+            p.cached.multiplier2 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 0.3 : 0;
+        }
+    },
+    3753: {
+        chainAddition: function(p) { return 0.9; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

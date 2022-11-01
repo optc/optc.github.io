@@ -13232,6 +13232,17 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    3751: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.damageCounter >= 50000 ? 5.25 : 4.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
+    3752: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.damageCounter >= 50000 ? 5.25 : 4.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
+    3753: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

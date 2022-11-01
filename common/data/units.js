@@ -3749,6 +3749,9 @@ window.units = [
     [ "Kikunojo - Dragon Felling Fallen Snow", "STR", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1437, 713, 148, null, null, null, null ],
     [ "Raizo - Dragon Felling Ninja", "STR", [ "Shooter", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1684, 727, 102, null, null, null, null ],
     [ "Kaido - Dragon Confronting the Moonlight", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 2000000, 1762, 751, 56, null, null, null, null ],
+    [ "Orochi - Begrudging Shogun", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1093, 410, 54, null, null, null, null ],
+    [ "Orochi - Assaulting Eight-Headed Snake", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2164, 783, 104, 4328, 1566, 257, 1 ],
+    [ "Kurozumi Kanjuro - Hidden Informant", "QCK", [ "Driven", "Striker" ], 5, 30, 4, 4, 99, 4000000, 2018, 772, 109, 4035, 1544, 218, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

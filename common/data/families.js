@@ -4313,6 +4313,9 @@ window.families = {
     3748: [ ...Kikunojo ],
     3749: [ ...Raizo ],
     3750: [ ...Kaido ],
+    3751: [ ...KurozumiOrochi ],
+    3752: [ ...KurozumiOrochi ],
+    3753: [ ...KurozumiKanjuro ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
