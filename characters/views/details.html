@@ -743,28 +743,28 @@
                                         <span ng-bind-html="rumble.target | targetToString"></span>
                                     </td>
                                 </tr>
-                                <tr ng-if="rumble.llbability">
+                                <tr ng-if="rumble.llbability && unit.maxLevel == 99">
                                     <td width="5%"></td>
                                     <td style="width: 47.5%"><strong>Base</strong></td>
                                     <td style="width: 50%"><strong>Level Limit Break</strong></td>
                                 </tr>
                                 <tr ng-if="rumble.resilience">
                                     <td width="5%"><span ng-if="rumble2">Character 1 </span>Resistance</td>
-                                    <td style="width: 47.5%">
+                                    <td th:style="${rumble.llbresilience && unit.maxLevel == 99 ? 'width: 47.5%' : 'width: 95%'}">
                                         <span ng-repeat="item in rumble.resilience track by $index"><span ng-bind-html="item | resilienceToString | decorate"></span><br /></span>
                                     </td>
-                                    <td style="width: 50%" ng-if="rumble.llbresilience">
+                                    <td style="width: 50%" ng-if="rumble.llbresilience && unit.maxLevel == 99">
                                         <span ng-repeat="item in rumble.llbresilience track by $index"><span ng-bind-html="item | resilienceToString | decorate"></span><br /></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="rumble.ability">
                                     <td width="5%"><span ng-if="rumble2">Character 1 </span>Rumble Ability</td>
-                                    <td style="width: 47.5%">
+                                    <td th:style="${rumble.llbability && unit.maxLevel == 99 ? 'width: 47.5%' : 'width: 95%'}">
                                         <div>
                                             <div ng-repeat="item in rumble.ability track by $index"><strong>Level {{::$index + 1}}:</strong> <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
                                         </div>
                                     </td>
-                                    <td style="width: 50%" ng-if="rumble.llbability">
+                                    <td style="width: 50%" ng-if="rumble.llbability && unit.maxLevel == 99">
                                         <div>
                                             <div ng-repeat="item in rumble.llbability track by $index"><strong>Level {{::$index + 1}}:</strong> <span ng-bind-html="item.effects | abilityToString | decorate"></span></div>
                                         </div>
@@ -772,12 +772,12 @@
                                 </tr>
                                 <tr ng-if="rumble.special">
                                     <td width="5%"><span ng-if="rumble2">Character 1 </span>Rumble Special</td>
-                                    <td style="width: 47.5%">
+                                    <td th:style="${rumble.llbspecial && unit.maxLevel == 99 ? 'width: 47.5%' : 'width: 95%'}">
                                         <div>
                                             <div ng-repeat="item in rumble.special track by $index"><strong>Level {{::$index + 1}}: [{{::item.cooldown}} second cooldown] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
                                         </div>
                                     </td>
-                                    <td style="width: 50%" ng-if="rumble.llbspecial">
+                                    <td style="width: 50%" ng-if="rumble.llbspecial && unit.maxLevel == 99">
                                         <div>
                                             <div ng-repeat="item in rumble.llbspecial track by $index"><strong>Level {{::$index + 1}}: [{{::item.cooldown}} second cooldown] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
                                         </div>

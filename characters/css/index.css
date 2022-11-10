@@ -118,6 +118,10 @@ input#burgerMenuState {
         flex-direction: column;
     }
 
+    .abilities td {
+        width: 100%;
+    }
+
     .popover {
         top: initial !important;
         bottom: 0 !important;
