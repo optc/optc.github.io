@@ -312,6 +312,10 @@ window.altspecials = {
     3739: {
         atkbase: function(p) { return p.slot == p.sourceSlot ? 1250 : 0; },
     },
+    3755: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

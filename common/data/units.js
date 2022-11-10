@@ -3752,6 +3752,11 @@ window.units = [
     [ "Orochi - Begrudging Shogun", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1093, 410, 54, null, null, null, null ],
     [ "Orochi - Assaulting Eight-Headed Snake", "QCK", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2164, 783, 104, 4328, 1566, 257, 1 ],
     [ "Kurozumi Kanjuro - Hidden Informant", "QCK", [ "Driven", "Striker" ], 5, 30, 4, 4, 99, 4000000, 2018, 772, 109, 4035, 1544, 218, 1 ],
+    [ "Roronoa Zoro - Menacing Fight", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1025, 424, 59, null, null, null, null ],
+    [ "Roronoa Zoro - Dead Man's Drawn Sword in Hell", "DEX", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2021, 839, 109, null, null, null, null ],
+    [ "Trafalgar Law - Unrelenting Assault", "DEX", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1511, 743, 106, null, null, null, null ],
+    [ "Killer - Ripping Punisher", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1644, 751, 77, null, null, null, null ],
+    [ "Olin the Oiran - Climate Controlling Emperor", "QCK", [ "Driven", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1612, 772, 102, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

@@ -4316,6 +4316,11 @@ window.families = {
     3751: [ ...KurozumiOrochi ],
     3752: [ ...KurozumiOrochi ],
     3753: [ ...KurozumiKanjuro ],
+    3754: [ ...RoronoaZoro ],
+    3755: [ ...RoronoaZoro ],
+    3756: [ ...TrafalgarDWaterLaw ],
+    3757: [ ...Killer ],
+    3758: [ ...CharlotteLinlin ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

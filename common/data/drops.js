@@ -6456,6 +6456,16 @@ window.drops = {
             'Coast of Elegia': [ 3736 ]
         },
 
+        {
+            name: 'Olin',
+            dropID: 'treasuremap63',
+            thumb: 3736,
+            global: true,
+            nakama: 8373600,
+            gamewith: null,
+            'Coast of Elegia': [ 3758 ]
+        },
+
     ],
 
     
