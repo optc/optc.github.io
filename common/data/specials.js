@@ -14353,9 +14353,9 @@ window.specials = {
     },
     3754: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
-        chainAddition: function(p) { return p.cached.multiplier; },
+        chainMultiplication: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var levels = [0, 1.5];
+            var levels = [1, 1.5];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
@@ -14366,9 +14366,9 @@ window.specials = {
     },
     3755: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free SPirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
-        chainAddition: function(p) { return p.cached.multiplier; },
+        chainMultiplication: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
-            var levels = [0, 1.5];
+            var levels = [1, 1.5];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
