@@ -175,11 +175,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var shipParam = getParameters(n);
             // hp
             var hp = getStatOfUnit(x,'hp',n);
-            hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n,shipParam);
             hp = applyStaticEffectsToHP(n,hp);
+            //hp += getShipBonus('hp',true,x.unit,n,team[1].unit,n,shipParam);
             hp *= getEffectBonus('hp',x.unit);
             hp *= getShipBonus('hp',false,x.unit,n,team[1].unit,n,shipParam);
-            hpMax += Math.floor(applyCaptainEffectsToHP(n,hp));
+            hpMax += Math.floor(applyCaptainEffectsToHP(n,hp)) + getShipBonus('hp',true,x.unit,n,team[1].unit,n,shipParam);
             // rcv
             var rcv = getStatOfUnit(x,'rcv',n);
             rcv += getShipBonus('rcv',true,x.unit,n,team[1].unit,n,shipParam);
