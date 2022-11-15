@@ -958,7 +958,7 @@ nav > li > div {
 }
 
 .ship-name {
-    white-space: nowrap;
+    white-space: normal;
     padding: 0 10px 0 10px;
 }
 

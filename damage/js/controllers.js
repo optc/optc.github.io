@@ -196,6 +196,11 @@ controllers.ShipCtrl = function($scope, $state) {
         return 'background-image: url(https://onepiece-treasurecruise.com/wp-content/uploads/' + ship.thumb + ')';
     };
 
+    $scope.getThumbnailLocal = function(ship, relPathToRoot = '') {
+        if (!ship.thumb) return 'http://127.0.0.1:5500/api/images/thumbnail/ship/ship_blank_t1.png';
+        return 'http://127.0.0.1:5500/api/images/thumbnail/ship/' + ship.thumb;
+    };
+
     $scope.pickShip = function(name) {
         for (var i=0;i<ships.length;++i) {
             if (ships[i].name != name) continue;
