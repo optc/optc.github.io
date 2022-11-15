@@ -14290,7 +14290,7 @@ window.specials = {
         orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") ? p.cached.multiplier1 : 1; },
         atkbase: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
-            p.cached.multiplier1 = p.classCount.Slasher > 5 ? 2.25 : 1;
+            p.cached.multiplier1 = p.classCount.Slasher >= 5 ? 2.25 : 1;
             var levels = [0, 800];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier2 = levels[n];
@@ -14305,7 +14305,7 @@ window.specials = {
         type: "type",
         affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") ? p.cached.multiplier2 : 1; },
         onActivation: function(p) {
-            p.cached.multiplier1 = p.classCount.Slasher > 5 ? 2.25 : 1;
+            p.cached.multiplier1 = p.classCount.Slasher >= 5 ? 2.25 : 1;
             var levels = [1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier2 = levels[n];
@@ -14320,7 +14320,7 @@ window.specials = {
         status: function(p) { return p.defenseDown ? p.cached.multiplier[0] : 1; },
         chainAddition: function(p) { return p.cached.multiplier[1]; },
         onActivation: function(p) {
-            p.cached.multiplier = p.classCount.Slasher > 5 ? [1.75, 1.0] : [1, 0];
+            p.cached.multiplier = p.classCount.Slasher >= 5 ? [1.75, 1.0] : [1, 0];
         },
     },
     3749: {

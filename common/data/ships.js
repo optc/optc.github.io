@@ -767,11 +767,11 @@ window.ships = [
     
     
     { //57
-        name: "Thousand Sunny - Treasure Cruise 8th Anniversary Model",
+        name: "Whale Sharks",
         thumb: null,
-        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of all characters by 1.6x, boosts HP of ? by 10,000, makes PERFECTs easier to hit and makes [TND] orbs beneficial for all characters.',
-        atk: function(p) { return 1.6; },
-        hpStatic: function(p) { return 10000; },
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of all characters by 1.6x, boosts HP of crew by 10,000, makes PERFECTs easier to hit and makes [TND] orbs beneficial for all characters.',
+        atk: function(p) { return [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.45, 1.5, 1.6 ][p.boatLevel - 1]; },
+        hpStatic: function(p) { return p.slot == 1 ? [0, 0, 0, 0, 500, 1000, 2500, 2500, 5000, 10000] : 0; },
     },
 
 ];
