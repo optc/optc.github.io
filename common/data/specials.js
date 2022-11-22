@@ -14404,6 +14404,53 @@ window.specials = {
             p.cached.multiplier = (p.captain.class.has("Driven") || p.captain.class.has("Powerhouse")) ? [ 3.5, 3.5 ] : [ 1, Infinity ];
         },
     },
+    3759: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "type",
+    },
+    3760: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+        type: "type",
+    },
+    3761: {
+        atkPlus: function(p) { return 0.25; },
+        warning: "Selected special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
+    },
+    3762: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") ? 2.5 : 1; },
+        type: "type",
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        }
+    },
+    3763: {
+        atkbase: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [500, 1000];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + ' base ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3764: {
+        atkbase: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [750, 1000];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + ' base ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

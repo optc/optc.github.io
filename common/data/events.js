@@ -853,6 +853,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    3762: {
+        onInsertion: function($scope) {
+            if (++$scope.options.superBombOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [SUPERBOMB] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.superBombOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [SUPERBOMB] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

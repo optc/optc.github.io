@@ -226,7 +226,7 @@ window.altspecials = {
     },
     3631: {
         atkPlus: function(p) { return 0.25; },
-        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT most, if not all, of the time. Use at your own risk."
+        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
     },
     3641: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
@@ -272,7 +272,7 @@ window.altspecials = {
         onDeactivation: function(p) {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
-        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT most, if not all, of the time. Use at your own risk."
+        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
     },
     3695: {
         affinityPlus: function(p) { return 0.25; },
@@ -289,7 +289,7 @@ window.altspecials = {
     3721: {
         affinityPlus: function(p) { return 0.25; },
         orbPlus: function(p) { return 0.25; },
-        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT most, if not all, of the time. Use at your own risk."
+        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
     },
     3723: {
         atkbase: function(p) { return 1250; },

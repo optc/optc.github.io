@@ -361,6 +361,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     if (orb == 'superbomb'){
                         if ([ 2979, 2980 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
+                            //orb = (window.specials[3762].turnedOn) ? 2.25 : 2;
                         }
                     }
                     if (orb == 'dex'){

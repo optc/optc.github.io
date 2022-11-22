@@ -7029,6 +7029,16 @@ window.drops = {
             'Kizuna Exchange': [ 3739, 9071 ],
         },
 
+        {
+            name: 'Armored Brook',
+            dropID: 'kizuna40',
+            thumb: 3764,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3763, 9073, 9074 ],
+        },
+
     ],
 
 

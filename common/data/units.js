@@ -3756,7 +3756,13 @@ window.units = [
     [ "Roronoa Zoro - Dead Man's Drawn Sword in Hell", "DEX", [ "Slasher", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2021, 839, 109, 4042, 1678, 218, 1 ],
     [ "Trafalgar Law - Unrelenting Assault", "DEX", [ "Slasher", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 1511, 743, 106, 3022, 1486, 211, 1 ],
     [ "Killer - Ripping Punisher", "DEX", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1644, 751, 77, 3288, 1502, 154, 1 ],
-    [ "Olin the Oiran - Climate Controlling Emperor", "QCK", [ "Driven", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1612, 772, 102, null, null, null, null ],
+    [ "Olin the Oiran - Climate Controlling Emperor", "QCK", [ "Driven", "Powerhouse" ], 5, 60, 4, 1, 99, 5000000, 1612, 772, 102, 3224, 1543, 204, 1 ],
+    [ "Carrot - Respite Before the Battle", "QCK", [ "Free Spirit", "Fighter" ], 5, 1, 4, 4, 99, 4000000, 1483, 548, 139, 2732, 1124, 273, 1 ],
+    [ "Monkey D. Luffy - Armored for Battle", "DEX", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1491, 741, 151, 30028, 1486, 230, 1 ],
+    [ "Tony Tony Chopper - Armored for Battle", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1347, 728, 198, 2664, 1472, 321, 1 ],
+    [ "Eustass \"Captain\" Kid -- Enraged by the Traitor", "DEX", [ "Driven", "Striker" ], "6+", 65, 4, 5, 99, 5000000, 2099, 1183, 130, 4198, 1774, 259, 1 ],
+    [ "Brook - Armored for Battle", "DEX", [ "Slasher", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1322, 831, 81, null, null, null, null ],
+    [ "Brook - Armored Warrior Prepared for the Raid", "DEX", [ "Slasher", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1401, 983, 84, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
