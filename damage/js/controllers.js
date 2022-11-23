@@ -197,8 +197,8 @@ controllers.ShipCtrl = function($scope, $state) {
     };
 
     $scope.getThumbnailLocal = function(ship, relPathToRoot = '') {
-        if (!ship.thumb) return 'http://127.0.0.1:5500/api/images/thumbnail/ship/ship_blank_t1.png';
-        return 'http://127.0.0.1:5500/api/images/thumbnail/ship/' + ship.thumb;
+        if (!ship.thumb) return relPathToRoot + '/api/images/thumbnail/ship/ship_blank_t1.png';
+        return relPathToRoot + '/api/images/thumbnail/ship/' + ship.thumb;
     };
 
     $scope.pickShip = function(name) {
