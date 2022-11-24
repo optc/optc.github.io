@@ -1110,6 +1110,10 @@ window.zombies = {
     3752: { // Orochi
         type: 'healer',
     },
+    3768: { // Otama
+        type: 'healer',
+        multiplier: 2
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

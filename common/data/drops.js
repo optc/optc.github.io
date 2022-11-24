@@ -3159,6 +3159,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3750 ],
         },
+
+        {
+            name: 'Tobi Roppo!! Ulti',
+            dropID: 'event165',
+            thumb: 3770,
+            global: true,
+            nakama: 6377000,
+            gamewith: null,
+            'All Difficulties': [ 3770 ],
+        },
     ],
 
 

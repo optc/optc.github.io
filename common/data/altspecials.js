@@ -316,6 +316,9 @@ window.altspecials = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
         type: "type",
     },
+    3766: {
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

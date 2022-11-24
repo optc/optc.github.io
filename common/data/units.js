@@ -3763,6 +3763,12 @@ window.units = [
     [ "Eustass \"Captain\" Kid -- Enraged by the Traitor", "DEX", [ "Driven", "Striker" ], "6+", 65, 4, 5, 99, 5000000, 2099, 1183, 130, 4198, 1774, 259, 1 ],
     [ "Brook - Armored for Battle", "DEX", [ "Slasher", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1322, 831, 81, null, null, null, null ],
     [ "Brook - Armored Warrior Prepared for the Raid", "DEX", [ "Slasher", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1401, 983, 84, null, null, null, null ],
+    [ "Olin the Oiran - Fresh Thunder Cloud", "INT", [ "Driven", "Powerhouse" ], 5, 30, 4, 3, 70, 1066998, 1118, 411, 52, null, null, null, null ],
+    [ "Olin the Oiran - Mighty Combination Attack", "INT", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 2117, 852, 93, null, null, null, null ],
+    [ "General Franky - Slashing Franken Sword", "INT", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1741, 761, 84, null, null, null, null ],
+    [ "Otama - Begging Komachiyo to Flee", "INT", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1461, 692, 151, null, null, null, null ],
+    [ "Usopp - Assisting to Retaliate", "INT", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1670, 711, 111, null, null, null, null ],
+    [ "Ulti - Chasing Tobi Roppo", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1652, 740, 78, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

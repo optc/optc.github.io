@@ -14451,6 +14451,58 @@ window.specials = {
             });
         },
     },
+    3765: {
+        status: function(p) { return [2, 2.25, 2.25][p.cached.multiplier]; },
+        atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1000, 1250, 1500][p.cached.multiplier] : 0; },
+        atkPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the Stage' + [1, 2, 3][n] + ' special. To switch to ' + [1, 2, 3][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3766: {
+        status: function(p) { return [2, 2.25, 2.25][p.cached.multiplier]; },
+        atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1000, 1250, 1500][p.cached.multiplier] : 0; },
+        atkPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the Stage' + [1, 2, 3][n] + ' special. To switch to ' + [1, 2, 3][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3767: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
+        type: "type",
+    },
+    3768: {
+        orb: function(p) { return 2; },
+    },
+    3769: {
+        delay: function(p) { return 2; },
+    },
+    3756: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [1, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x chain boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
