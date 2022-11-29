@@ -3769,6 +3769,9 @@ window.units = [
     [ "Otama - Begging Komachiyo to Flee", "INT", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1461, 692, 151, null, null, null, null ],
     [ "Usopp - Assisting to Retaliate", "INT", [ "Shooter", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1670, 711, 111, null, null, null, null ],
     [ "Ulti - Chasing Tobi Roppo", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 4, 99, 2000000, 1652, 740, 78, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Sasaki - Full Potential of a Triceratops", "INT", [ "Powerhouse", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1725, 743, 65, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

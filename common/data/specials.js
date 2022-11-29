@@ -14491,7 +14491,7 @@ window.specials = {
     3769: {
         delay: function(p) { return 2; },
     },
-    3756: {
+    3770: {
         chainAddition: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             var levels = [1, 1.2];
@@ -14499,6 +14499,18 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x chain boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3773: {
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

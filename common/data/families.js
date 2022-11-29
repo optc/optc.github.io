@@ -613,7 +613,7 @@ const TenguyamaHitetsu = [ "Tenguyama Hitetsu" ];
 const CharlotteCustard = [ "Charlotte Custard" ];
 const Unluckies = [ "Unluckies" ];
 const BuenaFesta = [ "Buena Festa" ];
-const PageOne = [ "Page One", "Pay Pay", "PageOne", "Page 1" ];
+const PageOne = [ "Page One", "Pay Pay", "Pageone", "Page 1" ];
 const Toko = [ "Toko" ];
 const King = [ "King" ];
 const Onimaru = [ "Onimaru" ];
@@ -4333,6 +4333,7 @@ window.families = {
     3768: [ ...Tama ],
     3769: [ ...Usopp ],
     3770: [ ...Ulti ],
+    3773: [ ...Sasaki ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
