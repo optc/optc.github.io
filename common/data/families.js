@@ -4333,6 +4333,8 @@ window.families = {
     3768: [ ...Tama ],
     3769: [ ...Usopp ],
     3770: [ ...Ulti ],
+    3771: [ ...PageOne ],
+    3772: [ ...PageOne ],
     3773: [ ...Sasaki ],
     //break
     4986: [ ...MonkeyDLuffy ],

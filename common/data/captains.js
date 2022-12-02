@@ -13313,6 +13313,12 @@ window.captains = {
     3770: {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? Math.min(4.0, 3.0 + 0.2 * p.turnCounter) : 1; }
     },
+    3771: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? Math.min(5.0, 5.0 + 0.1 * p.turnCounter) : 1; }
+    },
+    3772: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? Math.min(5.0, 5.0 + 0.1 * p.turnCounter) : 1; }
+    },
     3773: {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 3.75 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; }

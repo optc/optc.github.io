@@ -14503,6 +14503,12 @@ window.specials = {
             });
         },
     },
+    3771: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    3772: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
     3773: {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
         onActivation: function(p) {
