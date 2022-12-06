@@ -4673,6 +4673,34 @@ let matchers = {
             ],
         },
 
+        {
+            name: 'Resistance Reduction',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            regex: /Reduces enemies' (?=((?:[^r."\d]+|r(?!esi))*))\1Resistance by -([?.\d]+)%(?:-([?.\d]+)%)? for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Percentage:',
+                    groups: [2, 3, 4, 5],
+                },
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [4, 5, 8, 9],
+                },
+                {
+                    type: 'separator',
+                    description: 'Affected types:',
+                },
+                ...createTypesSubmatchers([1]),
+                {
+                    type: 'separator',
+                    description: 'Affected classes:',
+                },
+                ...createClassesSubmatchers([1]),
+            ],
+        },
+
     ],
     'Reduce Enemy Effects': [
         {
