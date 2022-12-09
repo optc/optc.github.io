@@ -14521,6 +14521,73 @@ window.specials = {
             });
         },
     },
+    3774: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        chain: function(p) { return [p.cached.multiplier1[0], 1, p.cached.multiplier1[0]][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [p.cached.multiplier1[1], Infinity, p.cached.multiplier1[1]][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = (p.percHP > 99) ? [ 3.0, 40 ] : [ 2.5, 35 ];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boundary", "ATK", "Chain Boundary and ATK"][n] + ' boost. To switch to ' + ["Chain Boundary", "ATK", "Chain Boundary and ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3775: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        chain: function(p) { return [p.cached.multiplier1[0], 1, p.cached.multiplier1[0]][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [p.cached.multiplier1[1], Infinity, p.cached.multiplier1[1]][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = (p.percHP > 99) ? [ 3.0, 40 ] : [ 2.5, 35 ];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boundary", "ATK", "Chain Boundary and ATK"][n] + ' boost. To switch to ' + ["Chain Boundary", "ATK", "Chain Boundary and ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3776: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.percHP > 99) ? 1 : 0;
+        },
+    },
+    3777: {
+        atk: function(p) { return p.unit.type == "PSY" ? [1, 2, 2][p.cached.multiplier] : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" ? [p.cached.multiplier1, 1, p.cached.multiplier1][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "PSY" ? [p.cached.multiplier1, 1, p.cached.multiplier1][p.cached.multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = (p.percHP > 99) ? 2 : 1.75;
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity and Orb", "ATK", "Affinity, Orb and ATK"][n] + ' boost. To switch to ' + ["Affinity and Orb", "ATK", "Affinity, Orb and ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3778: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? 2.25 : 1;
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

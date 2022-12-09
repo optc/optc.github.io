@@ -6472,17 +6472,27 @@ window.drops = {
             global: true,
             nakama: 8373600,
             gamewith: null,
-            'Coast of Elegia': [ 3736 ]
+            'Coast of Wano': [ 3736 ]
         },
 
         {
             name: 'Olin',
             dropID: 'treasuremap63',
-            thumb: 3736,
+            thumb: 3758,
             global: true,
-            nakama: 8373600,
+            nakama: 8375800,
             gamewith: null,
-            'Coast of Elegia': [ 3758 ]
+            'Coast of Wano': [ 3758 ]
+        },
+
+        {
+            name: 'Who\'s-Who',
+            dropID: 'treasuremap64',
+            thumb: 3778,
+            global: true,
+            nakama: 8377800,
+            gamewith: null,
+            'Coast of Wano': [ 3778 ]
         },
 
     ],
