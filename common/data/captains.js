@@ -13339,7 +13339,7 @@ window.captains = {
         hp: function(p) { return 1.5; },
     },
     3778: {
-        atk: function(p) { return p.unit.class.has("Powerhouse") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
 };
