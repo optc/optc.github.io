@@ -3772,10 +3772,10 @@ window.units = [
     [ "Page One - Dashing Tobi Roppo", "STR", [ "Powerhouse", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 1088, 393, 53, 2176, 786, 105, 1 ],
     [ "Page One - Power of the Tobi Roppo", "STR", [ "Powerhouse", "Fighter" ], 6, 55, 4, 5, 99, 5000000, 2163, 779, 103, 4326, 1558, 205, 1 ],
     [ "Sasaki - Full Potential of a Triceratops", "INT", [ "Powerhouse", "Driven" ], 5, 40, 4, 3, 99, 4000000, 1725, 743, 65, 3450, 1486, 130, 1 ],
-    [ "Jinbe - Fierce Fight with an Ancient Type", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 3, 70, 1066998, 1090, 424, 59, null, null, null, null ],
-    [ "Jinbe - Fury-Filled Fists", "PSY", [ "Fighter", "Powerhouse" ], 6, 55, 5, 5, 99, 5000000, 2151, 798, 101, null, null, null, null ],
-    [ "Baby Gramps Chopper", "PSY", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1198, 673, 201, null, null, null, null ],
-    [ "Sanji - Carrying the Wounded", "PSY", [ "Fighter", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1485, 762, 99, null, null, null, null ],
+    [ "Jinbe - Fierce Fight with an Ancient Type", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 3, 70, 1066998, 1090, 424, 59, 2181, 845, 119, 1 ],
+    [ "Jinbe - Fury-Filled Fists", "PSY", [ "Fighter", "Powerhouse" ], 6, 55, 5, 5, 99, 5000000, 2151, 798, 101, 4301, 1596, 202, 1 ],
+    [ "Baby Gramps Chopper", "PSY", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1198, 673, 201, 2396, 1346, 402, 1 ],
+    [ "Sanji - Carrying the Wounded", "PSY", [ "Fighter", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1485, 762, 99, 2970, 1524, 197, 1 ],
     [ "Who's-Who - Redirecting His Grudge", "INT", [ "Powerhouse", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1714, 700, 106, null, null, null, null ],
 ];
 
