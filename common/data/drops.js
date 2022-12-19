@@ -7068,6 +7068,16 @@ window.drops = {
             'Kizuna Exchange': [ 3763, 9073, 9074 ],
         },
 
+        {
+            name: 'Christmas Chopper',
+            dropID: 'kizuna41',
+            thumb: 3784,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 9075 ],
+        },
+
     ],
 
 

@@ -1251,7 +1251,7 @@ unit > a {
 }
 
 .slot.responsive {
-    height: 256px;
+    height: 384px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

@@ -319,6 +319,9 @@ window.altspecials = {
     3766: {
         affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
     },
+    3780: {
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

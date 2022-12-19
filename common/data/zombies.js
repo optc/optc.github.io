@@ -1118,6 +1118,14 @@ window.zombies = {
         type: 'healer',
         multiplier: 3
     },
+    3779: { // Boa Hancock
+        type: 'healer',
+        amount: 2000
+    },
+    3780: { // Boa Hancock
+        type: 'healer',
+        amount: 2000
+    },
     5001: { // Smoker/Tashigi
         type: 'healer',
         amount: 300

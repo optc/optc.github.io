@@ -14588,6 +14588,31 @@ window.specials = {
             p.cached.multiplier = (p.captain.type == "STR" || p.captain.type == "DEX" || p.captain.type == "QCK") ? 2.25 : 1;
         },
     },
+    3779: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+        type: "type",
+    },
+    3780: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 2.5 : 1; },
+        type: "type",
+    },
+    3781: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+    },
+    3782: {
+        atkPlus: function(p) { return [0.25, 0, 0.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [1, 2, 2][p.cached.multiplier]: 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

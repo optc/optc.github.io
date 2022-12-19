@@ -4341,6 +4341,11 @@ window.families = {
     3776: [ ...TonyTonyChopper, ...Tristan ],
     3777: [ ...VinsmokeSanji, ...RoronoaZoro ],
     3778: [ ...WhosWho ],
+    3779: [ ...BoaHancock ],
+    3780: [ ...BoaHancock ],
+    3781: [ ...JewelryBonney ],
+    3782: [ ...CharlottePudding ],
+    3784: [ ...TonyTonyChopper ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

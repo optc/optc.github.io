@@ -4361,6 +4361,32 @@ let matchers = {
         },
 
         {
+            name: 'Debuff Reduction: Counter-Healing',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            regex: /(?:reduces|removes)[^."]+?(?:Counter-Healing|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2, 3, 4, 5],
+                },
+            ],
+        },
+
+        {
+            name: 'Debuff Reduction: Counter-RCV',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            regex: /(?:reduces|removes)[^."]+?(?:Counter-RCV|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2, 3, 4, 5],
+                },
+            ],
+        },
+
+        {
             name: 'Old Reduce No Healing',
             targets: [ 'potential' ],
             regex: /Reduce No Healing/i,

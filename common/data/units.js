@@ -3777,6 +3777,12 @@ window.units = [
     [ "Baby Gramps Chopper", "PSY", [ "Cerebral", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1198, 673, 201, 2396, 1346, 402, 1 ],
     [ "Sanji - Carrying the Wounded", "PSY", [ "Fighter", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1485, 762, 99, 2970, 1524, 197, 1 ],
     [ "Who's-Who - Redirecting His Grudge", "INT", [ "Powerhouse", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1714, 700, 106, null, null, null, null ],
+    [ "Boa Hancock - Devotion to Her Beloved", "STR", [ "Free Spirit", "Shooter" ], 5, 30, 5, 3, 70, 1066998, 742, 448, 74, null, null, null, null ],
+    [ "Boa Hancock - Support for Her Beloved", "STR", [ "Free Spirit", "Shooter" ], 6, 55, 5, 5, 99, 5000000, 1573, 987, 148, null, null, null, null ],
+    [ "Jewelry Bonney - Escape from the Pursuers", "STR", [ "Free Spirit", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1331, 654, 147, null, null, null, null ],
+    [ "Charlotte Pudding - Revealed Third Eye", "STR", [ "Shooter", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1312, 637, 143, null, null, null, null ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Tony Tony Chopper - Glittering Gift for the Holy Night", "PSY", [ "Shooter", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 1731, 1006, 261, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
