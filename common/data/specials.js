@@ -14454,8 +14454,8 @@ window.specials = {
     3765: {
         status: function(p) { return [2, 2.25, 2.25][p.cached.multiplier]; },
         atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1000, 1250, 1500][p.cached.multiplier] : 0; },
-        atkPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
-        orbPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0, 0.3][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0.3][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -14469,8 +14469,8 @@ window.specials = {
     3766: {
         status: function(p) { return [2, 2.25, 2.25][p.cached.multiplier]; },
         atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1000, 1250, 1500][p.cached.multiplier] : 0; },
-        atkPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
-        orbPlus: function(p) { return [0, 0, 0.25][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0, 0.3][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0.3][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
