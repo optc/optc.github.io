@@ -3968,7 +3968,7 @@ window.families = {
     3396: [ ...ShimotsukiRyuma ],
     3397: [ ...Jack ],
     3398: [ ...MonkeyDLuffy, ...RoronoaZoro, ...Nami, ...Usopp, ...VinsmokeSanji, ...TonyTonyChopper, ...NicoRobin, ...Franky, ...Brook, ...Jinbe ],
-    3399: [ ...Buggy, ...Alvida, ...Cabaji, ...Mohji, ...Richie ],
+    3399: [ ...Buggy, ...Alvida, ...Cabaji, ...Mohji, ...Richie, ...Galdino ],
     3400: [ ...Monet ],
     3401: [ ...Baby5 ],
     3402: [ ...VinsmokeReiju ],
