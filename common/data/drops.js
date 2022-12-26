@@ -3169,6 +3169,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3770 ],
         },
+
+        {
+            name: 'Thunder Bagua',
+            dropID: 'event166',
+            thumb: 3788,
+            global: true,
+            nakama: 6378800,
+            gamewith: null,
+            'All Difficulties': [ 3788 ],
+        },
     ],
 
 
@@ -8199,8 +8209,8 @@ window.drops = {
             name: 'Alliance Blitz! Vs. Navy',
             thumb: 3520,
             global: true,
-            nakama: 314546,
-            gamewith: 6352000,
+            nakama: 6352000,
+            gamewith: 314546,
             'All Difficulties': [ 3520 ],
             'Chopper Man Missions': [ 9056 ],
         },
@@ -8212,6 +8222,14 @@ window.drops = {
             nakama: null,
             gamewith: 6356000,
             'All Difficulties': [ 3560 ],
+        },
+
+        {
+            name: 'Battle of Demon and Spider - Pirate Alliance Blitz Battle',
+            thumb: 3796,
+            global: true,
+            nakama: 6379600,
+            'Chopper Man Missions': [ 3796 ],
         },
 
         {

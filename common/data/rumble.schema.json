@@ -379,6 +379,14 @@
                 "amount": {
                     "type": "number"
                 },
+                "amountrange": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                },
                 "interval": {
                     "type": "number"
                 },
@@ -764,7 +772,8 @@
                 "cut",
                 "atk",
                 "atkbase",
-                "time"
+                "time",
+                "random"
             ],
             "title": "AttackEffectType"
         },

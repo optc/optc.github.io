@@ -67,6 +67,43 @@ window.CrunchUtils.classSort = function(array, classMultiplier, classes) {
     return result;
 };
     
+/* Sorts by class (units not belonging to the specified class(es) at the
+ * beginning), then by ATK. classMultiplier is the multiplier units belonging
+ * to the specified class(es) receive. */
+window.CrunchUtils.typeclassSort = function(array, classMultiplier, classes) {
+    var result = [ ];
+    function isUnitAMatch(unit) {
+        for (var n = 0;n<classes.length;n++) {
+            if (unit.class.has(classes[n])) {
+                return true;
+            }
+        }
+        if (classes.includes(unit.type)) {
+            return true;
+        }
+        return false;
+    }
+    // atk-based
+    var temp = array.map(function(x) {
+        var multiplier = x.multipliers.reduce(function(prev,next) { return prev * next[0]; },1);
+        return [ x.base * multiplier * (isUnitAMatch(x.unit.unit) ? classMultiplier : 1), x ];
+    });
+    temp.sort(function(x,y) { return x[0] - y[0]; });
+    result.push(temp.map(function(x) { return x[1]; }));
+    // class-based
+    var beginning = [ ], end = [ ];
+    array.forEach(function(x) {
+        if (isUnitAMatch(x.unit.unit)) {
+            end.push(x);
+        } else {
+            beginning.push(x);
+        }
+    });
+    result.push(beginning.concat(end));
+    // return result
+    return result;
+};
+    
 window.CrunchUtils.lowCostSort = function(array, costMultiplier, cost) {
     var result = [ ];
     function isUnitAMatch(unit) {

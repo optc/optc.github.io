@@ -13936,6 +13936,9 @@ window.specials = {
             });
         },
     },
+    3702: {
+        chainAddition: function(p) { return 1.0; },
+    },
     3703: {
         def: function(p) { return 0.5; }
     },
@@ -14609,6 +14612,95 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK Buff", "ATK boost", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3785: {
+        atk: function(p) { return 2; },
+        type: "type",
+    },
+    3786: {
+        atk: function(p) { return [2.75, 3, 3.25, 1, 2.75, 3, 3.25][p.cached.multiplier]; },
+        affinity: function(p) { return [1, 1, 1, 2.25, 2.25, 2.25, 2.25][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["2.75x ATK boost", "3x ATK boost", "3.25x ATK boost", "Affinity boost", "2.75x ATK boost and Affinity boost", "3x ATK boost and Affinity boost", "3.25x ATK boost and Affinity boost"][n] + '. To switch to the ' + ["2.75x ATK boost", "3x ATK boost", "3.25x ATK boost", "Affinity boost", "2.75x ATK boost and Affinity boost", "3x ATK boost and Affinity boost", "3.25x ATK boost and Affinity boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3789: {
+        chainAddition: function(p) { return Math.min(Math.max(1.5, 1.5 + 0.1 * Math.floor(p.turnCounter/5)), 2.5); },
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? Math.min(Math.max(1250, 1250 + 250 * Math.floor(p.turnCounter/5)), 3000) : 0; }
+    },
+    3790: {
+        chainAddition: function(p) { return Math.min(Math.max(1.5, 1.5 + 0.1 * Math.floor(p.turnCounter/5)), 2.5); },
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? Math.min(Math.max(1250, 1250 + 250 * Math.floor(p.turnCounter/5)), 3000) : 0; }
+    },
+    3791: {
+        def: function(p) { return 0.2; },
+        status: function(p) { return p.defenseDown ? 2.25 : 1; },
+    },
+    3792: {
+        def: function(p) { return 0.2; },
+        status: function(p) { return p.defenseDown ? 2.25 : 1; },
+    },
+    3793: {
+        orbPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "Orb Buff", "Orb boost and Orb buff"][n] + '. To switch to ' + ["Orb boost", "Orb Buff", "Orb boost and Orb buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3794: {
+        atkPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "ATK Buff", "ATK boost and ATK buff"][n] + '. To switch to ' + ["ATK boost", "ATK Buff", "ATK boost and ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3795: {
+        tapTiming: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? { Good: 0.2, Great: 0.2, Perfect: 0.1 } : { Good: 0, Great: 0, Perfect: 0 }; },
+        chain: function(p) { return p.cached.multiplier1[0]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier1[1] : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.captain.class.has("Striker") || p.captain.class.has("Cerebral")) ? [2.25, 10] : [1, Infinity];
+        },
+    },
+    3796: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    3816: {
+        chainMultiplication: function(p) { return [0, 0, 0, 0, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.25, 2.5, 2.75, 2.5, 2.25, 2.5, 2.75, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6, 7];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Multiplication", "Stage 2 with Chain Multiplication", "Stage 3 with Chain Multiplication", "Buff Clear with Chain Multiplication"][n] + ' boost. To ' + ["Stage 1", "Stage 2", "Stage 3", "Buff Clear", "Stage 1 with Chain Multiplication", "Stage 2 with Chain Multiplication", "Stage 3 with Chain Multiplication", "Buff Clear with Chain Multiplication"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
@@ -17418,6 +17510,46 @@ var ghostsSpecials = {
         status: function(p) { return p.delayed > 0 ? 2.25 : 1; },
         atkbase: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1250 : 1; },
         ignoresImmunities: function(p) { return (p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit")) ? ['delay'] : []; },
+    },
+    429: {
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3 : 1; },
+        type: "type",
+    },
+    430: {
+        dmgredatk: function(p) { return 1+(p.damageReductionCounter/100); },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    431: {
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3.25 : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3 : 1; },
+        type: "type",
+    },
+    432: {
+        dmgredatk: function(p) { return 1+(p.damageReductionCounter/100); },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 

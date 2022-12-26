@@ -610,6 +610,10 @@
             case 9073: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3762-skull.png'; break;
             case 'skullBrook3':
             case 9074: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3764-skull.png'; break;
+            case 'skullRoger2':
+            case 9075: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3786-skull.png'; break;
+            case 'skullUta3':
+            case 9076: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3816-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';

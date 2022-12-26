@@ -684,6 +684,8 @@ filters.specialToString = function() {
 filters.gpconditionToString = function() {
     return function(input) {
         switch (input.type){
+          case "time":
+            return `After ${input.count} seconds`
           case "damage":
             return `After dealing damage ${input.count} times`
           case "action":
@@ -698,6 +700,8 @@ filters.gpconditionToString = function() {
             return `After ${input.team} uses ${input.count} Rumble Specials`
           case "dbfreceived":
             return `After ${input.count} debuffs recieved`
+          case "dmgdealt":
+            return `After ${new Intl.NumberFormat().format(input.count)} damage dealt`
           case "dmgreceived":
             return `After ${new Intl.NumberFormat().format(input.count)} damage recieved`
           case "hitreceived":
@@ -736,6 +740,9 @@ filters.abilityToString = function() {
                   break;
                 case "fixed":
                   e += `Deals ${new Intl.NumberFormat().format(effect.amount)} fixed damage`;
+                  break;
+                case "random":
+                  e += `Randomly deals between ${new Intl.NumberFormat().format(effect.amountrange[0])}-${new Intl.NumberFormat().format(effect.amountrange[1])} fixed damage`;
                   break;
                 case "cut":
                   e += `${new Intl.NumberFormat().format(effect.amount)}% health cut`;

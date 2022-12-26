@@ -660,6 +660,7 @@ const Sarutobi = [ "Sarutobi" ];
 const Uta = [ "Uta" ];
 const Gordon = [ "Gordon" ];
 const Sunny = [ "Sunny", "Thousand Sunny" ];
+const AdioSuerte = [ "Adio Suerte" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4265,6 +4266,7 @@ window.families = {
     3699: [ ...Blueno, ...Coby ],
     3700: [ ...Sunny ],
     3701: [ ...Uta ],
+    3702: [ ...AdioSuerte ],
     3703: [ ...Issho ],
     3704: [ ...Borsalino ],
     3705: [ ...MonkeyDLuffy ],
@@ -4346,6 +4348,19 @@ window.families = {
     3781: [ ...JewelryBonney ],
     3782: [ ...CharlottePudding ],
     3784: [ ...TonyTonyChopper ],
+    3785: [ ...MonkeyDLuffy ],
+    3786: [ ...GolDRoger ],
+    3787: [ ...Kaido, ...Yamato ],
+    3788: [ ...Kaido, ...Yamato ],
+    3789: [ ...Nami ],
+    3790: [ ...Nami ],
+    3791: [ ...NicoRobin ],
+    3792: [ ...NicoRobin ],
+    3793: [ ...RoronoaZoro ],
+    3794: [ ...VinsmokeSanji ],
+    3795: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    3796: [ ...BlackMaria ],
+    3816: [ ...Uta ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
