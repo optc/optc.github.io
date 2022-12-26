@@ -1341,6 +1341,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.tdata.rcvCounter.enabled = false;
         $scope.tdata.semlaCounter.enabled = false;
         $scope.tdata.damageCounter.enabled = false;
+        $scope.tdata.dmgreductionCounter.enabled = false;
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
         // orb map effects
@@ -1421,6 +1422,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.rcvCounter.enabled = true;
             if ([3461, 3462].has(id))
                 $scope.tdata.basehpCounter.enabled = true;
+            if ([5430, 5432].has(id))
+                $scope.tdata.dmgreductionCounter.enabled = true;
+            $scope.tdata.dmgreductionCounter.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
@@ -1836,6 +1840,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         unitTemp.class1 = Array.isArray(unitTemp.class) ? unitTemp.class[0] : unitTemp.class;
         unitTemp.class2 = Array.isArray(unitTemp.class) ? unitTemp.class[1] : null;
+        console.log($scope.tdata.dmgreductionCounter.value);
         return {
             cached: getCachedParameters(sourceSlotNumber, specialType),
             unit: unitTemp,
@@ -1860,6 +1865,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             rcvCounter: $scope.tdata.rcvCounter.value,
             semlaCounter: $scope.tdata.semlaCounter.value,
             damageCounter: $scope.tdata.damageCounter.value,
+            dmgreductionCounter: $scope.tdata.dmgreductionCounter.value,
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),

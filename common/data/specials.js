@@ -17517,7 +17517,7 @@ var ghostsSpecials = {
         type: "type",
     },
     430: {
-        dmgredatk: function(p) { return 1+(p.damageReductionCounter/100); },
+        dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
@@ -17537,7 +17537,7 @@ var ghostsSpecials = {
         type: "type",
     },
     432: {
-        dmgredatk: function(p) { return 1+(p.damageReductionCounter/100); },
+        dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },

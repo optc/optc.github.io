@@ -680,6 +680,43 @@ directives.damageCounter = function() {
     };
 };
 
+directives.dmgreductionCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="dmgreductions"><div id="dmgreductionSlider"></div>' +
+            '<div id="dmgreductionLabel">{{currentDmgreductions}}% Damage Reduction</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentDamageReds = 0;
+
+            var slider = element.find('#dmgreductionSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentDamageReds ],
+                range: { min: [ 0 ], max: [ 100 ] },
+                step: 1,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentDmgreductions = parseInt(value, 10);
+                if (event == 'change') scope.tdata.dmgreductionCounter.value = scope.currentDmgreductions;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
