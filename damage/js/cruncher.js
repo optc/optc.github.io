@@ -319,7 +319,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'int') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn || window.specials[2527].turnedOn
                                      || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 'int';
-            if (orb == 'empty') orb = (window.specials[3740].turnedOn || window.specials[3741].turnedOn)  ? 2.25 : 'empty';
+            if (orb == 'empty') orb = (window.specials[3740].turnedOn || window.specials[3741].turnedOn) ? 2.25 : 'empty';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn) ? 1 : .5;
             
@@ -334,6 +334,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             orb = 2;
                         }
                         if ([ 2462, 2463 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Powerhouse")){
+                            orb = 2;
+                        }
+                    }
+                }
+            }
+            if (orb =='tnd'){
+                orb = (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 : "tnd";
+                for (temp = 0; temp < 2; temp++){
+                    if (team[temp].unit != null){
+                        if ([ 5430, 5432 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                     }
@@ -686,11 +696,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             typeMult = getAffinity('strong', attackerType);
 
         //Get the strongest Color affinity Mult if it exists and apply it
+        var affinitySpecialType = null;
         if (!$scope.data.effect || !effects[$scope.data.effect].hasOwnProperty('affinity')) {
             affinityMultiplier.forEach(function(special){
                 team.forEach(function(space){
                     var params = getParameters(teamSlot, undefined, special.sourceSlot, special.specialType);
-                    if (space.unit != null) if(affinityMult<special.affinityMultiplier(params)) affinityMult = special.affinityMultiplier(params);
+                    if (space.unit != null) if(affinityMult<special.affinityMultiplier(params)) {
+                        affinityMult = special.affinityMultiplier(params);
+                        affinitySpecialType = special.specialType;
+                    }
                 })
                 });
         }
@@ -703,6 +717,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if(plusSpecial.hasOwnProperty('affinityPlus')){
                 let params = getParameters(teamSlot, undefined, plusSpecial.sourceSlot, plusSpecial.specialType);
                 affinityPlusTemp = Math.max(affinityPlusTemp, plusSpecial.affinityPlus(params));
+            }
+        });
+        enabledEffects.forEach(function(plusEffect) {
+            if(plusEffect.hasOwnProperty('affinityPlus')){
+                let params = getParameters(teamSlot, undefined, plusEffect.sourceSlot, plusEffect.specialType);
+                affinityPlusTemp += affinitySpecialType == "special" ? plusEffect.affinityPlus(params) : 0;
             }
         });
         if (affinityMult != 1)
@@ -1024,6 +1044,29 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             orbCeilTemp = Math.max(plusSpecial.orbCeil(plusParams), orbCeilTemp);
                         }
                     });
+                    
+                    enabledEffects.forEach(function(plusEffect) {
+                        plusParams = getParameters(plusEffect.sourceSlot, undefined, plusEffect.sourceSlot, plusEffect.specialType);
+                        //console.log(plusSpecial);
+                        if(plusEffect.hasOwnProperty('atkPlus')){
+                            atkPlusTemp += data.specialType == "special" ? plusEffect.atkPlus(plusParams) : 0;
+                        }
+                        /* if(plusEffect.hasOwnProperty('atkCeil')){
+                            if(plusEffect.atkCeil(plusParams) > atkCeilTemp)
+                                atkCeilTemp = plusEffect.atkCeil(plusParams);
+                        } */
+                        if(plusEffect.hasOwnProperty('statusPlus')){
+                            if(plusEffect.statusPlus(plusParams) > statusPlusTemp)
+                                statusPlusTemp = plusEffect.statusPlus(plusParams);
+                        }
+                        if (plusEffect.hasOwnProperty('orbPlus')) {
+                            orbPlusTemp += data.specialType == "special" ? plusEffect.orbPlus(plusParams) : 0;
+                        }
+                        /* if (plusEffect.hasOwnProperty('orbCeil')) {
+                            orbCeilTemp = Math.max(plusEffect.orbCeil(plusParams), orbCeilTemp);
+                        } */
+                    });
+
                     if (!data.s) { // non-static
                         var text = data.sourceSlot > -1 ? (team[data.sourceSlot].unit ? 'special (' + shortName(team[data.sourceSlot].unit.name) + ')' : 'special') : 'special override';
                         let multiplier = data.f(params);
@@ -1124,7 +1167,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ]};
+        var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ], dmgredatk: [ ]};
         chainSpecials = [ ];
         plusSpecials = [ ];
         chainAddition = [ ];
@@ -1159,6 +1202,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result.orb.push({ ...data, type: 'orb', f: data.orb });
             if (data.hasOwnProperty('affinity'))
                 result.affinity.push({ ...data, type: 'affinity', f: data.affinity });
+            if (data.hasOwnProperty('dmgredatk'))
+                result.dmgredatk.push({ ...data, type: 'dmgredatk', f: data.dmgredatk });
             if (data.hasOwnProperty('atkbase'))
                 atkbase.push({ ...data, f: data.atkbase });
             if (data.hasOwnProperty('chain'))
@@ -1198,7 +1243,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chainAddition'))
                 captChain.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0; }});
         });
-        specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb ]);
+        specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb, result.dmgredatk ]);
         if (chainSpecials.length === 0) chainSpecials.push({
             chain: function() { return 1.0; },
             chainLimiter: function() { return Infinity; }
@@ -1424,7 +1469,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.basehpCounter.enabled = true;
             if ([5430, 5432].has(id))
                 $scope.tdata.dmgreductionCounter.enabled = true;
-            $scope.tdata.dmgreductionCounter.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
@@ -1840,7 +1884,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
         unitTemp.class1 = Array.isArray(unitTemp.class) ? unitTemp.class[0] : unitTemp.class;
         unitTemp.class2 = Array.isArray(unitTemp.class) ? unitTemp.class[1] : null;
-        console.log($scope.tdata.dmgreductionCounter.value);
         return {
             cached: getCachedParameters(sourceSlotNumber, specialType),
             unit: unitTemp,

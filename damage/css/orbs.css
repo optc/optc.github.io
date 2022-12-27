@@ -92,6 +92,12 @@
     background-image: radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
 }
 
+.unitOrb.T {
+    background-image: -webkit-radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
+    background-image: -moz-radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
+    background-image: radial-gradient(9px 3px, circle cover, oldlace, darkgoldenrod, saddlebrown);
+}
+
 .unitOrb.W {
     background-image: -webkit-radial-gradient(9px 3px, circle cover, gold, orangered, rgb(50,50,50));
     background-image: -moz-radial-gradient(9px 3px, circle cover, gold, orangered, rgb(50,50,50));
@@ -230,6 +236,17 @@
 }
 
 .superbomb-orb {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin-right: 2px;
+    text-shadow: 0 0 5px black;
+    position: relative;
+    top: 1px;
+}
+
+.tnd-orb {
     color: white;
     font-weight: bold;
     font-style: normal;

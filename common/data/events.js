@@ -1335,10 +1335,14 @@ window.events = {
     },
     5430: {
         onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
             if (++$scope.options.wanoOrbsEnabled == 1)
                 $scope.notify({ text: 'Enabling [WANO] orbs support.' });
         },
         onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
             if (--$scope.options.wanoOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
@@ -1355,10 +1359,14 @@ window.events = {
     },
     5432: {
         onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
             if (++$scope.options.wanoOrbsEnabled == 1)
                 $scope.notify({ text: 'Enabling [WANO] orbs support.' });
         },
         onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
             if (--$scope.options.wanoOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }

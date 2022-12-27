@@ -1231,4 +1231,11 @@ window.effects = {
         thumb: 2853,
         id: 86, // don't change this
     },
+    
+    'TND Orbs': {
+        description: 'Activates [TND] orb support',
+        thumb: 3788,
+        id: 87, // don't change this
+        tndOrbsEnabled: true
+    },
 };

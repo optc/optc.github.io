@@ -1563,6 +1563,32 @@ var ghostsAltSpecials = {
             });
         },
     },
+    429: {
+        increaseDamageTaken: function(p) { return 1.5; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
+    },
+    430: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    431: {
+        increaseDamageTaken: function(p) { return 1.5; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
+    },
+    432: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {

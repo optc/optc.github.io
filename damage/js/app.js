@@ -126,6 +126,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         intOrbsEnabled: 0,
         rainbowOrbsEnabled: 0,
         meatOrbsEnabled: 0,
+        tndOrbsEnabled: 0,
         wanoOrbsEnabled: 0,
         emptyOrbsEnabled: 0,
         superBombOrbsEnabled: 0,
@@ -457,6 +458,35 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         if ($rootScope.data.effect) {
             var effect = window.effects[$rootScope.data.effect];
             if (effect && effect.meatOrbsEnabled) return true;
+        }
+        return false;
+    };
+
+    /* * * * * [TND] orb control * * * * */
+
+    var resetTndOrbs = function() {
+        for (var i=0;i<6;++i) {
+            if ($scope.tdata.team[i].orb == 'tnd')
+                $scope.tdata.team[i].orb = 1;
+        }
+    };
+
+    // reset tnd slots automatically
+    $scope.$watch('options.tndOrbsEnabled',function() {
+        if (!$rootScope.areTndOrbsEnabled())
+            resetTndOrbs();
+    });
+
+    $scope.$watch('data.effect',function() {
+        if (!$rootScope.areTndOrbsEnabled())
+            resetTndOrbs();
+    });
+
+    $rootScope.areTndOrbsEnabled = function() {
+        if ($rootScope.options.tndOrbsEnabled > 0) return true;
+        if ($rootScope.data.effect) {
+            var effect = window.effects[$rootScope.data.effect];
+            if (effect && effect.tndOrbsEnabled) return true;
         }
         return false;
     };

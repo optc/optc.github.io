@@ -823,6 +823,7 @@ directives.unitOrb = function($rootScope) {
                 if (unit.orb == 'int') return 'I';
                 if (unit.orb == 'rainbow') return 'R';
                 if (unit.orb == 'meat') return 'M';
+                if (unit.orb == 'tnd') return 'T';
                 if (unit.orb == 'wano') return 'W';
                 if (unit.orb == 'empty') return 'E';
                 if (unit.orb == 'superbomb') return 'SB';
@@ -841,6 +842,9 @@ directives.unitOrb = function($rootScope) {
                     }
                     if($rootScope.areMeatOrbsEnabled()){
                         ORBS.push('meat');
+                    }
+                    if($rootScope.areTndOrbsEnabled()){
+                        ORBS.push('tnd');
                     }
                     if($rootScope.areWanoOrbsEnabled()){
                         ORBS.push('wano');
@@ -928,6 +932,9 @@ directives.unitOrb = function($rootScope) {
                 }
                 if($rootScope.areMeatOrbsEnabled()){
                     ORBS.push('meat');
+                }
+                if($rootScope.areTndOrbsEnabled()){
+                    ORBS.push('tnd');
                 }
                 if($rootScope.areWanoOrbsEnabled()){
                     ORBS.push('wano');
