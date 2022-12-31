@@ -245,6 +245,9 @@ window.altspecials = {
     3652: {
         chainMultiplication: function(p) { return 1.25; }
     },
+    3669: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
     3670: {
         chainAddition: function(p) { return 1.5; }, 
     },

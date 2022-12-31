@@ -4987,9 +4987,21 @@ let matchers = {
             regex: /\[RCV\].+into/i,
         },*/
         {
-            name: 'Has Super Special',
+            name: 'Super Type/Class Transformation',
             targets: [ 'superSpecial' ],
-            regex: /./i,
+            regex: /transforms all ([^."]+?) characters into Super/i,
+            submatchers: [
+                {
+                    type: 'separator',
+                    description: 'Affected types:',
+                },
+                ...createTypesSubmatchers([1]),
+                {
+                    type: 'separator',
+                    description: 'Affected classes:',
+                },
+                ...createClassesSubmatchers([1]),
+            ],
         },
 
         {
