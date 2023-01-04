@@ -1940,6 +1940,29 @@ let matchers = {
         },
 
         {
+            name: 'Chain Boost: Tap Timing',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /increases Chain Tap Timing Bonus of ([^."]+?)characters? to \+([?.\d]+)x(?:-([?.\d]+)x)? for (\d) turns? depending on Tap Timing/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Multiplier:',
+                    groups: [2, 3],
+                },
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [4],
+                },
+                {
+                    type: 'separator',
+                    description: 'Affected classes:',
+                },
+                ...createClassesSubmatchers([1]),
+            ],
+        },
+
+        {
             name: 'Old Chain Lockers',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
             regex: /Locks the chain multiplier/i,
