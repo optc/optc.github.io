@@ -13424,6 +13424,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
+    3794: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
     3816: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5.4 : 5 : 1; },
     },

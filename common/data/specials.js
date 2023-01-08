@@ -14690,6 +14690,9 @@ window.specials = {
     3796: {
         affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 2 : 1; },
     },
+    3797: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
+    },
     3816: {
         chainMultiplication: function(p) { return [0, 0, 0, 0, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier] : 1; },
