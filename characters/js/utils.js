@@ -310,7 +310,6 @@ CharUtils.checkMatcher = function(matcher, id) {
         targetString = window.details[id]["VSSpecial"];
     }
     if (matcher.name == "Has Level Limit Break" && window.details[id].lLimit) {//Override for Seach by Level Limit Break (To keep it with other Limit Break filters)
-        console.log("test");
         return true;
     }
 
