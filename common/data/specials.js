@@ -14684,7 +14684,7 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier1[1] : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = (p.captain.class.has("Striker") || p.captain.class.has("Cerebral")) ? [2.25, 10] : [1, Infinity];
+            p.cached.multiplier1 = (p.captain.class.has("Striker") || p.captain.class.has("Cerebral")) ? [2.25, 10] : [1, Infinity];
         },
     },
     3796: {
