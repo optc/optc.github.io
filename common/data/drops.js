@@ -6505,6 +6505,16 @@ window.drops = {
             'Coast of Wano': [ 3778 ]
         },
 
+        {
+            name: 'Wyper',
+            dropID: 'treasuremap65',
+            thumb: 3801,
+            global: true,
+            nakama: 8380100,
+            gamewith: null,
+            'Coast of Wano': [ 3801 ]
+        },
+
     ],
 
     

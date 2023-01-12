@@ -14693,6 +14693,23 @@ window.specials = {
     3797: {
         orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.75 : 1; },
     },
+    3798: {
+        increaseDamageTaken: function(p) { return 1.3; },
+    },
+    3801: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        atkPlus: function(p) { return [0, 0.2, 0.2][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.2, 0.2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity Boost", "ATK & Orb Buff", "Affinity and ATK & Orb Buff"][n] + '. To ' + ["Affinity Boost", "ATK & Orb Buff", "Affinity and ATK & Orb Buff"][(n + 1) % levels.length] + ', disable and re-enable this special. This kind of ATK & Orb Boost Buff CAN NOT tell classes of origin yet, WIP.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
     3816: {
         chainMultiplication: function(p) { return [0, 0, 0, 0, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier] : 1; },

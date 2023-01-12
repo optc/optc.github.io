@@ -2740,6 +2740,9 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Fighter") ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 30 : 0; },
     },
+    3798: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 75 : 0; },
+    },
     3816: {
         hp: function(p) { return p.unit.class.has("Cerebral") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
     },
