@@ -13402,29 +13402,29 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 5.5 : 5.25 : 1; },
         hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.25 : 1; },
     },
-    3767: {
+    3793: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher" ]); },
         hitAtk: function(p) {
             return p.unit.class.has("Slasher") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.75 : 3.5 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
-    3768: {
+    3794: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Fighter" ]); },
         hitAtk: function(p) {
             return p.unit.class.has("Fighter") ? p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]) ? 4 : p.modifiers.slice(0, p.chainPosition).subcontains(["Perfect", "Perfect", "Perfect"]) ? 3.75 : 3.5 : 1;
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
     },
-    3792: {
+    3795: {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 4.5 : 4 : 1; },
         hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
-    3793: {
+    3796: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
-    3794: {
+    3797: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
