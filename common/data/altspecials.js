@@ -345,6 +345,18 @@ window.altspecials = {
             });
         },
     },
+    3816: {
+        atkPlus: function(p) { return 0.25; },
+        orbPlus: function(p) { return 0.25; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+        warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
