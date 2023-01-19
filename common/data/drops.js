@@ -7098,6 +7098,16 @@ window.drops = {
             'Kizuna Exchange': [ 9075 ],
         },
 
+        {
+            name: 'Donquixote Doflamingo',
+            dropID: 'kizuna42',
+            thumb: 3807,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3806, 9076, 9077, 9078 ],
+        },
+
     ],
 
 

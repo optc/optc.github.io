@@ -14666,6 +14666,7 @@ window.specials = {
     3794: {
         atkPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -14709,6 +14710,40 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3802: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 1.5 : 1; },
+        type: "type",
+    },
+    3803: {
+        def: function(p) { return [0.1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.defenseDown ? [1, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the Stage ' + [1, 2][levels[n]] + ' special. To switch to the Stage' + [1, 2][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3804: {
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
+    3805: {
+        onActivation: function(p) {
+            ++p.scope.tdata.sugarToysSpecialEnabled;
+        },
+        onDeactivation: function(p) {
+            --p.scope.tdata.sugarToysSpecialEnabled;
+        },
+    },
+    3806: {
+        atkbase: function(p) { return p.unit.cost <= 40 ? 1250 : 1; },
+    },
+    3807: {
+        atkbase: function(p) { return p.unit.cost <= 40 ? 1500 : 1; },
     },
     3816: {
         chainMultiplication: function(p) { return [0, 0, 0, 0, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },

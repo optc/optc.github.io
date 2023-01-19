@@ -4365,6 +4365,12 @@ window.families = {
     3799: [ ...Ohm ],
     3800: [ ...Gedatsu, ...Shura, ...Satori ],
     3801: [ ...Wyper ],
+    3802: [ ...Queen ],
+    3803: [ ...Bartolomeo ],
+    3804: [ ...Cavendish ],
+    3805: [ ...Sugar ],
+    3806: [ ...DonquixoteDoflamingo ],
+    3807: [ ...DonquixoteDoflamingo ],
     3816: [ ...Uta ],
     //break
     4986: [ ...MonkeyDLuffy ],

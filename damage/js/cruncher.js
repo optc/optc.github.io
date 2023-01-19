@@ -512,13 +512,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
         var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
+
+        var sugarSuperEnabled = false;
+        enabledSpecials.forEach(function(special){ if(params.team[special.sourceSlot].unit.number + 1 == 3805 && special.specialType == "special") sugarSuperEnabled = true; });
         
         if(params.limit != null && params.limit != 0){
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit-1,data.unit.limitStats[stat].length-1)];
             if(!LBaddition) LBaddition = 0;
         }
         if (stat == "atk" && params.sugarToy){
-            result = 2500;
+            result = sugarSuperEnabled ? 2750 : 2500;
             candyBonus = 0;
             LBaddition = 0;
         }
@@ -777,8 +780,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             // sugarToy in team does not get affected
             //console.log(params.team[damage[i].position].unit);
             var params2 = getParameters(damage[i].position, undefined, tapTimingSpecial && tapTimingSpecial.sourceSlot, tapTimingSpecial && tapTimingSpecial.specialType);
+            //console.log(enabledSpecials[0] ? enabledSpecials[0].sourceSlot : 1);
 
-            var hobbyBuff = (params.scope.tdata.sugarToysSpecialEnabled && hitModifiers[i] == 'Perfect' && params.team[damage[i].position].sugarToy) ? 0.4 : 0; //0.7 For each HOBBY-HOBBY Hit, but trying to consolidate it with tapTiming buffs, so subtract the 0.3x already inherited from Perfects
+            var sugarSuperEnabled = false;
+            enabledSpecials.forEach(function(special){ if(params.team[special.sourceSlot].unit.number + 1 == 3805 && special.specialType == "special") sugarSuperEnabled = true; });
+            
+            var hobbyBuff = (params.scope.tdata.sugarToysSpecialEnabled && hitModifiers[i] == 'Perfect' && params.team[damage[i].position].sugarToy) ? sugarSuperEnabled ? 0.5 : 0.4 : 0; //0.7 For each HOBBY-HOBBY Hit (0.8 with Super Evolution), but trying to consolidate it with tapTiming buffs, so subtract the 0.3x already inherited from Perfects
             var tapTimingBuff = tapTimingSpecial && !(params.scope.tdata.sugarToysSpecialEnabled && params.team[damage[i].position].sugarToy) ? tapTimingSpecial.tapTiming(params2)[hitModifiers[i]] : 0;
 
             if (hitModifiers[i] == 'Perfect') result += chainModifier * (0.3 + hobbyBuff + tapTimingBuff);

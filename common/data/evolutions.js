@@ -5321,7 +5321,7 @@ window.evolutions = {
     },
     3707: {
         evolution: 3708,
-        evolvers: [  ]
+        evolvers: [ "skullDoflamingo3", "skullDoflamingo3", "skullDoflamingo3", "skullDoflamingo3", "skullDoflamingo3" ]
     },
     3701: {
         evolution: 3713,
@@ -5418,6 +5418,14 @@ window.evolutions = {
     3791: {
         evolution: 3792,
         evolvers: [  ]
+    },
+    3009: {
+        evolution: 3805,
+        evolvers: [ "skullSugar", "skullSugar", "skullSugar", "skullSugar", "skullSugar" ]
+    },
+    3806: {
+        evolution: 3807,
+        evolvers: [ "skullSugar", "skullSugar", "skullSugar", "skullSugar", "skullSugar" ]
     },
     3721: {
         evolution: 3816,
