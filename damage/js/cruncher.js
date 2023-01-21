@@ -412,6 +412,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 ((window.specials[2128].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Striker"))) ? 2 : 1;
             if (orb == 'rainbow') orb = 2;
             if (orb == 'empty') orb = 1;
+            if (orb == 'tnd') orb = 1;
             if (orb == 'wano') orb = 2.5;
             if (orb == 'g') orb = 1.5;
             if (orb == 'superbomb') orb = 1.5;
