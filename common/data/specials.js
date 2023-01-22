@@ -17572,6 +17572,7 @@ var ghostsSpecials = {
         type: "type",
     },
     430: {
+        turnedOn: false,
         dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
         type: "type",
@@ -17580,11 +17581,15 @@ var ghostsSpecials = {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        }
     },
     431: {
         orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3.25 : 1; },
@@ -17592,6 +17597,7 @@ var ghostsSpecials = {
         type: "type",
     },
     432: {
+        turnedOn: false,
         dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
         type: "type",
@@ -17600,11 +17606,15 @@ var ghostsSpecials = {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
                 text: 'Using the ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK boost", "Orb boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        }
     },
 };
 

@@ -311,6 +311,9 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     if(window.specials[3740].turnedOn || window.specials[3741].turnedOn){
         if (orb == 'empty') return boostedMultiplier;
     }
+    if(window.specials[5430].turnedOn || window.specials[5432].turnedOn || window.altspecials[5432].turnedOn || window.altspecials[5432].turnedOn){
+        if (orb == 'tnd') return boostedMultiplier;
+    }
     if(window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn){
         if (orb == 0.5) return baseMultiplier;
     }

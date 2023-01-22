@@ -340,7 +340,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
             }
             if (orb =='tnd'){
-                orb = (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 : "tnd";
+                orb = (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 :
+                    (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : "tnd";
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
                         if ([ 5430, 5432 ].includes(team[temp].unit.number + 1)){
