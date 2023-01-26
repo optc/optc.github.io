@@ -14745,6 +14745,107 @@ window.specials = {
     3807: {
         atkbase: function(p) { return p.unit.cost <= 40 ? 1500 : 1; },
     },
+    3808: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        atkplus: function(p) { return p.cached.multiplier2; },
+        orbplus: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.percHP <= 50.0 ? 0.25 : 0;
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "ATK Boost", "Orb and ATK Boost"][n] + '. To switch to ' + ["Orb Boost", "ATK Boost", "Orb and ATK Boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3809: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        atkplus: function(p) { return p.cached.multiplier2; },
+        orbplus: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.percHP <= 50.0 ? 0.25 : 0;
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "ATK Boost", "Orb and ATK Boost"][n] + '. To switch to ' + ["Orb Boost", "ATK Boost", "Orb and ATK Boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3810: {
+        orb: function(p) { return p.cached.multiplier; },
+        atkplus: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            var levels = [2.5, 2.75, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.sourceSlot > 1 ? 0.25 : 0;
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x Orb boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3811: {
+        orb: function(p) { return p.cached.multiplier; },
+        atkplus: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            var levels = [2.5, 2.75, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier2 = p.sourceSlot > 1 ? 0.25 : 0;
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x Orb boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3812: {
+        def: function(p) { return [1, 0][p.cached.multiplier]; },
+        status: function(p) { return p.defenseDown ? 2 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + [0, 100][levels[n]] + '% Defense Down. To switch to the Stage' + [0, 100][levels[(n + 1) % levels.length]] + '% Defense Down, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3813: {
+        def: function(p) { return 0.2; },
+        chain: function(p) { return 2.0; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 10.0 : 1;
+        },
+    },
+    3814: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        atkbase: function(p) { return p.slot <= 1 ? Math.min(p.rcvCounter*200,2000) : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "Orb Boost", "ATK and Orb Boost"][n] + '. To switch to ' + ["ATK Boost", "Orb Boost", "ATK and Orb Boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3815: {
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 800 : 0; },
+    },
     3816: {
         chainMultiplication: function(p) { return [0, 0, 0, 0, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier] : 1; },

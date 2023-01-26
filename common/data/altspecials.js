@@ -1607,6 +1607,118 @@ var ghostsAltSpecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    433: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    434: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    435: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    436: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    437: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    438: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    439: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    440: {
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 1, 1.3][p.cached.multiplier]; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][n] + '. To switch to ' + ["ATK boost", "Chain Addition", "ATK boost and Chain Addition"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {

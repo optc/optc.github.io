@@ -5427,6 +5427,18 @@ window.evolutions = {
         evolution: 3807,
         evolvers: [ "skullSugar", "skullSugar", "skullSugar", "skullSugar", "skullSugar" ]
     },
+    3808: {
+        evolution: 3809,
+        evolvers: [  ]
+    },
+    3810: {
+        evolution: 3811,
+        evolvers: [  ]
+    },
+    3334: {
+        evolution: 3814,
+        evolvers: [ 'skullLuffy2', 'skullLuffy2', 'skullLuffy2', 'skullLuffy2', 'skullLuffy2' ]
+    },
     3721: {
         evolution: 3816,
         evolvers: [ "skullUta3", "skullUta3", "skullUta3", "skullUta3", "skullUta3" ]

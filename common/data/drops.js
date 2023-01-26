@@ -3179,6 +3179,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3795 ],
         },
+
+        {
+            name: 'I Am Oden!!',
+            dropID: 'event167',
+            thumb: 3815,
+            global: true,
+            nakama: 6381500,
+            gamewith: null,
+            'All Difficulties': [ 3815 ],
+        },
     ],
 
 
