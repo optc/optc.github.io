@@ -3808,11 +3808,11 @@ window.units = [
     [ "Donquixote Doflamingo - Birdcage Enclosing on Peace", "QCK", [ "Driven", "Cerebral" ], "5+", 40, 4, 4, 99, 5000000, 1403, 993, 86, 3491, 1571, 201, 1 ],
     [ "Edward Newgate - The Landing Great Pirate", "DEX", [ "Striker", "Powerhouse" ], 5, 30, 5, 3, 70, 1066998, 1023, 443, 49, null, null, null, null ],
     [ "Edward Newgate - Fierce Battle of the Great Pirate", "DEX", [ "Striker", "Powerhouse" ], 6, 55, 5, 5, 99, 5000000, 2015, 880, 96, null, null, null, null ],
-    [ "Rayleigh & Gaban - The Mighty Duo", ["PSY", "DEX"], [[ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ]], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, null, null, null, null ],
-    [ "Rayleigh & Gaban - The Assaulting Duo", ["PSY", "DEX"], [[ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ]], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, null, null, null, null ],
-    [ "Shanks - Back-to-Back Pirate Apprentices", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1540, 758, 119, null, null, null, null ],
-    [ "Buggy - Back-to-Back Pirate Apprentices", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1674, 720, 106, null, null, null, null ],
-    [ "Monkey D. Luffy - Inherited Straw Hat", "QCK", [ "Free Spirit", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2165, 1153, 126, null, null, null, null ],
+    [ "Rayleigh & Gaban - The Mighty Duo", ["PSY", "DEX"], [[ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ]], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, 2241, 894, 113, 1 ],
+    [ "Rayleigh & Gaban - The Assaulting Duo", ["PSY", "DEX"], [[ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ]], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, 4422, 1775, 222, 1 ],
+    [ "Shanks - Back-to-Back Pirate Apprentices", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1540, 758, 119, 3080, 1496, 238, 1 ],
+    [ "Buggy - Back-to-Back Pirate Apprentices", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1674, 720, 106, 3348, 1440, 212, 1 ],
+    [ "Monkey D. Luffy - Inherited Straw Hat", "QCK", [ "Free Spirit", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2165, 1153, 126, 4330, 1730, 252, 1 ],
     [ "Kozuki Oden - Welcoming Feast", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1556, 710, 104, null, null, null, null ],
     [ "Uta - The Song for the End", "QCK", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1878, 800, 202, 3756, 1759, 404, 1 ],
 ];
@@ -4276,6 +4276,14 @@ var ghostsUnits = [
     [ "[VS Unit] Yamato - Standoff of Mystical Beasts", "DEX", [ "Striker", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1147, 450, 64, 2394, 900, 129, 1 ],
     [ "[VS Unit] Kaido - Clashing Father and Son", "INT", [ "Striker", "Driven" ], 6, 55, 4, 5, 99, 5000000, 2428, 901, 95, 4856, 1802, 190, 1 ],
     [ "[VS Unit] Yamato - Clashing Father and Son", "DEX", [ "Striker", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 2264, 896, 124, 4528, 1792, 248, 1 ],
+    [ "[Dual Unit] Rayleigh - The Mighty Duo", "PSY", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, 1954, 823, 112, 1 ],
+    [ "[Dual Unit] Gaban - The Mighty Duo", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, 1975, 841, 104, 1 ],
+    [ "[Dual Unit] Rayleigh & Gaban - The Mighty Duo", "PSY", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, 2241, 894, 113, 1 ],
+    [ "[Dual Unit] Rayleigh & Gaban - The Mighty Duo", "DEX", [ "Free Spirit", "Cerebral" ], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, 2241, 894, 113, 1 ],
+    [ "[Dual Unit] Rayleigh - The Assaulting Duo", "PSY", [ "Free Spirit", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, 3848, 1634, 220, 1 ],
+    [ "[Dual Unit] Gaban - The Assaulting Duo", "DEX", [ "Free Spirit", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, 3890, 1670, 204, 1 ],
+    [ "[Dual Unit] Rayleigh & Gaban - The Assaulting Duo", "PSY", [ "Free Spirit", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, 4422, 1775, 222, 1 ],
+    [ "[Dual Unit] Rayleigh & Gaban - The Assaulting Duo", "DEX", [ "Free Spirit", "Cerebral" ], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, 4422, 1775, 222, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

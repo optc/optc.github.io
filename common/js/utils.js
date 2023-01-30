@@ -491,41 +491,59 @@
             case 'skullINT':
             case 9014: return relPathToRoot + '/api/images/common/skull-INT.png'; break;
             case 'skullJudge':
-            case 9015: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f1.png'; break;
+            case 9015: return relPathToRoot + '/api/images/thumbnail/jap/2/100/2138-skull.png'; break;
+            //case 9015: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f1.png'; break;
             case 'skullReiju':
-            case 9016: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f2.png'; break;
+            case 9016: return relPathToRoot + '/api/images/thumbnail/jap/2/100/2139-skull.png'; break;
+            //case 9016: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f2.png'; break;
             case 'skullIchiji':
-            case 9017: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f3.png'; break;
+            case 9017: return relPathToRoot + '/api/images/thumbnail/jap/2/100/2140-skull.png'; break;
+            //case 9017: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f3.png'; break;
             case 'skullNiji':
-            case 9018: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f4.png'; break;
+            case 9018: return relPathToRoot + '/api/images/thumbnail/jap/2/100/2141-skull.png'; break;
+            //case 9018: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f4.png'; break;
             case 'skullYonji':
-            case 9019: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f5.png'; break;
+            case 9019: return relPathToRoot + '/api/images/thumbnail/jap/2/100/2142-skull.png'; break;
+            //case 9019: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f5.png'; break;
             case 'skullDoffy':
-            case 9020: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f.png'; break;
+            case 9020: return relPathToRoot + '/api/images/thumbnail/jap/2/100/2126-skull.png'; break;
+            //case 9020: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f.png'; break;
             case 'skullEnel':
-            case 9021: return 'https://onepiece-treasurecruise.com/wp-content/uploads/enel_skull_f.png'; break;
+            case 9021: return relPathToRoot + '/api/images/thumbnail/jap/2/200/2232-skull.png'; break;
+            //case 9021: return 'https://onepiece-treasurecruise.com/wp-content/uploads/enel_skull_f.png'; break;
             case 'skullHiguma':
-            case 9022: return 'https://onepiece-treasurecruise.com/wp-content/uploads/higuma_skull_f.png'; break;
+            case 9022: return relPathToRoot + '/api/images/thumbnail/jap/2/200/2259-skull.png'; break;
+            //case 9022: return 'https://onepiece-treasurecruise.com/wp-content/uploads/higuma_skull_f.png'; break;
             case 'skullSanji2':
-            case 9023: return 'https://onepiece-treasurecruise.com/wp-content/uploads/sanji_skull_f.png'; break;
+            case 9023: return relPathToRoot + '/api/images/thumbnail/jap/2/200/2245-skull.png'; break;
+            //case 9023: return 'https://onepiece-treasurecruise.com/wp-content/uploads/sanji_skull_f.png'; break;
             case 'skullFrankie':
-            case 9024: return 'https://onepiece-treasurecruise.com/wp-content/uploads/frankie_skull_f.png'; break;
+            case 9024: return relPathToRoot + '/api/images/thumbnail/jap/2/300/2300-skull.png'; break;
+            //case 9024: return 'https://onepiece-treasurecruise.com/wp-content/uploads/frankie_skull_f.png'; break;
             case 'skullCavendish':
-            case 9025: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Cavendish_skull_f.png'; break;
+            case 9025: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2434-skull.png'; break;
+            //case 9025: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Cavendish_skull_f.png'; break;
             case 'skullDoflamingo':
-            case 9026: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f2.png'; break;
+            case 9026: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2444-skull.png'; break;
+            //case 9026: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Doflamingo_skull_f2.png'; break;
             case 'skullIchiji2':
-            case 9027: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f6.png'; break;
+            case 9027: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2448-skull.png'; break;
+            //case 9027: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f6.png'; break;
             case 'skullNiji2':
-            case 9028: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f7.png'; break;
+            case 9028: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2450-skull.png'; break;
+            //case 9028: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f7.png'; break;
             case 'skullYonji2':
-            case 9029: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f8.png'; break;
+            case 9029: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2452-skull.png'; break;
+            //case 9029: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f8.png'; break;
             case 'skullReiju2':
-            case 9030: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f9.png'; break;
+            case 9030: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2454-skull.png'; break;
+            //case 9030: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Jerma_skull_f9.png'; break;
             case 'skullHancock':
-            case 9031: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Hancock_skull_f.png'; break;
+            case 9031: return relPathToRoot + '/api/images/thumbnail/jap/2/400/2434-skull.png'; break;
+            //case 9031: return 'https://onepiece-treasurecruise.com/wp-content/uploads/Hancock_skull_f.png'; break;
             case 'skullNami2':
-            case 9032: return 'https://onepiece-treasurecruise.com/wp-content/uploads/nami_skull_f.png'; break;
+            case 9032: return relPathToRoot + '/api/images/thumbnail/jap/2/500/2588-skull.png'; break;
+            //case 9032: return 'https://onepiece-treasurecruise.com/wp-content/uploads/nami_skull_f.png'; break;
             case 'skullBullet':
             case 9033: return relPathToRoot + '/api/images/thumbnail/jap/2/600/2681-skull.png'; break;
             case 'skullKatakuri':
@@ -614,6 +632,12 @@
             case 9075: return relPathToRoot + '/api/images/thumbnail/jap/3/700/3786-skull.png'; break;
             case 'skullUta3':
             case 9076: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3816-skull.png'; break;
+            case 'skullSugar':
+            case 9077: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3805-skull.png'; break;
+            case 'skullDoflamingo4':
+            case 9078: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3807-skull.png'; break;
+            case 'skullLuffy2':
+            case 9079: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3814-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';

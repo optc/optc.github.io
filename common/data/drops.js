@@ -7115,7 +7115,7 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: null,
-            'Kizuna Exchange': [ 3806, 9076, 9077, 9078 ],
+            'Kizuna Exchange': [ 3806, 9075, 9077, 9078 ],
         },
 
     ],
