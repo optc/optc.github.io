@@ -2784,6 +2784,16 @@ window.sailors = {
     3816: {
         hp: function(p) { return p.unit.class.has("Cerebral") ? [1, 1, 1.1][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 1; },
     },
+    3817: {
+        atkStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+    },
+    3818: {
+        atkStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "PSY" ? 30 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

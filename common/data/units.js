@@ -3815,6 +3815,8 @@ window.units = [
     [ "Monkey D. Luffy - Inherited Straw Hat", "QCK", [ "Free Spirit", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2165, 1153, 126, 4330, 1730, 252, 1 ],
     [ "Kozuki Oden - Welcoming Feast", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1556, 710, 104, null, null, null, null ],
     [ "Uta - The Song for the End", "QCK", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1878, 800, 202, 3756, 1759, 404, 1 ],
+    [ "Crocus - Ship Doctor of the Roger Pirates", "PSY", [ "Cerebral", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2059, 667, 135, null, null, null, null ],
+    [ "Nozudon & Sambel", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2022, 777, 104, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

@@ -13479,6 +13479,13 @@ window.captains = {
     3816: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5.4 : 5 : 1; },
     },
+    3817: {
+        atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    3818: {
+        atk: function(p) { return p.unit.type == "PSY" ? 3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

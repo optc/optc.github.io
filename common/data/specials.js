@@ -14861,6 +14861,13 @@ window.specials = {
             });
         },
     },
+    3817: {
+        affinity: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+    },
+    3818: {
+        atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

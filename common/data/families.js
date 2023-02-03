@@ -661,6 +661,8 @@ const Uta = [ "Uta" ];
 const Gordon = [ "Gordon" ];
 const Sunny = [ "Sunny", "Thousand Sunny" ];
 const AdioSuerte = [ "Adio Suerte" ];
+const Nozudon = [ "Nozudon" ];
+const Sambel = [ "Sambel" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4380,6 +4382,8 @@ window.families = {
     3814: [ ...MonkeyDLuffy ],
     3815: [ ...KozukiOden ],
     3816: [ ...Uta ],
+    3817: [ ...Crocus ],
+    3818: [ ...Nozudon, ...Sambel ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
