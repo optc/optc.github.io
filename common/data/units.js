@@ -3806,17 +3806,17 @@ window.units = [
     [ "Sugar - Queen of Toys Controlling Lives", "QCK", [ "Driven", "Cerebral" ], "6+", 40, 4, 5, 99, 5000000, 1970, 1103, 195, 3940, 1654, 342, 1 ],
     [ "Donquixote Doflamingo - Game-Ending Bullet String", "QCK", [ "Driven", "Cerebral" ], 5, 40, 4, 4, 99, 5000000, 1291, 841, 81, 3210, 1460, 198, 1 ],
     [ "Donquixote Doflamingo - Birdcage Enclosing on Peace", "QCK", [ "Driven", "Cerebral" ], "5+", 40, 4, 4, 99, 5000000, 1403, 993, 86, 3491, 1571, 201, 1 ],
-    [ "Edward Newgate - The Landing Great Pirate", "DEX", [ "Striker", "Powerhouse" ], 5, 30, 5, 3, 70, 1066998, 1023, 443, 49, null, null, null, null ],
-    [ "Edward Newgate - Fierce Battle of the Great Pirate", "DEX", [ "Striker", "Powerhouse" ], 6, 55, 5, 5, 99, 5000000, 2015, 880, 96, null, null, null, null ],
+    [ "Edward Newgate - The Landing Great Pirate", "DEX", [ "Striker", "Powerhouse" ], 5, 30, 5, 3, 70, 1066998, 1023, 443, 49, 2045, 886, 98, 1 ],
+    [ "Edward Newgate - Fierce Battle of the Great Pirate", "DEX", [ "Striker", "Powerhouse" ], 6, 55, 5, 5, 99, 5000000, 2015, 880, 96, 4030, 1760, 192, 1 ],
     [ "Rayleigh & Gaban - The Mighty Duo", ["PSY", "DEX"], [[ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ]], 5, 30, 4, 3, 70, 1066998, 1121, 447, 57, 2241, 894, 113, 1 ],
     [ "Rayleigh & Gaban - The Assaulting Duo", ["PSY", "DEX"], [[ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ], [ "Free Spirit", "Cerebral" ]], 6, 55, 4, 5, 99, 5000000, 2211, 888, 111, 4422, 1775, 222, 1 ],
     [ "Shanks - Back-to-Back Pirate Apprentices", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1540, 758, 119, 3080, 1496, 238, 1 ],
     [ "Buggy - Back-to-Back Pirate Apprentices", "PSY", [ "Free Spirit", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1674, 720, 106, 3348, 1440, 212, 1 ],
     [ "Monkey D. Luffy - Inherited Straw Hat", "QCK", [ "Free Spirit", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2165, 1153, 126, 4330, 1730, 252, 1 ],
-    [ "Kozuki Oden - Welcoming Feast", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1556, 710, 104, null, null, null, null ],
+    [ "Kozuki Oden - Welcoming Feast", "DEX", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1556, 710, 104, 3112, 1420, 208, 1 ],
     [ "Uta - The Song for the End", "QCK", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1878, 800, 202, 3756, 1759, 404, 1 ],
-    [ "Crocus - Ship Doctor of the Roger Pirates", "PSY", [ "Cerebral", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2059, 667, 135, null, null, null, null ],
-    [ "Nozudon & Sambel", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2022, 777, 104, null, null, null, null ],
+    [ "Crocus - Ship Doctor of the Roger Pirates", "PSY", [ "Cerebral", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2059, 667, 135, 4118, 1334, 269, 1 ],
+    [ "Nozudon & Sambel", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2022, 777, 104, 4044, 1554, 208, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

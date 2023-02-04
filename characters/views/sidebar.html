@@ -20,6 +20,8 @@
         ng-click="filters.potential = !filters.potential">Show Characters with Potential Abtilites</span>
     <span class="filter width-12 exc" ng-model="filters.noLBex" ng-class="{ active: filters.noLBex }"
         ng-click="filters.noLBex = !filters.noLBex">Show Characters with no Limit Break +</span>
+    <span class="filter width-12 exc" ng-model="filters.noLLB" ng-class="{ active: filters.noLLB }"
+        ng-click="filters.noLLB = !filters.noLLB">Show Characters with No Level Limit Break</span>
     <span class="filter width-12 exc" ng-model="filters.noSupport" ng-class="{ active: filters.noSupport }"
         ng-click="filters.noSupport = !filters.noSupport">Show Characters with no support</span>
     <span class="filter width-12 exc" ng-model="filters.typoClass" ng-class="{ active: filters.typoClass }"
@@ -198,6 +200,14 @@
         ng-model="filters.nonFarmable.slrr" ng-click="onDropFilterClick($event,true)">Support Limited RR-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.slrr === false }"
         ng-model="filters.nonFarmable.slrr" ng-click="onDropFilterClick($event,false)">Hide Support lim. RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.superlrr }"
+        ng-model="filters.nonFarmable.superlrr" ng-click="onDropFilterClick($event,true)">Super Limited RR-only</span><!--
+--><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.superlrr === false }"
+    ng-model="filters.nonFarmable.superlrr" ng-click="onDropFilterClick($event,false)">Hide Super lim. RR-only</span>
+    <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.annilrr }"
+        ng-model="filters.nonFarmable.annilrr" ng-click="onDropFilterClick($event,true)">Anniversary Limited RR-only</span><!--
+--><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.annilrr === false }"
+    ng-model="filters.nonFarmable.annilrr" ng-click="onDropFilterClick($event,false)">Hide Anniversary lim. RR-only</span>
     <span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo }"
         ng-model="filters.nonFarmable.promo" ng-click="onDropFilterClick($event,true)">Promo-only</span><!--
  --><span class="filter width-6 drop" ng-class="{ active: filters.nonFarmable.promo === false }"

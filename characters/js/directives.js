@@ -439,6 +439,8 @@ directives.addTags = function($stateParams, $rootScope) {
             if (flags.pflrr) htmlToAppend += '<span class="tag flag">Pirate Rumble Sugo-fest Limited Rare Recruit only</span>';
             if (flags.superlrr) htmlToAppend += '<span class="tag flag">Super Sugo-fest Limited Rare Recruit only</span>';
             if (flags.slrr) htmlToAppend += '<span class="tag flag">Support Sugo-fest Limited Rare Recruit only</span>';
+            if (flags.superlrr) htmlToAppend += '<span class="tag flag">Super Sugo-fest Limited Rare Recruit only</span>';
+            if (flags.annilrr) htmlToAppend += '<span class="tag flag">Anniversary Sugo-fest Limited Rare Recruit only</span>';
             if (flags.promo) htmlToAppend += '<span class="tag flag">Promo-code only</span>';
             if (flags.shop) htmlToAppend += '<span class="tag flag">Rayleigh Shop Unit</span>';
             if (flags.tmshop) htmlToAppend += '<span class="tag flag">Trade Port Unit</span>';

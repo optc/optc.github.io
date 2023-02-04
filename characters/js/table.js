@@ -183,6 +183,12 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
             // Support RR
             if (filters.nonFarmable.slrr && !flags.slrr) return false;
             if (filters.nonFarmable.slrr === false && flags.slrr) return false;
+            // Super RR
+            if (filters.nonFarmable.superlrr && !flags.superlrr) return false;
+            if (filters.nonFarmable.superlrr === false && flags.superlrr) return false;
+            // Anni RR
+            if (filters.nonFarmable.annilrr && !flags.annilrr) return false;
+            if (filters.nonFarmable.annilrr === false && flags.annilrr) return false;
         }
         if (filters.farmable && Object.keys(filters.farmable).length > 0){
             if (farmableLocations !== null) {
@@ -257,6 +263,8 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
                 if (window.details[id].limit[x].description.includes("LOCKED WITH KEY")) return false;
             }
         }
+        if (filters.noLLB && window.details[id]) if("lLimit" in window.details[id]) return false;
+
         if (filters.noSupport && window.details[id]) if("support" in window.details[id]) return false;
         if (filters.globalTM && [ 3800, 3799, 3798, 3792, 3790, 3788, 5431, 5432, 3778, 3796, 3795, 3794, 3793, 3786, 3785, 3784, 3816, 3780, 3769, 3768, 3767, 3766, 3702, 3177, 3009, 3801, 3773, 3770, 3764, 3758, 3736, 3645, 3217, 3060, 5256, 5257, 5258, 5259, 2618, 5168, 5169, 5170, 5171, 2510, 2261, 2137, 3775, 3735, 3641, 3563, 3543, 5393, 5394, 5395, 5396, 3523, 3483, 3462, 3364, 3777, 3776, 3688, 3687, 3686, 3525, 3524, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3757, 3756, 3755, 3749, 3748, 3747, 3746, 3745, 3762, 3750, 3743, 3580, 3235, 3004, 2988, 2915, 2869, 2846, 2698, 2819, 5188, 5189, 5190, 5191, 2611, 2517, 5054, 5055, 5056, 5057, 2375, 1828, 1696, 1630, 1163, 1047, 865, 771, 654, 951, 1289, 1384, 1963, 2015, 2146, 2177, 2281, 1606, 1853 ].indexOf(id) == -1) return false;
         if (filters.globalKC && [ 3623, 3624, 3625, 2023, 3595, 3597, 3598, 3599, 3600, 3601, 3607, 3609, 3611, 3613, 3614, 3615, 3616, 3617, 3618, 3619, 3620, 3621, 5417, 5418, 5419, 5420, 3212, 3242, 3274, 3300, 5314, 5315, 5316, 5317, 3301, 3302, 3349, 5333, 5334, 5335, 5336, 3370, 3371, 3372, 3391, 3392, 3418, 3445, 3446, 3447, 3468, 3487, 3488, 3508, 5369, 5370, 5371, 5372, 3509, 3528, 3529, 3549, 3548, 3590, 3591, 3154, 3202, 3211, 3240, 3275, 3298, 3350, 3369, 3393, 3417, 3352, 3397, 3448, 3469, 3490, 3510, 3532, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 2756, 2793, 2832, 2853, 2887, 2889, 2888, 2996, 2997, 2998, 3120, 3121, 3118, 3204, 5296, 5297, 5298, 5299, 3205, 3574, 5409, 5410, 5411, 5412, 3576, 3577, 3578 ].indexOf(id) == -1) return false;
