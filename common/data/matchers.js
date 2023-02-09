@@ -4944,6 +4944,12 @@ let matchers = {
     ],
     'Other': [
         {
+            name: 'Exclude Passive Base Stat Boost Only',
+            targets: [ 'support' ],
+            regex: /"description":[^\]]*?(\["|",")(?!Adds ([?.\d]+)% of this character's base (?:ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV) to the supported character's base (?:ATK|HP|RCV|ATK and HP|ATK and RCV|HP and RCV|ATK, HP and RCV)\.?")[^"]*"/i,
+        },
+
+        {
             name: 'Old Captain Swapping %target%',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /Swaps this unit with your captain/i,
