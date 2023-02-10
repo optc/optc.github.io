@@ -688,7 +688,7 @@ filters.gpconditionToString = function() {
     return function(input) {
         switch (input.type){
           case "time":
-            return `After ${input.count} seconds`
+            return `${input.comparator == "after" ? "After" : "At Exactly"} ${input.count} seconds`
           case "damage":
             return `After dealing damage ${input.count} times`
           case "action":
