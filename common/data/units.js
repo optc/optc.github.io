@@ -3817,6 +3817,10 @@ window.units = [
     [ "Uta - The Song for the End", "QCK", [ "Cerebral", "Shooter" ], "6+", 65, 4, 5, 99, 5000000, 1878, 800, 202, 3756, 1759, 404, 1 ],
     [ "Crocus - Ship Doctor of the Roger Pirates", "PSY", [ "Cerebral", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2059, 667, 135, 4118, 1334, 269, 1 ],
     [ "Nozudon & Sambel", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2022, 777, 104, 4044, 1554, 208, 1 ],
+    [ "Marco - Young Blue Bird Dancing in Battle", "DEX", [ "Fighter", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1356, 705, 139, null, null, null, null ],
+    [ "Whitey Bay - Young Witch Dancing at Sunset", "DEX", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1501, 681, 123, null, null, null, null ],
+    [ "Marshall D. Teach - Young Pirate Rushing to Battle", "PSY", [ "Slasher", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1732, 705, 77, null, null, null, null ],
+    [ "Izo - Diligent Persuasion", "DEX", [ "Shooter", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1506, 692, 143, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

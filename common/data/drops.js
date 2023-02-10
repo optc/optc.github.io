@@ -6522,7 +6522,17 @@ window.drops = {
             global: true,
             nakama: 8380100,
             gamewith: null,
-            'Coast of Wano': [ 3801 ]
+            'Coast of Wano': [ 3801, 9075 ]
+        },
+
+        {
+            name: 'Izo',
+            dropID: 'treasuremap66',
+            thumb: 3822,
+            global: true,
+            nakama: 8382200,
+            gamewith: null,
+            'Coast of Wano': [ 3822, 9079 ]
         },
 
     ],

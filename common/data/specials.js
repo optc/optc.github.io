@@ -14868,6 +14868,40 @@ window.specials = {
         atk: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
         type: "type",
     },
+    3819: {
+        atkbasePlus: function(p) { return p.cached.multiplier2; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [p.cached.multiplier1, 0][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP < 50 ? 1000 : 700;
+            p.cached.multiplier2 = p.percHP <= 30 ? 250 : 0;
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK Boost", "Base ATK Boost Disabled"][n] + '. To switch to ' + ["Base ATK Boost", "Base ATK Boost Disabled"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3820: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.captain.class.has("Slasher") || p.captain.class.has("Powerhouse") ? [1, 1.2][p.cached.multiplier] : 0;
+            p.scope.notify({
+                text: 'Using the ' + [1.0, 1.2][n] + 'x Chain Addition. To switch to ' + [1.0, 1.2][(n + 1) % levels.length] + 'x Chain Addition, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3821: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.type == "DEX" || p.captain.type == "PSY" ? 2 : 1.75;
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

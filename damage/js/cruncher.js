@@ -528,13 +528,20 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             LBaddition = 0;
         }
         enabledSpecials.forEach(function(data) {
+            var atkbaseTemp = 0;
+            var atkbasePlusTemp = 0;
             if (data.hasOwnProperty('atkbase') && stat == "atk"){
                 params.cached = getCachedParameters(data.sourceSlot, data.specialType);
                 params["sourceSlot"] = data.sourceSlot;
-                atkbaseDamage = data.atkbase(params);
+                atkbaseTemp = Math.max(data.atkbase(params),atkbaseTemp);
+            }
+            if (data.hasOwnProperty('atkbasePlus') && stat == "atk"){
+                params.cached = getCachedParameters(data.sourceSlot, data.specialType);
+                params["sourceSlot"] = data.sourceSlot;
+                atkbasePlusTemp = Math.max(data.atkbase(params),atkbasePlusTemp);
             }
         });
-
+        atkbaseDamage += atkbaseTemp+atkbasePlusTemp;
         atkbaseDamage = parseFloat($scope.data.customATKBase) != 0 && stat == "atk" ? parseFloat($scope.data.customATKBase) : atkbaseDamage;
 
         if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
@@ -542,7 +549,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         
         birdBoost = $scope.data.birdBuff ? 1.5 : 1;
 
-        return (Math.floor(result) + candyBonus + LBaddition)*superClassBoost*birdBoost + atkbaseDamage;
+        return (Math.floor(result) + candyBonus + LBaddition + atkbaseDamage)*superClassBoost*birdBoost;
     };
 
     /* The effective damage of a unit is affected by the hit modifier being used, by the defense threshold of the enemy
@@ -1235,6 +1242,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 plusSpecials.push(data);
             if (data.hasOwnProperty('statusPlus'))
                 plusSpecials.push(data);
+            if (data.hasOwnProperty('atkbasePlus'))
+                plusSpecials.push(data);
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ ...data, chainAddition: data.chainAddition || function(){ return 0.0; } });
             if (data.hasOwnProperty('tapTiming'))
@@ -1342,10 +1351,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                             }
                         });
                         enabledSpecials.forEach(function(x) {
+                            var baseATKSpecialTemp = 0;
+                            var baseATKPlusSpecialTemp = 0;
                             if (x.hasOwnProperty('atkbase')){
                                 var params2 = getParameters(slot, undefined, x.sourceSlot, x.specialType);
-                                baseDamage += x.atkbase(params2);
+                                baseATKSpecialTemp = Math.max(x.atkbase(params2), baseATKSpecialTemp);
                             }
+                            if (x.hasOwnProperty('atkbasePlus')){
+                                var params2 = getParameters(slot, undefined, x.sourceSlot, x.specialType);
+                                baseATKPlusSpecialTemp = Math.max(x.atkbase(params2), baseATKPlusSpecialTemp);
+                            }
+                            baseDamage += baseATKSpecialTemp + baseATKPlusSpecialTemp;
                         });
                     }
                 }

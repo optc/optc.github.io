@@ -2246,7 +2246,7 @@ let matchers = {
             name: 'Buff Enhancers',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             // Roger/WB "increases or decreases"
-            regex: /increases (?:or decreases )?boost effects of ([^."]+?)(?:by \+?([?.\d]+)x(?:-([?.\d]+)x)?|to ([?.\d]+)x(?:-([?.\d]+)x)?)/i,
+            regex: /increases (?:or decreases )?boost effects of ([^."]+?)(?:by \+?([?.\d]+)x?(?:-([?.\d]+)x)?|to ([?.\d]+)x(?:-([?.\d]+)x)?)/i,
             submatchers: [
                 {
                     type: 'number',
