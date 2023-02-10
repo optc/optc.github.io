@@ -312,6 +312,9 @@ CharUtils.checkMatcher = function(matcher, id) {
     if (matcher.name == "Has Level Limit Break" && window.details[id].lLimit) {//Override for Seach by Level Limit Break (To keep it with other Limit Break filters)
         return true;
     }
+    if (matcher.name == "Has No Level Limit Break" && !window.details[id].lLimit) {//Override for Seach by Level Limit Break (To keep it with other Limit Break filters)
+        return true;
+    }
 
     var name = target + '.' + matcher.group + '.' + matcher.name;
     var result = false;

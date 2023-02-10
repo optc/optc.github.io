@@ -5061,6 +5061,12 @@ let matchers = {
         },
 
         {
+            name: 'Has No Level Limit Break',
+            targets: [ 'limit' ],
+            regex: /\^\$/i,
+        },
+
+        {
             name: 'Key Locked Limit Break',
             targets: [ 'limit' ],
             regex: /Locked/i,

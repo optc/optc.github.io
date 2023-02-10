@@ -527,9 +527,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             candyBonus = 0;
             LBaddition = 0;
         }
+        var atkbaseTemp = 0;
+        var atkbasePlusTemp = 0;
         enabledSpecials.forEach(function(data) {
-            var atkbaseTemp = 0;
-            var atkbasePlusTemp = 0;
             if (data.hasOwnProperty('atkbase') && stat == "atk"){
                 params.cached = getCachedParameters(data.sourceSlot, data.specialType);
                 params["sourceSlot"] = data.sourceSlot;
@@ -541,6 +541,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 atkbasePlusTemp = Math.max(data.atkbase(params),atkbasePlusTemp);
             }
         });
+        
         atkbaseDamage += atkbaseTemp+atkbasePlusTemp;
         atkbaseDamage = parseFloat($scope.data.customATKBase) != 0 && stat == "atk" ? parseFloat($scope.data.customATKBase) : atkbaseDamage;
 
