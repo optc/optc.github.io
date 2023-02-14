@@ -13440,7 +13440,7 @@ window.captains = {
         rcv: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
     },
     3801: {
-        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 3.75][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]] : 1; },
         hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
     },
     3802: {
