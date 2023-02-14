@@ -877,6 +877,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling [RCV] orbs support.' });
         }
     },
+    3805: {
+        onInsertion: function($scope) {
+            if (++$scope.options.sugarToysEnabled == 1)
+                $scope.notify({ text: 'Enabling Hobby-Hobby Transformation support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.sugarToysEnabled === 0)
+                $scope.notify({ text: 'Disabling Hobby-Hobby Transformation support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

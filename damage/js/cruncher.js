@@ -538,11 +538,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('atkbasePlus') && stat == "atk"){
                 params.cached = getCachedParameters(data.sourceSlot, data.specialType);
                 params["sourceSlot"] = data.sourceSlot;
-                atkbasePlusTemp = Math.max(data.atkbase(params),atkbasePlusTemp);
+                atkbasePlusTemp = Math.max(data.atkbasePlus(params),atkbasePlusTemp);
             }
         });
         
-        atkbaseDamage += atkbaseTemp+atkbasePlusTemp;
+        atkbaseDamage += atkbaseTemp+(atkbaseTemp > 0 ? atkbasePlusTemp : 0);
         atkbaseDamage = parseFloat($scope.data.customATKBase) != 0 && stat == "atk" ? parseFloat($scope.data.customATKBase) : atkbaseDamage;
 
         if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
@@ -1184,7 +1184,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
      * The function should return true if there's a conflict between specials
      */
     var computeSpecialsCombinations = function() {
-        var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ], dmgredatk: [ ]};
+        var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ], dmgredatk: [ ], atkbase: [ ]};
         chainSpecials = [ ];
         plusSpecials = [ ];
         chainAddition = [ ];
@@ -1222,7 +1222,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('dmgredatk'))
                 result.dmgredatk.push({ ...data, type: 'dmgredatk', f: data.dmgredatk });
             if (data.hasOwnProperty('atkbase'))
-                atkbase.push({ ...data, f: data.atkbase });
+            atkbase.push({ ...data, f: data.atkbase });
+                //result.atkbase.push({ ...data, f: data.atkbase, s: true }); To do
             if (data.hasOwnProperty('chain'))
                 chainSpecials.push({ ...data, chainLimiter: data.chainLimiter || function() { return Infinity; } });
             if (data.hasOwnProperty('chainPlus'))
@@ -1262,7 +1263,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chainAddition'))
                 captChain.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0; }});
         });
-        specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb, result.dmgredatk ]);
+        specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb, result.dmgredatk, result.atkbase ]);
         if (chainSpecials.length === 0) chainSpecials.push({
             chain: function() { return 1.0; },
             chainLimiter: function() { return Infinity; }
