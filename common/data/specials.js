@@ -14874,6 +14874,43 @@ window.specials = {
             p.cached.multiplier = p.captain.type == "DEX" || p.captain.type == "PSY" ? 2 : 1.75;
         },
     },
+    3823: {
+        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 1500, 0, 1500, 1500][p.cached.multiplier] : 0; },
+        chain: function(p) { return [2.75, 2.75, 3.25, 3.25, 1][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [10, 10, 15, 15, Infinity][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Stage 1 Chain Boundary", "Stage 1 Chain Boundary with Base ATK", "Stage 2 Chain Boundary", "Stage 2 Chain Boundary with Base ATK", "Base ATK"][n] + ' Effects. To switch to the ' + ["Stage 1 Chain Boundary", "Stage 1 Chain Boundary with Base ATK", "Stage 2 Chain Boundary", "Stage 2 Chain Boundary with Base ATK", "Base ATK"][(n + 1) % levels.length] + ' Effects, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3824: {
+        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 1500, 0, 1500, 1500][p.cached.multiplier] : 0; },
+        chain: function(p) { return [2.75, 2.75, 3.25, 3.25, 1][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [10, 10, 15, 15, Infinity][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Stage 1 Chain Boundary", "Stage 1 Chain Boundary with Base ATK", "Stage 2 Chain Boundary", "Stage 2 Chain Boundary with Base ATK", "Base ATK"][n] + ' Effects. To switch to the ' + ["Stage 1 Chain Boundary", "Stage 1 Chain Boundary with Base ATK", "Stage 2 Chain Boundary", "Stage 2 Chain Boundary with Base ATK", "Base ATK"][(n + 1) % levels.length] + ' Effects, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3825: {
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -17838,6 +17875,62 @@ var ghostsSpecials = {
             p.cached.multiplier2 = p.sourceSlot > 1 ? 0.25 : 0;
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x Orb boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    441: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 2.25, 1, 1 ][p.cached.multiplier] : 1; },
+        type: "class",
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 1, 2.25, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 1, 2.5, 2.5, 2.5, 2.5 ][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    442: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 2.25, 1, 1 ][p.cached.multiplier] : 1; },
+        type: "class",
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 1, 2.25, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 1, 2.5, 2.5, 2.5, 2.5 ][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    443: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 2.25, 1, 1 ][p.cached.multiplier] : 1; },
+        type: "class",
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 1, 2.25, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 1, 2.5, 2.5, 2.5, 2.5 ][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    444: {
+        atk: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 2.25, 1, 1 ][p.cached.multiplier] : 1; },
+        type: "class",
+        affinity: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 2.25, 2.25, 1, 2.25, 1 ][p.cached.multiplier] : 1; },
+        orb: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [ 1, 2.5, 2.5, 2.5, 2.5 ][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var n = (p.cached.multiplier == undefined ? 0 : (p.cached.multiplier + 1) % 5);
+            p.cached.multiplier = n;
+            p.scope.notify({
+                text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

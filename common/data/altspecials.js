@@ -1719,6 +1719,54 @@ var ghostsAltSpecials = {
             });
         },
     },
+    441: {
+        orb: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Class Orb'][n] + ' boost. To ' + ['Own Orb', 'Class Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    442: {
+        orb: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Class Orb'][n] + ' boost. To ' + ['Own Orb', 'Class Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    443: {
+        orb: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Class Orb'][n] + ' boost. To ' + ['Own Orb', 'Class Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    444: {
+        orb: function(p) { return [p.slot == p.sourceSlot, p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")][p.cached.multiplier] ? 2 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Class Orb'][n] + ' boost. To ' + ['Own Orb', 'Class Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {

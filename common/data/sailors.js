@@ -4087,6 +4087,18 @@ var ghostsSailors = {
         hpStatic: function(p) { return 100; },
         rcvStatic: function(p) { return 100; },
     },
+    441: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 125 : 0; },
+    },
+    442: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 125 : 0; },
+    },
+    443: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 125 : 0; },
+    },
+    444: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 125 : 0; },
+    },
 }
 
 Object.keys(ghostsSailors).forEach(function (key) {
