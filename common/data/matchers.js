@@ -2243,7 +2243,7 @@ let matchers = {
         },
 
         { // Just a copy from Buff Duration Extenders, except only damage-boosting buffs
-            name: 'Buff Enhancers',
+            name: 'Buff/Debuff Enhancers',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             // Roger/WB "increases or decreases"
             regex: /increases (?:or decreases )?boost effects of ([^."]+?)(?:by \+?([?.\d]+)x?(?:-([?.\d]+)x)?|to ([?.\d]+)x(?:-([?.\d]+)x)?)/i,
@@ -2318,6 +2318,17 @@ let matchers = {
                     type: 'option',
                     description: 'Chain Multiplication',
                     regex: /Chain Multiplication/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Damage Boosting Debuffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Increase Damage Taken',
+                    regex: /Increase Damage Taken/i,
                     groups: [1],
                     cssClasses: ['min-width-12'],
                 },
@@ -2646,6 +2657,268 @@ let matchers = {
             name: 'Special Cooldown Reducer on Special Activation',
             targets: [ 'sailor' ],
             regex: /When any.+character uses a special, reduces special cooldown of this character/i,
+        },
+
+        {
+            name: 'Requirement: Crew Effect',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /If your crew has ([^."]+?) when the special is activated,/i,
+            submatchers: [
+                {
+                    type: 'separator',
+                    description: 'Damage Boosting Buffs',
+                },
+                {
+                    type: 'option',
+                    description: 'ATK',
+                    // could've used negative lookbehind, but some platforms don't support it
+                    // either ATK boosting buffs or ATK UP or ATK boost
+                    regex: /(?:^|(?!base|atus).{4} )ATK (?:boost|UP)/i, // do not match "base ATK boost" and "Status ATK boost"
+                    groups: [1],
+                    cssClasses: ['min-width-3'],
+                },
+                {
+                    type: 'option',
+                    description: 'Orb',
+                    regex: /Orb (?:Amplification|boost|effect)/i,
+                    groups: [1],
+                    cssClasses: ['min-width-3'],
+                },
+                {
+                    type: 'option',
+                    description: 'Color Affinity',
+                    regex: /Color Affinity/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Base ATK',
+                    regex: /Base ATK boost/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Status ATK',
+                    regex: /Status ATK boost/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Chain Lock',
+                    regex: /Chain Lock/i, // should also match "Chain Lock/Limit/Boundary"
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Chain Addition',
+                    regex: /Chain Addition/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Chain Multiplication',
+                    regex: /Chain Multiplication/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Survivability Buffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Percent Damage Reduction',
+                    regex: /Percent Damage Reduction/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Threshold Damage Reduction',
+                    regex: /Threshold Damage Reduction/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Resilience',
+                    regex: /Resilience/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'End of Turn Healing',
+                    regex: /End of Turn Healing/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Misc. Buffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Turn Progress Effect',
+                    regex: /Turn Progress Effect/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Debuffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Normal Attack Only',
+                    regex: /Normal Attack Only/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+            ],
+        },
+
+        {
+            name: 'Requirement: Enemy Effect',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /If enemies (?:have|are) ([^."]+?) when the special is activated,/i,
+            submatchers: [
+                {
+                    type: 'separator',
+                    description: 'Debuff Immunities',
+                },
+                {
+                    type: 'option',
+                    description: 'All',
+                    regex: /All Debuff Protection/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Delay',
+                    regex: /Delay Debuff Protection/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Poison',
+                    regex: /Poison Debuff Protection/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Defense Reduction',
+                    regex: /Defense Reduction Debuff Protection/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Damage Boosting Buffs',
+                },
+                {
+                    type: 'option',
+                    description: 'ATK',
+                    // could've used negative lookbehind, but some platforms don't support it
+                    // either ATK boosting buffs or ATK UP or ATK boost
+                    regex: /(?:^|(?!base|atus).{4} )ATK (?:boost|UP)/i, // do not match "base ATK boost" and "Status ATK boost"
+                    groups: [1],
+                    cssClasses: ['min-width-3'],
+                },
+                {
+                    type: 'option',
+                    description: 'Enrage',
+                    regex: /Enrage/i,
+                    groups: [1],
+                    cssClasses: ['min-width-3'],
+                },
+                {
+                    type: 'option',
+                    description: 'End of Turn Damage',
+                    regex: /End of Turn Damage/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Survivability Buffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Increased Defense',
+                    regex: /Increased Defense/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Percent Damage Reduction',
+                    regex: /Percent Damage Reduction/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Threshold Damage Reduction',
+                    regex: /Threshold Damage Reduction/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Resilience',
+                    regex: /Resilience/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Barrier',
+                    regex: /Barrier/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'End of Turn Heal',
+                    regex: /End of Turn Heal/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Debuffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Delay',
+                    regex: /delayed/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Poison',
+                    regex: /inflicted with poison/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Defense Reduction',
+                    regex: /reduced defense/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+            ],
         },
     ],
     'Survivability': [
