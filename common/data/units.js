@@ -3827,6 +3827,13 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "Dogstorm & Cat Viper - Moonlight Shining Kings", [ "STR", "PSY" ], [[ "Slasher", "Cerebral" ],[ "Striker", "Powerhouse" ],[ "Slasher", "Cerebral" ]], "6+", 65, 4, 5, 99, 5000000, 2008, 884, 197, 4016, 1768, 393, 1 ],
+    [ "Portgas D. Ace - Captain of the Spade Pirates", "PSY", [ "Shooter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 990, 369, 90, null, null, null, null ],
+    [ "Portgas D. Ace - Dragon Hunting Flame", "PSY", [ "Shooter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1961, 733, 179, null, null, null, null ],
+    [ "Monkey D. Luffy - Boy Chasing His Dream", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 1013, 379, 83, null, null, null, null ],
+    [ "Monkey D. Luffy - The End of the Boy's Dream", "PSY", [ "Free Spirit", "Fighter" ], 6, 40, 4, 5, 99, 5000000, 2006, 752, 165, null, null, null, null ],
+    [ "Leonero & Ganryu", "QCK", [ "Striker", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1684, 658, 125, null, null, null, null ],
+    [ "Skull & Mihal", "PSY", [ "Shooter", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1669, 628, 138, null, null, null, null ],
+    [ "Yamato - Unexpected Request", "QCK", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

@@ -13513,6 +13513,46 @@ window.captains = {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.2 : 1; },
     },
+    3829: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? p.colorCount.QCK > 0 ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
+        chainAddition: function(p) { return p.colorCount.QCK > 0 ? 0.3 : 0; }
+    },
+    3830: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? p.colorCount.QCK > 0 ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
+        chainAddition: function(p) { return p.colorCount.QCK > 0 ? 0.3 : 0; }
+    },
+    3831: {
+        atk: function(p) { return p.turnCounter >= 30 ? 5.5 : p.turnCounter >= 20 ? 5.25 : p.turnCounter >= 10 ? 5 : 4.75; },
+        hp: function(p) { return 1.3; }
+    },
+    3832: {
+        atk: function(p) { return p.turnCounter >= 30 ? 5.5 : p.turnCounter >= 20 ? 5.25 : p.turnCounter >= 10 ? 5 : 4.75; },
+        hp: function(p) { return 1.3; }
+    },
+    3833: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4 : p.unit.type == "QCK" || p.unit.type == "PSY" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; }
+    },
+    3834: {
+        damageSorter: function(d) { return CrunchUtils.okamaSort(d, ['QCK', 'PSY']); },
+        hitAtk: function(p) {
+            return (p.unit.type == "QCK" || p.unit.type == "PSY") ? CrunchUtils.okamaCheck(p.damage.slice(0, p.chainPosition), p.modifiers, [{
+                type: 'PSY',
+                minModifier: 'Good'
+            }, {
+                type: 'QCK',
+                minModifier: 'Good'
+            }]) ? 4.5 : 3 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
+    },
+    3835: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; }
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

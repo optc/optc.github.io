@@ -14749,8 +14749,8 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
-        atkplus: function(p) { return p.cached.multiplier2; },
-        orbplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
+        orbPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -14766,8 +14766,8 @@ window.specials = {
         atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
-        atkplus: function(p) { return p.cached.multiplier2; },
-        orbplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
+        orbPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -14819,7 +14819,7 @@ window.specials = {
         atkbase: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 800 : 0; },
     },
     3816: {
-        chainMultiplication: function(p) { return [0, 0, 0, 0, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },
+        chainMultiplication: function(p) { return [1, 1, 1, 1, 1.2, 1.2, 1.2, 1.2][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier] : 1; },
         type: "type",
         orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [2.25, 2.5, 2.75, 2.5, 2.25, 2.5, 2.75, 2.5][p.cached.multiplier] : 1; },
@@ -14910,6 +14910,87 @@ window.specials = {
     },
     3825: {
         affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 2.25 : 1; },
+    },
+    3829: {
+        chainAddition: function(p) { return [1.5, 0, 1.5][p.cached.multiplier]; },
+        chainCarry: function(p) { return Math.min(Math.max(0.2, p.chainCounter*0.2),2.0); },
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Shooter") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition", "Base ATK", "Chain Addition and Base ATK"][n] + '. To switch to ' + ["Chain Addition", "Base ATK", "Chain Addition and Base ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3830: {
+        chainAddition: function(p) { return [1.5, 0, 1.5][p.cached.multiplier]; },
+        chainCarry: function(p) { return Math.min(Math.max(0.2, p.chainCounter*0.2),2.0); },
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Shooter") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition", "Base ATK", "Chain Addition and Base ATK"][n] + '. To switch to ' + ["Chain Addition", "Base ATK", "Chain Addition and Base ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3831: {
+        orb: function(p) { return [2.25, 2.25, 2.25, 1, 1, 1][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0.5, 0, 0, 0.5][p.cached.multiplier]; },
+        chainMultiplication: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Shooter") ? [1.2, 1.35, 1.5, 1.2, 1.35, 1.5][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Turn 1", "Turn 2", "Turn 3", "Turn 1 w/o Orb Boost", "Turn 2 w/o Orb Boost", "Turn 3 w/o Orb Boost"][n] + ' Special. To switch to ' + ["Turn 1", "Turn 2", "Turn 3", "Turn 1 w/o Orb Boost", "Turn 2 w/o Orb Boost", "Turn 3 w/o Orb Boost"][(n + 1) % levels.length] + ' Special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3832: {
+        orb: function(p) { return [2.25, 2.25, 2.25, 1, 1, 1][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0, 0.5, 0, 0, 0.5][p.cached.multiplier]; },
+        chainMultiplication: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Shooter") ? [1.2, 1.35, 1.5, 1.2, 1.35, 1.5][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Turn 1", "Turn 2", "Turn 3", "Turn 1 w/o Orb Boost", "Turn 2 w/o Orb Boost", "Turn 3 w/o Orb Boost"][n] + ' Special. To switch to ' + ["Turn 1", "Turn 2", "Turn 3", "Turn 1 w/o Orb Boost", "Turn 2 w/o Orb Boost", "Turn 3 w/o Orb Boost"][(n + 1) % levels.length] + ' Special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3833: {
+        atk: function(p) { return p.cached.multiplier; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.type == "QCK" || p.captain.type == "PSY" ? 2 : 1;
+        },
+    },
+    3834: {
+        affinity: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.type == "QCK" || p.captain.type == "PSY" ? 2 : 1;
+        },
+    },
+    3835: {
+        tapTiming: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [{ Good: 0.4, Great: 0, Perfect: 0.1 },{ Good: 0.1, Great: 0, Perfect: 0.2 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["+0.1-0.4", "+0.1-0.5"][n] + 'x boost. To switch to ' + ["+0.1-0.4", "+0.1-0.5"][(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 
@@ -17769,7 +17850,7 @@ var ghostsSpecials = {
     },
     433: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17783,7 +17864,7 @@ var ghostsSpecials = {
     },
     434: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17797,7 +17878,7 @@ var ghostsSpecials = {
     },
     435: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17811,7 +17892,7 @@ var ghostsSpecials = {
     },
     436: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17825,7 +17906,7 @@ var ghostsSpecials = {
     },
     437: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17839,7 +17920,7 @@ var ghostsSpecials = {
     },
     438: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17853,7 +17934,7 @@ var ghostsSpecials = {
     },
     439: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17867,7 +17948,7 @@ var ghostsSpecials = {
     },
     440: {
         orb: function(p) { return p.cached.multiplier; },
-        atkplus: function(p) { return p.cached.multiplier2; },
+        atkPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [2.5, 2.75, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;

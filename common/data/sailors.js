@@ -2806,6 +2806,25 @@ window.sailors = {
     3821: {
         staticMult: function(p) { return [0, 4][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]]; }
     },
+    3830: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 0, 100][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3833: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 50 : 0; },
+    },
+    3834: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 60 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 60 : 0; },
+    },
+    3835: {
+        atkStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

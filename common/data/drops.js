@@ -3189,6 +3189,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3815 ],
         },
+
+        {
+            name: 'Can I Have a Piece?',
+            dropID: 'event168',
+            thumb: 3835,
+            global: true,
+            nakama: 6383500,
+            gamewith: null,
+            'All Difficulties': [ 3835 ],
+        },
     ],
 
 

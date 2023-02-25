@@ -360,6 +360,10 @@ window.altspecials = {
         },
         warning: "Selected alt-special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
     },
+    3829: {
+        atk: function(p) { return 1.75; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
