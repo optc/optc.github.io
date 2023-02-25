@@ -2662,7 +2662,7 @@ let matchers = {
         {
             name: 'Requirement: Crew Effect',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /If your crew has ([^."]+?) when the special is activated,/i,
+            regex: /If your crew (?:has|is) ([^."]+?) when the special is activated,/i,
             submatchers: [
                 {
                     type: 'separator',
@@ -2772,6 +2772,34 @@ let matchers = {
                 {
                     type: 'separator',
                     description: 'Debuffs',
+                },
+                {
+                    type: 'option',
+                    description: 'Bind',
+                    regex: /Bind/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Despair',
+                    regex: /Despair/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Paralysis',
+                    regex: /Paralysis/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Silence',
+                    regex: /Silence/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
                 },
                 {
                     type: 'option',
