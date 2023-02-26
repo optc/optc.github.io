@@ -2814,7 +2814,7 @@ let matchers = {
         {
             name: 'Requirement: Enemy Effect',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /If enemies (?:have|are) ([^."]+?) when the special is activated,/i,
+            regex: /If enemies (?:have|are) ([^."]+?) (?:when the special is activated|after receiving damage),/i,
             submatchers: [
                 {
                     type: 'separator',
@@ -2938,6 +2938,13 @@ let matchers = {
                     regex: /inflicted with poison/i,
                     groups: [1],
                     cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Melo-Melo/Love-Love',
+                    regex: /Melo-Melo/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
                 },
                 {
                     type: 'option',
