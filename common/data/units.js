@@ -3832,7 +3832,7 @@ window.units = [
     [ "Monkey D. Luffy - Boy Chasing His Dream", "PSY", [ "Free Spirit", "Fighter" ], 5, 30, 4, 3, 70, 1066998, 1013, 379, 83, 2026, 758, 166, 1 ],
     [ "Monkey D. Luffy - The End of the Boy's Dream", "PSY", [ "Free Spirit", "Fighter" ], 6, 40, 4, 5, 99, 5000000, 2006, 752, 165, 4012, 1504, 330, 1 ],
     [ "Leonero & Ganryu", "QCK", [ "Striker", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1684, 658, 125, 3368, 1316, 250, 1 ],
-    [ "Skull & Mihal", "PSY", [ "Shooter", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1669, 628, 138, 3338, 1259, 275, 1 ],
+    [ "Skull & Mihal", "PSY", [ "Shooter", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1669, 628, 138, 3338, 1256, 275, 1 ],
     [ "Yamato - Unexpected Request", "QCK", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, null, null, null, null ],
 ];
 
