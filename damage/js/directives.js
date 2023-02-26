@@ -463,7 +463,7 @@ directives.turnCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="turns"><div id="turnSlider"></div>' +
-            '<div id="turnLabel">{{currentTurns}} {{currentTurns == 1 ? "turn" : "turns"}} elapsed</div></div>',
+            '<div id="turnLabel"><b>{{currentTurns}}</b> {{currentTurns == 1 ? "turn" : "turns"}} elapsed/{{currentTurns == 1 ? "stack" : "stacks"}} accumulated</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentTurns = 0;
@@ -471,7 +471,7 @@ directives.turnCounter = function() {
             var slider = element.find('#turnSlider')[0];
             var sliderSettings = {
                 start: [ scope.currentTurns ],
-                range: { min: [ 0 ], max: [ 25 ] },
+                range: { min: [ 0 ], max: [ 50 ] },
                 step: 1,
                 connect: 'lower'
             };
@@ -500,7 +500,7 @@ directives.healCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="heals"><div id="healSlider"></div>' +
-            '<div id="healLabel">{{currentHeals}} {{currentHeals == 1 ? "Health Point" : "Health Points"}} recovered in the last turn</div></div>',
+            '<div id="healLabel"><b>{{currentHeals}}</b> {{currentHeals == 1 ? "Health Point" : "Health Points"}} recovered in the last turn</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentHeals = 0;
@@ -537,7 +537,7 @@ directives.basehpCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="basehps"><div id="basehpSlider"></div>' +
-            '<div id="basehpLabel">{{currentbasehps}} {{currentbasehps == 1 ? "Health Point" : "Health Points"}} added</div></div>',
+            '<div id="basehpLabel"><b>{{currentbasehps}}</b> {{currentbasehps == 1 ? "Health Point" : "Health Points"}} added</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentbasehps = 0;
@@ -574,7 +574,7 @@ directives.rcvCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="rcvs"><div id="rcvSlider"></div>' +
-            '<div id="rcvLabel">{{currentRCVs}} {{currentRCVs == 1 ? "RCV Orb" : "RCV Orbs"}} consumed</div></div>',
+            '<div id="rcvLabel"><b>{{currentRCVs}}</b> {{currentRCVs == 1 ? "RCV Orb" : "RCV Orbs"}} consumed</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentRCVs = 0;
@@ -611,7 +611,7 @@ directives.semlaCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="semla"><div id="semlaSlider"></div>' +
-            '<div id="semlaLabel">{{currentSemla}} {{currentSemla == 1 ? "turn" : "turns"}} since last SEMLA orb consumed</div></div>',
+            '<div id="semlaLabel"><b>{{currentSemla}}</b> {{currentSemla == 1 ? "turn" : "turns"}} since last SEMLA orb consumed</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentSemla = 0;
@@ -648,7 +648,7 @@ directives.damageCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="damages"><div id="damageSlider"></div>' +
-            '<div id="damageLabel">{{currentDamages}} {{currentDamages == 1 ? "Health Point" : "Health Points"}} lost since special was activated</div></div>',
+            '<div id="damageLabel"><b>{{currentDamages}}</b> {{currentDamages == 1 ? "Health Point" : "Health Points"}} lost since special was activated</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentHeals = 0;
@@ -685,7 +685,7 @@ directives.dmgreductionCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="dmgreductions"><div id="dmgreductionSlider"></div>' +
-            '<div id="dmgreductionLabel">{{currentDmgreductions}}% Damage Reduction</div></div>',
+            '<div id="dmgreductionLabel"><b>{{currentDmgreductions}}%</b> Damage Reduction</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentDamageReds = 0;
@@ -708,6 +708,43 @@ directives.dmgreductionCounter = function() {
             var update = function(event,value) {
                 scope.currentDmgreductions = parseInt(value, 10);
                 if (event == 'change') scope.tdata.dmgreductionCounter.value = scope.currentDmgreductions;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.carrychainCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="carrychains"><div id="carrychainSlider"></div>' +
+            '<div id="carrychainLabel"><b>{{currentCarrychains ? currentCarrychains/10 : 0}}x</b> Chain Value in last turn</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentcarrychains = 0;
+
+            var slider = element.find('#carrychainSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentcarrychains ],
+                range: { min: [ 0 ], max: [ 500 ] },
+                step: 1,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentCarrychains = parseInt(value, 10);
+                if (event == 'change') scope.tdata.carrychainCounter.value = scope.currentCarrychains / 10;
                 scope.$apply();
             };
 

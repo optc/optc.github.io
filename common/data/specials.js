@@ -14913,7 +14913,7 @@ window.specials = {
     },
     3829: {
         chainAddition: function(p) { return [1.5, 0, 1.5][p.cached.multiplier]; },
-        chainCarry: function(p) { return Math.min(Math.max(0.2, p.chainCounter*0.2),2.0); },
+        chainCarry: function(p) { return !p.carrychainCounter ? p.carrychainCounter : Math.min(Math.max(0.2, p.carrychainCounter*0.2),2.0); },
         atkbase: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Shooter") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -14924,10 +14924,11 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+        warning: "Use 0x Chain for no Carry Over chain boost (First turn). Any non-Zero value will activate the chain boost."
     },
     3830: {
         chainAddition: function(p) { return [1.5, 0, 1.5][p.cached.multiplier]; },
-        chainCarry: function(p) { return Math.min(Math.max(0.2, p.chainCounter*0.2),2.0); },
+        chainCarry: function(p) { return !p.carrychainCounter ? p.carrychainCounter : Math.min(Math.max(0.2, p.carrychainCounter*0.2),2.0); },
         atkbase: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Shooter") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -14938,6 +14939,7 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+        warning: "Use 0x Chain for no Carry Over chain boost (First turn). Any non-Zero value will activate the chain boost."
     },
     3831: {
         orb: function(p) { return [2.25, 2.25, 2.25, 1, 1, 1][p.cached.multiplier]; },

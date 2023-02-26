@@ -337,13 +337,13 @@ body, html {
  * BUTTONS & HP BAR *
  ********************/
 
-#hpSlider, #turnSlider, #healSlider, #semlaSlider, #damageSlider, #rcvSlider, #basehpSlider, #dmgreductionSlider {
+#hpSlider, #turnSlider, #healSlider, #semlaSlider, #damageSlider, #rcvSlider, #basehpSlider, #dmgreductionSlider, #carrychainSlider {
     width: 350px;
     height: 12px;
     display: inline-block;
 }
 
-#turnSlider, #healSlider, #semlaSlider, #damageSlider, #rcvSlider, #basehpSlider, #dmgreductionSlider {
+#turnSlider, #healSlider, #semlaSlider, #damageSlider, #rcvSlider, #basehpSlider, #dmgreductionSlider, #carrychainSlider {
     width: 300px;
 }
 
@@ -373,6 +373,10 @@ body, html {
 
 #dmgreductions > .noUi-connect {
     background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6);
+}
+
+#carrychains > .noUi-connect {
+    background: linear-gradient(90deg,#ffcc00, #ffcc00, #eb5800);
 }
 
 .noUi-handle {

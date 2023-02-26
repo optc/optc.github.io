@@ -891,7 +891,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyChainAndBonusMultipliers = function(damage,modifiers,type) {
         
-        var currentMax = -1, currentResult = null, addition = 0.0, additionPlus = 0.0, captainAddition = 0.0;
+        var currentMax = -1, currentResult = null, addition = 0.0, carryChain = 0.0, additionPlus = 0.0, captainAddition = 0.0;
         if(shipBonus.bonus.name=="Donquixote Pirates Ship - Special ACTIVATED"){
             addition = 0.2
         }
@@ -901,6 +901,12 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
             if(addition<special.chainAddition(params)){
                 addition = special.chainAddition(params);
+            }
+        });
+        chainCarry.forEach(function(special){
+            var params = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
+            if(carryChain<special.chainCarry(params)){
+                carryChain = special.chainCarry(params);
             }
         });
         plusSpecials.forEach(function(special){
@@ -917,7 +923,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 captainAddition += chainCaptain.chainAddition(params);
             }
         });
-        addition += additionPlus + captainAddition;
+        addition += additionPlus + captainAddition + carryChain;
         
         addition = parseFloat($scope.data.customChainAddition) != 0 ? parseFloat($scope.data.customChainAddition) + captainAddition : addition;
 
@@ -1188,6 +1194,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         chainSpecials = [ ];
         plusSpecials = [ ];
         chainAddition = [ ];
+        chainCarry = [ ];
         tapTiming = [ ];
         chainSpecMultiplication = [ ];
         affinityMultiplier = [ ];
@@ -1248,6 +1255,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 plusSpecials.push(data);
             if (data.hasOwnProperty('chainAddition'))
                 chainAddition.push({ ...data, chainAddition: data.chainAddition || function(){ return 0.0; } });
+            if (data.hasOwnProperty('chainCarry'))
+                chainCarry.push({ ...data, chainCarry: data.chainCarry || function(){ return 0.0; } });
             if (data.hasOwnProperty('tapTiming'))
                 tapTiming.push(data);
             if (data.hasOwnProperty('chainMultiplication'))
@@ -1414,6 +1423,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         $scope.tdata.semlaCounter.enabled = false;
         $scope.tdata.damageCounter.enabled = false;
         $scope.tdata.dmgreductionCounter.enabled = false;
+        $scope.tdata.carrychainCounter.enabled = false;
         // get ship bonus
         shipBonus = jQuery.extend({ bonus: window.ships[$scope.data.ship[0]] },{ level: $scope.data.ship[1] });
         // orb map effects
@@ -1480,7 +1490,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: ALTSPECIAL },altspecials[id]));
             }
             // activate counters if necessary
-            if (n < 2 && [794, 795, 1124, 1125, 1191, 1192, 1219, 1220, 1288, 1289, 1361, 1362, 1525, 1557, 1558, 1559, 1560, 1561, 1562, 1712, 1713, 1716, 1764, 1907, 1908, 2015, 2049, 2050, 2198,2199, 2214, 2215, 2299, 2337, 2338, 2421, 2422, 2423, 2424, 2440, 2441, 3552, 3553, 5074, 5534, 5535, 2669, 2670, 2683, 2684, 3047, 3072, 3073, 3108, 3393, 3770].has(id))
+            if (n < 2 && [794, 795, 1124, 1125, 1191, 1192, 1219, 1220, 1288, 1289, 1361, 1362, 1525, 1557, 1558, 1559, 1560, 1561, 1562, 1712, 1713, 1716, 1764, 1907, 1908, 2015, 2049, 2050, 2198,2199, 2214, 2215, 2299, 2337, 2338, 2421, 2422, 2423, 2424, 2440, 2441, 3552, 3553, 5074, 5534, 5535, 2669, 2670, 2683, 2684, 3047, 3072, 3073, 3108, 3393, 3770, 3831, 3832 ].has(id))
                 $scope.tdata.turnCounter.enabled = true;
             if(shipBonus.bonus.name=="Shark Superb")
                 $scope.tdata.turnCounter.enabled = true;
@@ -1496,6 +1506,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.basehpCounter.enabled = true;
             if ([5430, 5432].has(id))
                 $scope.tdata.dmgreductionCounter.enabled = true;
+            if ([3829, 3830].has(id))
+                $scope.tdata.carrychainCounter.enabled = true;
         });
         if (conflictWarning) 
             $scope.notify({ type: 'error', text: 'One or more specials you selected cannot be activated due to an active map effect.' });
@@ -1936,6 +1948,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             semlaCounter: $scope.tdata.semlaCounter.value,
             damageCounter: $scope.tdata.damageCounter.value,
             dmgreductionCounter: $scope.tdata.dmgreductionCounter.value,
+            carrychainCounter: $scope.tdata.carrychainCounter.value,
             chainPosition: chainPosition,
             classCount: classCounter(),
             colorCount: colorCounter(),

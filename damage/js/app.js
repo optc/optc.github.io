@@ -103,6 +103,11 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             value: 0
         },
 
+        carrychainCounter: {
+            enabled: false,
+            value: 0
+        },
+
     };
 
     // should be switched around when units are switched, just like `tdata` and `data`
