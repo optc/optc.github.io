@@ -4403,6 +4403,8 @@ window.families = {
     3833: [ ...Leonero, ...Ganryu ],
     3834: [ ...Skull, ...Mihal ],
     3835: [ ...Yamato ],
+    3836: [ ...Bluejam ],
+    3837: [ ...Porchemy ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

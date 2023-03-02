@@ -13553,6 +13553,13 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.2 : 1; }
     },
+    3836: {
+        atk: function(p) { return p.unit.type == "QCK" ? 3 : 1; },
+    },
+    3837: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; }
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

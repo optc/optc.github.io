@@ -2825,6 +2825,14 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
         rcvStatic: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? [0, 40][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
     },
+    3836: {
+        atkStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "QCK" ? 30 : 0; },
+    },
+    3837: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 45 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
