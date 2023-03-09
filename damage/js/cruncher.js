@@ -891,7 +891,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var applyChainAndBonusMultipliers = function(damage,modifiers,type) {
         
-        var currentMax = -1, currentResult = null, addition = 0.0, carryChain = 0.0, additionPlus = 0.0, captainAddition = 0.0;
+        var currentMax = -1, currentResult = null, addition = 0.0, carryChain = 0.0, additionPlus = 0.0, captainAddition = 0.0, captainBaseChain = 0.0;
         if(shipBonus.bonus.name=="Donquixote Pirates Ship - Special ACTIVATED"){
             addition = 0.2
         }
@@ -921,6 +921,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             var params = getParameters(chainCaptain.sourceSlot, undefined, chainCaptain.sourceSlot);
             if (chainCaptain.hasOwnProperty('chainAddition')){
                 captainAddition += chainCaptain.chainAddition(params);
+            }
+            if (chainCaptain.hasOwnProperty('chain')){
+                captainBaseChain += chainCaptain.chain(params);
             }
         });
         addition += additionPlus + captainAddition + carryChain;
@@ -980,7 +983,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 });
                 
                 if(special.chain(params[n]) == 1) chainUpgrade = 0;
-                var chainMultiplier = getChainMultiplier(chainOverride == 0 ? special.chain(params[n]) + chainUpgrade : chainOverride, modifiers.slice(0,n), chainModifier, params[n], damage);
+                var chainMultiplier = getChainMultiplier(chainOverride == 0 ? special.chain(params[n]) + chainUpgrade + captainBaseChain : chainOverride, modifiers.slice(0,n), chainModifier, params[n], damage);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
@@ -1271,6 +1274,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 captAffinityMultiplier.push({ sourceSlot: data.sourceSlot, captAffinityMultiplier: data.affinity || function(){ return 1.0; }});
             if (data.hasOwnProperty('chainAddition'))
                 captChain.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0; }});
+            if (data.hasOwnProperty('chain'))
+                captChain.push({ sourceSlot: data.sourceSlot, chain: data.chain || function(){ return 0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb, result.dmgredatk, result.atkbase ]);
         if (chainSpecials.length === 0) chainSpecials.push({
