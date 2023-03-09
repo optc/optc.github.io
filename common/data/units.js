@@ -3833,7 +3833,7 @@ window.units = [
     [ "Monkey D. Luffy - The End of the Boy's Dream", "PSY", [ "Free Spirit", "Fighter" ], 6, 40, 4, 5, 99, 5000000, 2006, 752, 165, 4012, 1504, 330, 1 ],
     [ "Leonero & Ganryu", "QCK", [ "Striker", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1684, 658, 125, 3368, 1316, 250, 1 ],
     [ "Skull & Mihal", "PSY", [ "Shooter", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1669, 628, 138, 3338, 1256, 275, 1 ],
-    [ "Yamato - Unexpected Request", "QCK", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, null, null, null, null ],
+    [ "Yamato - Unexpected Request", "QCK", [ "Striker", "Free Spirit" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, 3204, 1462, 179, 1 ],
     [ "Bluejam - Sworn to Exact Revenge on the Aristocrats", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 2016, 690, 134, 4032, 1380, 268, 1 ],
     [ "Porchemy - Bluejam Pirates Crewmate", "QCK", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 2026, 751, 112, 4052, 1502, 224, 1 ],
     [ "Sabo - Reunion With His Little Brother", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 1046, 434, 86, null, null, null, null ],
