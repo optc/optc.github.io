@@ -2833,6 +2833,11 @@ window.sailors = {
     3837: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 45 : 0; },
     },
+    3840: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 60 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 60 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 60 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

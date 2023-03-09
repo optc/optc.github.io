@@ -13560,6 +13560,25 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; }
     },
+    3838: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.4 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Cerebral") ? 1.4 : 1; },
+    },
+    3839: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.4 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Cerebral") ? 1.4 : 1; },
+    },
+    3840: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 4 : 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Cerebral") ? 1.25 : 1; },
+    },
+    3841: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 4 : 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.25 : 1; },
+    },
+    3842: {
+        atk: function(p) { return [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][p.team[p.sourceSlot].unit.limitStats.captains[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.captains.length-1)]]; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

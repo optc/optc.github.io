@@ -6545,6 +6545,16 @@ window.drops = {
             'Coast of Wano': [ 3822, 9079 ]
         },
 
+        {
+            name: 'Fujitora',
+            dropID: 'treasuremap67',
+            thumb: 3842,
+            global: true,
+            nakama: 8384200,
+            gamewith: null,
+            'Raging Sea': [ 3842 ]
+        },
+
     ],
 
     

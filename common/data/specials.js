@@ -14994,6 +14994,47 @@ window.specials = {
             });
         },
     },
+    3838:{
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 30 : 1;
+        },
+        onActivation: function(p) {
+            var levels = [2.75, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Chain Boundary. To switch to the ' + levels[(n + 1) % levels.length] + 'x Chain Boundary, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3839:{
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 30 : 1;
+        },
+        onActivation: function(p) {
+            var levels = [2.75, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Chain Boundary. To switch to the ' + levels[(n + 1) % levels.length] + 'x Chain Boundary, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3840: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    3842: {
+        affinityPlus: function(p) { return 0.25; },
+        warning: "Selected special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

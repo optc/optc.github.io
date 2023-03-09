@@ -364,6 +364,12 @@ window.altspecials = {
         atk: function(p) { return 1.75; },
         type: "type",
     },
+    3839: {
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
+    3842: {
+        affinity: function(p) { return 1.75; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
