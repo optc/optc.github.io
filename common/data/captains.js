@@ -13469,12 +13469,28 @@ window.captains = {
         rcv: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
     3808: {
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.percHP <= 50.0 ? 5.5 : 5 : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? p.percHP <= 50.0 ? 5.5 : 5 : 1; },
         hp: function(p) { return 1.5; },
     },
     3809: {
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? p.percHP <= 50.0 ? 5.5 : 5 : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? p.percHP <= 50.0 ? 5.5 : 5 : 1; },
         hp: function(p) { return 1.5; },
+    },
+    3812: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    3813: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    3814: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? isNaN(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; }
+    },
+    3815: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
     },
     3816: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5.4 : 5 : 1; },
