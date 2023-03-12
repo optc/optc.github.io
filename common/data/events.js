@@ -863,20 +863,6 @@ window.events = {
                 $scope.notify({ text: 'Disabling [SUPERBOMB] orbs support.' });
         }
     },
-    3814: {
-        onInsertion: function($scope) {
-            if (++$scope.options.wanoOrbsEnabled == 1)
-                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
-            if (++$scope.options.rcvOrbsEnabled == 1)
-                $scope.notify({ text: 'Enabling [RCV] orbs support.' });
-        },
-        onRemoval: function($scope) {
-            if (--$scope.options.wanoOrbsEnabled === 0)
-                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
-            if (--$scope.options.rcvOrbsEnabled === 0)
-                $scope.notify({ text: 'Disabling [RCV] orbs support.' });
-        }
-    },
     3805: {
         onInsertion: function($scope) {
             if (++$scope.options.sugarToysEnabled == 1)
@@ -885,6 +871,18 @@ window.events = {
         onRemoval: function($scope) {
             if (--$scope.options.sugarToysEnabled === 0)
                 $scope.notify({ text: 'Disabling Hobby-Hobby Transformation support.' });
+        }
+    },
+    3814: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] and [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] and [WANO] orbs support.' });
         }
     },
     5052: {
