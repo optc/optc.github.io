@@ -348,6 +348,9 @@ window.altspecials = {
     3805: {
         orb: function(p) { return p.unit.cost <= 40  ? 2.25 : 1; },
     },
+    3814: {
+        chainAddition: function(p) { return 1.5; },
+    },
     3816: {
         atkPlus: function(p) { return 0.25; },
         orbPlus: function(p) { return 0.25; },

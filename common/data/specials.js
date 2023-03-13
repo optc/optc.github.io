@@ -14803,7 +14803,7 @@ window.specials = {
     3814: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [3, 1, 3][p.cached.multiplier] : 1; },
         type: "class",
-        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
         atkbase: function(p) { return p.slot <= 1 ? Math.min(p.rcvCounter*200,2000) : 0; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
