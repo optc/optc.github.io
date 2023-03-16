@@ -698,11 +698,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getAffinity('weak', attackerType);
         
         if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = getAffinity('strong', attackerType);
-        if ([3070, 3071, 3369].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);
+        if ([3070, 3071, 3369, 3847, 3848].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);
         if ([3398].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) typeMult = getAffinity('strong', attackerType);
         
         if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
-            if ([ 3568, 3569 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+            if ([ 3844, 3843 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
         }
 
         if ($scope.data.rainbowDamage[teamSlot])
@@ -1326,9 +1326,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
             }
             if (([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) || 
-                ([3070, 3071, 3369].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) ||
+                ([3070, 3071, 3369, 3847, 3848].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) ||
                 ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) ||
-                ([ 3623, 3634 ].indexOf(unit.number + 1) != -1 && $scope.data.effect == 'Kizuna Clash [Worldwide]')){
+                ([ 3844, 3843 ].indexOf(unit.number + 1) != -1 && $scope.data.effect == 'Kizuna Clash [Worldwide]')){
                     //pass so that the affinityMultiplier is whatever it should be instead of 1
             }
             else if(unit.type != type){

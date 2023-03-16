@@ -638,6 +638,12 @@
             case 9078: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3807-skull.png'; break;
             case 'skullLuffy2':
             case 9079: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3814-skull.png'; break;
+            case 'skullDogCat':
+            case 9080: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3828-skull.png'; break;
+            case 'skullRedHair':
+            case 9081: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3845-skull.png'; break;
+            case 'skullGarp':
+            case 9082: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3848-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';
@@ -1112,6 +1118,10 @@
             case (ghostPoint+442).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3828-2.png'; break;
             case (ghostPoint+443).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3828-STR.png'; break;
             case (ghostPoint+444).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3828-PSY.png'; break;
+            case (ghostPoint+445).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3845-1.png'; break;
+            case (ghostPoint+446).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3845-2.png'; break;
+            case (ghostPoint+447).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3845-PSY.png'; break;
+            case (ghostPoint+448).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/800/3845-QCK.png'; break;
             default: break;
         }
 

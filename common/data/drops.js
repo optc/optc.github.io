@@ -7148,6 +7148,26 @@ window.drops = {
             'Kizuna Exchange': [ 3806, 9075, 9077, 9078 ],
         },
 
+        {
+            name: 'Dogstorm & Cat Viper',
+            dropID: 'kizuna43',
+            thumb: 3828,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 9079, 9080 ],
+        },
+
+        {
+            name: 'Monkey D. Garp',
+            dropID: 'kizuna44',
+            thumb: 3848,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3847, 9081, 9082 ],
+        },
+
     ],
 
 

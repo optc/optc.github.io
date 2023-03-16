@@ -15035,6 +15035,46 @@ window.specials = {
         affinityPlus: function(p) { return 0.25; },
         warning: "Selected special (%name%) does not account for the Class of character that applies the buff and WILL BE INCORRECT some, if not all, of the time. Use at your own risk."
     },
+    3843: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [2, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3844: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Free Spirit") ? 2.25 : 1; },
+    },
+    3846: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "type",
+    },
+    3847: {
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2 : 1; },
+        turnedOn: [false,false,false,false,false,false],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    3848: {
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 2.25 : 1; },
+        turnedOn: [false,false,false,false,false,false],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -18058,6 +18098,58 @@ var ghostsSpecials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    445: {
+        affinity: function(p) { return p.cached.multiplier2; },
+        atkbase: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return 3.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier1 = (p.captain.type == "QCK") ? 1000 : 0;
+            p.cached.multiplier2 = (p.captain.type == "PSY") ? 2.25 : 1;
+        }
+    },
+    446: {
+        affinity: function(p) { return p.cached.multiplier2; },
+        atkbase: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return 3.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier1 = (p.captain.type == "QCK") ? 1000 : 0;
+            p.cached.multiplier2 = (p.captain.type == "PSY") ? 2.25 : 1;
+        }
+    },
+    447: {
+        affinity: function(p) { return p.cached.multiplier2; },
+        atkbase: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return 3.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier1 = (p.captain.type == "QCK") ? 1000 : 0;
+            p.cached.multiplier2 = (p.captain.type == "PSY") ? 2.25 : 1;
+        }
+    },
+    448: {
+        affinity: function(p) { return p.cached.multiplier2; },
+        atkbase: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return 3.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier1 = (p.captain.type == "QCK") ? 1000 : 0;
+            p.cached.multiplier2 = (p.captain.type == "PSY") ? 2.25 : 1;
+        }
     },
 };
 

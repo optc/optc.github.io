@@ -667,6 +667,9 @@ const Leonero = [ "Leonero" ];
 const Ganryu = [ "Ganryu" ];
 const Skull = [ "Skull" ];
 const Mihal = [ "Mihal" ];
+const WoopSlap = [ "Woop Slap" ];
+const Cornelia = [ "Cornelia" ];
+const Kotatsu = [ "Kotatsu" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4410,6 +4413,12 @@ window.families = {
     3840: [ ...Koala ],
     3841: [ ...Hack ],
     3842: [ ...Issho ],
+    3843: [ ...Dadan ],
+    3844: [ ...Makino, ...WoopSlap ],
+    3845: [ ...Shanks, ...BenBeckman, ...LuckyRoux, ...Yasopp ],
+    3846: [ ...Cornelia, ...Kotatsu ],
+    3847: [ ...MonkeyDGarp ],
+    3848: [ ...MonkeyDGarp ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

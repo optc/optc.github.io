@@ -3841,6 +3841,12 @@ window.units = [
     [ "Koala - Finding Important Evidence", "QCK", [ "Cerebral", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1490, 710, 140, 2980, 1420, 280, 1 ],
     [ "Hack - Punishing the Foolish", "QCK", [ "Fighter", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 1740, 732, 91, 3480, 1464, 182, 1 ],
     [ "Fujitora - Unswaying Stance", "QCK", [ "Powerhouse", "Cerebral" ], 5, 60, 4, 1, 99, 5000000, 1758, 717, 93, null, null, null, null ],
+    [ "Curly Dadan - Life-Risking Rescue", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1311, 701, 117, null, null, null, null ],
+    [ "Makino & Woop Slap", "PSY", [ "Free Spirit", "Striker" ], 5, 30, 4, 4, 99, 4000000, 1138, 648, 254, null, null, null, null ],
+    [ "Red-Hair Pirates - Impeding Emperor", [ "PSY", "QCK" ], [[ "Slasher", "Cerebral" ],[ "Shooter", "Cerebral" ],[ "Slasher", "Cerebral" ]], "6+", 65, 4, 5, 99, 5000000, 2114, 1014, 182, 4227, 1825, 363, 1 ],
+    [ "Cornelia & Kotatsu", "PSY", [ "Slasher", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1498, 571, 145, 2787, 1132, 259, 1 ],
+    [ "Monkey D. Garp - Scolding His Grandson", "PSY", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1341, 843, 78, null, null, null, null ],
+    [ "Monkey D. Garp - Disciplining the Brats", "PSY", [ "Powerhouse", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1384, 995, 83, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4314,6 +4320,10 @@ var ghostsUnits = [
     [ "[Dual Unit] Cat Viper - Moonlight Shining Kings", "PSY", [ "Striker", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 1863, 847, 182, 3726, 1694, 364, 1 ],
     [ "[Dual Unit] Dogstorm & Cat Viper - Moonlight Shining Kings", "STR", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2008, 884, 197, 4016, 1768, 393, 1 ],
     [ "[Dual Unit] Dogstorm & Cat Viper - Moonlight Shining Kings", "PSY", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2008, 884, 197, 4016, 1768, 393, 1 ],
+    [ "[Dual Unit] Red-Haired Shanks - Impeding Emperor", "PSY", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2002, 958, 160, 4004, 1724, 320, 1 ],
+    [ "[Dual Unit] Beckman & Lucky Roux & Yasopp - Impeding Emperor", "QCK", [ "Shooter", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2002, 941, 167, 4004, 1693, 334, 1 ],
+    [ "[Dual Unit] Red-Hair Pirates - Impeding Emperor", "PSY", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2114, 1014, 182, 4227, 1825, 363, 1 ],
+    [ "[Dual Unit] Red-Hair Pirates - Impeding Emperor", "QCK", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2114, 1014, 182, 4227, 1825, 363, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
