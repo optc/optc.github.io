@@ -13532,12 +13532,12 @@ window.captains = {
     3829: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? p.colorCount.QCK > 0 ? 5.25 : 5 : 1; },
         hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
-        chain: function(p) { return p.colorCount.QCK > 0 ? 0.3 : 0; }
+        chainAddition: function(p) { return p.colorCount.QCK > 0 ? 0.3 : 0; }
     },
     3830: {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? p.colorCount.QCK > 0 ? 5.25 : 5 : 1; },
         hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.35 : 1; },
-        chain: function(p) { return p.colorCount.QCK > 0 ? 0.3 : 0; }
+        chainAddition: function(p) { return p.colorCount.QCK > 0 ? 0.3 : 0; }
     },
     3831: {
         atk: function(p) { return p.turnCounter >= 30 ? 5.5 : p.turnCounter >= 20 ? 5.25 : p.turnCounter >= 10 ? 5 : 4.75; },
