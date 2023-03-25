@@ -13616,6 +13616,34 @@ window.captains = {
         atk: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 3.75*(p.actions[p.sourceSlot] ? 1.2 : 1) : 1; },
         hp: function(p) { return p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.25 : 1; },
     },
+    3849: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.65 : 1; },
+    },
+    3850: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.65 : 1; },
+    },
+    3851: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.percHP >= 90.0 || p.percHP <= 30.0 ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.3 : 1; },
+    },
+    3852: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.percHP >= 90.0 || p.percHP <= 30.0 ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.3 : 1; },
+    },
+    3853: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    3854: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4 : p.unit.type == "PSY" || p.unit.type == "INT" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
+    },
+    3855: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3.3 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

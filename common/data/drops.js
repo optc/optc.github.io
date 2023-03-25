@@ -3199,6 +3199,16 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3835 ],
         },
+
+        {
+            name: 'Plotting Numbers',
+            dropID: 'event169',
+            thumb: 3855,
+            global: true,
+            nakama: 6385500,
+            gamewith: null,
+            'All Difficulties': [ 3855 ],
+        },
     ],
 
 

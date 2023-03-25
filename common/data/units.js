@@ -3847,6 +3847,13 @@ window.units = [
     [ "Cornelia & Kotatsu", "PSY", [ "Slasher", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1498, 571, 145, 2787, 1132, 259, 1 ],
     [ "Monkey D. Garp - Scolding His Grandson", "PSY", [ "Powerhouse", "Free Spirit" ], 5, 50, 4, 4, 99, 5000000, 1341, 843, 78, null, null, null, null ],
     [ "Monkey D. Garp - Disciplining the Brats", "PSY", [ "Powerhouse", "Free Spirit" ], "5+", 50, 4, 4, 99, 5000000, 1384, 995, 83, null, null, null, null ],
+    [ "Killer - Offering His Life", "INT", [ "Driven", "Striker" ], 5, 30, 4, 3, 70, 1066998, 1156, 446, 38, null, null, null, null ],
+    [ "Killer - Saving His Partner's Life", "INT", [ "Driven", "Striker" ], 6, 55, 4, 5, 99, 5000000, 2282, 887, 75, null, null, null, null ],
+    [ "Basil Hawkins - Final Straw Doll", "PSY", [ "Cerebral", "Striker" ], 5, 30, 4, 3, 70, 1066998, 998, 431, 70, null, null, null, null ],
+    [ "Basil Hawkins - Future-Reading Cards", "PSY", [ "Cerebral", "Striker" ], 6, 55, 4, 5, 99, 5000000, 1965, 856, 138, null, null, null, null ],
+    [ "Roronoa Zoro - Swordsman on the Chase", "PSY", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1578, 756, 111, null, null, null, null ],
+    [ "X Drake - Aligned Goals", "INT", [ "Striker", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1731, 737, 91, null, null, null, null ],
+    [ "Inbi & Fuga & Zanki", "PSY", [ "Powerhouse", "Striker" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

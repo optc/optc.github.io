@@ -386,6 +386,14 @@ window.altspecials = {
             });
         },
     },
+    3850: {
+        status: function(p) { return p.defenseDown ? 2.25 : 1; },
+        orbPlus: function(p) { return 0.25; },
+    },
+    3852: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

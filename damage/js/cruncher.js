@@ -1501,7 +1501,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && [1609, 1610, 2232, 3037, 3038].has(id))
                 $scope.tdata.healCounter.enabled = true;
-            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474, 3751, 3752].has(id))
+            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474, 3751, 3752, 3851, 3852].has(id))
                 $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && [2233, 2234, 2500].has(id))
                 $scope.tdata.semlaCounter.enabled = true;

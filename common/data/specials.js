@@ -15075,6 +15075,63 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
         }
     },
+    3849: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 2.5 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1250, 0][p.cached.multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1.5, 1][p.cached.multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier = (p.percHP <= 50) ? 1 : 0;
+        },
+    },
+    3850: {
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 2.5 : 1; },
+        atkbase: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1250, 0][p.cached.multiplier] : 1; },
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [1.5, 1][p.cached.multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier = (p.percHP <= 50) ? 1 : 0;
+        },
+    },
+    3851: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) { p.cached.multiplier = p.damageCounter >= 30000 ? 2.75 : 2.5; }
+    },
+    3852: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) { p.cached.multiplier = p.damageCounter >= 30000 ? 2.75 : 2.5; }
+    },
+    3853: {
+        def: function(p) { return 0; },
+        status: function(p) { return p.defenseDown ? [2, 1, 2][p.cached.multiplier] : 1; },
+        statusPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Conditional Boost", "Conditional Buff", "Conditional Boost and Conditional Buff"][n] + ' boost. To ' + ["Conditional Boost", "Conditional Buff", "Conditional Boost and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3854: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
+        type: "type",
+    },
+    3855: {
+        delay: function(p) { return [1, 0, 0, 1, 1][p.cached.multiplier]; },
+        chainAddition: function(p) { return [0, 1.1, 1.2, 1.1, 1.2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Delay", "1.1x Chain Boost", "1.2x Chain Boost", "Delay and 1.1x Chain Boost", "Delay and 1.2x Chain Boost"][n] + ' boost. To ' + ["Delay", "1.1x Chain Boost", "1.2x Chain Boost", "Delay and 1.1x Chain Boost", "Delay and 1.2x Chain Boost"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
