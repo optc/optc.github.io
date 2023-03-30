@@ -670,6 +670,9 @@ const Mihal = [ "Mihal" ];
 const WoopSlap = [ "Woop Slap" ];
 const Cornelia = [ "Cornelia" ];
 const Kotatsu = [ "Kotatsu" ];
+const Inbi = [ "Inbi" ];
+const Fuga = [ "Fuga" ];
+const Zanki = [ "Zanki" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4419,6 +4422,13 @@ window.families = {
     3846: [ ...Cornelia, ...Kotatsu ],
     3847: [ ...MonkeyDGarp ],
     3848: [ ...MonkeyDGarp ],
+    3849: [ ...Killer ],
+    3850: [ ...Killer ],
+    3851: [ ...BasilHawkins ],
+    3852: [ ...BasilHawkins ],
+    3853: [ ...RoronoaZoro ],
+    3854: [ ...XDrake ],
+    3855: [ ...Inbi, ...Fuga, ...Zanki ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
