@@ -4429,6 +4429,10 @@ window.families = {
     3853: [ ...RoronoaZoro ],
     3854: [ ...XDrake ],
     3855: [ ...Inbi, ...Fuga, ...Zanki ],
+    3856: [ ...MonkeyDLuffy, ...TrafalgarDWaterLaw, ...EustassKid ],
+    3857: [ ...MonkeyDLuffy, ...TrafalgarDWaterLaw, ...EustassKid ],
+    3858: [ ...ScratchmenApoo ],
+    3859: [ ...ScratchmenApoo ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

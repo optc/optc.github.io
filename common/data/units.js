@@ -3854,6 +3854,10 @@ window.units = [
     [ "Roronoa Zoro - Swordsman on the Chase", "PSY", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1578, 756, 111, null, null, null, null ],
     [ "X Drake - Aligned Goals", "INT", [ "Striker", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1731, 737, 91, null, null, null, null ],
     [ "Inbi & Fuga & Zanki", "PSY", [ "Powerhouse", "Striker" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, null, null, null, null ],
+    [ "Luffy & Law & Kid", "PSY", [ "Fighter", "Slasher" ], 5, 50, 4, 3, 99, 5000000, 1688, 701, 85, null, null, null, null ],
+    [ "Luffy & Law & Kid - Incoming Flames", "PSY", [ "Fighter", "Slasher" ], "5+", 50, 4, 3, 99, 5000000, 1710, 980, 120, null, null, null, null ],
+    [ "Scratchmen Apoo - Music to Energize the Floor", "INT", [ "Shooter", "Driven" ], 5, 30, 4, 3, 70, 1066998, 987, 450, 65, null, null, null, null ],
+    [ "Scratchmen Apoo - DJ Energizing the Floor", "INT", [ "Shooter", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1944, 894, 128, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

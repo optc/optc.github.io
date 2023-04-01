@@ -13644,6 +13644,20 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3.3 : 1; },
         hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
     },
+    3856: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 3.5 : 2.5; },
+        hp: function(p) { return 1.2; },
+    },
+    3857: {
+        atk: function(p) { return p.slot == p.sourceSlot ? 4 : 3.5; },
+        hp: function(p) { return 1.2; },
+    },
+    3858: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? Math.min(5 + p.turnCounter*.1, 5.5) : 1; },
+    },
+    3859: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? Math.min(5 + p.turnCounter*.1, 5.5) : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

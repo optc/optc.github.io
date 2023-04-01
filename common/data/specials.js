@@ -15132,6 +15132,36 @@ window.specials = {
             });
         },
     },
+    3856: {
+        orb: function(p) { return 1.75; },
+    },
+    3857: {
+        orb: function(p) { return 2; },
+    },
+    3858: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [1.4, 1.6, 2.0];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x Chain boost. To use the ' + levels[(n + 1) % levels.length] + 'x Chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3859: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [1.4, 1.6, 2.0];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x Chain boost. To use the ' + levels[(n + 1) % levels.length] + 'x Chain boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

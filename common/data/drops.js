@@ -4295,6 +4295,16 @@ window.drops = {
             'All Difficulties': [ 3671 ],
         },
 
+        {
+            name: 'Clash?! Three Captains',
+            dropID: 'clash75',
+            thumb: 3857,
+            global: true,
+            nakama: 4385700,
+            gamewith: null,
+            'All Difficulties': [ 3856, 9083 ],
+        },
+
     ],
 
 
