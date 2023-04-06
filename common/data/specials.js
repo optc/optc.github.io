@@ -15162,6 +15162,63 @@ window.specials = {
             });
         },
     },
+    3860: {
+        increaseDamageTaken: function(p) { return [1.5, 1.5, 1.5, 1.5, 1, 1, 1][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") ? [2.25, 2.5, 2.75, 1, 2.25, 2.5, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["2.25x Affinity Boost w/ Increase Damage Taken", "2.5x Affinity Boost w/ Increase Damage Taken", "2.75x Affinity Boost w/ Increase Damage Taken", "Increase Damage Taken", "2.25x Affinity Boost w/o Increase Damage Taken", "2.5x Affinity Boost w/o Increase Damage Taken", "2.75x Affinity Boost w/o Increase Damage Taken"][n] + '. To switch to the ' + ["2.25x Affinity Boost w/ Increase Damage Taken", "2.5x Affinity Boost w/ Increase Damage Taken", "2.75x Affinity Boost w/ Increase Damage Taken", "Increase Damage Taken", "2.25x Affinity Boost w/o Increase Damage Taken", "2.5x Affinity Boost w/o Increase Damage Taken", "2.75x Affinity Boost w/o Increase Damage Taken"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3861: {
+        increaseDamageTaken: function(p) { return [1.5, 1.5, 1.5, 1.5, 1, 1, 1][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") ? [2.25, 2.5, 2.75, 1, 2.25, 2.5, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["2.25x Affinity Boost w/ Increase Damage Taken", "2.5x Affinity Boost w/ Increase Damage Taken", "2.75x Affinity Boost w/ Increase Damage Taken", "Increase Damage Taken", "2.25x Affinity Boost w/o Increase Damage Taken", "2.5x Affinity Boost w/o Increase Damage Taken", "2.75x Affinity Boost w/o Increase Damage Taken"][n] + '. To switch to the ' + ["2.25x Affinity Boost w/ Increase Damage Taken", "2.5x Affinity Boost w/ Increase Damage Taken", "2.75x Affinity Boost w/ Increase Damage Taken", "Increase Damage Taken", "2.25x Affinity Boost w/o Increase Damage Taken", "2.5x Affinity Boost w/o Increase Damage Taken", "2.75x Affinity Boost w/o Increase Damage Taken"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3862: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? [1, 2, 2][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3863: {
+        orb: function(p) { return p.unit.type == "PSY" ? p.cached.multiplier1 : 1; },
+        atkbase: function(p) { return p.unit.type == "PSY" ? p.cached.multiplier2 : 0; },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(p.cached.multiplier1) + 1) % levels.length;
+            p.cached.multiplier1 = levels[n];
+            p.cached.multiplier2 = p.colorCount.PSY >= 4 ? [500, 1000][n] : 0;
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3864: {
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

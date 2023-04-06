@@ -394,6 +394,13 @@ window.altspecials = {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.5 : 1; },
         type: "type",
     },
+    3861: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        }
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

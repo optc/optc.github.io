@@ -2869,6 +2869,9 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "PSY" ? 40 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" ? 40 : 0; },
     },
+    3862: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? 60 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
