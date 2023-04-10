@@ -3856,12 +3856,12 @@ window.units = [
     [ "Inbi & Fuga & Zanki", "PSY", [ "Powerhouse", "Striker" ], 5, 30, 4, 4, 99, 2000000, 1602, 731, 90, 3204, 1462, 179, 1 ],
     [ "Luffy & Law & Kid", "PSY", [ "Fighter", "Slasher" ], 5, 50, 4, 3, 99, 5000000, 1688, 701, 85, 3856, 1402, 170, 1 ],
     [ "Luffy & Law & Kid - Incoming Flames", "PSY", [ "Fighter", "Slasher" ], "5+", 50, 4, 3, 99, 5000000, 1710, 980, 120, 3420, 1470, 240, 1 ],
-    [ "Scratchmen Apoo - Music to Energize the Floor", "INT", [ "Shooter", "Driven" ], 5, 30, 4, 3, 70, 1066998, 987, 450, 65, null, null, null, null ],
-    [ "Scratchmen Apoo - DJ Energizing the Floor", "INT", [ "Shooter", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1944, 894, 128, null, null, null, null ],
-    [ "Jewelry Bonney - Greedy Captain", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 870, 335, 83, null, null, null, null ],
-    [ "Jewelry Bonney - Overcoming All Obstacles", "PSY", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1711, 760, 162, null, null, null, null ],
-    [ "Marshall D. Teach - Testing His Stolen Powers", "INT", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1525, 760, 93, null, null, null, null ],
-    [ "\"Mad Monk\" Urouge - All-Out Retaliation", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1584, 702, 102, null, null, null, null ],
+    [ "Scratchmen Apoo - Music to Energize the Floor", "INT", [ "Shooter", "Driven" ], 5, 30, 4, 3, 70, 1066998, 987, 450, 65, 1974, 900, 130, 1 ],
+    [ "Scratchmen Apoo - DJ Energizing the Floor", "INT", [ "Shooter", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1944, 894, 128, 3888, 1788, 256, 1 ],
+    [ "Jewelry Bonney - Greedy Captain", "PSY", [ "Fighter", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 870, 335, 83, 1740, 770, 167, 1 ],
+    [ "Jewelry Bonney - Overcoming All Obstacles", "PSY", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1711, 760, 162, 3422, 1520, 323, 1 ],
+    [ "Marshall D. Teach - Testing His Stolen Powers", "INT", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1525, 760, 93, 3050, 1520, 186, 1 ],
+    [ "\"Mad Monk\" Urouge - All-Out Retaliation", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1584, 702, 102, 3168, 1404, 204, 1 ],
     [ "Capone \"Gang\" Bege - Overwhelming Military Power", "INT", [ "Shooter", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1601, 748, 109, null, null, null, null ],
 ];
 
