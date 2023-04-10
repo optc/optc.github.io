@@ -376,6 +376,7 @@ window.altspecials = {
     3848: {
         atkPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
         atk: function(p) { return [1.75, 1, 1.75][p.cached.multiplier]; },
+        type: "type",
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
