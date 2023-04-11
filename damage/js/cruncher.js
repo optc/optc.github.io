@@ -936,9 +936,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // Get the highest IDT multiplier before chain calculation loop for performance
         var increaseDamageTakenMultiplier = 1;
         if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
-            increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken);
+            increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken.filter(Number.isFinite));
         }
-        increaseDamageTakenMultiplier = increaseDamageTakenMultiplier ? increaseDamageTakenMultiplier : 1; //fix for issue when unit with IDT in Special also has Alt. Special for some reason returns undefined
         if (enemyEffectsFromSpecials.increaseDamageTakenPlus.length > 0){
             increaseDamageTakenMultiplier += increaseDamageTakenMultiplier > 1 ? Math.max(...enemyEffectsFromSpecials.increaseDamageTakenPlus) : 0;
         }
