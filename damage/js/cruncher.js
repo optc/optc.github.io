@@ -938,6 +938,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
             increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken);
         }
+        increaseDamageTakenMultiplier = increaseDamageTakenMultiplier ? increaseDamageTakenMultiplier : 1; //fix for issue when unit with IDT in Special also has Alt. Special for some reason returns undefined
         if (enemyEffectsFromSpecials.increaseDamageTakenPlus.length > 0){
             increaseDamageTakenMultiplier += increaseDamageTakenMultiplier > 1 ? Math.max(...enemyEffectsFromSpecials.increaseDamageTakenPlus) : 0;
         }
