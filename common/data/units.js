@@ -3863,6 +3863,10 @@ window.units = [
     [ "Marshall D. Teach - Testing His Stolen Powers", "INT", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1525, 760, 93, 3050, 1520, 186, 1 ],
     [ "\"Mad Monk\" Urouge - All-Out Retaliation", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1584, 702, 102, 3168, 1404, 204, 1 ],
     [ "Capone \"Gang\" Bege - Overwhelming Military Power", "INT", [ "Shooter", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1601, 748, 109, null, null, null, null ],
+    [ "Diamante - Merciless Ripple-Ripple", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1236, 656, 131, null, null, null, null ],
+    [ "Trebol - Inescapable Stick-Stick", "INT", [ "Driven", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1248, 643, 144, null, null, null, null ],
+    [ "Pica - Pulverizing Stones", "PSY", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1431, 631, -150, null, null, null, null ],
+    [ "Bartolomeo & Hakuba - Flower Preotecting Man-Eater and Slicing Wind", [ "DEX", "QCK" ], [ [ "Driven", "Striker" ], [ "Driven", "Slasher" ], [ "Driven", "Slasher" ] ], "6+", 65, 4, 5, 99, 5000000, 2006, 1164, 200, 4012, 1746, 400, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4340,6 +4344,10 @@ var ghostsUnits = [
     [ "[Dual Unit] Beckman & Lucky Roux & Yasopp - Impeding Emperor", "QCK", [ "Shooter", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2002, 941, 167, 4004, 1693, 334, 1 ],
     [ "[Dual Unit] Red-Hair Pirates - Impeding Emperor", "PSY", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2114, 1014, 182, 4227, 1825, 363, 1 ],
     [ "[Dual Unit] Red-Hair Pirates - Impeding Emperor", "QCK", [ "Slasher", "Cerebral" ], "6+", 65, 4, 5, 99, 5000000, 2114, 1014, 182, 4227, 1825, 363, 1 ],
+    [ "[Dual Unit] Bartolomeo - Flower Preotecting Man-Eater and Slicing Wind", "DEX", [ "Driven", "Striker" ], "6+", 65, 4, 5, 99, 5000000, 1912, 1053, 193, 3824, 1580, 386, 1 ],
+    [ "[Dual Unit] Hakuba - Flower Preotecting Man-Eater and Slicing Wind", "QCK", [ "Driven", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 1865, 1132, 181, 3729, 1698, 362, 1 ],
+    [ "[Dual Unit] Bartolomeo & Hakuba - Flower Preotecting Man-Eater and Slicing Wind", "DEX", [ "Driven", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 2006, 1164, 200, 4012, 1746, 400, 1 ],
+    [ "[Dual Unit] Bartolomeo & Hakuba - Flower Preotecting Man-Eater and Slicing Wind", "QCK", [ "Driven", "Slasher" ], "6+", 65, 4, 5, 99, 5000000, 2006, 1164, 200, 4012, 1746, 400, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

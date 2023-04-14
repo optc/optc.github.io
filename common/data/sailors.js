@@ -2872,6 +2872,14 @@ window.sailors = {
     3862: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Driven") ? 60 : 0; },
     },
+    3865: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 150][p.team[p.sourceSlot].unit.limitStats.sailors[Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats.sailors.length-1)]] : 0; },
+    },
+    3866: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
@@ -4164,6 +4172,20 @@ var ghostsSailors = {
     },
     444: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? 125 : 0; },
+    },
+    449: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    450: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 50 : 0; },
+    },
+    451: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    452: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
     },
 }
 

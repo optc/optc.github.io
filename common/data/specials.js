@@ -15219,6 +15219,23 @@ window.specials = {
     3864: {
         orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Driven") ? 2.25 : 1; },
     },
+    3865: {
+        atk: function(p) { return p.unit.class.has("Driven") ? p.cached.multiplier : 1; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Driven == 6 ? 2.5 : 1.75;
+        }
+    },
+    3866: {
+        chain: function(p) { return 2.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35.0 : 1;
+        },
+    },
+    3867: {
+        chainAddition: function(p) { return 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

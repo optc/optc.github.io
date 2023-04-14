@@ -156,7 +156,7 @@ const Jinbe = [ "Jinbe", "Jinbei", "Jimbei" ];
 const BartholomewKuma = [ "Bartholomew Kuma" ];
 const GeckoMoria = [ "Gecko Moria" ];
 const BoaHancock = [ "Boa Hancock" ];
-const DonquixoteDoflamingo = [ "Donquixote Doflamingo" ];
+const DonquixoteDoflamingo = [ "Donquixote Doflamingo", "Doffy" ];
 const Brook = [ "Brook" ];
 const ShimotsukiRyuma = [ "Shimotsuki Ryuma" ];
 const Masira = [ "Masira" ];
@@ -4438,6 +4438,10 @@ window.families = {
     3862: [ ...MarshallDTeach ],
     3863: [ ...Urouge ],
     3864: [ ...CaponeBege ],
+    3865: [ ...Diamante ],
+    3866: [ ...Trebol ],
+    3867: [ ...Pica ],
+    3868: [ ...Bartolomeo, ...Cavendish ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
