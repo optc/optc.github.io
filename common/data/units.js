@@ -3862,10 +3862,10 @@ window.units = [
     [ "Jewelry Bonney - Overcoming All Obstacles", "PSY", [ "Fighter", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1711, 760, 162, 3422, 1520, 323, 1 ],
     [ "Marshall D. Teach - Testing His Stolen Powers", "INT", [ "Driven", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1525, 760, 93, 3050, 1520, 186, 1 ],
     [ "\"Mad Monk\" Urouge - All-Out Retaliation", "PSY", [ "Fighter", "Powerhouse" ], 5, 30, 5, 4, 99, 4000000, 1584, 702, 102, 3168, 1404, 204, 1 ],
-    [ "Capone \"Gang\" Bege - Overwhelming Military Power", "INT", [ "Shooter", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1601, 748, 109, null, null, null, null ],
-    [ "Diamante - Merciless Ripple-Ripple", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1236, 656, 131, null, null, null, null ],
-    [ "Trebol - Inescapable Stick-Stick", "INT", [ "Driven", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1248, 643, 144, null, null, null, null ],
-    [ "Pica - Pulverizing Stones", "PSY", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1431, 631, -150, null, null, null, null ],
+    [ "Capone \"Gang\" Bege - Overwhelming Military Power", "INT", [ "Shooter", "Driven" ], 5, 60, 4, 1, 99, 5000000, 1601, 748, 109, 3202, 1495, 218, 1 ],
+    [ "Diamante - Merciless Ripple-Ripple", "INT", [ "Driven", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1236, 656, 131, 2835, 1483, 234, 1 ],
+    [ "Trebol - Inescapable Stick-Stick", "INT", [ "Driven", "Striker" ], 5, 30, 5, 4, 99, 4000000, 1248, 643, 144, 2793, 1475, 243, 1 ],
+    [ "Pica - Pulverizing Stones", "PSY", [ "Driven", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1431, 631, -150, 4121, 1453, -100, 1 ],
     [ "Bartolomeo & Hakuba - Flower Preotecting Man-Eater and Slicing Wind", [ "DEX", "QCK" ], [ [ "Driven", "Striker" ], [ "Driven", "Slasher" ], [ "Driven", "Slasher" ] ], "6+", 65, 4, 5, 99, 5000000, 2006, 1164, 200, 4012, 1746, 400, 1 ],
 ];
 
