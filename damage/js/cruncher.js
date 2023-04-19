@@ -145,9 +145,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (altspecials[id].hasOwnProperty('onActivation')) {
                 altspecials[id].onActivation(params);
             }
-            applyEnemyEffectsFromSpecial(specials[id], params, true);
+            applyEnemyEffectsFromSpecial(altspecials[id], params, true);
         } else {
-            applyEnemyEffectsFromSpecial(specials[id], params, false);
+            applyEnemyEffectsFromSpecial(altspecials[id], params, false);
             if (altspecials[id].hasOwnProperty('onDeactivation')) {
                 altspecials[id].onDeactivation(params);
             }
@@ -935,6 +935,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // This is rounded down in-game, so 1.5x will still give 1 damage.
         // Get the highest IDT multiplier before chain calculation loop for performance
         var increaseDamageTakenMultiplier = 1;
+        console.log(enemyEffectsFromSpecials.increaseDamageTaken);
         if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
             increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken.filter(value => !isNaN(value)), 1);
         }
