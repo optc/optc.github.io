@@ -12260,7 +12260,7 @@ window.specials = {
         }
     },
     3471: {
-        chainAddition: function(p) { return [1.4, 1, 1.4][p.cached.multiplier]; },
+        chainAddition: function(p) { return [1, 1.4, 1.4][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][p.cached.multiplier] : 0; },
@@ -12270,13 +12270,13 @@ window.specials = {
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Chain, ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                text: 'Using the ' + ["ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     3472: {
-        chainAddition: function(p) { return 1.4; },
+        chainAddition: function(p) { return [1, 1.4, 1.4][p.cached.multiplier]; },
         atk: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         orb: function(p) { return p.unit.class.has("Driven") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
         atkbase: function(p) { return p.unit.class.has("Driven") ? [0, 1000, 1000][p.cached.multiplier] : 0; },
@@ -12286,7 +12286,7 @@ window.specials = {
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Chain, ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                text: 'Using the ' + ["ATK and Orb boost", "Chain and Base ATK boost", "All Boosts"][levels[n]] + '. To switch to ' + ["ATK and Orb boost", "Base ATK boost", "All Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
