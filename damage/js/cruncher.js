@@ -50,6 +50,7 @@ var DEFAULT_HIT_MODIFIERS = [ 'Perfect', 'Perfect', 'Perfect', 'Perfect', 'Perfe
 // specialType for getParameters and cacheParameters
 const SPECIAL = 'special';
 const ALTSPECIAL = 'altspecial';
+const CAPSPECIAL = 'capspecial';
 
 /****************
  * CruncherCtrl *
@@ -150,6 +151,28 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             applyEnemyEffectsFromSpecial(altspecials[id], params, false);
             if (altspecials[id].hasOwnProperty('onDeactivation')) {
                 altspecials[id].onDeactivation(params);
+            }
+        }
+    });
+    
+    $rootScope.$on('capspecialToggled', function(e, slot, enabled) {
+        var unit = $scope.data.team[slot].unit;
+        if (!unit) return;
+        var id = unit.number + 1;
+
+        // provide specialType to get the cached parameters on deactivation
+        var params = getParameters(slot, undefined, slot, CAPSPECIAL);
+        if (!capspecials.hasOwnProperty(id)) return;
+        if (enabled) {
+            cacheParameters(params, slot, CAPSPECIAL);
+            if (capspecials[id].hasOwnProperty('onActivation')) {
+                capspecials[id].onActivation(params);
+            }
+            applyEnemyEffectsFromSpecial(capspecials[id], params, true);
+        } else {
+            applyEnemyEffectsFromSpecial(capspecials[id], params, false);
+            if (capspecials[id].hasOwnProperty('onDeactivation')) {
+                capspecials[id].onDeactivation(params);
             }
         }
     });
@@ -1494,6 +1517,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
                 else
                     enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: ALTSPECIAL },altspecials[id]));
+            }
+            if (x.capspecial && capspecials.hasOwnProperty(id)) {
+                if (capspecials[id].hasOwnProperty('orb') && enabledSpecials[0] && enabledSpecials[0].permanent){
+                    conflictWarning = true;
+                    var disabledSpecial = {}
+                    for (var i in capspecials[id]){
+                        if(i != 'orb')
+                            disabledSpecial[i] = capspecials[id][i];
+                    }
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: CAPSPECIAL },disabledSpecial));
+                }
+                else
+                    enabledSpecials.push(jQuery.extend({ sourceSlot: n, specialType: CAPSPECIAL },capspecials[id]));
             }
             // activate counters if necessary
             if (n < 2 && [794, 795, 1124, 1125, 1191, 1192, 1219, 1220, 1288, 1289, 1361, 1362, 1525, 1557, 1558, 1559, 1560, 1561, 1562, 1712, 1713, 1716, 1764, 1907, 1908, 2015, 2049, 2050, 2198,2199, 2214, 2215, 2299, 2337, 2338, 2421, 2422, 2423, 2424, 2440, 2441, 3552, 3553, 5074, 5534, 5535, 2669, 2670, 2683, 2684, 3047, 3072, 3073, 3108, 3393, 3770, 3831, 3832 ].has(id))

@@ -1281,6 +1281,45 @@ directives.altspecial = function($rootScope) {
     };
 };
 
+directives.capspecial = function($rootScope) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<li class="capspecial" ng-show="hasCapSpecial"><div>[Cpt. Special] {{data.team[slot].unit.name}}</div></li>',
+        link: function(scope, element, attrs) {
+            scope.slot = element.prevAll('.capspecial').length;
+            var isSelected = scope.tdata.team[scope.slot].capspecial;
+            var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
+            scope.hasCapSpecial = false;
+            scope.$watch('tdata.team[slot].capspecial',function(enabled) {
+                removeType();
+                var unit = scope.data.team[scope.slot].unit;
+                if (enabled) element.addClass(unit.type);
+                type = (unit ? unit.type : null);
+                isSelected = enabled;
+                if (enabled && window.capspecials[unit.number+1].warning) {
+                    scope.notify({
+                        text: window.capspecials[unit.number+1].warning.replace(/%name%/g, window.units[unit.number].name),
+                        type: 'warning'
+                    });
+                }
+            });
+            scope.$watch('data.team[slot].unit',function(unit) {
+                removeType();
+                if (scope.tdata.team[scope.slot].capspecial) element.addClass(unit.type);
+                scope.hasCapSpecial = unit && window.capspecials.hasOwnProperty(unit.number+1);
+            });
+            element.click(function(e) {
+                isSelected = !isSelected;
+                $rootScope.$emit('capspecialToggled', scope.slot, isSelected);
+                scope.tdata.team[scope.slot].capspecial = isSelected;
+                scope.$apply();
+            });
+        }
+    };
+};
+
 directives.candySlider = function($compile, $timeout) {
     return {
         restrict: 'E',

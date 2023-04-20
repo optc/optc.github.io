@@ -54,6 +54,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             orb: 1,
             special: false,
             altspecial: false,
+            capspecial: false,
             lock: 0,
             silence: 0,
             removed: 0,
@@ -115,6 +116,7 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
     $rootScope.cachedParams = Array.from({length: 6}, () => ({
         special: null,
         altspecial: null,
+        capspecial: null,
     })),
 
     $rootScope.numbers = {
@@ -150,6 +152,8 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
             $rootScope.$emit('specialToggled', n, false);
         if ($scope.tdata.team[n].altspecial)
             $rootScope.$emit('altspecialToggled', n, false);
+        if ($scope.tdata.team[n].capspecial)
+            $rootScope.$emit('capspecialToggled', n, false);
         // toggle events if any
         if ($scope.data.team[n].unit) {
             var uid = $scope.data.team[n].unit.number + 1;

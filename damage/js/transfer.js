@@ -130,6 +130,15 @@ var ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
                     emitQueue.push([ 'altspecialToggled', n, true]);
                 }
             });
+        } else if (type == 'C') {
+            temp = ('000000' + parseInt(data, 10).toString(2))
+                .slice(-6).split('').map(function(x) { return parseInt(x, 10); });
+            temp.forEach(function(x,n) {
+                if (x == 1) {
+                    $scope.options.sidebarVisible = true;
+                    emitQueue.push([ 'capspecialToggled', n, true]);
+                }
+            });
         } else if (type == 'H') {
             $scope.data.percHP = parseFloat(data, 10);
         } else if (type == 'E') {
@@ -248,6 +257,7 @@ var ExportCtrl = function($scope) {
         result += parseInt(team.map(function(x) { return x.removed; }).join(''),3) + 'R';
         result += parseInt(team.map(function(x) { return x.special ? 1 : 0; }).join(''),2) + 'S';
         result += parseInt(team.map(function(x) { return x.altspecial ? 1 : 0; }).join(''),2) + 'A';
+        result += parseInt(team.map(function(x) { return x.capspecial ? 1 : 0; }).join(''),2) + 'C';
         result += (Math.floor(data.percHP * 100) / 100) + 'H';
 
         $scope.tdata.url = window.location.href.match(/^(.+?)#/)[1] + result;
