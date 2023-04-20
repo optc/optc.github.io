@@ -372,4 +372,12 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     return 1;
 };
 
+window.CrunchUtils.limitUnlock = function(p, ability) {
+    return p.team[p.sourceSlot].unit.limitStats[ability][Math.min(p.team[p.sourceSlot].limit,p.team[p.sourceSlot].unit.limitStats[ability].length-1)];
+};
+
+window.CrunchUtils.llimitUnlock = function(p, ability) {
+    return p.team[p.sourceSlot].unit.llimitStats[ability][Math.min(p.team[p.sourceSlot].llimit,p.team[p.sourceSlot].unit.llimitStats[ability].length-1)];
+};
+
 })();

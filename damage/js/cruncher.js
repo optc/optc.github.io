@@ -527,7 +527,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Basic operations * * * * */
 
     var getStatOfUnit = function(data,stat,slot) {
-        console.log(data);
         var params = getParameters(slot);
         var atkbaseDamage = 0;
         var LBaddition = 0;
