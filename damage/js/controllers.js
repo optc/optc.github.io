@@ -44,7 +44,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
     $scope.pickUnit = function(unitNumber) {
         $scope.resetSlot($stateParams.slot);
         $scope.data.team[$stateParams.slot].unit = units[unitNumber];
-        $scope.data.team[$stateParams.slot].level = $scope.data.team[$stateParams.slot].unit.maxLevel;
+        $scope.data.team[$stateParams.slot].level = units[unitNumber].maxLevel;
         $scope.slotChanged($stateParams.slot);
         updateRecent(unitNumber);
         // captain warning
@@ -320,7 +320,7 @@ controllers.QuickPickCtrl = function($scope, $state) {
         $scope.resetSlot(slotNumber);
         if (unitNumber) {
             $scope.data.team[slotNumber].unit = units[unitNumber - 1];
-            $scope.data.team[slotNumber].level = $scope.data.team[slotNumber].unit.maxLevel;
+            $scope.data.team[slotNumber].level = units[unitNumber - 1].maxLevel;
             $scope.slotChanged(slotNumber);
         }
         if (slotNumber < 2 && captains[unitNumber] && captains[unitNumber].warning) {

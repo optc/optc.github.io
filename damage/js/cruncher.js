@@ -537,7 +537,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
 
-        data.level = Math.min(data.level, data.unit.maxLevel + [0, 6, 11, 21, 31, 51][data.llimit]); //fix for an error when changing a 150/150 unit's LLB to a lower level
+        data.level = Math.min(data.level, data.unit.maxLevel + [0, 6, 11, 21, 31, 51][data.llimit ? data.llimit : 0]); //fix for an error when changing a 150/150 unit's LLB to a lower level
         var result = data.level < 100 ? (data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth)) : data.unit[maxStat]*(1+ 0.5*((1-(150-data.level)/51)));
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
 
@@ -1942,6 +1942,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var getParameters = function(slotNumber, chainPosition, sourceSlotNumber, specialType) {
         if ($scope.data.team[slotNumber].limit === undefined)
             $scope.data.team[slotNumber].limit = 0;
+        if ($scope.data.team[slotNumber].llimit === undefined)
+            $scope.data.team[slotNumber].llimit = 0;
         var unitTemp = Object.assign({},team[slotNumber].unit);
         if(team[0].unit) var friendCaptainTemp = Object.assign({},team[0].unit);
         if(team[1].unit) var captainTemp = Object.assign({},team[1].unit);
