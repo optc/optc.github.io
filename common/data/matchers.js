@@ -2352,6 +2352,12 @@ let matchers = {
     ],
     'Ability Requirements': [
         {
+            name: 'Turn Limited Effects',
+            targets: [ 'captain' ],
+            regex: /for \d+ turn/i,
+        },
+
+        {
             name: 'Old HP-based ATK %target%',
             targets: [ 'captain' ],
             regex: /(?:Boosts|their) ATK(?:(?!\.\D)[^"])+?depending on the crew's current HP/i,
@@ -4940,7 +4946,7 @@ let matchers = {
         {
             name: 'Delayers',
             targets: [ 'captain' ],
-            regex: /chance to delay (all enemies|that enemy) by ([?\d]+)(?:-([?\d]+))? turns?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            regex: /(ignores? (?:Delay )?Debuff Protection and )?delays (all enemies|that enemy) by ([?\d]+)(?:-([?\d]+))? turns?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
@@ -4949,10 +4955,16 @@ let matchers = {
                 },
                 {
                     type: 'option',
+                    description: 'Ignores Immunity',
+                    regex: /i/,
+                    groups: [1],
+                },
+                {
+                    type: 'option',
                     description: 'One enemy',
                     regex: /^t/,
                     radioGroup: '1',
-                    groups: [1],
+                    groups: [2],
                     cssClasses: ['min-width-6'],
                 },
                 {
@@ -4960,7 +4972,7 @@ let matchers = {
                     description: 'All enemies',
                     regex: /^a/,
                     radioGroup: '1',
-                    groups: [1],
+                    groups: [2],
                     cssClasses: ['min-width-6'],
                 },
             ],
@@ -4975,7 +4987,7 @@ let matchers = {
         {
             name: 'Delayers',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(ignores (?:Delay )?Debuff Protection and )?delays (that enemy|all enemies) by ([?\d]+)(?:-([?\d]+))? turns?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            regex: /(ignores? (?:Delay )?Debuff Protection and )?delays (that enemy|all enemies) by ([?\d]+)(?:-([?\d]+))? turns?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
@@ -5016,13 +5028,63 @@ let matchers = {
         {
             name: 'Poisoners',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /(poisons|Inflicts Toxic)/i,
+            regex: /(ignores? (?:Defense Reduction )?Debuff Protection and )?(strongly poisons|poisons|Inflicts Toxic)/i,
+            submatchers: [
+                {
+                    type: 'option',
+                    description: 'Ignores Immunity',
+                    regex: /i/,
+                    groups: [1],
+                },
+                {
+                    type: 'option',
+                    description: 'Poison',
+                    regex: /^p/i,
+                    radioGroup: '1',
+                    groups: [2],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Strong Poison',
+                    regex: /^s/i,
+                    radioGroup: '1',
+                    groups: [2],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Toxic',
+                    regex: /^i/i,
+                    radioGroup: '1',
+                    groups: [2],
+                    cssClasses: ['min-width-12'],
+                },
+            ],
         },
 
         {
             name: 'Paralyzers',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /Paralyzes/i,
+            regex: /(ignores (?:Negative )?Debuff Protection and )?Paralyzes \(([?\d]+)%(?:-([?\d]+)%)?\) all enemies for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Percentage:',
+                    groups: [2, 3],
+                },
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [4, 5],
+                },
+                {
+                    type: 'option',
+                    description: 'Ignores Immunity',
+                    regex: /i/,
+                    groups: [1],
+                },
+            ],
         },
 
         {
@@ -5033,18 +5095,24 @@ let matchers = {
 
         {
             name: 'Defense Reduction',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /Reduces the defense of all enemies by ([?\d]+)%(?:-([?\d]+)%)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?\d]+)%(?:-([?\d]+)%)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /(ignores? (?:Defense Reduction )?Debuff Protection and )?Reduces the defense of all enemies by ([?\d]+)%(?:-([?\d]+)%)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?\d]+)%(?:-([?\d]+)%)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
             submatchers: [
                 {
                     type: 'number',
                     description: 'Percentage:',
-                    groups: [1, 2, 5, 6],
+                    groups: [2, 3, 6, 7],
                 },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [3, 4, 7, 8],
+                    groups: [4, 5, 8, 9],
+                },
+                {
+                    type: 'option',
+                    description: 'Ignores Immunity',
+                    regex: /i/,
+                    groups: [1],
                 },
             ],
         },
@@ -5096,7 +5164,42 @@ let matchers = {
         {
             name: 'Melo-Melo',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /inflicts Melo-Melo/i,
+            regex: /(ignores (?:Melo-Melo )?Debuff Protection and )?inflicts Melo-Melo to (all enemies|enemies that attack you) for ([?\d]+\+?)(?:-([?\d]+))? (additional )?hits/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Hits:',
+                    groups: [3, 4],
+                },
+                {
+                    type: 'option',
+                    description: 'Attacking enemies',
+                    regex: /^e/,
+                    radioGroup: '1',
+                    groups: [2],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'All enemies',
+                    regex: /^a/,
+                    radioGroup: '1',
+                    groups: [2],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Ignores Immunity',
+                    regex: /i/,
+                    groups: [1],
+                },
+                {
+                    type: 'option',
+                    description: 'Additional Hits',
+                    regex: /a/,
+                    groups: [5],
+                },
+            ],
         },
 
         {
@@ -5401,7 +5504,6 @@ let matchers = {
 
     ],
     'Uncategorized': [
-
         /* * * * * Specials * * * * */
 
         /*{
