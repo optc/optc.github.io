@@ -527,6 +527,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     /* * * * * * Basic operations * * * * */
 
     var getStatOfUnit = function(data,stat,slot) {
+        console.log(data);
         var params = getParameters(slot);
         var atkbaseDamage = 0;
         var LBaddition = 0;
@@ -535,7 +536,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var maxLevel = (data.unit.maxLevel == 1 ? 1 : data.unit.maxLevel -1);
         var growth = data.unit.growth[stat] || 1;
         var minStat = 'min' + stat.toUpperCase(), maxStat = 'max' + stat.toUpperCase();
-        var result = data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth);
+
+        data.level = Math.min(data.level, data.unit.maxLevel + [0, 6, 11, 21, 31, 51][data.llimit]); //fix for an error when changing a 150/150 unit's LLB to a lower level
+        var result = data.level < 100 ? (data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth)) : data.unit[maxStat]*(1+ 0.5*((1-(150-data.level)/51)));
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
 
         var sugarSuperEnabled = false;
@@ -958,7 +961,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         // This is rounded down in-game, so 1.5x will still give 1 damage.
         // Get the highest IDT multiplier before chain calculation loop for performance
         var increaseDamageTakenMultiplier = 1;
-        console.log(enemyEffectsFromSpecials.increaseDamageTaken);
         if (enemyEffectsFromSpecials.increaseDamageTaken.length > 0){
             increaseDamageTakenMultiplier = Math.max(...enemyEffectsFromSpecials.increaseDamageTaken.filter(value => !isNaN(value)), 1);
         }
@@ -1940,10 +1942,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var getParameters = function(slotNumber, chainPosition, sourceSlotNumber, specialType) {
         if ($scope.data.team[slotNumber].limit === undefined)
             $scope.data.team[slotNumber].limit = 0;
-        
         var unitTemp = Object.assign({},team[slotNumber].unit);
         if(team[0].unit) var friendCaptainTemp = Object.assign({},team[0].unit);
         if(team[1].unit) var captainTemp = Object.assign({},team[1].unit);
+
+        if($scope.data.team[slotNumber].llimit){
+            unitTemp.maxLevel += [ 0, 6, 11, 21, 31, 51 ][$scope.data.team[slotNumber].llimit]
+        }
         if ($scope.tdata.sugarToysSpecialEnabled){
             if (team[slotNumber].unit) unitTemp.cost = $scope.data.team[slotNumber].sugarToy ? 40 : window.units[team[slotNumber].unit.number].cost;
         }
@@ -1963,8 +1968,10 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 cloneReplace(captainTemp, 1)
             }
         }
+
         unitTemp.class1 = Array.isArray(unitTemp.class) ? unitTemp.class[0] : unitTemp.class;
         unitTemp.class2 = Array.isArray(unitTemp.class) ? unitTemp.class[1] : null;
+
         return {
             cached: getCachedParameters(sourceSlotNumber, specialType),
             unit: unitTemp,
@@ -2007,6 +2014,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             },
             actions: [ $scope.data.actionleft, $scope.data.actionright ],
             limit: $scope.data.team[slotNumber].limit,
+            llimit: $scope.data.team[slotNumber].llimit,
             // sugarToy will be false when sugar special is off, but sugarToy in team and scope.data.team will stay
             sugarToy: $scope.tdata.sugarToysSpecialEnabled && $scope.data.team[slotNumber].sugarToy,
             tokiState: $scope.data.team[slotNumber].tokiState,

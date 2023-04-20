@@ -760,8 +760,8 @@ directives.levelLabel = function($timeout) {
         replace: true,
         scope: true,
         template: '<div class="unitLevel">' +
-            '<span ng-show="data.team[slot].level != data.team[slot].unit.maxLevel">Lv. {{data.team[slot].level}}</span>' +
-            '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel" src="../res/max.png">' +
+            '<span ng-show="data.team[slot].level != data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit] ">Lv. {{data.team[slot].level}}</span>' +
+            '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit]" src="../res/max.png">' +
             '<input type="number" ng-show="editorVisible" ng-model="level"></input></div>',
         link: function(scope, element, attrs) {
             scope.level = scope.data.team[scope.slot].level;
@@ -772,7 +772,7 @@ directives.levelLabel = function($timeout) {
                     if (scope.options.slidersEnabled) $('.unit').eq(scope.slot).addClass('slide');
                     else scope.editorVisible = true;
                 } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey)))
-                    scope.data.team[scope.slot].level = scope.data.team[scope.slot].unit.maxLevel;
+                    scope.data.team[scope.slot].level = scope.data.team[scope.slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit];
                 scope.$apply();
                 if (scope.editorVisible)
                     $timeout(function() { input.focus(); });
@@ -785,7 +785,7 @@ directives.levelLabel = function($timeout) {
                 var level = parseInt(scope.level,10);
                 scope.editorVisible = false;
                 if (isNaN(level)) return;
-                scope.data.team[scope.slot].level = Math.min(Math.max(1,level),scope.data.team[scope.slot].unit.maxLevel);
+                scope.data.team[scope.slot].level = Math.min(Math.max(1,level),scope.data.team[scope.slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][scope.data.team[scope.slot].llimit]);
                 scope.$apply();
             };
             input.focusout(update);
@@ -809,7 +809,8 @@ directives.levelSlider = function($timeout) {
             };
             var update = function(value) {
                 if (!value || value <= 0 || currentValue == value) return;
-                currentValue = Math.min(value,scope.data.team[scope.slot].unit ? scope.data.team[scope.slot].unit.maxLevel : 1);
+                currentValue = Math.min(value,scope.data.team[scope.slot].unit ? scope.data.team[scope.slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][scope.data.team[scope.slot].llimit] : 1);
+                scope.data.team[scope.slot].level = currentValue;
                 element.val(currentValue).trigger('change');
             };
             var updateMax = function(value) {
@@ -825,9 +826,9 @@ directives.levelSlider = function($timeout) {
                 release: onRelease,
                 change: function(value) { immediateValue = value; },
                 min: 1,
-                max: 99
+                max: 150
             });
-            scope.$watch('data.team[slot].unit.maxLevel',updateMax);
+            scope.$watch('data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit]',updateMax);
             scope.$watch('data.team[slot].level',update);
             element.parent().on('click touchend',function(e) {
                 $('.unit').eq(scope.slot).removeClass('slide');

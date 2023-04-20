@@ -231,6 +231,13 @@ var SharedRootCtrl = function($scope, $rootScope, $timeout) {
         $scope.data.team.some(x => x.limit > 0) ? $scope.data.team.forEach(x => x.limit = 0) : $scope.data.team.forEach(x => x.limit = x.unit ? x.unit.limitStats.atk.length : 0);
     };
 
+    /**
+     * Sets all Level Limit Break Levels to 0 if they have values, to character MAX if they are all 0.
+     */
+    $scope.toggleLLimitBreakLevels = function() {
+        $scope.data.team.some(x => x.llimit > 0) ? $scope.data.team.forEach(x => x.llimit = 0) : $scope.data.team.forEach(x => x.llimit = x.unit ? x.unit.maxLevel == 99 ? 5 : 0 : 0);
+    };
+
     // to be invoked every time a new unit is set in a slot so the insertion events can be triggered
     $scope.slotChanged = function(n) {
         if (!$scope.data.team[n].unit) return;

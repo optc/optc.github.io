@@ -124,6 +124,14 @@
                 <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="limitLevel" class="wheelable" name="limit{{$index}}" min=0 max="{{data.team[$index].unit.limitStats.atk.length ? data.team[$index].unit.limitStats.atk.length : 0}}" ng-model="data.team[$index].limit"><br ng-if="$index % 2 == 1"></span>
             </div>
         </li>
+        
+        <li>
+            <div id="llimit">
+                <i class="fa fa-angle-double-up"></i>
+                Level Limit Break Level:  <button type="button" ng-click="toggleLLimitBreakLevels()">Toggle MAX</button> <br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="llimitLevel" class="wheelable" name="llimit{{$index}}" min=0 max="{{data.team[$index].unit.maxLevel == 99 ? 5 : 0}}" ng-model="data.team[$index].llimit"><br ng-if="$index % 2 == 1"></span>
+            </div>
+        </li>
 
         <li>
             <div>
