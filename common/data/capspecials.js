@@ -1,4 +1,7 @@
 window.capspecials = {
+    2035: {
+        orb: function(p) { return p.unit.cost <= 40 ? 2 : 1; }
+    },
     2112: {
         delay: function(p) { return 1; },
     },
@@ -7,6 +10,9 @@ window.capspecials = {
     },
     2739: {
         delay: function(p) { return 1; },
+    },
+    3154: {
+        affinity: function(p) { return 1.75; },
     },
     3640: {
         atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
@@ -120,6 +126,18 @@ var ghostsCapSpecials = {
     },
     428: {
         delay: function(p) { return 1; },
+    },
+    449: {
+        dmgredatk: function(p) { return Math.min(1.5, 1+(p.dmgreductionCounter/100)); },
+    },
+    450: {
+        dmgredatk: function(p) { return Math.min(1.5, 1+(p.dmgreductionCounter/100)); },
+    },
+    451: {
+        dmgredatk: function(p) { return Math.min(1.5, 1+(p.dmgreductionCounter/100)); },
+    },
+    452: {
+        dmgredatk: function(p) { return Math.min(1.5, 1+(p.dmgreductionCounter/100)); },
     },
 }
 

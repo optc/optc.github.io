@@ -263,6 +263,11 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
                 if (window.details[id].limit[x].description.includes("LOCKED WITH KEY")) return false;
             }
         }
+        if (filters.noLBCap && window.details[id]) if("limit" in window.details[id]) {
+            for (x in window.details[id].limit){
+                if (window.details[id].limit[x].description.includes("Acquire new Captain Ability")) return false;
+            }
+        }
         if (filters.noLLB && window.details[id]) if("lLimit" in window.details[id]) return false;
 
         if (filters.noSupport && window.details[id]) if("support" in window.details[id]) return false;
