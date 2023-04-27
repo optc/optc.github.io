@@ -13701,6 +13701,13 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
     },
+    3884: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    3886: {
+        atk: function(p) { return p.unit.type == "PSY" ? [[4, 4.25, 4.5], [4.5, 4.5, 5.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : [[3.5, 4, 4.25], [4.25, 4.25, 4.5]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")]; },
+        hp: function(p) { return [[1.2, 1.3, 1.4], [1.4, 1.4, 1.4]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")]; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

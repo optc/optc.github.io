@@ -15236,6 +15236,25 @@ window.specials = {
     3867: {
         chainAddition: function(p) { return 1; },
     },
+    3884: {
+        atkbase: function(p) { return p.unit.type == "PSY" ? 1000 : 0; },
+        warning: "Selected special (%name%) assumes that Monkey D. Luffy is on your crew."
+    },
+    3862: {
+        atk: function(p) { return p.unit.type == "PSY" ? [[1.75, 1, 1.75],[2.5, 1, 2.5]][CrunchUtils.llimitUnlock(p, "specials")][p.cached.multiplier] : 1; },
+        type: "type",
+        atkPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = [0, levels[n]][CrunchUtils.llimitUnlock(p, "specials")];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: '' + ["ATK", "ATK and Orb Buffs", "All Effects"][n] + ' boost. To ' + ["ATK", "ATK and Orb Buffs", "All Effects"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

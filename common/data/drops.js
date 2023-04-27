@@ -3212,6 +3212,13 @@ window.drops = {
     ],
 
 
+    'Pirate King Adventure': [
+
+
+
+    ],
+
+
     'Raid': [
 
         {

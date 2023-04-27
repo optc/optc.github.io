@@ -5491,6 +5491,10 @@ window.evolutions = {
         evolution: 3868,
         evolvers: [ "skullBartoCav", "skullBartoCav", "skullBartoCav", "skullDEX", "skullQCK" ]
     },
+    2936: {
+        evolution: 3886,
+        evolvers: [ "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy" ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]

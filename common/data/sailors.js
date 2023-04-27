@@ -2880,6 +2880,15 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
     },
+    3884: {
+        hpStatic: function(p) { return 100; },
+        atkStatic: function(p) { return [0, 50][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    3886: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

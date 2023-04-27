@@ -4442,6 +4442,8 @@ window.families = {
     3866: [ ...Trebol ],
     3867: [ ...Pica ],
     3868: [ ...Bartolomeo, ...Cavendish ],
+    3884: [ ...Jinbe ],
+    3886: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
