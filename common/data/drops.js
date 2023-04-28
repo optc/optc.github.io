@@ -3209,12 +3209,30 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3855 ],
         },
+
+        {
+            name: 'Blue Flame to the Rescue',
+            dropID: 'event170',
+            thumb: 3874,
+            global: true,
+            nakama: 6387400,
+            gamewith: null,
+            'All Difficulties': [ 3874 ],
+        },
     ],
 
 
     'Pirate King Adventure': [
 
-
+        {
+            name: 'Tutorial',
+            dropID: 'pka0',
+            thumb: 3886,
+            global: true,
+            nakama: 6387400,
+            gamewith: null,
+            'All Difficulties': [ 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3884, 9085 ],
+        },
 
     ],
 

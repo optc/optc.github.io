@@ -534,7 +534,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
 
     $timeout(function() {
         jQuery.fn.dataTable.ext.search.push(tableFilter);
-        var types = { Story: 'Story Island', Fortnight: 'Fortnight', Raid: 'Raid', Coliseum: 'Coliseum', Arena: 'Arena', Treasuremap: 'Treasure Map', Ambush: 'Ambush', Kizuna: 'Kizuna Clash', Piraterumble: 'Pirate Rumble' };
+        var types = { Story: 'Story Island', Fortnight: 'Fortnight', Raid: 'Raid', Coliseum: 'Coliseum', Arena: 'Arena', Treasuremap: 'Treasure Map', Ambush: 'Ambush', Kizuna: 'Kizuna Clash', Piraterumble: 'Pirate Rumble', Pirateking: 'Pirate King Adventure' };
         $rootScope.$watch('table',function(table) {
             tableData = table;
             if (table.parameters && table.parameters.filters && table.parameters.filters.farmable) {
