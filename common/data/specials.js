@@ -15321,6 +15321,125 @@ window.specials = {
     3867: {
         chainAddition: function(p) { return 1; },
     },
+    3869: {
+        atkbasePlus: function(p) { return [500, 0, 500][p.cached.multiplier]; }, 
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0.25, 0, 0.25][p.cached.multiplier] : 0;
+        }, 
+        chain: function(p) { return [1, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 30, 30][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Lock & Base ATK Buff", "Chain Lock", "Chain Lock and Chain Lock & Base ATK Buff"][n] + '. To switch to ' + ["Chain Lock & Base ATK Buff", "Chain Lock", "Chain Lock and Chain Lock & Base ATK Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3870: {
+        atkbasePlus: function(p) { return [500, 0, 500][p.cached.multiplier]; }, 
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0.25, 0, 0.25][p.cached.multiplier] : 0;
+        }, 
+        chain: function(p) { return [1, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 30, 30][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Lock & Base ATK Buff", "Chain Lock", "Chain Lock and Chain Lock & Base ATK Buff"][n] + '. To switch to ' + ["Chain Lock & Base ATK Buff", "Chain Lock", "Chain Lock and Chain Lock & Base ATK Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3871: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        atkPlus: function(p) { return [0, 0.2, 0.2][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.2, 0.2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.scope.notify({
+                text: '' + ["ATK & Orb Boosts", "ATK and Orb Buffs", "All Effects"][n] + ' boost. To ' + ["ATK & Orb Boosts", "ATK and Orb Buffs", "All Effects"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3872: {
+        poison: function(p) { return 1; },
+        delay: function(p) { return 1; },
+        burn: function(p) { return 1; },
+        paralyze: function(p) { return 1; },
+        affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.75 : 1; },
+        atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 800 : 0; },
+    },
+    3873: {
+        chainPlus: function(p) { 
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0.3, 0, 0.3][p.cached.multiplier] : 0;
+        }, 
+        chain: function(p) { return [1, 3.25, 3.25][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 3.25, 3.25][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Lock Buff", "Chain Lock", "Chain Lock and Chain Lock Buff"][n] + '. To switch to ' + ["Chain Lock Buff", "Chain Lock", "Chain Lock and Chain Lock Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3874: {
+        atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
+        onActivation: function(p) {
+            var levels = [800, 1000];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + ' base ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' base ATK boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3876: {
+        affinity: function(p) { return p.unit.type == "STR" ? 1.25 : 1; },
+    },
+    3884: {
+        atkbase: function(p) { return p.unit.type == "PSY" ? 1000 : 0; },
+        warning: "Selected special (%name%) assumes that Monkey D. Luffy is on your crew."
+    },
+    3862: {
+        atk: function(p) { return p.unit.type == "PSY" ? [[1.75, 1, 1.75],[2.5, 1, 2.5]][CrunchUtils.llimitUnlock(p, "specials")][p.cached.multiplier] : 1; },
+        type: "type",
+        atkPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = [0, levels[n]][CrunchUtils.llimitUnlock(p, "specials")];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: '' + ["ATK Boost", "ATK and Orb Buffs", "All Effects"][n] + '. To ' + ["ATK Boost", "ATK and Orb Buffs", "All Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

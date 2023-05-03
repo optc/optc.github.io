@@ -6,7 +6,7 @@ var CharUtils = { };
 
 var reverseDropMap = null;
 var alternateDropMap = null;
-var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Rookie Mission': 4, 'Fortnight': 8, 'Raid': 16, 'Coliseum': 32, 'Treasure Map': 64, 'Ambush': 128, 'Kizuna Clash': 256, 'Arena': 512, 'Pirate Rumble': 1024, 'Special': 2048 };
+var marks = { 'Story Island': 1, 'Booster and Evolver Island': 2, 'Rookie Mission': 4, 'Fortnight': 8, 'Raid': 16, 'Coliseum': 32, 'Treasure Map': 64, 'Ambush': 128, 'Kizuna Clash': 256, 'Arena': 512, 'Pirate Rumble': 1024, 'Special': 2048, 'Pirate King Adventure': 4096 };
 
 var comparators = {
     "<": (a, b) => a < b,
@@ -25,10 +25,6 @@ var generateReverseDropMap = function() {
                 if (!data || data.constructor != Array) continue;
                 for (var i=0;i<data.length;++i) {
                     if (data[i] < 0 || CharUtils.isFarmable(data[i], type)) continue;
-                   /* if (drops[type][island].name == 'Coliseum')
-                        flagUnit(data[i], 'Coliseum');
-                    else if (drops[type][island].name == 'Arena')
-                        flagUnit(data[i], 'Arena');*/
                     else
                         flagUnit(data[i], type);
                 }
@@ -142,7 +138,7 @@ CharUtils.searchDropLocations = function(id) {
                 else if (type == 'Arena') name += ' Arena';
                 else if (type == 'Treasure Map') name += ' Treasure Map';
                 else if (type == 'Kizuna Clash') name += ' Kizuna';*/
-                var data = { name: name, thumb: window.drops[type][island].thumb, data: temp };
+                var data = { name: name + " | " + type, thumb: window.drops[type][island].thumb, data: temp };
                 if (type == 'Story Island' || window.drops[type][island].hasOwnProperty('day'))
                     data.bonuses = CharUtils.getIslandBonuses(island, window.drops[type][island].day);
                 result.push(data);

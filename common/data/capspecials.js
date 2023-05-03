@@ -1,4 +1,9 @@
 window.capspecials = {
+    1764: {
+        atk: function(p) { return [1.75, 2][CrunchUtils.limitUnlock(p, "captains")]; },
+        type: "type",
+        orb: function(p) { return [1.75, 2][CrunchUtils.limitUnlock(p, "captains")]; },
+    },
     2035: {
         orb: function(p) { return p.unit.cost <= 40 ? 2 : 1; }
     },

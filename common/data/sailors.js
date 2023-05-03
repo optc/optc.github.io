@@ -2880,6 +2880,32 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Driven") ? 70 : 0; },
     },
+    3870: {
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3871: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3873: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3874: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") ? 45 : 0; },
+    },
+    3875: {
+        atkStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
+    },
+    3884: {
+        hpStatic: function(p) { return 100; },
+        atkStatic: function(p) { return [0, 50][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    3886: {
+        atkStatic: function(p) { return 50; },
+        hpStatic: function(p) { return 50; },
+        rcvStatic: function(p) { return 50; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

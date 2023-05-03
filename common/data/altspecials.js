@@ -402,6 +402,19 @@ window.altspecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         }
     },
+    3886: {
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
+        },
+    },
+    3870: {
+        increaseDamageTaken: function(p) { return 2; },
+        def: function(p) { return 0; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

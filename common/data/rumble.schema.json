@@ -617,6 +617,7 @@
             "type": "string",
             "enum": [
                 "above",
+                "exactly",
                 "below",
                 "remaining",
                 "first",

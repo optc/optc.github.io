@@ -30,7 +30,7 @@
         var limitexHealth = element[12], limitexAttack = element[13], limitexRecovery = element[14], limitexCooldown = 0, limitexSlots = element[6];
         var keylevel = 0;
         var LBhp = [], LBatk = [], LBrcv = [], LBsailor = [ 0 ], LBcaptain = [ 0 ];
-        var LLBsailor1 = [ 0 ]; LLBsailor2 = [ 0 ]; LLBcaptain = [ 0 ]; LLBspecial = [ 0 ];
+        var LLBsailor1 = [ 0 ], LLBsailor2 = [ 0 ], LLBcaptain = [ 0 ], LLBspecial = [ 0 ];
         var LLBsailor1s = 0, LLBsailor2s = 0, LLBcaptains = 0, LLBspecials = 0;
         var LBhptotal = 0, LBatktotal = 0, LBrcvtotal = 0, LBsailors = 0, LBcaptains = 0;
         if (window.details) if(window.details[n + 1]) if(window.details[n + 1].limit){
@@ -666,6 +666,8 @@
             case 9083: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3857-skull.png'; break;
             case 'skullBartoCav':
             case 9084: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3868-skull.png'; break;
+            case 'skullRookieLuffy':
+            case 9085: return relPathToRoot + '/api/images/thumbnail/jap/3/800/3886-skull.png'; break;
         }
         if (n === null || n === undefined)
             return relPathToRoot + '/api/images/common/noimage.png';

@@ -67,6 +67,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var enemyEffects = {
         barrier: false, // this will use the enemyBuffs.barrier for now, because orb barriers aren't implemented yet
         burn: false,
+        paralysis: false,
         def: false,
         delay: false,
         increaseDamageTaken: false,
@@ -455,6 +456,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atkStatic,null,true,enabledEffects[i].sourceSlot);
             if (enabledEffects[i].hasOwnProperty('atk'))
                 result = applyCaptainEffectsToDamage(result,enabledEffects[i].atk,null,false,enabledEffects[i].sourceSlot);
+            if (enabledEffects[i].hasOwnProperty('status'))
+                result = applyCaptainEffectsToDamage(result,enabledEffects[i].status,null,false,enabledEffects[i].sourceSlot);
         }
         for (var i=0;i<enabledSpecials.length;++i) {
             if (enabledSpecials[i].hasOwnProperty('atkStatic'))
@@ -1985,6 +1988,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             poisoned: enemyEffects.poison,
             marked: enemyEffects.mark,
             negative: enemyEffects.negative,
+            burn: enemyEffects.burn,
+            paralysis: enemyEffects.paralysis,
+            increaseDamageTaken: enemyEffects.increaseDamageTaken,
             data: team[slotNumber],
             tdata: $scope.tdata.team[slotNumber],
             scope: $scope,

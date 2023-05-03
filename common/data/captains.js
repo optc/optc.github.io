@@ -13701,6 +13701,48 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Driven") ? 3.5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") ? 1.3 : 1; },
     },
+    3869: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 5 : 1; },
+        status: function(p) { return p.increasedDamageTaken ? 1.1 : (p.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.05 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
+    3870: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 5 : 1; },
+        status: function(p) { return p.increasedDamageTaken ? 1.1 : (p.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.05 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Striker") || p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
+    3871: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? p.marked ? 4.5 : 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    3872: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 3.25 : 1; },
+        status: function(p) { return (p.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.35 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    3873: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? p.marked ? 4.25 : 3 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
+    3874: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    3875: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    3876: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    3884: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    3886: {
+        atk: function(p) { return p.unit.type == "PSY" ? [[4, 4.25, 4.5], [4.5, 4.5, 5.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : [[3.5, 4, 4.25], [4.25, 4.25, 4.5]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")]; },
+        hp: function(p) { return [[1.2, 1.3, 1.4], [1.4, 1.4, 1.4]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")]; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
