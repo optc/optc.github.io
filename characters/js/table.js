@@ -268,6 +268,9 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
                 if (window.details[id].limit[x].description.includes("Acquire new Captain Ability")) return false;
             }
         }
+        if (filters.LLBSailor && window.details[id]) if("lLimit" in window.details[id]) {
+            if (!("sailor" in window.details[id].lLimit[4])) return false
+        }
         if (filters.noLLB && window.details[id]) if("lLimit" in window.details[id]) return false;
 
         if (filters.noSupport && window.details[id]) if("support" in window.details[id]) return false;
