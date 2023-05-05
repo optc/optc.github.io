@@ -344,6 +344,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                                      || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 'int';
             if (orb == 'empty') orb = (window.specials[3740].turnedOn || window.specials[3741].turnedOn) ? 2.25 : 'empty';
+            if (orb == 'rainbow') orb = (window.specials[2631].turnedOn) ? 2.25 : 'rainbow';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn) ? 1 : .5;
             
@@ -395,8 +396,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                     if (orb == 'superbomb'){
                         if ([ 2979, 2980 ].includes(team[temp].unit.number + 1)){
-                            orb = 2;
-                            //orb = (window.specials[3762].turnedOn) ? 2.25 : 2;
+                            //orb = 2;
+                            orb = (window.specials[3762].turnedOn) ? 2.25 : 2;
                         }
                     }
                     if (orb == 'dex'){
@@ -543,15 +544,17 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var result = data.level < 100 ? (data.unit[minStat] + (data.unit[maxStat] - data.unit[minStat]) * Math.pow((data.level-1) / maxLevel, growth)) : data.unit[maxStat]*(1+ 0.5*((1-(150-data.level)/51)));
         var candyBonus = (data.candies && data.candies[stat] ? data.candies[stat] * { hp: 5, atk: 2, rcv: 1 }[stat] : 0);
 
-        var sugarSuperEnabled = false;
-        enabledSpecials.forEach(function(special){ if(params.team[special.sourceSlot].unit.number + 1 == 3805 && special.specialType == "special") sugarSuperEnabled = true; });
+        var sugarSuperEnabled = 0;
+        enabledSpecials.forEach(function(special){ if(params.team[special.sourceSlot].unit.number + 1 == 3805 && special.specialType == "special") {
+            sugarSuperEnabled = $scope.data.team[special.sourceSlot].llimit == 5 ? 2 : 1;
+        }});
         
         if(params.limit != null && params.limit != 0){
             LBaddition = data.unit.limitStats[stat][Math.min(params.limit-1,data.unit.limitStats[stat].length-1)];
             if(!LBaddition) LBaddition = 0;
         }
         if (stat == "atk" && params.sugarToy){
-            result = sugarSuperEnabled ? 2750 : 2500;
+            result = [2500, 2750, 3250][sugarSuperEnabled];
             candyBonus = 0;
             LBaddition = 0;
         }
@@ -1542,7 +1545,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.turnCounter.enabled = true;
             if (n < 2 && [1609, 1610, 2232, 3037, 3038].has(id))
                 $scope.tdata.healCounter.enabled = true;
-            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474, 3751, 3752, 3851, 3852].has(id))
+            if ([2364, 2365, 2981, 2982, 3224, 3225, 3473, 3474, 3751, 3752, 3851, 3852, 5449, 5450, 5451, 5452].has(id))
                 $scope.tdata.damageCounter.enabled = true;
             if (n < 2 && [2233, 2234, 2500].has(id))
                 $scope.tdata.semlaCounter.enabled = true;

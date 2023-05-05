@@ -483,6 +483,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
         }
     },
+    2776: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
     2801: {
         onInsertion: function($scope) {
             if (++$scope.options.wanoOrbsEnabled == 1)
@@ -621,6 +631,16 @@ window.events = {
         onRemoval: function($scope) {
             if (--$scope.options.meatOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+        }
+    },
+    3350: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
     3389: {

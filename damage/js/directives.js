@@ -761,7 +761,8 @@ directives.levelLabel = function($timeout) {
         scope: true,
         template: '<div class="unitLevel">' +
             '<span ng-show="data.team[slot].level != data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit] ">Lv. {{data.team[slot].level}}</span>' +
-            '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit]" src="../res/max.png">' +
+            '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit] && data.team[slot].level != 150" src="../res/max.png">' +
+            '<img ng-show="data.team[slot].level == 150" src="../res/llbmax.png">' +
             '<input type="number" ng-show="editorVisible" ng-model="level"></input></div>',
         link: function(scope, element, attrs) {
             scope.level = scope.data.team[scope.slot].level;
