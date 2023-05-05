@@ -12341,7 +12341,7 @@ window.captains = {
         hp: function(p) { return 0.8; },
     },
     3510: {
-        atk: function(p) { return p.percHP >= 99.0 ? [3.25, 3.5][CrunchUtils.limitUnlock(p, "captains")] : [2.5, 2.5][CrunchUtils.limitUnlock(p, "captains")]; }
+        atk: function(p) { return p.percHP >= [99.0, 80.0][CrunchUtils.llimitUnlock(p, "specials")] ? [[3.25, 3.5], [4, 4.25]][CrunchUtils.llimitUnlock(p, "specials")][CrunchUtils.limitUnlock(p, "captains")] : [[2.5, 2.5], [3.25, 3.5]][CrunchUtils.llimitUnlock(p, "specials")][CrunchUtils.limitUnlock(p, "captains")]; }
     },
     3511: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") ? 3.5 : 1; },

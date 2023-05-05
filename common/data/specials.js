@@ -12866,7 +12866,8 @@ window.specials = {
         },
     },
     3510: {
-        chainAddition: function(p) { return 0.8; }
+        chainAddition: function(p) { return [0.8, 1.2][CrunchUtils.llimitUnlock(p, "specials")]; },
+        status: function(p) { return p.delayed > 0 ? [1, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; }
     },
     3511: {
         increaseDamageTaken: function(p) { return 1.3; },
