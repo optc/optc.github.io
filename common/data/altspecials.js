@@ -415,6 +415,9 @@ window.altspecials = {
         increaseDamageTaken: function(p) { return 2; },
         def: function(p) { return 0; },
     },
+    3887: {
+        increaseDamageTaken: function(p) { return 1.75; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
@@ -1918,6 +1921,198 @@ var ghostsAltSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ['Own Orb', 'Class Orb'][n] + ' boost. To ' + ['Own Orb', 'Class Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    453: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    454: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    455: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    456: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    457: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    458: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    459: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    460: {
+        affinity: function(p) { return p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    461: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    462: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    463: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    464: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    465: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    466: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    467: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    468: {
+        orb: function(p) { return p.unit.class.has("Slasher") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

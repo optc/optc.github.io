@@ -15709,9 +15709,44 @@ window.specials = {
     3876: {
         affinity: function(p) { return p.unit.type == "STR" ? 1.25 : 1; },
     },
+    3881: {
+        atkbasePlus: function(p) { return [0, 300, 300][p.cached.multiplier]; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [1000, 0, 1000][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK boost", "Base ATK Buff", "Base ATK boost and Base ATK buff"][n] + '. To switch to ' + ["Base ATK boost", "Base ATK Buff", "Base ATK boost and Base ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3882: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
+    },
+    3883: {
+        delay: function(p) { return 1; },
+        status: function(p) { return p.delayed ? 2 : 1; },
+        warning: "Selected special (%name%) assumes that enemies do not have Delay Debuff Protection."
+    },
     3884: {
         atkbase: function(p) { return p.unit.type == "PSY" ? [0, 1000][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
         warning: "Selected special (%name%) assumes that Monkey D. Luffy is on your crew."
+    },
+    3885: {
+        atkbasePlus: function(p) { return [0, 200, 200][p.cached.multiplier]; },
+        atkbase: function(p) { return p.unit.class.has("Slasher") ? [800, 0, 800][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK boost", "Base ATK Buff", "Base ATK boost and Base ATK buff"][n] + '. To switch to ' + ["Base ATK boost", "Base ATK Buff", "Base ATK boost and Base ATK buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     3886: {
         atk: function(p) { return p.unit.type == "PSY" ? [[2, 1, 2],[2.5, 1, 2.5]][CrunchUtils.llimitUnlock(p, "specials")][p.cached.multiplier] : 1; },
@@ -15727,6 +15762,11 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3887: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
     },
 };
 
@@ -18879,6 +18919,142 @@ var ghostsSpecials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    453: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    454: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    455: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    456: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    457: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    458: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    459: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    460: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [3, 3.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], ['increaseDamageTaken']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Singular Form", "Double Form"][levels[n]] + ' special. To switch to the Stage' + ["Singular Form", "Double Form"][levels[(n + 1) % levels.length]] + ' special, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    461: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    462: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    463: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    464: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    465: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    466: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    467: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    468: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
     },
 };
 

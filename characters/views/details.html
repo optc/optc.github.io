@@ -369,6 +369,8 @@
                                             <div ng-show="details.special.character1" ng-bind-html="details.special.character1 | decorate"></div>
                                             <span class="badge badge-character2" ng-show="details.special.character2">Character 2 Special Ability</span>
                                             <div ng-show="details.special.character2" ng-bind-html="details.special.character2 | decorate"></div>
+                                            <span class="badge badge-combined" ng-show="details.special.combined">Combined Special Ability</span>
+                                            <div ng-show="details.special.combined" ng-bind-html="details.special.combined | decorate"></div>
                                         </div>
                                         <div ng-if="isSpecialHybrid && isSpecialStaged">
                                             <span class="badge badge-base" ng-show="details.special.base">Base Special</span><br>

@@ -3229,9 +3229,19 @@ window.drops = {
             dropID: 'pka0',
             thumb: 3886,
             global: true,
-            nakama: 6387400,
+            nakama: 6388600,
             gamewith: null,
             'All Difficulties': [ 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3884, 9085 ],
+        },
+
+        {
+            name: 'Gol D. Roger',
+            dropID: 'pka1',
+            thumb: 3885,
+            global: true,
+            nakama: 6388500,
+            gamewith: null,
+            'All Difficulties': [ 3885 ],
         },
 
     ],
@@ -8375,6 +8385,14 @@ window.drops = {
             global: true,
             nakama: 6379600,
             'Chopper Man Missions': [ 3796 ],
+        },
+
+        {
+            name: '9th Anniversary Pirate Alliance Blitz Battle',
+            thumb: 3887,
+            global: true,
+            nakama: 6388700,
+            'Chopper Man Missions': [ 3887 ],
         },
 
         {

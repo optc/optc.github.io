@@ -667,13 +667,20 @@ filters.patternToString = function() {
 filters.resilienceToString = function() {
   return function(input) {
       if (!input) return 'N/A';
-      if (input.amount) {
-        return `${conditionToString(input.condition)}Heals ${input.amount} HP every ${input.interval} seconds.`
+      switch(input.type){
+        case "dmgboost":
+            return `${conditionToString(input.condition)}${input.amount}x boost to ${input.attribute} enemies.`
+            break;
+        case "healing":
+            return `${conditionToString(input.condition)}Heals ${input.amount} HP every ${input.interval} seconds.`
+            break;
+        case "damage":
+            return `${conditionToString(input.condition)}${input.percentage}% reduction to ${input.attribute} damage.`
+            break;
+        case "debuff":
+            return `${conditionToString(input.condition)}${input.chance}% to resist ${input.attribute}.`;
+            break;
       }
-      if (input.type == "damage") {
-        return `${conditionToString(input.condition)}${input.percentage}% reduction to ${input.attribute} damage.`
-      }
-      return `${conditionToString(input.condition)}${input.chance}% to resist ${input.attribute}.`;
     }
 };
 

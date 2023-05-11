@@ -279,6 +279,26 @@
             ],
             "title": "DamageResilience"
         },
+        "DamageBoostResilience": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "attribute": {
+                    "$ref": "#/definitions/Damage"
+                },
+                "amount": {
+                    "type": "number"
+                },
+                "type":{
+                  "const": "dmgboost"
+                }
+            },
+            "required": [
+                "type",
+                "amount"
+            ],
+            "title": "DamageBoostResilience"
+        },
         "HealingResilience": {
             "type": "object",
             "additionalProperties": false,

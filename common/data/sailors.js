@@ -2897,6 +2897,9 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
         rcvStatic: function(p) { return p.unit.type == "STR" ? 30 : 0; },
     },
+    3881: {
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 125][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     3884: {
         hpStatic: function(p) { return 100; },
         atkStatic: function(p) { return [0, 50][CrunchUtils.limitUnlock(p, "sailors")]; },
@@ -4212,6 +4215,50 @@ var ghostsSailors = {
     452: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Driven") ? 100 : 0; },
+    },
+    453: {
+        atkStatic: function(p) { return 100; },
+    },
+    454: {
+        atkStatic: function(p) { return 100; },
+    },
+    455: {
+        atkStatic: function(p) { return 100; },
+    },
+    456: {
+        atkStatic: function(p) { return 100; },
+    },
+    457: {
+        atkStatic: function(p) { return 100; },
+    },
+    458: {
+        atkStatic: function(p) { return 100; },
+    },
+    459: {
+        atkStatic: function(p) { return 100; },
+    },
+    460: {
+        atkStatic: function(p) { return 100; },
+    },
+    465: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    466: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    467: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    468: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
 }
 
