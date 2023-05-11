@@ -9551,13 +9551,20 @@ window.specials = {
         orb: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
     },
     2938: {
-        orb: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; }
+        orb: function(p) { return p.unit.type == "PSY" ? [1.75, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; }
+    },
+    2940: {
+        paralysis: function(p) { return [0, 1][CrunchUtils.llimitUnlock(p, "specials")]; },
+        status: function(p) { return p.paralysis ? [1, 2][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        warning: "Selected special (%name%) assumes that Monkey D. Luffy is on your crew."
     },
     2941: {
-        delay: function(p) { return 2; },	
+        delay: function(p) { return 2; },
     },
     2942: {
-        delay: function(p) { return 2; },	
+        delay: function(p) { return 2; },
+        chainAddition: function(p) { return [0, 0.9][CrunchUtils.llimitUnlock(p, "specials")]; },
+        warning: "Selected special (%name%) assumes that Monkey D. Luffy is on your crew."
     },
     2943: {
         chain: function(p) { return 2.5; },
@@ -9570,14 +9577,31 @@ window.specials = {
         chain: function(p) { return 2.5; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.5 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [2.5, 30][CrunchUtils.llimitUnlock(p, "specials")] : 1;
         }
+    },
+    2948: {
+        defense: function(p) { return [1, 0.2][CrunchUtils.llimitUnlock(p, "specials")]; },
+        status: function(p) { return p.defenseDown ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        warning: "Selected special (%name%) assumes that Monkey D. Luffy is on your crew."
     },
     2949: {
         affinity: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
     },
     2950: {
-        affinity: function(p) { return p.unit.type == "PSY" ? 1.75 : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" ? [1.75, p.cached.multiplier][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Affinity boost, disable and re-enable this special',
+                name: '3236warning'
+            });
+        },
+    },
+    2952: {
+        increaseDamageTaken: function(p) { return [1, 1.5][CrunchUtils.llimitUnlock(p, "specials")]; }
     },
     2953: {
         orb: function(p) { return (p.unit.type == "STR" || p.unit.type == "INT") ? 2 : 1; }
@@ -15670,7 +15694,7 @@ window.specials = {
         poison: function(p) { return 1; },
         delay: function(p) { return 1; },
         burn: function(p) { return 1; },
-        paralyze: function(p) { return 1; },
+        paralysis: function(p) { return 1; },
         affinity: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.75 : 1; },
         atkbase: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 800 : 0; },
     },
