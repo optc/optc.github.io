@@ -5497,6 +5497,12 @@ let matchers = {
         },
 
         {
+            name: 'Triple Special Activation',
+            targets: [ 'potential' ],
+            regex: /Triple Special Activation/i,
+        },
+
+        {
             name: 'Barrier Penetration',
             targets: [ 'potential' ],
             regex: /Barrier Penetration/i,
