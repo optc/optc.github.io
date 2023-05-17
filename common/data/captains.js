@@ -15760,11 +15760,11 @@ var ghostsCaptains = {
         hp: function(p) { return 1.2; },
     },
     441: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [4.5, 4.75][CrunchUtils.llimitUnlock(p, "captains")] : [4.25, 55][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [4.5, 4.75][CrunchUtils.llimitUnlock(p, "captains")] : [4.25, 4.5][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     442: {
-        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [4.5, 4.75][CrunchUtils.llimitUnlock(p, "captains")] : [4.25, 55][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [4.5, 4.75][CrunchUtils.llimitUnlock(p, "captains")] : [4.25, 4.5][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     443: {
