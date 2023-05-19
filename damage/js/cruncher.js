@@ -352,10 +352,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
+                            orb = 2;
+                        }
+                        if ([ 3890, 3891 ].includes(team[temp].unit.number + 1) && (x.unit.class.has("Driven") || x.unit.class.has("Cerebral"))){
                             orb = 2;
                         }
                         if ([ 2462, 2463 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Powerhouse")){

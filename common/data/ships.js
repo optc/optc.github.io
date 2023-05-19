@@ -773,5 +773,15 @@ window.ships = [
         atk: function(p) { return [ 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.45, 1.5, 1.6 ][p.boatLevel - 1]; },
         hpStatic: function(p) { return p.slot == 1 ? [0, 0, 0, 0, 500, 1000, 2500, 2500, 5000, 10000][p.boatLevel - 1] : 0; },
     },
+    
+    
+    
+    { //56
+        name: "Thousand Sunny - 9th Anniversary Model",
+        thumb: 'ship_0060_t2.png',
+        description: 'Boosted Ability 1: At the start of the adventure, all specials start at MAX charge. Boosts ATK by 1.6x, makes [RCV] orbs beneficial for all characters, makes PERFECTs easier to hit and boosts EXP and Beli gained by 3x. Boosted Ability 2: Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK by 1.6x, makes [RCV] orbs beneficial for all characters and boosts EXP and Beli gained by 2x. Base Ability: Boosts ATK by 1.5x and makes PERFECTs easier to hit.',
+        atk: function(p) { return 1.55; },
+        hp: function(p) { return 1.2; },
+    },
 
 ];

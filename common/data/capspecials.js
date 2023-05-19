@@ -55,6 +55,12 @@ window.capspecials = {
     3735: {
         delay: function(p) { return 1; },
     },
+    3890: {
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 500 : 0; }
+    },
+    3891: {
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 500 : 0; }
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };

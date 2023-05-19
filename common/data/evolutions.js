@@ -5495,6 +5495,10 @@ window.evolutions = {
         evolution: 3870,
         evolvers: [  ]
     },
+    3877: {
+        evolution: 3878,
+        evolvers: [  ]
+    },
     3879: {
         evolution: 3880,
         evolvers: [  ]
@@ -5502,6 +5506,14 @@ window.evolutions = {
     2936: {
         evolution: 3886,
         evolvers: [ "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy" ]
+    },
+    3888: {
+        evolution: 3889,
+        evolvers: [  ]
+    },
+    3890: {
+        evolution: 3891,
+        evolvers: [  ]
     },
     4986: {
         evolution: 4987,

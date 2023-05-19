@@ -13766,6 +13766,38 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? p.orb == 'wano' ? 4.5 : 4 : 1; },
         hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.5 : 1; },
     },
+    3888: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? ['wano', 'meat', 'tnd', 'g'].includes(p.orb) ? 5.75 : 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    3889: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? ['wano', 'meat', 'tnd', 'g'].includes(p.orb) ? 5.75 : 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    3890: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? ['wano', 'meat', 'tnd'].includes(p.orb) ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.65 : 1; },
+    },
+    3891: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? ['wano', 'meat', 'tnd'].includes(p.orb) ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.65 : 1; },
+    },
+    3892: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 3.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    3893: {
+        atk: function(p) { return 3.25; },
+        hp: function(p) { return 1.25; },
+    },
+    3894: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? [1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? [1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+    },
+    3928: {
+        atk: function(p) { return 3; },
+        hp: function(p) { return 1.5; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

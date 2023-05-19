@@ -673,6 +673,7 @@ const Kotatsu = [ "Kotatsu" ];
 const Inbi = [ "Inbi" ];
 const Fuga = [ "Fuga" ];
 const Zanki = [ "Zanki" ];
+const Lim = [ "Lim" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4461,6 +4462,14 @@ window.families = {
     3885: [ ...GolDRoger ],
     3886: [ ...MonkeyDLuffy ],
     3887: [ ...Kaido ],
+    3888: [ ...VinsmokeSanji ],
+    3889: [ ...VinsmokeSanji ],
+    3890: [ ...Queen ],
+    3891: [ ...Queen ],
+    3892: [ ...Jinbe ],
+    3893: [ ...TonyTonyChopper ],
+    3894: [ ...KozukiMomonosuke ],
+    3928: [ ...Lim ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

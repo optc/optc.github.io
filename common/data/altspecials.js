@@ -82,6 +82,12 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = false;
         },
     },
+    2803: {
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 500 : 0; }
+    },
+    2804: {
+        staticMult: function(p) { return p.slot == p.sourceSlot ? 500 : 0; }
+    },
     2958: {
         atk: function(p) { return 2; },
         type: "type",
@@ -417,6 +423,9 @@ window.altspecials = {
     },
     3887: {
         increaseDamageTaken: function(p) { return 1.75; },
+    },
+    3889: {
+        chainAddition: function(p) { return 1.5; },
     },
 };
 

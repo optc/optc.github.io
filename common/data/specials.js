@@ -15792,6 +15792,80 @@ window.specials = {
         type: "type",
         orb: function(p) { return p.unit.class.has("Driven") ? 2.25 : 1; },
     },
+    3888: {
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1500 : 0; },
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40.0 : 1;
+        },
+    },
+    3889: {
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1500 : 0; },
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40.0 : 1;
+        },
+    },
+    3890: {
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [1, 2.5, 2.5[p.cached.multiplier]] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity Boost", "Status Boost", "Affinity and Status Boost"][n] + '. To ' + ["Affinity Boost", "Status Boost", "Affinity and Status Boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3891: {
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [1, 2.5, 2.5[p.cached.multiplier]] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Affinity Boost", "Status Boost", "Affinity and Status Boost"][n] + '. To ' + ["Affinity Boost", "Status Boost", "Affinity and Status Boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3892: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2 : 1; },
+        type: "type",
+    },
+    3893: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3928: {
+        chain: function(p) { return [2, 2.25][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [10, 20][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["2x-10", "2.25x-20"][n] + 'x Chain Set. To switch to the ' + ["2x-10", "2.25x-20"][(n + 1) % levels.length] + 'x Chain Set, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

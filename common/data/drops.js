@@ -6620,6 +6620,16 @@ window.drops = {
             'Raging Sea': [ 3864 ]
         },
 
+        {
+            name: 'Momonosuke',
+            dropID: 'treasuremap69',
+            thumb: 3894,
+            global: true,
+            nakama: 8389400,
+            gamewith: null,
+            'Raging Sea': [ 3894 ]
+        },
+
     ],
 
     

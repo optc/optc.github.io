@@ -925,6 +925,54 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    3888: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] and [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] and [WANO] orbs support.' });
+        }
+    },
+    3889: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] and [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] and [WANO] orbs support.' });
+        }
+    },
+    3890: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] and [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] and [WANO] orbs support.' });
+        }
+    },
+    3891: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] and [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] and [WANO] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

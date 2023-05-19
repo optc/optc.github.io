@@ -693,6 +693,16 @@
                                         <add-super-tandem-query criteria="details.superTandem.characterCondition[4]" excluded-families="families"></add-super-tandem-query>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.rush">
+                                    <td>Rush</td>
+                                    <td>
+                                        <span ng-if="details.rush.condition"><strong>Condition:</strong> <span ng-bind-html="details.rush.condition | decorate"></span></span>
+                                        <div ng-repeat="item in details.rush.description track by $index"><strong>Level {{::$index + 1}} (<span ng-bind-html="details.rush.characterCondition[$index] | decorate"></span>):</strong>
+                                        <span ng-bind-html="item | decorate"></span><br></div>
+                                        <span class="notes" ng-if="details.rushNotes" ng-bind-html="details.rushNotes | notes | decorate"></span>
+                                        <add-super-tandem-query criteria="details.rush.characterCondition[4]" excluded-families="families"></add-super-tandem-query>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
