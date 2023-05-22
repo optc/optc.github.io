@@ -695,10 +695,20 @@
                                 </tr>
                                 <tr ng-if="details.rush">
                                     <td>Rush</td>
-                                    <td>
-                                        <span ng-if="details.rush.condition"><strong>Condition:</strong> <span ng-bind-html="details.rush.condition | decorate"></span></span>
-                                        <div ng-repeat="item in details.rush.description track by $index"><strong>Level {{::$index + 1}} (<span ng-bind-html="details.rush.characterCondition[$index] | decorate"></span>):</strong>
-                                        <span ng-bind-html="item | decorate"></span><br></div>
+                                    <td border-spacing="0px">
+                                        <div ng-if="details.rush.condition"><strong>Condition:</strong> <div ng-bind-html="details.rush.condition | decorate"></div></div>
+                                        <table class="table table-striped-column abilities rush">
+                                            <tbody>
+                                                <tr ng-repeat-start="item in details.rush.description track by $index">
+                                                    <th colspan="2"><strong>Level {{::$index + 1}} (<span ng-bind-html="details.rush.characterCondition[$index] | decorate"></span>)</strong></th>
+                                                </tr>
+                                                <tr ng-repeat-end>
+                                                    <td width="50%"><!--strong>Level {{::$index + 1}} (<span ng-bind-html="details.rush.characterCondition[$index] | decorate"></span>):</strong-->
+                                                    <div ng-bind-html="item | decorate"></div></td>
+                                                    <td><div ng-bind-html="details.rush.stats[$index] | decorate"></div></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <span class="notes" ng-if="details.rushNotes" ng-bind-html="details.rushNotes | notes | decorate"></span>
                                         <add-super-tandem-query criteria="details.rush.characterCondition[4]" excluded-families="families"></add-super-tandem-query>
                                     </td>

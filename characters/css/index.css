@@ -945,6 +945,10 @@ tr.preview td:nth-child(2) > a:after {
     white-space: nowrap;
 }
 
+.abilities td:nth-child(n+1) {
+    white-space: normal;
+}
+
 .abilities td:nth-child(2) {
     /*width: 100%;*/
 }
