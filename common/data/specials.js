@@ -15850,6 +15850,107 @@ window.specials = {
             });
         },
     },
+    3895: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.25 : 1; },
+        type: "type",
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit") ? 2.25 : 1;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = [true, false][levels[n]];
+            p.scope.notify({
+                text: 'Using the ' + ["TND Orb Buff Enabled", "TND Orb Buff Disabled"][levels[n]] + '. To switch to ' + ["TND Orb Buff Enabled", "TND Orb Buff Disabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    3896: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.25 : 1; },
+        type: "type",
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit") ? 2.25 : 1;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = [true, false][levels[n]];
+            p.scope.notify({
+                text: 'Using the ' + ["TND Orb Buff Enabled", "TND Orb Buff Disabled"][levels[n]] + '. To switch to ' + ["TND Orb Buff Enabled", "TND Orb Buff Disabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    3897: {
+        atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1500, 0][p.cached.multiplier1] : 0; },
+        tapTiming: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
+        chainAddition: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            p.cached.multiplier2 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 2 : 0;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier1 = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[n]] + '. To switch to ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3898: {
+        atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1500, 0][p.cached.multiplier1] : 0; },
+        tapTiming: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
+        chainAddition: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            p.cached.multiplier2 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 2 : 0;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier1 = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[n]] + '. To switch to ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3899: {
+        affinityPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? [2, 1, 2][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3900: {
+        chainAddition: function(p) { return [1.2, 0, 1.2][p.cached.multiplier]; },
+        def: function(p) { return [1, 0, 0][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition", "Defense Reduction", "Both Effects"][n] + '. To switch to ' + ["Chain Addition", "Defense Reduction", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3901: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+        type: "type",
+    },
+    3903: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
+    },
     3928: {
         chain: function(p) { return [2, 2.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
@@ -19153,6 +19254,42 @@ var ghostsSpecials = {
     },
     468: {
         affinity: function(p) { return p.unit.class.has("Slasher") ? 2.75 : 1; },
+    },
+    469: {
+        atkbase: function(p) { return p.cached.multiplier; },
+        chain: function(p) { return p.cached.multiplier1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier1 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = Math.min(2000, Math.max(1000, Math.floor(p.percHP*p.maxHP/10000)));
+            p.cached.multiplier1 = Math.min([4, 4.5][CrunchUtils.llimitUnlock(p, "specials")], 3.5 + (Math.floor(p.turnCounter/5) * 0.25));
+        },
+    },
+    470: {
+        atkbase: function(p) { return p.cached.multiplier; },
+        chain: function(p) { return p.cached.multiplier1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier1 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = Math.min(2000, Math.max(1000, Math.floor(p.percHP*p.maxHP/10000)));
+            p.cached.multiplier1 = Math.min([4, 4.5][CrunchUtils.llimitUnlock(p, "specials")], 3.5 + (Math.floor(p.turnCounter/5) * 0.25));
+        },
+    },
+    471: {
+        atkbase: function(p) { return p.cached.multiplier; },
+        chain: function(p) { return p.cached.multiplier1; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier1 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = Math.min(2000, Math.max(1000, Math.floor(p.percHP*p.maxHP/10000)));
+            p.cached.multiplier1 = Math.min([4, 4.5][CrunchUtils.llimitUnlock(p, "specials")], 3.5 + (Math.floor(p.turnCounter/5) * 0.25));
+        },
     },
 };
 

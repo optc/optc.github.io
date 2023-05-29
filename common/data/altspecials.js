@@ -40,9 +40,9 @@ window.altspecials = {
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+            var n = (levels.indexOf(window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
             p.scope.notify({
                 text: '' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][n] + ' boost. To ' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -54,9 +54,9 @@ window.altspecials = {
         turnedOn: [ false, false, false, false, false, false ],
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
-            var n = (levels.indexOf(window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
-            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+            var n = (levels.indexOf(window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
             p.scope.notify({
                 text: '' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][n] + ' boost. To ' + ["Gear 2", "Gear 3", "Boundman", "Tankman"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -426,6 +426,40 @@ window.altspecials = {
     },
     3889: {
         chainAddition: function(p) { return 1.5; },
+    },
+    3898: {
+        chainAddition: function(p) { return 1.5; },
+    },
+    3895: {
+        luffyGear: [ 0, 0, 0, 0, 0, 0 ],
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+            p.scope.notify({
+                text: '' + ["Sheathed", "Enma", "Enma Unleached", "Weakened"][n] + ' boost. To ' + ["Sheathed", "Enma", "Enma Unleached", "Weakened"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3896: {
+        luffyGear: [ 0, 0, 0, 0, 0, 0 ],
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]) + 1) % levels.length;
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot] = levels[n];
+            window.capspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = true;
+            p.scope.notify({
+                text: '' + ["Sheathed", "Enma", "Enma Unleached", "Weakened"][n] + ' boost. To ' + ["Sheathed", "Enma", "Enma Unleached", "Weakened"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3903: {
+        increaseDamageTaken: function(p) { return 2; },
     },
 };
 
@@ -2122,6 +2156,48 @@ var ghostsAltSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    469: {
+        atk: function(p) { return [p.slot == p.sourceSlot ? 1.5 : 1, 2][p.cached.multiplier]; },
+        type: "type",
+        orb: function(p) { return [p.slot == p.sourceSlot ? 1.5 : 1, 2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Universal Orb'][n] + ' boost. To ' + ['Own Orb', 'Universal Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    470: {
+        atk: function(p) { return [p.slot == p.sourceSlot ? 1.5 : 1, 2][p.cached.multiplier]; },
+        type: "type",
+        orb: function(p) { return [p.slot == p.sourceSlot ? 1.5 : 1, 2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Universal Orb'][n] + ' boost. To ' + ['Own Orb', 'Universal Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    471: {
+        atk: function(p) { return [p.slot == p.sourceSlot ? 1.5 : 1, 2][p.cached.multiplier]; },
+        type: "type",
+        orb: function(p) { return [p.slot == p.sourceSlot ? 1.5 : 1, 2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Own Orb', 'Universal Orb'][n] + ' boost. To ' + ['Own Orb', 'Universal Orb'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

@@ -2909,6 +2909,9 @@ window.sailors = {
         hpStatic: function(p) { return 50; },
         rcvStatic: function(p) { return 50; },
     },
+    3887: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 200][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     3881: {
         hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 200][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
@@ -2917,6 +2920,19 @@ window.sailors = {
     },
     3892: {
         hpStatic: function(p) { return 200; },
+    },
+    3899: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3900: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3903: {
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 200][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4986: {
         staticMult: function(p) { return 3; }
@@ -4268,6 +4284,15 @@ var ghostsSailors = {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    469: {
+        hpStatic: function(p) { return [0, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    470: {
+        hpStatic: function(p) { return [0, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    471: {
+        hpStatic: function(p) { return [0, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
     },
 }
 

@@ -5515,6 +5515,22 @@ window.evolutions = {
         evolution: 3891,
         evolvers: [  ]
     },
+    3895: {
+        evolution: 3896,
+        evolvers: [  ]
+    },
+    3897: {
+        evolution: 3898,
+        evolvers: [  ]
+    },
+    2536: {
+        evolution: 3902,
+        evolvers: [ 'skullZPBigMom', 'skullZPBigMom', 'skullZPBigMom', 'skullINT', 'skullINT' ]
+    },
+    3887: {
+        evolution: 3903,
+        evolvers: [ 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido' ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]

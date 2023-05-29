@@ -615,7 +615,7 @@ const Unluckies = [ "Unluckies" ];
 const BuenaFesta = [ "Buena Festa" ];
 const PageOne = [ "Page One", "Pay Pay", "Pageone", "Page 1" ];
 const Toko = [ "Toko" ];
-const King = [ "King" ];
+const King = [ "King", "Alber" ];
 const Onimaru = [ "Onimaru" ];
 const Gyukimaru = [ "Gyukimaru", "Onimaru" ];
 const KurozumiOrochi = [ "Kurozumi Orochi" ];
@@ -4469,6 +4469,15 @@ window.families = {
     3892: [ ...Jinbe ],
     3893: [ ...TonyTonyChopper ],
     3894: [ ...KozukiMomonosuke ],
+    3895: [ ...RoronoaZoro ],
+    3896: [ ...RoronoaZoro ],
+    3897: [ ...King ],
+    3898: [ ...King ],
+    3899: [ ...Brook ],
+    3900: [ ...Franky ],
+    3901: [ ...Tama ],
+    3902: [ ...CharlotteLinlin, ...Zeus, ...Prometheus ],
+    3903: [ ...Kaido ],
     3928: [ ...Lim ],
     //break
     4986: [ ...MonkeyDLuffy ],

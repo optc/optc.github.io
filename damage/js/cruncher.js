@@ -370,6 +370,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='tnd'){
                 orb = (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 :
                     (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : "tnd";
+                orb = (window.altspecials[3895].turnedOn || window.altspecials[3896].turnedOn) ? 2.5 : "tnd";
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
                         if ([ 5430, 5432 ].includes(team[temp].unit.number + 1)){
@@ -1543,6 +1544,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             }
             // activate counters if necessary
             if (n < 2 && [794, 795, 1124, 1125, 1191, 1192, 1219, 1220, 1288, 1289, 1361, 1362, 1525, 1557, 1558, 1559, 1560, 1561, 1562, 1712, 1713, 1716, 1764, 1907, 1908, 1921, 2015, 2049, 2050, 2198,2199, 2214, 2215, 2299, 2337, 2338, 2421, 2422, 2423, 2424, 2440, 2441, 3552, 3553, 5074, 5534, 5535, 2669, 2670, 2683, 2684, 3047, 3072, 3073, 3108, 3393, 3770, 3831, 3832 ].has(id))
+                $scope.tdata.turnCounter.enabled = true;
+            if ([3789, 3790, 5469, 5470, 5471 ].has(id))
                 $scope.tdata.turnCounter.enabled = true;
             if(shipBonus.bonus.name=="Shark Superb")
                 $scope.tdata.turnCounter.enabled = true;

@@ -61,6 +61,14 @@ window.capspecials = {
     3891: {
         staticMult: function(p) { return p.slot == p.sourceSlot ? 500 : 0; }
     },
+    3895: {
+        increaseDamageTaken: function(p) { return 1.5; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
+    },
+    3896: {
+        increaseDamageTaken: function(p) { return 1.5; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };

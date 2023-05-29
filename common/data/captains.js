@@ -13794,6 +13794,48 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? [1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25][CrunchUtils.limitUnlock(p, "captains")] : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? [1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
+    3896: {
+        damageSorter: function(d) { return CrunchUtils.gearSort(d, 5.25); },
+        hitAtk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [5.25, 5.5, 5.75, 2][window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]] : 5.25 : 1; },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    3897: {
+        damageSorter: function(d) { return CrunchUtils.gearSort(d, 5.25); },
+        hitAtk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [5.25, 5.5, 5.75, 2][window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]] : 5.25 : 1; },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    3897: {
+        hitAtk: function(p) {
+            if (!(p.unit.class.has('Powerhouse') || p.unit.class.has('Driven'))) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 5 : (prev == 'Good' ? 5+(1/6) : (prev == 'Great' ? 5+(1/3) : (prev == 'Perfect' ? 5.5 : 5)));
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has('Powerhouse') || p.unit.class.has('Driven') ? 1.25 : 1; }
+    },
+    3898: {
+        hitAtk: function(p) {
+            if (!(p.unit.class.has('Powerhouse') || p.unit.class.has('Driven'))) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 5 : (prev == 'Good' ? 5+(1/6) : (prev == 'Great' ? 5+(1/3) : (prev == 'Perfect' ? 5.5 : 5)));
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
+        hp: function(p) { return p.unit.class.has('Powerhouse') || p.unit.class.has('Driven') ? 1.25 : 1; }
+    },
+    3899: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
+    3900: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
+    },
+    3901: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
+    },
     3928: {
         atk: function(p) { return 3; },
         hp: function(p) { return 1.5; },
@@ -15908,6 +15950,18 @@ var ghostsCaptains = {
     468: {
         atk: function(p) { return p.unit.class.has("Slasher") ? 5.25*(p.orb == 'wano' ? 1.1 : 1) : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? 1.2 : 1; },
+    },
+    469: {
+        atk: function(p) { return [4.25, 4.5][CrunchUtils.llimitUnlock(p, "captains")]; },
+        hp: function(p) { return 2; }
+    },
+    470: {
+        atk: function(p) { return [4.25, 4.5][CrunchUtils.llimitUnlock(p, "captains")]; },
+        hp: function(p) { return 2; }
+    },
+    471: {
+        atk: function(p) { return [4.75, 5][CrunchUtils.llimitUnlock(p, "captains")]; },
+        hp: function(p) { return 2; }
     },
 };
 
