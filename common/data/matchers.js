@@ -3950,7 +3950,7 @@ let matchers = {
         {
             name: 'Normal Attack Bypassing Enemy Buffs',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /Attacks.+ignore.+damage reducing Barriers and Buffs/i,
+            regex: /Attacks.+ignore.+damage reducing Barriers( and Buffs|, Buffs and DEF)/i,
         },
 
         {
