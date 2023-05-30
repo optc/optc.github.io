@@ -3926,7 +3926,7 @@ window.units = [
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
     [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
-    [ "Lim - Mysterious Girl", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1355, 670, 194, null, null, null, null ],
+    [ "Lim - Mysterious Girl", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1355, 670, 194, 2710, 1340, 387, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
