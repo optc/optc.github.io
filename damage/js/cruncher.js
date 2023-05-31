@@ -805,7 +805,6 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         });
         var result = chainBase;
         
-        //console.log(tapTiming);
         var tapTimingTemp = 0;
         var tapTimingSpecial = null;
         tapTiming.forEach(function(special){

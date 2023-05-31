@@ -15887,14 +15887,14 @@ window.specials = {
         }
     },
     3897: {
-        atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1500, 0][p.cached.multiplier1] : 0; },
+        atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1500, 0][p.cached.multiplier] : 0; },
         tapTiming: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         chainAddition: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             p.cached.multiplier2 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 2 : 0;
             var levels = [0, 1];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
-            p.cached.multiplier1 = levels[n];
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[n]] + '. To switch to ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -15902,14 +15902,14 @@ window.specials = {
         },
     },
     3898: {
-        atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1500, 0][p.cached.multiplier1] : 0; },
+        atkbase: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1500, 0][p.cached.multiplier] : 0; },
         tapTiming: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         chainAddition: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             p.cached.multiplier2 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 2 : 0;
             var levels = [0, 1];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
-            p.cached.multiplier1 = levels[n];
+            p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[n]] + '. To switch to ' + ["Base ATK and Tap Timing Buff Enabled", "Base ATK and Tap Timing Buff Disabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
