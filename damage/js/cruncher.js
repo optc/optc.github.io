@@ -368,13 +368,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 }
             }
             if (orb =='tnd'){
-                orb = (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 :
-                    (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : "tnd";
-                orb = (window.altspecials[3895].turnedOn || window.altspecials[3896].turnedOn) ? 2.5 : "tnd";
+                orb = (window.altspecials[3895].turnedOn.includes(true) || window.altspecials[3896].turnedOn.includes(true)) ? 2.5 : 
+                    (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 :
+                    (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : orb;
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
                         if ([ 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460 ].includes(team[temp].unit.number + 1)){
-                            orb = 2;
+                            orb = orb == 'tnd' ? 2 : Math.max(orb,2);
                         }
                     }
                 }

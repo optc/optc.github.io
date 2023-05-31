@@ -13794,13 +13794,13 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") ? [1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25][CrunchUtils.limitUnlock(p, "captains")] : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") ? [1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
-    3896: {
+    3895: {
         damageSorter: function(d) { return CrunchUtils.gearSort(d, 5.25); },
         hitAtk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [5.25, 5.5, 5.75, 2][window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]] : 5.25 : 1; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.5 : 1; }
     },
-    3897: {
+    3896: {
         damageSorter: function(d) { return CrunchUtils.gearSort(d, 5.25); },
         hitAtk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? [5.25, 5.5, 5.75, 2][window.altspecials[p.team[p.sourceSlot].unit.number+1].luffyGear[p.sourceSlot]] : 5.25 : 1; },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"],
