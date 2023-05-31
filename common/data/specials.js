@@ -15810,7 +15810,7 @@ window.specials = {
     },
     3890: {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
-        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [1, 2.5, 2.5[p.cached.multiplier]] : 1; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -15823,7 +15823,7 @@ window.specials = {
     },
     3891: {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
-        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [1, 2.5, 2.5[p.cached.multiplier]] : 1; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
