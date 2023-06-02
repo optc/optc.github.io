@@ -5531,6 +5531,10 @@ window.evolutions = {
         evolution: 3903,
         evolvers: [ 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido' ]
     },
+    3904: {
+        evolution: 3905,
+        evolvers: [  ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]

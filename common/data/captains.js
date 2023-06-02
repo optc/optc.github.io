@@ -13836,6 +13836,20 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 2 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
     },
+    3903: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? p.orb=="wano" ? 5 : 4.75 : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") ? 1.5 : 1; }
+    },
+    3903: {
+        atk: function(p) { return ['wano', 'meat', 'tnd', 'empty', 'g', 'rainbow' ].includes(p.orb) ? 5.5 : 5; },
+    },
+    3904: {
+        atk: function(p) { return ['wano', 'meat', 'tnd', 'empty', 'g', 'rainbow' ].includes(p.orb) ? 5.5 : 5; },
+    },
+    3905: {
+        atk: function(p) { return p.unit.type == "QCK" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "QCK" ? 1.2 : 1; }
+    },
     3928: {
         atk: function(p) { return 3; },
         hp: function(p) { return 1.5; },

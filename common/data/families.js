@@ -4478,6 +4478,9 @@ window.families = {
     3901: [ ...Tama ],
     3902: [ ...CharlotteLinlin, ...Zeus, ...Prometheus ],
     3903: [ ...Kaido ],
+    3904: [ ...EmporioIvankov ],
+    3905: [ ...EmporioIvankov ],
+    3906: [ ...Inazuma ],
     3928: [ ...Lim ],
     //break
     4986: [ ...MonkeyDLuffy ],

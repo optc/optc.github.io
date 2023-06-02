@@ -2939,6 +2939,11 @@ window.sailors = {
         hpStatic: function(p) { return [0, 50][CrunchUtils.limitUnlock(p, "sailors")]; },
         rcvStatic: function(p) { return [0, 50][CrunchUtils.limitUnlock(p, "sailors")]; },
     },
+    3906: {
+        atkStatic: function(p) { return p.unit.class.has("Free Spirit") ? 45 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 45 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 45 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

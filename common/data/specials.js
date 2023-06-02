@@ -15951,6 +15951,37 @@ window.specials = {
         type: "type",
         orb: function(p) { return p.unit.class.has("Driven") ? 2.5 : 1; },
     },
+    3904: {
+        atk: function(p) { return p.cached.multiplier[0]; },
+        type: "type",
+        orb: function(p) { return p.cached.multiplier[1]; },
+        affinity: function(p) { return p.cached.multiplier[2]; },
+        chainAddition: function(p) { return p.cached.multiplier[3]; },
+        onActivation: function(p) {
+            p.cached.multiplier = [ 1, 1, 1, 0 ]
+            p.cached.multiplier[0] = p.captain.class.has("Fighter") || p.captain.class.has("Slasher") ? 2.25 : 1;
+            p.cached.multiplier[1] = p.captain.class.has("Shooter") || p.captain.class.has("Striker") ? 2.25 : 1;
+            p.cached.multiplier[2] = p.captain.class.has("Free Spirit") || p.captain.class.has("Powerhouse") ? 2.25 : 1;
+            p.cached.multiplier[3] = p.captain.class.has("Cerebral") || p.captain.class.has("Driven") ? 1.3 : 0;
+        },
+    },
+    3905: {
+        atk: function(p) { return p.cached.multiplier[0]; },
+        type: "type",
+        orb: function(p) { return p.cached.multiplier[1]; },
+        affinity: function(p) { return p.cached.multiplier[2]; },
+        chainAddition: function(p) { return p.cached.multiplier[3]; },
+        onActivation: function(p) {
+            p.cached.multiplier = [ 1, 1, 1, 0 ]
+            p.cached.multiplier[0] = p.captain.class.has("Fighter") || p.captain.class.has("Slasher") ? 2.25 : 1;
+            p.cached.multiplier[1] = p.captain.class.has("Shooter") || p.captain.class.has("Striker") ? 2.25 : 1;
+            p.cached.multiplier[2] = p.captain.class.has("Free Spirit") || p.captain.class.has("Powerhouse") ? 2.25 : 1;
+            p.cached.multiplier[3] = p.captain.class.has("Cerebral") || p.captain.class.has("Driven") ? 1.3 : 0;
+        },
+    },
+    3906: {
+        affinity: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
+    },
     3928: {
         chain: function(p) { return [2, 2.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
