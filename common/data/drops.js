@@ -6630,6 +6630,16 @@ window.drops = {
             'Raging Sea': [ 3894 ]
         },
 
+        {
+            name: 'Akainu',
+            dropID: 'treasuremap70',
+            thumb: 3915,
+            global: true,
+            nakama: 8391500,
+            gamewith: null,
+            'Raging Sea': [ 3915 ]
+        },
+
     ],
 
     

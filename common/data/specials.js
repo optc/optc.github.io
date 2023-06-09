@@ -15982,6 +15982,46 @@ window.specials = {
     3906: {
         affinity: function(p) { return p.unit.type == "QCK" ? 2 : 1; },
     },
+    3911: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "type",
+    },
+    3912: {
+        atkPlus: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.25, 0.4];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x buff. To ' + levels[(n + 1) % levels.length] + 'x buff, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3913: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = p.percHP > 50 ? [0.25, 0.4] : [1.2, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3914: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "type",
+    },
+    3915: {
+        burn: function(p) { return 1; },
+        status: function(p) { return p.cached.multiplier; },
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn.",
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.class.has("Driven") ? 2.25 : 1.75;
+        },
+    },
     3928: {
         chain: function(p) { return [2, 2.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
@@ -19320,6 +19360,146 @@ var ghostsSpecials = {
         onActivation: function(p) {
             p.cached.multiplier = Math.min(2000, Math.max(1000, Math.floor(p.percHP*p.maxHP/10000)));
             p.cached.multiplier1 = Math.min([4, 4.5][CrunchUtils.llimitUnlock(p, "specials")], 3.5 + (Math.floor(p.turnCounter/5) * 0.25));
+        },
+    },
+    472: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+        },
+        tapTiming: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP >= 50 ? { Good: 0, Great: 0, Perfect: 0 } : { Good: 0.2, Great: 0.3, Perfect: 0.3 };
+        },
+    },
+    473: {
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP >= 51 ? 1000 : p.percHP >= 21 ? 1500 : 1750;
+        },
+    },
+    474: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+        },
+        tapTiming: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP >= 50 ? { Good: 0, Great: 0, Perfect: 0 } : { Good: 0.2, Great: 0.3, Perfect: 0.3 };
+        },
+    },
+    475: {
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") ? p.cached.multiplier : 0; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP >= 51 ? 1000 : p.percHP >= 21 ? 1500 : 1750;
+        },
+    },
+    476: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    477: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    478: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    479: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    480: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    481: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    482: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    483: {
+        affinityPlus: function(p) { return [0, 0.75, 0.75][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.type == "PSY" ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
 };

@@ -158,6 +158,12 @@ var ghostsCapSpecials = {
     452: {
         dmgredatk: function(p) { return Math.min(1.5, 1+(p.dmgreductionCounter/100)); },
     },
+    473: {
+        chainAddition: function(p) { return 1.2; },
+    },
+    475: {
+        chainAddition: function(p) { return 1.2; },
+    },
 }
 
 Object.keys(ghostsCapSpecials).forEach(function (key) {

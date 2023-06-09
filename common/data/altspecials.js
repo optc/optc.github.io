@@ -2202,6 +2202,18 @@ var ghostsAltSpecials = {
             });
         },
     },
+    472: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "PSY" ? 2.5 : 1; },
+    },
+    473: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "DEX" ? 2.5 : 1; },
+    },
+    474: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "PSY" ? 2.5 : 1; },
+    },
+    475: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.type == "DEX" ? 2.5 : 1; },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {
