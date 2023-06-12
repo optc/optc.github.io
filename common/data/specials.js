@@ -14640,7 +14640,7 @@ window.specials = {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
             return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0, 0, 0, 3.75, 3.75, 3.75, 3.75][p.cached.multiplier] : 0;
         },
-        orbCeil: function(p) { return [Infinity, [Infinity, Infinity, Infinity, 3, 3, 3, 3][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")];},
+        orbCeil: function(p) { return [1, [1, 1, 1, 3, 3, 3, 3][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")];},
         onActivation: function(p) {
             var levels = [0, 1, 2, 3, 4, 5, 6 ];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;

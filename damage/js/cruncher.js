@@ -1017,14 +1017,14 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 });
                 
                 if(special.chain(params[n]) == 1) chainUpgrade = 0;
-                var chainMultiplier = getChainMultiplier(chainOverride == 0 ? special.chain(params[n]) + chainUpgrade + captainBaseChain : chainOverride, modifiers.slice(0,n), chainModifier, params[n], damage);
+                var chainMultiplier = getChainMultiplier(chainOverride == 0 || special.chainLimiter(params[n]) == Infinity ? special.chain(params[n]) + chainUpgrade + captainBaseChain : chainOverride, modifiers.slice(0,n), chainModifier, params[n], damage);
                 //Add flat Multiplier Bonuses if they exist
                 if(addition>0.0 && chainMultiplier != 1.0)
                     chainMultiplier = chainMultiplier + addition;
                 if (mapEffect.hasOwnProperty('chainLimiter'))
                     chainMultiplier = Math.min(chainOverride == 0 ? mapEffect.chainLimiter(params[n]) + chainUpgrade : chainOverride, chainMultiplier);
                 else if (special.hasOwnProperty('chainLimiter')){
-                    //console.log((special.chainLimiter(params[n])));
+                    if(special.chainLimiter(params[n]) == Infinity) chainOverride = 0;
                     chainMultiplier = Math.min(chainOverride == 0 ? special.chainLimiter(params[n]) + chainUpgrade : chainOverride, chainMultiplier);
                 }
                 if($scope.tdata.semlaCounter.value >= 3 && (x.unit.unit.number == 2232 || x.unit.unit.number == 2233 || x.unit.unit.number == 2499) && x.position < 2){
