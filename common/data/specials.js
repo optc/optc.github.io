@@ -19362,15 +19362,22 @@ var ghostsSpecials = {
             p.cached.multiplier1 = Math.min([4, 4.5][CrunchUtils.llimitUnlock(p, "specials")], 3.5 + (Math.floor(p.turnCounter/5) * 0.25));
         },
     },
-    472: {
-        chain: function(p) { return 2.75; },
+    474: {
+        chain: function(p) { return [2.75, 1, 2.75][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [35, Infinity, 35][p.cached.multiplier] : 1;
         },
-        tapTiming: function(p) { return p.cached.multiplier; },
+        tapTiming: function(p) { return [{ Good: 0, Great: 0, Perfect: 0 }, p.cached.multiplier1, p.cached.multiplier1][p.cached.multiplier]; },
         onActivation: function(p) {
-            p.cached.multiplier = p.percHP >= 50 ? { Good: 0, Great: 0, Perfect: 0 } : { Good: 0.2, Great: 0.3, Perfect: 0.3 };
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP >= 50 ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boundary", "Tap Bonus", "Both Effects"][n] + '. To switch to ' + ["Chain Boundary", "Tap Bonus", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
     473: {
@@ -19381,14 +19388,21 @@ var ghostsSpecials = {
         },
     },
     474: {
-        chain: function(p) { return 2.75; },
+        chain: function(p) { return [2.75, 1, 2.75][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 35 : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [35, Infinity, 35][p.cached.multiplier] : 1;
         },
-        tapTiming: function(p) { return p.cached.multiplier; },
+        tapTiming: function(p) { return [{ Good: 0, Great: 0, Perfect: 0 }, p.cached.multiplier1, p.cached.multiplier1][p.cached.multiplier]; },
         onActivation: function(p) {
-            p.cached.multiplier = p.percHP >= 50 ? { Good: 0, Great: 0, Perfect: 0 } : { Good: 0.2, Great: 0.3, Perfect: 0.3 };
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP >= 50 ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Boundary", "Tap Bonus", "Both Effects"][n] + '. To switch to ' + ["Chain Boundary", "Tap Bonus", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
     475: {

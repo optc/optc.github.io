@@ -4977,6 +4977,21 @@ const ghostFamilies = {
     466: [ ...KozukiOden, ...KozukiToki ],
     467: [ ...KozukiOden, ...KozukiToki ],
     468: [ ...KozukiOden, ...KozukiToki ],
+    469: [ ...CharlotteLinlin, ...Zeus, ...Prometheus ],
+    470: [ ...CharlotteLinlin, ...Zeus, ...Prometheus ],
+    471: [ ...CharlotteLinlin, ...Zeus, ...Prometheus ],
+    472: [ ...EdwardNewgate ],
+    473: [ ...MarshallDTeach ],
+    474: [ ...EdwardNewgate ],
+    475: [ ...MarshallDTeach ],
+    476: [ ...Shanks, ...Buggy ],
+    477: [ ...Shanks, ...Buggy ],
+    478: [ ...Shanks, ...Buggy ],
+    479: [ ...Shanks, ...Buggy ],
+    480: [ ...Shanks, ...Buggy ],
+    481: [ ...Shanks, ...Buggy ],
+    482: [ ...Shanks, ...Buggy ],
+    483: [ ...Shanks, ...Buggy ],
 }
 
 Object.keys(ghostFamilies).forEach(function (key) {
