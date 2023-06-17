@@ -111,7 +111,8 @@
                     }
                     if (window.details[n + 1].lLimit[x].special){
                         if (window.details[n + 1].special.constructor == String) window.details[n + 1].special = { base: window.details[n + 1].special };
-                        window.details[n + 1].special.llbbase = window.details[n + 1].lLimit[x].special;
+                        window.details[n + 1].special.llbbase = window.details[n + 1].lLimit[x].special.base ? window.details[n + 1].lLimit[x].special.base : window.details[n + 1].special.llbbase;
+                        window.details[n + 1].special.llbcombined = window.details[n + 1].lLimit[x].special.combined ? window.details[n + 1].lLimit[x].special.combined : window.details[n + 1].special.llbcombined;
                         LLBspecials++;
                     }
                 }
@@ -1185,6 +1186,18 @@
             case (ghostPoint+481).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3910-2.png'; break;
             case (ghostPoint+482).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3910-PSY.png'; break;
             case (ghostPoint+483).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3910-DEX.png'; break;
+            case (ghostPoint+484).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3916-1.png'; break;
+            case (ghostPoint+485).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3916-2.png'; break;
+            case (ghostPoint+486).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3916-DEX.png'; break;
+            case (ghostPoint+487).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3916-QCK.png'; break;
+            case (ghostPoint+488).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3917-1.png'; break;
+            case (ghostPoint+489).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3917-2.png'; break;
+            case (ghostPoint+490).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3917-DEX.png'; break;
+            case (ghostPoint+491).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3917-QCK.png'; break;
+            case (ghostPoint+492).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-1.png'; break;
+            case (ghostPoint+493).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-2.png'; break;
+            case (ghostPoint+494).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-QCK.png'; break;
+            case (ghostPoint+495).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-STR.png'; break;
             default: break;
         }
 

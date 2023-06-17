@@ -16022,6 +16022,16 @@ window.specials = {
             p.cached.multiplier = p.captain.class.has("Driven") ? 2.25 : 1.75;
         },
     },
+    3918: {
+        chain: function(p) { return 3.25; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.25 : 1;
+        },
+    },
+    3919: {
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
+    },
     3928: {
         chain: function(p) { return [2, 2.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
@@ -19512,6 +19522,102 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Affinity", "Affinity Buff", "Both Effects"][n] + '. To switch to ' + ["Affinity", "Affinity Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    484: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    485: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    486: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    487: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    488: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    489: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    490: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    491: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        type: "type",
+    },
+    492: {
+        burn: function(p) { return 1; },
+        orb: function(p) { return [[2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")], 1, [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")]][p.cached.multiplier]; },
+        atk: function(p) { return [1, [1, 2.25, 2.25][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")]; },
+        type: "type",
+        status: function(p) { return p.cached.captain.type == "STR" || p.cached.captain.type == "QCK" ? [1, 2][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both boosts"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both boosts"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    493: {
+        burn: function(p) { return 1; },
+        orb: function(p) { return [[2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")], 1, [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")]][p.cached.multiplier]; },
+        atk: function(p) { return [1, [1, 2.25, 2.25][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")]; },
+        type: "type",
+        status: function(p) { return p.cached.captain.type == "STR" || p.cached.captain.type == "QCK" ? [1, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both boosts"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both boosts"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    494: {
+        burn: function(p) { return 2; },
+        orb: function(p) { return [[2.5, 2.75][CrunchUtils.llimitUnlock(p, "specials")], 1, [2.5, 2.75][CrunchUtils.llimitUnlock(p, "specials")]][p.cached.multiplier]; },
+        atk: function(p) { return [1, [1, 2.5, 2.5][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")]; },
+        type: "type",
+        status: function(p) { return p.cached.captain.type == "STR" || p.cached.captain.type == "QCK" ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both boosts"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both boosts"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    495: {
+        burn: function(p) { return 2; },
+        orb: function(p) { return [[2.5, 2.75][CrunchUtils.llimitUnlock(p, "specials")], 1, [2.5, 2.75][CrunchUtils.llimitUnlock(p, "specials")]][p.cached.multiplier]; },
+        atk: function(p) { return [1, [1, 2.5, 2.5][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")]; },
+        type: "type",
+        status: function(p) { return p.cached.captain.type == "STR" || p.cached.captain.type == "QCK" ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both boosts"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both boosts"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
