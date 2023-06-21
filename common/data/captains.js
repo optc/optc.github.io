@@ -13868,7 +13868,7 @@ window.captains = {
     },
     3915: {
         atk: function(p) { return p.unit.class.has("Driven") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, 4][CrunchUtils.limitUnlock(p, "captains")] : 1; },
-        hp: function(p) { return p.unit.class.has("Driven") ? [1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") ? [1.1, 1.1, 1.15, 1.15, 1.2, 1.2, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
     3918: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 3.5 : 1; },

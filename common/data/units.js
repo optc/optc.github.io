@@ -3913,7 +3913,7 @@ window.units = [
     [ "Rakuyo & Namule & Blenheim", "PSY", [ "Powerhouse", "Slasher" ], 5, 30, 4, 4, 99, 4000000, 1982, 656, 76, 3964, 1312, 152, 1 ],
     [ "Diamond Jozu - Retaliating Diamond", "DEX", [ "Powerhouse", "Fighter" ], 5, 30, 5, 4, 99, 4000000, 1726, 817, 65, 3452, 1634, 130, 1 ],
     [ "Whirl Spider Squard - Tempted Treachery", "DEX", [ "Powerhouse", "Striker" ], 5, 1, 5, 4, 99, 4000000, 1374, 649, 129, 2748, 1298, 258, 1 ],
-    [ "Akainu - Pirate-Chasing Admiral", "DEX", [ "Driven", "Powerhouse" ], 5, 60, 5, 1, 99, 5000000, 1820, 726, 80, null, null, null, null ],
+    [ "Akainu - Pirate-Chasing Admiral", "DEX", [ "Driven", "Powerhouse" ], 5, 60, 5, 1, 99, 5000000, 1820, 726, 80, 3640, 1452, 160, 1 ],
     [ "Doflamingo & Crocodile - Recruiting on the Battlefield", ["DEX", "QCK"], [[ "Driven", "Cerebral" ],[ "Driven", "Cerebral" ],[ "Driven", "Cerebral" ]], 5, 30, 4, 3, 70, 1066998, 986, 450, 103, 1972, 901, 206, 1 ],
     [ "Doflamingo & Crocodile - Conflicting Sand and Thread", ["DEX", "QCK"], [[ "Driven", "Cerebral" ],[ "Driven", "Cerebral" ],[ "Driven", "Cerebral" ]], 6, 55, 4, 5, 99, 5000000, 1942, 895, 204, 3884, 1789, 407, 1 ],
     [ "Gecko Moria - Shadow Harvester", "DEX", [ "Driven", "Slasher" ], 5, 30, 5, 4, 99, 4000000, 1448, 757, 122, 2896, 1513, 243, 1 ],
