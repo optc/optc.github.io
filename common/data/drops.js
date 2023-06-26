@@ -3239,9 +3239,19 @@ window.drops = {
             dropID: 'pka1',
             thumb: 3885,
             global: true,
-            nakama: 6388500,
+            //nakama: 6388500,
             gamewith: null,
             'All Difficulties': [ 3885 ],
+        },
+
+        {
+            name: 'Rayleigh',
+            dropID: 'pka2',
+            thumb: 1534,
+            global: true,
+            //nakama: 6153400,
+            gamewith: null,
+            'All Difficulties': [ 3927 ],
         },
 
     ],

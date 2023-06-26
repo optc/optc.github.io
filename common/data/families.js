@@ -4495,6 +4495,13 @@ window.families = {
     3918: [ ...GeckoMoria ],
     3919: [ ...DraculeMihawk ],
     3920: [ ...MonkeyDLuffy, ...PortgasDAce ],
+    3921: [ ...NicoRobin, ...Koala ],
+    3922: [ ...NicoRobin, ...Koala ],
+    3923: [ ...BlackMaria, ...Ulti ],
+    3924: [ ...BlackMaria, ...Ulti ],
+    3925: [ ...BoaHancock ],
+    3926: [ ...Shinobu ],
+    3927: [ ...VinsmokeSanji ],
     3928: [ ...Lim ],
     //break
     4986: [ ...MonkeyDLuffy ],

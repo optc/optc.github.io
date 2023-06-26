@@ -2278,6 +2278,198 @@ var ghostsAltSpecials = {
             });
         },
     },
+    496: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    497: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    498: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    499: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    500: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    501: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    502: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    503: {
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.type == "DEX" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.5, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    504: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    505: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    506: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    507: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    508: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    509: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    510: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    511: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.5, 1.2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {

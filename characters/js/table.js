@@ -460,7 +460,7 @@ angular.module('optc') .run(function($rootScope, $timeout, $storage) {
      * Table configuration *
      ***********************/
 
-    var data = window.units.filter(function(x) { return x.name && !x.name.includes("VS Unit") && !x.name.includes("Dual Unit"); }).map(function(x,n) {
+    var data = window.units.filter(function(x) { return x.name && !x.name.includes("⚔") && !x.name.includes("⚐"); }).map(function(x,n) {
         var result = [
             ('000' + (x.number+1)).slice(-padding),
             x.name,

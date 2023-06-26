@@ -1198,6 +1198,22 @@
             case (ghostPoint+493).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-2.png'; break;
             case (ghostPoint+494).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-QCK.png'; break;
             case (ghostPoint+495).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3920-STR.png'; break;
+            case (ghostPoint+496).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3921-1.png'; break;
+            case (ghostPoint+497).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3921-2.png'; break;
+            case (ghostPoint+498).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3921-INT.png'; break;
+            case (ghostPoint+499).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3921-DEX.png'; break;
+            case (ghostPoint+500).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3922-1.png'; break;
+            case (ghostPoint+501).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3922-2.png'; break;
+            case (ghostPoint+502).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3922-INT.png'; break;
+            case (ghostPoint+503).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3922-DEX.png'; break;
+            case (ghostPoint+504).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3923-1.png'; break;
+            case (ghostPoint+505).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3923-2.png'; break;
+            case (ghostPoint+506).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3923-DEX.png'; break;
+            case (ghostPoint+507).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3923-INT.png'; break;
+            case (ghostPoint+508).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3924-1.png'; break;
+            case (ghostPoint+509).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3924-2.png'; break;
+            case (ghostPoint+510).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3924-DEX.png'; break;
+            case (ghostPoint+511).toString(): return relPathToRoot + '/api/images/thumbnail/jap/3/900/3924-INT.png'; break;
             default: break;
         }
 

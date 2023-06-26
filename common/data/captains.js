@@ -13878,6 +13878,17 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
         hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
+    3925: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
+    },
+    3926: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
+    },
+    3927: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 4.5 : 3.3 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
     3928: {
         atk: function(p) { return 3; },
         hp: function(p) { return 1.5; },
@@ -16108,6 +16119,70 @@ var ghostsCaptains = {
     495: {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [5.25, 5.5][CrunchUtils.llimitUnlock(p, "captains")] : 5 : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    496: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    497: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    498: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    499: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    500: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    501: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5 : 4.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    502: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    503: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    504: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 4.75 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    505: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    506: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 5.25 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    507: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 5.25 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    508: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 4.75 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    509: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 4.75 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    510: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 5.25 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    511: {
+        atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 5.25 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
     },
 };
 
