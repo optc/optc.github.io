@@ -19763,6 +19763,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19779,6 +19780,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19795,6 +19797,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19811,6 +19814,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19827,6 +19831,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19843,6 +19848,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19859,6 +19865,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -19875,6 +19882,7 @@ var ghostsSpecials = {
         delay: function(p) { return p.cached.multiplier2; },
         ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier2]; },
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
         status: function(p) { return p.delayed ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
