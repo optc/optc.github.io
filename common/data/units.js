@@ -3927,6 +3927,9 @@ window.units = [
     [ "Shinobu - Hiding in the Shadows", "DEX", [ "Cerebral", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 15711, 695, 116, 3142, 1389, 231, 1 ],
     [ "Sanji - Meeting the Goddesses After Two Years", "INT", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1838, 781, -16, null, null, null, null ],
     [ "Lim - Mysterious Girl", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1355, 670, 194, 2710, 1340, 387, 1 ],
+    [ "Boa Marigold - Gorgon's Execution", "STR", [ "Striker", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 2370, 661, 85, null, null, null, null ],
+    [ "Hina - Royal Escort's Duty", "PSY", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 2151, 759, 91, null, null, null, null ],
+    [ "Vinsmoke Reiju - Caring Sister", "DEX", [ "Powerhouse", "Cerebral" ], 5, 40, 5, 3, 99, 4000000, 1522, 663, 151, null, null, null, null ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

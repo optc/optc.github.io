@@ -5943,6 +5943,15 @@ window.drops = {
             gamewith: null,
             'All Difficulties': [ 3773 ],
         },
+        
+        {
+            name: 'Reiju',
+            thumb: 3931,
+            global: true,
+            nakama: 10393100,
+            gamewith: null,
+            'All Difficulties': [ 3931 ],
+        },
 
     ],
 

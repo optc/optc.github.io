@@ -16081,6 +16081,26 @@ window.specials = {
             });
         },
     },
+    3929: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "type",
+    },
+    3930: {
+        atkbase: function(p) { return p.unit.class.has("Striker") ? 500 : 0; },
+    },
+    3931:{
+        status: function(p) { return p.defenseDown ? 2 : 1; },
+        def: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.2, 0];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + [80, 100][n] + '% DEF Reduction. To ' + [80, 100][(n + 1) % levels.length] + '% DEF Reduction, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

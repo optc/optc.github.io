@@ -13893,6 +13893,17 @@ window.captains = {
         atk: function(p) { return 3; },
         hp: function(p) { return 1.5; },
     },
+    3929: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" ? 1.2 : 1; },
+    },
+    3930: {
+        atk: function(p) { return p.unit.class.has("Striker") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    3931: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 3.75 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
