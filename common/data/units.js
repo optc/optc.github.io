@@ -3925,10 +3925,10 @@ window.units = [
     [ "Black Maria & Ulti - Merciless Assault", ["DEX", "INT"], [[ "Cerebral", "Driven" ],[ "Cerebral", "Driven" ],[ "Cerebral", "Driven" ]], 6, 55, 4, 5, 99, 5000000, 2063, 889, 185, 4126, 1777, 370, 1 ],
     [ "Boa Hancock - Maiden with a Racing Heart", "DEX", [ "Cerebral", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1550, 714, 114, 3100, 1427, 227, 1 ],
     [ "Shinobu - Hiding in the Shadows", "DEX", [ "Cerebral", "Shooter" ], 5, 30, 4, 4, 99, 4000000, 15711, 695, 116, 3142, 1389, 231, 1 ],
-    [ "Sanji - Meeting the Goddesses After Two Years", "INT", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1838, 781, -16, null, null, null, null ],
+    [ "Sanji - Meeting the Goddesses After Two Years", "INT", [ "Fighter", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1838, 781, -16, 3675, 1562, -32, 1 ],
     [ "Lim - Mysterious Girl", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1355, 670, 194, 2710, 1340, 387, 1 ],
-    [ "Boa Marigold - Gorgon's Execution", "STR", [ "Striker", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 2370, 661, 85, null, null, null, null ],
-    [ "Hina - Royal Escort's Duty", "PSY", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 2151, 759, 91, null, null, null, null ],
+    [ "Boa Marigold - Gorgon's Execution", "STR", [ "Striker", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 2370, 661, 85, 4740, 1321, 170, 1 ],
+    [ "Hina - Royal Escort's Duty", "PSY", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 2151, 759, 91, 4301, 1518, 181, 1 ],
     [ "Vinsmoke Reiju - Caring Sister", "DEX", [ "Powerhouse", "Cerebral" ], 5, 40, 5, 3, 99, 4000000, 1522, 663, 151, null, null, null, null ],
 ];
 
