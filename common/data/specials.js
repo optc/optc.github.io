@@ -16101,6 +16101,32 @@ window.specials = {
             });
         },
     },
+    3935: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.cached.multiplier1 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.cached.multiplier : 1; },
+        atkbase: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.cached.multiplier2 : 0; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 15000 ? 2 : 1;
+            p.cached.multiplier1 = p.healCounter >= 30000 ? 2.25 : 1;
+            p.cached.multiplier2 = p.healCounter >= 50000 ? 1000 : 0;
+        },
+    },
+    3936: {
+        chainAddition: function(p) { return [1.2, 0, 1.2][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1, 1.5, 1.5][p.cached.multiplier]; },
+        delay: function(p) { return 1; },
+        paralysis: function(p) { return 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition", "Increase Damage Taken", "Both Effects"][n] + '. To switch to ' + ["Chain Addition", "Increase Damage Taken", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -19913,6 +19939,102 @@ var ghostsSpecials = {
                 text: 'Using the ' + ["ATK boost", "Status boost", "Both boosts"][n] + '. To switch to ' + ["ATK boost", "Status boost", "Both boosts"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
+        },
+    },
+    512: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    513: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    514: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    515: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    516: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    517: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    518: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    519: {
+        chainAddition: function(p) { return p.cached.multiplier1; },
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
 };

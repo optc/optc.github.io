@@ -3929,7 +3929,12 @@ window.units = [
     [ "Lim - Mysterious Girl", "QCK", [ "Fighter", "Free Spirit" ], 5, 30, 5, 4, 99, 4000000, 1355, 670, 194, 2710, 1340, 387, 1 ],
     [ "Boa Marigold - Gorgon's Execution", "STR", [ "Striker", "Cerebral" ], 5, 30, 5, 4, 99, 4000000, 2370, 661, 85, 4740, 1321, 170, 1 ],
     [ "Hina - Royal Escort's Duty", "PSY", [ "Striker", "Cerebral" ], 5, 30, 4, 4, 99, 4000000, 2151, 759, 91, 4301, 1518, 181, 1 ],
-    [ "Vinsmoke Reiju - Caring Sister", "DEX", [ "Powerhouse", "Cerebral" ], 5, 40, 5, 3, 99, 4000000, 1522, 663, 151, null, null, null, null ],
+    [ "Vinsmoke Reiju - Caring Sister", "DEX", ["Powerhouse", "Cerebral"], 5, 40, 5, 3, 99, 4000000, 1522, 663, 151, 3044, 1325, 301, 1 ],
+    [ "Nami & Carrot - Escaping Into the Seducing Woods", ["INT", "DEX"], [["Cerebral", "Free Spirit"],["Cerebral", "Free Spirit"],["Cerebral", "Free Spirit"]], 5, 30, 4, 3, 70, 1066998, 1093, 415, 97, 2185, 830, 193, 1 ],
+    [ "Nami & Carrot - Relaxing Bath Time", ["INT", "DEX"], [["Cerebral", "Free Spirit"],["Cerebral", "Free Spirit"],["Cerebral", "Free Spirit"]], 6, 55, 4, 5, 99, 5000000, 2155, 824, 191, 4310, 1648, 382, 1 ],
+    [ "Charlotte Pudding - Falling Tears", "DEX", ["Cerebral", "Fighter"], 5, 30, 5, 4, 99, 4000000, 1701, 690, 112, 3402, 1380, 223, 1 ],
+    [ "Charlotte Smoothie - Welcoming Guests", "INT", ["Powerhouse", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1628, 731, 110, 3256, 1462, 220, 1 ],
+    [ "Charlotte Flampe - Attentive Little Sister", "INT", ["Shooter", "Cerebral"], 5, 60, 4, 1, 99, 5000000, 1801, 611, 122, 3602, 1221, 243, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4470,6 +4475,14 @@ var ghostsUnits = [
     [ "⚐ Ulti - Merciless Assault", "INT", [ "Cerebral", "Driven" ], 6, 55, 4, 5, 99, 5000000, 1848, 827, 166, 3696, 1653, 333, 1 ],
     [ "⚐ Black Maria & Ulti - Merciless Assault", "DEX", [ "Cerebral", "Driven" ], 6, 55, 4, 5, 99, 5000000, 2063, 889, 185, 4126, 1777, 370, 1 ],
     [ "⚐ Black Maria & Ulti - Merciless Assault", "INT", [ "Cerebral", "Driven" ], 6, 55, 4, 5, 99, 5000000, 2063, 889, 185, 4126, 1777, 370, 1 ],
+    [ "⚐ Nami - Escaping Into the Seducing Woods", "INT", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 945, 392, 93, 1890, 784, 185, 1 ],
+    [ "⚐ Carrot - Escaping Into the Seducing Woods", "DEX", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 935, 411, 87, 1870, 822, 174, 1 ],
+    [ "⚐ Nami & Carrot - Escaping Into the Seducing Woods", "INT", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1093, 415, 97, 2185, 830, 193, 1 ],
+    [ "⚐ Nami & Carrot - Escaping Into the Seducing Woods", "DEX", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1093, 415, 97, 2185, 830, 193, 1 ],
+    [ "⚐ Nami - Relaxing Bath Time", "INT", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1860, 777, 183, 3720, 1555, 366, 1 ],
+    [ "⚐ Carrot - Relaxing Bath Time", "DEX", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1839, 816, 172, 3679, 1631, 343, 1 ],
+    [ "⚐ Nami & Carrot - Relaxing Bath Time", "INT", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2155, 824, 191, 4310, 1648, 382, 1 ],
+    [ "⚐ Nami & Carrot - Relaxing Bath Time", "DEX", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2155, 824, 191, 4310, 1648, 382, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

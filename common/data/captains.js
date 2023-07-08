@@ -13904,6 +13904,18 @@ window.captains = {
     3931: {
         atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 3.75 : 1; },
     },
+    3934: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? ['wano', 'meat', 'tnd', 'g', 'rcv', 'rainbow', 'superbomb'].includes(p.orb) ? 3.75 : 3.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3935: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    3936: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, p.percHP >= 90.0 || p.percHP <= 50.0 ? 4.25 : 3.75][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -16194,6 +16206,38 @@ var ghostsCaptains = {
     511: {
         atk: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 5.25 : 1)*(p.delayed || p.defenseDown || p.poisoned || p.increasedDamageTaken || p.paralysis ? 1.1 : 1); },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    512: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5 : 4.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    513: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5.25 : 4.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    514: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    515: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    516: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5 : 4.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    517: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5.25 : 4.5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    518: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    519: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? p.percHP >= 99.0 ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 1.2 : 1; },
     },
 };
 

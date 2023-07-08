@@ -2973,6 +2973,19 @@ window.sailors = {
     3931: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? 75 : 0; },
     },
+    3934: {
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Cerebral") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3935: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 60 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 60 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? 60 : 0; },
+    },
+    3936: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? [0, 60, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? [0, 60, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? [0, 60, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

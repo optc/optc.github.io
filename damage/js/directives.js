@@ -508,8 +508,8 @@ directives.healCounter = function() {
             var slider = element.find('#healSlider')[0];
             var sliderSettings = {
                 start: [ scope.currentTurns ],
-                range: { min: [ 0 ], max: [ 10000 ] },
-                step: 10,
+                range: { min: [ 0 ], max: [ 100000 ] },
+                step: 100,
                 connect: 'lower'
             };
 

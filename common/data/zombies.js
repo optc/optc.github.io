@@ -1406,4 +1406,28 @@ window.zombies = {
         type: 'healer',
         amount: 2000
     },
+    5512: { // Nami Carrot
+        type: 'healer',
+        multiplier: 1
+    },
+    5514: { // Nami Carrot
+        type: 'healer',
+        multiplier: 2
+    },
+    5515: { // Nami Carrot
+        type: 'healer',
+        multiplier: 2
+    },
+    5516: { // Nami Carrot
+        type: 'healer',
+        multiplier: 1
+    },
+    5518: { // Nami Carrot
+        type: 'healer',
+        multiplier: 2
+    },
+    5519: { // Nami Carrot
+        type: 'healer',
+        multiplier: 2
+    },
 };

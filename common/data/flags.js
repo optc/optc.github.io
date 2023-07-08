@@ -3835,6 +3835,10 @@ window.flags = {
     3928: { special: 1, shop: 1 },
     3929: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     3930: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    3932: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    3933: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    3934: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    3935: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },
