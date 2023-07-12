@@ -3935,6 +3935,12 @@ window.units = [
     [ "Charlotte Pudding - Falling Tears", "DEX", ["Cerebral", "Fighter"], 5, 30, 5, 4, 99, 4000000, 1701, 690, 112, 3402, 1380, 223, 1 ],
     [ "Charlotte Smoothie - Welcoming Guests", "INT", ["Powerhouse", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1628, 731, 110, 3256, 1462, 220, 1 ],
     [ "Charlotte Flampe - Attentive Little Sister", "INT", ["Shooter", "Cerebral"], 5, 60, 4, 1, 99, 5000000, 1801, 611, 122, 3602, 1221, 243, 1 ],
+    [ "Hiyori - Confident Smile", "DEX", ["Cerebral", "Slasher"], 5, 30, 5, 4, 99, 4000000, 1411, 739, 162, 2861, 1441, 343, 1 ],
+    [ "Bao Huang", "INT", ["Cerebral", "Driven"], 5, 30, 4, 4, 99, 4000000, 1781, 812, 87, 3543, 1527, 151, 1 ],
+    [ "Moda", "DEX", ["Cerebral", "Free Spirit"], 5, 1, 4, 4, 99, 4000000, 1274, 513, 142, 2748, 1063, 284, 1 ],
+    [ "Nami & Robin - Elegant Flowers Blooming on the Battlefield", ["DEX", "INT"], [["Free Spirit", "Striker"],["Free Spirit", "Cerebral"],["Free Spirit", "Cerebral"]], "6+", 65, 5, 5, 99, 5000000, 1817, 1067, 256, 3634, 1600, 511, 1 ],
+    [ "Perona - Sudden News", "INT", ["Driven", "Cerebral"], 5, 50, 4, 4, 99, 5000000, 1642, 743, 102, 3312, 1416, 201, 1 ],
+    [ "Perona - Tearful Departure", "INT", ["Driven", "Cerebral"], "5+", 50, 4, 4, 99, 5000000, 1847, 891, 112, 3417, 1541, 227, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4483,6 +4489,10 @@ var ghostsUnits = [
     [ "⚐ Carrot - Relaxing Bath Time", "DEX", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1839, 816, 172, 3679, 1631, 343, 1 ],
     [ "⚐ Nami & Carrot - Relaxing Bath Time", "INT", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2155, 824, 191, 4310, 1648, 382, 1 ],
     [ "⚐ Nami & Carrot - Relaxing Bath Time", "DEX", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2155, 824, 191, 4310, 1648, 382, 1 ],
+    [ "⚐ Nami - Elegant Flowers Blooming on the Battlefield", "DEX", ["Free Spirit", "Striker"], "6+", 65, 4, 5, 99, 5000000, 1764, 1028, 224, 3528, 1542, 448, 1 ],
+    [ "⚐ Nico Robin - Elegant Flowers Blooming on the Battlefield", "INT", ["Free Spirit", "Cerebral"], "6+", 65, 4, 5, 99, 5000000, 1741, 1014, 232, 3482, 1521, 463, 1 ],
+    [ "⚐ Nami & Robin - Elegant Flowers Blooming on the Battlefield", "DEX", ["Free Spirit", "Cerebral"], "6+", 65, 5, 5, 99, 5000000, 1817, 1067, 256, 3634, 1600, 511, 1 ],
+    [ "⚐ Nami & Robin - Elegant Flowers Blooming on the Battlefield", "INT", ["Free Spirit", "Cerebral"], "6+", 65, 5, 5, 99, 5000000, 1817, 1067, 256, 3634, 1600, 511, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
