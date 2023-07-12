@@ -5048,6 +5048,10 @@ const ghostFamilies = {
     517: [ ...Nami, ...Carrot ],
     518: [ ...Nami, ...Carrot ],
     519: [ ...Nami, ...Carrot ],
+    520: [ ...Nami, ...Robin ],
+    521: [ ...Nami, ...Robin ],
+    522: [ ...Nami, ...Robin ],
+    523: [ ...Nami, ...Robin ],
 }
 
 Object.keys(ghostFamilies).forEach(function (key) {

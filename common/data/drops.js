@@ -7302,6 +7302,26 @@ window.drops = {
             'Kizuna Exchange': [ 9086 ],
         },
 
+        {
+            name: 'Luffy & Ace',
+            dropID: 'kizuna47',
+            thumb: 3920,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 9088 ],
+        },
+
+        {
+            name: 'Perona',
+            dropID: 'kizuna47',
+            thumb: 3942,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3941, 9089, 9090 ],
+        },
+
     ],
 
 
@@ -8451,7 +8471,7 @@ window.drops = {
             thumb: 3887,
             global: true,
             nakama: 6388700,
-            'Chopper Man Missions': [ 3887 ],
+            'Chopper Man Missions': [ 3887, 9087 ],
         },
 
         {

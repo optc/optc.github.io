@@ -16127,6 +16127,50 @@ window.specials = {
             });
         },
     },
+    3938: {
+        atkbase: function(p) { return p.unit.class.has("Cerebral") ? p.cached.multiplier : 0; },
+        onActivation: function(p) {
+            var levels = [1000, 1250];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using +' + levels[n] + ' boost. To use +' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3939: {
+        atk: function(p) { return p.unit.class.has("Cerebral") ? 2 : 1; },
+        type: "type",
+    },
+    3941: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity boost", "ATK boost", "Both Effects"][n] + '. To switch to ' + ["Affinity boost", "ATK boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3942: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [1, 2.25, 2.5, 2.25, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? [2.25, 1, 1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity boost", "2.25x ATK boost", "2.5x ATK boost", "Affinity and 2.25x ATK boost", "Affinity and 2.5x ATK boost"][n] + '. To switch to ' + ["Affinity boost", "2.25x ATK boost", "2.5x ATK boost", "Affinity and 2.25x ATK boost", "Affinity and 2.5x ATK boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -20035,6 +20079,62 @@ var ghostsSpecials = {
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+        },
+    },
+    520: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both Effects"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    521: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both Effects"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    522: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both Effects"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    523: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral") ? [2.5, 1, 2.5][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "ATK boost", "Both Effects"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
 };
