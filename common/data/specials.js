@@ -19949,7 +19949,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -19961,7 +19961,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -19973,7 +19973,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -19985,7 +19985,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -19997,7 +19997,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -20009,7 +20009,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -20021,7 +20021,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
@@ -20033,7 +20033,7 @@ var ghostsSpecials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 40 : 1;
         },
         onActivation: function(p) {
-            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3.5 : 2.75;
+            p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
             p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
         },
     },
