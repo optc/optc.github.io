@@ -19986,7 +19986,7 @@ var ghostsSpecials = {
         },
     },
     512: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -19994,11 +19994,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     513: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20006,11 +20006,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     514: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20018,11 +20018,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     515: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20030,11 +20030,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     516: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20042,11 +20042,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     517: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20054,11 +20054,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     518: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20066,11 +20066,11 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     519: {
-        chainAddition: function(p) { return p.cached.multiplier1; },
+        chainMultiplication: function(p) { return p.cached.multiplier1; },
         chain: function(p) { return p.cached.multiplier; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -20078,7 +20078,7 @@ var ghostsSpecials = {
         },
         onActivation: function(p) {
             p.cached.multiplier = p.healCounter >= 50000 ? 3.25 : p.healCounter >= 20000 ? 3 : 2.75;
-            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 0;
+            p.cached.multiplier1 = p.healCounter >= 50000 ? 1.5 : 1;
         },
     },
     520: {
