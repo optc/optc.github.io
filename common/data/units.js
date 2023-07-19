@@ -3941,6 +3941,10 @@ window.units = [
     [ "Nami & Robin - Elegant Flowers Blooming on the Battlefield", ["DEX", "INT"], [["Free Spirit", "Striker"],["Free Spirit", "Cerebral"],["Free Spirit", "Cerebral"]], "6+", 65, 5, 5, 99, 5000000, 1817, 1067, 256, 3634, 1600, 511, 1 ],
     [ "Perona - Sudden News", "INT", ["Driven", "Cerebral"], 5, 50, 4, 4, 99, 5000000, 1642, 743, 102, 3312, 1416, 201, 1 ],
     [ "Perona - Tearful Departure", "INT", ["Driven", "Cerebral"], "5+", 50, 4, 4, 99, 5000000, 1847, 891, 112, 3417, 1541, 227, 1 ],
+    [ "Vivi & Rebecca & Shirahoshi & Mansherry", "DEX", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 895, 443, 101, 1791, 886, 202, 1 ],
+    [ "Vivi & Rebecca & Shirahoshi & Mansherry - Enjoyable Conversation", "DEX", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1761, 879, 200, 3521, 1759, 400, 1 ],
+    [ "Viola - Princess Departing for the Sacred Land", "DEX", ["Cerebral", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1505, 680, 148, 3010, 1360, 295, 1 ],
+    [ "Jewelry Bonney - Infiltrating the Sacred Land", "STR", ["Free Spirit", "Cerebral"], 5, 50, 4, 3, 99, 5000000, 1432, 703, 152, 2864, 1406, 304, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
