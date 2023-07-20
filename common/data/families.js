@@ -674,6 +674,8 @@ const Inbi = [ "Inbi" ];
 const Fuga = [ "Fuga" ];
 const Zanki = [ "Zanki" ];
 const Lim = [ "Lim" ];
+const BaoHuang = [ "Bao Huang" ];
+const Moda = [ "Moda" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4511,6 +4513,16 @@ window.families = {
     3934: [ ...CharlottePudding ],
     3935: [ ...CharlotteSmoothie ],
     3936: [ ...CharlotteFlampe ],
+    3937: [ ...KozukiHiyori ],
+    3938: [ ...BaoHuang ],
+    3939: [ ...Moda ],
+    3940: [ ...Nami, ...NicoRobin ],
+    3941: [ ...Perona ],
+    3942: [ ...Perona ],
+    3943: [ ...NefertariVivi, ...Rebecca, ...Shirahoshi, ...Mansherry ],
+    3944: [ ...NefertariVivi, ...Rebecca, ...Shirahoshi, ...Mansherry ],
+    3945: [ ...Viola ],
+    3946: [ ...JewelryBonney ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

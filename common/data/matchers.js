@@ -4743,11 +4743,11 @@ let matchers = {
         {
             name: 'Slot Barrier',
             targets: [ 'potential' ],
-            regex: /Reduces Slot Barrier duration (?:by ([?\d]+) turns?|(completely))/i,
+            regex: /Reduces Slot Barrier duration (?:by ([?\d]+) stacks?|(completely))/i,
             submatchers: [
                 {
                     type: 'number',
-                    description: 'Turns:',
+                    description: 'Stacks:',
                     groups: [1, 2],
                 },
             ],

@@ -2986,6 +2986,10 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? [0, 60, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Cerebral") ? [0, 60, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    3946: {
+        hpStatic: function(p) { return 60; },
+        rcvStatic: function(p) { return 60; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

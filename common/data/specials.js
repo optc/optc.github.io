@@ -7494,9 +7494,9 @@ window.specials = {
         type: "class"
     },
     2500: {
-        atk: function(p) { return p.cached.multiplier ? p.slot < 2 ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        atk: function(p) { return p.cached.multiplier ? p.slot < 2 ? [2, 3.5][CrunchUtils.llimitUnlock(p, "captains")] : 1 : p.slot == p.sourceSlot ? [2, 4][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
         type: "class",
-        orb: function(p) { return p.cached.multiplier ? (p.slot < 2) ? 2 : 1 : p.slot == p.sourceSlot ? 2 : 1; },
+        orb: function(p) { return p.cached.multiplier ? (p.slot < 2) ? [2, 3.5][CrunchUtils.llimitUnlock(p, "captains")] : 1 : p.slot == p.sourceSlot ? [2, 4][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
         onActivation: function(p) {
             p.cached.multiplier = (p.slot < 2 ? true : false);
         }
@@ -16167,6 +16167,52 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Affinity boost", "2.25x ATK boost", "2.5x ATK boost", "Affinity and 2.25x ATK boost", "Affinity and 2.5x ATK boost"][n] + '. To switch to ' + ["Affinity boost", "2.25x ATK boost", "2.5x ATK boost", "Affinity and 2.25x ATK boost", "Affinity and 2.5x ATK boost"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3943: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 2.75 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        turnedOn: [false,false,false,false,false,false],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    3944: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT" ? 2.75 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        turnedOn: [false,false,false,false,false,false],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
+    3945: {
+        atkbase: function(p) { return p.unit.class.has("Cerebral") ? 1000 : 0; },
+        status: function(p) { return p.defenseDown ? 2.25 : 1; },
+    },
+    3946: {
+        chainAddition: function(p) { return [1, 0, 0, 1, 1, 0, 1][p.cached.multiplier]; },
+        chainMultiplication: function(p) { return [1, 1, 1.25, 1, 1.25, 1.25, 1.25][p.cached.multiplier]; },
+        chain: function(p) { return [1, 2.25, 1, 2.25, 1, 2.25, 2.25][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [10, 20][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6, 7];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Addition", "Chain Boundary", "Chain Multiplication", "Chain Addition & Boundary", "Chain Addition & Multiplication", "Chain Multiplication & Boundary", "All Effects"][n] + '. To switch to ' + ["Chain Addition", "Chain Boundary", "Chain Multiplication", "Chain Addition & Boundary", "Chain Addition & Multiplication", "Chain Multiplication & Boundary", "All Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

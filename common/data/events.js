@@ -1075,6 +1075,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling [TND] and [MEAT] orbs support.' });
         }
     },
+    3943: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
+    3944: {
+        onInsertion: function($scope) {
+            if (++$scope.options.rainbowOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RAINBOW] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.rainbowOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

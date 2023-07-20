@@ -4350,6 +4350,16 @@ window.drops = {
             'All Difficulties': [ 3856, 9083 ],
         },
 
+        {
+            name: 'Clash!! Bonney',
+            dropID: 'clash76',
+            thumb: 3946,
+            global: true,
+            nakama: 4394600,
+            gamewith: null,
+            'All Difficulties': [ 3946 ],
+        },
+
     ],
 
 
