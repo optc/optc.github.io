@@ -3899,7 +3899,7 @@ window.units = [
     [ "Alber - Reigning Fire Dragon", "INT", [ "Driven", "Powerhouse" ], 6, 55, 4, 5, 99, 5000000, 1831, 813, 121, 4158, 1758, 271, 1 ],
     [ "Brook - Assisting Musician", "QCK", [ "Slasher", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1643, 743, 109, 3241, 1503, 210, 1 ],
     [ "General Franky - Blasting Cannon", "QCK", [ "Powerhouse", "Free Spirit" ], 5, 30, 4, 4, 99, 4000000, 1843, 721, 87, 3481, 1521, 164, 1 ],
-    [ "Otama - Full-Force Rally", "INT", [ "Fighter", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1481, 521, 131, 2791, 1093, 271, 1 ],
+    [ "Otama - Full-Force Rally", "QCK", [ "Fighter", "Free Spirit" ], 5, 1, 4, 4, 99, 4000000, 1481, 521, 131, 2791, 1093, 271, 1 ],
     [ "Zeus & Prometheus & Big Mom - Emperor Cornering the New Generation", ["INT", "INT"], [[ "Powerhouse", "Slasher" ],[ "Powerhouse", "Slasher" ],[ "Powerhouse", "Slasher" ]], "6+", 65, 4, 5, 99, 5000000, 2424, 1237, 112, 4848, 1856, 224, 1 ],
     [ "Kaido - Punishing the Child of Ogres", "INT", [ "Driven", "Powerhouse" ], "5+", 50, 5, 4, 99, 2000000, 1841, 832, 81, 3491, 1591, 188, 1 ],
     [ "Emporio Ivankov - This is the First Time in My Life", "QCK", [ "Cerebral", "Free Spirit" ], 5, 30, 6, 3, 70, 1066998, 998, 384, 73, 1996, 768, 146, 1 ],

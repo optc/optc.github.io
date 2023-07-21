@@ -16205,7 +16205,7 @@ window.specials = {
         chain: function(p) { return [1, 2.25, 1, 2.25, 1, 2.25, 2.25][p.cached.multiplier]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [10, 20][p.cached.multiplier] : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 15, Infinity, 15, Infinity, 15, 15][p.cached.multiplier] : 1;
         },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3, 4, 5, 6, 7];
