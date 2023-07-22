@@ -4,6 +4,10 @@ window.capspecials = {
         type: "type",
         orb: function(p) { return [1.75, 2][CrunchUtils.limitUnlock(p, "captains")]; },
     },
+    1941: {
+        status: function(p) { return [1, 1.5][CrunchUtils.llimitUnlock(p, "specials")]; },
+        warning: "Selected special (%name%) assumes that the enemy has been inflicted with Burn."
+    },
     2035: {
         orb: function(p) { return p.unit.cost <= 40 ? 2 : 1; }
     },

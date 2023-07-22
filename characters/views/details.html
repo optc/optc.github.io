@@ -276,6 +276,8 @@
                                             <div ng-show="details.captain.llblevel1" ng-bind-html="details.captain.llblevel1 | decorate"></div>
                                             <span class="badge badge-level2" ng-show="details.captain.llblevel2">LLB Level 2 Captain Ability</span>
                                             <div ng-show="details.captain.llblevel2" ng-bind-html="details.captain.llblevel2 | decorate"></div>
+                                            <span class="badge badge-level6" ng-show="details.captain.llblevel6">LLB Level 6 Captain Ability</span>
+                                            <div ng-show="details.captain.llblevel6" ng-bind-html="details.captain.llblevel6 | decorate"></div>
                                             <span class="badge badge-character1" ng-show="details.captain.llbcharacter1">LLB Character 1 Captain Ability</span>
                                             <div ng-show="details.captain.llbcharacter1" ng-bind-html="details.captain.llbcharacter1 | decorate"></div>
                                             <span class="badge badge-character2" ng-show="details.captain.llbcharacter2">LLB Character 2 Captain Ability</span>
@@ -648,8 +650,7 @@
                                         <!-- different potential abilities -->
                                         <div ng-if="!isPotentialHybrid && isPotentialStaged">
                                             <div ng-repeat="stage in details.potential track by $index">
-                                                <strong>Potential Ability {{::$index + 1}}:</strong>
-                                                 {{::stage.Name}}
+                                                <strong>Potential Ability {{::$index + 1}}: </strong><span ng-bind-html="stage.Name | decorate"></span>
                                                 <br>
                                                 <div ng-repeat="item in stage.description track by $index" style="margin-left: 2em"><strong>Level {{::$index + 1}}:</strong>
                                                 <span ng-bind-html="item | decorate"></span><br></div>
@@ -727,6 +728,7 @@
                                             <span ng-if="stage.captain.base" class="badge badge-base">Base Captain</span><div ng-if="stage.captain.base" ng-bind-html="stage.captain.base | decorate"></div>
                                             <span ng-if="stage.captain.level1" class="badge badge-level1">Level 1 Captain</span><div ng-if="stage.captain.level1" ng-bind-html="stage.captain.level1 | decorate"></div>
                                             <span ng-if="stage.captain.level2" class="badge badge-level2">Level 2 Captain</span><div ng-if="stage.captain.level2" ng-bind-html="stage.captain.level2 | decorate"></div>
+                                            <span ng-if="stage.captain.level6" class="badge badge-level6">Level 6 Captain</span><div ng-if="stage.captain.level6" ng-bind-html="stage.captain.level6 | decorate"></div>
                                             <span ng-if="stage.captain.character1" class="badge badge-character1">Character 1 Captain</span><div ng-if="stage.captain.character1" ng-bind-html="stage.captain.character1 | decorate"></div>
                                             <span ng-if="stage.captain.character1" class="badge badge-character2">Character 2 Captain</span><div ng-if="stage.captain.character2" ng-bind-html="stage.captain.character2 | decorate"></div>
                                             <span ng-if="stage.captain.combined" class="badge badge-combined">Dual Character Captain</span><div ng-if="stage.captain.combined" ng-bind-html="stage.captain.combined | decorate"></div>

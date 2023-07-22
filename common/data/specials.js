@@ -3981,12 +3981,12 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[1808].turnedOn[p.slot] = false;
         },
-        chain: function(p) { return p.cached.captain.class.has("Slasher") ? 2.75 : 1; },
+        chain: function(p) { return p.cached.captain.class.has("Slasher") ? [2.75, 3.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
-            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Slasher") ? 2.75 : Infinity) : 1;
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? (p.cached.captain.class.has("Slasher") ? [2.75, 3.25][CrunchUtils.llimitUnlock(p, "specials")] : Infinity) : 1;
         },
-        orb: function(p) { return p.cached.captain.class.has("Slasher") && p.unit.class.has("Slasher") ? 2 : 1; },
+        orb: function(p) { return p.cached.captain.class.has("Slasher") && p.unit.class.has("Slasher") ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
     },
     1811: {
         atk: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
@@ -4118,9 +4118,10 @@ window.specials = {
         orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; }
     },
     1853: {
-        atk: function(p) { return p.slot == p.sourceSlot && p.cached.enemyEffects.barrier ? 2.25 : 1; },
+        atk: function(p) { return p.cached.enemyEffects.barrier ? [p.slot == p.sourceSlot ? 2.25 : 1, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "type",
-        orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; }
+        orb: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
+        affinity: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Powerhouse") ? [1, 1.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; }
     },
     1854: {
         atk: function(p) { return p.unit.class.has("Free Spirit") ? 1.5 : 1; },
@@ -4283,9 +4284,10 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; }
     },
     1889: {
-        atk: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; },
+        def: function(p) { return [1, 0][CrunchUtils.llimitUnlock(p, "specials")]; },
+        atk: function(p) { return p.unit.class.has("Driven") ? [1.75, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "class",
-        orb: function(p) { return p.unit.class.has("Driven") ? 1.75 : 1; }
+        orb: function(p) { return p.unit.class.has("Driven") ? [1.75, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; }
     },
     1890: {
         turnedOn: false,
@@ -4587,7 +4589,8 @@ window.specials = {
         onDeactivation: function(p) {
             window.specials[1941].turnedOn = false;
         },
-        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? 1.75 : 1; },
+        burn: function(p) { return [0,60][CrunchUtils.llimitUnlock(p, "specials")]; },
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "QCK" || p.unit.type == "PSY" ? [1.75, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "type"
     },
     1942: {
@@ -9204,11 +9207,12 @@ window.specials = {
         type: "type",
         onActivation: function(p) {
             window.specials[2879].turnedOn = true;
-            var n = (p.cached.multiplier == 1.75 ? 1 : 0);
-            p.cached.multiplier = [1.75, 2][n];
+            var levels = [[1.75, 2],[2, 2.25]][CrunchUtils.llimitUnlock(p, "specials")];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2804warning'
+                text: 'Using the ' + levels[n] + 'x boost. To switch to ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -12328,15 +12332,16 @@ window.specials = {
         affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "INT" ? 2 : 0; },
     },
     3416: {
-        affinityPlus: function(p) { return p.cached.multiplier != 0 ? 0.25 : 0; },
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? p.cached.multiplier != 1 ? 1.75 : 1 : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? [[1.75, 1, 1.75],[2, 1, 2]][CrunchUtils.llimitUnlock(p, "specials")][p.cached.multiplier] : 1; },
         turnedOn: false,
         onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             var levels = [0, 1, 2];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Affinity Boost", "Affinity Buff", "Affinity Boost and Affinity Buff"][n] + '. To switch to ' + ["Affinity Boost", "Affinity Buff", "Affinity Boost and Affinity Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
@@ -12972,8 +12977,8 @@ window.specials = {
         orb: function(p) { return (p.unit.class.has("Driven") || p.unit.class.has("Shooter")) ? 1.75 : 1; },
     },
     3527: {
-        affinityPlus: function(p) { return p.cached.multiplier != 1 ? 0.25 : 0; },
-        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? p.cached.multiplier != 0 ? 2 : 1 : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Slasher") ? [2, 1, 2][p.cached.multiplier] : 1; },
         turnedOn: false,
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -12981,7 +12986,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
             p.scope.notify({
-                text: 'Using the ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][n] + '. To switch to ' + ["Affinity Buff", "Affinity boost", "Affinity boost and Affinity buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Affinity Boost", "Affinity Buff", "Affinity Boost and Affinity Buff"][n] + '. To switch to ' + ["Affinity Boost", "Affinity Buff", "Affinity Boost and Affinity Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
