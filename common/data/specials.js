@@ -16222,6 +16222,58 @@ window.specials = {
             });
         },
     },
+    3947: {
+        tapTiming: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") ? [{ Good: 0.2, Great: 0.3, Perfect: 0.3 },{ Good: 0, Great: 0, Perfect: 0 },{ Good: 0.2, Great: 0.3, Perfect: 0.3 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Tap Timing Buff", "Base ATK", "Tap Timing Buff and Base ATK"][n] + ' boost. To ' + ["Tap Timing Buff", "Base ATK", "Tap Timing Buff and Base ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3948: {
+        tapTiming: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") ? [{ Good: 0.2, Great: 0.3, Perfect: 0.3 },{ Good: 0, Great: 0, Perfect: 0 },{ Good: 0.2, Great: 0.3, Perfect: 0.3 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Shooter") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Tap Timing Buff", "Base ATK", "Tap Timing Buff and Base ATK"][n] + ' boost. To ' + ["Tap Timing Buff", "Base ATK", "Tap Timing Buff and Base ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3950: {
+        chainAddition: function(p) { return 1.1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Slasher") ? 2.25 : 1; },
+    },
+    3951: {
+        status: function(p) { return p.delayed ? 2 : 1; },
+        delay: function(p) { return 1; },
+        ignoresImmunities: function(p) { return [[],['delay']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP <= 10 ? 1 : 0;
+        },
+    },
+    3952: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        atkbasePlus: function(p) { return [0, 300, 300][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["ATK boost", "Base ATK buff", "ATK boost and Base ATK buff"][n] + ' boost. To ' + ["Tap Timing Buff", "Base ATK", "Tap Timing Buff and Base ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

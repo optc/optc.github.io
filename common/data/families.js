@@ -604,7 +604,7 @@ const Holdem = [ "Holdem" ];
 const Speed = [ "Speed" ];
 const CharlottePoire = [ "Charlotte Poire" ];
 const KozukiHiyori = [ "Kozuki Hiyori", "Komurasaki" ];
-const Kikunojo = [ "Kikunojo" ];
+const Kikunojo = [ "Kikunojo", "Okiku" ];
 const Tama = [ "Tama" ];
 const MissTsuru = [ "Miss Tsuru", "Otsuru", "Tsurunojo" ];
 const Denjiro = [ "Denjiro", "Kyoshiro" ];
@@ -676,6 +676,7 @@ const Zanki = [ "Zanki" ];
 const Lim = [ "Lim" ];
 const BaoHuang = [ "Bao Huang" ];
 const Moda = [ "Moda" ];
+const Maha = [ "Maha" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4523,6 +4524,12 @@ window.families = {
     3944: [ ...NefertariVivi, ...Rebecca, ...Shirahoshi, ...Mansherry ],
     3945: [ ...Viola ],
     3946: [ ...JewelryBonney ],
+    3947: [ ...Izo ],
+    3948: [ ...Izo ],
+    3949: [ ...Marco ],
+    3950: [ ...Kikunojo ],
+    3951: [ ...Usopp ],
+    3952: [ ...Maha ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

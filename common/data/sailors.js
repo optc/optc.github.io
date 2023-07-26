@@ -2990,6 +2990,19 @@ window.sailors = {
         hpStatic: function(p) { return 60; },
         rcvStatic: function(p) { return 60; },
     },
+    3948: {
+        atkStatic: function(p) { return p.unit.type == "STR" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3950: {
+        atkStatic: function(p) { return p.percHP <= 10 ? [0, 200][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3952: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

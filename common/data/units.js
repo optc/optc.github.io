@@ -3944,7 +3944,13 @@ window.units = [
     [ "Vivi & Rebecca & Shirahoshi & Mansherry", "DEX", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 895, 443, 101, 1791, 886, 202, 1 ],
     [ "Vivi & Rebecca & Shirahoshi & Mansherry - Enjoyable Conversation", "DEX", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1761, 879, 200, 3521, 1759, 400, 1 ],
     [ "Viola - Princess Departing for the Sacred Land", "DEX", ["Cerebral", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1505, 680, 148, 3010, 1360, 295, 1 ],
-    [ "Jewelry Bonney - Infiltrating the Sacred Land", "STR", ["Free Spirit", "Cerebral"], 5, 50, 4, 3, 99, 5000000, 1432, 703, 152, 2864, 1406, 304, 1 ],
+    [ "Jewelry Bonney - Infiltrating the Sacred Land", "STR", ["Free Spirit", "Cerebral"], 5, 50, 4, 3, 99, 5000000, 1432, 703, 152, 2864, 1406, 304, 1 ], 
+    [ "Izo - Pinning the Pursuing Foe", "STR", ["Shooter", "Slasher"], 5, 30, 4, 3, 70, 1066998, 1145, 406, 60, 2291, 811, 120, 1 ],
+    [ "Izo - Engaging a Fierce Battle", "STR", ["Shooter", "Slasher"], 6, 55, 4, 5, 99, 5000000, 2261, 805, 118, 4521, 1610, 235, 1 ],
+    [ "Marco - Impeding Blue Flame", "STR", ["Fighter", "Powerhouse"], 5, 30, 4, 4, 99, 4000000, 1510, 751, 125, 3020, 1501, 249, 1 ],
+    [ "Kikunojo - Fury Against the Dishonorable Traitor", "STR", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1661, 796, 83, 3321, 1592, 166, 1 ],
+    [ "Usopp - A Rebuke to Death", "PSY", ["Shooter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1626, 726, 112, 3252, 1452, 224, 1 ],
+    [ "Maha", "DEX", ["Fighter", "Shooter"], 5, 30, 4, 4, 99, 2000000, 1663, 781, 89, 3325, 1561, 177, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

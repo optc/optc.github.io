@@ -1095,6 +1095,48 @@ window.events = {
                 $scope.notify({ text: 'Disabling [RAINBOW] orbs support.' });
         }
     },
+    3947: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1){}
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO], [TND] and [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0){}
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO], [TND] and [MEAT] orbs support.' });
+        }
+    },
+    3948: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1){}
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO], [TND] and [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0){}
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO], [TND] and [MEAT] orbs support.' });
+        }
+    },
+    3950: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1){}
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO], [TND] and [MEAT] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0){}
+            if (--$scope.options.meatOrbsEnabled === 0){}
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO], [TND] and [MEAT] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
