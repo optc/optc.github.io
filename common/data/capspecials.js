@@ -78,6 +78,18 @@ window.capspecials = {
 var calcGhostStartIDCapSpecials = { "start": 5000 };
 
 var ghostsCapSpecials = {
+    12: {
+        atkPlus: function(p) { return [0, 0.3][CrunchUtils.llimitUnlock(p, "specials")]; },
+    },
+    13: {
+        atkPlus: function(p) { return [0, 0.3][CrunchUtils.llimitUnlock(p, "specials")]; },
+    },
+    14: {
+        atkPlus: function(p) { return [0, 0.3][CrunchUtils.llimitUnlock(p, "specials")]; },
+    },
+    15: {
+        atkPlus: function(p) { return [0, 0.3][CrunchUtils.llimitUnlock(p, "specials")]; },
+    },
     304: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
         type: "type",
