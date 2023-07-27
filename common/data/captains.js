@@ -14103,10 +14103,12 @@ var ghostsCaptains = {
     14: {
         atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [3.75, 5.25][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
         hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [1, 1.2][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        atkPlus: function(p) { return [0, 0.25][CrunchUtils.llimitUnlock(p, "captains")]; },
     },
     15: {
         atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [3.75, 5.25][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
         hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [1, 1.2][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        atkPlus: function(p) { return [0, 0.25][CrunchUtils.llimitUnlock(p, "captains")]; },
     },
     16: {
         atk: function(p) { return p.unit.type == "PSY" ? 3.5 : 2.75; },
