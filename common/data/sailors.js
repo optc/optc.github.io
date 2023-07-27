@@ -388,6 +388,16 @@ window.sailors = {
     1908: {
         atkStatic: function(p) { return p.slot <= 1 ? 100 : 0; },
     },
+    1916: {
+        atkStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
+        hpStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
+        rcvStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
+    },
+    1972: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     1973: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
     },

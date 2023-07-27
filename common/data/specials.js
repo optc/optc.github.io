@@ -4401,7 +4401,7 @@ window.specials = {
         affinity: function(p) { return 1.75; }
     },
     1916: {
-        affinity: function(p) { return 1.75; }
+        affinity: function(p) { return [1.75, 2.25][CrunchUtils.llimitUnlock(p, "specials")]; }
     },
     1917: {
         atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
@@ -4762,7 +4762,7 @@ window.specials = {
         def: function(p) { return p.cached.captain.class.has("Cerebral") ? .2 : 1; },
     },
     1972: {
-        atk: function(p) { return (p.cached.captain.class.has("Cerebral") && p.defenseDown) ? 1.75 : 1; },
+        atk: function(p) { return (p.cached.captain.class.has("Cerebral") && p.defenseDown) ? [1.75, 2][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "condition",
         def: function(p) { return p.cached.captain.class.has("Cerebral") ? .2 : 1; },
     },
@@ -5557,7 +5557,7 @@ window.specials = {
         type: "type",
     },
     2137: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 2 : 1; },
+        atk: function(p) { return [p.slot == p.sourceSlot ? 2 : 1, 2.25][CrunchUtils.llimitUnlock(p, "specials")]; },
         type: "type",
     },
     2138: {
@@ -16366,16 +16366,16 @@ var ghostsSpecials = {
         orb: function(p) { return 2; }
     },
     12: {
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.25 : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
     },
     13: {
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.25 : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
     },
     14: {
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.25 : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
     },
     15: {
-        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? 2.25 : 1; },
+        orb: function(p) { return (p.unit.type == "DEX" || p.unit.type == "PSY") ? [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
     },
     16: {
     },
