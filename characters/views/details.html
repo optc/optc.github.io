@@ -940,26 +940,26 @@
                                         <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
-                                <tr ng-if="details.festGPAbility">
+                                <tr ng-if="details.festAbilityGP">
                                     <td>Grand Party</td>
                                     <td>Ability</td>
                                     <td>Special</td>
                                 </tr>
-                                <tr ng-if="details.festGPAbility">
+                                <tr ng-if="details.festAbilityGP">
                                     <td>-</td>
                                     <td>
                                         <div>
-                                                <div ng-repeat="item in details.festGPAbility track by $index"><strong>Level {{$index + 1}}:</strong>
-                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                                <div ng-repeat="item in details.festAbilityGP track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.festGPAbility | decorate"></span><br></div>
                                         </div>
-                                        <span class="notes" ng-if="details.festGPAbilityNotes" ng-bind-html="details.festGPAbilityNotes | notes | decorate"></span>
+                                        <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
                                     </td>
                                     <td>
                                         <div>
-                                                <div ng-repeat="item in details.festGPSpecial track by $index"><strong>Level {{$index + 1}}: [{{item.uses}} use{{"" ? item.uses == 1 : "s"}}] </strong>
-                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                                <div ng-repeat="item in details.festAbilityGP track by $index"><strong>Level {{$index + 1}}: [{{item.uses}} use{{"" ? item.uses == 1 : "s"}}] </strong>
+                                                <span ng-bind-html="item.festGPSpecial | decorate"></span><br></div>
                                         </div>
-                                        <span class="notes" ng-if="details.festGPSpecialNotes" ng-bind-html="details.festGPSpecialNotes | notes | decorate"></span>
+                                        <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                             </tbody>                            

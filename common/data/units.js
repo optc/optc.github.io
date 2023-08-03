@@ -3951,6 +3951,15 @@ window.units = [
     [ "Kikunojo - Fury Against the Dishonorable Traitor", "STR", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1661, 796, 83, 3321, 1592, 166, 1 ],
     [ "Usopp - A Rebuke to Death", "PSY", ["Shooter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1626, 726, 112, 3252, 1452, 224, 1 ],
     [ "Maha", "DEX", ["Fighter", "Shooter"], 5, 30, 4, 4, 99, 2000000, 1663, 781, 89, 3325, 1561, 177, 1 ],
+    [ "Kawamatsu - Determination of a Kozuki Clan Vassal", "PSY", ["Slasher", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1154, 440, 47, 2308, 880, 94, 1 ],
+    [ "Kawamatsu the Kappa - Blade Inheriting the Spirit of Oden", "PSY", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2278, 874, 91, 4556, 1748, 183, 1 ],
+    [ "Monkey D. Luffy - Awoken Warrior of Liberation", "PSY", ["Free Spirit", "Fighter"], 5, 30, 4, 3, 70, 1066998, 1129, 437, 71, 2258, 873, 142, 1 ],
+    [ "Monkey D. Luffy - Mystical Figure in White", "PSY", ["Free Spirit", "Fighter"], 6, 55, 4, 5, 99, 5000000, 2228, 867, 140, 4456, 1734, 280, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Kozuki Momonosuke - Appearance of the Pink Dragon", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 3, 70, 1066998, 1198, 388, 76, 2396, 776, 151, 1 ],
+    [ "Kozuki Momonosuke - Courage to Bite the Emperor", "PSY", ["Free Spirit", "Slasher"], 6, 40, 4, 5, 99, 5000000, 2366, 770, 149, 4732, 1540, 298, 1 ],
+    [ "Komurasaki - Revealing the True Name", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1528, 730, 127, 3056, 1460, 254, 1 ],
+    [ "Denjiro - Enduring the Tarnished Pride of Oden", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1604, 752, 107, 3208, 1504, 214, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
