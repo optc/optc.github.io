@@ -461,6 +461,15 @@ window.altspecials = {
     3903: {
         increaseDamageTaken: function(p) { return 2; },
     },
+    3956: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

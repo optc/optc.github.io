@@ -13983,6 +13983,38 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? 4 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
+    3953: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.percHP >= 80 || p.percHP <= 25 ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
+    3954: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? p.percHP >= 80 || p.percHP <= 25 ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
+    3955: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 6 : 5.5 : p.actions[p.sourceSlot] ? 5 : 4.5; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3956: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? p.actions[p.sourceSlot] ? 6 : 5.5 : p.actions[p.sourceSlot] ? 5 : 4.5; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3958: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.35 : 1; },
+    },
+    3959: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 5.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.35 : 1; },
+    },
+    3960: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.35 : 1; },
+    },
+    3961: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 3.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

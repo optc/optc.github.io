@@ -3013,6 +3013,26 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Shooter") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    3954: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3956: {
+        atkStatic: function(p) { return [0, 150, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+        hpStatic: function(p) { return [0, 150, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+        rcvStatic: function(p) { return [0, 150, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    3959: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3961: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

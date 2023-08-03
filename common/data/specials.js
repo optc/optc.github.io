@@ -16269,7 +16269,68 @@ window.specials = {
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: '' + ["ATK boost", "Base ATK buff", "ATK boost and Base ATK buff"][n] + ' boost. To ' + ["Tap Timing Buff", "Base ATK", "Tap Timing Buff and Base ATK"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                text: '' + ["ATK boost", "Base ATK buff", "ATK boost and Base ATK buff"][n] + ' boost. To ' + ["ATK boost", "Base ATK buff", "ATK boost and Base ATK buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3953: {
+        atkbase: function(p) { return p.unit.class.has("Slasher") ? [1250, 0, 1250][p.cached.multiplier] : 1; },
+        atkbasePlus: function(p) { return [0, 250, 250][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Base ATK boost", "Base ATK buff", "Base ATK boost and Base ATK buff"][n] + ' boost. To ' + ["Base ATK boost", "Base ATK buff", "Base ATK boost and Base ATK buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3954: {
+        affinity: function(p) { return p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        orb: function(p) { return p.cached.multiplier ? p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3.25 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.actions[p.sourceSlot];
+        },
+    },
+    3955: {
+        affinity: function(p) { return p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
+        orb: function(p) { return p.cached.multiplier ? p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3.25 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.actions[p.sourceSlot];
+        },
+    },
+    3958: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") ? 2.5 : 1; },
+        type: "type",
+    },
+    3959: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") ? 2.5 : 1; },
+        type: "type",
+    },
+    3960: {
+        def: function(p) { return [0, 1, 0][p.cached.multiplier]; },
+        chainAddition: function(p) { return [0, 1.2, 1.2][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Defense Reduction", "Chain Addition", "Both Effects"][n] + '. To ' + ["Defense Reduction", "Chain Addition", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3961: {
+        status: function(p) { return p.defenseDown ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        chainAdditionPlus: function(p) { return [0, 0.8, 0.8][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Defense Reduction Status", "Chain Addition Buff", "Both Effects"][n] + '. To ' + ["Defense Reduction Status", "Chain Addition Buff", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

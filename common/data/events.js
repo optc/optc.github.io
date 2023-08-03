@@ -616,21 +616,21 @@ window.events = {
     3306: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
-                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+                $scope.notify({ text: 'Enabling [RCV] orbs support.' });
         },
         onRemoval: function($scope) {
             if (--$scope.options.meatOrbsEnabled === 0)
-                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+                $scope.notify({ text: 'Disabling [RCV] orbs support.' });
         }
     },
     3307: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
-                $scope.notify({ text: 'Enabling [MEAT] orbs support.' });
+                $scope.notify({ text: 'Enabling [RCV] orbs support.' });
         },
         onRemoval: function($scope) {
             if (--$scope.options.meatOrbsEnabled === 0)
-                $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
+                $scope.notify({ text: 'Disabling [RCV] orbs support.' });
         }
     },
     3350: {
@@ -1135,6 +1135,66 @@ window.events = {
             if (--$scope.options.meatOrbsEnabled === 0){}
             if (--$scope.options.tndOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [WANO], [TND] and [MEAT] orbs support.' });
+        }
+    },
+    3953: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
+    3954: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
+    3955: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] orbs support.' });
+        }
+    },
+    3956: {
+        onInsertion: function($scope) {
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [RCV] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.meatOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [RCV] orbs support.' });
+        }
+    },
+    3958: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
+    3959: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
     5052: {
