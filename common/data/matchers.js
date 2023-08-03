@@ -5331,7 +5331,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: End of Turn Heal',
+            name: 'End of Turn Heal',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies[^."]+?End of Turn Heal[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5350,7 +5350,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: End of Turn Damage/Percent Cut',
+            name: 'End of Turn Damage/Percent Cut',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies[^."]+?End of Turn Damage\/Percent Cut[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5369,7 +5369,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Enrage',
+            name: 'Enrage',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies[^."]+?Enrage[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5388,7 +5388,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: ATK UP',
+            name: 'ATK UP',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?ATK UP[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5407,7 +5407,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Increased Defense',
+            name: 'Increased Defense',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?Increased Defense[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5426,7 +5426,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Percent Damage Reduction',
+            name: 'Percent Damage Reduction',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?Percent Damage Reduction[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5445,7 +5445,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Damage Nullification',
+            name: 'Damage Nullification',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?Damage Nullification[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5464,7 +5464,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Threshold Damage Reduction',
+            name: 'Threshold Damage Reduction',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?Threshold Damage Reduction[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5483,7 +5483,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Barrier',
+            name: 'Barrier',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?Barrier[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5502,7 +5502,7 @@ let matchers = {
         },
 
         {
-            name: 'Buff Reduction: Resilience',
+            name: 'Resilience',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes) enemies'[^."]+?Resilience[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
