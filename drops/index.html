@@ -131,14 +131,15 @@
                             {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
                         <td hide-when-empty colspan="2">
-                            <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid > 0 && uid < 9000 && !hiddenUnits[uid]"
+                            <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
                                 decorate-slot uid="uid" class="slot small" 
                                 href="../characters/#/view/{{uid}}" target="_blank"
                                 uib-tooltip="{{getTooltipText(uid)}}"
                                 tooltip-placement="bottom" tooltip-trigger="mouseenter"
                                 tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a>
-                            <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid.includes('skull') || uid > 9000"
+                            <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid.includes('skull')"
                                 decorate-slot uid="uid" class="slot small" 
+                                href="../characters/{{uid.includes('-') ? '#/view/' + uid.slice(0,4) : ''}}" target="_blank"
                                 uib-tooltip="{{getTooltipText(uid)}}"
                                 tooltip-placement="bottom" tooltip-trigger="mouseenter"
                                 tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a>

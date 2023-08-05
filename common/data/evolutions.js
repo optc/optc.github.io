@@ -2113,15 +2113,15 @@ window.evolutions = {
     },
     4: {
         evolution: 1387,
-        evolvers: [ 'skullLuffy', 267 ]
+        evolvers: [ '1387-skull', 267 ]
     },
     8: {
         evolution: 1388,
-        evolvers: [ 'skullZoro', 267 ]
+        evolvers: [ '1388-skull', 267 ]
     },
     12: {
         evolution: 1389,
-        evolvers: [ 'skullNami', 267 ]
+        evolvers: [ '1389-skull', 267 ]
     },
     1390: {
         evolution: 1391,
@@ -2221,15 +2221,15 @@ window.evolutions = {
     },
     16: {
         evolution: 1446,
-        evolvers: [ 'skullUsopp', 267 ]
+        evolvers: [ '1446-skull', 267 ]
     },
     20: {
         evolution: 1447,
-        evolvers: [ 'skullSanji', 267 ]
+        evolvers: [ '1447-skull', 267 ]
     },
     22: {
         evolution: 1448,
-        evolvers: [ 'skullChopper', 267 ]
+        evolvers: [ '1448-skull', 267 ]
     },
     1449: {
         evolution: 1450,
@@ -2389,15 +2389,15 @@ window.evolutions = {
     },
     709: {
         evolution: 1549,
-        evolvers: [ 'skullRobin', 267 ]
+        evolvers: [ '1549-skull', 267 ]
     },
     739: {
         evolution: 1550,
-        evolvers: [ 'skullFranky', 267 ]
+        evolvers: [ '1550-skull', 267 ]
     },
     896: {
         evolution: 1551,
-        evolvers: [ 'skullBrook', 267 ]
+        evolvers: [ '1551-skull', 267 ]
     },
     1552: {
         evolution: 1553,
@@ -3413,7 +3413,7 @@ window.evolutions = {
     },
     2004: {
         evolution: 2126,
-        evolvers: [ 'skullDoffy', 89, 95, 95, 300 ]
+        evolvers: [ '2126-skull', 89, 95, 95, 300 ]
     },
     2131: {
         evolution: 2132,
@@ -3429,23 +3429,23 @@ window.evolutions = {
     },
     1832: {
         evolution: 2138,
-        evolvers: [ 'skullJudge', 'skullJudge', 'skullJudge', 'skullJudge', 'skullJudge' ]
+        evolvers: [ '2138-skull', '2138-skull', '2138-skull', '2138-skull', '2138-skull' ]
     },
     1834: {
         evolution: 2139,
-        evolvers: [ 'skullReiju', 'skullReiju', 'skullReiju', 'skullReiju', 'skullReiju' ]
+        evolvers: [ '2139-skull', '2139-skull', '2139-skull', '2139-skull', '2139-skull' ]
     },
     1836: {
         evolution: 2140,
-        evolvers: [ 'skullIchiji', 'skullIchiji', 'skullIchiji', 'skullIchiji', 'skullIchiji' ]
+        evolvers: [ '2140-skull', '2140-skull', '2140-skull', '2140-skull', '2140-skull' ]
     },
     1838: {
         evolution: 2141,
-        evolvers: [ 'skullNiji', 'skullNiji', 'skullNiji', 'skullNiji', 'skullNiji' ]
+        evolvers: [ '2141-skull', '2141-skull', '2141-skull', '2141-skull', '2141-skull' ]
     },
     1840: {
         evolution: 2142,
-        evolvers: [ 'skullYonji', 'skullYonji', 'skullYonji', 'skullYonji', 'skullYonji' ]
+        evolvers: [ '2142-skull', '2142-skull', '2142-skull', '2142-skull', '2142-skull' ]
     },
     2143: {
         evolution: 2144,
@@ -3601,7 +3601,7 @@ window.evolutions = {
     },
     1610: {
         evolution: 2232,
-        evolvers: [ 'skullEnel', 'skullEnel', 'skullEnel', 'skullEnel', 'skullEnel' ]
+        evolvers: [ '2232-skull', '2232-skull', '2232-skull', '2232-skull', '2232-skull' ]
     },
     2233: {
         evolution: 2234,
@@ -3629,7 +3629,7 @@ window.evolutions = {
     },
     1588: {
         evolution: 2245,
-        evolvers: [ 'skullSanji2', 'skullSanji2', 'skullSanji2', 'skullSanji2', 'skullSanji2' ]
+        evolvers: [ '2245-skull', '2245-skull', '2245-skull', '2245-skull', '2245-skull' ]
     },
     2246: {
         evolution: 2247,
@@ -3649,7 +3649,7 @@ window.evolutions = {
     },
     2258: {
         evolution: 2259,
-        evolvers: [ 'skullHiguma', 'skullHiguma', 'skullHiguma', 'skullHiguma', 'skullHiguma' ]
+        evolvers: [ '2259-skull', '2259-skull', '2259-skull', '2259-skull', '2259-skull' ]
     },
     2260: {
         evolution: 2261,
@@ -3725,7 +3725,7 @@ window.evolutions = {
     },
     1935: {
         evolution: 2300,
-        evolvers: [ 'skullFrankie', 'skullFrankie', 'skullFrankie', 'skullFrankie', 'skullFrankie' ]
+        evolvers: [ '2300-skull', '2300-skull', '2300-skull', '2300-skull', '2300-skull' ]
     },
     2301: {
         evolution: 2302,
@@ -3813,7 +3813,7 @@ window.evolutions = {
     },
     1123: {
         evolution: 2357,
-        evolvers: [ 'skullCavendish', 'skullCavendish', 'skullCavendish', 'skullCavendish', 'skullCavendish',]
+        evolvers: [ '2357-skull', '2357-skull', '2357-skull', '2357-skull', '2357-skull',]
     },
     2361: {
         evolution: 2362,
@@ -3945,7 +3945,7 @@ window.evolutions = {
     },
     1747: {
         evolution: 2434,
-        evolvers: [ 'skullHancock', 'skullHancock', 'skullHancock', 'skullHancock', 'skullHancock' ]
+        evolvers: [ '2434-skull', '2434-skull', '2434-skull', '2434-skull', '2434-skull' ]
     },
     2551: {
         evolution: 2552,
@@ -3961,7 +3961,7 @@ window.evolutions = {
     },
     870: {
         evolution: 2444,
-        evolvers: [ 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', 'skullDoflamingo', ]
+        evolvers: [ '2444-skull', '2444-skull', '2444-skull', '2444-skull', '2444-skull', ]
     },
     2445: {
         evolution: 2446,
@@ -3969,19 +3969,19 @@ window.evolutions = {
     },
     2447: {
         evolution: 2448,
-        evolvers: [ 'skullIchiji2', 'skullIchiji2', 'skullIchiji2', 'skullIchiji2', 'skullIchiji2' ]
+        evolvers: [ '2448-skull', '2448-skull', '2448-skull', '2448-skull', '2448-skull' ]
     },
     2449: {
         evolution: 2450,
-        evolvers: [ 'skullNiji2', 'skullNiji2', 'skullNiji2', 'skullNiji2', 'skullNiji2' ]
+        evolvers: [ '2450-skull', '2450-skull', '2450-skull', '2450-skull', '2450-skull' ]
     },
     2451: {
         evolution: 2452,
-        evolvers: [ 'skullYonji2', 'skullYonji2', 'skullYonji2', 'skullYonji2', 'skullYonji2' ]
+        evolvers: [ '2452-skull', '2452-skull', '2452-skull', '2452-skull', '2452-skull' ]
     },
     2453: {
         evolution: 2454,
-        evolvers: [ 'skullReiju2', 'skullReiju2', 'skullReiju2', 'skullReiju2', 'skullReiju2' ]
+        evolvers: [ '2454-skull', '2454-skull', '2454-skull', '2454-skull', '2454-skull' ]
     },
     2456: {
         evolution: 2457,
@@ -4177,7 +4177,7 @@ window.evolutions = {
     },
     2076: {
         evolution: 2588,
-        evolvers: [ 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2', 'skullNami2' ]
+        evolvers: [ '2588-skull', '2588-skull', '2588-skull', '2588-skull', '2588-skull' ]
     },
     2229: {
         evolution: 2597,
@@ -4301,7 +4301,7 @@ window.evolutions = {
     },
     2651: {
         evolution: 2681,
-        evolvers: [ 'skullBullet', 'skullBullet', 'skullBullet', 'skullBullet', 'skullBullet' ]
+        evolvers: [ '2681-skull', '2681-skull', '2681-skull', '2681-skull', '2681-skull' ]
     },
     2683: {
         evolution: 2684,
@@ -4381,7 +4381,7 @@ window.evolutions = {
     },
     2113: {
         evolution: 2739,
-        evolvers: [ 'skullKatakuri', 'skullKatakuri', 'skullKatakuri', 'skullKatakuri', 'skullKatakuri' ]
+        evolvers: [ '2739-skull', '2739-skull', '2739-skull', '2739-skull', '2739-skull' ]
     },
     2740: {
         evolution: 2741,
@@ -4561,7 +4561,7 @@ window.evolutions = {
     },
     2885: {
         evolution: 2886,
-        evolvers: [ 'skullCP9', 'skullCP9', 'skullCP9', 'skullCP9', 'skullCP9' ]
+        evolvers: [ '2886-skull', '2886-skull', '2886-skull', '2886-skull', '2886-skull' ]
     },
     2894: {
         evolution: 2895,
@@ -4585,11 +4585,11 @@ window.evolutions = {
     },
     2686: {
         evolution: 2909,
-        evolvers: [ 'skullWhitebeard', 'skullWhitebeard', 'skullWhitebeard', 'skullWhitebeard', 'skullWhitebeard' ]
+        evolvers: [ '2909-skull', '2909-skull', '2909-skull', '2909-skull', '2909-skull' ]
     },
     2922: {
         evolution: 2923,
-        evolvers: [ 'skullRaidKaido', 'skullRaidKaido', 'skullRaidKaido', 'skullRaidKaido', 'skullRaidKaido' ]
+        evolvers: [ '2923-skull', '2923-skull', '2923-skull', '2923-skull', '2923-skull' ]
     },
     2929: {
         evolution: 2930,
@@ -4829,7 +4829,7 @@ window.evolutions = {
     },
     1268: {
         evolution: 3154,
-        evolvers: [ 'skullBlackbeard', 'skullBlackbeard', 'skullBlackbeard', 'skullBlackbeard', 'skullBlackbeard' ]
+        evolvers: [ '3154-skull', '3154-skull', '3154-skull', '3154-skull', '3154-skull' ]
     },
     3163: {
         evolution: 3164,
@@ -4877,7 +4877,7 @@ window.evolutions = {
     },
     2477: {
         evolution: 3202,
-        evolvers: [ "skullZoro2", "skullZoro2", "skullZoro2", "skullZoro2", "skullZoro2" ]
+        evolvers: [ "3202-skull", "3202-skull", "3202-skull", "3202-skull", "3202-skull" ]
     },
     3203: {
         evolution: 3204,
@@ -4885,7 +4885,7 @@ window.evolutions = {
     },
     2148: {
         evolution: 3211,
-        evolvers: [ "skullSanji3", "skullSanji3", "skullSanji3", "skullSanji3", "skullSanji3" ]
+        evolvers: [ "3211-skull", "3211-skull", "3211-skull", "3211-skull", "3211-skull" ]
     },
     3218: {
         evolution: 3219,
@@ -4913,7 +4913,7 @@ window.evolutions = {
     },
     2475: {
         evolution: 3240,
-        evolvers: [ "skullMihawk", "skullMihawk", "skullMihawk", "skullMihawk", "skullMihawk" ]
+        evolvers: [ "3240-skull", "3240-skull", "3240-skull", "3240-skull", "3240-skull" ]
     },
     3244: {
         evolution: 3245,
@@ -4941,7 +4941,7 @@ window.evolutions = {
     },
     2774: {
         evolution: 3275,
-        evolvers: [ "skullNami3", "skullNami3", "skullNami3", "skullNami3", "skullNami3" ]
+        evolvers: [ "3275-skull", "3275-skull", "3275-skull", "3275-skull", "3275-skull" ]
     },
     3277: {
         evolution: 3278,
@@ -4957,7 +4957,7 @@ window.evolutions = {
     },
     2465: {
         evolution: 3298,
-        evolvers: [ "skullCracker", "skullCracker", "skullCracker", "skullCracker", "skullCracker" ]
+        evolvers: [ "3298-skull", "3298-skull", "3298-skull", "3298-skull", "3298-skull" ]
     },
     3299: {
         evolution: 3300,
@@ -5017,11 +5017,11 @@ window.evolutions = {
     },
     2776: {
         evolution: 3350,
-        evolvers: [ "skullKomurasaki", "skullKomurasaki", "skullKomurasaki", "skullKomurasaki", "skullKomurasaki" ]
+        evolvers: [ "3350-skull", "3350-skull", "3350-skull", "3350-skull", "3350-skull" ]
     },
     3351: {
         evolution: 3352,
-        evolvers: [ "skullKuja", "skullKuja", "skullKuja", "skullKuja", "skullKuja" ]
+        evolvers: [ "3352-skull", "3352-skull", "3352-skull", "3352-skull", "3352-skull" ]
     },
     3354: {
         evolution: 3355,
@@ -5037,7 +5037,7 @@ window.evolutions = {
     },
     3071: {
         evolution: 3369,
-        evolvers: [ "skullGerma", "skullGerma", "skullGerma", "skullGerma", "skullGerma" ]
+        evolvers: [ "3369-skull", "3369-skull", "3369-skull", "3369-skull", "3369-skull" ]
     },
     3375: {
         evolution: 3376,
@@ -5053,11 +5053,11 @@ window.evolutions = {
     },
     2441: {
         evolution: 3393,
-        evolvers: [ "skullSabo", "skullSabo", "skullSabo", "skullSabo", "skullSabo" ]
+        evolvers: [ "3393-skull", "3393-skull", "3393-skull", "3393-skull", "3393-skull" ]
     },
     3394: {
         evolution: 3397,
-        evolvers: [ "skullJack", "skullJack", "skullJack", "skullJack", "skullJack" ]
+        evolvers: [ "3397-skull", "3397-skull", "3397-skull", "3397-skull", "3397-skull" ]
     },
     3402: {
         evolution: 3403,
@@ -5073,7 +5073,7 @@ window.evolutions = {
     },
     2338: {
         evolution: 3417,
-        evolvers: [ "skullCarrot", "skullCarrot", "skullCarrot", "skullCarrot", "skullCarrot" ]
+        evolvers: [ "3417-skull", "3417-skull", "3417-skull", "3417-skull", "3417-skull" ]
     },
     3421: {
         evolution: 3422,
@@ -5085,7 +5085,7 @@ window.evolutions = {
     },
     3429: {
         evolution: 3430,
-        evolvers: [ "skullYamato" ]
+        evolvers: [ "3430-skull" ]
     },
     3432: {
         evolution: 3433,
@@ -5093,11 +5093,11 @@ window.evolutions = {
     },
     2433: {
         evolution: 3448,
-        evolvers: [ "skullJack2", "skullJack2", "skullJack2", "skullJack2", "skullJack2" ]
+        evolvers: [ "3448-skull", "3448-skull", "3448-skull", "3448-skull", "3448-skull" ]
     },
     3449: {
         evolution: 3450,
-        evolvers: [ "skullLinlin", "skullLinlin", "skullLinlin", "skullLinlin", "skullLinlin" ]
+        evolvers: [ "3450-skull", "3450-skull", "3450-skull", "3450-skull", "3450-skull" ]
     },
     3451: {
         evolution: 3452,
@@ -5113,7 +5113,7 @@ window.evolutions = {
     },
     2837: {
         evolution: 3469,
-        evolvers: [ "skullPudding", "skullPudding", "skullPudding", "skullPudding", "skullPudding" ]
+        evolvers: [ "3469-skull", "3469-skull", "3469-skull", "3469-skull", "3469-skull" ]
     },
     3471: {
         evolution: 3472,
@@ -5129,7 +5129,7 @@ window.evolutions = {
     },
     3489: {
         evolution: 3490,
-        evolvers: [ "skullKrieg", "skullKrieg", "skullKrieg", "skullKrieg", "skullKrieg" ]
+        evolvers: [ "3490-skull", "3490-skull", "3490-skull", "3490-skull", "3490-skull" ]
     },
     3492: {
         evolution: 3493,
@@ -5145,7 +5145,7 @@ window.evolutions = {
     },
     2236: {
         evolution: 3510,
-        evolvers: [ "skullBrook2", "skullBrook2", "skullBrook2", "skullBrook2", "skullBrook2" ]
+        evolvers: [ "3510-skull", "3510-skull", "3510-skull", "3510-skull", "3510-skull" ]
     },
     3512: {
         evolution: 3513,
@@ -5157,7 +5157,7 @@ window.evolutions = {
     },
     3175: {
         evolution: 3519,
-        evolvers: [ "skullOden", "skullOden", "skullOden", "skullOden", "skullOden" ]
+        evolvers: [ "3519-skull", "3519-skull", "3519-skull", "3519-skull", "3519-skull" ]
     },
     3522: {
         evolution: 3523,
@@ -5165,7 +5165,7 @@ window.evolutions = {
     },
     3531: {
         evolution: 3532,
-        evolvers: [ "skullBlackbeard2", "skullBlackbeard2", "skullBlackbeard2", "skullBlackbeard2", "skullBlackbeard2" ]
+        evolvers: [ "3532-skull", "3532-skull", "3532-skull", "3532-skull", "3532-skull" ]
     },
     3533: {
         evolution: 3534,
@@ -5181,7 +5181,7 @@ window.evolutions = {
     },
     1910: {
         evolution: 3550,
-        evolvers: [ "skullDoflamingo2", "skullDoflamingo2", "skullDoflamingo2", "skullDoflamingo2", "skullDoflamingo2" ]
+        evolvers: [ "3550-skull", "3550-skull", "3550-skull", "3550-skull", "3550-skull" ]
     },
     3552: {
         evolution: 3553,
@@ -5197,7 +5197,7 @@ window.evolutions = {
     },
     3571: {
         evolution: 3572,
-        evolvers: [ "skullOrochi", "skullOrochi", "skullOrochi", "skullOrochi", "skullOrochi" ]
+        evolvers: [ "3572-skull", "3572-skull", "3572-skull", "3572-skull", "3572-skull" ]
     },
     3573: {
         evolution: 3574,
@@ -5209,7 +5209,7 @@ window.evolutions = {
     },
     3581: {
         evolution: 3582,
-        evolvers: [  ]
+        evolvers: [ 118, 82, 1180, 304, 267 ]
     },
     3589: {
         evolution: 3590,
@@ -5217,15 +5217,15 @@ window.evolutions = {
     },
     2025: {
         evolution: 3592,
-        evolvers: [ "skullKuzan", "skullKuzan", "skullKuzan", "skullKuzan", "skullKuzan" ]
+        evolvers: [ "3592-skull", "3592-skull", "3592-skull", "3592-skull", "3592-skull" ]
     },
     3594: {
         evolution: 3595,
-        evolvers: [  ]
+        evolvers: [118, 266, 303, 103, 267]
     },
     3596: {
         evolution: 3597,
-        evolvers: [  ]
+        evolvers: [118, 1180, 304, 104, 267]
     },
     3606: {
         evolution: 3607,
@@ -5245,99 +5245,99 @@ window.evolutions = {
     },
     3619: {
         evolution: 3620,
-        evolvers: [ "skullOden2", "skullOden2", "skullOden2", "skullOden2", "skullOden2" ]
+        evolvers: [ "3620-skull", "3620-skull", "3620-skull", "3620-skull", "3620-skull" ]
     },
     2023: {
         evolution: 3625,
-        evolvers: [ "skullAkainu", "skullAkainu", "skullAkainu", "skullAkainu", "skullAkainu" ]
+        evolvers: [ "3625-skull", "3625-skull", "3625-skull", "3625-skull", "3625-skull" ]
     },
     3626: {
         evolution: 3627,
-        evolvers: [ "skullRoger", "skullRoger", "skullRoger", "skullRoger", "skullRoger" ]
+        evolvers: [ "3627-skull", "3627-skull", "3627-skull", "3627-skull", "3627-skull" ]
     },
     3628: {
         evolution: 3629,
-        evolvers: [  ]
+        evolvers: [118, 266, 85, 101, 267]
     },
     3630: {
         evolution: 3631,
-        evolvers: [  ]
+        evolvers: [118, 2662, 304, 104, 267]
     },
     3636: {
         evolution: 3637,
-        evolvers: [  ]
+        evolvers: [118, 80, 1180, 302, 267]
     },
     3640: {
         evolution: 3641,
-        evolvers: [  ]
+        evolvers: [118, 88, 304, 104, 267]
     },
     3649: {
         evolution: 3650,
-        evolvers: [  ]
+        evolvers: [118, 266, 85, 101, 267]
     },
     3651: {
         evolution: 3652,
-        evolvers: [  ]
+        evolvers: [118, 2662, 300, 100, 267]
     },
     3653: {
         evolution: 3654,
-        evolvers: [  ]
+        evolvers: [118, 266, 86, 102, 267]
     },
     2365: {
         evolution: 3666,
-        evolvers: [ "skullKatakuri2", "skullKatakuri2", "skullKatakuri2", "skullKatakuri2", "skullKatakuri2" ]
+        evolvers: [ "3666-skull", "3666-skull", "3666-skull", "3666-skull", "3666-skull" ]
     },
     3668: {
         evolution: 3669,
-        evolvers: [ "skullSummerLuffy", "skullSummerLuffy", "skullSummerLuffy", "skullSummerLuffy", "skullSummerLuffy" ]
+        evolvers: [ "3669-skull", "3669-skull", "3669-skull", "3669-skull", "3669-skull" ]
     },
     3673: {
         evolution: 3674,
-        evolvers: [  ]
+        evolvers: [118, 2662, 300, 100, 267]
     },
     3675: {
         evolution: 3676,
-        evolvers: [  ]
+        evolvers: [118, 266, 86, 102, 267]
     },
     3681: {
         evolution: 3682,
-        evolvers: [  ]
+        evolvers: [118, 266, 88, 104, 267]
     },
     2201: {
         evolution: 3693,
-        evolvers: [ "skullShiki", "skullShiki", "skullShiki", "skullShiki", "skullShiki" ]
+        evolvers: [ "3693-skull", "3693-skull", "3693-skull", "3693-skull", "3693-skull" ]
     },
     3694: {
         evolution: 3695,
-        evolvers: [  ]
+        evolvers: [118, 2662, 301, 101, 267]
     },
     3696: {
         evolution: 3697,
-        evolvers: [  ]
+        evolvers: [118, 266, 85, 101, 267]
     },
     3705: {
         evolution: 3706,
-        evolvers: [  ]
+        evolvers: [118, 2662, 303, 103, 267]
     },
     3707: {
         evolution: 3708,
-        evolvers: [ "skullDoflamingo3", "skullDoflamingo3", "skullDoflamingo3", "skullDoflamingo3", "skullDoflamingo3" ]
+        evolvers: [ "3708-skull", "3708-skull", "3708-skull", "3708-skull", "3708-skull" ]
     },
     3701: {
         evolution: 3713,
-        evolvers: [ "skullUta", "skullUta", "skullUta", "skullUta", "skullUta" ]
+        evolvers: [ "3713-skull", "3713-skull", "3713-skull", "3713-skull", "3713-skull" ]
     },
     2960: {
         evolution: 3718,
-        evolvers: [ "skullSabo2", "skullSabo2", "skullSabo2", "skullSabo2", "skullSabo2" ]
+        evolvers: [ "3718-skull", "3718-skull", "3718-skull", "3718-skull", "3718-skull" ]
     },
     3719: {
         evolution: 3720,
-        evolvers: [ "skullShanks", "skullShanks", "skullShanks", "skullShanks", "skullShanks" ]
+        evolvers: [ "3720-skull", "3720-skull", "3720-skull", "3720-skull", "3720-skull" ]
     },
     3680: {
         evolution: 3721,
-        evolvers: [ "skullUta2", "skullUta2", "skullUta2", "skullUta2", "skullUta2" ]
+        evolvers: [ "3721-skull", "3721-skull", "3721-skull", "3721-skull", "3721-skull" ]
     },
     3722: {
         evolution: 3723,
@@ -5345,43 +5345,43 @@ window.evolutions = {
     },
     3729: {
         evolution: 3730,
-        evolvers: [  ]
+        evolvers: [118, 80, 1180, 302, 267]
     },
     3734: {
         evolution: 3735,
-        evolvers: [  ]
+        evolvers: [118, 85, 301, 101, 267]
     },
     2964: {
         evolution: 3739,
-        evolvers: [ "skullBlackbeard3", "skullBlackbeard3", "skullBlackbeard3", "skullBlackbeard3", "skullBlackbeard3" ]
+        evolvers: [ "3739-skull", "3739-skull", "3739-skull", "3739-skull", "3739-skull" ]
     },
     3740: {
         evolution: 3741,
-        evolvers: [  ]
+        evolvers: [118, 266, 88, 104, 267]
     },
     2741: {
         evolution: 3742,
-        evolvers: [ "skullAce", "skullAce", "skullAce", "skullAce", "skullAce" ]
+        evolvers: [ "3742-skull", "3742-skull", "3742-skull", "3742-skull", "3742-skull" ]
     },
     3744: {
         evolution: 3745,
-        evolvers: [  ]
+        evolvers: [118, 2662, 300, 100, 267]
     },
     3751: {
         evolution: 3752,
-        evolvers: [  ]
+        evolvers: [118, 79, 1180, 301, 267]
     },
     3754: {
         evolution: 3755,
-        evolvers: [  ]
+        evolvers: [118, 302, 1180, 102, 267]
     },
     2980: {
         evolution: 3762,
-        evolvers: [ "skullKid", "skullKid", "skullKid", "skullKid", "skullKid" ]
+        evolvers: [ "3762-skull", "3762-skull", "3762-skull", "3762-skull", "3762-skull" ]
     },
     3763: {
         evolution: 3764,
-        evolvers: [ "skullBrook3", "skullBrook3", "skullBrook3", "skullBrook3", "skullBrook3" ]
+        evolvers: [ "3764-skull", "3764-skull", "3764-skull", "3764-skull", "3764-skull" ]
     },
     3765: {
         evolution: 3766,
@@ -5389,211 +5389,211 @@ window.evolutions = {
     },
     3771: {
         evolution: 3772,
-        evolvers: [  ]
+        evolvers: [118, 1180, 300, 100, 267]
     },
     3774: {
         evolution: 3775,
-        evolvers: [  ]
+        evolvers: [118, 303, 1180, 103, 267]
     },
     3779: {
         evolution: 3780,
-        evolvers: [  ]
+        evolvers: [118, 84, 266, 300, 267]
     },
     2797: {
         evolution: 3784,
-        evolvers: [  ]
+        evolvers: [ "3784-skull", "3784-skull", "3784-skull", "3784-skull", "3784-skull" ]
     },
     3177: {
         evolution: 3786,
-        evolvers: [ "skullRoger2", "skullRoger2", "skullRoger2", "skullRoger2", "skullRoger2" ]
+        evolvers: [ "3786-skull", "3786-skull", "3786-skull", "3786-skull", "3786-skull" ]
     },
     3787: {
         evolution: 3788,
-        evolvers: [  ]
+        evolvers: [118, 2662, 304, 102, 267]
     },
     3789: {
         evolution: 3790,
-        evolvers: [  ]
+        evolvers: [118, 266, 87, 103, 267]
     },
     3791: {
         evolution: 3792,
-        evolvers: [  ]
+        evolvers: [118, 2662, 301, 101, 267]
     },
     3009: {
         evolution: 3805,
-        evolvers: [ "skullSugar", "skullSugar", "skullSugar", "skullSugar", "skullSugar" ]
+        evolvers: [ "3805-skull", "3805-skull", "3805-skull", "3805-skull", "3805-skull" ]
     },
     3806: {
         evolution: 3807,
-        evolvers: [ "skullDoflamingo4", "skullDoflamingo4", "skullDoflamingo4", "skullDoflamingo4", "skullDoflamingo4" ]
+        evolvers: [ "3807-skull", "3807-skull", "3807-skull", "3807-skull", "3807-skull" ]
     },
     3808: {
         evolution: 3809,
-        evolvers: [  ]
+        evolvers: [118, 2662, 302, 102, 267]
     },
     3810: {
         evolution: 3811,
-        evolvers: [  ]
+        evolvers: [118, 266, 86, 102, 267]
     },
     3334: {
         evolution: 3814,
-        evolvers: [ 'skullLuffy2', 'skullLuffy2', 'skullLuffy2', 'skullLuffy2', 'skullLuffy2' ]
+        evolvers: [ '3814-skull', '3814-skull', '3814-skull', '3814-skull', '3814-skull' ]
     },
     3721: {
         evolution: 3816,
-        evolvers: [ "skullUta3", "skullUta3", "skullUta3", "skullUta3", "skullUta3" ]
+        evolvers: [ "3816-skull", "3816-skull", "3816-skull", "3816-skull", "3816-skull" ]
     },
     3823: {
         evolution: 3824,
-        evolvers: [  ]
+        evolvers: [118, 86, 266, 302, 267]
     },
     2577: {
         evolution: 3828,
-        evolvers: [ "skullDogCat", "skullDogCat", "skullDogCat", "skullSTR", "skullPSY" ]
+        evolvers: [ "3828-skull", "3828-skull", "3828-skull", "skullSTR", "skullPSY" ]
     },
     3829: {
         evolution: 3830,
-        evolvers: [  ]
+        evolvers: [118, 2662, 303, 103, 267]
     },
     3831: {
         evolution: 3832,
-        evolvers: [  ]
+        evolvers: [118, 266, 87, 103, 267]
     },
     3838: {
         evolution: 3839,
-        evolvers: [  ]
+        evolvers: [118, 301, 1180, 101, 267]
     },
     2862: {
         evolution: 3845,
-        evolvers: [ "skullRedHair", "skullRedHair", "skullRedHair", "skullPSY", "skullQCK" ]
+        evolvers: [ "3845-skull", "3845-skull", "3845-skull", "skullPSY", "skullQCK" ]
     },
     3847: {
         evolution: 3848,
-        evolvers: [  ]
+        evolvers: [ "3848-skull", "3848-skull", "3848-skull", "3848-skull", "3848-skull" ]
     },
     3849: {
         evolution: 3850,
-        evolvers: [  ]
+        evolvers: [118, 304, 2662, 104, 267]
     },
     3851: {
         evolution: 3852,
-        evolvers: [  ]
+        evolvers: [118, 303, 1180, 87, 266]
     },
     3856: {
         evolution: 3857,
-        evolvers: [ "skullTrio", "skullTrio", "skullTrio", "skullTrio", "skullTrio" ]
+        evolvers: [ "3857-skull", "3857-skull", "3857-skull", "3857-skull", "3857-skull" ]
     },
     3858: {
         evolution: 3859,
-        evolvers: [  ]
+        evolvers: [118, 1180, 304, 104, 2662]
     },
     3860: {
         evolution: 3861,
-        evolvers: [  ]
+        evolvers: [118, 87, 303, 103, 267]
     },
     2418: {
         evolution: 3868,
-        evolvers: [ "skullBartoCav", "skullBartoCav", "skullBartoCav", "skullDEX", "skullQCK" ]
+        evolvers: [ "3868-skull", "3868-skull", "3868-skull", "skullDEX", "skullQCK" ]
     },
     3869: {
         evolution: 3870,
-        evolvers: [  ]
+        evolvers: [118, 304, 1180, 104, 267]
     },
-    3877: {
-        evolution: 3878,
-        evolvers: [  ]
+    3878: {
+        evolution: 3877,
+        evolvers: [ "ink", "ink", "ink", "ink", "ink" ]
     },
     3879: {
         evolution: 3880,
-        evolvers: [  ]
+        evolvers: [118, 266, 85, 100, 267]
     },
     2936: {
         evolution: 3886,
-        evolvers: [ "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy", "skullRookieLuffy" ]
+        evolvers: [ "3886-skull", "3886-skull", "3886-skull", "3886-skull", "3886-skull" ]
     },
     3888: {
         evolution: 3889,
-        evolvers: [  ]
+        evolvers: [118, 302, 2662, 102, 267]
     },
     3890: {
         evolution: 3891,
-        evolvers: [  ]
+        evolvers: [118, 304, 1180, 88, 266]
     },
     3895: {
         evolution: 3896,
-        evolvers: [  ]
+        evolvers: [118, 301, 2662, 101, 267]
     },
     3897: {
         evolution: 3898,
-        evolvers: [  ]
+        evolvers: [118, 304, 2662, 104, 267]
     },
     2536: {
         evolution: 3902,
-        evolvers: [ 'skullZPBigMom', 'skullZPBigMom', 'skullZPBigMom', 'skullINT', 'skullINT' ]
+        evolvers: [ '3902-skull', '3902-skull', '3902-skull', 'skullINT', 'skullINT' ]
     },
     3887: {
         evolution: 3903,
-        evolvers: [ 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido', 'skullBlitzKaido' ]
+        evolvers: [ '3903-skull', '3903-skull', '3903-skull', '3903-skull', '3903-skull' ]
     },
     3904: {
         evolution: 3905,
-        evolvers: [  ]
+        evolvers: [118, 79, 1180, 301, 267]
     },
     3907: {
         evolution: 3908,
-        evolvers: [  ]
+        evolvers: [118, 2662, 303, 102, 267]
     },
     3909: {
         evolution: 3910,
-        evolvers: [  ]
+        evolvers: [118, 266, 87, 102, 267]
     },
     3916: {
         evolution: 3917,
-        evolvers: [  ]
+        evolvers: [118, 118, 101, 102, 267]
     },
     1985: {
         evolution: 3920,
-        evolvers: [  ]
+        evolvers: [ "3920-skull", "3920-skull", "3920-skull", "skullQCK", "skullSTR" ]
     },
     3921: {
         evolution: 3922,
-        evolvers: [  ]
+        evolvers: [118, 1180, 104, 102, 267]
     },
     3923: {
         evolution: 3924,
-        evolvers: [  ]
+        evolvers: [118, 1180, 102, 104, 267]
     },
     3932: {
         evolution: 3933,
-        evolvers: [  ]
+        evolvers: [118, 1180, 104, 102, 267]
     },
     2835: {
         evolution: 3940,
-        evolvers: [  ]
+        evolvers: [ "3940-skull", "3940-skull", "3940-skull", "skullDEX", "skullINT" ]
     },
     3941: {
         evolution: 3942,
-        evolvers: [  ]
+        evolvers: [ "3942-skull", "3942-skull", "3942-skull", "3942-skull", "3942-skull" ]
     },
     3943: {
         evolution: 3944,
-        evolvers: [  ]
+        evolvers: [118, 2662, 302, 103, 267]
     },
     3947: {
         evolution: 3948,
-        evolvers: [  ]
+        evolvers: [118, 2662, 300, 100, 267]
     },
     3953: {
         evolution: 3954,
-        evolvers: [  ]
+        evolvers: [118, 81, 1180, 303, 267]
     },
     3955: {
         evolution: 3956,
-        evolvers: [  ]
+        evolvers: [118, 303, 2662, 103, 267]
     },
     3958: {
         evolution: 3959,
-        evolvers: [  ]
+        evolvers: [118, 103, 267, 87, 266]
     },
     4986: {
         evolution: 4987,
