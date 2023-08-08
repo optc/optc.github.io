@@ -16335,6 +16335,57 @@ window.specials = {
             });
         },
     },
+    3962: {
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [p.cached.multiplier1, 1, p.cached.multiplier1][p.cached.multiplier] : 1; },
+        orbPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.damageCounter >= 40000 ? 2.5 : 2.25;
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[n]] + '. To switch to ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3963: {
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.damageCounter >= 40000 ? 3.5 : 3.25;
+        },
+    },
+    3964: {
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [p.cached.multiplier1, 0, p.cached.multiplier1][p.cached.multiplier] : 0; },
+        atkbasePlus: function(p) { return [0, 300, 300][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.damageCounter >= 40000 ? 1250 : 1000;
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK Boost", "Base ATK Buff", "Base ATK Boost and Base ATK Buff"][levels[n]] + '. To switch to ' + ["Base ATK Boost", "Base ATK Buff", "Base ATK Boost and Base ATK Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3965: {
+        affinity: function(p) { return p.unit.class.has("Slasher") ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1, 1.5, 1.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity Boost", "Increase Damage Taken", "Affinity Boost and Increase Damage Taken"][levels[n]] + '. To switch to ' + ["Affinity Boost", "Increase Damage Taken", "Affinity Boost and Increase Damage Taken"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

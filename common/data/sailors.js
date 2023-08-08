@@ -3033,6 +3033,24 @@ window.sailors = {
         hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    3962: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3963: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3964: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3965: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 0, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

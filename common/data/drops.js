@@ -6689,6 +6689,16 @@ window.drops = {
             'Raging Sea': [ 3936 ]
         },
 
+        {
+            name: 'Yamato',
+            dropID: 'treasuremap72',
+            thumb: 3965,
+            global: true,
+            nakama: 8396500,
+            gamewith: null,
+            'Raging Sea': [ 3965 ]
+        },
+
     ],
 
     

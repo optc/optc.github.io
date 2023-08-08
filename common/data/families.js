@@ -677,6 +677,9 @@ const Lim = [ "Lim" ];
 const BaoHuang = [ "Bao Huang" ];
 const Moda = [ "Moda" ];
 const Maha = [ "Maha" ];
+const ShimotsukiUshimaru = [ "Shimotsuki Ushimaru" ];
+const FugetsuOmusubi = [ "Fugetsu Omusubi" ];
+const UzukiTempura = [ "Uzuki Tempura" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4538,6 +4541,10 @@ window.families = {
     3959: [ ...KozukiMomonosuke ],
     3960: [ ...KozukiHiyori ],
     3961: [ ...Denjiro ],
+    3962: [ ...ShimotsukiUshimaru ],
+    3963: [ ...FugetsuOmusubi ],
+    3964: [ ...UzukiTempura ],
+    3965: [ ...Yamato ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
