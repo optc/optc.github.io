@@ -3960,6 +3960,10 @@ window.units = [
     [ "Kozuki Momonosuke - Courage to Bite the Emperor", "PSY", ["Free Spirit", "Slasher"], 6, 40, 4, 5, 99, 5000000, 2366, 770, 149, 4732, 1540, 298, 1 ],
     [ "Komurasaki - Revealing the True Name", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1528, 730, 127, 3056, 1460, 254, 1 ],
     [ "Denjiro - Enduring the Tarnished Pride of Oden", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1604, 752, 107, 3208, 1504, 214, 1 ],
+    [ "Shimotsuki Ushimaru", "QCK", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1671, 753, 71, 3342, 1506, 141, 1 ],
+    [ "Fugetsu Omusubi", "PSY", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1644, 701, 93, 3288, 1401, 185, 1 ],
+    [ "Uzuki Tempura", "PSY", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1742, 710, 73, 3484, 1420, 146, 1 ],
+    [ "Yamato - Aspiring Beyond the Horizon", "PSY", ["Fighter", "Free Spirit"], 5, 40, 4, 1, 99, 5000000, 1821, 651, 105, 3641, 1301, 210, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
