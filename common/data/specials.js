@@ -16288,13 +16288,26 @@ window.specials = {
         },
     },
     3954: {
+        atkbase: function(p) { return p.unit.class.has("Slasher") ? [1250, 0, 1250][p.cached.multiplier] : 1; },
+        atkbasePlus: function(p) { return [0, 250, 250][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Base ATK boost", "Base ATK buff", "Base ATK boost and Base ATK buff"][n] + ' boost. To ' + ["Base ATK boost", "Base ATK buff", "Base ATK boost and Base ATK buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3955: {
         affinity: function(p) { return p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         orb: function(p) { return p.cached.multiplier ? p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3.25 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1 : 1; },
         onActivation: function(p) {
             p.cached.multiplier = p.actions[p.sourceSlot];
         },
     },
-    3955: {
+    3956: {
         affinity: function(p) { return p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1; },
         orb: function(p) { return p.cached.multiplier ? p.unit.type == "PSY" && p.unit.class.has("Free Spirit") ? 3.25 : p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 2.75 : 1 : 1; },
         onActivation: function(p) {
