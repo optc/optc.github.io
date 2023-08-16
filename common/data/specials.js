@@ -16399,6 +16399,33 @@ window.specials = {
             });
         },
     },
+    3966: {
+        status: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2.5, 2.75];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x ATK multiplier. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3967: {
+        status: function(p) { return p.poisoned ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2.5, 2.75];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x ATK multiplier. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3968: {
+        chainAddition: function(p) { return 1.2; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -20363,6 +20390,30 @@ var ghostsSpecials = {
                 text: 'Using the ' + ["Orb boost", "ATK boost", "Both Effects"][n] + '. To switch to ' + ["Orb boost", "ATK boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
+        },
+    },
+    524: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atkPlus: function(p) { return p.cached.multiplier; },
+        orbPlus: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 0.25 : 0;
+        },
+    },
+    525: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atkPlus: function(p) { return p.cached.multiplier; },
+        orbPlus: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 0.25 : 0;
+        },
+    },
+    526: {
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        atkPlus: function(p) { return p.cached.multiplier; },
+        orbPlus: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 0.25 : 0;
         },
     },
 };

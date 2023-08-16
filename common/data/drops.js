@@ -6696,7 +6696,7 @@ window.drops = {
             global: true,
             nakama: 8396500,
             gamewith: null,
-            'Raging Sea': [ 3965 ]
+            'Raging Sea': [ 3965, "3956-skull" ]
         },
 
     ],
@@ -7350,6 +7350,16 @@ window.drops = {
             nakama: null,
             gamewith: null,
             'Kizuna Exchange': [ 3941, "3940-skull", "3942-skull" ],
+        },
+
+        {
+            name: 'Sanji & Judge',
+            dropID: 'kizuna48',
+            thumb: 3969,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ "3956-skull", "3969-skull" ],
         },
 
     ],

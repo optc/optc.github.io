@@ -4545,6 +4545,10 @@ window.families = {
     3963: [ ...FugetsuOmusubi ],
     3964: [ ...UzukiTempura ],
     3965: [ ...Yamato ],
+    3966: [ ...VinsmokeReiju ],
+    3967: [ ...VinsmokeReiju ],
+    3968: [ ...VinsmokeIchiji, ...VinsmokeNiji, ...VinsmokeYonji ],
+    3969: [ ...VinsmokeSanji, ...VinsmokeJudge ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

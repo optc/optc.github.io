@@ -352,7 +352,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889, 3904, 3905, 3947, 3948, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 3955, 3956 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889, 3904, 3905, 3947, 3948, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 3955, 3956, 3966, 3967 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -374,7 +374,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : orb;
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 3904, 3905, 3947, 3948, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460 ].includes(team[temp].unit.number + 1)){
+                        if ([ 3904, 3905, 3947, 3948, 3966, 3967, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460 ].includes(team[temp].unit.number + 1)){
                             orb = orb == 'tnd' ? 2 : Math.max(orb,2);
                         }
                     }
@@ -737,8 +737,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if ([3070, 3071, 3369, 3847, 3848].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);
         if ([3398].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) typeMult = getAffinity('strong', attackerType);
         
-        if ($scope.data.effect == 'Kizuna Clash [Worldwide]'){
-            if ([ 3844, 3843 ].indexOf(unit.unit.number + 1) != -1) typeMult = getAffinity('strong', attackerType);
+        if (effects[$scope.data.effect] && effects[$scope.data.effect].hasOwnProperty('rainbow')){
+            var params = getParameters(teamSlot)
+            if (effects[$scope.data.effect].rainbow(params)) {
+                typeMult = getAffinity('strong', attackerType);
+            }
         }
 
         if ($scope.data.rainbowDamage[teamSlot])
@@ -1339,7 +1342,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         var affinityMultiplier = 1.0;
         if(staticMultiplier.length >= 1 || sailor){
             //Since we need this for defense down, and defense down gets saved for all slots we just go with slot 0
-            var params = getParameters(0);
+            var params = getParameters(teamSlot);
             params['unit'] = unit;
             params['slot'] = teamSlot;
             var unitParams = params;
@@ -1363,7 +1366,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) || 
                 ([3070, 3071, 3369, 3847, 3848].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) ||
                 ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) ||
-                ([ 3844, 3843 ].indexOf(unit.number + 1) != -1 && $scope.data.effect == 'Kizuna Clash [Worldwide]')){
+                (effects[$scope.data.effect].hasOwnProperty('rainbow') && effects[$scope.data.effect].rainbow(unitParams))){
                     //pass so that the affinityMultiplier is whatever it should be instead of 1
             }
             else if(unit.type != type){

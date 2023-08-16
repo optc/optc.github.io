@@ -3964,6 +3964,10 @@ window.units = [
     [ "Fugetsu Omusubi", "PSY", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1644, 701, 93, 3288, 1401, 185, 1 ],
     [ "Uzuki Tempura", "PSY", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1742, 710, 73, 3484, 1420, 146, 1 ],
     [ "Yamato - Aspiring Beyond the Horizon", "PSY", ["Fighter", "Free Spirit"], 5, 40, 4, 1, 99, 5000000, 1821, 651, 105, 3641, 1301, 210, 1 ],
+    [ "Vinsmoke Reiju - Second Farewell", "DEX", ["Fighter", "Powerhouse"], 5, 30, 5, 3, 70, 1066998, 841, 571, 53, 1548, 1241, 101, 1 ],
+    [ "Vinsmoke Reiju - Poisonous Fangs Protecting Her Brother", "DEX", ["Fighter", "Powerhouse"], 6, 55, 5, 5, 99, 5000000, 1504, 1120, 98, 3831, 1691, 398, 1 ],
+    [ "Ichiji & Niji & Yonji", "STR", ["Fighter", "Powerhouse"], 5, 30, 4, 4, 99, 4000000, 1485, 843, 72, 3514, 1565, 143, 1 ],
+    [ "Sanji & Judge - Severed Family Ties", ["PSY", "PSY"], [["Powerhouse", "Fighter"],["Powerhouse", "Driven"],["Powerhouse", "Fighter"]], "6+", 65, 4, 5, 99, 5000000, 2130, 1180, 175, 4260, 1770, 350, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4516,6 +4520,9 @@ var ghostsUnits = [
     [ "⚐ Nico Robin - Elegant Flowers Blooming on the Battlefield", "INT", ["Free Spirit", "Cerebral"], "6+", 65, 4, 5, 99, 5000000, 1741, 1014, 232, 3482, 1521, 463, 1 ],
     [ "⚐ Nami & Robin - Elegant Flowers Blooming on the Battlefield", "DEX", ["Free Spirit", "Cerebral"], "6+", 65, 5, 5, 99, 5000000, 1817, 1067, 256, 3634, 1600, 511, 1 ],
     [ "⚐ Nami & Robin - Elegant Flowers Blooming on the Battlefield", "INT", ["Free Spirit", "Cerebral"], "6+", 65, 5, 5, 99, 5000000, 1817, 1067, 256, 3634, 1600, 511, 1 ],
+    [ "⚐ Sanji - Severed Family Ties", "PSY", ["Powerhouse", "Fighter"], "6+", 65, 4, 5, 99, 5000000, 1962, 1132, 140, 3924, 1698, 280, 1 ],
+    [ "⚐ Vinsmoke Judge - Severed Family Ties", "PSY", ["Powerhouse", "Driven"], "6+", 65, 4, 5, 99, 5000000, 2010, 1116, 116, 4020, 1674, 231, 1 ],
+    [ "⚐ Sanji & Judge - Severed Family Ties", "PSY", ["Powerhouse", "Fighter"], "6+", 65, 4, 5, 99, 5000000, 2130, 1180, 175, 4260, 1770, 350, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

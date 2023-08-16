@@ -4471,6 +4471,16 @@ var ghostsSailors = {
         hpStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") ? 150 : 0; },
     },
+    525: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 50 : 0; },
+    },
+    526: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
 }
 
 Object.keys(ghostsSailors).forEach(function (key) {

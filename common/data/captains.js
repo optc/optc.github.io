@@ -14031,6 +14031,18 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [2.5, 2.75, 3, 3.25, 3.5, 3.75, p.turnCounter > 0 ? 4.5 : 4][CrunchUtils.limitUnlock(p, "captains")] : 1; },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.35][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
+    3966: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [ 'meat', 'tnd', 'g', 'wano', 'rainbow'].has(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    3967: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [ 'meat', 'tnd', 'g', 'wano', 'rainbow'].has(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    3968: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 3.5 : 1)*(p.actions[p.sourceSlot] ? 1.5 : 1); },
+        hp: function(p) { return 1.25; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -16379,6 +16391,18 @@ var ghostsCaptains = {
         atk: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral")) ? (p.orb == 'empty') ? [6.25, 6.75][CrunchUtils.llimitUnlock(p, "captains")] : ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [5.25, 5.5][CrunchUtils.llimitUnlock(p, "captains")] : 5 : 1; },
         hp: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral")) ? 1.3 : 1; },
         rcv: function(p) { return (p.unit.type == "DEX" || p.unit.type == "INT" || p.unit.class.has("Cerebral")) ? 1.3 : 1; },
+    },
+    524: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? [(p.classCount.Powerhouse == 6) ? 4.75 : 4.25, 4.75][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? 1.25 : 1; },
+    },
+    525: {
+        atk: function(p) { return [4.5, 4.75][CrunchUtils.llimitUnlock(p, "captains")]; },
+        hp: function(p) { return 1.25; },
+    },
+    526: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Fighter") ? [(p.classCount.Powerhouse == 6) ? 5.25 : 5, 5.25][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return 1.25; },
     },
 };
 

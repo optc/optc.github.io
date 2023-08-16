@@ -470,6 +470,10 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3967: {
+        poison: function(p) { return 99; },
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
@@ -2475,6 +2479,48 @@ var ghostsAltSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    524: {
+        chainMultiplication: function(p) { return [1.25, 1, 1.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Chain Multiplication', 'ATK', 'Chain Multiplication & ATK'][n] + ' boost. To ' + ['Chain Multiplication', 'ATK', 'Chain Multiplication & ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    525: {
+        chainMultiplication: function(p) { return [1.25, 1, 1.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Chain Multiplication', 'ATK', 'Chain Multiplication & ATK'][n] + ' boost. To ' + ['Chain Multiplication', 'ATK', 'Chain Multiplication & ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    526: {
+        chainMultiplication: function(p) { return [1.25, 1, 1.25][p.cached.multiplier]; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Chain Multiplication', 'ATK', 'Chain Multiplication & ATK'][n] + ' boost. To ' + ['Chain Multiplication', 'ATK', 'Chain Multiplication & ATK'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
