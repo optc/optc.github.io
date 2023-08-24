@@ -3738,7 +3738,7 @@ window.units = [
     [ "X Drake - Navy HQ Top Secret Special Force Captain of \"Sword\"", "STR", [ "Slasher", "Powerhouse" ], 5, 30, 4, 4, 99, 4000000, 1452, 734, 143, 3008, 1491, 222, 1 ],
     [ "Coby - Navy HQ Captain and Member of \"SWORD\"", "STR", [ "Cerebral", "Fighter" ], 5, 30, 4, 4, 99, 4000000, 1468, 711, 151, 2864, 1487, 247, 1 ],
     [ "Blackbeard - Ruling Emperor", "INT", [ "Driven", "Powerhouse" ], "6+", 65, 4, 5, 99, 5000000, 2176, 1094, 127, 4352, 1712, 254, 1 ],
-    [ "Corazon & Law: Secret Day-Off - Creepy Night Halloween", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 1, 3, 70, 1066998, 974, 415, 67, 1948, 831, 135, 1 ],
+    [ "Corazon & Law: Secret Day-Off - Creepy Night Halloween", "INT", [ "Cerebral", "Free Spirit" ], 5, 30, 4, 3, 70, 1066998, 974, 415, 67, 1948, 831, 135, 1 ],
     [ "Corazon & Law: Moonlight Day-Off - Creepy Night Halloween", "INT", [ "Cerebral", "Free Spirit" ], 6, 55, 4, 5, 99, 5000000, 1918, 826, 130, 3836, 1652, 260, 1 ],
     [ "Ace: Riot Flame Wolf - Happy Halloween!", "INT", [ "Shooter", "Fighter" ], "6+", 65, 4, 5, 99, 5000000, 2256, 1037, 111, 4512, 1728, 222, 1 ],
     [ "Doflamingo: Horror Night Parade - Creepy Night Halloween", "INT", [ "Driven", "Cerebral" ], 5, 30, 4, 4, 99, 2000000, 1582, 738, 118, 3164, 1476, 236, 1 ],
