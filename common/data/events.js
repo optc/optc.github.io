@@ -341,12 +341,14 @@ window.events = {
     },
     2109: {
         onInsertion: function($scope) {
-            if (++$scope.options.gOrbsEnabled == 1)
-                $scope.notify({ text: 'Enabling [G] orbs support.' });
+            if (++$scope.options.gOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [G] and [SEMLA] orbs support.' });
         },
         onRemoval: function($scope) {
-            if (--$scope.options.gOrbsEnabled == 0)
-                $scope.notify({ text: 'Enabling [G] orbs support.' });
+            if (--$scope.options.gOrbsEnabled == 0){}
+            if (--$scope.options.meatOrbsEnabled == 0)
+                $scope.notify({ text: 'Enabling [G] and [SEMLA] orbs support.' });
         }
     },
     2232: {

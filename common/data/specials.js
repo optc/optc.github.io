@@ -5175,7 +5175,8 @@ window.specials = {
         type: "type",
     },
     2064: {
-        atk: function(p) { return p.unit.type == p.cached.captain.type ? 1.75 : 1; },
+        def: function(p) { return [1, 0][CrunchUtils.llimitUnlock(p, "specials")]; },
+        atk: function(p) { return p.unit.type == p.cached.captain.type ? [1.75, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "type",
     },
     2066: {
@@ -5423,7 +5424,7 @@ window.specials = {
         type: "type",
     },
     2109: {
-        orb: function(p) { return 3; },
+        orb: function(p) { return [3, 3.25][CrunchUtils.llimitUnlock(p, "specials")]; },
         affinity: function(p) { return 1.25; },
         atk: function(p) { return 1.25; },
         type: "type",
@@ -5756,6 +5757,18 @@ window.specials = {
     2173: {
         chainAddition: function(p) { return 0.65; }
     },
+    2175: {
+        atkbase: function(p) { return p.unit.class.has("Powerhouse") ? [0, p.cached.multiplier][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+        onActivation: function(p) {
+            var levels = [800, 1000, 1250];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the +' + levels[n] + ' boost. To switch to the +' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
     2176: {
         chainAddition: function(p) { return p.cached.captain.class.has("Striker") ? .5 : 0; },
     },
@@ -5922,6 +5935,10 @@ window.specials = {
                 name: '2207warning'
             });
         },
+    },
+    2211: {
+        status: function(p) { return p.paralysis ? [1, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        paralysis: function(p) { return [0, 2][CrunchUtils.llimitUnlock(p, "specials")]; },
     },
     2214: {
         delay: function(p) { return 1; },
