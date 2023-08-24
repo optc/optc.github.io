@@ -3051,6 +3051,19 @@ window.sailors = {
     3965: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [0, 0, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    3973: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 0, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    3974: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    3975: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    3976: {
+        rcvStatic: function(p) { return 80; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
@@ -4480,6 +4493,18 @@ var ghostsSailors = {
         atkStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         hpStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? 75 : 0; },
+    },
+    531: {
+        atkStatic: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? [0, 125][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    532: {
+        atkStatic: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? [0, 125][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    533: {
+        atkStatic: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? [0, 125][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    534: {
+        atkStatic: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? [0, 125][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
 }
 

@@ -16426,6 +16426,49 @@ window.specials = {
     3968: {
         chainAddition: function(p) { return 1.2; },
     },
+    3972: {
+        ignoresImmunities: function(p) { return ['burn']; },
+        burn: function(p) { return 2; },
+        status: function(p) { return p.burn ? 2.25 : 1; },
+    },
+    3973: {
+        ignoresImmunities: function(p) { return ['burn']; },
+        burn: function(p) { return 2; },
+        status: function(p) { return p.burn ? 2.25 : 1; },
+    },
+    3974: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        type: "type",
+        status: function(p) { return p.defenseDown ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "Status Boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK Boost", "Status Boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3975: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [2.25, 1, 2.25][p.cached.multiplier] : 1; },
+        status: function(p) { return p.defenseDown ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Status Boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["Orb Boost", "Status Boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3976: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP > 99 ? 2 : 1;
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -20414,6 +20457,134 @@ var ghostsSpecials = {
         orbPlus: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
             p.cached.multiplier = (p.colorCount.STR >= 1 && p.colorCount.DEX >= 1 && p.colorCount.QCK >= 1 && p.colorCount.PSY >= 1 && p.colorCount.INT >= 1) ? 0.25 : 0;
+        },
+    },
+    527: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    528: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    529: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    530: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    531: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    532: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    533: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    534: {
+        def: function(p) { return 0; },
+        ignoresImmunities: function(p) { return ['def']; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        type: "type",
+        superAffinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3 : 1; },
+        onActivation: function(p) {
+            var levels = [3, 3.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
 };

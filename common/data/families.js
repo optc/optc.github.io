@@ -4549,6 +4549,13 @@ window.families = {
     3967: [ ...VinsmokeReiju ],
     3968: [ ...VinsmokeIchiji, ...VinsmokeNiji, ...VinsmokeYonji ],
     3969: [ ...VinsmokeSanji, ...VinsmokeJudge ],
+    3970: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    3971: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    3972: [ ...CharlotteLinlin ],
+    3973: [ ...CharlotteLinlin ],
+    3974: [ ...Bepo ],
+    3975: [ ...Killer ],
+    3976: [ ...Tama ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
