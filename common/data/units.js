@@ -3968,6 +3968,13 @@ window.units = [
     [ "Vinsmoke Reiju - Poisonous Fangs Protecting Her Brother", "DEX", ["Fighter", "Powerhouse"], 6, 55, 5, 5, 99, 5000000, 1504, 1120, 98, 3831, 1691, 398, 1 ],
     [ "Ichiji & Niji & Yonji", "STR", ["Fighter", "Powerhouse"], 5, 30, 4, 4, 99, 4000000, 1485, 843, 72, 3514, 1565, 143, 1 ],
     [ "Sanji & Judge - Severed Family Ties", ["PSY", "PSY"], [["Powerhouse", "Fighter"],["Powerhouse", "Driven"],["Powerhouse", "Fighter"]], "6+", 65, 4, 5, 99, 5000000, 2130, 1180, 175, 4260, 1770, 350, 1 ],
+    [ "Law & Kid - Awakened Captains", ["PSY", "INT"], [["Free Spirit", "Slasher"],["Driven", "Free Spirit"],["Free Spirit", "Driven"]], 5, 30, 4, 3, 70, 1066998, 1056, 467, 98, 2111, 934, 196, 1 ],
+    [ "Law & Kid - Overthrowing an Emperor", ["PSY", "INT"], [["Free Spirit", "Slasher"],["Driven", "Free Spirit"],["Free Spirit", "Driven"]], 6, 55, 4, 5, 99, 5000000, 2081, 928, 194, 4162, 1855, 388, 1 ],
+    [ "Olin the Oiran - Incoming Terror", "DEX", ["Driven", "Powerhouse"], 5, 30, 4, 3, 70, 1066998, 1159, 438, 66, 2319, 876, 131, 1 ],
+    [ "Olin the Oiran - A Lesson for the New Generation", "DEX", ["Driven", "Powerhouse"], 6, 55, 4, 5, 99, 5000000, 2289, 870, 129, 4577, 1740, 258, 1 ],
+    [ "Bepo - Assisting the Alliance", "PSY", ["Free Spirit", "Powerhouse"], 5, 30, 5, 4, 99, 4000000, 1507, 711, 137, 3014, 1421, 274, 1 ],
+    [ "Killer - Clash of the Worst Generation", "INT", ["Driven", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1649, 794, 86, 3298, 1588, 171, 1 ],
+    [ "Otama - Contributing to the Fight", "PSY", ["Free Spirit", "Fighter"], 5, 30, 4, 4, 99, 2000000, 1621, 749, 106, 3242, 1498, 211, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4523,6 +4530,14 @@ var ghostsUnits = [
     [ "⚐ Sanji - Severed Family Ties", "PSY", ["Powerhouse", "Fighter"], "6+", 65, 4, 5, 99, 5000000, 1962, 1132, 140, 3924, 1698, 280, 1 ],
     [ "⚐ Vinsmoke Judge - Severed Family Ties", "PSY", ["Powerhouse", "Driven"], "6+", 65, 4, 5, 99, 5000000, 2010, 1116, 116, 4020, 1674, 231, 1 ],
     [ "⚐ Sanji & Judge - Severed Family Ties", "PSY", ["Powerhouse", "Fighter"], "6+", 65, 4, 5, 99, 5000000, 2130, 1180, 175, 4260, 1770, 350, 1 ],
+    [ "⚐ Trafalgar Law - Awakened Captains", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 3, 70, 1066998, 973, 435, 98, 1945, 870, 195, 1 ],
+    [ "⚐ Eustass Kid - Awakened Captains", "INT", ["Driven", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 991, 453, 89, 1981, 907, 177, 1 ],
+    [ "⚐ Law & Kid - Awakened Captains", "PSY", ["Free Spirit", "Driven"], 5, 30, 4, 3, 70, 1066998, 1056, 467, 98, 2111, 934, 196, 1 ],
+    [ "⚐ Law & Kid - Awakened Captains", "INT", ["Free Spirit", "Driven"], 5, 30, 4, 3, 70, 1066998, 1056, 467, 98, 2111, 934, 196, 1 ],
+    [ "⚐ Trafalgar Law - Overthrowing an Emperor", "PSY", ["Free Spirit", "Slasher"], 6, 55, 4, 5, 99, 5000000, 1915, 864, 193, 3830, 1728, 386, 1 ],
+    [ "⚐ Eustass Kid - Overthrowing an Emperor", "INT", ["Driven", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1951, 901, 175, 3902, 1801, 350, 1 ],
+    [ "⚐ Law & Kid - Overthrowing an Emperor", "PSY", ["Free Spirit", "Driven"], 6, 55, 4, 5, 99, 5000000, 2081, 928, 194, 4162, 1855, 388, 1 ],
+    [ "⚐ Law & Kid - Overthrowing an Emperor", "INT", ["Free Spirit", "Driven"], 6, 55, 4, 5, 99, 5000000, 2081, 928, 194, 4162, 1855, 388, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

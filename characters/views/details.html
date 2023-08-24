@@ -962,6 +962,14 @@
                                         <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.festAbilityGPCondition">
+                                    <td>GP Burst Condition</td>
+                                    <td colspan="2">
+                                        <div>
+                                                <span ng-bind-html="details.festAbilityGPCondition | decorate"></span></div>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>                            
                         </table>
                     </div>
