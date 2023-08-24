@@ -1253,6 +1253,30 @@ window.events = {
                 $scope.notify({ text: 'Disabling [RCV] and [TND] orbs support.' });
         }
     },
+    3972: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] and [SEMLA] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled == 0){}
+            if (--$scope.options.meatOrbsEnabled == 0)
+                $scope.notify({ text: 'Enabling [WANO] and [SEMLA] orbs support.' });
+        }
+    },
+    3973: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1){}
+            if (++$scope.options.meatOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] and [SEMLA] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled == 0){}
+            if (--$scope.options.meatOrbsEnabled == 0)
+                $scope.notify({ text: 'Enabling [WANO] and [SEMLA] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
