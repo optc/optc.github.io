@@ -16486,6 +16486,19 @@ window.specials = {
             p.cached.multiplier = p.percHP > 99 ? 2 : 1;
         },
     },
+    3975: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1000, 0, 1000][p.cached.multiplier] : 0; },
+        status: function(p) { return p.defenseDown ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK Boost", "Status Boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["Base ATK Boost", "Status Boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

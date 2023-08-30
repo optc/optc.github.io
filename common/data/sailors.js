@@ -3064,6 +3064,9 @@ window.sailors = {
     3976: {
         rcvStatic: function(p) { return 80; },
     },
+    3977: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

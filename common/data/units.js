@@ -3975,6 +3975,7 @@ window.units = [
     [ "Bepo - Assisting the Alliance", "PSY", ["Free Spirit", "Powerhouse"], 5, 30, 5, 4, 99, 4000000, 1507, 711, 137, 3014, 1421, 274, 1 ],
     [ "Killer - Clash of the Worst Generation", "INT", ["Driven", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1649, 794, 86, 3298, 1588, 171, 1 ],
     [ "Otama - Contributing to the Fight", "PSY", ["Free Spirit", "Fighter"], 5, 30, 4, 4, 99, 2000000, 1621, 749, 106, 3242, 1498, 211, 1 ],
+    [ "Jean Bart - Captain Protecting Fist", "INT", ["Free Spirit", "Driven"], 5, 30, 4, 4, 99, 4000000, 2150, 751, 92, 4300, 1501, 183, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

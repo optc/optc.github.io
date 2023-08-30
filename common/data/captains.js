@@ -14067,6 +14067,10 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.type == "PSY" ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "INT" || p.unit.type == "PSY" ? 1.25 : 1; },
     },
+    3977: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
