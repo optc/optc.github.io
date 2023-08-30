@@ -477,8 +477,8 @@ directives.addTags = function($stateParams, $rootScope) {
                             // captain effects
                             if (matcher.target == 'captain' && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (/Class$/.test(name)) name += ' captain';
-                                else if (!/captains$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' captain';
+                                if (/Class$/.test(name)) name = 'Captain: ' + name;
+                                else if (!/captains$/.test(name)) name = "Captain: " + name.replace(/ers$/,'ing');
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
                                 htmlToAppend += '<span class="tag captain">' + name + '</span>';
@@ -489,7 +489,7 @@ directives.addTags = function($stateParams, $rootScope) {
                                     for (var sailor in data[matcher.target]){
                                         if (matcher.regex.test(data[matcher.target][sailor])){
                                             name = matcher.name;
-                                            if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                                            if (!/sailor$/.test(name)) name = "Sailor: " + name.replace(/ers$/,'ing');
                                             else name = name.replace(/s$/,'');
                                             name = name.replace(/iing/,'ying');
                                             if (name != "Has Sailor Ability sailor"){
@@ -501,7 +501,7 @@ directives.addTags = function($stateParams, $rootScope) {
                                 else{
                                     if (matcher.regex.test(data[matcher.target])){
                                         name = matcher.name;
-                                        if (!/sailor$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' sailor';
+                                        if (!/sailor$/.test(name)) name = "Sailor: " + name.replace(/ers$/,'ing');
                                         else name = name.replace(/s$/,'');
                                         name = name.replace(/iing/,'ying');
                                         htmlToAppend += '<span class="tag sailor">' + name + '</span>';
@@ -511,7 +511,7 @@ directives.addTags = function($stateParams, $rootScope) {
                             // specials
                             if (matcher.target.indexOf('special') === 0 && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
+                                if (!/specials$/.test(name)) name = "Special: " + name.replace(/ers$/,'ing');
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
                                 htmlToAppend += '<span class="tag special">' + name + '</span>';
@@ -519,7 +519,7 @@ directives.addTags = function($stateParams, $rootScope) {
                             // limit
                             if (matcher.target.indexOf('limit') === 0 && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (!/limit$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' limit';
+                                if (!/limit$/.test(name)) name = "Limit Break: " + name.replace(/ers$/,'ing');
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
                                 if (name != "Has Limit Break limit"){
@@ -529,7 +529,7 @@ directives.addTags = function($stateParams, $rootScope) {
                             // potentials
                             if (matcher.target.indexOf('potential') === 0 && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (!/potential$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'');
+                                if (!/potential$/.test(name)) name = "Potential Ability: " + name.replace(/ers$/,'ing');
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
                                 htmlToAppend += '<span class="tag potential">' + name + '</span>';
@@ -537,15 +537,15 @@ directives.addTags = function($stateParams, $rootScope) {
                             // super specials
                             if (matcher.target === 'superSpecial' && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (!/specials$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' special';
-                                else name = name.replace(/s$/,'').replace(/special/i, 'super special');
+                                if (!/specials$/.test(name)) name = "Super Special: " + name.replace(/ers$/,'ing');
+                                else name = name.replace(/s$/,'').replace(/special/i, 'Super Special');
                                 name = name.replace(/iing/,'ying');
                                 htmlToAppend += '<span class="tag superSpecial">' + name + '</span>';
                             }
                             // support
                             if (matcher.target === 'support' && matcher.regex.test(targetString)) {
                                 name = matcher.name;
-                                if (!/support$/.test(name)) name = name.replace(/ers$/,'ing').replace(/s$/,'') + ' support';
+                                if (!/support$/.test(name)) name = "Support: " + name.replace(/ers$/,'ing');
                                 else name = name.replace(/s$/,'');
                                 name = name.replace(/iing/,'ying');
                                 htmlToAppend += '<span class="tag support">' + name + '</span>';
