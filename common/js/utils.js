@@ -384,7 +384,7 @@
         // idea: return an array of queries, so that there will be multiple "Search for these characters" links,
         // depending on the conditions (so that one will handle the `6 Striker characters`,
         // the other will handle the family names.)
-        let charactersRegex = /must consist of\: (?:\d (.*?)characters(?: or )?)?(.*)?, excluding Support members/i;
+        let charactersRegex = /must consist of, excluding Supports and counting only 1 per unit\: (?:\d (.*?)characters(?: or )?)?(.*)?/i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
@@ -406,7 +406,7 @@
         // idea: return an array of queries, so that there will be multiple "Search for these characters" links,
         // depending on the conditions (so that one will handle the `Striker characters`,
         // the other will handle the family names.)
-        let charactersRegex = /of the following: (?!.+:)(?:\d (.*?)characters(?: or )?)?(.*)?\./i;
+        let charactersRegex = /of the following, excluding Supports and counting only 1 per unit\: (?!.+:)(?:\d (.*?)characters(?: or )?)?(.*)?\./i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
