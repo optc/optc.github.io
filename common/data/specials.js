@@ -16486,7 +16486,7 @@ window.specials = {
             p.cached.multiplier = p.percHP > 99 ? 2 : 1;
         },
     },
-    3975: {
+    3977: {
         atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1000, 0, 1000][p.cached.multiplier] : 0; },
         status: function(p) { return p.defenseDown ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
         onActivation: function(p) {
@@ -16495,6 +16495,35 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Base ATK Boost", "Status Boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["Base ATK Boost", "Status Boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3978: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 20 : 1;
+        },
+    },
+    3979: {
+        chainAddition: function(p) { return 1.2; },
+    },
+    3980: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.75 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.75 : 1; },
+    },
+    3981: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.25, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        orbPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["No Kaido Effects", "Kaido Effects"][levels[n]] + '. To switch to ' + ["No Kaido Effects", "Kaido Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },

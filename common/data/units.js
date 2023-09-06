@@ -3976,6 +3976,10 @@ window.units = [
     [ "Killer - Clash of the Worst Generation", "INT", ["Driven", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1649, 794, 86, 3298, 1588, 171, 1 ],
     [ "Otama - Contributing to the Fight", "PSY", ["Free Spirit", "Fighter"], 5, 30, 4, 4, 99, 2000000, 1621, 749, 106, 3242, 1498, 211, 1 ],
     [ "Jean Bart - Captain Protecting Fist", "INT", ["Free Spirit", "Driven"], 5, 30, 4, 4, 99, 4000000, 2150, 751, 92, 4300, 1501, 183, 1 ],
+    [ "Zoro - Peerless Lending a Favor", "PSY", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1669, 758, 70, 3337, 1514, 139, 1 ],
+    [ "Sanji - Peerless Returning the Favor", "PSY", ["Fighter", "Free Spirit"], 5, 30, 6, 4, 99, 4000000, 1611, 747, 83, 3222, 1494, 165, 1 ],
+    [ "Raizo - Face-Off Within the Flames", "INT", ["Shooter", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1746, 705, 75, 3492, 1409, 149, 1 ],
+    [ "Lead Performers - Impeding Disasters", "STR", ["Driven", "Powerhouse"], 5, 60, 4, 1, 99, 5000000, 1781, 781, 68, 3562, 1561, 136, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

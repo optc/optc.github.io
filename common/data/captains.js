@@ -14071,6 +14071,22 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.2 : 1; },
     },
+    3978: {
+        atk: function(p) { return 3.5; },
+        hp: function(p) { return 1.25; },
+    },
+    3979: {
+        atk: function(p) { return 3.5; },
+        hp: function(p) { return 1.25; },
+    },
+    3980: {
+        atk: function(p) { return 3.25; },
+        hp: function(p) { return 1.25; },
+    },
+    3967: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 3, 3.25, 3.5, 3.75, 4, 4.25][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1.1, 1.1, 1.15, 1.15, 1.15, 1.2, 1.2][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

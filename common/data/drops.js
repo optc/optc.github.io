@@ -6709,6 +6709,16 @@ window.drops = {
             'Raging Sea': [ 3965, "3956-skull" ]
         },
 
+        {
+            name: 'Lead Performers',
+            dropID: 'treasuremap73',
+            thumb: 3981,
+            global: true,
+            nakama: 8398100,
+            gamewith: null,
+            'Raging Sea': [ 3981, "3956-skull" ]
+        },
+
     ],
 
     
