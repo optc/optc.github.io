@@ -16481,7 +16481,7 @@ window.specials = {
         },
     },
     3976: {
-        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? p.cached.multiplier : 1; },
         onActivation: function(p) {
             p.cached.multiplier = p.percHP > 99 ? 2 : 1;
         },

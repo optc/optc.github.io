@@ -801,11 +801,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
     var getChainMultiplier = function(chainBase, hitModifiers, chainModifier, params, damage) {
         var chainSpecialMult = 1;
+        var chainSpecialMultPlus = 0;
         var chainUpgrade = 0;
 
         chainSpecMultiplication.forEach(function(special){
             var params2 = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
             chainSpecialMult = Math.max(chainSpecialMult, special.chainMultiplication(params2));
+        });
+        plusSpecials.forEach(function(special){
+            var params2 = getParameters(special.sourceSlot, undefined, special.sourceSlot, special.specialType);
+            if(special.hasOwnProperty("chainMultiplicationPlus")) chainSpecialMultPlus = Math.max(chainSpecialMultPlus, special.chainMultiplicationPlus(params2));
         });
         var result = chainBase;
         
@@ -841,7 +846,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             else if (hitModifiers[i] == 'Good') result += chainModifier * (0 + tapTimingBuff);
             else result = chainBase;
         }
-        result = result != 1 ? result * chainSpecialMult : result;
+        result = result != 1 ? result * (chainSpecialMult + chainSpecialMultPlus) : result;
         
         return result;
     };
@@ -1279,6 +1284,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (data.hasOwnProperty('chainCeil'))
                 plusSpecials.push(data);
             if (data.hasOwnProperty('chainAdditionPlus'))
+                plusSpecials.push(data);
+            if (data.hasOwnProperty('chainMultiplicationPlus'))
                 plusSpecials.push(data);
             if (data.hasOwnProperty('atkPlus'))
                 plusSpecials.push(data);
