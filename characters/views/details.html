@@ -417,6 +417,17 @@
                                         {{::cooldown.length ? ' \u2192 ' + (cooldown[1] - unit.limitexCD) + ' turns' : ''}}</span>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.specialCooldown">
+                                    <td>Cooldown<span ng-if="unit.limitCD != 0"><br>CD + LB</span><span ng-if="unit.limitexCD != 0 && unit.limitCD != unit.limitexCD"><br>CD + LB+</span></td>
+                                    <td colspan="{{details.special.llbbase ? 2 : 1}}">
+                                        {{::details.specialCooldown.length ? details.specialCooldown[0] : details.specialCooldown}} turns
+                                        {{::details.specialCooldown.length ? ' \u2192 ' + details.specialCooldown[1] + ' turns' : ''}}<span ng-if="unit.limitCD != 0"><br>
+                                        {{::details.specialCooldown.length ? (details.specialCooldown[0] - unit.limitCD) : (details.specialCooldown - unit.limitCD)}} turns
+                                        {{::details.specialCooldown.length ? ' \u2192 ' + (details.specialCooldown[1] - unit.limitCD) + ' turns' : ''}}</span><span ng-if="unit.limitexCD != 0 && unit.limitCD != unit.limitexCD"><br>
+                                        {{::details.specialCooldown.length ? (details.specialCooldown[0] - unit.limitexCD) : (details.specialCooldown - unit.limitexCD)}} turns
+                                        {{::details.specialCooldown.length ? ' \u2192 ' + (details.specialCooldown[1] - unit.limitexCD) + ' turns' : ''}}</span>
+                                    </td>
+                                </tr>
                                 <tr ng-if="cooldown && !isSpecialStaged && isCooldownHybrid">
                                     <td>Cooldown Japan<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span><br><br>
                                         Cooldown Global<span ng-if="unit.limitCD != 0"><br>Cooldown w/ LB</span></td>
