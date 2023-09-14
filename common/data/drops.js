@@ -6706,7 +6706,7 @@ window.drops = {
             global: true,
             nakama: 8396500,
             gamewith: null,
-            'Raging Sea': [ 3965, "3956-skull" ]
+            'Raging Sea': [ 3965, "3957-skull" ]
         },
 
         {
@@ -6716,7 +6716,7 @@ window.drops = {
             global: true,
             nakama: 8398100,
             gamewith: null,
-            'Raging Sea': [ 3981, "3956-skull" ]
+            'Raging Sea': [ 3981, "3957-skull" ]
         },
 
     ],
@@ -7379,7 +7379,17 @@ window.drops = {
             global: true,
             nakama: null,
             gamewith: null,
-            'Kizuna Exchange': [ "3956-skull", "3969-skull" ],
+            'Kizuna Exchange': [ "3957-skull", "3969-skull" ],
+        },
+
+        {
+            name: 'Yamato',
+            dropID: 'kizuna49',
+            thumb: 3991,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 3990, "3957-skull", "3989-skull", "3991-skull" ],
         },
 
     ],
