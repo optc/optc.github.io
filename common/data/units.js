@@ -3955,7 +3955,7 @@ window.units = [
     [ "Kawamatsu the Kappa - Blade Inheriting the Spirit of Oden", "PSY", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2278, 874, 91, 4556, 1748, 183, 1 ],
     [ "Monkey D. Luffy - Awoken Warrior of Liberation", "PSY", ["Free Spirit", "Fighter"], 5, 30, 4, 3, 70, 1066998, 1129, 437, 71, 2258, 873, 142, 1 ],
     [ "Monkey D. Luffy - Mystical Figure in White", "PSY", ["Free Spirit", "Fighter"], 6, 55, 4, 5, 99, 5000000, 2228, 867, 140, 4456, 1734, 280, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Monkey D. Luffy - Beating Drum of Liberation", "PSY", ["Free Spirit", "Fighter"], "6+", 65, 4, 5, 99, 5000000, 2245, 1223, 145, 4490, 1835, 290, 1 ],
     [ "Kozuki Momonosuke - Appearance of the Pink Dragon", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 3, 70, 1066998, 1198, 388, 76, 2396, 776, 151, 1 ],
     [ "Kozuki Momonosuke - Courage to Bite the Emperor", "PSY", ["Free Spirit", "Slasher"], 6, 40, 4, 5, 99, 5000000, 2366, 770, 149, 4732, 1540, 298, 1 ],
     [ "Komurasaki - Revealing the True Name", "PSY", ["Free Spirit", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1528, 730, 127, 3056, 1460, 254, 1 ],
@@ -3980,6 +3980,16 @@ window.units = [
     [ "Sanji - Peerless Returning the Favor", "PSY", ["Fighter", "Free Spirit"], 5, 30, 6, 4, 99, 4000000, 1611, 747, 83, 3222, 1494, 165, 1 ],
     [ "Raizo - Face-Off Within the Flames", "INT", ["Shooter", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1746, 705, 75, 3492, 1409, 149, 1 ],
     [ "Lead Performers - Impeding Disasters", "STR", ["Driven", "Powerhouse"], 5, 60, 4, 1, 99, 5000000, 1781, 781, 68, 3562, 1561, 136, 1 ],
+    [ "Kozuki Momonosuke - Reckless Collision", "DEX", ["Free Spirit", "Powerhouse"], 5, 1, 4, 4, 99, 4000000, 1313, 699, 117, 2626, 1398, 234, 1 ],
+    [ "Kaido - Flaming Rising Dragon", "STR", ["Powerhouse", "Driven"], 5, 30, 4, 3, 70, 1066998, 1160, 449, 62, 2320, 898, 123, 1 ],
+    [ "Kaido - Blazing Rising Dragon", "STR", ["Powerhouse", "Driven"], 6, 55, 4, 5, 99, 5000000, 2290, 892, 121, 4580, 1784, 242, 1 ],
+    [ "Kurozumi Kanjuro - Performing the Final Dance", "STR", ["Driven", "Powerhouse"], 5, 30, 4, 3, 70, 1066998, 1146, 429, 71, 2292, 858, 141, 1 ],
+    [ "Kurozumi Kanjuro - Kazenbo Falling into the Abyss", "STR", ["Driven", "Powerhouse"], 6, 55, 4, 5, 99, 5000000, 2262, 852, 139, 4524, 1704, 278, 1 ],
+    [ "Orochi - Inflating Impatience", "STR", ["Driven", "Powerhouse"], 5, 30, 5, 4, 99, 4000000, 1570, 784, 102, 3140, 1568, 204, 1 ],
+    [ "Fukurokuju - Face-Off Within the Flames", "STR", ["Driven", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1480, 796, 113, 2960, 1592, 226, 1 ],
+    [ "Whitebeard & Marco - Deadly Battle at the Paramount War", ["PSY", "INT"], [["Striker", "Powerhouse"],["Fighter", "Powerhouse"],["Striker", "Powerhouse"]], "6+", 65, 4, 5, 99, 5000000, 1870, 1153, 225, 3740, 1730, 450, 1 ],
+    [ "Yamato - Dashing Through the Castle", "INT", ["Striker", "Free Spirit"], 5, 50, 4, 4, 99, 5000000, 1658, 764, 104, 3324, 1424, 197, 1 ],
+    [ "Yamato - Holding Back the Explosion", "INT", ["Striker", "Free Spirit"], "5+", 50, 4, 4, 99, 5000000, 2014, 924, 114, 3432, 1577, 213, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4543,6 +4553,10 @@ var ghostsUnits = [
     [ "⚐ Eustass Kid - Overthrowing an Emperor", "INT", ["Driven", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1951, 901, 175, 3902, 1801, 350, 1 ],
     [ "⚐ Law & Kid - Overthrowing an Emperor", "PSY", ["Free Spirit", "Driven"], 6, 55, 4, 5, 99, 5000000, 2081, 928, 194, 4162, 1855, 388, 1 ],
     [ "⚐ Law & Kid - Overthrowing an Emperor", "INT", ["Free Spirit", "Driven"], 6, 55, 4, 5, 99, 5000000, 2081, 928, 194, 4162, 1855, 388, 1 ],
+    [ "⚐ Whitebeard - Deadly Battle at the Paramount War", "PSY", ["Striker", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 1844, 1123, 177, 3688, 1684, 354, 1 ],
+    [ "⚐ Marco - Deadly Battle at the Paramount War", "INT", ["Fighter", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 1765, 1063, 215, 3530, 1594, 430, 1 ],
+    [ "⚐ Whitebeard & Marco - Deadly Battle at the Paramount War", "PSY", ["Striker", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 1870, 1153, 225, 3740, 1730, 450, 1 ],
+    [ "⚐ Whitebeard & Marco - Deadly Battle at the Paramount War", "INT", ["Striker", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 1870, 1153, 225, 3740, 1730, 450, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

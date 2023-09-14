@@ -895,7 +895,7 @@
                             <tbody>
                                 <tr ng-if="details.festAttackPattern">
                                     <td>Pirate Festival Attack Pattern</td>
-                                    <td>
+                                    <td colspan="2">
                                         <div>
                                                 <div ng-repeat="item in details.festAttackPattern track by $index"> <span ng-bind-html="item | decorate"></span> </div>
                                         </div>
@@ -904,27 +904,58 @@
                                 </tr>
                                 <tr ng-if="details.festAttackTarget">
                                     <td>Pirate Festival Attack Target</td>
-                                    <td>
+                                    <td colspan="2">
                                         <div>
                                                 <span ng-bind-html="details.festAttackTarget | decorate"></span></div>
                                         </div>
                                         <span class="notes" ng-if="details.festAttackTargetNotes" ng-bind-html="details.festAttackTargetNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
+                                <tr ng-if="details.festResistance.hasOwnProperty('base') || details.festAbility.hasOwnProperty('base') || details.festSpecial.hasOwnProperty('base')">
+                                    <td width="5%"></td>
+                                    <td style="width: 47.5%"><strong>Base</strong></td>
+                                    <td style="width: 50%"><strong>Level Limit Break</strong></td>
+                                </tr>
                                 <tr ng-if="details.festResistance">
                                     <td>Pirate Festival Resistance</td>
-                                    <td>
+                                    <td colspan="2" ng-if="!details.festResistance.hasOwnProperty('base')">
                                         <div>
                                                 <span ng-bind-html="details.festResistance | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
+                                    </td>
+                                    <td ng-if="details.festResistance.hasOwnProperty('base')">
+                                        <div>
+                                                <span ng-bind-html="details.festResistance.base | decorate"></span></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
+                                    </td>
+                                    <td ng-if="details.festResistance.hasOwnProperty('llbbase')">
+                                        <div>
+                                                <span ng-bind-html="details.festResistance.llbbase | decorate"></span></div>
                                         </div>
                                         <span class="notes" ng-if="details.festResistanceNotes" ng-bind-html="details.festResistanceNotes | notes | decorate"></span>
                                     </td>
                                 </tr>
                                 <tr ng-if="details.festAbility">
                                     <td>Pirate Festival Ability</td>
-                                    <td>
+                                    <td colspan="2" ng-if="!details.festAbility.hasOwnProperty('base')">
                                         <div>
                                                 <div ng-repeat="item in details.festAbility track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
+                                    </td>
+                                    <td ng-if="details.festAbility.hasOwnProperty('base')">
+                                        <div>
+                                                <div ng-repeat="item in details.festAbility.base track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
+                                    </td>
+                                    <td ng-if="details.festAbility.hasOwnProperty('llbbase')">
+                                        <div>
+                                                <div ng-repeat="item in details.festAbility.llbbase track by $index"><strong>Level {{$index + 1}}:</strong>
                                                 <span ng-bind-html="item | decorate"></span><br></div>
                                         </div>
                                         <span class="notes" ng-if="details.festAbilityNotes" ng-bind-html="details.festAbilityNotes | notes | decorate"></span>
@@ -932,9 +963,23 @@
                                 </tr>
                                 <tr ng-if="details.festSpecial">
                                     <td>Pirate Festival Special</td>
-                                    <td>
+                                    <td colspan="2" ng-if="!details.festSpecial.hasOwnProperty('base')">
                                         <div>
                                                 <div ng-repeat="item in details.festSpecial track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
+                                    </td>
+                                    <td ng-if="details.festSpecial.hasOwnProperty('base')">
+                                        <div>
+                                                <div ng-repeat="item in details.festSpecial.base track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
+                                                <span ng-bind-html="item.description | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
+                                    </td>
+                                    <td ng-if="details.festSpecial.hasOwnProperty('llbbase')">
+                                        <div>
+                                                <div ng-repeat="item in details.festSpecial.llbbase track by $index"><strong>Level {{$index + 1}}: [{{item.cooldown}} seconds] </strong>
                                                 <span ng-bind-html="item.description | decorate"></span><br></div>
                                         </div>
                                         <span class="notes" ng-if="details.festSpecialNotes" ng-bind-html="details.festSpecialNotes | notes | decorate"></span>
