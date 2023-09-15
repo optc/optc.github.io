@@ -352,7 +352,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889, 3904, 3905, 3947, 3948, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 3955, 3956, 3966, 3967 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889, 3904, 3905, 3947, 3948, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 3955, 3956, 3957, 3966, 3967 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -366,6 +366,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         }
                     }
                 }
+                if (window.specials[3957].turnedOn) orb = 2.75
                 if (window.altspecials[3956].turnedOn) orb = 3
             }
             if (orb =='tnd'){
@@ -1571,7 +1572,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.rcvCounter.enabled = true;
             if ([3461, 3462].has(id))
                 $scope.tdata.basehpCounter.enabled = true;
-            if ([5430, 5432, 5449, 5450, 5451, 5452].has(id))
+            if ([5430, 5432, 5449, 5450, 5451, 5452, 3990, 3991].has(id))
                 $scope.tdata.dmgreductionCounter.enabled = true;
             if ([3829, 3830].has(id))
                 $scope.tdata.carrychainCounter.enabled = true;

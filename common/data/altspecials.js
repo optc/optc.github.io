@@ -470,12 +470,40 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    3957: {
+        increaseDamageTaken: function(p) { return 2; },
+    },
     3967: {
         poison: function(p) { return 99; },
         affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
     },
     3973: {
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    3984: {
+        increaseDamageTaken: function(p) { return [1.75, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Increase Damage Taken Debuff", "Increase Damage Taken Increase", "Both Effects"][n] + '. To switch to ' + ["Increase Damage Taken Debuff", "Increase Damage Taken Increase", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3986: {
+        burn: function(p) { return 2; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.25 : 1; },
+        type: "type",
+    },
+    3990: {
+        dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
+    },
+    3991: {
+        dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
     },
 };
 

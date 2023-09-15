@@ -16331,6 +16331,27 @@ window.specials = {
             p.cached.multiplier = p.actions[p.sourceSlot];
         },
     },
+    3957: {
+        atk: function(p) { return [3, 1, 3][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0.25, 0.25][p.cached.multiplier]; },
+        type: "type",
+        orb: function(p) { return [1, 3, 3][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0.25, 0, 0.25][p.cached.multiplier]; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Use Meat Orbs for Boosted Orb Multiplier. Using ' + ["ATK Boost & Orb Buff", "Orb Boost & ATK Buff", "All Effects"][n] + '. To ' + ["ATK Boost & Orb Buff", "Orb Boost & ATK Buff", "All Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
     3958: {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") ? 2.5 : 1; },
         type: "type",
@@ -16527,6 +16548,74 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    3982: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 2 : 1; },
+        type: "type",
+    },
+    3983: {
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? p.cached.multiplier : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") ? p.orb = 'wano' ? 3 : 2.75 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.sourceSlot <= 1 ? 3 : 2.75;
+        }
+    },
+    3984: {
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? p.cached.multiplier : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") ? p.orb = 'wano' ? 3 : 2.75 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.sourceSlot <= 1 ? 3 : 2.75;
+        }
+    },
+    3985: {
+        burn: function(p) { return [3, 0, 3][p.cached.multiplier]; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        atkCeil: function(p) { return p.cached.multiplier1; },
+        orbCeil: function(p) { return p.cached.multiplier1; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 3 : 1;
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Burn", "Base ATK Boost", "Both Effects"][levels[n]] + '. To switch to ' + ["Burn", "Base ATK Boost", "Both Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3986: {
+        burn: function(p) { return [3, 0, 3][p.cached.multiplier]; },
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        atkCeil: function(p) { return p.cached.multiplier1; },
+        orbCeil: function(p) { return p.cached.multiplier1; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.captain.class.has("Driven") || p.captain.class.has("Powerhouse") ? 3 : 1;
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Burn", "Base ATK Boost", "Both Effects"][levels[n]] + '. To switch to ' + ["Burn", "Base ATK Boost", "Both Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    3987: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+        affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+    },
+    3990: {
+        increaseDamageTaken: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.type == "PSY" || p.captain.type == "INT" ? 1.5 : 1;
+        }
+    },
+    3991: {
+        increaseDamageTaken: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.captain.type == "PSY" || p.captain.type == "INT" ? 1.5 : 1;
+        }
     },
 };
 
@@ -20645,6 +20734,18 @@ var ghostsSpecials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    535: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1250, 1500][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+    },
+    536: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1250, 1500][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+    },
+    537: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1250, 1500][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+    },
+    538: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1250, 1500][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
     },
 };
 

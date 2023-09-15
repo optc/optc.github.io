@@ -76,6 +76,34 @@ window.capspecials = {
         increaseDamageTaken: function(p) { return 1.5; },
         ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
     },
+    3983: {
+        burn: function(p) { return [3, 0, 3][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1, 2, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken', 'burn']; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Burn", "Increase Damage Taken", "Both Debuffs"][n] + '. To switch to ' + ["Burn", "Increase Damage Taken", "Both Debuffs"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3984: {
+        burn: function(p) { return [3, 0, 3][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1, 2, 2][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return ['increaseDamageTaken', 'burn']; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Burn", "Increase Damage Taken", "Both Debuffs"][n] + '. To switch to ' + ["Burn", "Increase Damage Taken", "Both Debuffs"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };

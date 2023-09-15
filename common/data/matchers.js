@@ -2212,7 +2212,7 @@ let matchers = {
 
         {
             name: 'Buff Duration Extender',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
             regex: /increases duration of any ([^."]+?)by ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
             submatchers: [
                 {
@@ -2320,7 +2320,7 @@ let matchers = {
 
         { // Just a copy from Buff Duration Extenders, except only damage-boosting buffs
             name: 'Buff/Debuff Enhancers',
-            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            targets: [ 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
             // Roger/WB "increases or decreases"
             regex: /increases (?:or decreases )?boost effects of ([^."]+?)(?:by \+?([?.\d]+)x?(?:-([?.\d]+)x)?|to ([?.\d]+)x(?:-([?.\d]+)x)?)/i,
             submatchers: [
@@ -5528,7 +5528,7 @@ let matchers = {
         },
 
         {
-            name: 'Captain Swapping %target%',
+            name: 'Captain Swap',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /Swaps this unit with your captain for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -5541,9 +5541,15 @@ let matchers = {
         },
 
         {
-            name: 'Instant Defeat special',
+            name: 'Instant Defeat',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /instantly defeat/i,
+        },
+
+        {
+            name: 'Beneficial Effect Clear',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /Removes all positive buffs on your team/i,
         },
 
         {
@@ -5595,7 +5601,7 @@ let matchers = {
         {
             name: 'Super Type/Class Transformation',
             targets: [ 'superSpecial' ],
-            regex: /transforms all ([^."]+?) characters into Super/i,
+            regex: /transforms ([^."]+?) characters into Super/i,
             submatchers: [
                 {
                     type: 'separator',
