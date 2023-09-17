@@ -292,6 +292,10 @@ app.controller('DetailsCtrl',function($scope, $rootScope, $state, $stateParams, 
         $('#compare').val('');
         $('#compare').prop('disabled', false);
     };
+    $scope.openBigThumbTab = function(id) {
+        console.log(Utils.getBigThumbnailUrl(id, ''))
+        window.open(Utils.getBigThumbnailUrl(id, ''), '_blank');
+    };
     $scope.getPrevious = function() { return $stateParams.previous.concat($scope.id); };
     $scope.isCaptainHybrid = ($scope.details && $scope.details.captain && ($scope.details.captain.global || $scope.details.captain.base || $scope.details.captain.combined || $scope.details.captain.character1));
     $scope.isSailorHybrid = ($scope.details && $scope.details.sailor && ($scope.details.sailor.global || $scope.details.sailor.level1 || $scope.details.sailor.combined || $scope.details.sailor.character1));
