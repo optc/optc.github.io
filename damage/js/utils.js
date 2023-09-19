@@ -217,6 +217,9 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
         if (orb == 'str') return boostedMultiplier;
         if (orb == 0.5 && type == 'DEX') return boostedMultiplier;
     }
+    if(window.specials[3957].turnedOn){
+        if (orb == 'meat') return boostedMultiplier;
+    }
     if(window.specials[1940].turnedOn || window.specials[1941].turnedOn){
         if(type == 'STR' || type == 'PSY' || type == 'QCK'){
             if (orb == 'str') return boostedMultiplier;

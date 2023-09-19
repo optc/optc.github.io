@@ -16555,14 +16555,14 @@ window.specials = {
     },
     3983: {
         status: function(p) { return p.enemyEffects.increaseDamageTaken ? p.cached.multiplier : 1; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") ? p.orb = 'wano' ? 3 : 2.75 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") ? p.orb == 'wano' ? 3 : 2.75 : 1; },
         onActivation: function(p) {
             p.cached.multiplier = p.sourceSlot <= 1 ? 3 : 2.75;
         }
     },
     3984: {
         status: function(p) { return p.enemyEffects.increaseDamageTaken ? p.cached.multiplier : 1; },
-        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") ? p.orb = 'wano' ? 3 : 2.75 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") ? p.orb == 'wano' ? 3 : 2.75 : 1; },
         onActivation: function(p) {
             p.cached.multiplier = p.sourceSlot <= 1 ? 3 : 2.75;
         }
