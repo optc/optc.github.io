@@ -2212,7 +2212,7 @@ let matchers = {
 
         {
             name: 'Buff Duration Extender',
-            targets: [ 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
             regex: /increases duration of any ([^."]+?)by ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
             submatchers: [
                 {
@@ -2320,7 +2320,7 @@ let matchers = {
 
         { // Just a copy from Buff Duration Extenders, except only damage-boosting buffs
             name: 'Buff/Debuff Enhancers',
-            targets: [ 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
             // Roger/WB "increases or decreases"
             regex: /increases (?:or decreases )?boost effects of ([^."]+?)(?:by \+?([?.\d]+)x?(?:-([?.\d]+)x)?|to ([?.\d]+)x(?:-([?.\d]+)x)?)/i,
             submatchers: [

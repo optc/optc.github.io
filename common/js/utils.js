@@ -384,13 +384,13 @@
         // idea: return an array of queries, so that there will be multiple "Search for these characters" links,
         // depending on the conditions (so that one will handle the `6 Striker characters`,
         // the other will handle the family names.)
-        let charactersRegex = /must consist of, excluding Supports and counting only 1 per unit\: (?:\d (.*?)characters(?: or )?)?(.*)?/i;
+        let charactersRegex = /must consist of any \d(?: or \d) of the following, excluding Supports and counting only 1 per unit\: (?:(?:\d )?(.*?)characters(?: or )?)?(.*)?(?<!\.)/i;
         let match = criteria.match(charactersRegex);
         if (!match)
             return null;
         // prioritize family names. if there are no family names (match[2] is null|undefined), use the classes/types condition.
         var criteriaTrimmed = (match[2] || match[1]).trim();
-
+        console.log(criteriaTrimmed);
         return utils.generateCriteriaQuery(criteriaTrimmed, supportingFamilies);
     }
 
