@@ -4426,7 +4426,7 @@ let matchers = {
         },
 
         {
-            name: 'Fear/Sailor Despair',
+            name: 'Fear (IGN: Sailor Despair)',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
             regex: /(?:reduces|removes)[^."]+?sailor despair[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?: on ([^."]+?)characters?)?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
@@ -4461,7 +4461,7 @@ let matchers = {
         },
 
         {
-            name: 'Fear/Sailor Despair',
+            name: 'Fear (IGN: Sailor Despair)',
             targets: [ 'potential' ],
             regex: /Reduces? Sailor Despair duration (?:by ([?\d]+) turns?|(completely))/i,
             submatchers: [
@@ -4480,9 +4480,9 @@ let matchers = {
         },
 
         {
-            name: 'Silence/Special Bind',
+            name: 'Silence (IGN: Special Bind)',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
-            regex: /(?:reduces|removes)[^."]+?silence[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?: on ([^."]+?)characters?)?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            regex: /(?:reduces|removes)(?: |[^."]+?, |[^."]+? and )silence[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?: on ([^."]+?)characters?)?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
@@ -4512,6 +4512,35 @@ let matchers = {
                     radioGroup: '1',
                     groups: [4],
                     cssClasses: ['min-width-12'],
+                },
+            ],
+        },
+
+        {
+            name: 'Active Ability Silence (IGN: Silence)',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /(?:reduces|removes)[^."]+?active ability silence[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?: on ([^."]+?)characters?)?(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2, 3, 5, 6],
+                },
+                {
+                    type: 'option',
+                    description: 'Self only',
+                    regex: /^this|^the supported/,
+                    radioGroup: '1',
+                    groups: [4],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Whole crew',
+                    regex: /^$/,
+                    radioGroup: '1',
+                    groups: [4],
+                    cssClasses: ['min-width-6'],
                 },
             ],
         },
