@@ -559,6 +559,12 @@ window.sailors = {
     2193: {
         hpStatic: function(p) { return p.unit.class.has("Shooter") ? 75 : 0; },
     },
+    2204: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Driven") ? p.slot == p.sourceSlot ? 100 : 0 : 0 : 0; },
+    },
+    2205: {
+        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Driven") ? [p.slot == p.sourceSlot, true][CrunchUtils.llimitUnlock(p, "sailors")] ? 100 : 0 : 0 : 0; },
+    },
     2266: {
         staticMult: function(p) { return 2; }
     },

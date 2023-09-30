@@ -5888,6 +5888,20 @@ window.specials = {
             });
         }
     },
+    2203: {
+        affinity: function(p) { return [1, p.cached.multiplier1][CrunchUtils.llimitUnlock(p, "specials")]; },
+        orbPlus: function(p) { return [0, [0, 0.25][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")]; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.percHP <= 10 ? 2 : 1;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["No Orb Buff", "Orb Buff"][levels[n]] + '. To switch to ' + ["No Orb Buff", "Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
     2204: {
         orb: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
@@ -5900,13 +5914,17 @@ window.specials = {
         }
     },
     2205: {
-        orb: function(p) { return p.cached.multiplier; },
+        orb: function(p) { return [p.cached.multiplier1, [1, 2.25][p.cached.multiplier]][CrunchUtils.llimitUnlock(p, "specials")]; },
+        atk: function(p) { return [1, p.cached.multiplier1][CrunchUtils.llimitUnlock(p, "specials")]; },
+        type: "class",
         onActivation: function(p) {
-            var n = (p.percHP <= 10 ? 2 : 1);
-            p.cached.multiplier = n;
+            p.cached.multiplier1 = p.percHP <= 10 ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + n + 'x Orb boost.',
-                name: '2205warning'
+                text: 'Using the ' + ["No Orb Boost", "Orb Boost"][levels[n]] + '. To switch to ' + ["No Orb Boost", "Orb Boost"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6541,17 +6559,16 @@ window.specials = {
     },
     2334: {
         delay: function(p) { return 1; },
-        orb: function(p) { return (p.unit.class.has("Shooter") && p.cached.multiplier) ? 1.75 : 1; },
+        orb: function(p) { return p.unit.class.has("Shooter") ? [[1.75, 1][p.cached.multiplier], 2][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        status: function(p) { return p.delayed > 0 ? [1, p.cached.multiplier1][CrunchUtils.llimitUnlock(p, "specials")] : 1},
         onActivation: function(p) {
-            if (p.cached.multiplier == null) {
-                p.cached.multiplier = true;
-            }
-            else{
-                p.cached.multiplier = !p.cached.multiplier;
-            }
-            p.scope.notify({
-                text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (p.cached.multiplier ? 'under or equal to ' : 'over ') + '80% HP',
-                name: '2334warning'
+            p.cached.multiplier1 = p.captain != null ? p.captain.class.has("Shooter") ? 2 : 1 : 1;
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if(CrunchUtils.llimitUnlock(p, "specials")) p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "No Orb Boost"][levels[n]] + '. To switch to ' + ["Orb Boost", "No Orb Boost"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },

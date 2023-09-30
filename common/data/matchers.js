@@ -4677,7 +4677,7 @@ let matchers = {
         },
 
         {
-            name: 'Blindness',
+            name: 'Blindness (IGN: Remove SFX)',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
             regex: /(?:reduces|removes)[^."]+?(?:blindness|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
