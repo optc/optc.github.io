@@ -852,7 +852,7 @@
                                     <td width="5%"><span ng-if="rumble2">Character 1 </span>GP Burst</td>
                                     <td colspan="2">
                                         <div>
-                                            <div ng-repeat="item in rumble.gpspecial track by $index"><strong>Level {{::$index + 1}}: [{{::item.uses}} use(s)] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
+                                            <div ng-repeat="item in rumble.gpspecial track by $index"><strong>Level {{::$index + 1}}: [{{::item.uses}} use{{item.uses != 1 ? "s" : ""}}] </strong> <span ng-bind-html="item.effects | specialToString | decorate"></span></div>
                                         </div>
                                     </td>
                                 </tr>
