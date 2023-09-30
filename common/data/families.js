@@ -680,6 +680,11 @@ const Maha = [ "Maha" ];
 const ShimotsukiUshimaru = [ "Shimotsuki Ushimaru" ];
 const FugetsuOmusubi = [ "Fugetsu Omusubi" ];
 const UzukiTempura = [ "Uzuki Tempura" ];
+const Hongo = [ "Hongo" ];
+const Gabu = [ "Gabu" ];
+const Snake = [ "Snake" ];
+const BonkPunch = [ "Bonk Punch" ];
+const Monster = [ "Monster" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4572,6 +4577,16 @@ window.families = {
     3989: [ ...EdwardNewgate, ...Marco ],
     3990: [ ...Yamato ],
     3991: [ ...Yamato ],
+    3992: [ ...Uta ],
+    3993: [ ...Uta ],
+    3994: [ ...Borsalino, ...Issho ],
+    3995: [ ...Borsalino, ...Issho ],
+    3996: [ ...Hongo ],
+    3997: [ ...Gabu, ...Snake ],
+    3998: [ ...BonkPunch, ...Monster ],
+    3999: [ ...Gordon ],
+    4000: [ ...GildTesoro ],
+    4024: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

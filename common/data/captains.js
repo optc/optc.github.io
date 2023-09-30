@@ -14128,6 +14128,42 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 4.5 : 4 : 1; },
         hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.2 : 1; },
     },
+    3992: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? ['tnd'].includes(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    3993: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? ['tnd'].includes(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    3996: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? ['tnd'].includes(p.orb) ? 3.5 : 3.25 : 1; },
+        hp: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    3997: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.actions[p.sourceSlot] ? 3.6 : 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.3 : 1; },
+    },
+    3998: {
+        atk: function(p) { return 3.25; },
+        hp: function(p) { return 1.2; },
+    },
+    3999: {
+        atk: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    4000: {
+        hitAtk: function(p) {
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            var tesoroModifier = (p.chainPosition === 0 ? 1 : (prev == 'Good' ? 1 : (prev == 'Great' ? 1 : (prev == 'Perfect' ? 0.6 : 1))));
+            return [[p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great", "Great"]) ? 5.5 : 4.75, p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great", "Great"]) ? 5.5 : 5],[p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 5.75 : 5.25, p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great"]) ? 5.75 : 5.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] * tesoroModifier;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Great", "Great", "Great", "Perfect"],
+        hp: function(p) { return 1.35; },
+    },
+    4024: {
+        atk: function(p) { return 4.5; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

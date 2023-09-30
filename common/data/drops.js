@@ -3231,7 +3231,7 @@ window.drops = {
             global: true,
             nakama: 6388600,
             gamewith: null,
-            'All Difficulties': [ 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3884, "3886-skull" ],
+            'Defeat Level Rewards': [ 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3884, "3886-skull" ],
         },
 
         {
@@ -3241,7 +3241,7 @@ window.drops = {
             global: true,
             //nakama: 6388500,
             gamewith: null,
-            'All Difficulties': [ 3885 ],
+            'Defeat Level Rewards': [ 3885 ],
         },
 
         {
@@ -3251,7 +3251,7 @@ window.drops = {
             global: true,
             //nakama: 6153400,
             gamewith: null,
-            'All Difficulties': [ 3927 ],
+            'Defeat Level Rewards': [ 3927 ],
         },
 
         {
@@ -3261,7 +3261,7 @@ window.drops = {
             global: true,
             //nakama: 6395200,
             gamewith: null,
-            'All Difficulties': [ 3952 ],
+            'Defeat Level Rewards': [ 3952 ],
         },
 
         {
@@ -3271,7 +3271,17 @@ window.drops = {
             global: true,
             //nakama: 6395200,
             gamewith: null,
-            'All Difficulties': [ 3976 ],
+            'Defeat Level Rewards': [ 3976 ],
+        },
+
+        {
+            name: 'Shanks',
+            dropID: 'pka5',
+            thumb: 3695,
+            global: true,
+            //nakama: 6395200,
+            gamewith: null,
+            'Defeat Level Rewards': [ 3999 ],
         },
 
     ],

@@ -505,6 +505,14 @@ window.altspecials = {
     3991: {
         dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
     },
+    3993: {
+        delay: function(p) { return 1; },
+        ignoresImmunities: function(p) { return ['delay']; },
+    },
+    4024: {
+        atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
+        type: "type",
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

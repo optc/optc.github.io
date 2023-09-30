@@ -1347,6 +1347,36 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    3992: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    3993: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    3996: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
@@ -2083,6 +2113,86 @@ window.events = {
         onRemoval: function($scope) {
             if (--$scope.options.emptyOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [EMPTY] orbs support.' });
+        }
+    },
+    5539: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5540: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5541: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5542: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5543: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5544: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5545: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5546: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
         }
     },
 };

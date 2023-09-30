@@ -16617,6 +16617,116 @@ window.specials = {
             p.cached.multiplier = p.captain.type == "PSY" || p.captain.type == "INT" ? 1.5 : 1;
         }
     },
+    3992: {
+        chain: function(p) { return [1, 1, 1, 1, 2.75, 2.75, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, Infinity, Infinity, Infinity, 35, 35, 35, 35][p.cached.multiplier] : 1;
+        },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? [2.5, 2.75, 2.75, 2.75, 2.5, 2.75, 2.75, 2.75][p.cached.multiplier] : 1; },
+        atkPlus: function(p) { return [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier]; },
+        type: "type",
+        status: function(p) { return p.delayed ? [1, 2, 2, 1, 1, 2, 2, 1][p.cached.multiplier] : 1; },
+        statusPlus: function(p) { return [0, 0, 0.25, 0, 0, 0, 0.25, 0][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6, 7];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Stage 2", "Stage 3", "Stage 4", "Buff Clear", "Stage 2 with Chain Boundary", "Stage 3 with Chain Boundary", "Stage 4 with Chain Boundary", "Buff Clear with Chain Boundary"][n] + ' boost. To ' + ["Stage 2", "Stage 3", "Stage 4", "Buff Clear", "Stage 2 with Chain Boundary", "Stage 3 with Chain Boundary", "Stage 4 with Chain Boundary", "Buff Clear with Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3993: {
+        chain: function(p) { return [1, 1, 1, 1, 2.75, 2.75, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, Infinity, Infinity, Infinity, 35, 35, 35, 35][p.cached.multiplier] : 1;
+        },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? [2.5, 2.75, 2.75, 2.75, 2.5, 2.75, 2.75, 2.75][p.cached.multiplier] : 1; },
+        atkPlus: function(p) { return [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier]; },
+        type: "type",
+        status: function(p) { return p.delayed ? [1, 2, 2, 1, 1, 2, 2, 1][p.cached.multiplier] : 1; },
+        statusPlus: function(p) { return [0, 0, 0.25, 0, 0, 0, 0.25, 0][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6, 7];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Stage 2", "Stage 3", "Stage 4", "Buff Clear", "Stage 2 with Chain Boundary", "Stage 3 with Chain Boundary", "Stage 4 with Chain Boundary", "Buff Clear with Chain Boundary"][n] + ' boost. To ' + ["Stage 2", "Stage 3", "Stage 4", "Buff Clear", "Stage 2 with Chain Boundary", "Stage 3 with Chain Boundary", "Stage 4 with Chain Boundary", "Buff Clear with Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3996: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Orb multiplier. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3997: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? [800, 0, 800][p.cached.multiplier] : 0; },
+        atkbasePlus: function(p) { return [0, 300, 300][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK Boost", "Base ATK Buff", "Base ATK Boost and Base ATK Buff"][levels[n]] + '. To switch to ' + ["Base ATK Boost", "Base ATK Buff", "Base ATK Boost and Base ATK Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3998: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [0.9, 1.1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x Chain Addition. To switch to the ' + levels[(n + 1) % levels.length] + 'x addition, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    3999: {
+        chain: function(p) { return 2.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 2.75 : 1;
+        },
+    },
+    4000: {
+        chain: function(p) { return 3.75; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 3.75 : 1;
+        },
+        chainCeil: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1];
+            return p.chainPosition === 0 ? 0 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [0, 0, 4.25, 4.25][p.cached.multiplier] : 0;
+        },
+        atkbasePlus: function(p) { return [0, 500, 0, 500][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Chain Lock", "Chain Lock & Base ATK Buff", "Chain Lock & Chain Buff", "All Effects"][levels[n]] + '. To switch to ' + ["Chain Lock", "Chain Lock & Base ATK Buff", "Chain Lock & Chain Buff", "All Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4024: {
+        def: function(p) { return 0; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
@@ -20746,6 +20856,54 @@ var ghostsSpecials = {
     },
     538: {
         atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [1250, 1500][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+    },
+    539: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    540: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    541: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    542: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    543: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    544: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    545: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
+    },
+    546: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+        },
     },
 };
 
