@@ -376,7 +376,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
                         if ([ 3904, 3905, 3947, 3948, 3966, 3967, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 5539, 5540, 5541, 5542, 5543, 5544, 5545, 5546 ].includes(team[temp].unit.number + 1)){
-                            orb = Math.max(orb,2);
+                            orb = orb == 'tnd' ? 2 : Math.max(orb,2);
                         }
                     }
                 }
