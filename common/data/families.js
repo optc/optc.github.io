@@ -4586,6 +4586,7 @@ window.families = {
     3998: [ ...BonkPunch, ...Monster ],
     3999: [ ...Gordon ],
     4000: [ ...GildTesoro ],
+    4001: [ ...Shiki ],
     4024: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],

@@ -16641,7 +16641,7 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, Infinity, Infinity, Infinity, 35, 35, 35, 35][p.cached.multiplier] : 1;
         },
         atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? [2.5, 2.75, 2.75, 2.75, 2.5, 2.75, 2.75, 2.75][p.cached.multiplier] : 1; },
-        atkPlus: function(p) { return [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0, 0.25, 0, 0, 0, 0.25, 0][p.cached.multiplier]; },
         type: "type",
         status: function(p) { return p.delayed ? [1, 2, 2, 1, 1, 2, 2, 1][p.cached.multiplier] : 1; },
         statusPlus: function(p) { return [0, 0, 0.25, 0, 0, 0, 0.25, 0][p.cached.multiplier]; },
@@ -16662,7 +16662,7 @@ window.specials = {
             return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, Infinity, Infinity, Infinity, 35, 35, 35, 35][p.cached.multiplier] : 1;
         },
         atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Free Spirit") || p.unit.class.has("Shooter") ? [2.5, 2.75, 2.75, 2.75, 2.5, 2.75, 2.75, 2.75][p.cached.multiplier] : 1; },
-        atkPlus: function(p) { return [2.5, 2.75, 3, 2.5, 2.5, 2.75, 3, 2.5][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0, 0.25, 0, 0, 0, 0.25, 0][p.cached.multiplier]; },
         type: "type",
         status: function(p) { return p.delayed ? [1, 2, 2, 1, 1, 2, 2, 1][p.cached.multiplier] : 1; },
         statusPlus: function(p) { return [0, 0, 0.25, 0, 0, 0, 0.25, 0][p.cached.multiplier]; },
@@ -16740,6 +16740,10 @@ window.specials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    4001: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+        type: "type",
     },
     4024: {
         def: function(p) { return 0; },
@@ -20877,49 +20881,49 @@ var ghostsSpecials = {
     539: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     540: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     541: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     542: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     543: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     544: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     545: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
     546: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? p.cached.multiplier : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
-            p.cached.multiplier = p.unit.captain.has("Slasher") || p.unit.captain.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 };
+            p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
     },
 };

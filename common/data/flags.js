@@ -3892,6 +3892,7 @@ window.flags = {
     3997: { rr: 1, rro: 1 },
     3998: { rr: 1, rro: 1 },
     4000: { rr: 1, rro: 1 },
+    4001: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     4024: { special: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },

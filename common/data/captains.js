@@ -14161,6 +14161,10 @@ window.captains = {
         hitModifiers: ["Perfect", "Perfect", "Great", "Great", "Great", "Perfect"],
         hp: function(p) { return 1.35; },
     },
+    4001: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5: 1; },
+        hp: function(p) { return p.unit.type == "INT" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
+    },
     4024: {
         atk: function(p) { return 4.5; },
     },
@@ -16595,6 +16599,38 @@ var ghostsCaptains = {
         atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? [5, 5.25][CrunchUtils.llimitUnlock(p, "captains")] : [4.25, 4.5][CrunchUtils.llimitUnlock(p, "captains")]; },
         hp: function(p) { return [1, 1.2][CrunchUtils.llimitUnlock(p, "captains")]; },
         rcv: function(p) { return 1.5; },
+    },
+    539: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5 : 4.75 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    540: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5 : 4.75 : 1; },
+        hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    541: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    542: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    543: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5 : 4.75 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    544: {
+        atk: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5 : 4.75 : 1; },
+        hp: function(p) { return (p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    545: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    546: {
+        atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5.5 : 5.25 : 1; },
+        hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
     },
 };
 

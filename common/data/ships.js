@@ -733,10 +733,10 @@ window.ships = [
         thumb: 'ship_0056_t2.png',
         description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of Slasher and Free Spirit characters by 1.6x, their HP by 1.3x, makes [RCV] and [TND] orbs beneficial for Slasher and Free Spirit characters, makes Slasher and Free Spirit character\'s PERFECTs easier to hit and recovers 1,000 HP at the end of the turn. Special: Reduces Paralysis duration by 2 turns (Cooldown: 9 turns).',
         atk: function(p) {
-            return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.2, 1.25, 1.3, 1.3, 1.35, 1.4, 1.45, 1.45, 1.5, 1.6 ][p.boatLevel - 1];
+            return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? [ 1.2, 1.25, 1.3, 1.3, 1.35, 1.4, 1.45, 1.45, 1.5, 1.6 ][p.boatLevel - 1] : 1;
         },
         hp: function(p) {
-            return !(p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? 1 : [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.3 ][p.boatLevel - 1];
+            return (p.unit.class.has('Slasher') || p.unit.class.has('Free Spirit')) ? [ 1.1, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.2, 1.3 ][p.boatLevel - 1] : 1;
         },
         heal: function(p) {
             return [ 0, 0, 0, 0, 0, 0, 0, 500, 750, 1000 ][p.boatLevel - 1];
@@ -776,12 +776,68 @@ window.ships = [
     
     
     
-    { //56
+    { //58
         name: "Thousand Sunny - 9th Anniversary Model",
         thumb: 'ship_0060_t2.png',
         description: 'Boosted Ability 1: At the start of the adventure, all specials start at MAX charge. Boosts ATK by 1.6x, makes [RCV] orbs beneficial for all characters, makes PERFECTs easier to hit and boosts EXP and Beli gained by 3x. Boosted Ability 2: Reduces Special Cooldown of all characters by 2 turns at the start of the fight, boosts ATK by 1.6x, makes [RCV] orbs beneficial for all characters and boosts EXP and Beli gained by 2x. Base Ability: Boosts ATK by 1.5x and makes PERFECTs easier to hit.',
         atk: function(p) { return 1.55; },
         hp: function(p) { return 1.2; },
+    },
+    
+    
+    
+    {
+        name: "Shiki's Island Ship",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of [DEX], [INT], and [QCK] characters by 1.55x, by 1.7x instead if HP is above 99% or below 30% at start of attack, thier HP by 1.25x.',
+        atk: function(p) {
+            return p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT" ? (p.p.percHP <= 30.0 || p.p.percHP >= 99.0) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.4, 1.5, 1.5, 1.6, 1.7 ][p.boatLevel - 1] : [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5, 1.55 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT" ? [ 1, 1.1, 1.15, 1.15, 1.2, 1.2, 1.2, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
+    },
+    
+    
+    
+    {
+        name: "White Tiger",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of Shooter characters by 1.6x, their HP by 1.25x, makes [PSY] and [INT] orbs beneficial for all characters, and makes PERFECT easier to hit.',
+        atk: function(p) {
+            return (p.unit.class.has('Shooter')) ? [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.3, 1.4, 1.4, 1.5, 1.6 ][p.boatLevel - 1] : 1;
+        },
+        hp: function(p) {
+            return (p.unit.class.has('Shooter')) ? [ 1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.25, 1.25, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
+    },
+    
+    
+    
+    {
+        name: "Catapult",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of [STR], [QCK], and [INT] characters by 1.55x, boosts ATK of your Captain by 1.86x instead, boosts HP of [STR], [QCK] and [INT] characters by 1.25x, and makes PERFECT easier to hit.',
+        atk: function(p) {
+            return (p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT" ? [ 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.45, 1.5, 1.55 ][p.boatLevel - 1] : 1)*((p.slot == 1) ? [ 1, 1, 1, 1.1, 1.1, 1.1, 1.1, 1.15, 1.15, 1.2 ][p.boatLevel - 1] : 1);
+        },
+        hp: function(p) {
+            return p.unit.type == "DEX" || p.unit.type == "QCK" || p.unit.type == "INT" ? [ 1, 1.1, 1.1, 1.1, 1.2, 1.2, 1.2, 1.2, 1.25, 1.25 ][p.boatLevel - 1] : 1;
+        },
+    },
+    
+    
+    
+    {
+        name: "Gran Tesoro",
+        thumb: null,
+        description: 'Reduces cooldown of all specials by 1 turn, boosts ATK of all characters by 1.5x, by 1.75x instead if they have a [G] or [RAINBOW] orb, boosts HP of all characters by 1.35x, boosts their ATK by approximately 1.75x when they have [G] or Rainbow slots and boosts amount of Beli received by 2x. If your crew has a Fighter, Slasher, Striker, Shooter, Free Spirit, Driven, Cerebral, and Powerhouse character, increases duration of any Chain Lock/Limit/Boundary buffs/debuffs applied by Specials by 1 turn.',
+        atk: function(p) {
+            return ['g', 'rainbow'].has(p.p.orb) ? [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.5, 1.6, 1.75, 1.75 ][p.boatLevel - 1] : [ 1.2, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4, 1.5 ][p.boatLevel - 1];
+        },
+        hp: function(p) {
+            return [ 1, 1.1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.35, 1.35, 1.35 ][p.boatLevel - 1];
+        },
     },
 
 ];

@@ -327,7 +327,7 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     return boostedMultiplier;
                 }
             }
-            if([5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460].includes(captains[temp].number + 1)){
+            if([5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 5539, 5540, 5541, 5542, 5543, 5544, 5545, 5546].includes(captains[temp].number + 1)){
                 if (orb == 'tnd'){
                     return boostedMultiplier;
                 }
