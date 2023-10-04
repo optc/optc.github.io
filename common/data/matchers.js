@@ -3584,7 +3584,7 @@ let matchers = {
         },
 
         {
-            name: 'Beneficial Orb Enablers',
+            name: 'Beneficial Orb Enable',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
             regex: /makes ([^".]+?)orbs beneficial for ([^".]+?)characters? for ([?\d]+\+?)(?:-([?\d]+))? turn/i,
             submatchers: [
@@ -3616,6 +3616,37 @@ let matchers = {
                     description: 'Affected classes:',
                 },
                 ...createClassesSubmatchers([2]),
+            ]
+        },
+
+        {
+            name: 'Orb Multiplier Override',
+            targets: [ 'special', 'superSpecial', 'swap', 'support' ],
+            regex: /increases Orb Effects of (?: beneficial)?([^".]+?)orbs to ([?.\d]+)x(?:-([?.\d]+)x)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, to ([?.\d]+)x(?:-([?.\d]+)x)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Multiplier:',
+                    groups: [2],
+                },
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [3, 4],
+                },
+                ...createUniversalSubmatcher([2]),
+                {
+                    type: 'separator',
+                    description: 'Beneficial orbs:',
+                },
+                ...createOrbsSubmatchers(['STR', 'DEX', 'QCK', 'PSY', 'INT', 'RCV', 'TND', 'BOMB', 'SEMLA', 'RAINBOW', 'WANO', 'SUPERBOMB'], [1]),
+                {
+                    type: 'option',
+                    description: 'Badly Matching',
+                    regex: /Badly Matching/i,
+                    cssClasses: ['min-width-6'],
+                    groups: [1],
+                },
             ]
         },
 
