@@ -16745,6 +16745,33 @@ window.specials = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
         type: "type",
     },
+    4005: {
+        affinity: function(p) { return [1, 1.75, 1.75][p.cached.multiplier]; },
+        orb: function(p) { return [2.5, 1, 2.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost", "Affinity boost", "Both Effects"][n] + '. To switch to ' + ["Orb boost", "Affinity boost", "Both Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4006: {
+        def: function(p) { return .23; },
+        status: function(p) { return p.defenseDown ? 2 : 1; },
+        ignoresImmunities: function(p) { return [[], ['def']][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Normal Defense Reduction", "Immunity Ignoring Defense Reduction"][n] + '. To switch to ' + ["Normal Defense Reduction", "Immunity Ignoring Defense Reduction"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
     4024: {
         def: function(p) { return 0; },
     },
@@ -20925,6 +20952,34 @@ var ghostsSpecials = {
         onActivation: function(p) {
             p.cached.multiplier = p.captain ? p.captain.class.has("Slasher") || p.captain.class.has("Shooter") ? { Good: 0, Great: 0, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 } : { Good: 0, Great: 0, Perfect: 0 };
         },
+    },
+    547: {
+        atk: function(p) { return 2.25; },
+        type: "type",
+    },
+    548: {
+        orb: function(p) { return 2.25; },
+    },
+    549: {
+        atk: function(p) { return 2.25; },
+        type: "type",
+    },
+    550: {
+        orb: function(p) { return 2.25; },
+    },
+    551: {
+        atk: function(p) { return 2.25; },
+        type: "type",
+    },
+    552: {
+        orb: function(p) { return 2.25; },
+    },
+    553: {
+        atk: function(p) { return 2.25; },
+        type: "type",
+    },
+    554: {
+        orb: function(p) { return 2.25; },
     },
 };
 

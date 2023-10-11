@@ -6729,6 +6729,16 @@ window.drops = {
             'Raging Sea': [ 3981, "3957-skull" ]
         },
 
+        {
+            name: 'Baccarat & Dice & Mr. Tanaka',
+            dropID: 'treasuremap74',
+            thumb: 4006,
+            global: true,
+            nakama: 8400600,
+            gamewith: null,
+            'Raging Sea': [ 4006 ]
+        },
+
     ],
 
     

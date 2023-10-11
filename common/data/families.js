@@ -685,6 +685,10 @@ const Gabu = [ "Gabu" ];
 const Snake = [ "Snake" ];
 const BonkPunch = [ "Bonk Punch" ];
 const Monster = [ "Monster" ];
+const RaiseMax = [ "Raise Max" ];
+const DoubleDown = [ "Double Down" ];
+const Ricca = [ "Ricca" ];
+const Tempo = [ "Tempo" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4587,6 +4591,11 @@ window.families = {
     3999: [ ...Gordon ],
     4000: [ ...GildTesoro ],
     4001: [ ...Shiki ],
+    4002: [ ...Nami, ...Carina ],
+    4003: [ ...Nami, ...Carina ],
+    4004: [ ...RaiseMax ],
+    4005: [ ...DoubleDown, ...Ricca, ...Tempo ],
+    4006: [ ...Baccarat, ...Dice, ...Tanaka ],
     4024: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],
@@ -5129,6 +5138,37 @@ const ghostFamilies = {
     521: [ ...Nami, ...NicoRobin ],
     522: [ ...Nami, ...NicoRobin ],
     523: [ ...Nami, ...NicoRobin ],
+    524: [ ...VinsmokeSanji, ...VinsmokeJudge ],
+    525: [ ...VinsmokeSanji, ...VinsmokeJudge ],
+    526: [ ...VinsmokeSanji, ...VinsmokeJudge ],
+    527: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    528: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    529: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    530: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    531: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    532: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    533: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    534: [ ...TrafalgarDWaterLaw, ...EustassKid ],
+    535: [ ...EdwardNewgate, ...Marco ],
+    536: [ ...EdwardNewgate, ...Marco ],
+    537: [ ...EdwardNewgate, ...Marco ],
+    538: [ ...EdwardNewgate, ...Marco ],
+    539: [ ...Borsalino, ...Issho ],
+    540: [ ...Borsalino, ...Issho ],
+    541: [ ...Borsalino, ...Issho ],
+    542: [ ...Borsalino, ...Issho ],
+    543: [ ...Borsalino, ...Issho ],
+    544: [ ...Borsalino, ...Issho ],
+    545: [ ...Borsalino, ...Issho ],
+    546: [ ...Borsalino, ...Issho ],
+    547: [ ...Nami, ...Carina ],
+    548: [ ...Nami, ...Carina ],
+    549: [ ...Nami, ...Carina ],
+    550: [ ...Nami, ...Carina ],
+    551: [ ...Nami, ...Carina ],
+    552: [ ...Nami, ...Carina ],
+    553: [ ...Nami, ...Carina ],
+    554: [ ...Nami, ...Carina ],
 }
 
 Object.keys(ghostFamilies).forEach(function (key) {

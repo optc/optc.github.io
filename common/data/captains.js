@@ -14165,6 +14165,20 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.5: 1; },
         hp: function(p) { return p.unit.type == "INT" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.2 : 1; },
     },
+    4004: {
+        atk: function(p) { return 3.25; },
+    },
+    4005: {
+        atk: function(p) { return 3.25; },
+    },
+    4006: {
+        hitAtk: function(p) {
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            var tesoroModifier = (p.chainPosition === 0 ? 1 : (prev == 'Good' ? 1 : (prev == 'Great' ? 1 : (prev == 'Perfect' ? [1, 1, 0.7, 0.7, 0.7, 0.7, 0.7][CrunchUtils.limitUnlock(p, "captains")] : 1))));
+            return (p.modifiers.slice(0, p.chainPosition).subcontains(["Great", "Great", "Great", "Great"]) ? [3, 3.25, 4.25, 4.5, 4.75, 5, 5] : [3, 3.25, 3.5, 3.75, 4, 4.25, 4.25])[CrunchUtils.limitUnlock(p, "captains")] * tesoroModifier;
+        },
+        hitModifiers: ["Perfect", "Great", "Great", "Great", "Great", "Perfect"],
+    },
     4024: {
         atk: function(p) { return 4.5; },
     },
@@ -16631,6 +16645,38 @@ var ghostsCaptains = {
     546: {
         atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? ['tnd'].has(p.orb) ? 5.5 : 5.25 : 1; },
         hp: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter")) ? 1.3 : 1; },
+    },
+    547: {
+        atk: function(p) { return ['g'].has(p.orb) ? 4.75 : ['meat', 'tnd'].has(p.orb) ? 4.25 : 3.75; },
+        hp: function(p) { return 1.2; },
+    },
+    548: {
+        atk: function(p) { return ['g'].has(p.orb) ? 4.75 : ['meat', 'tnd'].has(p.orb) ? 4.25 : 3.75; },
+        hp: function(p) { return 1.2; },
+    },
+    549: {
+        atk: function(p) { return ['g'].has(p.orb) ? 5 : ['meat', 'tnd'].has(p.orb) ? 4.5 : 4; },
+        hp: function(p) { return 1.2; },
+    },
+    550: {
+        atk: function(p) { return ['g'].has(p.orb) ? 5 : ['meat', 'tnd'].has(p.orb) ? 4.5 : 4; },
+        hp: function(p) { return 1.2; },
+    },
+    551: {
+        atk: function(p) { return ['g'].has(p.orb) ? 4.75 : ['meat', 'tnd'].has(p.orb) ? 4.25 : 3.75; },
+        hp: function(p) { return 1.2; },
+    },
+    552: {
+        atk: function(p) { return ['g'].has(p.orb) ? 4.75 : ['meat', 'tnd'].has(p.orb) ? 4.25 : 3.75; },
+        hp: function(p) { return 1.2; },
+    },
+    553: {
+        atk: function(p) { return ['g'].has(p.orb) ? 5 : ['meat', 'tnd'].has(p.orb) ? 4.5 : 4; },
+        hp: function(p) { return 1.2; },
+    },
+    554: {
+        atk: function(p) { return ['g'].has(p.orb) ? 5 : ['meat', 'tnd'].has(p.orb) ? 4.5 : 4; },
+        hp: function(p) { return 1.2; },
     },
 };
 

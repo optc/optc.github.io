@@ -2668,6 +2668,134 @@ var ghostsAltSpecials = {
             });
         },
     },
+    547: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    548: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    549: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    550: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    551: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    552: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    553: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
+    554: {
+        atkbase: function(p) { return [300, 800][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap'][n] + ' boost. To ' + ['Swap', 'Super Swap'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] = -1;
+        },
+    },
 }
 
 Object.keys(ghostsAltSpecials).forEach(function (key) {
