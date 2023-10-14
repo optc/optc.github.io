@@ -372,6 +372,7 @@ input#burgerMenuState {
 .RCV       { background: sandybrown; }
 .TND       { background: peru; }
 .BLOCK     { background: darkslateblue; }
+.SUPERBLOCK     { background: darkslateblue; color: #ffe97d; }
 .BOMB      { background: maroon; }
 .SEMLA     { background: saddlebrown; }
 .WANO      { background: firebrick; }

@@ -172,6 +172,7 @@ body {
 .RCV   { background: darkgoldenrod; }
 .TND   { background: peru; }
 .BLOCK { background: darkslateblue; }
+.SuperBLOCK { background: darkslateblue; }
 .BOMB  { background: maroon; }
 .WANO  { background: firebrick; }
 .SEMLA  { background: saddlebrown; }
