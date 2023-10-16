@@ -448,7 +448,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'wano') orb = 2.5;
             if (orb == 'g'){
                 orb = 1.5;
-                if (math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn]) > -1) orb = [2, 2.25][math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn])];
+                if (Math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn]) > -1) orb = [2, 2.25][Math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn])];
             }
             if (orb == 'superbomb') orb = 1.5;
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
