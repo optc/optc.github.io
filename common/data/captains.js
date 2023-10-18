@@ -13506,7 +13506,7 @@ window.captains = {
         hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 1.2 : 1; }
     },
     3816: {
-        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Striker") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5.4 : 5 : 1; },
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? p.actions[p.sourceSlot] ? 5.4 : 5 : 1; },
     },
     3817: {
         atk: function(p) { return p.unit.type == "PSY" ? 2.5 : 1; },
