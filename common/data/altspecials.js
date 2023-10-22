@@ -509,6 +509,9 @@ window.altspecials = {
         delay: function(p) { return 1; },
         ignoresImmunities: function(p) { return ['delay']; },
     },
+    3364: {
+        atkPlus: function(p) { return 0.25; },
+    },
     4024: {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
         type: "type",

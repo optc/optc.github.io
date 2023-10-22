@@ -16772,6 +16772,51 @@ window.specials = {
             });
         },
     },
+    4007: {
+        increaseDamageTaken: function(p) { return [2.25, 1][p.cached.multiplier]; },
+        burn: function(p) { return 2; },
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.75 : 0; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Increased Damage Taken Debuff", "Increased Damage Taken Debuff Disabled"][n] + '. To switch to ' + ["Increased Damage Taken Debuff", "Increased Damage Taken Debuff Disabled"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4008: {
+        increaseDamageTaken: function(p) { return [2.25, 1][p.cached.multiplier]; },
+        burn: function(p) { return 2; },
+        orb: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Increased Damage Taken Debuff", "Increased Damage Taken Debuff Disabled"][n] + '. To switch to ' + ["Increased Damage Taken Debuff", "Increased Damage Taken Debuff Disabled"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4009: {
+        affinity: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4010: {
+        staticMult: function(p) { return 100; },
+        atk: function(p) { return p.unit.class.has("Shooter") ? [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "class",
+    },
     4024: {
         def: function(p) { return 0; },
     },

@@ -14179,6 +14179,26 @@ window.captains = {
         },
         hitModifiers: ["Perfect", "Great", "Great", "Great", "Great", "Perfect"],
     },
+    4007: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    4008: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.25 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 1.2 : 1; },
+    },
+    4009: {
+        hitAtk: function(p) {
+            return p.modifiers.slice(0, p.chainPosition).count("Perfect") == p.chainPosition ? 4.25 : 1;
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    4010: {
+        atk: function(p) {
+                return p.unit.class.has("Shooter") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [[5, 5.25],[5.25, 5.5]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : [[4.25, 4.5],[4.5, 4.75]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Shooter") ? [[1.2, 1.2],[1.2, 1.35]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+    },
     4024: {
         atk: function(p) { return 4.5; },
     },

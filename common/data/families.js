@@ -4596,6 +4596,10 @@ window.families = {
     4004: [ ...RaiseMax ],
     4005: [ ...DoubleDown, ...Ricca, ...Tempo ],
     4006: [ ...Baccarat, ...Dice, ...Tanaka ],
+    4007: [ ...Ain ],
+    4008: [ ...Ain ],
+    4009: [ ...Binz ],
+    4010: [ ...Zephyr ],
     4024: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],

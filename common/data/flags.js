@@ -3897,6 +3897,10 @@ window.flags = {
     4003: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     4004: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     4005: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    4007: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
+    4008: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
+    4009: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
+    4010: { rr: 1, rro: 1 },
     4024: { special: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },
