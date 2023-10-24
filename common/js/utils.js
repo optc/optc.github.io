@@ -1259,7 +1259,7 @@
         query = utils.normalizeText(query.toLowerCase().trim());
         var result = {matchers: {}, ranges: {}, query: [], queryTerms: []};
         var ranges = {}, params = ['hp', 'atk', 'stars', 'cost', 'growth', 'rcv', 'id', 'slots', 'combo', 'exp', 'minCD', 'maxCD'];
-        var regex = new RegExp('^((type|class|family|notfamily|supports):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
+        var regex = new RegExp('^((type|class|family|notfamily|supports|units):(.+)|(' + params.join('|') + ')(>|<|>=|<=|=)([-?\\d.]+))$', 'i');
         const typeRegex = /^(?:str|dex|qck|psy|int)$/;
         var tokens = query.replace(/&|\//g, ' ').split(/\s+/);
         tokens.forEach(function (x) {
@@ -1298,7 +1298,7 @@
                     result.ranges[parameter][0] =  value;
                 }
             } else { // matcher (string operators)
-                if (temp[2] === 'supports' && /^[\d|]+$/.test(temp[3])) { // allow only IDs and `|` for a separator
+                if ((['supports', 'units'].includes(temp[2])) && /^[\d|]+$/.test(temp[3])) { // allow only IDs and `|` for a separator
                     // split by `|` and make sure no empty elements are pushed
                     let ids = temp[3].split(/\|+/).filter(x => x.length > 0).map(Number);
                     if (ids.length == 0)
@@ -1310,7 +1310,7 @@
                 } else {
                     result.matchers[temp[2]] = new RegExp(temp[3], 'i');
                 }
-                //console.log(result.matchers); Here for stuff to try to do custom
+                //console.log(result.matchers); //Here for stuff to try to do custom
             }
         });
         if (result.query.length > 0)
@@ -1348,6 +1348,10 @@
             } else if (matcher === 'supports') {
                 let ids = regex; // `regex` is an array of IDs here
                 if (!ids.some(id => utils.canSupportUnit(id, unit)))
+                    return false;
+            } else if (matcher === 'units') {
+                let ids = regex; // `regex` is an array of IDs here
+                if (!ids.some(id => id==unit.number+1))
                     return false;
             } else if (!regex.test(unit[matcher])) {
                 return false;
