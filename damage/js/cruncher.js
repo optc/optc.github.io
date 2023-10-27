@@ -1377,7 +1377,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (([2650, 2651, 2681].indexOf(unit.number + 1) != -1 && teamSlot < 2) || 
                 ([3070, 3071, 3369, 3847, 3848].indexOf(unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) ||
                 ([3398].indexOf(unit.number + 1) != -1 && teamSlot < 2 && $scope.hp.perc > 99) ||
-                (effects[$scope.data.effect].hasOwnProperty('rainbow') && effects[$scope.data.effect].rainbow(unitParams))){
+                (effects[$scope.data.effect] && effects[$scope.data.effect].hasOwnProperty('rainbow') && effects[$scope.data.effect].rainbow(unitParams))){
                     //pass so that the affinityMultiplier is whatever it should be instead of 1
             }
             else if(unit.type != type){

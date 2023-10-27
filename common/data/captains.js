@@ -7895,9 +7895,10 @@ window.captains = {
     },
     2299: {
         atk: function(p) {
-            return p.unit.class.has("Shooter") ? Math.min([2.5, 2.5, 2.5, 2.75, 3, 3, 3.25][CrunchUtils.limitUnlock(p, "captains")], [1.5, 1.75, 1.75, 2, 2, 2, 2.25][CrunchUtils.limitUnlock(p, "captains")] + ([1, .75, .75, .75, 1, 1, 1][CrunchUtils.limitUnlock(p, "captains")]/6) * p.turnCounter) : 1;
+            return p.unit.class.has("Shooter") ? Math.min([[2.5, 2.5, 2.5, 2.75, 3, 3, 3.25],[3.25, 3.25, 3.25, 3.25, 3.25, 3.25, 5.5]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], [[1.5, 1.75, 1.75, 2, 2, 2, 2.25],[2.25, 2.25, 2.25, 2.25, 2.25, 2.25, 4.75]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] + ([[1, .75, .75, .75, 1, 1, 1],[1, 1, 1, 1, 1, 1, 0.75]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")]/[[6, 6, 6, 6, 6, 6, 6],[6, 6, 6, 6, 6, 6, 4]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")]) * p.turnCounter) : 1;
         },
-        rcv: function(p) { return p.unit.class.has("Shooter") ? [1.1, 1.1, 1.2, 1.2, 1.2, 1.3, 1.3][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? [[1.1, 1.1, 1.2, 1.2, 1.2, 1.3, 1.3], [1.3, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return p.unit.class.has("Shooter") ? [[1, 1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1.2]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
     2300: {
         atk: function(p) { return p.frankyCheck.Primary == 6 ? window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.sourceSlot] ? ([[4.25, 4.25],[4.75, 5.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] * [ 1.25, 1, .5, .75 ][['Fighter', 'Slasher', 'Striker', 'Shooter'].indexOf(p.frankyClass[p.slot])]) : [[3.25, 3.5],[4.5, 4.75]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
@@ -9663,7 +9664,7 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; },
     },
     2749: {
-        atk: function(p) { return p.unit.class.has("Fighter") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") ? [2.75, 3.75][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
     },
     2750: {
         atk: function(p) { return (p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 2 : 1; },
@@ -9695,8 +9696,8 @@ window.captains = {
         hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 1.2 : 1; },
     },
     2758: {
-        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 3 : 1; },
-        hp: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 1.2 : 1; },
+        atk: function(p) { return [(p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 3 : 1, (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 5 : 1][CrunchUtils.llimitUnlock(p, "captains")]; },
+        hp: function(p) { return [(p.unit.class.has("Fighter") || p.unit.class.has("Striker")) ? 1.2 : 1, (p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter")) ? 1.3 : 1][CrunchUtils.llimitUnlock(p, "captains")]; },
     },
     2759: {
         atk: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
@@ -9711,8 +9712,8 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") ? 1.5 : 1; },
     },
     2763: {
-        atk: function(p) { return p.unit.class.has("Shooter") ? [1.75, 2, 2, 2, 2, 2, 2.25][CrunchUtils.limitUnlock(p, "captains")] : 1; },
-        affinity: function(p) { console.log(p); return p.unit.class.has("Shooter") ? [1, 1, 1.1, 1.25, 1.4, 1.5, 1.5][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        atk: function(p) { return p.unit.class.has("Shooter") ? [[1.75, 2, 2, 2, 2, 2, 2.25],[2.25, 2.25, 2.25, 2.25, 2.25, 2.25, 3.5]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
+        affinity: function(p) { return p.unit.class.has("Shooter") ? [[1, 1, 1.1, 1.25, 1.4, 1.5, 1.5],[1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.4]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
     2764: {
         atk: function(p) { return p.unit.class.has("Cerebral") ? 2.5 : 1; },
