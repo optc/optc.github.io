@@ -3284,6 +3284,16 @@ window.drops = {
             'Defeat Level Rewards': [ 3999 ],
         },
 
+        {
+            name: 'Tot Musica',
+            dropID: 'pka6',
+            thumb: 3721,
+            global: true,
+            //nakama: 6395200,
+            gamewith: null,
+            'Defeat Level Rewards': [ 4025 ],
+        },
+
     ],
 
 
@@ -8562,6 +8572,14 @@ window.drops = {
             global: true,
             nakama: 6388700,
             'Chopper Man Missions': [ 3887, "3903-skull" ],
+        },
+
+        {
+            name: 'Pirate Alliance Challenge - Straw Hat And Diva',
+            thumb: 4021,
+            global: true,
+            nakama: 6402100,
+            'Chopper Man Missions': [ 4021 ],
         },
 
         {

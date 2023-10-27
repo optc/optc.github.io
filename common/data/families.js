@@ -689,6 +689,7 @@ const RaiseMax = [ "Raise Max" ];
 const DoubleDown = [ "Double Down" ];
 const Ricca = [ "Ricca" ];
 const Tempo = [ "Tempo" ];
+const LimeJuice = [ "Lime Juice" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4600,7 +4601,15 @@ window.families = {
     4008: [ ...Ain ],
     4009: [ ...Binz ],
     4010: [ ...Zephyr ],
+    4011: [ ...Shanks ],
+    4012: [ ...MonkeyDLuffy ],
+    4019: [ ...CharlotteKatakuri, ...CharlotteOven ],
+    4020: [ ...CharlotteKatakuri, ...CharlotteOven ],
+    4021: [ ...Makino, ...MonkeyDLuffy, ...Uta ],
+    4022: [ ...Rockstar ],
+    4023: [ ...LimeJuice ],
     4024: [ ...MonkeyDLuffy ],
+    4025: [ ...Blueno, ...Bepo, ...Sunny ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

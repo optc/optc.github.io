@@ -16817,8 +16817,82 @@ window.specials = {
         atk: function(p) { return p.unit.class.has("Shooter") ? [2.25, 2.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "class",
     },
+    4011: {
+        ignoresImmunities: function(p) { return ['def']; },
+        def: function(p) { return 0; },
+        orb: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") || p.unit.class.has("Fighter") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        orbPlus: function(p) { return [0, 0.5, 0.5][p.cached.multiplier]; },
+        chainMultiplication: function(p) { return [1, 1.5, 1.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Orb Buff & Chain Multiplication", "Orb Boost, Orb Buff & Chain Multiplication"][n] + '. To switch to ' + ["Orb Boost", "Orb Buff & Chain Multiplication", "Orb Boost, Orb Buff & Chain Multiplication"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4012: {
+        ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
+        increaseDamageTaken: function(p) { return 1.5; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        type: "class",
+        atkPlus: function(p) { return [0, 0.5, 0.5][p.cached.multiplier]; },
+        chain: function(p) { return [1, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 35, 35][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "ATK Buff & Chain Boundary", "ATK Boost, ATK Buff & Chain Boundary"][n] + '. To switch to ' + ["ATK Boost", "ATK Buff & Chain Boundary", "ATK Boost, ATK Buff & Chain Boundary"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4019: {
+        status: function(p) { return p.defenseDown ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5] : 1; },
+        chainAddition: function(p) { return [0, 1.5, 1.5, 0, 0, 1.5, 1.5][p.cached.multiplier]; },
+        atkbase: function(p) { return [0, 0, 0, 1250, 1250, 1250, 1250][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["DEF Down Status Boost", "Chain Addition", "DEF Down Status Boost & Chain Addition", "Base ATK", "DEF Down Status Boost & Base ATK", "Chain Addition & Base ATK", "DEF Down Status Boost, Chain Addition & Base ATK"][n] + '. To switch to ' + ["DEF Down Status Boost", "Chain Addition", "DEF Down Status Boost & Chain Addition", "Base ATK", "DEF Down Status Boost & Base ATK", "Chain Addition & Base ATK", "DEF Down Status Boost, Chain Addition & Base ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4020: {
+        status: function(p) { return p.defenseDown ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5] : 1; },
+        chainAddition: function(p) { return [0, 1.5, 1.5, 0, 0, 1.5, 1.5][p.cached.multiplier]; },
+        atkbase: function(p) { return [0, 0, 0, 1250, 1250, 1250, 1250][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["DEF Down Status Boost", "Chain Addition", "DEF Down Status Boost & Chain Addition", "Base ATK", "DEF Down Status Boost & Base ATK", "Chain Addition & Base ATK", "DEF Down Status Boost, Chain Addition & Base ATK"][n] + '. To switch to ' + ["DEF Down Status Boost", "Chain Addition", "DEF Down Status Boost & Chain Addition", "Base ATK", "DEF Down Status Boost & Base ATK", "Chain Addition & Base ATK", "DEF Down Status Boost, Chain Addition & Base ATK"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4022: {
+        affinity: function(p) { return 2; },
+    },
+    4023: {
+        paralysis: function(p) { return 3; },
+    },
     4024: {
         def: function(p) { return 0; },
+    },
+    4025: {
+        status: function(p) { return p.defenseDown ? 2 : 1; },
     },
 };
 

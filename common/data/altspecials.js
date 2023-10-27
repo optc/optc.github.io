@@ -512,6 +512,21 @@ window.altspecials = {
     3364: {
         atkPlus: function(p) { return 0.25; },
     },
+    4011: {
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
+    },
+    4012: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    4020: {
+        def: function(p) { return 0.1; },
+    },
     4024: {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
         type: "type",

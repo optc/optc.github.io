@@ -104,6 +104,14 @@ window.capspecials = {
             });
         },
     },
+    4019: {
+        burn: function(p) { return 1; },
+        def: function(p) { return 0; },
+    },
+    4020: {
+        burn: function(p) { return 1; },
+        def: function(p) { return 0; },
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };

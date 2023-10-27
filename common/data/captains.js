@@ -14199,8 +14199,48 @@ window.captains = {
         },
         hp: function(p) { return p.unit.class.has("Shooter") ? [[1.2, 1.2],[1.2, 1.35]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
+    4011: {
+        atk: function(p) {
+                return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.5 : 5.25 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") || p.unit.class.has("Fighter") || p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
+    4012: {
+        atk: function(p) {
+                return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? 5.5 : 5.25 : 1;
+        },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
+    4019: {
+        atk: function(p) {
+                return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? p.actions[p.sourceSlot] ? 5.75 : 5.25 : 1;
+        },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    4020: {
+        atk: function(p) {
+                return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? p.actions[p.sourceSlot] ? 5.75 : 5.25 : 1;
+        },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? 1.2 : 1; },
+    },
+    4021: {
+        atk: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    4022: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? p.percHP <= 50 ? 4 : 3.5 : 1; },
+        hp: function(p) { return 1.3; },
+    },
+    4023: {
+        atk: function(p) { return 3.5; },
+        hp: function(p) { return 1.2; },
+    },
     4024: {
         atk: function(p) { return 4.5; },
+    },
+    4025: {
+        atk: function(p) { return 4; },
+        hp: function(p) { return 1.2; },
     },
 };
 
