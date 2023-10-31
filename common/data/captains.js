@@ -14243,6 +14243,14 @@ window.captains = {
         atk: function(p) { return 4; },
         hp: function(p) { return 1.2; },
     },
+    4026: {
+        atk: function(p) { return p.unit.type == "DEX" ? 2.2 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" ? 1.5 : 1; },
+    },
+    4027: {
+        atk: function(p) { return p.unit.class.has("Fighter") ? 2.2 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") ? 1.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

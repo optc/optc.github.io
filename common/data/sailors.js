@@ -3152,6 +3152,16 @@ window.sailors = {
         hpStatic: function(p) { return 75; },
         rcvStatic: function(p) { return 75; },
     },
+    4026: {
+        atkStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+        hpStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+        rcvStatic: function(p) { return p.unit.type == "DEX" ? 50 : 0; },
+    },
+    4027: {
+        atkStatic: function(p) { return p.unit.class.has("Fighter") ? 45 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Fighter") ? 45 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Fighter") ? 45 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

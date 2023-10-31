@@ -16902,6 +16902,15 @@ window.specials = {
     4025: {
         status: function(p) { return p.defenseDown ? 2 : 1; },
     },
+    4026: {
+        atk: function(p) { return p.unit.type == "DEX" ? 1.75 : 1; },
+        type: "class",
+        atkbase: function(p) { return p.slot == p.sourceSlot ? 800 : 0; },
+    },
+    4027: {
+        atk: function(p) { return 1.5; },
+        type: "class",
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

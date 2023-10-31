@@ -4024,6 +4024,8 @@ window.units = [
     [ "Lime Juice", "PSY", ["Free Spirit", "Striker"], 5, 30, 4, 4, 99, 4000000, 1631, 728, 111, 3261, 1456, 222, 1 ],
     [ "Monkey D. Luffy - Yearning for Adventure", "STR", ["Fighter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 2212, 734, 74, 3647, 1478, 135, 1 ],
     [ "Blueno & Bepo & Sunny-kun", "PSY", ["Cerebral", "Fighter"], 5, 40, 4, 4, 99, 5000000, 1620, 729, 112, 3240, 1458, 224, 1 ],
+    [ "Douglas Bullet - Score-Settling Brawl", "DEX", ["Fighter", "Driven"], 5, 30, 4, 4, 99, 4000000, 2391, 745, 54, 4781, 1490, 107, 1 ],
+    [ "Ann - Diva of the Pirates Expo", "DEX", ["Fighter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1989, 653, 151, 3978, 1305, 302, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
