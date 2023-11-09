@@ -4026,6 +4026,12 @@ window.units = [
     [ "Blueno & Bepo & Sunny-kun", "PSY", ["Cerebral", "Fighter"], 5, 40, 4, 4, 99, 5000000, 1620, 729, 112, 3240, 1458, 224, 1 ],
     [ "Douglas Bullet - Score-Settling Brawl", "DEX", ["Fighter", "Driven"], 5, 30, 4, 4, 99, 4000000, 2391, 745, 54, 4781, 1490, 107, 1 ],
     [ "Ann - Diva of the Pirates Expo", "DEX", ["Fighter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1989, 653, 151, 3978, 1305, 302, 1 ],
+    [ "Coby - Hero Arriving at Elegia", "STR", ["Fighter", "Cerebral"], 5, 30, 4, 3, 70, 1066998, 1143, 426, 72, 2287, 851, 145, 1 ],
+    [ "Coby - Commanding the Defensive Formation", "STR", ["Fighter", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 2257, 845, 143, 4513, 1690, 285, 1 ],
+    [ "Jellyfish Pirates", "STR", ["Slasher", "Driven"], 5, 30, 4, 4, 99, 4000000, 1544, 720, 128, 3088, 1440, 256, 1 ],
+    [ "Romy & Yorueka", "PSY", ["Free Spirit", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1649, 682, 123, 3298, 1363, 246, 1 ],
+    [ "Trafalgar Law - Pushing Through the Uta World", "STR", ["Cerebral", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1608, 754, 106, 3215, 1507, 212, 1 ],
+    [ "Blueno & Bepo & Sunny-kun - Fleeing Little Ones", "PSY", ["Cerebral", "Fighter"], "5+", 40, 4, 4, 99, 5000000, 1664, 791, 115, 3327, 1581, 229, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
