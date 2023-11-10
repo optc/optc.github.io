@@ -531,6 +531,9 @@ window.altspecials = {
         atk: function(p) { return p.unit.type == "STR" ? 2.25 : 1; },
         type: "type",
     },
+    4029: {
+        atkbase: function(p) { return 1250; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

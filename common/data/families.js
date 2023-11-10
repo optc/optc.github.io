@@ -690,6 +690,11 @@ const DoubleDown = [ "Double Down" ];
 const Ricca = [ "Ricca" ];
 const Tempo = [ "Tempo" ];
 const LimeJuice = [ "Lime Juice" ];
+const Eboshi = [ "Eboshi" ];
+const Hanagasa = [ "Hanagasa" ];
+const Kaginote = [ "Kaginote" ];
+const Romy = [ "Romy" ];
+const Yorueka = [ "Yorueka" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4612,6 +4617,12 @@ window.families = {
     4025: [ ...Blueno, ...Bepo, ...Sunny ],
     4026: [ ...DouglasBullet ],
     4027: [ ...Ann ],
+    4028: [ ...Coby ],
+    4029: [ ...Coby ],
+    4030: [ ...Eboshi, ...Hanagasa, ...Kaginote ],
+    4031: [ ...Romy, ...Yorueka ],
+    4032: [ ...TrafalgarDWaterLaw ],
+    4033: [ ...Blueno, ...Bepo, ...Sunny ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

@@ -352,7 +352,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb =='meat'){
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889, 3904, 3905, 3947, 3948, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 3955, 3956, 3957, 3966, 3967, 5547, 5548, 5549, 5550, 5551, 5552, 5553, 5554 ].includes(team[temp].unit.number + 1)){
+                        if ([ 1610, 1609, 1532, 1531, 2232, 2233, 2234, 2500, 2300, 2803, 2804, 5052, 5054, 5055, 5057, 2957, 2957, 3306, 3307, 3814, 3888, 3889, 3904, 3905, 3947, 3948, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 3955, 3956, 3957, 3966, 3967, 5547, 5548, 5549, 5550, 5551, 5552, 5553, 5554, 4028, 4029 ].includes(team[temp].unit.number + 1)){
                             orb = 2;
                         }
                         if ([ 2012, 2013 ].includes(team[temp].unit.number + 1) && x.unit.class.has("Free Spirit")){
@@ -370,12 +370,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (window.altspecials[3956].turnedOn) orb = 3
             }
             if (orb =='tnd'){
-                orb = (window.altspecials[3895].turnedOn.includes(true) || window.altspecials[3896].turnedOn.includes(true)) ? 2.5 : 
-                    (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn) ? 2.25 :
+                orb = (window.specials[4028].turnedOn == 2 || window.specials[4029].turnedOn == 2) ? 2.75 : 
+                    (window.altspecials[3895].turnedOn.includes(true) || window.altspecials[3896].turnedOn.includes(true)) ? 2.5 : 
+                    (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn || window.specials[4028].turnedOn == 1 || window.specials[4029].turnedOn == 1) ? 2.25 :
                     (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : orb;
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 3904, 3905, 3947, 3948, 3966, 3967, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 5539, 5540, 5541, 5542, 5543, 5544, 5545, 5546, 5547, 5548, 5549, 5550, 5551, 5552, 5553, 5554 ].includes(team[temp].unit.number + 1)){
+                        if ([ 3904, 3905, 3947, 3948, 3966, 3967, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 5539, 5540, 5541, 5542, 5543, 5544, 5545, 5546, 5547, 5548, 5549, 5550, 5551, 5552, 5553, 5554, 4028, 4029 ].includes(team[temp].unit.number + 1)){
                             orb = orb == 'tnd' ? 2 : Math.max(orb,2);
                         }
                     }

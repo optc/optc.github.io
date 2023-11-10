@@ -16911,6 +16911,58 @@ window.specials = {
         atk: function(p) { return 1.5; },
         type: "class",
     },
+    4028: {
+        affinity: function(p) { return p.cached.multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var levels = [2.25, 2.5, 2.75];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = n;
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4029: {
+        affinity: function(p) { return p.cached.multiplier; },
+        type: "class",
+        onActivation: function(p) {
+            var levels = [2.25, 2.5, 2.75];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = n;
+            p.scope.notify({
+                text: 'Using the ' + levels[n] + 'x boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4030: {
+        atk: function(p) { return p.unit.type == "STR" ? 1.75 : 1; },
+        type: "class",
+    },
+    4032: {
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
+        chainAddition: function(p) { return 1.0; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.sourceSlot <= 1 ? 2 : 1;
+        },
+    },
+    4033: {
+        status: function(p) { return p.defenseDown ? [2, 1, 2][p.cached.multiplier] : 1; },
+        statusPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ["Conditional Boost", "Conditional Buff", "Conditional Boost and Conditional Buff"][n] + ' boost. To ' + ["Conditional Boost", "Conditional Buff", "Conditional Boost and Conditional Buff"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

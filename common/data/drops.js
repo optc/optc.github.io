@@ -6749,6 +6749,16 @@ window.drops = {
             'Raging Sea': [ 4006 ]
         },
 
+        {
+            name: 'Blueno & Bepo & Sunny-kun',
+            dropID: 'treasuremap75',
+            thumb: 4033,
+            global: true,
+            nakama: 8403300,
+            gamewith: null,
+            'Raging Sea': [ 4033 ]
+        },
+
     ],
 
     

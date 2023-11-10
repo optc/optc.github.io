@@ -3910,6 +3910,11 @@ window.flags = {
     4024: { special: 1 },
     4026: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     4027: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    4028: { rr: 1, rro: 1, lrr: 1, annilrr: 1 },
+    4029: { rr: 1, rro: 1, lrr: 1, annilrr: 1 },
+    4030: { rr: 1, rro: 1 },
+    4031: { rr: 1, rro: 1 },
+    4032: { rr: 1, rro: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },
