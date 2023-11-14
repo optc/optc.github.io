@@ -389,14 +389,14 @@ window.sailors = {
         atkStatic: function(p) { return p.slot <= 1 ? 100 : 0; },
     },
     1916: {
-        atkStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
-        hpStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
-        rcvStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
+        atkStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors2")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
+        hpStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors2")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
+        rcvStatic: function(p) { return (p.unit.class.has("Free Spirit") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0) + (p.unit.class.has("Powerhouse") ? [[0, 0, 30],[0, 0, 75]][CrunchUtils.llimitUnlock(p, "sailors2")][CrunchUtils.limitUnlock(p, "sailors")] : 0); },
     },
     1972: {
-        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Cerebral") ? [[0, 30, 30],[0, 60, 60]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     1973: {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") ? 75 : 0; },
@@ -563,7 +563,7 @@ window.sailors = {
         atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Driven") ? p.slot == p.sourceSlot ? 100 : 0 : 0 : 0; },
     },
     2205: {
-        atkStatic: function(p) { return p.captain != null ? p.captain.class.has("Driven") ? [p.slot == p.sourceSlot, true][CrunchUtils.llimitUnlock(p, "sailors")] ? 100 : 0 : 0 : 0; },
+        atkStatic: function(p) { return (p.captain != null ? p.captain.class.has("Driven") ? [p.slot == p.sourceSlot, true][CrunchUtils.llimitUnlock(p, "sailors1")] ? 100 : 0 : 0 : 0) + [0, 50][CrunchUtils.limitUnlock(p, "sailors")]; },
     },
     2266: {
         staticMult: function(p) { return 2; }
@@ -612,9 +612,9 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? 50 : 0; },
     },
     2299: {
-        atkStatic: function(p) { return p.unit.class.has("Shooter") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Shooter") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
-        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Shooter") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Shooter") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Shooter") ? [[0, 30, 30],[0, 75, 75]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     2305: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 75 : 0; },
@@ -3127,8 +3127,8 @@ window.sailors = {
         rcvStatic: function(p) { return p.unit.class.has("Free Spirit") || p.unit.class.has("Cerebral") ? 60 : 0; },
     },
     4000: {
-        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, [50, 100][CrunchUtils.llimitUnlock(p, "sailors")], [50, 100][CrunchUtils.llimitUnlock(p, "sailors")]][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
-        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, [50, 100][CrunchUtils.llimitUnlock(p, "sailors")], [50, 100][CrunchUtils.llimitUnlock(p, "sailors")]][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, [50, 100][CrunchUtils.llimitUnlock(p, "sailors1")], [50, 100][CrunchUtils.llimitUnlock(p, "sailors1")]][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, [50, 100][CrunchUtils.llimitUnlock(p, "sailors1")], [50, 100][CrunchUtils.llimitUnlock(p, "sailors1")]][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4008: {
         atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? [0, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
@@ -3137,7 +3137,7 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? [0, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4010: {
-        staticMult: function(p) { return [[0, 4],[0, 10]][CrunchUtils.llimitUnlock(p, "sailors")][CrunchUtils.limitUnlock(p, "sailors")]; }
+        staticMult: function(p) { return [[0, 4],[0, 10]][CrunchUtils.llimitUnlock(p, "sailors1")][CrunchUtils.limitUnlock(p, "sailors")]; }
     },
     4020: {
         atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },

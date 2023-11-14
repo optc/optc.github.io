@@ -16863,7 +16863,7 @@ window.specials = {
         },
     },
     4019: {
-        status: function(p) { return p.defenseDown ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5] : 1; },
+        status: function(p) { return p.defenseDown ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5][p.cached.multiplier] : 1; },
         chainAddition: function(p) { return [0, 1.5, 1.5, 0, 0, 1.5, 1.5][p.cached.multiplier]; },
         atkbase: function(p) { return [0, 0, 0, 1250, 1250, 1250, 1250][p.cached.multiplier]; },
         onActivation: function(p) {
@@ -16877,7 +16877,7 @@ window.specials = {
         },
     },
     4020: {
-        status: function(p) { return p.defenseDown ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5] : 1; },
+        status: function(p) { return p.defenseDown ? [2.5, 1, 2.5, 1, 2.5, 1, 2.5][p.cached.multiplier] : 1; },
         chainAddition: function(p) { return [0, 1.5, 1.5, 0, 0, 1.5, 1.5][p.cached.multiplier]; },
         atkbase: function(p) { return [0, 0, 0, 1250, 1250, 1250, 1250][p.cached.multiplier]; },
         onActivation: function(p) {
