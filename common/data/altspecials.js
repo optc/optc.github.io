@@ -534,6 +534,27 @@ window.altspecials = {
     4029: {
         atkbase: function(p) { return 1250; },
     },
+    4035: {
+        dmgredatk: function(p) { return 1+(p.dmgreductionCounter/100); },
+    },
+    4038: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    4039: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

@@ -938,6 +938,11 @@ window.sailors = {
     2661: {
         atkStatic: function(p) { return p.unit.class.has("Fighter") ? 40 : 0; },
     },
+    2672: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     2673: {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "DEX" ? 50 : 0; },
     },
@@ -3166,6 +3171,23 @@ window.sailors = {
         atkStatic: function(p) { return 75; },
         hpStatic: function(p) { return 75; },
         rcvStatic: function(p) { return 75; },
+    },
+    4034: {
+        atkStatic: function(p) { return p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [0, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4035: {
+        atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? [0, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4037: {
+        atkStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY" ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4038: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4039: {
+        atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4986: {
         staticMult: function(p) { return 3; }

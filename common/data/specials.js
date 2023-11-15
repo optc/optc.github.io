@@ -16963,6 +16963,39 @@ window.specials = {
             });
         },
     },
+    4034: {
+        atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
+        type: "class",
+    },
+    4035: {
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 2.5 : 1; },
+    },
+    4036: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 2 : 1; },
+        type: "class",
+    },
+    4037: {
+        atk: function(p) { return p.slot == p.sourceSlot ? [3, 3.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "type",
+        orb: function(p) { return p.slot == p.sourceSlot ? [3, 3.5][CrunchUtils.llimitUnlock(p, "specials")] : 1},
+        atkbase: function(p) { return p.slot == p.sourceSlot ? [1250, 1500][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+        affinityPlus: function(p) { return [[0, 0.25][CrunchUtils.llimitUnlock(p, "specials")], 0][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: 'Using the ' + ["Affinity Buff Enabled", "Affinity Buff Disabled"][levels[n]] + ' boost. To switch to the ' + ["Affinity Buff Enabled", "Affinity Buff Disabled"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: '3209warning'
+            });
+        },
+    },
+    4038: {
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 2 : 1; },
+    },
+    4039: {
+        affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

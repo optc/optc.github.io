@@ -112,11 +112,29 @@ window.capspecials = {
         burn: function(p) { return 1; },
         def: function(p) { return 0; },
     },
+    4034: {
+        atkPlus: function(p) { return 0.25; },
+    },
+    4035: {
+        orbPlus: function(p) { return 0.25; },
+    },
+    4038: {
+        affinityPlus: function(p) { return 0.25; },
+    },
+    4039: {
+        affinityPlus: function(p) { return 0.25; },
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };
 
 var ghostsCapSpecials = {
+    14: {
+        atkPlus: function(p) { return [0, 0.25][CrunchUtils.llimitUnlock(p, "captains")]; },
+    },
+    15: {
+        atkPlus: function(p) { return [0, 0.25][CrunchUtils.llimitUnlock(p, "captains")]; },
+    },
     304: {
         atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2 : 1; },
         type: "type",
@@ -188,6 +206,16 @@ var ghostsCapSpecials = {
     },
     428: {
         delay: function(p) { return 1; },
+    },
+    429: {
+        atkPlus: function(p) { return 0.25; },
+        orbPlus: function(p) { return 0.25; },
+        affinityPlus: function(p) { return 0.25; },
+    },
+    431: {
+        atkPlus: function(p) { return 0.25; },
+        orbPlus: function(p) { return 0.25; },
+        affinityPlus: function(p) { return 0.25; },
     },
     449: {
         dmgredatk: function(p) { return Math.min(1.5, 1+(p.dmgreductionCounter/100)); },

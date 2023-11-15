@@ -451,7 +451,11 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 orb = 1.5;
                 if (Math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn]) > -1) orb = [2, 2.25][Math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn])];
             }
-            if (orb == 'superbomb') orb = 1.5;
+            if (orb == 'superbomb'){
+                orb = 1.5;
+                orb = window.altspecials[4038].turnedOn || window.altspecials[4039].turnedOn ? 2.5 : 
+                window.specials[3762].turnedOn ? 2.25 : orb;
+            }
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
