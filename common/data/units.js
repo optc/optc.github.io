@@ -4032,6 +4032,12 @@ window.units = [
     [ "Romy & Yorueka", "PSY", ["Free Spirit", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1649, 682, 123, 3298, 1363, 246, 1 ],
     [ "Trafalgar Law - Pushing Through the Uta World", "STR", ["Cerebral", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1608, 754, 106, 3215, 1507, 212, 1 ],
     [ "Blueno & Bepo & Sunny-kun - Fleeing Little Ones", "PSY", ["Cerebral", "Fighter"], "5+", 40, 4, 4, 99, 5000000, 1664, 791, 115, 3327, 1581, 229, 1 ],
+    [ "Kaido - Beast Ruler of Wano", "INT", ["Powerhouse", "Driven"], 5, 30, 4, 4, 99, 4000000, 1743, 864, 64, 3582, 1578, 127, 1 ],
+    [ "Sir Crocodile - Ruler of the Sands", "QCK", ["Cerebral", "Driven"], 5, 30, 4, 4, 99, 4000000, 1248, 824, 71, 3556, 1543, 143, 1 ],
+    [ "Bartolomeo - Barrier to Subdue the Diva", "INT", ["Striker", "Driven"], 5, 1, 4, 4, 99, 4000000, 1261, 618, 134, 2522, 1236, 269, 1 ],
+    [ "Monkey D. Luffy - Carving Out His Own Adventure", "PSY", ["Fighter", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 2005, 912, 162, 4010, 1824, 324, 1 ],
+    [ "Eustass Kid - New Generation Overtaking the Emperor", "DEX", ["Driven", "Striker"], 5, 50, 4, 4, 99, 5000000, 1543, 844, 108, 3243, 1454, 205, 1 ],
+    [ "Eustass \"Captain\" Kid - Pulverizing Magnetism", "DEX", ["Driven", "Striker"], "5+", 50, 4, 4, 99, 5000000, 2011, 923, 116, 3435, 1568, 215, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
