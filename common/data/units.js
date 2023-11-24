@@ -4038,6 +4038,14 @@ window.units = [
     [ "Monkey D. Luffy - Carving Out His Own Adventure", "PSY", ["Fighter", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 2005, 912, 162, 4010, 1824, 324, 1 ],
     [ "Eustass Kid - New Generation Overtaking the Emperor", "DEX", ["Driven", "Striker"], 5, 50, 4, 4, 99, 5000000, 1543, 844, 108, 3243, 1454, 205, 1 ],
     [ "Eustass \"Captain\" Kid - Pulverizing Magnetism", "DEX", ["Driven", "Striker"], "5+", 50, 4, 4, 99, 5000000, 2011, 923, 116, 3435, 1568, 215, 1 ],
+    [ "Kozuki Momonosuke - Pink Dragon Protecting Wano", "QCK", ["Slasher", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1091, 432, 66, 2182, 864, 133, 1 ],
+    [ "Kozuki Momonosuke - Shogun of Wano", "QCK", ["Slasher", "Free Spirit"], 6, 40, 4, 5, 99, 5000000, 2152, 858, 131, 4304, 1715, 261, 1 ],
+    [ "Kozuki Hiyori - Opening of the Tragic Days", "QCK", ["Slasher", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 981, 424, 95, 1962, 847, 190, 1 ],
+    [ "Kozuki Hiyori - Engraved Crest of the Kozuki Clan", "QCK", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1932, 841, 188, 3863, 1682, 376, 1 ],
+    [ "Kozuki Sukiyaki", "QCK", ["Slasher", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1579, 760, 109, 3158, 1520, 217, 1 ],
+    [ "Law & Robin", "QCK", ["Slasher", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1554, 792, 102, 3108, 1584, 204, 1 ],
+    [ "Okiku & Otoko", "QCK", ["Slasher", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1569, 745, 118, 3137, 1489, 236, 1 ],
+    [ "Monkey D. Luffy - Enjoying the Flavor of the Festival", "QCK", ["Fighter", "Free Spirit"], 5, 40, 4, 4, 99, 5000000, 1671, 722, 106, 3341, 1444, 212, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
