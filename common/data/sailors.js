@@ -3189,6 +3189,23 @@ window.sailors = {
     4039: {
         atkStatic: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Driven") ? [0, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    4041: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        chainAddition: function(p) { return [0, 0.1, 0.1][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    4044: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 75 : 0; },
+    },
+    4045: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [0, 50][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [0, 50][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [0, 50][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4046: {
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 75 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -609,7 +609,7 @@ const Tama = [ "Tama" ];
 const MissTsuru = [ "Miss Tsuru", "Otsuru", "Tsurunojo" ];
 const Denjiro = [ "Denjiro", "Kyoshiro" ];
 const AshuraDoji = [ "Ashura Doji", "Shutenmaru" ];
-const TenguyamaHitetsu = [ "Tenguyama Hitetsu" ];
+const TenguyamaHitetsu = [ "Tenguyama Hitetsu", "Kozuki Sukiyaki" ];
 const CharlotteCustard = [ "Charlotte Custard" ];
 const Unluckies = [ "Unluckies" ];
 const BuenaFesta = [ "Buena Festa" ];
@@ -4629,6 +4629,14 @@ window.families = {
     4037: [ ...MonkeyDLuffy ],
     4038: [ ...EustassKid ],
     4039: [ ...EustassKid ],
+    4040: [ ...KozukiMomonosuke ],
+    4040: [ ...KozukiMomonosuke ],
+    4040: [ ...KozukiHiyori ],
+    4040: [ ...KozukiHiyori ],
+    4040: [ ...TenguyamaHitetsu ],
+    4040: [ ...TrafalgarDWaterLaw, ...NicoRobin ],
+    4040: [ ...Kikunojo, ...Toko ],
+    4040: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

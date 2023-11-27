@@ -705,7 +705,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '668warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -717,7 +717,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '669warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -871,7 +871,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Self Attack boost.',
-                name: '780warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -883,7 +883,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Self Attack boost.',
-                name: '781warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -992,7 +992,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 20%, using the ' + n + 'x multiplier.',
-                name: '828warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }  
     },
@@ -1004,7 +1004,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 20%, using the ' + n + 'x multiplier.',
-                name: '829warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1062,7 +1062,7 @@ window.specials = {
                 text: (window.specials[843].first ?
                     'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
                     'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
-                name: '843warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1078,7 +1078,7 @@ window.specials = {
                 text: (window.specials[844].first ?
                     'Boosting Shooters. To switch to the second multiplier, disable and re-enable this special' :
                     'Boosting Shooters, Slashers and Strikers. To switch to the first multiplier, disable and re-enable this special'),
-                name: '844warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1155,7 +1155,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '873warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1166,7 +1166,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '874warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1192,7 +1192,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '883warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1204,7 +1204,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '884warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1216,7 +1216,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '885warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1228,7 +1228,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '886warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1247,7 +1247,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '902warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1259,7 +1259,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '902warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1278,7 +1278,7 @@ window.specials = {
             window.specials[905].stage = (window.specials[905].stage + 1) % 3;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[905].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '905warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1294,7 +1294,7 @@ window.specials = {
             window.specials[906].stage = (window.specials[906].stage + 1) % 3;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[906].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '906warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1323,7 +1323,7 @@ window.specials = {
             window.specials[911].stage = (window.specials[911].stage + 1) % 2;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[911].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '911warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1338,7 +1338,7 @@ window.specials = {
             window.specials[912].stage = (window.specials[912].stage + 1) % 2;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[912].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '912warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1433,7 +1433,7 @@ window.specials = {
             p.cached.multiplier = [1.1, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
-                name: '965warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1445,7 +1445,7 @@ window.specials = {
             p.cached.multiplier = [1.1, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.1, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.1][n] + 'x multiplier, disable and re-enable this special',
-                name: '965warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1523,7 +1523,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Orb boost.',
-                name: '1024warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1534,7 +1534,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Orb boost.',
-                name: '1025warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1544,7 +1544,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '1028warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1554,7 +1554,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '1029warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1579,7 +1579,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '1040warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1591,7 +1591,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '1041warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1668,7 +1668,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Attack boost.',
-                name: '1082warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1680,7 +1680,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below 30%' : n == 1.5 ? 'between 70% and 30%' : 'above 70%') + ', using the ' + n + 'x Attack boost.',
-                name: '1083warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1772,7 +1772,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1132warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1784,7 +1784,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1133warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1835,7 +1835,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' ' + (n == 1.75 ? '10%' : n == 1.5 ? '10%' : n == 1.25 ? '30%' : '50%') + ', using the ' + n + 'x multiplier.',
-                name: '1168warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1847,7 +1847,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' ' + (n == 1.75 ? '10%' : n == 1.5 ? '10%' : n == 1.25 ? '30%' : '50%') + ', using the ' + n + 'x multiplier.',
-                name: '1168warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1915,7 +1915,7 @@ window.specials = {
             window.specials[1219].stage = (window.specials[1219].stage + 1) % 3;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[1219].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '1219warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1931,7 +1931,7 @@ window.specials = {
             window.specials[1220].stage = (window.specials[1220].stage + 1) % 3;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[1220].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '1220warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1978,7 +1978,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '1237warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1988,7 +1988,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '1238warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -1998,7 +1998,7 @@ window.specials = {
             window.specials[1239].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Kizaru is your captain',
-                name: '1239warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -2011,7 +2011,7 @@ window.specials = {
             window.specials[1240].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Kizaru is your captain',
-                name: '1240warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -2032,7 +2032,7 @@ window.specials = {
             p.cached.multiplier = [1.3, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1245warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2044,7 +2044,7 @@ window.specials = {
             p.cached.multiplier = [1.3, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1246warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2056,7 +2056,7 @@ window.specials = {
             p.cached.multiplier = [1.3, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1247warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2274,7 +2274,7 @@ window.specials = {
             window.specials[1339].stage = (window.specials[1339].stage + 1) % 3;
             p.scope.notify({
                 text: 'Activating stage #' + (window.specials[1339].stage + 1) + '. To move onto the next stage, disable and re-enable this special.',
-                name: '1339warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2349,7 +2349,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1367warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2360,7 +2360,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Orb boost. To switch to the ' + [1.75, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1368warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2448,7 +2448,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x Affinity boost, disable and re-enable this special',
-                name: '1400warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2459,7 +2459,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x Affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x Affinity boost, disable and re-enable this special',
-                name: '1401warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2471,7 +2471,7 @@ window.specials = {
             p.cached.multiplier = [1.3, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.3, 1.5][n] + 'x Type boost. To switch to the ' + [1.5, 1.3][n] + 'x Type boost, disable and re-enable this special',
-                name: '1402warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2565,7 +2565,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
-                name: '1421warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2577,7 +2577,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
-                name: '1422warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2667,7 +2667,7 @@ window.specials = {
             p.cached.multiplier = [1.2, 1.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.2, 1.5][n] + 'x ATK multiplier. To switch to the ' + [1.5, 1.2][n] + 'x multiplier, disable and re-enable this special',
-                name: '1447warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2749,7 +2749,7 @@ window.specials = {
             p.cached.multiplier = [1.25, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '1482warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2761,7 +2761,7 @@ window.specials = {
             p.cached.multiplier = [1.25, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '1483warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2841,7 +2841,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '1512warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2886,7 +2886,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1526warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2898,7 +2898,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1527warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -2920,7 +2920,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '1529warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2931,7 +2931,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '1530warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2943,7 +2943,7 @@ window.specials = {
             p.cached.multiplier = [0.2, 0.3][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3][n] + 'x chain addition. To switch to the ' + [0.3, 0.2][n] + 'x chain addition, disable and re-enable this special',
-                name: '1531warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -2955,7 +2955,7 @@ window.specials = {
             p.cached.multiplier = [0.2, 0.3][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3][n] + 'x chain addition. To switch to the ' + [0.3, 0.2][n] + 'x chain addition, disable and re-enable this special',
-                name: '1532warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3113,7 +3113,7 @@ window.specials = {
             p.cached.multiplier = [0.2, 0.3, 0.5][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3, 0.5][n] + 'x chain addition. To switch to the ' + [0.3, 0.5, 0.2][n] + 'x chain addition, disable and re-enable this special',
-                name: '1578warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3124,7 +3124,7 @@ window.specials = {
             p.cached.multiplier = [0.2, 0.3, 0.5][n];
             p.scope.notify({
                 text: 'Using the ' + [0.2, 0.3, 0.5][n] + 'x chain addition. To switch to the ' + [0.3, 0.5, 0.2][n] + 'x chain addition, disable and re-enable this special',
-                name: '1579warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3146,7 +3146,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1583warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -3157,7 +3157,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1584warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -3293,7 +3293,7 @@ window.specials = {
             p.cached.multiplier = [1.25, 1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.5, 1.75, 1.25][n] + 'x affinity boost, disable and re-enable this special',
-                name: '1627warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3304,7 +3304,7 @@ window.specials = {
             p.cached.multiplier = [1.25, 1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.25, 1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.5, 1.75, 1.25][n] + 'x affinity boost, disable and re-enable this special',
-                name: '1628warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3452,7 +3452,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'above' : 'below') + ' 70%, using the ' + n + 'x orb boost.',
-                name: '1666warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3463,7 +3463,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'above' : 'below') + ' 70%, using the ' + n + 'x orb boost.',
-                name: '1667warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3508,7 +3508,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Luffy is ' + (n == 0.5 ? 'not captain' : 'captain') + ', using the ' + n + ' Chain Addition.',
-                name: '1681warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3519,7 +3519,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Luffy is ' + (n == 0.5 ? 'not captain' : 'captain') + ', using the ' + n + ' Chain Addition.',
-                name: '1682warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3632,7 +3632,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '1716warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3662,7 +3662,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x multiplier.',
-                name: '1722warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3674,7 +3674,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x multiplier.',
-                name: '1723warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3761,7 +3761,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1750warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -3787,7 +3787,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1752warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3799,7 +3799,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1753warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -3904,7 +3904,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1793warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4161,7 +4161,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1864warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4173,7 +4173,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1865warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4203,7 +4203,7 @@ window.specials = {
             window.specials[1878].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Bartolomeo is your captain',
-                name: '1878warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4216,7 +4216,7 @@ window.specials = {
             window.specials[1879].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Bartolomeo is your captain',
-                name: '1879warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4335,7 +4335,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '1894warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4347,7 +4347,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '1895warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4358,7 +4358,7 @@ window.specials = {
             p.cached.multiplier = [.3, .7][n];
             p.scope.notify({
                 text: 'Using the ' + [.3, .7][n] + 'x chain boost multiplier. To switch to the ' + [.7, .3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1896warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4369,7 +4369,7 @@ window.specials = {
             p.cached.multiplier = [.3, .7][n];
             p.scope.notify({
                 text: 'Using the ' + [.3, .7][n] + 'x chain boost multiplier. To switch to the ' + [.7, .3][n] + 'x multiplier, disable and re-enable this special',
-                name: '1897warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4492,7 +4492,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
-                name: '1931warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4510,7 +4510,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
-                name: '1932warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4527,7 +4527,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, Switch the order of the specials needed.',
-                name: '1933warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4553,7 +4553,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'Assuming there are more than 4 enemies on the stage',
-                name: '1938warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4562,7 +4562,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'Assuming there are more than 4 enemies on the stage',
-                name: '1938warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4630,7 +4630,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1954warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4642,7 +4642,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1955warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4666,7 +4666,7 @@ window.specials = {
             window.specials[1960].turnedOn = true;
             p.scope.notify({
                 text: 'Captain Ability boost effect only works if Sweet Heart Memory Pudding is the captain',
-                name: '1960warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4680,7 +4680,7 @@ window.specials = {
             window.specials[1961].turnedOn = true;
             p.scope.notify({
                 text: 'Captain Ability boost effect only works if Sweet Heart Memory Pudding is the captain',
-                name: '1961warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4694,7 +4694,7 @@ window.specials = {
             window.specials[1962].turnedOn = true;
             p.scope.notify({
                 text: 'Captain Ability boost effect only works if Sweet Heart Memory Sanji is the Captain',
-                name: '1962warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4712,7 +4712,7 @@ window.specials = {
             window.specials[1963].turnedOn = true;
             p.scope.notify({
                 text: 'Captain Ability boost effect only works if Sweet Heart Memory Sanji is the Captain',
-                name: '1963warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -4741,7 +4741,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1967warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4752,7 +4752,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '1968warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4806,7 +4806,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .75][n] + 'x chain boost multiplier. To switch to the ' + [.75, .5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1986warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4822,7 +4822,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .75][n] + 'x chain boost multiplier. To switch to the ' + [.75, .5][n] + 'x multiplier, disable and re-enable this special',
-                name: '1987warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -4855,7 +4855,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1992warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4872,7 +4872,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '1993warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4919,7 +4919,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2008warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4930,7 +4930,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2009warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4952,7 +4952,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2016warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -4964,7 +4964,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2017warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5044,7 +5044,7 @@ window.specials = {
             });
             p.scope.notify({
                 text: 'Also affects damage if Kizaru is your captain',
-                name: '2034warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5150,7 +5150,7 @@ window.specials = {
             p.cached.multiplier = [Infinity, 2.5, 2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + ['Regular ', 2.5, 2.75, 3][n] + 'x chain lock. To switch to the ' + [2.5, 2.75, 3, 'Regular '][n] + 'x chain lock, disable and re-enable this special',
-                name: '2059warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5166,7 +5166,7 @@ window.specials = {
             p.cached.multiplier = [Infinity, 2.5, 2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + ['Regular', '2.5x', '2.75x', '3x'][n] + ' chain lock. To switch to the ' + ['2.5x', '2.75x', '3x', 'Regular'][n] + ' chain lock, disable and re-enable this special',
-                name: '2060warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5306,7 +5306,7 @@ window.specials = {
             window.specials[2087].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Luffy is your captain',
-                name: '2087warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5325,7 +5325,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.5 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
-                name: '2089warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5338,7 +5338,7 @@ window.specials = {
             window.specials[2092].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Zoro is your captain',
-                name: '2092warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5359,7 +5359,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
-                name: '2096warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5370,7 +5370,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'equal to' : 'below') + ' 100%, using the ' + n + 'x multiplier.',
-                name: '2097warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5443,7 +5443,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + ["Delay", "Immunity Ignore Delay"][levels[n]] + '. To switch to the ' + ["Delay", "Immunity Ignore Delay"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5468,7 +5468,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using ' + [1.75, 2][n] + 'x ATK boost. To switch to the ' + [2, 1.75][n] + 'x ATK boost, disable and re-enable this special.',
-                name: '2120warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5481,7 +5481,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using ' + [1.75, 2][n] + 'x ATK boost. To switch to the ' + [2, 1.75][n] + 'x ATK boost, disable and re-enable this special.',
-                name: '2121warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5504,7 +5504,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2126warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5534,7 +5534,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2131warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5546,7 +5546,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2132warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5603,7 +5603,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2147warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5615,7 +5615,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2148warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5647,7 +5647,7 @@ window.specials = {
             window.specials[2160].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Doflamingo is your captain',
-                name: '2160warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5661,7 +5661,7 @@ window.specials = {
             window.specials[2161].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Doflamingo is your captain',
-                name: '2161warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5702,7 +5702,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2168warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5718,7 +5718,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2169warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -5734,7 +5734,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2170warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5747,7 +5747,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x ATK multiplier. To switch to the ' + [1.75, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2171warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5850,7 +5850,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '2196warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5862,7 +5862,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x ATK boost.',
-                name: '2197warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5873,7 +5873,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2198warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5884,7 +5884,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + 'x affinity boost. To switch to the ' + [1.75, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2199warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5909,7 +5909,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + n + 'x Orb boost.',
-                name: '2204warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -5937,7 +5937,7 @@ window.specials = {
             p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2207warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -5950,7 +5950,7 @@ window.specials = {
             p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2207warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6016,7 +6016,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1 ? 'below' : 'above') + ' 50%, using the ' + n + 'x multiplier.',//change this
-                name: '2229warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6119,7 +6119,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['4 STR and DEX orbs Stage 1', '4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2'][n] + ' special. To switch to the ' + ['4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2', '4 STR and DEX orbs Stage 1'][n] + ' special, disable and re-enable this special',
-                name: '2249warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
             window.specials[2248].turnedOn = n > 1 ? true : false;
         },
@@ -6137,7 +6137,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['4 STR and DEX orbs Stage 1', '4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2'][n] + ' special. To switch to the ' + ['4 STR and DEX orbs Stage 2', '4 PSY and INT orbs Stage 1', '4 PSY and INT orbs Stage 2', '4 STR and DEX orbs Stage 1'][n] + ' special, disable and re-enable this special',
-                name: '2249warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
             window.specials[2249].turnedOn = n > 1 ? true : false;
         },
@@ -6165,7 +6165,7 @@ window.specials = {
             window.specials[2252].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Pound is your captain',
-                name: '2252warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -6179,7 +6179,7 @@ window.specials = {
             window.specials[2253].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Pound is your captain',
-                name: '2253warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -6195,7 +6195,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2256warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6222,7 +6222,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2264warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6243,7 +6243,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2265warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6277,7 +6277,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
-                name: '2274warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         delay: function(p) { return p.cached.multiplier != 1 ? 1 : 0; },
@@ -6290,7 +6290,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
-                name: '2275warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         delay: function(p) { return p.cached.multiplier != 1 ? 1 : 0; },
@@ -6339,7 +6339,7 @@ window.specials = {
             p.cached.multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2286warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6351,7 +6351,7 @@ window.specials = {
             p.cached.multiplier = (p.captain.class.has("Powerhouse") || p.captain.class.has("Striker")) ? [1.75, 2.25][n] : 1;
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2287warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6363,7 +6363,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
-                name: '2288warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6375,7 +6375,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
-                name: '2289warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6387,7 +6387,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Sabo Buff', 'RCV boost', 'RCV boost and Sabo Buff'][n] + '. To switch to the ' + ['RCV boost', 'RCV boost and Sabo Buff', 'Sabo Buff'][n] + ', disable and re-enable this special',
-                name: '2290warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6407,7 +6407,7 @@ window.specials = {
             p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x orb boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x orb boost, disable and re-enable this special',
-                name: '2296warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6420,7 +6420,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Conditional boost', 'Orb boost', 'Conditional boost and Orb boost'][n] + '. To switch to the ' + ['Orb boost', 'Conditional boost and Orb boost', 'Conditional boost'][n] + ', disable and re-enable this special',
-                name: '2298warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         orb: function(p) { return (p.cached.multiplier != 0 && p.unit.class.has("Shooter")) ? 2 : 1; },
@@ -6451,7 +6451,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") < 0) p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
-                name: '2296warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6556,7 +6556,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the orb boost. Enemy with highest MAX HP is ' + (p.cached.multiplier ? 'Under or equal to ' : 'Over ') + '80% HP',
-                name: '2333warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6595,7 +6595,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2239warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6607,7 +6607,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2340warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6619,7 +6619,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Orb boost', 'Affinity boost', 'Affinity boost and Orb boost'][n] + '. To switch to the ' + ['Affinity boost', 'Affinity boost and Orb boost', 'Orb boost'][n] + ', disable and re-enable this special',
-                name: '2341warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6631,7 +6631,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Orb boost', 'Affinity boost', 'Affinity boost and Orb boost'][n] + '. To switch to the ' + ['Affinity boost', 'Affinity boost and Orb boost', 'Orb boost'][n] + ', disable and re-enable this special',
-                name: '2342warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6694,7 +6694,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
-                name: '2353warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6708,7 +6708,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75][n] + ' Conditional Boost. To switch to the ' + [1.75, 1.5][n] + ' Conditional Boost, disable and re-enable this special. <br>Selected special assumes that the enemy has been ' + ['Poisoned', 'Poisoned or Strongly Poisoned'][n] + '.',
-                name: '2354warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6731,7 +6731,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2131warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6749,7 +6749,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["Stage 1", "Stage 2 - Turn 1", "Stage 2 - Turn 2"][levels[n]] + 'x ATK boost. To switch to the ' + ["Stage 1", "Stage 2 - Turn 1", "Stage 2 - Turn 2"][levels[(n + 1) % levels.length]] + ' ATK boost, disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -6850,7 +6850,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '2380warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6860,7 +6860,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '2381warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6872,7 +6872,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2383warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -6921,7 +6921,7 @@ window.specials = {
             if (p.cached.multiplier){
                 p.scope.notify({
                     text: 'Only affects damage if Big Emperor is your captain, to use turn 2 Orb boost only, disable and re-enable the special',
-                    name: '2398warning'
+                    name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
                 });
             }
             p.cached.multiplier = !p.cached.multiplier;
@@ -6942,7 +6942,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
-                name: '2400warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6958,7 +6958,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
-                name: '2401warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6974,7 +6974,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
-                name: '2402warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -6990,7 +6990,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
-                name: '2403warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7006,7 +7006,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
-                name: '2404warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7022,7 +7022,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + p.cached.multiplier + 'x ATK multiplier.',
-                name: '2405warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7040,7 +7040,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
-                name: '2406warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7058,7 +7058,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: (p.cached.multiplier ? 'En' : 'Dis') + 'abling the chain boost.',
-                name: '2407warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7076,7 +7076,7 @@ window.specials = {
             p.cached.multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][m] + ' the chain lock. To switch to the chain buff ' + ['off', 'on'][m] + ', disable and re-enable this special',
-                name: '2419warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -7097,7 +7097,7 @@ window.specials = {
             p.cached.multiplier = !n ? (p.captain.type == "DEX" || p.captain.type == "INT") ? 2.75 : (p.captain.type == "QCK" || p.captain.type == "PSY") ? 3 : 1 : 1;
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][m] + ' the chain lock. To switch to the chain buff ' + ['off', 'on'][m] + ', disable and re-enable this special',
-                name: '2420warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -7119,7 +7119,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2423warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7130,7 +7130,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2424warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7199,7 +7199,7 @@ window.specials = {
             p.cached.multiplier = [1, 1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1, 1.75, 2, 2.25][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 2.25, 1][n] + 'x Conditional boost, disable and re-enable this special',
-                name: '2438warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7218,7 +7218,7 @@ window.specials = {
             p.cached.multiplier = [3, 1][n];
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
-                name: '2440warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 2.25 : 1; },
@@ -7235,7 +7235,7 @@ window.specials = {
             p.cached.multiplier = [3, 1][n];
             p.scope.notify({
                 text: ['Enabling', 'Disabling'][n] + ' the 3x chain lock. To switch to the buff ' + ['off', 'on'][n] + ', disable and re-enable this special',
-                name: '2441warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit")) ? 2.25 : 1; },
@@ -7246,7 +7246,7 @@ window.specials = {
             window.specials[2442].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Doflamingo is your captain',
-                name: '2442warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -7259,7 +7259,7 @@ window.specials = {
             window.specials[2443].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Doflamingo is your captain',
-                name: '2443warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -7356,7 +7356,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2462warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7368,7 +7368,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK boost. To switch to the ' + [2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2463warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7403,7 +7403,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2466warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7438,7 +7438,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '2474warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7449,7 +7449,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '2475warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7461,7 +7461,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '2476warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7473,7 +7473,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '2477warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7576,7 +7576,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2507warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7588,7 +7588,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2508warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7684,7 +7684,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Conditional boost, disable and re-enable this special',
-                name: '2554warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7696,7 +7696,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2555warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7714,7 +7714,7 @@ window.specials = {
             p.cached.multiplier = [true, false][n];
             p.scope.notify({
                 text: 'Using the ' + ['0.3x Chain Boost', '0.7x Chain Boost and 1.5x RCV boost'][n] + '. To switch to the ' + ['0.7x Chain Boost and 1.5x RCV boost', '0.3x Chain Boost'][n] + ', disable and re-enable this special',
-                name: '2564warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7726,7 +7726,7 @@ window.specials = {
             p.cached.multiplier = [true, false][n];
             p.scope.notify({
                 text: 'Using the ' + ['0.3x Chain Boost', '0.7x Chain Boost and 1.5x RCV boost'][n] + '. To switch to the ' + ['0.7x Chain Boost and 1.5x RCV boost', '0.3x Chain Boost'][n] + ', disable and re-enable this special',
-                name: '2565warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7742,7 +7742,7 @@ window.specials = {
                 p.cached.multiplier = [0.5, 0][n];
                 p.scope.notify({
                     text: 'Using the ' + ['50%', '100%'][n] + ' Defense down. To switch to the ' + ['100%', '50%'][n] + ' Defense down, disable and re-enable this special',
-                    name: '2568warning'
+                    name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
                 });
             }
         },
@@ -7762,7 +7762,7 @@ window.specials = {
                 p.cached.multiplier = [0.5, 0][n];
                 p.scope.notify({
                     text: 'Using the ' + ['50%', '100%'][n] + ' Defense down. To switch to the ' + ['100%', '50%'][n] + ' Defense down, disable and re-enable this special',
-                    name: '2569warning'
+                    name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
                 });
             }
         },
@@ -7810,7 +7810,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2579warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7828,7 +7828,7 @@ window.specials = {
             p.cached.multiplier = n;
             if (n == 2) p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '2582warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7839,7 +7839,7 @@ window.specials = {
             p.cached.multiplier = n;
             if (n == 2) p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '2583warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7850,7 +7850,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '2584warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7861,7 +7861,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'below' : 'above') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '2585warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7873,7 +7873,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2586warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7885,7 +7885,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2587warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7926,7 +7926,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2606warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7938,7 +7938,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2607warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -7962,7 +7962,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x ATK boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2612warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -7973,7 +7973,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2613warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8097,7 +8097,7 @@ window.specials = {
             window.specials[2633].turnedOn[p.slot] = true;
             /*p.scope.notify({
                 text: 'Only affects damage if Luffy is your captain',
-                name: '2633warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });*/
         },
         onDeactivation: function(p) {
@@ -8143,7 +8143,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2648warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8155,7 +8155,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 50%, using the ' + n + 'x multiplier.',
-                name: '2649warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8173,7 +8173,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2656warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8185,7 +8185,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2657warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8272,7 +8272,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + ["Affinity Buff Enabled", "Affinity Buff Disabled"][levels[n]] + ' boost. To switch to the ' + ["Affinity Buff Enabled", "Affinity Buff Disabled"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8337,7 +8337,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [1.75, 2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2687warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8420,7 +8420,7 @@ window.specials = {
             p.cached.multiplier = [.5, 0][n];
             p.scope.notify({
                 text: 'Using the ' + [50, 100][n] + '% Defense Reduction. To switch to the ' + [100, 50][n] + '% Defense Reduction, disable and re-enable this special',
-                name: '2705warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8431,7 +8431,7 @@ window.specials = {
             p.cached.multiplier = [.5, 0][n];
             p.scope.notify({
                 text: 'Using the ' + [50, 100][n] + '% Defense Reduction. To switch to the ' + [100, 50][n] + '% Defense Reduction, disable and re-enable this special',
-                name: '2706warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8488,7 +8488,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
-                name: '2725warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8500,7 +8500,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2727warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8517,7 +8517,7 @@ window.specials = {
             p.cached.multiplier = [0.5, 1.1][n];
             p.scope.notify({
                 text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
-                name: '2730warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8528,7 +8528,7 @@ window.specials = {
             p.cached.multiplier = [0.5, 1.1][n];
             p.scope.notify({
                 text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
-                name: '2731warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8616,7 +8616,7 @@ window.specials = {
             p.cached.multiplier = [2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3][n] + 'x chain lock. To switch to the ' + [3, 2.75][n] + 'x chain lock, disable and re-enable this special',
-                name: '2748warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8634,7 +8634,7 @@ window.specials = {
             p.cached.multiplier2 = [[0, 0], [1000, 700]][CrunchUtils.llimitUnlock(p, "specials")][n];
             p.scope.notify({
                 text: 'Using the ' + [[2.75, 3], [3.25, 3]][CrunchUtils.llimitUnlock(p, "specials")][n] + 'x Chain Lock. To switch to the ' + [[2.75, 3], [3.25, 3]][CrunchUtils.llimitUnlock(p, "specials")][(n + 1) % levels.length] + 'x Chain Lock, disable and re-enable this special',
-                name: '3236warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8656,7 +8656,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
-                name: '2757warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8668,7 +8668,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x Orb boost, disable and re-enable this special',
-                name: '3236warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8679,7 +8679,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
-                name: '2759warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8704,7 +8704,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
-                name: '2761warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8716,7 +8716,7 @@ window.specials = {
                 p.cached.multiplier = [1.75, 2][n];
                 p.scope.notify({
                     text: 'Using the ' + [1.75, 2][n] + 'x Affinity boost. To switch to the ' + [2, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
-                    name: '2762warning'
+                    name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
                 });
             }
             else p.cached.multiplier = 1;
@@ -8731,7 +8731,7 @@ window.specials = {
                 p.cached.multiplier = levels[n];
                 p.scope.notify({
                     text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x Affinity boost, disable and re-enable this special',
-                    name: '3236warning'
+                    name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
                 });
             }
             else p.cached.multiplier = 1;
@@ -8746,7 +8746,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '2767warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8756,7 +8756,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '2767warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8824,7 +8824,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2781warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8840,7 +8840,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 0.9 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '2785warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8863,7 +8863,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2790warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8877,7 +8877,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '2793warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8888,7 +8888,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2794warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8905,7 +8905,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Chain Lock', 'Conditional boost', 'Conditional boost and Chain Lock'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Chain Lock', 'Chain Lock'][n] + ', disable and re-enable this special',
-                name: '2799warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return p.cached.multiplier != 1 ? 2.75 : 1; },
@@ -8923,7 +8923,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2803warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8935,7 +8935,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2804warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -8964,7 +8964,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x ATK boost, disable and re-enable this special',
-                name: '3236warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8973,7 +8973,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability assumes the enemy has a Barrier or Percent Damage Reduction.',
-                name: '2816warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8982,7 +8982,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability assumes the enemy has a Barrier or Percent Damage Reduction.',
-                name: '2817warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -8993,7 +8993,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2820warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9028,7 +9028,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .8][n] + 'x chain boost multiplier. To switch to the ' + [.8, .5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2838warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9044,7 +9044,7 @@ window.specials = {
             }
             p.scope.notify({
                 text: 'Using the ' + [.5, .8][n] + 'x chain boost multiplier. To switch to the ' + [.8, .5][n] + 'x multiplier, disable and re-enable this special',
-                name: '2839warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9056,7 +9056,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '2840warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9068,7 +9068,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x ATK multiplier. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '2841warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9079,7 +9079,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2844warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9103,7 +9103,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x attack boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x attack boost, disable and re-enable this special',
-                name: '2848warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9114,7 +9114,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2849warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9140,7 +9140,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2856warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9151,7 +9151,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2857warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9162,7 +9162,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '2858warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9228,7 +9228,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x Conditional boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x Conditional boost, disable and re-enable this special',
-                name: '2876warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9239,7 +9239,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2878warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9294,7 +9294,7 @@ window.specials = {
             window.specials[2885].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects captain damage if CP9 is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2885warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -9307,7 +9307,7 @@ window.specials = {
             window.specials[2886].turnedOn = true;
             p.scope.notify({
                 text: 'Only affects captain damage if CP9 is your captain, use Friend Captain if you don\'t want the additional ATK boost due to Captain Swap',
-                name: '2886warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -9332,7 +9332,7 @@ window.specials = {
             //console.log(window.specials[2887].boostATK);
             p.scope.notify({
                 text: 'Using the ' + ['2x ATK Boost', '1.75x Orb Boost', '2x Orb Boost', '2.25x Orb Boost'][window.specials[2887].switch[p.slot]] + '. To switch to the ' + ['1.75x Orb Boost', '2x Orb Boost', '2.25x Orb Boost', '2x ATK Boost'][window.specials[2887].switch[p.slot]] + ', disable and re-enable this special',
-                name: '2887warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9361,7 +9361,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x orb boost. To switch to the ' + [2.25, 1.75][n] + 'x orb boost, disable and re-enable this special',
-                name: '2892warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9385,7 +9385,7 @@ window.specials = {
             window.specials[2896].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Additionally affects damage if Rayleigh is your captain',
-                name: '2896warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -9401,7 +9401,7 @@ window.specials = {
             window.specials[2897].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Additionally affects damage if Rayleigh is your captain',
-                name: '2897warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -9464,7 +9464,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2910warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9490,7 +9490,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '2912warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9513,7 +9513,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '2915warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9539,7 +9539,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '2381warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9549,7 +9549,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '2381warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9642,7 +9642,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Affinity boost, disable and re-enable this special',
-                name: '3236warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9687,7 +9687,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Affinity', 'Chain Boost', 'Affinity and Chain'][n] + ' boost. To switch to the ' + ['Chain Boost', 'Affinity and Chain', 'Affinity'][n] + ' boost, disable and re-enable this special',
-                name: '2959warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9726,7 +9726,7 @@ window.specials = {
             p.cached.multiplier = [2, 3, 4][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 3, 4][n] + 'x Orb boost. To switch to the ' + [3, 4, 2][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2963warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9739,7 +9739,7 @@ window.specials = {
             p.cached.multiplier = [2, 3, 4][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 3, 4][n] + 'x Orb boost. To switch to the ' + [3, 4, 2][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2964warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9821,7 +9821,7 @@ window.specials = {
             p.cached.multiplier = [0.5, 1.1][n];
             p.scope.notify({
                 text: 'Using the ' + [0.5, 1.1][n] + 'x chain addition. To switch to the ' + [1.1, 0.5][n] + 'x chain addition, disable and re-enable this special',
-                name: '2731warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9849,7 +9849,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using ' + ["Stage 1", "Stage 2"][levels[n]] + '. To switch to ' + ["Stage 1", "Stage 2"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9860,7 +9860,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Affinity boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Affinity boost, disable and re-enable this special',
-                name: '2992warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9871,7 +9871,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '2993warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9902,7 +9902,7 @@ window.specials = {
             //console.log(window.specials[2996].boostAffinity);
             p.scope.notify({
                 text: 'Using the ' + ['2.25x Affinity Boost', '1.75x ATK Boost', '2x ATK Boost', '2.25x ATK Boost'][window.specials[2996].switch[p.slot]] + '. To switch to the ' + ['1.75x ATK Boost', '2x ATK Boost', '2.25x ATK Boost', '2.25x Affinity Boost'][window.specials[2996].switch[p.slot]] + ', disable and re-enable this special',
-                name: '2996warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9938,7 +9938,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
-                name: '3006warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9951,7 +9951,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK', 'Change Action Orb', 'ATK and Change Action Orb'][n] + ' boost. To switch to the ' + ['Orb', 'ATK and Orb', 'ATK'][n] + ' boost, disable and re-enable this special',
-                name: '3007warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -9985,7 +9985,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3012warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -9997,7 +9997,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x ATK multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3013warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10038,7 +10038,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x affinity boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x affinity boost, disable and re-enable this special',
-                name: '3019warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10049,7 +10049,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Orb boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '3020warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10159,7 +10159,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '3043warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10170,7 +10170,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb boost. To switch to the ' + [2, 1.75][n] + 'x Orb boost, disable and re-enable this special',
-                name: '3044warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10207,7 +10207,7 @@ window.specials = {
             effecttext = [["2x ATK Boost", "2.25x ATK Boost"],["Chain Lock", "Chain Lock Disabled"]][CrunchUtils.llimitUnlock(p, "specials")];
             p.scope.notify({
                 text: 'Using the ' + effecttext[n] + '. To switch to the ' + effecttext[[(n + 1) % levels.length]] + ', disable and re-enable this special',
-                name: '3048warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
             window.specials[3048].turnedOn = p.cached.multiplier == 2.25 || CrunchUtils.llimitUnlock(p, "specials") > 0 ? true : false;
         },
@@ -10232,7 +10232,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3056warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10243,7 +10243,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3057warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10285,7 +10285,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb Boost. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '3070warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -10301,7 +10301,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb Boost. To switch to the ' + [2, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '3071warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -10327,7 +10327,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3074warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10338,7 +10338,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3075warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10350,7 +10350,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3076warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10362,7 +10362,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3077warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10374,7 +10374,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Delay', 'Conditional boost', 'Conditional boost and Delay'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Delay', 'Delay'][n] + ', disable and re-enable this special',
-                name: '3078warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         delay: function(p) { return p.cached.multiplier != 1 ? 1 : 0; },
@@ -10409,7 +10409,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 1.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '3083warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10427,7 +10427,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 1.75, 2][n] + 'x orb boost. To switch to the ' + [1.75, 2, 1.5][n] + 'x orb boost, disable and re-enable this special',
-                name: '3088warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10440,7 +10440,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x Conditional boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x Conditional boost, disable and re-enable this special',
-                name: '2132warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10462,7 +10462,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '3094warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10483,7 +10483,7 @@ window.specials = {
             p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '3099warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10495,7 +10495,7 @@ window.specials = {
             p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x ATK multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '3100warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10506,7 +10506,7 @@ window.specials = {
             p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '3101warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10517,7 +10517,7 @@ window.specials = {
             p.cached.multiplier = [2.25, 2.5][n];
             p.scope.notify({
                 text: 'Using the ' + [2.25, 2.5][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.25][n] + 'x multiplier, disable and re-enable this special',
-                name: '3102warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10540,7 +10540,7 @@ window.specials = {
             p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '3110warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10551,7 +10551,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2, 2.25][n] + 'x ATK boost. To switch to the ' + [2, 2.25, 1.75][n] + 'x ATK boost, disable and re-enable this special',
-                name: '3112warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10566,7 +10566,7 @@ window.specials = {
             p.cached.multiplier = [2.5, 2.75, 3][n];
             p.scope.notify({
                 text: 'Using the ' + ['2.5x', '2.75x', '3x'][n] + ' chain lock. To switch to the ' + ['2.5x', '2.75x', '3x'][n] + ' chain lock, disable and re-enable this special',
-                name: '3114warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10608,7 +10608,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3126warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10620,7 +10620,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3127warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10631,7 +10631,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3128warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10642,7 +10642,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Orb multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3129warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10685,7 +10685,7 @@ window.specials = {
             p.cached.multiplier = [2, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.25][n] + 'x Orb boost. To switch to the ' + [2.25, 2][n] + 'x Orb boost, disable and re-enable this special',
-                name: '3145warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10696,7 +10696,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2][n] + 'x Affinity multiplier. To switch to the ' + [2, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3146warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10707,7 +10707,7 @@ window.specials = {
             p.cached.multiplier = [1.75, 2.25][n];
             p.scope.notify({
                 text: 'Using the ' + [1.75, 2.25][n] + 'x Orb multiplier. To switch to the ' + [2.25, 1.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '3147warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10728,7 +10728,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + [ 2, 1, 1, 2, 1, 2, 2 ][n] + 'x ATK boost, the ' + [ 1, 1.75, 1, 1.75, 1.75, 1, 1.75 ][n] + 'x Affinity boost and the ' + [ 1, 1, 1.75, 1, 1.75, 1.75, 1.75 ][n] + 'x Orb boost. To switch disable and re-enable this special',
-                name: '3150warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10825,7 +10825,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10838,7 +10838,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
-                name: '3177warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10892,7 +10892,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['Defense Reduction', 'Conditional boost', 'Conditional boost and Defense Reduction'][n] + '. To switch to the ' + ['Conditional boost', 'Conditional boost and Defense Reduction', 'Defense Reduction'][n] + ', disable and re-enable this special',
-                name: '3189warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10909,7 +10909,7 @@ window.specials = {
             p.cached.multiplier = [1.5, 2][n];
             p.scope.notify({
                 text: 'Using the ' + [1.5, 2][n] + 'x Conditional multiplier. To switch to the ' + [2, 1.5][n] + 'x multiplier, disable and re-enable this special',
-                name: '3191warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -10965,7 +10965,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + ["ATK", "Strong ATK", "Affinity", "ATK & Affinity", "Strong ATK & Affinity"][levels[n]] + ' boost. To switch to the ' + ["ATK", "Strong ATK", "Affinity", "ATK & Affinity", "Strong ATK & Affinity"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -10987,7 +10987,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["ATK", "ORB"][levels[n]] + ' boost. To switch to the ' + ["ATK", "ORB"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11015,7 +11015,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + ["Chain Multiplier", "No Chain Multiplier"][levels[n]] + ' boost. To switch to the ' + ["Chain Multiplier", "No Chain Multiplier"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11038,7 +11038,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + ' chain lock. To switch to the ' + levels[(n + 1) % levels.length] + ' chain lock, disable and re-enable this special',
-                name: '3214warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11050,7 +11050,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + ' chain lock. To switch to the ' + levels[(n + 1) % levels.length] + ' chain lock, disable and re-enable this special',
-                name: '3215warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11079,7 +11079,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '3220warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -11090,7 +11090,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '3221warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -11116,7 +11116,7 @@ window.specials = {
             window.specials[3226].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Kaido is your captain',
-                name: '3226warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -11130,7 +11130,7 @@ window.specials = {
             window.specials[3227].turnedOn[p.slot] = true;
             p.scope.notify({
                 text: 'Only affects damage if Kaido is your captain',
-                name: '3227warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         onDeactivation: function(p) {
@@ -11161,7 +11161,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + levels[n] + '. To switch to the ' + levels[(n + 1) % levels.length] + ', disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11176,7 +11176,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + ["DEF Down", "Delay"][levels[n]] + ' boost. To switch to the ' + ["DEF Down", "Delay"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3235warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11189,7 +11189,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x ATK boost. To switch to the ' + levels[(n + 1) % levels.length] + ' ATK boost, disable and re-enable this special',
-                name: '3236warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11201,7 +11201,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Affinity boost. To switch to the ' + levels[(n + 1) % levels.length] + ' Affinity boost, disable and re-enable this special',
-                name: '3237warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11217,7 +11217,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + ["Orb", "Strong Orb", "Base ATK", "Orb & Base ATK", "Strong Orb & Base ATK"][levels[n]] + ' boost. To switch to the ' + ["Orb", "Strong Orb", "Base ATK", "Orb & Base ATK", "Strong Orb & Base ATK"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11227,7 +11227,7 @@ window.specials = {
         onActivation: function(p) {
             p.scope.notify({
                 text: 'This ability currently stacks with regular attack boosts when it does not in-game, so please keep that in mind.',
-                name: '3241warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -11239,7 +11239,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.25 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5074warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -11270,7 +11270,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3248warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11284,7 +11284,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Conditional", "Not Activating Conditional"][n] + ' boost. To ' + ["Enable the Conditional", "Disable the Conditional"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3249warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11344,7 +11344,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3269warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11357,7 +11357,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3270warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11369,7 +11369,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3271warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11406,7 +11406,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][n] + ' boost. To ' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3277warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11422,7 +11422,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][n] + ' boost. To ' + [ '2.5x ATK boost and 2x Affinity', '2x Affinity' ][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3278warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11518,7 +11518,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3296warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11569,7 +11569,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3304warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11581,7 +11581,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3305warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11600,7 +11600,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '3306warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11619,7 +11619,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '3307warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11631,7 +11631,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3309warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11744,7 +11744,7 @@ window.specials = {
             p.cached.multiplier = "0".repeat(3-p.cached.multiplier.toString(2).length) + p.cached.multiplier.toString(2);
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3337warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11760,7 +11760,7 @@ window.specials = {
             p.cached.multiplier = "0".repeat(3-p.cached.multiplier.toString(2).length) + p.cached.multiplier.toString(2);
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb", "Affinity", "ATK and Affinity", "Orb and Affinity", "ATK, Orb and Affinity"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3338warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -11773,7 +11773,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + levels[n] + ' boost. To ' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '3339warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -12609,7 +12609,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5279warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -12627,7 +12627,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5274warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -12638,7 +12638,7 @@ window.specials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5274warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -13559,7 +13559,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5279warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -13740,7 +13740,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: '' + ["Orb", "ATK", "ATK and Orb"][n] + ' boost. To ' + ["Orb", "ATK", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5279warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -16986,7 +16986,7 @@ window.specials = {
             p.cached.multiplier = levels[n];
             if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
                 text: 'Using the ' + ["Affinity Buff Enabled", "Affinity Buff Disabled"][levels[n]] + ' boost. To switch to the ' + ["Affinity Buff Enabled", "Affinity Buff Disabled"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
-                name: '3209warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -16995,6 +16995,91 @@ window.specials = {
     },
     4039: {
         affinity: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 2.25 : 1; },
+    },
+    4040:{
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 30 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Slasher >= 4 ? 3 : 2.75;
+        },
+    },
+    4041:{
+        chain: function(p) { return p.cached.multiplier; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 30 : 1;
+        },
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Slasher >= 4 ? 3 : 2.75;
+        },
+    },
+    4042: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [2.5, 1, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25, 2.5, 2.5][p.cached.multiplier] : 1},
+        chainAddition: function(p) { return [0, 1.6, 1.6, 0, 1.6][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Initial ATK and Orb", "Chain Boost", "Initial ATK and Orb and Chain Boost", "Strong ATK and Orb", "Strong ATK and Orb and Chain Addition"][levels[n]] + ' boost. To switch to the ' + ["Initial ATK and Orb", "Chain Boost", "Initial ATK and Orb and Chain Boost", "Strong ATK and Orb", "Strong ATK and Orb and Chain Addition"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4043: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [2.5, 1, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        type: "type",
+        orb: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [2.25, 1, 2.25, 2.5, 2.5][p.cached.multiplier] : 1},
+        chainAddition: function(p) { return [0, 1.6, 1.6, 0, 1.6][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Initial ATK and Orb", "Chain Boost", "Initial ATK and Orb and Chain Boost", "Strong ATK and Orb", "Strong ATK and Orb and Chain Addition"][levels[n]] + ' boost. To switch to the ' + ["Initial ATK and Orb", "Chain Boost", "Initial ATK and Orb and Chain Boost", "Strong ATK and Orb", "Strong ATK and Orb and Chain Addition"][levels[(n + 1) % levels.length]] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4044: {
+        chainAdditionPlus: function(p) { return [0, 0.3, 0.6][p.cached.multiplier]; },
+        chainAddition: function(p) { return [1.2, 0, 0][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["1.2x Chain Addition Buff", "+0.3 Chain Addition Buff", "+0.6 Chain Addition Buff"][levels[n]] + '. To switch to the ' + ["1.2x Chain Addition Buff", "+0.3 Chain Addition Buff", "+0.6 Chain Addition Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4045: {
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2 : 1; },
+    },
+    4046:{
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Slasher >= 4 ? 2 : 1.75;
+        },
+    },
+    4047: {
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1000 : 0; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1.75, 2, 2.25];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 
@@ -17289,7 +17374,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5074warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -17301,7 +17386,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5075warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -17313,7 +17398,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5076warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -17325,7 +17410,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.75 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5077warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -17588,7 +17673,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5128warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17603,7 +17688,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5129warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17618,7 +17703,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5130warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17633,7 +17718,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5131warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17648,7 +17733,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5132warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17663,7 +17748,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5133warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17678,7 +17763,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5134warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17693,7 +17778,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2.75,3.25][n];
             p.scope.notify({
                 text: 'Using the ' + [2.75, 3.25][n] + 'x Chain Lock. To switch to the ' + [3.25, 2.75][n] + 'x multiplier, disable and re-enable this special',
-                name: '5135warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17843,7 +17928,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5152warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17857,7 +17942,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5153warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17871,7 +17956,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5154warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17885,7 +17970,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5155warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17899,7 +17984,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5156warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17913,7 +17998,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5157warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17927,7 +18012,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5158warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -17941,7 +18026,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['ATK and Affinity Boost', 'ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost'][n] + '. To switch to the ' + ['ATK, Affinity and Orb Boost', 'ATK and Orb Boost', 'Affinity and Orb Boost', 'Orb Boost', 'ATK and Affinity Boost' ][n] + ', disable and re-enable this special',
-                name: '5159warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18048,7 +18133,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5191warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18064,7 +18149,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5192warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18080,7 +18165,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5193warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18096,7 +18181,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5194warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18112,7 +18197,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5195warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18128,7 +18213,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5196warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18144,7 +18229,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5197warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18160,7 +18245,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [2, 2.5, 2.75][n];
             p.scope.notify({
                 text: 'Using the ' + [2, 2.5, 2.75][n] + 'x Orb multiplier. To switch to the ' + [2.5, 2.75, 2][n] + 'x multiplier, disable and re-enable this special',
-                name: '5198warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
         chain: function(p) { return 3; },
@@ -18288,7 +18373,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '5210warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18303,7 +18388,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '5211warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18318,7 +18403,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '5212warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18333,7 +18418,7 @@ var ghostsSpecials = {
             p.cached.multiplier = [3, 3.25, 3.5][n];
             p.scope.notify({
                 text: 'Using the ' + [3, 3.25, 3.5][n] + 'x Chain Lock. To switch to the ' + [3.25, 3.5, 3][n] + 'x multiplier, disable and re-enable this special',
-                name: '5213warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18345,7 +18430,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '5214warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18357,7 +18442,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '5215warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18369,7 +18454,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '5216warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18381,7 +18466,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '5217warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18393,7 +18478,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '5218warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18405,7 +18490,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2 ? 'above' : 'below') + ' 30%, using the ' + n + 'x multiplier.',
-                name: '5219warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18614,7 +18699,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5267warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18626,7 +18711,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5268warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18638,7 +18723,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5269warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18650,7 +18735,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5270warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18662,7 +18747,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5271warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18674,7 +18759,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5272warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18686,7 +18771,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5273warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18698,7 +18783,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'HP ' + (n == 2.5 ? 'above' : 'below') + ' 99%, using the ' + n + 'x multiplier.',
-                name: '5274warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         }
     },
@@ -18736,7 +18821,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5279warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18750,7 +18835,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5280warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18764,7 +18849,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5281warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18778,7 +18863,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["ATK", "Orb", "ATK and Orb"][n] + ' boost. To ' + ["ATK", "Orb", "ATK and Orb"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5282warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18884,7 +18969,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Chain Boundary", "Not Activating Chain Boundary"][n] + ' boost. To ' + ["Enable the Chain Boundary", "Disable the Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5307warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18901,7 +18986,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain Lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
-                name: '3110warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18919,7 +19004,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: '' + ["Activating Chain Boundary", "Not Activating Chain Boundary"][n] + ' boost. To ' + ["Enable the Chain Boundary", "Disable the Chain Boundary"][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
-                name: '5309warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -18936,7 +19021,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x Chain Lock. To switch to the ' + levels[(n + 1) % levels.length] + 'x multiplier, disable and re-enable this special',
-                name: '5310warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19008,7 +19093,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
-                name: '5184warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19022,7 +19107,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
-                name: '5185warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19036,7 +19121,7 @@ var ghostsSpecials = {
             p.cached.multiplier = n;
             p.scope.notify({
                 text: 'Using the ' + ['1.5x', '1.75x'][n] + ' boosts. To switch to the ' + ['1.75x', '1.5x'][n] + ' boosts, disable and re-enable this special',
-                name: '5186warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19087,7 +19172,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x orb boost, disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19101,7 +19186,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [0, 100][n] + '% Defense Reduction. To switch to the ' + [0, 100][(n + 1) % levels.length] + '% Defense Reduction, disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19116,7 +19201,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + levels[n] + 'x orb boost. To switch to the ' + levels[(n + 1) % levels.length] + 'x orb boost, disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
@@ -19130,7 +19215,7 @@ var ghostsSpecials = {
             p.cached.multiplier = levels[n];
             p.scope.notify({
                 text: 'Using the ' + [0, 100][n] + '% Defense Reduction. To switch to the ' + [0, 100][(n + 1) % levels.length] + '% Defense Reduction, disable and re-enable this special',
-                name: '3176warning'
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },

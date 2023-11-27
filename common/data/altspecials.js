@@ -555,6 +555,21 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    4041: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")? [1.25, 1, 1.25][p.cached.multiplier] : 1; },
+        type: "type",
+        atkbase: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")? [0, 1250, 1250][p.cached.multiplier] : 0; },
+        orb: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit")? [1.25, 1, 1.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK & Orb Boost", "Base ATK Boost", "All Effects"][n] + '. To switch to ' + ["ATK & Orb Boost", "Base ATK Boost", "All Effects"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
