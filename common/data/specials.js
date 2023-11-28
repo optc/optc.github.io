@@ -6203,7 +6203,9 @@ window.specials = {
         staticMult: function(p) { return 60; }
     },
     2261: {
-        staticMult: function(p) { return 60; }
+        atk: function(p) { return [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")]; },
+        type: "class",
+        staticMult: function(p) { return [60, 100][CrunchUtils.llimitUnlock(p, "specials")]; }
     },
     2264: {
         turnedOn: false,
@@ -6579,7 +6581,7 @@ window.specials = {
         chainAddition: function(p) { return 0.7; }
     },
     2336: {
-        chainAddition: function(p) { return 0.7; }
+        chainAddition: function(p) { return [0.7, 0.9][CrunchUtils.llimitUnlock(p, "specials")]; }
     },
     2337: {
         orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral")) ? 2 : 1; },
@@ -6886,9 +6888,9 @@ window.specials = {
         orb: function(p) { return 1.5; },
     },
     2387: {
-        atk: function(p) { return p.slot == p.sourceSlot ? 3.25 : 1; },
+        atk: function(p) { return p.slot == p.sourceSlot ? [3.25, 3.5][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
         type: "class",
-        orb: function(p) { return 1.5; },
+        orb: function(p) { return [1.5, 1.75][CrunchUtils.llimitUnlock(p, "specials")]; },
     },
     2389: {
         atk: function(p) { return 1.3; },
