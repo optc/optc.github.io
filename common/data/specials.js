@@ -17081,6 +17081,18 @@ window.specials = {
             });
         },
     },
+    4048: {
+        ignoresImmunities: function(p) { return [p.cached.multiplier2[1]]; },
+        delay: function(p) { return p.cached.multiplier2[0]; },
+        status: function(p) { return p.delayed > 0 ? p.cached.multiplier1 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.captain ? p.captain.class.has("Shooter") || p.captain.class.has("Free Spirit") ? 2.25 : 1 : 1;
+            p.cached.multiplier2 = p.captain ? p.captain.class.has("Slasher") ? [1,'delay'] : [0,''] : [0,''];
+        },
+    },
+    4049: {
+        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.2 : 1; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

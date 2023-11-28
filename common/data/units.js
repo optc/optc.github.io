@@ -4046,6 +4046,8 @@ window.units = [
     [ "Law & Robin", "QCK", ["Slasher", "Cerebral"], 5, 30, 5, 4, 99, 4000000, 1554, 792, 102, 3108, 1584, 204, 1 ],
     [ "Okiku & Otoko", "QCK", ["Slasher", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1569, 745, 118, 3137, 1489, 236, 1 ],
     [ "Monkey D. Luffy - Enjoying the Flavor of the Festival", "QCK", ["Fighter", "Free Spirit"], 5, 40, 4, 4, 99, 5000000, 1671, 722, 106, 3341, 1444, 212, 1 ],
+    [ "Shinobu & Raizo - Shinobis Protecting Wano", "STR", ["Shooter", "Slasher"], 6, 55, 4, 5, 99, 5000000, 2162, 837, 112, 4324, 1674, 224, 1 ],
+    [ "Cat Viper - Gun-Point Towards the Navy Admiral", "INT", ["Shooter", "Slasher"], 5, 30, 5, 4, 99, 4000000, 2277, 773, 63, 4554, 1545, 126, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

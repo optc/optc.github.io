@@ -26,6 +26,9 @@ UnitUtils.extendDouble = function(state, baseid, type) {
                 // either "character1" or "character2" only
                 window.details[newId].special = window.details[baseid].special[types[i % 2]];
             }
+            else if (window.details[newId].special.combined){
+                window.details[newId].special = (types[i] == "combined") ? window.details[newId].special.combined : window.details[newId].special.base;
+            }
             if (window.details[baseid].sailor) window.details[newId]["sailor"] = { "base": window.details[baseid]["sailor"][types[i]], "level1": window.details[baseid]["sailor"]["level1"], };
         }
         if (type == "vs"){
