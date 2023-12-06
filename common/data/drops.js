@@ -6766,7 +6766,17 @@ window.drops = {
             global: true,
             nakama: 8403300,
             gamewith: null,
-            'Raging Sea': [ 4033 ]
+            'Raging Sea': [ "4033-skull" ]
+        },
+
+        {
+            name: 'Luffy',
+            dropID: 'treasuremap76',
+            thumb: 4053,
+            global: true,
+            nakama: 8405300,
+            gamewith: null,
+            'Raging Sea': [ "4053-skull" ]
         },
 
     ],

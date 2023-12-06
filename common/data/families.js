@@ -695,6 +695,8 @@ const Hanagasa = [ "Hanagasa" ];
 const Kaginote = [ "Kaginote" ];
 const Romy = [ "Romy" ];
 const Yorueka = [ "Yorueka" ];
+const Aramaki = [ "Aramaki", "Ryokugyu" ];
+const Tensei = [ "Tensei", "Kurouma" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4639,6 +4641,10 @@ window.families = {
     4047: [ ...MonkeyDLuffy ],
     4048: [ ...Shinobu, ...Raizo ],
     4049: [ ...Nekomamushi ],
+    4050: [ ...Aramaki ],
+    4051: [ ...Sakazuki ],
+    4052: [ ...Tensei ],
+    4053: [ ...MonkeyDLuffy ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

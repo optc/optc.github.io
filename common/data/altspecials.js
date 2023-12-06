@@ -570,6 +570,9 @@ window.altspecials = {
             });
         },
     },
+    4050: {
+        orbPlus: function(p) { return 0.25; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

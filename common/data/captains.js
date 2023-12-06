@@ -14354,6 +14354,23 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
+    4050: {
+        atk: function(p) { return [ 'tnd' ].includes(p.orb) ? 5.75 : 5.25; },
+        hp: function(p) { return 1.3; },
+    },
+    4051: {
+        atk: function(p) { return 3.25; },
+        hp: function(p) { return 1.25; },
+    },
+    4052: {
+        atk: function(p) { return p.unit.class.has("Powerhouse") ? 3.25 : 1; },
+        hp: function(p) { return p.unit.class.has("Powerhouse") ? 1.25 : 1; },
+    },
+    4053: {
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? [ 'meat' ].includes(p.orb) ? 4 : 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

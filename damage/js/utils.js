@@ -372,6 +372,11 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
                     return boostedMultiplier;
                 }
             }
+            if([4050].includes(captains[temp].number + 1)){
+                if ((orb == 'dex') || (orb == 2  && type == 'DEX')){
+                    return boostedMultiplier;
+                }
+            }
         }
     }
     if (orb == 1.0 || orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int' || orb == 'meat' || orb == 'empty') return baseMultiplier;

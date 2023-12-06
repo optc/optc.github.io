@@ -17095,6 +17095,62 @@ window.specials = {
     4049: {
         orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
+    4050: {
+        orb: function(p) { return p.unit.type == "DEX" ? [2.75, 1, 2.75][p.cached.multiplier] : [2.5, 1, 2.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Orb Multiplier Override", "Both Effects"][levels[n]] + '. To switch to the ' + ["Orb Boost", "Orb Multiplier Override", "Both Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = [false, true, true][p.cached.multiplier];
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        }
+    },
+    4051: {
+        burn: function(p) { return 1; },
+        status: function(p) { return p.burn ? p.cached.multiplier1 : 1; },
+        atk: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Powerhouse") ? p.cached.multiplier2 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.captain ? p.captain.class.has("Powerhouse") ? 2 : 1.75 : 1.75;
+            p.cached.multiplier2 = p.percHP > 99 ? 2.25 : 1;
+        }
+    },
+    4052: {
+        affinity: function(p) { return p.unit.class.has("Powerhouse") ? p.cached.multiplier1 : 1; },
+        def: function(p) { return [1, 0][p.cached.multiplier]; },
+        affinityPlus: function(p) { return p.cached.multiplier2; },
+        onActivation: function(p) {
+            var levels = [1.75, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = n;
+            p.cached.multiplier1 = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+            p.cached.multiplier2 = p.percHP > 99 ? 0.25 : 0;
+        },
+    },
+    4053: {
+        rcv: function(p) { return 1.5; },
+        atkbase: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1000 : 0; },
+        orb: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [2, 2.25, 2.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

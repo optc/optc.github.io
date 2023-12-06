@@ -436,6 +436,16 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     }
                 }
             }
+            if (orb =='dex' || (orb == 2 && x.unit.type == "DEX")){
+                for (temp = 0; temp < 2; temp++){
+                    if (team[temp].unit != null){
+                        if ([ 4050 ].includes(team[temp].unit.number + 1)){
+                            orb = 2;
+                        }
+                    }
+                }
+                if (window.specials[4050].turnedOn) orb = 2.5;
+            }
             if (orb == 0.5 && x.unit.type == 'DEX' && $scope.data.effect == 'STR Orbs Beneficial') orb = 2;
             if (orb == 'str' && $scope.data.effect == 'STR Orbs Beneficial') orb = 2;
             if (orb == 'meat') orb = 
