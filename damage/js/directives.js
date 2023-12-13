@@ -911,35 +911,35 @@ directives.unitOrb = function($rootScope) {
                     }
                     var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
                     var ORBSlength = ORBS.length;
-                    if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
+                    if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR")){
                         var tempy = [];
                         ORBS.forEach(function(element){
                             if (element != 'str') tempy.push(element);
                         });
                         ORBS = tempy;
                     }
-                    if($rootScope.areDEXOrbsEnabled() && (unit.unit.type == "QCK" || unit.unit.type == "DEX")){
+                    if($rootScope.areDEXOrbsEnabled() && (unit.unit.type == "DEX")){
                         var tempy = [];
                         ORBS.forEach(function(element){
                             if (element != 'dex') tempy.push(element);
                         });
                         ORBS = tempy;
                     }
-                    if($rootScope.areQCKOrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "QCK")){
+                    if($rootScope.areQCKOrbsEnabled() && (unit.unit.type == "QCK")){
                         var tempy = [];
                         ORBS.forEach(function(element){
                             if (element != 'qck') tempy.push(element);
                         });
                         ORBS = tempy;
                     }
-                    if($rootScope.arePSYOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                    if($rootScope.arePSYOrbsEnabled() && (unit.unit.type == "PSY")){
                         var tempy = [];
                         ORBS.forEach(function(element){
                             if (element != 'psy') tempy.push(element);
                         });
                         ORBS = tempy;
                     }
-                    if($rootScope.areINTOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                    if($rootScope.areINTOrbsEnabled() && (unit.unit.type == "INT")){
                         var tempy = [];
                         ORBS.forEach(function(element){
                             if (element != 'int') tempy.push(element);

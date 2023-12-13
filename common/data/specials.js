@@ -16632,6 +16632,9 @@ window.specials = {
         orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.25 : 1; },
         affinity: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 2.5 : 1; },
     },
+    3988: {
+        chainAddition: function(p) { return 1.1; },
+    },
     3990: {
         increaseDamageTaken: function(p) { return p.cached.multiplier; },
         onActivation: function(p) {
@@ -17127,14 +17130,14 @@ window.specials = {
         affinityPlus: function(p) { return p.cached.multiplier2; },
         onActivation: function(p) {
             var levels = [1.75, 2];
-            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            var n = (levels.indexOf(p.cached.multiplier1) + 1) % levels.length;
             p.cached.multiplier = n;
             p.cached.multiplier1 = levels[n];
+            p.cached.multiplier2 = p.percHP > 99 ? 0.25 : 0;
             p.scope.notify({
-                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                text: '' + levels[n] + 'x boost. To use the ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special<br><br>' + (p.percHP > 99 ? "HP is full, adding 0.25x Affinity Buff." : "HP is not full, not adding Affinity Buff."),
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
-            p.cached.multiplier2 = p.percHP > 99 ? 0.25 : 0;
         },
     },
     4053: {

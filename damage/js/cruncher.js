@@ -376,7 +376,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                     (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : orb;
                 for (temp = 0; temp < 2; temp++){
                     if (team[temp].unit != null){
-                        if ([ 3904, 3905, 3947, 3948, 3966, 3967, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 5539, 5540, 5541, 5542, 5543, 5544, 5545, 5546, 5547, 5548, 5549, 5550, 5551, 5552, 5553, 5554, 4028, 4029 ].includes(team[temp].unit.number + 1)){
+                        if ([ 3904, 3905, 3947, 3948, 3966, 3967, 5430, 5432, 5453, 5454, 5455, 5456, 5457, 5548, 5459, 5460, 5539, 5540, 5541, 5542, 5543, 5544, 5545, 5546, 5547, 5548, 5549, 5550, 5551, 5552, 5553, 5554, 4028, 4029, 4050 ].includes(team[temp].unit.number + 1)){
                             orb = orb == 'tnd' ? 2 : Math.max(orb,2);
                         }
                     }
@@ -459,13 +459,18 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'wano') orb = 2.5;
             if (orb == 'g'){
                 orb = 1.5;
-                if (Math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn]) > -1) orb = [2, 2.25][Math.max([window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn])];
+                if (Math.max(window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn) > -1) orb = [2, 2.25][Math.max(window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn)];
             }
             if (orb == 'superbomb'){
                 orb = 1.5;
                 orb = window.altspecials[4038].turnedOn || window.altspecials[4039].turnedOn ? 2.5 : 
                 window.specials[3762].turnedOn ? 2.25 : orb;
             }
+            if (orb == 'str' && x.type == 'DEX') orb = 0.5;
+            if (orb == 'dex' && x.type == 'QCK') orb = 0.5;
+            if (orb == 'qck' && x.type == 'STR') orb = 0.5;
+            if (orb == 'psy' && x.type == 'INT') orb = 0.5;
+            if (orb == 'int' && x.type == 'PSY') orb = 0.5;
             if (orb == 'str' || orb == 'dex' || orb == 'qck' || orb == 'psy' || orb == 'int') orb = 1;
             atk += getShipBonus('atk',true,x.unit,n,team[1].unit,n,shipParam);//This needs to be changed so that the second n is the position, but the position doesn't exist yet
             multipliers.push([ orb, 'orb' ]); // orb multiplier (fixed)
@@ -1257,6 +1262,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     var computeSpecialsCombinations = function() {
         var result = { type: [ ], class: [ ], base: [ ], orb: [ ], affinity: [ ], condition: [ ], dmgredatk: [ ], atkbase: [ ]};
         chainSpecials = [ ];
+        orbMatching = [ ];
         plusSpecials = [ ];
         chainAddition = [ ];
         chainCarry = [ ];
@@ -1340,6 +1346,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 captChain.push({ sourceSlot: data.sourceSlot, chainAddition: data.chainAddition || function(){ return 0; }});
             if (data.hasOwnProperty('chain'))
                 captChain.push({ sourceSlot: data.sourceSlot, chain: data.chain || function(){ return 0; }});
+            if (data.hasOwnProperty('beneficialOrb'))
+                orbMatching.push({ sourceSlot: data.sourceSlot, beneficialOrb: data.beneficialOrb || function(){ return 0; }});
         });
         specialsCombinations = Utils.arrayProduct([ result.type.concat(result.class), result.condition, result.orb, result.dmgredatk, result.atkbase ]);
         if (chainSpecials.length === 0) chainSpecials.push({
@@ -2081,6 +2089,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             },
             enemyImmunities: $scope.data.enemyImmunities,
             enemyEffects: enemyEffects,
+            orbMatching: orbMatching,
         };
     };
 

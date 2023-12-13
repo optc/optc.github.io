@@ -14355,7 +14355,7 @@ window.captains = {
         hp: function(p) { return p.unit.type == "INT" || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") ? 1.2 : 1; },
     },
     4050: {
-        atk: function(p) { return [ 'tnd' ].includes(p.orb) ? 5.75 : 5.25; },
+        atk: function(p) { return [ 'tnd', 'dex' ].includes(p.orb) ? 5.75 : 5.25; },
         hp: function(p) { return 1.3; },
     },
     4051: {
