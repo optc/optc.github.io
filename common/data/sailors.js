@@ -3193,7 +3193,7 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         hpStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Slasher") ? [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
-        chainAddition: function(p) { return [0, 0.1, 0.1][CrunchUtils.limitUnlock(p, "sailors")]; },
+        chainAddition: function(p) { return p.captain.class.has("Slasher") ? [0, 0.1, 0.1][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4044: {
         atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 75 : 0; },

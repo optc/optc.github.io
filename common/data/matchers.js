@@ -2533,6 +2533,12 @@ let matchers = {
         },
 
         {
+            name: 'Requirement: Overfill Healing',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            regex: /If there is more than \d+(,\d+)* Excess Healing done /i,
+        },
+
+        {
             name: 'Requirement: Beneficial Orb',
             targets: [ 'captain' ],
             regex: /if they have a beneficial orb/i,

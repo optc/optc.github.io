@@ -697,6 +697,7 @@ const Romy = [ "Romy" ];
 const Yorueka = [ "Yorueka" ];
 const Aramaki = [ "Aramaki", "Ryokugyu" ];
 const Tensei = [ "Tensei", "Kurouma" ];
+const Hamlet = [ "Hamlet" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4645,6 +4646,9 @@ window.families = {
     4051: [ ...Sakazuki ],
     4052: [ ...Tensei ],
     4053: [ ...MonkeyDLuffy ],
+    4054: [ ...Tama ],
+    4055: [ ...Speed, ...Hamlet ],
+    4056: [ ...Shanks ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

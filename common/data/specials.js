@@ -17154,6 +17154,22 @@ window.specials = {
             });
         },
     },
+    4054: {
+        orbPlus: function(p) { return 0.5; },
+        statusPlus: function(p) { return 0.5; },
+    },
+    4055: {
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+    },
+    4056: {
+        atk: function(p) { return p.unit.type == p.cached.multiplier ? 2.5 : 1; },
+        atkbase: function(p) { return p.unit.type == p.cached.multiplier ? [0, 1000][CrunchUtils.llimitUnlock(p, "specials")] : 0; },
+        type: "type",
+        chainAddition: function(p) { return [1.2, 1.4][CrunchUtils.llimitUnlock(p, "specials")]; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.colorCount.STR>=4 ? "STR" : p.colorCount.DEX>=4 ? "DEX" : p.colorCount.QCK>=4 ? "QCK" : p.colorCount.PSY>=4 ? "PSY" : p.colorCount.INT>=4 ? "INT" : "NaT";
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

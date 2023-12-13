@@ -573,6 +573,11 @@ window.altspecials = {
     4050: {
         orbPlus: function(p) { return 0.25; },
     },
+    4054: {
+        status: function(p) { return p.defenseDown ? 2 : 1; },
+        def: function(p) { return 0.5; },
+        ignoresImmunities: function(p) { return ['def']; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

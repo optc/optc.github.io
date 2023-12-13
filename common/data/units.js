@@ -4052,6 +4052,9 @@ window.units = [
     [ "Sakazuki - Justice Eradicating Evil", "STR", ["Powerhouse", "Fighter"], 5, 30, 4, 4, 99, 4000000, 1610, 804, 89, 3220, 1608, 178, 1 ],
     [ "Kurouma", "INT", ["Powerhouse", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1590, 775, 102, 3180, 1550, 204, 1 ],
     [ "Monkey D. Luffy - Fireworks Lighting the Skies of Wano", "QCK", ["Fighter", "Free Spirit"], "5+", 40, 4, 4, 99, 5000000, 1721, 771, 112, 3441, 1542, 223, 1 ],
+    [ "Otama - Yell of Determination", "DEX", ["Free Spirit", "Powerhouse"], 6, 40, 4, 5, 99, 5000000, 1917, 773, 206, 3835, 1546, 412, 1 ],
+    [ "Speed & Hamlet", "DEX", ["Powerhouse", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1759, 755, 80, 3519, 1510, 161, 1 ],
+    [ "Red-Haired Shanks - Approaching the New Era", "INT", ["Free Spirit", "Cerebral"], "6+", 65, 4, 5, 99, 5000000, 1908, 862, 195, 3815, 1724, 390, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

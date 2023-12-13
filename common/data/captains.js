@@ -14371,6 +14371,18 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
         rcv: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Free Spirit") ? 1.3 : 1; },
     },
+    4054: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? [ 'meat', 'tnd', 'wano' ].includes(p.orb) ? 5.5 : 5.25 : 1; },
+        rcv: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 1.35 : 1; },
+    },
+    4055: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 3.75 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Free Spirit") || p.unit.class.has("Powerhouse") ? 1.4 : 1; },
+    },
+    4056: {
+        atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? [5,5.25][CrunchUtils.llimitUnlock(p, "captains")] : [4.5, 4.75][CrunchUtils.limitUnlock(p, "captains")]; },
+        hp: function(p) { return 1.3; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
