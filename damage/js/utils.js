@@ -208,7 +208,6 @@ window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier
     }); */
 
     boostedMultiplier = parseFloat(params.customBuffs.orb) != 1 ? parseFloat(params.customBuffs.orb) : boostedMultiplier;
-    console.log($scope.enabledSpecials);
     
     if(effectName == 'STR Orbs Beneficial'){
         if (orb == 'str') return boostedMultiplier;
