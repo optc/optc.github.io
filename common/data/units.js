@@ -4055,6 +4055,16 @@ window.units = [
     [ "Otama - Yell of Determination", "DEX", ["Free Spirit", "Powerhouse"], 6, 40, 4, 5, 99, 5000000, 1917, 773, 206, 3835, 1546, 412, 1 ],
     [ "Speed & Hamlet", "DEX", ["Powerhouse", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1759, 755, 80, 3519, 1510, 161, 1 ],
     [ "Red-Haired Shanks - Approaching the New Era", "INT", ["Free Spirit", "Cerebral"], "6+", 65, 4, 5, 99, 5000000, 1908, 862, 195, 3815, 1724, 390, 1 ],
+    [ "Roger & Oden - Set Sail to the Vast Ocean", "QCK", ["Slasher", "Striker"], 5, 30, 4, 3, 70, 1066998, 1071, 415, 88, 2141, 830, 176, 1 ],
+    [ "Roger & Oden - Remarkable Grand Adventure", "QCK", ["Slasher", "Striker"], 6, 55, 4, 5, 99, 5000000, 2111, 824, 174, 4222, 1648, 347, 1 ],
+    [ "Yamato - Determined to Fight Alongside the Land of Wano", ["QCK", "DEX"], [["Striker", "Slasher"],["Striker", "Slasher"],["Striker", "Slasher"]], 5, 30, 5, 3, 70, 1066998, 1216, 444, 92, 2431, 888, 183, 1 ],
+    [ "\"Child of Ogres\" Yamato - Determined to Fight Alongside the Land of Wano", ["QCK", "DEX"], [["Striker", "Slasher"],["Striker", "Slasher"],["Striker", "Slasher"]], 6, 55, 5, 5, 99, 5000000, 2401, 882, 181, 4802, 1763, 362, 1 ],
+    [ "Zoro & Sanji - Vows Made", ["DEX", "QCK"], [["Slasher", "Driven"],["Free Spirit", "Fighter"],["Slasher", "Free Spirit"]], 5, 30, 4, 3, 70, 1066998, 1147, 450, 101, 2293, 900, 202, 1 ],
+    [ "Zoro & Sanji - Wings to Become the King", ["DEX", "QCK"], [["Slasher", "Driven"],["Free Spirit", "Fighter"],["Slasher", "Free Spirit"]], 6, 55, 4, 5, 99, 5000000, 2263, 894, 200, 4526, 1787, 400, 1 ],
+    [ "Trafalgar Law - Inherited Will of Silence", "DEX", ["Cerebral", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 1913, 965, 185, 3826, 1929, 370, 1 ],
+    [ "Kin'emon - Samurai With Dignity", "QCK", ["Slasher", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1646, 680, 124, 3292, 1360, 248, 1 ],
+    [ "Kozuki Toki - Guiding Her Husband", "QCK", ["Slasher", "Cerebral"], 5, 30, 4, 4, 99, 4000000, 1560, 660, 146, 3119, 1319, 291, 1 ],
+    [ "Edward Newgate - Anger's Restraint", "QCK", ["Striker", "Slasher"], 5, 40, 4, 4, 99, 5000000, 1823, 823, 48, 3646, 1646, 96, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4638,6 +4648,22 @@ var ghostsUnits = [
     [ "⚐ Carina - Cat and Fox's Showtime", "QCK", ["Free Spirit", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 1824, 762, 192, 3648, 1524, 384, 1 ],
     [ "⚐ Nami & Carina - Cat and Fox's Showtime", "STR", ["Free Spirit", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 1945, 835, 223, 3890, 1670, 445, 1 ],
     [ "⚐ Nami & Carina - Cat and Fox's Showtime", "QCK", ["Free Spirit", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 1945, 835, 223, 3890, 1670, 445, 1 ],
+    [ "⚐ Yamato - White Beast Dashing Through the Battlefield", "QCK", ["Striker", "Slasher"], 5, 30, 4, 3, 70, 1066998, 1138, 425, 86, 2275, 850, 172, 1 ],
+    [ "⚐ Yamato - Using the Name of Oden", "DEX", ["Striker", "Slasher"], 5, 30, 5, 3, 70, 1066998, 1167, 419, 83, 2333, 838, 166, 1 ],
+    [ "⚐ Yamato - Determined to Fight Alongside the Land of Wano", "QCK", ["Striker", "Slasher"], 5, 30, 5, 3, 70, 1066998, 1216, 444, 92, 2431, 888, 183, 1 ],
+    [ "⚐ Yamato - Determined to Fight Alongside the Land of Wano", "DEX", ["Striker", "Slasher"], 5, 30, 5, 3, 70, 1066998, 1216, 444, 92, 2431, 888, 183, 1 ],
+    [ "⚐ \"Child of Ogres\" Yamato - White Beast Dashing Through the Battlefield", "QCK", ["Striker", "Slasher"], 6, 55, 4, 5, 99, 5000000, 2245, 844, 170, 4490, 1688, 339, 1 ],
+    [ "⚐ \"Child of Ogres\" Yamato - Using the Name of Oden", "DEX", ["Striker", "Slasher"], 6, 55, 5, 5, 99, 5000000, 2303, 832, 164, 4606, 1663, 328, 1 ],
+    [ "⚐ \"Child of Ogres\" Yamato - Determined to Fight Alongside the Land of Wano", "QCK", ["Striker", "Slasher"], 6, 55, 5, 5, 99, 5000000, 2401, 882, 181, 4802, 1763, 362, 1 ],
+    [ "⚐ \"Child of Ogres\" Yamato - Determined to Fight Alongside the Land of Wano", "DEX", ["Striker", "Slasher"], 6, 55, 5, 5, 99, 5000000, 2401, 882, 181, 4802, 1763, 362, 1 ],
+    [ "⚐ Roronoa Zoro - Vows Made", "DEX", ["Slasher", "Driven"], 5, 30, 4, 3, 70, 1066998, 1108, 420, 93, 2216, 839, 185, 1 ],
+    [ "⚐ Sanji - Vows Made", "QCK", ["Free Spirit", "Fighter"], 5, 30, 4, 3, 70, 1066998, 1109, 411, 95, 2217, 822, 191, 1 ],
+    [ "⚐ Zoro & Sanji - Vows Made", "DEX", ["Slasher", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1147, 450, 101, 2293, 900, 202, 1 ],
+    [ "⚐ Zoro & Sanji - Vows Made", "QCK", ["Slasher", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1147, 450, 101, 2293, 900, 202, 1 ],
+    [ "⚐ Roronoa Zoro - Wings to Become the King", "DEX", ["Slasher", "Driven"], 6, 55, 4, 5, 99, 5000000, 2186, 833, 183, 4372, 1666, 366, 1 ],
+    [ "⚐ Sanji - Wings to Become the King", "QCK", ["Free Spirit", "Fighter"], 6, 55, 4, 5, 99, 5000000, 2187, 816, 189, 4374, 1632, 377, 1 ],
+    [ "⚐ Zoro & Sanji - Wings to Become the King", "DEX", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2263, 894, 200, 4526, 1787, 400, 1 ],
+    [ "⚐ Zoro & Sanji - Wings to Become the King", "QCK", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2263, 894, 200, 4526, 1787, 400, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
