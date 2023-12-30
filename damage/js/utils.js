@@ -197,6 +197,10 @@ window.CrunchUtils.gearSort = function(array, typeMultiplier) {
     result.push(beginning.concat(end));
     return result;
 };
+    
+window.CrunchUtils.kataCount = function(checkClasses, unitClasses) {
+    return checkClasses.reduce((a, c) => a + unitClasses.includes(c), 0);
+};
 
 window.CrunchUtils.getOrbMultiplier = function(orb, type, uclass, baseMultiplier, boostedMultiplier, captains, effectName, params) {
     /* Object.keys(window.altspecials).forEach(function(x) {

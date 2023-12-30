@@ -72,6 +72,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         delay: false,
         increaseDamageTaken: false,
         increaseDamageTakenPlus: false,
+        increaseDamageTakenCeil: false,
         mark: false,
         negative: false,
         poison: false,
@@ -85,6 +86,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         def: [], // replace the booleans with arrays for these effects with multiplier
         increaseDamageTaken: [],
         increaseDamageTakenPlus: [],
+        increaseDamageTakenCeil: [],
     };
 
     var katakuri = false;
@@ -94,6 +96,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
     $scope.data.customAffinity = 1;
     $scope.data.customATKBase = 0;
     $scope.data.customChainAddition = 0;
+
+    $scope.data.classOverride = [ null, null ];
 
     var specialsCombinations = [ ], chainSpecials = [ ];
     var hitModifiers = [ ];
@@ -300,6 +304,13 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             else if(n != 0 && $scope.data.cloneCheck2 && [3522, 3523].includes(unitTemp.number+1)) cloneReplace(unitTemp, n);
             if(friendCaptain && $scope.data.cloneCheck1 && [3522, 3523].includes(friendCaptain.number+1)) cloneReplace(friendCaptain, 0);
             if(captain && $scope.data.cloneCheck2 && [3522, 3523].includes(captain.number+1)) cloneReplace(captain, 1);
+            
+            if($scope.data.classOverrideEnabled) {
+                classOverrideReplace(unitTemp, n);
+                classOverrideReplace(friendCaptain, 0);
+                classOverrideReplace(captain, 1);
+
+            }
             
             x.unit = unitTemp; //Override for custom unit Type/Classes
 
@@ -1008,6 +1019,9 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         if (enemyEffectsFromSpecials.increaseDamageTakenPlus.length > 0){
             increaseDamageTakenMultiplier += increaseDamageTakenMultiplier > 1 ? Math.max(...enemyEffectsFromSpecials.increaseDamageTakenPlus) : 0;
         }
+        if (enemyEffectsFromSpecials.increaseDamageTakenCeil.length > 0){
+            increaseDamageTakenMultiplier = increaseDamageTakenMultiplier > 1 ? Math.max(...enemyEffectsFromSpecials.increaseDamageTakenCeil) : increaseDamageTakenMultiplier;
+        }
 
         chainSpecials.forEach(function(special) {
             var multipliersUsed = [ ], currentHits = 0, overall = 0;
@@ -1692,7 +1706,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (!params.enemyImmunities[enemyEffect] || (special.ignoresImmunities && special.ignoresImmunities(params).includes(enemyEffect))) {
                     var returnValue = special[enemyEffect](params);
                     // for these effects, the function returns the multiplier, so 1 means no effect
-                    if ([ 'def', 'increaseDamageTaken', 'increaseDamageTakenPlus' ].includes(enemyEffect)){
+                    if ([ 'def', 'increaseDamageTaken', 'increaseDamageTakenPlus', 'increaseDamageTakenCeil' ].includes(enemyEffect)){
                         if (returnValue == 1){
                             continue;
                         }
@@ -1886,6 +1900,15 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         }
     };
 
+    var classOverrideReplace = function(cloneUnit){
+        //cloneUnit.type = $scope.data.cloneFCType ? $scope.data.cloneFCType : cloneUnit.type;
+        //if($scope.data.cloneFCClass1 == $scope.data.cloneFCClass2 || !$scope.data.cloneFCClass2 && $scope.data.cloneFCClass1)
+        //    cloneUnit.class = $scope.data.cloneFCClass1 ? $scope.data.cloneFCClass1 : cloneUnit.class;
+        //else
+        //    cloneUnit.class = $scope.data.cloneFCClass1 ? [ $scope.data.cloneFCClass1, $scope.data.cloneFCClass2 ] : cloneUnit.class;
+        console.log("Not Yet Implemented")
+    };
+
     /**
      * Caches the parameters. This is should be called whenever a special or altspecial is toggled.
      * The cached parameters can be used for specials that check for something (like the Captain's type or crew HP) at the time of activation.
@@ -2023,6 +2046,8 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
 
         unitTemp.class1 = Array.isArray(unitTemp.class) ? unitTemp.class[0] : unitTemp.class;
         unitTemp.class2 = Array.isArray(unitTemp.class) ? unitTemp.class[1] : null;
+
+        if($scope.data.classOverrideEnabled) classOverrideReplace(unitTemp);
 
         return {
             cached: getCachedParameters(sourceSlotNumber, specialType),

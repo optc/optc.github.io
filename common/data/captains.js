@@ -7058,28 +7058,10 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Shooter") ? 2.5 : 1; },
     },
     2112: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(1.825, Katacount);
-        },
+        atk: function(p) { return Math.pow(1.825, CrunchUtils.kataCount([ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     2113: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow([[1.825, 1.9],[2.15, 2.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], Katacount);
-        },
+        atk: function(p) { return Math.pow([[1.825, 1.9],[2.15, 2.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], CrunchUtils.kataCount([ "Fighter", "Striker", "Shooter", "Cerebral", "Powerhouse" ], p.unit.class)); },
         hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse") ? [[1, 1],[1, 1.2]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
     2114: {
@@ -8048,52 +8030,16 @@ window.captains = {
         hp: function(p) { return p.unit.class.has("Shooter") ? 1.25 : 1; },
     },
     2335: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Free Spirit", "Cerebral" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(1.1, Katacount);
-        },
+        atk: function(p) { return Math.pow(1.1, CrunchUtils.kataCount([ "Fighter", "Slasher", "Free Spirit", "Cerebral" ], p.unit.class)); },
     },
     2336: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Free Spirit", "Cerebral" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow([[1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8],[1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 2.3]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], Katacount);
-        },
+        atk: function(p) { return Math.pow([[1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8],[1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 2.3]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], CrunchUtils.kataCount([ "Fighter", "Slasher", "Free Spirit", "Cerebral" ], p.unit.class)); },
     },
     2337: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return (p.turnCounter < 12) ? Math.pow(2, Katacount) : (Katacount > 0) ? 2.75 : 1;
-        },
+        atk: function(p) { return (p.turnCounter < 12) ? Math.pow(2, CrunchUtils.kataCount([ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ], p.unit.class)) : (CrunchUtils.kataCount([ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ], p.unit.class) > 0) ? 2.75 : 1; },
     },
     2338: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return (p.turnCounter < 12) ? Math.pow(2, Katacount) : (Katacount > 0) ? 2.75 : 1;
-        },
+        atk: function(p) { return (p.turnCounter < 12) ? Math.pow(2, CrunchUtils.kataCount([ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ], p.unit.class)) : (CrunchUtils.kataCount([ "Fighter", "Slasher", "Shooter", "Striker", "Cerebral" ], p.unit.class) > 0) ? 2.75 : 1; },
     },
     2339: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Cerebral") ? 2.25 : 1; },
@@ -8229,29 +8175,11 @@ window.captains = {
         hp: function(p) { return [1.35, 1.45][CrunchUtils.llimitUnlock(p, "captains")]; }
     },
     2364: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(1.825, Katacount);
-        },
+        atk: function(p) { return Math.pow(1.825, CrunchUtils.kataCount([ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ], p.unit.class)); },
         affinity: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.4 : 1; }
     },
     2365: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(1.825, Katacount);
-        },
+        atk: function(p) { return Math.pow(1.825, CrunchUtils.kataCount([ "Fighter", "Slasher", "Shooter", "Driven", "Powerhouse" ], p.unit.class)); },
         affinity: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse")) ? 1.4 : 1; }
     },
     2368: {
@@ -9622,16 +9550,7 @@ window.captains = {
         hp: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "PSY") ? 1.2 : 1; },
     },
     2739: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Slasher", "Striker", "Driven", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow([[1.95, 2],[2.2, 2.3]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], Katacount);
-        },
+        atk: function(p) { return Math.pow([[1.95, 2],[2.2, 2.3]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")], CrunchUtils.kataCount([ "Slasher", "Striker", "Driven", "Cerebral", "Powerhouse" ], p.unit.class)); },
         hp: function(p) { return (p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Driven") || p.unit.class.has("Cerebral") || p.unit.class.has("Powerhouse")) ? [[1, 1],[1, 1.2]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
     },
     2740: {
@@ -14383,6 +14302,42 @@ window.captains = {
         atk: function(p) { return (p.colorCount.STR>=4 || p.colorCount.DEX>=4 || p.colorCount.QCK>=4 || p.colorCount.PSY>=4 || p.colorCount.INT>=4) ? [5,5.25][CrunchUtils.llimitUnlock(p, "captains")] : [4.5, 4.75][CrunchUtils.limitUnlock(p, "captains")]; },
         hp: function(p) { return 1.3; },
     },
+    4057: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 6 : 5.5 : p.actions[p.sourceSlot] ? 5.25 : 5; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") ? 1.4 : 1; },
+    },
+    4058: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") ? p.actions[p.sourceSlot] ? 6 : 5.5 : p.actions[p.sourceSlot] ? 5.25 : 5; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") ? 1.4 : 1; },
+    },
+    4063: {
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? p.percHP > 99 ? 5.75 : 5.25 : 1; },
+        hp: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 1.3 : 1; },
+    },
+    4064: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
+    4065: {
+        atk: function(p) { return p.unit.class.has("Slasher") ? 3 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
+    4066: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? p.percHP <= 50 ? 4 : 3.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    4067: {
+        atk: function(p) { return p.unit.class.has("Shooter") ? p.percHP <= 30 ? 5 : 3.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") ? 1.5 : 1; },
+    },
+    4068: {
+        atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? p.percHP <= 30 ? [5.5, 6][CrunchUtils.llimitUnlock(p, "captains")] : [4.5, 5.5][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        rcv: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    4069: {
+        atk: function(p) { return p.unit.type == "INT" ? 3 : 1; },
+        hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
@@ -16051,100 +16006,28 @@ var ghostsCaptains = {
         hp: function(p) { return 1.5; },
     },
     389: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.2, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.2, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     390: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.2, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.2, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     391: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.25, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.25, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     392: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.25, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.25, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     393: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.2, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.2, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     394: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.2, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.2, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     395: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.25, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.25, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     396: {
-        atk: function(p) {
-            var Katacount = 0;
-            var Kataclass = [ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ];
-            for(var i = 0; i < Kataclass.length; i++) {
-                if(p.unit.class.has(Kataclass[i])) {
-                    Katacount++;
-                }
-            }
-            return Math.pow(2.25, Katacount);
-        },
+        atk: function(p) { return Math.pow(2.25, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Cerebral", "Powerhouse" ], p.unit.class)); },
     },
     397: {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? 4.25 : 1; },
@@ -16878,6 +16761,70 @@ var ghostsCaptains = {
     554: {
         atk: function(p) { return ['g'].has(p.orb) ? 5 : ['meat', 'tnd'].has(p.orb) ? 4.5 : 4; },
         hp: function(p) { return 1.2; },
+    },
+    555: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.25 : 4.75; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.35 : 1; },
+    },
+    556: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.25 : 4.75; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.35 : 1; },
+    },
+    557: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 6 : 5; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    558: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 6 : 5; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    559: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.25 : 4.75; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.35 : 1; },
+    },
+    560: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 5.25 : 4.75; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.35 : 1; },
+    },
+    561: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 6 : 5; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    562: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 6 : 5; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
+    563: {
+        atk: function(p) { return Math.pow(2.3, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    564: {
+        atk: function(p) { return Math.pow(2.3, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    565: {
+        atk: function(p) { return Math.pow(2.45, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    566: {
+        atk: function(p) { return Math.pow(2.45, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    567: {
+        atk: function(p) { return Math.pow(2.3, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    568: {
+        atk: function(p) { return Math.pow(2.3, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    569: {
+        atk: function(p) { return Math.pow(2.45, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    570: {
+        atk: function(p) { return Math.pow(2.45, CrunchUtils.kataCount([ "Fighter", "Slasher", "Striker", "Shooter", "Driven", "Free Spirit" ], p.unit.class)); },
+        hp: function(p) { return p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Striker") || p.unit.class.has("Shooter") || p.unit.class.has("Driven") || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
     },
 };
 

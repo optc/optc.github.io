@@ -1284,22 +1284,38 @@ let matchers = {
                 Spirit characters by 2x-2.5x for 1-2 turns, by 1.5x-2x for 2-3 turns
                 otherwise."
             */
-            regex: /Boosts ATK(?: and HP| and RCV|, HP and RCV)? of (?=((?:[^c."]+|c(?!har))*))\1characters? by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?) (?:after [?\d\w]+? hit in the chain )?for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?) for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
+            regex: /Boosts ATK(?: and HP| and RCV|, HP and RCV)? of (?=((?:[^c."]+|c(?!har))*))\1characters? by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?)(?:, (\D+?),)? (?:after [?\d\w]+? hit in the chain )?for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?)(?:, (\D+?),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
                     description: 'Multiplier:',
-                    groups: [2, 3, 8, 9],
+                    groups: [2, 3, 9, 10],
                 },
                 {
                     type: 'number',
                     description: 'Static Boost:',
-                    groups: [4, 5, 10, 11],
+                    groups: [4, 5, 11, 12],
                 },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [6, 7, 12, 13],
+                    groups: [7, 8, 14, 15],
+                },
+                {
+                    type: 'option',
+                    description: 'Allowing Override',
+                    regex: /allowing override/,
+                    radioGroup: 'targets',
+                    groups: [6, 13],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Buff Clear Immune',
+                    regex: /preventing buff clears/,
+                    radioGroup: 'targets',
+                    groups: [6, 13],
+                    cssClasses: ['min-width-6'],
                 },
                 ...createUniversalSubmatcher([1]),
                 {
@@ -1335,22 +1351,38 @@ let matchers = {
         {
             name: 'Base ATK Boost',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /Boosts base ATK(?: and HP| and RCV|, HP and RCV)? of (?=((?:[^c."]+|c(?!har))*))\1characters? by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?) for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?) for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
+            regex: /Boosts base ATK(?: and HP| and RCV|, HP and RCV)? of (?=((?:[^c."]+|c(?!har))*))\1characters? by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?)(?:, (\D+?),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by (?:([?.\d]+)x(?:-([?.\d]+)x)?|([?.,\d]+)(?:-([?.,\d]+))?)(?:, (\D+?),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
                     description: 'Multiplier:',
-                    groups: [2, 3, 8, 9],
+                    groups: [2, 3, 9, 10],
                 },
                 {
                     type: 'number',
                     description: 'Static Boost:',
-                    groups: [4, 5, 10, 11],
+                    groups: [4, 5, 11, 12],
                 },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [6, 7, 12, 13],
+                    groups: [7, 8, 14, 15],
+                },
+                {
+                    type: 'option',
+                    description: 'Allowing Override',
+                    regex: /allowing override/,
+                    radioGroup: 'targets',
+                    groups: [6, 13],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Buff Clear Immune',
+                    regex: /preventing buff clears/,
+                    radioGroup: 'targets',
+                    groups: [6, 13],
+                    cssClasses: ['min-width-6'],
                 },
                 ...createUniversalSubmatcher([1]),
                 {
@@ -1435,17 +1467,33 @@ let matchers = {
         {
             name: 'Orb Effect: Boost',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /boosts Orb Effects of (?=((?:[^c."]+|c(?!har))*))\1characters? by ([?.\d]+)x(?:-([?.\d]+)x)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
+            regex: /boosts Orb Effects of (?=((?:[^c."]+|c(?!har))*))\1characters? by ([?.\d]+)x(?:-([?.\d]+)x)?(?:, (\D+?),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?(?:, (\D+?),)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
             submatchers: [
                 {
                     type: 'number',
                     description: 'Multiplier:',
-                    groups: [2, 3, 6, 7],
+                    groups: [2, 3, 7, 8],
                 },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [4, 5, 8, 9],
+                    groups: [5, 6, 10, 11],
+                },
+                {
+                    type: 'option',
+                    description: 'Allowing Override',
+                    regex: /allowing override/,
+                    radioGroup: 'targets',
+                    groups: [4, 9],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Buff Clear Immune',
+                    regex: /preventing buff clears/,
+                    radioGroup: 'targets',
+                    groups: [4, 9],
+                    cssClasses: ['min-width-6'],
                 },
                 ...createUniversalSubmatcher([1]),
                 {
@@ -1530,17 +1578,33 @@ let matchers = {
         {
             name: 'Color Affinity Boost',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /Boosts (?:the )?Color Affinity of (?=((?:[^c."]+|c(?!har))*))\1characters? by ([?.\d]+)x(?:-([?.\d]+)x)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
+            regex: /Boosts (?:the )?Color Affinity of (?=((?:[^c."]+|c(?!har))*))\1characters? by ([?.\d]+)x(?:-([?.\d]+)x)?(?:, (\D+?),)? for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, by ([?.\d]+)x(?:-([?.\d]+)x)?(?:, (\D+?),)?(?: for ([?\d]+\+?)(?:-([?\d]+))? turns?)?)?/i,
             submatchers: [
                 {
                     type: 'number',
                     description: 'Multiplier:',
-                    groups: [2, 3, 6, 7],
+                    groups: [2, 3, 7, 8],
                 },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [4, 5, 8, 9],
+                    groups: [5, 6, 10, 11],
+                },
+                {
+                    type: 'option',
+                    description: 'Allowing Override',
+                    regex: /allowing override/,
+                    radioGroup: 'targets',
+                    groups: [4, 9],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Buff Clear Immune',
+                    regex: /preventing buff clears/,
+                    radioGroup: 'targets',
+                    groups: [4, 9],
+                    cssClasses: ['min-width-6'],
                 },
                 ...createUniversalSubmatcher([1]),
                 {
@@ -4829,7 +4893,36 @@ let matchers = {
         {
             name: 'ATK DOWN',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
-            regex: /(?:reduces|removes)[^."]+?(?:ATK DOWN|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            //Does not match Minimum-Chain or Maximum-Chain ATK DOWN
+            regex: /(?:reduces|removes)[^."]+?(?<!Chain )(?:ATK DOWN|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2, 3, 4, 5],
+                },
+            ],
+        },
+
+        {
+            name: 'Minimum-Chain ATK DOWN',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            //Does not match Minimum-Chain or Maximum-Chain ATK DOWN
+            regex: /(?:reduces|removes)[^."]+?(?:Minimum-Chain ATK DOWN|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [1, 2, 3, 4, 5],
+                },
+            ],
+        },
+
+        {
+            name: 'Maximum-Chain ATK DOWN',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            //Does not match Minimum-Chain or Maximum-Chain ATK DOWN
+            regex: /(?:reduces|removes)[^."]+?(?:Maximum-Chain ATK DOWN|selected debuffs?)[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
                 {
                     type: 'number',
@@ -5249,23 +5342,23 @@ let matchers = {
             name: 'Burn',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support' ],
             // "inflicts all enemies with Burn that will deal 100x enemies' ATK in damage for 4 turns that will ignore debuff protection"
-            regex: /inflicts all enemies with Burn that will deal ([?.\d]+)x(?:-([?.\d]+)x)? enemies' ATK in damage for ([?\d]+)(?:-([?\d]+))? turns?(?:, for ([?\d]+)(?:-([?\d]+))? turns?)?( that will ignore debuff protection)?/i,
+            regex: /(ignores? (?:Burn )?Debuff Protection and )?inflicts all enemies with Burn that will deal ([?.\d]+)x(?:-([?.\d]+)x)? enemies' ATK in damage for ([?\d]+)(?:-([?\d]+))? turns?(?:, for ([?\d]+)(?:-([?\d]+))? turns?)?( that will ignore debuff protection)?/i,
             submatchers: [
                 {
                     type: 'number',
                     description: 'Multiplier:',
-                    groups: [1, 2],
+                    groups: [2, 3],
                 },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [3, 4, 5, 6],
+                    groups: [4, 5, 6, 7],
                 },
                 {
                     type: 'option',
                     description: 'Ignores Immunity',
                     regex: /./,
-                    groups: [7],
+                    groups: [1, 8],
                 },
             ],
         },

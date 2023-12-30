@@ -1517,6 +1517,26 @@ window.events = {
                 $scope.notify({ text: 'Disabling [MEAT] orbs support.' });
         }
     },
+    4057: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
+    4058: {
+        onInsertion: function($scope) {
+            if (++$scope.options.wanoOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [WANO] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.wanoOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [WANO] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)
@@ -2445,6 +2465,86 @@ window.events = {
                 $scope.notify({ text: 'Disabling [G] orbs support.' });
             if (--$scope.options.tndOrbsEnabled === 0)
                 $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
+    5563: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5564: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5565: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5566: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5567: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5568: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5569: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
+        }
+    },
+    5570: {
+        onInsertion: function($scope) {
+            if (++$scope.options.classOverrideEnabled == 1)
+                $scope.notify({ text: 'Enabling Class Override.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.classOverrideEnabled === 0)
+                $scope.notify({ text: 'Disabling Class Override.' });
         }
     },
 };

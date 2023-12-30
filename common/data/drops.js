@@ -3304,6 +3304,16 @@ window.drops = {
             'Defeat Level Rewards': [ 4047 ],
         },
 
+        {
+            name: 'Edward Newgate',
+            dropID: 'pka7',
+            thumb: 4066,
+            global: true,
+            //nakama: 6395200,
+            gamewith: null,
+            'Defeat Level Rewards': [ 4066 ],
+        },
+
     ],
 
 

@@ -264,6 +264,43 @@
             </div>
         </li>
 
+        <li ng-show="options.classOverrideEnabled">
+            <div id="clone">
+                <i class="fa fa-people-arrows"></i>
+                Universal Class Override:<br>
+                <input type="checkbox" name="classOverrideEnabled" value="left" ng-model="data.classOverrideEnabled"><br>
+                <!-- Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.typeOverride">
+                        <option value="STR" selected>STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value="QCK">QCK</option>
+                        <option value="PSY">PSY</option>
+                        <option value="INT">INT</option>
+                    </select><br> -->
+                Class 1: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride1">
+                        <option value=0 selected>None</option>
+                        <option value="Fighter" >Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
+                Class 2: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride2">
+                        <option value=0 selected>None</option>
+                        <option value="Fighter" >Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
+            </div>
+        </li>
+
         <li>
             <div id="sliderToggle" status="{{options.slidersEnabled ? 0 : 1}}"
                 ng-click="options.slidersEnabled = !options.slidersEnabled">

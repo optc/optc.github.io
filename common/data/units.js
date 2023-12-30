@@ -4065,6 +4065,9 @@ window.units = [
     [ "Kin'emon - Samurai With Dignity", "QCK", ["Slasher", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1646, 680, 124, 3292, 1360, 248, 1 ],
     [ "Kozuki Toki - Guiding Her Husband", "QCK", ["Slasher", "Cerebral"], 5, 30, 4, 4, 99, 4000000, 1560, 660, 146, 3119, 1319, 291, 1 ],
     [ "Edward Newgate - Anger's Restraint", "QCK", ["Striker", "Slasher"], 5, 40, 4, 4, 99, 5000000, 1823, 823, 48, 3646, 1646, 96, 1 ],
+    [ "Portgas D. Ace - Unleashed Fire Fist", "STR", ["Shooter", "Striker"], 6, 55, 4, 5, 99, 25000000, 1557, 680, 81, 3114, 1360, 161, 1 ],
+    [ "Portgas D. Ace - Final Moments of the Beloved Man", "STR", ["Shooter", "Striker"], "6+", 65, 4, 5, 99, 25000000, 1617, 710, 86, 3234, 1420, 171, 1 ],
+    [ "Portgas D. Ace - Invading Onigashima", "INT", ["Fighter", "Shooter"], 5, 30, 4, 4, 99, 4000000, 2111, 728, 106, 4222, 1456, 211, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

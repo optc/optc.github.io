@@ -1771,6 +1771,11 @@ window.sailors = {
         hpStatic: function(p) { return 30; },
         rcvStatic: function(p) { return 30; },
     },
+    3336: {
+        atkStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
+        hpStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
+        rcvStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
     3340: {
         atkStatic: function(p) { return p.unit.type == "STR" ? 50 : 0; },
     },
@@ -3219,6 +3224,31 @@ window.sailors = {
     },
     4052: {
         rcvStatic: function(p) { return p.unit.class.has("Powerhouse") ? [0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4058: {
+        atkStatic: function(p) { return [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+        hpStatic: function(p) { return [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+        rcvStatic: function(p) { return [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    4063: {
+        atkStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
+        hpStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
+        rcvStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
+    },
+    4063: {
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4066: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 60 : 0; },
+    },
+    4067: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? [0, 70, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4068: {
+        atkStatic: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Striker") ? [0, 70, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4069: {
+        atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
     4986: {
         staticMult: function(p) { return 3; }
@@ -4678,6 +4708,58 @@ var ghostsSailors = {
         atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
         rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
+    },
+    555: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+    },
+    556: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+    },
+    557: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    558: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    559: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+    },
+    560: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 100 : 0; },
+    },
+    561: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    562: {
+        atkStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0; },
+    },
+    565: {
+        chainAddition: function(p) { return p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit") ? [0, 0.1][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    566: {
+        chainAddition: function(p) { return p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit") ? [0, 0.1][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    569: {
+        chainAddition: function(p) { return p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit") ? [0, 0.1][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    570: {
+        chainAddition: function(p) { return p.captain.class.has("Slasher") || p.captain.class.has("Free Spirit") ? [0, 0.1][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
 }
 

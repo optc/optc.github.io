@@ -578,6 +578,9 @@ window.altspecials = {
         def: function(p) { return 0.5; },
         ignoresImmunities: function(p) { return ['def']; },
     },
+    4058: {
+        atkbase: function(p) { return p.slot % 2 == 1 ? 2000 : 0; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
@@ -2867,6 +2870,117 @@ var ghostsAltSpecials = {
         },
         onDeactivation: function(p) {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = -1;
+        },
+    },
+    563: {
+        chainMultiplication: function(p) { return [1.25, 1.4, 1.25, 1.4][p.cached.multiplier]; },
+        chainMultiplicationPlus: function(p) { return [0, 0, 0.25, 0.25][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    564: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    565: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    566: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    567: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    568: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    569: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    570: {
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][n] + ' boost. To ' + ['Swap', 'Super Swap', 'Swap & EX', 'Super Swap & EX'][(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
 }
