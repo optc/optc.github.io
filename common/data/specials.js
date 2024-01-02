@@ -7600,9 +7600,9 @@ window.specials = {
         staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
     },
     2510:{
-        atk: function(p) { return p.cached.enemyImmunities.delay ? 2 : 1; },
+        atk: function(p) { return [p.cached.enemyImmunities.delay ? 2 : 1,2.25][CrunchUtils.llimitUnlock(p, "specials")]; },
         type: "class",
-        staticMult: function(p) { return p.slot == p.sourceSlot ? 300 : 0; },
+        staticMult: function(p) { return [p.slot == p.sourceSlot ? 300 : 0,300][CrunchUtils.llimitUnlock(p, "specials")]; },
     },
     2514: {
         orb: function(p) { return p.unit.class.has("Fighter") ? 2.25 : 1; }
@@ -17455,16 +17455,56 @@ var ghostsSpecials = {
         orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2 : 1; },
     },
     46: {
-        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        delay: function(p) { return [0, p.cached.multiplier][CrunchUtils.llimitUnlock(p, "specials")]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: '' + ["No Delay", "Delay"][n] + '. To use the ' + ["No Delay", "Delay"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     47: {
-        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        delay: function(p) { return [0, p.cached.multiplier][CrunchUtils.llimitUnlock(p, "specials")]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: '' + ["No Delay", "Delay"][n] + '. To use the ' + ["No Delay", "Delay"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     48: {
-        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        delay: function(p) { return [0, p.cached.multiplier][CrunchUtils.llimitUnlock(p, "specials")]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: '' + ["No Delay", "Delay"][n] + '. To use the ' + ["No Delay", "Delay"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     49: {
-        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? 2 : 1; },
+        orb: function(p) { return (p.unit.type == "QCK" || p.unit.type == "PSY" || p.unit.type == "INT") ? [2, 2.25][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        delay: function(p) { return [0, p.cached.multiplier][CrunchUtils.llimitUnlock(p, "specials")]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            if (CrunchUtils.llimitUnlock(p, "specials") > 0) p.scope.notify({
+                text: '' + ["No Delay", "Delay"][n] + '. To use the ' + ["No Delay", "Delay"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     50:{
         poison: function(p) { return 99; },
@@ -18235,12 +18275,24 @@ var ghostsSpecials = {
     167: {
     },
     168: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "class"
     },
     169: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "class"
     },
     170: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "class"
     },
     171: {
+        atk: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        affinity: function(p) { return (p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "INT") ? [1, 1.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "class"
     },
     172: {
         atk: function(p) { return (p.unit.type == "PSY" || p.unit.type == "INT") ? p.cached.multiplier : 1; },
