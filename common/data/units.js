@@ -4068,6 +4068,11 @@ window.units = [
     [ "Portgas D. Ace - Unleashed Fire Fist", "STR", ["Shooter", "Striker"], 6, 55, 4, 5, 99, 25000000, 1557, 680, 81, 3114, 1360, 161, 1 ],
     [ "Portgas D. Ace - Final Moments of the Beloved Man", "STR", ["Shooter", "Striker"], "6+", 65, 4, 5, 99, 25000000, 1617, 710, 86, 3234, 1420, 171, 1 ],
     [ "Portgas D. Ace - Invading Onigashima", "INT", ["Fighter", "Shooter"], 5, 30, 4, 4, 99, 4000000, 2111, 728, 106, 4222, 1456, 211, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Monkey D. Luffy - Excitement Before the Feast", "QCK", ["Free Spirit", "Fighter"], 6, 55, 4, 5, 99, 5000000, 1867, 801, 197, 3734, 1602, 394, 1 ],
+    [ "Nami - Relaxing Moment in the Bath", "QCK", ["Free Spirit", "Striker"], 5, 30, 4, 4, 99, 4000000, 1555, 801, 99, 3110, 1601, 198, 1 ],
+    [ "Hiyori - Casual Conversation in the Bath", "QCK", ["Free Spirit", "Slasher"], 5, 30, 5, 4, 99, 4000000, 1576, 767, 107, 3152, 1533, 214, 1 ],
+    [ "Edward Newgate - Anger of Family Being Taken Away", "STR", ["Striker", "Slasher"], "5+", 40, 4, 4, 99, 5000000, 1849, 850, 64, 3698, 1700, 127, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
