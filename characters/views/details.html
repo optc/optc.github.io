@@ -763,6 +763,8 @@
                                             <div ng-if="stage.rResilience" class="badge badge-slevel1">Rumble Resilience</div><br ng-if="stage.rResilience"><span ng-if="stage.rResilience" ng-repeat="item in rumble.llbresilience track by $index"><span ng-bind-html="item | resilienceToString | decorate"></span><br /></span>
                                             <div ng-if="stage.rAbility" class="badge badge-slevel1">Rumble Ability</div><div ng-if="stage.rAbility" ng-bind-html="rumble.llbability[rumble.llbability.length-1].effects | abilityToString | decorate"></div>
                                             <div ng-if="stage.rSpecial" class="badge badge-slevel1">Rumble Special</div><div ng-if="stage.rSpecial" ng-bind-html="rumble.llbspecial[rumble.llbspecial.length-1].effects | abilityToString | decorate"></div>
+                                            <div ng-if="stage.gpAbility" class="badge badge-slevel1">Grand Party Abilty</div><div ng-if="stage.gpAbility" ng-bind-html="rumble.llbgpability[rumble.llbgpability.length-1].effects | abilityToString | decorate"></div>
+                                            <div ng-if="stage.gpSpecial" class="badge badge-slevel1">Grand Party Special</div><div ng-if="stage.gpSpecial" ng-bind-html="rumble.llbgpspecial[rumble.llbgpspecial.length-1].effects | abilityToString | decorate"></div>
                                             <br ng-if="$index != 4">
                                         </div>
                                         <div ng-repeat="x in [].constructor(5) track by $index" ng-if="!details.lLimit">
@@ -1013,7 +1015,41 @@
                                     <td>Ability</td>
                                     <td>Special</td>
                                 </tr>
-                                <tr ng-if="details.festAbilityGP">
+                                <tr ng-if="details.festAbilityGP && details.festAbilityGP.hasOwnProperty('base')">
+                                    <td>-</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbilityGP.base track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.festGPAbility | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
+                                    </td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbilityGP.base track by $index"><strong>Level {{$index + 1}}: [{{item.uses}} use{{"" ? item.uses == 1 : "s"}}] </strong>
+                                                <span ng-bind-html="item.festGPSpecial | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAbilityGP && details.festAbilityGP.hasOwnProperty('llbbase')">
+                                    <td>-</td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbilityGP.llbbase track by $index"><strong>Level {{$index + 1}}:</strong>
+                                                <span ng-bind-html="item.festGPAbility | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
+                                    </td>
+                                    <td>
+                                        <div>
+                                                <div ng-repeat="item in details.festAbilityGP.llbbase track by $index"><strong>Level {{$index + 1}}: [{{item.uses}} use{{"" ? item.uses == 1 : "s"}}] </strong>
+                                                <span ng-bind-html="item.festGPSpecial | decorate"></span><br></div>
+                                        </div>
+                                        <span class="notes" ng-if="details.festAbilityGPNotes" ng-bind-html="details.festAbilityGPNotes | notes | decorate"></span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="details.festAbilityGP && !details.festAbilityGP.hasOwnProperty('base')">
                                     <td>-</td>
                                     <td>
                                         <div>

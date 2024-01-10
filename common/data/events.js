@@ -1537,6 +1537,16 @@ window.events = {
                 $scope.notify({ text: 'Disabling [WANO] orbs support.' });
         }
     },
+    4071: {
+        onInsertion: function($scope) {
+            if (++$scope.options.tndOrbsEnabled == 1)
+                $scope.notify({ text: 'Enabling [TND] orbs support.' });
+        },
+        onRemoval: function($scope) {
+            if (--$scope.options.tndOrbsEnabled === 0)
+                $scope.notify({ text: 'Disabling [TND] orbs support.' });
+        }
+    },
     5052: {
         onInsertion: function($scope) {
             if (++$scope.options.meatOrbsEnabled == 1)

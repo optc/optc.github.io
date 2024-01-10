@@ -4662,6 +4662,10 @@ window.families = {
     4067: [ ...PortgasDAce ],
     4068: [ ...PortgasDAce ],
     4069: [ ...PortgasDAce ],
+    4071: [ ...MonkeyDLuffy ],
+    4072: [ ...Nami ],
+    4073: [ ...KozukiHiyori ],
+    4074: [ ...EdwardNewgate ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

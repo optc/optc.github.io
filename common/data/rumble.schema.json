@@ -609,7 +609,8 @@
                 "hit",
                 "takes damage",
                 "heal",
-                "near"
+                "near",
+                "all"
             ],
             "title": "Attribute"
         },

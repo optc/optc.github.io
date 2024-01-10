@@ -3946,6 +3946,9 @@ window.flags = {
     4067: { shop: 1 },
     4068: { shop: 1 },
     4069: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    4071: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    4072: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
+    4073: { rr: 1, rro: 1, lrr: 1, tmlrr: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },

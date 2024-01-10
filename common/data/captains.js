@@ -14338,6 +14338,22 @@ window.captains = {
         atk: function(p) { return p.unit.type == "INT" ? 3 : 1; },
         hp: function(p) { return p.unit.type == "INT" ? 1.5 : 1; },
     },
+    4071: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? ((CrunchUtils.getOrbMultiplier(p.orb, p.unit.type, p.unit.class, 1, 2, [p.friendCaptain, p.captain], p.effectName, p) >= 2) && (p.orb != 'g')) ? [ 'meat', 'tnd', 'wano' ].includes(p.orb) ? 5.75 : 5.5 : 5.25 : 4.75; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? 1.5 : 1; },
+    },
+    4072: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 3.75 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Striker") ? 1.25 : 1; },
+    },
+    4073: {
+        atk: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") ? 3.75 : 1; },
+        rcv: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") || p.unit.class.has("Slasher") ? 1.25 : 1; },
+    },
+    4074: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? p.percHP <= 50 ? 4.5 : 3.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

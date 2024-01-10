@@ -6789,6 +6789,16 @@ window.drops = {
             'Raging Sea': [ "4053-skull" ]
         },
 
+        {
+            name: 'Zoro',
+            dropID: 'treasuremap77',
+            thumb: 3755,
+            global: true,
+            nakama: 8375500,
+            gamewith: null,
+            'Raging Sea': [ "4074-skull" ]
+        },
+
     ],
 
     

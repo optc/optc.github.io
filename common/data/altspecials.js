@@ -581,6 +581,11 @@ window.altspecials = {
     4058: {
         atkbase: function(p) { return p.slot % 2 == 1 ? 2000 : 0; },
     },
+    4071: {
+        delay: function(p) { return 1; },
+        ignoresImmunities: function(p) { return ['delay']; },
+        status: function(p) { return p.delayed > 0 ? 1.75 : 1; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

@@ -17203,7 +17203,7 @@ window.specials = {
     4063: {
         increaseDamageTaken: function(p) { return p.cached.multiplier; },
         ignoresImmunities: function(p) { return ['increaseDamageTaken']; },
-        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher")  || p.unit.class.has("Cerebral") ? 2.75 : 1; },
+        atk: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? 2.75 : 1; },
         type: "type",
         superAffinity: function(p) { return p.unit.type == "DEX" ? 3 : 1; },
         onActivation: function(p) {
@@ -17229,10 +17229,9 @@ window.specials = {
             p.cached.multiplier = levels[n];
             p.cached.multiplier1 = p.captain.class.has("Striker") || p.captain.class.has("Slasher") ? [2.75, 40] : [1, Infinity];
             p.scope.notify({
-                text: 'Using the ' + ["Increase Damage Taken Disabled", "Increase Damage Taken Enabled"][levels[n]] + '. To switch to the ' + ["Orb Boost", "Orb Multiplier Override", "Both Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Increase Damage Taken Disabled", "Increase Damage Taken Enabled"][levels[n]] + '. To switch to the ' + ["Increase Damage Taken Disabled", "Increase Damage Taken Enabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
-            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = [false, true, true][p.cached.multiplier];
         },
     },
     4067: {
@@ -17244,6 +17243,66 @@ window.specials = {
         burn: function(p) { return 1; },
         ignoresImmunities: function(p) { return ['burn']; },
         status: function(p) { return p.burn ? 2 : 1; },
+    },
+    4071: {
+        atk: function(p) { return [p.unit.type == "QCK" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? 2.75 : 1, 1, p.unit.type == "QCK" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? 2.75 : 1][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK boost", "Affinity boost", "ATK and Affinity boost"][levels[n]] + '. To switch to the ' + ["ATK boost", "Affinity boost", "ATK and Affinity boost"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4072: {
+        atk: function(p) { return p.cached.multiplier1 ? p.unit.type == "QCK" && p.unit.class.has("Striker") ? 2.75 : p.unit.type == "QCK" || p.unit.class.has("Striker") ? 2.5 : 1 : 1; },
+        orb: function(p) { return [1, p.unit.type == "QCK" && p.unit.class.has("Striker") ? 2.75 : p.unit.type == "QCK" || p.unit.class.has("Striker") ? 2.5 : 1][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP <= 10;
+            p.scope.notify({
+                text: 'Using the ' + ["Orb boost disabled", "Orb boost enabled"][levels[n]] + '. To switch to the ' + ["Orb boost disabled", "Orb boost enabled"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4073: {
+        atkbase: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            var levels = [1000, 1500];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the +' + levels[n] + ' boost. To switch to the +' + levels[(n + 1) % levels.length] + ' boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4074: {
+        increaseDamageTaken: function(p) { return p.cached.multiplier2; },
+        increaseDamageTakenPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return p.cached.percHP <= 10 ? ['increaseDamageTaken'] : []; },
+        chain: function(p) { return p.cached.multiplier1[0]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? p.cached.multiplier1[1] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = p.percHP <= 10 || p.captain.class.has("Striker") || p.captain.class.has("Slasher") ? [2.75, 40] : [1, Infinity];
+            p.cached.multiplier2 = p.percHP <= 10 || levels[n] == 1 ? 1.5 : 1;
+            p.scope.notify({
+                text: 'Using the ' + ["No TND orb effects", "TND orb effects"][levels[n]] + '. To switch to the ' + ["No TND orb effects", "TND orb effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
 };
 

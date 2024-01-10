@@ -3250,6 +3250,9 @@ window.sailors = {
     4069: {
         atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
     },
+    4074: {
+        atkStatic: function(p) { return p.percHP <= 30 ? p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
