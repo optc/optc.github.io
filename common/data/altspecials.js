@@ -2878,8 +2878,10 @@ var ghostsAltSpecials = {
         },
     },
     563: {
-        chainMultiplication: function(p) { return [1.25, 1.4, 1.25, 1.4][p.cached.multiplier]; },
-        chainMultiplicationPlus: function(p) { return [0, 0, 0.25, 0.25][p.cached.multiplier]; },
+        atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
+        orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -2892,6 +2894,7 @@ var ghostsAltSpecials = {
     },
     564: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
@@ -2906,6 +2909,7 @@ var ghostsAltSpecials = {
     },
     565: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
@@ -2920,6 +2924,7 @@ var ghostsAltSpecials = {
     },
     566: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
@@ -2934,6 +2939,7 @@ var ghostsAltSpecials = {
     },
     567: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
@@ -2948,6 +2954,7 @@ var ghostsAltSpecials = {
     },
     568: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
@@ -2962,6 +2969,7 @@ var ghostsAltSpecials = {
     },
     569: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
@@ -2976,6 +2984,7 @@ var ghostsAltSpecials = {
     },
     570: {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
+        type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {

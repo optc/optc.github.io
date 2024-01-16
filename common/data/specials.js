@@ -17155,11 +17155,20 @@ window.specials = {
         },
     },
     4054: {
-        orbPlus: function(p) { return 0.5; },
-        statusPlus: function(p) { return 0.5; },
+        orbPlus: function(p) { return [0.25, 0.5][p.cached.multiplier]; },
+        statusPlus: function(p) { return [0.25, 0.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0.25, 0.5];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the +' + levels[n] + 'x Buff. To switch to +' + levels[(n + 1) % levels.length] + 'x Buff, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
     },
     4055: {
-        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 1.2 : 1; },
+        orb: function(p) { return p.unit.type == "DEX" || p.unit.class.has("Powerhouse") || p.unit.class.has("Free Spirit") ? 2 : 1; },
     },
     4056: {
         atk: function(p) { return p.unit.type == p.cached.multiplier ? 2.5 : 1; },
@@ -17192,6 +17201,7 @@ window.specials = {
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
             p.cached.multiplier1 = [0, 1, 0, 1][n];
             p.cached.multiplier2 = [0, 0, 1, 1][n];
             p.scope.notify({
@@ -17217,7 +17227,7 @@ window.specials = {
         },
     },
     4066: {
-        increaseDamageTaken: function(p) { return p.cached.multiplier; },
+        increaseDamageTaken: function(p) { return [1, 1.5][p.cached.multiplier]; },
         chain: function(p) { return p.cached.multiplier1[0]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -17246,6 +17256,7 @@ window.specials = {
     },
     4071: {
         atk: function(p) { return [p.unit.type == "QCK" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? 2.75 : 1, 1, p.unit.type == "QCK" && p.unit.class.has("Free Spirit") ? 3 : p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? 2.75 : 1][p.cached.multiplier]; },
+        type: "type",
         affinity: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Free Spirit") ? [1, 2.75, 2.75][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2];
@@ -17284,9 +17295,9 @@ window.specials = {
         },
     },
     4074: {
-        increaseDamageTaken: function(p) { return p.cached.multiplier2; },
+        increaseDamageTaken: function(p) { return 1.5; },
         increaseDamageTakenPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
-        ignoresImmunities: function(p) { return p.cached.percHP <= 10 ? ['increaseDamageTaken'] : []; },
+        ignoresImmunities: function(p) { return p.cached.multiplier2; },
         chain: function(p) { return p.cached.multiplier1[0]; },
         chainLimiter: function(p) {
             var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
@@ -17297,7 +17308,7 @@ window.specials = {
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.cached.multiplier1 = p.percHP <= 10 || p.captain.class.has("Striker") || p.captain.class.has("Slasher") ? [2.75, 40] : [1, Infinity];
-            p.cached.multiplier2 = p.percHP <= 10 || levels[n] == 1 ? 1.5 : 1;
+            p.cached.multiplier2 = p.percHP <= 10 ? ['increaseDamageTaken'] : [];
             p.scope.notify({
                 text: 'Using the ' + ["No TND orb effects", "TND orb effects"][levels[n]] + '. To switch to the ' + ["No TND orb effects", "TND orb effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
@@ -21563,129 +21574,129 @@ var ghostsSpecials = {
         orb: function(p) { return 2.25; },
     },
     555: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     556: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     557: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     558: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     559: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     560: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     561: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
     },
     562: {
-        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75][p.cached.multiplier] : 1; },
-        affinityPlus: function(p) { return [0, 0.25, 0, 0.25][p.cached.multiplier]; },
-        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1][p.cached.multiplier]; },
-        increaseDamageTakenCeil: function(p) { return [0, 0, 2.25, 2.25][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? [2.5, 2.75, 2.5, 2.75, 2.75][p.cached.multiplier] : 1; },
+        affinityPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25][p.cached.multiplier]; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1, 1, 1.75][p.cached.multiplier]; },
+        increaseDamageTakenCeil: function(p) { return [1, 1, 2.25, 2.25, 2.25][p.cached.multiplier]; },
         ignoresImmunities: function(p) { return ["increaseDamageTaken"]; },
         onActivation: function(p) {
-            var levels = [0, 1, 2, 3];
+            var levels = [0, 1, 2, 3, 4];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
             p.scope.notify({
-                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff"][(n + 1) % levels.length] + ', disable and re-enable this special',
+                text: 'Using the ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][n] + '. To switch to ' + ["Special & Increased Damage Taken", "Combined Special & Increased Damage Taken", "Special & Increased Damage Taken Buff", "Combined Special & Increased Damage Taken Buff", "Combined Special Used Twice"][(n + 1) % levels.length] + ', disable and re-enable this special',
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
