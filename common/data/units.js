@@ -4073,6 +4073,12 @@ window.units = [
     [ "Nami - Relaxing Moment in the Bath", "QCK", ["Free Spirit", "Striker"], 5, 30, 4, 4, 99, 4000000, 1555, 801, 99, 3110, 1601, 198, 1 ],
     [ "Hiyori - Casual Conversation in the Bath", "QCK", ["Free Spirit", "Slasher"], 5, 30, 5, 4, 99, 4000000, 1576, 767, 107, 3152, 1533, 214, 1 ],
     [ "Edward Newgate - Anger of Family Being Taken Away", "STR", ["Striker", "Slasher"], "5+", 40, 4, 4, 99, 5000000, 1849, 850, 64, 3698, 1700, 127, 1 ],
+    [ "Marco - Power of Former Whitebeard Pirates First Division Commander", "STR", ["Fighter", "Striker"], 5, 30, 4, 4, 99, 4000000, 1536, 774, 111, 3072, 1548, 222, 1 ],
+    [ "Franky - Arms to Catch the Swordsman", "QCK", ["Shooter", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1673, 793, 82, 3346, 1586, 164, 1 ],
+    [ "Dogstorm & Cat Viper - Vassals Following Their Master", "QCK", ["Slasher", "Striker"], 5, 1, 4, 4, 99, 4000000, 1399, 611, 117, 2798, 1222, 234, 1 ],
+    [ "King - Last Survivor of Lunaria Race", "QCK", ["Driven", "Slasher"], 5, 50, 4, 4, 99, 5000000, 1850, 749, 60, 3700, 1498, 119, 1 ],
+    [ "Alber - Fight of the Right-Hand Men", "QCK", ["Driven", "Slasher"], "5+", 50, 4, 4, 99, 5000000, 1900, 799, 75, 3800, 1598, 149, 1 ],
+    [ "Kaido - Enjoying the Deadly Battle", "QCK", ["Driven", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 2120, 996, 115, 4240, 1991, 230, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
