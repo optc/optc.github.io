@@ -14354,6 +14354,30 @@ window.captains = {
         atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? p.percHP <= 50 ? 4.5 : 3.5 : 1; },
         rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.5 : 1; },
     },
+    4075: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.actions[p.sourceSlot] ? p.percHP <= 50 ? 5.75 : 5.5 : p.percHP <= 50 ? 4.25 : 4 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    4076: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? p.percHP <= 50 ? 4.25 : 4 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 1.5 : 1; },
+    },
+    4077: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 1.2 : 1; },
+    },
+    4078: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 4.25 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    4079: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 4.5 : 1; },
+        rcv: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.25 : 1; },
+    },
+    4080: {
+        atk: function(p) { return [p.unit.type == "QCK" || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 5.25 : 5 : 4.5, p.unit.type == "QCK" || p.unit.class.has("Driven") ? p.actions[p.sourceSlot] ? 5.5 : 5 : 4.5][CrunchUtils.llimitUnlock(p, "captains")]; },
+        hp: function(p) { return p.unit.type == "QCK" || p.unit.class.has("Driven") ? [1.5, 1.65][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

@@ -7492,6 +7492,16 @@ window.drops = {
             'Kizuna Exchange': [ "4056-skull" ],
         },
 
+        {
+            name: 'Alber',
+            dropID: 'kizuna52',
+            thumb: 4079,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ "4079-skull", "4080-skull" ],
+        },
+
     ],
 
 

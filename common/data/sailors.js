@@ -3253,6 +3253,12 @@ window.sailors = {
     4074: {
         atkStatic: function(p) { return p.percHP <= 30 ? p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 150 : 0 : 0; },
     },
+    4075: {
+        atkStatic: function(p) { return p.percHP <= 30 ? 150 : 0; },
+    },
+    4076: {
+        atkStatic: function(p) { return p.percHP <= 30 ? 150 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -4666,6 +4666,12 @@ window.families = {
     4072: [ ...Nami ],
     4073: [ ...KozukiHiyori ],
     4074: [ ...EdwardNewgate ],
+    4075: [ ...Marco ],
+    4076: [ ...Franky ],
+    4077: [ ...Inuarashi, ...Nekomamushi ],
+    4078: [ ...King ],
+    4079: [ ...King ],
+    4080: [ ...Kaido ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

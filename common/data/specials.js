@@ -17315,6 +17315,41 @@ window.specials = {
             });
         },
     },
+    4075: {
+        status: function(p) { return p.enemyEffects.increaseDamageTaken || p.enemyEffects.defenseDown ? p.cached.multiplier : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP <= 10 ? 2.25 : 1;
+        }
+    },
+    4076: {
+        def: function(p) { return 0; },
+    },
+    4077: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Striker") ? 2 : 1; },
+        type: "type",
+    },
+    4078: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2.25 : 1; },
+    },
+    4079: {
+        affinity: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2.25 : 1; },
+    },
+    4080: {
+        increaseDamageTaken: function(p) { return p.cached.multiplier1 == 2 ? p.cached.multiplier1 : [2.25, 1, 2.25][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], p.cached.multiplier1 == 2 ? ["increaseDamageTaken"] : []][CrunchUtils.llimitUnlock(p, "specials")]; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? [[1, 2.25, 2.25], [1, 2.5, 2.5]][CrunchUtils.llimitUnlock(p, "specials")][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.cached.multiplier1 = [1, p.enemyImmunities.increaseDamageTaken ? 2 : 1][CrunchUtils.llimitUnlock(p, "specials")];
+            p.scope.notify({
+                text: 'Using the ' + ["Increase Damage Taken", "Status ATK Boost", "Both Effects"][levels[n]] + '. To switch to the ' + ["ATK boost", "Affinity boost", "ATK and Affinity boost"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
