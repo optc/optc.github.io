@@ -3314,6 +3314,16 @@ window.drops = {
             'Defeat Level Rewards': [ 4066 ],
         },
 
+        {
+            name: 'Lilith',
+            dropID: 'pka8',
+            thumb: 4082,
+            global: true,
+            //nakama: 6395200,
+            gamewith: null,
+            'Defeat Level Rewards': [ 4088 ],
+        },
+
     ],
 
 

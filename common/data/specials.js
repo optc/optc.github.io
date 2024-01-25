@@ -17350,6 +17350,71 @@ window.specials = {
             });
         },
     },
+    4081: {
+        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        orbPlus: function(p) { return [0, 0.5, 0.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[n]] + '. To switch to ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4082: {
+        orb: function(p) { return p.unit.type == "INT" || p.unit.class.has("Cerebral") || p.unit.class.has("Shooter") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        orbPlus: function(p) { return [0, 0.5, 0.5][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[n]] + '. To switch to ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4083: {
+        weaken: function(p) { return p.cached.multiplier; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken || p.enemyEffects.weaken ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.sourceSlot >= 2 ? [1.5, 1.25] : [1, 1];
+        },
+    },
+    4084: {
+        weaken: function(p) { return p.cached.multiplier; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken || p.enemyEffects.weaken ? 2.25 : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.sourceSlot >= 2 ? [1.5, 1.25] : [1, 1];
+        },
+    },
+    4085: {
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
+    },
+    4086: {
+        chainAddition: function(p) { return p.cached.multiplier; },
+        onActivation: function(p) {
+            var levels = [1.1, 1.3];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: '' + levels[n] + 'x boost. To ' + levels[(n + 1) % levels.length] + 'x boost, disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4087: {
+        atkbase: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Shooter") ? 1000 : 0; },
+        atkbasePlus: function(p) { return p.cached.multiplier2; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" || p.unit.class.has("Shooter") ? p.cached.multiplier1 : 1; },
+        type: "type",
+        onActivation: function(p) {
+            p.cached.multiplier1 = p.percHP >= 80 ? 2.25 : 2;
+            p.cached.multiplier2 = p.percHP >= 80 ? 300 : 0;
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

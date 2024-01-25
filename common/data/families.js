@@ -695,9 +695,10 @@ const Hanagasa = [ "Hanagasa" ];
 const Kaginote = [ "Kaginote" ];
 const Romy = [ "Romy" ];
 const Yorueka = [ "Yorueka" ];
-const Aramaki = [ "Aramaki", "Ryokugyu" ];
+const Aramaki = [ "Aramaki", "Ryokugyu", "Greenbull" ];
 const Tensei = [ "Tensei", "Kurouma" ];
 const Hamlet = [ "Hamlet" ];
+const Lilith = [ "Lilith", "Dr. Vegapunk", "PUNK-02" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4672,6 +4673,14 @@ window.families = {
     4078: [ ...King ],
     4079: [ ...King ],
     4080: [ ...Kaido ],
+    4081: [ ...Lilith ],
+    4082: [ ...Lilith ],
+    4083: [ ...JewelryBonney ],
+    4084: [ ...JewelryBonney ],
+    4085: [ ...MonkeyDLuffy ],
+    4086: [ ...TonyTonyChopper ],
+    4087: [ ...Franky, ...Usopp ],
+    4088: [ ...Jinbe ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

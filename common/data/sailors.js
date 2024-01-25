@@ -3259,6 +3259,16 @@ window.sailors = {
     4076: {
         atkStatic: function(p) { return p.percHP <= 30 ? 150 : 0; },
     },
+    4082: {
+        atkStatic: function(p) { return p.slot <= 1 ? [0, 0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4087: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    4088: {
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

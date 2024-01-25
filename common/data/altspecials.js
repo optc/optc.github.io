@@ -586,6 +586,29 @@ window.altspecials = {
         ignoresImmunities: function(p) { return ['delay']; },
         status: function(p) { return p.delayed > 0 ? 1.75 : 1; },
     },
+    4082: {
+        atk: function(p) { return p.unit.type == "INT" && p.unit.class.has("Cerebral") ? 2.75 : p.unit.type == "INT" || p.unit.class.has("Cerebral") ? 2.5 : 1; },
+        type: "type",
+    },
+    4084: {
+        increaseDamageTaken: function(p) { return 1.75; },
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
+    4085: {
+        turnedOn: false,
+        onActivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = true;
+        },
+        onDeactivation: function(p) {
+            window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
+        },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

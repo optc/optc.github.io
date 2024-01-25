@@ -112,6 +112,13 @@ window.capspecials = {
         burn: function(p) { return 1; },
         def: function(p) { return 0; },
     },
+    4084: {
+        weaken: function(p) { return [1.5, 1.25]; },
+        ignoresImmunities: function(p) { return ['weaken']; },
+    },
+    4085: {
+        affinityPlus: function(p) { return 0.25; },
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };
