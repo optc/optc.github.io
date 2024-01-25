@@ -4079,6 +4079,14 @@ window.units = [
     [ "King - Last Survivor of Lunaria Race", "QCK", ["Driven", "Slasher"], 5, 50, 4, 4, 99, 5000000, 1850, 749, 60, 3700, 1498, 119, 1 ],
     [ "Alber - Fight of the Right-Hand Men", "QCK", ["Driven", "Slasher"], "5+", 50, 4, 4, 99, 5000000, 1900, 799, 75, 3800, 1598, 149, 1 ],
     [ "Kaido - Enjoying the Deadly Battle", "QCK", ["Driven", "Powerhouse"], "6+", 65, 4, 5, 99, 5000000, 2120, 996, 115, 4240, 1991, 230, 1 ],
+    [ "Dr. Vegapunk \"Lilith the Evil\"", "INT", ["Cerebral", "Shooter"], 5, 30, 4, 3, 70, 1066998, 1116, 400, 73, 2231, 801, 146, 1 ],
+    [ "Dr. Vegapunk \"Lilith the Evil\" - PUNK-02", "INT", ["Cerebral", "Shooter"], 6, 55, 4, 5, 99, 5000000, 2201, 795, 144, 4402, 1589, 287, 1 ],
+    [ "Jewelry Bonney - Girl Jumping Out the Warm Eddy", "INT", ["Fighter", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 1045, 410, 81, 2091, 821, 163, 1 ],
+    [ "Jewelry Bonney - Meeting the Worst Generation", "INT", ["Fighter", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2061, 815, 161, 4121, 1629, 321, 1 ],
+    [ "Monkey D. Luffy - Encounter of the Next Journey", "INT", ["Free Spirit", "Fighter"], 5, 30, 4, 4, 99, 4000000, 1578, 737, 117, 3156, 1473, 233, 1 ],
+    [ "Amigasa Hat Chopper", "INT", ["Cerebral", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1706, 612, 162, 3412, 1224, 324, 1 ],
+    [ "Franky & Usopp - Giant Robot of Dreams", "INT", ["Shooter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1770, 671, 132, 3539, 1341, 264, 1 ],
+    [ "Jinbe - Confronting the Raging Sea", "INT", ["Fighter", "Cerebral"], 5, 40, 4, 4, 99, 5000000, 1719, 803, 71, 3438, 1605, 142, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
