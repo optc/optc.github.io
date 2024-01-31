@@ -4682,7 +4682,7 @@ window.families = {
     4087: [ ...Franky, ...Usopp ],
     4088: [ ...Jinbe ],
     4090: [ ...RoronoaZoro ],
-    4090: [ ...Brook ],
+    4091: [ ...Brook ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],
