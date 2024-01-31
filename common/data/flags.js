@@ -3960,6 +3960,8 @@ window.flags = {
     4085: { special: 1 },
     4086: { rr: 1, rro: 1 },
     4087: { rr: 1, rro: 1 },
+    4090: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
+    4091: { rr: 1, rro: 1, lrr: 1, pflrr: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },

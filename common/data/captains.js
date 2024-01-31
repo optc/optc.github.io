@@ -14413,6 +14413,13 @@ window.captains = {
         atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 3.5 : 1; },
         hp: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 1.5 : 1; },
     },
+    4090: {
+        atk: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 2.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? 1.2 : 1; },
+    },
+    4091: {
+        atk: function(p) { return p.unit.type == "INT" ? 2.5 : 1; },
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };

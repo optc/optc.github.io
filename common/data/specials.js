@@ -17415,6 +17415,22 @@ window.specials = {
             p.cached.multiplier2 = p.percHP >= 80 ? 300 : 0;
         },
     },
+    4090: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [2, 1, 2][p.cached.multiplier] : 1; },
+        orbPlus: function(p) { return [0, 0.3, 0.3][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[n]] + '. To switch to ' + ["Orb Boost", "Orb Buff", "Orb Boost and Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4091: {
+        chainMultiplication: function(p) { return 1.25; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
