@@ -3269,6 +3269,9 @@ window.sailors = {
     4088: {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
+    4088: {
+        hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 200 : 0; },
+    },
     4090: {
         atkStatic: function(p) { return p.unit.type == "PSY" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "PSY" ? 50 : 0; },
@@ -3278,6 +3281,12 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
         hpStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
         rcvStatic: function(p) { return p.unit.type == "INT" ? 50 : 0; },
+    },
+    4092: {
+        atkStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 75 : 0; },
+    },
+    4094: {
+        rcvStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [0, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4986: {
         staticMult: function(p) { return 3; }

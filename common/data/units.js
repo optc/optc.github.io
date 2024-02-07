@@ -4087,9 +4087,12 @@ window.units = [
     [ "Amigasa Hat Chopper", "INT", ["Cerebral", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1706, 612, 162, 3412, 1224, 324, 1 ],
     [ "Franky & Usopp - Giant Robot of Dreams", "INT", ["Shooter", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 1770, 671, 132, 3539, 1341, 264, 1 ],
     [ "Jinbe - Confronting the Raging Sea", "INT", ["Fighter", "Cerebral"], 5, 40, 4, 4, 99, 5000000, 1719, 803, 71, 3438, 1605, 142, 1 ],
-    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "Jinbe - Rescue from the Raging Sea", "INT", ["Fighter", "Cerebral"], "5+", 40, 4, 4, 99, 5000000, 1779, 833, 81, 3558, 1665, 162, 1 ],
     [ "Roronoa Zoro - Splitting the Warm Eddy", "PSY", ["Slasher", "Driven"], 5, 30, 4, 4, 99, 4000000, 2164, 747, 91, 4328, 1494, 181, 1 ],
     [ "Brook - Unexplainable Familiarity", "INT", ["Slasher", "Free Spirit"], 5, 30, 4, 4, 99, 4000000, 2089, 750, 103, 4177, 1499, 205, 1 ],
+    [ "Sanji - Encountering the Beauty", "PSY", ["Fighter", "Cerebral"], 5, 30, 4, 4, 99, 4000000, 1655, 801, 83, 3310, 1601, 165, 1 ],
+    [ "Nami - Foreseeing a New Place", "PSY", ["Cerebral", "Striker"], 5, 30, 4, 4, 99, 4000000, 1572, 787, 101, 3144, 1573, 202, 1 ],
+    [ "Nico Robin - Locating the Enemy", "PSY", ["Cerebral", "Fighter"], 5, 30, 5, 4, 99, 4000000, 1645, 800, 85, 3290, 1599, 169, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

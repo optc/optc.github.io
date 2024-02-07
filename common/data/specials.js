@@ -17431,6 +17431,46 @@ window.specials = {
     4091: {
         chainMultiplication: function(p) { return 1.25; },
     },
+    4092: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [2, 2.5][p.cached.multiplier] : 1; },
+        type: "type",
+        tapTimingPlus: function(p) { return [0, 0.1][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Weak ATK Boost", "Strong ATK Boost and Tap Timing Boost Buff (WIP)"][levels[n]] + '. To switch to ' + ["Weak ATK Boost", "Strong ATK Boost and Tap Timing Boost Buff (WIP)"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4093: {
+        orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [2, 2.5][p.cached.multiplier] : 1; },
+        atkPlus: function(p) { return [0, 0.1][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Weak Orb Boost", "Strong Orb Boost and ATK Buff"][levels[n]] + '. To switch to ' + ["Weak Orb Boost", "Strong Orb Boost and ATK Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4094: {
+        tapTiming: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [{ Good: 0.1, Great: 0.2, Perfect: 0.1 }, { Good: 0.1, Great: 0.2, Perfect: 0.2 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
+        orbPlus: function(p) { return [0, 0.1][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Weak Tap Timing Bonus Boost", "Strong Tap Timing Bonus Boost and ATK Buff"][levels[n]] + '. To switch to ' + ["Weak Tap Timing Bonus Boost", "Strong Tap Timing Bonus Boost and ATK Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
