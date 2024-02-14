@@ -4093,6 +4093,10 @@ window.units = [
     [ "Sanji - Encountering the Beauty", "PSY", ["Fighter", "Cerebral"], 5, 30, 4, 4, 99, 4000000, 1655, 801, 83, 3310, 1601, 165, 1 ],
     [ "Nami - Foreseeing a New Place", "PSY", ["Cerebral", "Striker"], 5, 30, 4, 4, 99, 4000000, 1572, 787, 101, 3144, 1573, 202, 1 ],
     [ "Nico Robin - Locating the Enemy", "PSY", ["Cerebral", "Fighter"], 5, 30, 5, 4, 99, 4000000, 1645, 800, 85, 3290, 1599, 169, 1 ],
+    [ "Boa Hancock - Sealed Powers", "PSY", ["Cerebral", "Free Spirit"], 5, 30, 4, 3, 70, 1066998, 723, 696, 119, 1446, 1192, 238, 1 ],
+    [ "Boa Hancock - Engaging Pirate Empress", "PSY", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1348, 1072, 141, 3696, 1608, 424, 1 ],
+    [ "Shakuyaku - Empress of Amazon Lily Two Generations Ago", "PSY", ["Cerebral", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1702, 731, 121, 3404, 1462, 242, 1 ],
+    [ "Silvers Rayleigh - Aiding Dark King", "PSY", ["Cerebral", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 1522, 830, 235, 3813, 1634, 420, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

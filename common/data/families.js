@@ -699,6 +699,7 @@ const Aramaki = [ "Aramaki", "Ryokugyu", "Greenbull" ];
 const Tensei = [ "Tensei", "Kurouma" ];
 const Hamlet = [ "Hamlet" ];
 const Lilith = [ "Lilith", "Dr. Vegapunk", "PUNK-02" ];
+const Shakuyaku = [ "Shakuyaku", "Shakky" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4687,6 +4688,10 @@ window.families = {
     4092: [ ...VinsmokeSanji ],
     4093: [ ...Nami ],
     4094: [ ...NicoRobin ],
+    4095: [ ...BoaHancock ],
+    4096: [ ...BoaHancock ],
+    4097: [ ...Shakuyaku ],
+    4098: [ ...SilversRayleigh ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

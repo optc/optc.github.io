@@ -17471,6 +17471,64 @@ window.specials = {
             });
         },
     },
+    4095: {
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 }; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        type: "type",
+        chain: function(p) { return [1, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 30, 30][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "Chain Boundary", "ATK Boost and Chain Boundary"][levels[n]] + '. To switch to ' + ["ATK Boost", "Chain Boundary", "ATK Boost and Chain Boundary"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4096: {
+        tapTiming: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? { Good: 0.2, Great: 0.3, Perfect: 0.4 } : { Good: 0, Great: 0, Perfect: 0 }; },
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        type: "type",
+        chain: function(p) { return [1, 2.75, 2.75][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 30, 30][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "Chain Boundary", "ATK Boost and Chain Boundary"][levels[n]] + '. To switch to ' + ["ATK Boost", "Chain Boundary", "ATK Boost and Chain Boundary"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4097: {
+        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
+        chainPlus: function(p) { return 0.3; },
+    },
+    4098: {
+        atk: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? [2.5, 2.75][CrunchUtils.llimitUnlock(p, "specials")] : 1; },
+        type: "class",
+        orb: function(p) { return (p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral")) ? 2.5 : 1; },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = true;
+            p.scope.notify({
+                text: 'Additionally affects damage if Rayleigh is your captain',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+        onDeactivation: function(p) {
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
+        }
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };
