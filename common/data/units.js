@@ -4097,6 +4097,15 @@ window.units = [
     [ "Boa Hancock - Engaging Pirate Empress", "PSY", ["Cerebral", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 1348, 1072, 141, 3696, 1608, 424, 1 ],
     [ "Shakuyaku - Empress of Amazon Lily Two Generations Ago", "PSY", ["Cerebral", "Free Spirit"], 5, 30, 5, 4, 99, 4000000, 1702, 731, 121, 3404, 1462, 242, 1 ],
     [ "Silvers Rayleigh - Aiding Dark King", "PSY", ["Cerebral", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 1522, 830, 235, 3813, 1634, 420, 1 ],
+    [ "Marshall D. Teach - Intervening Emperor", "STR", ["Driven", "Powerhouse"], 5, 30, 4, 3, 70, 1066998, 1364, 429, -276, 2728, 858, -138, 1 ],
+    [ "Blackbeard - Emperor Chasing the Pirate Empress", "STR", ["Driven", "Powerhouse"], 6, 55, 4, 5, 99, 5000000, 2698, 852, -140, 5396, 1703, -70, 1 ],
+    [ "Jesus Burgess - New Found Powers", "STR", ["Driven", "Fighter"], 5, 30, 4, 3, 70, 1066998, 1153, 425, 58, 2306, 850, 117, 1 ],
+    [ "Jesus Burgess - User of the Strong-Strong Fruit", "STR", ["Driven", "Fighter"], 6, 55, 4, 5, 99, 5000000, 2276, 844, 115, 4552, 1687, 229, 1 ],
+    [ "Catarina Devon - Pirate Chasing the Pirate Empress", "STR", ["Driven", "Slasher"], 5, 30, 4, 4, 99, 4000000, 1831, 681, 118, 3662, 1361, 236, 1 ],
+    [ "Vasco Shot - Pirate Chasing the Pirate Empress", "STR", ["Driven", "Shooter"], 5, 30, 5, 4, 99, 4000000, 2111, 688, 69, 4222, 1375, 138, 1 ],
+    [ "Doc Q - User of the Sick-Sick Fruit", "STR", ["Driven", "Striker"], 5, 30, 4, 4, 99, 4000000, 1804, 675, 125, 3608, 1349, 249, 1 ],
+    [ "Van Ogre - User of the Warp-Warp Fruit", "STR", ["Driven", "Shooter"], 5, 30, 4, 4, 99, 4000000, 2068, 670, 82, 4136, 1340, 164, 1 ],
+    [ "Coby - Hero of the Rocky Port Incident", "PSY", ["Cerebral", "Fighter"], 5, 40, 5, 4, 99, 5000000, 1703, 797, 76, 3405, 1593, 152, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
