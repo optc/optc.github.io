@@ -2076,8 +2076,24 @@ let matchers = {
         {
             name: 'Chain Boost: Additive',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /adds ([?.\d]+)x(?:-([?.\d]+)x)? to (?:the )?Chain multiplier for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
+            regex: /adds ([?.\d]+)x(?:-([?.\d]+)x)?(?:, (\D+?),)? to (?:the )?Chain multiplier for ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
             submatchers: [
+                {
+                    type: 'option',
+                    description: 'Allowing Override',
+                    regex: /allowing override/,
+                    radioGroup: 'targets',
+                    groups: [3],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Buff Clear Immune',
+                    regex: /preventing buff clears/,
+                    radioGroup: 'targets',
+                    groups: [3],
+                    cssClasses: ['min-width-6'],
+                },
                 {
                     type: 'number',
                     description: 'Multiplier:',
@@ -2086,7 +2102,7 @@ let matchers = {
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [3, 4],
+                    groups: [4, 5],
                 },
             ],
         },
@@ -2278,6 +2294,114 @@ let matchers = {
             name: 'Buff Duration Extender',
             targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
             regex: /increases duration of any ([^."]+?)by ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
+            submatchers: [
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [2, 3],
+                },
+                // following should also match "...boosting"
+                {
+                    type: 'separator',
+                    description: 'Damage Boosting Buffs',
+                },
+                {
+                    type: 'option',
+                    description: 'ATK',
+                    // could've used negative lookbehind, but some platforms don't support it
+                    // either ATK boosting buffs or ATK UP or ATK boost
+                    regex: /(?:^|(?!base|atus).{4} )ATK (?:boost|UP)/i, // do not match "base ATK boost" and "Status ATK boost"
+                    groups: [1],
+                    cssClasses: ['min-width-3'],
+                },
+                {
+                    type: 'option',
+                    description: 'Orb',
+                    regex: /Orb (?:Amplification|boost|effect)/i,
+                    groups: [1],
+                    cssClasses: ['min-width-3'],
+                },
+                {
+                    type: 'option',
+                    description: 'Color Affinity',
+                    regex: /Color Affinity/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Base ATK',
+                    regex: /Base ATK boost/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Status ATK',
+                    regex: /Status ATK boost/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Chain Lock',
+                    regex: /Chain Lock/i, // should also match "Chain Lock/Limit/Boundary"
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Chain Addition',
+                    regex: /Chain Addition/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'Chain Multiplication',
+                    regex: /Chain Multiplication/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'separator',
+                    description: 'Others',
+                },
+                {
+                    type: 'option',
+                    description: 'Percent Damage Reduction',
+                    regex: /Percent Damage Reduction/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'Threshold Damage Reduction',
+                    regex: /Threshold Damage Reduction/i,
+                    groups: [1],
+                    cssClasses: ['min-width-12'],
+                },
+                {
+                    type: 'option',
+                    description: 'EOT Damage',
+                    regex: /End of Turn Damage/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+                {
+                    type: 'option',
+                    description: 'EOT Healing',
+                    regex: /End of Turn Healing/i,
+                    groups: [1],
+                    cssClasses: ['min-width-6'],
+                },
+            ],
+        },
+
+        {
+            name: 'Buff Duration Reducer',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'support', 'sailor' ],
+            regex: /decreases duration of any ([^."]+?)by ([?\d]+\+?)(?:-([?\d]+))? turns?/i,
             submatchers: [
                 {
                     type: 'number',
@@ -2728,6 +2852,19 @@ let matchers = {
             name: 'Final Stage Activated %target%',
             targets: [ 'support' ],
             regex: /final stage/i,
+        },
+
+        {
+            name: 'Number Stage Activated %target%',
+            targets: [ 'support' ],
+            regex: /when you reach the (\d+)\w{2} stage/i,
+            submatchers:[
+                {
+                    type: 'number',
+                    description: 'Stage:',
+                    groups: [1],
+                },
+            ]
         },
 
         {
@@ -5162,6 +5299,25 @@ let matchers = {
                 },
             ],
         },
+
+        {
+            name: 'Captain Swap',
+            targets: [ 'captain', 'special', 'superSpecial', 'swap', 'sailor', 'support' ],
+            regex: /(optionally )?(?:reduces|removes)[^."]+?Captain Swap[^."]+?duration (?:by ([?\d]+)(?:-([?\d]+))? turns?|(completely))(?:, by ([?\d]+)(?:-([?\d]+))? turns?)?/i,
+            submatchers: [
+                {
+                    type: 'option',
+                    description: 'Optional',
+                    regex: /i/,
+                    groups: [1],
+                },
+                {
+                    type: 'number',
+                    description: 'Turns:',
+                    groups: [2, 3, 4, 5, 6],
+                },
+            ],
+        },
     ],
     'Apply Enemy Effects': [
         {
@@ -5689,12 +5845,18 @@ let matchers = {
         {
             name: 'Captain Swap',
             targets: [ 'special', 'superSpecial', 'swap', 'support' ],
-            regex: /Swaps this unit with your captain for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
+            regex: /(optionally )?swaps this unit with your captain for ([?\d]+\+?)(?:-([?\d]+))? turns?(?:, for ([?\d]+\+?)(?:-([?\d]+))? turns?)?/i,
             submatchers: [
+                {
+                    type: 'option',
+                    description: 'Optional',
+                    regex: /i/,
+                    groups: [1],
+                },
                 {
                     type: 'number',
                     description: 'Turns:',
-                    groups: [1, 2, 3, 4],
+                    groups: [2, 3, 4, 5],
                 }
             ],
         },

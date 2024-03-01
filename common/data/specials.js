@@ -17317,7 +17317,7 @@ window.specials = {
     },
     4075: {
         status: function(p) { return p.enemyEffects.increaseDamageTaken || p.enemyEffects.defenseDown ? p.cached.multiplier : 1; },
-        affinity: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
+        orb: function(p) { return p.unit.type == "STR" || p.unit.type == "DEX" || p.unit.type == "QCK" ? 2.25 : 1; },
         onActivation: function(p) {
             p.cached.multiplier = p.percHP <= 10 ? 2.25 : 1;
         }
@@ -17447,7 +17447,7 @@ window.specials = {
     },
     4093: {
         orb: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [2, 2.5][p.cached.multiplier] : 1; },
-        atkPlus: function(p) { return [0, 0.1][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17460,7 +17460,7 @@ window.specials = {
     },
     4094: {
         tapTiming: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? [{ Good: 0.1, Great: 0.2, Perfect: 0.1 }, { Good: 0.1, Great: 0.2, Perfect: 0.2 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
-        orbPlus: function(p) { return [0, 0.1][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
         onActivation: function(p) {
             var levels = [0, 1];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -17510,7 +17510,7 @@ window.specials = {
         },
     },
     4097: {
-        atk: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
+        affinity: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 2.25 : 1; },
         chainPlus: function(p) { return 0.3; },
     },
     4098: {

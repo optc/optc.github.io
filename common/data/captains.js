@@ -11652,7 +11652,7 @@ window.captains = {
     },
     3350: {
         atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? [[4.25, 4.25],[5, 5.25]][CrunchUtils.llimitUnlock(p, "captains")][CrunchUtils.limitUnlock(p, "captains")] : 1; },
-        atk: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? [1,1.2][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
+        hp: function(p) { return (p.unit.type == "QCK" || p.unit.type == "INT") ? [1,1.2][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
     },
     3351: {
         atk: function(p) { return p.unit.class.has("Shooter") || p.unit.class.has("Free Spirit") ? 3.5 : 1; },

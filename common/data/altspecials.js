@@ -2910,7 +2910,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -2925,7 +2925,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -2940,7 +2940,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -2955,7 +2955,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -2970,7 +2970,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -2985,7 +2985,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -3000,7 +3000,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
@@ -3015,7 +3015,7 @@ var ghostsAltSpecials = {
         atk: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
         type: "type",
         orb: function(p) { return [1.3, 2.25, 1.3, 2.25][p.cached.multiplier]; },
-        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }] : { Good: 0, Great: 0, Perfect: 0 }; },
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Free Spirit") ? [{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.0 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 },{ Good: 0, Great: 0, Perfect: 0.4 }][p.cached.multiplier] : { Good: 0, Great: 0, Perfect: 0 }; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;

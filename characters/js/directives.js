@@ -856,7 +856,7 @@ function conditionToString(condition, suffix) {
       }
     case "crew":
     case "enemies":
-      return `When there are ${condition.count} or ${condition.comparator} ${condition.type} ${condition.targets ? arrayToString(condition.targets) + " characters " : ""}${condition.relative ? condition.type == "crew" ? "than the enemy team" : "than your crew" : ""} remaining, `
+      return `When there are ${condition.count} or ${condition.comparator} ${condition.type} ${condition.targets ? arrayToString(condition.targets) + " characters" : ""}${condition.relative ? condition.type == "crew" ? " than the enemy team" : " than your crew" : ""}${condition.composition ? "" : " remaining"}, `
     case "trigger":
       return `The first ${condition.count} times this character ${condition.stat == "takes damage" || condition.stat.includes("recieves") ? condition.stat : "lands a " + condition.stat}, `
     case "debuff":

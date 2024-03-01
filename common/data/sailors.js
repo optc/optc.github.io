@@ -3235,7 +3235,7 @@ window.sailors = {
         hpStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
         rcvStatic: function(p) { return [0, 100, 100][CrunchUtils.limitUnlock(p, "sailors")]; },
     },
-    4063: {
+    4064: {
         atkStatic: function(p) { return p.slot <= 1 ? [0, 150][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
     4066: {
@@ -3269,7 +3269,7 @@ window.sailors = {
     4088: {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 100 : 0; },
     },
-    4088: {
+    4089: {
         hpStatic: function(p) { return p.unit.type == "PSY" || p.unit.type == "INT" ? 200 : 0; },
     },
     4090: {

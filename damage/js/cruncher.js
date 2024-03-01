@@ -377,7 +377,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                         }
                     }
                 }
-                if (window.specials[3957].turnedOn) orb = 2.75
+                if (window.specials[3957].turnedOn || window.altspecials[4084].turnedOn) orb = 2.75
                 if (window.altspecials[3956].turnedOn) orb = 3
             }
             if (orb =='tnd'){
