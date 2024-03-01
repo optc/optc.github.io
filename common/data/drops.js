@@ -3324,6 +3324,16 @@ window.drops = {
             'Defeat Level Rewards': [ 4088 ],
         },
 
+        {
+            name: 'Blackbeard',
+            dropID: 'pka9',
+            thumb: 4100,
+            global: true,
+            //nakama: 6395200,
+            gamewith: null,
+            'Defeat Level Rewards': [ 4107 ],
+        },
+
     ],
 
 

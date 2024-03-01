@@ -17529,6 +17529,121 @@ window.specials = {
             window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = false;
         }
     },
+    4099: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 3, 3, 3, 3, 3, 3][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1.75, 1.75, 2.25, 2.25, 2.25][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], [], [], [], ["increaseDamageTaken"], ["increaseDamageTaken"], ["increaseDamageTaken"]][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25, 0, 0.25][p.cached.multiplier]; },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = [false , false, true, true, false, true, true][n];
+            p.scope.notify({
+                text: 'Using the ' + ["No Confitions Met", "Tri-Color + RCV/TND Condition Met", "Bi-Color + EMPTY Condition Met", "Both Orb Conditions Met", "Enemy Buff & Tri-Color + RCV/TND Condition Met", "Enemy Buff & Bi-Color + EMPTY Condition Met", "Enemy Buff & Both Orb Conditions Met"][levels[n]] + ' Special. To switch to ' + ["No Confitions Met", "Tri-Color + RCV/TND Condition Met", "Bi-Color + EMPTY Condition Met", "Both Orb Conditions Met", "Enemy Buff & Tri-Color + RCV/TND Condition Met", "Enemy Buff & Bi-Color + EMPTY Condition Met", "Enemy Buff & Both Orb Conditions Met"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4100: {
+        orb: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 3, 3, 3, 3, 3, 3][p.cached.multiplier] : 1; },
+        increaseDamageTaken: function(p) { return [1.75, 1.75, 1.75, 1.75, 2.25, 2.25, 2.25][p.cached.multiplier]; },
+        ignoresImmunities: function(p) { return [[], [], [], [], ["increaseDamageTaken"], ["increaseDamageTaken"], ["increaseDamageTaken"]][p.cached.multiplier]; },
+        atkPlus: function(p) { return [0, 0.25, 0, 0.25, 0.25, 0, 0.25][p.cached.multiplier]; },
+        turnedOn: [ false, false, false, false, false, false ],
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn[p.slot] = [false , false, true, true, false, true, true][n];
+            p.scope.notify({
+                text: 'Using the ' + ["No Confitions Met", "Tri-Color + RCV/TND Condition Met", "Bi-Color + EMPTY Condition Met", "Both Orb Conditions Met", "Enemy Buff & Tri-Color + RCV/TND Condition Met", "Enemy Buff & Bi-Color + EMPTY Condition Met", "Enemy Buff & Both Orb Conditions Met"][levels[n]] + ' Special. To switch to ' + ["No Confitions Met", "Tri-Color + RCV/TND Condition Met", "Bi-Color + EMPTY Condition Met", "Both Orb Conditions Met", "Enemy Buff & Tri-Color + RCV/TND Condition Met", "Enemy Buff & Bi-Color + EMPTY Condition Met", "Enemy Buff & Both Orb Conditions Met"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4101: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? [2.75, 3][p.cached.multiplier] : 1; },
+        type: "class",
+        chainAddition: function(p) { return [0, 1.6][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Weak Boost", "Strong Boost and Chain Addition"][levels[n]] + '. To switch to ' + ["Weak Boost", "Strong Boost and Chain Addition"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4102: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? [2.75, 3][p.cached.multiplier] : 1; },
+        type: "class",
+        chainAddition: function(p) { return [0, 1.6][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Weak Boost", "Strong Boost and Chain Addition"][levels[n]] + '. To switch to ' + ["Weak Boost", "Strong Boost and Chain Addition"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4103: {
+        affinity: function(p) { return p.unit.class.has("Driven") ? [1, 2.25][p.cached.multiplier] : 1; },
+        delay: function(p) { return 2; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["No Affinity Boost", "Affinity Boost"][levels[n]] + '. To switch to ' + ["No Affinity Boost", "Affinity Boost"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4104: {
+        chain: function(p) { return 2.5; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? 20 : 1;
+        },
+    },
+    4105: {
+        weaken: function(p) { return [1.2, 1.4]; },
+    },
+    4106: {
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") ? [1250, 0, 1250][p.cached.multiplier] : 1; },
+        atkbasePlus: function(p) { return [0, 500, 500][p.cached.multiplier]; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Base ATK Boost", "Base ATK Buff", "Both Effects"][levels[n]] + '. To switch to ' + ["Base ATK Boost", "Base ATK Buff", "Both Effects"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4107: {
+        atkPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
+        chainAddition: function(p) { return 1.1; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["No ATK/Orb Buff", "ATK/Orb Buff"][levels[n]] + '. To switch to ' + ["No ATK/Orb Buff", "ATK/Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4109: {
+        tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
+    },
 };
 
 var calcGhostStartIDSpecials = { "start": 5000 };

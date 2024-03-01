@@ -354,7 +354,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'int') orb = (window.specials[2235].turnedOn || window.specials[2236].turnedOn || window.specials[2249].turnedOn || window.specials[2527].turnedOn
                                      || ((window.specials[2374].turnedOn || window.specials[2375].turnedOn) && (x.unit.class.has("Slasher") || x.unit.class.has("Powerhouse")))
                                      || ((window.specials[1977].turnedOn || window.specials[1978].turnedOn) && (x.unit.class.has("Free Spirit")))) ? 2 : 'int';
-            if (orb == 'empty') orb = (window.specials[3740].turnedOn || window.specials[3741].turnedOn) ? 2.25 : 'empty';
+            if (orb == 'empty') orb = (window.specials[3740].turnedOn || window.specials[3741].turnedOn || window.specials[4099].turnedOn.has(true) || window.specials[4100].turnedOn.has(true)) ? 2.25 : 'empty';
             if (orb == 'rainbow') orb = (window.specials[3943].turnedOn || window.specials[3944].turnedOn) ? 2.75 : (window.specials[2631].turnedOn) ? 2.25 : 'rainbow';
             
             if (orb == 0.5) orb = (window.specials[1269].turnedOn || window.specials[1270].turnedOn || window.specials[1330].turnedOn || window.specials[1546].turnedOn || window.specials[1547].turnedOn || window.specials[1557].turnedOn || window.specials[1890].turnedOn || window.specials[1891].turnedOn || window.specials[2227].turnedOn || window.specials[2478].turnedOn || window.specials[2479].turnedOn) ? 1 : .5;

@@ -4106,6 +4106,8 @@ window.units = [
     [ "Doc Q - User of the Sick-Sick Fruit", "STR", ["Driven", "Striker"], 5, 30, 4, 4, 99, 4000000, 1804, 675, 125, 3608, 1349, 249, 1 ],
     [ "Van Ogre - User of the Warp-Warp Fruit", "STR", ["Driven", "Shooter"], 5, 30, 4, 4, 99, 4000000, 2068, 670, 82, 4136, 1340, 164, 1 ],
     [ "Coby - Hero of the Rocky Port Incident", "PSY", ["Cerebral", "Fighter"], 5, 40, 5, 4, 99, 5000000, 1703, 797, 76, 3405, 1593, 152, 1 ],
+    [ "", "Type", [ "Class1", "Class2" ], null, null, null, null, null, null, null, null, null, null, null, null, null ],
+    [ "S-Hawk", "INT", ["Slasher", "Driven"], 6, 40, 4, 5, 99, 5000000, 2258, 899, 87, 4516, 1798, 173, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };

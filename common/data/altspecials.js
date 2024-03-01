@@ -609,6 +609,12 @@ window.altspecials = {
             window.altspecials[p.team[p.sourceSlot].unit.number+1].turnedOn = false;
         },
     },
+    4100: {
+        superAffinity: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+    },
+    4058: {
+        atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1250 : 0; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };

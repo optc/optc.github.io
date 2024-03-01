@@ -119,6 +119,12 @@ window.capspecials = {
     4085: {
         affinityPlus: function(p) { return 0.25; },
     },
+    4099: {
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? 2.25 : 1; },
+    },
+    4100: {
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? 2.25 : 1; },
+    },
 };
 
 var calcGhostStartIDCapSpecials = { "start": 5000 };

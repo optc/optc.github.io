@@ -3292,6 +3292,17 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 80, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Cerebral") || p.unit.class.has("Free Spirit") ? [0, 0, 80][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    4100: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? [0, 0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") ? [0, 0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") ? [0, 0, 70][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4105: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 60 : 0; },
+    },
+    4106: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") ? 60 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

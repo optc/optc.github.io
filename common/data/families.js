@@ -700,6 +700,7 @@ const Tensei = [ "Tensei", "Kurouma" ];
 const Hamlet = [ "Hamlet" ];
 const Lilith = [ "Lilith", "Dr. Vegapunk", "PUNK-02" ];
 const Shakuyaku = [ "Shakuyaku", "Shakky" ];
+const SHawk = [ "S-Hawk" ];
 
 window.families = {
     1: [ ...MonkeyDLuffy ],
@@ -4692,6 +4693,16 @@ window.families = {
     4096: [ ...BoaHancock ],
     4097: [ ...Shakuyaku ],
     4098: [ ...SilversRayleigh ],
+    4099: [ ...MarshallDTeach ],
+    4100: [ ...MarshallDTeach ],
+    4101: [ ...JesusBurgess ],
+    4102: [ ...JesusBurgess ],
+    4103: [ ...CatarinaDevon ],
+    4104: [ ...VascoShot ],
+    4105: [ ...DocQ ],
+    4106: [ ...VanAugur ],
+    4107: [ ...Coby ],
+    4109: [ ...SHawk ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

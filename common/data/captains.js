@@ -14472,6 +14472,47 @@ window.captains = {
     4098: {
         atk: function(p) { return (window.specials[4098].turnedOn[p.sourceSlot]) && p.slot == p.sourceSlot ? [5.25, 5.75][CrunchUtils.llimitUnlock(p, "captains")] : p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [4.5, 5][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
     },
+    4099: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.classcount.Fighter > 1 && p.classcount.Slasher > 1 && p.classcount.Striker > 1 && p.classcount.Shooter > 1 ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    4100: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.classcount.Fighter > 1 && p.classcount.Slasher > 1 && p.classcount.Striker > 1 && p.classcount.Shooter > 1 ? 5.75 : 5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
+    },
+    4101: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 5.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1.4 : 1; },
+    },
+    4102: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 5.5 : 1; },
+        hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1.4 : 1; },
+    },
+    4103: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 3.5 : 1; },
+    },
+    4104: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? 3.5 : 1; },
+    },
+    4105: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 3.5 : 1; },
+    },
+    4106: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Shooter") ? 3.5 : 1; },
+    },
+    4107: {
+        atk: function(p) { return p.percHP >= 80 ? 4 : 3.75; },
+        hp: function(p) { return 1.25; },
+    },
+    4109: {
+        damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Driven" ]); },
+        hitAtk: function(p) {
+            if (!(p.unit.class.has('Slasher') || p.unit.class.has('Driven'))) return 1;
+            var prev = p.modifiers.slice(p.chainPosition - 1, p.chainPosition)[0];
+            return p.chainPosition === 0 ? 4.75 : (prev == 'Good' ? 5 : (prev == 'Great' ? 5.25 : (prev == 'Perfect' ? 5.5 : 4.75)));
+        },
+        hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
 };
 
 var calcGhostStartIDCaptains = { "start": 5000 };
