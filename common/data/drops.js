@@ -6820,9 +6820,9 @@ window.drops = {
         },
 
         {
-            name: 'Zoro',
+            name: 'S-Hawk',
             dropID: 'treasuremap78',
-            thumb: 3755,
+            thumb: 4109,
             global: true,
             nakama: 8375500,
             gamewith: null,
