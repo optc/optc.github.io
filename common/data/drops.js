@@ -6826,7 +6826,7 @@ window.drops = {
             global: true,
             nakama: 8375500,
             gamewith: null,
-            'Raging Sea': [ "4074-skull" ]
+            'Raging Sea': [ "4108-skull" ]
         },
 
     ],
