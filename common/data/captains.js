@@ -14504,6 +14504,10 @@ window.captains = {
         atk: function(p) { return p.percHP >= 80 ? 4 : 3.75; },
         hp: function(p) { return 1.25; },
     },
+    4108: {
+        atk: function(p) { return p.percHP >= 80 ? 4.25 : 4; },
+        hp: function(p) { return 1.25; },
+    },
     4109: {
         damageSorter: function(d) { return CrunchUtils.classSort(d, 4, [ "Slasher", "Driven" ]); },
         hitAtk: function(p) {
@@ -14512,6 +14516,21 @@ window.captains = {
             return p.chainPosition === 0 ? 4.75 : (prev == 'Good' ? 5 : (prev == 'Great' ? 5.25 : (prev == 'Perfect' ? 5.5 : 4.75)));
         },
         hitModifiers: ["Perfect", "Perfect", "Perfect", "Perfect", "Perfect", "Perfect"]
+    },
+    4110: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? p.unit.cost <= 40 ? 6 : 5.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
+    4111: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? p.unit.cost <= 40 ? 6 : 5.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? 1.3 : 1; },
+    },
+    4112: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 3.5 : 1; },
+    },
+    4113: {
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 3.5 : 1; },
+        hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? 1.2 : 1; },
     },
 };
 

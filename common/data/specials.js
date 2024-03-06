@@ -17641,8 +17641,71 @@ window.specials = {
             });
         },
     },
+    4108: {
+        atkPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
+        orbPlus: function(p) { return [0, 0.25][p.cached.multiplier]; },
+        chainAddition: function(p) { return 1.3; },
+        onActivation: function(p) {
+            var levels = [0, 1];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["No ATK/Orb Buff", "ATK/Orb Buff"][levels[n]] + '. To switch to ' + ["No ATK/Orb Buff", "ATK/Orb Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
     4109: {
         tapTiming: function(p) { return p.unit.class.has("Slasher") || p.unit.class.has("Driven") ? { Good: 0.2, Great: 0.3, Perfect: 0.3 } : { Good: 0, Great: 0, Perfect: 0 }; },
+    },
+    4110: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        chain: function(p) { return [1, 3, 3][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 20, 20][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Chain Boundary", "Orb Boost and Chain Boundary"][levels[n]] + '. To switch to ' + ["Orb Boost", "Chain Boundary", "Orb Boost and Chain Boundary"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4111: {
+        orb: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? [2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        chain: function(p) { return [1, 3, 3][p.cached.multiplier]; },
+        chainLimiter: function(p) {
+            var prev = p.hitcombo[p.hitcombo.length - 1][p.chainPosition - 1]
+            return p.chainPosition === 0 ? 1 : (prev == 'Good'  || prev == 'Great' || prev == 'Perfect') ? [Infinity, 20, 20][p.cached.multiplier] : 1;
+        },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["Orb Boost", "Chain Boundary", "Orb Boost and Chain Boundary"][levels[n]] + '. To switch to ' + ["Orb Boost", "Chain Boundary", "Orb Boost and Chain Boundary"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4112: {
+        affinity: function(p) { return p.unit.class.has(p.cached.multiplier1) ? p.cached.multiplier : 1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Driven == 6 ? 2 : p.classCount.Striker == 6 ? 2.25 : 1;
+            p.cached.multiplier1 = p.classCount.Driven == 6 ? "Driven" : p.classCount.Striker == 6 ? "Striker" : "None";
+        },
+    },
+    4113: {
+        atk: function(p) { return p.unit.class.has(p.cached.multiplier1) ? p.cached.multiplier : 1; },
+        type: "class",
+        onActivation: function(p) {
+            p.cached.multiplier = p.classCount.Driven == 6 ? 2.25 : p.classCount.Striker == 6 ? 2.5 : 1;
+            p.cached.multiplier1 = p.classCount.Driven == 6 ? "Driven" : p.classCount.Striker == 6 ? "Striker" : "None";
+        },
     },
 };
 

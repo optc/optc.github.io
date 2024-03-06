@@ -4702,7 +4702,12 @@ window.families = {
     4105: [ ...DocQ ],
     4106: [ ...VanAugur ],
     4107: [ ...Coby ],
+    4108: [ ...Coby ],
     4109: [ ...SHawk ],
+    4110: [ ...Buggy, ...DraculeMihawk, ...Crocodile ],
+    4111: [ ...Buggy, ...DraculeMihawk, ...Crocodile ],
+    4112: [ ...Galdino ],
+    4113: [ ...Alvida, ...Mohji, ...Richie, ...Cabaji ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

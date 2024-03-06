@@ -3303,6 +3303,17 @@ window.sailors = {
     4106: {
         atkStatic: function(p) { return p.unit.class.has("Driven") ? 60 : 0; },
     },
+    4111: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Slasher") ? [0, 75, 75][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4112: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        hpStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
+    4113: {
+        atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+        rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },
