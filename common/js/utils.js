@@ -1099,6 +1099,9 @@
             case (ghostPoint+568).toString(): return relPathToRoot + '/api/images/thumbnail/jap/4/000/4062-2.png'; break;
             case (ghostPoint+569).toString(): return relPathToRoot + '/api/images/thumbnail/jap/4/000/4062-DEX.png'; break;
             case (ghostPoint+570).toString(): return relPathToRoot + '/api/images/thumbnail/jap/4/000/4062-QCK.png'; break;
+            case (ghostPoint+571).toString(): return relPathToRoot + '/api/images/thumbnail/jap/4/100/4118-1.png'; break;
+            case (ghostPoint+572).toString(): return relPathToRoot + '/api/images/thumbnail/jap/4/100/4118-2.png'; break;
+            case (ghostPoint+573).toString(): return relPathToRoot + '/api/images/thumbnail/jap/4/100/4118-STR.png'; break;
             default: break;
         }
 

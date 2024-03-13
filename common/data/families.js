@@ -4708,6 +4708,13 @@ window.families = {
     4111: [ ...Buggy, ...DraculeMihawk, ...Crocodile ],
     4112: [ ...Galdino ],
     4113: [ ...Alvida, ...Mohji, ...Richie, ...Cabaji ],
+    4114: [ ...Sasaki, ...WhosWho, ...BlackMaria, ...Ulti, ...PageOne, ...XDrake ],
+    4115: [ ...Sasaki, ...WhosWho, ...BlackMaria, ...Ulti, ...PageOne, ...XDrake ],
+    4116: [ ...BasilHawkins ],
+    4117: [ ...BaoHuang ],
+    4118: [ ...Arlong, ...Choo, ...Kuroobi, ...Hatchan ],
+    4119: [ ...XDrake ],
+    4120: [ ...XDrake ],
     //break
     4986: [ ...MonkeyDLuffy ],
     4987: [ ...MonkeyDLuffy ],

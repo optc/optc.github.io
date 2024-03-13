@@ -7570,6 +7570,22 @@ window.drops = {
             'Kizuna Exchange': [ "4098-skull" ],
         },
 
+        {
+            name: 'X Drake',
+            dropID: 'kizuna54',
+            thumb: 4120,
+            global: true,
+            nakama: null,
+            gamewith: null,
+            'Kizuna Exchange': [ 4119, "4118-skull", "4120-skull" ],
+            boosters: [
+                {"effect": "Boosts Kizuna Tickets earned for Clear Rewards by 1.5x! Boosts Super Boss Tokens earned for Clear Rewards by 1.3x! Plus, stats boosted by 2x, Special charge time reduced by 15 turns at start of quest, and makes character's attacks effective against all enemy types!", "units": [4115]},
+                {"effect": "Boosts Kizuna Tickets earned for Clear Rewards by 1.2x! Boosts Super Boss Tokens earned for Clear Rewards by 1.2x! Plus, stats boosted by 2x, Special charge time reduced by 15 turns at start of quest, and makes character's attacks effective against all enemy types!", "units": [4116]},
+                {"effect": "Stats boosted by 2x, Special charge time reduced by 15 turns at start of quest!", "units": [4100, 4102, 4103, 4104, 4105, 4106, 4108, 4111, 4112, 4113, 4068, 4067, 4109, 4118, 2860, 5571, 5572, 5573, 5210, 5211, 5212]},
+                {"effect": "Stats boosted by 1.5x, Special charge time reduced by 15 turns at start of quest!", "units": [3886, 2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3884, 4107, 4096, 4097, 2729, 2831, 2792, 2977, 3510, 3550, 3609, 4080, 3376, 4079, 3891, 3870, 3973, 3824, 3508, 3917, 3308, 3616, 3617, 3900, 3912, 3949, 3974, 3987, 4030, 3825, 3737, 3938, 3509, 4055, 4034, 3866, 3488, 5192, 5193, 5194, 5488, 5489, 5490, 5491]},
+            ],
+        },
+
     ],
 
 

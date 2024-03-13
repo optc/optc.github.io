@@ -615,6 +615,9 @@ window.altspecials = {
     4058: {
         atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1250 : 0; },
     },
+    4115: {
+        increaseDamageTaken: function(p) { return 2; },
+    },
 };
 
 var calcGhostStartIDAltSpecials = { "start": 5000 };
@@ -3025,6 +3028,18 @@ var ghostsAltSpecials = {
                 name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
             });
         },
+    },
+    571: {
+        atkbase: function(p) { return Math.ceil(10 + 1240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
+    },
+    572: {
+        atkbase: function(p) { return Math.ceil(10 + 1240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
+    },
+    573: {
+        atkbase: function(p) { return Math.ceil(10 + 1240*(1 - p.cached.multiplier/100)); },
+        onActivation: function(p) { p.cached.multiplier = p.percHP; },
     },
 }
 

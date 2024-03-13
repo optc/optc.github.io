@@ -3982,6 +3982,11 @@ window.flags = {
     4111: { rr: 1, rro: 1, lrr: 1, annilrr: 1 },
     4112: { rr: 1, rro: 1 },
     4113: { rr: 1, rro: 1 },
+    4114: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
+    4115: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
+    4116: { rr: 1, rro: 1, lrr: 1, kclrr: 1 },
+    4117: { rr: 1, rro: 1, lrr: 1, slrr: 1 },
+    4118: { rr: 1, rro: 1 },
     //break
     4986: { rr: 1, rro: 1, global: 1 },
     4987: { rr: 1, rro: 1, global: 1 },

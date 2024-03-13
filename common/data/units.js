@@ -4112,6 +4112,13 @@ window.units = [
     [ "Buggy & Crocodile & Mihawk - Cross Guild", "QCK", ["Driven", "Slasher"], 6, 55, 4, 5, 99, 5000000, 2241, 933, 91, 4481, 1866, 182, 1 ],
     [ "Galdino - Flattery to His Former Boss", "QCK", ["Driven", "Striker"], 5, 30, 4, 4, 99, 4000000, 1933, 731, 85, 3866, 1461, 169, 1 ],
     [ "Alvida & Cabaji & Mohji & Richie", "QCK", ["Driven", "Striker"], 5, 30, 4, 4, 99, 4000000, 1900, 663, 113, 3800, 1325, 225, 1 ],
+    [ "Tobi Roppo - Animal Kingdom Pirates", "STR", ["Powerhouse", "Driven"], 5, 30, 4, 3, 70, 1066998, 868, 548, 47, 1520, 1202, 94, 1 ],
+    [ "Tobi Roppo - Forces of the Animal Kingdom Pirates", "STR", ["Powerhouse", "Driven"], 6, 55, 4, 5, 99, 5000000, 1482, 1102, 90, 3944, 1656, 318, 1 ],
+    [ "Basil Hawkins - Laughing at the Scapegoat", "STR", ["Cerebral", "Driven"], 5, 30, 4, 4, 99, 4000000, 1262, 728, 91, 3546, 1458, 182, 1 ],
+    [ "Bao Huang - Surveillance Force \"Marys\"", "STR", ["Driven", "Cerebral"], 5, 1, 4, 4, 99, 4000000, 1382, 569, 131, 2764, 1138, 262, 1 ],
+    [ "Arlong Pirates - Brutal Punishment", ["STR", "STR"], [["Powerhouse", "Slasher"],["Powerhouse", "Slasher"],["Powerhouse", "Slasher"]], "6+", 65, 4, 5, 99, 5000000, 3151, 1199, 138, 4726, 1798, 263, 1 ],
+    [ "X Drake - Being Chased", "QCK", ["Striker", "Slasher"], 5, 50, 4, 4, 99, 5000000, 1767, 714, 78, 3534, 1428, 156, 1 ],
+    [ "X Drake - Life-Risking Hope", "QCK", ["Striker", "Slasher"], "5+", 50, 4, 4, 99, 5000000, 1817, 764, 98, 3634, 1528, 196, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4711,6 +4718,9 @@ var ghostsUnits = [
     [ "⚐ Sanji - Wings to Become the King", "QCK", ["Free Spirit", "Fighter"], 6, 55, 4, 5, 99, 5000000, 2187, 816, 189, 4374, 1632, 377, 1 ],
     [ "⚐ Zoro & Sanji - Wings to Become the King", "DEX", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2263, 894, 200, 4526, 1787, 400, 1 ],
     [ "⚐ Zoro & Sanji - Wings to Become the King", "QCK", ["Slasher", "Free Spirit"], 6, 55, 4, 5, 99, 5000000, 2263, 894, 200, 4526, 1787, 400, 1 ],
+    [ "⚐ Arlong - Brutal Punishment", "STR", ["Powerhouse", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 2973, 1154, 112, 4460, 1731, 230, 1 ],
+    [ "⚐ Hatchan & Kuroobi & Choo - Brutal Punishment", "STR", ["Powerhouse", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 3025, 1105, 123, 4538, 1658, 241, 1 ],
+    [ "⚐ Arlong Pirates - Brutal Punishment", "STR", ["Powerhouse", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 3151, 1199, 138, 4726, 1798, 263, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);

@@ -5743,6 +5743,18 @@ window.evolutions = {
         evolution: 4111,
         evolvers: [118, 301, 2662, 101, 267]
     },
+    4114: {
+        evolution: 4115,
+        evolvers: [118, 84, 266, 95, 267]
+    },
+    2860: {
+        evolution: 4118,
+        evolvers: [ "4118-skull", "4118-skull", "4118-skull", "skullSTR", "skullSTR" ]
+    },
+    4119: {
+        evolution: 4120,
+        evolvers: [ "4120-skull", "4120-skull", "4120-skull", "4120-skull", "4120-skull" ]
+    },
     4986: {
         evolution: 4987,
         evolvers: [ 118, 86, 266, 302, 267 ]

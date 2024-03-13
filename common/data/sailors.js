@@ -3314,6 +3314,12 @@ window.sailors = {
         atkStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
         rcvStatic: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Striker") ? [0, 60][CrunchUtils.limitUnlock(p, "sailors")] : 0; },
     },
+    4114: {
+        atkStatic: function(p) { return p.slot <= 1 ? 150 : 0; },
+    },
+    4115: {
+        atkStatic: function(p) { return p.slot <= 1 ? 150 : 0; },
+    },
     4986: {
         staticMult: function(p) { return 3; }
     },

@@ -381,7 +381,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 if (window.altspecials[3956].turnedOn) orb = 3
             }
             if (orb =='tnd'){
-                orb = (window.specials[4028].turnedOn == 2 || window.specials[4029].turnedOn == 2) ? 2.75 : 
+                orb = (window.specials[4028].turnedOn == 2 || window.specials[4029].turnedOn == 2 || window.specials[4114].turnedOn || window.specials[4115].turnedOn) ? 2.75 : 
                     (window.altspecials[3895].turnedOn.includes(true) || window.altspecials[3896].turnedOn.includes(true)) ? 2.5 : 
                     (window.altspecials[5430].turnedOn || window.altspecials[5432].turnedOn || window.specials[4028].turnedOn == 1 || window.specials[4029].turnedOn == 1) ? 2.25 :
                     (window.specials[5430].turnedOn || window.specials[5432].turnedOn) ? 2 : orb;
@@ -460,6 +460,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 0.5 && x.unit.type == 'DEX' && $scope.data.effect == 'STR Orbs Beneficial') orb = 2;
             if (orb == 'str' && $scope.data.effect == 'STR Orbs Beneficial') orb = 2;
             if (orb == 'meat') orb = 
+                (window.specials[4114].turnedOn || window.specials[4115].turnedOn) ? 2.75 : 
                 ((window.specials[1515].turnedOn || window.specials[1516].turnedOn || (window.specials[1593].turnedOn.has(true)) && x.unit.class.has("Fighter")) || 
                 ((window.specials[1181].turnedOn || window.specials[1182].turnedOn) && x.unit.class.has("Slasher")) || 
                 ((window.specials[1380].turnedOn || window.specials[1379].turnedOn) && (x.unit.class.has("Cerebral") || x.unit.class.has("Free Spirit")))) || 
@@ -467,7 +468,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
             if (orb == 'rainbow') orb = 2;
             if (orb == 'empty') orb = 1;
             if (orb == 'tnd') orb = 1;
-            if (orb == 'wano') orb = 2.5;
+            if (orb == 'wano') orb = window.specials[4114].turnedOn || window.specials[4115].turnedOn ? 2.75 : 2.5;
             if (orb == 'g'){
                 orb = 1.5;
                 if (Math.max(window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn) > -1) orb = [2, 2.25][Math.max(window.altspecials[5547].turnedOn, window.altspecials[5548].turnedOn, window.altspecials[5549].turnedOn, window.altspecials[5550].turnedOn, window.altspecials[5551].turnedOn, window.altspecials[5552].turnedOn, window.altspecials[5553].turnedOn, window.altspecials[5554].turnedOn)];
@@ -1612,7 +1613,7 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
                 $scope.tdata.rcvCounter.enabled = true;
             if ([3461, 3462].has(id))
                 $scope.tdata.basehpCounter.enabled = true;
-            if ([5430, 5432, 5449, 5450, 5451, 5452, 3990, 3991].has(id))
+            if ([5430, 5432, 5449, 5450, 5451, 5452, 3990, 3991, 4116].has(id))
                 $scope.tdata.dmgreductionCounter.enabled = true;
             if ([3829, 3830].has(id))
                 $scope.tdata.carrychainCounter.enabled = true;

@@ -17158,6 +17158,7 @@ window.specials = {
         orbPlus: function(p) { return [0.25, 0.5][p.cached.multiplier]; },
         statusPlus: function(p) { return [0.25, 0.5][p.cached.multiplier]; },
         onActivation: function(p) {
+            console.log(p);
             var levels = [0.25, 0.5];
             var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
             p.cached.multiplier = levels[n];
@@ -17705,6 +17706,72 @@ window.specials = {
         onActivation: function(p) {
             p.cached.multiplier = p.classCount.Driven == 6 ? 2.25 : p.classCount.Striker == 6 ? 2.5 : 1;
             p.cached.multiplier1 = p.classCount.Driven == 6 ? "Driven" : p.classCount.Striker == 6 ? "Striker" : "None";
+        },
+    },
+    4114: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5, 1, 1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "class",
+        chain: function(p) { return [0, 1.8, 1.8, 0, 0, 1.8, 1.8][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75, 1, 2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = [false, false, false, true, true, true, true][n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity Boost", "ATK Boost and Chain Addition", "ATK, Affinity and Chain Addition", "Orb Multiplier Buff", "Affinity Boost and Orb Multiplier Buff", "ATK Boost, Chain Addition and Orb Multiplier Buff", "ATK, Affinity, Chain Addition and Orb Multiplier Buff"][levels[n]] + '. To switch to ' + ["Affinity Boost", "ATK Boost and Chain Addition", "ATK, Affinity and Chain Addition", "Orb Multiplier Buff", "Affinity Boost and Orb Multiplier Buff", "ATK Boost, Chain Addition and Orb Multiplier Buff", "ATK, Affinity, Chain Addition and Orb Multiplier Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4115: {
+        atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5, 1, 1, 2.5, 2.5][p.cached.multiplier] : 1; },
+        type: "class",
+        chain: function(p) { return [0, 1.8, 1.8, 0, 0, 1.8, 1.8][p.cached.multiplier]; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75, 1, 2.75, 1, 2.75][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2, 3, 4, 5, 6];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            window.specials[p.team[p.sourceSlot].unit.number+1].turnedOn = [false, false, false, true, true, true, true][n];
+            p.scope.notify({
+                text: 'Using the ' + ["Affinity Boost", "ATK Boost and Chain Addition", "ATK, Affinity and Chain Addition", "Orb Multiplier Buff", "Affinity Boost and Orb Multiplier Buff", "ATK Boost, Chain Addition and Orb Multiplier Buff", "ATK, Affinity, Chain Addition and Orb Multiplier Buff"][levels[n]] + '. To switch to ' + ["Affinity Boost", "ATK Boost and Chain Addition", "ATK, Affinity and Chain Addition", "Orb Multiplier Buff", "Affinity Boost and Orb Multiplier Buff", "ATK Boost, Chain Addition and Orb Multiplier Buff", "ATK, Affinity, Chain Addition and Orb Multiplier Buff"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4116: {
+        def: function(p) { return 0; },
+        dmgredatk: function(p) { return 1+((p.dmgreductionCounter/100)/2); },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken || p.delayed > 0 ? 2.25 : 1; },
+        affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    4119: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? [1, 2, 2][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "Orb Boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK Boost", "Orb Boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        },
+    },
+    4120: {
+        atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? [2, 1, 2][p.cached.multiplier] : 1; },
+        type: "class",
+        orb: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? [1, 2.25, 2.25][p.cached.multiplier] : 1; },
+        onActivation: function(p) {
+            var levels = [0, 1, 2];
+            var n = (levels.indexOf(p.cached.multiplier) + 1) % levels.length;
+            p.cached.multiplier = levels[n];
+            p.scope.notify({
+                text: 'Using the ' + ["ATK Boost", "Orb Boost", "Both Boosts"][levels[n]] + '. To switch to ' + ["ATK Boost", "Orb Boost", "Both Boosts"][levels[(n + 1) % levels.length]] + ', disable and re-enable this special',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
         },
     },
 };
@@ -22252,6 +22319,45 @@ var ghostsSpecials = {
         onDeactivation: function(p) {
             p.cached.multiplier1 = [null, null];
         },
+    },
+    571: {
+        atk: function(p) { return p.cached.multiplier; },
+        type: "class",
+        atkPlus: function(p) { return p.cached.multiplier1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP <= 30 ? 2.75 : 2.5;
+            p.cached.multiplier1 = (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? [0.25, 0.5][CrunchUtils.llimitUnlock(p, "specials")] : 0;
+            p.scope.notify({
+                text: 'HP ' + (p.percHP <= 30 ? 'below' : 'above') + ' 30%, using the ' + p.cached.multiplier + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    572: {
+        atk: function(p) { return p.cached.multiplier; },
+        type: "class",
+        atkPlus: function(p) { return p.cached.multiplier1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP <= 30 ? 2.75 : 2.5;
+            p.cached.multiplier1 = (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? [0.25, 0.5][CrunchUtils.llimitUnlock(p, "specials")] : 0;
+            p.scope.notify({
+                text: 'HP ' + (p.percHP <= 30 ? 'below' : 'above') + ' 30%, using the ' + p.cached.multiplier + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
+    },
+    573: {
+        atk: function(p) { return p.cached.multiplier; },
+        type: "class",
+        atkPlus: function(p) { return p.cached.multiplier1; },
+        onActivation: function(p) {
+            p.cached.multiplier = p.percHP <= 30 ? 2.75 : 2.5;
+            p.cached.multiplier1 = (p.colorCount.INT>=1 && p.colorCount.PSY>=1 && p.colorCount.STR>=1 && p.colorCount.DEX>=1 && p.colorCount.QCK>=1) ? [0.25, 0.5][CrunchUtils.llimitUnlock(p, "specials")] : 0;
+            p.scope.notify({
+                text: 'HP ' + (p.percHP <= 30 ? 'below' : 'above') + ' 30%, using the ' + p.cached.multiplier + 'x multiplier.',
+                name: (p.team[p.sourceSlot].unit.number+1).toString() + 'warning'
+            });
+        }
     },
 };
 
