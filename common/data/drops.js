@@ -6826,7 +6826,35 @@ window.drops = {
             global: true,
             nakama: 8375500,
             gamewith: null,
-            'Raging Sea': [ "4108-skull" ]
+            'Raging Sea': [ "4108-skull" ],
+            boosters: [
+                {"effect": "Boosts Treasure Pts by 2.5x! Plus, stats boosted by 2.5x and Special charge time reduced by 10 turns at start of quest!\n[Card Enhance Effect] Adds 1 Card slot! Boosts success chance of Steering Wheel Cards by +20%! Boosts Treasure Pts multiplier of Slingshot/Pistol/Cannon Cards by +0.5!", "units": [4111]},
+                {"effect": "Boosts Treasure Pts by 1.6x! Plus, stats boosted by 2.5x and Special charge time reduced by 10 turns at start of quest!\n[Card Enhance Effect] Boosts success chance of  Slingshot/Pistol/Cannon Cards by +20%!", "units": [4112]},
+                {"effect": "Boosts Treasure Pts by 1.6x! Plus, stats boosted by 2.5x and Special charge time reduced by 10 turns at start of quest!\n[Card Enhance Effect] Boosts success chance of Sea Chart Cards by +20%!", "units": [4113]},
+                {"effect": "Boosts Treasure Pts by 1.4x! Plus, stats boosted by 2.5x and Special charge time reduced by 10 turns at start of quest!\n[Card Enhance Effect] Boosts the number of times obtaining Treasure Pts with Sea Cat Cards by +5 times!", "units": [4107]},
+                {"effect": "Boosts Treasure Pts by 1.4x! Plus, stats boosted by 2.5x and Special charge time reduced by 10 turns at start of quest!\n[Card Enhance Effect] Boosts Navigation Lv. increment effect of Sea Chart Cards by +1!", "units": [4089]},
+                {"effect": "Boosts Treasure Pts by 1.4x! Plus, stats boosted by 2.5x and Special charge time reduced by 10 turns at start of quest!", "units": [4100, 4102, 4108]},
+                {"effect": "Boosts Treasure Pts by 1.35x! Plus, stats boosted by 1.25x and Special charge time reduced by 7 turns at start of quest!", "units": [4103, 4104, 4105, 4106, 4109, 4096, 4097, 4082, 4084, 4086, 4087, 4088, 4098]},
+                {"effect": "Boosts Treasure Pts by 1.25x! Plus, stats boosted by 1.25x and Special charge time reduced by 7 turns at start of quest!", "units": [4066, 4074, 4078, 4079, 4080, 4085, 4063, 4068, 4067, 3443, 3936, 3022, 3094, 3965, 2879, 3915, 3567, 3981, 3416]},
+                {"effect": "Boosts Treasure Pts by 1.25x! Plus, stats boosted by 1.25x and Special charge time reduced by 10 turns at start of quest!", "units": [3364, 3462, 3483, 3523, 3543, 3563, 3641, 3735, 3775, 3861, 3933, 4003, 4050, 4071, 5393, 5394, 5395, 5396, 5516, 5517, 5518, 5519, 5551, 5552, 5553, 5554]},
+                {"effect": "Boosts Treasure Pts by 1.2x! Plus, stats boosted by 1.2x and Special charge time reduced by 5 turns at start of quest!", "units": [2936, 2938, 2940, 2942, 2944, 2946, 2948, 2950, 2952, 3884, 3886, 4054, 4058, 4060, 4062, 4064, 4065, 4056, 516, 1108, 1298, 1163, 5024, 2473, 2517, 2956, 3110, 3671, 1102, 1456, 2163, 2193, 2249, 2869, 2917, 3145, 3235, 3385, 4039, 5559, 5560, 5561, 5562, 5567, 5568, 5569, 5570, 5054, 5055, 5056, 5057]},
+                {"effect": "Boosts Treasure Pts by 1.2x! Plus, stats boosted by 1.25x and Special charge time reduced by 5 turns at start of quest!", "units": [3584, 3585, 3586, 3564, 3565, 4094, 4093, 4092, 4072, 4073]},
+                {"effect": "Boosts Treasure Pts by 1.2x! Plus, stats boosted by 1.2x and Special charge time reduced by 20 turns at start of quest!", "units": [3460, 3083, 3017, 2092, 1842, 2751, 392, 929, 2165]},
+            ],
+            /* gimmicks: {
+                "East Blue": [
+                    { "title": "Fight 1", "recUnits": [1], "gimmicks": "Fight 1 Gimmicks" },
+                    { "title": "Fight 2", "recUnits": [2], "gimmicks": "Fight 2 Gimmicks" }
+                ],
+                "Grand Line": [
+                    { "title": "Fight 1", "recUnits": [3], "gimmicks": "Fight 1 Gimmicks" },
+                    { "title": "Fight 2", "recUnits": [4], "gimmicks": "Fight 2 Gimmicks" }
+                ],
+                "New World": [
+                    { "title": "Fight 1", "recUnits": [5], "gimmicks": "Fight 1 Gimmicks" },
+                    { "title": "Fight 2", "recUnits": [6], "gimmicks": "Fight 2 Gimmicks" }
+                ],
+            } */
         },
 
     ],

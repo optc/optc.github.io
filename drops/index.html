@@ -124,6 +124,30 @@
                         <td>Condition</td>
                         <td style="white-space: pre-line" colspan="2">{{island.condition}} </td>
                     </tr>
+                    <tr ng-if="island.boosters" hide-when-empty>
+                        <td>Boosters</td>
+                        <td style="white-space: pre-line" colspan="2">
+                            <span ng-repeat="tier in island.boosters">
+                            <a ng-repeat="uid in tier.units | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
+                            decorate-slot uid="uid" class="slot small" 
+                            href="../characters/#/view/{{uid}}" target="_blank"
+                            uib-tooltip="{{getTooltipText(uid)}}"
+                            tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                            tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a><br>{{tier.effect}}<br></span>
+                        </td>
+                    </tr>
+                    <tr ng-if="island.gimmicks" hide-when-empty>
+                        <td>Gimmicks</td>
+                        <td ng-repeat="(difficulty,data) in island.gimmicks">{{difficulty}}<br>
+                            <span ng-repeat="fight in data">{{fight.title}}<br>Recommended Units:<br>
+                            <a ng-repeat="uid in fight.recUnits | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
+                            decorate-slot uid="uid" class="slot small" 
+                            href="../characters/#/view/{{uid}}" target="_blank"
+                            uib-tooltip="{{getTooltipText(uid)}}"
+                            tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                            tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a><br>Gimmicks: <br>{{fight.gimmicks}}<br></span>
+                        </td>
+                    </tr>
                     <tr ng-if="island.challenge">
                         <td>Challenge</td>
                         <td colspan="2">{{island.challenge}} </td>
@@ -136,7 +160,7 @@
                 </tbody>
                 <tbody>
                     <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global' && stage != 'condition' && stage != 'challenge' && stage != 'completion' && stage != 'challengeData' && stage != 'showManual' && stage != 'gamewith' && stage != 'slefty' && stage != 'nakama' && stage != 'dropID'">
+                        ng-if="!['thumb', 'day', 'name', 'shortName', 'global', 'condition', 'challenge', 'completion', 'challengeData', 'showManual', 'gamewith', 'slefty', 'nakama', 'dropID', 'boosters', 'gimmicks'].includes(stage)">
                         <td>
                             {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
                         </td>
