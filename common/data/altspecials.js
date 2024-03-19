@@ -610,9 +610,9 @@ window.altspecials = {
         },
     },
     4100: {
-        superAffinity: function(p) { return p.unit.class.has("Driven") ? 1.5 : 1; },
+        superClass: function(p) { return { "Driven": 1.5 }; },
     },
-    4058: {
+    4102: {
         atkbase: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Fighter") ? 1250 : 0; },
     },
     4115: {

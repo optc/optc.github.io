@@ -14473,11 +14473,11 @@ window.captains = {
         atk: function(p) { return (window.specials[4098].turnedOn[p.sourceSlot]) && p.slot == p.sourceSlot ? [5.25, 5.75][CrunchUtils.llimitUnlock(p, "captains")] : p.unit.class.has("Fighter") || p.unit.class.has("Slasher") || p.unit.class.has("Cerebral") ? [4.5, 5][CrunchUtils.llimitUnlock(p, "captains")] : 1; },
     },
     4099: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.classCount.Fighter > 1 && p.classCount.Slasher > 1 && p.classCount.Striker > 1 && p.classCount.Shooter > 1 ? 5.75 : 5 : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.classCount.Fighter >= 1 && p.classCount.Slasher >= 1 && p.classCount.Striker >= 1 && p.classCount.Shooter >= 1 ? 5.75 : 5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     4100: {
-        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.classCount.Fighter > 1 && p.classCount.Slasher > 1 && p.classCount.Striker > 1 && p.classCount.Shooter > 1 ? 5.75 : 5 : 1; },
+        atk: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? p.classCount.Fighter >= 1 && p.classCount.Slasher >= 1 && p.classCount.Striker >= 1 && p.classCount.Shooter >= 1 ? 5.75 : 5 : 1; },
         hp: function(p) { return p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? 1.2 : 1; },
     },
     4101: {
@@ -14534,17 +14534,17 @@ window.captains = {
     },
     4114: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [ 'wano', 'tnd' ].includes(p.orb) ? 5.5 : 5.25 : 1; },
-        status: function(p) { return p.increasedDamageTaken ? 1.1 : (p.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.05 : 1; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? 1.1 : (p.enemyEffects.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.05 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 1.25 : 1; },
     },
     4115: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? [ 'wano', 'tnd' ].includes(p.orb) ? 5.5 : 5.25 : 1; },
-        status: function(p) { return p.increasedDamageTaken ? 1.1 : (p.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.05 : 1; },
+        status: function(p) { return p.enemyEffects.increaseDamageTaken ? 1.1 : (p.enemyEffects.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis) ? 1.05 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Powerhouse") || p.unit.class.has("Driven") ? 1.25 : 1; },
     },
     4116: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? [ 'wano', 'tnd' ].includes(p.orb) ? 4.5 : 3.75 : 1; },
-        status: function(p) { return p.increasedDamageTaken || p.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis ? 1.2 : 1; },
+        status: function(p) { return p.increaseDamageTaken || p.enemyEffects.delayed > 1 || p.defenseDown || p.poisoned || p.paralysis ? 1.2 : 1; },
         hp: function(p) { return p.unit.type == "STR" || p.unit.class.has("Cerebral") || p.unit.class.has("Driven") ? 1.25 : 1; },
     },
     4117: {

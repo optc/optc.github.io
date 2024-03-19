@@ -617,8 +617,19 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         atkbaseDamage += atkbaseTemp+(atkbaseTemp > 0 ? atkbasePlusTemp : 0);
         atkbaseDamage = parseFloat($scope.data.customATKBase) != 0 && stat == "atk" ? parseFloat($scope.data.customATKBase) : atkbaseDamage;
 
-        if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? 1.2 : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? 1.2 : 1; }
-        else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? 1.2 : 1;
+        var superClassBuffs = { "Fighter": 1.2, "Striker": 1.2, "Slasher": 1.2, "Shooter": 1.2, "Free Spirit": 1.2, "Cerebral": 1.2, "Driven": 1.2, "Powerhouse": 1.2 };
+        enabledSpecials.forEach(function(data) {
+            if (data.hasOwnProperty('superClass')){
+                superParams = getParameters(slot);
+                params["sourceSlot"] = data.sourceSlot;
+                var temp = data.superClass(params);
+                for([key, value] of Object.entries(temp)){
+                    if(stat == "atk") superClassBuffs[key] = Math.max(superClassBuffs[key], value);
+                }
+            }
+        });
+        if (Array.isArray(data.unit.class)) { superClassBoost *= ($scope.data["superClass" + data.unit.class[0].replace(" ","")]) ? superClassBuffs[data.unit.class[0]] : 1; superClassBoost *= ($scope.data["superClass" + data.unit.class[1].replace(" ","")]) ? superClassBuffs[data.unit.class[1]] : 1; }
+        else superClassBoost = ($scope.data["superClass" + data.unit.class.replace(" ","")]) ? superClassBuffs[data.unit.class] : 1;
         
         birdBoost = $scope.data.birdBuff ? 1.5 : 1;
 
@@ -752,22 +763,30 @@ var CruncherCtrl = function($scope, $rootScope, $timeout) {
         return effects[$scope.data.effect][type](unit.unit || unit);
     };
 
-    var getAffinity = function(strength, attackerType){
-        if(strength == 'strong') return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 2 : 2.5 : $scope.data.enemySuperType ? 1.5 : 2;
+    var getAffinity = function(strength, attackerType, teamSlot){
+        var superAffinity = [ 2, 0.5 ];
+        enabledSpecials.forEach(function(data) {
+            if (data.hasOwnProperty('superAffinity')){
+                superParams = getParameters(teamSlot);
+                params["sourceSlot"] = data.sourceSlot;
+                superAffinity[0] = data.superAffinity(params) > 1 ? data.superAffinity(params) : superAffinity[0];
+            }
+        });
+        if(strength == 'strong') return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? superAffinity[0] : superAffinity[0] : $scope.data.enemySuperType ? 1.5 : superAffinity[0];
         else return $scope.data["superType" + attackerType] ? $scope.data.enemySuperType ? 0.5 : 0.75 : $scope.data.enemySuperType ? 0.25 : 0.5;
     };
 
     var getTypeMultiplierOfUnit = function(attackerType, attackedType, unit, teamSlot) {
         var typeMult = 1, affinityMult = 1, captAffinityMult = 1;
         
-        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = getAffinity('strong', attackerType);
-        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = getAffinity('strong', attackerType);
-        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = getAffinity('strong', attackerType);
-        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = getAffinity('strong', attackerType);
-        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = getAffinity('strong', attackerType);
-        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = getAffinity('weak', attackerType);
-        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = getAffinity('weak', attackerType);
-        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getAffinity('weak', attackerType);
+        if (attackerType == 'STR' && attackedType == 'DEX') typeMult = getAffinity('strong', attackerType, unit, teamSlot);
+        if (attackerType == 'QCK' && attackedType == 'STR') typeMult = getAffinity('strong', attackerType, unit, teamSlot);
+        if (attackerType == 'DEX' && attackedType == 'QCK') typeMult = getAffinity('strong', attackerType, unit, teamSlot);
+        if (attackerType == 'INT' && attackedType == 'PSY') typeMult = getAffinity('strong', attackerType, unit, teamSlot);
+        if (attackerType == 'PSY' && attackedType == 'INT') typeMult = getAffinity('strong', attackerType, unit, teamSlot);
+        if (attackerType == 'STR' && attackedType == 'QCK') typeMult = getAffinity('weak', attackerType, unit, teamSlot);
+        if (attackerType == 'QCK' && attackedType == 'DEX') typeMult = getAffinity('weak', attackerType, unit, teamSlot);
+        if (attackerType == 'DEX' && attackedType == 'STR') typeMult = getAffinity('weak', attackerType, unit, teamSlot);
         
         if ([2650, 2651, 2681].indexOf(unit.unit.number + 1) != -1 && teamSlot < 2) typeMult = getAffinity('strong', attackerType);
         if ([3070, 3071, 3369, 3847, 3848].indexOf(unit.unit.number + 1) != -1 && teamSlot == 1 && $scope.data.actionright) typeMult = getAffinity('strong', attackerType);

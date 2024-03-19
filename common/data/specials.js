@@ -17711,7 +17711,7 @@ window.specials = {
     4114: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5, 1, 1, 2.5, 2.5][p.cached.multiplier] : 1; },
         type: "class",
-        chain: function(p) { return [0, 1.8, 1.8, 0, 0, 1.8, 1.8][p.cached.multiplier]; },
+        chainAddition: function(p) { return [0, 1.8, 1.8, 0, 0, 1.8, 1.8][p.cached.multiplier]; },
         affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75, 1, 2.75, 1, 2.75][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3, 4, 5, 6];
@@ -17727,7 +17727,7 @@ window.specials = {
     4115: {
         atk: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [1, 2.5, 2.5, 1, 1, 2.5, 2.5][p.cached.multiplier] : 1; },
         type: "class",
-        chain: function(p) { return [0, 1.8, 1.8, 0, 0, 1.8, 1.8][p.cached.multiplier]; },
+        chainAddition: function(p) { return [0, 1.8, 1.8, 0, 0, 1.8, 1.8][p.cached.multiplier]; },
         affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Powerhouse") ? [2.75, 1, 2.75, 1, 2.75, 1, 2.75][p.cached.multiplier] : 1; },
         onActivation: function(p) {
             var levels = [0, 1, 2, 3, 4, 5, 6];
@@ -17745,6 +17745,9 @@ window.specials = {
         dmgredatk: function(p) { return 1+((p.dmgreductionCounter/100)/2); },
         status: function(p) { return p.enemyEffects.increaseDamageTaken || p.delayed > 0 ? 2.25 : 1; },
         affinity: function(p) { return p.unit.type == "STR" || p.unit.class.has("Driven") || p.unit.class.has("Cerebral") ? 1.5 : 1; },
+    },
+    4117: {
+        atk: function(p) { return p.unit.class.has("Driven") ? 2 : 1; },
     },
     4119: {
         atk: function(p) { return p.unit.class.has("Striker") || p.unit.class.has("Slasher") ? [2, 1, 2][p.cached.multiplier] : 1; },
