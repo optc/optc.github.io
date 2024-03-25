@@ -4119,6 +4119,13 @@ window.units = [
     [ "Arlong Pirates - Brutal Punishment", ["STR", "STR"], [["Powerhouse", "Slasher"],["Powerhouse", "Slasher"],["Powerhouse", "Slasher"]], "6+", 65, 4, 5, 99, 5000000, 3151, 1199, 138, 4726, 1798, 263, 1 ],
     [ "X Drake - Being Chased", "QCK", ["Striker", "Slasher"], 5, 50, 4, 4, 99, 5000000, 1767, 714, 78, 3534, 1428, 156, 1 ],
     [ "X Drake - Life-Risking Hope", "QCK", ["Striker", "Slasher"], "5+", 50, 4, 4, 99, 5000000, 1817, 764, 98, 3634, 1528, 196, 1 ],
+    [ "Doflamingo & Sugar - Darkness of Dressrosa", ["QCK", "INT"], [["Driven", "Cerebral"],["Driven", "Cerebral"],["Driven", "Cerebral"]], 5, 30, 4, 3, 70, 1066998, 1123, 423, 89, 2245, 846, 178, 1 ],
+    [ "Doflamingo & Sugar - The Family Ruling From the Darkness", ["QCK", "INT"], [["Driven", "Cerebral"],["Driven", "Cerebral"],["Driven", "Cerebral"]], 6, 55, 4, 5, 99, 5000000, 2215, 840, 176, 4430, 1680, 352, 1 ],
+    [ "Moria & Perona - Nightmare of Thriller Bark", ["INT", "QCK"], [["Driven", "Cerebral"],["Driven", "Cerebral"],["Driven", "Cerebral"]], 5, 30, 5, 3, 70, 1066998, 1141, 421, 87, 2282, 842, 173, 1 ],
+    [ "Moria & Perona - Neverending Nightmare", ["INT", "QCK"], [["Driven", "Cerebral"],["Driven", "Cerebral"],["Driven", "Cerebral"]], 6, 55, 5, 5, 99, 5000000, 2252, 836, 171, 4504, 1672, 342, 1 ],
+    [ "Hody & Vander Decken IX - Planning to Overthrow the Country", "QCK", ["Driven", "Powerhouse"], 5, 30, 4, 4, 99, 4000000, 1891, 762, 81, 3782, 1523, 162, 1 ],
+    [ "Caesar & Monet", "INT", ["Driven", "Cerebral"], 5, 30, 4, 4, 99, 4000000, 1885, 708, 100, 3770, 1415, 200, 1 ],
+    [ "Lucci & Kaku & Stussy - Headed to the Future Island", "QCK", ["Driven", "Cerebral"], 5, 40, 4, 4, 99, 5000000, 1630, 787, 91, 3260, 1574, 182, 1 ],
 ];
 
 var calcGhostStartID = { "start": 5000 };
@@ -4721,6 +4728,22 @@ var ghostsUnits = [
     [ "⚐ Arlong - Brutal Punishment", "STR", ["Powerhouse", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 2973, 1154, 112, 4460, 1731, 230, 1 ],
     [ "⚐ Hatchan & Kuroobi & Choo - Brutal Punishment", "STR", ["Powerhouse", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 3025, 1105, 123, 4538, 1658, 241, 1 ],
     [ "⚐ Arlong Pirates - Brutal Punishment", "STR", ["Powerhouse", "Slasher"], "6+", 65, 4, 5, 99, 5000000, 3151, 1199, 138, 4726, 1798, 263, 1 ],
+    [ "⚐ Doflamingo - Darkness of Dressrosa", "QCK", ["Driven", "Cerebral"], 5, 30, 4, 3, 70, 1066998, 1078, 421, 72, 2155, 841, 145, 1 ],
+    [ "⚐ Sugar - Darkness of Dressrosa", "INT", ["Driven", "Cerebral"], 5, 30, 4, 3, 70, 1066998, 1060, 411, 79, 2120, 821, 157, 1 ],
+    [ "⚐ Doflamingo & Sugar - Darkness of Dressrosa", "QCK", ["Driven", "Cerebral"], 5, 30, 4, 3, 70, 1066998, 1123, 423, 89, 2245, 846, 178, 1 ],
+    [ "⚐ Doflamingo & Sugar - Darkness of Dressrosa", "INT", ["Driven", "Cerebral"], 5, 30, 4, 3, 70, 1066998, 1123, 423, 89, 2245, 846, 178, 1 ],
+    [ "⚐ Doflamingo - The Family Ruling From the Darkness", "QCK", ["Driven", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 2125, 835, 143, 4250, 1670, 285, 1 ],
+    [ "⚐ Sugar - The Family Ruling From the Darkness", "INT", ["Driven", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 2090, 815, 155, 4180, 1630, 310, 1 ],
+    [ "⚐ Doflamingo & Sugar - The Family Ruling From the Darkness", "QCK", ["Driven", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 2215, 840, 176, 4430, 1680, 352, 1 ],
+    [ "⚐ Doflamingo & Sugar - The Family Ruling From the Darkness", "INT", ["Driven", "Cerebral"], 6, 55, 4, 5, 99, 5000000, 2215, 840, 176, 4430, 1680, 352, 1 ],
+    [ "⚐ Gecko Moria - Nightmare of Thriller Bark", "INT", ["Driven", "Cerebral"], 5, 30, 6, 3, 70, 1066998, 1073, 401, 80, 2145, 801, 160, 1 ],
+    [ "⚐ Perona - Nightmare of Thriller Bark", "QCK", ["Driven", "Cerebral"], 5, 30, 5, 3, 70, 1066998, 1065, 408, 79, 2130, 816, 157, 1 ],
+    [ "⚐ Moria & Perona - Nightmare of Thriller Bark", "INT", ["Driven", "Cerebral"], 5, 30, 5, 3, 70, 1066998, 1141, 421, 87, 2282, 842, 173, 1 ],
+    [ "⚐ Moria & Perona - Nightmare of Thriller Bark", "QCK", ["Driven", "Cerebral"], 5, 30, 5, 3, 70, 1066998, 1141, 421, 87, 2282, 842, 173, 1 ],
+    [ "⚐ Gecko Moria - Neverending Nightmare", "INT", ["Driven", "Cerebral"], 6, 55, 6, 5, 99, 5000000, 2115, 795, 158, 4230, 1590, 315, 1 ],
+    [ "⚐ Perona - Neverending Nightmare", "QCK", ["Driven", "Cerebral"], 6, 55, 5, 5, 99, 5000000, 2100, 810, 155, 4200, 1620, 310, 1 ],
+    [ "⚐ Moria & Perona - Neverending Nightmare", "INT", ["Driven", "Cerebral"], 6, 55, 5, 5, 99, 5000000, 2252, 836, 171, 4504, 1672, 342, 1 ],
+    [ "⚐ Moria & Perona - Neverending Nightmare", "QCK", ["Driven", "Cerebral"], 6, 55, 5, 5, 99, 5000000, 2252, 836, 171, 4504, 1672, 342, 1 ],
 ];
 
 window.units = window.units.concat(ghostsUnits);
