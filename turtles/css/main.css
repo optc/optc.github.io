@@ -1,0 +1,135 @@
+/*==============================
+=            NAVBAR            =
+==============================*/
+@media (max-width: 769px) {
+  .language-picker {
+    display: none; }
+
+  #settings {
+    display: block !important; } }
+.navbar-nav {
+  margin-top: -1px !important;
+  overflow-y: hidden; }
+  .navbar-nav li a {
+    font-size: 24px;
+    font-family: 'Squada One', cursive; }
+
+.container {
+  max-width: 900px !important;
+  margin: auto; }
+
+#settings {
+  display: none; }
+
+.jumbotron {
+  background: #fff !important;
+  margin-top: -20px;
+  padding: 0 !important; }
+  .jumbotron h1, .jumbotron h2 {
+    font-family: 'Squada One', cursive; }
+  .jumbotron p {
+    font-family: Lora,sans-serif;
+    margin: 0; }
+  .jumbotron span {
+    font-size: 1.1em;
+    font-family: Lora,sans-serif; }
+  .jumbotron input[type="checkbox"] {
+    margin-left: 20px;
+    margin-right: 5px; }
+
+.id {
+  margin-top: 15px; }
+
+.container {
+  text-align: center; }
+
+.next_week {
+  margin-top: 50px; }
+
+.see-more {
+  margin-top: 20px; }
+
+.input-id {
+  width: 50px; }
+
+.navbar-nav.nav-justified > li {
+  float: none; }
+
+.turtle-day p:first-child {
+  background-color: #eee;
+  margin-bottom: 0; }
+.turtle-day p span {
+  margin-right: 40px; }
+
+.turtle-global, .turtle-jpn {
+  margin-top: 20px; }
+
+.turtle-jpn :nth-child(odd) div p, .event-day :nth-child(odd) div p {
+  background-color: #eee; }
+.turtle-jpn :nth-child(2n) div p, .event-day :nth-child(2n) div p {
+  margin-bottom: 15px !important; }
+
+.turtle-day-jpn p, .event-day-jpn p {
+  margin-bottom: 0 !important; }
+.turtle-day-jpn p span, .event-day-jpn p span {
+  margin-right: 40px; }
+
+.game-version {
+  margin-bottom: -10px; }
+
+.ttc-version {
+  margin-top: -10px; }
+
+.event-version {
+  margin-top: 20px; }
+
+table {
+  margin-top: 20px !important;
+  max-width: 600px !important;
+  margin: auto; }
+  table th {
+    text-align: center; }
+
+.bb-hours {
+  margin-bottom: -5px; }
+
+.timer span {
+  font-family: 'Consolas'; }
+
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
+
+iframe {
+  width: 100%;
+  height: 900px; }
+
+/*==================================
+=            TTIME BETA            =
+==================================*/
+.ttime-day {
+  display: block; }
+  .ttime-day:first-child {
+    margin-top: 20px; }
+  .ttime-day:nth-child(odd) {
+    background-color: #eee; }
+  .ttime-day:nth-child(2n+0) {
+    margin-bottom: 10px; }
+  .ttime-day p {
+    margin-bottom: 0px !important; }
+    .ttime-day p span {
+      margin-right: 15px; }
+
+.btn-notif {
+  margin: 5px 0 5px 0 !important; }
+
+.settings-notif * {
+  text-align: center; }
+.settings-notif div:first-child {
+  margin-bottom: 5px; }
+.settings-notif div > button {
+  margin-left: 20px; }
+
+.alert-site {
+  margin-top: 13px; }
+
+/*# sourceMappingURL=main.css.map */

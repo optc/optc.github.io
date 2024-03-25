@@ -16,13 +16,14 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th>Ship</th>
-                                    <th>Effect at MAX level</th>
+                                    <th width="30%">Ship</th>
+                                    <th width="60%">Effect at MAX level</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="ship in list track by $index" ng-click="pickShip(ship.name)">
-                                    <td class="ship-icon"><div class="slot small" style="{{getThumbnail(ship)}}"></div></td>
+                                    <!--td class="ship-icon"><div class="slot small" style="{{getThumbnail(ship)}}"></div></td-->
+                                    <td class="ship-icon"><img class="slot medium" src="{{getThumbnailLocal(ship)}}"></img></td>
                                     <td class="ship-name">{{ship.name}}</td>
                                     <td>{{ship.description}}</td>
                                 </tr>

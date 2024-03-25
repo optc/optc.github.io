@@ -3,9 +3,21 @@
 
     <head>
 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-59Y3NZR5TN"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-59Y3NZR5TN');
+        </script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=600, height=650, initial-scale=0.6, user-scalable=no, user-scalable=0">
-        <meta name="description" itemprop="description" content="We tables now">
+        <meta name="description" itemprop="description" content="One Piece Treasure Cruise Drop Table">
+        <meta name="author" content="Zeenigami and Mondfischer">
+        <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Database, Calculator, Guides, Help, Walkthroughs, Tutorials">
 
         <title>One Piece Treasure Cruise Drop Table</title>
 
@@ -13,7 +25,11 @@
 
         <link rel="stylesheet" type="text/css" href="../common/libs/css/animate.css" />
         <link rel="stylesheet" type="text/css" href="../common/libs/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="../common/libs/css/font-awesome.min.css" />
+        <!--<link rel="stylesheet" type="text/css" href="../common/libs/css/font-awesome.min.css" />-->
+        <link rel="stylesheet" type="text/css" href="../common/libs/css/fontawesome/all.css" />
+        <script src="https://kit.fontawesome.com/ef0695d0bc.js" crossorigin="anonymous"></script>
+        <!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/js/all.js" -->
+        <!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js" -->
         <link rel="stylesheet" type="text/css" href="../common/libs/css/ngDialog.min.css" />
         <link rel="stylesheet" type="text/css" href="../common/libs/css/ngDialog-theme-default.min.css" />
 
@@ -30,6 +46,8 @@
         <script src="../common/libs/js/ngDialog.min.js"></script>
 
         <script src="../common/data/units.js"></script>
+        <script src="../common/data/aliases.js"></script>
+        <script src="../common/data/festival.js"></script>
         <script src="../common/data/drops.js"></script>
         <script src="../common/data/cooldowns.js"></script>
 
@@ -42,10 +60,13 @@
         <script src="../common/js/dismissal.js"></script>
 
         <script src="../characters/js/utils.js"></script>
+        
+        <script src="../common/libs/js/moment.js"></script>
+        <script src="../common/libs/js/moment-timezone.js"></script>
 
     </head>
 
-    <body ng-controller="MainCtrl">
+    <body ng-controller="MainCtrl" onload="updateTimes()">
 
         <script type="text/ng-template" id="type.html">
             <div ng-repeat="island in data[type]" ng-if="island.name != 'Oars Special'" class="island collapsed"
@@ -56,9 +77,14 @@
                     <i class="fa fa-chevron-right"></i>
                     <i class="fa fa-chevron-down"></i>
                     <span>{{island.name}}</span>
-                    <i class="fa fa-globe" ng-show="island.global"></i>
+                    <i class="fa fa-globe-americas" ng-show="island.global" title="Available On Global"></i>
+                    <i class="fa fa-star" ng-show="island.challenge" title="Challenge Available"></i>
+                    <!-- Flag next to the FN/Raid name if its permanent on either/both. Messes up the character view making it like its trying to get a tag or something
+                    <i class="far fa-flag" ng-show="island.permglobal" title="Permanent on Global"></i>
+                    <i class="fas fa-flag" ng-show="island.permjapan" title="Permanent on Japan"></i>
+                    <i class="fas fa-flag-checkered" ng-show="island.permboth" title="Permanent on Japan and Global"></i>-->
                     <bonus-list ng-if="type == 'Story Island'" y="$index"></bonus-list>
-                    <day-label ng-if="type == 'Weekly Island'"></day-label>
+                    <day-label ng-if="type == 'Rookie Mission'"></day-label>
                 </h3>
             </div>
         </script>
@@ -66,19 +92,92 @@
         <script type="text/ng-template" id="island.html">
             <table class="table table-striped">
                 <tbody>
-                    <tr ng-repeat="(stage,data) in island"
-                        ng-if="stage != 'thumb' && stage != 'day' && stage != 'name' && stage != 'shortName' && stage != 'global'">
-                        <td>
-                            {{type == 'Story Island' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
+                    <tr ng-if="island.completion" hide-when-empty>
+                        <td>Completion</td>
+                        <td colspan="2">{{island.completion}} </td>
+                    </tr>
+                    <tr ng-if="island.gamewith" hide-when-empty>
+                        <td>Gamewith (Japanese)</td>
+                        <td colspan="2">
+                            <a ng-if="!island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith}}" target="_blank">Gamewith Page</a>
+                            <a ng-if="island.gamewith[0]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[0]}}" target="_blank">Gamewith Page: Part 1</a><br ng-if="island.gamewith[0]">
+                            <a ng-if="island.gamewith[1]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[1]}}" target="_blank">Gamewith Page: Part 2</a><br ng-if="island.gamewith[1]">
+                            <a ng-if="island.gamewith[2]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[2]}}" target="_blank">Gamewith Page: Part 3</a><br ng-if="island.gamewith[2]">
+                            <a ng-if="island.gamewith[3]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[3]}}" target="_blank">Gamewith Page: Part 4</a><br ng-if="island.gamewith[3]">
+                            <a ng-if="island.gamewith[4]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[4]}}" target="_blank">Gamewith Page: Part 5</a><br ng-if="island.gamewith[5]">
+                            <a ng-if="island.gamewith[5]" href = "https://トレクル.gamewith.jp/article/show/{{island.gamewith[5]}}" target="_blank">Gamewith Page: Part 6</a><br ng-if="island.gamewith[6]">
                         </td>
-                        <td hide-when-empty>
+                    </tr>
+                    <tr ng-if="island.slefty" hide-when-empty>
+                        <td>Slefty's Team Database</td>
+                        <td colspan="2">
+                            <a href = "http://slefty.herokuapp.com/{{island.slefty}}" target="_blank">Slefty's Team Database Page</a>
+                        </td>
+                    </tr>
+                    <tr ng-if="island.nakama" hide-when-empty>
+                        <td>Nakama Network</td>
+                        <td colspan="2">
+                            <a href = "https://www.nakama.network/stages/{{island.nakama}}/details" target="_blank">Nakama Network Team Database</a>
+                        </td>
+                    </tr>
+                    <tr ng-if="island.condition" hide-when-empty>
+                        <td>Condition</td>
+                        <td style="white-space: pre-line" colspan="2">{{island.condition}} </td>
+                    </tr>
+                    <tr ng-if="island.boosters" hide-when-empty>
+                        <td>Boosters</td>
+                        <td style="white-space: pre-line" colspan="2">
+                            <span ng-repeat="tier in island.boosters">
+                            <a ng-repeat="uid in tier.units | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
+                            decorate-slot uid="uid" class="slot small" 
+                            href="../characters/#/view/{{uid}}" target="_blank"
+                            uib-tooltip="{{getTooltipText(uid)}}"
+                            tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                            tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a><br>{{tier.effect}}<br></span>
+                        </td>
+                    </tr>
+                    <tr ng-if="island.gimmicks" hide-when-empty>
+                        <td>Gimmicks</td>
+                        <td ng-repeat="(difficulty,data) in island.gimmicks">{{difficulty}}<br>
+                            <span ng-repeat="fight in data">{{fight.title}}<br>Recommended Units:<br>
+                            <a ng-repeat="uid in fight.recUnits | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
+                            decorate-slot uid="uid" class="slot small" 
+                            href="../characters/#/view/{{uid}}" target="_blank"
+                            uib-tooltip="{{getTooltipText(uid)}}"
+                            tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                            tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a><br>Gimmicks: <br>{{fight.gimmicks}}<br></span>
+                        </td>
+                    </tr>
+                    <tr ng-if="island.challenge">
+                        <td>Challenge</td>
+                        <td colspan="2">{{island.challenge}} </td>
+                    </tr>
+                    <tr ng-repeat="challenge in island.challengeData">
+                        <td></td>
+                        <td>{{challenge[0]}}</td>
+                        <td>{{challenge[1]}}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr ng-repeat="(stage,data) in island"
+                        ng-if="!['thumb', 'day', 'name', 'shortName', 'global', 'condition', 'challenge', 'completion', 'challengeData', 'showManual', 'gamewith', 'slefty', 'nakama', 'dropID', 'boosters', 'gimmicks'].includes(stage)">
+                        <td>
+                            {{type == 'Story Island'&& stage!='Completion Units' ? 'Stage ' + stage : (stage.length < 2 ? 'Any' : stage)}}
+                        </td>
+                        <td hide-when-empty colspan="2">
                             <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid > 0 && !hiddenUnits[uid]"
                                 decorate-slot uid="uid" class="slot small" 
                                 href="../characters/#/view/{{uid}}" target="_blank"
                                 uib-tooltip="{{getTooltipText(uid)}}"
                                 tooltip-placement="bottom" tooltip-trigger="mouseenter"
                                 tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a>
-                            <h4 ng-if="type == 'Fortnight'">Manuals:</h4>
+                            <a ng-repeat="uid in data | smartSort:'false'" ng-if="uid.includes('skull')"
+                                decorate-slot uid="uid" class="slot small" 
+                                href="../characters/{{uid.includes('-') ? '#/view/' + uid.slice(0,4) : ''}}" target="_blank"
+                                uib-tooltip="{{getTooltipText(uid)}}"
+                                tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                                tooltip-enable="{{isTooltipEnabled(uid)}}" tooltip-append-to-body="true"></a>
+                            <h4 ng-if="type == 'Fortnight' || type == 'Rookie Mission' || island.showManual">Manuals:</h4>
                             <a ng-repeat="uid in data | smartSort:'true'" ng-if="uid < 0"
                                 decorate-slot uid="-uid" class="slot small"
                                 href="../characters/#/view/{{-uid}}" target="_blank"
@@ -100,10 +199,10 @@
                 <label><input type="checkbox" ng-model="noEvolverBooster" ng-change="changeFilters()">Hide Boosters and Evolvers</label>
                 <label><input type="checkbox" ng-model="sortByType" ng-change="changeSorting()">Sort by type</label>
                 <input class="pull-right" type="text" placeholder="Filter by name" auto-focus
-                    ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()">
+                    ng-model="queryFilter" ng-model-options="{ debounce: 500 }" ng-change="changeQueryFilter()" id="search">
             </h1>
 
-            <div ng-repeat="type in [ 'Story Island', 'Weekly Island', 'Fortnight', 'Raid', 'Special' ]"
+            <div ng-repeat="type in [ 'Story Island', 'Booster and Evolver Island', 'Rookie Mission', 'Fortnight', 'Pirate King Adventure', 'Raid', 'Coliseum', 'Arena', 'Treasure Map', 'Ambush', 'Kizuna Clash', 'Pirate Rumble', 'Special', 'Training Forest' ]"
                 class="type collapsed" collapsable hidden-units="hiddenUnits" only-global="onlyGlobal"
                 target="type.html" type="type" data="data" query="query">
                 <h2>
@@ -114,7 +213,12 @@
             </div>
 
             <h1 class="page-header">Bonus Table</h1>
-
+            
+            <div>
+                <p id="times"></p>
+                <p id="timesNote"></p>
+            </div>
+            
             <table class="table table-striped" id="bonus-table" add-bonuses>
                 <thead>
                     <tr>
@@ -145,12 +249,8 @@
         </div>
 
         <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-64769042-1', 'auto');
-        ga('send', 'pageview', '/drops');
+        gtag('event', 'UA-73715806-1', 'auto');
+        gtag('event', 'pageview', '/drops');
         </script>
 
         <error-report></error-report>

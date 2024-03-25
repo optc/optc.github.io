@@ -1,4 +1,4 @@
-﻿<nav id="menu" class="panel" role="navigation">
+<nav id="menu" class="panel" role="navigation">
 
     <ul>
 
@@ -17,19 +17,287 @@
                 <div id="ship-background"></div>
             </div>
         </li>
+        
+        <li>
+            <div id="buffs">
+                <i class="fa fa-fist-raised"></i> Custom Universal (for now) Buffs:<br>
+                 ATK: <input type="number" size="4" min="1" max="10" step="0.1" id="customATK" to-int ng-model="data.customATK"></input><br>
+                 Orb: <input type="number" size="4" min="1" max="10" step="0.1" id="customOrb" to-int ng-model="data.customOrb"></input><br>
+                 Affinity: <input type="number" size="4" min="1" max="10" step="0.1" id="customAffinity" to-int ng-model="data.customAffinity"></input><br>
+                 ATK Base: <input type="number" size="5" min="0" max="10000" step="10" id="customATKBase" to-int ng-model="data.customATKBase"></input><br>
+                 Chain Addition: <input type="number" size="4" min="0" max="5" step="0.1" id="customChainAddition" to-int ng-model="data.customChainAddition"></input><br>
+                 Bird Buff: <input type="checkbox" id="birdBuff" ng-model="data.birdBuff"></input>
+            </div>
+        </li>
+
+        <li>
+            <div id="customRainbow">
+                <i class="fa fa-fist-raised"></i> Custom Rainbow Damage:<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="rainbowDamage{{$index}}" ng-model="data.rainbowDamage[$index]"></label><br ng-if="$index % 2 == 1"> </span>
+            </div>
+        </li>
+        
+        <li>
+            <div id="heal">
+                <i class="fa fa-heart"></i>
+                Heal Socket Level: <input type="number" size="2" min="0" max="5" id="healLevel" to-int ng-model="data.healLevel"></input>
+            </div>
+        </li>
 
         <li>
             <div id="defenseContainer" title="Middle-click or CTRL-click for details" defense-on-click>
                 <i class="fa fa-level-up comodity" ui-sref="main.defense"></i>
                 <i class="fa fa-shield"></i>
-                Enemy defense: <input type="number" id="defense" to-int ng-model="data.defense"></input>
+                Enemy Defense: <input type="number" id="defense" min = 0 to-int ng-model="data.defense"></input>
+            </div>
+        </li>
+
+        <li>
+            <div id="enemySuperTypeContainer">
+                <input type="checkbox" name="enemySuperType" ng-model="data.enemySuperType"><span>Enemy Super Type</span>
+            </div>
+        </li>
+
+        <li>
+            <div id="enemyImmunities">
+                <i class="fa fa-shield"></i>Enemy Immunities:<br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.all" ng-model="data.enemyImmunities.all" ng-change="toggleEnemyImmunity(true)"> All</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.burn" ng-model="data.enemyImmunities.burn" ng-change="toggleEnemyImmunity(false)"> Burn</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.def" ng-model="data.enemyImmunities.def" ng-change="toggleEnemyImmunity(false)"> Defense Reduction</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.delay" ng-model="data.enemyImmunities.delay" ng-change="toggleEnemyImmunity(false)"> Delay</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.increaseDamageTaken" ng-model="data.enemyImmunities.increaseDamageTaken" ng-change="toggleEnemyImmunity(false)"> Increase Damage Taken</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.negative" ng-model="data.enemyImmunities.negative" ng-change="toggleEnemyImmunity(false)"> Negative</label><br>
+                <label><input type="checkbox" class="wheelable" name="enemyImmunities.poison" ng-model="data.enemyImmunities.poison" ng-change="toggleEnemyImmunity(false)"> Poison</label><br>
+            </div>
+        </li>
+
+        <li>
+            <div id="enemyBuffs">
+                <i class="fa fa-fist-raised"></i>Other Enemy Buffs<br>
+                <label><input type="checkbox" class="wheelable" name="enemyBuffs.barrier" ng-model="data.enemyBuffs.barrier"> Barrier</label><br>
+            </div>
+        </li>
+
+        <li>
+            <div id="shieldContainer">
+                <i class="fa fa-shield"></i>
+                Barrier: <input min="0" style="color: black; width:40px" type="number" id="comboShield" to-int ng-model="data.comboShield">
+                                                                      <select style="color: black" id="comboType" ng-model="data.comboType">
+                                                                        <option value="" selected>Hits</option>
+                                                                        <option value="Good">Good</option>
+                                                                        <option value="Great">Great</option>
+                                                                        <option value="Perfect">Perfect</option>
+                                                                      </select> 
             </div>
         </li>
 
         <li ui-sref=".candy">
             <div id="candyContainer">
                 <i class="fa fa-sliders"></i>
-                <a>Cotton candies</a>
+                <a>Cotton Candies</a>
+            </div>
+        </li>
+        
+        <li>
+            <div id="action">
+                <i class="fa fa-check-square"></i>
+                Boosted Abilities: <br><input type="checkbox" name="friend" value="left" ng-model="data.actionleft">Friend/Guest Captain<br><input type="checkbox" name="captain" value="right" ng-model="data.actionright">Captain
+                <!--br>Gear Levels: <br>Friend/Guest Captain: <select style="color: black" id="gearLevelLeft" ng-model="data.gearLevelLeft">
+                                                                        <option value=0 selected>Gear 2</option>
+                                                                        <option value=1>Gear 3</option>
+                                                                        <option value=2>Gear 4: Boundman</option>
+                                                                        <option value=3>Gear 4: Tankman</option>
+                                                                      </select>
+                                <br> Captain: <select style="color: black" id="gearLevelRight" ng-model="data.gearLevelRight">
+                                                                        <option value=0 selected>Gear 2</option>
+                                                                        <option value=1>Gear 3</option>
+                                                                        <option value=2>Gear 4: Boundman</option>
+                                                                        <option value=3>Gear 4: Tankman</option>
+                                                                      </select--> 
+            </div>
+        </li>
+        
+        <li>
+            <div id="limit">
+                <i class="fa fa-angle-double-up"></i>
+                Limit Break Level:  <button type="button" ng-click="toggleLimitBreakLevels()">Toggle MAX</button> <br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="limitLevel" class="wheelable" name="limit{{$index}}" min=0 max="{{data.team[$index].unit.limitStats.atk.length ? data.team[$index].unit.limitStats.atk.length : 0}}" ng-model="data.team[$index].limit"><br ng-if="$index % 2 == 1"></span>
+            </div>
+        </li>
+        
+        <li>
+            <div id="llimit">
+                <i class="fa fa-angle-double-up"></i>
+                Level Limit Break Level:  <button type="button" ng-click="toggleLLimitBreakLevels()">Toggle MAX</button> <br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><input type="number" size="4" id="llimitLevel" class="wheelable" name="llimit{{$index}}" min=0 max="{{data.team[$index].unit.maxLevel == 99 ? 5 : 0}}" ng-model="data.team[$index].llimit"><br ng-if="$index % 2 == 1"></span>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <i class="fa fa-atom"></i> 
+                Super Typing: 
+            </div>
+            <div id="supertypeContainer">
+                <input id="supertypeSTR" type="checkbox" name="STR" ng-model="data.superTypeSTR"><label for="supertypeSTR" 
+                    class="width-4 supertype STR">STR
+                </label><input id="supertypeDEX" type="checkbox" name="DEX" ng-model="data.superTypeDEX"><label for="supertypeDEX" 
+                    class="width-4 supertype DEX">DEX
+                </label><input id="supertypeQCK" type="checkbox" name="QCK" ng-model="data.superTypeQCK"><label for="supertypeQCK" 
+                    class="width-4 supertype QCK">QCK
+                </label><input id="supertypePSY" type="checkbox" name="PSY" ng-model="data.superTypePSY"><label for="supertypePSY" 
+                    class="width-6 supertype PSY">PSY
+                </label><input id="supertypeINT" type="checkbox" name="INT" ng-model="data.superTypeINT"><label for="supertypeINT" 
+                    class="width-6 supertype INT">INT
+                </label>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <i class="fa fa-toolbox"></i> 
+                Super Class: 
+            </div>
+            <div id="superclassContainer">
+                <input id="superclassFighter" type="checkbox" name="Fighter" ng-model="data.superClassFighter"><label for="superclassFighter" 
+                    class="width-6 superclass Fighter">Fighter
+                </label><input id="superclassShooter" type="checkbox" name="Shooter" ng-model="data.superClassShooter"><label for="superclassShooter" 
+                    class="width-6 superclass Shooter">Shooter
+                </label><input id="superclassSlasher" type="checkbox" name="Slasher" ng-model="data.superClassSlasher"><label for="superclassSlasher" 
+                    class="width-6 superclass Slasher">Slasher
+                </label><input id="superclassStriker" type="checkbox" name="Striker" ng-model="data.superClassStriker"><label for="superclassStriker" 
+                    class="width-6 superclass Striker">Striker
+                </label><input id="superclassFreeSpirit" type="checkbox" name="FreeSpirit" ng-model="data.superClassFreeSpirit"><label for="superclassFreeSpirit" 
+                    class="width-6 superclass FreeSpirit">Free Spirit
+                </label><input id="superclassCerebral" type="checkbox" name="Cerebral" ng-model="data.superClassCerebral"><label for="superclassCerebral" 
+                    class="width-6 superclass Cerebral">Cerebral
+                </label><input id="superclassPowerhouse" type="checkbox" name="Powerhouse" ng-model="data.superClassPowerhouse"><label for="superclassPowerhouse" 
+                    class="width-6 superclass Powerhouse">Powerhouse
+                </label><input id="superclassDriven" type="checkbox" name="Driven" ng-model="data.superClassDriven"><label for="superclassDriven" 
+                    class="width-6 superclass Driven">Driven
+                </label><input id="superclassEvolver" type="checkbox" name="Evolver" ng-model="data.superClassEvolver"><label for="superclassEvolver" 
+                    class="width-6 superclass Evolver">Evolver
+                </label><input id="superclassBooster" type="checkbox" name="Booster" ng-model="data.superClassBooster"><label for="superclassBooster" 
+                    class="width-6 superclass Booster">Booster
+                </label>
+            </div>
+        </li>
+
+        <li ng-show="options.sugarToysEnabled">
+            <div id="sugarToy">
+                <i class="fa fa-paw"></i>
+                Hobby-Hobby Transformation:<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="sugarToy{{$index}}" ng-model="data.team[$index].sugarToy"></label><br ng-if="$index % 2 == 1"> </span>
+                <button type="button" ng-click="toggleSugarToys()">Toggle All</button>
+            </div>
+        </li>
+
+        <li ng-show="options.tokiStateEnabled">
+            <div id="toki">
+                <i class="fa fa-hourglass"></i>
+                Toki-Toki & Selected Character Effects:<br>
+                <span ng-repeat="n in ::[].constructor(6) track by $index"><label>Crew {{$index+1}}: <input type="checkbox" class="wheelable" name="tokiState{$index}}" ng-model="data.team[$index].tokiState"></label><br ng-if="$index % 2 == 1"> </span>
+                <button type="button" ng-click="resetTokiStates()">Reset</button>
+            </div>
+        </li>
+
+        <li ng-show="options.cloneEnabled">
+            <div id="clone">
+                <i class="fa fa-people-arrows"></i>
+                Clone-Clone Effect:<br>
+                <input type="checkbox" name="cloneCheck1" value="left" ng-model="data.cloneCheck1">Friend/Guest Captain<br>
+                Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneFCType">
+                        <option value="STR" selected>STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value="QCK">QCK</option>
+                        <option value="PSY">PSY</option>
+                        <option value="INT">INT</option>
+                    </select><br>
+                Class 1: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneFCClass1">
+                        <option value="Fighter" selected>Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
+                Class 2: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneFCClass2">
+                        <option value="Fighter" selected>Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select><br>
+                <input type="checkbox" name="cloneCheck2" value="right" ng-model="data.cloneCheck2">Crew<br>
+                Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.cloneCrewType">
+                        <option value="STR" selected>STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value="QCK">QCK</option>
+                        <option value="PSY">PSY</option>
+                        <option value="INT">INT</option>
+                    </select><br>
+                Class 1: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneCrewClass1">
+                        <option value="Fighter" selected>Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
+                Class 2: <select style="color: black" name="cars" id="cloneClass" ng-model="data.cloneCrewClass2">
+                        <option value="Fighter" selected>Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
+            </div>
+        </li>
+
+        <li ng-show="options.classOverrideEnabled">
+            <div id="clone">
+                <i class="fa fa-people-arrows"></i>
+                Universal Class Override:<br>
+                <input type="checkbox" name="classOverrideEnabled" value="left" ng-model="data.classOverrideEnabled"><br>
+                <!-- Type: <select style="color: black" name="cars" id="cloneType" ng-model="data.typeOverride">
+                        <option value="STR" selected>STR</option>
+                        <option value="DEX">DEX</option>
+                        <option value="QCK">QCK</option>
+                        <option value="PSY">PSY</option>
+                        <option value="INT">INT</option>
+                    </select><br> -->
+                Class 1: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride1">
+                        <option value=0 selected>None</option>
+                        <option value="Fighter" >Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
+                Class 2: <select style="color: black" name="cars" id="overrideClass" ng-model="data.classOverride2">
+                        <option value=0 selected>None</option>
+                        <option value="Fighter" >Fighter</option>
+                        <option value="Shooter">Shooter</option>
+                        <option value="Slasher">Slasher</option>
+                        <option value="Striker">Striker</option>
+                        <option value="Free Spirit">Free Spirit</option>
+                        <option value="Cerebral">Cerebral</option>
+                        <option value="Powerhouse">Powerhouse</option>
+                        <option value="Driven">Driven</option>
+                    </select>
             </div>
         </li>
 
@@ -43,7 +311,7 @@
         <li ng-show="showGatherButton">
             <div id="gather" ui-sref=".gather">
                 <i class="fa fa-heartbeat"></i>
-                Data gathering
+                Data Gathering
             </div>
         </li>
 
@@ -57,6 +325,18 @@
         <special slot="3"></special>
         <special slot="4"></special>
         <special slot="5"></special>
+        <altspecial slot="0"></altspecial>
+        <altspecial slot="1"></altspecial>
+        <altspecial slot="2"></altspecial>
+        <altspecial slot="3"></altspecial>
+        <altspecial slot="4"></altspecial>
+        <altspecial slot="5"></altspecial>
+        <capspecial slot="0"></capspecial>
+        <capspecial slot="1"></capspecial>
+        <capspecial slot="2"></capspecial>
+        <capspecial slot="3"></capspecial>
+        <capspecial slot="4"></capspecial>
+        <capspecial slot="5"></capspecial>
 
     </ul>
 

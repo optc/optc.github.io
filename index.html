@@ -1,24 +1,94 @@
 <html>
+<!--
+                           ____   _   __ ______   ____   ____ ______ ______ ______                 
+                          / __ \ / | / // ____/  / __ \ /  _// ____// ____// ____/                 
+                         / / / //  |/ // __/    / /_/ / / / / __/  / /    / __/                    
+                        / /_/ // /|  // /___   / ____/_/ / / /___ / /___ / /___                    
+                        \____//_/ |_//_____/  /_/    /___//_____/ \____//_____/                    
+  ______ ____   ______ ___    _____  __  __ ____   ______   ______ ____   __  __ ____ _____  ______
+ /_  __// __ \ / ____//   |  / ___/ / / / // __ \ / ____/  / ____// __ \ / / / //  _// ___/ / ____/
+  / /  / /_/ // __/  / /| |  \__ \ / / / // /_/ // __/    / /    / /_/ // / / / / /  \__ \ / __/   
+ / /  / _, _// /___ / ___ | ___/ // /_/ // _, _// /___   / /___ / _, _// /_/ /_/ /  ___/ // /___   
+/_/  /_/ |_|/_____//_/  |_|/____/ \____//_/ |_|/_____/   \____//_/ |_| \____//___/ /____//_____/   
+                       ____   ___   ______ ___     ____   ___    _____  ______                     
+                      / __ \ /   | /_  __//   |   / __ ) /   |  / ___/ / ____/                     
+                     / / / // /| |  / /  / /| |  / __  |/ /| |  \__ \ / __/                        
+                    / /_/ // ___ | / /  / ___ | / /_/ // ___ | ___/ // /___                        
+                   /_____//_/  |_|/_/  /_/  |_|/_____//_/  |_|/____//_____/
+-->
 
     <head>
-        <title>OPTC Stuff</title>
+        <title>OPTC Database</title>
         <link rel="stylesheet" type="text/css" href="common/libs/css/animate.css" />
-        <link rel="stylesheet" type="text/css" href="common/libs/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="common/libs/css/fontawesome/all.css" />
+        <!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/js/all.js" -->
+        <!-- link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js" -->
         <link rel="stylesheet" type="text/css" href="index.css" />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script src="common/libs/js/jquery.min.js"></script>
+        <script src="common/data/units.js"></script>
+        <script src="common/js/utils.js"></script>
+        <script src="common/js/nonSuspicious.js"></script>
         <meta name="viewport" content="initial-scale=1, user-scalable=no, user-scalable=0">
+        <meta name="author" content="Solaris, Zeenigami, and Mondfischer">
+        <meta name="keywords" content="OPTC, One Piece Treasure Cruise, Database, Calculator, Guides, Help, Walkthroughs, Tutorials">
+        <meta name="description" content="Fan run database for One Piece Treasure Cruise. Includes a character database with all unit ability descriptions. Also includes a damage calculator that accurately helps you find out how much damage your team will deal.">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-59Y3NZR5TN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-59Y3NZR5TN');
+</script>
+
     </head>
 
     <body>
+       
         <div id="container">
-
             <a class="animated zoomInLeft button blue" href="damage">Damage Calculator</a>
             <a class="animated zoomInRight button green" href="characters">Character Table</a>
             <a class="animated zoomInLeft button yellow" href="drops">Drop Table</a>
             <a class="animated zoomInRight button red" href="mats">Evolution Helper</a>
             <a class="animated zoomInLeft button purple" href="slots">Slot Planner</a>
-
+            <a class="animated zoomInRight button pink" href="probability">Probability Calculator</a>
+            <a class="animated zoomInLeft button darkpurple" href="https://optcreddit.github.io/ships">Ship Database</a>
+            <a class="animated zoomInRight button gold" href="https://lukforce.bitbucket.io/">Calendar and TM Planner</a>
+            <a class="animated zoomInleft button darkblue" href="https://www.nakama.network/">Nakama Network</a>
+            <a class="animated zoomInRight button limegreen" href="https://thepiebandit.github.io/optc-supports/">Supports Database</a>
+            <a class="animated zoomInRight button darkorange" href="https://thepiebandit.github.io/optc-pirate-rumble-db/">Pirate Rumble Database</a>
+<!--
+            <a class="animated zoomInLeft button brown" href="turtles">Turtle Times</a>
+-->
         </div> 
+        <div id="empty">
+        </div>
+        <div class="animated zoomIn blue" id="changelog">
+            <p id="update">Updates</p>
+
+            <p>2 January 2022 </p>
+            <br>
+            <ul>
+                <li>Happy New Year, あけましておめでとう, <br>새해 복 많이 받으세요, Bonne Année,
+                <br>新年快乐, Buon Anno, Gott Nytt År, <br>Frohes Neues Jahr, Feliz Año Nuevo,
+                <br>с новым годом</li>
+                <br>
+                <li>We always add stuff, to report an error<br>or to stay up to date, <a href="https://discord.gg/MRhRrbF" >join the Discord server</a></li>
+                <br>
+            </ul>
+            <table id="table">
+                   <p>Recently Added:</p>
+                    <tbody>
+                        <tr>
+                            <td id="newUnits">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
     </body>
 
 </html>

@@ -6,7 +6,7 @@ var findEvolvers = function(id) {
     var result = [ ];
     for (var key in evolutions) {
         if (!evolutions[key] || !evolutions[key].evolvers) continue;
-        if (evolutions[key].evolution == id) 
+        if (evolutions[key].evolution == id)
             result.push({ from: parseInt(key,10), to: id, evolvers: evolutions[key].evolvers });
         if (evolutions[key].evolution.constructor == Array) {
             for (var i=0;i<evolutions[key].evolution.length;++i) {
@@ -127,7 +127,10 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce,
         var temp = { };
         $rootScope.pool.forEach(function(unit) {
             unit.evolvers.forEach(function(x) {
-                var key = ('000' + x).slice(-4);
+                if(typeof x != 'string'){
+                    var key = ('000' + x).slice(-4);
+                }
+                else var key = x;
                 temp[key] = (temp[key] || [ ]).concat(unit.to);
             });
         });
@@ -153,12 +156,15 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $storage, $sce,
         }
         if (!$rootScope.$$phase) $rootScope.$apply();
     };
-    
+
     var getEvolverClass = function(id) {
+        if (typeof id == 'string'){
+            return 'Skull'
+        }
         if (id.between(78,83)) return 'Robber Penguins';
         if (id.between(84,88) || id == 266) return 'Pirate Penguins';
         if (id.between(89,94)) return 'Hermit Crabs';
-        if (id.between(95,99)) return 'Armored Crabs';
+        if (id.between(95,99) || id == 1180) return 'Armored Crabs';
         if (id.between(100,104) || id == 267) return 'Dragons';
         if (id.between(115,118)) return 'Sea Horses';
         if (id.between(300,304)) return 'Plated Lobsters';
@@ -252,13 +258,16 @@ app.controller('PickerCtrl',function($scope, $rootScope, $state, $stateParams, $
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
-        // filter by query
-        if (parameters.query) {
-            result = result.filter(function(unit) {
-                return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
-            });
-        }
+
+        result = window.units.filter(function(x) {
+            // some units don't exist or have no functions for their abilities, like turtles.
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
+                return false;
+            if (!Utils.checkUnitMatchSearchParameters(x, parameters))
+                return false;
+            return true;
+        });
+
         $scope.units = result;
         if (!$scope.isMats)
             $scope.units = $scope.units.filter(function(x) { return Utils.searchBaseForms(x.number + 1); });
@@ -320,9 +329,11 @@ app.directive('decorateSlot',function() {
         link: function(scope, element, attrs) {
             if (scope.uid && attrs.hasOwnProperty('addHref'))
                 element.attr('href','../characters/#/view/' + parseInt(scope.uid, 10));
-            var url = Utils.getThumbnailUrl(scope.uid);
+            var url = Utils.getThumbnailUrl(scope.uid, '..');
+            //var url2 = Utils.getGlobalThumbnailUrl(scope.uid);
             var div = $('<div class="amount"></div>');
             element[0].style.backgroundImage = 'url(' + url + ')';
+            //element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
             element.append(div);
             // updating
             var update = function() {

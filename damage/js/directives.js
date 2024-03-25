@@ -10,12 +10,12 @@ var directives = { };
  *****************/
 
 directives.autoFocus = function($timeout) {
-	return {
-		restrict: 'A',
-		link: function(scope, element, attrs) {
-			$timeout(function(){ element[0].focus(); });
-		}
-	};
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            $timeout(function(){ element[0].focus(); });
+        }
+    };
 };
 
 directives.decorateSlot = function($rootScope) {
@@ -23,14 +23,15 @@ directives.decorateSlot = function($rootScope) {
         restrict: 'A',
         scope: { uid: '=', udata: '=', flag: '@' },
         link: function(scope, element, attrs) {
-            var update = function() { 
+            var update = function() {
                 var target = element[0];
                 if (scope.uid == null && scope.udata == null) {
-                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(null) + ')';
+                    target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(null, '..') + ')';
                     target.removeAttribute('title');
                 } else {
                     if (scope.uid != 1 || scope.flag || (scope.udata && scope.udata.name == 'Monkey D. Luffy'))
-                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid) + ')';
+                        target.style.backgroundImage = 'url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
+                        //target.style.backgroundImage = 'url(' + Utils.getGlobalThumbnailUrl(scope.uid) + '), url(' + Utils.getThumbnailUrl(scope.uid, '..') + ')';
                     else
                         target.style.backgroundImage = null;
                     if (attrs.decorateSlot.indexOf('notitle') == -1)
@@ -243,7 +244,7 @@ directives.floatingHeader = function($timeout) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
-            $timeout(function() { 
+            $timeout(function() {
                 element.floatThead({
                     scrollContainer: function($table) {
                         return $table.closest('#picker + .modal-div');
@@ -255,8 +256,8 @@ directives.floatingHeader = function($timeout) {
 };
 
 directives.goBack = function($state) {
-	return {
-		restrict: 'A',
+    return {
+        restrict: 'A',
         link: function(scope, element, attrs) {
             element.click(function(e) {
                 if (!e.target || e.target.className.indexOf('inner-container') == -1) return;
@@ -267,8 +268,8 @@ directives.goBack = function($state) {
 };
 
 directives.quickPick = function() {
-	return {
-		restrict: 'A',
+    return {
+        restrict: 'A',
         link: function(scope, element, attrs) {
             var fuse = new Fuse(window.units, { keys: [ 'name' ], id: 'number', threshold: 0.3, distance: 200 });
             element.textcomplete([{
@@ -281,8 +282,10 @@ directives.quickPick = function() {
                     callback(result.slice(0,7).filter(function(x) { return x > 0; }));
                 },
                 template: function (value) {
-                    var thumb = Utils.getThumbnailUrl(value + 1);
+                    var thumb = Utils.getThumbnailUrl(value + 1, '..');
                     return '<span><img class="quickpick-icon" src="' + thumb + '"> ' + window.units[value].name + '</span>';
+                    //var thumb2 = Utils.getGlobalThumbnailUrl(value + 1);
+                    //return '<span><img class="quickpick-icon" src="' + thumb2 + '" onerror="this.onerror=null;this.src=\'' + thumb + '\';"> ' + window.units[value].name + '</span>';
                 },
                 replace: function(value) {
                     return window.units[value].name;
@@ -346,6 +349,10 @@ directives.slot = function() {
         scope: true,
         link: function(scope, element, attrs) {
             scope.slot = element.index();
+            if(scope.data.team[scope.slot].unit != null){
+                var id = scope.data.team[scope.slot].unit.number + 1;
+                scope.sailors = window.sailors[id] ? JSON.parse(JSON.stringify(window.sailors[id])) : null;
+            }
             scope.onDrop = function(i, j) {
                 var temp = scope.data.team[i];
                 scope.data.team[i] = scope.data.team[j];
@@ -353,6 +360,9 @@ directives.slot = function() {
                 temp = scope.tdata.team[i];
                 scope.tdata.team[i] = scope.tdata.team[j];
                 scope.tdata.team[j] = temp;
+                temp = scope.cachedParams[i];
+                scope.cachedParams[i] = scope.cachedParams[j];
+                scope.cachedParams[j] = temp;
             };
             scope.isDraggable = function(e) {
                 return !Utils.isClickOnOrb(e, e.target.parentNode);
@@ -379,7 +389,7 @@ directives.hpBar = function() {
     return {
         retrict: 'E',
         replace: true,
-        template: '<div id="hp"><div id="hpSlider"></div>' + 
+        template: '<div id="hp"><div id="hpSlider"></div>' +
             '<div id="hp-rcv"><table><tbody>' +
                 '<tr><td id="hp-cell" ng-click="setHP()">{{ hp.current | number }}</td><td>HP ({{ hp.perc | number:2 }}%)</td></tr>' +
                 '<tr><td>{{ numbers.rcv | number }}</td><td>RCV</td></tr>' +
@@ -434,10 +444,11 @@ directives.hpBar = function() {
                 if (!hp) return;
                 hp = hp.trim();
                 if (/%$/.test(hp)) perc = true;
+                if(!perc) hp = eval(hp); //Enable User Input to be calculated
                 hp = parseFloat(hp, 10);
                 if (!perc) hp = Math.floor(hp);
                 if (isNaN(hp)) return;
-                if (!perc) 
+                if (!perc)
                     update('manual', Math.min(scope.numbers.hp, Math.max(1, hp)));
                 else
                     update('manual', Math.min(scope.numbers.hp, Math.max(1, Math.round(scope.numbers.hp * hp / 100))));
@@ -452,7 +463,7 @@ directives.turnCounter = function() {
         retrict: 'E',
         replace: true,
         template: '<div id="turns"><div id="turnSlider"></div>' +
-            '<div id="turnLabel">{{currentTurns}} {{currentTurns == 1 ? "turn" : "turns"}} elapsed</div></div>',
+            '<div id="turnLabel"><b>{{currentTurns}}</b> {{currentTurns == 1 ? "turn" : "turns"}} elapsed/{{currentTurns == 1 ? "stack" : "stacks"}} accumulated</div></div>',
         link: function(scope, element, attrs) {
 
             scope.currentTurns = 0;
@@ -460,11 +471,11 @@ directives.turnCounter = function() {
             var slider = element.find('#turnSlider')[0];
             var sliderSettings = {
                 start: [ scope.currentTurns ],
-                range: { min: [ 0 ], max: [ 25 ] },
+                range: { min: [ 0 ], max: [ 50 ] },
                 step: 1,
                 connect: 'lower'
             };
-            
+
             var createSlider = function() {
                 if (slider.noUiSlider) slider.noUiSlider.destroy();
                 noUiSlider.create(slider, sliderSettings);
@@ -484,14 +495,274 @@ directives.turnCounter = function() {
     };
 };
 
+directives.healCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="heals"><div id="healSlider"></div>' +
+            '<div id="healLabel"><b>{{currentHeals}}</b> {{currentHeals == 1 ? "Health Point" : "Health Points"}} recovered in the last turn</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentHeals = 0;
+
+            var slider = element.find('#healSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 100000 ] },
+                step: 100,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentHeals = parseInt(value, 10);
+                if (event == 'change') scope.tdata.healCounter.value = scope.currentHeals;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.basehpCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="basehps"><div id="basehpSlider"></div>' +
+            '<div id="basehpLabel"><b>{{currentbasehps}}</b> {{currentbasehps == 1 ? "Health Point" : "Health Points"}} added</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentbasehps = 0;
+
+            var slider = element.find('#basehpSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentbasehps ],
+                range: { min: [ 0 ], max: [ 100000 ] },
+                step: 10,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentbasehps = parseInt(value, 10);
+                if (event == 'change') scope.tdata.basehpCounter.value = scope.currentbasehps;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.rcvCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="rcvs"><div id="rcvSlider"></div>' +
+            '<div id="rcvLabel"><b>{{currentRCVs}}</b> {{currentRCVs == 1 ? "RCV Orb" : "RCV Orbs"}} consumed</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentRCVs = 0;
+
+            var slider = element.find('#rcvSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 20 ] },
+                step: 1,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentRCVs = parseInt(value, 10);
+                if (event == 'change') scope.tdata.rcvCounter.value = scope.currentRCVs;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.semlaCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="semla"><div id="semlaSlider"></div>' +
+            '<div id="semlaLabel"><b>{{currentSemla}}</b> {{currentSemla == 1 ? "turn" : "turns"}} since last SEMLA orb consumed</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentSemla = 0;
+
+            var slider = element.find('#semlaSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentTurns ],
+                range: { min: [ 0 ], max: [ 10 ] },
+                step: 1,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentSemla = parseInt(value, 10);
+                if (event == 'change') scope.tdata.semlaCounter.value = scope.currentSemla;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.damageCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="damages"><div id="damageSlider"></div>' +
+            '<div id="damageLabel"><b>{{currentDamages}}</b> {{currentDamages == 1 ? "Health Point" : "Health Points"}} lost since special was activated</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentHeals = 0;
+
+            var slider = element.find('#damageSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentDamages ],
+                range: { min: [ 0 ], max: [ 200000 ] },
+                step: 100,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentDamages = parseInt(value, 10);
+                if (event == 'change') scope.tdata.damageCounter.value = scope.currentDamages;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.dmgreductionCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="dmgreductions"><div id="dmgreductionSlider"></div>' +
+            '<div id="dmgreductionLabel"><b>{{currentDmgreductions}}%</b> Damage Reduction</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentDamageReds = 0;
+
+            var slider = element.find('#dmgreductionSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentDamageReds ],
+                range: { min: [ 0 ], max: [ 100 ] },
+                step: 1,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentDmgreductions = parseInt(value, 10);
+                if (event == 'change') scope.tdata.dmgreductionCounter.value = scope.currentDmgreductions;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
+directives.carrychainCounter = function() {
+    return {
+        retrict: 'E',
+        replace: true,
+        template: '<div id="carrychains"><div id="carrychainSlider"></div>' +
+            '<div id="carrychainLabel"><b>{{currentCarrychains ? currentCarrychains/10 : 0}}x</b> Chain Value in last turn</div></div>',
+        link: function(scope, element, attrs) {
+
+            scope.currentcarrychains = 0;
+
+            var slider = element.find('#carrychainSlider')[0];
+            var sliderSettings = {
+                start: [ scope.currentcarrychains ],
+                range: { min: [ 0 ], max: [ 500 ] },
+                step: 1,
+                connect: 'lower'
+            };
+
+            var createSlider = function() {
+                if (slider.noUiSlider) slider.noUiSlider.destroy();
+                noUiSlider.create(slider, sliderSettings);
+                slider.noUiSlider.on('change', function(_,__,value) { update('change', value); });
+                slider.noUiSlider.on('slide', function(_,__,value) { update('slide', value); });
+            };
+
+            var update = function(event,value) {
+                scope.currentCarrychains = parseInt(value, 10);
+                if (event == 'change') scope.tdata.carrychainCounter.value = scope.currentCarrychains / 10;
+                scope.$apply();
+            };
+
+            createSlider();
+
+        }
+    };
+};
+
 directives.levelLabel = function($timeout) {
     return {
         restrict: 'E',
         replace: true,
         scope: true,
-        template: '<div class="unitLevel">' + 
-            '<span ng-show="data.team[slot].level != data.team[slot].unit.maxLevel">Lv. {{data.team[slot].level}}</span>' +
-            '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel" src="../res/max.png">' +
+        template: '<div class="unitLevel">' +
+            '<span ng-show="data.team[slot].level != data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit] ">Lv. {{data.team[slot].level}}</span>' +
+            '<img ng-show="data.team[slot].level == data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit] && data.team[slot].level != 150" src="../res/max.png">' +
+            '<img ng-show="data.team[slot].level == 150" src="../res/llbmax.png">' +
             '<input type="number" ng-show="editorVisible" ng-model="level"></input></div>',
         link: function(scope, element, attrs) {
             scope.level = scope.data.team[scope.slot].level;
@@ -502,7 +773,7 @@ directives.levelLabel = function($timeout) {
                     if (scope.options.slidersEnabled) $('.unit').eq(scope.slot).addClass('slide');
                     else scope.editorVisible = true;
                 } else if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey)))
-                    scope.data.team[scope.slot].level = scope.data.team[scope.slot].unit.maxLevel;
+                    scope.data.team[scope.slot].level = scope.data.team[scope.slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit];
                 scope.$apply();
                 if (scope.editorVisible)
                     $timeout(function() { input.focus(); });
@@ -512,10 +783,10 @@ directives.levelLabel = function($timeout) {
             });
             var update = function(e) {
                 if (e.type == 'keyup' && e.which != 13) return;
-                var level = parseInt(scope.level,10); 
+                var level = parseInt(scope.level,10);
                 scope.editorVisible = false;
                 if (isNaN(level)) return;
-                scope.data.team[scope.slot].level = Math.min(Math.max(1,level),scope.data.team[scope.slot].unit.maxLevel);
+                scope.data.team[scope.slot].level = Math.min(Math.max(1,level),scope.data.team[scope.slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][scope.data.team[scope.slot].llimit]);
                 scope.$apply();
             };
             input.focusout(update);
@@ -539,7 +810,8 @@ directives.levelSlider = function($timeout) {
             };
             var update = function(value) {
                 if (!value || value <= 0 || currentValue == value) return;
-                currentValue = Math.min(value,scope.data.team[scope.slot].unit ? scope.data.team[scope.slot].unit.maxLevel : 1);
+                currentValue = Math.min(value,scope.data.team[scope.slot].unit ? scope.data.team[scope.slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][scope.data.team[scope.slot].llimit] : 1);
+                scope.data.team[scope.slot].level = currentValue;
                 element.val(currentValue).trigger('change');
             };
             var updateMax = function(value) {
@@ -555,12 +827,12 @@ directives.levelSlider = function($timeout) {
                 release: onRelease,
                 change: function(value) { immediateValue = value; },
                 min: 1,
-                max: 99
+                max: 150
             });
-            scope.$watch('data.team[slot].unit.maxLevel',updateMax);
+            scope.$watch('data.team[slot].unit.maxLevel + [0, 6, 11, 21, 31, 51][data.team[slot].llimit]',updateMax);
             scope.$watch('data.team[slot].level',update);
             element.parent().on('click touchend',function(e) {
-                $('.unit').eq(scope.slot).removeClass('slide'); 
+                $('.unit').eq(scope.slot).removeClass('slide');
                 if (e.type == 'touchend') onRelease(Math.round(immediateValue));
                 e.preventDefault();
                 e.stopPropagation();
@@ -571,7 +843,7 @@ directives.levelSlider = function($timeout) {
 };
 
 directives.unitOrb = function($rootScope) {
-    var ORBS = [ 0.5, 1, 2, 'g' ];
+    var ORBS = [ 0.5, 1, 2 ];
     return {
         restrict: 'E',
         replace: true,
@@ -583,6 +855,17 @@ directives.unitOrb = function($rootScope) {
                 if (unit.orb == 1) return 'none';
                 if (unit.orb == 2) return scope.data.team[scope.slot].unit.type;
                 if (unit.orb == 'g') return 'G';
+                if (unit.orb == 'str') return 'S';
+                if (unit.orb == 'dex') return 'D';
+                if (unit.orb == 'qck') return 'Q';
+                if (unit.orb == 'psy') return 'P';
+                if (unit.orb == 'int') return 'I';
+                if (unit.orb == 'rainbow') return 'R';
+                if (unit.orb == 'meat') return 'M';
+                if (unit.orb == 'tnd') return 'T';
+                if (unit.orb == 'wano') return 'W';
+                if (unit.orb == 'empty') return 'E';
+                if (unit.orb == 'superbomb') return 'SB';
                 return Utils.getOppositeType(scope.data.team[scope.slot].unit.type) + ' opposite';
             };
             var onShortPress = function(e) {
@@ -590,29 +873,187 @@ directives.unitOrb = function($rootScope) {
                 if (!$(e.target).hasClass('unitPortrait')) return;
                 if (unit.unit === null || /unitLevel/.test(e.target.className) || e.altKey || e.shiftKey) return;
                 if (e.which == 2 || (e.which == 1 && (e.ctrlKey || e.metaKey || Utils.isClickOnOrb(e,e.target.parentNode)))) {
+                    if($rootScope.areGOrbsEnabled()){
+                        ORBS.push('g');
+                    }
+                    if($rootScope.areRainbowOrbsEnabled()){
+                        ORBS.push('rainbow');
+                    }
+                    if($rootScope.areMeatOrbsEnabled()){
+                        ORBS.push('meat');
+                    }
+                    if($rootScope.areTndOrbsEnabled()){
+                        ORBS.push('tnd');
+                    }
+                    if($rootScope.areWanoOrbsEnabled()){
+                        ORBS.push('wano');
+                    }
+                    if($rootScope.areEmptyOrbsEnabled()){
+                        ORBS.push('empty');
+                    }
+                    if($rootScope.areSuperBombOrbsEnabled()){
+                        ORBS.push('superbomb');
+                    }
+                    if($rootScope.areSTROrbsEnabled()){
+                        ORBS.push('str');
+                    }
+                    if($rootScope.areDEXOrbsEnabled()){
+                        ORBS.push('dex');
+                    }
+                    if($rootScope.areQCKOrbsEnabled()){
+                        ORBS.push('qck');
+                    }
+                    if($rootScope.arePSYOrbsEnabled()){
+                        ORBS.push('psy');
+                    }
+                    if($rootScope.areINTOrbsEnabled()){
+                        ORBS.push('int');
+                    }
+                    var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                    var ORBSlength = ORBS.length;
+                    if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'str') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.areDEXOrbsEnabled() && (unit.unit.type == "DEX")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'dex') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.areQCKOrbsEnabled() && (unit.unit.type == "QCK")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'qck') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.arePSYOrbsEnabled() && (unit.unit.type == "PSY")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'psy') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    if($rootScope.areINTOrbsEnabled() && (unit.unit.type == "INT")){
+                        var tempy = [];
+                        ORBS.forEach(function(element){
+                            if (element != 'int') tempy.push(element);
+                        });
+                        ORBS = tempy;
+                    }
+                    ORBSlength = ORBS.length;
                     var n = ORBS.indexOf(tunit.orb);
-                    tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length : ORBS.length - 1)];
+                    /*if(unit.unit.type == "STR" || unit.unit.type == "DEX")
+                        tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
+                    else
+                        tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];*/
+                    tunit.orb = ORBS[(n + 1) % (ORBSlength)];
                     scope.glow();
                     scope.$apply();
                     e.preventDefault();
                     e.stopPropagation();
+                    ORBS = [ 0.5, 1, 2 ];
                     return false;
                 }
+
             };
             var onLongPress = function(e) {
+                if($rootScope.areGOrbsEnabled()){
+                    ORBS.push('g');
+                }
+                if($rootScope.areRainbowOrbsEnabled()){
+                    ORBS.push('rainbow');
+                }
+                if($rootScope.areMeatOrbsEnabled()){
+                    ORBS.push('meat');
+                }
+                if($rootScope.areTndOrbsEnabled()){
+                    ORBS.push('tnd');
+                }
+                if($rootScope.areWanoOrbsEnabled()){
+                    ORBS.push('wano');
+                }
+                if($rootScope.areEmptyOrbsEnabled()){
+                    ORBS.push('empty');
+                }
+                if($rootScope.areSuperBombOrbsEnabled()){
+                    ORBS.push('superbomb');
+                }
+                if($rootScope.areSTROrbsEnabled()){
+                    ORBS.push('str');
+                }
+                if($rootScope.areDEXOrbsEnabled()){
+                    ORBS.push('dex');
+                }
+                if($rootScope.areQCKOrbsEnabled()){
+                    ORBS.push('qck');
+                }
+                if($rootScope.arePSYOrbsEnabled()){
+                    ORBS.push('psy');
+                }
+                if($rootScope.areINTOrbsEnabled()){
+                    ORBS.push('int');
+                }
                 var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                var ORBSlength = ORBS.length;
+                if($rootScope.areSTROrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "DEX")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'str') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.areDEXOrbsEnabled() && (unit.unit.type == "QCK" || unit.unit.type == "DEX")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'dex') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.areQCKOrbsEnabled() && (unit.unit.type == "STR" || unit.unit.type == "QCK")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'qck') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.arePSYOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'psy') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                if($rootScope.areINTOrbsEnabled() && (unit.unit.type == "INT" || unit.unit.type == "PSY")){
+                    var tempy = [];
+                    ORBS.forEach(function(element){
+                        if (element != 'int') tempy.push(element);
+                    });
+                    ORBS = tempy;
+                }
+                ORBSlength = ORBS.length;
                 var n = ORBS.indexOf(tunit.orb);
-                tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length : ORBS.length - 1)];
+                /*if(unit.unit.type == "STR" || unit.unit.type == "DEX")
+                tunit.orb = ORBS[(n + 1) % ($rootScope.areGOrbsEnabled() ? ORBS.length - 1 : ORBS.length - 2)];
+                else
+                tunit.orb = ORBS[(n + ((!$rootScope.areGOrbsEnabled() && $rootScope.areSTROrbsEnabled() && n == ORBS.length - 3) ? 2 : 1)) % ($rootScope.areGOrbsEnabled() ? ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 1) : ($rootScope.areSTROrbsEnabled() ? ORBS.length : ORBS.length - 2))];*/
+                tunit.orb = ORBS[(n + 1) % (ORBSlength)];
                 scope.glow();
                 scope.$apply();
                 e.preventDefault();
                 e.stopPropagation();
+                ORBS = [ 0.5, 1, 2 ];
                 return false;
             };
             element.parent().longpress(onLongPress,onShortPress);
         },
         controller: function($scope, $timeout) {
-            $timeout(function() { 
+            $timeout(function() {
                 if ($scope.tdata.team[$scope.slot].orb != 1)
                     $scope.$apply();
             });
@@ -674,6 +1115,35 @@ directives.unitSilence = function() {
     };
 };
 
+/*directives.unitDisabled = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitDisabled" ng-class="{ active: tdata.team[slot].disabled > 0 }"></div>',
+        link: function(scope, element, attrs) {
+            var parent = element.parent();
+            scope.$watch('tdata.team[slot].disabled',function(lock) {
+                if (lock > 0) parent.addClass('gray');
+                else parent.removeClass('gray');
+            });
+            var onMouseUp = function(e) {
+                var unit = scope.data.team[scope.slot], tunit = scope.tdata.team[scope.slot];
+                if (!$(e.target).hasClass('unitPortrait')) return;
+                if (unit.unit === null || /unitLevel/.test(e.target.className)) return;
+                if (e.which == 1 && (e.altKey || e.metaKey) && e.shiftKey && e.ctrlKey && !Utils.isClickOnOrb(e,e.target.parentNode)) {
+                    tunit.disabled = (tunit.disabled > 0 ? 0 : 2);
+                    scope.$apply();
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            };
+            element.parent().mouseup(onMouseUp);
+        }
+    };
+};*/
+
 directives.unitRemoved = function() {
     return {
         restrict: 'E',
@@ -719,6 +1189,21 @@ directives.unitCandies = function() {
     };
 };
 
+directives.unitSailor = function() {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<div class="unitSailor" ng-show="hasSailor"><i class="fa fa-anchor"></div>',
+        link: function(scope, element, attrs) {
+            scope.hasSailor = false;
+            scope.$watch('data.team[slot].unit',function(unit) {
+                scope.hasSailor = unit && window.sailors.hasOwnProperty(unit.number+1);
+            });
+        }
+    };
+};
+
 directives.special = function($rootScope) {
     return {
         restrict: 'E',
@@ -730,6 +1215,7 @@ directives.special = function($rootScope) {
             var isSelected = scope.tdata.team[scope.slot].special;
             var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
             scope.hasSpecial = false;
+            scope.hasAltSpecial = false;
             scope.$watch('tdata.team[slot].special',function(enabled) {
                 removeType();
                 var unit = scope.data.team[scope.slot].unit;
@@ -758,6 +1244,84 @@ directives.special = function($rootScope) {
     };
 };
 
+directives.altspecial = function($rootScope) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<li class="altspecial" ng-show="hasAltSpecial"><div>[Alt. Special] {{data.team[slot].unit.name}}</div></li>',
+        link: function(scope, element, attrs) {
+            scope.slot = element.prevAll('.altspecial').length;
+            var isSelected = scope.tdata.team[scope.slot].altspecial;
+            var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
+            scope.hasAltSpecial = false;
+            scope.$watch('tdata.team[slot].altspecial',function(enabled) {
+                removeType();
+                var unit = scope.data.team[scope.slot].unit;
+                if (enabled) element.addClass(unit.type);
+                type = (unit ? unit.type : null);
+                isSelected = enabled;
+                if (enabled && window.altspecials[unit.number+1].warning) {
+                    scope.notify({
+                        text: window.altspecials[unit.number+1].warning.replace(/%name%/g, window.units[unit.number].name),
+                        type: 'warning'
+                    });
+                }
+            });
+            scope.$watch('data.team[slot].unit',function(unit) {
+                removeType();
+                if (scope.tdata.team[scope.slot].altspecial) element.addClass(unit.type);
+                scope.hasAltSpecial = unit && window.altspecials.hasOwnProperty(unit.number+1);
+            });
+            element.click(function(e) {
+                isSelected = !isSelected;
+                $rootScope.$emit('altspecialToggled', scope.slot, isSelected);
+                scope.tdata.team[scope.slot].altspecial = isSelected;
+                scope.$apply();
+            });
+        }
+    };
+};
+
+directives.capspecial = function($rootScope) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: true,
+        template: '<li class="capspecial" ng-show="hasCapSpecial"><div>[Cpt. Special] {{data.team[slot].unit.name}}</div></li>',
+        link: function(scope, element, attrs) {
+            scope.slot = element.prevAll('.capspecial').length;
+            var isSelected = scope.tdata.team[scope.slot].capspecial;
+            var removeType = function() { ['STR','DEX','QCK','PSY','INT'].forEach(function(x) { element.removeClass(x); }); };
+            scope.hasCapSpecial = false;
+            scope.$watch('tdata.team[slot].capspecial',function(enabled) {
+                removeType();
+                var unit = scope.data.team[scope.slot].unit;
+                if (enabled) element.addClass(unit.type);
+                type = (unit ? unit.type : null);
+                isSelected = enabled;
+                if (enabled && window.capspecials[unit.number+1].warning) {
+                    scope.notify({
+                        text: window.capspecials[unit.number+1].warning.replace(/%name%/g, window.units[unit.number].name),
+                        type: 'warning'
+                    });
+                }
+            });
+            scope.$watch('data.team[slot].unit',function(unit) {
+                removeType();
+                if (scope.tdata.team[scope.slot].capspecial) element.addClass(unit.type);
+                scope.hasCapSpecial = unit && window.capspecials.hasOwnProperty(unit.number+1);
+            });
+            element.click(function(e) {
+                isSelected = !isSelected;
+                $rootScope.$emit('capspecialToggled', scope.slot, isSelected);
+                scope.tdata.team[scope.slot].capspecial = isSelected;
+                scope.$apply();
+            });
+        }
+    };
+};
+
 directives.candySlider = function($compile, $timeout) {
     return {
         restrict: 'E',
@@ -778,7 +1342,7 @@ directives.candySlider = function($compile, $timeout) {
             };
             var updateMax = function(data) {
                 var used = Object.keys(data).reduce(function(prev,next) { return prev + (next == scope.type ? 0 : data[next]); },0);
-                input.trigger('configure',{ max: Math.min(100,200 - used) });
+                input.trigger('configure',{ max: Math.min(500,2000 - used) });
                 currentValue = data[scope.type];
                 input.val(currentValue).trigger('change');
                 scope.actualBonus = currentValue * { hp: 5, atk: 2, rcv: 1 }[scope.type];

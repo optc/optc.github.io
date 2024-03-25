@@ -6,6 +6,14 @@
     </div>
 
     <turn-counter ng-show="tdata.turnCounter.enabled"></turn-counter>
+    <heal-counter ng-show="tdata.healCounter.enabled"></heal-counter>
+    <rcv-counter ng-show="tdata.rcvCounter.enabled"></rcv-counter>
+    <semla-counter ng-show="tdata.semlaCounter.enabled"></semla-counter>
+    <damage-counter ng-show="tdata.damageCounter.enabled"></damage-counter>
+    <basehp-counter ng-show="tdata.basehpCounter.enabled"></basehp-counter>
+    <dmgreduction-counter ng-show="tdata.dmgreductionCounter.enabled"></dmgreduction-counter>
+    <carrychain-counter ng-show="tdata.carrychainCounter.enabled"></carrychain-counter>
+    
     <hp-bar></hp-bar>
 
     <div id="other">
@@ -32,6 +40,10 @@
      --><button type="button" class="btn btn-warning" ui-sref=".image" title="Generate image"
                 uib-tooltip="Export Image" tooltip-append-to-body="true">
             <i class="fa fa-picture-o"></i>
+        </button>
+        <button type="button" class="btn" ui-sref="main.instruction" title="Instructions"
+                uib-tooltip="Instructions" tooltip-append-to-body="true">
+            <i class="fa fa-question-circle"></i>
         </button>
     </div>
 

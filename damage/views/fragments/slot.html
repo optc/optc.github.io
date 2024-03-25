@@ -19,9 +19,11 @@
         <unit-removed></unit-removed>
         <unit-silence ng-if="slot < 2"></unit-silence>
         <unit-candies></unit-candies>
+        <unit-sailor ng-if="slot >= 2 "></unit-sailor>
     </div>
 
     <level-slider></level-slider>
+    
 
     <div class="ribbon-container" ng-if="slot < 2">
         <div class="corner-ribbon orange" ng-if="slot < 1">Friend</div>

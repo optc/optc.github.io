@@ -13,7 +13,7 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
 
     /* * * * * Theme * * * * */
 
-    var edgyMode = $storage.get('edgy', false);
+    var edgyMode = $storage.get('edgy', true);
     $('#edgy')[0].disabled = !edgyMode;
 
     $(document.body).dblclick(function(e) {
@@ -32,6 +32,16 @@ var MainCtrl = function($scope, $rootScope, $controller, $filter, $storage) {
             $scope.notify({
                 text: 'Two or more specials you selected are incompatible with each other, ' + 
                     'trying to compute the strongest combination.',
+                type: 'error'
+            });
+        }
+    });
+    
+    $scope.$watch('conflictingMultipliers',function(value) {
+        if (value) {
+            $scope.notify({
+                text: 'Only one Static Attack Multiplier may be active at a time,'+
+                        'please check yourself which combination is better.',
                 type: 'error'
             });
         }
