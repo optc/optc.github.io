@@ -43,15 +43,17 @@ var onMove = function(e) {
 
 var onEndMove = function(stopProp, removable) {
     return function(e) {
-        e.target.style.zIndex = 3;
-        e.target.style.webkitTransform = e.target.style.transform = '';
-        if (removable) $('#removeZone').hide();
-        if (stopProp && stopProp(dropped)) stopPropagation = true;
-        else stopPropagation = false;
-        coordinates = [ 0, 0 ];
-        startObject.removeClass('ghoster');
-        startObject = null;
-        $(e.target.parentNode).removeClass('dragging');
+		setTimeout(function() {
+			e.target.style.zIndex = 3;
+			e.target.style.webkitTransform = e.target.style.transform = '';
+			if (removable) $('#removeZone').hide();
+			if (stopProp && stopProp(dropped)) stopPropagation = true;
+			else stopPropagation = false;
+			coordinates = [ 0, 0 ];
+			startObject.removeClass('ghoster');
+			startObject = null;
+			$(e.target.parentNode).removeClass('dragging');
+		}, 100);
     };
 };
 

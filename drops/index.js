@@ -18,6 +18,8 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
     $rootScope.query = '';
     $scope.data = drops;
     $scope.hiddenUnits = [ ];
+    var searchQuery = location.search.replace('?','');
+
 
     // units
     $scope.reverse = function(x) { return -x; };
@@ -33,6 +35,11 @@ app.controller('MainCtrl',function($scope, $rootScope, $timeout, $controller) {
         if (!$scope.$$phase) $scope.$apply();
     };
 
+    //Use URI for one time search
+    if(searchQuery!=""){
+        $scope.query = Utils.getRegex(decodeURI(searchQuery.replace(/%20Fortnight|%20Raid/g,"").replace(/\?/,"\\?")));
+    }
+
     $controller('DismissalCtrl');
 
 });
@@ -42,9 +49,11 @@ app.directive('decorateSlot',function() {
         restrict: 'A',
         scope: { uid: '=', big: '@', delay: '@' },
         link: function(scope, element, attrs) {
-            var url = scope.big ? Utils.getBigThumbnailUrl(scope.uid) : Utils.getThumbnailUrl(scope.uid);
+            var url = scope.big ? Utils.getBigThumbnailUrl(scope.uid) : Utils.getThumbnailUrl(scope.uid, '..');
+            //var url2 = scope.big ? Utils.getBigThumbnailUrl(scope.uid) : Utils.getGlobalThumbnailUrl(scope.uid);
             if (scope.delay) element[0].setAttribute('data',url);
             else element[0].style.backgroundImage = 'url(' + url + ')';
+            //else element[0].style.backgroundImage = 'url(' + url2 + '), url(' + url + ')';
         }
     };
 });
@@ -61,12 +70,12 @@ app.directive('type',function() {
 app.directive('island',function() {
     return {
         restrict: 'E',
-        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=' },
+        scope: { island: '=', data: '=', type: '=', hiddenUnits: '=', condition: '=', challenge: '=', completion: '=', showManual: '=' },
         replace: true,
         templateUrl: 'island.html',
         link: function(scope, element, attrs) {
             scope.isTooltipEnabled = function(id) { return !!cooldowns[id - 1]; };
-            scope.getTooltipText = function(id) { 
+            scope.getTooltipText = function(id) {
                 var cooldown = cooldowns[id - 1], unit = units[id - 1];
                 if (!cooldown && (!unit || !unit.name || !unit.incomplete)) return;
                 if (cooldown) {
@@ -209,6 +218,7 @@ app.directive('dayLabel',function() {
 
 app.filter('smartSort',function($rootScope) {
     var getId = function(id) {
+        //if(typeof id == "string"){ console.log(id.charCodeAt(0)); return id.charCodeAt(0); }
         id = Math.abs(id);
         return [ 'STR', 'DEX', 'QCK', 'PSY', 'INT' ].indexOf(window.units[id-1].type || 'INT') * 1000 + id;
     };
@@ -224,3 +234,24 @@ app.filter('smartSort',function($rootScope) {
 });
 
 })();
+
+function refreshTimer(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('updateTimes()',refresh)
+}
+
+function updateTimes(){
+    //Japan can also be Etc/GMT-9
+    document.getElementById("times").innerHTML = "Global: <b>"+moment().tz('Etc/GMT+8').format('H:mm:ss')+"</b> | Japan: <b>"+moment().tz('Asia/Tokyo').format('H:mm:ss')+"</b>";
+
+    if(moment().tz('Asia/Tokyo').format('H')>12 && moment().tz('Asia/Tokyo').format('H')<23){
+        document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently active<b>";
+    }else{
+         document.getElementById("timesNote").innerHTML = "The Bonuses in the Japanese Version only last from 12:00 till 23:00<br><b>Japan Bonuses are currently not active<b>";
+    }
+    tt=refreshTimer();
+}
+window.onload = function() {
+    //Also add the URI Search into the Search Bar
+    document.getElementById("search").value = decodeURI(location.search.replace('?','').replace(/%20Fortnight|%20Raid/g,"").replace(/\?/,"\\?"));
+}

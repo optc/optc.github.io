@@ -1,0 +1,201 @@
+/*==============================
+=            NAVBAR            =
+==============================*/
+
+@media (max-width: 640px) {
+	// #bonus-isles {
+	// 	margin-left: -30px !important;
+	// }
+}
+
+@media (max-width: 769px) {
+	.language-picker {
+		display: none;
+	}
+
+	#settings {
+		display: block !important;
+	}
+}
+
+.navbar-nav {
+	margin-top: -1px !important; // remove margin for mobile
+	overflow-y: hidden;
+	li a{
+		font-size: 24px;
+		font-family: 'Squada One', cursive;
+	}
+}
+.container {
+	max-width: 900px !important;
+	margin: auto;
+}
+
+#settings {
+	display: none;
+}
+
+
+.jumbotron {
+	background: #fff !important;
+	margin-top: -20px;
+	padding: 0 !important;
+	h1, h2 {
+		font-family: 'Squada One', cursive;
+	}
+	p {
+		font-family: Lora,sans-serif;
+		margin: 0;
+	}
+	span {
+		font-size: 1.1em;
+		font-family: Lora,sans-serif;
+	}
+	input[type="checkbox"] {
+		margin-left: 20px;
+		margin-right: 5px;
+	}
+}
+
+.id {
+	margin-top: 15px;
+}
+
+.container {
+	text-align: center;
+}
+
+.next_week {
+	margin-top: 50px;
+}
+
+.see-more {
+	margin-top: 20px;
+}
+
+.input-id {
+	width: 50px;
+}
+
+.navbar-nav.nav-justified > li {
+	float: none;
+}
+
+.turtle-day {
+	p {
+		&:first-child{
+			background-color: #eee;
+			margin-bottom: 0;
+		}
+		span {
+		margin-right:40px;
+		}
+	}
+}
+
+.turtle-global, .turtle-jpn {
+	margin-top: 20px;
+}
+
+.turtle-jpn, .event-day {
+	:nth-child(odd) {
+		div p {
+			background-color: #eee;
+		}
+	}
+	:nth-child(2n) {
+		div p {
+			margin-bottom: 15px !important;
+		}
+	}
+}
+.turtle-day-jpn, .event-day-jpn {
+	p {
+		margin-bottom: 0 !important;
+	}
+	p span{
+	margin-right:40px;
+	}
+}
+
+.game-version {
+	margin-bottom: -10px;
+}
+
+.ttc-version {
+	margin-top: -10px;
+}
+
+.event-version {
+	margin-top: 20px;
+}
+
+table {
+	margin-top: 20px !important;
+	max-width: 600px !important;
+	margin: auto;
+	th {
+		text-align: center;
+	}
+}
+
+.bb-hours {
+	margin-bottom: -5px;
+}
+
+.timer span{
+	font-family: 'Consolas';
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+iframe {
+	width: 100%;
+	height: 900px;
+}
+
+/*==================================
+=            TTIME BETA            =
+==================================*/
+
+.ttime-day {
+	display: block;
+
+	&:first-child {
+		margin-top: 20px;
+	}
+
+	&:nth-child(odd) {
+		background-color: #eee;
+	}
+
+	&:nth-child(2n+0) {
+		margin-bottom: 10px;
+	}
+
+	p {
+		margin-bottom: 0px !important;
+		span {
+			margin-right: 15px;
+		}
+	}
+}
+
+.btn-notif {
+	margin: 5px 0 5px 0 !important;
+}
+.settings-notif {
+	* {
+		text-align: center;
+	}
+	div:first-child {
+		margin-bottom: 5px;
+	}
+	div>button {
+		margin-left: 20px;
+	}
+}
+
+.alert-site {
+	margin-top: 13px;
+}

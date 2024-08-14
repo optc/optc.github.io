@@ -1,4 +1,15 @@
 
+@font-face {
+	font-family: 'icomoon';
+	src:url('../../res/icomoon.eot?xewvs9');
+	src:url('../../res/icomoon.eot?xewvs9#iefix') format('embedded-opentype'),
+		url('../../res/icomoon.ttf?xewvs9') format('truetype'),
+		url('../../res/icomoon.woff?xewvs9') format('woff'),
+		url('../../res/icomoon.svg?xewvs9#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 * {
      -moz-box-sizing: border-box;
      -o-box-sizing: border-box;
@@ -7,6 +18,7 @@
 }
 
 body {
+    background-color: #2b303b;
     width: 100%;
     height: 100%;
     font-family: "Open Sans";
@@ -23,6 +35,39 @@ body {
     transform: translate3d(0,-50%,0);
 }
 
+#changelog {
+    position: fixed;
+    padding: 35px;
+    float: right;
+    bottom: 10;
+    right: 10;
+/*    z-index: -1;*/
+}
+
+#changelog > p {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+#changelog > ul {
+    list-style-type: none;
+    text-align: left;
+    margin: auto;
+    padding-left: 0;
+}
+
+#update {
+    font-size: 20;    
+}
+
+@media only screen and (max-width: 1000px) { 
+  #changelog { 
+    display: none; 
+  } 
+}
+
 .button {
     display: block;
     width: 250px;
@@ -30,6 +75,7 @@ body {
     margin: 5px auto;
     cursor: pointer;
     color: white;
+    text-shadow: 2px 2px 10px #000; 
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
@@ -43,14 +89,107 @@ body {
     border-radius: 0 0 5px 5px;
 }
 
+@media (hover) {
+    .button:hover {
+        transform: scale(1.1);
+        font-weight:bold;
+    }
+}
+
 .green  { background-color: #7FCA9F; }
 .blue   { background-color: #85C1F5; }
 .red    { background-color: #E96D63; }
 .purple { background-color: #DA70D6; }
 .yellow { background-color: #F4BA70; }
+.pink   { background-color: #DEA5A4; }
+.brown   { background-color: #993300; }
+.darkpurple   { background-color: #7D3C98; }
+.gold   { background-color: #B38F15; }
+.darkblue   { background-color: #183578; }
+.limegreen   { background-color: #32CD32; }
+.darkorange   { background-color: #CF5300; }
 
-.green:hover  { background-color: #6EB98E; }
-.blue:hover   { background-color: #74B0E4; }
-.red:hover    { background-color: #D85C52; }
-.purple:hover { background-color: #C96995; }
-.yellow:hover { background-color: #E3A969; }
+@media (hover) {
+    .green:hover  { background-color: #6EB98E; }
+    .blue:hover   { background-color: #74B0E4; }
+    .red:hover    { background-color: #D85C52; }
+    .purple:hover { background-color: #C96995; }
+    .yellow:hover { background-color: #E3A969; }
+    .pink:hover   { background-color: #A57777; }
+    .brown:hover   { background-color: #662200; }
+    .darkpurple:hover   { background-color: #5B2C6F; }
+    .gold:hover   { background-color: #947713; }
+    .darkblue:hover   { background-color: #092056; }
+    .limegreen:hover   { background-color: #228B22; }
+    .darkorange:hover   { background-color: #B54C05; }
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;
+    z-index: 100;
+}
+
+.hide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 100;
+}
+
+#hide > img {
+    margin-top: 15%;
+    animation: fa-spin 3s infinite linear;
+}
+
+.slot {
+    display: inline-block;
+}
+
+@media (hover) {
+    .slot:hover {
+        outline: 1px solid red;
+    }
+}
+
+.slot.small {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    margin: 1px;
+}
+
+.STR   { background: salmon; }
+.QCK   { background: lightskyblue; }
+.DEX   { background: lightgreen; }
+.PSY   { background: gold; }
+.INT   { background: orchid; }
+.RCV   { background: darkgoldenrod; }
+.TND   { background: peru; }
+.BLOCK { background: darkslateblue; }
+.SuperBLOCK { background: darkslateblue; }
+.BOMB  { background: maroon; }
+.WANO  { background: firebrick; }
+.SEMLA  { background: saddlebrown; }
+.RAINBOW { background: linear-gradient(90deg,#fa8072,#ffd700,#90ee90,#87cefa, #da70d6); }
+.SUPERBOMB { background: linear-gradient(90deg, #ff2600, #debb2f, #ff2600); }
+.G     { background: orange; }
+.EMPTY { background: #777; }
+
+.block-icon:before {
+    font-style: normal;
+    font-weight: normal;
+    font-family: icomoon;
+    font-size: 11px;
+    position: relative;
+    top: 1px;
+}
+
+.block-icon:before {
+    content: "\e902";
+}

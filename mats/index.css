@@ -52,8 +52,10 @@ h2, h2 + div {
     transform: translate(-50%,-50%);
 }
 
-#add:hover > i {
-    color: salmon;
+@media (hover) {
+    #add:hover > i {
+        color: salmon;
+    }
 }
 
 .slot {
@@ -62,8 +64,10 @@ h2, h2 + div {
     position: relative;
 }
 
-.slot:not(#add):hover {
-    outline: 1px solid red;
+@media (hover) {
+    .slot:not(#add):hover {
+        outline: 1px solid red;
+    }
 }
 
 .slot.medium {
@@ -233,12 +237,14 @@ span.animated {
     cursor: pointer;
 }
 
-#evolution-table td:hover {
-    background: #ddd;
-}
+@media (hover) {
+    #evolution-table td:hover {
+        background: #ddd;
+    }
 
-#evolution-table .slot:hover {
-    outline: none;
+    #evolution-table .slot:hover {
+        outline: none;
+    }
 }
 
 div > .pull-right {

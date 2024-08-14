@@ -44,7 +44,7 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
     $scope.pickUnit = function(unitNumber) {
         $scope.resetSlot($stateParams.slot);
         $scope.data.team[$stateParams.slot].unit = units[unitNumber];
-        $scope.data.team[$stateParams.slot].level = 1;
+        $scope.data.team[$stateParams.slot].level = units[unitNumber].maxLevel;
         $scope.slotChanged($stateParams.slot);
         updateRecent(unitNumber);
         // captain warning
@@ -66,29 +66,19 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
-        // filter by matchers
-        for (var matcher in parameters.matchers) {
-            result = result.filter(function(unit) {
-                return parameters.matchers[matcher].test(unit[matcher]);
-            });
-        }
-        // filter by ranges
-        for (var range in parameters.ranges) {
-            result = result.filter(function(unit) {
-                var stat;
-                if (range == 'id') stat = unit.number + 1;
-                else stat = unit.hasOwnProperty(range.toLowerCase()) ? unit[range.toLowerCase()] : unit['max' + range.toUpperCase()];
-                if (stat < parameters.ranges[range][0] || stat > parameters.ranges[range][1]) return false;
-                return true;
-            });
-        }
-        // filter by query
-        if (parameters.query) {
-            result = result.filter(function(unit) {
-                return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
-            });
-        }
+
+        result = window.units.filter(function(x) {
+            // some units don't exist or have no functions for their abilities, like turtles.
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
+                return false;
+            // do not allow dual/vs units. Their "ghost" forms (which only have one type) can be added though
+            if (Array.isArray(x.type))
+                return false;
+            if (!Utils.checkUnitMatchSearchParameters(x, parameters))
+                return false;
+            return true
+        });
+
         $scope.units = result;
     };
 
@@ -148,7 +138,11 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
             slot.team.forEach(function(x,n) {
                 if (n > 5) return;
                 $scope.resetSlot(n);
-                if (x !== null) $scope.data.team[n] = { unit: units[x.unit], level: x.level, candies: x.candies };
+                if (x !== null) {
+                    // override default properties so old teams will always have complete properties
+                    // override unit property with the whole unit data (was stored as number)
+                    Object.assign($scope.data.team[n], x, {unit: units[x.unit]});
+                };
                 $scope.slotChanged(n);
             });
             if (slot.hasOwnProperty('defense')) $scope.data.defense = parseInt(slot.defense, 10) || 0;
@@ -166,7 +160,7 @@ controllers.SlotsCtrl = function($scope, $state, $stateParams, $storage) {
     $scope.saveTeam = function() {
         $scope.$broadcast('$validate');
         var team = $scope.data.team.map(function(x) {
-            return !x.unit ? null : { unit : x.unit.number, level: x.level, candies: x.candies };
+            return !x.unit ? null : {...x, ...{unit: x.unit.number}}; // save only the unit number to save space
         });
         var result = { name: $scope.lastSlot, team: team };
         if ($scope.saveShip) result.ship = $scope.data.ship;
@@ -198,8 +192,13 @@ controllers.ShipCtrl = function($scope, $state) {
     });
 
     $scope.getThumbnail = function(ship) {
-        if (!ship.thumb) return 'background-image: url(' + Utils.getThumbnailUrl(null) + ')';
-        return 'background-image: url(http://onepiece-treasurecruise.com/wp-content/uploads/' + ship.thumb + ')';
+        if (!ship.thumb) return 'background-image: url(' + Utils.getThumbnailUrl(null, '..') + ')';
+        return 'background-image: url(https://onepiece-treasurecruise.com/wp-content/uploads/' + ship.thumb + ')';
+    };
+
+    $scope.getThumbnailLocal = function(ship, relPathToRoot = '') {
+        if (!ship.thumb) return relPathToRoot + '/api/images/thumbnail/ship/ship_blank_t1.png';
+        return relPathToRoot + '/api/images/thumbnail/ship/' + ship.thumb;
     };
 
     $scope.pickShip = function(name) {
@@ -223,6 +222,14 @@ controllers.ResetCtrl = function($scope, $state, $storage) {
         for (var i=0;i<6;++i) $scope.resetSlot(i);
         $state.go('^');
     };
+};
+    
+/*******************
+ * InstructionCtrl *
+ ******************/
+
+controllers.InstructionCtrl = function() {
+    //Do nothing
 };
 
 /*************
@@ -258,8 +265,44 @@ controllers.PopoverCtrl = function($scope) {
     $scope.details = window.details[id] ? JSON.parse(JSON.stringify(window.details[id])) : null;
     $scope.cooldown = window.cooldowns[id - 1];
     if (!$scope.details || !$scope.details.special) return;
-    if ($scope.details.special.japan)
-        $scope.details.special = $scope.details.special.japan;
+    if ($scope.details.special){
+        if ($scope.details.special.japan)
+            $scope.details.special = $scope.details.special.japan;
+        if ($scope.details.special.llbbase)
+            $scope.details.special = $scope.details.special.llbbase;
+    }
+    if ($scope.details.captain){
+        if ($scope.details.captain.combined){
+            $scope.details.captain = $scope.details.captain.combined;
+        }
+        else if ($scope.details.captain.level6){
+            $scope.details.captain = $scope.details.captain.level6;
+        }
+        else if ($scope.details.captain.level5){
+            $scope.details.captain = $scope.details.captain.level5;
+        }
+        else if ($scope.details.captain.level4){
+            $scope.details.captain = $scope.details.captain.level4;
+        }
+        else if ($scope.details.captain.level3){
+            $scope.details.captain = $scope.details.captain.level3;
+        }
+        else if ($scope.details.captain.level2){
+            $scope.details.captain = $scope.details.captain.level2;
+        }
+        else if ($scope.details.captain.llblevel1){
+            $scope.details.captain = $scope.details.captain.llblevel1;
+        }
+        else if ($scope.details.captain.level1){
+            $scope.details.captain = $scope.details.captain.level1;
+        }
+        else if ($scope.details.captain.llbbase){
+            $scope.details.captain = $scope.details.captain.llbbase;
+        }
+        else if ($scope.details.captain.base){
+            $scope.details.captain = $scope.details.captain.base;
+        }
+    }
     if ($scope.details.special.constructor == Array) {
         var lastStage = $scope.details.special.slice(-1)[0];
         $scope.cooldown = lastStage.cooldown;
@@ -277,7 +320,7 @@ controllers.QuickPickCtrl = function($scope, $state) {
         $scope.resetSlot(slotNumber);
         if (unitNumber) {
             $scope.data.team[slotNumber].unit = units[unitNumber - 1];
-            $scope.data.team[slotNumber].level = 1;
+            $scope.data.team[slotNumber].level = units[unitNumber - 1].maxLevel;
             $scope.slotChanged(slotNumber);
         }
         if (slotNumber < 2 && captains[unitNumber] && captains[unitNumber].warning) {

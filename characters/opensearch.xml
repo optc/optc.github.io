@@ -3,6 +3,6 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
     <ShortName>OPTC Character Table</ShortName>
     <Description></Description>
-    <Image width="16" height="16" type="image/x-icon">https://optc.github.io/favicon.ico</Image>
-    <Url type="text/html" template="https://optc.github.io/characters/#/search/{searchTerms}"/>
+    <Image width="16" height="16" type="image/x-icon">https://optc-db.github.io/favicon.ico</Image>
+    <Url type="text/html" template="https://optc-db.github.io/characters/#/search/{searchTerms}"/>
 </OpenSearchDescription>

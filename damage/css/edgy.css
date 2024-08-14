@@ -2,7 +2,7 @@ html, body {
     background-color: #2b303b;
 }
 
-#hp-rcv, .tip {
+#hp-rcv, .tip, #turnLabel, #healLabel, #semlaLabel, #damageLabel, #rcvLabel, #basehpLabel, #dmgreductionLabel, #carrychainLabel {
     color: white;
 }
 
@@ -27,7 +27,23 @@ html, body {
 }
 
 li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
-    color: white !important;
+    color: #2d2d2d !important;
+}
+
+.popover {
+    background-color: #4d4d4d;
+}
+.popover-title {
+    background-color: #4d4d4d !important;
+    color: #eeeeee;
+}
+.popover-data .information {
+    background-color: #4d4d4d !important;
+    color: #eeeeee;
+}
+.popover-data .header {
+    background-color: #3c3c3c !important;
+    color: #eeeeee;
 }
 
 .noUi-target {
@@ -42,9 +58,16 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     border-bottom: 2px solid #343d46;
 }
 
-.unit, .unit:hover {
+.unit {
     border-color: white;
     color: white;
+}
+
+@media (hover) {
+    .unit:hover {
+        border-color: white;
+        color: white;
+    }
 }
 
 .modal-header {
@@ -67,14 +90,16 @@ li.STR > div, li.QCK > div, li.DEX > div, li.PSY > div, li.INT > div {
     color: white;
 }
 
-.btn.trigger > i:hover {
-    color: black;
+@media (hover) {
+    .btn.trigger > i:hover {
+        color: black;
+    }
+
+    .rotater:hover .fa {
+        color: white !important;
+    }
 }
 
-.rotater:hover .fa {
-    color: white !important;
-}
-
-.fa-star {
+.fa-spin {
     color: black !important;
 }

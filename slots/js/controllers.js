@@ -8,11 +8,12 @@ var controllers = { };
  * MainCtrl *
  ************/
 
-controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $controller, $timeout) { 
-
+controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $controller, $timeout) {
+    
+    $scope.limitBreakOn = [ false, false, false, false, false, false ];
     $rootScope.team = [ null, null, null, null, null, null ];
     $rootScope.options = { transient: false };
-
+    
     $rootScope.changeUnit = function(unit, uid) {
         $scope.team[unit] = { uid: uid, slots: [ ] };
     };
@@ -23,9 +24,14 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
         return result;
     };
 
-    $scope.slotCount = function(uid) {
+    $scope.slotCount = function(uid, slotNumber) {
+        var slot = $rootScope.team[slotNumber];
         if (!uid) return 0;
-        return units[uid - 1].slots;
+        if ($scope.limitBreakOn[slotNumber]) return units[uid - 1].limitSlot;
+        else if (!$scope.limitBreakOn[slotNumber]) {
+            for (var i=units[uid - 1].slots;i<5;++i) if(slot.slots[i]) slot.slots[i] = null;
+            return units[uid - 1].slots;
+        }
     };
 
     $scope.onDrop = function(i,j) {
@@ -67,16 +73,31 @@ controllers.MainCtrl = function($scope, $rootScope, $state, $stateParams, $contr
         });
 
     };
+    $scope.limitBreak = function(slotNumber) {
+        $scope.limitBreakOn[slotNumber] = !$scope.limitBreakOn[slotNumber];
+    };
 
     $scope.quickFill = function(slotNumber) {
         var slot = $rootScope.team[slotNumber];
         if (!slot || !slot.uid) return;
-        var slotCount = units[slot.uid - 1].slots;
+        var slotCount = 0;
+        if ($scope.limitBreakOn[slotNumber]) slotCount = units[slot.uid - 1].limitSlot;
+        else slotCount = units[slot.uid - 1].slots;
         slot.slots = [ ];
         for (var i=0;i<slotCount;++i)
             slot.slots.push({ id: [ 2, 3, 1, 6, 4][i], level: 5 });
     };
+        var notifications = { };
 
+    $rootScope.notify = function(data) {
+        data = jQuery.extend({ type: 'information' },data);
+        if (data.name && notifications[data[name]]) notifications[data[name]].close(); 
+        var notification = noty(jQuery.extend({ timeout: 2500, layout: 'topRight', theme: 'relax' }, data));
+        if (data.name) notifications[data[name]] = notification;
+        return notification;
+
+    };
+    
     $controller('StorageCtrl', { $scope: $scope });
     $controller('DismissalCtrl');
 
@@ -112,13 +133,16 @@ controllers.PickerCtrl = function($scope, $state, $stateParams, $storage) {
         $scope.units = [ ];
         var result, parameters = Utils.generateSearchParameters($scope.query);
         if (parameters === null) return;
-        result = window.units.filter(function(x) { return x !== null && x !== undefined && x.hasOwnProperty('number'); });
-        // filter by query
-        if (parameters.query) {
-            result = result.filter(function(unit) {
-                return parameters.query.test(Utils.getFullUnitName(unit.number + 1));
-            });
-        }
+
+        result = window.units.filter(function(x) {
+            // some units don't exist or have no functions for their abilities, like turtles.
+            if (x === null || x === undefined || !x.hasOwnProperty('number'))
+                return false;
+            if (!Utils.checkUnitMatchSearchParameters(x, parameters))
+                return false;
+            return true;
+        });
+
         $scope.units = result;
     };
 
@@ -179,6 +203,7 @@ controllers.SummaryCtrl = function($scope, $rootScope, $state, $stateParams) {
  **************/
 
 controllers.ImportCtrl = function($scope, $rootScope, $state, $stateParams) {
+    history.replaceState(null, null, '#/');
 
     var data = $stateParams.data;
 
@@ -309,6 +334,38 @@ controllers.ResetCtrl = function($scope, $rootScope, $state) {
         $state.go('^');
     };
 
+};
+
+/******************
+ * CopyCtrl used to copy current Calc Team *
+ ******************/
+
+controllers.CopyCtrl = function($scope, $storage, $rootScope, $state){
+    var validate = function(data){
+        return data.team.some(function(unitData) {
+             return unitData.unit !== null;
+         });
+    };
+    
+    $scope.copyCurrentCalcTeam = function () {
+        var data = $storage.get('data');
+
+        if(validate(data)!== true){
+            $rootScope.notify({
+                text: 'No characters found.' + 
+                    ' Your current calc team seems to be empty.',
+                type: 'error'
+            });
+            $state.go('^');
+            return;
+        } 
+        
+        var result = data.team.map(function(unitData) {
+            return {uid:  unitData.unit !== null ? unitData.unit + 1 : unitData.unit, slots: []};
+        });
+        $rootScope.team = result;
+        $state.go('^');
+    };
 };
 
 /******************

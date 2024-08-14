@@ -1,0 +1,71 @@
+<div>
+    <!-- Uncategorized -->
+    <div class="filter width-12 custom" ng-repeat="(name, filter) in ::filterData[target]['Uncategorized'] track by $index" ng-if="::filter.target == target" ng-class="{ active: filters.custom[target]['Uncategorized'].matchers[name].enabled }">
+        <div ng-click="toggleMatcher($event, filter)">{{::filter.name}}</div>
+        <div class="collapse" ng-if="::filter.submatchers">
+            <animate-collapse class="filter width-12 custom submatchers-toggler" fa-classes="fa fa-chevron-down" ng-if="::filters.custom[target]['Uncategorized'].matchers[name].submatchers.length > 5">
+            </animate-collapse>
+            <div ng-class="::{ collapse: filters.custom[target]['Uncategorized'].matchers[name].submatchers.length > 5 }">
+                <!-- Separate div.collapse from div.submatchers because .collapse needs 0 padding -->
+                <div class="width-12 submatchers">
+                    <div ng-repeat="(j, submatcher) in ::filter.submatchers" class="submatcher" ng-class="::getCssClasses(submatcher)">
+                        <div ng-if="::submatcher.type == 'number'" class="width-12 submatcher-number">
+                            <label>
+                                {{::submatcher.description}} <input type="text" ng-model="filters.custom[target]['Uncategorized'].matchers[name].submatchers[j].param" size="11" placeholder="ex: '3', '<5', '>=2'">
+                            </label>
+                        </div>
+                        <div ng-if="::submatcher.type == 'text'" class="width-12">
+                            <label>
+                                {{::submatcher.description}} <input type="text" ng-model="filters.custom[target]['Uncategorized'].matchers[name].submatchers[j].param" size="11" placeholder="ex: 'luffy', 'usopp|chopper'">
+                            </label>
+                        </div>
+                        <add-orb-options ng-if="::submatcher.type == 'orbs'" class="width-12">
+                        </add-orb-options>
+                        <div ng-if="::submatcher.type == 'option'" class="filter subclass width-12 submatcher-option" ng-class="{ active: filters.custom[target]['Uncategorized'].matchers[name].submatchers[j].param }" ng-click="toggleRadioGroup(filter, j, submatcher.radioGroup)">
+                            {{::submatcher.description}}
+                        </div>
+                        <div ng-if="::submatcher.type == 'separator'" class="width-12 submatcher-separator">
+                            {{::submatcher.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Categorized -->
+    <div class="filter-group width-12" ng-repeat="(group, matchers) in ::filterData[target]" ng-if="::group != 'Uncategorized'">
+        <animate-collapse class="filter-group-header filter-header">{{::group}}</animate-collapse>
+        <div class="collapse">
+            <div class="filter width-12 custom" ng-repeat="(name, filter) in ::matchers track by $index" ng-if="::filter.target == target" ng-class="{ active: filters.custom[target][group].matchers[name].enabled }">
+                <div ng-click="toggleMatcher($event, filter)">{{::filter.name}}</div>
+                <div class="collapse" ng-if="::filter.submatchers">
+                    <animate-collapse class="filter width-12 custom submatchers-toggler" fa-classes="fa fa-chevron-down" ng-if="::filters.custom[target][group].matchers[name].submatchers.length > 5">
+                    </animate-collapse>
+                    <div ng-class="::{ collapse: filters.custom[target][group].matchers[name].submatchers.length > 5 }">
+                        <!-- Separate div.collapse from div.submatchers because .collapse needs 0 padding -->
+                        <div class="width-12 submatchers">
+                            <div ng-repeat="(j, submatcher) in ::filter.submatchers" class="submatcher" ng-class="::getCssClasses(submatcher)">
+                                <div ng-if="::submatcher.type == 'number'" class="width-12 submatcher-number">
+                                    <label>
+                                        {{::submatcher.description}} <input type="text" ng-model="filters.custom[target][group].matchers[name].submatchers[j].param" size="11" placeholder="ex: '3', '<5', '>=2'">
+                                    </label>
+                                </div>
+                                <div ng-if="::submatcher.type == 'text'" class="width-12">
+                                    <label>
+                                        {{::submatcher.description}} <input type="text" ng-model="filters.custom[target][group].matchers[name].submatchers[j].param" size="11" placeholder="ex: 'luffy', 'usopp|chopper'">
+                                    </label>
+                                </div>
+                                <div ng-if="::submatcher.type == 'option'" class="filter subclass width-12 submatcher-option" ng-class="{ active: filters.custom[target][group].matchers[name].submatchers[j].param }" ng-click="toggleRadioGroup(filter, j, submatcher.radioGroup)">
+                                    {{::submatcher.description}}
+                                </div>
+                                <div ng-if="::submatcher.type == 'separator'" class="width-12 submatcher-separator">
+                                    {{::submatcher.description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

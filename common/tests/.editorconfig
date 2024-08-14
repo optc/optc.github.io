@@ -1,0 +1,18 @@
+# editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+# Auto insert a newline character at the end of the file to avoid the git diff
+# message: No newline at end of file
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+# Two trailing whitespace in markdown are like line breaks.
+# So we want to keep them.
+trim_trailing_whitespace = true
+indent_size = 2
